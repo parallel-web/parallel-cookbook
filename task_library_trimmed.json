@@ -1,0 +1,704 @@
+{
+  "tasks": [
+    {
+      "name": "identify_business_challenges",
+      "intent": "Given the company name, identify and describe the major challenges the company is facing this fiscal year.",
+      "prompt": "Identify and describe the major challenges facing ${company_name} in the current fiscal year. Focus on challenges that are significantly affecting the company's core financial output. Include both company-specific challenges and broader industry-level challenges that impact the company. Ensure all information is current and verified from multiple reliable sources. Provide specific examples and data where possible to support your analysis.",
+      "input_schema": {
+        "type": "object",
+        "required": ["company_name"],
+        "properties": {
+          "company_name": {
+            "type": "string",
+            "description": "The name of the company to analyze for major challenges."
+          }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": [
+          "company_challenge_1",
+          "company_challenge_2",
+          "company_challenge_3",
+          "industry_challenge_1",
+          "industry_challenge_2",
+          "financial_impact",
+          "reasoning",
+          "citations"
+        ],
+        "properties": {
+          "company_challenge_1": {
+            "type": "string",
+            "description": "Description of a major company-specific challenge facing the company this fiscal year."
+          },
+          "company_challenge_2": {
+            "type": "string",
+            "description": "Description of another major company-specific challenge facing the company this fiscal year."
+          },
+          "company_challenge_3": {
+            "type": "string",
+            "description": "Description of a third major company-specific challenge facing the company this fiscal year."
+          },
+          "industry_challenge_1": {
+            "type": "string",
+            "description": "Description of a major industry-level challenge affecting the company this fiscal year."
+          },
+          "industry_challenge_2": {
+            "type": "string",
+            "description": "Description of another major industry-level challenge affecting the company this fiscal year."
+          },
+          "financial_impact": {
+            "type": "string",
+            "description": "Overview of how these challenges are affecting the company's core financial output."
+          },
+          "reasoning": {
+            "type": "string",
+            "description": "Explanation of the analysis and why these challenges are considered major for the company."
+          },
+          "citations": {
+            "type": "string",
+            "description": "URLs separated by space which support the information provided. E.g. http://example.com/1 http://example.com/2"
+          }
+        }
+      },
+      "metadata": {
+        "general_use_case": "Financial Enrichment"
+      }
+    },
+    {
+      "name": "kyb_verification",
+      "intent": "Given the company name, domain, and country, verify the company's existence and legitimacy through an extensive Know Your Business (KYB) analysis.",
+      "prompt": "Conduct a comprehensive Know Your Business (KYB) verification and risk assessment for the given company.\n\nCompany: ${company_name}\nClaimed Domain: ${domain}\nCountry: ${country}\n\nVerification Steps:\n1. Verify company existence and legitimacy:\n   - Confirm registration/incorporation status\n   - Verify operating history\n   - Check for legitimate business operations\n\n2. Domain verification:\n   - Verify domain ownership matches company\n   - Check domain age and registration details\n   - Look for any suspicious domain patterns\n\n3. Risk Assessment:\n   Check for risk signals including but not limited to:\n   - Regulatory compliance issues\n   - Legal troubles or lawsuits\n   - Negative news coverage\n   - Suspicious business practices\n   - Shell company indicators\n   - Sanctioned individuals in leadership\n   - Geographic risk factors\n   - Cryptocurrency/blockchain involvement\n   - Known scam reports or complaints\n\n4. Evidence Collection:\n   - Gather supporting URLs and sources\n   - Document key findings\n   - Note any verification limitations\n\nProvide a detailed assessment with confidence score and reasoning.\n",
+      "input_schema": {
+        "type": "object",
+        "title": "KYBInput",
+        "required": ["company_name", "domain", "country"],
+        "properties": {
+          "company_name": {
+            "type": "string",
+            "title": "Company Name",
+            "description": "Name of the company to verify"
+          },
+          "domain": {
+            "type": "string",
+            "title": "Domain",
+            "description": "Claimed company domain"
+          },
+          "country": {
+            "type": "string",
+            "title": "Country",
+            "description": "Country where company claims to operate"
+          }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "title": "KYBOutput",
+        "required": [
+          "company_verified",
+          "domain_verified",
+          "registration_date",
+          "company_type",
+          "risk_signals",
+          "risk_level",
+          "confidence_score",
+          "evidence",
+          "reasoning"
+        ],
+        "properties": {
+          "company_verified": {
+            "type": "boolean",
+            "title": "Company Verified",
+            "description": "Whether the company exists and is legitimate"
+          },
+          "domain_verified": {
+            "type": "boolean",
+            "title": "Domain Verified",
+            "description": "Whether the domain belongs to the company"
+          },
+          "registration_date": {
+            "type": "string",
+            "title": "Registration Date",
+            "description": "When the company was registered/founded"
+          },
+          "company_type": {
+            "type": "string",
+            "title": "Company Type",
+            "description": "Type of company/entity"
+          },
+          "risk_signals": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "title": "Risk Signals",
+            "description": "List of identified risk signals"
+          },
+          "risk_level": {
+            "type": "string",
+            "enum": ["LOW", "MEDIUM", "HIGH"],
+            "title": "Risk Level",
+            "description": "Overall risk assessment"
+          },
+          "confidence_score": {
+            "type": "number",
+            "title": "Confidence Score",
+            "description": "Confidence in the assessment (0-1)"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "title": "Evidence",
+            "description": "URLs and sources supporting the findings"
+          },
+          "reasoning": {
+            "type": "string",
+            "title": "Reasoning",
+            "description": "Detailed explanation of the assessment"
+          }
+        }
+      },
+      "metadata": {
+        "general_use_case": "Compliance"
+      }
+    },
+    {
+      "name": "calculate_engineering_experience",
+      "intent": "Given a LinkedIn profile URL, find the total number of years of professional engineering experience",
+      "prompt": "Extract the work experience from the provided LinkedIn profile, calculate the total number of years the person has worked in roles that include the title 'Engineer,' excluding any roles labeled as 'Internship' or 'Co-op.' Provide the total number of years of professional engineering experience, rounded to the nearest whole number and nothing else.",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "linkedin_profile_url": {
+            "type": "string",
+            "description": "The URL of the LinkedIn profile to analyze."
+          }
+        },
+        "required": ["linkedin_profile_url"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "years_of_engineering_experience": {
+            "type": "integer",
+            "description": "The total number of years of professional engineering experience, rounded to the nearest whole number."
+          },
+          "citations": {
+            "type": "string",
+            "description": "URLs separated by space which support the answer. E.g. http://example.com/1 http://example.com/2"
+          },
+          "reasoning": {
+            "type": "string",
+            "description": "The reasoning/explanation for the answer."
+          }
+        },
+        "required": [
+          "years_of_engineering_experience",
+          "reasoning",
+          "citations"
+        ],
+        "additionalProperties": false
+      },
+      "metadata": {
+        "general_use_case": "Recruitment"
+      }
+    },
+    {
+      "name": "board_memberships",
+      "intent": "Given a person's full name, job title, and current company, find their current and prior board memberships.",
+      "prompt": "Given a person's full name, job title, and current company, identify up to three organizations where they currently serve or have previously served as a board member. For each organization, determine if they are currently a board member and when they joined the board. Provide the most recent board memberships if more than three exist.\n\nperson_full_name: ${person_name}\ncompany_name: ${company_name}\nperson_job_title: ${job_title}\n",
+      "input_schema": {
+        "type": "object",
+        "title": "PersonInput",
+        "required": ["company_name", "person_name", "job_title"],
+        "properties": {
+          "person_name": {
+            "type": "string",
+            "title": "Person Name",
+            "description": "Full name of person"
+          },
+          "company_name": {
+            "type": "string",
+            "title": "Company Name",
+            "description": "Company name"
+          },
+          "job_title": {
+            "type": "string",
+            "title": "Job Title",
+            "description": "Job title of person"
+          }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "title": "BoardOutput",
+        "required": [
+          "title",
+          "organization_1",
+          "organization_1_join_date",
+          "organization_1_current_status",
+          "organization_2",
+          "organization_2_join_date",
+          "organization_2_current_status",
+          "organization_3",
+          "organization_3_join_date",
+          "organization_3_current_status",
+          "reasoning",
+          "citations"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "description": "One line title for analysis"
+          },
+          "organization_1": {
+            "type": "string",
+            "title": "Organization 1",
+            "description": "First organization"
+          },
+          "organization_2": {
+            "type": "string",
+            "title": "Organization 2",
+            "description": "Second organization"
+          },
+          "organization_3": {
+            "type": "string",
+            "title": "Organization 3",
+            "description": "Third organization"
+          },
+          "organization_1_join_date": {
+            "type": "string",
+            "title": "Organization 1 Join Date",
+            "description": "Join date for first org"
+          },
+          "organization_2_join_date": {
+            "type": "string",
+            "title": "Organization 2 Join Date",
+            "description": "Join date for second org"
+          },
+          "organization_3_join_date": {
+            "type": "string",
+            "title": "Organization 3 Join Date",
+            "description": "Join date for third org"
+          },
+          "organization_1_current_status": {
+            "type": "string",
+            "title": "Organization 1 Current Status",
+            "description": "Current status at first org"
+          },
+          "organization_2_current_status": {
+            "type": "string",
+            "title": "Organization 2 Current Status",
+            "description": "Current status at second org"
+          },
+          "organization_3_current_status": {
+            "type": "string",
+            "title": "Organization 3 Current Status",
+            "description": "Current status at third org"
+          },
+          "reasoning": {
+            "type": "string",
+            "title": "Reasoning",
+            "description": "Reasoning for determinations"
+          },
+          "citations": {
+            "type": "string",
+            "title": "Citations",
+            "description": "Sources used"
+          }
+        }
+      },
+      "metadata": {
+        "general_use_case": "Sales Enrichment"
+      }
+    },
+    {
+      "name": "find_sourcing_site",
+      "intent": "Given a government entity, find their purchasing/procurement/RFP pages.",
+      "prompt": "Given a government entity, find their purchasing/procurement/RFP pages. Please return only pages that have lists of open bids/RFPs on them instead of any general purchasing information sites.\n\nGovernment Entity: ${GovernmentEntity}\n\nPlease provide:\n\n1. All relevant URLs where they post purchasing opportunities3\n2. Any special notes about their purchasing sites (e.g. if they have multiple sites that are synced, or sites that may be irrelevant)\n3. If from your research, this entity is covered by another entity, please provide the name of the entity that covers instead of a purchasing site.\n\nEnsure all URLs are active and lead directly to pages listing RFPs/opportunities/solicitations.\n",
+      "input_schema": {
+        "type": "object",
+        "required": ["GovernmentEntity"],
+        "properties": {
+          "GovernmentEntity": {
+            "type": "string",
+            "description": "A US state, county, city, town, or special district."
+          }
+        }
+      },
+      "output_schema": {
+        "type": "object",
+        "required": ["notes", "urls", "covered_by_other_entity"],
+        "properties": {
+          "urls": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The URLs of the purchasing sites for the given government entity, specifically the ones with lists of RFPs, RFIs, etc."
+          },
+          "notes": {
+            "type": "string",
+            "description": "Any special notes about the purchasing site (e.g. if they have multiple that are synced up, or ones that may be irrelevant)"
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "description": "URL of the source."
+                },
+                "title": {
+                  "type": "string",
+                  "description": "Title of the source"
+                },
+                "excerpts": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "description": "Excerpts from the sources which support the answer. Ideally 2-3 sentences taken verbatim from the content"
+                  }
+                }
+              },
+              "description": "Source for the answer."
+            },
+            "description": "Sources with excerpts which support the answer"
+          },
+          "covered_by_other_entity": {
+            "type": "string",
+            "description": "If from your research, this entity is covered by another entity, please provide the name of the entity that covers it. Otherwise, leave blank."
+          }
+        }
+      },
+      "metadata": {
+        "general_use_case": "Procurement"
+      }
+    },
+    {
+      "name": "identify_recent_acquisitions",
+      "intent": "Given a company name, describe acquisitions they have been involved in in the last 5 years.",
+      "prompt": "Research and identify whether the given company has been involved in any acquisitions (either as acquirer or target) within the last 5 years. For each transaction found (up to 3 most recent), provide detailed information about the deal.\n\nCompany: ${company_name}\n\nFor each transaction, determine:\n1. Transaction type (Acquisition, Merger, etc.)\n2. Target company\n3. Deal value (if disclosed)\n4. Deal multiple (if available)\n5. Strategic rationale\n\nProvide detailed reasoning and citations to support findings.\n",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "company_name": {
+            "type": "string",
+            "description": "Name of the company to research"
+          }
+        },
+        "required": ["company_name"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "transaction_1_type": {
+            "type": "string",
+            "description": "Type of the first transaction (e.g., Acquisition, Merger)"
+          },
+          "transaction_1_target": {
+            "type": "string",
+            "description": "Name of the target company in first transaction"
+          },
+          "transaction_1_deal_value": {
+            "type": "string",
+            "description": "Deal value of first transaction"
+          },
+          "transaction_1_deal_multiple": {
+            "type": "string",
+            "description": "Deal multiple of first transaction"
+          },
+          "transaction_1_strategic_rationale": {
+            "type": "string",
+            "description": "Strategic rationale for first transaction"
+          },
+          "transaction_2_type": {
+            "type": "string",
+            "description": "Type of the second transaction"
+          },
+          "transaction_2_target": {
+            "type": "string",
+            "description": "Name of the target company in second transaction"
+          },
+          "transaction_2_deal_value": {
+            "type": "string",
+            "description": "Deal value of second transaction"
+          },
+          "transaction_2_deal_multiple": {
+            "type": "string",
+            "description": "Deal multiple of second transaction"
+          },
+          "transaction_2_strategic_rationale": {
+            "type": "string",
+            "description": "Strategic rationale for second transaction"
+          },
+          "transaction_3_type": {
+            "type": "string",
+            "description": "Type of the third transaction"
+          },
+          "transaction_3_target": {
+            "type": "string",
+            "description": "Name of the target company in third transaction"
+          },
+          "transaction_3_deal_value": {
+            "type": "string",
+            "description": "Deal value of third transaction"
+          },
+          "transaction_3_deal_multiple": {
+            "type": "string",
+            "description": "Deal multiple of third transaction"
+          },
+          "transaction_3_strategic_rationale": {
+            "type": "string",
+            "description": "Strategic rationale for third transaction"
+          },
+          "reasoning": {
+            "type": "string",
+            "description": "Detailed explanation of findings and analysis"
+          },
+          "citations": {
+            "type": "string",
+            "description": "Sources used to verify the information"
+          }
+        },
+        "required": ["reasoning", "citations"],
+        "additionalProperties": false
+      },
+      "metadata": {
+        "general_use_case": "Financial Enrichment"
+      }
+    },
+    {
+      "name": "identify_industry_news",
+      "intent": "Given a company name, find the latest news and insights relating to their industry",
+      "prompt": "Find the latest news and insights relating to the industry of ${company_name} that could impact their market. Focus on news that doesn't directly mention the company but is relevant to their industry. Provide the article titles, summaries, and explain their relevance to the company's business.\n\nFor each news item:\n1. Provide the article title and publication date\n2. Summarize the key points\n3. Explain why it's relevant to the company\n4. Include citation links\n\nFocus on the 3 most relevant and recent news items.\n",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "company_name": {
+            "type": "string",
+            "description": "Name of the company to research industry news for"
+          },
+          "company_website": {
+            "type": "string",
+            "description": "Website of the company to help determine industry focus"
+          }
+        },
+        "required": ["company_name", "company_website"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "article_titles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Titles of the news articles found. Use <UNKNOWN> if a value could not be found."
+          },
+          "article_summaries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Summaries of the news articles. Use <UNKNOWN> if a value could not be found."
+          },
+          "publication_dates": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Publication dates of the news articles. Use <UNKNOWN> if a value could not be found."
+          },
+          "relevance_explanations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Explanation of why each article is relevant to the company. Use <UNKNOWN> if a value could not be found."
+          },
+          "citations": {
+            "type": "string",
+            "description": "URLs separated by space which support the answer. E.g. http://example.com/1 http://example.com/2"
+          },
+          "reasoning": {
+            "type": "string",
+            "description": "The reasoning/explanation for why these articles were selected as most relevant."
+          }
+        },
+        "required": [
+          "article_titles",
+          "article_summaries",
+          "publication_dates",
+          "relevance_explanations",
+          "reasoning",
+          "citations"
+        ],
+        "additionalProperties": false
+      },
+      "metadata": {
+        "general_use_case": "Marketing"
+      }
+    },
+    {
+      "name": "identify_political_organization",
+      "intent": "Given a company URL and product description, check if the company is a political organization.",
+      "prompt": "Analyze the provided company URL and product description to determine if the user is a political organization. Focus on any information that suggests the organization is primarily involved in accepting contributions or making expenditures for political purposes, or influencing elections or appointments to public offices. Provide your answer in the specified format, including the question, your reasoning, and a yes/no answer.\n",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "company_url": {
+            "type": "string",
+            "description": "The URL of the company to analyze."
+          },
+          "product_description": {
+            "type": "string",
+            "description": "The product description of the company to analyze."
+          }
+        },
+        "required": ["company_url", "product_description"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "reasoning": {
+            "type": "string",
+            "description": "The reasoning behind the answer."
+          },
+          "is_political_organization": {
+            "type": "string",
+            "enum": ["yes", "no"],
+            "description": "Whether the organization is a political organization."
+          },
+          "citations": {
+            "type": "string",
+            "description": "URLs separated by space which support the answer. E.g. http://example.com/1 http://example.com/2"
+          }
+        },
+        "required": ["reasoning", "is_political_organization", "citations"],
+        "additionalProperties": false
+      },
+      "metadata": {
+        "general_use_case": "Compliance"
+      }
+    },
+    {
+      "name": "identify_company_relationships",
+      "intent": "Given a company website, determine its parent company (if any) and its child companies. If no parent company exists, treat the given company as the parent.",
+      "prompt": "Given a company website, determine its parent company (if any) and its child companies. If no parent company exists, treat the given company as the parent. Provide the parent company's name and domain, and a list of child companies.\n",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "company_website": {
+            "type": "string",
+            "description": "The website of the company to research."
+          }
+        },
+        "required": ["company_website"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "parent_company_name": {
+            "type": "string",
+            "description": "The name of the parent company. If the input company has no parent, this will be the name of the input company."
+          },
+          "parent_company_domain": {
+            "type": "string",
+            "description": "The domain name of the parent company. If the input company has no parent, this will be the domain of the input company."
+          },
+          "child_companies": {
+            "type": "array",
+            "description": "A list of child companies associated with the parent company.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "citations": {
+            "type": "array",
+            "description": "A comma-separated list of URLs used as citations.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "reasoning": {
+            "type": "string",
+            "description": "The reasoning/explanation for the answer."
+          }
+        },
+        "required": [
+          "parent_company_name",
+          "parent_company_domain",
+          "child_companies",
+          "citations",
+          "reasoning"
+        ],
+        "additionalProperties": false
+      },
+      "metadata": {
+        "general_use_case": "Financial Enrichment"
+      }
+    },
+    {
+      "name": "classify_website_status",
+      "intent": "Given a domain, verify its status and classify it as 404, redirect, parked, valid or invalid",
+      "prompt": "Verify the validity of the given domain and classify its status based on the following criteria:\n\n- 'Valid Domain': The page loads normally with genuine content.\n- '404 Error': The domain returns a '404 Not Found' error.\n- 'Parked Domain': The domain redirects to a generic hosting provider page or shows content indicating it's 'For Sale' or 'Parked'.\n- 'Redirect': The domain redirects to a non-generic hosting provider and it's a valid business website. Return the website it redirects to.\n- 'Invalid': The input is not a properly formatted domain (e.g., email addresses, Google Maps links).\n",
+      "input_schema": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "description": "The domain to verify and classify."
+          }
+        },
+        "required": ["domain"],
+        "additionalProperties": false
+      },
+      "output_schema": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "enum": [
+              "Parked Domain",
+              "Invalid",
+              "404 Error",
+              "Redirect",
+              "Valid Domain"
+            ],
+            "description": "The classification of the domain's status."
+          },
+          "redirect_url": {
+            "type": "string",
+            "description": "The URL the domain redirects to, if applicable."
+          },
+          "reasoning": {
+            "type": "string",
+            "description": "Explanation of why the domain was classified as such."
+          },
+          "citations": {
+            "type": "array",
+            "description": "Citations to the sources of the information.",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["status", "redirect_url", "reasoning", "citations"],
+        "additionalProperties": false
+      },
+      "metadata": {
+        "general_use_case": "Sales Enrichment"
+      }
+    }
+  ]
+}
