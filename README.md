@@ -19,7 +19,7 @@ Depending on your question, please choose the contexts needed:
 | Batch tasks                  | Using Cloudflare Queues                 |                                                               |                                                             |
  -->
 
-- [Full Documentation](https://docs.parallel.ai) - [![](https://b.lmpify.com/Select_A_Context)](https://letmeprompt.com?q=https://docs.parallel.ai/llms.txt)
+- [Full Documentation](https://docs.parallel.ai) - [![](https://b.lmpify.com/Select_A_Context)](https://letmeprompt.com?q=https://docs.parallel.ai/llms-full.txt)
 - [Parallel API Specification](https://docs.parallel.ai/api-reference/search-api/search) - [![](https://badge.forgithub.com/janwilmake/parallel-openapi/tree/main/openapi.yaml)](https://uithub.com/janwilmake/parallel-openapi?maxTokens=10000000&lines=false) [![](https://b.lmpify.com/Select_A_Context)](https://letmeprompt.com?q=https://parallel.oapis.org/%20%20give%20me%20urls:%20which%20files%20are%20relevant%20for%20...)
 - [Parallel Website and Blog](https://parallel.ai) - [![](https://badge.forgithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false)](https://uithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false)
 - [Python SDK](https://github.com/parallel-web/parallel-sdk-python) - [![](https://badge.forgithub.com/parallel-web/parallel-sdk-python?maxTokens=10000000&lines=false)](https://uithub.com/parallel-web/parallel-sdk-python?maxTokens=10000000&lines=false)
