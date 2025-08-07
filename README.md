@@ -9,7 +9,7 @@ The following cookbook is designed to get you cooking with Parallel APIs as quic
 2. gathering the right contexts for this
 3. creating a full implementation using the right context
 
-You can use this framework with any LLM/IDE that supports URL context expansion or MCP. For your convenience, I've also provided quick links to view contexts and prompt examples.
+You can use this framework with any LLM/IDE that supports URL context expansion or MCP. For your convenience, there are also quick links to view contexts and prompt examples.
 
 ## Choose Your Context
 
@@ -60,7 +60,7 @@ The following examples have been tested with [Claude Sonnet 4](https://www.anthr
 
 ### Finetuning the scope of your request and gathering the right contexts for this
 
-You can use this prompt to iteratively get to a better definition of what you want to build, and get the right context for this. Please note that the Python SDK is not included in this quickstart. You can add it if desired, you can also let it generate an ad-hoc client more tailored for your specific use-case. The latter requires less context for the same information and is the way that I recommend.
+You can use this prompt to iteratively get to a better definition of what you want to build, and get the right context for this. Please note that the Python SDK is not included in this quickstart. You can add it if desired, you can also let it generate an ad-hoc client more tailored for your specific use-case. The latter requires less context for the same information and is recommended.
 
 ```txt path="relevant-context-prompt.txt"
 OpenAPI: @https://parallel.oapis.org/llms.txt
