@@ -15,10 +15,6 @@ You can use this framework with any LLM/IDE that supports URL context expansion 
 
 Depending on your question, please choose the contexts needed:
 
-<!-- | Batch tasks                  | Using Parallel Task Group API           |                                                               |                                                             |
-| Batch tasks                  | Using Cloudflare Queues                 |                                                               |                                                             |
- -->
-
 - [Full Documentation](https://docs.parallel.ai) - [![](https://b.lmpify.com/Select_A_Context)](https://letmeprompt.com?q=https://docs.parallel.ai/llms-full.txt)
 - [Parallel API Specification](https://docs.parallel.ai/api-reference/search-api/search) - [![](https://badge.forgithub.com/janwilmake/parallel-openapi/tree/main/openapi.yaml)](https://uithub.com/janwilmake/parallel-openapi?maxTokens=10000000&lines=false) [![](https://b.lmpify.com/Select_A_Context)](https://letmeprompt.com?q=https://parallel.oapis.org/%20%20give%20me%20urls:%20which%20files%20are%20relevant%20for%20...)
 - [Parallel Website and Blog](https://parallel.ai) - [![](https://badge.forgithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false)](https://uithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false)
@@ -105,7 +101,7 @@ Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs tha
 <!--
 
 
-
+| Tasks using MCP              | X Login, Authorize MCPs, do tasks       | Coming soon                                                   |                                                             |
 | Tasks MCP server             |                                         | [Repo](https://github.com/janwilmake/parallel-tasks-mcp)      |                                                             | -->
 
 <!--
