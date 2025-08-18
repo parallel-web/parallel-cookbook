@@ -89,17 +89,17 @@ These recipes focus on building full-stack serverless apps on Cloudflare Workers
 
 Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs that are more complete (payments, login, etc) and can be used as boilerplate / starting point for new SaaS Products!
 
-| Title                        | Description                             | Repo                                                                                               | Demo                               |
-| ---------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------- |
-| **Recipes**                  |                                         |                                                                                                    |                                    |
-| Tasks using SSE              |                                         | [Repo](https://github.com/janwilmake/parallel-tasks-sse)                                           | [Demo](https://tasks.gptideas.com) |
-| Recurring Tasks and Webhooks | Active Monitoring using cronjobs and KV | [Repo](https://github.com/janwilmake/parallel-daily-insights)                                      | [Demo](https://daily.p0web.com)    |
-| Tasks using MCP              | X Login, Authorize MCPs, do tasks       | [Repo](https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling) | [Demo](https://mcp.p0web.com)      |
-| Batch tasks                  | Using Parallel Task Group API           | Coming soon                                                                                        |                                    |
-| Batch tasks                  | Using Cloudflare Queues                 | Coming soon                                                                                        |                                    |
-|                              |                                         |                                                                                                    |                                    |
-| **Example Apps**             | Coming soon!                            |                                                                                                    |                                    |
-| -                            |                                         |                                                                                                    |                                    |
+| Title                        | Description                             | Repo                                                                                               | Demo                            |
+| ---------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- | ------------------------------- |
+| **Recipes**                  |                                         |                                                                                                    |                                 |
+| Tasks using SSE              |                                         | [Repo](https://github.com/janwilmake/parallel-tasks-sse)                                           | [Demo](https://sse.p0web.com)   |
+| Recurring Tasks and Webhooks | Active Monitoring using cronjobs and KV | [Repo](https://github.com/janwilmake/parallel-daily-insights)                                      | [Demo](https://daily.p0web.com) |
+| Tasks using MCP              | X Login, Authorize MCPs, do tasks       | [Repo](https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling) | [Demo](https://mcp.p0web.com)   |
+| Batch tasks                  | Using Parallel Task Group API           | Coming soon                                                                                        |                                 |
+| Batch tasks                  | Using Cloudflare Queues                 | Coming soon                                                                                        |                                 |
+|                              |                                         |                                                                                                    |                                 |
+| **Example Apps**             | Coming soon!                            |                                                                                                    |                                 |
+| -                            |                                         |                                                                                                    |                                 |
 
 <!--
 | Tasks MCP server             |                                         | [Repo](https://github.com/janwilmake/parallel-tasks-mcp)      |                                                             |
