@@ -58,6 +58,8 @@ The following examples have been tested with [Claude Sonnet 4](https://www.anthr
 
 You can use this prompt to iteratively get to a better definition of what you want to build, and get the right context for this. Please note that the Python SDK is not included in this quickstart. You can add it if desired, you can also let it generate an ad-hoc client more tailored for your specific use-case. The latter requires less context for the same information and is recommended.
 
+<!-- Note: this openapi llms.txt isnot really needed since docs.parallel.ai already has references to them. The only thing it adds now is the decision logic that i put into the openapi manually-->
+
 ```txt path="relevant-context-prompt.txt"
 OpenAPI: @https://parallel.oapis.org/llms.txt
 Docs: @https://docs.parallel.ai/llms.txt
@@ -87,17 +89,17 @@ These recipes focus on building full-stack serverless apps on Cloudflare Workers
 
 Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs that are more complete (payments, login, etc) and can be used as boilerplate / starting point for new SaaS Products!
 
-| Title                        | Description                             | Repo                                                                                               | Demo                                                        |
-| ---------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| **Recipes**                  |                                         |                                                                                                    |                                                             |
-| Tasks using SSE              |                                         | [Repo](https://github.com/janwilmake/parallel-tasks-sse)                                           | [Demo](https://tasks.gptideas.com)                          |
-| Recurring Tasks and Webhooks | Active Monitoring using cronjobs and KV | [Repo](https://github.com/janwilmake/parallel-daily-insights)                                      | [Demo](https://parallel-daily-insights.wilmake.workers.dev) |
-| Tasks using MCP              | X Login, Authorize MCPs, do tasks       | [Repo](https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling) | [Demo](https://mcp.p0web.com)                               |
-| Batch tasks                  | Using Parallel Task Group API           | Coming soon                                                                                        |                                                             |
-| Batch tasks                  | Using Cloudflare Queues                 | Coming soon                                                                                        |                                                             |
-|                              |                                         |                                                                                                    |                                                             |
-| **Example Apps**             | Coming soon!                            |                                                                                                    |                                                             |
-| -                            |                                         |                                                                                                    |                                                             |
+| Title                        | Description                             | Repo                                                                                               | Demo                               |
+| ---------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------- | ---------------------------------- |
+| **Recipes**                  |                                         |                                                                                                    |                                    |
+| Tasks using SSE              |                                         | [Repo](https://github.com/janwilmake/parallel-tasks-sse)                                           | [Demo](https://tasks.gptideas.com) |
+| Recurring Tasks and Webhooks | Active Monitoring using cronjobs and KV | [Repo](https://github.com/janwilmake/parallel-daily-insights)                                      | [Demo](https://daily.p0web.com)    |
+| Tasks using MCP              | X Login, Authorize MCPs, do tasks       | [Repo](https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling) | [Demo](https://mcp.p0web.com)      |
+| Batch tasks                  | Using Parallel Task Group API           | Coming soon                                                                                        |                                    |
+| Batch tasks                  | Using Cloudflare Queues                 | Coming soon                                                                                        |                                    |
+|                              |                                         |                                                                                                    |                                    |
+| **Example Apps**             | Coming soon!                            |                                                                                                    |                                    |
+| -                            |                                         |                                                                                                    |                                    |
 
 <!--
 | Tasks MCP server             |                                         | [Repo](https://github.com/janwilmake/parallel-tasks-mcp)      |                                                             |
