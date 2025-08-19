@@ -159,6 +159,80 @@ Follow this structured format for field-level descriptions:
 
 > Reference: [Specify a Task - Unsupported Keywords](https://docs.parallel.ai/task-api/core-concepts/specify-a-task.md)
 
+## High Confidence Output Pitfalls
+
+### Overly Subjective Properties
+
+**❌ Avoid subjective assessments:**
+
+- `"market_disruption_potential"` - Requires predicting future impact
+- `"most_strategically_significant"` - Subjective valuation of importance
+- `"notable_series_a"` - Vague criteria for what's "notable"
+- `"interesting_pricing_model"` - Undefined success criteria
+
+**✅ Use fact-based alternatives:**
+
+- `"product_category"` and `"target_market_size"`
+- `"largest_acquisition_by_value"` with specific amount
+- `"series_a_rounds_over_10m"` with clear threshold
+- `"freemium_vs_subscription_model"` with defined categories
+
+### Aggregation-Heavy Fields
+
+**❌ Avoid complex aggregations:**
+
+- `"sector_trending"` - Requires analyzing multiple deals to identify patterns
+- `"most_active_vc_firm"` - Needs ranking across many entities
+- `"geographic_hotspot"` - Complex geographic analysis across regions
+
+**✅ Use concrete metrics:**
+
+- `"top_3_sectors_by_funding_amount"` with specific format
+- `"investors_with_3plus_deals_today"` with clear threshold
+- `"funding_by_region"` with predefined regions list
+
+### Interpretation-Based Fields
+
+**❌ Avoid interpretive analysis:**
+
+- `"competitive_response"` - Requires understanding strategic intent
+- `"enforcement_action_severity"` - Subjective assessment of impact
+- `"supply_chain_criticality"` - Complex impact assessment
+
+**✅ Use verifiable data:**
+
+- `"companies_announcing_partnerships"` with official announcements
+- `"fines_over_1m_dollars"` with specific amounts and agencies
+- `"materials_with_shortage_alerts"` from official sources
+
+### Processor Complexity Mismatch
+
+**❌ Common mismatches:**
+
+- Using `core` processor for highly interpretive tasks
+- Expecting `lite` processor to handle 10+ complex fields
+- Using `pro` processor for simple data extraction
+
+**✅ Proper processor selection:**
+
+- `lite`/`base`: 2-5 factual fields, simple data extraction
+- `core`: 5-10 fields with moderate complexity, clear success criteria
+- `pro`/`ultra`: Complex analysis, 10+ fields, interpretive reasoning required
+
+### Format Specification Gaps
+
+**❌ Vague format requirements:**
+
+- `"funding_amount"` without specifying millions/billions
+- `"company_list"` without count or format specification
+- `"recent_events"` without time frame definition
+
+**✅ Explicit format requirements:**
+
+- `"funding_amount_in_millions"` with format: "$X.XM"
+- `"top_5_companies"` with format: "1. CompanyName, 2. CompanyName..."
+- `"events_last_30_days"` with specific date range
+
 ## Processor Selection Guidelines
 
 Choose processors based on task complexity and required reasoning depth:
@@ -171,6 +245,38 @@ Choose processors based on task complexity and required reasoning depth:
 **Deep Research mode**: Use `auto` schema with `pro`+ processors for comprehensive, exploratory research that automatically generates optimal output structures.
 
 > Reference: [Choose a Processor](https://docs.parallel.ai/task-api/core-concepts/choose-a-processor.md) and [Deep Research - Auto Schema](https://docs.parallel.ai/task-api/features/task-deep-research.md)
+
+## Daily Task Optimization
+
+### Time-Sensitive Data Challenges
+
+**❌ Common daily task pitfalls:**
+
+- Expecting real-time data that may not be indexed yet
+- Using overly broad time windows ("recent developments")
+- Requesting predictions based on single-day data
+
+**✅ Daily task best practices:**
+
+- Use specific date ranges: "announced on [YYYY-MM-DD]"
+- Focus on events likely to be officially announced and indexed
+- Request concrete data points rather than trend analysis
+- Include fallback handling: "if no data for today, return 'No events found'"
+
+### Source Availability Considerations
+
+**❌ Unrealistic daily expectations:**
+
+- Assuming all events are immediately published online
+- Expecting comprehensive coverage of private company activities
+- Requesting data that requires insider knowledge
+
+**✅ Realistic daily monitoring:**
+
+- Focus on publicly announced events and filings
+- Target companies and sectors with high media coverage
+- Use official sources: press releases, SEC filings, government announcements
+- Include error handling for data unavailability
 
 ## Size and Performance Limits
 
