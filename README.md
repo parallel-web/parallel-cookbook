@@ -58,7 +58,7 @@ The following examples have been tested with [Claude Sonnet 4](https://www.anthr
 
 You can use this prompt to iteratively get to a better definition of what you want to build, and get the right context for this. Please note that the Python SDK is not included in this quickstart. You can add it if desired, you can also let it generate an ad-hoc client more tailored for your specific use-case. The latter requires less context for the same information and is recommended.
 
-<!-- Note: this openapi llms.txt isnot really needed since docs.parallel.ai already has references to them. The only thing it adds now is the decision logic that i put into the openapi manually-->
+<!-- Note: this openapi llms.txt is not really needed since docs.parallel.ai already has references to them. The only thing it adds now is the decision logic that i put into the openapi manually-->
 
 ```txt path="relevant-context-prompt.txt"
 OpenAPI: @https://parallel.oapis.org/llms.txt
