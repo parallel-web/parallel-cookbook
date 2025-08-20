@@ -111,7 +111,6 @@ Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs tha
 | xytext [soon]           | Making Parallel part of my day to day toolkit |                                                          |                            |
 | Batch tasks                  | Using Cloudflare Queues                 | Coming soon                                                                                        |                                 |
 
-
 Recipes TODO:
 
 Tasks using SSE:
