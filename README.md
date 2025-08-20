@@ -95,14 +95,12 @@ Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs tha
 | Tasks using SSE              |                                          | [Repo](https://github.com/janwilmake/parallel-tasks-sse)                                           | [sse.p0web.com](https://sse.p0web.com)     |
 | Recurring Tasks and Webhooks | Active Monitoring using cronjobs and KV  | [Repo](https://github.com/janwilmake/parallel-daily-insights)                                      | [daily.p0web.com](https://daily.p0web.com) |
 | Tasks using MCP              | X Login, Authorize MCPs, do tasks        | [Repo](https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling) | [mcp.p0web.com](https://mcp.p0web.com)     |
-| Ingest to batch tasks        | Using Parallel Ingest and Task Group API | Coming soon                                                                                        |                                            |
-|                              |                                          |                                                                                                    |                                            |
-| **Example Apps**             |                                          |                                                                                                    |                                            |
-| Based People                 |                                          |                                                                                                    |                                            |
+| Ingest to batch tasks        | Using Parallel Ingest and Task Group API | [Repo](https://github.com/janwilmake/parallel-csv)                                                 | [csv.p0web.com](https://csv.p0web.com)     |
 
 ## Awesome Parallel OSS Examples
 
 - [Parallel Spreadsheet](https://github.com/zahidkhawaja/parallel-spreadsheet) by [@chillzaza\_](https://x.com/chillzaza_/status/1958005876918292941) (Next.js, Typescript)
+- [Based People](https://github.com/janwilmake/basedpeople) by [@janwilmake](https://x.com/janwilmake/status/1956061673833300443) (Cloudflare, Typescript)
 
 ## Contributing
 
