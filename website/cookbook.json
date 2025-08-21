@@ -1,0 +1,88 @@
+{
+  "cookbooks": [
+    {
+      "slug": "parallel-tasks-sse",
+      "popular": true,
+      "featured": false,
+      "title": "Tasks using SSE",
+      "description": "Real-time task execution with Server-Sent Events for live updates and progress tracking",
+      "repoUrl": "https://github.com/janwilmake/parallel-tasks-sse",
+      "websiteUrl": "https://sse.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": null,
+      "tags": ["realtime", "tasks", "sse"]
+    },
+    {
+      "slug": "parallel-daily-insights",
+      "popular": false,
+      "featured": true,
+      "title": "Recurring Tasks and Webhooks",
+      "description": "Active monitoring using cron jobs and KV storage for scheduled tasks and webhook handling",
+      "repoUrl": "https://github.com/janwilmake/parallel-daily-insights",
+      "websiteUrl": "https://daily.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": null,
+      "tags": ["cron", "webhooks", "monitoring"]
+    },
+    {
+      "slug": "universal-mcp-oauth",
+      "popular": false,
+      "featured": true,
+      "title": "Tasks using MCP",
+      "description": "X Login, authorize MCPs, and execute tasks using Model Context Protocol integration",
+      "repoUrl": "https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling",
+      "websiteUrl": "https://mcp.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": null,
+      "tags": ["mcp", "oauth", "tasks"]
+    },
+    {
+      "slug": "parallel-csv",
+      "popular": false,
+      "featured": false,
+      "title": "Ingest to batch tasks",
+      "description": "Using Parallel Ingest and Task Group API for efficient CSV processing and batch operations",
+      "repoUrl": "https://github.com/janwilmake/parallel-csv",
+      "websiteUrl": "https://csv.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": null,
+      "tags": ["ingest", "batch", "csv"]
+    },
+    {
+      "slug": "web-search-agent",
+      "popular": false,
+      "featured": false,
+      "title": "Web Search Agent",
+      "description": "Using Search MCP with an intelligent agent for web search and information retrieval",
+      "repoUrl": "https://github.com/janwilmake/web-search-agent",
+      "websiteUrl": "https://agent.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": null,
+      "tags": ["agent", "search", "mcp"]
+    },
+    {
+      "slug": "parallel-spreadsheet",
+      "popular": false,
+      "featured": false,
+      "title": "Parallel Spreadsheet",
+      "description": "Full-featured spreadsheet application built with Next.js and TypeScript for collaborative data editing",
+      "repoUrl": "https://github.com/zahidkhawaja/parallel-spreadsheet",
+      "websiteUrl": "https://github.com/zahidkhawaja/parallel-spreadsheet",
+      "creators": ["zahidkhawaja"],
+      "imageUrl": null,
+      "tags": ["nextjs", "typescript", "spreadsheet"]
+    },
+    {
+      "slug": "basedpeople",
+      "popular": false,
+      "featured": true,
+      "title": "Based People",
+      "description": "Community-driven platform built with Cloudflare Workers and TypeScript for connecting like-minded individuals",
+      "repoUrl": "https://github.com/janwilmake/basedpeople",
+      "websiteUrl": "https://basedpeople.com",
+      "creators": ["janwilmake"],
+      "imageUrl": null,
+      "tags": ["community", "workers", "typescript"]
+    }
+  ]
+}

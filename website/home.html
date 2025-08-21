@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallel Cookbook - Build powerful applications with Parallel APIs</title>
+    <meta name="description"
+        content="Full-stack app recipes and examples for the Parallel Web. Build powerful applications with Parallel APIs.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('/assets/FTSystemMono-Regular.woff2') format('woff2'),
+                url('/assets/FTSystemMono-Regular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('/assets/FTSystemMono-Medium.woff2') format('woff2'),
+                url('/assets/FTSystemMono-Medium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('/assets/Gerstner-ProgrammRegular.woff2') format('woff2'),
+                url('/assets/Gerstner-ProgrammRegular.woff') format('woff');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('/assets/Gerstner-ProgrammMedium.woff2') format('woff2'),
+                url('/assets/Gerstner-ProgrammMedium.woff') format('woff');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --color-off-white: #fcfcfa;
+            --color-index-black: #1d1b16;
+            --color-neural: #d8d0bf;
+            --color-signal: #fb631b;
+
+            --font-mono: 'FT System Mono', 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+            --font-programm: 'Gerstner Programm', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: var(--color-index-black);
+                --color-text: var(--color-off-white);
+                --color-text-muted: var(--color-neural);
+                --color-border: #333;
+                --color-card-bg: #252520;
+                --color-nav-bg: rgba(29, 27, 22, 0.8);
+                --glass-blur: blur(20px);
+                --glass-opacity: 0.8;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --color-bg: var(--color-off-white);
+                --color-text: var(--color-index-black);
+                --color-text-muted: #666;
+                --color-border: var(--color-neural);
+                --color-card-bg: #fff;
+                --color-nav-bg: rgba(252, 252, 250, 0.8);
+                --glass-blur: blur(20px);
+                --glass-opacity: 0.8;
+            }
+        }
+
+        .mobile-card {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .desktop-table {
+                display: none;
+            }
+
+            .mobile-card {
+                display: block;
+            }
+        }
+
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        mono: ['var(--font-mono)'],
+                        programm: ['var(--font-programm)'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-programm bg-[var(--color-bg)] text-[var(--color-text)] leading-relaxed overflow-x-hidden pt-20">
+    <!-- Sticky Navigation -->
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-nav-bg)] backdrop-blur-[var(--glass-blur)] border-b border-[var(--color-border)] py-2 transition-all">
+        <div class="max-w-6xl mx-auto px-5 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-3 no-underline">
+                <img src="/assets/dark-parallel-logo-270.svg" alt="Parallel"
+                    class="h-[26px] w-auto dark:invert dark:brightness-110">
+                <span class="font-programm text-2xl font-medium text-[var(--color-text)]">Cookbook</span>
+            </a>
+            <div class="flex items-center gap-4">
+                <a href="https://docs.parallel.ai" target="_blank" rel="noopener"
+                    class="flex items-center gap-2 px-5 py-3 border border-[var(--color-border)] rounded-lg font-mono text-sm text-[var(--color-text)] transition-all bg-white/5 backdrop-blur-md hover:bg-[var(--color-text)] hover:text-[var(--color-bg)] hover:border-[var(--color-text)] hover:-translate-y-px no-underline">
+                    <span>Docs</span>
+                    <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" />
+                    </svg>
+                </a>
+                <a href="https://github.com/parallel-web/parallel-cookbook" target="_blank" rel="noopener"
+                    class="flex items-center gap-2 px-5 py-3 border border-[var(--color-border)] rounded-lg font-mono text-sm text-[var(--color-text)] transition-all bg-white/5 backdrop-blur-md hover:bg-[var(--color-text)] hover:text-[var(--color-bg)] hover:border-[var(--color-text)] hover:-translate-y-px no-underline">
+                    <span>GitHub</span>
+                    <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3M16 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <header
+        class="py-32 pb-24 text-center relative bg-gradient-to-br from-[var(--color-bg)] via-[rgba(252,252,250,0.05)] to-[var(--color-bg)] dark:bg-gradient-to-br dark:from-[var(--color-bg)] dark:via-[rgba(29,27,22,0.8)] dark:to-[var(--color-bg)]">
+        <div class="max-w-6xl mx-auto px-5">
+            <h1
+                class="font-programm text-[clamp(3rem,8vw,6rem)] font-medium text-transparent bg-clip-text bg-[var(--color-text)] relative -tracking-[0.02em] shadow-[0_0_40px_rgba(255,255,255,0.1)] before:content-[''] before:absolute before:-top-5 before:-left-5 before:-right-5 before:-bottom-5 before:bg-gradient-to-br before:from-[rgba(255,255,255,0.1)] before:to-[rgba(255,255,255,0.05)] before:rounded-[20px] before:backdrop-blur-md before:border before:border-[rgba(255,255,255,0.1)] before:z-[-1] before:opacity-60 dark:before:bg-gradient-to-br dark:before:from-[rgba(255,255,255,0.05)] dark:before:to-[rgba(255,255,255,0.02)] dark:before:border-[rgba(255,255,255,0.05)]">
+                Get Cooking</h1>
+        </div>
+    </header>
+
+    <section class="py-12 border-b border-[var(--color-border)]" id="featuredSection">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="font-mono text-2xl font-medium mb-8 text-center">Featured Cookbooks</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="featuredCards">
+                <!-- Featured cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 border-b border-[var(--color-border)]" id="popularSection">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="font-mono text-2xl font-medium mb-8 text-center">Popular Cookbooks</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="popularCards">
+                <!-- Popular cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="max-w-6xl mx-auto px-5">
+            <h2 class="font-mono text-2xl font-medium mb-8 text-center">All Cookbooks</h2>
+            <div class="mb-6 text-center">
+                <input type="text"
+                    class="filter-input font-mono px-4 py-3 border border-[var(--color-border)] rounded-md bg-[var(--color-card-bg)] text-[var(--color-text)] text-base w-full max-w-md placeholder-[var(--color-text-muted)]"
+                    id="searchInput" placeholder="Search cookbooks...">
+            </div>
+            <div class="mb-6 text-center">
+                <div class="flex flex-wrap gap-3 justify-center" id="topicTags">
+                    <!-- Topics will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Desktop Table View -->
+            <div
+                class="desktop-table bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl overflow-hidden">
+                <div
+                    class="grid grid-cols-[60px_1fr_200px_120px_150px] gap-4 p-4 font-mono font-medium text-sm text-[var(--color-text)] border-b border-[var(--color-border)] bg-[var(--color-border)]">
+                    <div></div>
+                    <div>Name & Description</div>
+                    <div>Tags</div>
+                    <div>Authors</div>
+                    <div>Links</div>
+                </div>
+                <div id="allCookbooks">
+                    <!-- All cookbooks will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Mobile Card View -->
+            <div class="mobile-card" id="mobileCookbooks">
+                <!-- Mobile cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Data will be injected here by the worker
+    </script>
+
+    <script>
+        // Wait for DOM to be ready
+        document.addEventListener('DOMContentLoaded', function () {
+            if (typeof window.data === 'undefined') {
+                console.error('No data found');
+                return;
+            }
+
+            const cookbooks = window.data.cookbooks;
+            let activeFilters = [];
+
+            // Get unique tags - just all unique tags from json, no priority
+            const allTags = [...new Set(cookbooks.flatMap(cookbook => cookbook.tags))]
+                .sort((a, b) => a.localeCompare(b));
+
+            // Function to generate deterministic color from string
+            function stringToColor(str) {
+                let hash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    hash = str.charCodeAt(i) + ((hash << 5) - hash);
+                }
+
+                // Generate HSL color with good saturation and lightness
+                const hue = Math.abs(hash) % 360;
+                const saturation = 65 + (Math.abs(hash >> 8) % 20); // 65-85%
+                const lightness = 45 + (Math.abs(hash >> 16) % 20); // 45-65%
+
+                return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+            }
+
+            // Function to get top tags (limit to 1-3)
+            function getTopTags(tags, limit = 3) {
+                return tags.slice(0, limit);
+            }
+
+            // Populate topic tags
+            const topicTags = document.getElementById('topicTags');
+            allTags.forEach(tag => {
+                const tagElement = document.createElement('span');
+                tagElement.className = 'bg-[var(--color-card-bg)] border border-[var(--color-border)] px-4 py-2 rounded-full font-mono text-sm cursor-pointer transition-all text-[var(--color-text)] hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)]';
+                tagElement.textContent = tag;
+                tagElement.addEventListener('click', () => toggleFilter(tag));
+                topicTags.appendChild(tagElement);
+            });
+
+            // Populate featured cookbooks
+            const featuredCookbooks = cookbooks.filter(cookbook => cookbook.featured);
+            if (featuredCookbooks.length === 0) {
+                document.getElementById("featuredSection").remove()
+            } else {
+                populateCards('featuredCards', featuredCookbooks);
+            }
+
+            // Populate popular cookbooks
+            const popularCookbooks = cookbooks.filter(cookbook => cookbook.popular && !cookbook.featured);
+            if (popularCookbooks.length === 0) {
+                document.getElementById("popularSection").remove()
+            } else {
+                populateCards('popularCards', popularCookbooks);
+            }
+
+            // Populate all cookbooks (both desktop table and mobile cards)
+            populateTable('allCookbooks', cookbooks);
+            populateMobileCards('mobileCookbooks', cookbooks);
+
+            // Search functionality
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', filterCookbooks);
+
+            function populateCards(containerId, cookbookList) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                container.innerHTML = '';
+                cookbookList.forEach(cookbook => {
+                    const card = createCard(cookbook);
+                    container.appendChild(card);
+                });
+            }
+
+            function createCard(cookbook) {
+                const card = document.createElement('div');
+                card.className = 'group';
+
+                const hasImage = cookbook.imageUrl && cookbook.imageUrl !== '/assets/placeholder.png';
+                const imageContent = hasImage ? `<img src="${cookbook.imageUrl}" alt="${cookbook.title}" class="w-full h-full object-cover">` : cookbook.title;
+                const bgColor = hasImage ? 'transparent' : `linear-gradient(135deg, ${stringToColor(cookbook.repoUrl)} 0%, ${stringToColor(cookbook.repoUrl + 'salt')} 100%)`;
+
+                const descriptionHtml = !hasImage ? `<p class="text-white/80 text-sm mt-2">${cookbook.description}</p>` : '';
+
+                card.innerHTML = `
+                    <div class="relative rounded-lg overflow-hidden aspect-[16/9]">
+                        <a href="${cookbook.websiteUrl}" target="_blank" rel="noopener" class="block w-full h-full">
+                            <div class="w-full h-full flex items-center justify-center text-white font-mono font-medium text-base text-center p-4" style="background: ${bgColor};">
+                                ${imageContent}
+                            </div>
+                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4">
+                                <div>
+                                    <h3 class="text-white font-mono text-lg font-medium">${cookbook.title}</h3>
+                                    ${descriptionHtml}
+                                </div>
+                                <div class="flex gap-2">
+                                    <a href="${cookbook.repoUrl}" class="flex-1 bg-white text-[var(--color-index-black)] px-4 py-2 rounded-md font-mono text-sm text-center no-underline hover:bg-[var(--color-signal)] hover:text-white" target="_blank" rel="noopener" onclick="event.stopPropagation();">Code</a>
+                                    <a href="${cookbook.websiteUrl}" class="flex-1 bg-[var(--color-signal)] text-white px-4 py-2 rounded-md font-mono text-sm text-center no-underline hover:opacity-80" target="_blank" rel="noopener" onclick="event.stopPropagation();">Demo</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mt-2">
+                        <div class="text-sm font-medium text-[var(--color-text)] flex items-center gap-2 flex-wrap">
+                            <span>${cookbook.title}</span>
+                            ${cookbook.creators.map(creator => `<span class="text-[var(--color-text-muted)]">@${creator}</span>`).join(' ')}
+                        </div>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            ${getTopTags(cookbook.tags, 3).map(tag => `<span class="px-2 py-1 text-xs bg-[var(--color-border)] rounded text-[var(--color-text)] font-mono">${tag}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+                return card;
+            }
+
+            function populateTable(containerId, cookbookList) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                container.innerHTML = '';
+                cookbookList.forEach(cookbook => {
+                    const item = createTableRow(cookbook);
+                    container.appendChild(item);
+                });
+            }
+
+            function populateMobileCards(containerId, cookbookList) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
+
+                container.innerHTML = '';
+                cookbookList.forEach(cookbook => {
+                    const card = createMobileCard(cookbook);
+                    container.appendChild(card);
+                });
+            }
+
+            function createTableRow(cookbook) {
+                const item = document.createElement('div');
+                item.className = 'grid grid-cols-[60px_1fr_200px_120px_150px] gap-4 p-4 border-b border-[var(--color-border)] transition-all items-center hover:bg-[var(--color-card-bg)] hover:brightness-105 last:border-b-0';
+                item.dataset.tags = cookbook.tags.join(',');
+                item.dataset.title = cookbook.title.toLowerCase();
+                item.dataset.description = cookbook.description.toLowerCase();
+
+                const badges = [];
+                if (cookbook.popular) badges.push('<span class="px-1 py-0.5 rounded text-xs font-mono font-medium bg-[var(--color-signal)] text-white">Popular</span>');
+                if (cookbook.featured) badges.push('<span class="px-1 py-0.5 rounded text-xs font-mono font-medium bg-[var(--color-neural)] text-[var(--color-index-black)]">Featured</span>');
+
+                const creators = cookbook.creators.map(creator =>
+                    `<img src="https://github.com/${creator}.png" alt="${creator}" class="w-5 h-5 rounded-full border border-[var(--color-border)]">`
+                ).join('');
+
+                const topTags = getTopTags(cookbook.tags, 2);
+                const tags = topTags.map(tag =>
+                    `<span class="px-1 py-0.5 rounded text-xs bg-[var(--color-border)] text-[var(--color-text)] font-mono">${tag}</span>`
+                ).join('');
+
+                const hasImage = cookbook.imageUrl && cookbook.imageUrl !== '/assets/placeholder.png';
+                const imageContent = hasImage ? `<img src="${cookbook.imageUrl}" alt="${cookbook.title}" class="w-full h-full object-cover rounded-lg">` : '';
+                const bgColor = hasImage ? 'transparent' : `linear-gradient(135deg, ${stringToColor(cookbook.repoUrl)} 0%, ${stringToColor(cookbook.repoUrl + 'salt')} 100%)`;
+
+                item.innerHTML = `
+                    <div class="w-12 h-12 rounded-lg flex items-center justify-center text-white font-mono font-medium text-xs overflow-hidden" style="background: ${bgColor};">
+                        ${imageContent || cookbook.title.charAt(0).toUpperCase()}
+                    </div>
+                    <div class="min-w-0">
+                        <div class="font-mono text-base font-medium text-[var(--color-text)] mb-1 flex items-center gap-2">
+                            ${cookbook.title}
+                            ${badges.join(' ')}
+                        </div>
+                        <div class="text-[var(--color-text-muted)] text-sm line-clamp-2">${cookbook.description}</div>
+                    </div>
+                    <div class="flex flex-wrap gap-1">${tags}</div>
+                    <div class="flex gap-1 items-center flex-wrap">${creators}</div>
+                    <div class="flex flex-row gap-2">
+                        <a href="${cookbook.repoUrl}" class="px-3 py-1.5 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)] whitespace-nowrap" target="_blank" rel="noopener">Code</a>
+                        <a href="${cookbook.websiteUrl}" class="px-3 py-1.5 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)] whitespace-nowrap" target="_blank" rel="noopener">Demo</a>
+                    </div>
+                `;
+                return item;
+            }
+
+            function createMobileCard(cookbook) {
+                const card = document.createElement('div');
+                card.className = 'bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-lg p-4 mb-4 hover:brightness-105 transition-all';
+                card.dataset.tags = cookbook.tags.join(',');
+                card.dataset.title = cookbook.title.toLowerCase();
+                card.dataset.description = cookbook.description.toLowerCase();
+
+                const badges = [];
+                if (cookbook.popular) badges.push('<span class="px-2 py-1 rounded text-xs font-mono font-medium bg-[var(--color-signal)] text-white">Popular</span>');
+                if (cookbook.featured) badges.push('<span class="px-2 py-1 rounded text-xs font-mono font-medium bg-[var(--color-neural)] text-[var(--color-index-black)]">Featured</span>');
+
+                const creators = cookbook.creators.map(creator =>
+                    `<img src="https://github.com/${creator}.png" alt="${creator}" class="w-6 h-6 rounded-full border border-[var(--color-border)]" title="@${creator}">`
+                ).join('');
+
+                const tags = cookbook.tags.map(tag =>
+                    `<span class="px-2 py-1 rounded text-xs bg-[var(--color-border)] text-[var(--color-text)] font-mono">${tag}</span>`
+                ).join('');
+
+                const hasImage = cookbook.imageUrl && cookbook.imageUrl !== '/assets/placeholder.png';
+                const imageContent = hasImage ? `<img src="${cookbook.imageUrl}" alt="${cookbook.title}" class="w-full h-full object-cover rounded-lg">` : '';
+                const bgColor = hasImage ? 'transparent' : `linear-gradient(135deg, ${stringToColor(cookbook.repoUrl)} 0%, ${stringToColor(cookbook.repoUrl + 'salt')} 100%)`;
+
+                card.innerHTML = `
+                    <div class="flex items-start gap-3">
+                        <div class="w-16 h-16 rounded-lg flex items-center justify-center text-white font-mono font-medium text-sm overflow-hidden flex-shrink-0" style="background: ${bgColor};">
+                            ${imageContent || cookbook.title.charAt(0).toUpperCase()}
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex items-center gap-2 flex-wrap mb-2">
+                                <h3 class="font-mono text-lg font-medium text-[var(--color-text)]">${cookbook.title}</h3>
+                                ${badges.join(' ')}
+                            </div>
+                            <p class="text-[var(--color-text-muted)] text-sm mb-3 line-clamp-2">${cookbook.description}</p>
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="text-xs text-[var(--color-text-muted)] font-mono">By:</span>
+                                <div class="flex gap-1 items-center">${creators}</div>
+                            </div>
+                            <div class="flex flex-wrap gap-1 mb-3">${tags}</div>
+                            <div class="flex gap-2">
+                                <a href="${cookbook.repoUrl}" class="flex-1 px-3 py-2 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)]" target="_blank" rel="noopener">Code</a>
+                                <a href="${cookbook.websiteUrl}" class="flex-1 px-3 py-2 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)]" target="_blank" rel="noopener">Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                return card;
+            }
+
+            function toggleFilter(tag) {
+                const tagElements = document.querySelectorAll('#topicTags span');
+                const targetElement = Array.from(tagElements).find(el => el.textContent === tag);
+
+                if (activeFilters.includes(tag)) {
+                    activeFilters = activeFilters.filter(f => f !== tag);
+                    targetElement.classList.remove('bg-[var(--color-signal)]', 'text-white', 'border-[var(--color-signal)]');
+                } else {
+                    activeFilters.push(tag);
+                    targetElement.classList.add('bg-[var(--color-signal)]', 'text-white', 'border-[var(--color-signal)]');
+                }
+
+                filterCookbooks();
+            }
+
+            function filterCookbooks() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const desktopItems = document.querySelectorAll('#allCookbooks > div');
+                const mobileItems = document.querySelectorAll('#mobileCookbooks > div');
+
+                const allItems = [...desktopItems, ...mobileItems];
+
+                allItems.forEach(item => {
+                    const tags = item.dataset.tags.split(',');
+                    const title = item.dataset.title;
+                    const description = item.dataset.description;
+
+                    const matchesSearch = !searchTerm ||
+                        title.includes(searchTerm) ||
+                        description.includes(searchTerm) ||
+                        tags.some(tag => tag.toLowerCase().includes(searchTerm));
+
+                    // Changed logic: show items that have ANY of the active filters (OR instead of AND)
+                    const matchesFilters = activeFilters.length === 0 ||
+                        activeFilters.some(filter => tags.includes(filter));
+
+                    if (matchesSearch && matchesFilters) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

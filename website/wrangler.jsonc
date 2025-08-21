@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "parallel-cookbook",
+  "main": "worker.ts",
+  "compatibility_date": "2025-07-14",
+  "assets": { "directory": "./public" },
+  "observability": { "logs": { "enabled": true } },
+  "routes": [
+    { "custom_domain": true, "pattern": "p0web.com" },
+    { "custom_domain": true, "pattern": "www.p0web.com" }
+  ]
+}

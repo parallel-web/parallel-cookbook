@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cookbook Schema",
+  "type": "object",
+  "properties": {
+    "cookbooks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "slug": {
+            "type": "string",
+            "description": "Unique identifier for the cookbook"
+          },
+          "popular": {
+            "type": "boolean",
+            "description": "Whether this cookbook is marked as popular"
+          },
+          "featured": {
+            "type": "boolean",
+            "description": "Whether this cookbook is featured prominently"
+          },
+          "title": {
+            "type": "string",
+            "description": "Display title of the cookbook"
+          },
+          "description": {
+            "type": "string",
+            "description": "Short description of what the cookbook does"
+          },
+          "repoUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "GitHub repository URL"
+          },
+          "websiteUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "Live demo website URL"
+          },
+          "creators": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "imageUrl": {
+            "type": "string",
+            "format": "uri",
+            "description": "Preview image URL for the cookbook"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Tags categorizing the cookbook"
+          }
+        },
+        "required": [
+          "slug",
+          "popular",
+          "featured",
+          "title",
+          "description",
+          "repoUrl",
+          "websiteUrl",
+          "creators",
+          "imageUrl",
+          "tags"
+        ]
+      }
+    }
+  },
+  "required": ["cookbooks"]
+}
