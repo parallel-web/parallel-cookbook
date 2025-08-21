@@ -6,7 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallel Cookbook - Build powerful applications with Parallel APIs</title>
     <meta name="description"
-        content="Full-stack app recipes and examples for the Parallel Web. Build powerful applications with Parallel APIs.">
+        content="Full-stack app recipes and examples for the Parallel Web. Build powerful applications with Parallel APIs." />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://p0web.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Parallel Cookbook - Build powerful applications with Parallel APIs" />
+    <meta property="og:description"
+        content="Full-stack app recipes and examples for the Parallel Web. Build powerful applications with Parallel APIs." />
+    <meta property="og:image" content="https://quickog.com/screenshot/p0web.com" />
+    <meta property="og:image:alt"
+        content="Full-stack app recipes and examples for the Parallel Web. Build powerful applications with Parallel APIs." />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="p0web.com" />
+    <meta property="twitter:url" content="https://p0web.com" />
+    <meta name="twitter:title" content="Parallel Cookbook - Build powerful applications with Parallel APIs" />
+    <meta name="twitter:description"
+        content="Full-stack app recipes and examples for the Parallel Web. Build powerful applications with Parallel APIs." />
+    <meta name="twitter:image" content="https://quickog.com/screenshot/p0web.com" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,6 +118,10 @@
             .mobile-card {
                 display: block;
             }
+
+            .mobile-nav-hidden {
+                display: none !important;
+            }
         }
 
         .line-clamp-2 {
@@ -134,14 +160,14 @@
             </a>
             <div class="flex items-center gap-4">
                 <a href="https://docs.parallel.ai" target="_blank" rel="noopener"
-                    class="flex items-center gap-2 px-5 py-3 border border-[var(--color-border)] rounded-lg font-mono text-sm text-[var(--color-text)] transition-all bg-white/5 backdrop-blur-md hover:bg-[var(--color-text)] hover:text-[var(--color-bg)] hover:border-[var(--color-text)] hover:-translate-y-px no-underline">
+                    class="mobile-nav-hidden flex items-center gap-2 px-5 py-3 border border-[var(--color-border)] rounded-lg font-mono text-sm text-[var(--color-text)] transition-all bg-white/5 backdrop-blur-md hover:bg-[var(--color-text)] hover:text-[var(--color-bg)] hover:border-[var(--color-text)] hover:-translate-y-px no-underline">
                     <span>Docs</span>
                     <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
                         <path d="M7 17L17 7M17 7H7M17 7V17" />
                     </svg>
                 </a>
                 <a href="https://github.com/parallel-web/parallel-cookbook" target="_blank" rel="noopener"
-                    class="flex items-center gap-2 px-5 py-3 border border-[var(--color-border)] rounded-lg font-mono text-sm text-[var(--color-text)] transition-all bg-white/5 backdrop-blur-md hover:bg-[var(--color-text)] hover:text-[var(--color-bg)] hover:border-[var(--color-text)] hover:-translate-y-px no-underline">
+                    class="mobile-nav-hidden flex items-center gap-2 px-5 py-3 border border-[var(--color-border)] rounded-lg font-mono text-sm text-[var(--color-text)] transition-all bg-white/5 backdrop-blur-md hover:bg-[var(--color-text)] hover:text-[var(--color-bg)] hover:border-[var(--color-text)] hover:-translate-y-px no-underline">
                     <span>GitHub</span>
                     <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
                         <path
@@ -156,7 +182,7 @@
         class="py-32 pb-24 text-center relative bg-gradient-to-br from-[var(--color-bg)] via-[rgba(252,252,250,0.05)] to-[var(--color-bg)] dark:bg-gradient-to-br dark:from-[var(--color-bg)] dark:via-[rgba(29,27,22,0.8)] dark:to-[var(--color-bg)]">
         <div class="max-w-6xl mx-auto px-5">
             <h1
-                class="font-programm text-[clamp(3rem,8vw,6rem)] font-medium text-transparent bg-clip-text bg-[var(--color-text)] relative -tracking-[0.02em] shadow-[0_0_40px_rgba(255,255,255,0.1)] before:content-[''] before:absolute before:-top-5 before:-left-5 before:-right-5 before:-bottom-5 before:bg-gradient-to-br before:from-[rgba(255,255,255,0.1)] before:to-[rgba(255,255,255,0.05)] before:rounded-[20px] before:backdrop-blur-md before:border before:border-[rgba(255,255,255,0.1)] before:z-[-1] before:opacity-60 dark:before:bg-gradient-to-br dark:before:from-[rgba(255,255,255,0.05)] dark:before:to-[rgba(255,255,255,0.02)] dark:before:border-[rgba(255,255,255,0.05)]">
+                class="font-programm text-[clamp(3rem,8vw,6rem)] font-medium text-transparent bg-clip-text bg-[var(--color-text)] relative -tracking-[0.02em] before:content-[''] before:absolute before:-top-5 before:-left-5 before:-right-5 before:-bottom-5 before:bg-gradient-to-br before:from-[rgba(255,255,255,0.1)] before:to-[rgba(255,255,255,0.05)] before:rounded-[20px] before:backdrop-blur-md before:border before:border-[rgba(255,255,255,0.1)] before:z-[-1] before:opacity-60 dark:before:bg-gradient-to-br dark:before:from-[rgba(255,255,255,0.05)] dark:before:to-[rgba(255,255,255,0.02)] dark:before:border-[rgba(255,255,255,0.05)]">
                 Get Cooking</h1>
         </div>
     </header>
@@ -215,6 +241,49 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-[var(--color-border)] py-12 mt-24 bg-[var(--color-card-bg)]">
+        <div class="max-w-6xl mx-auto px-5 text-center">
+            <div class="flex items-center justify-center gap-3 mb-6">
+                <img src="/assets/dark-parallel-logo-270.svg" alt="Parallel"
+                    class="h-[20px] w-auto dark:invert dark:brightness-110">
+                <span class="font-programm text-lg font-medium text-[var(--color-text)]">Cookbook</span>
+            </div>
+            <p class="text-[var(--color-text-muted)] text-sm mb-6 font-mono">
+                Full-stack app recipes and examples for the Parallel Web
+            </p>
+            <div class="flex items-center justify-center gap-6">
+                <a href="https://docs.parallel.ai" target="_blank" rel="noopener"
+                    class="flex items-center gap-2 text-[var(--color-text)] hover:text-[var(--color-signal)] transition-colors no-underline font-mono text-sm">
+                    <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14,2 14,8 20,8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                        <polyline points="10,9 9,9 8,9" />
+                    </svg>
+                    <span>Docs</span>
+                </a>
+                <a href="https://github.com/parallel-web/parallel-cookbook" target="_blank" rel="noopener"
+                    class="flex items-center gap-2 text-[var(--color-text)] hover:text-[var(--color-signal)] transition-colors no-underline font-mono text-sm">
+                    <svg class="w-4 h-4 stroke-current stroke-2 fill-none" viewBox="0 0 24 24">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3M16 22v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                    </svg>
+                    <span>GitHub</span>
+                </a>
+                <a href="https://x.com/p0" target="_blank" rel="noopener"
+                    class="flex items-center gap-2 text-[var(--color-text)] hover:text-[var(--color-signal)] transition-colors no-underline font-mono text-sm">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                    <span>Twitter</span>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Data will be injected here by the worker
