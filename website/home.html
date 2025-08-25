@@ -223,7 +223,7 @@
             <div
                 class="desktop-table bg-[var(--color-card-bg)] border border-[var(--color-border)] rounded-xl overflow-hidden">
                 <div
-                    class="grid grid-cols-[60px_1fr_200px_120px_150px] gap-4 p-4 font-mono font-medium text-sm text-[var(--color-text)] border-b border-[var(--color-border)] bg-[var(--color-border)]">
+                    class="grid grid-cols-[100px_1fr_180px_120px_150px] gap-4 p-4 font-mono font-medium text-sm text-[var(--color-text)] border-b border-[var(--color-border)] bg-[var(--color-border)]">
                     <div></div>
                     <div>Name & Description</div>
                     <div>Tags</div>
@@ -373,19 +373,18 @@
                 const card = document.createElement('div');
                 card.className = 'group';
 
-                const hasImage = cookbook.imageUrl && cookbook.imageUrl !== '/assets/placeholder.png';
+                const hasImage = !!cookbook.imageUrl
                 const imageContent = hasImage ? `<img src="${cookbook.imageUrl}" alt="${cookbook.title}" class="w-full h-full object-cover">` : cookbook.title;
                 const bgColor = hasImage ? 'transparent' : `linear-gradient(135deg, ${stringToColor(cookbook.repoUrl)} 0%, ${stringToColor(cookbook.repoUrl + 'salt')} 100%)`;
-
-                const descriptionHtml = !hasImage ? `<p class="text-white/80 text-sm mt-2">${cookbook.description}</p>` : '';
+                const descriptionHtml = `<p class="text-white/80 text-sm mt-2">${cookbook.description}</p>`
 
                 card.innerHTML = `
                     <div class="relative rounded-lg overflow-hidden aspect-[16/9]">
-                        <a href="${cookbook.websiteUrl}" target="_blank" rel="noopener" class="block w-full h-full">
-                            <div class="w-full h-full flex items-center justify-center text-white font-mono font-medium text-base text-center p-4" style="background: ${bgColor};">
+                        <a href="${cookbook.repoUrl}" target="_blank" rel="noopener" class="block w-full h-full">
+                            <div class="w-full h-full flex items-center justify-center text-white font-mono font-medium text-base text-center group-hover:blur-sm" style="background: ${bgColor}">
                                 ${imageContent}
                             </div>
-                            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4">
+                            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4">
                                 <div>
                                     <h3 class="text-white font-mono text-lg font-medium">${cookbook.title}</h3>
                                     ${descriptionHtml}
@@ -434,7 +433,7 @@
 
             function createTableRow(cookbook) {
                 const item = document.createElement('div');
-                item.className = 'grid grid-cols-[60px_1fr_200px_120px_150px] gap-4 p-4 border-b border-[var(--color-border)] transition-all items-center hover:bg-[var(--color-card-bg)] hover:brightness-105 last:border-b-0';
+                item.className = 'grid grid-cols-[100px_1fr_180px_120px_150px] gap-4 p-4 border-b border-[var(--color-border)] transition-all items-center hover:bg-[var(--color-card-bg)] hover:brightness-105 last:border-b-0';
                 item.dataset.tags = cookbook.tags.join(',');
                 item.dataset.title = cookbook.title.toLowerCase();
                 item.dataset.description = cookbook.description.toLowerCase();
@@ -457,7 +456,7 @@
                 const bgColor = hasImage ? 'transparent' : `linear-gradient(135deg, ${stringToColor(cookbook.repoUrl)} 0%, ${stringToColor(cookbook.repoUrl + 'salt')} 100%)`;
 
                 item.innerHTML = `
-                    <div class="w-12 h-12 rounded-lg flex items-center justify-center text-white font-mono font-medium text-xs overflow-hidden" style="background: ${bgColor};">
+                    <div class="w-20 h-12 rounded-lg flex items-center justify-center text-white font-mono font-medium text-xs overflow-hidden" style="background: ${bgColor};">
                         ${imageContent || cookbook.title.charAt(0).toUpperCase()}
                     </div>
                     <div class="min-w-0">

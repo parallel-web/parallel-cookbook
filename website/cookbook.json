@@ -1,41 +1,5 @@
 {
-  "cookbooks": [
-    {
-      "slug": "parallel-tasks-sse",
-      "popular": true,
-      "featured": false,
-      "title": "Tasks using SSE",
-      "description": "Real-time task execution with Server-Sent Events for live updates and progress tracking",
-      "repoUrl": "https://github.com/janwilmake/parallel-tasks-sse",
-      "websiteUrl": "https://sse.p0web.com",
-      "creators": ["janwilmake"],
-      "imageUrl": null,
-      "tags": ["realtime", "tasks", "sse"]
-    },
-    {
-      "slug": "parallel-daily-insights",
-      "popular": false,
-      "featured": true,
-      "title": "Recurring Tasks and Webhooks",
-      "description": "Active monitoring using cron jobs and KV storage for scheduled tasks and webhook handling",
-      "repoUrl": "https://github.com/janwilmake/parallel-daily-insights",
-      "websiteUrl": "https://daily.p0web.com",
-      "creators": ["janwilmake"],
-      "imageUrl": null,
-      "tags": ["cron", "webhooks", "monitoring"]
-    },
-    {
-      "slug": "universal-mcp-oauth",
-      "popular": false,
-      "featured": true,
-      "title": "Tasks using MCP",
-      "description": "X Login, authorize MCPs, and execute tasks using Model Context Protocol integration",
-      "repoUrl": "https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling",
-      "websiteUrl": "https://mcp.p0web.com",
-      "creators": ["janwilmake"],
-      "imageUrl": null,
-      "tags": ["mcp", "oauth", "tasks"]
-    },
+  "drafts": [
     {
       "slug": "parallel-csv",
       "popular": false,
@@ -59,7 +23,47 @@
       "creators": ["janwilmake"],
       "imageUrl": null,
       "tags": ["agent", "search", "mcp"]
+    }
+  ],
+
+  "cookbooks": [
+    {
+      "slug": "parallel-tasks-sse",
+      "popular": false,
+      "featured": true,
+      "title": "Tasks using SSE",
+      "description": "Real-time task execution with Server-Sent Events for live updates and progress tracking",
+      "repoUrl": "https://github.com/janwilmake/parallel-tasks-sse",
+      "websiteUrl": "https://sse.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": "http://svg.quickog.com/https://sse.p0web.com/og.svg",
+      "tags": ["realtime", "tasks", "sse"]
     },
+    {
+      "slug": "parallel-daily-insights",
+      "popular": false,
+      "featured": true,
+      "title": "Recurring Tasks and Webhooks",
+      "description": "Active monitoring using cron jobs and KV storage for scheduled tasks and webhook handling",
+      "repoUrl": "https://github.com/janwilmake/parallel-daily-insights",
+      "websiteUrl": "https://daily.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": "http://svg.quickog.com/https://daily.p0web.com/og.svg",
+      "tags": ["cron", "webhooks", "monitoring"]
+    },
+    {
+      "slug": "universal-mcp-oauth",
+      "popular": false,
+      "featured": true,
+      "title": "Tasks using MCP",
+      "description": "X Login, authorize MCPs, and execute tasks using Model Context Protocol integration",
+      "repoUrl": "https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling",
+      "websiteUrl": "https://mcp.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": "http://svg.quickog.com/https://mcp.p0web.com/og.svg",
+      "tags": ["mcp", "oauth", "tasks"]
+    },
+
     {
       "slug": "parallel-spreadsheet",
       "popular": false,
@@ -75,7 +79,7 @@
     {
       "slug": "basedpeople",
       "popular": false,
-      "featured": true,
+      "featured": false,
       "title": "Based People",
       "description": "Never miss what tech leaders actually say",
       "repoUrl": "https://github.com/janwilmake/basedpeople",
