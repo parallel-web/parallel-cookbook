@@ -16,7 +16,6 @@ Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs tha
 
 | Title                           | Description                              | Repo                                                          | Demo                                       |
 | ------------------------------- | ---------------------------------------- | ------------------------------------------------------------- | ------------------------------------------ |
-| **Recipes**                     |                                          |                                                               |                                            |
 | Tasks Playground with Streaming | Using Durable Objects and SSE Events API | [Repo](https://github.com/janwilmake/parallel-tasks-sse)      | [sse.p0web.com](https://sse.p0web.com)     |
 | Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | [Repo](https://github.com/janwilmake/parallel-daily-insights) | [daily.p0web.com](https://daily.p0web.com) |
 
