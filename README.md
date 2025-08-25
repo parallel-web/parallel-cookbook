@@ -14,11 +14,11 @@ These recipes focus on building full-stack serverless apps on Cloudflare Workers
 
 Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs that are more complete (payments, login, etc) and can be used as boilerplate / starting point for new SaaS Products!
 
-| Title                        | Description                             | Repo                                                          | Demo                                       |
-| ---------------------------- | --------------------------------------- | ------------------------------------------------------------- | ------------------------------------------ |
-| **Recipes**                  |                                         |                                                               |                                            |
-| Tasks using SSE              |                                         | [Repo](https://github.com/janwilmake/parallel-tasks-sse)      | [sse.p0web.com](https://sse.p0web.com)     |
-| Recurring Tasks and Webhooks | Active Monitoring using cronjobs and KV | [Repo](https://github.com/janwilmake/parallel-daily-insights) | [daily.p0web.com](https://daily.p0web.com) |
+| Title                           | Description                              | Repo                                                          | Demo                                       |
+| ------------------------------- | ---------------------------------------- | ------------------------------------------------------------- | ------------------------------------------ |
+| **Recipes**                     |                                          |                                                               |                                            |
+| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | [Repo](https://github.com/janwilmake/parallel-tasks-sse)      | [sse.p0web.com](https://sse.p0web.com)     |
+| Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | [Repo](https://github.com/janwilmake/parallel-daily-insights) | [daily.p0web.com](https://daily.p0web.com) |
 
 <!--
 
