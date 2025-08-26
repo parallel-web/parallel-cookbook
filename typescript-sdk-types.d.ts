@@ -43,6 +43,8 @@ import { RequestInit as RequestInit_9 } from '../../../../../../../../node_modul
 declare namespace API {
     export {
         Beta,
+        SearchResult,
+        BetaSearchParams,
         TaskRun,
         Input,
         JsonSchema,
@@ -150,10 +152,70 @@ export declare class BadRequestError extends APIError<400, Headers> {
 
 declare class Beta extends APIResource {
     taskGroup: TaskGroupAPI.TaskGroup;
+    /**
+     * Searches the web.
+     */
+    search(body: BetaSearchParams, options?: RequestOptions): APIPromise<SearchResult>;
 }
 
 declare namespace Beta {
+        { declare type SearchResult as SearchResult, declare type BetaSearchParams as BetaSearchParams };
         { declare type TaskGroup as TaskGroup, declare type TaskGroupRun as TaskGroupRun, declare type TaskGroupEventsResponse as TaskGroupEventsResponse, declare type TaskGroupRetrieveRunsResponse as TaskGroupRetrieveRunsResponse, declare type TaskGroupCreateParams as TaskGroupCreateParams, declare type TaskGroupAddRunsParams as TaskGroupAddRunsParams, declare type TaskGroupEventsParams as TaskGroupEventsParams, declare type TaskGroupRetrieveRunsParams as TaskGroupRetrieveRunsParams, };
+}
+
+declare interface BetaSearchParams {
+    /**
+     * Upper bound on the number of characters to include in excerpts for each search
+     * result.
+     */
+    max_chars_per_result?: number | null;
+    /**
+     * Upper bound on the number of results to return. May be limited by the processor.
+     * Defaults to 10 if not provided.
+     */
+    max_results?: number | null;
+    /**
+     * Natural-language description of what the web search is trying to find. May
+     * include guidance about preferred sources or freshness. At least one of objective
+     * or search_queries must be provided.
+     */
+    objective?: string | null;
+    /**
+     * Search processor.
+     */
+    processor?: 'base' | 'pro';
+    /**
+     * Optional list of traditional keyword search queries to guide the search. May
+     * contain search operators. At least one of objective or search_queries must be
+     * provided.
+     */
+    search_queries?: Array<string> | null;
+    /**
+     * Source policy for web search results.
+     *
+     * This policy governs which sources are allowed/disallowed in results.
+     */
+    source_policy?: BetaSearchParams.SourcePolicy | null;
+}
+
+declare namespace BetaSearchParams {
+    /**
+     * Source policy for web search results.
+     *
+     * This policy governs which sources are allowed/disallowed in results.
+     */
+    interface SourcePolicy {
+        /**
+         * List of domains to exclude from results. If specified, sources from these
+         * domains will be excluded.
+         */
+        exclude_domains?: Array<string>;
+        /**
+         * List of domains to restrict the results to. If specified, only sources from
+         * these domains will be included.
+         */
+        include_domains?: Array<string>;
+    }
 }
 
 /**
@@ -395,12 +457,40 @@ declare interface Input {
         [key: string]: string | number | boolean;
     } | null;
     /**
+     * Source policy for web search results.
+     *
+     * This policy governs which sources are allowed/disallowed in results.
+     */
+    source_policy?: Input.SourcePolicy | null;
+    /**
      * Specification for a task.
      *
-     * For convenience we allow bare strings as input or output schemas, which is
-     * equivalent to a text schema with the same description.
+     * Auto output schemas can be specified by setting `output_schema={"type":"auto"}`.
+     * Not specifying a TaskSpec is the same as setting an auto output schema.
+     *
+     * For convenience bare strings are also accepted as input or output schemas.
      */
     task_spec?: TaskSpec | null;
+}
+
+declare namespace Input {
+    /**
+     * Source policy for web search results.
+     *
+     * This policy governs which sources are allowed/disallowed in results.
+     */
+    interface SourcePolicy {
+        /**
+         * List of domains to exclude from results. If specified, sources from these
+         * domains will be excluded.
+         */
+        exclude_domains?: Array<string>;
+        /**
+         * List of domains to restrict the results to. If specified, only sources from
+         * these domains will be included.
+         */
+        include_domains?: Array<string>;
+    }
 }
 
 export declare class InternalServerError extends APIError<number, Headers> {
@@ -592,7 +682,7 @@ declare class Parallel {
 declare namespace Parallel {
     type RequestOptions = Opts.RequestOptions;
         { declare type TaskRun as TaskRun, declare type Input as Input, declare type JsonSchema as JsonSchema, declare type TaskRunResult as TaskRunResult, declare type TaskSpec as TaskSpec, declare type TextSchema as TextSchema, declare type TaskRunCreateParams as TaskRunCreateParams, declare type TaskRunResultParams as TaskRunResultParams, };
-        { Beta as Beta };
+        { Beta as Beta, declare type SearchResult as SearchResult, declare type BetaSearchParams as BetaSearchParams };
 }
 export { Parallel }
 export default Parallel;
@@ -699,6 +789,40 @@ declare interface ResponseLike {
     blob(): Promise<BlobLike>;
 }
 
+/**
+ * Output for the Search API.
+ */
+declare interface SearchResult {
+    /**
+     * A list of WebSearchResult objects, ordered by decreasing relevance.
+     */
+    results: Array<SearchResult.Result>;
+    /**
+     * Search ID. Example: `search_cad0a6d2-dec0-46bd-95ae-900527d880e7`
+     */
+    search_id: string;
+}
+
+declare namespace SearchResult {
+    /**
+     * A single search result from the web search API.
+     */
+    interface Result {
+        /**
+         * Text excerpts from the search result which are relevant to the request.
+         */
+        excerpts: Array<string>;
+        /**
+         * Title of the search result.
+         */
+        title: string;
+        /**
+         * URL associated with the search result.
+         */
+        url: string;
+    }
+}
+
 declare class Stream<Item> implements AsyncIterable<Item> {
     #private;
     private iterator;
@@ -736,7 +860,7 @@ declare class TaskGroup extends APIResource {
     /**
      * Initiates multiple task runs within a TaskGroup.
      */
-    addRuns(taskGroupID: string, body: TaskGroupAddRunsParams, options?: RequestOptions): APIPromise<TaskGroupRun>;
+    addRuns(taskGroupID: string, params: TaskGroupAddRunsParams, options?: RequestOptions): APIPromise<TaskGroupRun>;
     /**
      * Streams events from a TaskGroup: status updates and run completions.
      *
@@ -746,13 +870,6 @@ declare class TaskGroup extends APIResource {
     events(taskGroupID: string, query?: TaskGroupEventsParams | undefined, options?: RequestOptions): APIPromise<Stream<TaskGroupEventsResponse>>;
     /**
      * Retrieves task runs in a TaskGroup and optionally their inputs and outputs.
-     *
-     * Note: this method signature might change in the future based on feedback.
-     * Questions:
-     *
-     * - is it confusing to return the same TaskRunEvent object as the event stream?
-     * - should we support blocking until each run is completed?
-     * - should event_id be an integer or opaque string instead of run_id?
      */
     retrieveRuns(taskGroupID: string, query?: TaskGroupRetrieveRunsParams | undefined, options?: RequestOptions): APIPromise<Stream<TaskGroupRetrieveRunsResponse>>;
 }
@@ -818,21 +935,27 @@ declare namespace TaskGroup {
 
 declare interface TaskGroupAddRunsParams {
     /**
-     * List of task runs to execute.
+     * Body param: List of task runs to execute.
      */
     inputs: Array<TaskGroupAddRunsParams.Input>;
     /**
-     * Specification for a task.
+     * Query param:
+     */
+    parallel_beta?: string | null;
+    /**
+     * Body param: Specification for a task.
      *
-     * For convenience we allow bare strings as input or output schemas, which is
-     * equivalent to a text schema with the same description.
+     * Auto output schemas can be specified by setting `output_schema={"type":"auto"}`.
+     * Not specifying a TaskSpec is the same as setting an auto output schema.
+     *
+     * For convenience bare strings are also accepted as input or output schemas.
      */
     default_task_spec?: TaskRunAPI.TaskSpec | null;
 }
 
 declare namespace TaskGroupAddRunsParams {
     /**
-     * Request to run a task.
+     * Task run input with additional beta fields.
      */
     interface Input {
         /**
@@ -844,6 +967,23 @@ declare namespace TaskGroupAddRunsParams {
          */
         processor: string;
         /**
+         * Controls tracking of task run execution progress. When set to true, progress
+         * events are recorded and can be accessed via the
+         * [Task Run events](https://platform.parallel.ai/api-reference) endpoint. When
+         * false, no progress events are tracked. Note that progress tracking cannot be
+         * enabled after a run has been created. The flag is set to true by default for
+         * premium processors (pro and above). This feature is not available via the Python
+         * SDK. To enable this feature in your API requests, specify the `parallel-beta`
+         * header with `events-sse-2025-07-24` value.
+         */
+        enable_events?: boolean | null;
+        /**
+         * Optional list of MCP servers to use for the run. This feature is not available
+         * via the Python SDK. To enable this feature in your API requests, specify the
+         * `parallel-beta` header with `mcp-server-2025-07-17` value.
+         */
+        mcp_servers?: Array<Input.McpServer> | null;
+        /**
          * User-provided metadata stored with the run. Keys and values must be strings with
          * a maximum length of 16 and 512 characters respectively.
          */
@@ -851,12 +991,83 @@ declare namespace TaskGroupAddRunsParams {
             [key: string]: string | number | boolean;
         } | null;
         /**
+         * Source policy for web search results.
+         *
+         * This policy governs which sources are allowed/disallowed in results.
+         */
+        source_policy?: Input.SourcePolicy | null;
+        /**
          * Specification for a task.
          *
-         * For convenience we allow bare strings as input or output schemas, which is
-         * equivalent to a text schema with the same description.
+         * Auto output schemas can be specified by setting `output_schema={"type":"auto"}`.
+         * Not specifying a TaskSpec is the same as setting an auto output schema.
+         *
+         * For convenience bare strings are also accepted as input or output schemas.
          */
         task_spec?: TaskRunAPI.TaskSpec | null;
+        /**
+         * Webhooks for Task Runs.
+         */
+        webhook?: Input.Webhook | null;
+    }
+    namespace Input {
+        /**
+         * MCP server configuration.
+         */
+        interface McpServer {
+            /**
+             * Name of the MCP server.
+             */
+            name: string;
+            /**
+             * URL of the MCP server.
+             */
+            url: string;
+            /**
+             * List of allowed tools for the MCP server.
+             */
+            allowed_tools?: Array<string> | null;
+            /**
+             * Headers for the MCP server.
+             */
+            headers?: {
+                [key: string]: string;
+            } | null;
+            /**
+             * Type of MCP server being configured. Always `url`.
+             */
+            type?: 'url';
+        }
+        /**
+         * Source policy for web search results.
+         *
+         * This policy governs which sources are allowed/disallowed in results.
+         */
+        interface SourcePolicy {
+            /**
+             * List of domains to exclude from results. If specified, sources from these
+             * domains will be excluded.
+             */
+            exclude_domains?: Array<string>;
+            /**
+             * List of domains to restrict the results to. If specified, only sources from
+             * these domains will be included.
+             */
+            include_domains?: Array<string>;
+        }
+        /**
+         * Webhooks for Task Runs.
+         */
+        interface Webhook {
+            /**
+             * URL for the webhook.
+             */
+            url: string;
+            /**
+             * Event types to send the webhook notifications for.
+             */
+            event_types?: Array<'task_run.status'>;
+        }
     }
 }
 
@@ -887,7 +1098,432 @@ declare interface TaskGroupEventsParams {
     timeout?: number | null;
 }
 
-declare type TaskGroupEventsResponse = string;
+/**
+ * Event indicating an update to group status.
+ */
+declare type TaskGroupEventsResponse = TaskGroupEventsResponse.TaskGroupStatusEvent | TaskGroupEventsResponse.TaskRunEvent | TaskGroupEventsResponse.ErrorEvent;
+
+declare namespace TaskGroupEventsResponse {
+    /**
+     * Event indicating an update to group status.
+     */
+    interface TaskGroupStatusEvent {
+        /**
+         * Cursor to resume the event stream.
+         */
+        event_id: string;
+        /**
+         * Status of a task group.
+         */
+        status: TaskGroupStatusEvent.Status;
+        /**
+         * Event type; always 'task_group_status'.
+         */
+        type?: 'task_group_status';
+    }
+    namespace TaskGroupStatusEvent {
+        /**
+         * Status of a task group.
+         */
+        interface Status {
+            /**
+             * True if at least one run in the group is currently active, i.e. status is one of
+             * {'cancelling', 'queued', 'running'}.
+             */
+            is_active: boolean;
+            /**
+             * Timestamp of the last status update to the group, as an RFC 3339 string.
+             */
+            modified_at: string | null;
+            /**
+             * Number of task runs in the group.
+             */
+            num_task_runs: number;
+            /**
+             * Human-readable status message for the group.
+             */
+            status_message: string | null;
+            /**
+             * Number of task runs with each status.
+             */
+            task_run_status_counts: {
+                [key: string]: number;
+            };
+        }
+    }
+    /**
+     * Event when a task run transitions to a non-active status.
+     *
+     * May indicate completion, cancellation, or failure.
+     */
+    interface TaskRunEvent {
+        /**
+         * Cursor to resume the event stream. Always empty for non Task Group runs.
+         */
+        event_id: string | null;
+        /**
+         * Status of a task run.
+         */
+        run: TaskRunAPI.TaskRun;
+        /**
+         * Task run input with additional beta fields.
+         */
+        input?: TaskRunEvent.Input | null;
+        /**
+         * Output from the run; included only if requested and if status == `completed`.
+         */
+        output?: TaskRunEvent.TaskRunTextOutput | TaskRunEvent.TaskRunJsonOutput | null;
+        /**
+         * Event type; always 'task_run.state'.
+         */
+        type?: 'task_run.state';
+    }
+    namespace TaskRunEvent {
+        /**
+         * Task run input with additional beta fields.
+         */
+        interface Input {
+            /**
+             * Input to the task, either text or a JSON object.
+             */
+            input: string | unknown;
+            /**
+             * Processor to use for the task.
+             */
+            processor: string;
+            /**
+             * Controls tracking of task run execution progress. When set to true, progress
+             * events are recorded and can be accessed via the
+             * [Task Run events](https://platform.parallel.ai/api-reference) endpoint. When
+             * false, no progress events are tracked. Note that progress tracking cannot be
+             * enabled after a run has been created. The flag is set to true by default for
+             * premium processors (pro and above). This feature is not available via the Python
+             * SDK. To enable this feature in your API requests, specify the `parallel-beta`
+             * header with `events-sse-2025-07-24` value.
+             */
+            enable_events?: boolean | null;
+            /**
+             * Optional list of MCP servers to use for the run. This feature is not available
+             * via the Python SDK. To enable this feature in your API requests, specify the
+             * `parallel-beta` header with `mcp-server-2025-07-17` value.
+             */
+            mcp_servers?: Array<Input.McpServer> | null;
+            /**
+             * User-provided metadata stored with the run. Keys and values must be strings with
+             * a maximum length of 16 and 512 characters respectively.
+             */
+            metadata?: {
+                [key: string]: string | number | boolean;
+            } | null;
+            /**
+             * Source policy for web search results.
+             *
+             * This policy governs which sources are allowed/disallowed in results.
+             */
+            source_policy?: Input.SourcePolicy | null;
+            /**
+             * Specification for a task.
+             *
+             * Auto output schemas can be specified by setting `output_schema={"type":"auto"}`.
+             * Not specifying a TaskSpec is the same as setting an auto output schema.
+             *
+             * For convenience bare strings are also accepted as input or output schemas.
+             */
+            task_spec?: TaskRunAPI.TaskSpec | null;
+            /**
+             * Webhooks for Task Runs.
+             */
+            webhook?: Input.Webhook | null;
+        }
+        namespace Input {
+            /**
+             * MCP server configuration.
+             */
+            interface McpServer {
+                /**
+                 * Name of the MCP server.
+                 */
+                name: string;
+                /**
+                 * URL of the MCP server.
+                 */
+                url: string;
+                /**
+                 * List of allowed tools for the MCP server.
+                 */
+                allowed_tools?: Array<string> | null;
+                /**
+                 * Headers for the MCP server.
+                 */
+                headers?: {
+                    [key: string]: string;
+                } | null;
+                /**
+                 * Type of MCP server being configured. Always `url`.
+                 */
+                type?: 'url';
+            }
+            /**
+             * Source policy for web search results.
+             *
+             * This policy governs which sources are allowed/disallowed in results.
+             */
+            interface SourcePolicy {
+                /**
+                 * List of domains to exclude from results. If specified, sources from these
+                 * domains will be excluded.
+                 */
+                exclude_domains?: Array<string>;
+                /**
+                 * List of domains to restrict the results to. If specified, only sources from
+                 * these domains will be included.
+                 */
+                include_domains?: Array<string>;
+            }
+            /**
+             * Webhooks for Task Runs.
+             */
+            interface Webhook {
+                /**
+                 * URL for the webhook.
+                 */
+                url: string;
+                /**
+                 * Event types to send the webhook notifications for.
+                 */
+                event_types?: Array<'task_run.status'>;
+            }
+        }
+        /**
+         * Output from a task that returns text.
+         */
+        interface TaskRunTextOutput {
+            /**
+             * Basis for the output. The basis has a single field 'output'.
+             */
+            basis: Array<TaskRunTextOutput.Basis>;
+            /**
+             * Text output from the task.
+             */
+            content: string;
+            /**
+             * MCP tool calls made by the task.
+             */
+            mcp_tool_calls?: Array<TaskRunTextOutput.McpToolCall> | null;
+            /**
+             * The type of output being returned, as determined by the output schema of the
+             * task spec.
+             */
+            type?: 'text';
+        }
+        namespace TaskRunTextOutput {
+            /**
+             * Citations and reasoning supporting one field of a task output.
+             */
+            interface Basis {
+                /**
+                 * Name of the output field.
+                 */
+                field: string;
+                /**
+                 * Reasoning for the output field.
+                 */
+                reasoning: string;
+                /**
+                 * List of citations supporting the output field.
+                 */
+                citations?: Array<Basis.Citation>;
+                /**
+                 * Confidence level for the output field. Only certain processors provide
+                 * confidence levels.
+                 */
+                confidence?: string | null;
+            }
+            namespace Basis {
+                /**
+                 * A citation for a task output.
+                 */
+                interface Citation {
+                    /**
+                     * URL of the citation.
+                     */
+                    url: string;
+                    /**
+                     * Excerpts from the citation supporting the output. Only certain processors
+                     * provide excerpts.
+                     */
+                    excerpts?: Array<string> | null;
+                    /**
+                     * Title of the citation.
+                     */
+                    title?: string | null;
+                }
+            }
+            /**
+             * Result of an MCP tool call.
+             */
+            interface McpToolCall {
+                /**
+                 * Arguments used to call the MCP tool.
+                 */
+                arguments: string;
+                /**
+                 * Name of the MCP server.
+                 */
+                server_name: string;
+                /**
+                 * Identifier for the tool call.
+                 */
+                tool_call_id: string;
+                /**
+                 * Name of the tool being called.
+                 */
+                tool_name: string;
+                /**
+                 * Output received from the tool call, if successful.
+                 */
+                content?: string | null;
+                /**
+                 * Error message if the tool call failed.
+                 */
+                error?: string | null;
+            }
+        }
+        /**
+         * Output from a task that returns JSON.
+         */
+        interface TaskRunJsonOutput {
+            /**
+             * Basis for each top-level field in the JSON output.
+             */
+            basis: Array<TaskRunJsonOutput.Basis>;
+            /**
+             * Output from the task as a native JSON object, as determined by the output schema
+             * of the task spec.
+             */
+            content: unknown;
+            /**
+             * MCP tool calls made by the task.
+             */
+            mcp_tool_calls?: Array<TaskRunJsonOutput.McpToolCall> | null;
+            /**
+             * Output schema for the Task Run. Populated only if the task was executed with an
+             * auto schema.
+             */
+            output_schema?: unknown | null;
+            /**
+             * The type of output being returned, as determined by the output schema of the
+             * task spec.
+             */
+            type?: 'json';
+        }
+        namespace TaskRunJsonOutput {
+            /**
+             * Citations and reasoning supporting one field of a task output.
+             */
+            interface Basis {
+                /**
+                 * Name of the output field.
+                 */
+                field: string;
+                /**
+                 * Reasoning for the output field.
+                 */
+                reasoning: string;
+                /**
+                 * List of citations supporting the output field.
+                 */
+                citations?: Array<Basis.Citation>;
+                /**
+                 * Confidence level for the output field. Only certain processors provide
+                 * confidence levels.
+                 */
+                confidence?: string | null;
+            }
+            namespace Basis {
+                /**
+                 * A citation for a task output.
+                 */
+                interface Citation {
+                    /**
+                     * URL of the citation.
+                     */
+                    url: string;
+                    /**
+                     * Excerpts from the citation supporting the output. Only certain processors
+                     * provide excerpts.
+                     */
+                    excerpts?: Array<string> | null;
+                    /**
+                     * Title of the citation.
+                     */
+                    title?: string | null;
+                }
+            }
+            /**
+             * Result of an MCP tool call.
+             */
+            interface McpToolCall {
+                /**
+                 * Arguments used to call the MCP tool.
+                 */
+                arguments: string;
+                /**
+                 * Name of the MCP server.
+                 */
+                server_name: string;
+                /**
+                 * Identifier for the tool call.
+                 */
+                tool_call_id: string;
+                /**
+                 * Name of the tool being called.
+                 */
+                tool_name: string;
+                /**
+                 * Output received from the tool call, if successful.
+                 */
+                content?: string | null;
+                /**
+                 * Error message if the tool call failed.
+                 */
+                error?: string | null;
+            }
+        }
+    }
+    /**
+     * Event indicating an error.
+     */
+    interface ErrorEvent {
+        /**
+         * An error message.
+         */
+        error: ErrorEvent.Error;
+        /**
+         * Event type; always 'error'.
+         */
+        type?: 'error';
+    }
+    namespace ErrorEvent {
+        /**
+         * An error message.
+         */
+        interface Error {
+            /**
+             * Human-readable message.
+             */
+            message: string;
+            /**
+             * Reference ID for the error.
+             */
+            ref_id: string;
+            /**
+             * Optional detail supporting the error.
+             */
+            detail?: unknown | null;
+        }
+    }
+}
 
 declare interface TaskGroupRetrieveRunsParams {
     include_input?: boolean;
@@ -896,7 +1532,387 @@ declare interface TaskGroupRetrieveRunsParams {
     status?: 'queued' | 'action_required' | 'running' | 'completed' | 'failed' | 'cancelling' | 'cancelled' | null;
 }
 
-declare type TaskGroupRetrieveRunsResponse = string;
+/**
+ * Event when a task run transitions to a non-active status.
+ *
+ * May indicate completion, cancellation, or failure.
+ */
+declare type TaskGroupRetrieveRunsResponse = TaskGroupRetrieveRunsResponse.TaskRunEvent | TaskGroupRetrieveRunsResponse.ErrorEvent;
+
+declare namespace TaskGroupRetrieveRunsResponse {
+    /**
+     * Event when a task run transitions to a non-active status.
+     *
+     * May indicate completion, cancellation, or failure.
+     */
+    interface TaskRunEvent {
+        /**
+         * Cursor to resume the event stream. Always empty for non Task Group runs.
+         */
+        event_id: string | null;
+        /**
+         * Status of a task run.
+         */
+        run: TaskRunAPI.TaskRun;
+        /**
+         * Task run input with additional beta fields.
+         */
+        input?: TaskRunEvent.Input | null;
+        /**
+         * Output from the run; included only if requested and if status == `completed`.
+         */
+        output?: TaskRunEvent.TaskRunTextOutput | TaskRunEvent.TaskRunJsonOutput | null;
+        /**
+         * Event type; always 'task_run.state'.
+         */
+        type?: 'task_run.state';
+    }
+    namespace TaskRunEvent {
+        /**
+         * Task run input with additional beta fields.
+         */
+        interface Input {
+            /**
+             * Input to the task, either text or a JSON object.
+             */
+            input: string | unknown;
+            /**
+             * Processor to use for the task.
+             */
+            processor: string;
+            /**
+             * Controls tracking of task run execution progress. When set to true, progress
+             * events are recorded and can be accessed via the
+             * [Task Run events](https://platform.parallel.ai/api-reference) endpoint. When
+             * false, no progress events are tracked. Note that progress tracking cannot be
+             * enabled after a run has been created. The flag is set to true by default for
+             * premium processors (pro and above). This feature is not available via the Python
+             * SDK. To enable this feature in your API requests, specify the `parallel-beta`
+             * header with `events-sse-2025-07-24` value.
+             */
+            enable_events?: boolean | null;
+            /**
+             * Optional list of MCP servers to use for the run. This feature is not available
+             * via the Python SDK. To enable this feature in your API requests, specify the
+             * `parallel-beta` header with `mcp-server-2025-07-17` value.
+             */
+            mcp_servers?: Array<Input.McpServer> | null;
+            /**
+             * User-provided metadata stored with the run. Keys and values must be strings with
+             * a maximum length of 16 and 512 characters respectively.
+             */
+            metadata?: {
+                [key: string]: string | number | boolean;
+            } | null;
+            /**
+             * Source policy for web search results.
+             *
+             * This policy governs which sources are allowed/disallowed in results.
+             */
+            source_policy?: Input.SourcePolicy | null;
+            /**
+             * Specification for a task.
+             *
+             * Auto output schemas can be specified by setting `output_schema={"type":"auto"}`.
+             * Not specifying a TaskSpec is the same as setting an auto output schema.
+             *
+             * For convenience bare strings are also accepted as input or output schemas.
+             */
+            task_spec?: TaskRunAPI.TaskSpec | null;
+            /**
+             * Webhooks for Task Runs.
+             */
+            webhook?: Input.Webhook | null;
+        }
+        namespace Input {
+            /**
+             * MCP server configuration.
+             */
+            interface McpServer {
+                /**
+                 * Name of the MCP server.
+                 */
+                name: string;
+                /**
+                 * URL of the MCP server.
+                 */
+                url: string;
+                /**
+                 * List of allowed tools for the MCP server.
+                 */
+                allowed_tools?: Array<string> | null;
+                /**
+                 * Headers for the MCP server.
+                 */
+                headers?: {
+                    [key: string]: string;
+                } | null;
+                /**
+                 * Type of MCP server being configured. Always `url`.
+                 */
+                type?: 'url';
+            }
+            /**
+             * Source policy for web search results.
+             *
+             * This policy governs which sources are allowed/disallowed in results.
+             */
+            interface SourcePolicy {
+                /**
+                 * List of domains to exclude from results. If specified, sources from these
+                 * domains will be excluded.
+                 */
+                exclude_domains?: Array<string>;
+                /**
+                 * List of domains to restrict the results to. If specified, only sources from
+                 * these domains will be included.
+                 */
+                include_domains?: Array<string>;
+            }
+            /**
+             * Webhooks for Task Runs.
+             */
+            interface Webhook {
+                /**
+                 * URL for the webhook.
+                 */
+                url: string;
+                /**
+                 * Event types to send the webhook notifications for.
+                 */
+                event_types?: Array<'task_run.status'>;
+            }
+        }
+        /**
+         * Output from a task that returns text.
+         */
+        interface TaskRunTextOutput {
+            /**
+             * Basis for the output. The basis has a single field 'output'.
+             */
+            basis: Array<TaskRunTextOutput.Basis>;
+            /**
+             * Text output from the task.
+             */
+            content: string;
+            /**
+             * MCP tool calls made by the task.
+             */
+            mcp_tool_calls?: Array<TaskRunTextOutput.McpToolCall> | null;
+            /**
+             * The type of output being returned, as determined by the output schema of the
+             * task spec.
+             */
+            type?: 'text';
+        }
+        namespace TaskRunTextOutput {
+            /**
+             * Citations and reasoning supporting one field of a task output.
+             */
+            interface Basis {
+                /**
+                 * Name of the output field.
+                 */
+                field: string;
+                /**
+                 * Reasoning for the output field.
+                 */
+                reasoning: string;
+                /**
+                 * List of citations supporting the output field.
+                 */
+                citations?: Array<Basis.Citation>;
+                /**
+                 * Confidence level for the output field. Only certain processors provide
+                 * confidence levels.
+                 */
+                confidence?: string | null;
+            }
+            namespace Basis {
+                /**
+                 * A citation for a task output.
+                 */
+                interface Citation {
+                    /**
+                     * URL of the citation.
+                     */
+                    url: string;
+                    /**
+                     * Excerpts from the citation supporting the output. Only certain processors
+                     * provide excerpts.
+                     */
+                    excerpts?: Array<string> | null;
+                    /**
+                     * Title of the citation.
+                     */
+                    title?: string | null;
+                }
+            }
+            /**
+             * Result of an MCP tool call.
+             */
+            interface McpToolCall {
+                /**
+                 * Arguments used to call the MCP tool.
+                 */
+                arguments: string;
+                /**
+                 * Name of the MCP server.
+                 */
+                server_name: string;
+                /**
+                 * Identifier for the tool call.
+                 */
+                tool_call_id: string;
+                /**
+                 * Name of the tool being called.
+                 */
+                tool_name: string;
+                /**
+                 * Output received from the tool call, if successful.
+                 */
+                content?: string | null;
+                /**
+                 * Error message if the tool call failed.
+                 */
+                error?: string | null;
+            }
+        }
+        /**
+         * Output from a task that returns JSON.
+         */
+        interface TaskRunJsonOutput {
+            /**
+             * Basis for each top-level field in the JSON output.
+             */
+            basis: Array<TaskRunJsonOutput.Basis>;
+            /**
+             * Output from the task as a native JSON object, as determined by the output schema
+             * of the task spec.
+             */
+            content: unknown;
+            /**
+             * MCP tool calls made by the task.
+             */
+            mcp_tool_calls?: Array<TaskRunJsonOutput.McpToolCall> | null;
+            /**
+             * Output schema for the Task Run. Populated only if the task was executed with an
+             * auto schema.
+             */
+            output_schema?: unknown | null;
+            /**
+             * The type of output being returned, as determined by the output schema of the
+             * task spec.
+             */
+            type?: 'json';
+        }
+        namespace TaskRunJsonOutput {
+            /**
+             * Citations and reasoning supporting one field of a task output.
+             */
+            interface Basis {
+                /**
+                 * Name of the output field.
+                 */
+                field: string;
+                /**
+                 * Reasoning for the output field.
+                 */
+                reasoning: string;
+                /**
+                 * List of citations supporting the output field.
+                 */
+                citations?: Array<Basis.Citation>;
+                /**
+                 * Confidence level for the output field. Only certain processors provide
+                 * confidence levels.
+                 */
+                confidence?: string | null;
+            }
+            namespace Basis {
+                /**
+                 * A citation for a task output.
+                 */
+                interface Citation {
+                    /**
+                     * URL of the citation.
+                     */
+                    url: string;
+                    /**
+                     * Excerpts from the citation supporting the output. Only certain processors
+                     * provide excerpts.
+                     */
+                    excerpts?: Array<string> | null;
+                    /**
+                     * Title of the citation.
+                     */
+                    title?: string | null;
+                }
+            }
+            /**
+             * Result of an MCP tool call.
+             */
+            interface McpToolCall {
+                /**
+                 * Arguments used to call the MCP tool.
+                 */
+                arguments: string;
+                /**
+                 * Name of the MCP server.
+                 */
+                server_name: string;
+                /**
+                 * Identifier for the tool call.
+                 */
+                tool_call_id: string;
+                /**
+                 * Name of the tool being called.
+                 */
+                tool_name: string;
+                /**
+                 * Output received from the tool call, if successful.
+                 */
+                content?: string | null;
+                /**
+                 * Error message if the tool call failed.
+                 */
+                error?: string | null;
+            }
+        }
+    }
+    /**
+     * Event indicating an error.
+     */
+    interface ErrorEvent {
+        /**
+         * An error message.
+         */
+        error: ErrorEvent.Error;
+        /**
+         * Event type; always 'error'.
+         */
+        type?: 'error';
+    }
+    namespace ErrorEvent {
+        /**
+         * An error message.
+         */
+        interface Error {
+            /**
+             * Human-readable message.
+             */
+            message: string;
+            /**
+             * Reference ID for the error.
+             */
+            ref_id: string;
+            /**
+             * Optional detail supporting the error.
+             */
+            detail?: unknown | null;
+        }
+    }
+}
 
 /**
  * Response from adding new task runs to a task group.
@@ -960,8 +1976,10 @@ declare class TaskRun extends APIResource {
      * Initiates a task run.
      *
      * Returns immediately with a run object in status 'queued'.
+     *
+     * Beta features can be enabled by setting the 'parallel-beta' header.
      */
-    create(body: TaskRunCreateParams, options?: RequestOptions): APIPromise<TaskRun>;
+    create(params: TaskRunCreateParams, options?: RequestOptions): APIPromise<TaskRun>;
     /**
      * Retrieves run status by run_id.
      *
@@ -1080,27 +2098,120 @@ declare namespace TaskRunAPI {
 
 declare interface TaskRunCreateParams {
     /**
-     * Input to the task, either text or a JSON object.
+     * Body param: Input to the task, either text or a JSON object.
      */
     input: string | unknown;
     /**
-     * Processor to use for the task.
+     * Body param: Processor to use for the task.
      */
     processor: string;
     /**
-     * User-provided metadata stored with the run. Keys and values must be strings with
-     * a maximum length of 16 and 512 characters respectively.
+     * Body param: Controls tracking of task run execution progress. When set to true,
+     * progress events are recorded and can be accessed via the
+     * [Task Run events](https://platform.parallel.ai/api-reference) endpoint. When
+     * false, no progress events are tracked. Note that progress tracking cannot be
+     * enabled after a run has been created. The flag is set to true by default for
+     * premium processors (pro and above). This feature is not available via the Python
+     * SDK. To enable this feature in your API requests, specify the `parallel-beta`
+     * header with `events-sse-2025-07-24` value.
+     */
+    enable_events?: boolean | null;
+    /**
+     * Body param: Optional list of MCP servers to use for the run. This feature is not
+     * available via the Python SDK. To enable this feature in your API requests,
+     * specify the `parallel-beta` header with `mcp-server-2025-07-17` value.
+     */
+    mcp_servers?: Array<TaskRunCreateParams.McpServer> | null;
+    /**
+     * Body param: User-provided metadata stored with the run. Keys and values must be
+     * strings with a maximum length of 16 and 512 characters respectively.
      */
     metadata?: {
         [key: string]: string | number | boolean;
     } | null;
     /**
-     * Specification for a task.
+     * Body param: Source policy for web search results.
      *
-     * For convenience we allow bare strings as input or output schemas, which is
-     * equivalent to a text schema with the same description.
+     * This policy governs which sources are allowed/disallowed in results.
+     */
+    source_policy?: TaskRunCreateParams.SourcePolicy | null;
+    /**
+     * Body param: Specification for a task.
+     *
+     * Auto output schemas can be specified by setting `output_schema={"type":"auto"}`.
+     * Not specifying a TaskSpec is the same as setting an auto output schema.
+     *
+     * For convenience bare strings are also accepted as input or output schemas.
      */
     task_spec?: TaskSpec | null;
+    /**
+     * Body param: Webhooks for Task Runs.
+     */
+    webhook?: TaskRunCreateParams.Webhook | null;
+    /**
+     * Header param:
+     */
+    'parallel-beta'?: string;
+}
+
+declare namespace TaskRunCreateParams {
+    /**
+     * MCP server configuration.
+     */
+    interface McpServer {
+        /**
+         * Name of the MCP server.
+         */
+        name: string;
+        /**
+         * URL of the MCP server.
+         */
+        url: string;
+        /**
+         * List of allowed tools for the MCP server.
+         */
+        allowed_tools?: Array<string> | null;
+        /**
+         * Headers for the MCP server.
+         */
+        headers?: {
+            [key: string]: string;
+        } | null;
+        /**
+         * Type of MCP server being configured. Always `url`.
+         */
+        type?: 'url';
+    }
+    /**
+     * Source policy for web search results.
+     *
+     * This policy governs which sources are allowed/disallowed in results.
+     */
+    interface SourcePolicy {
+        /**
+         * List of domains to exclude from results. If specified, sources from these
+         * domains will be excluded.
+         */
+        exclude_domains?: Array<string>;
+        /**
+         * List of domains to restrict the results to. If specified, only sources from
+         * these domains will be included.
+         */
+        include_domains?: Array<string>;
+    }
+    /**
+     * Webhooks for Task Runs.
+     */
+    interface Webhook {
+        /**
+         * URL for the webhook.
+         */
+        url: string;
+        /**
+         * Event types to send the webhook notifications for.
+         */
+        event_types?: Array<'task_run.status'>;
+    }
 }
 
 /**
@@ -1130,6 +2241,10 @@ declare namespace TaskRunResult {
          * Text output from the task.
          */
         content: string;
+        /**
+         * MCP tool calls made by the task.
+         */
+        mcp_tool_calls?: Array<TaskRunTextOutput.McpToolCall> | null;
         /**
          * The type of output being returned, as determined by the output schema of the
          * task spec.
@@ -1179,9 +2294,38 @@ declare namespace TaskRunResult {
                 title?: string | null;
             }
         }
+        /**
+         * Result of an MCP tool call.
+         */
+        interface McpToolCall {
+            /**
+             * Arguments used to call the MCP tool.
+             */
+            arguments: string;
+            /**
+             * Name of the MCP server.
+             */
+            server_name: string;
+            /**
+             * Identifier for the tool call.
+             */
+            tool_call_id: string;
+            /**
+             * Name of the tool being called.
+             */
+            tool_name: string;
+            /**
+             * Output received from the tool call, if successful.
+             */
+            content?: string | null;
+            /**
+             * Error message if the tool call failed.
+             */
+            error?: string | null;
+        }
     }
     /**
-     * Output from a task that returns text.
+     * Output from a task that returns JSON.
      */
     interface TaskRunJsonOutput {
         /**
@@ -1193,6 +2337,15 @@ declare namespace TaskRunResult {
          * of the task spec.
          */
         content: unknown;
+        /**
+         * MCP tool calls made by the task.
+         */
+        mcp_tool_calls?: Array<TaskRunJsonOutput.McpToolCall> | null;
+        /**
+         * Output schema for the Task Run. Populated only if the task was executed with an
+         * auto schema.
+         */
+        output_schema?: unknown | null;
         /**
          * The type of output being returned, as determined by the output schema of the
          * task spec.
@@ -1242,6 +2395,35 @@ declare namespace TaskRunResult {
                 title?: string | null;
             }
         }
+        /**
+         * Result of an MCP tool call.
+         */
+        interface McpToolCall {
+            /**
+             * Arguments used to call the MCP tool.
+             */
+            arguments: string;
+            /**
+             * Name of the MCP server.
+             */
+            server_name: string;
+            /**
+             * Identifier for the tool call.
+             */
+            tool_call_id: string;
+            /**
+             * Name of the tool being called.
+             */
+            tool_name: string;
+            /**
+             * Output received from the tool call, if successful.
+             */
+            content?: string | null;
+            /**
+             * Error message if the tool call failed.
+             */
+            error?: string | null;
+        }
     }
 }
 
@@ -1252,8 +2434,10 @@ declare interface TaskRunResultParams {
 /**
  * Specification for a task.
  *
- * For convenience we allow bare strings as input or output schemas, which is
- * equivalent to a text schema with the same description.
+ * Auto output schemas can be specified by setting `output_schema={"type":"auto"}`.
+ * Not specifying a TaskSpec is the same as setting an auto output schema.
+ *
+ * For convenience bare strings are also accepted as input or output schemas.
  */
 declare interface TaskSpec {
     /**
@@ -1262,12 +2446,24 @@ declare interface TaskSpec {
      * response. A bare string is equivalent to a text schema with the same
      * description.
      */
-    output_schema: JsonSchema | TextSchema | string;
+    output_schema: JsonSchema | TextSchema | TaskSpec.AutoSchema | string;
     /**
      * Optional JSON schema or text description of expected input to the task. A bare
      * string is equivalent to a text schema with the same description.
      */
-    input_schema?: JsonSchema | TextSchema | string | null;
+    input_schema?: string | JsonSchema | TextSchema | null;
+}
+
+declare namespace TaskSpec {
+    /**
+     * Auto schema for a task input or output.
+     */
+    interface AutoSchema {
+        /**
+         * The type of schema being defined. Always `auto`.
+         */
+        type?: 'auto';
+    }
 }
 
 /**
