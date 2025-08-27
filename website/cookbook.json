@@ -12,18 +12,7 @@
       "imageUrl": null,
       "tags": ["ingest", "batch", "csv"]
     },
-    {
-      "slug": "web-search-agent",
-      "popular": false,
-      "featured": false,
-      "title": "Web Search Agent",
-      "description": "Using Search MCP with an intelligent agent for web search and information retrieval",
-      "repoUrl": "https://github.com/janwilmake/web-search-agent",
-      "websiteUrl": "https://agent.p0web.com",
-      "creators": ["janwilmake"],
-      "imageUrl": null,
-      "tags": ["agent", "search", "mcp"]
-    },
+
     {
       "slug": "universal-mcp-oauth",
       "popular": false,
@@ -62,6 +51,18 @@
       "creators": ["janwilmake"],
       "imageUrl": "http://svg.quickog.com/https://daily.p0web.com/og.svg",
       "tags": ["cron", "webhooks", "monitoring"]
+    },
+    {
+      "slug": "web-search-agent",
+      "popular": false,
+      "featured": true,
+      "title": "Web Search Agent",
+      "description": "Using Search MCP with an intelligent agent for web search and information retrieval",
+      "repoUrl": "https://github.com/janwilmake/parallel-search-agent",
+      "websiteUrl": "https://agent.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": "https://svg.quickog.com/https://agent.p0web.com/og.svg",
+      "tags": ["agent", "search", "mcp"]
     },
 
     {
