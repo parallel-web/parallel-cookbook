@@ -49,37 +49,27 @@ The following examples have been tested with [Claude Sonnet 4](https://www.anthr
 
 ### Finetuning the scope of your request and gathering the right contexts for this
 
-<!--
-this is confusing and I should be more clear how this works for conversation flows
-https://wilmake.slack.com/archives/C09807JBB26/p1756138137492169
--->
+You can use this prompt to iteratively get to a better definition of what you want to build, and get the right context for this. Please note that the Python SDK or Typescript SDK aren't included in this quickstart. You can add these if desired.
 
-You can use this prompt to iteratively get to a better definition of what you want to build, and get the right context for this. Please note that the Python SDK is not included in this quickstart. You can add it if desired, you can also let it generate an ad-hoc client more tailored for your specific use-case. The latter requires less context for the same information and is recommended.
+Before using this prompt, ensure your AI either has access to a tool that can fetch llms.txt urls like [this fetch MCP server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) or [this remote one](https://smithery.ai/server/@jiankaitian/servers)
 
-<!-- Note: this openapi llms.txt is not really needed since docs.parallel.ai already has references to them. The only thing it adds now is the decision logic that i put into the openapi manually-->
+Alternatively it's possible to use this same prompt to retrieve URLs you can paste in your follow-up message. In this case, be sure to copyt it for the documentation to be included into the context window. This will work in any modern LLM client, see [using context](#using-context) for more details.
 
 ```txt path="relevant-context-prompt.txt"
-OpenAPI: @https://parallel.oapis.org/llms.txt
 Docs: @https://docs.parallel.ai/llms.txt
 Website: @https://uithub.com/janwilmake/parallel-website/tree/main?omitFiles=true
 
-First, reason about the different choices that need to be made and ask the user a set of questions.
-Respond with a bulletted list of raw urls (prepended with @) that might be relevant, depending on the decisions of the user.
+Consider these resources and determine which ones are necessary to complete the users task.
+If possible, fetch useful URLs, then respond with a bulletted list of raw urls (prepended with @) that are relevant.
 
-I want to build a full-stack application with [your-technology]. Specification:
+I want to build a full-stack application.
 
-[your-spec]
+Technology: [YOUR TECH STACK]
+Specification:
+[YOUR SPECIFICATION]
 ```
 
-### Creating a full implementation using the right context
-
-After you have the URLs of the right context, it's a matter of providing that togethr with your spec. To optimize for output quality, it's crucial to have complete context when prompting without providing too much irrelevant information to the model.
-
-```txt path="full-implementation-prompt.txt
-[Context URLs]
-
-[Your Full Spec]
-```
+The LLM should fetch URLs and respond with the URLs that are deemed useful. You can now either continue prompting to perform the implementation, or take the URLs as context into a fresh prompt.
 
 ## Choose Your Context
 
