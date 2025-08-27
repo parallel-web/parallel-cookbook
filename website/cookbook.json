@@ -34,7 +34,7 @@
       "featured": true,
       "title": "Tasks using SSE",
       "description": "Real-time task execution with Server-Sent Events for live updates and progress tracking",
-      "repoUrl": "https://github.com/janwilmake/parallel-tasks-sse",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse",
       "websiteUrl": "https://sse.p0web.com",
       "creators": ["janwilmake"],
       "imageUrl": "http://svg.quickog.com/https://sse.p0web.com/og.svg",
@@ -46,7 +46,7 @@
       "featured": true,
       "title": "Recurring Tasks and Webhooks",
       "description": "Active monitoring using cron jobs and KV storage for scheduled tasks and webhook handling",
-      "repoUrl": "https://github.com/janwilmake/parallel-daily-insights",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-daily-insights",
       "websiteUrl": "https://daily.p0web.com",
       "creators": ["janwilmake"],
       "imageUrl": "http://svg.quickog.com/https://daily.p0web.com/og.svg",
@@ -57,8 +57,8 @@
       "popular": false,
       "featured": true,
       "title": "Web Search Agent",
-      "description": "Using Search MCP with an intelligent agent for web search and information retrieval",
-      "repoUrl": "https://github.com/janwilmake/parallel-search-agent",
+      "description": "Using an AI agent for web search and information retrieval",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent",
       "websiteUrl": "https://agent.p0web.com",
       "creators": ["janwilmake"],
       "imageUrl": "https://svg.quickog.com/https://agent.p0web.com/og.svg",
@@ -77,6 +77,7 @@
       "imageUrl": null,
       "tags": ["nextjs", "typescript", "spreadsheet"]
     },
+
     {
       "slug": "basedpeople",
       "popular": false,

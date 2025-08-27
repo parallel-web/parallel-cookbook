@@ -1,0 +1,62 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#fcfcfa"/>
+  
+  <!-- Parallel Icon -->
+  <image x="80" y="60" width="120" height="120" href="https://assets.p0web.com/dark-parallel-symbol-540.svg"/>
+  
+  <!-- Main Title -->
+  <text x="240" y="110" font-family="'FT System Mono', monospace" font-size="48" font-weight="600" fill="#1d1b16">
+    Daily Insights
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="240" y="150" font-family="'FT System Mono', monospace" font-size="24" font-weight="400" fill="#d8d0bf">
+    Recurring Tasks with Parallel AI
+  </text>
+  
+  <!-- Visual Elements - Cron representation -->
+  <g transform="translate(80, 250)">
+    <!-- Clock/Schedule Icon -->
+    <circle cx="60" cy="60" r="50" fill="none" stroke="#fb631b" stroke-width="4"/>
+    <line x1="60" y1="60" x2="60" y2="30" stroke="#fb631b" stroke-width="3" stroke-linecap="round"/>
+    <line x1="60" y1="60" x2="85" y2="60" stroke="#fb631b" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Arrow -->
+    <path d="M140 60 L180 60 M170 50 L180 60 L170 70" stroke="#d8d0bf" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Tasks representation -->
+    <g transform="translate(200, 20)">
+      <rect x="0" y="0" width="200" height="20" rx="10" fill="#fb631b" opacity="0.8"/>
+      <rect x="0" y="30" width="160" height="20" rx="10" fill="#d8d0bf" opacity="0.8"/>
+      <rect x="0" y="60" width="180" height="20" rx="10" fill="#fb631b" opacity="0.6"/>
+      <rect x="0" y="90" width="140" height="20" rx="10" fill="#d8d0bf" opacity="0.6"/>
+    </g>
+    
+    <!-- Arrow -->
+    <path d="M420 60 L460 60 M450 50 L460 60 L450 70" stroke="#d8d0bf" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Results/KV storage -->
+    <g transform="translate(480, 20)">
+      <rect x="0" y="0" width="120" height="80" rx="8" fill="none" stroke="#1d1b16" stroke-width="2"/>
+      <text x="60" y="45" font-family="'FT System Mono', monospace" font-size="14" text-anchor="middle" fill="#1d1b16">KV Store</text>
+      <circle cx="30" cy="25" r="3" fill="#fb631b"/>
+      <circle cx="60" cy="25" r="3" fill="#d8d0bf"/>
+      <circle cx="90" cy="25" r="3" fill="#fb631b"/>
+    </g>
+  </g>
+  
+  <!-- Feature highlights -->
+  <g transform="translate(80, 420)">
+    <text x="0" y="0" font-family="'FT System Mono', monospace" font-size="18" fill="#1d1b16">✓ Daily 3AM Cronjobs</text>
+    <text x="0" y="35" font-family="'FT System Mono', monospace" font-size="18" fill="#1d1b16">✓ Webhook Processing</text>
+    <text x="0" y="70" font-family="'FT System Mono', monospace" font-size="18" fill="#1d1b16">✓ Historical Results</text>
+    
+    <text x="400" y="0" font-family="'FT System Mono', monospace" font-size="18" fill="#1d1b16">✓ Cloudflare Workers</text>
+    <text x="400" y="35" font-family="'FT System Mono', monospace" font-size="18" fill="#1d1b16">✓ Parallel AI Integration</text>
+    <text x="400" y="70" font-family="'FT System Mono', monospace" font-size="18" fill="#1d1b16">✓ Real-time Insights</text>
+  </g>
+  
+  <!-- Bottom accent -->
+  <rect x="0" y="600" width="1200" height="30" fill="#fb631b" opacity="0.1"/>
+</svg>

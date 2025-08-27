@@ -1,0 +1,22 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "parallel-daily-insights",
+  "main": "worker.ts",
+  "compatibility_date": "2025-08-14",
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "observability": { "logs": { "enabled": true } },
+  "kv_namespaces": [
+    {
+      "binding": "DAILY_INSIGHTS",
+      "id": "68b24836e5354bfcbcf43202c65db332",
+      "experimental_remote": true
+    }
+  ],
+  "route": { "custom_domain": true, "pattern": "daily.p0web.com" },
+  "triggers": {
+    "crons": ["30 23 * * *"]
+  },
+  "vars": {
+    "ENVIRONMENT": "production"
+  }
+}

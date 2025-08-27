@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Task Feed - Parallel Daily Insights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'off-white': '#fcfcfa',
+                        'index-black': '#1d1b16',
+                        'neural': '#d8d0bf',
+                        'signal': '#fb631b'
+                    },
+                    fontFamily: {
+                        'mono': ['FT System Mono', 'monospace'],
+                        'sans': ['Gerstner Programm', 'sans-serif']
+                    }
+                }
+            },
+            darkMode: 'media'
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2');
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: normal;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff2') format('woff2');
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body class="bg-off-white dark:bg-index-black text-index-black dark:text-off-white font-sans min-h-screen">
+    <div class="container mx-auto px-6 py-12 max-w-5xl">
+        <header class="mb-12">
+            <div class="flex items-center justify-between mb-6">
+                <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                    <img src="https://assets.p0web.com/dark-parallel-symbol-270.svg" class="w-8 h-8 dark:hidden"
+                        alt="Parallel">
+                    <img src="https://assets.p0web.com/white-parallel-symbol-270.svg" class="w-8 h-8 hidden dark:block"
+                        alt="Parallel">
+                    <span class="font-mono text-neural">← Back to all insights</span>
+                </a>
+                <a href="https://github.com/janwilmake/parallel-daily-insights"
+                    class="p-2 hover:bg-neural/10 rounded-lg transition-colors">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+            </div>
+            <div id="task-header">
+                <!-- Task header will be populated by JavaScript -->
+            </div>
+        </header>
+
+        <div class="space-y-8" id="results-container">
+            <!-- Results will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+        }
+
+        function getHostname(url) {
+            try {
+                return new URL(url).hostname;
+            } catch {
+                return null;
+            }
+        }
+
+        function renderCitations(citations) {
+            if (!citations || citations.length === 0) return '';
+
+            return citations.map(citation => {
+                const hostname = getHostname(citation.url);
+                return `
+                    <a href="${citation.url}" 
+                       target="_blank"
+                       class="inline-flex items-center space-x-2 px-3 py-1 bg-neural/10 hover:bg-neural/20 rounded-lg text-sm transition-colors">
+                        ${hostname ? `<img src="https://www.google.com/s2/favicons?domain=${hostname}&sz=16" 
+                                           class="w-4 h-4" alt="${hostname}">` : ''}
+                        <span class="font-mono text-neural">${citation.title || hostname || 'Source'}</span>
+                        <svg class="w-3 h-3 text-neural" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                        </svg>
+                    </a>
+                `;
+            }).join(' ');
+        }
+
+        function renderFieldBasis(field, basis) {
+            if (!basis) return '';
+
+            const confidence = basis.confidence ?
+                `<span class="px-2 py-1 text-xs bg-signal/10 text-signal rounded font-mono">Confidence: ${basis.confidence}</span>` : '';
+
+            const citations = basis.citations ? renderCitations(basis.citations) : '';
+
+            return `
+                <div class="mt-2 p-3 bg-neural/5 rounded-lg border-l-4 border-neural/20">
+                    ${confidence}
+                    ${basis.reasoning ? `<p class="text-sm text-neural mt-2 font-mono">Reasoning: ${basis.reasoning}</p>` : ''}
+                    ${citations ? `<div class="flex flex-wrap gap-2 mt-3">${citations}</div>` : ''}
+                </div>
+            `;
+        }
+
+        function populateFeed() {
+            const headerEl = document.getElementById('task-header');
+            const containerEl = document.getElementById('results-container');
+            const titleEl = document.getElementById('page-title');
+
+            if (!window.feedData) {
+                containerEl.innerHTML = '<p class="text-neural">Loading...</p>';
+                return;
+            }
+
+            const { task, results } = window.feedData;
+
+            // Update page title and header
+            titleEl.textContent = `${task.name} - Parallel Daily Insights`;
+            headerEl.innerHTML = `
+                <h1 class="text-3xl font-medium mb-3">${task.name}</h1>
+                <p class="text-lg text-neutral-600 dark:text-neural mb-4">${task.description}</p>
+                <div class="flex items-center space-x-4">
+                    <span class="px-3 py-1 bg-signal/10 text-signal rounded-lg font-mono text-sm">
+                        ${task.processor} processor
+                    </span>
+                    <span class="text-neural font-mono text-sm">
+                        ${results.length} recent results
+                    </span>
+                </div>
+            `;
+
+            if (results.length === 0) {
+                containerEl.innerHTML = `
+                    <div class="text-center py-12">
+                        <div class="text-6xl mb-4">🔍</div>
+                        <h3 class="text-xl font-medium mb-2">No results yet</h3>
+                        <p class="text-neural">This task hasn't run successfully yet. Check back tomorrow!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            containerEl.innerHTML = results.map(result => {
+                const output = result.data.output;
+                const isJsonOutput = output.type === 'json';
+
+                return `
+                    <div class="bg-white dark:bg-index-black/50 rounded-xl p-6 border border-neural/20">
+                        <div class="flex items-center justify-between mb-6">
+                            <h2 class="text-xl font-medium">${formatDate(result.date)}</h2>
+                            <span class="px-2 py-1 text-xs bg-neural/10 rounded font-mono text-neural">
+                                ${isJsonOutput ? 'JSON' : 'TEXT'} output
+                            </span>
+                        </div>
+                        
+                        ${isJsonOutput ?
+                        Object.entries(output.content).map(([key, value]) => {
+                            const basis = output.basis.find(b => b.field === key);
+                            const fieldName = key.split('_').map(word =>
+                                word.charAt(0).toUpperCase() + word.slice(1)
+                            ).join(' ');
+
+                            return `
+                                    <div class="mb-6">
+                                        <h3 class="text-lg font-medium mb-2 text-signal">${fieldName}</h3>
+                                        <p class="text-neutral-700 dark:text-off-white leading-relaxed">${value}</p>
+                                        ${renderFieldBasis(key, basis)}
+                                    </div>
+                                `;
+                        }).join('')
+                        :
+                        `
+                                <div class="mb-6">
+                                    <p class="text-neutral-700 dark:text-off-white leading-relaxed text-lg">${output.content}</p>
+                                    ${renderFieldBasis('output', output.basis[0])}
+                                </div>
+                            `
+                    }
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Populate feed when page loads
+        document.addEventListener('DOMContentLoaded', populateFeed);
+    </script>
+</body>
+
+</html>

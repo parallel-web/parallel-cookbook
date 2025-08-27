@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250819.0"
+  },
+  "scripts": {
+    "dev": "wrangler dev --x-remote-bindings"
+  }
+}

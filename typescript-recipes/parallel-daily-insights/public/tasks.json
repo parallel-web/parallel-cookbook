@@ -1,0 +1,319 @@
+{
+  "tasks": [
+    {
+      "slug": "daily-funding-facts",
+      "name": "Daily Startup Funding Facts",
+      "description": "Track individual funding announcements with specific details",
+      "processor": "pro",
+      "task_spec": {
+        "output_schema": {
+          "type": "json",
+          "json_schema": {
+            "type": "object",
+            "required": [
+              "first_funding_round_found",
+              "second_funding_round_found",
+              "third_funding_round_found",
+              "unicorn_announcement_today",
+              "ipo_announcement_today"
+            ],
+            "properties": {
+              "first_funding_round_found": {
+                "type": "string",
+                "description": "First funding round announced today: 'CompanyName raised $XM Series [A/B/C/etc] led by InvestorName' or 'No funding rounds found'"
+              },
+              "second_funding_round_found": {
+                "type": "string",
+                "description": "Second funding round announced today: 'CompanyName raised $XM Series [A/B/C/etc] led by InvestorName' or 'No second round found'"
+              },
+              "third_funding_round_found": {
+                "type": "string",
+                "description": "Third funding round announced today: 'CompanyName raised $XM Series [A/B/C/etc] led by InvestorName' or 'No third round found'"
+              },
+              "unicorn_announcement_today": {
+                "type": "string",
+                "description": "Company announcing $1B+ valuation today: 'CompanyName achieved $XB valuation in Series [X] round' or 'No unicorn announcements found'"
+              },
+              "ipo_announcement_today": {
+                "type": "string",
+                "description": "Company announcing IPO plans today: 'CompanyName announced IPO filing/plans for [exchange]' or 'No IPO announcements found'"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "input": "Find individual startup funding round announcements from today. Look for specific company names, exact funding amounts, series type, and lead investors from official company announcements or press releases."
+    },
+    {
+      "slug": "daily-product-releases",
+      "name": "Daily Product Release Tracker",
+      "description": "Track specific product launches with concrete details",
+      "processor": "core",
+      "task_spec": {
+        "output_schema": {
+          "type": "json",
+          "json_schema": {
+            "type": "object",
+            "required": [
+              "first_product_launch",
+              "second_product_launch",
+              "first_app_release",
+              "first_api_launch",
+              "first_beta_program"
+            ],
+            "properties": {
+              "first_product_launch": {
+                "type": "string",
+                "description": "First product launched today: 'CompanyName launched ProductName - [one sentence description] - Available [when/where]' or 'No product launches found'"
+              },
+              "second_product_launch": {
+                "type": "string",
+                "description": "Second product launched today with same format or 'No second product launch found'"
+              },
+              "first_app_release": {
+                "type": "string",
+                "description": "First mobile/web app released today: 'AppName by CompanyName - [core function] - Available on [iOS/Android/Web]' or 'No app releases found'"
+              },
+              "first_api_launch": {
+                "type": "string",
+                "description": "First API announced today: 'CompanyName API - [main function] - [free/paid/pricing]' or 'No API launches found'"
+              },
+              "first_beta_program": {
+                "type": "string",
+                "description": "First beta program started today: 'ProductName by CompanyName - [description] - Apply at [URL/method]' or 'No beta programs found'"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "input": "Find specific product launches, app releases, API announcements, and beta program starts from today. Look for official company announcements with product names, availability, and access information."
+    },
+    {
+      "slug": "daily-regulatory-updates",
+      "name": "Daily Regulatory Update Facts",
+      "description": "Track specific regulatory announcements with exact details",
+      "processor": "core",
+      "task_spec": {
+        "output_schema": {
+          "type": "json",
+          "json_schema": {
+            "type": "object",
+            "required": [
+              "first_rule_announced",
+              "first_enforcement_action",
+              "first_deadline_announced",
+              "first_comment_period",
+              "first_international_agreement"
+            ],
+            "properties": {
+              "first_rule_announced": {
+                "type": "string",
+                "description": "First new rule announced today: '[Agency] announced [specific rule name] effective [date] affecting [specific industry/entities]' or 'No new rules found'"
+              },
+              "first_enforcement_action": {
+                "type": "string",
+                "description": "First enforcement action announced today: '[Company] fined $[exact amount] by [agency] for [specific violation]' or 'No enforcement actions found'"
+              },
+              "first_deadline_announced": {
+                "type": "string",
+                "description": "First compliance deadline announced today: '[Specific regulation] compliance required by [exact date] for [affected entities]' or 'No new deadlines found'"
+              },
+              "first_comment_period": {
+                "type": "string",
+                "description": "First public comment period opened today: '[Agency] opened comments on [specific topic] until [date]' or 'No comment periods found'"
+              },
+              "first_international_agreement": {
+                "type": "string",
+                "description": "First international agreement announced today: '[Countries] signed [agreement name] on [date] for [purpose]' or 'No agreements found'"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "input": "Find specific regulatory announcements from government agencies today. Look for official government press releases with exact dates, amounts, agency names, and affected parties."
+    },
+    {
+      "slug": "daily-earnings-tracker",
+      "name": "Daily Earnings Results Monitor",
+      "description": "Track individual company earnings with specific numbers",
+      "processor": "core",
+      "task_spec": {
+        "output_schema": {
+          "type": "json",
+          "json_schema": {
+            "type": "object",
+            "required": [
+              "first_earnings_report",
+              "second_earnings_report",
+              "third_earnings_report",
+              "first_guidance_change",
+              "largest_stock_move"
+            ],
+            "properties": {
+              "first_earnings_report": {
+                "type": "string",
+                "description": "First earnings report today: 'CompanyName reported Q[X] EPS $X.XX vs estimate $X.XX, revenue $XM vs estimate $XM' or 'No earnings reports found'"
+              },
+              "second_earnings_report": {
+                "type": "string",
+                "description": "Second earnings report today with same format or 'No second earnings report found'"
+              },
+              "third_earnings_report": {
+                "type": "string",
+                "description": "Third earnings report today with same format or 'No third earnings report found'"
+              },
+              "first_guidance_change": {
+                "type": "string",
+                "description": "First guidance change announced today: 'CompanyName updated [Q/FY] EPS guidance to $X.XX-$X.XX from $X.XX-$X.XX' or 'No guidance changes found'"
+              },
+              "largest_stock_move": {
+                "type": "string",
+                "description": "Single largest post-earnings stock move today: 'CompanyName stock moved +/-X.X% to $XX.XX after earnings' or 'No significant moves found'"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "input": "Find individual company earnings releases today. Look for specific EPS and revenue numbers compared to analyst estimates, and stock price reactions from financial news sources."
+    },
+    {
+      "slug": "daily-patent-filings",
+      "name": "Daily Patent and IP Activity",
+      "description": "Track individual patent filings and IP events",
+      "processor": "core",
+      "task_spec": {
+        "output_schema": {
+          "type": "json",
+          "json_schema": {
+            "type": "object",
+            "required": [
+              "first_patent_filing",
+              "first_patent_grant",
+              "first_ip_lawsuit",
+              "first_trademark_filing",
+              "first_patent_dispute"
+            ],
+            "properties": {
+              "first_patent_filing": {
+                "type": "string",
+                "description": "First patent application published today: 'CompanyName filed patent #[number] for [technology] on [filing date]' or 'No patent filings found'"
+              },
+              "first_patent_grant": {
+                "type": "string",
+                "description": "First patent granted today: 'Patent #[number] granted to CompanyName for [technology] filed on [original date]' or 'No patents granted found'"
+              },
+              "first_ip_lawsuit": {
+                "type": "string",
+                "description": "First IP lawsuit filed today: 'CompanyA sued CompanyB in [Court] over Patent #[number] for [technology]' or 'No IP lawsuits found'"
+              },
+              "first_trademark_filing": {
+                "type": "string",
+                "description": "First trademark application today: 'CompanyName applied for trademark [name] in class [number] for [products/services]' or 'No trademark filings found'"
+              },
+              "first_patent_dispute": {
+                "type": "string",
+                "description": "First patent dispute resolution today: 'Patent dispute between CompanyA and CompanyB resolved with [outcome]' or 'No dispute resolutions found'"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "input": "Search for individual patent applications published, patents granted, IP lawsuits filed, and trademark applications from today. Look for specific patent numbers, company names, and filing dates."
+    },
+    {
+      "slug": "daily-executive-moves",
+      "name": "Daily Executive Leadership Changes",
+      "description": "Track individual executive appointments and departures",
+      "processor": "core",
+      "task_spec": {
+        "output_schema": {
+          "type": "json",
+          "json_schema": {
+            "type": "object",
+            "required": [
+              "first_ceo_change",
+              "first_cfo_appointment",
+              "first_cto_appointment",
+              "first_board_appointment",
+              "first_executive_departure"
+            ],
+            "properties": {
+              "first_ceo_change": {
+                "type": "string",
+                "description": "First CEO change announced today: 'CompanyName appointed [Name] as CEO replacing [Previous CEO] effective [date]' or 'No CEO changes found'"
+              },
+              "first_cfo_appointment": {
+                "type": "string",
+                "description": "First CFO appointment today: 'CompanyName hired [Name] as CFO from [Previous Company/Role]' or 'No CFO appointments found'"
+              },
+              "first_cto_appointment": {
+                "type": "string",
+                "description": "First CTO appointment today: 'CompanyName appointed [Name] as CTO from [Previous Company/Role]' or 'No CTO appointments found'"
+              },
+              "first_board_appointment": {
+                "type": "string",
+                "description": "First board appointment today: '[Name] joined CompanyName board of directors, previously [background]' or 'No board appointments found'"
+              },
+              "first_executive_departure": {
+                "type": "string",
+                "description": "First executive departure announced today: '[Name] left role as [Title] at CompanyName after [tenure]' or 'No executive departures found'"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "input": "Find individual executive leadership changes announced today. Look for specific names, titles, companies, effective dates, and previous roles from official company announcements."
+    },
+    {
+      "slug": "daily-cybersecurity-incidents",
+      "name": "Daily Cybersecurity Incident Monitor",
+      "description": "Track individual security incidents with specific details",
+      "processor": "core",
+      "task_spec": {
+        "output_schema": {
+          "type": "json",
+          "json_schema": {
+            "type": "object",
+            "required": [
+              "first_breach_disclosed",
+              "first_ransomware_attack",
+              "first_vulnerability_announced",
+              "first_incident_update",
+              "first_security_patch"
+            ],
+            "properties": {
+              "first_breach_disclosed": {
+                "type": "string",
+                "description": "First data breach disclosed today: 'CompanyName disclosed breach affecting [number] users/records, discovered on [date]' or 'No breaches disclosed found'"
+              },
+              "first_ransomware_attack": {
+                "type": "string",
+                "description": "First ransomware attack reported today: 'CompanyName hit by [ransomware name/group], [operational status]' or 'No ransomware attacks found'"
+              },
+              "first_vulnerability_announced": {
+                "type": "string",
+                "description": "First critical vulnerability announced today: 'CVE-[number] in [software] allows [attack type], CVSS score [X.X]' or 'No vulnerabilities found'"
+              },
+              "first_incident_update": {
+                "type": "string",
+                "description": "First incident response update today: 'CompanyName: [specific status update] on [incident type]' or 'No incident updates found'"
+              },
+              "first_security_patch": {
+                "type": "string",
+                "description": "First security patch released today: '[Software] version [X.X] patches CVE-[number], [severity level]' or 'No security patches found'"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "input": "Find individual cybersecurity incidents disclosed, ransomware attacks reported, vulnerabilities announced, and security patches released today. Look for specific CVE numbers, company names, and impact details."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "parallel-task-runner",
+  "main": "worker.ts",
+  "compatibility_date": "2025-07-14",
+  "assets": { "directory": "./" },
+  "observability": { "logs": { "enabled": true } },
+  "durable_objects": {
+    "bindings": [
+      { "name": "TASK_MANAGER", "class_name": "TaskManager" },
+      { "name": "TASK_RUNNER", "class_name": "TaskRunner" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["TaskManager", "TaskRunner"] }
+  ],
+  "routes": [
+    { "custom_domain": true, "pattern": "tasks.gptideas.com" },
+    { "custom_domain": true, "pattern": "sse.p0web.com" }
+  ]
+}

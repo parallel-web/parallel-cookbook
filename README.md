@@ -14,11 +14,11 @@ These recipes focus on building full-stack serverless apps on Cloudflare Workers
 
 Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs that are more complete (payments, login, etc) and can be used as boilerplate / starting point for new SaaS Products!
 
-| Title                           | Description                              | Repo                                                          | Demo                                       |
-| ------------------------------- | ---------------------------------------- | ------------------------------------------------------------- | ------------------------------------------ |
-| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | [Repo](https://github.com/janwilmake/parallel-tasks-sse)      | [sse.p0web.com](https://sse.p0web.com)     |
-| Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | [Repo](https://github.com/janwilmake/parallel-daily-insights) | [daily.p0web.com](https://daily.p0web.com) |
-| Search Agent                    | AI SDK + Parallel SDK Search API as tool | [Repo](https://github.com/janwilmake/parallel-search-agent)   | [agent.p0web.com](https://agent.p0web.com) |
+| Title                           | Description                              | Code                                                 | Demo                                       |
+| ------------------------------- | ---------------------------------------- | ---------------------------------------------------- | ------------------------------------------ |
+| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | [Recipe](typescript-recipes/parallel-tasks-sse)      | [sse.p0web.com](https://sse.p0web.com)     |
+| Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | [Recipe](typescript-recipes/parallel-daily-insights) | [daily.p0web.com](https://daily.p0web.com) |
+| Search Agent                    | AI SDK + Parallel SDK Search API as tool | [Recipe](typescript-recipes/parallel-search-agent)   | [agent.p0web.com](https://agent.p0web.com) |
 
 <!--
 
@@ -87,16 +87,6 @@ Note: Why badges?
 - Allows easy filtering of a context
 - Allows quickly seeing a prompt & result and altering the prompt
 
-Other contexts:
-- 🟠 Typescript SDK (https://uithub.com/parallel-web/parallel-sdk-typescript)
-- 🟠 MCP server to select context (Coming soon!)
-
-# Reduce LLM SDK context
-
-- Check if stainless allows generating pyi stubs: https://letmeprompt.com/what-is-a-dts-file-m18w490
-- Create and expose `types.d.ts` file for the Typescript SDK
-
-These would create a much shorter context for libraries that make it much more usable for LLMs. It's interesting to generate it programmatically, but since code is often badly documented or may contain comments that don't end up in the stub but ARE important, it'd also be very interesting to try and generate these files using AI.
 -->
 
 ## Using Context

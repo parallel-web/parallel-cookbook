@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallel task manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'off-white': '#fcfcfa',
+                        'index-black': '#1d1b16',
+                        'neural': '#d8d0bf',
+                        'signal': '#fb631b',
+                    },
+                    fontFamily: {
+                        'ft-mono': ['FT System Mono', 'Monaco', 'Menlo', 'monospace'],
+                        'gerstner': ['Gerstner Programm', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2'),
+                url('https://assets.p0web.com/FTSystemMono-Regular.woff') format('woff');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2'),
+                url('https://assets.p0web.com/FTSystemMono-Medium.woff') format('woff');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Bold.woff2') format('woff2'),
+                url('https://assets.p0web.com/FTSystemMono-Bold.woff') format('woff');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2'),
+                url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff') format('woff');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff2') format('woff2'),
+                url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff') format('woff');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        /* System theme detection */
+        @media (prefers-color-scheme: dark) {
+            html {
+                color-scheme: dark;
+            }
+        }
+
+        /* Custom select arrow */
+        .custom-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 12px center;
+            background-repeat: no-repeat;
+            background-size: 16px 12px;
+        }
+
+        .dark .custom-select {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%9ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        }
+
+        /* Tooltip positioning for mobile */
+        @media (max-width: 768px) {
+            .processor-tooltip {
+                position: fixed !important;
+                bottom: auto !important;
+                left: 50% !important;
+                transform: translateX(-50%) !important;
+                max-width: 280px !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-off-white dark:bg-index-black text-index-black dark:text-off-white font-gerstner min-h-screen">
+    <script>
+        // Apply dark mode class based on system preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+
+        // Listen for changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (e.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+    <div class="max-w-7xl mx-auto min-h-screen flex flex-col">
+        <header class="p-6 border-b border-neural dark:border-gray-700">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                <div class="font-ft-mono text-2xl font-bold lowercase">parallel task manager</div>
+                <div class="flex items-center gap-6">
+                    <a href="https://github.com/janwilmake/parallel-tasks-sse" target="_blank"
+                        class="text-gray-600 dark:text-gray-400 hover:text-index-black dark:hover:text-off-white transition-colors duration-200 font-ft-mono text-sm flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        repository
+                    </a>
+                    <a href="https://p0web.com" target="_blank"
+                        class="transition-opacity duration-200 hover:opacity-80">
+                        <img src="https://assets.p0web.com/dark-parallel-logo-270.png" alt="Parallel"
+                            class="h-8 dark:hidden">
+                        <img src="https://assets.p0web.com/white-parallel-logo-270.png" alt="Parallel"
+                            class="h-8 hidden dark:block">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <script src="convert.js"></script>
+        <main class="flex-1 p-8">
+            <section class="mb-12">
+                <h2 class="text-lg font-medium mb-6 font-ft-mono">Create Task</h2>
+
+                <div
+                    class="bg-neural/20 dark:bg-gray-800/50 border border-neural dark:border-gray-700 rounded-lg p-5 mb-8 text-sm font-ft-mono">
+                    <h4 class="mb-3 text-index-black dark:text-off-white font-medium">Output Schema Modes</h4>
+                    <ul class="ml-4 mb-4 space-y-2">
+                        <li class="text-gray-700 dark:text-gray-300"><strong
+                                class="text-index-black dark:text-off-white">Text:</strong> Simple narrative responses
+                            for explanatory answers and summaries</li>
+                        <li class="text-gray-700 dark:text-gray-300"><strong
+                                class="text-index-black dark:text-off-white">Auto:</strong> System generates optimal
+                            JSON structure for comprehensive research reports with detailed citations <em>(Pro/Ultra
+                                processors only)</em></li>
+                        <li class="text-gray-700 dark:text-gray-300"><strong
+                                class="text-index-black dark:text-off-white">Object:</strong> You define exact JSON
+                            structure for consistent, systematic data processing</li>
+                    </ul>
+                    <p class="text-gray-700 dark:text-gray-300"><strong
+                            class="text-index-black dark:text-off-white">Note:</strong> This system uses Server-Sent
+                        Events (SSE) to stream real-time progress updates during task execution. Auto mode provides the
+                        most detailed basis information with granular field-level citations.</p>
+                </div>
+
+                <form id="taskForm" class="space-y-5 mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div class="relative">
+                            <label for="apiKey"
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 font-ft-mono">API
+                                Key</label>
+                            <input type="password" id="apiKey" name="apiKey" required
+                                placeholder="Enter your Parallel API key"
+                                class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 text-sm text-index-black dark:text-off-white font-ft-mono focus:outline-none focus:border-signal dark:focus:border-signal">
+                            <div class="mt-1.5 text-xs font-ft-mono">
+                                <a href="https://platform.parallel.ai/settings?tab=api-keys" target="_blank"
+                                    class="text-signal hover:text-signal/80 inline-flex items-center gap-1 px-2 py-1 rounded transition-all duration-200 hover:bg-neural/20 dark:hover:bg-gray-800">
+                                    Get your API key
+                                    <span class="text-[10px] opacity-70">↗</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <label for="processor"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 font-ft-mono">Processor</label>
+                                <div class="relative group">
+                                    <div
+                                        class="w-4 h-4 rounded-full bg-gray-500 text-off-white text-[10px] font-bold flex items-center justify-center cursor-help">
+                                        ?
+                                        <div
+                                            class="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-index-black dark:bg-off-white text-off-white dark:text-index-black px-3 py-3 rounded-lg text-xs leading-tight whitespace-normal max-w-80 w-max z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 shadow-xl font-ft-mono">
+                                            Choose based on task complexity:<br>
+                                            <strong>Lite/Base:</strong> Simple enrichments<br>
+                                            <strong>Core:</strong> Reliable accuracy, ~10 fields<br>
+                                            <strong>Pro/Ultra:</strong> Deep research &amp; reasoning
+                                            <div
+                                                class="absolute top-full left-1/2 transform -translate-x-1/2 border-[5px] border-transparent border-t-index-black dark:border-t-off-white">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <select id="processor" name="processor" required
+                                    class="custom-select w-full appearance-none bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 pr-10 text-sm text-index-black dark:text-off-white font-ft-mono cursor-pointer focus:outline-none focus:border-signal dark:focus:border-signal">
+                                    <option value="lite">Lite - Basic metadata, low latency (5-45s, $5/1k)</option>
+                                    <option value="base" selected>Base - Standard enrichments (10-80s, $10/1k)</option>
+                                    <option value="core">Core - Cross-referenced research (45-160s, $25/1k)</option>
+                                    <option value="pro">Pro - Exploratory web research (60s-8min, $100/1k)</option>
+                                    <option value="ultra">Ultra - Multi-source deep research (5-12min, $300/1k)</option>
+                                    <option value="ultra2x">Ultra2x - Difficult deep research (8-15min, $600/1k)
+                                    </option>
+                                    <option value="ultra4x">Ultra4x - Very difficult research (8-20min, $1200/1k)
+                                    </option>
+                                    <option value="ultra8x">Ultra8x - Most difficult research (8-20min, $2400/1k)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="input"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 font-ft-mono">Input</label>
+                        <textarea id="input" name="input" required placeholder="Enter your task input..."
+                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[80px] focus:outline-none focus:border-signal dark:focus:border-signal"></textarea>
+                    </div>
+
+                    <div>
+                        <label
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 font-ft-mono">Output
+                            Schema Type</label>
+                        <div class="flex flex-col sm:flex-row gap-6">
+                            <div class="flex items-center gap-2">
+                                <input type="radio" id="schemaText" name="schemaType" value="text"
+                                    class="w-4 h-4 text-signal bg-neural/30 dark:bg-gray-800 border-neural dark:border-gray-600 focus:ring-signal dark:focus:ring-signal">
+                                <label for="schemaText"
+                                    class="text-sm font-medium text-index-black dark:text-off-white font-ft-mono">Text</label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input type="radio" id="schemaAuto" name="schemaType" value="auto" checked
+                                    class="w-4 h-4 text-signal bg-neural/30 dark:bg-gray-800 border-neural dark:border-gray-600 focus:ring-signal dark:focus:ring-signal">
+                                <label for="schemaAuto"
+                                    class="text-sm font-medium text-index-black dark:text-off-white font-ft-mono">Auto</label>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <input type="radio" id="schemaObject" name="schemaType" value="object"
+                                    class="w-4 h-4 text-signal bg-neural/30 dark:bg-gray-800 border-neural dark:border-gray-600 focus:ring-signal dark:focus:ring-signal">
+                                <label for="schemaObject"
+                                    class="text-sm font-medium text-index-black dark:text-off-white font-ft-mono">Object</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="autoModeWarning"
+                        class="hidden bg-red-900/20 text-red-400 p-3 rounded flex items-center gap-2 text-sm font-ft-mono">
+                        <span class="text-base flex-shrink-0">⚠</span>
+                        Auto mode requires Pro, Ultra, or Ultra+ processors for Deep Research functionality. Please
+                        select a Pro or Ultra processor to use Auto mode.
+                    </div>
+
+                    <div class="hidden" id="textDescriptionGroup">
+                        <label for="textDescription"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 font-ft-mono">Text
+                            Description</label>
+                        <textarea id="textDescription" name="textDescription"
+                            placeholder="Describe the desired text output..."
+                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[80px] focus:outline-none focus:border-signal dark:focus:border-signal"></textarea>
+                    </div>
+
+                    <div class="hidden" id="objectSchemaGroup">
+                        <label for="objectSchema"
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 font-ft-mono">JSON
+                            Schema</label>
+                        <textarea id="objectSchema" name="objectSchema"
+                            placeholder='{"type": "object", "properties": {"field1": {"type": "string", "description": "..."}}, "required": ["field1"], "additionalProperties": false}'
+                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[120px] focus:outline-none focus:border-signal dark:focus:border-signal"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="bg-signal text-off-white border-none rounded px-6 py-3 text-sm font-medium cursor-pointer transition-opacity duration-200 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed font-ft-mono">
+                        Create Task
+                    </button>
+                </form>
+            </section>
+
+            <section class="mb-12">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                    <h2 class="text-lg font-medium font-ft-mono">Tasks</h2>
+                    <button type="button" onclick="loadTasks()"
+                        class="bg-neural/30 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-neural dark:border-gray-600 rounded px-6 py-3 text-sm font-medium cursor-pointer transition-colors duration-200 hover:text-index-black dark:hover:text-off-white font-ft-mono">
+                        Refresh
+                    </button>
+                </div>
+
+                <div
+                    class="bg-neural/20 dark:bg-gray-800/50 rounded border border-neural dark:border-gray-700 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr class="bg-neural dark:bg-gray-700">
+                                    <th
+                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
+                                        ID</th>
+                                    <th
+                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
+                                        Processor</th>
+                                    <th
+                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
+                                        Status</th>
+                                    <th
+                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
+                                        Input</th>
+                                    <th
+                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
+                                        Created</th>
+                                    <th
+                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
+                                        Completed</th>
+                                    <th
+                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
+                                        JSON</th>
+                                    <th
+                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
+                                        Table</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasksBody" class="divide-y divide-neural dark:divide-gray-700">
+                                <!-- Tasks will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer
+            class="p-6 border-t border-neural dark:border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div
+                class="flex bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded overflow-hidden">
+                <span
+                    class="px-4 py-2 bg-signal text-off-white text-xs font-medium uppercase tracking-wider font-ft-mono">HUMAN</span>
+                <a href="/README.md" target="_blank"
+                    class="px-4 py-2 text-gray-600 dark:text-gray-400 text-xs font-medium uppercase tracking-wider font-ft-mono transition-colors duration-200 hover:text-gray-800 dark:hover:text-gray-200 no-underline">MACHINE</a>
+            </div>
+            <a href="/README.md"
+                class="text-gray-600 dark:text-gray-400 text-xs font-ft-mono no-underline hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-200">
+                API Documentation
+            </a>
+        </footer>
+    </div>
+
+    <script>
+        // Form persistence
+        function loadFormData() {
+            const data = JSON.parse(localStorage.getItem('taskFormData') || '{}');
+            Object.entries(data).forEach(([key, value]) => {
+                const el = document.getElementById(key);
+                if (!el) return;
+                if (el.type === 'radio') {
+                    if (el.value === value) el.checked = true;
+                } else {
+                    el.value = value;
+                }
+            });
+
+            // Handle radio buttons for schema type
+            if (data.schemaType) {
+                document.querySelector(`input[name="schemaType"][value="${data.schemaType}"]`).checked = true;
+            }
+
+            toggleSchemaInputs();
+        }
+
+        function saveFormData() {
+            const data = {};
+            ['apiKey', 'processor', 'input', 'textDescription', 'objectSchema'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) data[id] = el.value;
+            });
+
+            const schemaType = document.querySelector('input[name="schemaType"]:checked');
+            if (schemaType) data.schemaType = schemaType.value;
+
+            localStorage.setItem('taskFormData', JSON.stringify(data));
+        }
+
+        function toggleSchemaInputs() {
+            const schemaType = document.querySelector('input[name="schemaType"]:checked')?.value;
+
+            document.getElementById('textDescriptionGroup').classList.toggle('hidden', schemaType !== 'text');
+            document.getElementById('objectSchemaGroup').classList.toggle('hidden', schemaType !== 'object');
+        }
+
+        function checkAutoModeCompatibility() {
+            const processor = document.getElementById('processor').value;
+            const schemaType = document.querySelector('input[name="schemaType"]:checked')?.value;
+            const warningDiv = document.getElementById('autoModeWarning');
+
+            const isHighComputeProcessor = ['pro', 'ultra', 'ultra2x', 'ultra4x', 'ultra8x'].includes(processor);
+
+            // Show warning only if auto mode is selected but processor doesn't support it
+            const shouldShowWarning = schemaType === 'auto' && !isHighComputeProcessor;
+            warningDiv.classList.toggle('hidden', !shouldShowWarning);
+
+            return isHighComputeProcessor || schemaType !== 'auto';
+        }
+
+        // Event listeners
+        document.querySelectorAll('input[name="schemaType"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                toggleSchemaInputs();
+                checkAutoModeCompatibility();
+                saveFormData();
+            });
+        });
+
+        document.getElementById('processor').addEventListener('change', () => {
+            checkAutoModeCompatibility();
+            saveFormData();
+        });
+
+        document.querySelectorAll('#taskForm input, #taskForm select, #taskForm textarea')
+            .forEach(el => el.addEventListener('input', saveFormData));
+
+        // Form submission
+        document.getElementById('taskForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Check compatibility before submission
+            if (!checkAutoModeCompatibility()) {
+                return; // Don't submit if there's a compatibility issue
+            }
+
+            const btn = e.target.querySelector('button');
+            btn.disabled = true;
+            btn.textContent = 'Creating...';
+
+            const formData = new FormData(e.target);
+            const schemaType = document.querySelector('input[name="schemaType"]:checked').value;
+
+            const taskData = {
+                apiKey: formData.get('apiKey'),
+                processor: formData.get('processor'),
+                input: formData.get('input'),
+                enable_events: true
+            };
+
+            // Build task spec based on schema type
+            if (schemaType === 'text') {
+                const description = formData.get('textDescription')?.trim();
+                taskData.taskSpec = {
+                    output_schema: {
+                        type: 'text',
+                        description: description || 'Provide a comprehensive text response'
+                    }
+                };
+            } else if (schemaType === 'auto') {
+                taskData.taskSpec = {
+                    output_schema: {
+                        type: 'auto'
+                    }
+                };
+            } else if (schemaType === 'object') {
+                const objectSchema = formData.get('objectSchema')?.trim();
+                if (objectSchema) {
+                    try {
+                        const parsedSchema = JSON.parse(objectSchema);
+                        taskData.taskSpec = {
+                            output_schema: {
+                                type: 'json',
+                                json_schema: parsedSchema
+                            }
+                        };
+                    } catch (error) {
+                        alert('Invalid JSON in object schema');
+                        btn.disabled = false;
+                        btn.textContent = 'Create Task';
+                        return;
+                    }
+                } else {
+                    alert('Object schema is required when using Object mode');
+                    btn.disabled = false;
+                    btn.textContent = 'Create Task';
+                    return;
+                }
+            }
+
+            try {
+                const response = await fetch('/api/tasks', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(taskData)
+                });
+
+                if (response.ok) {
+                    loadTasks();
+                    // Clear input after successful creation
+                    document.getElementById('input').value = '';
+                    saveFormData();
+                } else {
+                    alert(`Error: ${await response.text()}`);
+                }
+            } catch (error) {
+                alert(`Error: ${error.message}`);
+            } finally {
+                btn.disabled = false;
+                btn.textContent = 'Create Task';
+            }
+        });
+
+        // Load tasks
+        async function loadTasks() {
+            try {
+                const response = await fetch('/api/tasks');
+                const tasks = await response.json();
+                const tbody = document.getElementById('tasksBody');
+
+                tbody.innerHTML = tasks.map(task => `
+                    <tr class="hover:bg-neural/30 dark:hover:bg-gray-800/50 cursor-pointer transition-colors duration-200">
+                        <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">${task.id.substring(0, 8)}...</td>
+                        <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">${task.processor}</td>
+                        <td class="p-4">
+                            <span class="inline-flex px-2 py-1 rounded-full text-xs font-medium uppercase tracking-wide font-ft-mono
+                                ${task.status === 'pending' ? 'bg-yellow-900/50 text-yellow-400' :
+                        task.status === 'queued' ? 'bg-yellow-900/50 text-yellow-400' :
+                            task.status === 'running' ? 'bg-blue-900/50 text-blue-400' :
+                                task.status === 'completed' ? 'bg-green-900/50 text-green-400' :
+                                    task.status === 'failed' ? 'bg-red-900/50 text-red-400' : 'bg-gray-900/50 text-gray-400'}">
+                                ${task.status}
+                            </span>
+                        </td>
+                        <td class="p-4 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap text-gray-500 dark:text-gray-400 text-xs font-ft-mono">${task.inputPreview}</td>
+                        <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">${new Date(task.createdAt).toLocaleString()}</td>
+                        <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">${task.completedAt ? new Date(task.completedAt).toLocaleString() : '—'}</td>
+                        <td class="p-4 text-signal hover:text-signal/80 cursor-pointer text-sm font-ft-mono" onclick="window.open('/task/${task.id}', '_blank')">JSON</td>
+                        <td class="p-4 text-signal hover:text-signal/80 cursor-pointer text-sm font-ft-mono" onclick="convertUrl('/task/${task.id}')">Table</td>
+                    </tr>
+                `).join('');
+            } catch (error) {
+                console.error('Error loading tasks:', error);
+            }
+        }
+
+        // Initialize
+        loadFormData();
+        checkAutoModeCompatibility();
+        loadTasks();
+        setInterval(loadTasks, 10000);
+    </script>
+</body>
+
+</html>

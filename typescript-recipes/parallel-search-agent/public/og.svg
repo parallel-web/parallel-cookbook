@@ -1,0 +1,98 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#fcfcfa"/>
+  
+  <!-- Subtle grid pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#d8d0bf" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Parallel Logo -->
+  <g transform="translate(60, 50)">
+    <image href="https://assets.p0web.com/dark-parallel-logo-270.svg" width="180" height="45"/>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="60" y="180" font-family="'FT System Mono', monospace" font-size="48" font-weight="600" fill="#1d1b16">
+    After hours of iteration,
+  </text>
+  <text x="60" y="240" font-family="'FT System Mono', monospace" font-size="48" font-weight="600" fill="#1d1b16">
+    I one-shotted my
+  </text>
+  <text x="60" y="300" font-family="'FT System Mono', monospace" font-size="48" font-weight="700" fill="#fb631b">
+    Search Agent
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="60" y="350" font-family="'FT System Mono', monospace" font-size="24" font-weight="400" fill="#1d1b16" opacity="0.8">
+    A short guide about context engineering and building agents
+  </text>
+  
+  <!-- Tech Stack Icons/Labels -->
+  <g transform="translate(60, 420)">
+    <rect x="0" y="0" width="120" height="36" rx="18" fill="#d8d0bf" opacity="0.3"/>
+    <text x="60" y="24" font-family="'FT System Mono', monospace" font-size="14" font-weight="500" fill="#1d1b16" text-anchor="middle">Parallel AI</text>
+  </g>
+  
+  <g transform="translate(200, 420)">
+    <rect x="0" y="0" width="100" height="36" rx="18" fill="#d8d0bf" opacity="0.3"/>
+    <text x="50" y="24" font-family="'FT System Mono', monospace" font-size="14" font-weight="500" fill="#1d1b16" text-anchor="middle">Vercel AI</text>
+  </g>
+  
+  <g transform="translate(320, 420)">
+    <rect x="0" y="0" width="80" height="36" rx="18" fill="#d8d0bf" opacity="0.3"/>
+    <text x="40" y="24" font-family="'FT System Mono', monospace" font-size="14" font-weight="500" fill="#1d1b16" text-anchor="middle">Cerebras</text>
+  </g>
+  
+  <g transform="translate(420, 420)">
+    <rect x="0" y="0" width="100" height="36" rx="18" fill="#d8d0bf" opacity="0.3"/>
+    <text x="50" y="24" font-family="'FT System Mono', monospace" font-size="14" font-weight="500" fill="#1d1b16" text-anchor="middle">Cloudflare</text>
+  </g>
+  
+  <!-- Code snippet visual -->
+  <g transform="translate(650, 120)">
+    <rect x="0" y="0" width="480" height="320" rx="12" fill="#1d1b16" opacity="0.05"/>
+    <rect x="12" y="12" width="456" height="296" rx="8" fill="#1d1b16" opacity="0.02"/>
+    
+    <!-- Mock code lines -->
+    <rect x="30" y="40" width="120" height="12" rx="6" fill="#fb631b" opacity="0.6"/>
+    <rect x="30" y="65" width="200" height="8" rx="4" fill="#d8d0bf" opacity="0.4"/>
+    <rect x="30" y="85" width="160" height="8" rx="4" fill="#d8d0bf" opacity="0.4"/>
+    <rect x="30" y="105" width="180" height="8" rx="4" fill="#d8d0bf" opacity="0.4"/>
+    
+    <rect x="30" y="135" width="100" height="12" rx="6" fill="#fb631b" opacity="0.6"/>
+    <rect x="30" y="160" width="220" height="8" rx="4" fill="#d8d0bf" opacity="0.4"/>
+    <rect x="30" y="180" width="140" height="8" rx="4" fill="#d8d0bf" opacity="0.4"/>
+    
+    <rect x="30" y="210" width="80" height="12" rx="6" fill="#fb631b" opacity="0.6"/>
+    <rect x="30" y="235" width="190" height="8" rx="4" fill="#d8d0bf" opacity="0.4"/>
+    <rect x="30" y="255" width="170" height="8" rx="4" fill="#d8d0bf" opacity="0.4"/>
+    <rect x="30" y="275" width="200" height="8" rx="4" fill="#d8d0bf" opacity="0.4"/>
+  </g>
+  
+  <!-- Search icon -->
+  <g transform="translate(950, 480)">
+    <circle cx="20" cy="20" r="16" fill="none" stroke="#fb631b" stroke-width="3"/>
+    <path d="32 32 42 42" stroke="#fb631b" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Bottom text -->
+  <text x="60" y="530" font-family="'FT System Mono', monospace" font-size="18" font-weight="500" fill="#1d1b16">
+    One-shot implementation using context engineering
+  </text>
+  
+  <text x="60" y="560" font-family="'FT System Mono', monospace" font-size="16" font-weight="400" fill="#1d1b16" opacity="0.6">
+    janwilmake → agent.p0web.com
+  </text>
+  
+  <!-- Decorative elements -->
+  <circle cx="1050" cy="100" r="3" fill="#fb631b" opacity="0.4"/>
+  <circle cx="1100" cy="140" r="2" fill="#d8d0bf" opacity="0.6"/>
+  <circle cx="980" cy="80" r="2.5" fill="#fb631b" opacity="0.3"/>
+  
+  <!-- Subtle accent line -->
+  <rect x="60" y="380" width="400" height="2" rx="1" fill="#fb631b" opacity="0.3"/>
+</svg>
