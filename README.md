@@ -36,8 +36,9 @@ https://cookbook.openai.com
 
 ## Awesome Parallel OSS Examples
 
-- [Parallel Spreadsheet](https://github.com/zahidkhawaja/parallel-spreadsheet) by [@chillzaza\_](https://x.com/chillzaza_/status/1958005876918292941) (Next.js, Typescript)
+- [Parallel Spreadsheet](https://github.com/zahidkhawaja/parallel-spreadsheet) by [@chillzaza\_](https://x.com/chillzaza_/status/1958005876918292941) (Vercel, Typescript)
 - [Based People](https://github.com/janwilmake/basedpeople) by [@janwilmake](https://x.com/janwilmake/status/1956061673833300443) (Cloudflare, Typescript)
+- [Scira](https://github.com/zaidmukaddam/scira) by [@zaidmukaddam](https://x.com/zaidmukaddam/status/1958583204635439264) (Vercel, Typescript)
 
 ## Contributing
 
