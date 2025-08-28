@@ -1,12 +1,6 @@
-# Parallel AI - Context-aware Cookbook
+# Parallel AI Cookbook
 
-The following cookbook is designed to get you cooking with Parallel APIs as quickly as possible. It uses a 3-step framework that allows ingesting the right context to ensure maximum LLM output quality:
-
-1. finetuning the scope of your request
-2. gathering the right contexts for this
-3. creating a full implementation using the right context
-
-You can use this framework with any LLM/IDE that supports URL context expansion or MCP. For your convenience, there are also quick links to view contexts and prompt examples.
+The following cookbook is designed to get you cooking with Parallel APIs as quickly as possible. Explore and remix recipes and OSS projects using Parallel, use useful utilities, and try the machine quickstart to get cooking immediately.
 
 ## Recipes & Examples
 
@@ -40,7 +34,7 @@ https://cookbook.openai.com
 - [Based People](https://github.com/janwilmake/basedpeople) by [@janwilmake](https://x.com/janwilmake/status/1956061673833300443) (Cloudflare, Typescript)
 - [Scira (10k+ stars)](https://github.com/zaidmukaddam/scira) by [@zaidmukaddam](https://x.com/zaidmukaddam/status/1958583204635439264) (Vercel, Typescript)
 
-## Resources
+## Resources & Utitlies
 
 - https://github.com/janwilmake/parallel-flatten - Utility for getting flat outputs for easier rendering
 
@@ -53,7 +47,7 @@ Built something cool with Parallel APIs you want to showcase? The Parallel cookb
 > [!NOTE]
 > The following examples have been tested with [Claude Sonnet 4](https://www.anthropic.com/claude/sonnet) ONLY, which is widely regarded one of the best AI coding models. That said, these prompts will work well with other models too.
 >
-> Please note that the Python SDK or Typescript SDK aren't included in this quickstart as of yet. You can add these if desired.
+> Please note that the Python SDK isn't included in this quickstart as of yet. You can add these if desired.
 >
 > Before using these prompts, ensure your AI either has access to a tool that can fetch llms.txt urls like [this fetch MCP server](https://github.com/modelcontextprotocol/servers/tree/main/src/fetch) or [this remote one](https://smithery.ai/server/@jiankaitian/servers)
 
@@ -66,7 +60,7 @@ Note: Why badges?
 
 -->
 
-For quick questions you may use the following prompt in your LLM client - please note it's best to filter on more specific information before asking the LLM to implement anything, for optimal output quality. See the [advanced machine start](#advanced-machine-start-2-step-with-mcp) for more info on that.
+For quick questions you may use the following prompt in your LLM client. You can use this prompt with any LLM/IDE that supports URL context expansion or MCP. For your convenience, there are also quick links to view contexts and prompt examples. please note it's best to filter on more specific information before asking the LLM to implement anything, for optimal output quality. See the [advanced machine start](#advanced-machine-start-2-step-with-mcp) for more info on that.
 
 ```md
 Here is all information available about parallel:
@@ -74,6 +68,7 @@ Here is all information available about parallel:
 - Full documentation: @https://docs.parallel.ai/llms-full.txt
 - API specification: @https://uithub.com/janwilmake/parallel-openapi/tree/bdbb361f194b761bbe8220faf5beba33e3ba70e1/tags?lines=false
 - Website and blog: @https://uithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false
+- Typescript SDK summary: @https://rules-httpsuithu-s10son0.letmeprompt.com/parallel-sdk.d.ts
 
 Answer the users prompt based on available information. Do not make up anything, fetch URLs needed incase you need more context, or respond with the URLs if you can't reach them yourself.
 ```
@@ -84,12 +79,17 @@ Depending on your question, please choose the contexts needed:
 - [API Specification](https://docs.parallel.ai/api-reference) - [![](https://badge.forgithub.com/janwilmake/parallel-openapi/tree/main/openapi.yaml)](https://uithub.com/janwilmake/parallel-openapi?maxTokens=10000000&lines=false) [![](https://b.lmpify.com/Select_A_Context)](https://letmeprompt.com?q=https://parallel.oapis.org/%20%20give%20me%20urls:%20which%20files%20are%20relevant%20for%20...)
 - [Website and Blog](https://parallel.ai) - [![](https://badge.forgithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false)](https://uithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false)
 - [Python SDK](https://github.com/parallel-web/parallel-sdk-python) - [![](https://badge.forgithub.com/parallel-web/parallel-sdk-python?maxTokens=10000000&lines=false)](https://uithub.com/parallel-web/parallel-sdk-python?maxTokens=10000000&lines=false)
+- [Typescript SDK (coming soon)](#) - [Raw Context](https://rules-httpsuithu-s10son0.letmeprompt.com/parallel-sdk.d.ts)
 
 ## Advanced Machine Start (2-step, with MCP)
 
-You can use this prompt to iteratively get to a better definition of what you want to build, and get the right context for this.
+The advanced machine quickstart uses a 3-step framework that allows ingesting the right context to ensure maximum LLM output quality:
 
-Alternatively it's possible to use this same prompt to retrieve URLs you can paste in your follow-up message. In this case, be sure to copyt it for the documentation to be included into the context window. This will work in any modern LLM client, see [using context](#using-context) for more details.
+1. finetuning the scope of your request
+2. gathering the right contexts for this
+3. creating a full implementation using the right context
+
+You can use this prompt to iteratively get to a better definition of what you want to build, and get the right context for this. Alternatively it's possible to use this same prompt to retrieve URLs you can paste in your follow-up message. In this case, be sure to copyt it for the documentation to be included into the context window. This will work in any modern LLM client, see [using context](#using-context) for more details.
 
 ```txt path="relevant-context-prompt.txt"
 Docs: @https://docs.parallel.ai/llms.txt
