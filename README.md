@@ -117,3 +117,5 @@ How to use context with your LLM/IDE?
 - [Context Management in VSCode](https://code.visualstudio.com/docs/copilot/chat/copilot-chat-context#_add-files-as-context) works with URLs directly
 - [Claude Code](https://www.anthropic.com/engineering/claude-code-best-practices) works with URLs directly
 - [AmpCode](https://ampcode.com) works with URLs directly
+
+Please be aware that some providers/clients (such as Cursor or ChatGPT) may intelligently choose to truncate context from the window using their own context-engine, for higher control, use a client that gives you full control over the context window.
