@@ -60,6 +60,19 @@
             border-left: 4px solid #fb631b;
         }
 
+        .reasoning-section {
+            background: linear-gradient(135deg, #6366f120, #e0e7ff30);
+            border-left: 4px solid #6366f1;
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        .reasoning-section .markdown-content {
+            font-size: 0.8rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
         .loading-dots {
             animation: pulse 1.5s ease-in-out infinite;
         }
@@ -81,9 +94,29 @@
             }
         }
 
-        /* Markdown styles */
         .markdown-content {
             line-height: 1.6;
+            overflow-x: auto;
+            padding-right: 8px;
+        }
+
+        /* Custom scrollbar for markdown content */
+        .markdown-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .markdown-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .markdown-content::-webkit-scrollbar-thumb {
+            background: #d8d0bf;
+            border-radius: 3px;
+        }
+
+        .markdown-content::-webkit-scrollbar-thumb:hover {
+            background: #fb631b;
         }
 
         .markdown-content h1,
@@ -164,32 +197,63 @@
         .markdown-content strong {
             font-weight: 500;
         }
+
+        .finish-indicator {
+            background: linear-gradient(135deg, #10b98120, #dcfce720);
+            border-left: 4px solid #10b981;
+        }
+
+        /* Mobile-first responsive design */
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .search-input-container {
+                padding: 0.75rem;
+            }
+
+            .search-input-container input {
+                padding-right: 5rem;
+            }
+
+            .search-btn {
+                right: 0.5rem;
+                top: 0.5rem;
+                bottom: 0.5rem;
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                font-size: 0.875rem;
+            }
+        }
     </style>
 </head>
 
 <body class="min-h-screen">
-    <div id="app" class="container mx-auto px-4 py-8 max-w-4xl">
+    <div id="app" class="container mx-auto px-2 sm:px-4 py-4 sm:py-8 max-w-4xl">
         <!-- Header -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-8 sm:mb-12">
             <img src="https://assets.p0web.com/dark-parallel-symbol-270.svg" alt="Parallel"
-                class="mx-auto mb-4 w-16 h-16">
-            <h1 class="heading-font text-4xl font-bold mb-2">Web Research Agent</h1>
-            <p class="text-gray-600">Powered by Parallel Search API & Cerebras AI</p>
+                class="mx-auto mb-4 w-12 h-12 sm:w-16 sm:h-16">
+            <h1 class="heading-font text-2xl sm:text-4xl font-bold mb-2">Web Search Agent</h1>
+            <p class="text-gray-600 text-sm sm:text-base">Powered by Parallel Search API & Cerebras AI</p>
         </div>
 
         <!-- Search Interface -->
-        <div id="search-interface" class="space-y-6">
-            <div class="relative">
-                <input type="text" id="search-input" placeholder="What would you like to research?"
-                    class="w-full px-6 py-4 text-lg border-2 border-gray-200 rounded-lg focus:border-orange-500 focus:outline-none transition-colors bg-white">
+        <div id="search-interface" class="space-y-4 sm:space-y-6">
+            <div
+                class="relative flex flex-row search-input-container bg-white border-2 border-gray-200 rounded-lg focus-within:border-orange-500 transition-colors">
+                <input type="text" id="search-input" placeholder="What would you like to know?"
+                    class="w-full mr-32 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg bg-transparent focus:outline-none pr-20 sm:pr-24">
                 <button id="search-btn"
-                    class="absolute right-2 top-2 bottom-2 px-6 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors font-medium">
-                    Research
+                    class="search-btn absolute right-2 top-2 bottom-2 px-3 sm:px-6 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors font-medium text-sm sm:text-base">
+                    Search
                 </button>
             </div>
 
             <div class="flex justify-center">
-                <button id="config-btn" class="text-sm text-gray-500 hover:text-gray-700 underline">
+                <button id="config-btn" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700 underline">
                     Configure System Prompt
                 </button>
             </div>
@@ -197,39 +261,54 @@
 
         <!-- Results Interface -->
         <div id="results-interface" class="hidden">
-            <div class="flex items-center justify-between mb-6">
-                <h2 class="text-2xl font-bold">Research Results</h2>
+            <div class="flex items-center justify-between mb-4 sm:mb-6">
+                <h2 class="text-xl sm:text-2xl font-bold">Search Results</h2>
                 <button id="new-search-btn"
-                    class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors">
+                    class="px-3 sm:px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors text-sm sm:text-base">
                     New Search
                 </button>
             </div>
 
-            <div id="results-content" class="space-y-6">
+            <div id="results-content" class="space-y-4 sm:space-y-6">
                 <!-- Results will be populated here -->
             </div>
         </div>
 
         <!-- Loading State -->
-        <div id="loading-state" class="hidden text-center py-12">
-            <div class="spinner w-8 h-8 mx-auto mb-4"></div>
-            <p class="text-gray-600">Researching your query...</p>
+        <div id="loading-state" class="hidden text-center py-8 sm:py-12">
+            <div class="spinner w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-4"></div>
+            <p class="text-gray-600 text-sm sm:text-base">Researching your query...</p>
         </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-center">
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-500">
+                <span>Built with Parallel AI & Vercel AI SDK</span>
+                <span class="hidden sm:inline">•</span>
+                <a href="https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent"
+                    target="_blank" class="text-orange-500 hover:text-orange-600 underline">
+                    View on GitHub
+                </a>
+            </div>
+        </footer>
     </div>
 
     <!-- Config Modal -->
     <div id="config-modal"
-        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-lg p-6 max-w-2xl w-full max-h-96">
-            <h3 class="text-xl font-bold mb-4">System Prompt Configuration</h3>
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-2 sm:p-4 z-50">
+        <div class="bg-white rounded-lg p-4 sm:p-6 max-w-2xl w-full max-h-[90vh] sm:max-h-96">
+            <h3 class="text-lg sm:text-xl font-bold mb-4">System Prompt Configuration</h3>
             <textarea id="system-prompt"
-                class="w-full h-48 p-4 border border-gray-200 rounded-lg resize-none focus:border-orange-500 focus:outline-none"
+                class="w-full h-32 sm:h-48 p-3 sm:p-4 border border-gray-200 rounded-lg resize-none focus:border-orange-500 focus:outline-none text-sm sm:text-base"
                 placeholder="Enter custom system prompt..."></textarea>
-            <div class="flex justify-end space-x-3 mt-4">
-                <button id="cancel-config" class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
+            <div class="flex justify-end space-x-2 sm:space-x-3 mt-4">
+                <button id="cancel-config"
+                    class="px-3 sm:px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 text-sm sm:text-base">
                     Cancel
                 </button>
-                <button id="save-config" class="px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
+                <button id="save-config"
+                    class="px-3 sm:px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 text-sm sm:text-base">
                     Save
                 </button>
             </div>
@@ -239,6 +318,7 @@
     <script>
         let currentSystemPrompt = '';
         let abortController = null;
+        let currentMode = 'text'; // 'text' or 'reasoning'
 
         // DOM Elements
         const searchInterface = document.getElementById('search-interface');
@@ -278,6 +358,7 @@
             loadingState.classList.add('hidden');
             resultsContent.innerHTML = '';
             searchInput.value = '';
+            currentMode = 'text';
             if (abortController) {
                 abortController.abort();
                 abortController = null;
@@ -315,6 +396,7 @@
             if (!query) return;
 
             showLoadingState();
+            currentMode = 'text';
 
             // Abort any existing request
             if (abortController) {
@@ -393,24 +475,33 @@
         function handleStreamChunk(chunk) {
             switch (chunk.type) {
                 case 'text-delta':
+                    if (currentMode === 'reasoning') {
+                        finalizeCurrentSection();
+                        currentMode = 'text';
+                    }
                     appendText(chunk.text || '');
                     break;
                 case 'reasoning-delta':
-                    appendText(chunk.text || '');
+                    if (currentMode === 'text') {
+                        finalizeCurrentSection();
+                        currentMode = 'reasoning';
+                    }
+                    appendReasoning(chunk.text || '');
                     break;
                 case 'tool-call':
+                    finalizeCurrentSection();
                     addToolCall(chunk);
                     break;
                 case 'tool-result':
                     addToolResult(chunk);
                     break;
                 case 'error':
-                    showError(chunk.error);
+                    showError(chunk.error?.message);
                     break;
                 case 'finish':
-                    // Research completed - finalize current text element
-                    finalizeCurrentText();
-                    console.log('Research completed');
+                    finalizeCurrentSection();
+                    addFinishIndicator(chunk.finishReason);
+                    console.log('Research completed with reason:', chunk.finishReason);
                     break;
             }
         }
@@ -418,45 +509,87 @@
         function appendText(text) {
             if (!text) return;
 
-            let currentTextElement = resultsContent.querySelector('.current-text');
-            if (!currentTextElement) {
-                currentTextElement = document.createElement('div');
-                currentTextElement.className = 'current-text bg-white border border-gray-200 rounded-lg p-4 mb-4 search-result';
+            let currentElement = resultsContent.querySelector('.current-text');
+            if (!currentElement) {
+                currentElement = document.createElement('div');
+                currentElement.className = 'current-text bg-white border border-gray-200 rounded-lg p-3 sm:p-4 mb-4 search-result';
 
                 // Create the markdown content container
                 const markdownContainer = document.createElement('div');
                 markdownContainer.className = 'markdown-content';
-                currentTextElement.appendChild(markdownContainer);
+                currentElement.appendChild(markdownContainer);
 
-                resultsContent.appendChild(currentTextElement);
+                resultsContent.appendChild(currentElement);
             }
 
             // Store the raw text
-            if (!currentTextElement.rawText) {
-                currentTextElement.rawText = '';
+            if (!currentElement.rawText) {
+                currentElement.rawText = '';
             }
-            currentTextElement.rawText += text;
+            currentElement.rawText += text;
 
             // Render markdown
-            const textContainer = currentTextElement.querySelector('.markdown-content');
+            const textContainer = currentElement.querySelector('.markdown-content');
             if (textContainer) {
-                textContainer.innerHTML = marked.parse(currentTextElement.rawText);
+                textContainer.innerHTML = marked.parse(currentElement.rawText);
             }
         }
 
-        function finalizeCurrentText() {
+        function appendReasoning(text) {
+            if (!text) return;
+
+            let currentElement = resultsContent.querySelector('.current-reasoning');
+            if (!currentElement) {
+                currentElement = document.createElement('div');
+                currentElement.className = 'current-reasoning reasoning-section p-3 sm:p-4 rounded-lg mb-4 search-result';
+
+                // Add reasoning header
+                const header = document.createElement('div');
+                header.className = 'flex items-center mb-2';
+                header.innerHTML = `
+                    <div class="w-3 h-3 bg-indigo-500 rounded-full mr-2"></div>
+                    <span class="font-medium text-xs sm:text-sm text-indigo-700">🧠 AI Reasoning</span>
+                `;
+                currentElement.appendChild(header);
+
+                // Create the markdown content container
+                const markdownContainer = document.createElement('div');
+                markdownContainer.className = 'markdown-content';
+                currentElement.appendChild(markdownContainer);
+
+                resultsContent.appendChild(currentElement);
+            }
+
+            // Store the raw text
+            if (!currentElement.rawText) {
+                currentElement.rawText = '';
+            }
+            currentElement.rawText += text;
+
+            // Render markdown
+            const textContainer = currentElement.querySelector('.markdown-content');
+            if (textContainer) {
+                textContainer.innerHTML = marked.parse(currentElement.rawText);
+            }
+        }
+
+        function finalizeCurrentSection() {
             const currentTextElement = resultsContent.querySelector('.current-text');
             if (currentTextElement) {
                 currentTextElement.classList.remove('current-text');
             }
+
+            const currentReasoningElement = resultsContent.querySelector('.current-reasoning');
+            if (currentReasoningElement) {
+                currentReasoningElement.classList.remove('current-reasoning');
+            }
         }
 
         function addToolCall(toolCall) {
-            // Finalize any current text element before adding tool call
-            finalizeCurrentText();
+            finalizeCurrentSection();
 
             const toolCallElement = document.createElement('div');
-            toolCallElement.className = 'tool-call p-4 rounded-lg mb-4 search-result';
+            toolCallElement.className = 'tool-call p-3 sm:p-4 rounded-lg mb-4 search-result';
 
             const objective = toolCall.args?.objective || toolCall.input?.objective || 'Searching...';
             const searchQueries = toolCall.args?.search_queries || toolCall.input?.search_queries || [];
@@ -464,9 +597,9 @@
             toolCallElement.innerHTML = `
                 <div class="flex items-center mb-2">
                     <div class="w-3 h-3 bg-orange-500 rounded-full mr-2 animate-pulse"></div>
-                    <span class="font-medium">🔍 Searching Web</span>
+                    <span class="font-medium text-sm sm:text-base">🔍 Searching Web</span>
                 </div>
-                <div class="text-sm text-gray-600">
+                <div class="text-xs sm:text-sm text-gray-600">
                     <div class="mb-1"><strong>Objective:</strong> ${objective}</div>
                     ${searchQueries.length > 0 ? `<div><strong>Queries:</strong> ${searchQueries.join(', ')}</div>` : ''}
                 </div>
@@ -476,9 +609,9 @@
 
         function addToolResult(toolResult) {
             const resultElement = document.createElement('div');
-            resultElement.className = 'bg-gray-50 border border-gray-200 rounded-lg p-4 mb-4 search-result';
+            resultElement.className = 'bg-gray-50 border border-gray-200 rounded-lg p-3 sm:p-4 mb-4 search-result';
 
-            let resultsHtml = '<div class="flex items-center font-medium text-sm mb-3"><div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>Search Results Found</div>';
+            let resultsHtml = '<div class="flex items-center font-medium text-xs sm:text-sm mb-3"><div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>Search Results Found</div>';
 
             const output = toolResult.result || toolResult.output;
             if (output && output.results && Array.isArray(output.results)) {
@@ -486,7 +619,7 @@
                     resultsHtml += `
                         <div class="mb-3 pb-3 ${index < Math.min(output.results.length, 5) - 1 ? 'border-b border-gray-200' : ''}">
                             <div class="font-medium text-blue-600 mb-1">
-                                <a href="${result.url}" target="_blank" class="hover:underline text-sm">${result.title}</a>
+                                <a href="${result.url}" target="_blank" class="hover:underline text-xs sm:text-sm">${result.title}</a>
                             </div>
                             <div class="text-xs text-gray-500 truncate">${result.url}</div>
                         </div>
@@ -496,20 +629,37 @@
                     resultsHtml += `<div class="text-xs text-gray-500 text-center pt-2">+ ${output.results.length - 5} more results</div>`;
                 }
             } else {
-                resultsHtml += '<div class="text-sm text-gray-500">No detailed results available</div>';
+                resultsHtml += '<div class="text-xs sm:text-sm text-gray-500">No detailed results available</div>';
             }
 
             resultElement.innerHTML = resultsHtml;
             resultsContent.appendChild(resultElement);
         }
 
+        function addFinishIndicator(finishReason) {
+            const finishElement = document.createElement('div');
+            finishElement.className = 'finish-indicator p-3 sm:p-4 rounded-lg mb-4 search-result';
+
+            const reasonText = finishReason || 'completed';
+            const reasonDisplay = reasonText.charAt(0).toUpperCase() + reasonText.slice(1);
+
+            finishElement.innerHTML = `
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                    <span class="font-medium text-sm sm:text-base text-green-700">✅ Research Complete</span>
+                    <span class="ml-2 text-xs text-green-600">• ${reasonDisplay}</span>
+                </div>
+            `;
+            resultsContent.appendChild(finishElement);
+        }
+
         function showError(error) {
             showResults(); // Make sure results interface is visible
-            finalizeCurrentText(); // Finalize any current text
+            finalizeCurrentSection(); // Finalize any current section
 
             const errorElement = document.createElement('div');
-            errorElement.className = 'bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4 search-result';
-            errorElement.innerHTML = `<div class="flex items-center"><div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div><strong>Error:</strong> ${error}</div>`;
+            errorElement.className = 'bg-red-50 border border-red-200 text-red-700 px-3 sm:px-4 py-3 rounded-lg mb-4 search-result';
+            errorElement.innerHTML = `<div class="flex items-center text-sm sm:text-base"><div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div><strong>Error:</strong> ${error}</div>`;
             resultsContent.appendChild(errorElement);
         }
 

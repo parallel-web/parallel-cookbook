@@ -68,6 +68,9 @@ Using Parallel went quite well, although I had to be explicit for it not to use 
 
 But in the end, [SPEC.md](SPEC.md) was all it took.
 
+> [!NOTE]
+> After receiving feedback, I followed through with some iterations based on the code (not based on the spec): https://letmeprompt.com/httpsuithubcomp-lktkuq0
+
 # How it works?
 
 The AI SDK elegantly allows to use `/chat/completions` and other endpoints and tool use through an SDK that abstracts away a lot into a easier to use interface. The main benefit here is how tool-use is elegantly simplified. Within the `streamText` function we just need to specify this to perform up to 10 reasoning and tool use steps and stream back everything into a single stream. This really reduces boilerplate, a lot!

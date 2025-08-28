@@ -48,7 +48,7 @@ export default {
 
         // Define the search tool
         const searchTool = tool({
-          description: `# Web Search Tool - Simplified
+          description: `# Web Search Tool
 
 **Purpose:** Perform web searches and return LLM-friendly results.
 
@@ -91,26 +91,25 @@ export default {
           model: cerebras("gpt-oss-120b"),
           system:
             systemPrompt ||
-            `Use the search tool to access web information. Scale the number of calls based on complexity - single call for simple questions, multiple calls for complex research.
+            `You are a simple search agent. Your mission is to comprehensively fulfill the user's search objective by conducting 1 up to 3 searches from different angles until you have gathered sufficient information to provide a complete answer.
+
+**Research Philosophy:**
+- NEVER stop early - keep searching until the objective is fully met
+- Each search should explore a unique angle or aspect of the topic
+- Synthesize information from multiple sources for comprehensive coverage
+- If initial searches don't provide enough detail, dig deeper with more specific queries
 
 **Key Parameters:**
 - objective: Describe what you're trying to accomplish. This helps the search engine understand intent and provide relevant results.
 
-**Query Tips:**
-- Keep queries concise (1-6 words)
-- Start broad, then narrow down
-- Never repeat similar queries - make each unique
-- If initial results insufficient, reformulate with different angles
-
-**Usage Pattern:**
-- Simple queries: One call usually sufficient
-- Complex research: Multiple unique queries to gather comprehensive information`,
+**Quality Standards:**
+Provide a short to the point answer. Markdown is allowed but no tables`,
           prompt: query,
           tools: {
             search: searchTool,
           },
-          stopWhen: stepCountIs(10),
-          maxOutputTokens: 16000,
+          stopWhen: stepCountIs(15), // Increased to allow more thorough research
+          maxOutputTokens: 20000, // Increased for more comprehensive responses
         });
 
         // Return the streaming response
