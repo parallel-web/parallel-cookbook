@@ -94,11 +94,83 @@
             }
         }
 
+
+        /* Update the existing .markdown-content styles with these additions/changes */
+
         .markdown-content {
             line-height: 1.6;
             overflow-x: auto;
             padding-right: 8px;
+            word-wrap: break-word;
+            /* Add this */
         }
+
+        /* Improve list rendering */
+        .markdown-content ul,
+        .markdown-content ol {
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+            list-style-position: outside;
+            /* Add this to ensure bullets/numbers show */
+        }
+
+        /* Ensure list items have proper styling */
+        .markdown-content ul {
+            list-style-type: disc;
+            /* Explicitly set bullet style */
+        }
+
+        .markdown-content ol {
+            list-style-type: decimal;
+            /* Explicitly set numbering */
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.5em;
+            /* Increase from 0.25em for better spacing */
+            display: list-item;
+            /* Explicitly set display type */
+            line-height: 1.5;
+        }
+
+        /* Nested lists */
+        .markdown-content ul ul,
+        .markdown-content ol ol,
+        .markdown-content ul ol,
+        .markdown-content ol ul {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            padding-left: 1.2em;
+        }
+
+        .markdown-content ul ul {
+            list-style-type: circle;
+        }
+
+        .markdown-content ul ul ul {
+            list-style-type: square;
+        }
+
+        /* Ensure proper spacing around lists */
+        .markdown-content p+ul,
+        .markdown-content p+ol {
+            margin-top: -0.5em;
+        }
+
+        .markdown-content ul+p,
+        .markdown-content ol+p {
+            margin-top: 0.5em;
+        }
+
+        /* Handle list items with paragraphs */
+        .markdown-content li p {
+            margin-bottom: 0.5em;
+        }
+
+        .markdown-content li p:last-child {
+            margin-bottom: 0;
+        }
+
 
         /* Custom scrollbar for markdown content */
         .markdown-content::-webkit-scrollbar {
@@ -214,10 +286,6 @@
                 padding: 0.75rem;
             }
 
-            .search-input-container input {
-                padding-right: 5rem;
-            }
-
             .search-btn {
                 right: 0.5rem;
                 top: 0.5rem;
@@ -243,11 +311,11 @@
         <!-- Search Interface -->
         <div id="search-interface" class="space-y-4 sm:space-y-6">
             <div
-                class="relative flex flex-row search-input-container bg-white border-2 border-gray-200 rounded-lg focus-within:border-orange-500 transition-colors">
+                class="relative flex flex-row gap-4 search-input-container bg-white border-2 border-gray-200 rounded-lg focus-within:border-orange-500 transition-colors">
                 <input type="text" id="search-input" placeholder="What would you like to know?"
-                    class="w-full mr-32 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg bg-transparent focus:outline-none pr-20 sm:pr-24">
+                    class="w-full px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg bg-transparent focus:outline-none">
                 <button id="search-btn"
-                    class="search-btn absolute right-2 top-2 bottom-2 px-3 sm:px-6 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors font-medium text-sm sm:text-base">
+                    class="search-btn h-12 px-3 sm:px-6 bg-orange-500 text-white rounded-md hover:bg-orange-600 transition-colors font-medium text-sm sm:text-base">
                     Search
                 </button>
             </div>
@@ -257,6 +325,7 @@
                     Configure System Prompt
                 </button>
             </div>
+
         </div>
 
         <!-- Results Interface -->
@@ -285,12 +354,20 @@
             <div
                 class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-500">
                 <span>Built with Parallel AI & Vercel AI SDK</span>
+
+
                 <span class="hidden sm:inline">•</span>
                 <a href="https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent"
                     target="_blank" class="text-orange-500 hover:text-orange-600 underline">
                     View on GitHub
                 </a>
             </div>
+            <div class="flex mt-4 justify-center text-xs text-center">
+                <p>This is a Free Public Demo with low rate-limits <br>Please self-host with your own model for
+                    extensive
+                    use</p>
+            </div>
+
         </footer>
     </div>
 

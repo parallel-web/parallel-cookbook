@@ -54,14 +54,6 @@ export default {
 
 **Usage:**
 - objective: Natural-language description of your research goal (max 200 characters)
-  - Specify what you want to learn or find
-  - Include any source preferences or freshness requirements
-  - Focus on the end goal, not implementation details
-
-**Examples:**
-- "Find the latest developments in AI safety research from 2024"
-- "Get current stock price and recent news for Tesla"
-- "Compare features of top 3 project management tools"
 
 **Best Practices:**
 - Be specific about what information you need
@@ -91,25 +83,26 @@ export default {
           model: cerebras("gpt-oss-120b"),
           system:
             systemPrompt ||
-            `You are a simple search agent. Your mission is to comprehensively fulfill the user's search objective by conducting 1 up to 3 searches from different angles until you have gathered sufficient information to provide a complete answer.
+            `You are a simple search agent. Your mission is to comprehensively fulfill the user's search objective by conducting 1 up to 3 searches from different angles until you have gathered sufficient information to provide a complete answer. The current date is ${new Date(
+              Date.now()
+            )
+              .toISOString()
+              .slice(0, 10)}
 
 **Research Philosophy:**
-- NEVER stop early - keep searching until the objective is fully met
 - Each search should explore a unique angle or aspect of the topic
-- Synthesize information from multiple sources for comprehensive coverage
-- If initial searches don't provide enough detail, dig deeper with more specific queries
+- NEVER try to OPEN an article, the excerpts provided should be enough
 
 **Key Parameters:**
 - objective: Describe what you're trying to accomplish. This helps the search engine understand intent and provide relevant results.
 
-**Quality Standards:**
-Provide a short to the point answer. Markdown is allowed but no tables`,
+**Output:**
+After doing the searches required, write up your 'search report' that answers the initial search query. Even if you could not answer the question ensure to always provide a final report! Please do NOT use markdown tables. 
+`,
           prompt: query,
-          tools: {
-            search: searchTool,
-          },
-          stopWhen: stepCountIs(15), // Increased to allow more thorough research
-          maxOutputTokens: 20000, // Increased for more comprehensive responses
+          tools: { search: searchTool },
+          stopWhen: stepCountIs(25),
+          maxOutputTokens: 20000,
         });
 
         // Return the streaming response
