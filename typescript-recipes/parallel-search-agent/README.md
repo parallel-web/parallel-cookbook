@@ -1,87 +1,133 @@
-# After hours of iteration, I one-shotted my Search Agent - A short guide about context engineering and building agents
+# Building a Web Research Agent with Parallel Search API - A Complete Guide
 
 [![janwilmake/parallel-search-agent context](https://badge.forgithub.com/janwilmake/parallel-search-agent?lines=false)](https://uithub.com/janwilmake/parallel-search-agent?lines=false) [![](https://remix.forgithub.com/badge)](https://remix.forgithub.com/janwilmake/parallel-search-agent) | Discuss: [HN Thread](https://news.ycombinator.com/item?id=45038332) | [X Thread](https://x.com/janwilmake/status/1960669482697023920)
 
-In this guide, we'll build a Web Research Agent accessible over a simple frontend. By the end of this guide, you'll know how to build a search agent like in [this demo](https://x.com/janwilmake/status/1960652955251589355) (try it out at https://agent.p0web.com as long as there's still Cerebras & Parallel credit left).
+In this guide, we'll demonstrate how to build a sophisticated Web Research Agent using Parallel's Search API and deploy it with a simple frontend interface. By the end of this tutorial, you'll have created a search agent like the one shown in [this demo](https://x.com/janwilmake/status/1960652955251589355) (try it out at https://agent.p0web.com as long as there's still Cerebras & Parallel credit left).
 
-Parallel's Search API has a [different take on search](https://parallel.ai/blog/parallel-search-api) that [beats competition](https://parallel.ai/blog/search-api-benchmark) in benchmarks - a more AI native search. The key difference between other Search Agents such as Exa or Tavily, is that it gives all required context in a single API call, whereas other search agents still function the traditional way of search, where it's split up into 2 API calls - one for getting the SERP, one for getting the pages that seem relevant. Parallel smoothens this process and has build a system that finds the most relevant context of all pages immediately, but only the relevant stuff, to reduce context bloat.
+## Why Parallel Search API?
 
-The Search Agent we're building will:
+Parallel's Search API introduces a [fundamentally different approach to search](https://parallel.ai/blog/parallel-search-api) that [outperforms traditional methods](https://parallel.ai/blog/search-api-benchmark) in comprehensive benchmarks. Unlike conventional Search APIs such as Exa or Tavily, which require multiple API calls (one for SERP results, another for page content extraction), Parallel delivers all necessary context in a single API call.
 
-- Show a simple search homepage
-- Allow user to edit system prompt in config modal
-- Connect the agent with search through tool use
-- Stream back search results and the AI reasoning upon that
+This AI-native approach streamlines the entire search process by intelligently identifying and extracting only the most relevant content from all pages immediately, significantly reducing context bloat while maximizing relevance.
 
-The Technology Stack we'll use:
+## What We'll Build
 
-- [Parallel Typescript SDK](https://docs.parallel.ai/home)
-- [Vercel AI SDK](https://ai-sdk.dev/docs/introduction)
-- [Cerebras](https://ai-sdk.dev/providers/ai-sdk-providers/cerebras) for fast AI responses
-- [Cloudflare Workers](https://workers.cloudflare.com) to deploy it
+The Web Research Agent we'll create will feature:
 
-# Defining our context
+- A clean search homepage interface
+- Configurable system prompt via a modal
+- Intelligent search capabilities through tool integration
+- Real-time streaming of search results and AI reasoning
 
-**I'm writing this after having one-shotted a full implementation** (which can be found [here](https://github.com/janwilmake/parallel-search-agent)) - but I wasn't able to one-shot this immediately. It took me a while to gather all needed context for the LLM to make zero mistakes. In this section I'll dive in how I found that context.
+## Technology Stack
 
-## Context for the AI SDK
+We'll leverage the following modern technologies:
 
-The AI SDK is not easy to get context for. After some digging I found that the docs are exposed at https://github.com/vercel/ai/blob/main/content/docs so we can get those via [uithub](https://uithub.com), and the NPM packages contain pretty good `.d.ts` type files. Unlike many other pacakages, the main `.d.ts` file for the packages we'll be using are pretty complete, although some things were still missing. We can access the raw file context of NPM packages through https://unpkg.com/{package}/{...path}.
+- [Parallel Typescript SDK](https://docs.parallel.ai/home) for search functionality
+- [Vercel AI SDK](https://ai-sdk.dev/docs/introduction) for AI orchestration
+- [Cerebras](https://ai-sdk.dev/providers/ai-sdk-providers/cerebras) for ultra-fast AI responses
+- [Cloudflare Workers](https://workers.cloudflare.com) for scalable deployment
 
-All in all this was the context I went with:
+# Context Engineering: The Foundation of Effective Agents
 
-- AI SDK stubs file: https://unpkg.com/ai@5.0.22/dist/index.d.ts
-- Cerebras types: https://unpkg.com/@ai-sdk/cerebras@1.0.11/dist/index.d.ts
-- Cerebras models: https://inference-docs.cerebras.ai/api-reference/models.md
-- How to use agents in AI SDK: https://uithub.com/vercel/ai/blob/main/content/docs/02-foundations/06-agents.mdx
+**This implementation demonstrates a complete working solution** (available [here](https://github.com/janwilmake/parallel-search-agent)) that was developed through careful context engineering. Understanding how to properly gather context for building AI agents is crucial for building reliable, production-ready systems.
 
-First I tried without the agents docs, but found the implementation was done in different ways over several trials and all of them were lacking something, meaning there's probably not enough information in the SDK doc-comments to understand the best approach. Since I'm looking to build an agent that could do multiple tool calls and reasoning steps in a single simple call, I ended up adding the [agents docs](https://ai-sdk.dev/docs/foundations/agents) of the AI SDK.
+## Gathering Context for the AI SDK
 
-## Context for Parallel Search
+The Vercel AI SDK requires comprehensive context for optimal implementation. The most effective approach involves collecting documentation from multiple authoritative sources:
 
-For proper use of the Search API of Parallel, I needed at least the following docs which could be found by appending `.md` to the docs URL (this is a mintlify feature not linked to by Parallel themselves yet):
+**Primary Documentation Sources:**
 
-- Search Docs: https://docs.parallel.ai/search-api/search-quickstart.md
-- Search Processors Docs: https://docs.parallel.ai/search-api/processors.md
+- AI SDK core types: https://unpkg.com/ai@5.0.22/dist/index.d.ts
+- Cerebras provider types: https://unpkg.com/@ai-sdk/cerebras@1.0.11/dist/index.d.ts
+- Cerebras model specifications: https://inference-docs.cerebras.ai/api-reference/models.md
+- Agent implementation patterns: https://uithub.com/vercel/ai/blob/main/content/docs/02-foundations/06-agents.mdx
 
-Also I need to have the full API definition for the Paralel API to know all properties and how they work, and the exact response shape (with all possible sad paths). For this I would normally use the Search operation OpenAPI spec (Available through mintlify at https://docs.parallel.ai/api-reference/search-api/search.md, 1600 tokens) but since I want to use the SDK, I started looking for a great context for that.
+**Why Agent Documentation Matters:**
 
-I outline more on what I did [in this thread](https://x.com/janwilmake/status/1960395242391093620). **Tl;dr: It wasn't easy** but ended up using a 18k tokens `.d.ts` file generated using [api-extractor](https://api-extractor.com). I later [used AI](https://letmeprompt.com/rules-httpsuithu-nzfohl0) to reduce this further to [just 1500 tokens](https://rules-httpsuithu-nzfohl0.letmeprompt.com/parallel-search.d.ts).
+Initial attempts based on just the AI SDK types resulted in inconsistent implementations across multiple trials. The [agents documentation](https://ai-sdk.dev/docs/foundations/agents) from the AI SDK proved essential for understanding the optimal approach to building agents capable of multiple tool calls and reasoning steps in a single streamlined interaction.
 
-Key takeaway is that I think it'd be huge if SDK Companies would provide the best of these files for us once, rather than all developers using different coding agents or other strategies independently to get this for us. My hope is this thread will spark some attention to this topic.
+## Gathering Context for Parallel Search
 
-## Context for Cloudflare
+For comprehensive integration with Parallel's Search API, we gathered documentation from these key sources:
 
-Over the last 12 months I've built and deployed hundreds of workers on Cloudflare. I've recently even [hit the 500 workers limit](https://x.com/janwilmake/status/1954895768617361827), which luckily got increased after a request. After all of this, I created [this Cloudflare prompt](https://flaredream.com/system-ts.md) that works wonders for me. I use it all the time when I want to create a new worker. This prompt mainly addressses the knowledge gaps of Claude Sonnet regarding Cloudflare. I made this by iterating on building Cloudflare workers, and added and removed bits and pieces many times until I got to this.
+**Essential Documentation:**
 
-## Additional requirements
+- Search API Quickstart: https://docs.parallel.ai/search-api/search-quickstart.md
+- Search Processors Guide: https://docs.parallel.ai/search-api/processors.md
 
-In my specification I've listed a few more requirements and contexts, among others, I used https://assets.p0web.com to ensure AI followed my branding guidelines and used some assets, and instructed it to use https://cdn.tailwindcss.com to use Tailwind over regular CSS. This saves lots of lines!
+**API Definition Strategy:**
 
-# Building the app
+Rather than using raw fetch calls or incomplete documentation, we obtained the complete API definition to understand all properties, response shapes, and error handling patterns. This involved using the Search operation OpenAPI spec (available through mintlify at https://docs.parallel.ai/api-reference/search-api/search.md, approximately 1600 tokens).
 
-Just to be clear, I didn't one-shot it at once, it took me many trial and error, and adopting the prompt. But after a few hours of improving context, [this was the prompt that did the job for me](SPEC.md). Remix it using my app LMPIFY using this button: [![](https://remix.forgithub.com/badge)](https://remix.forgithub.com/janwilmake/parallel-search-agent) - be sure to use Claude Sonnet or better/similar.
+For SDK-specific implementation, we utilized a comprehensive `.d.ts` file generated using [api-extractor](https://api-extractor.com). The original 18k token file was later [optimized using AI](https://letmeprompt.com/rules-httpsuithu-nzfohl0) to [a focused 1500-token version](https://rules-httpsuithu-nzfohl0.letmeprompt.com/parallel-search.d.ts).
 
-The main things I added iterating where things where there were multiple options and the AI didn't know which one to use. Primarily the Vercel AI SDK was confusing; Claude got confused because it used `cerebras` over `createCerebras` and `parameters` over `inputSchema`, and a few other things.
+**Industry Recommendation:**
 
-Using Parallel went quite well, although I had to be explicit for it not to use raw `fetch`, probably because my SDK context was quite bloated, and the docs included some `fetch` codesamples? This led the AI to choose the wrong implementation a few times, even after specifically requesting using the SDK, it still randomly made mistakes.
+We believe SDK providers should offer optimized context files like these as standard resources, rather than requiring each developer to independently generate them through various strategies.
 
-But in the end, [SPEC.md](SPEC.md) was all it took.
+## Cloudflare Workers Context
+
+Our deployment strategy leverages extensive Cloudflare Workers experience (including reaching the 500 workers limit, which was subsequently increased upon request). This experience informed the creation of [a specialized Cloudflare prompt](https://flaredream.com/system-ts.md) that addresses common knowledge gaps in AI assistants regarding Cloudflare Workers deployment patterns.
+
+This prompt was refined through hundreds of worker deployments and represents battle-tested patterns for Cloudflare Workers development.
+
+## Additional Context Requirements
+
+The implementation specification includes several additional context elements:
+
+- Brand guidelines and assets from https://assets.p0web.com to ensure consistent visual identity
+- Tailwind CSS integration via https://cdn.tailwindcss.com for streamlined styling without verbose CSS
+- Specific implementation patterns and architectural decisions (Choosing these required several iterations to determine, reviewing the result each time)
+
+# Implementation Process
+
+The complete specification that achieved the desired implementation is available in [SPEC.md](SPEC.md). This represents the culmination of iterative context refinement and can be remixed using the LMPIFY app: [![](https://remix.forgithub.com/badge)](https://remix.forgithub.com/janwilmake/parallel-search-agent). We recommend using Claude Sonnet or equivalent models for optimal results.
+
+## Key Implementation Refinements
+
+The primary challenges resolved through specification iteration involved:
+
+**AI SDK Configuration:**
+
+- Clarifying the use of `createCerebras` over `cerebras`
+- Specifying `inputSchema` over `parameters` for tool definitions
+- Resolving various SDK-specific naming conventions
+
+**Parallel SDK Integration:**
+
+- Ensuring SDK usage over raw `fetch` implementations
+- Addressing confusion from documentation code samples that included `fetch` examples
+- Maintaining consistent SDK patterns throughout the implementation
+
+The final [SPEC.md](SPEC.md) provides a complete, working specification.
 
 > [!NOTE]
-> After receiving feedback, I followed through with some iterations based on the code (not based on the spec): https://letmeprompt.com/httpsuithubcomp-lktkuq0
+> Based on community feedback, we've implemented additional iterations available at: https://letmeprompt.com/httpsuithubcomp-lktkuq0
 
-# How it works?
+# Architecture Overview
 
-The AI SDK elegantly allows to use `/chat/completions` and other endpoints and tool use through an SDK that abstracts away a lot into a easier to use interface. The main benefit here is how tool-use is elegantly simplified. Within the `streamText` function we just need to specify this to perform up to 10 reasoning and tool use steps and stream back everything into a single stream. This really reduces boilerplate, a lot!
+The implementation leverages the Vercel AI SDK's elegant abstraction over `/chat/completions` and tool use patterns. The key advantage lies in the simplified tool integration approach:
 
-```ts
+```typescript
 tools: { search: searchTool },
 stopWhen: stepCountIs(10),
 ```
 
-Trust me, I've done it without before (even before tool-use, using raw stop tokens) and if you don't want fine-grained control, it's better to just go with the AI SDK. You'll be done much faster.
+This configuration enables up to 10 reasoning and tool use steps with streaming responses in a single API call, dramatically reducing boilerplate code compared to manual tool use implementations.
 
-# Takeaway
+The AI SDK's abstraction layer eliminates the complexity of managing raw stop tokens and tool use patterns, enabling developers to focus on business logic rather than integration mechanics.
 
-In this guide I showed you my process of collecting the right context and iterating over a specification rather than having a vibe conversation like most developers do. The resulting worker is an elegant implementation of under 700 lines of HTML and Typescript, especially leveraging the Vercel AI SDK (and Tailwind) to really reduce these amount of lines, making the code much more readable and editable for humans.
+# Key Takeaways
+
+This guide demonstrates a systematic approach to software development through:
+
+1. **Comprehensive Context Engineering**: Gathering authoritative documentation from multiple sources
+2. **Specification-Driven Development**: Iterating on specifications rather than ad-hoc conversational development, a.k.a. "vibe-coding".
+3. **Modern Toolchain Integration**: Leveraging the Vercel AI SDK and Tailwind CSS for minimal, readable code
+
+The resulting implementation comprises under 1000 lines of HTML and TypeScript, showcasing the power of well-chosen abstractions and comprehensive context engineering. This approach prioritizes code readability and maintainability while delivering production-ready functionality.
+
+[Our demo](https://agent.p0web.com) showcases how GPT-OSS120B hosted on Cerebras can be used with Parallel Web Search as a tool creating highly performant agentic web search. Initial tests showcase the performance of GPT-OSS120B is not always perfect, and can likely be further optimized by fine-tuning the model or choosing a bigger, more reliable reasoning model.
+
+The methodology presented here - from context collection through specification refinement to final implementation - provides a replicable framework for building sophisticated AI agents with Parallel's Search API and modern web technologies.
