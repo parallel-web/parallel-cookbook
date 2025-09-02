@@ -1,6 +1,6 @@
 # Crafting a Full-Stack Search Agent using Parallel and OpenAI GPT-OSS 120B
 
-[![janwilmake/parallel-search-agent context](https://badge.forgithub.com/janwilmake/parallel-search-agent?lines=false)](https://uithub.com/janwilmake/parallel-search-agent?lines=false) [![](https://remix.forgithub.com/badge)](https://remix.forgithub.com/janwilmake/parallel-search-agent) | Discuss: [HN Thread](https://news.ycombinator.com/item?id=45038332) | [X Thread](https://x.com/janwilmake/status/1960669482697023920)
+[![janwilmake/parallel-search-agent context](https://badge.forgithub.com/janwilmake/parallel-search-agent?lines=false)](https://uithub.com/janwilmake/parallel-search-agent?lines=false) [![](https://remix.forgithub.com/badge)](https://remix.forgithub.com/janwilmake/parallel-search-agent)
 
 In this guide, we'll show you how to build a Web Research Agent accessible over a simple frontend. By the end of this guide, you'll know how to build a search agent like in [this demo](https://x.com/janwilmake/status/1960652955251589355) (see the result at https://agent.p0web.com and try it as long as there's still Cerebras & Parallel credit left).
 
