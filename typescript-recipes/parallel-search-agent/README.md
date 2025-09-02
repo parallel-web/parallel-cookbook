@@ -12,7 +12,7 @@ The Search Agent we're building will:
 - Stream back searches, search results, AI reasoning, and AI responses
 - Render that nicely as it comes in
 
-![](architecture.drawio.png)
+![](setup.drawio.png)
 
 The Technology Stack we'll use:
 
