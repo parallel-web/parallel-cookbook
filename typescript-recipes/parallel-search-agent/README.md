@@ -362,7 +362,7 @@ function handleStreamChunk(chunk) {
 }
 ```
 
-As can be seen in [index.html](https://github.com/parallel-web/parallel-cookbook/blob/main/typescript-recipes/parallel-search-agent/worker.ts), we are also using https://cdn.tailwindcss.com to use TailwindCSS and heavily reduce the lines needed to get nice styling. Other than that there are no dependencies! If you use React or other frontend frameworks, the [AI SDK UI](https://ai-sdk.dev/docs/ai-sdk-ui/overview) is a useful helper. Since I went with regular HTML, [this context](https://unpkg.com/ai@5.0.22/dist/index.d.ts) was needed to ensure the AI could easily generate the frontend based on the requirements. For more information on how I generated this entire app, see [this context guide](notes/context-guide.md).
+As can be seen in [index.html](https://github.com/parallel-web/parallel-cookbook/blob/main/typescript-recipes/parallel-search-agent/worker.ts), we are also using https://cdn.tailwindcss.com to use TailwindCSS and heavily reduce the lines needed to get nice styling. Other than that there are no dependencies! If you use React or other frontend frameworks, the [AI SDK UI](https://ai-sdk.dev/docs/ai-sdk-ui/overview) is a useful helper. Since this guide uses regular HTML instead of a framework, [this context](https://unpkg.com/ai@5.0.22/dist/index.d.ts) was needed to ensure the AI could easily generate the frontend based on the requirements. For more information on the generation process, see [this context guide](notes/context-guide.md).
 
 ## Result and considerations
 
