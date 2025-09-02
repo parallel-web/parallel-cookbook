@@ -1,9 +1,0 @@
-{
-  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
-  "name": "web-research-agent",
-  "main": "worker.ts",
-  "compatibility_date": "2025-07-14",
-  "observability": { "logs": { "enabled": true } },
-  "assets": { "directory": "./public" },
-  "route": { "custom_domain": true, "pattern": "agent.p0web.com" }
-}

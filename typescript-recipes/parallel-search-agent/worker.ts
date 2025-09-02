@@ -20,15 +20,27 @@ export default {
 
     const url = new URL(request.url);
 
+    if (url.pathname === "/agent") {
+      // redirect from oss.p0web.com/agent to /agent/ to ensure api call works
+      return new Response(null, {
+        status: 302,
+        headers: { Location: "/agent/" },
+      });
+    }
+    // Needed to host on subpath
+    const pathname = url.pathname.startsWith("/agent/")
+      ? url.pathname.slice("/agent".length)
+      : url.pathname;
+
     // Serve the HTML page
-    if (request.method === "GET" && url.pathname === "/") {
+    if (request.method === "GET" && pathname === "/") {
       return new Response(indexHtml, {
         headers: { "Content-Type": "text/html" },
       });
     }
 
     // Handle research requests
-    if (request.method === "POST" && url.pathname === "/api/research") {
+    if (request.method === "POST" && pathname === "/api/research") {
       try {
         const { query, systemPrompt } = await request.json<any>();
 

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "web-research-agent",
+  "main": "worker.ts",
+  "compatibility_date": "2025-07-14",
+  "observability": { "logs": { "enabled": true } },
+  "assets": { "directory": "./public" },
+  "routes": [
+    {
+      // NB: this requires an A record to with name `oss` and value 192.0.2.1 in your zone DNS
+      "zone_name": "p0web.com",
+      "pattern": "oss.p0web.com/agent",
+      "custom_domain": false
+    },
+    {
+      // NB: this requires an A record to with name `oss` and value 192.0.2.1 in your zone DNS
+      "zone_name": "p0web.com",
+      "pattern": "oss.p0web.com/agent/*",
+      "custom_domain": false
+    },
+    { "custom_domain": true, "pattern": "agent.p0web.com" }
+  ]
+}
