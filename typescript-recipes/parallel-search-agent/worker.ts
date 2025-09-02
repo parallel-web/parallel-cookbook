@@ -36,15 +36,28 @@ export default {
           return new Response("Query is required", { status: 400 });
         }
 
-        // Initialize Parallel client
-        const parallel = new Parallel({
-          apiKey: env.PARALLEL_API_KEY,
-        });
+        const execute = async ({ objective }) => {
+          const parallel = new Parallel({
+            apiKey: env.PARALLEL_API_KEY,
+          });
 
-        // Initialize Cerebras provider
-        const cerebras = createCerebras({
-          apiKey: env.CEREBRAS_API_KEY,
-        });
+          const searchResult = await parallel.beta.search({
+            // Choose objective or search queries. We choose objective because it allows natural language way of describing what you're looking for
+            objective,
+            search_queries: undefined,
+            // "base" works best for apps where speed is important, while "pro" is better when freshness and content-quality is critical
+            processor: "base",
+
+            source_policy: {
+              exclude_domains: undefined,
+              include_domains: undefined,
+            },
+            max_results: 5,
+            max_chars_per_result: 800, // Keep low to save tokens
+          });
+
+          return searchResult;
+        };
 
         // Define the search tool
         const searchTool = tool({
@@ -66,16 +79,12 @@ export default {
                 "Natural-language description of your research goal (max 200 characters)"
               ),
           }),
-          execute: async ({ objective }) => {
-            const searchResult = await parallel.beta.search({
-              objective,
-              processor: "base",
-              max_results: 5,
-              max_chars_per_result: 800, // Keep low to save tokens
-            });
+          execute,
+        });
 
-            return searchResult;
-          },
+        // Initialize Cerebras provider
+        const cerebras = createCerebras({
+          apiKey: env.CEREBRAS_API_KEY,
         });
 
         // Stream the research process
