@@ -730,7 +730,7 @@
             resultElement.className = 'bg-gray-50 border border-gray-200 rounded-lg p-3 sm:p-4 mb-4 search-result';
 
             // Count total excerpts
-            const totalExcerpts = results.reduce((sum, result) => sum + (result.excerpts?.length || 0), 0);
+            const totalExcerpts = results.slice(0, 5).reduce((sum, result) => sum + (result.excerpts?.length || 0), 0);
 
             let resultsHtml = `
         <div class="flex items-center justify-between mb-3">
@@ -740,7 +740,7 @@
             </div>
             ${totalExcerpts > 0 ? `
                 <button class="excerpts-toggle-btn text-xs text-blue-600 hover:text-blue-800 underline" data-expanded="false">
-                    Show Excerpts (${totalExcerpts})
+                    Show Chosen Excerpts (${totalExcerpts})
                 </button>
             ` : ''}
         </div>
@@ -790,7 +790,7 @@
                     if (isExpanded) {
                         // Hide excerpts
                         excerptContainers.forEach(container => container.classList.add('hidden'));
-                        this.textContent = `Show Excerpts (${totalExcerpts})`;
+                        this.textContent = `Show Chosen Excerpts (${totalExcerpts})`;
                         this.dataset.expanded = 'false';
                     } else {
                         // Show excerpts
