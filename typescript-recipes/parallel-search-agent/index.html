@@ -684,26 +684,70 @@
             resultsContent.appendChild(toolCallElement);
         }
 
+
+        /**
+         * Creates a URL with text fragments that will highlight the excerpts when clicked
+         * @param {string} originalUrl - The original URL
+         * @param {string[]} excerpts - Array of text excerpts to highlight
+         * @returns {string} URL with text fragments for highlighting
+         */
+        function createHighlightUrl(originalUrl, excerpts) {
+            if (!excerpts || !Array.isArray(excerpts) || excerpts.length === 0) {
+                return originalUrl;
+            }
+
+            // Clean and prepare excerpts
+            const textFragments = excerpts
+                .map(excerpt => {
+                    if (typeof excerpt !== 'string') return '';
+
+                    // Remove trailing ".." or "..." and trim whitespace
+                    return excerpt.replace(/\.{2,}$/, '').trim();
+                })
+                .filter(excerpt => excerpt.length > 0)
+                .map(encodeURIComponent); // Remove empty excerpts
+
+            if (textFragments.length === 0) {
+                return originalUrl;
+            }
+
+
+            // Create the text fragment parameter
+            const fragmentParam = textFragments.map(fragment => `text=${fragment}`).join('&');
+
+            // Add text fragments to URL
+            const separator = originalUrl.includes('#') ? '&' : '#:~:';
+            return `${originalUrl}${separator}${fragmentParam}`;
+        }
+
         function addToolResult(toolResult) {
+
+            const results = toolResult?.output?.results;
+            if (!results) {
+                return;
+            }
             const resultElement = document.createElement('div');
             resultElement.className = 'bg-gray-50 border border-gray-200 rounded-lg p-3 sm:p-4 mb-4 search-result';
 
             let resultsHtml = '<div class="flex items-center font-medium text-xs sm:text-sm mb-3"><div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>Search Results Found</div>';
 
-            const output = toolResult.result || toolResult.output;
-            if (output && output.results && Array.isArray(output.results)) {
-                output.results.slice(0, 5).forEach((result, index) => {
+            if (results && Array.isArray(results)) {
+                const lastIndex = results.slice(0, 5).length - 1;
+                results.slice(0, 5).forEach((result, index) => {
+                    const notLast = index < lastIndex;
+                    const urlWithTextHighlights = createHighlightUrl(result.url, result.excerpts || [])
+
                     resultsHtml += `
-                        <div class="mb-3 pb-3 ${index < Math.min(output.results.length, 5) - 1 ? 'border-b border-gray-200' : ''}">
+                        <div class="mb-3 pb-3 ${notLast ? 'border-b border-gray-200' : ''}">
                             <div class="font-medium text-blue-600 mb-1">
-                                <a href="${result.url}" target="_blank" class="hover:underline text-xs sm:text-sm">${result.title}</a>
+                                <a href="${urlWithTextHighlights}" target="_blank" class="hover:underline text-xs sm:text-sm">${result.title} (${result.excerpts?.length || 0} excerpts)</a>
                             </div>
                             <div class="text-xs text-gray-500 truncate">${result.url}</div>
                         </div>
                     `;
                 });
-                if (output.results.length > 5) {
-                    resultsHtml += `<div class="text-xs text-gray-500 text-center pt-2">+ ${output.results.length - 5} more results</div>`;
+                if (results.length > 5) {
+                    resultsHtml += `<div class="text-xs text-gray-500 text-center pt-2">+ ${results.length - 5} more results</div>`;
                 }
             } else {
                 resultsHtml += '<div class="text-xs sm:text-sm text-gray-500">No detailed results available</div>';
@@ -712,6 +756,8 @@
             resultElement.innerHTML = resultsHtml;
             resultsContent.appendChild(resultElement);
         }
+
+
 
         function addFinishIndicator(finishReason) {
             const finishElement = document.createElement('div');

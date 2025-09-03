@@ -43,7 +43,7 @@ export default {
     if (request.method === "POST" && pathname === "/api/research") {
       try {
         const { query, systemPrompt } = await request.json<any>();
-
+        console.log({ query });
         if (!query) {
           return new Response("Query is required", { status: 400 });
         }
@@ -64,10 +64,9 @@ export default {
               exclude_domains: undefined,
               include_domains: undefined,
             },
-            max_results: 5,
-            max_chars_per_result: 800, // Keep low to save tokens
+            max_results: 15,
+            max_chars_per_result: 4000, // Keep low to save tokens
           });
-
           return searchResult;
         };
 
