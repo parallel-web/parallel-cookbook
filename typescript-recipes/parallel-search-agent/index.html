@@ -721,31 +721,56 @@
         }
 
         function addToolResult(toolResult) {
-
             const results = toolResult?.output?.results;
             if (!results) {
                 return;
             }
+
             const resultElement = document.createElement('div');
             resultElement.className = 'bg-gray-50 border border-gray-200 rounded-lg p-3 sm:p-4 mb-4 search-result';
 
-            let resultsHtml = '<div class="flex items-center font-medium text-xs sm:text-sm mb-3"><div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>Search Results Found</div>';
+            // Count total excerpts
+            const totalExcerpts = results.reduce((sum, result) => sum + (result.excerpts?.length || 0), 0);
+
+            let resultsHtml = `
+        <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center font-medium text-xs sm:text-sm">
+                <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                Search Results Found
+            </div>
+            ${totalExcerpts > 0 ? `
+                <button class="excerpts-toggle-btn text-xs text-blue-600 hover:text-blue-800 underline" data-expanded="false">
+                    Show Excerpts (${totalExcerpts})
+                </button>
+            ` : ''}
+        </div>
+    `;
 
             if (results && Array.isArray(results)) {
                 const lastIndex = results.slice(0, 5).length - 1;
                 results.slice(0, 5).forEach((result, index) => {
                     const notLast = index < lastIndex;
-                    const urlWithTextHighlights = createHighlightUrl(result.url, result.excerpts || [])
+                    const urlWithTextHighlights = createHighlightUrl(result.url, result.excerpts || []);
+                    const hasExcerpts = result.excerpts && result.excerpts.length > 0;
 
                     resultsHtml += `
-                        <div class="mb-3 pb-3 ${notLast ? 'border-b border-gray-200' : ''}">
-                            <div class="font-medium text-blue-600 mb-1">
-                                <a href="${urlWithTextHighlights}" target="_blank" class="hover:underline text-xs sm:text-sm">${result.title} (${result.excerpts?.length || 0} excerpts)</a>
+                <div class="mb-3 pb-3 ${notLast ? 'border-b border-gray-200' : ''}" data-result-index="${index}">
+                    <div class="font-medium text-blue-600 mb-1">
+                        <a href="${urlWithTextHighlights}" target="_blank" class="hover:underline text-xs sm:text-sm">${escapeHtml(result.title)}</a>
+                    </div>
+                    <div class="text-xs text-gray-500 truncate mb-2">${escapeHtml(result.url)}</div>
+                    ${hasExcerpts ? `
+                        <div class="excerpts-container hidden">
+                            <div class="text-xs font-medium text-gray-600 mb-1">Excerpts:</div>
+                            <div class="space-y-1">
+                                ${result.excerpts.map(excerpt => `<pre class="text-xs text-gray-600 bg-white p-2 rounded border-l-2 border-blue-200 whitespace-pre-wrap break-words">${escapeHtml(excerpt)}</pre>`).join('')}
                             </div>
-                            <div class="text-xs text-gray-500 truncate">${result.url}</div>
                         </div>
-                    `;
+                    ` : ''}
+                </div>
+            `;
                 });
+
                 if (results.length > 5) {
                     resultsHtml += `<div class="text-xs text-gray-500 text-center pt-2">+ ${results.length - 5} more results</div>`;
                 }
@@ -754,10 +779,39 @@
             }
 
             resultElement.innerHTML = resultsHtml;
+
+            // Add event listener for the toggle button
+            const toggleBtn = resultElement.querySelector('.excerpts-toggle-btn');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function () {
+                    const isExpanded = this.dataset.expanded === 'true';
+                    const excerptContainers = resultElement.querySelectorAll('.excerpts-container');
+
+                    if (isExpanded) {
+                        // Hide excerpts
+                        excerptContainers.forEach(container => container.classList.add('hidden'));
+                        this.textContent = `Show Excerpts (${totalExcerpts})`;
+                        this.dataset.expanded = 'false';
+                    } else {
+                        // Show excerpts
+                        excerptContainers.forEach(container => container.classList.remove('hidden'));
+                        this.textContent = `Hide Excerpts`;
+                        this.dataset.expanded = 'true';
+                    }
+                });
+            }
+
             resultsContent.appendChild(resultElement);
         }
 
+        // Add this helper function to escape HTML
+        function escapeHtml(text) {
+            if (!text) return '';
 
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
 
         function addFinishIndicator(finishReason) {
             const finishElement = document.createElement('div');

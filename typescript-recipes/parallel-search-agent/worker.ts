@@ -64,8 +64,8 @@ export default {
               exclude_domains: undefined,
               include_domains: undefined,
             },
-            max_results: 15,
-            max_chars_per_result: 4000, // Keep low to save tokens
+            // max_results: 15,
+            // max_chars_per_result: 4000, // Keep low to save tokens
           });
           return searchResult;
         };
