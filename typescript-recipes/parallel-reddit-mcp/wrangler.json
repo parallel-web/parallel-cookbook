@@ -1,0 +1,18 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "changemymind-debates",
+  "main": "worker.ts",
+  "compatibility_date": "2025-08-14",
+  "observability": { "logs": { "enabled": true } },
+  "assets": { "directory": "./public" },
+  "durable_objects": {
+    "bindings": [{ "name": "CHANGEMYMIND", "class_name": "ChangeMindDO" }]
+  },
+  "routes": [
+    {
+      "custom_domain": true,
+      "pattern": "changemymind.p0web.com"
+    }
+  ],
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ChangeMindDO"] }]
+}

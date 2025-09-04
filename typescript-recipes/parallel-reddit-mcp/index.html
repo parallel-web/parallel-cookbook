@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change My Mind - Reddit Perspectives</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        :root {
+            --off-white: #fcfcfa;
+            --index-black: #1d1b16;
+            --neural: #d8d0bf;
+            --signal: #fb631b;
+        }
+
+        body {
+            font-family: 'FT System Mono', monospace;
+            background-color: var(--off-white);
+            color: var(--index-black);
+        }
+
+        .gerstner {
+            font-family: 'Gerstner Programm', serif;
+        }
+
+        .meme-container {
+            position: relative;
+            background-image: url('/change-my-mind.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            aspect-ratio: 950/960;
+            max-width: 500px;
+        }
+
+        .meme-text-area {
+            position: absolute;
+            top: 60%;
+            bottom: 20%;
+            left: 30%;
+            right: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .meme-text-input {
+            background: transparent;
+            border: none;
+            outline: none;
+            resize: none;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-weight: 900;
+            color: black;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: clamp(14px, 3vw, 24px);
+            line-height: 1.1;
+            text-shadow: 2px 2px 0px white, -2px -2px 0px white, 2px -2px 0px white, -2px 2px 0px white;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-meme {
+            background-image: url('/change-my-mind.jpg');
+            background-size: cover;
+            background-position: center;
+            aspect-ratio: 950/960;
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card-meme:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-meme-text {
+            position: absolute;
+            top: 60%;
+            bottom: 20%;
+            left: 30%;
+            right: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-weight: 900;
+            color: black;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: clamp(10px, 2.5vw, 16px);
+            line-height: 1.1;
+            text-shadow: 2px 2px 0px white, -2px -2px 0px white, 2px -2px 0px white, -2px 2px 0px white;
+            padding: 4px;
+        }
+
+        .neural-bg {
+            background-color: var(--neural);
+        }
+
+        .signal-text {
+            color: var(--signal);
+        }
+
+        .index-black-text {
+            color: var(--index-black);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="p-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="https://assets.p0web.com/dark-parallel-symbol-270.svg" alt="Parallel" class="w-8 h-8">
+                <h1 class="gerstner text-2xl font-medium">Change My Mind</h1>
+            </div>
+            <p class="text-sm text-gray-600">Explore Reddit perspectives on controversial topics</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="gerstner text-4xl md:text-6xl font-medium mb-6 index-black-text">
+                What's your hot take?
+            </h2>
+            <p class="text-lg mb-12 text-gray-700 max-w-2xl mx-auto">
+                Submit a statement and we'll find the most compelling counter-arguments from Reddit.
+                Get ready to see the other side of the debate.
+            </p>
+
+            <!-- Meme Input -->
+            <div class="meme-container mx-auto mb-8">
+                <div class="meme-text-area">
+                    <textarea class="meme-text-input" placeholder="YOUR STATEMENT HERE..." maxlength="100"></textarea>
+                </div>
+            </div>
+
+            <button class="bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors">
+                FIND COUNTER-ARGUMENTS
+            </button>
+        </div>
+    </section>
+
+    <!-- Featured Debates -->
+    <section id="popular" class="py-16 px-6 neural-bg">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="gerstner text-3xl font-medium mb-12 text-center index-black-text">
+                Popular Debates
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-meme" onclick="window.location.href='result/pineapple-pizza'">
+                    <div class="card-meme-text">
+                        Pineapple belongs on pizza
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-meme" onclick="window.location.href='result/remote-work'">
+                    <div class="card-meme-text">
+                        Remote work is better than office work
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-meme" onclick="window.location.href='result/ai-replace-jobs'">
+                    <div class="card-meme-text">
+                        AI will replace most jobs in 10 years
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-meme" onclick="window.location.href='result/console-vs-pc'">
+                    <div class="card-meme-text">
+                        Console gaming is better than PC gaming
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card-meme" onclick="window.location.href='result/social-media-harmful'">
+                    <div class="card-meme-text">
+                        Social media is harmful to society
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card-meme" onclick="window.location.href='result/cryptocurrency-future'">
+                    <div class="card-meme-text">
+                        Cryptocurrency is the future of money
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="gerstner text-3xl font-medium mb-12 text-center index-black-text">
+                How it works
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 bg-black text-white flex items-center justify-center text-2xl font-bold">
+                        1
+                    </div>
+                    <h4 class="font-medium mb-2">Submit your statement</h4>
+                    <p class="text-gray-600">Share your opinion on any controversial topic</p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 neural-bg text-black flex items-center justify-center text-2xl font-bold">
+                        2
+                    </div>
+                    <h4 class="font-medium mb-2">AI searches Reddit</h4>
+                    <p class="text-gray-600">Our AI finds the best counter-arguments from relevant subreddits</p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-16 h-16 mx-auto mb-4 signal-text border-2 border-current flex items-center justify-center text-2xl font-bold">
+                        3
+                    </div>
+                    <h4 class="font-medium mb-2">Get challenged</h4>
+                    <p class="text-gray-600">Read the most compelling arguments from the other side</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="recent" class="py-16 px-6 neural-bg">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="gerstner text-3xl font-medium mb-12 text-center index-black-text">
+                Recent Debates
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-meme" onclick="window.location.href='result/pineapple-pizza'">
+                    <div class="card-meme-text">
+                        Pineapple belongs on pizza
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-meme" onclick="window.location.href='result/remote-work'">
+                    <div class="card-meme-text">
+                        Remote work is better than office work
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-meme" onclick="window.location.href='result/ai-replace-jobs'">
+                    <div class="card-meme-text">
+                        AI will replace most jobs in 10 years
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-meme" onclick="window.location.href='result/console-vs-pc'">
+                    <div class="card-meme-text">
+                        Console gaming is better than PC gaming
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card-meme" onclick="window.location.href='result/social-media-harmful'">
+                    <div class="card-meme-text">
+                        Social media is harmful to society
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card-meme" onclick="window.location.href='result/cryptocurrency-future'">
+                    <div class="card-meme-text">
+                        Cryptocurrency is the future of money
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="https://assets.p0web.com/dark-parallel-logo-270.svg" alt="Parallel" class="w-20 h-auto">
+                <span class="text-sm text-gray-600">Powered by Reddit & AI</span>
+            </div>
+            <div class="text-sm text-gray-600">
+                Built for open minds
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Handle textarea input
+        const textarea = document.querySelector('.meme-text-input');
+        const button = document.querySelector('button');
+
+        textarea.addEventListener('input', function () {
+            // Auto-resize height
+            this.style.height = 'auto';
+            this.style.height = this.scrollHeight + 'px';
+        });
+
+        button.addEventListener('click', function () {
+            const statement = textarea.value.trim();
+            if (statement) {
+                window.location.href = `new?statement=${encodeURIComponent(statement)}`;
+            } else {
+                alert('Please enter a statement first!');
+            }
+        });
+
+        // Add enter key support
+        textarea.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                button.click();
+            }
+        });
+    </script>
+</body>
+
+</html>

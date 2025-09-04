@@ -1,0 +1,19 @@
+{
+  "name": "changemymind-debates",
+  "version": "1.0.0",
+  "description": "Reddit perspectives on controversial topics",
+  "main": "worker.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "read -p \"Enter Cloudflare Account ID: \" account_id && CLOUDFLARE_ACCOUNT_ID=\"$account_id\" wrangler deploy"
+  },
+  "dependencies": {
+    "parallel-web": "^0.1.0",
+    "simplerauth-client": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241106.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.91.0"
+  }
+}

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change My Mind - Debate Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        :root {
+            --off-white: #fcfcfa;
+            --index-black: #1d1b16;
+            --neural: #d8d0bf;
+            --signal: #fb631b;
+        }
+
+        body {
+            font-family: 'FT System Mono', monospace;
+            background-color: var(--off-white);
+            color: var(--index-black);
+        }
+
+        .gerstner {
+            font-family: 'Gerstner Programm', serif;
+        }
+
+        .meme-container {
+            position: relative;
+            background-image: url('/change-my-mind.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            aspect-ratio: 950/960;
+            max-width: 400px;
+        }
+
+        .meme-text {
+            position: absolute;
+            top: 60%;
+            bottom: 20%;
+            left: 30%;
+            right: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            font-weight: 900;
+            color: black;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: clamp(12px, 2.5vw, 18px);
+            line-height: 1.1;
+            text-shadow: 2px 2px 0px white, -2px -2px 0px white, 2px -2px 0px white, -2px 2px 0px white;
+            padding: 4px;
+        }
+
+        .neural-bg {
+            background-color: var(--neural);
+        }
+
+        .signal-text {
+            color: var(--signal);
+        }
+
+        .index-black-text {
+            color: var(--index-black);
+        }
+
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="p-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="https://assets.p0web.com/dark-parallel-symbol-270.svg" alt="Parallel" class="w-8 h-8">
+                <a href="/" class="gerstner text-2xl font-medium hover:text-gray-600">Change My Mind</a>
+            </div>
+            <a href="/" class="text-sm text-gray-600 hover:text-gray-800">← Back to debates</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-6">
+        <div class="max-w-4xl mx-auto">
+
+            <!-- Meme Section -->
+            <div class="text-center mb-12">
+                <div class="meme-container mx-auto mb-6">
+                    <div class="meme-text" id="meme-statement">
+                        <!-- Statement will be injected here -->
+                    </div>
+                </div>
+
+                <!-- Author Info -->
+                <div class="flex items-center justify-center space-x-3 mb-8">
+                    <img id="author-avatar" src="" alt="" class="w-10 h-10 rounded-full">
+                    <div class="text-left">
+                        <div class="font-medium" id="author-name"></div>
+                        <div class="text-sm text-gray-600" id="debate-date"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading-state" class="text-center py-16 hidden">
+                <div
+                    class="loading-spinner w-12 h-12 border-4 border-gray-300 border-t-black rounded-full mx-auto mb-6">
+                </div>
+                <h2 class="gerstner text-2xl font-medium mb-4">Analyzing Reddit discussions...</h2>
+                <p class="text-gray-600 max-w-md mx-auto">
+                    Our AI is searching through thousands of Reddit comments to find the most compelling
+                    counter-arguments. This may take up to 10 minutes.
+                </p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-state" class="text-center py-16 hidden">
+                <div
+                    class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <h2 class="gerstner text-2xl font-medium mb-4">Oops! Something went wrong</h2>
+                <p class="text-gray-600 mb-6" id="error-message"></p>
+                <a href="/" class="bg-black text-white px-6 py-2 font-medium hover:bg-gray-800 transition-colors">
+                    Try Another Debate
+                </a>
+            </div>
+
+            <!-- Results State -->
+            <div id="results-state" class="hidden">
+                <!-- Roast Section -->
+                <div class="neural-bg p-8 rounded-lg mb-12">
+                    <h2 class="gerstner text-3xl font-medium mb-6 text-center">
+                        🔥 The Roast
+                    </h2>
+                    <blockquote class="text-xl italic text-center font-medium" id="roast-content">
+                        <!-- Roast will be injected here -->
+                    </blockquote>
+                </div>
+
+                <!-- Counter-arguments Section -->
+                <div>
+                    <h2 class="gerstner text-3xl font-medium mb-8 text-center">
+                        Counter-Arguments from Reddit
+                    </h2>
+
+                    <div class="space-y-6" id="counterpoints-container">
+                        <!-- Counterpoints will be injected here -->
+                    </div>
+                </div>
+
+                <!-- Share Section -->
+                <div class="text-center mt-16 py-12 border-t border-gray-200">
+                    <h3 class="gerstner text-2xl font-medium mb-6">Ready for your own debate?</h3>
+                    <a href="/" class="bg-black text-white px-8 py-3 font-medium hover:bg-gray-800 transition-colors">
+                        Challenge Another Opinion
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <img src="https://assets.p0web.com/dark-parallel-logo-270.svg" alt="Parallel" class="w-20 h-auto">
+                <span class="text-sm text-gray-600">Powered by Reddit & AI</span>
+            </div>
+            <div class="text-sm text-gray-600">
+                Built for open minds
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get data injected from server
+        const data = window.data;
+        const task = data.task;
+
+        // Populate basic info
+        document.getElementById('meme-statement').textContent = task.statement;
+        document.getElementById('author-avatar').src = task.profile_image_url || '/default-avatar.png';
+        document.getElementById('author-name').textContent = '@' + task.username;
+
+        const date = new Date(task.created_at);
+        document.getElementById('debate-date').textContent = date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Show appropriate state
+        if (task.status === 'pending') {
+            document.getElementById('loading-state').classList.remove('hidden');
+
+            // Poll for updates every 10 seconds
+            const pollInterval = setInterval(async () => {
+                try {
+                    const response = await fetch(window.location.href);
+                    if (response.ok) {
+                        // Reload if status changed
+                        window.location.reload();
+                    }
+                } catch (error) {
+                    console.error('Polling error:', error);
+                }
+            }, 10000);
+
+            // Stop polling after 15 minutes
+            setTimeout(() => {
+                clearInterval(pollInterval);
+            }, 15 * 60 * 1000);
+
+        } else if (task.error) {
+            document.getElementById('error-state').classList.remove('hidden');
+            document.getElementById('error-message').textContent = task.error;
+
+        } else if (task.result) {
+            document.getElementById('results-state').classList.remove('hidden');
+
+            // Populate roast
+            document.getElementById('roast-content').textContent = task.result.roast;
+
+            // Populate counterpoints
+            const container = document.getElementById('counterpoints-container');
+            task.result.counterpoints.forEach((counterpoint, index) => {
+                const card = document.createElement('div');
+                card.className = 'bg-white p-6 rounded-lg border border-gray-200 shadow-sm';
+                card.innerHTML = `
+                    <div class="flex items-start space-x-4">
+                        <div class="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0">
+                            ${index + 1}
+                        </div>
+                        <div class="flex-1">
+                            <p class="text-gray-900 leading-relaxed">${counterpoint}</p>
+                            <div class="mt-4 text-sm text-gray-600">
+                                <span class="inline-flex items-center">
+                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    Source: Reddit discussions
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+    </script>
+</body>
+
+</html>
