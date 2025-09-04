@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitor Analysis - AI-Powered Market Research</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        :root {
+            --off-white: #fcfcfa;
+            --index-black: #1d1b16;
+            --neural: #d8d0bf;
+            --signal: #fb631b;
+        }
+
+        body {
+            font-family: 'FT System Mono', monospace;
+            background-color: var(--off-white);
+            color: var(--index-black);
+        }
+
+        .gerstner {
+            font-family: 'Gerstner Programm', serif;
+        }
+
+        .neural-bg {
+            background-color: var(--neural);
+        }
+
+        .signal-text {
+            color: var(--signal);
+        }
+
+        .index-black-text {
+            color: var(--index-black);
+        }
+
+        .company-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+            border-color: var(--signal);
+        }
+
+        .company-logo {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--signal), #ff8c42);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 1.25rem;
+        }
+
+        .input-group {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .company-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .company-input:focus {
+            outline: none;
+            border-color: var(--signal);
+            box-shadow: 0 0 0 4px rgba(251, 99, 27, 0.1);
+        }
+
+        .analyze-btn {
+            background: linear-gradient(135deg, var(--signal), #ff8c42);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .analyze-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(251, 99, 27, 0.3);
+        }
+
+        .analyze-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="p-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg"></div>
+                <h1 class="gerstner text-2xl font-medium">Competitor Analysis</h1>
+            </div>
+            <p class="text-sm text-gray-600">AI-powered market research with Reddit insights</p>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="gerstner text-4xl md:text-6xl font-medium mb-6 index-black-text">
+                Know Your Competition
+            </h2>
+            <p class="text-lg mb-12 text-gray-700 max-w-2xl mx-auto">
+                Enter any company domain and get an AI-powered competitive analysis with real user insights from Reddit.
+                Understand the market landscape, key players, and what users are saying.
+            </p>
+
+            <!-- Company Input -->
+            <div class="input-group mb-8">
+                <input 
+                    type="text" 
+                    class="company-input" 
+                    placeholder="Enter company domain (e.g., openai.com, stripe.com)"
+                    id="company-input"
+                    autocomplete="off"
+                />
+                <button class="analyze-btn w-full" id="analyze-btn">
+                    <span class="btn-text">🔍 Analyze Competition</span>
+                    <span class="btn-loading hidden">
+                        <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Analyzing...
+                    </span>
+                </button>
+            </div>
+
+            <p class="text-sm text-gray-500">For demo purposes, you get 5 free analyses</p>
+        </div>
+    </section>
+
+    <!-- Featured Analyses -->
+    <section id="popular" class="py-16 px-6 neural-bg">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="gerstner text-3xl font-medium mb-12 text-center index-black-text">
+                Popular Analyses
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Sample cards will be populated by server -->
+                <div class="company-card" onclick="window.location.href='/analysis/openai-com'">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="company-logo">AI</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">OpenAI</h4>
+                            <p class="text-sm text-gray-500">openai.com</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">
+                        AI research and deployment company, known for ChatGPT and GPT models
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>📊 Analysis available</span>
+                        <span>🔥 1.2k views</span>
+                    </div>
+                </div>
+
+                <div class="company-card" onclick="window.location.href='/analysis/stripe-com'">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="company-logo">$</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Stripe</h4>
+                            <p class="text-sm text-gray-500">stripe.com</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">
+                        Online payment processing for internet businesses
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>📊 Analysis available</span>
+                        <span>🔥 890 views</span>
+                    </div>
+                </div>
+
+                <div class="company-card" onclick="window.location.href='/analysis/notion-so'">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="company-logo">N</div>
+                        <div>
+                            <h4 class="font-semibold text-lg">Notion</h4>
+                            <p class="text-sm text-gray-500">notion.so</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-3">
+                        All-in-one workspace for notes, docs, and project management
+                    </p>
+                    <div class="flex items-center justify-between text-xs text-gray-500">
+                        <span>📊 Analysis available</span>
+                        <span>🔥 756 views</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="gerstner text-3xl font-medium mb-12 text-center index-black-text">
+                How it works
+            </h3>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-blue-600 text-white flex items-center justify-center text-2xl font-bold rounded-full">
+                        1
+                    </div>
+                    <h4 class="font-medium mb-2">Company Research</h4>
+                    <p class="text-gray-600 text-sm">AI researches the company's business model, products, and market position</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-green-500 to-green-600 text-white flex items-center justify-center text-2xl font-bold rounded-full">
+                        2
+                    </div>
+                    <h4 class="font-medium mb-2">Find Competitors</h4>
+                    <p class="text-gray-600 text-sm">Identifies direct and indirect competitors in the same market space</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 signal-text border-2 border-current flex items-center justify-center text-2xl font-bold rounded-full">
+                        3
+                    </div>
+                    <h4 class="font-medium mb-2">Reddit Mining</h4>
+                    <p class="text-gray-600 text-sm">Analyzes Reddit discussions for real user opinions and market insights</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500 to-purple-600 text-white flex items-center justify-center text-2xl font-bold rounded-full">
+                        4
+                    </div>
+                    <h4 class="font-medium mb-2">Generate Report</h4>
+                    <p class="text-gray-600 text-sm">Creates comprehensive competitive analysis with actionable insights</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Analyses -->
+    <section id="recent" class="py-16 px-6 neural-bg">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="gerstner text-3xl font-medium mb-12 text-center index-black-text">
+                Recent Analyses
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="recent-analyses">
+                <!-- Recent analyses will be populated by server -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <span class="text-sm text-gray-600">Powered by AI & Reddit</span>
+                <a href="https://github.com/janwilmake/competitor-analysis" target="_blank" class="text-orange-500 hover:text-orange-600 underline">
+                    View on GitHub
+                </a>
+            </div>
+            <div class="text-sm text-gray-600">
+                Built for strategic insights
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const input = document.getElementById('company-input');
+        const button = document.getElementById('analyze-btn');
+        const btnText = button.querySelector('.btn-text');
+        const btnLoading = button.querySelector('.btn-loading');
+
+        function validateDomain(domain) {
+            // Remove protocol if present
+            domain = domain.replace(/^https?:\/\//, '');
+            // Remove www if present
+            domain = domain.replace(/^www\./, '');
+            // Remove trailing slash
+            domain = domain.replace(/\/$/, '');
+            
+            // Basic domain validation
+            const domainRegex = /^[a-zA-Z0-9][a-zA-Z0-9-]{0,61}[a-zA-Z0-9]?(\.[a-zA-Z]{2,})+$/;
+            return domainRegex.test(domain) ? domain : null;
+        }
+
+        function setLoading(loading) {
+            button.disabled = loading;
+            if (loading) {
+                btnText.classList.add('hidden');
+                btnLoading.classList.remove('hidden');
+            } else {
+                btnText.classList.remove('hidden');
+                btnLoading.classList.add('hidden');
+            }
+        }
+
+        button.addEventListener('click', function() {
+            const rawInput = input.value.trim();
+            if (!rawInput) {
+                alert('Please enter a company domain');
+                return;
+            }
+
+            const domain = validateDomain(rawInput);
+            if (!domain) {
+                alert('Please enter a valid domain (e.g., openai.com, stripe.com)');
+                return;
+            }
+
+            setLoading(true);
+            
+            // Convert domain to slug format
+            const slug = domain.replace(/\./g, '-');
+            
+            window.location.href = `/new?company=${encodeURIComponent(domain)}`;
+        });
+
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                button.click();
+            }
+        });
+
+        // Auto-format input
+        input.addEventListener('input', function() {
+            let value = this.value;
+            // Remove protocol if user types it
+            value = value.replace(/^https?:\/\//, '');
+            this.value = value;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,18 +1,21 @@
 {
   "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
-  "name": "changemymind-debates",
+  "name": "competitor-analysis",
   "main": "worker.ts",
   "compatibility_date": "2025-08-14",
   "observability": { "logs": { "enabled": true } },
-  "assets": { "directory": "./public" },
   "durable_objects": {
-    "bindings": [{ "name": "CHANGEMYMIND", "class_name": "ChangeMindDO" }]
+    "bindings": [
+      { "name": "COMPETITOR_ANALYSIS", "class_name": "CompetitorAnalysisDO" }
+    ]
   },
   "routes": [
     {
       "custom_domain": true,
-      "pattern": "changemymind.p0web.com"
+      "pattern": "competitors.p0web.com"
     }
   ],
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["ChangeMindDO"] }]
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["CompetitorAnalysisDO"] }
+  ]
 }

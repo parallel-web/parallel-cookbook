@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competitor Analysis Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        :root {
+            --off-white: #fcfcfa;
+            --index-black: #1d1b16;
+            --neural: #d8d0bf;
+            --signal: #fb631b;
+        }
+
+        body {
+            font-family: 'FT System Mono', monospace;
+            background-color: var(--off-white);
+            color: var(--index-black);
+        }
+
+        .gerstner {
+            font-family: 'Gerstner Programm', serif;
+        }
+
+        .neural-bg {
+            background-color: var(--neural);
+        }
+
+        .signal-text {
+            color: var(--signal);
+        }
+
+        .index-black-text {
+            color: var(--index-black);
+        }
+
+        .loading-spinner {
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .company-header {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .company-logo {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--signal), #ff8c42);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .competitor-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .competitor-card:hover {
+            border-color: var(--signal);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .strength-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            background: #dcfce7;
+            color: #166534;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin: 0.25rem 0.25rem 0.25rem 0;
+        }
+
+        .weakness-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.25rem 0.75rem;
+            background: #fef2f2;
+            color: #991b1b;
+            border-radius: 6px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin: 0.25rem 0.25rem 0.25rem 0;
+        }
+
+        .insight-card {
+            background: white;
+            border-left: 4px solid var(--signal);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .citation-link {
+            color: var(--signal);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        .citation-link:hover {
+            text-decoration: underline;
+        }
+
+        .market-position {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+        }
+
+        .reddit-insights {
+            background: linear-gradient(135deg, #fef7ed 0%, #fed7aa 100%);
+            border: 1px solid #fdba74;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="p-6 border-b border-gray-200">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <a href="/" class="gerstner text-2xl font-medium hover:text-gray-600 flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg"></div>
+                    <span>Competitor Analysis</span>
+                </a>
+            </div>
+            <a href="/" class="text-sm text-gray-600 hover:text-gray-800">← Back to analyses</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+
+            <!-- Loading State -->
+            <div id="loading-state" class="text-center py-16 hidden">
+                <div
+                    class="loading-spinner w-12 h-12 border-4 border-gray-300 border-t-orange-500 rounded-full mx-auto mb-6">
+                </div>
+                <h2 class="gerstner text-2xl font-medium mb-4">Analyzing Competition...</h2>
+                <p class="text-gray-600 max-w-md mx-auto mb-4">
+                    Our AI is researching the company, identifying competitors, and mining Reddit for insights.
+                </p>
+                <div class="max-w-sm mx-auto bg-gray-200 rounded-full h-2 mb-4">
+                    <div class="bg-gradient-to-r from-orange-500 to-red-500 h-2 rounded-full animate-pulse"
+                        style="width: 45%"></div>
+                </div>
+                <p class="text-sm text-gray-500">This will take a bit. Come back in 30 minutes!</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error-state" class="text-center py-16 hidden">
+                <div
+                    class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <h2 class="gerstner text-2xl font-medium mb-4">Analysis Failed</h2>
+                <p class="text-gray-600 mb-6" id="error-message"></p>
+                <a href="/"
+                    class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 py-2 font-medium hover:opacity-90 transition-colors rounded-lg">
+                    Try Another Company
+                </a>
+            </div>
+
+            <!-- Results State -->
+            <div id="results-state" class="hidden">
+
+                <!-- Company Header -->
+                <div class="company-header mb-12">
+                    <div class="flex items-start space-x-6">
+                        <div class="company-logo" id="company-logo">
+                            <!-- Company initial will be injected -->
+                        </div>
+                        <div class="flex-1">
+                            <h1 class="gerstner text-3xl font-medium mb-2" id="company-name">
+                                <!-- Company name will be injected -->
+                            </h1>
+                            <p class="text-gray-600 mb-4" id="company-domain">
+                                <!-- Domain will be injected -->
+                            </p>
+                            <p class="text-lg leading-relaxed" id="company-description">
+                                <!-- Company description will be injected -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Market Position -->
+                <section class="market-position p-8 rounded-lg mb-12">
+                    <h2 class="gerstner text-2xl font-medium mb-6 flex items-center">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Market Position & UVP
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-semibold mb-3">Unique Value Proposition</h3>
+                            <p id="company-uvp" class="text-gray-700">
+                                <!-- UVP will be injected -->
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold mb-3">Target Market</h3>
+                            <p id="company-market" class="text-gray-700">
+                                <!-- Target market will be injected -->
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Competitors Analysis -->
+                <section class="mb-12">
+                    <h2 class="gerstner text-2xl font-medium mb-8 flex items-center">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
+                        </svg>
+                        Key Competitors
+                    </h2>
+                    <div class="grid lg:grid-cols-2 gap-8" id="competitors-container">
+                        <!-- Competitors will be injected here -->
+                    </div>
+                </section>
+
+                <!-- Reddit Insights -->
+                <section class="reddit-insights p-8 rounded-lg mb-12">
+                    <h2 class="gerstner text-2xl font-medium mb-8 flex items-center">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Reddit Community Insights
+                    </h2>
+                    <div class="grid lg:grid-cols-2 gap-8" id="reddit-insights-container">
+                        <!-- Reddit insights will be injected here -->
+                    </div>
+                </section>
+
+                <!-- Key Findings -->
+                <section class="mb-12">
+                    <h2 class="gerstner text-2xl font-medium mb-8 flex items-center">
+                        <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        Key Strategic Insights
+                    </h2>
+                    <div class="space-y-6" id="key-insights-container">
+                        <!-- Key insights will be injected here -->
+                    </div>
+                </section>
+
+                <!-- Sources -->
+                <section class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="font-semibold mb-4 flex items-center">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Sources & References
+                    </h3>
+                    <div id="sources-container" class="space-y-2">
+                        <!-- Sources will be injected here -->
+                    </div>
+                </section>
+
+                <!-- CTA Section -->
+                <div class="text-center mt-16 py-12 border-t border-gray-200">
+                    <h3 class="gerstner text-2xl font-medium mb-6">Ready to analyze another company?</h3>
+                    <a href="/"
+                        class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-3 font-medium hover:opacity-90 transition-colors rounded-lg">
+                        Analyze Competition
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 px-6 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <span class="text-sm text-gray-600">Powered by AI & Reddit</span>
+                <a href="https://github.com/janwilmake/competitor-analysis" target="_blank"
+                    class="text-orange-500 hover:text-orange-600 underline">
+                    View on GitHub
+                </a>
+            </div>
+            <div class="text-sm text-gray-600">
+                Built for strategic insights
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get data injected from server
+        const data = window.data;
+        const analysis = data.analysis;
+
+        // Populate basic info
+        const companyInitial = analysis.company_domain.charAt(0).toUpperCase();
+        document.getElementById('company-logo').textContent = companyInitial;
+        document.getElementById('company-name').textContent = analysis.company_name;
+        document.getElementById('company-domain').textContent = analysis.company_domain;
+
+        // Show appropriate state
+        if (analysis.status === 'pending') {
+            document.getElementById('loading-state').classList.remove('hidden');
+
+            // Poll for updates
+            let initialContent = null;
+            fetch(window.location.href)
+                .then(response => response.text())
+                .then(content => { initialContent = content; })
+                .catch(error => console.error('Error fetching initial content:', error));
+
+            const pollInterval = setInterval(async () => {
+                try {
+                    const response = await fetch(window.location.href);
+                    if (response.ok) {
+                        const currentContent = await response.text();
+                        if (initialContent && currentContent !== initialContent) {
+                            clearInterval(pollInterval);
+                            window.location.reload();
+                        }
+                    }
+                } catch (error) {
+                    console.error('Polling error:', error);
+                }
+            }, 5000);
+
+            setTimeout(() => clearInterval(pollInterval), 15 * 60 * 1000);
+
+        } else if (analysis.error) {
+            document.getElementById('error-state').classList.remove('hidden');
+            document.getElementById('error-message').textContent = analysis.error;
+
+        } else if (analysis.result) {
+            document.getElementById('results-state').classList.remove('hidden');
+            const result = analysis.result.output.content;
+
+            // Populate company info
+            document.getElementById('company-description').textContent = result.company_overview.description;
+            document.getElementById('company-uvp').textContent = result.company_overview.unique_value_proposition;
+            document.getElementById('company-market').textContent = result.company_overview.target_market;
+
+            // Populate competitors
+            const competitorsContainer = document.getElementById('competitors-container');
+            result.competitors.forEach(competitor => {
+                const competitorDiv = document.createElement('div');
+                competitorDiv.className = 'competitor-card';
+
+                const strengthsBadges = competitor.strengths.map(s =>
+                    `<span class="strength-badge">✓ ${s}</span>`
+                ).join('');
+
+                const weaknessesBadges = competitor.weaknesses.map(w =>
+                    `<span class="weakness-badge">⚠ ${w}</span>`
+                ).join('');
+
+                competitorDiv.innerHTML = `
+                    <div class="flex items-start space-x-4 mb-4">
+                        <div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center font-bold text-gray-700">
+                            ${competitor.name.charAt(0)}
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-semibold text-lg">${competitor.name}</h3>
+                            <p class="text-sm text-gray-500 mb-2">${competitor.website || 'Website not available'}</p>
+                            <p class="text-gray-700 text-sm">${competitor.description}</p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h4 class="font-medium text-sm mb-2">Strengths:</h4>
+                        <div>${strengthsBadges}</div>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-sm mb-2">Weaknesses:</h4>
+                        <div>${weaknessesBadges}</div>
+                    </div>
+                `;
+                competitorsContainer.appendChild(competitorDiv);
+            });
+
+            // Populate Reddit insights
+            const redditContainer = document.getElementById('reddit-insights-container');
+            result.reddit_insights.forEach(insight => {
+                const insightDiv = document.createElement('div');
+                insightDiv.className = 'insight-card';
+                insightDiv.innerHTML = `
+                    <h4 class="font-semibold mb-3">${insight.topic}</h4>
+                    <p class="text-gray-700 mb-3">${insight.summary}</p>
+                    <div class="text-sm">
+                        ${insight.sources.map(source =>
+                    `<a href="${source.url}" target="_blank" class="citation-link">📎 ${source.title}</a>`
+                ).join(' • ')}
+                    </div>
+                `;
+                redditContainer.appendChild(insightDiv);
+            });
+
+            // Populate key insights
+            const insightsContainer = document.getElementById('key-insights-container');
+            result.key_insights.forEach(insight => {
+                const insightDiv = document.createElement('div');
+                insightDiv.className = 'insight-card';
+                insightDiv.innerHTML = `
+                    <h4 class="font-semibold mb-3 flex items-center">
+                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
+                        ${insight.title}
+                    </h4>
+                    <p class="text-gray-700">${insight.description}</p>
+                `;
+                insightsContainer.appendChild(insightDiv);
+            });
+
+            // Collect and display sources
+            const sourcesContainer = document.getElementById('sources-container');
+            const allSources = new Set();
+
+            result.reddit_insights.forEach(insight => {
+                insight.sources.forEach(source => {
+                    allSources.add(JSON.stringify(source));
+                });
+            });
+
+            Array.from(allSources).forEach((sourceStr, index) => {
+                const source = JSON.parse(sourceStr);
+                const sourceDiv = document.createElement('div');
+                sourceDiv.innerHTML = `
+                    <a href="${source.url}" target="_blank" class="citation-link">
+                        [${index + 1}] ${source.title}
+                    </a>
+                `;
+                sourcesContainer.appendChild(sourceDiv);
+            });
+        }
+    </script>
+</body>
+
+</html>
