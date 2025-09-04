@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "deploy": "read -p \"Enter Cloudflare Account ID: \" account_id && CLOUDFLARE_ACCOUNT_ID=\"$account_id\" wrangler deploy"
   },
   "dependencies": {
     "@ai-sdk/cerebras": "^1.0.11",
