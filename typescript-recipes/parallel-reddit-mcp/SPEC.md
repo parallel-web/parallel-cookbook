@@ -40,3 +40,5 @@ CONTEXT NEEDED
 - parallel docs on webhooks https://docs.parallel.ai/task-api/features/webhooks.md
 - typescript sdk for task creation and task result https://letmeprompt.com/httpsuithubcomp-1qyxfp0?key=result
 - `index.html` https://pastebin.contextarea.com/N4J55eQ.md
+
+<!-- https://letmeprompt.com/files-indexhtml-hap5fr0 -->

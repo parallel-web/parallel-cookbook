@@ -49,7 +49,7 @@ export default {
         // Remove first segment from pathname for routing
         const pathname = url.pathname;
 
-        const do_id = env.CHANGEMYMIND.idFromName("global");
+        const do_id = env.CHANGEMYMIND.idFromName("v2");
         const do_stub = env.CHANGEMYMIND.get(do_id);
 
         switch (pathname) {
@@ -188,7 +188,7 @@ async function handleNew(
     const taskRun = await parallel.taskRun.create(
       {
         input: `Statement to counter-argue: "${statement}"`,
-        processor: "pro",
+        processor: "base",
         task_spec: {
           output_schema: {
             json_schema: {
@@ -232,6 +232,8 @@ async function handleNew(
       }
     );
 
+    console.log({ taskRun: taskRun });
+
     await do_stub.createTask({
       slug,
       statement: statement.trim(),
@@ -266,6 +268,7 @@ async function handleWebhook(
     return new Response("Method not allowed", { status: 405 });
   }
 
+  console.log("Handling webhook");
   const webhookId = request.headers.get("webhook-id");
   const webhookTimestamp = request.headers.get("webhook-timestamp");
   const webhookSignature = request.headers.get("webhook-signature");
@@ -273,6 +276,7 @@ async function handleWebhook(
   if (!webhookId || !webhookTimestamp || !webhookSignature) {
     return new Response("Missing webhook headers", { status: 400 });
   }
+  console.log("Got headers");
 
   const body = await request.text();
 
@@ -288,6 +292,8 @@ async function handleWebhook(
   ) {
     return new Response("Invalid signature", { status: 401 });
   }
+
+  console.log("Signature correct");
 
   const payload = JSON.parse(body);
 
@@ -305,11 +311,7 @@ async function handleWebhook(
       const result = await parallel.taskRun.result(payload.data.run_id);
 
       if (result.output.type === "json") {
-        await do_stub.updateTaskResult(
-          slug,
-          JSON.stringify(result.output.content),
-          null
-        );
+        await do_stub.updateTaskResult(slug, JSON.stringify(result), null);
       } else {
         await do_stub.updateTaskResult(slug, null, "Unexpected output format");
       }
@@ -329,6 +331,8 @@ async function handleWebhook(
         payload.data.error?.message || "Task failed"
       );
     }
+  } else {
+    console.log("Unknown payload", payload);
   }
 
   return new Response("OK");
@@ -344,16 +348,26 @@ async function handleResult(
     return new Response("Debate not found", { status: 404 });
   }
 
-  // Increment visits
-  await do_stub.incrementVisits(slug);
+  if (task.status === "done") {
+    // Increment visits
+    await do_stub.incrementVisits(slug);
+  }
 
   let html = resultHtml;
 
   // Inject dynamic data
+
+  const result = task.result ? JSON.parse(task.result) : null;
+
+  if (result?.output?.["beta_fields"]?.["mcp-server-2025-07-17"]) {
+    // correct slight sdk difference with api spec
+    result.output.mcp_tool_calls =
+      result?.output?.["beta_fields"]?.["mcp-server-2025-07-17"];
+  }
   const data = {
     task: {
       ...task,
-      result: task.result ? JSON.parse(task.result) : null,
+      result,
     },
   };
 
@@ -407,9 +421,12 @@ async function verifyWebhookSignature(
 }
 
 function escapeHtml(text: string): string {
-  const div = document.createElement("div");
-  div.textContent = text;
-  return div.innerHTML;
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
 }
 
 export class ChangeMindDO extends DurableObject<Env> {

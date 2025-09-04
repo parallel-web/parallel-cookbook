@@ -116,6 +116,136 @@
                 transform: rotate(360deg);
             }
         }
+
+        .citation-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background-color: var(--signal);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            text-decoration: none;
+            margin-left: 4px;
+            transition: all 0.2s ease;
+        }
+
+        .citation-icon:hover {
+            background-color: var(--index-black);
+            transform: scale(1.1);
+        }
+
+        .sources-section {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .source-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+        }
+
+        .source-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background-color: var(--signal);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .source-link {
+            color: var(--signal);
+            text-decoration: none;
+            font-weight: 500;
+            word-break: break-all;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            display: block;
+            line-height: 1.4;
+        }
+
+        .source-link:hover {
+            text-decoration: underline;
+        }
+
+        .excerpt {
+            font-style: italic;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+
+        .mcp-stats {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border: 1px solid #d1d5db;
+        }
+
+        .mcp-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            background-color: var(--signal);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .tool-call-item {
+            background-color: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-call-header {
+            display: flex;
+            align-items: center;
+            justify-content: between;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .tool-name {
+            font-weight: 600;
+            color: var(--index-black);
+        }
+
+        .server-name {
+            color: var(--signal);
+            font-size: 0.875rem;
+        }
+
+        .tool-content {
+            font-size: 0.875rem;
+            color: #6b7280;
+            max-height: 100px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .tool-content::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            width: 100%;
+            background: linear-gradient(transparent, white);
+        }
     </style>
 </head>
 
@@ -184,6 +314,8 @@
 
             <!-- Results State -->
             <div id="results-state" class="hidden">
+
+
                 <!-- Roast Section -->
                 <div class="neural-bg p-8 rounded-lg mb-12">
                     <h2 class="gerstner text-3xl font-medium mb-6 text-center">
@@ -202,6 +334,38 @@
 
                     <div class="space-y-6" id="counterpoints-container">
                         <!-- Counterpoints will be injected here -->
+                    </div>
+
+                    <!-- Sources Section -->
+                    <div class="sources-section" id="sources-section" style="display: none;">
+                        <h3 class="gerstner text-xl font-medium mb-4">Sources</h3>
+                        <div id="sources-list">
+                            <!-- Sources will be injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MCP Stats Section -->
+                <div id="mcp-stats-section" class="mcp-stats p-6 rounded-lg my-8 hidden">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="gerstner text-lg font-medium flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
+                            </svg>
+                            Analysis Details
+                        </h3>
+                        <div class="mcp-badge" id="mcp-count-badge">
+                            <!-- MCP tool call count will be injected here -->
+                        </div>
+                    </div>
+
+                    <div class="text-sm text-gray-600 mb-4">
+                        Our AI made the following tool calls to gather data from Reddit:
+                    </div>
+
+                    <div id="mcp-tool-calls-list">
+                        <!-- MCP tool calls will be injected here -->
                     </div>
                 </div>
 
@@ -251,18 +415,36 @@
         if (task.status === 'pending') {
             document.getElementById('loading-state').classList.remove('hidden');
 
-            // Poll for updates every 10 seconds
+            // Store initial page content for comparison
+            let initialContent = null;
+
+            // Get initial content
+            fetch(window.location.href)
+                .then(response => response.text())
+                .then(content => {
+                    initialContent = content;
+                })
+                .catch(error => {
+                    console.error('Error fetching initial content:', error);
+                });
+
+            // Poll for updates every 5 seconds
             const pollInterval = setInterval(async () => {
                 try {
                     const response = await fetch(window.location.href);
                     if (response.ok) {
-                        // Reload if status changed
-                        window.location.reload();
+                        const currentContent = await response.text();
+
+                        // If content has changed from initial, refresh the page
+                        if (initialContent && currentContent !== initialContent) {
+                            clearInterval(pollInterval);
+                            window.location.reload();
+                        }
                     }
                 } catch (error) {
                     console.error('Polling error:', error);
                 }
-            }, 10000);
+            }, 5000);
 
             // Stop polling after 15 minutes
             setTimeout(() => {
@@ -276,12 +458,117 @@
         } else if (task.result) {
             document.getElementById('results-state').classList.remove('hidden');
 
-            // Populate roast
-            document.getElementById('roast-content').textContent = task.result.roast;
+            // Get the output from the task result
+            const output = task.result.output;
+            const basis = output.basis || [];
+            const mcpToolCalls = output.mcp_tool_calls || [];
 
-            // Populate counterpoints
+            // Show MCP stats if there are tool calls
+            if (mcpToolCalls.length > 0) {
+                document.getElementById('mcp-stats-section').classList.remove('hidden');
+
+                // Update MCP count badge
+                const countBadge = document.getElementById('mcp-count-badge');
+                countBadge.innerHTML = `
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                    </svg>
+                    ${mcpToolCalls.length} tool call${mcpToolCalls.length !== 1 ? 's' : ''}
+                `;
+
+                // Populate MCP tool calls list
+                const mcpList = document.getElementById('mcp-tool-calls-list');
+                mcpToolCalls.forEach((toolCall, index) => {
+                    const toolCallDiv = document.createElement('div');
+                    toolCallDiv.className = 'tool-call-item';
+
+                    // Parse arguments to show cleaner display
+                    let parsedArgs = '';
+                    try {
+                        const args = JSON.parse(toolCall.arguments);
+                        parsedArgs = Object.entries(args)
+                            .map(([key, value]) => `${key}: ${value}`)
+                            .join(', ');
+                    } catch (e) {
+                        parsedArgs = toolCall.arguments;
+                    }
+
+                    // Truncate content for display
+                    let displayContent = toolCall.content || 'No content returned';
+                    if (displayContent.length > 150) {
+                        displayContent = displayContent.substring(0, 150) + '...';
+                    }
+
+                    toolCallDiv.innerHTML = `
+                        <div class="tool-call-header">
+                            <span class="tool-name">${toolCall.tool_name}</span>
+                            <span class="server-name">via ${toolCall.server_name}</span>
+                        </div>
+                        <div class="text-xs text-gray-500 mb-2">
+                            ${parsedArgs}
+                        </div>
+                        ${toolCall.error ? `
+                            <div class="text-xs text-red-600 bg-red-50 p-2 rounded">
+                                Error: ${toolCall.error}
+                            </div>
+                        ` : `
+                            <div class="tool-content">
+                                ${displayContent}
+                            </div>
+                        `}
+                    `;
+
+                    mcpList.appendChild(toolCallDiv);
+                });
+            }
+
+            // Collect all unique citations
+            const allCitations = [];
+            const citationMap = new Map();
+            let citationCounter = 1;
+
+            basis.forEach(fieldBasis => {
+                if (fieldBasis.citations && fieldBasis.citations.length > 0) {
+                    fieldBasis.citations.forEach(citation => {
+                        if (!citationMap.has(citation.url)) {
+                            const citationWithNumber = {
+                                ...citation,
+                                number: citationCounter++
+                            };
+                            allCitations.push(citationWithNumber);
+                            citationMap.set(citation.url, citationWithNumber);
+                        }
+                    });
+                }
+            });
+
+            // Function to add citation links to text
+            function addCitationLinks(text, fieldName) {
+                let result = text;
+                const fieldBasis = basis.find(b => b.field === fieldName);
+
+                if (fieldBasis && fieldBasis.citations && fieldBasis.citations.length > 0) {
+                    fieldBasis.citations.forEach(citation => {
+                        const citationInfo = citationMap.get(citation.url);
+                        if (citationInfo) {
+                            result += `<a href="${citation.url}" target="_blank" rel="noopener noreferrer" class="citation-icon" title="${citation.title || citation.url}">${citationInfo.number}</a>`;
+                        }
+                    });
+                }
+
+                return result;
+            }
+
+            // Populate roast with citations
+            const roastWithCitations = addCitationLinks(output.content.roast, 'roast');
+            document.getElementById('roast-content').innerHTML = roastWithCitations;
+
+            // Populate counterpoints with citations
             const container = document.getElementById('counterpoints-container');
-            task.result.counterpoints.forEach((counterpoint, index) => {
+            output.content.counterpoints.forEach((counterpoint, index) => {
+                const counterpointWithCitations = addCitationLinks(counterpoint, 'counterpoints');
+
                 const card = document.createElement('div');
                 card.className = 'bg-white p-6 rounded-lg border border-gray-200 shadow-sm';
                 card.innerHTML = `
@@ -290,20 +577,42 @@
                             ${index + 1}
                         </div>
                         <div class="flex-1">
-                            <p class="text-gray-900 leading-relaxed">${counterpoint}</p>
-                            <div class="mt-4 text-sm text-gray-600">
-                                <span class="inline-flex items-center">
-                                    <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    Source: Reddit discussions
-                                </span>
-                            </div>
+                            <p class="text-gray-900 leading-relaxed">${counterpointWithCitations}</p>
                         </div>
                     </div>
                 `;
                 container.appendChild(card);
             });
+
+            // Populate sources section if there are citations
+            if (allCitations.length > 0) {
+                document.getElementById('sources-section').style.display = 'block';
+                const sourcesList = document.getElementById('sources-list');
+
+                allCitations.forEach(citation => {
+                    const sourceItem = document.createElement('div');
+                    sourceItem.className = 'source-item';
+
+                    let excerpts = '';
+                    if (citation.excerpts && citation.excerpts.length > 0) {
+                        excerpts = citation.excerpts.map(excerpt =>
+                            `<div class="excerpt">"${excerpt}"</div>`
+                        ).join('');
+                    }
+
+                    sourceItem.innerHTML = `
+                        <div class="source-number">${citation.number}</div>
+                        <div class="flex-1">
+                            <a href="${citation.url}" target="_blank" rel="noopener noreferrer" class="source-link">
+                                ${citation.title || citation.url}
+                            </a>
+                            ${excerpts}
+                        </div>
+                    `;
+
+                    sourcesList.appendChild(sourceItem);
+                });
+            }
         }
     </script>
 </body>
