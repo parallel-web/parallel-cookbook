@@ -8,11 +8,12 @@ These recipes focus on building full-stack serverless apps on Cloudflare Workers
 
 Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs that are more complete (payments, login, etc) and can be used as boilerplate / starting point for new SaaS Products!
 
-| Title                           | Description                              | Code                                                 | Demo                                       |
-| ------------------------------- | ---------------------------------------- | ---------------------------------------------------- | ------------------------------------------ |
-| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | [Recipe](typescript-recipes/parallel-tasks-sse)      | [sse.p0web.com](https://sse.p0web.com)     |
-| Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | [Recipe](typescript-recipes/parallel-daily-insights) | [daily.p0web.com](https://daily.p0web.com) |
-| Search Agent                    | AI SDK + Parallel SDK Search API as tool | [Recipe](typescript-recipes/parallel-search-agent)   | [agent.p0web.com](https://agent.p0web.com) |
+| Title                           | Description                              | Code                                                 | Demo                                                     |
+| ------------------------------- | ---------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------- |
+| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | [Recipe](typescript-recipes/parallel-tasks-sse)      | [sse.p0web.com](https://sse.p0web.com)                   |
+| Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | [Recipe](typescript-recipes/parallel-daily-insights) | [daily.p0web.com](https://daily.p0web.com)               |
+| Search Agent                    | AI SDK + Parallel SDK Search API as tool | [Recipe](typescript-recipes/parallel-search-agent)   | [agent.p0web.com](https://agent.p0web.com)               |
+| Reddit MCP                      | Change My Mind                           | [Repo](typescript-recipes/parallel-reddit-mcp)       | [changemymind.p0web.com](https://changemymind.p0web.com) |
 
 <!--
 
