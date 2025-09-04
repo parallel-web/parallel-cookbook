@@ -1,5 +1,9 @@
 # Change My Mind - Using Reddit MCP with Parallel's Task API is a Great Idea
 
+[Thread](https://x.com/janwilmake/status/1963610758152929295)
+
+![](public/change-my-mind.jpg)
+
 Live Demo: https://changemymind.p0web.com
 
 How it was made:
@@ -9,6 +13,8 @@ How it was made:
 - Using webhook to retrieve result
 - Using Cloudflare Workers with Durable Object for SQLite storage
 - Using https://github.com/janwilmake/simplerauth-provider/tree/main/simplerauth-client for simple minimal X Login
+
+This is just for fun, but imagine the same pattern for a real business use-case: sourcing information from private data sources, repurposing it for more high quality content, making it available to serve customers (or the public good)!?
 
 The relevant code that runs the task with MCP tool calling:
 
