@@ -165,7 +165,7 @@ async function handleNew(
 
   // Check user limits and slug existence
   const userTasks = await do_stub.getUserTaskCount(ctx.user?.username);
-  if (userTasks >= 5) {
+  if (userTasks >= 5 && ctx.user.username !== "janwilmake") {
     return new Response(
       "Maximum of 5 searches allowed per user. Host it yourself if you like to have more! \n\nhttps://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-reddit-mcp",
       {
@@ -282,17 +282,15 @@ async function handleWebhook(
   console.log("Got headers");
 
   const body = await request.text();
-
+  const isSignatureValid = await verifyWebhookSignature(
+    env.PARALLEL_WEBHOOK_SECRET,
+    webhookId,
+    webhookTimestamp,
+    body,
+    webhookSignature
+  );
   // Verify webhook signature
-  if (
-    !verifyWebhookSignature(
-      env.PARALLEL_WEBHOOK_SECRET,
-      webhookId,
-      webhookTimestamp,
-      body,
-      webhookSignature
-    )
-  ) {
+  if (!isSignatureValid) {
     return new Response("Invalid signature", { status: 401 });
   }
 
