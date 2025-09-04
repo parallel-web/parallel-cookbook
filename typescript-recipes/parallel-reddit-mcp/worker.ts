@@ -2,7 +2,7 @@
 /// <reference lib="esnext" />
 
 import { DurableObject } from "cloudflare:workers";
-import { withSimplerAuth } from "simplerauth-client";
+import { UserContext, withSimplerAuth } from "simplerauth-client";
 import Parallel from "parallel-web";
 //@ts-ignore
 import indexHtml from "./index.html";
@@ -141,7 +141,7 @@ async function handleHome(
 async function handleNew(
   request: Request,
   do_stub: DurableObjectStub<ChangeMindDO>,
-  ctx: any,
+  ctx: UserContext,
   env: Env
 ): Promise<Response> {
   const url = new URL(request.url);
@@ -164,11 +164,14 @@ async function handleNew(
   const slug = createSlug(statement);
 
   // Check user limits and slug existence
-  const userTasks = await do_stub.getUserTaskCount(ctx.user.id);
+  const userTasks = await do_stub.getUserTaskCount(ctx.user?.username);
   if (userTasks >= 5) {
-    return new Response("Maximum of 5 pending/done tasks allowed per user", {
-      status: 429,
-    });
+    return new Response(
+      "Maximum of 5 searches allowed per user. Host it yourself if you like to have more! \n\nhttps://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-reddit-mcp",
+      {
+        status: 429,
+      }
+    );
   }
 
   const existingTask = await do_stub.getTask(slug);
