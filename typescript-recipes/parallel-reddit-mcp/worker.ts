@@ -65,7 +65,7 @@ export default {
           default:
             if (pathname.startsWith("/result/")) {
               const slug = pathname.replace("/result/", "");
-              return handleResult(slug, do_stub);
+              return handleResult(url, slug, do_stub);
             }
             return new Response("Not Found", { status: 404 });
         }
@@ -340,6 +340,7 @@ async function handleWebhook(
 }
 
 async function handleResult(
+  url: URL,
   slug: string,
   do_stub: DurableObjectStub<ChangeMindDO>
 ): Promise<Response> {
@@ -356,8 +357,51 @@ async function handleResult(
 
   let html = resultHtml;
 
-  // Inject dynamic data
+  // Inject dynamic title and meta tags
+  const pageTitle = `${task.statement} - Change My Mind`;
+  const description =
+    task.status === "done" && !task.error
+      ? `See compelling counter-arguments from Reddit discussions challenging: "${task.statement}". AI-powered debate analysis with real sources.`
+      : `Analysis in progress for: "${task.statement}". Check back soon for counter-arguments from Reddit discussions.`;
 
+  // Replace title
+  html = html.replace(
+    /<title>.*?<\/title>/i,
+    `<title>${escapeHtml(pageTitle)}</title>`
+  );
+
+  // Inject meta tags before closing head tag
+  const metaTags = `
+    <meta name="description" content="${escapeHtml(description)}">
+    <meta name="keywords" content="debate, reddit, counter-arguments, change my mind, AI analysis, discussion">
+    <meta name="author" content="Change My Mind">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="${url.origin}/result/${slug}">
+    <meta property="og:title" content="${escapeHtml(pageTitle)}">
+    <meta property="og:description" content="${escapeHtml(description)}">
+    <meta property="og:image" content="${url.origin}/change-my-mind.jpg">
+    <meta property="og:image:width" content="950">
+    <meta property="og:image:height" content="960">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:site_name" content="Change My Mind">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="${url.origin}/result/${slug}">
+    <meta property="twitter:title" content="${escapeHtml(pageTitle)}">
+    <meta property="twitter:description" content="${escapeHtml(description)}">
+    <meta property="twitter:image" content="${url.origin}/change-my-mind.jpg">
+    <meta property="twitter:image:alt" content="Change My Mind meme template">
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="${url.origin}/result/${slug}">`;
+
+  html = html.replace("</head>", `${metaTags}</head>`);
+
+  // Inject dynamic data
   const result = task.result ? JSON.parse(task.result) : null;
 
   if (result?.output?.["beta_fields"]?.["mcp-server-2025-07-17"]) {
@@ -365,6 +409,7 @@ async function handleResult(
     result.output.mcp_tool_calls =
       result?.output?.["beta_fields"]?.["mcp-server-2025-07-17"];
   }
+
   const data = {
     task: {
       ...task,
