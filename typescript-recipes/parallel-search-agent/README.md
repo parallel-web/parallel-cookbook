@@ -1,39 +1,61 @@
-# Crafting a Full-Stack Search Agent using Parallel and OpenAI GPT-OSS 120B
+# Building a Full-Stack Search Agent with Parallel and Cerebras
 
 [![janwilmake/parallel-search-agent context](https://badge.forgithub.com/janwilmake/parallel-search-agent?lines=false)](https://uithub.com/janwilmake/parallel-search-agent?lines=false) [![](https://remix.forgithub.com/badge)](https://remix.forgithub.com/janwilmake/parallel-search-agent)
 
-In this guide, we'll show you how to build a Web Research Agent accessible over a simple frontend. By the end of this guide, you'll know how to build a search agent like in [this demo](https://x.com/janwilmake/status/1960652955251589355) (see the result at https://agent.p0web.com and try it as long as there's still Cerebras & Parallel credit left).
+This guide demonstrates how to build a web research agent that combines Parallel's Search API with streaming AI inference. By the end, you'll have a complete search agent with a simple frontend that shows searches, results, and AI responses as they stream in real-time.
 
-The Search Agent we're building will:
+Complete app available at: https://oss.parallel.ai/agent/
 
-- Show a simple search homepage
-- Allow user to edit system prompt in config modal
-- Connect the agent with search through tool use
-- Stream back searches, search results, AI reasoning, and AI responses
-- Render that nicely as it comes in
+## The Architecture
+The search agent we're building includes:
+* A simple search homepage
+* User-editable system prompt in config modal
+* Agent connection through Parallel Search API tool use
+* Streaming searches, search results, AI reasoning, and AI responses
+* Clean rendering of results as they arrive
 
-![](setup.drawio.png)
+Our technology stack:
+* [Parallel TypeScript SDK](https://www.npmjs.com/package/parallel-web) for the Search API
+* [Vercel AI SDK](https://ai-sdk.dev/docs/introduction) for AI orchestration
+* [Cerebras](https://ai-sdk.dev/providers/ai-sdk-providers/cerebras) with GPT-OSS 120B for fast responses
+* [Cloudflare Workers](https://workers.cloudflare.com/) for deployment
 
-The Technology Stack we'll use:
+## Why This Architecture Works
+### Search API vs Traditional Agent Search Architecture
+Parallel's Search API is designed for machines from first principles. The key difference from other search APIs like Exa or Tavily is that it provides all required context in a single API call. Other search approaches typically require two separate calls - one for getting the search engine results page (SERP), another for scraping the relevant pages. This traditional approach is slower and more token-heavy for the LLM.
 
-- [Parallel Typescript SDK](https://docs.parallel.ai/home)
-- [Vercel AI SDK](https://ai-sdk.dev/docs/introduction)
-- [Cerebras](https://ai-sdk.dev/providers/ai-sdk-providers/cerebras) for fast AI responses
-- [Cloudflare Workers](https://workers.cloudflare.com) to deploy it
+Parallel streamlines this by finding the most relevant context from all pages immediately, returning only the relevant content to reduce context bloat. Our Search API [benchmark](https://parallel.ai/blog/search-api-benchmark) demonstrates that the Parallel Search API being used in an agentic workflow can translate to up to 20% gains in accuracy vs other Search providers.
 
-This guide shows how these different pieces work together and highlights the decisions of this architecture.
+The diagram also illustrates how the AI agent can iteratively call the Search API multiple times, allowing it to explore different angles and gather comprehensive information before providing a final response. This multi-step capability is essential for true agentic behavior.
 
-## Vercel AI SDK
+<img width="500" height="1000" alt="image" src="https://github.com/user-attachments/assets/6cdcab20-5a03-427d-9dfd-7966cc0d554b" />
 
-These days, most AI providers ship their models with tool calling built-in. Some providers are starting to adopt the newer [responses API](https://community.openai.com/t/introducing-the-responses-api/1140929) that has more built-in functionality like MCP, but most providers aren't there yet and it's not clear if this will become the new standard. In this guide we're using GPT OSS 120B on Cerebras via a `/chat/completions` endpoint, the most standard way today to do AI inference.
+### Choosing the Vercel AI SDK
+Most AI providers ship models with built-in tool calling via /chat/completions endpoints. However, doing tool calling in a streaming fashion requires working with Server-Sent Events and multiple API round trips, which is complex to implement correctly.
 
-Although `/chat/completions` is most standard, it's not most intuitive. Doing tool calling in a streaming fashion requires working with SSE and multiple back and forths to the API (steps) which is hard to get right. Also there, what if we want to change to a different provider, model or protocol later? Writing the code manually this might end up costing a lot of time if we used the raw API specification. Luckily, there's the Vercel AI SDK which elegantly abstracts away the provider-specific quirks and allows calling most providers with most of their features from a unified, well-documented interface.
+The Vercel AI SDK elegantly abstracts provider-specific quirks and allows calling most providers with most of their features from a unified interface. This eliminates the need to work directly with raw API specifications and handle the back-and-forth tool calling manually.
 
-In order to build our agent, under water the `/chat/completions` endpoint from Cerebras is called for every step. When a tool needs to be called (search in our case) it comes back and we execute that on our server-side, giving the output back to the model to continue inference.
+The SDK offers multiple approaches for building this agent. While we use vanilla HTML/JavaScript for simplicity, the same backend can work with React frontends using AI SDK UI components for more sophisticated interfaces. The streaming approach we demonstrate works across different frontend frameworks, giving you flexibility in your implementation choice.
 
-The Vercel SDK allows doing this back and forth in a single fucntion call through defining a tool with an `execute` parameter:
 
-```ts
+## Implementation 
+Now that we understand the architectural advantages, let's walk through building this search agent step by step.
+
+### Dependencies and Setup
+```bash
+npm i ai zod @ai-sdk/cerebras
+```
+To prevent TypeScript's "Type instantiation is excessively deep" error, zod requires a version suffix. Import the required functions:
+
+```typescript
+import { createCerebras } from "@ai-sdk/cerebras";
+import { streamText, tool, stepCountIs } from "ai";
+import { z } from "zod/v4";
+```
+
+### Defining the Search Tool
+This section covers setting up the core search functionality that will power our AI agent:
+```typescript
 // Define the search tool
 const searchTool = tool({
   description: `# Web Search Tool
@@ -57,25 +79,44 @@ const searchTool = tool({
   // we'll define this later
   execute: undefined,
 });
+
+    const searchResult = await parallel.beta.search({
+      // Choose objective or search queries.
+      // We choose objective here because it allows for a
+      // natural language way of describing what you're looking for
+      objective,
+      search_queries: undefined,
+      // "base" works best for apps where speed is important,
+      // while "pro" is better when freshness and content-quality is critical
+      processor: "base",
+
+      source_policy: {
+        exclude_domains: undefined,
+        include_domains: undefined,
+      },
+      max_results: 10,
+      // Keep reasonable to balance context and token usage
+      max_chars_per_result: 1000,
+    });
+
+    return searchResult;
+  },
+});
 ```
 
-As you can see we're using zod to define the schemas. We also need the cerebras provider to use their models. All in all, we can install these 3 packages like so:
+### Key implementation choices:
+* We choose "objective" over "search_queries" because it allows for natural language description of research goals, making the tool more intuitive for the AI to use
+* The "base" processor prioritizes speed while "pro" focuses on freshness and quality - choose based on your use case requirements
+* Token limits are balanced to provide sufficient context without overwhelming the model
 
-```sh
-npm i ai zod @ai-sdk/cerebras
+## Creating the Streaming Agent
+Here we set up the core AI agent with multi-step reasoning capabilities:
+
+```bash
+CEREBRAS_API_KEY=YOUR_KEY
 ```
 
-In order to prevent the famous `Type instantiation is excessively deep and possibly infinite. ts(2589)` Typescript error, zod requires specifying a version suffix. The packages and needed functions can be imported like so:
-
-```ts
-import { createCerebras } from "@ai-sdk/cerebras";
-import { streamText, tool, stepCountIs } from "ai";
-import { z } from "zod/v4";
-```
-
-After defining the tool we can use `streamText` to create a multi-step streaming agent like this:
-
-```ts
+```typescript
 // Initialize Cerebras provider
 const cerebras = createCerebras({
   apiKey: env.CEREBRAS_API_KEY,
@@ -109,17 +150,20 @@ After doing the searches required, write up your 'search report' that answers th
 });
 ```
 
-When using this, don't forget to add your [Cerebras API key](https://cloud.cerebras.ai/platform) to your `.env`:
+### Important configuration details:
+The `stepCountIs(25)` parameter allows the agent to make multiple search calls and reasoning steps, enabling thorough research across different angles before providing a comprehensive response.
 
-```sh
+The system prompt guides the agent to conduct multiple searches from different perspectives, which is crucial for comprehensive research
+
+```bash
 CEREBRAS_API_KEY=YOUR_KEY
+PARALLEL_API_KEY=YOUR_KEY
 ```
 
-The tool is added to tools using `tools: { search: searchTool }`. Using `stopWhen` we're ensuring the agent does not stop after a single step but only after max 25 steps. By specifying `maxOutputTokens` you can prevent it from being too excessive.
+## Streaming Response Handler
+This section handles the real-time streaming of agent responses to the frontend:
 
-After we have the result, we can respond with the full stream that contains all events by putting `result.fullStream` (which is an async iterable iterator) into a `ReadableStream`. Alternatively it's also possible to use Vercel's [UIMessage abstraction](https://ai-sdk.dev/docs/reference/ai-sdk-core/ui-message#uimessage).
-
-```ts
+```typescript
 // Return the streaming response
 const encoder = new TextEncoder();
 const stream = new ReadableStream({
@@ -158,59 +202,8 @@ return new Response(stream, {
 });
 ```
 
-## Executing the tool with the Parallel Typescript SDK
-
-We designed our [Search API](https://parallel.ai/blog/parallel-search-api) for machines from first principles. It [beats competition](https://parallel.ai/blog/search-api-benchmark) in benchmarks. The key difference from other Search APIs such as Exa or Tavily, is that it gives all required context in a single API call, whereas other search agents still function the traditional way of search, where it's split up into 2 API calls - one for getting the SERP, one for getting the pages that seem relevant. This works too, but is usually a lot slower and more token-heavy for the LLM. Parallel smoothens this process and has build a system that finds the most relevant context of all pages immediately, but only the relevant stuff, to reduce context bloat.
-
-The Parallel Search API allows fine-grained control over the type of input, the way it's processed, the sources that are included/excluded, and most importantly, how many output tokens will appear.
-
-Our Typescript SDK can be installed using npm:
-
-```sh
-npm i parallel-web
-```
-
-Get your API key from [API Key Settings](https://platform.parallel.ai/settings?tab=api-keys) and put it in `.env`
-
-```
-PARALLEL_API_KEY=YOUR_KEY
-```
-
-For our search agent we're using the Search API to execute the tool call. Since we are looking to make a multi-step research agent with a smaller model (GPT OSS 120B) we'll keep the amount of results per search and the amount of characters per result small, preventing the context window to fill too quickly, and saving on cost.
-
-```ts
-import { Parallel } from "parallel-web";
-
-const execute = ({ objective }) => {
-  const parallel = new Parallel({ apiKey: env.PARALLEL_API_KEY });
-
-  const searchResult = await parallel.beta.search({
-    // Choose objective or search queries.
-    // We choose objective here because it allows for a
-    // natural language way of describing what you're looking for
-    objective,
-    search_queries: undefined,
-    // "base" works best for apps where speed is important,
-    // while "pro" is better when freshness and content-quality is critical
-    processor: "base",
-
-    source_policy: {
-      exclude_domains: undefined,
-      include_domains: undefined,
-    },
-    max_results: 5,
-    // Keep low to save tokens
-    max_chars_per_result: 800,
-  });
-};
-```
-
-## Serving this on serverless
-
-In this guide we're using Cloudflare Workers to deploy the above code. We're bringing the AI SDK and Parallel Typescript SDK Code together and serve it at `POST /api/research` in [worker.ts](https://github.com/parallel-web/parallel-cookbook/blob/main/typescript-recipes/parallel-search-agent/worker.ts).
-
-Using the following `wrangler.json` configuration, we are able to deploy this app using `wrangler deploy`. Node.js, the [wrangler CLI](https://developers.cloudflare.com/workers/wrangler/install-and-update/), and a Cloudflare account [are needed for this](https://developers.cloudflare.com/workers/get-started/guide/).
-
+## Cloudflare Workers Deployment
+### Configuration
 ```json
 {
   "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
@@ -221,19 +214,25 @@ Using the following `wrangler.json` configuration, we are able to deploy this ap
 }
 ```
 
-Before deploying, make sure to submit your secrets to the worker environment:
+## Deployment Process
+Requirements:
+* Node.js
+* Wrangler CLI
+* Cloudflare account
 
-```sh
+Before deploying, submit your secrets:
+```bash
 wrangler secret bulk .env
 ```
 
-## Creating the frontend
+Deploy with:
+```bash
+wrangler deploy
+```
 
-We now have a public POST endpoint that is only ratelimited by our budgets for the Parallel API and the Cerebras API. In a production application you would add user authentication and limit based on your users plan, but for the purposes of this guide we're omitting that, and any frontend is able to consume our API.
-
-As you can see in the worker code, we're also hosting an `index.html` and serving that at `GET /`:
-
-```ts
+## Frontend Implementation
+The worker also serves the frontend at the root path:
+```
 import indexHtml from "./index.html";
 
 // in your handler:
@@ -244,9 +243,9 @@ if (request.method === "GET" && url.pathname === "/") {
 }
 ```
 
-The HTML shows the search interface and after submitting a search, calls `POST /api/research` and renders the events coming back from the stream.
-
-```js
+### Handling the Stream
+The frontend processes the streaming responses in real-time:
+```typescript
 async function startResearch() {
   const query = searchInput.value.trim();
   if (!query) return;
@@ -362,8 +361,33 @@ function handleStreamChunk(chunk) {
 }
 ```
 
-As can be seen in [index.html](https://github.com/parallel-web/parallel-cookbook/blob/main/typescript-recipes/parallel-search-agent/worker.ts), we are also using https://cdn.tailwindcss.com to use TailwindCSS and heavily reduce the lines needed to get nice styling. Other than that there are no dependencies! If you use React or other frontend frameworks, the [AI SDK UI](https://ai-sdk.dev/docs/ai-sdk-ui/overview) is a useful helper. Since this guide uses regular HTML instead of a framework, [this context](https://unpkg.com/ai@5.0.22/dist/index.d.ts) was needed to ensure the AI could easily generate the frontend based on the requirements. For more information on the generation process, see [this context guide](notes/context-guide.md).
+## Styling and Dependencies
+The frontend uses https://cdn.tailwindcss.com for styling, which reduces the lines needed for clean design without additional dependencies. The implementation uses regular HTML rather than React or other frameworks, making it accessible and easy to understand.
 
-## Result and considerations
+## Development Context and Resources
+When working with this implementation, having proper TypeScript context is crucial for understanding the full integration. The complete source files provide essential context for both backend logic and frontend streaming:
 
-The resulting agent can be found [here](https://agent.p0web.com) and the related source code can be found [here](https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent). For demonstration purposes this recipe uses a very cheap and fast model: [GPT OSS 120B on Cerebras](https://www.cerebras.ai/news/cerebras-helps-power-openai-s-open-model-at-world-record-inference-speeds-gpt-oss-120b-delivers) ([Docs](https://inference-docs.cerebras.ai/models/openai-oss)). Although it's one of the fastest models on the market right now and is fully OSS, it should be noted that this model sometimes inacurately stops early during a search even though instructions instruct it differently. Also it sometimes tries to call tools that aren't there, which is likely due to overfitting on the tools it was trained on. In a production use-case it's likely better to go for a better tool-calling model that doesn't have these quirks yet is similarly speedy. Both [groq](https://groq.com) and [cerebras](https://www.cerebras.ai) provide such models and besides adding authentication and rate-limiting, this would be a good next step to making a production-ready search agent for your enterprise use-case.
+Essential source files:
+* worker.ts - Complete backend implementation
+* index.html - Frontend with streaming UI
+
+These files contain the complete TypeScript definitions and HTML implementation that are essential for understanding the full integration between the Parallel Search API and the streaming frontend.
+
+## Model Considerations
+The guide uses GPT-OSS 120B on Cerebras, which is one of the fastest models available and fully open source. However, there are some noted limitations. The model sometimes inaccurately stops early during search despite instructions and occasionally tries to call tools that aren't available, likely due to overfitting on training data. For production use cases, consider upgrading to better tool-calling models that don't have these quirks while maintaining similar speed. Both Groq and Cerebras provide such alternatives.
+
+## Production Considerations
+This demonstration omits several production requirements:
+Authentication: No user authentication is implemented
+* Rate limiting: Currently limited only by API budgets
+* Error handling: Basic error handling is shown but could be expanded
+* Monitoring: No observability or logging beyond basic console output
+
+Adding these features would be important next steps for enterprise deployment.
+
+The resulting agent demonstrates real-time streaming of search operations, multi-step AI reasoning with tool use, clean separation of search logic and presentation, and serverless deployment ready for scaling. The architecture shows how modern AI SDKs can simplify complex multi-step agent workflows while maintaining performance and user experience quality.
+
+Resources:
+* [Complete source code](https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent)
+* [Parallel API documentation](https://docs.parallel.ai/) 
+* [Get Parallel API keys](https://platform.parallel.ai/)
