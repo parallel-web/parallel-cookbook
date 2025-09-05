@@ -1,35 +1,17 @@
-# Parallel AI Cookbook
+# Parallel Cookbook
 
-The following cookbook is designed to get you cooking with Parallel APIs as quickly as possible. Explore and remix recipes and OSS projects using Parallel, use useful utilities, and try the machine quickstart to get cooking immediately.
+The following cookbook is designed to get you building with Parallel APIs as quickly as possible. Explore and remix recipes and OSS projects using Parallel, use useful utilities, and try the machine quickstart to get cooking immediately.
 
 ## Recipes & Examples
 
-These recipes focus on building full-stack serverless apps on Cloudflare Workers. The recipes are sufficiently small to be taken as context, and refactor as a whole, for example to change the usecase, lay-out, or programming language.
-
-Example Apps are intended to be bigger MIT OSS Apps Powered by Parallel APIs that are more complete (payments, login, etc) and can be used as boilerplate / starting point for new SaaS Products!
-
 | Title                           | Description                              | Code                                                       | Demo                                                   |
 | ------------------------------- | ---------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------ |
-| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | [Recipe](typescript-recipes/parallel-tasks-sse)            | [sse.p0web.com](https://sse.p0web.com)                 |
-| Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | [Recipe](typescript-recipes/parallel-daily-insights)       | [daily.p0web.com](https://daily.p0web.com)             |
-| Search Agent                    | AI SDK + Parallel SDK Search API as tool | [Recipe](typescript-recipes/parallel-search-agent)         | [agent.p0web.com](https://agent.p0web.com)             |
-| Competitive Analysis            | Using Web Enrichment and Reddit MCP      | [Recipe](typescript-recipes/parallel-competitive-analysis) | [competitors.p0web.com](https://competitors.p0web.com) |
+| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | Coming Soon           | Coming Soon                |
+| Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | Coming Soon       | Coming Soon             |
+| Search Agent                    | AI SDK + Parallel SDK Search API as tool | [Recipe](typescript-recipes/parallel-search-agent)         | [oss.parallel.ai/agent](https://oss.parallel.ai/agent)             |
+| Competitive Analysis            | Using Web Enrichment and Reddit MCP      | Coming Soon | Coming Soon |
 
-<!--
-
-Recipes TODO:
-
-Tasks using SSE:
-- Add source policy
-
-
-Cool cookbooks
-
-https://github.com/anthropics/anthropic-cookbook
-https://cookbook.openai.com
--->
-
-## Awesome Parallel OSS Examples
+## Community Examples
 
 - [Parallel Spreadsheet](https://github.com/zahidkhawaja/parallel-spreadsheet) by [@chillzaza\_](https://x.com/chillzaza_/status/1958005876918292941) (Vercel, Typescript)
 - [Based People](https://github.com/janwilmake/basedpeople) by [@janwilmake](https://x.com/janwilmake/status/1956061673833300443) (Cloudflare, Typescript)
@@ -41,7 +23,7 @@ https://cookbook.openai.com
 
 ## Contributing
 
-Built something cool with Parallel APIs you want to showcase? The Parallel cookbook welcomes community contributions. Also ideas for other recipes are welcome. See [contributing](CONTRIBUTING.md) for more details.
+Built something with Parallel APIs you want to showcase? The Parallel cookbook welcomes community contributions. Also ideas for other recipes are welcome. See [contributing](CONTRIBUTING.md) for more details.
 
 ## Machine Quickstart
 
@@ -67,7 +49,7 @@ For quick questions you may use the following prompt in your LLM client. You can
 Here is all information available about parallel:
 
 - Full documentation: @https://docs.parallel.ai/llms-full.txt
-- API specification: @https://uithub.com/janwilmake/parallel-openapi/tree/bdbb361f194b761bbe8220faf5beba33e3ba70e1/tags?lines=false
+- API specification: @https://docs.parallel.ai/public-openapi.json
 - Website and blog: @https://uithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false
 - Typescript SDK summary: @https://rules-httpsuithu-s10son0.letmeprompt.com/parallel-sdk.d.ts
 
@@ -76,12 +58,12 @@ Answer the users prompt based on available information. Do not make up anything,
 
 Depending on your question, please choose the contexts needed:
 
-- [Full Documentation](https://docs.parallel.ai) - [llms-full.txt](https://docs.parallel.ai/llms-full.txt)
-- [API Specification](https://docs.parallel.ai/api-reference) - [![](https://badge.forgithub.com/janwilmake/parallel-openapi/tree/main/openapi.yaml)](https://uithub.com/janwilmake/parallel-openapi?maxTokens=10000000&lines=false) [![](https://b.lmpify.com/Select_A_Context)](https://letmeprompt.com?q=https://parallel.oapis.org/%20%20give%20me%20urls:%20which%20files%20are%20relevant%20for%20...)
-- [Website and Blog](https://parallel.ai) - [![](https://badge.forgithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false)](https://uithub.com/janwilmake/parallel-website?maxTokens=10000000&lines=false)
-- [Python SDK](https://github.com/parallel-web/parallel-sdk-python) - [![](https://badge.forgithub.com/parallel-web/parallel-sdk-python?maxTokens=10000000&lines=false)](https://uithub.com/parallel-web/parallel-sdk-python?maxTokens=10000000&lines=false)
-- [Typescript SDK (coming soon)](#) - [Raw Context](https://rules-httpsuithu-s10son0.letmeprompt.com/parallel-sdk.d.ts)
-
+- [Full Documentation](https://docs.parallel.ai)
+- [API Specification](https://docs.parallel.ai/api-reference) 
+- [Website and Blog](https://parallel.ai)
+- [Python SDK](https://github.com/parallel-web/parallel-sdk-python)
+- [Typescript SDK](https://www.npmjs.com/package/parallel-web)
+  
 ## Advanced Machine Start (2-step, with MCP)
 
 The advanced machine quickstart uses a 3-step framework that allows ingesting the right context to ensure maximum LLM output quality:
