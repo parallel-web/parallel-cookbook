@@ -64,8 +64,9 @@ export default {
               exclude_domains: undefined,
               include_domains: undefined,
             },
-            max_results: 15,
-            // max_chars_per_result: 4000, // Keep low to save tokens
+            max_results: 10,
+            // Keep low to save tokens
+            max_chars_per_result: 2500,
           });
           return searchResult;
         };
@@ -100,7 +101,7 @@ export default {
 
         // Stream the research process
         const result = streamText({
-          model: cerebras("gpt-oss-120b"),
+          model: cerebras("qwen-3-235b-a22b-instruct-2507"),
           system:
             systemPrompt ||
             `You are a simple search agent. Your mission is to comprehensively fulfill the user's search objective by conducting 1 up to 3 searches from different angles until you have gathered sufficient information to provide a complete answer. The current date is ${new Date(

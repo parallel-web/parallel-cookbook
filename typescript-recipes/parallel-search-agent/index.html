@@ -573,7 +573,7 @@
                     addToolResult(chunk);
                     break;
                 case 'error':
-                    showError(chunk.error?.message);
+                    showError(chunk.error?.message || chunk.error?.lastError?.data?.message);
                     break;
                 case 'finish':
                     finalizeCurrentSection();

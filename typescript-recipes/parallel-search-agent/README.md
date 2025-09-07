@@ -394,6 +394,8 @@ When altering the front-end implementation, having proper Typescript context is 
 
 The guide uses GPT-OSS 120B on Cerebras, which is one of the fastest models available and fully open source. However, there are some noted limitations. The model sometimes inaccurately stops early during search despite instructions and occasionally tries to call tools that aren't available, likely due to overfitting on training data. For production use cases, consider upgrading to better tool-calling models that don't have these quirks while maintaining similar speed. Both Groq and Cerebras provide such alternatives.
 
+> Update September 7: After releasing this demo and receiving user feedback, we've switched GPT-OSS with [Qwen 3 235B Instruct](https://inference-docs.cerebras.ai/models/qwen-3-235b-2507) because it shows significantly better tool calling chains while not significantly decreasing latency or increasing cost.
+
 ## Production Considerations
 
 This demonstration omits several production requirements:
