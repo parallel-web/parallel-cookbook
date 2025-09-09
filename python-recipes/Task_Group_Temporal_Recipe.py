@@ -7,7 +7,7 @@ A minimal Temporal workflow that uses the Parallel Task Group API to check if co
 
 ## Setup
 
-1. **Configure API Keys**: Update the configuration variables at the top of `demo_runner.py` with your own API keys and settings.
+1. **Configure API Keys**: Update the configuration variables at the top of this script with your own API keys and settings.
 
 2. **Install Dependencies**:
    ```bash
