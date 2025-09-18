@@ -1,0 +1,19 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "parallel-oss-redirect",
+  "account_id": "aceab98f1a2fc658ed4e20bc307fa65a",
+  "compatibility_date": "2025-09-11",
+  "assets": { "directory": "./" },
+  "routes": [
+    {
+      "zone_name": "parallel.ai",
+      "pattern": "oss.parallel.ai",
+      "custom_domain": false
+    },
+    {
+      "zone_name": "parallel.ai",
+      "pattern": "oss.parallel.ai/*",
+      "custom_domain": false
+    }
+  ]
+}
