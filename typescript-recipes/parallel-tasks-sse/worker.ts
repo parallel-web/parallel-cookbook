@@ -252,7 +252,7 @@ export class TaskManager extends DurableObject {
       return new Response("Task not found", { status: 404 });
     }
 
-    const task = taskRows[0] as TaskRecord;
+    const task = taskRows[0] as unknown as TaskRecord;
 
     // Get all events for this task
     const eventsResult = this.sql.exec(
@@ -303,7 +303,7 @@ export class TaskManager extends DurableObject {
       return new Response("Task not found", { status: 404 });
     }
 
-    const task = taskRows[0] as TaskRecord;
+    const task = taskRows[0] as unknown as TaskRecord;
 
     // Get all events for this task
     const eventsResult = this.sql.exec(
@@ -926,7 +926,7 @@ export class TaskRunner extends DurableObject {
 
   private async initializeTask(
     taskState: TaskState,
-    taskManager: TaskManager
+    taskManager: DurableObjectStub<TaskManager>
   ): Promise<void> {
     // Exponential backoff for retries
     if (taskState.attempts > 0) {
@@ -961,7 +961,7 @@ export class TaskRunner extends DurableObject {
 
   private async monitorTask(
     taskState: TaskState,
-    taskManager: TaskManager
+    taskManager: DurableObjectStub<TaskManager>
   ): Promise<void> {
     const { taskId, runId, taskData } = taskState;
 
@@ -1005,7 +1005,7 @@ export class TaskRunner extends DurableObject {
 
   private async handleStream(
     taskState: TaskState,
-    taskManager: TaskManager
+    taskManager: DurableObjectStub<TaskManager>
   ): Promise<void> {
     const { taskId, runId, taskData } = taskState;
     const maxStreamAttempts = 5;
@@ -1066,7 +1066,7 @@ export class TaskRunner extends DurableObject {
 
   private async finalizeTask(
     taskState: TaskState,
-    taskManager: TaskManager
+    taskManager: DurableObjectStub<TaskManager>
   ): Promise<void> {
     const { taskId, runId, taskData, finalStatus } = taskState;
 
@@ -1089,7 +1089,7 @@ export class TaskRunner extends DurableObject {
 
   private async createOrRecoverRun(
     taskState: TaskState,
-    taskManager: TaskManager
+    taskManager: DurableObjectStub<TaskManager>
   ): Promise<string | null> {
     const { taskId, taskData } = taskState;
 
@@ -1145,7 +1145,7 @@ export class TaskRunner extends DurableObject {
     taskId: string,
     runId: string,
     apiKey: string,
-    taskManager: TaskManager
+    taskManager: DurableObjectStub<TaskManager>
   ): Promise<StreamResult> {
     const streamTimeout = 570000; // 570 seconds
     const startTime = Date.now();
@@ -1283,7 +1283,7 @@ export class TaskRunner extends DurableObject {
     await this.state.storage.setAlarm(now + delayMs);
   }
 
-  private async getTaskManager(): Promise<TaskManager> {
+  private async getTaskManager(): Promise<DurableObjectStub<TaskManager>> {
     const taskManagerId = this.env.TASK_MANAGER.idFromName(MAIN_INSTANCE);
     return this.env.TASK_MANAGER.get(taskManagerId);
   }
@@ -1296,7 +1296,7 @@ export class TaskRunner extends DurableObject {
     taskId: string,
     runId: string,
     apiKey: string,
-    taskManager: TaskManager
+    taskManager: DurableObjectStub<TaskManager>
   ): Promise<void> {
     try {
       const response = await fetch(
