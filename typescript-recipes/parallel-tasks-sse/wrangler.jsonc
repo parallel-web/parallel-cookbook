@@ -1,6 +1,7 @@
 {
   "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
-  "name": "parallel-task-runner",
+  "name": "parallel-tasks-sse",
+  "account_id": "aceab98f1a2fc658ed4e20bc307fa65a",
   "main": "worker.ts",
   "compatibility_date": "2025-07-14",
   "assets": { "directory": "./" },
@@ -15,7 +16,15 @@
     { "tag": "v1", "new_sqlite_classes": ["TaskManager", "TaskRunner"] }
   ],
   "routes": [
-    { "custom_domain": true, "pattern": "tasks.gptideas.com" },
-    { "custom_domain": true, "pattern": "sse.p0web.com" }
+    {
+      "zone_name": "parallel.ai",
+      "pattern": "oss.parallel.ai/tasks-sse",
+      "custom_domain": false
+    },
+    {
+      "zone_name": "parallel.ai",
+      "pattern": "oss.parallel.ai/tasks-sse/*",
+      "custom_domain": false
+    }
   ]
 }

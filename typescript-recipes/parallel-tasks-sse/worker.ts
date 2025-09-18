@@ -99,23 +99,42 @@ export default {
     ctx: ExecutionContext
   ): Promise<Response> {
     const url = new URL(request.url);
+    if (url.pathname === "/tasks-sse") {
+      return new Response(null, {
+        status: 302,
+        headers: { Location: "/tasks-sse/" },
+      });
+    }
+    const pathname = "/" + url.pathname.split("/").slice(2).join("/");
 
     // Get the main task manager DO
     const taskManagerId = env.TASK_MANAGER.idFromName(MAIN_INSTANCE);
     const taskManager = env.TASK_MANAGER.get(taskManagerId);
 
-    if (url.pathname === "/api/tasks" && request.method === "POST") {
+    if (pathname === "/api/tasks" && request.method === "POST") {
       const taskData = (await request.json()) as CreateTaskRequest;
       return taskManager.createTask(taskData);
     }
 
-    if (url.pathname === "/api/tasks" && request.method === "GET") {
+    if (pathname === "/api/tasks" && request.method === "GET") {
       return taskManager.getTasks();
     }
 
-    if (url.pathname.startsWith("/task/")) {
-      const taskId = url.pathname.split("/")[2];
-      return taskManager.getTaskDetails(taskId);
+    // Handle both JSON and HTML routes for tasks
+    if (pathname.startsWith("/task/")) {
+      const pathParts = pathname.split("/");
+      const taskId = pathParts[2];
+
+      if (pathParts.length === 3) {
+        // Default to HTML view
+        return taskManager.getTaskDetailsHtml(taskId);
+      } else if (pathParts[3] === "json") {
+        // JSON endpoint
+        return taskManager.getTaskDetailsJson(taskId);
+      } else if (pathParts[3] === "html") {
+        // Explicit HTML endpoint
+        return taskManager.getTaskDetailsHtml(taskId);
+      }
     }
 
     return new Response("Not found", { status: 404 });
@@ -198,7 +217,7 @@ export class TaskManager extends DurableObject {
 
   async getTasks(): Promise<Response> {
     const result = this.sql.exec(`
-      SELECT id, processor, status, created_at, completed_at, 
+      SELECT id, processor, status, created_at, completed_at, run_id,
              substr(input, 1, 100) as input_preview
       FROM tasks 
       ORDER BY created_at DESC
@@ -213,6 +232,7 @@ export class TaskManager extends DurableObject {
         ? new Date(row.completed_at).toISOString()
         : null,
       inputPreview: row.input_preview,
+      runId: row.run_id,
     }));
 
     return new Response(JSON.stringify(tasks), {
@@ -220,7 +240,7 @@ export class TaskManager extends DurableObject {
     });
   }
 
-  async getTaskDetails(taskId: string): Promise<Response> {
+  async getTaskDetailsJson(taskId: string): Promise<Response> {
     // Get task info
     const taskResult = this.sql.exec(
       `SELECT * FROM tasks WHERE id = ?`,
@@ -269,6 +289,537 @@ export class TaskManager extends DurableObject {
     return new Response(JSON.stringify(response, null, 2), {
       headers: { "Content-Type": "application/json;charset=utf8" },
     });
+  }
+
+  async getTaskDetailsHtml(taskId: string): Promise<Response> {
+    // Get task info
+    const taskResult = this.sql.exec(
+      `SELECT * FROM tasks WHERE id = ?`,
+      taskId
+    );
+    const taskRows = taskResult.toArray();
+
+    if (taskRows.length === 0) {
+      return new Response("Task not found", { status: 404 });
+    }
+
+    const task = taskRows[0] as TaskRecord;
+
+    // Get all events for this task
+    const eventsResult = this.sql.exec(
+      `SELECT event_type, event_data, timestamp 
+       FROM task_events 
+       WHERE task_id = ? 
+       ORDER BY timestamp ASC`,
+      taskId
+    );
+
+    const events = eventsResult.toArray().map((row: any) => ({
+      type: row.event_type,
+      data: JSON.parse(row.event_data),
+      timestamp: new Date(row.timestamp).toISOString(),
+    }));
+
+    const taskData = {
+      id: task.id,
+      processor: task.processor,
+      input: task.input,
+      taskSpec: task.task_spec ? JSON.parse(task.task_spec) : null,
+      runId: task.run_id,
+      status: task.status,
+      createdAt: new Date(task.created_at).toISOString(),
+      completedAt: task.completed_at
+        ? new Date(task.completed_at).toISOString()
+        : null,
+      result: task.result ? JSON.parse(task.result) : null,
+    };
+
+    const html = this.generateTaskHtml(taskData, events);
+
+    return new Response(html, {
+      headers: { "Content-Type": "text/html;charset=utf8" },
+    });
+  }
+
+  private generateTaskHtml(task: any, events: any[]): string {
+    const statusColor = this.getStatusColor(task.status);
+
+    // Group events by type for better display
+    const sseEvents = events.filter((e) => e.type === "sse_event");
+    const otherEvents = events.filter((e) => e.type !== "sse_event");
+
+    // Extract different types of SSE events
+    const statusEvents = sseEvents.filter(
+      (e) => e.data.type === "task_run.state"
+    );
+    const messageEvents = sseEvents.filter((e) =>
+      e.data.type?.startsWith("task_run.progress_msg")
+    );
+    const statsEvents = sseEvents.filter(
+      (e) => e.data.type === "task_run.progress_stats"
+    );
+
+    return `
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Details - ${task.id}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'off-white': '#fcfcfa',
+                        'index-black': '#1d1b16',
+                        'neural': '#d8d0bf',
+                        'signal': '#fb631b',
+                    },
+                    fontFamily: {
+                        'ft-mono': ['FT System Mono', 'Monaco', 'Menlo', 'monospace'],
+                        'gerstner': ['Gerstner Programm', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2'),
+                 url('https://assets.p0web.com/FTSystemMono-Regular.woff') format('woff');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2'),
+                 url('https://assets.p0web.com/FTSystemMono-Medium.woff') format('woff');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Bold.woff2') format('woff2'),
+                 url('https://assets.p0web.com/FTSystemMono-Bold.woff') format('woff');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2'),
+                 url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff') format('woff');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff2') format('woff2'),
+                 url('https://assets.p0web.com/Gerstner-ProgrammMedium.woff') format('woff');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        .copy-button:hover {
+            background-color: rgba(251, 99, 27, 0.1);
+        }
+        
+        .event-message {
+            background: linear-gradient(90deg, rgba(251, 99, 27, 0.05) 0%, transparent 100%);
+            border-left: 3px solid #fb631b;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            html {
+                color-scheme: dark;
+            }
+        }
+    </style>
+</head>
+<body class="bg-off-white dark:bg-index-black text-index-black dark:text-off-white font-gerstner h-full">
+    <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.documentElement.classList.add('dark');
+        }
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            if (e.matches) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+        });
+    </script>
+
+    <div class="min-h-full">
+        <!-- Header -->
+        <header class="border-b border-neural dark:border-gray-700">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-4">
+                        <a href="/tasks-sse/" class="font-ft-mono text-xl font-bold text-signal hover:opacity-80 transition-opacity">
+                            ← back to tasks
+                        </a>
+                        <div class="h-6 border-l border-neural dark:border-gray-600"></div>
+                        <h1 class="font-ft-mono text-xl font-medium">Task Details</h1>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="/tasks-sse/task/${
+                          task.id
+                        }/json" target="_blank" 
+                           class="text-signal hover:opacity-80 font-ft-mono text-sm flex items-center gap-1">
+                            Raw JSON
+                            <span class="text-xs opacity-70">↗</span>
+                        </a>
+                        <img src="https://assets.p0web.com/dark-parallel-logo-270.png" alt="Parallel" class="h-6 dark:hidden">
+                        <img src="https://assets.p0web.com/white-parallel-logo-270.png" alt="Parallel" class="h-6 hidden dark:block">
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Task Info -->
+            <div class="bg-neural/10 dark:bg-gray-800/30 rounded-lg border border-neural/30 dark:border-gray-700 p-6 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-ft-mono font-medium text-sm mb-3 text-gray-600 dark:text-gray-400 uppercase tracking-wider">Task ID</h3>
+                        <div class="flex items-center gap-2">
+                            <span class="font-ft-mono text-sm">${task.id}</span>
+                            <button onclick="copyToClipboard('${task.id}')" 
+                                    class="copy-button p-1 rounded text-gray-500 hover:text-signal transition-colors" 
+                                    title="Copy task ID">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    ${
+                      task.runId
+                        ? `
+                    <div>
+                        <h3 class="font-ft-mono font-medium text-sm mb-3 text-gray-600 dark:text-gray-400 uppercase tracking-wider">Run ID</h3>
+                        <div class="flex items-center gap-2">
+                            <span class="font-ft-mono text-sm">${task.runId}</span>
+                            <button onclick="copyToClipboard('${task.runId}')" 
+                                    class="copy-button p-1 rounded text-gray-500 hover:text-signal transition-colors" 
+                                    title="Copy run ID">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    `
+                        : ""
+                    }
+                    
+                    <div>
+                        <h3 class="font-ft-mono font-medium text-sm mb-3 text-gray-600 dark:text-gray-400 uppercase tracking-wider">Status</h3>
+                        <span class="inline-flex px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wider font-ft-mono ${statusColor}">
+                            ${task.status}
+                        </span>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-ft-mono font-medium text-sm mb-3 text-gray-600 dark:text-gray-400 uppercase tracking-wider">Processor</h3>
+                        <span class="font-ft-mono text-sm">${
+                          task.processor
+                        }</span>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <h3 class="font-ft-mono font-medium text-sm mb-3 text-gray-600 dark:text-gray-400 uppercase tracking-wider">Input</h3>
+                        <div class="bg-neural/20 dark:bg-gray-700/50 rounded-lg p-4 font-ft-mono text-sm whitespace-pre-wrap break-words">
+                            ${this.escapeHtml(task.input)}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Events Section -->
+            ${
+              sseEvents.length > 0
+                ? `
+            <div class="mb-8">
+                <h2 class="font-ft-mono text-lg font-medium mb-6">Live Stream Events</h2>
+                
+                <!-- Message Events -->
+                ${
+                  messageEvents.length > 0
+                    ? `
+                <div class="mb-6">
+                    <h3 class="font-ft-mono font-medium text-sm mb-4 text-gray-600 dark:text-gray-400 uppercase tracking-wider">Progress Messages</h3>
+                    <div class="space-y-3">
+                        ${messageEvents
+                          .map(
+                            (event) => `
+                            <div class="event-message p-4 rounded-lg">
+                                <div class="flex items-start justify-between mb-2">
+                                    <span class="font-ft-mono text-xs text-signal uppercase tracking-wider">
+                                        ${event.data.type.replace(
+                                          "task_run.progress_msg.",
+                                          ""
+                                        )}
+                                    </span>
+                                    <span class="font-ft-mono text-xs text-gray-500 dark:text-gray-400">
+                                        ${new Date(
+                                          event.data.timestamp ||
+                                            event.timestamp
+                                        ).toLocaleString()}
+                                    </span>
+                                </div>
+                                <div class="font-gerstner text-sm leading-relaxed">
+                                    ${this.escapeHtml(event.data.message)}
+                                </div>
+                            </div>
+                        `
+                          )
+                          .join("")}
+                    </div>
+                </div>
+                `
+                    : ""
+                }
+
+                <!-- Status Events -->
+                ${
+                  statusEvents.length > 0
+                    ? `
+                <div class="mb-6">
+                    <h3 class="font-ft-mono font-medium text-sm mb-4 text-gray-600 dark:text-gray-400 uppercase tracking-wider">Status Updates</h3>
+                    <div class="space-y-2">
+                        ${statusEvents
+                          .map(
+                            (event) => `
+                            <div class="flex items-center justify-between p-3 bg-neural/10 dark:bg-gray-800/30 rounded border border-neural/30 dark:border-gray-700">
+                                <div class="flex items-center gap-3">
+                                    <span class="inline-flex px-2 py-1 rounded-full text-xs font-medium uppercase tracking-wider font-ft-mono ${this.getStatusColor(
+                                      event.data.run.status
+                                    )}">
+                                        ${event.data.run.status}
+                                    </span>
+                                    ${
+                                      event.data.run.is_active
+                                        ? '<span class="text-signal text-xs font-ft-mono">● ACTIVE</span>'
+                                        : ""
+                                    }
+                                </div>
+                                <span class="font-ft-mono text-xs text-gray-500 dark:text-gray-400">
+                                    ${new Date(
+                                      event.timestamp
+                                    ).toLocaleString()}
+                                </span>
+                            </div>
+                        `
+                          )
+                          .join("")}
+                    </div>
+                </div>
+                `
+                    : ""
+                }
+
+                <!-- Stats Events -->
+                ${
+                  statsEvents.length > 0
+                    ? `
+                <div class="mb-6">
+                    <h3 class="font-ft-mono font-medium text-sm mb-4 text-gray-600 dark:text-gray-400 uppercase tracking-wider">Source Statistics</h3>
+                    <div class="space-y-3">
+                        ${statsEvents
+                          .map(
+                            (event) => `
+                            <div class="p-4 bg-neural/10 dark:bg-gray-800/30 rounded border border-neural/30 dark:border-gray-700">
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-3">
+                                    <div class="text-center">
+                                        <div class="font-ft-mono text-xl font-bold text-signal">${
+                                          event.data.source_stats
+                                            .num_sources_considered || 0
+                                        }</div>
+                                        <div class="font-ft-mono text-xs text-gray-600 dark:text-gray-400 uppercase">Sources Considered</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="font-ft-mono text-xl font-bold text-signal">${
+                                          event.data.source_stats
+                                            .num_sources_read || 0
+                                        }</div>
+                                        <div class="font-ft-mono text-xs text-gray-600 dark:text-gray-400 uppercase">Sources Read</div>
+                                    </div>
+                                    <div class="text-center">
+                                        <div class="font-ft-mono text-xl font-bold text-signal">${
+                                          (
+                                            event.data.source_stats
+                                              .sources_read_sample || []
+                                          ).length
+                                        }</div>
+                                        <div class="font-ft-mono text-xs text-gray-600 dark:text-gray-400 uppercase">Sample URLs</div>
+                                    </div>
+                                </div>
+                                ${
+                                  event.data.source_stats.sources_read_sample &&
+                                  event.data.source_stats.sources_read_sample
+                                    .length > 0
+                                    ? `
+                                <details class="mt-3">
+                                    <summary class="font-ft-mono text-xs text-signal cursor-pointer hover:opacity-80">View Source URLs Sample</summary>
+                                    <div class="mt-2 space-y-1">
+                                        ${event.data.source_stats.sources_read_sample
+                                          .map(
+                                            (url) => `
+                                            <div class="font-ft-mono text-xs text-gray-600 dark:text-gray-400 break-all pl-4">
+                                                <a href="${url}" target="_blank" class="hover:text-signal transition-colors">${url}</a>
+                                            </div>
+                                        `
+                                          )
+                                          .join("")}
+                                    </div>
+                                </details>
+                                `
+                                    : ""
+                                }
+                                <div class="text-right mt-2">
+                                    <span class="font-ft-mono text-xs text-gray-500 dark:text-gray-400">
+                                        ${new Date(
+                                          event.timestamp
+                                        ).toLocaleString()}
+                                    </span>
+                                </div>
+                            </div>
+                        `
+                          )
+                          .join("")}
+                    </div>
+                </div>
+                `
+                    : ""
+                }
+            </div>
+            `
+                : ""
+            }
+
+            <!-- Task Result -->
+            ${
+              task.result
+                ? `
+            <div class="mb-8">
+                <h2 class="font-ft-mono text-lg font-medium mb-6">Result</h2>
+                <div class="bg-neural/10 dark:bg-gray-800/30 rounded-lg border border-neural/30 dark:border-gray-700 p-6">
+                    ${
+                      task.result.output.type === "text"
+                        ? `
+                        <div class="font-gerstner leading-relaxed whitespace-pre-wrap">
+                            ${this.escapeHtml(task.result.output.content)}
+                        </div>
+                    `
+                        : `
+                        <pre class="font-ft-mono text-sm overflow-x-auto whitespace-pre-wrap break-words">${this.escapeHtml(
+                          JSON.stringify(task.result.output.content, null, 2)
+                        )}</pre>
+                    `
+                    }
+                </div>
+            </div>
+            `
+                : ""
+            }
+
+            <!-- All Events Debug -->
+            ${
+              otherEvents.length > 0
+                ? `
+            <div class="mb-8">
+                <h2 class="font-ft-mono text-lg font-medium mb-6">System Events</h2>
+                <div class="space-y-3">
+                    ${otherEvents
+                      .map(
+                        (event) => `
+                        <div class="bg-neural/10 dark:bg-gray-800/30 rounded border border-neural/30 dark:border-gray-700 p-4">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-ft-mono text-sm font-medium text-signal">${
+                                  event.type
+                                }</span>
+                                <span class="font-ft-mono text-xs text-gray-500 dark:text-gray-400">
+                                    ${new Date(
+                                      event.timestamp
+                                    ).toLocaleString()}
+                                </span>
+                            </div>
+                            <pre class="font-ft-mono text-xs text-gray-600 dark:text-gray-400 overflow-x-auto whitespace-pre-wrap">${this.escapeHtml(
+                              JSON.stringify(event.data, null, 2)
+                            )}</pre>
+                        </div>
+                    `
+                      )
+                      .join("")}
+                </div>
+            </div>
+            `
+                : ""
+            }
+        </main>
+    </div>
+
+    <script>
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                // Show a brief success indication
+                const button = event.target.closest('button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+                button.classList.add('text-green-500');
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('text-green-500');
+                }, 1000);
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
+        }
+    </script>
+</body>
+</html>`;
+  }
+
+  private getStatusColor(status: string): string {
+    switch (status) {
+      case "pending":
+      case "queued":
+        return "bg-yellow-900/50 text-yellow-400";
+      case "running":
+        return "bg-blue-900/50 text-blue-400";
+      case "completed":
+        return "bg-green-900/50 text-green-400";
+      case "failed":
+        return "bg-red-900/50 text-red-400";
+      case "cancelled":
+      case "cancelling":
+        return "bg-gray-900/50 text-gray-400";
+      default:
+        return "bg-gray-900/50 text-gray-400";
+    }
+  }
+
+  private escapeHtml(text: string): string {
+    const map = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;",
+    };
+    return text.replace(/[&<>"']/g, (m) => map[m]);
   }
 
   async addEvent(
@@ -642,9 +1193,9 @@ export class TaskRunner extends DurableObject {
                 const eventData = JSON.parse(line.slice(6));
                 await taskManager.addEvent(taskId, "sse_event", eventData);
 
-                if (eventData.type === "status") {
-                  if (this.isTerminalStatus(eventData.status)) {
-                    return { completed: true, status: eventData.status };
+                if (eventData.type === "task_run.state") {
+                  if (this.isTerminalStatus(eventData.run.status)) {
+                    return { completed: true, status: eventData.run.status };
                   }
                 }
               } catch (e) {

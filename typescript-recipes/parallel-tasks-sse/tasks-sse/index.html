@@ -95,6 +95,30 @@
                 max-width: 280px !important;
             }
         }
+
+        /* Row hover effects */
+        .task-row {
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .task-row:hover {
+            background-color: rgba(251, 99, 27, 0.05);
+            transform: translateX(2px);
+        }
+
+        .dark .task-row:hover {
+            background-color: rgba(251, 99, 27, 0.1);
+        }
+
+        .copy-button {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .task-row:hover .copy-button {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -118,10 +142,19 @@
     <div class="max-w-7xl mx-auto min-h-screen flex flex-col">
         <header class="p-6 border-b border-neural dark:border-gray-700">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-                <div class="font-ft-mono text-2xl font-bold lowercase">parallel task manager</div>
+                <div class="flex flex-row gap-4"><a href="https://parallel.ai" target="_blank"
+                        class="transition-opacity duration-200 hover:opacity-80">
+                        <img src="https://assets.p0web.com/dark-parallel-logo-270.png" alt="Parallel"
+                            class="h-8 dark:hidden">
+                        <img src="https://assets.p0web.com/white-parallel-logo-270.png" alt="Parallel"
+                            class="h-8 hidden dark:block">
+                    </a>
+                    <div class="font-ft-mono text-2xl font-bold lowercase">task manager</div>
+                </div>
                 <div class="flex items-center gap-6">
-                    <a href="https://github.com/janwilmake/parallel-tasks-sse" target="_blank"
-                        class="text-gray-600 dark:text-gray-400 hover:text-index-black dark:hover:text-off-white transition-colors duration-200 font-ft-mono text-sm flex items-center gap-2">
+                    <a href="https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse"
+                        target="_blank"
+                        class="text-gray-600 dark:text-gray-400 hover:text-signal dark:hover:text-signal transition-colors duration-200 font-ft-mono text-sm flex items-center gap-2">
                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd"
                                 d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
@@ -129,13 +162,7 @@
                         </svg>
                         repository
                     </a>
-                    <a href="https://p0web.com" target="_blank"
-                        class="transition-opacity duration-200 hover:opacity-80">
-                        <img src="https://assets.p0web.com/dark-parallel-logo-270.png" alt="Parallel"
-                            class="h-8 dark:hidden">
-                        <img src="https://assets.p0web.com/white-parallel-logo-270.png" alt="Parallel"
-                            class="h-8 hidden dark:block">
-                    </a>
+
                 </div>
             </div>
         </header>
@@ -143,39 +170,39 @@
         <script src="convert.js"></script>
         <main class="flex-1 p-8">
             <section class="mb-12">
-                <h2 class="text-lg font-medium mb-6 font-ft-mono">Create Task</h2>
+                <h2 class="text-lg font-medium mb-6 font-ft-mono text-signal">Create Task</h2>
 
                 <div
-                    class="bg-neural/20 dark:bg-gray-800/50 border border-neural dark:border-gray-700 rounded-lg p-5 mb-8 text-sm font-ft-mono">
+                    class="bg-neural/20 dark:bg-gray-800/50 border border-neural dark:border-gray-700 rounded-lg p-6 mb-8 text-sm font-ft-mono">
                     <h4 class="mb-3 text-index-black dark:text-off-white font-medium">Output Schema Modes</h4>
                     <ul class="ml-4 mb-4 space-y-2">
-                        <li class="text-gray-700 dark:text-gray-300"><strong
-                                class="text-index-black dark:text-off-white">Text:</strong> Simple narrative responses
+                        <li class="text-gray-700 dark:text-gray-300"><strong class="text-signal">Text:</strong> Simple
+                            narrative responses
                             for explanatory answers and summaries</li>
-                        <li class="text-gray-700 dark:text-gray-300"><strong
-                                class="text-index-black dark:text-off-white">Auto:</strong> System generates optimal
+                        <li class="text-gray-700 dark:text-gray-300"><strong class="text-signal">Auto:</strong> System
+                            generates optimal
                             JSON structure for comprehensive research reports with detailed citations <em>(Pro/Ultra
                                 processors only)</em></li>
-                        <li class="text-gray-700 dark:text-gray-300"><strong
-                                class="text-index-black dark:text-off-white">Object:</strong> You define exact JSON
+                        <li class="text-gray-700 dark:text-gray-300"><strong class="text-signal">Object:</strong> You
+                            define exact JSON
                             structure for consistent, systematic data processing</li>
                     </ul>
-                    <p class="text-gray-700 dark:text-gray-300"><strong
-                            class="text-index-black dark:text-off-white">Note:</strong> This system uses Server-Sent
+                    <p class="text-gray-700 dark:text-gray-300"><strong class="text-signal">Note:</strong> This system
+                        uses Server-Sent
                         Events (SSE) to stream real-time progress updates during task execution. Auto mode provides the
                         most detailed basis information with granular field-level citations.</p>
                 </div>
 
-                <form id="taskForm" class="space-y-5 mb-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <form id="taskForm" class="space-y-6 mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="relative">
                             <label for="apiKey"
-                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 font-ft-mono">API
+                                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 font-ft-mono">API
                                 Key</label>
                             <input type="password" id="apiKey" name="apiKey" required
                                 placeholder="Enter your Parallel API key"
-                                class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 text-sm text-index-black dark:text-off-white font-ft-mono focus:outline-none focus:border-signal dark:focus:border-signal">
-                            <div class="mt-1.5 text-xs font-ft-mono">
+                                class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded-lg px-4 py-3 text-sm text-index-black dark:text-off-white font-ft-mono focus:outline-none focus:border-signal dark:focus:border-signal focus:ring-1 focus:ring-signal">
+                            <div class="mt-2 text-xs font-ft-mono">
                                 <a href="https://platform.parallel.ai/settings?tab=api-keys" target="_blank"
                                     class="text-signal hover:text-signal/80 inline-flex items-center gap-1 px-2 py-1 rounded transition-all duration-200 hover:bg-neural/20 dark:hover:bg-gray-800">
                                     Get your API key
@@ -184,7 +211,7 @@
                             </div>
                         </div>
                         <div>
-                            <div class="flex items-center gap-2 mb-2">
+                            <div class="flex items-center gap-2 mb-3">
                                 <label for="processor"
                                     class="block text-sm font-medium text-gray-700 dark:text-gray-300 font-ft-mono">Processor</label>
                                 <div class="relative group">
@@ -206,7 +233,7 @@
                             </div>
                             <div class="relative">
                                 <select id="processor" name="processor" required
-                                    class="custom-select w-full appearance-none bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 pr-10 text-sm text-index-black dark:text-off-white font-ft-mono cursor-pointer focus:outline-none focus:border-signal dark:focus:border-signal">
+                                    class="custom-select w-full appearance-none bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded-lg px-4 py-3 pr-10 text-sm text-index-black dark:text-off-white font-ft-mono cursor-pointer focus:outline-none focus:border-signal dark:focus:border-signal focus:ring-1 focus:ring-signal">
                                     <option value="lite">Lite - Basic metadata, low latency (5-45s, $5/1k)</option>
                                     <option value="base" selected>Base - Standard enrichments (10-80s, $10/1k)</option>
                                     <option value="core">Core - Cross-referenced research (45-160s, $25/1k)</option>
@@ -225,29 +252,29 @@
 
                     <div>
                         <label for="input"
-                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 font-ft-mono">Input</label>
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 font-ft-mono">Input</label>
                         <textarea id="input" name="input" required placeholder="Enter your task input..."
-                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[80px] focus:outline-none focus:border-signal dark:focus:border-signal"></textarea>
+                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded-lg px-4 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[100px] focus:outline-none focus:border-signal dark:focus:border-signal focus:ring-1 focus:ring-signal"></textarea>
                     </div>
 
                     <div>
                         <label
-                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 font-ft-mono">Output
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-4 font-ft-mono">Output
                             Schema Type</label>
                         <div class="flex flex-col sm:flex-row gap-6">
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-3">
                                 <input type="radio" id="schemaText" name="schemaType" value="text"
                                     class="w-4 h-4 text-signal bg-neural/30 dark:bg-gray-800 border-neural dark:border-gray-600 focus:ring-signal dark:focus:ring-signal">
                                 <label for="schemaText"
                                     class="text-sm font-medium text-index-black dark:text-off-white font-ft-mono">Text</label>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-3">
                                 <input type="radio" id="schemaAuto" name="schemaType" value="auto" checked
                                     class="w-4 h-4 text-signal bg-neural/30 dark:bg-gray-800 border-neural dark:border-gray-600 focus:ring-signal dark:focus:ring-signal">
                                 <label for="schemaAuto"
                                     class="text-sm font-medium text-index-black dark:text-off-white font-ft-mono">Auto</label>
                             </div>
-                            <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-3">
                                 <input type="radio" id="schemaObject" name="schemaType" value="object"
                                     class="w-4 h-4 text-signal bg-neural/30 dark:bg-gray-800 border-neural dark:border-gray-600 focus:ring-signal dark:focus:ring-signal">
                                 <label for="schemaObject"
@@ -257,7 +284,7 @@
                     </div>
 
                     <div id="autoModeWarning"
-                        class="hidden bg-red-900/20 text-red-400 p-3 rounded flex items-center gap-2 text-sm font-ft-mono">
+                        class="hidden bg-red-900/20 border border-red-900/50 text-red-400 p-4 rounded-lg flex items-center gap-3 text-sm font-ft-mono">
                         <span class="text-base flex-shrink-0">⚠</span>
                         Auto mode requires Pro, Ultra, or Ultra+ processors for Deep Research functionality. Please
                         select a Pro or Ultra processor to use Auto mode.
@@ -265,24 +292,24 @@
 
                     <div class="hidden" id="textDescriptionGroup">
                         <label for="textDescription"
-                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 font-ft-mono">Text
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 font-ft-mono">Text
                             Description</label>
                         <textarea id="textDescription" name="textDescription"
                             placeholder="Describe the desired text output..."
-                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[80px] focus:outline-none focus:border-signal dark:focus:border-signal"></textarea>
+                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded-lg px-4 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[100px] focus:outline-none focus:border-signal dark:focus:border-signal focus:ring-1 focus:ring-signal"></textarea>
                     </div>
 
                     <div class="hidden" id="objectSchemaGroup">
                         <label for="objectSchema"
-                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 font-ft-mono">JSON
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 font-ft-mono">JSON
                             Schema</label>
                         <textarea id="objectSchema" name="objectSchema"
                             placeholder='{"type": "object", "properties": {"field1": {"type": "string", "description": "..."}}, "required": ["field1"], "additionalProperties": false}'
-                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded px-3 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[120px] focus:outline-none focus:border-signal dark:focus:border-signal"></textarea>
+                            class="w-full bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded-lg px-4 py-3 text-sm text-index-black dark:text-off-white font-ft-mono resize-y min-h-[140px] focus:outline-none focus:border-signal dark:focus:border-signal focus:ring-1 focus:ring-signal"></textarea>
                     </div>
 
                     <button type="submit"
-                        class="bg-signal text-off-white border-none rounded px-6 py-3 text-sm font-medium cursor-pointer transition-opacity duration-200 hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed font-ft-mono">
+                        class="bg-signal text-off-white border-none rounded-lg px-8 py-3 text-sm font-medium cursor-pointer transition-all duration-200 hover:bg-signal/90 disabled:opacity-50 disabled:cursor-not-allowed font-ft-mono shadow-lg hover:shadow-xl">
                         Create Task
                     </button>
                 </form>
@@ -290,19 +317,19 @@
 
             <section class="mb-12">
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
-                    <h2 class="text-lg font-medium font-ft-mono">Tasks</h2>
+                    <h2 class="text-lg font-medium font-ft-mono text-signal">Tasks</h2>
                     <button type="button" onclick="loadTasks()"
-                        class="bg-neural/30 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-neural dark:border-gray-600 rounded px-6 py-3 text-sm font-medium cursor-pointer transition-colors duration-200 hover:text-index-black dark:hover:text-off-white font-ft-mono">
+                        class="bg-neural/30 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-neural dark:border-gray-600 rounded-lg px-6 py-3 text-sm font-medium cursor-pointer transition-all duration-200 hover:text-signal dark:hover:text-signal hover:border-signal dark:hover:border-signal font-ft-mono">
                         Refresh
                     </button>
                 </div>
 
                 <div
-                    class="bg-neural/20 dark:bg-gray-800/50 rounded border border-neural dark:border-gray-700 overflow-hidden">
+                    class="bg-neural/10 dark:bg-gray-800/30 rounded-lg border border-neural/30 dark:border-gray-700 overflow-hidden shadow-lg">
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse">
                             <thead>
-                                <tr class="bg-neural dark:bg-gray-700">
+                                <tr class="bg-neural/50 dark:bg-gray-700">
                                     <th
                                         class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
                                         ID</th>
@@ -323,13 +350,10 @@
                                         Completed</th>
                                     <th
                                         class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
-                                        JSON</th>
-                                    <th
-                                        class="text-left p-4 font-medium text-xs uppercase tracking-wider font-ft-mono text-index-black dark:text-off-white">
-                                        Table</th>
+                                        Raw JSON Output</th>
                                 </tr>
                             </thead>
-                            <tbody id="tasksBody" class="divide-y divide-neural dark:divide-gray-700">
+                            <tbody id="tasksBody" class="divide-y divide-neural/30 dark:divide-gray-700">
                                 <!-- Tasks will be loaded here -->
                             </tbody>
                         </table>
@@ -344,11 +368,11 @@
                 class="flex bg-neural/30 dark:bg-gray-800 border border-neural dark:border-gray-600 rounded overflow-hidden">
                 <span
                     class="px-4 py-2 bg-signal text-off-white text-xs font-medium uppercase tracking-wider font-ft-mono">HUMAN</span>
-                <a href="/README.md" target="_blank"
+                <a href="/tasks-sse/README.md" target="_blank"
                     class="px-4 py-2 text-gray-600 dark:text-gray-400 text-xs font-medium uppercase tracking-wider font-ft-mono transition-colors duration-200 hover:text-gray-800 dark:hover:text-gray-200 no-underline">MACHINE</a>
             </div>
-            <a href="/README.md"
-                class="text-gray-600 dark:text-gray-400 text-xs font-ft-mono no-underline hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-200">
+            <a href="/tasks-sse/README.md"
+                class="text-gray-600 dark:text-gray-400 text-xs font-ft-mono no-underline hover:text-signal dark:hover:text-signal transition-colors duration-200">
                 API Documentation
             </a>
         </footer>
@@ -408,6 +432,23 @@
             warningDiv.classList.toggle('hidden', !shouldShowWarning);
 
             return isHighComputeProcessor || schemaType !== 'auto';
+        }
+
+        async function copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                // Show a brief success indication
+                const button = event.target.closest('button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+                button.classList.add('text-green-500');
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.classList.remove('text-green-500');
+                }, 1000);
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+            }
         }
 
         // Event listeners
@@ -491,7 +532,7 @@
             }
 
             try {
-                const response = await fetch('/api/tasks', {
+                const response = await fetch('api/tasks', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(taskData)
@@ -516,16 +557,28 @@
         // Load tasks
         async function loadTasks() {
             try {
-                const response = await fetch('/api/tasks');
+                const response = await fetch('api/tasks');
                 const tasks = await response.json();
                 const tbody = document.getElementById('tasksBody');
 
                 tbody.innerHTML = tasks.map(task => `
-                    <tr class="hover:bg-neural/30 dark:hover:bg-gray-800/50 cursor-pointer transition-colors duration-200">
-                        <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">${task.id.substring(0, 8)}...</td>
-                        <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">${task.processor}</td>
+                    <tr class="task-row hover:bg-neural/30 dark:hover:bg-gray-800/50 transition-all duration-200" 
+                        onclick="window.location.href='task/${task.id}/html'">
+                        <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">
+                            <div class="flex items-center gap-2">
+                                <span>${task.id.substring(0, 8)}...</span>
+                                <button onclick="event.stopPropagation(); copyToClipboard('${task.id}')" 
+                                        class="copy-button p-1 rounded text-gray-400 hover:text-signal transition-colors" 
+                                        title="Copy task ID">
+                                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono capitalize">${task.processor}</td>
                         <td class="p-4">
-                            <span class="inline-flex px-2 py-1 rounded-full text-xs font-medium uppercase tracking-wide font-ft-mono
+                            <span class="inline-flex px-3 py-1 rounded-full text-xs font-medium uppercase tracking-wide font-ft-mono
                                 ${task.status === 'pending' ? 'bg-yellow-900/50 text-yellow-400' :
                         task.status === 'queued' ? 'bg-yellow-900/50 text-yellow-400' :
                             task.status === 'running' ? 'bg-blue-900/50 text-blue-400' :
@@ -537,8 +590,12 @@
                         <td class="p-4 max-w-[200px] overflow-hidden text-ellipsis whitespace-nowrap text-gray-500 dark:text-gray-400 text-xs font-ft-mono">${task.inputPreview}</td>
                         <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">${new Date(task.createdAt).toLocaleString()}</td>
                         <td class="p-4 text-gray-700 dark:text-gray-300 text-sm font-ft-mono">${task.completedAt ? new Date(task.completedAt).toLocaleString() : '—'}</td>
-                        <td class="p-4 text-signal hover:text-signal/80 cursor-pointer text-sm font-ft-mono" onclick="window.open('/task/${task.id}', '_blank')">JSON</td>
-                        <td class="p-4 text-signal hover:text-signal/80 cursor-pointer text-sm font-ft-mono" onclick="convertUrl('/task/${task.id}')">Table</td>
+                        <td class="p-4">
+                            <button onclick="event.stopPropagation(); window.open('/tasks-sse/task/${task.id}/json', '_blank')" 
+                                    class="text-signal hover:text-signal/80 cursor-pointer text-sm font-ft-mono transition-colors hover:bg-signal/10 px-2 py-1 rounded">
+                                JSON ↗
+                            </button>
+                        </td>
                     </tr>
                 `).join('');
             } catch (error) {
