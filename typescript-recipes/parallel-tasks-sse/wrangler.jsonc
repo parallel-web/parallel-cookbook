@@ -16,6 +16,8 @@
     { "tag": "v1", "new_sqlite_classes": ["TaskManager", "TaskRunner"] }
   ],
   "routes": [
+    // NB: please note that in several places in the code we assume /tasks-sse/ is the path prefix.
+    // When changing to your own domain, it's adviced to use `custom_domain:true` with a pattern without path, and update the code accordingly so your links don't have this prefix.
     {
       "zone_name": "parallel.ai",
       "pattern": "oss.parallel.ai/tasks-sse",
