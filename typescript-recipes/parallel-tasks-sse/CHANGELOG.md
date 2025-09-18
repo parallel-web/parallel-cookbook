@@ -1,0 +1,16 @@
+# CHANGELOG
+
+## Improvements (2025-09-18)
+
+- Ensure HTML renders on server-side from `/task/{id}.html` and JSON renders at `/task/{id}.json`
+- Ensure the table that lists previous tasks links to the correct html and json (copy for JSON column: "Raw JSON Output"). Remove HTML column; clicking the row goes to `/task/{id}.html`
+- Improve the styling of the SSE app to align with parallel branding
+- The only streaming updates in sse demo seem to be "status" updates. We should expand this so that all event updates show clearly -- including the "message" text that shows for updates on pro + processors.
+- Run IDs should be "copy"-able
+
+Context:
+
+- https://uithub.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse
+- https://assets.p0web.com
+- https://docs.parallel.ai/api-reference/task-api-v1/stream-task-run-events.md
+- https://docs.parallel.ai/task-api/features/task-sse.md
