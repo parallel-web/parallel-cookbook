@@ -13,7 +13,7 @@ This recipe highlights:
 
 The key difference of this "playground" to the official Parallel playgrounds is that here, you get a better feel of how the actual API works, and it's possible to see the results in both JSON and as a table.
 
-Check out the playground [here](https://sse.p0web.com). After entering your API key, you'll be able to submit any task with any configuration. The results will be streamed to a JSON blob that is publicly accessible to anyone.
+Check out the playground [here](https://oss.parallel.ai/tasks-sse). After entering your API key, you'll be able to submit any task with any configuration. The results will be streamed to a JSON blob that is publicly accessible to anyone.
 
 For this recipe, we're using [Cloudflare Workers](https://workers.cloudflare.com) with [Durable Objects](https://developers.cloudflare.com/durable-objects/) to deploy this app into the Cloud.
 
@@ -59,4 +59,4 @@ Building the recipe was straightforward - I collected all context from the docs 
 
 ## Result
 
-You can view the result on https://sse.p0web.com.
+You can view the result on https://oss.parallel.ai/tasks-sse
