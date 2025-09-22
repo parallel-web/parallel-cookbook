@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallel + Groq</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #0c0c0c;
+            color: #fafafa;
+            line-height: 1.6;
+        }
+
+        .heading-font {
+            font-family: 'Gerstner Programm', serif;
+        }
+
+        .search-result {
+            animation: fadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(8px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tool-call {
+            background: #161616;
+            border: 1px solid #262626;
+            border-left: 3px solid #525252;
+        }
+
+        .reasoning-section {
+            background: #161616;
+            border: 1px solid #262626;
+            border-left: 3px solid #525252;
+            font-size: 0.875rem;
+        }
+
+        .reasoning-section .markdown-content {
+            font-size: 0.875rem;
+            color: #a3a3a3;
+            line-height: 1.6;
+        }
+
+        .loading-dots {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .spinner {
+            border: 2px solid #262626;
+            border-top: 2px solid #fafafa;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* Update the existing .markdown-content styles with these additions/changes */
+
+        .markdown-content {
+            line-height: 1.6;
+            overflow-x: auto;
+            padding-right: 8px;
+            word-wrap: break-word;
+            color: #fafafa;
+        }
+
+        /* Improve list rendering */
+        .markdown-content ul,
+        .markdown-content ol {
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+            list-style-position: outside;
+            /* Add this to ensure bullets/numbers show */
+        }
+
+        /* Ensure list items have proper styling */
+        .markdown-content ul {
+            list-style-type: disc;
+            /* Explicitly set bullet style */
+        }
+
+        .markdown-content ol {
+            list-style-type: decimal;
+            /* Explicitly set numbering */
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.5em;
+            /* Increase from 0.25em for better spacing */
+            display: list-item;
+            /* Explicitly set display type */
+            line-height: 1.5;
+        }
+
+        /* Nested lists */
+        .markdown-content ul ul,
+        .markdown-content ol ol,
+        .markdown-content ul ol,
+        .markdown-content ol ul {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            padding-left: 1.2em;
+        }
+
+        .markdown-content ul ul {
+            list-style-type: circle;
+        }
+
+        .markdown-content ul ul ul {
+            list-style-type: square;
+        }
+
+        /* Ensure proper spacing around lists */
+        .markdown-content p+ul,
+        .markdown-content p+ol {
+            margin-top: -0.5em;
+        }
+
+        .markdown-content ul+p,
+        .markdown-content ol+p {
+            margin-top: 0.5em;
+        }
+
+        /* Handle list items with paragraphs */
+        .markdown-content li p {
+            margin-bottom: 0.5em;
+        }
+
+        .markdown-content li p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Custom scrollbar for markdown content */
+        .markdown-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .markdown-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .markdown-content::-webkit-scrollbar-thumb {
+            background: #d8d0bf;
+            border-radius: 3px;
+        }
+
+        .markdown-content::-webkit-scrollbar-thumb:hover {
+            background: #fb631b;
+        }
+
+        .markdown-content h1,
+        .markdown-content h2,
+        .markdown-content h3,
+        .markdown-content h4,
+        .markdown-content h5,
+        .markdown-content h6 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .markdown-content h1 {
+            font-size: 1.5em;
+        }
+
+        .markdown-content h2 {
+            font-size: 1.3em;
+        }
+
+        .markdown-content h3 {
+            font-size: 1.1em;
+        }
+
+        .markdown-content p {
+            margin-bottom: 1em;
+        }
+
+        .markdown-content ul,
+        .markdown-content ol {
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.25em;
+        }
+
+        .markdown-content blockquote {
+            border-left: 3px solid #525252;
+            padding-left: 1em;
+            margin: 1em 0;
+            font-style: italic;
+            color: #a3a3a3;
+            background: #1a1a1a;
+            border-radius: 0 0.25rem 0.25rem 0;
+        }
+
+        .markdown-content code {
+            background-color: #1a1a1a;
+            color: #d4d4d8;
+            padding: 0.125em 0.25em;
+            border-radius: 0.25em;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.875em;
+            border: 1px solid #404040;
+        }
+
+        .markdown-content pre {
+            background-color: #1a1a1a;
+            padding: 1em;
+            border-radius: 0.375em;
+            overflow-x: auto;
+            margin: 1em 0;
+            border: 1px solid #404040;
+        }
+
+        .markdown-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .markdown-content a {
+            color: #fafafa;
+            text-decoration: underline;
+            transition: color 0.2s ease;
+        }
+
+        .markdown-content a:hover {
+            color: #d4d4d8;
+        }
+
+        .markdown-content strong {
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .finish-indicator {
+            background: #161616;
+            border: 1px solid #262626;
+            border-left: 3px solid #22c55e;
+        }
+
+        /* Mobile-first responsive design */
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .search-input-container {
+                padding: 0.75rem;
+            }
+
+            .search-btn {
+                right: 0.5rem;
+                top: 0.5rem;
+                bottom: 0.5rem;
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <div id="app" class="container mx-auto px-2 sm:px-4 py-4 sm:py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-8 sm:mb-12">
+            <img src="https://assets.p0web.com/white-parallel-symbol-270.svg" alt="Parallel"
+            class="mx-auto mb-4 w-12 h-12 sm:w-16 sm:h-16">
+        <h1 class="heading-font text-2xl sm:text-4xl font-bold mb-2">Web Search Agent</h1>
+            <p class="text-neutral-400 text-sm sm:text-base">Powered by Parallel Search API & Groq AI</p>
+        </div>
+
+        <!-- Search Interface -->
+        <div id="search-interface" class="space-y-4 sm:space-y-6">
+            <div
+                class="relative flex flex-row items-center gap-3 pr-2 search-input-container bg-neutral-900 border border-neutral-700 rounded-md focus-within:border-neutral-600 transition-all duration-200 hover:bg-neutral-800">
+                <input type="text" id="search-input" placeholder="What would you like to know?"
+                    class="w-full lg:px-4 sm:px-5 py-3 sm:py-4 text-sm lg:text-base bg-transparent focus:outline-none text-white placeholder-neutral-500">
+                <button id="search-btn"
+                    class="search-btn h-10 px-4 sm:px-5 bg-white text-black rounded hover:bg-neutral-100 transition-all duration-200 font-medium text-sm sm:text-base">
+                    Search
+                </button>
+            </div>
+
+            <div class="flex justify-center">
+                <button id="config-btn" class="text-xs sm:text-sm text-neutral-500 hover:text-neutral-400 transition-colors duration-200">
+                    Configure System Prompt
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Results Interface -->
+        <div id="results-interface" class="hidden">
+            <div class="flex items-center justify-between mb-6 sm:mb-8">
+                <h2 class="text-xl sm:text-2xl font-semibold text-white">Search Results</h2>
+                <button id="new-search-btn"
+                    class="px-4 py-2 bg-neutral-800 text-neutral-200 rounded border border-neutral-700 hover:bg-neutral-700 hover:border-neutral-600 transition-all duration-200 text-sm font-medium">
+                    New Search
+                </button>
+            </div>
+
+            <div id="results-content" class="space-y-4 sm:space-y-6">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading-state" class="hidden text-center py-12 sm:py-16">
+            <div class="spinner w-7 h-7 sm:w-9 sm:h-9 mx-auto mb-6"></div>
+            <p class="text-zinc-400 text-sm sm:text-base font-medium">Researching your query...</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-16 sm:mt-20 pt-8 sm:pt-10 border-t border-neutral-800 text-center">
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-neutral-500">
+                <span>Built with Groq AI & Parallel Search API</span>
+            </div>
+            <div class="flex mt-4 justify-center text-xs text-center">
+                <p class="text-neutral-600">Free demo with rate limits • Self-host for production use</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Config Modal -->
+    <div id="config-modal"
+        class="hidden fixed inset-0 bg-black/50 flex items-center justify-center p-4 sm:p-6 z-50">
+        <div class="bg-neutral-900 border border-neutral-700 rounded p-6 sm:p-8 max-w-2xl w-full max-h-[90vh]">
+            <h3 class="text-lg sm:text-xl font-semibold mb-6 text-white">System Prompt Configuration</h3>
+            <textarea id="system-prompt"
+                class="w-full h-32 sm:h-48 p-4 border border-neutral-600 bg-neutral-800 rounded resize-none focus:border-neutral-500 focus:outline-none text-sm sm:text-base text-white placeholder-neutral-500 transition-colors duration-200"
+                placeholder="Enter custom system prompt..."></textarea>
+            <div class="flex justify-end space-x-3 mt-6">
+                <button id="cancel-config"
+                    class="px-4 py-2 bg-neutral-700 text-neutral-200 rounded hover:bg-neutral-600 transition-all duration-200 text-sm font-medium border border-neutral-600">
+                    Cancel
+                </button>
+                <button id="save-config"
+                    class="px-4 py-2 bg-white text-black rounded hover:bg-neutral-100 transition-all duration-200 text-sm font-medium">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSystemPrompt = '';
+        let abortController = null;
+        let currentMode = 'text'; // 'text' or 'reasoning'
+
+        // DOM Elements
+        const searchInterface = document.getElementById('search-interface');
+        const resultsInterface = document.getElementById('results-interface');
+        const loadingState = document.getElementById('loading-state');
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const newSearchBtn = document.getElementById('new-search-btn');
+        const resultsContent = document.getElementById('results-content');
+        const configModal = document.getElementById('config-modal');
+        const configBtn = document.getElementById('config-btn');
+        const systemPromptTextarea = document.getElementById('system-prompt');
+        const saveConfigBtn = document.getElementById('save-config');
+        const cancelConfigBtn = document.getElementById('cancel-config');
+
+        // Configure marked options
+        marked.setOptions({
+            breaks: true,
+            gfm: true
+        });
+
+        // Event Listeners
+        searchBtn.addEventListener('click', startResearch);
+        newSearchBtn.addEventListener('click', showSearchInterface);
+        configBtn.addEventListener('click', showConfigModal);
+        saveConfigBtn.addEventListener('click', saveConfig);
+        cancelConfigBtn.addEventListener('click', hideConfigModal);
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') startResearch();
+        });
+
+        // Functions
+        function showSearchInterface() {
+            searchInterface.classList.remove('hidden');
+            resultsInterface.classList.add('hidden');
+            loadingState.classList.add('hidden');
+            resultsContent.innerHTML = '';
+            searchInput.value = '';
+            currentMode = 'text';
+            if (abortController) {
+                abortController.abort();
+                abortController = null;
+            }
+        }
+
+        function showLoadingState() {
+            searchInterface.classList.add('hidden');
+            resultsInterface.classList.add('hidden');
+            loadingState.classList.remove('hidden');
+        }
+
+        function showResults() {
+            searchInterface.classList.add('hidden');
+            resultsInterface.classList.remove('hidden');
+            loadingState.classList.add('hidden');
+        }
+
+        function showConfigModal() {
+            systemPromptTextarea.value = currentSystemPrompt;
+            configModal.classList.remove('hidden');
+        }
+
+        function hideConfigModal() {
+            configModal.classList.add('hidden');
+        }
+
+        function saveConfig() {
+            currentSystemPrompt = systemPromptTextarea.value;
+            hideConfigModal();
+        }
+
+        async function startResearch() {
+            const query = searchInput.value.trim();
+            if (!query) return;
+
+            showLoadingState();
+            currentMode = 'text';
+
+            // Abort any existing request
+            if (abortController) {
+                abortController.abort();
+            }
+
+            abortController = new AbortController();
+
+            try {
+                const response = await fetch('api/research', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        systemPrompt: currentSystemPrompt || undefined,
+                    }),
+                    signal: abortController.signal,
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const reader = response.body?.getReader();
+                const decoder = new TextDecoder();
+
+                if (!reader) {
+                    throw new Error('No response body');
+                }
+
+                let buffer = '';
+                showResults(); // Show results interface when stream starts
+
+                while (true) {
+                    const { done, value } = await reader.read();
+
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+
+                    // Process complete lines
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop() || ''; // Keep the last incomplete line in buffer
+
+                    for (const line of lines) {
+                        if (line.startsWith('data: ')) {
+                            const data = line.slice(6);
+                            if (data === '[DONE]') {
+                                return;
+                            }
+
+                            try {
+                                const chunk = JSON.parse(data);
+                                handleStreamChunk(chunk);
+                            } catch (error) {
+                                console.error('Error parsing chunk:', error, data);
+                            }
+                        }
+                    }
+                }
+
+            } catch (error) {
+                if (error.name === 'AbortError') {
+                    console.log('Request was aborted');
+                } else {
+                    console.error('Research error:', error);
+                    showError(`Research failed: ${error.message}`);
+                }
+            } finally {
+                abortController = null;
+            }
+        }
+
+        function handleStreamChunk(chunk) {
+            switch (chunk.type) {
+                case 'text-delta':
+                    if (currentMode === 'reasoning') {
+                        finalizeCurrentSection();
+                        currentMode = 'text';
+                    }
+                    appendText(chunk.text || '');
+                    break;
+                case 'reasoning-delta':
+                    if (currentMode === 'text') {
+                        finalizeCurrentSection();
+                        currentMode = 'reasoning';
+                    }
+                    appendReasoning(chunk.text || '');
+                    break;
+                case 'tool-call':
+                    finalizeCurrentSection();
+                    addToolCall(chunk);
+                    break;
+                case 'tool-result':
+                    addToolResult(chunk);
+                    break;
+                case 'error':
+                    showError(chunk.error?.message || chunk.error?.lastError?.data?.message || 'Unknown error occurred');
+                    break;
+                case 'finish':
+                    finalizeCurrentSection();
+                    addFinishIndicator(chunk.finishReason);
+                    console.log('Research completed with reason:', chunk.finishReason);
+                    break;
+            }
+        }
+
+        function appendText(text) {
+            if (!text) return;
+
+            let currentElement = resultsContent.querySelector('.current-text');
+            if (!currentElement) {
+                currentElement = document.createElement('div');
+                currentElement.className = 'current-text bg-neutral-900 border border-neutral-700 rounded p-4 sm:p-5 mb-4 search-result';
+
+                // Create the markdown content container
+                const markdownContainer = document.createElement('div');
+                markdownContainer.className = 'markdown-content';
+                currentElement.appendChild(markdownContainer);
+
+                resultsContent.appendChild(currentElement);
+            }
+
+            // Store the raw text
+            if (!currentElement.rawText) {
+                currentElement.rawText = '';
+            }
+            currentElement.rawText += text;
+
+            // Render markdown
+            const textContainer = currentElement.querySelector('.markdown-content');
+            if (textContainer) {
+                textContainer.innerHTML = marked.parse(currentElement.rawText);
+            }
+        }
+
+        function appendReasoning(text) {
+            if (!text) return;
+
+            let currentElement = resultsContent.querySelector('.current-reasoning');
+            if (!currentElement) {
+                currentElement = document.createElement('div');
+                currentElement.className = 'current-reasoning reasoning-section p-4 sm:p-5 rounded mb-4 search-result';
+
+                // Add reasoning header
+                const header = document.createElement('div');
+                header.className = 'flex items-center mb-2';
+                header.innerHTML = `
+                    <div class="w-3 h-3 bg-neutral-500 rounded-full mr-2"></div>
+                    <span class="font-medium text-xs sm:text-sm text-neutral-400">🧠 AI Reasoning</span>
+                `;
+                currentElement.appendChild(header);
+
+                // Create the markdown content container
+                const markdownContainer = document.createElement('div');
+                markdownContainer.className = 'markdown-content';
+                currentElement.appendChild(markdownContainer);
+
+                resultsContent.appendChild(currentElement);
+            }
+
+            // Store the raw text
+            if (!currentElement.rawText) {
+                currentElement.rawText = '';
+            }
+            currentElement.rawText += text;
+
+            // Render markdown
+            const textContainer = currentElement.querySelector('.markdown-content');
+            if (textContainer) {
+                textContainer.innerHTML = marked.parse(currentElement.rawText);
+            }
+        }
+
+        function finalizeCurrentSection() {
+            const currentTextElement = resultsContent.querySelector('.current-text');
+            if (currentTextElement) {
+                currentTextElement.classList.remove('current-text');
+            }
+
+            const currentReasoningElement = resultsContent.querySelector('.current-reasoning');
+            if (currentReasoningElement) {
+                currentReasoningElement.classList.remove('current-reasoning');
+            }
+        }
+
+        function addToolCall(toolCall) {
+            finalizeCurrentSection();
+
+            const toolCallElement = document.createElement('div');
+            toolCallElement.className = 'tool-call p-4 sm:p-5 rounded mb-4 search-result';
+
+            const objective = toolCall.args?.objective || toolCall.input?.objective || 'Searching...';
+            const searchQueries = toolCall.args?.search_queries || toolCall.input?.search_queries || [];
+
+            toolCallElement.innerHTML = `
+                <div class="flex items-center mb-2">
+                    <div class="w-3 h-3 bg-neutral-500 rounded-full mr-2 animate-pulse"></div>
+                    <span class="font-medium text-sm sm:text-base">🔍 Searching Web</span>
+                </div>
+                <div class="text-xs sm:text-sm text-neutral-400">
+                    <div class="mb-1"><strong>Objective:</strong> ${objective}</div>
+                    ${searchQueries.length > 0 ? `<div><strong>Queries:</strong> ${searchQueries.join(', ')}</div>` : ''}
+                </div>
+            `;
+            resultsContent.appendChild(toolCallElement);
+        }
+
+
+        /**
+         * Creates a URL with text fragments that will highlight the excerpts when clicked
+         * @param {string} originalUrl - The original URL
+         * @param {string[]} excerpts - Array of text excerpts to highlight
+         * @returns {string} URL with text fragments for highlighting
+         */
+        function createHighlightUrl(originalUrl, excerpts) {
+            if (!excerpts || !Array.isArray(excerpts) || excerpts.length === 0) {
+                return originalUrl;
+            }
+
+            // Clean and prepare excerpts
+            const textFragments = excerpts
+                .map(excerpt => {
+                    if (typeof excerpt !== 'string') return '';
+
+                    // Remove trailing ".." or "..." and trim whitespace
+                    return excerpt.replace(/\.{2,}$/, '').trim();
+                })
+                .filter(excerpt => excerpt.length > 0)
+                .map(encodeURIComponent); // Remove empty excerpts
+
+            if (textFragments.length === 0) {
+                return originalUrl;
+            }
+
+
+            // Create the text fragment parameter
+            const fragmentParam = textFragments.map(fragment => `text=${fragment}`).join('&');
+
+            // Add text fragments to URL
+            const separator = originalUrl.includes('#') ? '&' : '#:~:';
+            return `${originalUrl}${separator}${fragmentParam}`;
+        }
+
+        function addToolResult(toolResult) {
+            const results = toolResult?.output?.results;
+            if (!results) {
+                return;
+            }
+
+            const resultElement = document.createElement('div');
+            resultElement.className = 'bg-neutral-900 border border-neutral-700 rounded p-4 sm:p-5 mb-4 search-result';
+
+            // Count total excerpts
+            const totalExcerpts = results.slice(0, 5).reduce((sum, result) => sum + (result.excerpts?.length || 0), 0);
+
+            let resultsHtml = `
+        <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center font-medium text-xs sm:text-sm">
+                <div class="w-2 h-2 bg-neutral-500 rounded-full mr-2"></div>
+                Search Results Found
+            </div>
+            ${totalExcerpts > 0 ? `
+                <button class="excerpts-toggle-btn text-xs text-neutral-400 hover:text-neutral-300 underline" data-expanded="false">
+                    Show Chosen Excerpts (${totalExcerpts})
+                </button>
+            ` : ''}
+        </div>
+    `;
+
+            if (results && Array.isArray(results)) {
+                const lastIndex = results.slice(0, 5).length - 1;
+                results.slice(0, 5).forEach((result, index) => {
+                    const notLast = index < lastIndex;
+                    const urlWithTextHighlights = createHighlightUrl(result.url, result.excerpts || []);
+                    const hasExcerpts = result.excerpts && result.excerpts.length > 0;
+
+                    resultsHtml += `
+                <div class="mb-3 pb-3 ${notLast ? 'border-b border-neutral-700' : ''}" data-result-index="${index}">
+                    <div class="font-medium text-white mb-1">
+                        <a href="${urlWithTextHighlights}" target="_blank" class="hover:underline text-xs sm:text-sm hover:text-neutral-300">${escapeHtml(result.title)}</a>
+                    </div>
+                    <div class="text-xs text-neutral-500 truncate mb-2">${escapeHtml(result.url)}</div>
+                    ${hasExcerpts ? `
+                        <div class="excerpts-container hidden">
+                            <div class="text-xs font-medium text-neutral-400 mb-1">Excerpts:</div>
+                            <div class="space-y-1">
+                                ${result.excerpts.map(excerpt => `<pre class="text-xs text-neutral-300 bg-neutral-800 p-2 rounded border-l-2 border-neutral-600 whitespace-pre-wrap break-words">${escapeHtml(excerpt)}</pre>`).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+                });
+
+                if (results.length > 5) {
+                    resultsHtml += `<div class="text-xs text-neutral-500 text-center pt-2">+ ${results.length - 5} more results</div>`;
+                }
+            } else {
+                resultsHtml += '<div class="text-xs sm:text-sm text-neutral-500">No detailed results available</div>';
+            }
+
+            resultElement.innerHTML = resultsHtml;
+
+            // Add event listener for the toggle button
+            const toggleBtn = resultElement.querySelector('.excerpts-toggle-btn');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function () {
+                    const isExpanded = this.dataset.expanded === 'true';
+                    const excerptContainers = resultElement.querySelectorAll('.excerpts-container');
+
+                    if (isExpanded) {
+                        // Hide excerpts
+                        excerptContainers.forEach(container => container.classList.add('hidden'));
+                        this.textContent = `Show Chosen Excerpts (${totalExcerpts})`;
+                        this.dataset.expanded = 'false';
+                    } else {
+                        // Show excerpts
+                        excerptContainers.forEach(container => container.classList.remove('hidden'));
+                        this.textContent = `Hide Excerpts`;
+                        this.dataset.expanded = 'true';
+                    }
+                });
+            }
+
+            resultsContent.appendChild(resultElement);
+        }
+
+        // Add this helper function to escape HTML
+        function escapeHtml(text) {
+            if (!text) return '';
+
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function addFinishIndicator(finishReason) {
+            const finishElement = document.createElement('div');
+            finishElement.className = 'finish-indicator p-4 sm:p-5 rounded mb-4 search-result';
+
+            const reasonText = finishReason || 'completed';
+            const reasonDisplay = reasonText.charAt(0).toUpperCase() + reasonText.slice(1);
+
+            finishElement.innerHTML = `
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                    <span class="font-medium text-sm sm:text-base text-white">✅ Research Complete</span>
+                    <span class="ml-2 text-xs text-neutral-400">• ${reasonDisplay}</span>
+                </div>
+            `;
+            resultsContent.appendChild(finishElement);
+        }
+
+        function showError(error) {
+            showResults(); // Make sure results interface is visible
+            finalizeCurrentSection(); // Finalize any current section
+
+            const errorElement = document.createElement('div');
+            errorElement.className = 'bg-red-950/50 border border-red-800 text-red-200 px-4 sm:px-5 py-4 rounded mb-4 search-result';
+            errorElement.innerHTML = `<div class="flex items-center text-sm sm:text-base"><div class="w-3 h-3 bg-red-400 rounded-full mr-3"></div><strong>Error:</strong> ${error}</div>`;
+            resultsContent.appendChild(errorElement);
+        }
+
+        // Initialize
+        showSearchInterface();
+    </script>
+</body>
+
+</html>
