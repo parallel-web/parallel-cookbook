@@ -1,0 +1,19 @@
+{
+  "name": "web-research-agent-groq",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "read -p \"Enter Cloudflare Account ID: \" account_id && CLOUDFLARE_ACCOUNT_ID=\"$account_id\" wrangler deploy"
+  },
+  "dependencies": {
+    "@ai-sdk/groq": "^2.0.20",
+    "ai": "^5.0.35",
+    "parallel-web": "^0.1.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "typescript": "^5.6.3",
+    "wrangler": "^3.93.0"
+  }
+}
