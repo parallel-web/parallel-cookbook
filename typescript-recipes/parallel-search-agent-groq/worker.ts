@@ -18,29 +18,15 @@ export default {
       return new Response("Missing required API keys", { status: 500 });
     }
 
-    const url = new URL(request.url);
-
-    if (url.pathname === "/agent") {
-      // redirect from oss.p0web.com/agent to /agent/ to ensure api call works
-      return new Response(null, {
-        status: 302,
-        headers: { Location: "/agent/" },
-      });
-    }
-    // Needed to host on subpath
-    const pathname = url.pathname.startsWith("/agent/")
-      ? url.pathname.slice("/agent".length)
-      : url.pathname;
-
     // Serve the HTML page
-    if (request.method === "GET" && pathname === "/") {
+    if (request.method === "GET") {
       return new Response(indexHtml, {
         headers: { "Content-Type": "text/html" },
       });
     }
 
     // Handle research requests
-    if (request.method === "POST" && pathname === "/api/research") {
+    if (request.method === "POST") {
       try {
         const { query, systemPrompt } = await request.json<any>();
         console.log({ query });
@@ -116,7 +102,7 @@ The current date is ${new Date(Date.now()).toISOString().slice(0, 10)}
 IMPORTANT: Always start by using the search tool - do not provide answers without first searching!`,
           prompt: query,
           tools: { search: searchTool },
-          toolChoice: 'auto',
+          toolChoice: "auto",
           stopWhen: stepCountIs(25),
           maxOutputTokens: 8000,
         });

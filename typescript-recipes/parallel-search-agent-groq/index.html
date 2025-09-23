@@ -52,6 +52,7 @@
                 opacity: 0;
                 transform: translateY(8px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -316,8 +317,8 @@
         <!-- Header -->
         <div class="text-center mb-8 sm:mb-12">
             <img src="https://assets.p0web.com/white-parallel-symbol-270.svg" alt="Parallel"
-            class="mx-auto mb-4 w-12 h-12 sm:w-16 sm:h-16">
-        <h1 class="heading-font text-2xl sm:text-4xl font-bold mb-2">Web Search Agent</h1>
+                class="mx-auto mb-4 w-12 h-12 sm:w-16 sm:h-16">
+            <h1 class="heading-font text-2xl sm:text-4xl font-bold mb-2">Web Search Agent</h1>
             <p class="text-neutral-400 text-sm sm:text-base">Powered by Parallel Search API & Groq AI</p>
         </div>
 
@@ -334,7 +335,8 @@
             </div>
 
             <div class="flex justify-center">
-                <button id="config-btn" class="text-xs sm:text-sm text-neutral-500 hover:text-neutral-400 transition-colors duration-200">
+                <button id="config-btn"
+                    class="text-xs sm:text-sm text-neutral-500 hover:text-neutral-400 transition-colors duration-200">
                     Configure System Prompt
                 </button>
             </div>
@@ -375,8 +377,7 @@
     </div>
 
     <!-- Config Modal -->
-    <div id="config-modal"
-        class="hidden fixed inset-0 bg-black/50 flex items-center justify-center p-4 sm:p-6 z-50">
+    <div id="config-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center p-4 sm:p-6 z-50">
         <div class="bg-neutral-900 border border-neutral-700 rounded p-6 sm:p-8 max-w-2xl w-full max-h-[90vh]">
             <h3 class="text-lg sm:text-xl font-semibold mb-6 text-white">System Prompt Configuration</h3>
             <textarea id="system-prompt"
@@ -486,7 +487,7 @@
             abortController = new AbortController();
 
             try {
-                const response = await fetch('api/research', {
+                const response = await fetch('/agents/groq-search', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

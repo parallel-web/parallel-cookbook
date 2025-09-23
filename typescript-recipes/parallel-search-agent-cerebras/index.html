@@ -483,7 +483,7 @@
             abortController = new AbortController();
 
             try {
-                const response = await fetch('api/research', {
+                const response = await fetch('/agents/cerebras-search', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
