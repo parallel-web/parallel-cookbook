@@ -3,7 +3,11 @@
   "name": "web-research-agent-groq",
   "main": "worker.ts",
   "compatibility_date": "2025-07-14",
-  "observability": { "logs": { "enabled": true } },
+  "observability": {
+    "logs": {
+      "enabled": true
+    }
+  },
   "routes": [
     // Please note, the more simple setup for a domain looks like this:
     // {"custom_domain": true,"pattern": "yourdomain.com"}
@@ -16,6 +20,12 @@
       "zone_name": "parallel.ai",
       "pattern": "oss.parallel.ai/agents/groq-search/*",
       "custom_domain": false
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "RATE_LIMIT_KV",
+      "id": "befe4fbf3b1e454799d2e07e5b04a8f4"
     }
   ]
 }

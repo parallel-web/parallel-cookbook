@@ -3,12 +3,27 @@ import { Parallel } from "parallel-web";
 import { createGroq } from "@ai-sdk/groq";
 import { streamText, tool, stepCountIs } from "ai";
 import { z } from "zod/v4";
+import { rateLimitMiddleware } from "./ratelimit";
 //@ts-ignore
 import indexHtml from "./index.html";
 
 export interface Env {
   PARALLEL_API_KEY: string;
   GROQ_API_KEY: string;
+  RATE_LIMIT_KV: KVNamespace;
+}
+
+function getClientIP(request: Request): string {
+  const cfConnectingIP = request.headers.get("CF-Connecting-IP");
+  if (cfConnectingIP) return cfConnectingIP;
+
+  const xForwardedFor = request.headers.get("X-Forwarded-For");
+  if (xForwardedFor) return xForwardedFor.split(",")[0].trim();
+
+  const xRealIP = request.headers.get("X-Real-IP");
+  if (xRealIP) return xRealIP;
+
+  return "unknown";
 }
 
 export default {
@@ -18,6 +33,10 @@ export default {
       return new Response("Missing required API keys", { status: 500 });
     }
 
+    if (!env.RATE_LIMIT_KV) {
+      return new Response("Rate limiting service unavailable", { status: 500 });
+    }
+
     // Serve the HTML page
     if (request.method === "GET") {
       return new Response(indexHtml, {
@@ -25,8 +44,36 @@ export default {
       });
     }
 
-    // Handle research requests
+    // Handle research requests with rate limiting
     if (request.method === "POST") {
+      // Apply rate limiting - config builder gets access to request
+      const rateLimitResponse = await rateLimitMiddleware(env.RATE_LIMIT_KV, {
+        limits: [
+          {
+            name: "IP hourly",
+            requests: 100,
+            windowMs: 60 * 60 * 1000, // 1 hour
+            limiter: getClientIP(request), // Actual IP address
+          },
+          {
+            name: "Global per minute",
+            requests: 100,
+            windowMs: 60 * 1000, // 1 minute
+            limiter: "global", // Hardcoded global limiter
+          },
+          {
+            name: "Global daily",
+            requests: 10000,
+            windowMs: 24 * 60 * 60 * 1000, // 1 day
+            limiter: "global", // Hardcoded global limiter
+          },
+        ],
+      });
+
+      if (rateLimitResponse) {
+        return rateLimitResponse;
+      }
+
       try {
         const { query, systemPrompt } = await request.json<any>();
         console.log({ query });
