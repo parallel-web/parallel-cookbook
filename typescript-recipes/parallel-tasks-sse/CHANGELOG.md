@@ -24,4 +24,4 @@ Context:
 
 Discovered statefulness of stream api and improved docs with that: https://letmeprompt.com/rules-httpsuithu-2k8wr80
 
-Discovered browser-based use of the API isn't allowed due to CORS issue.
+Discovered browser-based use of the API isn't allowed due to CORS issue, decided to make frontend-only app with cors proxy

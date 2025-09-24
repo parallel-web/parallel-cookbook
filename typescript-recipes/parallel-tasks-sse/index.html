@@ -149,11 +149,61 @@
             margin-bottom: 15px;
         }
 
+        .form-group-inline {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .section-header {
+            font-weight: bold;
+            color: var(--signal);
+            font-size: 16px;
+            margin: 20px 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--neural);
+            font-family: 'FT System Mono', monospace;
+        }
+
+        .section-header:first-child {
+            margin-top: 0;
+        }
+
         label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
             font-family: 'FT System Mono', monospace;
+            font-size: 13px;
+        }
+
+        .label-with-help {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .help-icon {
+            cursor: help;
+            background: var(--neural);
+            color: var(--index-black);
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .help-text {
+            font-size: 11px;
+            color: #666;
+            margin-top: 2px;
+            font-family: 'FT System Mono', monospace;
+            font-style: italic;
         }
 
         input,
@@ -166,6 +216,17 @@
             border-radius: 4px;
             font-family: 'Gerstner Programm', serif;
             font-size: 14px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
         }
 
         textarea {
@@ -191,6 +252,85 @@
         button:disabled {
             background-color: var(--neural);
             cursor: not-allowed;
+        }
+
+        .collapsible {
+            border: 1px solid var(--neural);
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .collapsible-header {
+            background: var(--neural);
+            padding: 12px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            font-family: 'FT System Mono', monospace;
+            font-weight: bold;
+        }
+
+        .collapsible-header:hover {
+            background: #ccc1a8;
+        }
+
+        .collapsible-content {
+            display: none;
+            padding: 15px;
+        }
+
+        .collapsible-content.active {
+            display: block;
+        }
+
+        .collapsible-toggle {
+            font-size: 12px;
+            float: right;
+        }
+
+        .domain-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            min-height: 32px;
+            padding: 8px;
+            border: 1px solid var(--neural);
+            border-radius: 4px;
+            background: white;
+        }
+
+        .domain-tag {
+            background: var(--neural);
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            font-family: 'FT System Mono', monospace;
+        }
+
+        .domain-tag .remove {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--signal);
+        }
+
+        .domain-input-group {
+            display: flex;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .domain-input-group input {
+            flex: 1;
+        }
+
+        .domain-input-group button {
+            width: auto;
+            padding: 8px 16px;
         }
 
         .tasks-section {
@@ -481,6 +621,20 @@
             font-style: italic;
         }
 
+        .processor-info {
+            background: rgba(216, 208, 191, 0.2);
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-top: 5px;
+            font-family: 'FT System Mono', monospace;
+        }
+
+        .cost-info {
+            color: var(--signal);
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
             .links {
                 flex-direction: column;
@@ -490,6 +644,10 @@
             .logo-title {
                 flex-direction: column;
                 gap: 10px;
+            }
+
+            .form-group-inline {
+                grid-template-columns: 1fr;
             }
 
             .progress-stats {
@@ -523,8 +681,17 @@
             </div>
             <p class="subtitle">Create tasks and stream their execution events in real-time</p>
             <div class="links">
-                <a href="https://docs.parallel.ai/api-reference/task-api-v1/stream-task-run-events" target="_blank">
-                    📚 Stream Events Documentation
+                <a href="https://docs.parallel.ai/task-api/core-concepts/choose-a-processor" target="_blank">
+                    🏗️ Processors Guide
+                </a>
+                <a href="https://docs.parallel.ai/task-api/core-concepts/specify-a-task" target="_blank">
+                    📋 Task Specs
+                </a>
+                <a href="https://docs.parallel.ai/api-reference/task-api-v1/create-task-run" target="_blank">
+                    📚 API Reference
+                </a>
+                <a href="https://docs.parallel.ai/task-api/features/task-sse" target="_blank">
+                    🔄 Streaming Events
                 </a>
                 <a href="https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse"
                     target="_blank">
@@ -536,7 +703,6 @@
                 </a>
             </div>
             <p class="subtitle">To view the events in JSON, open developer console.</p>
-
         </header>
 
         <div class="auth-section" id="authSection">
@@ -549,39 +715,169 @@
         <div class="form-section disabled" id="formSection">
             <h2>Create New Task</h2>
             <form id="taskForm">
+                <div class="section-header">Basic Configuration</div>
+
                 <div class="form-group">
                     <label for="taskInput">Task Input:</label>
                     <textarea id="taskInput" name="taskInput" placeholder="Enter your task description..."
                         required></textarea>
+                    <div class="help-text">The input to your task - can be text or JSON object</div>
                 </div>
 
-                <div class="form-group">
-                    <label for="processor">Processor:</label>
-                    <select id="processor" name="processor" required>
-                        <option value="base">Base</option>
-                        <option value="pro" selected>Pro</option>
-                        <option value="lite">Lite</option>
-                    </select>
-                </div>
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <div class="label-with-help">
+                            <label for="processor">Processor:</label>
+                            <span class="help-icon"
+                                title="Different processors offer varying performance, latency, and cost characteristics">?</span>
+                        </div>
+                        <select id="processor" name="processor" required onchange="updateProcessorInfo()">
+                            <option value="lite">Lite ($5/1000 runs)</option>
+                            <option value="base">Base ($10/1000 runs)</option>
+                            <option value="core">Core ($25/1000 runs)</option>
+                            <option value="pro" selected>Pro ($100/1000 runs)</option>
+                            <option value="ultra">Ultra ($300/1000 runs)</option>
+                            <option value="ultra2x">Ultra 2x ($600/1000 runs)</option>
+                            <option value="ultra4x">Ultra 4x ($1200/1000 runs)</option>
+                            <option value="ultra8x">Ultra 8x ($2400/1000 runs)</option>
+                        </select>
+                        <div id="processorInfo" class="processor-info">
+                            Pro: Exploratory web research, 3-9 min latency, ~20 fields
+                        </div>
+                    </div>
 
-                <div class="form-group">
-                    <label for="outputType">Output Type:</label>
-                    <select id="outputType" name="outputType" onchange="updateOutputSchema()" required>
-                        <option value="auto">Auto Schema</option>
-                        <option value="text">Text Output</option>
-                        <option value="json">JSON Output</option>
-                    </select>
+                    <div class="form-group">
+                        <div class="label-with-help">
+                            <label for="outputType">Output Schema Type:</label>
+                            <span class="help-icon"
+                                title="Auto schema enables Deep Research outputs, JSON allows structured data, Text provides plain text responses">?</span>
+                        </div>
+                        <select id="outputType" name="outputType" onchange="updateOutputSchema()" required>
+                            <option value="auto">Auto Schema</option>
+                            <option value="text">Text Output</option>
+                            <option value="json">JSON Output</option>
+                        </select>
+                    </div>
                 </div>
 
                 <div class="form-group hidden" id="jsonSchemaGroup">
                     <label for="jsonSchema">JSON Schema:</label>
                     <textarea id="jsonSchema" name="jsonSchema" placeholder="Enter JSON schema..."></textarea>
+                    <div class="help-text">Define the structure of your expected JSON output</div>
                 </div>
 
                 <div class="form-group hidden" id="textDescriptionGroup">
                     <label for="textDescription">Text Description:</label>
                     <textarea id="textDescription" name="textDescription"
                         placeholder="Describe the desired text output..."></textarea>
+                    <div class="help-text">Describe what you want in the text response</div>
+                </div>
+
+                <div class="form-group hidden" id="inputSchemaGroup">
+                    <label for="inputSchema">Input Schema (Optional):</label>
+                    <textarea id="inputSchema" name="inputSchema"
+                        placeholder="Describe expected input format..."></textarea>
+                    <div class="help-text">Optional description of your input parameters</div>
+                </div>
+
+                <div class="section-header">Advanced Options</div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="enableEvents" name="enableEvents" checked>
+                        <label for="enableEvents">Enable Event Streaming</label>
+                        <span class="help-icon"
+                            title="Track task execution progress with real-time events. Required for streaming in this demo.">?</span>
+                    </div>
+                    <div class="help-text">Enabled by default for Pro+ processors. Required for this demo to work.</div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header" onclick="toggleCollapsible('sourcePolicyCollapsible')">
+                        Source Policy Configuration
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content" id="sourcePolicyCollapsible">
+                        <div class="form-group">
+                            <label>Include Domains (whitelist):</label>
+                            <div class="domain-list" id="includeDomains"></div>
+                            <div class="domain-input-group">
+                                <input type="text" id="includeDomainsInput" placeholder="e.g., wikipedia.org">
+                                <button type="button" onclick="addDomain('include')">Add</button>
+                            </div>
+                            <div class="help-text">Restrict results to only these domains</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Exclude Domains (blacklist):</label>
+                            <div class="domain-list" id="excludeDomains"></div>
+                            <div class="domain-input-group">
+                                <input type="text" id="excludeDomainsInput" placeholder="e.g., reddit.com">
+                                <button type="button" onclick="addDomain('exclude')">Add</button>
+                            </div>
+                            <div class="help-text">Exclude sources from these domains</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header" onclick="toggleCollapsible('webhookCollapsible')">
+                        Webhook Configuration
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content" id="webhookCollapsible">
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="enableWebhook" name="enableWebhook"
+                                    onchange="toggleWebhookFields()">
+                                <label for="enableWebhook">Enable Webhook</label>
+                                <span class="help-icon"
+                                    title="Receive HTTP POST notifications when task completes">?</span>
+                            </div>
+                        </div>
+
+                        <div id="webhookFields" class="hidden">
+                            <div class="form-group">
+                                <label for="webhookUrl">Webhook URL:</label>
+                                <input type="url" id="webhookUrl" name="webhookUrl"
+                                    placeholder="https://your-server.com/webhook">
+                                <div class="help-text">URL that will receive task completion notifications</div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="webhookTaskRunStatus" name="webhookTaskRunStatus"
+                                        checked>
+                                    <label for="webhookTaskRunStatus">Task Run Status Events</label>
+                                </div>
+                                <div class="help-text">Currently the only available event type</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible">
+                    <div class="collapsible-header" onclick="toggleCollapsible('metadataCollapsible')">
+                        Metadata & MCP Servers
+                        <span class="collapsible-toggle">▼</span>
+                    </div>
+                    <div class="collapsible-content" id="metadataCollapsible">
+                        <div class="form-group">
+                            <label for="metadata">Metadata (JSON):</label>
+                            <textarea id="metadata" name="metadata"
+                                placeholder='{"key": "value", "project": "demo"}'></textarea>
+                            <div class="help-text">Custom key-value pairs stored with the task (max 16 chars for keys,
+                                512 for values)</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mcpServers">MCP Servers (JSON Array):</label>
+                            <textarea id="mcpServers" name="mcpServers"
+                                placeholder='[{"type": "url", "name": "server_name", "url": "https://mcp.example.com", "headers": {"x-api-key": "key"}}]'></textarea>
+                            <div class="help-text">Model Context Protocol servers for extended functionality (Beta
+                                feature)</div>
+                        </div>
+                    </div>
                 </div>
 
                 <button type="submit" id="submitBtn">Create Task</button>
@@ -639,6 +935,22 @@
         // Use the proxied API endpoint
         const API_BASE = window.location.origin + '/tasks-sse/api';
 
+        // Domain management
+        let includeDomainsList = [];
+        let excludeDomainsList = [];
+
+        // Processor information
+        const processorInfo = {
+            lite: { description: "Basic metadata, fallback, low latency", latency: "5s-60s", cost: 5, fields: "~2 fields" },
+            base: { description: "Reliable standard enrichments", latency: "15s-100s", cost: 10, fields: "~5 fields" },
+            core: { description: "Cross-referenced, moderately complex outputs", latency: "60s-5min", cost: 25, fields: "~10 fields" },
+            pro: { description: "Exploratory web research", latency: "3min-9min", cost: 100, fields: "~20 fields" },
+            ultra: { description: "Advanced multi-source deep research", latency: "5min-25min", cost: 300, fields: "~20 fields" },
+            ultra2x: { description: "Difficult deep research", latency: "5min-25min", cost: 600, fields: "~25 fields" },
+            ultra4x: { description: "Very difficult deep research", latency: "8min-30min", cost: 1200, fields: "~25 fields" },
+            ultra8x: { description: "The most difficult deep research", latency: "8min-30min", cost: 2400, fields: "~25 fields" }
+        };
+
         // Check for existing auth on page load
         window.onload = function () {
             currentApiKey = localStorage.getItem('parallel_api_key');
@@ -646,6 +958,7 @@
                 updateAuthStatus(true);
             }
             loadTasks();
+            updateProcessorInfo();
 
             // Handle OAuth callback
             const code = new URLSearchParams(window.location.search).get('code');
@@ -656,6 +969,77 @@
             // Set default task input
             document.getElementById('taskInput').value = 'What are the latest developments in AI research from the past month?';
         };
+
+        function updateProcessorInfo() {
+            const processor = document.getElementById('processor').value;
+            const info = processorInfo[processor];
+            document.getElementById('processorInfo').innerHTML = `
+                <strong>${processor.charAt(0).toUpperCase() + processor.slice(1)}:</strong> ${info.description}<br>
+                <strong>Latency:</strong> ${info.latency} | <strong>Max Fields:</strong> ${info.fields} | <span class="cost-info">$${info.cost}/1000 runs</span>
+            `;
+        }
+
+        function toggleCollapsible(id) {
+            const content = document.getElementById(id);
+            const header = content.previousElementSibling;
+            const toggle = header.querySelector('.collapsible-toggle');
+
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                toggle.textContent = '▼';
+            } else {
+                content.classList.add('active');
+                toggle.textContent = '▲';
+            }
+        }
+
+        function toggleWebhookFields() {
+            const enabled = document.getElementById('enableWebhook').checked;
+            const fields = document.getElementById('webhookFields');
+
+            if (enabled) {
+                fields.classList.remove('hidden');
+            } else {
+                fields.classList.add('hidden');
+            }
+        }
+
+        function addDomain(type) {
+            const input = document.getElementById(`${type}DomainsInput`);
+            const domain = input.value.trim();
+
+            if (!domain) return;
+
+            const list = type === 'include' ? includeDomainsList : excludeDomainsList;
+
+            if (!list.includes(domain)) {
+                list.push(domain);
+                updateDomainDisplay(type);
+                input.value = '';
+            }
+        }
+
+        function removeDomain(type, domain) {
+            const list = type === 'include' ? includeDomainsList : excludeDomainsList;
+            const index = list.indexOf(domain);
+
+            if (index > -1) {
+                list.splice(index, 1);
+                updateDomainDisplay(type);
+            }
+        }
+
+        function updateDomainDisplay(type) {
+            const container = document.getElementById(`${type}Domains`);
+            const list = type === 'include' ? includeDomainsList : excludeDomainsList;
+
+            container.innerHTML = list.map(domain => `
+                <div class="domain-tag">
+                    ${domain}
+                    <span class="remove" onclick="removeDomain('${type}', '${domain}')">&times;</span>
+                </div>
+            `).join('');
+        }
 
         async function startOAuth() {
             try {
@@ -791,12 +1175,14 @@
             const outputType = document.getElementById('outputType').value;
             const jsonSchemaGroup = document.getElementById('jsonSchemaGroup');
             const textDescriptionGroup = document.getElementById('textDescriptionGroup');
+            const inputSchemaGroup = document.getElementById('inputSchemaGroup');
 
             jsonSchemaGroup.classList.add('hidden');
             textDescriptionGroup.classList.add('hidden');
 
             if (outputType === 'json') {
                 jsonSchemaGroup.classList.remove('hidden');
+                inputSchemaGroup.classList.remove('hidden');
                 document.getElementById('jsonSchema').value = JSON.stringify({
                     "type": "object",
                     "properties": {
@@ -808,13 +1194,21 @@
                             "type": "array",
                             "items": { "type": "string" },
                             "description": "List of key points or insights"
+                        },
+                        "date_range": {
+                            "type": "string",
+                            "description": "Time period covered by the research"
                         }
                     },
-                    "required": ["summary", "key_points"]
+                    "required": ["summary", "key_points", "date_range"],
+                    "additionalProperties": false
                 }, null, 2);
             } else if (outputType === 'text') {
                 textDescriptionGroup.classList.remove('hidden');
+                inputSchemaGroup.classList.remove('hidden');
                 document.getElementById('textDescription').value = 'A detailed response with well-structured information and insights.';
+            } else {
+                inputSchemaGroup.classList.remove('hidden');
             }
         }
 
@@ -836,6 +1230,8 @@
                 const input = formData.get('taskInput');
                 const processor = formData.get('processor');
                 const outputType = formData.get('outputType');
+                const enableEvents = document.getElementById('enableEvents').checked;
+
                 let taskSpec = null;
 
                 if (outputType === 'json') {
@@ -866,21 +1262,89 @@
                         }
                     };
                 }
+
+                // Add input schema if provided
+                const inputSchemaText = document.getElementById('inputSchema').value.trim();
+                if (inputSchemaText) {
+                    taskSpec.input_schema = inputSchemaText;
+                }
+
                 const body = {
                     input: input,
                     processor: processor,
                     task_spec: taskSpec,
-                    enable_events: true
+                    enable_events: enableEvents
+                };
+
+                // Add source policy
+                if (includeDomainsList.length > 0 || excludeDomainsList.length > 0) {
+                    body.source_policy = {};
+                    if (includeDomainsList.length > 0) {
+                        body.source_policy.include_domains = includeDomainsList;
+                    }
+                    if (excludeDomainsList.length > 0) {
+                        body.source_policy.exclude_domains = excludeDomainsList;
+                    }
                 }
-                console.log({ outputType, body })
+
+                // Add metadata
+                const metadataText = document.getElementById('metadata').value.trim();
+                if (metadataText) {
+                    try {
+                        body.metadata = JSON.parse(metadataText);
+                    } catch (error) {
+                        throw new Error('Invalid metadata JSON: ' + error.message);
+                    }
+                }
+
+                // Add MCP servers
+                const mcpServersText = document.getElementById('mcpServers').value.trim();
+                if (mcpServersText) {
+                    try {
+                        body.mcp_servers = JSON.parse(mcpServersText);
+                    } catch (error) {
+                        throw new Error('Invalid MCP servers JSON: ' + error.message);
+                    }
+                }
+
+                // Add webhook
+                if (document.getElementById('enableWebhook').checked) {
+                    const webhookUrl = document.getElementById('webhookUrl').value.trim();
+                    if (webhookUrl) {
+                        body.webhook = {
+                            url: webhookUrl,
+                            event_types: []
+                        };
+
+                        if (document.getElementById('webhookTaskRunStatus').checked) {
+                            body.webhook.event_types.push('task_run.status');
+                        }
+                    }
+                }
+
+                let headers = {
+                    'x-api-key': currentApiKey,
+                    'Content-Type': 'application/json'
+                };
+
+                // Add beta headers for advanced features
+                let betaFeatures = ['events-sse-2025-07-24'];
+                if (body.mcp_servers) {
+                    betaFeatures.push('mcp-server-2025-07-17');
+                }
+                if (body.webhook) {
+                    betaFeatures.push('webhook-2025-08-12');
+                }
+
+                if (betaFeatures.length > 0) {
+                    headers['parallel-beta'] = betaFeatures.join(',');
+                }
+
+                console.log({ outputType, body, headers });
 
                 const response = await fetch(`${API_BASE}/v1/tasks/runs`, {
                     method: 'POST',
-                    headers: {
-                        'x-api-key': currentApiKey,
-                        'Content-Type': 'application/json',
-                        'parallel-beta': 'events-sse-2025-07-24'
-                    },
+                    headers: headers,
                     body: JSON.stringify(body)
                 });
 
@@ -898,6 +1362,25 @@
                 document.getElementById('outputType').value = 'auto';
                 updateOutputSchema();
                 document.getElementById('taskInput').value = 'What are the latest developments in AI research from the past month?';
+                document.getElementById('enableEvents').checked = true;
+                document.getElementById('processor').value = 'pro';
+                updateProcessorInfo();
+
+                // Reset advanced options
+                includeDomainsList = [];
+                excludeDomainsList = [];
+                updateDomainDisplay('include');
+                updateDomainDisplay('exclude');
+
+                // Hide advanced sections
+                document.querySelectorAll('.collapsible-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.querySelectorAll('.collapsible-toggle').forEach(toggle => {
+                    toggle.textContent = '▼';
+                });
+
+                document.getElementById('webhookFields').classList.add('hidden');
 
             } catch (error) {
                 alert('Error creating task: ' + error.message);
@@ -1303,6 +1786,21 @@
                 localStorage.setItem('parallel_tasks', JSON.stringify(tasks));
             }
         }
+
+        // Allow Enter key to add domains
+        document.getElementById('includeDomainsInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addDomain('include');
+            }
+        });
+
+        document.getElementById('excludeDomainsInput').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                addDomain('exclude');
+            }
+        });
     </script>
 </body>
 
