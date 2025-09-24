@@ -19,3 +19,9 @@ Context:
 
 - make SSE events actually stream. the sse events aren't the easiest to read in this format, my suggestion would be to change the UI for streaming so that its a scorecard of sources considered & read, where the numbers update, rather than progress update events showing like this. showing off the sources we read right at the top of the sse events page would be valuable for a demo
 - Get back to it in slack https://wilmake.slack.com/archives/C09807JBB26/p1758041651707579
+
+##
+
+Discovered statefulness of stream api and improved docs with that: https://letmeprompt.com/rules-httpsuithu-2k8wr80
+
+Discovered browser-based use of the API isn't allowed due to CORS issue.

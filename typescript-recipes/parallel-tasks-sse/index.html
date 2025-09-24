@@ -6,7 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Parallel Task Stream Demo</title>
     <style>
-        @import url('https://assets.p0web.com/FTSystemMono-Regular.woff2');
+        /* Define font faces properly */
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('Gerstner-ProgrammMedium.woff2') format('woff2');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
 
         :root {
             --off-white: #fcfcfa;
@@ -22,7 +45,7 @@
         }
 
         body {
-            font-family: 'FT System Mono', 'Courier New', monospace;
+            font-family: 'Gerstner Programm', 'FT System Mono', 'Courier New', monospace;
             background-color: var(--off-white);
             color: var(--index-black);
             line-height: 1.6;
@@ -42,9 +65,34 @@
             border-radius: 8px;
         }
 
-        h1 {
-            color: var(--signal);
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
             margin-bottom: 10px;
+        }
+
+        .logo-title img {
+            height: 40px;
+            width: auto;
+        }
+
+        h1 {
+            color: var(--index-black);
+            font-family: 'Gerstner Programm', serif;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Gerstner Programm', serif;
+            font-weight: 500;
+        }
+
+        .subtitle {
+            font-family: 'FT System Mono', monospace;
+            font-size: 14px;
         }
 
         .links {
@@ -52,6 +100,7 @@
             justify-content: center;
             gap: 20px;
             margin-top: 15px;
+            flex-wrap: wrap;
         }
 
         .links a {
@@ -63,6 +112,9 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            transition: background-color 0.2s;
+            font-family: 'FT System Mono', monospace;
+            font-size: 13px;
         }
 
         .links a:hover {
@@ -101,6 +153,7 @@
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
+            font-family: 'FT System Mono', monospace;
         }
 
         input,
@@ -111,13 +164,14 @@
             padding: 10px;
             border: 1px solid var(--neural);
             border-radius: 4px;
-            font-family: inherit;
+            font-family: 'Gerstner Programm', serif;
             font-size: 14px;
         }
 
         textarea {
             resize: vertical;
             min-height: 80px;
+            font-family: 'FT System Mono', monospace;
         }
 
         button {
@@ -126,9 +180,11 @@
             border: none;
             cursor: pointer;
             font-weight: bold;
+            transition: background-color 0.2s;
+            font-family: 'FT System Mono', monospace;
         }
 
-        button:hover {
+        button:hover:not(:disabled) {
             background-color: #e55519;
         }
 
@@ -145,6 +201,8 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 15px;
+            font-family: 'FT System Mono', monospace;
+            font-size: 13px;
         }
 
         .tasks-table th,
@@ -164,11 +222,16 @@
             cursor: pointer;
         }
 
+        .tasks-table tr.selected {
+            background-color: rgba(251, 99, 27, 0.2);
+        }
+
         .status {
             padding: 4px 8px;
             border-radius: 4px;
             font-size: 12px;
             font-weight: bold;
+            font-family: 'FT System Mono', monospace;
         }
 
         .status.queued {
@@ -191,6 +254,11 @@
             color: #58151c;
         }
 
+        .status.cancelled {
+            background-color: #e2e3e5;
+            color: #383d41;
+        }
+
         .task-details {
             margin-top: 30px;
             padding: 20px;
@@ -203,21 +271,80 @@
             display: block;
         }
 
-        .events-container {
-            max-height: 400px;
-            overflow-y: auto;
-            border: 1px solid var(--neural);
-            border-radius: 4px;
-            padding: 15px;
-            background-color: #f8f8f6;
-            margin-top: 15px;
+        .stream-controls {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .stream-btn {
+            width: auto !important;
+            padding: 12px 24px !important;
+            display: flex !important;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .streaming-indicator {
+            display: none;
+            align-items: center;
+            gap: 8px;
+            color: var(--signal);
+            font-family: 'FT System Mono', monospace;
+            font-size: 13px;
+        }
+
+        .streaming-indicator.active {
+            display: flex;
+        }
+
+        .pulse {
+            width: 8px;
+            height: 8px;
+            background-color: var(--signal);
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.2);
+            }
+        }
+
+        .events-section {
+            margin-top: 30px;
         }
 
         .event {
-            margin-bottom: 10px;
-            padding: 8px;
-            border-radius: 4px;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
             border-left: 4px solid var(--neural);
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .event.progress-msg {
@@ -240,16 +367,19 @@
             font-weight: bold;
             color: var(--signal);
             font-size: 12px;
+            font-family: 'FT System Mono', monospace;
         }
 
         .event-timestamp {
             font-size: 11px;
             color: #6c757d;
             float: right;
+            font-family: 'FT System Mono', monospace;
         }
 
         .event-message {
-            margin-top: 5px;
+            margin-top: 8px;
+            font-family: 'Gerstner Programm', serif;
         }
 
         .progress-stats {
@@ -264,6 +394,8 @@
             padding: 8px;
             border-radius: 4px;
             border: 1px solid var(--neural);
+            font-family: 'FT System Mono', monospace;
+            font-size: 13px;
         }
 
         .output-section {
@@ -276,11 +408,14 @@
 
         .json-output {
             background-color: #f8f9fa;
-            padding: 10px;
+            padding: 15px;
             border-radius: 4px;
-            font-family: monospace;
+            font-family: 'FT System Mono', monospace;
+            font-size: 13px;
             white-space: pre-wrap;
             overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
         }
 
         .hidden {
@@ -301,14 +436,92 @@
             width: 16px;
             height: 16px;
         }
+
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .citation {
+            margin-top: 8px;
+            padding: 8px;
+            border-left: 3px solid var(--neural);
+            background-color: rgba(216, 208, 191, 0.1);
+            font-family: 'Gerstner Programm', serif;
+            font-size: 13px;
+        }
+
+        .citation a {
+            color: var(--signal);
+            text-decoration: none;
+        }
+
+        .citation a:hover {
+            text-decoration: underline;
+        }
+
+        .stream-status {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 8px;
+            background-color: #dc3545;
+        }
+
+        .stream-status.connected {
+            background-color: #28a745;
+        }
+
+        .no-events-message {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+            font-family: 'FT System Mono', monospace;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .logo-title {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .progress-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .tasks-table {
+                font-size: 12px;
+            }
+
+            .tasks-table th,
+            .tasks-table td {
+                padding: 8px;
+            }
+
+            .stream-controls {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <h1>Parallel Task Stream Demo</h1>
-            <p>Create tasks and stream their execution events in real-time</p>
+            <div class="logo-title">
+                <img src="dark-parallel-logo-270.svg" alt="Parallel Logo">
+                <h1>Task Stream Demo</h1>
+            </div>
+            <p class="subtitle">Create tasks and stream their execution events in real-time</p>
             <div class="links">
                 <a href="https://docs.parallel.ai/api-reference/task-api-v1/stream-task-run-events" target="_blank">
                     📚 Stream Events Documentation
@@ -322,6 +535,8 @@
                     View Code
                 </a>
             </div>
+            <p class="subtitle">To view the events in JSON, open developer console.</p>
+
         </header>
 
         <div class="auth-section" id="authSection">
@@ -336,21 +551,22 @@
             <form id="taskForm">
                 <div class="form-group">
                     <label for="taskInput">Task Input:</label>
-                    <textarea id="taskInput" placeholder="Enter your task description..." required></textarea>
+                    <textarea id="taskInput" name="taskInput" placeholder="Enter your task description..."
+                        required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="processor">Processor:</label>
-                    <select id="processor" required>
+                    <select id="processor" name="processor" required>
                         <option value="base">Base</option>
-                        <option value="pro">Pro</option>
+                        <option value="pro" selected>Pro</option>
                         <option value="lite">Lite</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label for="outputType">Output Type:</label>
-                    <select id="outputType" onchange="updateOutputSchema()" required>
+                    <select id="outputType" name="outputType" onchange="updateOutputSchema()" required>
                         <option value="auto">Auto Schema</option>
                         <option value="text">Text Output</option>
                         <option value="json">JSON Output</option>
@@ -359,15 +575,16 @@
 
                 <div class="form-group hidden" id="jsonSchemaGroup">
                     <label for="jsonSchema">JSON Schema:</label>
-                    <textarea id="jsonSchema" placeholder="Enter JSON schema..."></textarea>
+                    <textarea id="jsonSchema" name="jsonSchema" placeholder="Enter JSON schema..."></textarea>
                 </div>
 
                 <div class="form-group hidden" id="textDescriptionGroup">
                     <label for="textDescription">Text Description:</label>
-                    <textarea id="textDescription" placeholder="Describe the desired text output..."></textarea>
+                    <textarea id="textDescription" name="textDescription"
+                        placeholder="Describe the desired text output..."></textarea>
                 </div>
 
-                <button type="submit">Create Task</button>
+                <button type="submit" id="submitBtn">Create Task</button>
             </form>
         </div>
 
@@ -392,10 +609,23 @@
         <div class="task-details" id="taskDetails">
             <h2>Task Details</h2>
             <div id="taskInfo"></div>
-            <div class="events-container" id="eventsContainer">
-                <p>Click "Start Streaming" to see events...</p>
+
+            <div class="stream-controls">
+                <button class="stream-btn" id="streamBtn" onclick="toggleStream()">
+                    <span class="stream-status" id="streamStatus"></span>
+                    Start Streaming
+                </button>
+                <div class="streaming-indicator" id="streamingIndicator">
+                    <div class="pulse"></div>
+                    Streaming events...
+                </div>
             </div>
-            <button id="streamBtn" onclick="toggleStream()">Start Streaming</button>
+
+            <div class="events-section" id="eventsSection">
+                <div class="no-events-message" id="noEventsMessage">
+                    Click "Start Streaming" to see events...
+                </div>
+            </div>
         </div>
     </div>
 
@@ -405,6 +635,9 @@
         let eventSource = null;
         let streamReconnectAttempts = 0;
         const MAX_RECONNECT_ATTEMPTS = 3;
+
+        // Use the proxied API endpoint
+        const API_BASE = window.location.origin + '/tasks-sse/api';
 
         // Check for existing auth on page load
         window.onload = function () {
@@ -419,6 +652,9 @@
             if (code) {
                 handleOAuthCallback(code);
             }
+
+            // Set default task input
+            document.getElementById('taskInput').value = 'What are the latest developments in AI research from the past month?';
         };
 
         async function startOAuth() {
@@ -547,6 +783,7 @@
             if (eventSource) {
                 eventSource.close();
                 eventSource = null;
+                updateStreamStatus(false);
             }
         }
 
@@ -563,15 +800,21 @@
                 document.getElementById('jsonSchema').value = JSON.stringify({
                     "type": "object",
                     "properties": {
-                        "answer": {
+                        "summary": {
                             "type": "string",
-                            "description": "The answer to the question"
+                            "description": "A comprehensive summary of the findings"
+                        },
+                        "key_points": {
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "description": "List of key points or insights"
                         }
                     },
-                    "required": ["answer"]
+                    "required": ["summary", "key_points"]
                 }, null, 2);
             } else if (outputType === 'text') {
                 textDescriptionGroup.classList.remove('hidden');
+                document.getElementById('textDescription').value = 'A detailed response with well-structured information and insights.';
             }
         }
 
@@ -583,61 +826,67 @@
                 return;
             }
 
-            const formData = new FormData(e.target);
-            const input = formData.get('taskInput');
-            const processor = formData.get('processor');
-            const outputType = formData.get('outputType');
-
-            let taskSpec = null;
-
-            if (outputType === 'json') {
-                const jsonSchemaText = document.getElementById('jsonSchema').value;
-                try {
-                    const jsonSchema = JSON.parse(jsonSchemaText);
-                    taskSpec = {
-                        output_schema: {
-                            type: 'json',
-                            json_schema: jsonSchema
-                        }
-                    };
-                } catch (error) {
-                    alert('Invalid JSON schema: ' + error.message);
-                    return;
-                }
-            } else if (outputType === 'text') {
-                const description = document.getElementById('textDescription').value;
-                taskSpec = {
-                    output_schema: {
-                        type: 'text',
-                        description: description || null
-                    }
-                };
-            } else {
-                taskSpec = {
-                    output_schema: {
-                        type: 'auto'
-                    }
-                };
-            }
+            const submitBtn = document.getElementById('submitBtn');
+            const originalText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Creating...';
 
             try {
-                const response = await fetch('https://api.parallel.ai/v1/tasks/runs', {
+                const formData = new FormData(e.target);
+                const input = formData.get('taskInput');
+                const processor = formData.get('processor');
+                const outputType = formData.get('outputType');
+                let taskSpec = null;
+
+                if (outputType === 'json') {
+                    const jsonSchemaText = document.getElementById('jsonSchema').value;
+                    try {
+                        const jsonSchema = JSON.parse(jsonSchemaText);
+                        taskSpec = {
+                            output_schema: {
+                                type: 'json',
+                                json_schema: jsonSchema
+                            }
+                        };
+                    } catch (error) {
+                        throw new Error('Invalid JSON schema: ' + error.message);
+                    }
+                } else if (outputType === 'text') {
+                    const description = document.getElementById('textDescription').value;
+                    taskSpec = {
+                        output_schema: {
+                            type: 'text',
+                            description: description || null
+                        }
+                    };
+                } else {
+                    taskSpec = {
+                        output_schema: {
+                            type: 'auto'
+                        }
+                    };
+                }
+                const body = {
+                    input: input,
+                    processor: processor,
+                    task_spec: taskSpec,
+                    enable_events: true
+                }
+                console.log({ outputType, body })
+
+                const response = await fetch(`${API_BASE}/v1/tasks/runs`, {
                     method: 'POST',
                     headers: {
                         'x-api-key': currentApiKey,
                         'Content-Type': 'application/json',
                         'parallel-beta': 'events-sse-2025-07-24'
                     },
-                    body: JSON.stringify({
-                        input: input,
-                        processor: processor,
-                        task_spec: taskSpec,
-                        enable_events: true
-                    })
+                    body: JSON.stringify(body)
                 });
 
                 if (!response.ok) {
-                    throw new Error('Failed to create task: ' + response.statusText);
+                    const errorText = await response.text();
+                    throw new Error(`Failed to create task (${response.status}): ${errorText}`);
                 }
 
                 const taskRun = await response.json();
@@ -648,15 +897,19 @@
                 e.target.reset();
                 document.getElementById('outputType').value = 'auto';
                 updateOutputSchema();
+                document.getElementById('taskInput').value = 'What are the latest developments in AI research from the past month?';
 
             } catch (error) {
                 alert('Error creating task: ' + error.message);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
             }
         };
 
         function saveTask(taskRun, input, outputType) {
             const tasks = JSON.parse(localStorage.getItem('parallel_tasks') || '[]');
-            tasks.push({
+            tasks.unshift({ // Add to beginning
                 ...taskRun,
                 input: input,
                 outputType: outputType,
@@ -681,12 +934,12 @@
             status.textContent = `${tasks.length} task(s) created`;
 
             tbody.innerHTML = tasks.map(task => `
-                <tr onclick="selectTask('${task.run_id}')" data-run-id="${task.run_id}">
-                    <td>${task.run_id}</td>
+                <tr onclick="selectTask('${task.run_id}')" data-run-id="${task.run_id}" class="${currentTaskRun?.run_id === task.run_id ? 'selected' : ''}">
+                    <td title="${task.run_id}">${task.run_id.substring(0, 20)}...</td>
                     <td><span class="status ${task.status}">${task.status}</span></td>
                     <td>${task.processor}</td>
                     <td>${new Date(task.created_at).toLocaleString()}</td>
-                    <td>${task.input.substring(0, 50)}${task.input.length > 50 ? '...' : ''}</td>
+                    <td title="${task.input}">${task.input.substring(0, 50)}${task.input.length > 50 ? '...' : ''}</td>
                 </tr>
             `).join('');
         }
@@ -696,6 +949,12 @@
             currentTaskRun = tasks.find(task => task.run_id === runId);
 
             if (!currentTaskRun) return;
+
+            // Update table selection
+            document.querySelectorAll('.tasks-table tr').forEach(row => {
+                row.classList.remove('selected');
+            });
+            document.querySelector(`tr[data-run-id="${runId}"]`).classList.add('selected');
 
             const taskDetails = document.getElementById('taskDetails');
             const taskInfo = document.getElementById('taskInfo');
@@ -717,7 +976,7 @@
                 </div>
                 <div class="output-section">
                     <strong>Input:</strong>
-                    <div style="margin-top: 8px; padding: 10px; background-color: #f8f9fa; border-radius: 4px;">
+                    <div style="margin-top: 8px; padding: 10px; background-color: #f8f9fa; border-radius: 4px; max-height: 100px; overflow-y: auto; font-family: 'FT System Mono', monospace; font-size: 13px;">
                         ${currentTaskRun.input}
                     </div>
                 </div>
@@ -726,22 +985,46 @@
             taskDetails.classList.add('active');
 
             // Clear previous events
-            document.getElementById('eventsContainer').innerHTML = '<p>Click "Start Streaming" to see events...</p>';
+            clearEvents();
 
             // Close existing stream
             if (eventSource) {
                 eventSource.close();
                 eventSource = null;
+                updateStreamStatus(false);
             }
 
-            document.getElementById('streamBtn').textContent = 'Start Streaming';
+            document.getElementById('streamBtn').innerHTML = `
+                <span class="stream-status" id="streamStatus"></span>
+                Start Streaming
+            `;
+        }
+
+        function clearEvents() {
+            const eventsSection = document.getElementById('eventsSection');
+            const noEventsMessage = document.getElementById('noEventsMessage');
+
+            eventsSection.innerHTML = '';
+            eventsSection.appendChild(noEventsMessage);
+            noEventsMessage.style.display = 'block';
+        }
+
+        function hideNoEventsMessage() {
+            const noEventsMessage = document.getElementById('noEventsMessage');
+            if (noEventsMessage) {
+                noEventsMessage.style.display = 'none';
+            }
         }
 
         function toggleStream() {
             if (eventSource) {
                 eventSource.close();
                 eventSource = null;
-                document.getElementById('streamBtn').textContent = 'Start Streaming';
+                updateStreamStatus(false);
+                document.getElementById('streamBtn').innerHTML = `
+                    <span class="stream-status" id="streamStatus"></span>
+                    Start Streaming
+                `;
                 return;
             }
 
@@ -756,64 +1039,119 @@
         function startStream() {
             if (!currentApiKey || !currentTaskRun) return;
 
-            const eventsContainer = document.getElementById('eventsContainer');
-            eventsContainer.innerHTML = '<p>Connecting to event stream...</p>';
+            clearEvents();
+            hideNoEventsMessage();
 
-            eventSource = new EventSource(`https://api.parallel.ai/v1beta/tasks/runs/${currentTaskRun.run_id}/events`, {
-                headers: {
-                    'x-api-key': currentApiKey
+            // Use the proxied API endpoint for EventSource
+            const eventSourceUrl = `${API_BASE}/v1beta/tasks/runs/${currentTaskRun.run_id}/events`;
+
+            eventSource = new EventSource(eventSourceUrl);
+
+            // Add headers by creating a custom request (EventSource doesn't support custom headers directly)
+            // We need to send the API key through the proxy
+            eventSource.close();
+
+            // Create a manual SSE connection with fetch
+            createSSEConnection(eventSourceUrl);
+        }
+
+        async function createSSEConnection(url) {
+            try {
+                const response = await fetch(url, {
+                    method: 'GET',
+                    headers: {
+                        'x-api-key': currentApiKey,
+                        'Accept': 'text/event-stream',
+                        'Cache-Control': 'no-cache'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                 }
-            });
 
-            eventSource.onopen = function () {
-                eventsContainer.innerHTML = '<p>Connected! Waiting for events...</p>';
-                document.getElementById('streamBtn').textContent = 'Stop Streaming';
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = '';
+
+                updateStreamStatus(true);
+                document.getElementById('streamBtn').innerHTML = `
+                    <span class="stream-status connected" id="streamStatus"></span>
+                    Stop Streaming
+                `;
+
+                hideNoEventsMessage();
                 streamReconnectAttempts = 0;
-            };
 
-            eventSource.onmessage = function (event) {
-                try {
-                    const data = JSON.parse(event.data);
-                    handleEvent(data);
-                } catch (error) {
-                    console.error('Error parsing event:', error);
-                }
-            };
+                // Create an abort controller to handle manual closing
+                const abortController = new AbortController();
+                eventSource = { close: () => abortController.abort() };
 
-            eventSource.onerror = function (error) {
-                console.error('EventSource error:', error);
+                while (true) {
+                    const { done, value } = await reader.read();
 
-                if (eventSource.readyState === EventSource.CLOSED) {
-                    // Stream ended normally or timed out
-                    document.getElementById('streamBtn').textContent = 'Start Streaming';
+                    if (done || abortController.signal.aborted) break;
 
-                    if (streamReconnectAttempts < MAX_RECONNECT_ATTEMPTS) {
-                        streamReconnectAttempts++;
-                        setTimeout(() => {
-                            if (currentTaskRun && ['queued', 'running'].includes(currentTaskRun.status)) {
-                                console.log(`Reconnecting attempt ${streamReconnectAttempts}...`);
-                                startStream();
+                    buffer += decoder.decode(value, { stream: true });
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop(); // Keep the incomplete line
+
+                    let eventData = {};
+
+                    for (const line of lines) {
+                        if (line.startsWith('data: ')) {
+                            try {
+                                const data = JSON.parse(line.substring(6));
+                                handleEvent(data);
+                            } catch (error) {
+                                console.error('Error parsing event data:', error, line);
                             }
-                        }, 2000);
+                        } else if (line.startsWith('event: ')) {
+                            // Handle event type if needed
+                        }
                     }
                 }
-            };
 
-            // Auto-close after 570 seconds (stream timeout)
-            setTimeout(() => {
-                if (eventSource && eventSource.readyState === EventSource.OPEN) {
-                    eventSource.close();
+            } catch (error) {
+                console.error('SSE Connection error:', error);
+                updateStreamStatus(false);
+                document.getElementById('streamBtn').innerHTML = `
+                    <span class="stream-status" id="streamStatus"></span>
+                    Start Streaming
+                `;
+
+                // Auto-retry for active tasks
+                if (streamReconnectAttempts < MAX_RECONNECT_ATTEMPTS &&
+                    currentTaskRun && ['queued', 'running'].includes(currentTaskRun.status)) {
+                    streamReconnectAttempts++;
+                    setTimeout(() => {
+                        console.log(`Reconnecting attempt ${streamReconnectAttempts}...`);
+                        startStream();
+                    }, 2000);
                 }
-            }, 570000);
+            }
+        }
+
+        function updateStreamStatus(connected) {
+            const streamStatus = document.getElementById('streamStatus');
+            const streamingIndicator = document.getElementById('streamingIndicator');
+
+            if (streamStatus) {
+                if (connected) {
+                    streamStatus.classList.add('connected');
+                    streamingIndicator.classList.add('active');
+                } else {
+                    streamStatus.classList.remove('connected');
+                    streamingIndicator.classList.remove('active');
+                }
+            }
         }
 
         function handleEvent(data) {
-            const eventsContainer = document.getElementById('eventsContainer');
+            console.log(`event [${data.type}]`, data);
+            const eventsSection = document.getElementById('eventsSection');
 
-            // Clear "waiting" message if it exists
-            if (eventsContainer.innerHTML.includes('Waiting for events') || eventsContainer.innerHTML.includes('Connecting')) {
-                eventsContainer.innerHTML = '';
-            }
+            hideNoEventsMessage();
 
             let eventHtml = '';
             let eventClass = '';
@@ -842,6 +1180,15 @@
                             ${outputHtml}
                         </div>`;
                     }
+
+                    // Stop streaming animation when task completes
+                    if (!data.run.is_active) {
+                        updateStreamStatus(false);
+                        document.getElementById('streamBtn').innerHTML = `
+                            <span class="stream-status" id="streamStatus"></span>
+                            Start Streaming
+                        `;
+                    }
                     break;
 
                 case 'task_run.progress_stats':
@@ -853,11 +1200,11 @@
                             <div class="stat">Sources Considered: ${stats.num_sources_considered || 'N/A'}</div>
                             <div class="stat">Sources Read: ${stats.num_sources_read || 'N/A'}</div>
                         </div>
-                        ${stats.sources_read_sample ? `
+                        ${stats.sources_read_sample && stats.sources_read_sample.length > 0 ? `
                             <div style="margin-top: 10px;">
                                 <strong>Sample Sources:</strong>
                                 <ul style="margin-top: 5px; margin-left: 20px;">
-                                    ${stats.sources_read_sample.slice(0, 3).map(url => `<li><a href="${url}" target="_blank">${url}</a></li>`).join('')}
+                                    ${stats.sources_read_sample.slice(0, 3).map(url => `<li><a href="${url}" target="_blank" rel="noopener noreferrer">${url.length > 60 ? url.substring(0, 60) + '...' : url}</a></li>`).join('')}
                                 </ul>
                             </div>
                         ` : ''}
@@ -878,7 +1225,7 @@
                 default:
                     if (data.type.startsWith('task_run.progress_msg')) {
                         eventClass = 'progress-msg';
-                        const msgType = data.type.split('.').pop().toUpperCase();
+                        const msgType = data.type.split('.').pop().toUpperCase().replace('_', ' ');
                         eventHtml = `
                             <div class="event-type">${msgType}</div>
                             ${data.timestamp ? `<div class="event-timestamp">${new Date(data.timestamp).toLocaleString()}</div>` : ''}
@@ -888,7 +1235,7 @@
                         eventClass = 'unknown';
                         eventHtml = `
                             <div class="event-type">${data.type.toUpperCase()}</div>
-                            <div class="event-message">${JSON.stringify(data, null, 2)}</div>
+                            <div class="event-message"><pre style="font-family: 'FT System Mono', monospace; font-size: 12px;">${JSON.stringify(data, null, 2)}</pre></div>
                         `;
                     }
                     break;
@@ -898,8 +1245,10 @@
             eventDiv.className = `event ${eventClass}`;
             eventDiv.innerHTML = eventHtml;
 
-            eventsContainer.appendChild(eventDiv);
-            eventsContainer.scrollTop = eventsContainer.scrollHeight;
+            eventsSection.appendChild(eventDiv);
+
+            // Scroll to the new event
+            eventDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }
 
         function formatOutput(output) {
@@ -910,10 +1259,11 @@
                         <div style="margin-top: 10px;">
                             <strong>Citations & Reasoning:</strong>
                             ${output.basis.map(basis => `
-                                <div style="margin-top: 8px; padding: 8px; border-left: 3px solid var(--neural); background-color: #f8f9fa;">
+                                <div class="citation">
                                     <strong>${basis.field}:</strong> ${basis.reasoning}
+                                    ${basis.confidence ? `<br><small><strong>Confidence:</strong> ${basis.confidence}</small>` : ''}
                                     ${basis.citations && basis.citations.length > 0 ? `
-                                        <br><small>Sources: ${basis.citations.map(c => `<a href="${c.url}" target="_blank">${c.title || c.url}</a>`).join(', ')}</small>
+                                        <br><small><strong>Sources:</strong> ${basis.citations.map(c => `<a href="${c.url}" target="_blank" rel="noopener noreferrer">${c.title || c.url}</a>`).join(', ')}</small>
                                     ` : ''}
                                 </div>
                             `).join('')}
@@ -922,17 +1272,18 @@
                 `;
             } else if (output.type === 'text') {
                 return `
-                    <div style="padding: 10px; background-color: #f8f9fa; border-radius: 4px; white-space: pre-wrap;">
+                    <div style="padding: 15px; background-color: #f8f9fa; border-radius: 4px; white-space: pre-wrap; max-height: 400px; overflow-y: auto; font-family: 'Gerstner Programm', serif;">
                         ${output.content}
                     </div>
                     ${output.basis && output.basis.length > 0 ? `
                         <div style="margin-top: 10px;">
-                            <strong>Reasoning:</strong>
+                            <strong>Reasoning & Citations:</strong>
                             ${output.basis.map(basis => `
-                                <div style="margin-top: 8px; padding: 8px; border-left: 3px solid var(--neural); background-color: #f8f9fa;">
+                                <div class="citation">
                                     ${basis.reasoning}
+                                    ${basis.confidence ? `<br><small><strong>Confidence:</strong> ${basis.confidence}</small>` : ''}
                                     ${basis.citations && basis.citations.length > 0 ? `
-                                        <br><small>Sources: ${basis.citations.map(c => `<a href="${c.url}" target="_blank">${c.title || c.url}</a>`).join(', ')}</small>
+                                        <br><small><strong>Sources:</strong> ${basis.citations.map(c => `<a href="${c.url}" target="_blank" rel="noopener noreferrer">${c.title || c.url}</a>`).join(', ')}</small>
                                     ` : ''}
                                 </div>
                             `).join('')}
