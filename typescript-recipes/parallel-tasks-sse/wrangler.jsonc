@@ -2,18 +2,13 @@
   "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
   "name": "parallel-tasks-sse",
   "account_id": "aceab98f1a2fc658ed4e20bc307fa65a",
-  "main": "worker.ts",
   "compatibility_date": "2025-07-14",
-  "assets": { "directory": "./" },
+  "main": "main.ts",
   "observability": { "logs": { "enabled": true } },
-  "durable_objects": {
-    "bindings": [
-      { "name": "TASK_MANAGER", "class_name": "TaskManager" },
-      { "name": "TASK_RUNNER", "class_name": "TaskRunner" }
-    ]
-  },
   "migrations": [
-    { "tag": "v1", "new_sqlite_classes": ["TaskManager", "TaskRunner"] }
+    { "tag": "v1", "new_sqlite_classes": ["TaskManager", "TaskRunner"] },
+    { "tag": "v2", "deleted_classes": ["TaskRunner"] },
+    { "tag": "v2", "deleted_classes": ["TaskManager"] }
   ],
   "routes": [
     // NB: please note that in several places in the code we assume /tasks-sse/ is the path prefix.

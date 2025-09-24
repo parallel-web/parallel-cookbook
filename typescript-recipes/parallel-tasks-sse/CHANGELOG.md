@@ -14,3 +14,8 @@ Context:
 - https://assets.p0web.com
 - https://docs.parallel.ai/api-reference/task-api-v1/stream-task-run-events.md
 - https://docs.parallel.ai/task-api/features/task-sse.md
+
+## Tasks with SSE Recipe (2025-09-24)
+
+- make SSE events actually stream. the sse events aren't the easiest to read in this format, my suggestion would be to change the UI for streaming so that its a scorecard of sources considered & read, where the numbers update, rather than progress update events showing like this. showing off the sources we read right at the top of the sse events page would be valuable for a demo
+- Get back to it in slack https://wilmake.slack.com/archives/C09807JBB26/p1758041651707579

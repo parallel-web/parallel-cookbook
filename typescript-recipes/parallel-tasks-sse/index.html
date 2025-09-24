@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallel Task Stream Demo</title>
+    <style>
+        @import url('https://assets.p0web.com/FTSystemMono-Regular.woff2');
+
+        :root {
+            --off-white: #fcfcfa;
+            --index-black: #1d1b16;
+            --neural: #d8d0bf;
+            --signal: #fb631b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'FT System Mono', 'Courier New', monospace;
+            background-color: var(--off-white);
+            color: var(--index-black);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid var(--neural);
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: var(--signal);
+            margin-bottom: 10px;
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+        }
+
+        .links a {
+            color: var(--index-black);
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid var(--neural);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .links a:hover {
+            background-color: var(--neural);
+        }
+
+        .auth-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid var(--neural);
+            border-radius: 8px;
+        }
+
+        .auth-section.authenticated {
+            border-color: var(--signal);
+            background-color: rgba(251, 99, 27, 0.1);
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid var(--neural);
+            border-radius: 8px;
+        }
+
+        .form-section.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--neural);
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        button {
+            background-color: var(--signal);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #e55519;
+        }
+
+        button:disabled {
+            background-color: var(--neural);
+            cursor: not-allowed;
+        }
+
+        .tasks-section {
+            margin-bottom: 30px;
+        }
+
+        .tasks-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .tasks-table th,
+        .tasks-table td {
+            border: 1px solid var(--neural);
+            padding: 12px;
+            text-align: left;
+        }
+
+        .tasks-table th {
+            background-color: var(--neural);
+            font-weight: bold;
+        }
+
+        .tasks-table tr:hover {
+            background-color: rgba(216, 208, 191, 0.3);
+            cursor: pointer;
+        }
+
+        .status {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status.queued {
+            background-color: #fef3cd;
+            color: #664d03;
+        }
+
+        .status.running {
+            background-color: #cfe2ff;
+            color: #052c65;
+        }
+
+        .status.completed {
+            background-color: #d1edce;
+            color: #0a3622;
+        }
+
+        .status.failed {
+            background-color: #f8d7da;
+            color: #58151c;
+        }
+
+        .task-details {
+            margin-top: 30px;
+            padding: 20px;
+            border: 2px solid var(--signal);
+            border-radius: 8px;
+            display: none;
+        }
+
+        .task-details.active {
+            display: block;
+        }
+
+        .events-container {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid var(--neural);
+            border-radius: 4px;
+            padding: 15px;
+            background-color: #f8f8f6;
+            margin-top: 15px;
+        }
+
+        .event {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 4px;
+            border-left: 4px solid var(--neural);
+        }
+
+        .event.progress-msg {
+            border-left-color: var(--signal);
+        }
+
+        .event.progress-stats {
+            border-left-color: #17a2b8;
+        }
+
+        .event.state {
+            border-left-color: #28a745;
+        }
+
+        .event.error {
+            border-left-color: #dc3545;
+        }
+
+        .event-type {
+            font-weight: bold;
+            color: var(--signal);
+            font-size: 12px;
+        }
+
+        .event-timestamp {
+            font-size: 11px;
+            color: #6c757d;
+            float: right;
+        }
+
+        .event-message {
+            margin-top: 5px;
+        }
+
+        .progress-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .stat {
+            background-color: white;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid var(--neural);
+        }
+
+        .output-section {
+            margin-top: 15px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid var(--neural);
+        }
+
+        .json-output {
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .error {
+            color: #dc3545;
+            font-weight: bold;
+        }
+
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .github-icon {
+            width: 16px;
+            height: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Parallel Task Stream Demo</h1>
+            <p>Create tasks and stream their execution events in real-time</p>
+            <div class="links">
+                <a href="https://docs.parallel.ai/api-reference/task-api-v1/stream-task-run-events" target="_blank">
+                    📚 Stream Events Documentation
+                </a>
+                <a href="https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse"
+                    target="_blank">
+                    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    View Code
+                </a>
+            </div>
+        </header>
+
+        <div class="auth-section" id="authSection">
+            <h2>Authentication</h2>
+            <p id="authStatus">Not authenticated</p>
+            <button id="loginBtn" onclick="startOAuth()">Login with Parallel.ai</button>
+            <button id="logoutBtn" class="hidden" onclick="logout()">Logout</button>
+        </div>
+
+        <div class="form-section disabled" id="formSection">
+            <h2>Create New Task</h2>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskInput">Task Input:</label>
+                    <textarea id="taskInput" placeholder="Enter your task description..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="processor">Processor:</label>
+                    <select id="processor" required>
+                        <option value="base">Base</option>
+                        <option value="pro">Pro</option>
+                        <option value="lite">Lite</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="outputType">Output Type:</label>
+                    <select id="outputType" onchange="updateOutputSchema()" required>
+                        <option value="auto">Auto Schema</option>
+                        <option value="text">Text Output</option>
+                        <option value="json">JSON Output</option>
+                    </select>
+                </div>
+
+                <div class="form-group hidden" id="jsonSchemaGroup">
+                    <label for="jsonSchema">JSON Schema:</label>
+                    <textarea id="jsonSchema" placeholder="Enter JSON schema..."></textarea>
+                </div>
+
+                <div class="form-group hidden" id="textDescriptionGroup">
+                    <label for="textDescription">Text Description:</label>
+                    <textarea id="textDescription" placeholder="Describe the desired text output..."></textarea>
+                </div>
+
+                <button type="submit">Create Task</button>
+            </form>
+        </div>
+
+        <div class="tasks-section">
+            <h2>Created Tasks</h2>
+            <p id="tasksStatus">No tasks created yet</p>
+            <table class="tasks-table hidden" id="tasksTable">
+                <thead>
+                    <tr>
+                        <th>Run ID</th>
+                        <th>Status</th>
+                        <th>Processor</th>
+                        <th>Created</th>
+                        <th>Input Preview</th>
+                    </tr>
+                </thead>
+                <tbody id="tasksTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="task-details" id="taskDetails">
+            <h2>Task Details</h2>
+            <div id="taskInfo"></div>
+            <div class="events-container" id="eventsContainer">
+                <p>Click "Start Streaming" to see events...</p>
+            </div>
+            <button id="streamBtn" onclick="toggleStream()">Start Streaming</button>
+        </div>
+    </div>
+
+    <script>
+        let currentApiKey = null;
+        let currentTaskRun = null;
+        let eventSource = null;
+        let streamReconnectAttempts = 0;
+        const MAX_RECONNECT_ATTEMPTS = 3;
+
+        // Check for existing auth on page load
+        window.onload = function () {
+            currentApiKey = localStorage.getItem('parallel_api_key');
+            if (currentApiKey) {
+                updateAuthStatus(true);
+            }
+            loadTasks();
+
+            // Handle OAuth callback
+            const code = new URLSearchParams(window.location.search).get('code');
+            if (code) {
+                handleOAuthCallback(code);
+            }
+        };
+
+        async function startOAuth() {
+            try {
+                // Register client
+                const reg = await fetch("https://oauth.parallel.ai/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        redirect_uris: [window.location.origin + window.location.pathname]
+                    }),
+                });
+
+                if (!reg.ok) {
+                    throw new Error('Failed to register client');
+                }
+
+                const { client_id } = await reg.json();
+
+                // Generate PKCE
+                const cv = btoa(crypto.getRandomValues(new Uint8Array(32))).replace(
+                    /[+/=]/g, (m) => ({ "+": "-", "/": "_", "=": "" }[m])
+                );
+                localStorage.setItem('code_verifier', cv);
+
+                const cc = btoa(
+                    String.fromCharCode(
+                        ...new Uint8Array(
+                            await crypto.subtle.digest(
+                                "SHA-256",
+                                new TextEncoder().encode(cv)
+                            )
+                        )
+                    )
+                ).replace(/[+/=]/g, (m) => ({ "+": "-", "/": "_", "=": "" }[m]));
+
+                // Redirect to OAuth
+                const url = new URL("https://oauth.parallel.ai/authorize");
+                Object.entries({
+                    client_id,
+                    redirect_uri: window.location.origin + window.location.pathname,
+                    response_type: "code",
+                    scope: "api",
+                    code_challenge: cc,
+                    code_challenge_method: "S256",
+                    state: Math.random().toString(36).substring(7)
+                }).forEach(([k, v]) => url.searchParams.set(k, v));
+
+                window.location.href = url;
+            } catch (error) {
+                alert('OAuth error: ' + error.message);
+            }
+        }
+
+        async function handleOAuthCallback(code) {
+            try {
+                const response = await fetch("https://oauth.parallel.ai/token", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams({
+                        grant_type: "authorization_code",
+                        code,
+                        client_id: window.location.hostname,
+                        redirect_uri: window.location.origin + window.location.pathname,
+                        code_verifier: localStorage.getItem('code_verifier'),
+                    }),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to exchange code for token');
+                }
+
+                const { access_token } = await response.json();
+                currentApiKey = access_token;
+                localStorage.setItem('parallel_api_key', currentApiKey);
+                localStorage.removeItem('code_verifier');
+
+                // Clean up URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+
+                updateAuthStatus(true);
+            } catch (error) {
+                alert('Token exchange error: ' + error.message);
+            }
+        }
+
+        function updateAuthStatus(authenticated) {
+            const authSection = document.getElementById('authSection');
+            const authStatus = document.getElementById('authStatus');
+            const loginBtn = document.getElementById('loginBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            const formSection = document.getElementById('formSection');
+
+            if (authenticated) {
+                authSection.classList.add('authenticated');
+                authStatus.textContent = 'Authenticated ✓';
+                authStatus.className = 'success';
+                loginBtn.classList.add('hidden');
+                logoutBtn.classList.remove('hidden');
+                formSection.classList.remove('disabled');
+            } else {
+                authSection.classList.remove('authenticated');
+                authStatus.textContent = 'Not authenticated';
+                authStatus.className = 'error';
+                loginBtn.classList.remove('hidden');
+                logoutBtn.classList.add('hidden');
+                formSection.classList.add('disabled');
+            }
+        }
+
+        function logout() {
+            currentApiKey = null;
+            localStorage.removeItem('parallel_api_key');
+            localStorage.removeItem('parallel_tasks');
+            updateAuthStatus(false);
+
+            // Clear tasks
+            document.getElementById('tasksTableBody').innerHTML = '';
+            document.getElementById('tasksTable').classList.add('hidden');
+            document.getElementById('tasksStatus').textContent = 'No tasks created yet';
+
+            // Hide task details
+            document.getElementById('taskDetails').classList.remove('active');
+
+            // Close event source
+            if (eventSource) {
+                eventSource.close();
+                eventSource = null;
+            }
+        }
+
+        function updateOutputSchema() {
+            const outputType = document.getElementById('outputType').value;
+            const jsonSchemaGroup = document.getElementById('jsonSchemaGroup');
+            const textDescriptionGroup = document.getElementById('textDescriptionGroup');
+
+            jsonSchemaGroup.classList.add('hidden');
+            textDescriptionGroup.classList.add('hidden');
+
+            if (outputType === 'json') {
+                jsonSchemaGroup.classList.remove('hidden');
+                document.getElementById('jsonSchema').value = JSON.stringify({
+                    "type": "object",
+                    "properties": {
+                        "answer": {
+                            "type": "string",
+                            "description": "The answer to the question"
+                        }
+                    },
+                    "required": ["answer"]
+                }, null, 2);
+            } else if (outputType === 'text') {
+                textDescriptionGroup.classList.remove('hidden');
+            }
+        }
+
+        document.getElementById('taskForm').onsubmit = async function (e) {
+            e.preventDefault();
+
+            if (!currentApiKey) {
+                alert('Please login first');
+                return;
+            }
+
+            const formData = new FormData(e.target);
+            const input = formData.get('taskInput');
+            const processor = formData.get('processor');
+            const outputType = formData.get('outputType');
+
+            let taskSpec = null;
+
+            if (outputType === 'json') {
+                const jsonSchemaText = document.getElementById('jsonSchema').value;
+                try {
+                    const jsonSchema = JSON.parse(jsonSchemaText);
+                    taskSpec = {
+                        output_schema: {
+                            type: 'json',
+                            json_schema: jsonSchema
+                        }
+                    };
+                } catch (error) {
+                    alert('Invalid JSON schema: ' + error.message);
+                    return;
+                }
+            } else if (outputType === 'text') {
+                const description = document.getElementById('textDescription').value;
+                taskSpec = {
+                    output_schema: {
+                        type: 'text',
+                        description: description || null
+                    }
+                };
+            } else {
+                taskSpec = {
+                    output_schema: {
+                        type: 'auto'
+                    }
+                };
+            }
+
+            try {
+                const response = await fetch('https://api.parallel.ai/v1/tasks/runs', {
+                    method: 'POST',
+                    headers: {
+                        'x-api-key': currentApiKey,
+                        'Content-Type': 'application/json',
+                        'parallel-beta': 'events-sse-2025-07-24'
+                    },
+                    body: JSON.stringify({
+                        input: input,
+                        processor: processor,
+                        task_spec: taskSpec,
+                        enable_events: true
+                    })
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to create task: ' + response.statusText);
+                }
+
+                const taskRun = await response.json();
+                saveTask(taskRun, input, outputType);
+                loadTasks();
+
+                // Reset form
+                e.target.reset();
+                document.getElementById('outputType').value = 'auto';
+                updateOutputSchema();
+
+            } catch (error) {
+                alert('Error creating task: ' + error.message);
+            }
+        };
+
+        function saveTask(taskRun, input, outputType) {
+            const tasks = JSON.parse(localStorage.getItem('parallel_tasks') || '[]');
+            tasks.push({
+                ...taskRun,
+                input: input,
+                outputType: outputType,
+                events: []
+            });
+            localStorage.setItem('parallel_tasks', JSON.stringify(tasks));
+        }
+
+        function loadTasks() {
+            const tasks = JSON.parse(localStorage.getItem('parallel_tasks') || '[]');
+            const tbody = document.getElementById('tasksTableBody');
+            const table = document.getElementById('tasksTable');
+            const status = document.getElementById('tasksStatus');
+
+            if (tasks.length === 0) {
+                table.classList.add('hidden');
+                status.textContent = 'No tasks created yet';
+                return;
+            }
+
+            table.classList.remove('hidden');
+            status.textContent = `${tasks.length} task(s) created`;
+
+            tbody.innerHTML = tasks.map(task => `
+                <tr onclick="selectTask('${task.run_id}')" data-run-id="${task.run_id}">
+                    <td>${task.run_id}</td>
+                    <td><span class="status ${task.status}">${task.status}</span></td>
+                    <td>${task.processor}</td>
+                    <td>${new Date(task.created_at).toLocaleString()}</td>
+                    <td>${task.input.substring(0, 50)}${task.input.length > 50 ? '...' : ''}</td>
+                </tr>
+            `).join('');
+        }
+
+        function selectTask(runId) {
+            const tasks = JSON.parse(localStorage.getItem('parallel_tasks') || '[]');
+            currentTaskRun = tasks.find(task => task.run_id === runId);
+
+            if (!currentTaskRun) return;
+
+            const taskDetails = document.getElementById('taskDetails');
+            const taskInfo = document.getElementById('taskInfo');
+
+            taskInfo.innerHTML = `
+                <div class="progress-stats">
+                    <div class="stat">
+                        <strong>Run ID:</strong> ${currentTaskRun.run_id}
+                    </div>
+                    <div class="stat">
+                        <strong>Status:</strong> <span class="status ${currentTaskRun.status}">${currentTaskRun.status}</span>
+                    </div>
+                    <div class="stat">
+                        <strong>Processor:</strong> ${currentTaskRun.processor}
+                    </div>
+                    <div class="stat">
+                        <strong>Output Type:</strong> ${currentTaskRun.outputType}
+                    </div>
+                </div>
+                <div class="output-section">
+                    <strong>Input:</strong>
+                    <div style="margin-top: 8px; padding: 10px; background-color: #f8f9fa; border-radius: 4px;">
+                        ${currentTaskRun.input}
+                    </div>
+                </div>
+            `;
+
+            taskDetails.classList.add('active');
+
+            // Clear previous events
+            document.getElementById('eventsContainer').innerHTML = '<p>Click "Start Streaming" to see events...</p>';
+
+            // Close existing stream
+            if (eventSource) {
+                eventSource.close();
+                eventSource = null;
+            }
+
+            document.getElementById('streamBtn').textContent = 'Start Streaming';
+        }
+
+        function toggleStream() {
+            if (eventSource) {
+                eventSource.close();
+                eventSource = null;
+                document.getElementById('streamBtn').textContent = 'Start Streaming';
+                return;
+            }
+
+            if (!currentTaskRun) {
+                alert('Please select a task first');
+                return;
+            }
+
+            startStream();
+        }
+
+        function startStream() {
+            if (!currentApiKey || !currentTaskRun) return;
+
+            const eventsContainer = document.getElementById('eventsContainer');
+            eventsContainer.innerHTML = '<p>Connecting to event stream...</p>';
+
+            eventSource = new EventSource(`https://api.parallel.ai/v1beta/tasks/runs/${currentTaskRun.run_id}/events`, {
+                headers: {
+                    'x-api-key': currentApiKey
+                }
+            });
+
+            eventSource.onopen = function () {
+                eventsContainer.innerHTML = '<p>Connected! Waiting for events...</p>';
+                document.getElementById('streamBtn').textContent = 'Stop Streaming';
+                streamReconnectAttempts = 0;
+            };
+
+            eventSource.onmessage = function (event) {
+                try {
+                    const data = JSON.parse(event.data);
+                    handleEvent(data);
+                } catch (error) {
+                    console.error('Error parsing event:', error);
+                }
+            };
+
+            eventSource.onerror = function (error) {
+                console.error('EventSource error:', error);
+
+                if (eventSource.readyState === EventSource.CLOSED) {
+                    // Stream ended normally or timed out
+                    document.getElementById('streamBtn').textContent = 'Start Streaming';
+
+                    if (streamReconnectAttempts < MAX_RECONNECT_ATTEMPTS) {
+                        streamReconnectAttempts++;
+                        setTimeout(() => {
+                            if (currentTaskRun && ['queued', 'running'].includes(currentTaskRun.status)) {
+                                console.log(`Reconnecting attempt ${streamReconnectAttempts}...`);
+                                startStream();
+                            }
+                        }, 2000);
+                    }
+                }
+            };
+
+            // Auto-close after 570 seconds (stream timeout)
+            setTimeout(() => {
+                if (eventSource && eventSource.readyState === EventSource.OPEN) {
+                    eventSource.close();
+                }
+            }, 570000);
+        }
+
+        function handleEvent(data) {
+            const eventsContainer = document.getElementById('eventsContainer');
+
+            // Clear "waiting" message if it exists
+            if (eventsContainer.innerHTML.includes('Waiting for events') || eventsContainer.innerHTML.includes('Connecting')) {
+                eventsContainer.innerHTML = '';
+            }
+
+            let eventHtml = '';
+            let eventClass = '';
+
+            switch (data.type) {
+                case 'task_run.state':
+                    eventClass = 'state';
+                    eventHtml = `
+                        <div class="event-type">TASK STATE</div>
+                        <div class="event-message">
+                            Status: <span class="status ${data.run.status}">${data.run.status}</span>
+                            ${data.run.error ? `<br><span class="error">Error: ${data.run.error.message}</span>` : ''}
+                        </div>
+                    `;
+
+                    // Update current task status
+                    currentTaskRun.status = data.run.status;
+                    updateTaskInStorage(currentTaskRun);
+                    loadTasks();
+
+                    // Display output if available
+                    if (data.output) {
+                        const outputHtml = formatOutput(data.output);
+                        eventHtml += `<div class="output-section">
+                            <strong>Final Output:</strong>
+                            ${outputHtml}
+                        </div>`;
+                    }
+                    break;
+
+                case 'task_run.progress_stats':
+                    eventClass = 'progress-stats';
+                    const stats = data.source_stats;
+                    eventHtml = `
+                        <div class="event-type">PROGRESS STATS</div>
+                        <div class="progress-stats">
+                            <div class="stat">Sources Considered: ${stats.num_sources_considered || 'N/A'}</div>
+                            <div class="stat">Sources Read: ${stats.num_sources_read || 'N/A'}</div>
+                        </div>
+                        ${stats.sources_read_sample ? `
+                            <div style="margin-top: 10px;">
+                                <strong>Sample Sources:</strong>
+                                <ul style="margin-top: 5px; margin-left: 20px;">
+                                    ${stats.sources_read_sample.slice(0, 3).map(url => `<li><a href="${url}" target="_blank">${url}</a></li>`).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                    `;
+                    break;
+
+                case 'error':
+                    eventClass = 'error';
+                    eventHtml = `
+                        <div class="event-type">ERROR</div>
+                        <div class="event-message error">
+                            ${data.error.message}
+                            ${data.error.ref_id ? `<br><small>Ref ID: ${data.error.ref_id}</small>` : ''}
+                        </div>
+                    `;
+                    break;
+
+                default:
+                    if (data.type.startsWith('task_run.progress_msg')) {
+                        eventClass = 'progress-msg';
+                        const msgType = data.type.split('.').pop().toUpperCase();
+                        eventHtml = `
+                            <div class="event-type">${msgType}</div>
+                            ${data.timestamp ? `<div class="event-timestamp">${new Date(data.timestamp).toLocaleString()}</div>` : ''}
+                            <div class="event-message">${data.message}</div>
+                        `;
+                    } else {
+                        eventClass = 'unknown';
+                        eventHtml = `
+                            <div class="event-type">${data.type.toUpperCase()}</div>
+                            <div class="event-message">${JSON.stringify(data, null, 2)}</div>
+                        `;
+                    }
+                    break;
+            }
+
+            const eventDiv = document.createElement('div');
+            eventDiv.className = `event ${eventClass}`;
+            eventDiv.innerHTML = eventHtml;
+
+            eventsContainer.appendChild(eventDiv);
+            eventsContainer.scrollTop = eventsContainer.scrollHeight;
+        }
+
+        function formatOutput(output) {
+            if (output.type === 'json') {
+                return `
+                    <div class="json-output">${JSON.stringify(output.content, null, 2)}</div>
+                    ${output.basis && output.basis.length > 0 ? `
+                        <div style="margin-top: 10px;">
+                            <strong>Citations & Reasoning:</strong>
+                            ${output.basis.map(basis => `
+                                <div style="margin-top: 8px; padding: 8px; border-left: 3px solid var(--neural); background-color: #f8f9fa;">
+                                    <strong>${basis.field}:</strong> ${basis.reasoning}
+                                    ${basis.citations && basis.citations.length > 0 ? `
+                                        <br><small>Sources: ${basis.citations.map(c => `<a href="${c.url}" target="_blank">${c.title || c.url}</a>`).join(', ')}</small>
+                                    ` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                `;
+            } else if (output.type === 'text') {
+                return `
+                    <div style="padding: 10px; background-color: #f8f9fa; border-radius: 4px; white-space: pre-wrap;">
+                        ${output.content}
+                    </div>
+                    ${output.basis && output.basis.length > 0 ? `
+                        <div style="margin-top: 10px;">
+                            <strong>Reasoning:</strong>
+                            ${output.basis.map(basis => `
+                                <div style="margin-top: 8px; padding: 8px; border-left: 3px solid var(--neural); background-color: #f8f9fa;">
+                                    ${basis.reasoning}
+                                    ${basis.citations && basis.citations.length > 0 ? `
+                                        <br><small>Sources: ${basis.citations.map(c => `<a href="${c.url}" target="_blank">${c.title || c.url}</a>`).join(', ')}</small>
+                                    ` : ''}
+                                </div>
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                `;
+            }
+
+            return `<div class="json-output">${JSON.stringify(output, null, 2)}</div>`;
+        }
+
+        function updateTaskInStorage(updatedTask) {
+            const tasks = JSON.parse(localStorage.getItem('parallel_tasks') || '[]');
+            const index = tasks.findIndex(task => task.run_id === updatedTask.run_id);
+            if (index !== -1) {
+                tasks[index] = { ...tasks[index], ...updatedTask };
+                localStorage.setItem('parallel_tasks', JSON.stringify(tasks));
+            }
+        }
+    </script>
+</body>
+
+</html>
