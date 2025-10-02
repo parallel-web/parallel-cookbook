@@ -175,7 +175,7 @@ def build_task_spec(domains: list[str], source_rootdomain_name: str) -> dict[str
         "input_schema": {
             "json_schema": {
                 "type": "object",
-                "required": ["ManufacturerPartID", "SKU", "ManufacturerPartNumber", "WayOptionName", "UPC", "AdditionalUPC", "PrName", "ProductDescription", "MarketingCategory", "Class", "Manufacturer", "WayURL"],
+                "required": ["ManufacturerPartID", "SKU", "ManufacturerPartNumber", "OptionName", "UPC", "AdditionalUPC", "PrName", "ProductDescription", "MarketingCategory", "Class", "Manufacturer", "URL"],
                 "properties": {
                     "ManufacturerPartID": {
                         "description": "Manufacturer part ID of the product to find matches for.",
@@ -189,7 +189,7 @@ def build_task_spec(domains: list[str], source_rootdomain_name: str) -> dict[str
                         "description": "Manufacturer part number (MPN) of the product to find matches for.",
                         "type": "string",
                     },
-                    "WayOptionName": {
+                    "OptionName": {
                         "description": "",
                         "type": "string",
                     },
@@ -221,7 +221,7 @@ def build_task_spec(domains: list[str], source_rootdomain_name: str) -> dict[str
                         "description": "Name of manufacturer of the product to find matches for.",
                         "type": "string",
                     },
-                    "WayURL": {
+                    "URL": {
                         "description": f"The direct URL to the {source_rootdomain_name} product page. Use this URL to first extract all the product details including manufacturer, part number, product name, specifications, dimensions, weight, price, etc. before matching.",
                         "type": "string",
                     }
@@ -277,7 +277,7 @@ def create_run_payloads(
             "ManufacturerPartID": row.ManufacturerPartID,
             "SKU": row.SKU,
             "ManufacturerPartNumber": row.ManufacturerPartNumber,
-            "WayOptionName": row.WayOptionName,
+            "OptionName": row.OptionName,
             "UPC": row.UPC,
             "AdditionalUPC": row.AdditionalUPC,
             "PrName": row.PrName,
@@ -285,7 +285,7 @@ def create_run_payloads(
             "MarketingCategory": row.MarketingCategory,
             "Class": row.Class,
             "Manufacturer": row.Manufacturer,
-            "WayURL": row.WayURL,
+            "URL": row.URL,
             "domains": row_domains
         }
         mpn_str = str(row.ManufacturerPartNumber)
@@ -516,3 +516,4 @@ if __name__ == "__main__":
     if args.skip_invalid:
         SKIP_INVALID = True
     run_batch(args.input_dir, args.output_dir, args.processor)
+
