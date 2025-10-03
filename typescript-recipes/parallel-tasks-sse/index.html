@@ -1044,7 +1044,7 @@
         async function startOAuth() {
             try {
                 // Register client
-                const reg = await fetch("https://oauth.parallel.ai/register", {
+                const reg = await fetch("https://platform.parallel.ai/getKeys/register", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
@@ -1076,12 +1076,12 @@
                 ).replace(/[+/=]/g, (m) => ({ "+": "-", "/": "_", "=": "" }[m]));
 
                 // Redirect to OAuth
-                const url = new URL("https://oauth.parallel.ai/authorize");
+                const url = new URL("https://platform.parallel.ai/getKeys/authorize");
                 Object.entries({
                     client_id,
                     redirect_uri: window.location.origin + window.location.pathname,
                     response_type: "code",
-                    scope: "api",
+                    scope: "key:read",
                     code_challenge: cc,
                     code_challenge_method: "S256",
                     state: Math.random().toString(36).substring(7)
@@ -1095,7 +1095,7 @@
 
         async function handleOAuthCallback(code) {
             try {
-                const response = await fetch("https://oauth.parallel.ai/token", {
+                const response = await fetch("https://platform.parallel.ai/getKeys/token", {
                     method: "POST",
                     headers: { "Content-Type": "application/x-www-form-urlencoded" },
                     body: new URLSearchParams({
