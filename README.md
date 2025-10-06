@@ -6,8 +6,8 @@ The following cookbook is designed to get you building with Parallel APIs as qui
 
 | Title                           | Description                              | Code                                                       | Demo                                                   |
 | ------------------------------- | ---------------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------ |
-| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | Coming Soon           | Coming Soon                |
-| Recurring Tasks and Webhooks    | Active Monitoring using cronjobs and KV  | Coming Soon       | Coming Soon             |
+| Tasks Playground with Streaming | Using Durable Objects and SSE Events API | [Recipe](https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse)           | [oss.parallel.ai/tasks-sse](https://oss.parallel.ai/tasks-sse/)                |
+| Market Analysis Demo   | Deep Research for Market Analysis  | Coming Soon       | [market-analysis-demo.parallel.ai](https://market-analysis-demo.parallel.ai/)             |
 | Search Agent                    | AI SDK + Parallel SDK Search API as tool | [Recipe](typescript-recipes/parallel-search-agent)         | [oss.parallel.ai/agent](https://oss.parallel.ai/agent)             |
 | Competitive Analysis            | Using Web Enrichment and Reddit MCP      | [App Repo](https://github.com/parallel-web/competitive-analysis-demo/tree/main)| [competitive-analsis-demo.parallel.ai](https://competitive-analysis-demo.parallel.ai/) |
 
