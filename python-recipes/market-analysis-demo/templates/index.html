@@ -1,0 +1,441 @@
+{% extends "base.html" %}
+
+{% block title %}Market Research Tool - AI-Powered Analysis{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="hero-text-container">
+        <h1 class="hero-title gerstner">Market Research On Demand</h1>
+        <p class="hero-subtitle">
+            Generate a multi-page market research report on any industry, with comprehensive in-line citations, reasoning and excerpts. Powered by Parallel Deep Research.
+        </p>
+    </div>
+    <div class="centered-content">
+        
+        <!-- Research Form - Dynamic Layout -->
+        <div class="content-wrapper">
+            <div class="row" id="main-content-row">
+                <!-- Form Column -->
+                <div class="col-12" id="form-column">
+                    <div class="form-section" id="form-section">
+                        <!-- Recently Completed Reports -->
+                        {% if recently_completed %}
+                        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle me-3"></i>
+                                <div class="flex-grow-1">
+                                    <h6 class="alert-heading mb-1">New Research Complete!</h6>
+                                    <p class="mb-2">{{ recently_completed|length }} report(s) finished while you were away:</p>
+                                    <div class="recently-completed-list">
+                                        {% for report in recently_completed %}
+                                        <div class="d-flex align-items-center justify-content-between bg-light p-2 rounded mb-2">
+                                            <div>
+                                                <strong>{{ report.industry }}</strong>
+                                                {% if report.geography %} - {{ report.geography }}{% endif %}
+                                                <br>
+                                                <small class="text-muted">Completed: {{ report.created_at.strftime('%m/%d/%Y at %I:%M %p') }}</small>
+                                            </div>
+                                            {% if report.slug %}
+                                            <a href="/report/{{ report.slug }}" class="btn btn-sm btn-success">
+                                                <i class="fas fa-eye me-1"></i>View Report
+                                            </a>
+                                            {% else %}
+                                            <span class="btn btn-sm btn-secondary disabled">
+                                                <i class="fas fa-exclamation-triangle me-1"></i>Report Incomplete
+                                            </span>
+                                            {% endif %}
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <form id="research-form" class="research-form">
+                            <!-- Industry and Geography Row -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label for="industry" class="form-label stat-label">Industry *</label>
+                                    <input type="text" class="form-control form-control-lg" id="industry" 
+                                           placeholder="e.g., HVAC, SaaS, Electric Vehicles" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="geography" class="form-label stat-label">Geography</label>
+                                    <select class="form-select form-select-lg" id="geography">
+                                        <option value="">Select country or region</option>
+                                        <option value="Global">Global</option>
+                                        <option value="United States">United States</option>
+                                        <option value="Canada">Canada</option>
+                                        <option value="United Kingdom">United Kingdom</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="Germany">Germany</option>
+                                        <option value="France">France</option>
+                                        <option value="Japan">Japan</option>
+                                        <option value="China">China</option>
+                                        <option value="India">India</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="Other">Other (will default to global)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Research Focus Input -->
+                            <div class="mb-4">
+                                <label for="details" class="form-label stat-label">Research Focus</label>
+                                <textarea class="form-control" id="details" rows="5" 
+                                          placeholder="Describe the ideal market research report or any specific details you'd like to include in your report..."></textarea>
+                            </div>
+
+                            <!-- Email Input -->
+                            <div class="mb-4">
+                                <label for="email" class="form-label stat-label">Email</label>
+                                <input type="email" class="form-control form-control-lg" id="email" 
+                                       placeholder="your.email@example.com">
+                                <small class="text-muted">Optional. We'll email you when your research completes (you can safely close this tab).</small>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg" id="generate-btn" 
+                                        {% if recent_report_count >= max_reports_per_hour %}disabled{% endif %}>
+                                    <i class="fas fa-rocket me-2"></i>
+                                    <span class="btn-text">Launch AI Research</span>
+                                    <span class="spinner-border spinner-border-sm ms-2 d-none" role="status"></span>
+                                </button>
+                                {% if recent_report_count >= max_reports_per_hour %}
+                                <div class="alert alert-warning mt-3">
+                                    <i class="fas fa-exclamation-triangle me-2"></i>
+                                    Rate limit reached: {{ max_reports_per_hour }} reports per hour globally. Please try again later.
+                                </div>
+                                {% endif %}
+                            </div>
+
+                            <!-- Validation Status -->
+                            <div class="validation-status mt-3" id="validation-status">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <div class="validation-spinner d-none me-2" id="validation-spinner">
+                                        <div class="spinner-border spinner-border-sm text-primary" role="status">
+                                            <span class="visually-hidden">Validating...</span>
+                                        </div>
+                                    </div>
+                                    <div class="validation-message" id="validation-message"></div>
+                                </div>
+                            </div>
+
+                            <!-- Keyboard shortcut hint -->
+                            <div class="text-center mt-3">
+                                <small class="text-muted">
+                                    or press <kbd>⌘</kbd> + <kbd>Enter</kbd>
+                                </small>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Right Column: SSE Feed (Initially Hidden) -->
+                <div class="col-6 d-none" id="feed-column">
+                    <div class="sse-feed-container" id="sse-feed-container">
+                        <div class="sse-header">
+                            <div class="sse-status" id="sse-status">Generating Report...</div>
+                        </div>
+                        
+                        <!-- Dedicated Sources Section -->
+                        <div class="sse-sources-section d-none" id="sse-sources-section">
+                            <div class="sources-container">
+                                <div class="sources-stats">
+                                    <div class="sources-stat">
+                                        <span class="sources-number" id="sources-read">0</span>
+                                        <span class="sources-label">pages read</span>
+                                    </div>
+                                    <div class="sources-stat">
+                                        <span class="sources-number" id="sources-considered">0</span>
+                                        <span class="sources-label">pages considered</span>
+                                    </div>
+                                </div>
+                                <div class="sse-recent-sources">
+                                    <ul class="sources-list" id="recent-sources-list">
+                                        <!-- Sources will be populated dynamically -->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="sse-feed" id="sse-feed">
+                            <div class="sse-placeholder">
+                                Scrollable event feed from SSE
+                            </div>
+                        </div>
+                        
+                        <div class="sse-footer">
+                            <div class="sse-notice">Feel free to leave this page, or explore generated reports below.</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Completion State -->
+                    <div class="sse-completion d-none" id="sse-completion">
+                        <div class="sse-header">
+                            <div class="sse-status completed">Report completed!</div>
+                        </div>
+                        <div class="sse-actions">
+                            <a href="#" class="btn btn-primary" id="view-report-btn">View report now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Library Section -->
+<div class="library-section">
+    <div class="container">
+        <h2 class="section-title">Library</h2>
+        <p class="library-subtitle">Explore recently generated market research reports</p>
+        
+        {% if public_reports or active_tasks %}
+        <div class="analyses-grid">
+            <!-- Active Tasks (Generating) -->
+            {% for task in active_tasks %}
+            <div class="analysis-card generating-card">
+                <div class="company-logo" style="background-color: #9CA3AF; opacity: 0.6;">
+                    <i class="fas fa-cogs fa-spin"></i>
+                </div>
+                
+                <div class="company-name" style="color: #6B7280;">{{ task.industry }} Market Research Report{% if task.geography %} - {{ task.geography }}{% endif %}</div>
+                
+                <div class="company-description" style="color: #9CA3AF;">
+                    <i class="fas fa-hourglass-half me-2"></i>AI is currently researching market trends, competitive landscape, and strategic insights for the {{ task.industry }} sector{% if task.geography %} in {{ task.geography }}{% endif %}...
+                </div>
+                
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="company-category" style="background-color: #F3F4F6; color: #6B7280; border: 1px dashed #D1D5DB;">Generating...</div>
+                    <div class="task-time" style="color: #9CA3AF;">
+                        <i class="fas fa-clock"></i>
+                        <span>Started {{ task.created_at.strftime('%I:%M %p') }}</span>
+                    </div>
+                </div>
+                
+                <div class="mt-3">
+                    <button class="btn btn-outline-secondary btn-sm w-100" disabled style="opacity: 0.5;">
+                        <i class="fas fa-spinner fa-spin me-1"></i>Generating Report...
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+            
+            <!-- Completed Reports -->
+            {% for report in public_reports %}
+            <div class="analysis-card">
+                <!-- Company Logo Placeholder -->
+                <div class="company-logo">
+                    <i class="fas fa-building"></i>
+                </div>
+                
+                <div class="company-name">{{ report.industry[:30] }}{% if report.industry|length > 30 %}...{% endif %}</div>
+                
+                <div class="company-description">
+                    {% if report.industry %}
+                        {{ report.industry }} market analysis with comprehensive competitive intelligence and strategic insights.
+                    {% else %}
+                        Market research analysis with detailed competitive landscape and growth opportunities.
+                    {% endif %}
+                </div>
+                
+                <div class="d-flex align-items-center">
+                    <div class="company-category">Market Research</div>
+                </div>
+                
+                <div class="mt-3">
+                    {% if report.slug %}
+                    <a href="{{ url_for('view_report', slug=report.slug) }}" 
+                       class="btn btn-outline-primary btn-sm w-100">
+                        <i class="fas fa-eye me-1"></i>View Analysis
+                    </a>
+                    {% else %}
+                    <span class="btn btn-secondary btn-sm w-100 disabled">
+                        <i class="fas fa-exclamation-triangle me-1"></i>Report Incomplete
+                    </span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <!-- Sample Analyses Cards when no reports exist -->
+        <div class="analyses-grid">
+            <div class="analysis-card">
+                <div class="company-logo" style="background-color: #4A90E2;">
+                    <i class="fas fa-layer-group"></i>
+                </div>
+                <div class="company-name">StackOne Technologies LTD</div>
+                <div class="company-description">
+                    StackOne is a universal integration layer designed for B2B SaaS companies, enabling them to rapidly build and deploy a w...
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="company-category">Developer Tools</div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-primary btn-sm w-100" disabled>
+                        <i class="fas fa-eye me-1"></i>View Analysis
+                    </button>
+                </div>
+            </div>
+
+            <div class="analysis-card">
+                <div class="company-logo" style="background-color: #7B68EE;">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="company-name">Together Computer Inc.</div>
+                <div class="company-description">
+                    Together AI is an integrated cloud platform, branded as "The AI Acceleration Cloud," designed to support the entire life...
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="company-category">AI/ML Platform</div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-primary btn-sm w-100" disabled>
+                        <i class="fas fa-eye me-1"></i>View Analysis
+                    </button>
+                </div>
+            </div>
+
+            <div class="analysis-card">
+                <div class="company-logo" style="background-color: #FF6B35;">
+                    <i class="fas fa-question"></i>
+                </div>
+                <div class="company-name">Not found</div>
+                <div class="company-description">
+                    Jart (jart.lol) is an early-stage technology company that operates a web-based platform branded as the 'World's First Me...
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="company-category">Media & Entertainment</div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-primary btn-sm w-100" disabled>
+                        <i class="fas fa-eye me-1"></i>View Analysis
+                    </button>
+                </div>
+            </div>
+
+            <div class="analysis-card">
+                <div class="company-logo" style="background-color: #20B2AA;">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="company-name">Akamai Technologies, Inc.</div>
+                <div class="company-description">
+                    Akamai operates a comprehensive business built on three core pillars: Security, Cloud Computing, and Content Delivery, a...
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="company-category">Cybersecurity</div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-primary btn-sm w-100" disabled>
+                        <i class="fas fa-eye me-1"></i>View Analysis
+                    </button>
+                </div>
+            </div>
+
+            <div class="analysis-card">
+                <div class="company-logo" style="background-color: #232F3E;">
+                    <i class="fab fa-aws"></i>
+                </div>
+                <div class="company-name">Lambda, Inc.</div>
+                <div class="company-description">
+                    Lambda, which operates the Lambda Cloud platform, is a specialized cloud provider focused exclusively on delivering high...
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="company-category">AI/ML Platform</div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-primary btn-sm w-100" disabled>
+                        <i class="fas fa-eye me-1"></i>View Analysis
+                    </button>
+                </div>
+            </div>
+
+            <div class="analysis-card">
+                <div class="company-logo" style="background-color: #663399;">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="company-name">VAST Consulting BV</div>
+                <div class="company-description">
+                    MCP-Cloud.ai, operated by the Amsterdam-based legal entity VAST Consulting BV (KVK 64574334), provides a Platform-as-a-S...
+                </div>
+                <div class="d-flex align-items-center">
+                    <div class="company-category">Analysis available</div>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-primary btn-sm w-100" disabled>
+                        <i class="fas fa-eye me-1"></i>View Analysis
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+</div>
+
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="background-color: var(--primary-color); color: white;">
+                <h5 class="modal-title">
+                    <i class="fas fa-check-circle me-2"></i>Report Generated!
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Your market research report has been successfully generated.</p>
+                <div id="report-links" class="d-grid gap-2">
+                    <!-- Links will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Error Modal -->
+<div class="modal fade" id="errorModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-white">
+                <h5 class="modal-title">
+                    <i class="fas fa-exclamation-triangle me-2"></i>Error
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p id="error-message">An error occurred while generating the report.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// No authentication required
+window.isAuthenticated = true;
+
+// Add keyboard shortcut support (Cmd+Enter or Ctrl+Enter)
+document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('keydown', function(e) {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+            e.preventDefault();
+            const form = document.getElementById('research-form');
+            if (form) {
+                form.dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

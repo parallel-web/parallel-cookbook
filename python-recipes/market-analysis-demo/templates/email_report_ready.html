@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Market Research is Ready</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    <style type="text/css">
+        /* Email-safe CSS Reset */
+        body, table, td, p, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        
+        /* Body styles */
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: #ffffff;
+            font-family: 'Manrope', Arial, sans-serif;
+            color: #333333;
+            line-height: 1.5;
+        }
+        
+        /* Container */
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+        
+        /* Main heading */
+        .main-heading {
+            font-family: 'Manrope', Arial, sans-serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: #333333;
+            text-align: center;
+            margin: 0 0 40px 0;
+            line-height: 1.3;
+        }
+        
+        /* Subtitle */
+        .subtitle {
+            font-family: 'Manrope', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: #666666;
+            text-align: center;
+            margin: 0 0 40px 0;
+        }
+        
+        /* Button */
+        .button-container {
+            text-align: center;
+            margin: 0 0 80px 0;
+        }
+        
+        .button {
+            background-color: #fb631b;
+            color: #ffffff !important;
+            font-family: 'Manrope', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            padding: 16px 32px;
+            border-radius: 8px;
+            border: none;
+        }
+        
+        .button:hover {
+            background-color: #e55530 !important;
+            color: #ffffff !important;
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            margin: 0 -40px;
+        }
+        
+        .footer-text {
+            font-family: 'Manrope', Arial, sans-serif;
+            font-size: 14px;
+            color: #6c757d;
+            margin: 0;
+        }
+        
+        .footer-text a {
+            color: #fb631b;
+            text-decoration: none;
+        }
+        
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile responsive */
+        @media screen and (max-width: 600px) {
+            .email-container {
+                padding: 40px 20px !important;
+            }
+            
+            .main-heading {
+                font-size: 28px !important;
+            }
+            
+            .subtitle {
+                font-size: 16px !important;
+            }
+            
+            .footer {
+                margin: 0 -20px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+        <tr>
+            <td align="center">
+                <div class="email-container">
+                    <h1 class="main-heading">Your Market Research is Ready</h1>
+                    
+                    <p class="subtitle">View your report here</p>
+                    
+                    <div class="button-container">
+                        <a href="{{ report_url }}" class="button" target="_blank">
+                            View Report
+                        </a>
+                    </div>
+                    
+                    <div class="footer">
+                        <p class="footer-text">
+                            Market Research Demo built with <a href="https://parallel.ai" target="_blank">Parallel</a>
+                        </p>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

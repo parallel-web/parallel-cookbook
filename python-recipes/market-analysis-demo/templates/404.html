@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Report Not Found - Market Research Tool{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-6 mx-auto text-center">
+        <div class="py-5">
+            <i class="fas fa-search display-1 text-muted mb-4"></i>
+            <h1 class="display-4 fw-bold text-primary mb-3">Report Not Found</h1>
+            <p class="lead text-muted mb-4">
+                The market research report you're looking for doesn't exist or may have been removed.
+            </p>
+            
+            <div class="card border-0 bg-light mb-4">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-lightbulb me-2 text-warning"></i>
+                        What you can do:
+                    </h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Check the URL for any typos
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Return to the home page and browse existing reports
+                        </li>
+                        <li class="mb-0">
+                            <i class="fas fa-check text-success me-2"></i>
+                            Generate a new market research report
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <a href="{{ url_for('index') }}" class="btn btn-primary btn-lg">
+                    <i class="fas fa-home me-2"></i>
+                    Back to Home
+                </a>
+                <a href="{{ url_for('index') }}#research-form" class="btn btn-outline-primary btn-lg">
+                    <i class="fas fa-plus me-2"></i>
+                    Generate Report
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
