@@ -1,0 +1,16 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "account_id": "aceab98f1a2fc658ed4e20bc307fa65a",
+  "name": "entity-resolution-parallel",
+  "main": "worker.ts",
+  "assets": { "directory": "./" },
+  "compatibility_date": "2025-09-27",
+  "observability": { "logs": { "enabled": true } },
+  "routes": [
+    {
+      "custom_domain": true,
+      "pattern": "entity-resolution-demo.parallel.ai"
+    }
+  ],
+  "env": { "localhost": { "routes": [] } }
+}
