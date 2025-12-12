@@ -1,0 +1,33 @@
+{
+  "name": "cerebras-fact-checker",
+  "main": "worker.ts",
+  "compatibility_date": "2024-12-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "rules": [
+    {
+      "type": "Text",
+      "globs": ["**/*.html"],
+      "fallthrough": true
+    }
+  ],
+  "observability": {
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    }
+  },
+  "routes": [
+    {
+      "zone_name": "parallel.ai",
+      "pattern": "oss.parallel.ai/agents/cerebras-fact-checker",
+      "custom_domain": false
+    },
+    {
+      "zone_name": "parallel.ai",
+      "pattern": "oss.parallel.ai/agents/cerebras-fact-checker/*",
+      "custom_domain": false
+    }
+  ]
+}

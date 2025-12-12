@@ -1,0 +1,20 @@
+{
+  "name": "fact-checker",
+  "version": "1.0.0",
+  "description": "Content fact checker powered by Cerebras and Parallel Web Systems",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types"
+  },
+  "dependencies": {
+    "@ai-sdk/cerebras": "^1.0.32",
+    "ai": "^5.0.108",
+    "parallel-web": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20251209.0",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.54.0"
+  }
+}
