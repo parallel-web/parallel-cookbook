@@ -17,5 +17,17 @@
       "invocation_logs": true,
       "persist": true
     }
-  }
+  },
+  "routes": [
+    {
+      "zone_name": "parallel.ai",
+      "pattern": "oss.parallel.ai/agents/cerebras-fact-checker",
+      "custom_domain": false
+    },
+    {
+      "zone_name": "parallel.ai",
+      "pattern": "oss.parallel.ai/agents/cerebras-fact-checker/*",
+      "custom_domain": false
+    }
+  ]
 }

@@ -215,15 +215,22 @@ export default {
 
     const url = new URL(request.url);
 
+    // Normalize pathname - strip base path if present
+    const basePath = "/agents/cerebras-fact-checker";
+    let pathname = url.pathname;
+    if (pathname.startsWith(basePath)) {
+      pathname = pathname.slice(basePath.length) || "/";
+    }
+
     // Serve the HTML page
-    if (request.method === "GET" && (url.pathname === "/" || url.pathname === "")) {
+    if (request.method === "GET" && (pathname === "/" || pathname === "")) {
       return new Response(indexHtml, {
         headers: { "Content-Type": "text/html" },
       });
     }
 
     // Handle content extraction from URL - streams cleaned content + fact checking
-    if (request.method === "POST" && url.pathname === "/extract") {
+    if (request.method === "POST" && pathname === "/extract") {
       try {
         const { url: extractUrl } = await request.json() as { url: string };
 
@@ -332,7 +339,7 @@ INSTRUCTIONS:
     }
 
     // Handle fact checking for pasted text content
-    if (request.method === "POST" && url.pathname === "/check") {
+    if (request.method === "POST" && pathname === "/check") {
       try {
         const { content } = await request.json() as { content: string };
 
