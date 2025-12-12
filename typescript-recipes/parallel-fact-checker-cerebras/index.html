@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Content Fact Checker</title>
+  <style>
+    @font-face {
+      font-family: 'FT System Mono';
+      src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2'),
+           url('https://assets.p0web.com/FTSystemMono-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'FT System Mono';
+      src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2'),
+           url('https://assets.p0web.com/FTSystemMono-Medium.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'FT System Mono';
+      src: url('https://assets.p0web.com/FTSystemMono-Bold.woff2') format('woff2'),
+           url('https://assets.p0web.com/FTSystemMono-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    input, button, textarea, select {
+      font-family: inherit;
+    }
+
+    body {
+      font-family: 'FT System Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background-color: #fff;
+      color: #000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 30px 20px 20px;
+      flex: 1;
+      width: 100%;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .header.compact {
+      margin-bottom: 15px;
+    }
+
+    .header.compact h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .header.compact .powered-by {
+      margin-bottom: 0;
+    }
+
+    .header.compact .github-link {
+      display: none;
+    }
+
+    .header h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #000;
+    }
+
+    .header h1 a {
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .header h1 a:hover {
+      color: #f97316;
+    }
+
+    .powered-by {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .powered-by span {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .powered-by .cerebras-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .powered-by .cerebras-logo .logo-img {
+      height: 60px;
+      width: auto;
+    }
+
+    .powered-by .parallel-logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .powered-by .parallel-logo a {
+      display: flex;
+      align-items: center;
+    }
+
+
+    .powered-by .parallel-logo .logo-img {
+      height: 28px;
+      width: auto;
+    }
+
+    .github-link {
+      color: #f97316;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .github-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Input Section - Initial State */
+    .input-section {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .textarea-container {
+      margin-bottom: 20px;
+    }
+
+    .textarea-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 12px;
+    }
+
+    .main-textarea {
+      width: 100%;
+      min-height: 280px;
+      padding: 20px;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      font-size: 16px;
+      font-family: inherit;
+      resize: vertical;
+      outline: none;
+    }
+
+    .main-textarea:focus {
+      border-color: #ccc;
+    }
+
+    .main-textarea::placeholder {
+      color: #999;
+    }
+
+    .or-divider {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .url-input-container {
+      display: flex;
+      gap: 12px;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .url-input {
+      flex: 1;
+      padding: 14px 18px;
+      border: 1px solid #e5e5e5;
+      border-radius: 25px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .url-input:focus {
+      border-color: #ccc;
+    }
+
+    .url-input::placeholder {
+      color: #999;
+    }
+
+    .fetch-btn, .check-btn {
+      padding: 14px 28px;
+      background-color: #f97316;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .fetch-btn:hover, .check-btn:hover {
+      background-color: #ea580c;
+    }
+
+    .fetch-btn:disabled, .check-btn:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    /* Two Column Layout - Results State */
+    .results-layout {
+      display: grid;
+      grid-template-columns: 1fr 400px;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .results-header {
+      position: absolute;
+      top: -45px;
+      right: 0;
+    }
+
+    .restart-btn {
+      padding: 10px 20px;
+      background-color: transparent;
+      color: #666;
+      border: 1px solid #e5e5e5;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .restart-btn:hover {
+      border-color: #ccc;
+      background-color: #fafafa;
+      color: #333;
+    }
+
+    .content-panel {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 24px;
+      min-height: 400px;
+      max-height: calc(100vh - 220px);
+      overflow-y: auto;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #111;
+    }
+
+    .content-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .source-attribution {
+      font-size: 13px;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .source-attribution a {
+      color: #f97316;
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .source-attribution a:hover {
+      text-decoration: underline;
+    }
+
+    /* Fact Report Panel */
+    .fact-report-panel {
+      background: #fafafa;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+      padding: 20px;
+      min-height: 400px;
+      max-height: calc(100vh - 220px);
+      overflow-y: auto;
+    }
+
+    .fact-report-panel h2 {
+      font-size: 20px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    /* Loading State */
+    .loading-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
+    }
+
+    .loading-state h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .loading-state p {
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid #e5e5e5;
+      border-top-color: #f97316;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Results Categories */
+    .result-category {
+      margin-bottom: 15px;
+    }
+
+    .category-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .category-header .count {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .category-header .label {
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    .category-header .arrow {
+      font-size: 10px;
+      color: #666;
+      margin-left: auto;
+      transition: transform 0.2s;
+    }
+
+    .category-header.collapsed .arrow {
+      transform: rotate(180deg);
+    }
+
+    .pending .label, .pending .count { color: #6b7280; }
+    .verified .label, .verified .count { color: #16a34a; }
+    .unsure .label, .unsure .count { color: #ca8a04; }
+    .false .label, .false .count { color: #dc2626; }
+
+    /* Claim Items */
+    .claims-list {
+      padding: 10px 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .claims-list.collapsed {
+      max-height: 0;
+      padding: 0;
+    }
+
+    .claim-item {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 12px;
+      transition: background-color 0.3s ease;
+    }
+
+    .claim-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .claim-item p {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.5;
+      margin-bottom: 10px;
+    }
+
+    .claim-item .claim-number {
+      font-weight: 700;
+    }
+
+    .claim-explanation {
+      font-size: 12px;
+      color: #666;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .sources-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .source-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+    }
+
+    .source-item .status-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #f97316;
+      flex-shrink: 0;
+    }
+
+    .source-item .source-link {
+      color: #333;
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .source-item:hover .source-link {
+      color: #f97316;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: auto;
+    }
+
+    .footer p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .footer .disclaimer {
+      font-size: 12px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Fact underlines in content */
+    .fact-underline {
+      border-bottom: 2px solid #666;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .fact-underline:hover {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .fact-underline.pending {
+      border-bottom-color: #666;
+    }
+
+    .fact-underline.searching {
+      border-bottom-style: dotted;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .fact-underline.verified {
+      border-bottom-color: #16a34a;
+      background-color: rgba(22, 163, 74, 0.1);
+    }
+
+    .fact-underline.false {
+      border-bottom-color: #dc2626;
+      background-color: rgba(220, 38, 38, 0.1);
+    }
+
+    .fact-underline.unsure {
+      border-bottom-color: #ca8a04;
+      background-color: rgba(202, 138, 4, 0.1);
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    /* Utility classes */
+    .hidden {
+      display: none !important;
+    }
+
+    /* Citation Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal {
+      background: #fff;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-header {
+      padding: 20px;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .modal-header h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: #666;
+      padding: 0;
+      line-height: 1;
+    }
+
+    .modal-close:hover {
+      color: #000;
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
+    .modal-excerpt {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #333;
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      border-left: 3px solid #f97316;
+    }
+
+    .modal-source {
+      font-size: 13px;
+      color: #666;
+      word-break: break-all;
+    }
+
+    .modal-source a {
+      color: #f97316;
+      text-decoration: none;
+    }
+
+    .modal-source a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .results-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .header h1 {
+        font-size: 32px;
+      }
+
+      .url-input-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1><a href="#" id="titleLink">Content Fact Checker</a></h1>
+      <div class="powered-by">
+        <span>Powered by</span>
+        <div class="cerebras-logo">
+          <a href="https://www.cerebras.ai/">
+          <img src="https://cdn.brandfetch.io/idD5aRPmuk/w/820/h/361/theme/dark/logo.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="Cerebras" class="logo-img">
+          </a>
+        </div>
+        <div class="parallel-logo">
+          <a href="https://parallel.ai">
+            <img src="https://assets.p0web.com/dark-parallel-logo-270.svg" alt="Parallel" class="logo-img">
+          </a>
+        </div>
+      </div>
+      <a href="https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-fact-checker-cerebras" class="github-link">View on GitHub</a>
+    </header>
+
+    <!-- Initial Input State -->
+    <section class="input-section" id="inputSection">
+      <div class="textarea-container">
+        <textarea class="main-textarea" id="textInput" placeholder="Type or paste text to be fact checked"></textarea>
+        <div class="textarea-button">
+          <button class="check-btn" id="checkBtn">Check Facts</button>
+        </div>
+      </div>
+      <div class="or-divider">or</div>
+      <div class="url-input-container">
+        <input type="text" class="url-input" id="urlInput" placeholder="Enter URL to fetch and fact check">
+        <button class="fetch-btn" id="fetchBtn">Fetch & Check</button>
+      </div>
+    </section>
+
+    <!-- Results Layout (shown when checking) -->
+    <section class="results-layout hidden" id="resultsSection">
+      <!-- Top bar with restart button -->
+      <div class="results-header">
+        <button class="restart-btn" id="restartBtn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+            <path d="M3 3v5h5"/>
+          </svg>
+          Start Over
+        </button>
+      </div>
+
+      <!-- Left Panel - Content -->
+      <div class="content-column">
+        <div class="content-panel" id="contentPanel"></div>
+        <div class="source-attribution hidden" id="sourceAttribution">
+          Source: <a href="#" id="sourceLink" target="_blank"></a>
+        </div>
+      </div>
+
+      <!-- Right Panel - Fact Report -->
+      <div class="fact-report-panel" id="reportPanel">
+        <!-- Loading State -->
+        <div class="loading-state" id="loadingState">
+          <div class="spinner"></div>
+          <h3>Please wait...</h3>
+          <p id="loadingText">Fact report generation<br>in progress</p>
+        </div>
+
+        <!-- Results State -->
+        <div class="hidden" id="resultsState">
+          <h2>Fact report</h2>
+
+          <!-- Pending Section -->
+          <div class="result-category pending" id="pendingSection">
+            <div class="category-header" onclick="toggleCategory('pending')">
+              <span class="count" id="pendingCount">(0)</span>
+              <span class="label">Checking...</span>
+              <span class="arrow">▲</span>
+            </div>
+            <div class="claims-list" id="pendingClaims"></div>
+          </div>
+
+          <!-- Verified Section -->
+          <div class="result-category verified" id="verifiedSection">
+            <div class="category-header" onclick="toggleCategory('verified')">
+              <span class="count" id="verifiedCount">(0)</span>
+              <span class="label">Verified</span>
+              <span class="arrow">▲</span>
+            </div>
+            <div class="claims-list" id="verifiedClaims"></div>
+          </div>
+
+          <!-- Unsure Section -->
+          <div class="result-category unsure" id="unsureSection">
+            <div class="category-header" onclick="toggleCategory('unsure')">
+              <span class="count" id="unsureCount">(0)</span>
+              <span class="label">Unsure</span>
+              <span class="arrow">▲</span>
+            </div>
+            <div class="claims-list" id="unsureClaims"></div>
+          </div>
+
+          <!-- False Section -->
+          <div class="result-category false" id="falseSection">
+            <div class="category-header" onclick="toggleCategory('false')">
+              <span class="count" id="falseCount">(0)</span>
+              <span class="label">False</span>
+              <span class="arrow">▲</span>
+            </div>
+            <div class="claims-list" id="falseClaims"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Citation Modal -->
+  <div class="modal-overlay hidden" id="citationModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modalTitle">Source</h3>
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-excerpt" id="modalExcerpt"></div>
+        <div class="modal-source">
+          <strong>Source:</strong><br>
+          <a href="#" id="modalUrl" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>Powered by the <a href="https://docs.parallel.ai" target="_blank" style="color: #f97316; text-decoration: none;">Parallel Search & Extract APIs</a> + <a href="https://inference-docs.cerebras.ai" target="_blank" style="color: #f97316; text-decoration: none;">Cerebras Fast Inference</a></p>
+    <div class="disclaimer">
+      This is a Free Public Demo with low rate-limits<br>
+      Please self-host with your own model for extensive use
+    </div>
+  </footer>
+
+  <script>
+    // State
+    let facts = new Map();
+    let isProcessing = false;
+    let factCounter = 0;
+    let originalContent = ''; // Store original plain text for highlighting
+
+    // DOM Elements
+    const inputSection = document.getElementById('inputSection');
+    const resultsSection = document.getElementById('resultsSection');
+    const textInput = document.getElementById('textInput');
+    const urlInput = document.getElementById('urlInput');
+    const fetchBtn = document.getElementById('fetchBtn');
+    const checkBtn = document.getElementById('checkBtn');
+    const restartBtn = document.getElementById('restartBtn');
+    const contentPanel = document.getElementById('contentPanel');
+    const reportPanel = document.getElementById('reportPanel');
+    const loadingState = document.getElementById('loadingState');
+    const loadingText = document.getElementById('loadingText');
+    const resultsState = document.getElementById('resultsState');
+    const header = document.querySelector('.header');
+
+    // Event Listeners
+    fetchBtn.addEventListener('click', extractFromUrl);
+    checkBtn.addEventListener('click', startFactCheck);
+    restartBtn.addEventListener('click', resetToInitial);
+    document.getElementById('titleLink').addEventListener('click', (e) => {
+      e.preventDefault();
+      resetToInitial();
+    });
+
+    // Toggle category collapse
+    function toggleCategory(category) {
+      const header = document.querySelector(`#${category}Section .category-header`);
+      const list = document.getElementById(`${category}Claims`);
+      header.classList.toggle('collapsed');
+      list.classList.toggle('collapsed');
+    }
+
+    // Extract content from URL and run fact check
+    async function extractFromUrl() {
+      const url = urlInput.value.trim();
+      if (!url) {
+        alert('Please enter a URL');
+        return;
+      }
+
+      if (isProcessing) return;
+      isProcessing = true;
+
+      // Reset state
+      facts.clear();
+      factCounter = 0;
+
+      // Switch to results view immediately
+      inputSection.classList.add('hidden');
+      resultsSection.classList.remove('hidden');
+      header.classList.add('compact');
+      contentPanel.textContent = '';
+
+      // Show loading state
+      loadingState.classList.remove('hidden');
+      resultsState.classList.add('hidden');
+      loadingText.innerHTML = 'Fetching content...';
+
+      // Reset result sections
+      document.getElementById('pendingClaims').innerHTML = '';
+      document.getElementById('verifiedClaims').innerHTML = '';
+      document.getElementById('unsureClaims').innerHTML = '';
+      document.getElementById('falseClaims').innerHTML = '';
+      document.getElementById('pendingSection').classList.add('hidden');
+
+      fetchBtn.disabled = true;
+      fetchBtn.textContent = 'Fetching...';
+
+      let streamedContent = '';
+
+      try {
+        const response = await fetch('/extract', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ url })
+        });
+
+        if (!response.ok) throw new Error('Failed to extract content');
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+
+          for (const line of lines) {
+            if (line.startsWith('data: ')) {
+              const data = line.slice(6);
+              if (data === '[DONE]') continue;
+
+              try {
+                const event = JSON.parse(data);
+
+                // Handle content streaming directly to content panel
+                if (event.type === 'content_chunk') {
+                  streamedContent += event.chunk;
+                  contentPanel.textContent = streamedContent;
+                } else if (event.type === 'content_complete') {
+                  streamedContent = event.content;
+                  originalContent = streamedContent; // Store for highlighting
+                  contentPanel.innerHTML = escapeHtml(streamedContent);
+                  // Show source URL if provided
+                  if (event.sourceUrl) {
+                    const sourceAttribution = document.getElementById('sourceAttribution');
+                    const sourceLink = document.getElementById('sourceLink');
+                    sourceLink.href = event.sourceUrl;
+                    sourceLink.textContent = event.sourceUrl;
+                    sourceAttribution.classList.remove('hidden');
+                  }
+                } else {
+                  // Handle all other events (phases, facts, verdicts)
+                  handleStreamEvent(event);
+                }
+              } catch (e) {
+                console.error('Parse error:', e, data);
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Extract error:', error);
+        alert('Error: ' + error.message);
+        resetToInitial();
+      } finally {
+        isProcessing = false;
+        fetchBtn.disabled = false;
+        fetchBtn.textContent = 'Fetch & Check';
+        loadingState.classList.add('hidden');
+        resultsState.classList.remove('hidden');
+      }
+    }
+
+    // Reset to initial state
+    function resetToInitial() {
+      facts.clear();
+      factCounter = 0;
+      isProcessing = false;
+      originalContent = '';
+
+      // Reset UI
+      inputSection.classList.remove('hidden');
+      resultsSection.classList.add('hidden');
+      header.classList.remove('compact');
+      textInput.value = '';
+      urlInput.value = '';
+      contentPanel.innerHTML = '';
+      document.getElementById('sourceAttribution').classList.add('hidden');
+
+      // Reset results
+      document.getElementById('pendingClaims').innerHTML = '';
+      document.getElementById('verifiedClaims').innerHTML = '';
+      document.getElementById('unsureClaims').innerHTML = '';
+      document.getElementById('falseClaims').innerHTML = '';
+      document.getElementById('pendingSection').classList.add('hidden');
+      updateCounts();
+    }
+
+    // Start fact checking
+    async function startFactCheck() {
+      const content = textInput.value.trim();
+      if (!content) {
+        alert('Please enter some content to fact-check');
+        return;
+      }
+
+      if (isProcessing) return;
+      isProcessing = true;
+
+      // Reset state
+      facts.clear();
+      factCounter = 0;
+
+      // Switch to results view
+      inputSection.classList.add('hidden');
+      resultsSection.classList.remove('hidden');
+      header.classList.add('compact');
+      originalContent = content; // Store for highlighting
+      contentPanel.innerHTML = escapeHtml(content);
+
+      // Show loading state
+      loadingState.classList.remove('hidden');
+      resultsState.classList.add('hidden');
+      loadingText.innerHTML = 'Extracting facts...';
+
+      // Reset result sections
+      document.getElementById('pendingClaims').innerHTML = '';
+      document.getElementById('verifiedClaims').innerHTML = '';
+      document.getElementById('unsureClaims').innerHTML = '';
+      document.getElementById('falseClaims').innerHTML = '';
+      document.getElementById('pendingSection').classList.add('hidden');
+
+      try {
+        const response = await fetch('/check', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ content })
+        });
+
+        if (!response.ok) throw new Error('Failed to start fact check');
+
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+
+          for (const line of lines) {
+            if (line.startsWith('data: ')) {
+              const data = line.slice(6);
+              if (data === '[DONE]') continue;
+
+              try {
+                const event = JSON.parse(data);
+                handleStreamEvent(event);
+              } catch (e) {
+                console.error('Parse error:', e, data);
+              }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Fact check error:', error);
+        alert('Error: ' + error.message);
+      } finally {
+        isProcessing = false;
+        loadingState.classList.add('hidden');
+        resultsState.classList.remove('hidden');
+      }
+    }
+
+    // Handle streaming events
+    function handleStreamEvent(event) {
+      switch (event.type) {
+        case 'phase':
+          if (event.phase === 'extracting_url') {
+            loadingText.innerHTML = 'Fetching URL content...';
+          } else if (event.phase === 'formatting') {
+            loadingText.innerHTML = 'Formatting content...';
+          } else if (event.phase === 'extracting') {
+            loadingText.innerHTML = 'Extracting facts...';
+          } else if (event.phase === 'verifying') {
+            loadingText.innerHTML = 'Verifying facts...';
+            // Show results panel when verification starts
+            loadingState.classList.add('hidden');
+            resultsState.classList.remove('hidden');
+          }
+          break;
+
+        case 'fact_extracted':
+          addFact(event.fact);
+          addFactToPendingSection(event.fact);
+          highlightFactInContent(event.fact);
+          // Show results panel on first fact
+          if (facts.size === 1) {
+            loadingState.classList.add('hidden');
+            resultsState.classList.remove('hidden');
+          }
+          break;
+
+        case 'fact_status':
+          updateFactStatus(event.factId, event.status);
+          updatePendingFactStatus(event.factId, event.status);
+          break;
+
+        case 'fact_verdict':
+          updateFactVerdict(event.factId, event.status, event.explanation, event.references);
+          break;
+
+        case 'complete':
+          loadingState.classList.add('hidden');
+          resultsState.classList.remove('hidden');
+          // Hide pending section when complete
+          document.getElementById('pendingSection').classList.add('hidden');
+          break;
+
+        case 'error':
+          console.error('Stream error:', event.error);
+          break;
+      }
+    }
+
+    // Add a fact to our tracking
+    function addFact(fact) {
+      factCounter++;
+      fact.number = factCounter;
+      facts.set(fact.id, fact);
+    }
+
+    // Add fact to pending section in UI
+    function addFactToPendingSection(fact) {
+      const pendingClaims = document.getElementById('pendingClaims');
+      const pendingSection = document.getElementById('pendingSection');
+      pendingSection.classList.remove('hidden');
+
+      const claimEl = document.createElement('div');
+      claimEl.className = 'claim-item';
+      claimEl.id = `pending-claim-${fact.id}`;
+      claimEl.innerHTML = `
+        <p><span class="claim-number">[${fact.number}]</span> ${escapeHtml(fact.text)}</p>
+        <div class="claim-explanation" id="pending-status-${fact.id}">Waiting to verify...</div>
+      `;
+      pendingClaims.appendChild(claimEl);
+      updateCounts();
+    }
+
+    // Update pending fact status text
+    function updatePendingFactStatus(factId, status) {
+      const statusEl = document.getElementById(`pending-status-${factId}`);
+      if (statusEl) {
+        if (status === 'searching') {
+          statusEl.textContent = 'Searching for evidence...';
+        }
+      }
+    }
+
+    // Highlight fact in content display - rebuilds all highlights from original content
+    function highlightFactInContent(fact) {
+      rebuildHighlights();
+    }
+
+    // Rebuild all fact highlights from the original plain text
+    function rebuildHighlights() {
+      if (!originalContent) return;
+
+      // Start with escaped original content
+      let html = escapeHtml(originalContent);
+
+      // Collect all facts with their source spans
+      const factsToHighlight = [];
+      facts.forEach((fact) => {
+        const sourceSpan = fact.sourceSpan || fact.text;
+        if (sourceSpan) {
+          factsToHighlight.push(fact);
+        }
+      });
+
+      // Sort by source span length (longest first) to avoid nested replacements
+      factsToHighlight.sort((a, b) => {
+        const spanA = a.sourceSpan || a.text;
+        const spanB = b.sourceSpan || b.text;
+        return spanB.length - spanA.length;
+      });
+
+      // Apply highlights
+      for (const fact of factsToHighlight) {
+        const sourceSpan = fact.sourceSpan || fact.text;
+        const escapedSpan = escapeHtml(sourceSpan);
+        const regex = new RegExp(`(${escapeRegex(escapedSpan)})`, 'gi');
+        const status = fact.status || 'pending';
+        html = html.replace(
+          regex,
+          `<span class="fact-underline ${status}" data-fact-id="${fact.id}" title="[${fact.number}] ${escapeHtml(fact.text)}" onclick="scrollToFact('${fact.id}')">$1</span>`
+        );
+      }
+
+      contentPanel.innerHTML = html;
+    }
+
+    // Scroll to fact in results panel
+    function scrollToFact(factId) {
+      const claimEl = document.getElementById(`claim-${factId}`);
+      if (claimEl) {
+        // Make sure the category is expanded
+        const fact = facts.get(factId);
+        if (fact) {
+          const sectionId = fact.status === 'verified' ? 'verified' : fact.status === 'false' ? 'false' : 'unsure';
+          const claimsList = document.getElementById(`${sectionId}Claims`);
+          const header = document.querySelector(`#${sectionId}Section .category-header`);
+          if (claimsList.classList.contains('collapsed')) {
+            claimsList.classList.remove('collapsed');
+            header.classList.remove('collapsed');
+          }
+        }
+
+        // Scroll within the report panel
+        const panel = reportPanel;
+        const claimRect = claimEl.getBoundingClientRect();
+        const panelRect = panel.getBoundingClientRect();
+
+        panel.scrollTo({
+          top: panel.scrollTop + (claimRect.top - panelRect.top) - (panelRect.height / 2) + (claimRect.height / 2),
+          behavior: 'smooth'
+        });
+
+        // Briefly highlight the claim
+        claimEl.style.backgroundColor = 'rgba(249, 115, 22, 0.2)';
+        setTimeout(() => {
+          claimEl.style.backgroundColor = '';
+        }, 1500);
+      } else {
+        const fact = facts.get(factId);
+        if (fact) {
+          alert(`Fact [${fact.number}] is still being verified...`);
+        }
+      }
+    }
+
+    // Update fact status in content
+    function updateFactStatus(factId, status) {
+      const fact = facts.get(factId);
+      if (fact) {
+        fact.status = status;
+        facts.set(factId, fact);
+      }
+
+      // Rebuild highlights to reflect new status
+      rebuildHighlights();
+    }
+
+    // Update fact verdict and add to results panel
+    function updateFactVerdict(factId, status, explanation, references) {
+      const fact = facts.get(factId);
+      if (!fact) return;
+
+      fact.status = status;
+      fact.explanation = explanation;
+      fact.references = references;
+      facts.set(factId, fact);
+
+      // Remove from pending section
+      const pendingEl = document.getElementById(`pending-claim-${factId}`);
+      if (pendingEl) {
+        pendingEl.remove();
+      }
+
+      // Update highlighting
+      updateFactStatus(factId, status);
+
+      // Add to appropriate section
+      const sectionId = status === 'verified' ? 'verified' : status === 'false' ? 'false' : 'unsure';
+      const claimsContainer = document.getElementById(`${sectionId}Claims`);
+
+      const claimEl = document.createElement('div');
+      claimEl.className = 'claim-item';
+      claimEl.id = `claim-${factId}`;
+      claimEl.innerHTML = `
+        <p><span class="claim-number">[${fact.number}]</span> ${escapeHtml(fact.text)}</p>
+        ${explanation ? `<div class="claim-explanation">${escapeHtml(explanation)}</div>` : ''}
+        ${references && references.length > 0 ? `
+          <div class="sources-list">
+            ${references.map((ref, i) => `
+              <div class="source-item" data-ref-index="${i}" style="cursor: pointer;">
+                <span class="status-dot"></span>
+                <span class="source-link">${escapeHtml(ref.title || getDomain(ref.url))}</span>
+              </div>
+            `).join('')}
+          </div>
+        ` : ''}
+      `;
+
+      // Add click handlers for sources - store reference data directly via closure
+      claimEl.querySelectorAll('.source-item').forEach((item, i) => {
+        const ref = references[i];
+        if (ref) {
+          item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openCitation(ref.title || getDomain(ref.url), ref.excerpt || '', ref.url);
+          });
+        }
+      });
+
+      // Insert in sorted order by fact number
+      const existingClaims = claimsContainer.querySelectorAll('.claim-item');
+      let inserted = false;
+      for (const existing of existingClaims) {
+        const existingId = existing.id.replace('claim-', '');
+        const existingFact = facts.get(existingId);
+        if (existingFact && existingFact.number > fact.number) {
+          claimsContainer.insertBefore(claimEl, existing);
+          inserted = true;
+          break;
+        }
+      }
+      if (!inserted) {
+        claimsContainer.appendChild(claimEl);
+      }
+
+      // Update counts
+      updateCounts();
+    }
+
+    // Update verdict counts
+    function updateCounts() {
+      let pending = 0, verified = 0, unsure = 0, falseCount = 0;
+
+      facts.forEach(fact => {
+        if (fact.status === 'verified') verified++;
+        else if (fact.status === 'unsure') unsure++;
+        else if (fact.status === 'false') falseCount++;
+        else pending++; // pending or searching
+      });
+
+      document.getElementById('pendingCount').textContent = `(${pending})`;
+      document.getElementById('verifiedCount').textContent = `(${verified})`;
+      document.getElementById('unsureCount').textContent = `(${unsure})`;
+      document.getElementById('falseCount').textContent = `(${falseCount})`;
+
+      // Hide pending section if empty
+      const pendingSection = document.getElementById('pendingSection');
+      if (pending === 0) {
+        pendingSection.classList.add('hidden');
+      } else {
+        pendingSection.classList.remove('hidden');
+      }
+    }
+
+    // Utility functions
+    function escapeHtml(text) {
+      if (!text) return '';
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function escapeRegex(string) {
+      return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    }
+
+    function getDomain(url) {
+      try {
+        return new URL(url).hostname;
+      } catch {
+        return url;
+      }
+    }
+
+    // Modal functions
+    function openCitation(title, excerpt, url) {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('modalExcerpt').textContent = excerpt || 'No excerpt available';
+      document.getElementById('modalUrl').href = url;
+      document.getElementById('modalUrl').textContent = url;
+      document.getElementById('citationModal').classList.remove('hidden');
+    }
+
+    function closeModal() {
+      document.getElementById('citationModal').classList.add('hidden');
+    }
+
+    // Close modal on overlay click
+    document.getElementById('citationModal').addEventListener('click', (e) => {
+      if (e.target.id === 'citationModal') {
+        closeModal();
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
