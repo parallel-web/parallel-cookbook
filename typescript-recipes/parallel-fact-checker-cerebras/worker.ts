@@ -10,6 +10,9 @@ export interface Env {
   CEREBRAS_API_KEY: string;
 }
 
+// Constants
+const MAX_CONTENT_LENGTH = 5000;
+
 // Types for fact checking
 interface Fact {
   id: string;
@@ -59,9 +62,13 @@ async function extractFacts(
   controller: ReadableStreamDefaultController,
   encoder: TextEncoder
 ): Promise<Fact[]> {
-  const factsResult = streamText({
-    model: cerebras("gpt-oss-120b"),
-    system: `You are a claim extraction expert. Extract verifiable claims from content.
+  const extractedFacts: Fact[] = [];
+
+  try {
+    const factsResult = streamText({
+      model: cerebras("gpt-oss-120b"),
+      temperature: 0,
+      system: `You are a claim extraction expert. Extract verifiable claims from content.
 
 OUTPUT FORMAT - use this EXACT format for each fact (one per line):
 FACT: [EXACT QUOTE] ||| [claim to verify]
@@ -69,54 +76,68 @@ FACT: [EXACT QUOTE] ||| [claim to verify]
 CRITICAL: The text before ||| must be COPIED CHARACTER-FOR-CHARACTER from the input. Do not paraphrase, summarize, or modify it in any way. Copy-paste the exact substring.
 
 RULES:
-- Extract all verifiable claims (dates, numbers, events, people, places). Do not exclude any claims.
+- Extract all verifiable claims (numbers, events, people, places) with meaningful content.
 - Skip opinions and predictions
 - Skip code
+- Skip self-referential claims about the article itself (e.g., its publication date or authors)
+- Do not verify the publish dates of referenced articles
 - The quote before ||| will be highlighted in the UI, so it MUST match exactly
 - The claim after ||| can be rephrased for clarity`,
-    prompt: `Extract facts from this content. COPY the exact text for each quote:\n\n${content}`,
-    maxOutputTokens: 2000,
-  });
+      prompt: `Extract facts from this content. COPY the exact text for each quote:\n\n${content}`,
+      maxOutputTokens: 2000,
+    });
 
-  const extractedFacts: Fact[] = [];
-  let currentText = "";
+    let currentText = "";
+    let totalResponse = "";
 
-  for await (const chunk of factsResult.textStream) {
-    currentText += chunk;
+    for await (const chunk of factsResult.textStream) {
+      currentText += chunk;
+      totalResponse += chunk;
 
-    const lines = currentText.split("\n");
-    for (let i = 0; i < lines.length - 1; i++) {
-      const line = lines[i].trim();
-      if (line.startsWith("FACT:")) {
-        const parsed = parseFactLine(line);
-        if (parsed && !extractedFacts.some(f => f.sourceSpan === parsed.sourceSpan)) {
-          const fact: Fact = {
-            id: generateId(),
-            text: parsed.text,
-            sourceSpan: parsed.sourceSpan,
-            status: "pending",
-          };
-          extractedFacts.push(fact);
-          sendSSE(controller, encoder, { type: "fact_extracted", fact });
+      const lines = currentText.split("\n");
+      for (let i = 0; i < lines.length - 1; i++) {
+        const line = lines[i].trim();
+        if (line.startsWith("FACT:")) {
+          const parsed = parseFactLine(line);
+          if (parsed && !extractedFacts.some(f => f.sourceSpan === parsed.sourceSpan)) {
+            const fact: Fact = {
+              id: generateId(),
+              text: parsed.text,
+              sourceSpan: parsed.sourceSpan,
+              status: "pending",
+            };
+            extractedFacts.push(fact);
+            sendSSE(controller, encoder, { type: "fact_extracted", fact });
+          }
         }
       }
+      currentText = lines[lines.length - 1];
     }
-    currentText = lines[lines.length - 1];
-  }
 
-  // Process remaining text
-  if (currentText.trim().startsWith("FACT:")) {
-    const parsed = parseFactLine(currentText.trim());
-    if (parsed && !extractedFacts.some(f => f.sourceSpan === parsed.sourceSpan)) {
-      const fact: Fact = {
-        id: generateId(),
-        text: parsed.text,
-        sourceSpan: parsed.sourceSpan,
-        status: "pending",
-      };
-      extractedFacts.push(fact);
-      sendSSE(controller, encoder, { type: "fact_extracted", fact });
+    // Process remaining text
+    if (currentText.trim().startsWith("FACT:")) {
+      const parsed = parseFactLine(currentText.trim());
+      if (parsed && !extractedFacts.some(f => f.sourceSpan === parsed.sourceSpan)) {
+        const fact: Fact = {
+          id: generateId(),
+          text: parsed.text,
+          sourceSpan: parsed.sourceSpan,
+          status: "pending",
+        };
+        extractedFacts.push(fact);
+        sendSSE(controller, encoder, { type: "fact_extracted", fact });
+      }
     }
+
+    // If no facts were found, throw so outer handler can deal with it
+    if (extractedFacts.length === 0) {
+      console.log("No facts extracted. Response length:", totalResponse.length);
+      throw new Error("No facts could be extracted from the content.");
+    }
+  } catch (error: any) {
+    console.error("Error extracting facts:", error);
+    // Re-throw to let outer handler deal with it
+    throw error;
   }
 
   return extractedFacts;
@@ -145,6 +166,7 @@ async function verifyFact(
     // Get verdict from LLM
     const verdictResult = streamText({
       model: cerebras("gpt-oss-120b"),
+      temperature: 0,
       system: `You are a fact-checking expert. Analyze the provided evidence and determine if the claim is:
 - VERIFIED: The evidence strongly supports the claim
 - FALSE: The evidence contradicts the claim
@@ -196,11 +218,34 @@ Analyze this evidence and provide your verdict.`,
     });
   } catch (error: any) {
     console.error(`Error verifying fact ${fact.id}:`, error);
+
+    // Check for rate limit errors (various patterns from different APIs)
+    const errorStr = JSON.stringify(error) + (error?.message || '') + (error?.lastError?.message || '');
+    const isRateLimit = error?.statusCode === 429 ||
+      error?.lastError?.statusCode === 429 ||
+      errorStr.includes("too_many_requests") ||
+      errorStr.includes("high traffic") ||
+      errorStr.includes("rate limit") ||
+      errorStr.includes("limit exceeded") ||
+      errorStr.includes("RetryError");
+
+    const explanation = isRateLimit
+      ? "Rate limited - please try again later"
+      : "Could not verify due to an error";
+
+    // Send rate limit warning to UI
+    if (isRateLimit) {
+      sendSSE(controller, encoder, {
+        type: "warning",
+        message: "Demo is experiencing high traffic. Some claims could not be verified."
+      });
+    }
+
     sendSSE(controller, encoder, {
       type: "fact_verdict",
       factId: fact.id,
       status: "unsure",
-      explanation: "Could not verify due to an error",
+      explanation,
       references: [],
     });
   }
@@ -250,9 +295,9 @@ export default {
 
               const extractResult = await parallel.beta.extract({
                 urls: [extractUrl],
-                objective: "Extract the main content, article text, and key claims from this webpage",
+                objective: "Extract the article text and key claims from this webpage",
                 excerpts: true,
-                full_content: true,
+                full_content: false,
               });
 
               if (!extractResult.results || extractResult.results.length === 0) {
@@ -266,43 +311,31 @@ export default {
                 throw new Error("No content found at URL");
               }
 
-              // Phase 2: Clean and format the content with LLM
-              sendSSE(controller, encoder, { type: "phase", phase: "formatting" });
+              // Truncate content if needed
+              const wasTruncated = rawContent.length > MAX_CONTENT_LENGTH;
+              const content = rawContent.slice(0, MAX_CONTENT_LENGTH);
 
-              const formatResult = streamText({
-                model: cerebras("gpt-oss-120b"),
-                system: `You are a content formatter. Your task is to take raw extracted webpage content and output clean, readable plain text suitable for fact-checking.
-
-INSTRUCTIONS:
-1. Output the main article/content text in a clean, readable format
-2. Preserve the key facts, claims, and information
-3. Remove navigation, ads, footers, and other irrelevant content
-4. Keep paragraphs and logical structure
-5. Do NOT add any commentary, headers like "Here is the content", or explanations
-6. Just output the clean content directly
-7. Keep it concise but complete - aim for the essential content
-8. Do NOT use markdown formatting (no **, ##, -, *, etc.) - output plain text only`,
-                prompt: `Clean and format this extracted webpage content for fact-checking:\n\n${rawContent.slice(0, 15000)}`,
-                maxOutputTokens: 2000,
-              });
-
-              let formattedContent = "";
-              for await (const chunk of formatResult.textStream) {
-                formattedContent += chunk;
-                sendSSE(controller, encoder, { type: "content_chunk", chunk });
-              }
-
+              // Send truncated content
+              sendSSE(controller, encoder, { type: "content_chunk", chunk: content });
               sendSSE(controller, encoder, {
                 type: "content_complete",
-                content: formattedContent,
+                content: content,
                 sourceUrl: extractUrl
               });
 
-              // Phase 3: Extract facts
-              sendSSE(controller, encoder, { type: "phase", phase: "extracting" });
-              const extractedFacts = await extractFacts(formattedContent, cerebras, controller, encoder);
+              // Warn if content was truncated
+              if (wasTruncated) {
+                sendSSE(controller, encoder, {
+                  type: "warning",
+                  message: "Content was truncated for this demo"
+                });
+              }
 
-              // Phase 4: Verify facts in parallel
+              // Phase 2: Extract facts
+              sendSSE(controller, encoder, { type: "phase", phase: "extracting" });
+              const extractedFacts = await extractFacts(content, cerebras, controller, encoder);
+
+              // Phase 3: Verify facts in parallel
               sendSSE(controller, encoder, { type: "phase", phase: "verifying" });
               await Promise.all(
                 extractedFacts.map(fact => verifyFact(fact, parallel, cerebras, controller, encoder))
@@ -312,7 +345,13 @@ INSTRUCTIONS:
               controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             } catch (error: any) {
               console.error("Stream error:", error);
-              sendSSE(controller, encoder, { type: "error", error: error.message });
+              // Send user-friendly error message
+              const errorMsg = error?.message?.includes("limit") || error?.message?.includes("rate") || error?.message?.includes("Retry")
+                ? "Service is currently rate limited. Please try again in a moment."
+                : error.message || "An error occurred";
+              sendSSE(controller, encoder, { type: "error", error: errorMsg });
+              sendSSE(controller, encoder, { type: "complete" });
+              controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             } finally {
               controller.close();
             }
@@ -351,12 +390,30 @@ INSTRUCTIONS:
         const cerebras = createCerebras({ apiKey: env.CEREBRAS_API_KEY });
         const encoder = new TextEncoder();
 
+        const truncatedContent = content.slice(0, MAX_CONTENT_LENGTH);
+        const wasTruncated = content.length > MAX_CONTENT_LENGTH;
+
         const stream = new ReadableStream({
           async start(controller) {
             try {
+              // Warn if content was truncated
+              if (wasTruncated) {
+                sendSSE(controller, encoder, {
+                  type: "warning",
+                  message: "Content was truncated for this demo"
+                });
+              }
+
               // Phase 1: Extract facts
               sendSSE(controller, encoder, { type: "phase", phase: "extracting" });
-              const extractedFacts = await extractFacts(content, cerebras, controller, encoder);
+              const extractedFacts = await extractFacts(truncatedContent, cerebras, controller, encoder);
+
+              // Check if any facts were extracted - error already sent from extractFacts
+              if (extractedFacts.length === 0) {
+                sendSSE(controller, encoder, { type: "complete" });
+                controller.enqueue(encoder.encode("data: [DONE]\n\n"));
+                return;
+              }
 
               // Phase 2: Verify facts in parallel
               sendSSE(controller, encoder, { type: "phase", phase: "verifying" });
@@ -368,7 +425,13 @@ INSTRUCTIONS:
               controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             } catch (error: any) {
               console.error("Stream error:", error);
-              sendSSE(controller, encoder, { type: "error", error: error.message });
+              // Send user-friendly error message
+              const errorMsg = error?.message?.includes("limit") || error?.message?.includes("rate") || error?.message?.includes("Retry")
+                ? "Service is currently rate limited. Please try again in a moment."
+                : error.message || "An error occurred";
+              sendSSE(controller, encoder, { type: "error", error: errorMsg });
+              sendSSE(controller, encoder, { type: "complete" });
+              controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             } finally {
               controller.close();
             }
