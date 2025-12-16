@@ -39,7 +39,7 @@ npm install parallel-web @ai-sdk/cerebras ai
 The app uses a constant for content length limits:
 
 ```typescript
-const MAX_CONTENT_LENGTH = 10000;
+const MAX_CONTENT_LENGTH = 5000;
 ```
 
 ### Core Types
@@ -92,7 +92,7 @@ RULES:
 - The quote before ||| will be highlighted in the UI, so it MUST match exactly
 - The claim after ||| can be rephrased for clarity`,
       prompt: `Extract facts from this content:\n\n${content}`,
-      maxOutputTokens: 8000,
+      maxOutputTokens: 2000,
     });
 
     // Stream facts as they're extracted
@@ -264,7 +264,7 @@ npm run dev
 ## API Endpoints
 
 ### `POST /check`
-Fact-check pasted text content. Content is truncated to 10,000 characters.
+Fact-check pasted text content. Content is truncated to 5,000 characters.
 
 **Request:**
 ```json
@@ -274,7 +274,7 @@ Fact-check pasted text content. Content is truncated to 10,000 characters.
 **Response:** SSE stream with fact extraction and verification events.
 
 ### `POST /extract`
-Extract content from URL and fact-check it. Content is truncated to 10,000 characters.
+Extract content from URL and fact-check it. Content is truncated to 5,000 characters.
 
 **Request:**
 ```json
@@ -301,7 +301,7 @@ Extract content from URL and fact-check it. Content is truncated to 10,000 chara
 
 This demo has several limitations:
 
-- **Content truncation**: Text is limited to 10,000 characters
+- **Content truncation**: Text is limited to 5,000 characters
 - **Rate limiting**: May experience rate limits during high traffic
 - **No authentication**: No user authentication implemented
 - **No caching**: Results are not cached
