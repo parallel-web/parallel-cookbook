@@ -282,14 +282,53 @@
       min-height: 400px;
       max-height: calc(100vh - 220px);
       overflow-y: auto;
+      overflow-x: hidden;
       font-size: 15px;
       line-height: 1.8;
       color: #111;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .truncation-warning {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #92400e;
+    }
+
+    .error-warning {
+      background: #fee2e2;
+      border: 1px solid #ef4444;
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 16px;
+      font-size: 14px;
+      color: #991b1b;
+    }
+
+    .report-error {
+      background: #fee2e2;
+      border: 1px solid #ef4444;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+      font-size: 14px;
+      color: #991b1b;
+      text-align: center;
     }
 
     .content-column {
       display: flex;
       flex-direction: column;
+      min-width: 0;
+      width: 100%;
     }
 
     .source-attribution {
@@ -709,6 +748,9 @@
         <div class="hidden" id="resultsState">
           <h2>Fact report</h2>
 
+          <!-- Error Message (shown when no facts could be extracted) -->
+          <div class="report-error hidden" id="reportError"></div>
+
           <!-- Pending Section -->
           <div class="result-category pending" id="pendingSection">
             <div class="category-header" onclick="toggleCategory('pending')">
@@ -784,6 +826,8 @@
     let isProcessing = false;
     let factCounter = 0;
     let originalContent = ''; // Store original plain text for highlighting
+    let warningMessage = ''; // Store truncation warning if any
+    let warningIsError = false; // Track if warning is an error (red) or info (amber)
 
     // DOM Elements
     const inputSection = document.getElementById('inputSection');
@@ -832,23 +876,28 @@
       facts.clear();
       factCounter = 0;
 
-      // Switch to results view immediately
-      inputSection.classList.add('hidden');
-      resultsSection.classList.remove('hidden');
-      header.classList.add('compact');
-      contentPanel.textContent = '';
-
-      // Show loading state
+      // Reset UI state before showing results section
       loadingState.classList.remove('hidden');
       resultsState.classList.add('hidden');
       loadingText.innerHTML = 'Fetching content...';
+      contentPanel.textContent = '';
 
-      // Reset result sections
+      // Switch to results view
+      inputSection.classList.add('hidden');
+      resultsSection.classList.remove('hidden');
+      header.classList.add('compact');
+
+      // Reset result sections - keep all hidden until we have facts
       document.getElementById('pendingClaims').innerHTML = '';
       document.getElementById('verifiedClaims').innerHTML = '';
       document.getElementById('unsureClaims').innerHTML = '';
       document.getElementById('falseClaims').innerHTML = '';
       document.getElementById('pendingSection').classList.add('hidden');
+      document.getElementById('verifiedSection').classList.add('hidden');
+      document.getElementById('unsureSection').classList.add('hidden');
+      document.getElementById('falseSection').classList.add('hidden');
+      document.getElementById('reportError').classList.add('hidden');
+      document.getElementById('reportError').innerHTML = '';
 
       fetchBtn.disabled = true;
       fetchBtn.textContent = 'Fetching...';
@@ -918,8 +967,6 @@
         isProcessing = false;
         fetchBtn.disabled = false;
         fetchBtn.textContent = 'Fetch & Check';
-        loadingState.classList.add('hidden');
-        resultsState.classList.remove('hidden');
       }
     }
 
@@ -937,21 +984,30 @@
       textInput.value = '';
       urlInput.value = '';
       contentPanel.innerHTML = '';
+      warningMessage = '';
+      warningIsError = false;
       document.getElementById('sourceAttribution').classList.add('hidden');
 
-      // Reset results
+      // Reset results - keep all sections hidden
       document.getElementById('pendingClaims').innerHTML = '';
       document.getElementById('verifiedClaims').innerHTML = '';
       document.getElementById('unsureClaims').innerHTML = '';
       document.getElementById('falseClaims').innerHTML = '';
       document.getElementById('pendingSection').classList.add('hidden');
+      document.getElementById('verifiedSection').classList.add('hidden');
+      document.getElementById('unsureSection').classList.add('hidden');
+      document.getElementById('falseSection').classList.add('hidden');
+      document.getElementById('reportError').classList.add('hidden');
+      document.getElementById('reportError').innerHTML = '';
       updateCounts();
     }
 
     // Start fact checking
+    const MAX_CONTENT_LENGTH = 5000;
+
     async function startFactCheck() {
-      const content = textInput.value.trim();
-      if (!content) {
+      const rawContent = textInput.value.trim();
+      if (!rawContent) {
         alert('Please enter some content to fact-check');
         return;
       }
@@ -959,28 +1015,46 @@
       if (isProcessing) return;
       isProcessing = true;
 
+      // Truncate content if needed
+      const wasTruncated = rawContent.length > MAX_CONTENT_LENGTH;
+      const content = rawContent.slice(0, MAX_CONTENT_LENGTH);
+      if (wasTruncated) {
+        warningMessage = "Content was truncated for this demo";
+        warningIsError = false;
+      } else {
+        warningMessage = '';
+        warningIsError = false;
+      }
+
       // Reset state
       facts.clear();
       factCounter = 0;
 
-      // Switch to results view
-      inputSection.classList.add('hidden');
-      resultsSection.classList.remove('hidden');
-      header.classList.add('compact');
-      originalContent = content; // Store for highlighting
-      contentPanel.innerHTML = escapeHtml(content);
-
-      // Show loading state
+      // Reset UI state before showing results section
       loadingState.classList.remove('hidden');
       resultsState.classList.add('hidden');
       loadingText.innerHTML = 'Extracting facts...';
+      originalContent = content; // Store for highlighting
+      const warningClass = warningIsError ? 'error-warning' : 'truncation-warning';
+      const warningHtml = warningMessage ? `<div class="${warningClass}">⚠️ ${escapeHtml(warningMessage)}</div>` : '';
+      contentPanel.innerHTML = warningHtml + escapeHtml(content);
 
-      // Reset result sections
+      // Reset result sections - keep all hidden until we have facts
       document.getElementById('pendingClaims').innerHTML = '';
       document.getElementById('verifiedClaims').innerHTML = '';
       document.getElementById('unsureClaims').innerHTML = '';
       document.getElementById('falseClaims').innerHTML = '';
       document.getElementById('pendingSection').classList.add('hidden');
+      document.getElementById('verifiedSection').classList.add('hidden');
+      document.getElementById('unsureSection').classList.add('hidden');
+      document.getElementById('falseSection').classList.add('hidden');
+      document.getElementById('reportError').classList.add('hidden');
+      document.getElementById('reportError').innerHTML = '';
+
+      // Switch to results view
+      inputSection.classList.add('hidden');
+      resultsSection.classList.remove('hidden');
+      header.classList.add('compact');
 
       try {
         const response = await fetch('check', {
@@ -1022,8 +1096,6 @@
         alert('Error: ' + error.message);
       } finally {
         isProcessing = false;
-        loadingState.classList.add('hidden');
-        resultsState.classList.remove('hidden');
       }
     }
 
@@ -1049,10 +1121,13 @@
           addFact(event.fact);
           addFactToPendingSection(event.fact);
           highlightFactInContent(event.fact);
-          // Show results panel on first fact
+          // Show results panel and sections on first fact
           if (facts.size === 1) {
             loadingState.classList.add('hidden');
             resultsState.classList.remove('hidden');
+            document.getElementById('verifiedSection').classList.remove('hidden');
+            document.getElementById('unsureSection').classList.remove('hidden');
+            document.getElementById('falseSection').classList.remove('hidden');
           }
           break;
 
@@ -1067,13 +1142,34 @@
 
         case 'complete':
           loadingState.classList.add('hidden');
-          resultsState.classList.remove('hidden');
+          // Only show results if we have facts (error handler shows results for errors)
+          if (facts.size > 0) {
+            resultsState.classList.remove('hidden');
+          }
           // Hide pending section when complete
           document.getElementById('pendingSection').classList.add('hidden');
           break;
 
         case 'error':
           console.error('Stream error:', event.error);
+          // Display error in the fact report panel (sections are already hidden by default)
+          loadingState.classList.add('hidden');
+          resultsState.classList.remove('hidden');
+          const reportError = document.getElementById('reportError');
+          reportError.innerHTML = `⚠️ ${escapeHtml(event.error)}`;
+          reportError.classList.remove('hidden');
+          break;
+
+        case 'warning':
+          console.warn('Warning:', event.message);
+          // Store warning for display (will be shown when content is highlighted)
+          warningMessage = event.message;
+          warningIsError = false;
+          // Add warning to content panel if it has content
+          if (contentPanel.innerHTML) {
+            const warningHtml = `<div class="truncation-warning">⚠️ ${escapeHtml(warningMessage)}</div>`;
+            contentPanel.innerHTML = warningHtml + contentPanel.innerHTML;
+          }
           break;
       }
     }
@@ -1152,6 +1248,11 @@
         );
       }
 
+      // Prepend warning if present
+      if (warningMessage) {
+        const warnClass = warningIsError ? 'error-warning' : 'truncation-warning';
+        html = `<div class="${warnClass}">⚠️ ${escapeHtml(warningMessage)}</div>` + html;
+      }
       contentPanel.innerHTML = html;
     }
 

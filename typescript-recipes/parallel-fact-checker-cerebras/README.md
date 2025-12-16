@@ -5,10 +5,11 @@ This guide demonstrates how to build a fact-checking application that extracts v
 ## How It Works
 
 1. User pastes text or enters a URL
-2. LLM extracts verifiable factual claims from the content
-3. Each claim is searched on the web using Parallel's Search API
-4. LLM analyzes the search results to determine if each claim is Verified, Unsure, or False
-5. Results stream to the UI in real-time with source citations
+2. Content is extracted (for URLs) and truncated if needed
+3. LLM extracts verifiable factual claims from the content
+4. Each claim is searched on the web using Parallel's Search API
+5. LLM analyzes the search results to determine if each claim is Verified, Unsure, or False
+6. Results stream to the UI in real-time with source citations
 
 ## The Architecture
 
@@ -33,6 +34,14 @@ The Search API is designed for machine consumption, returning only the most rele
 npm install parallel-web @ai-sdk/cerebras ai
 ```
 
+### Configuration
+
+The app uses a constant for content length limits:
+
+```typescript
+const MAX_CONTENT_LENGTH = 5000;
+```
+
 ### Core Types
 
 The application tracks facts through various states:
@@ -54,7 +63,7 @@ interface Fact {
 
 ### Extracting Facts from Content
 
-Facts are extracted using streaming LLM inference. The prompt asks for exact quotes from the source text (for UI highlighting) paired with the claim to verify:
+Facts are extracted using streaming LLM inference with `temperature: 0` for consistent results. The prompt asks for exact quotes from the source text (for UI highlighting) paired with the claim to verify:
 
 ```typescript
 async function extractFacts(
@@ -63,9 +72,13 @@ async function extractFacts(
   controller: ReadableStreamDefaultController,
   encoder: TextEncoder
 ): Promise<Fact[]> {
-  const factsResult = await streamText({
-    model: cerebras("gpt-oss-120b"),
-    system: `You are a claim extraction expert. Extract verifiable claims from content.
+  const extractedFacts: Fact[] = [];
+
+  try {
+    const factsResult = streamText({
+      model: cerebras("gpt-oss-120b"),
+      temperature: 0,
+      system: `You are a claim extraction expert. Extract verifiable claims from content.
 
 OUTPUT FORMAT - use this EXACT format for each fact (one per line):
 FACT: [EXACT QUOTE] ||| [claim to verify]
@@ -75,19 +88,20 @@ CRITICAL: The text before ||| must be COPIED CHARACTER-FOR-CHARACTER from the in
 RULES:
 - Extract all verifiable claims (dates, numbers, events, people, places)
 - Skip opinions and predictions
+- Skip self-referential claims about the article itself
 - The quote before ||| will be highlighted in the UI, so it MUST match exactly
 - The claim after ||| can be rephrased for clarity`,
-    prompt: `Extract facts from this content:\n\n${content}`,
-    maxOutputTokens: 2000,
-  });
+      prompt: `Extract facts from this content:\n\n${content}`,
+      maxOutputTokens: 2000,
+    });
 
-  const extractedFacts: Fact[] = [];
-  let currentText = "";
-
-  // Stream facts as they're extracted
-  for await (const chunk of factsResult.textStream) {
-    currentText += chunk;
-    // Parse complete FACT: lines and emit them immediately
+    // Stream facts as they're extracted
+    for await (const chunk of factsResult.textStream) {
+      // Parse complete FACT: lines and emit them immediately
+      // ...
+    }
+  } catch (error) {
+    // Handle rate limits and other errors
     // ...
   }
 
@@ -107,19 +121,21 @@ async function verifyFact(
   controller: ReadableStreamDefaultController,
   encoder: TextEncoder
 ): Promise<void> {
-  // Search for evidence using Parallel
-  const searchResult = await parallel.beta.search({
-    objective: `Find reliable sources to verify or refute this claim: "${fact.text}"`,
-    search_queries: [fact.text],
-    processor: "base",
-    max_results: 5,
-    max_chars_per_result: 2000,
-  });
+  try {
+    // Search for evidence using Parallel
+    const searchResult = await parallel.beta.search({
+      objective: `Find reliable sources to verify or refute this claim: "${fact.text}"`,
+      search_queries: [fact.text],
+      processor: "base",
+      max_results: 5,
+      max_chars_per_result: 2000,
+    });
 
-  // Have LLM analyze the evidence
-  const verdictResult = await streamText({
-    model: cerebras("gpt-oss-120b"),
-    system: `You are a fact-checking expert. Analyze the provided evidence and determine if the claim is:
+    // Have LLM analyze the evidence
+    const verdictResult = streamText({
+      model: cerebras("gpt-oss-120b"),
+      temperature: 0,
+      system: `You are a fact-checking expert. Analyze the provided evidence and determine if the claim is:
 - VERIFIED: The evidence strongly supports the claim
 - FALSE: The evidence contradicts the claim
 - UNSURE: The evidence is insufficient or conflicting
@@ -127,17 +143,21 @@ async function verifyFact(
 Provide your response in this exact format:
 VERDICT: [VERIFIED/FALSE/UNSURE]
 EXPLANATION: [Brief 1-2 sentence explanation]`,
-    prompt: `Claim to verify: "${fact.text}"
+      prompt: `Claim to verify: "${fact.text}"
 
 Evidence from web search:
 ${JSON.stringify(searchResult.results?.slice(0, 3).map(r => ({
   title: r.title,
   excerpt: r.excerpts?.slice(0, 500)
 })), null, 2)}`,
-    maxOutputTokens: 500,
-  });
+      maxOutputTokens: 500,
+    });
 
-  // Parse verdict and send to client...
+    // Parse verdict and send to client...
+  } catch (error) {
+    // Handle rate limits gracefully
+    // ...
+  }
 }
 ```
 
@@ -153,21 +173,30 @@ await Promise.all(
 
 ### URL Extraction with Parallel Extract API
 
-When a user provides a URL, we first extract the content using Parallel's Extract API:
+When a user provides a URL, we extract the content using Parallel's Extract API:
 
 ```typescript
 const extractResult = await parallel.beta.extract({
   urls: [extractUrl],
-  objective: "Extract the main content, article text, and key claims from this webpage",
+  objective: "Extract the article text and key claims from this webpage",
   excerpts: true,
-  full_content: true,
+  full_content: false,
 });
 
 const rawContent = extractResult.results[0].full_content ||
   extractResult.results[0].excerpts?.join('\n\n') || '';
-```
 
-The raw content is then cleaned and formatted by an LLM before fact extraction.
+// Truncate content if needed
+const wasTruncated = rawContent.length > MAX_CONTENT_LENGTH;
+const content = rawContent.slice(0, MAX_CONTENT_LENGTH);
+
+if (wasTruncated) {
+  sendSSE(controller, encoder, {
+    type: "warning",
+    message: "Content was truncated for this demo"
+  });
+}
+```
 
 ### Streaming with Server-Sent Events
 
@@ -181,6 +210,8 @@ function sendSSE(controller: ReadableStreamDefaultController, encoder: TextEncod
 // Usage in the stream
 sendSSE(controller, encoder, { type: "fact_extracted", fact });
 sendSSE(controller, encoder, { type: "fact_verdict", factId, status, explanation, references });
+sendSSE(controller, encoder, { type: "warning", message: "Content was truncated for this demo" });
+sendSSE(controller, encoder, { type: "error", error: "Demo is experiencing high traffic. Please try again later." });
 ```
 
 The frontend handles these events to update the UI in real-time, showing facts as they're extracted and verdicts as they arrive.
@@ -233,7 +264,7 @@ npm run dev
 ## API Endpoints
 
 ### `POST /check`
-Fact-check pasted text content.
+Fact-check pasted text content. Content is truncated to 5,000 characters.
 
 **Request:**
 ```json
@@ -243,36 +274,37 @@ Fact-check pasted text content.
 **Response:** SSE stream with fact extraction and verification events.
 
 ### `POST /extract`
-Extract content from URL and fact-check it.
+Extract content from URL and fact-check it. Content is truncated to 5,000 characters.
 
 **Request:**
 ```json
 { "url": "https://example.com/article" }
 ```
 
-**Response:** SSE stream including content extraction, formatting, fact extraction, and verification.
+**Response:** SSE stream including content extraction, fact extraction, and verification.
 
 ## SSE Event Types
 
 | Event Type | Description |
 |------------|-------------|
-| `phase` | Current processing phase (extracting, verifying, etc.) |
+| `phase` | Current processing phase (extracting_url, extracting, verifying) |
 | `content_chunk` | Streamed content chunk (URL extraction only) |
-| `content_complete` | Full formatted content ready |
+| `content_complete` | Full content ready |
 | `fact_extracted` | New fact identified |
 | `fact_status` | Fact status update (e.g., "searching") |
 | `fact_verdict` | Final verdict with explanation and sources |
-| `complete` | Processing finished |
+| `warning` | Warning message (e.g., content truncated, rate limit hit) |
 | `error` | Error occurred |
+| `complete` | Processing finished |
 
-## Production Considerations
+## Demo Limitations
 
-This demo omits several production requirements:
+This demo has several limitations:
 
-- **Authentication**: No user authentication implemented
-- **Rate limiting**: Currently limited only by API budgets
-- **Caching**: Could cache verification results for common claims
-- **Error handling**: Basic error handling shown but could be expanded
+- **Content truncation**: Text is limited to 5,000 characters
+- **Rate limiting**: May experience rate limits during high traffic
+- **No authentication**: No user authentication implemented
+- **No caching**: Results are not cached
 
 ## Resources
 
