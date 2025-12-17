@@ -119,6 +119,10 @@ async function handleOAuthCallback(
     if (tokenData.access_token) {
       const headers = new Headers({ Location: "/?auth=success" });
       const securePart = isLocalhost ? `` : ` Secure;`;
+
+      // WARNING: This cookie is made directly accessible to front-end JavaScript (no HttpOnly flag).
+      // The API key is intentionally exposed to the frontend for client-side API calls for the purposes of this demo.
+      // Ensure this is only used in trusted contexts and consider the security implications.
       headers.append(
         "Set-Cookie",
         `parallel_api_key=${tokenData.access_token}; Path=/; ${securePart} SameSite=Lax; Max-Age=2592000`,
