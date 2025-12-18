@@ -1113,6 +1113,7 @@
 
                 const { access_token } = await response.json();
                 currentApiKey = access_token;
+                // NB: Store API key in localStorage for demo purposes only
                 localStorage.setItem('parallel_api_key', currentApiKey);
                 localStorage.removeItem('code_verifier');
 
