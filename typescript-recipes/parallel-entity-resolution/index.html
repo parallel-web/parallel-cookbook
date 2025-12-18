@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallel Entity Resolver</title>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --off-white: #fcfcfa;
+            --index-black: #1d1b16;
+            --neural: #d8d0bf;
+            --signal: #fb631b;
+        }
+
+        body {
+            font-family: 'FT System Mono', monospace;
+            line-height: 1.6;
+            color: var(--index-black);
+            background: var(--off-white);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--neural);
+        }
+
+        .header h1 {
+            font-family: 'Gerstner Programm', serif;
+            color: var(--index-black);
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .header .tagline {
+            color: var(--signal);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .header p {
+            color: var(--index-black);
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .auth-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--neural);
+            margin-bottom: 40px;
+        }
+
+        .auth-section h2 {
+            font-family: 'Gerstner Programm', serif;
+            margin-bottom: 20px;
+            color: var(--index-black);
+            font-weight: normal;
+        }
+
+        .btn {
+            background: var(--signal);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-family: 'FT System Mono', monospace;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn:hover {
+            background: #e55a17;
+            transform: translateY(-1px);
+        }
+
+        .btn:disabled {
+            background: var(--neural);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-secondary {
+            background: var(--neural);
+            color: var(--index-black);
+        }
+
+        .btn-secondary:hover {
+            background: #c7bfa8;
+        }
+
+        .resolver-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--neural);
+            margin-bottom: 40px;
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--index-black);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 12px;
+        }
+
+        .input-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid var(--neural);
+            border-radius: 4px;
+            font-family: 'FT System Mono', monospace;
+            font-size: 14px;
+            transition: border-color 0.2s;
+            resize: vertical;
+            min-height: 120px;
+            background: var(--off-white);
+        }
+
+        .input-group textarea:focus {
+            outline: none;
+            border-color: var(--signal);
+        }
+
+        .results-section {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--neural);
+            overflow: hidden;
+        }
+
+        .results-header {
+            padding: 25px 30px;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--neural);
+        }
+
+        .results-header h2 {
+            font-family: 'Gerstner Programm', serif;
+            margin: 0;
+            color: var(--index-black);
+            font-weight: normal;
+        }
+
+        .result-item {
+            padding: 30px;
+            border-bottom: 1px solid var(--neural);
+        }
+
+        .result-item:last-child {
+            border-bottom: none;
+        }
+
+        .result-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .result-id {
+            font-family: 'FT System Mono', monospace;
+            font-size: 12px;
+            color: var(--signal);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .status-pending {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+        }
+
+        .status-running {
+            background: var(--neural);
+            color: var(--index-black);
+            border: 1px solid #b8b0a0;
+        }
+
+        .status-completed {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+
+        .status-failed {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+
+        .loading-spinner {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .spinner {
+            width: 12px;
+            height: 12px;
+            border: 2px solid var(--neural);
+            border-top: 2px solid var(--signal);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .profiles-grid {
+            display: grid;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .profile-card {
+            border: 1px solid var(--neural);
+            border-radius: 4px;
+            padding: 20px;
+            background: var(--off-white);
+        }
+
+        .profile-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .profile-platform {
+            font-weight: 500;
+            color: var(--signal);
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .profile-url {
+            color: var(--index-black);
+            text-decoration: none;
+            word-break: break-all;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .profile-url:hover {
+            color: var(--signal);
+        }
+
+        .profile-flags {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .flag {
+            background: var(--neural);
+            color: var(--index-black);
+            padding: 2px 6px;
+            border-radius: 8px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .flag.self-proclaimed {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .flag.self-referring {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .profile-snippet {
+            font-size: 13px;
+            line-height: 1.5;
+            color: var(--index-black);
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .match-reasoning {
+            font-size: 12px;
+            font-style: italic;
+            color: var(--index-black);
+            opacity: 0.7;
+            border-left: 3px solid var(--signal);
+            padding-left: 10px;
+        }
+
+        .auth-status {
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            border: 1px solid;
+        }
+
+        .auth-status.authenticated {
+            background: #d1fae5;
+            color: #065f46;
+            border-color: #a7f3d0;
+        }
+
+        .auth-status.not-authenticated {
+            background: #fef3c7;
+            color: #92400e;
+            border-color: #fcd34d;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 30px;
+            color: var(--index-black);
+            opacity: 0.6;
+        }
+
+        .empty-state h3 {
+            font-family: 'Gerstner Programm', serif;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .api-docs {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid var(--neural);
+            margin-bottom: 40px;
+        }
+
+        .code-block {
+            background: var(--index-black);
+            color: var(--off-white);
+            padding: 20px;
+            border-radius: 4px;
+            font-family: 'FT System Mono', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .code-block .comment {
+            color: #6b7280;
+        }
+
+        .code-block .string {
+            color: #10b981;
+        }
+
+        .code-block .keyword {
+            color: var(--signal);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="tagline">Entity Resolution</div>
+            <h1>Parallel Resolver</h1>
+            <p>Map any initial data about a person to their digital profiles across platforms</p>
+        </div>
+
+        <div class="auth-section">
+            <h2>Authentication</h2>
+
+            <div id="auth-status" class="auth-status not-authenticated">
+                🔐 Connect your Parallel API key to start resolving entities
+            </div>
+
+            <div id="auth-actions">
+                <button class="btn" onclick="startOAuth()">Connect with Parallel AI</button>
+            </div>
+        </div>
+
+        <div class="api-docs">
+            <h2 style="font-family: 'Gerstner Programm', serif; margin-bottom: 20px;">API Reference</h2>
+
+            <h3 style="margin: 20px 0 10px 0;">POST /resolve</h3>
+            <p style="margin-bottom: 15px;">Submit person data for entity resolution</p>
+
+            <div class="code-block">
+                <span class="comment">// Request</span>
+                curl -X POST /resolve \
+                -H <span class="string">"Content-Type: application/json"</span> \
+                -H <span class="string">"x-api-key: YOUR_API_KEY"</span> \
+                -d <span class="string">'{"input": "John Smith, Software Engineer at Google, @johnsmith on
+                    Twitter"}'</span>
+
+                <span class="comment">// Response</span>
+                {
+                <span class="string">"trun_id"</span>: <span class="string">"trun_abc123def456"</span>
+                }
+            </div>
+
+            <h3 style="margin: 30px 0 10px 0;">GET /resolve/{trun_id}</h3>
+            <p style="margin-bottom: 15px;">Get resolution results</p>
+
+            <div class="code-block">
+                <span class="comment">// Response when ready</span>
+                {
+                <span class="string">"profiles"</span>: [
+                {
+                <span class="string">"platform_slug"</span>: <span class="string">"twitter"</span>,
+                <span class="string">"profile_url"</span>: <span class="string">"https://twitter.com/johnsmith"</span>,
+                <span class="string">"is_self_proclaimed"</span>: <span class="keyword">true</span>,
+                <span class="string">"is_self_referring"</span>: <span class="keyword">false</span>,
+                <span class="string">"match_reasoning"</span>: <span class="string">"Direct mention in input"</span>,
+                <span class="string">"profile_snippet"</span>: <span class="string">"Software Engineer
+                    @Google..."</span>
+                }
+                ]
+                }
+            </div>
+        </div>
+
+        <div class="resolver-section" id="resolver-section" style="display: none;">
+            <h2 style="font-family: 'Gerstner Programm', serif; margin-bottom: 25px;">Resolve Entity</h2>
+
+            <form onsubmit="resolveEntity(event)">
+                <div class="input-group">
+                    <label for="entity-input">Person Information</label>
+                    <textarea id="entity-input"
+                        placeholder="Enter any information about the person: name, social handles, email, bio, company, location, etc."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn" id="resolve-btn">Resolve Entity</button>
+            </form>
+        </div>
+
+        <div class="results-section" id="results-section" style="display: none;">
+            <div class="results-header">
+                <h2>Resolution Results</h2>
+            </div>
+            <div id="results-content">
+                <div class="empty-state">
+                    <h3>No resolutions yet</h3>
+                    <p>Submit person information above to start resolving their digital profiles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let resolutions = JSON.parse(localStorage.getItem('parallel_resolutions') || '[]');
+        let pollIntervals = new Map();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            checkAuthStatus();
+            displayResults();
+        });
+
+        function checkAuthStatus() {
+            const cookies = parseCookies(document.cookie);
+            const hasApiKey = !!cookies.parallel_api_key;
+
+            const authStatus = document.getElementById('auth-status');
+            const authActions = document.getElementById('auth-actions');
+            const resolverSection = document.getElementById('resolver-section');
+            const resultsSection = document.getElementById('results-section');
+
+            if (hasApiKey) {
+                authStatus.className = 'auth-status authenticated';
+                authStatus.innerHTML = '✅ Connected to Parallel AI';
+                authActions.innerHTML = '<button class="btn btn-secondary" onclick="logout()">Disconnect</button>';
+                resolverSection.style.display = 'block';
+                resultsSection.style.display = 'block';
+
+                // Resume polling for active resolutions
+                resolutions.forEach(res => {
+                    if (res.status === 'running' || res.status === 'pending') {
+                        startPolling(res.trun_id);
+                    }
+                });
+            } else {
+                authStatus.className = 'auth-status not-authenticated';
+                authStatus.innerHTML = '🔐 Connect your Parallel API key to start resolving entities';
+                authActions.innerHTML = '<button class="btn" onclick="startOAuth()">Connect with Parallel AI</button>';
+                resolverSection.style.display = 'none';
+                resultsSection.style.display = 'none';
+            }
+
+            // Check for auth success
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('auth') === 'success') {
+                setTimeout(() => {
+                    window.history.replaceState({}, '', window.location.pathname);
+                }, 100);
+            }
+        }
+
+        async function generatePKCE() {
+            const codeVerifier = btoa(crypto.getRandomValues(new Uint8Array(32)))
+                .replace(/[+/=]/g, (m) => ({ "+": "-", "/": "_", "=": "" }[m]));
+
+            const hash = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(codeVerifier));
+            const codeChallenge = btoa(String.fromCharCode(...new Uint8Array(hash)))
+                .replace(/[+/=]/g, (m) => ({ "+": "-", "/": "_", "=": "" }[m]));
+
+            return { codeVerifier, codeChallenge };
+        }
+
+        async function startOAuth() {
+            const { codeVerifier, codeChallenge } = await generatePKCE();
+
+            document.cookie = `code_verifier=${codeVerifier}; path=/; max-age=600`;
+
+            const authUrl = new URL('https://platform.parallel.ai/getKeys/authorize');
+            authUrl.searchParams.set('client_id', window.location.hostname);
+            authUrl.searchParams.set('redirect_uri', `${window.location.origin}/callback`);
+            authUrl.searchParams.set('response_type', 'code');
+            authUrl.searchParams.set('scope', 'key:read');
+            authUrl.searchParams.set('code_challenge', codeChallenge);
+            authUrl.searchParams.set('code_challenge_method', 'S256');
+            authUrl.searchParams.set('state', Math.random().toString(36).substring(2));
+
+            window.location.href = authUrl.toString();
+        }
+
+        function logout() {
+            document.cookie = 'parallel_api_key=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT';
+            window.location.reload();
+        }
+
+        async function resolveEntity(event) {
+            event.preventDefault();
+
+            const input = document.getElementById('entity-input').value.trim();
+            const resolveBtn = document.getElementById('resolve-btn');
+
+            resolveBtn.disabled = true;
+            resolveBtn.innerHTML = '<span class="loading-spinner"><span class="spinner"></span>Resolving...</span>';
+
+            try {
+                const response = await fetch('/resolve', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ input })
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.trun_id) {
+                    const resolution = {
+                        trun_id: result.trun_id,
+                        input: input,
+                        status: 'pending',
+                        created_at: new Date().toISOString(),
+                        profiles: null
+                    };
+
+                    resolutions.unshift(resolution);
+                    localStorage.setItem('parallel_resolutions', JSON.stringify(resolutions));
+
+                    displayResults();
+                    startPolling(result.trun_id);
+
+                    document.getElementById('entity-input').value = '';
+                } else {
+                    alert(result.error || 'Failed to submit resolution');
+                }
+            } catch (error) {
+                alert('Network error occurred');
+            }
+
+            resolveBtn.disabled = false;
+            resolveBtn.textContent = 'Resolve Entity';
+        }
+
+        function displayResults() {
+            const container = document.getElementById('results-content');
+
+            if (resolutions.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No resolutions yet</h3>
+                        <p>Submit person information above to start resolving their digital profiles</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const html = resolutions.map(resolution => `
+                <div class="result-item" id="resolution-${resolution.trun_id}">
+                    <div class="result-meta">
+                        <div class="result-id">${resolution.trun_id}</div>
+                        <div class="status-badge status-${resolution.status}">
+                            ${resolution.status === 'running' || resolution.status === 'pending' ?
+                    `<span class="loading-spinner"><span class="spinner"></span>${resolution.status}</span>` :
+                    resolution.status
+                }
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <strong>Input:</strong> ${resolution.input}
+                    </div>
+                    
+                    ${resolution.profiles ? renderProfiles(resolution.profiles) : ''}
+                </div>
+            `).join('');
+
+            container.innerHTML = html;
+        }
+
+        function renderProfiles(profiles) {
+            if (!profiles || profiles.length === 0) {
+                return '<div style="padding: 20px; text-align: center; color: var(--index-black); opacity: 0.6;">No profiles found</div>';
+            }
+
+            return `
+                <div class="profiles-grid">
+                    ${profiles.map(profile => `
+                        <div class="profile-card">
+                            <div class="profile-header">
+                                <div class="profile-platform">${profile.platform_slug}</div>
+                            </div>
+                            
+                            <a href="${profile.profile_url}" target="_blank" class="profile-url">${profile.profile_url}</a>
+                            
+                            <div class="profile-flags">
+                                ${profile.is_self_proclaimed ? '<span class="flag self-proclaimed">Self-proclaimed</span>' : ''}
+                                ${profile.is_self_referring ? '<span class="flag self-referring">Self-referring</span>' : ''}
+                            </div>
+                            
+                            ${profile.profile_snippet ? `<div class="profile-snippet">${profile.profile_snippet}</div>` : ''}
+                            
+                            <div class="match-reasoning">${profile.match_reasoning}</div>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        function startPolling(trunId) {
+            if (pollIntervals.has(trunId)) return;
+
+            const interval = setInterval(async () => {
+                await checkResolutionStatus(trunId);
+            }, 2000);
+
+            pollIntervals.set(trunId, interval);
+        }
+
+        async function checkResolutionStatus(trunId) {
+            try {
+                const response = await fetch(`/resolve/${trunId}`);
+                const result = await response.json();
+
+                if (response.ok) {
+                    const resolutionIndex = resolutions.findIndex(r => r.trun_id === trunId);
+                    if (resolutionIndex !== -1) {
+                        if (result.profiles) {
+                            resolutions[resolutionIndex].status = 'completed';
+                            resolutions[resolutionIndex].profiles = result.profiles;
+                            clearInterval(pollIntervals.get(trunId));
+                            pollIntervals.delete(trunId);
+                        } else if (result.status) {
+                            resolutions[resolutionIndex].status = result.status;
+                            if (result.status === 'failed') {
+                                clearInterval(pollIntervals.get(trunId));
+                                pollIntervals.delete(trunId);
+                            }
+                        }
+
+                        localStorage.setItem('parallel_resolutions', JSON.stringify(resolutions));
+                        displayResults();
+                    }
+                }
+            } catch (error) {
+                console.error('Error checking resolution status:', error);
+            }
+        }
+
+        function parseCookies(cookieString) {
+            return cookieString.split(';').reduce((cookies, cookie) => {
+                const [name, value] = cookie.trim().split('=');
+                if (name && value) {
+                    cookies[name] = decodeURIComponent(value);
+                }
+                return cookies;
+            }, {});
+        }
+    </script>
+</body>
+
+</html>
