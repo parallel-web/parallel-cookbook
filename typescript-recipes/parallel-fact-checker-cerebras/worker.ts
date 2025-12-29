@@ -263,12 +263,13 @@ export default {
     // Normalize pathname - strip base path if present
     const basePath = "/agents/cerebras-fact-checker";
     let pathname = url.pathname;
+
     if (pathname.startsWith(basePath)) {
       pathname = pathname.slice(basePath.length) || "/";
     }
 
     // Serve the HTML page
-    if (request.method === "GET" && (pathname === "/" || pathname === "")) {
+    if (request.method === "GET" && pathname === "/") {
       return new Response(indexHtml, {
         headers: { "Content-Type": "text/html" },
       });
