@@ -905,13 +905,23 @@
       let streamedContent = '';
 
       try {
-        const response = await fetch('extract', {
+        const response = await fetch('/agents/cerebras-fact-checker/extract', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ url })
         });
 
-        if (!response.ok) throw new Error('Failed to extract content');
+        if (!response.ok) {
+          const errorText = await response.text().catch(() => '');
+          if (response.status === 404) {
+            throw new Error('Service temporarily unavailable. Please try again.');
+          } else if (response.status === 429) {
+            throw new Error('Rate limit exceeded. Please wait a moment before trying again.');
+          } else if (response.status >= 500) {
+            throw new Error(`Server error: ${errorText || 'The service is temporarily unavailable. Please try again later.'}`);
+          }
+          throw new Error(errorText || `Request failed (${response.status})`);
+        }
 
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
@@ -1057,13 +1067,23 @@
       header.classList.add('compact');
 
       try {
-        const response = await fetch('check', {
+        const response = await fetch('/agents/cerebras-fact-checker/check', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ content })
         });
 
-        if (!response.ok) throw new Error('Failed to start fact check');
+        if (!response.ok) {
+          const errorText = await response.text().catch(() => '');
+          if (response.status === 404) {
+            throw new Error('Service temporarily unavailable. Please try again.');
+          } else if (response.status === 429) {
+            throw new Error('Rate limit exceeded. Please wait a moment before trying again.');
+          } else if (response.status >= 500) {
+            throw new Error(`Server error: ${errorText || 'The service is temporarily unavailable. Please try again later.'}`);
+          }
+          throw new Error(errorText || `Request failed (${response.status})`);
+        }
 
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
