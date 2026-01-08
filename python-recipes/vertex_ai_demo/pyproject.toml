@@ -29,10 +29,18 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+notebook = [
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+]
 dev = [
     "pytest>=8.0.0",
     "pytest-asyncio>=0.24.0",
     "pytest-cov>=4.0.0",
+    "jupyter>=1.0.0",
+    "ipykernel>=6.0.0",
+    "ruff>=0.8.0",
+    "ty>=0.0.10",
 ]
 
 [build-system]
@@ -58,3 +66,15 @@ exclude_lines = [
     "raise NotImplementedError",
     "if TYPE_CHECKING:",
 ]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+ignore = ["E501"]
+
+[tool.ruff.lint.per-file-ignores]
+"demo.py" = ["E402"]
+"quickstart.py" = ["E402"]

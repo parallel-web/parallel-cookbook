@@ -42,15 +42,52 @@ import google.auth
 import google.auth.transport.requests
 import requests
 
-from vertex_parallel import GroundedGeminiClient, GroundedResponse
+from vertex_parallel import GroundedGeminiClient, GroundedResponse, validate_setup
 
-# Sample questions about recent events that benefit from web grounding
+# Sample questions organized by domain to show diverse use cases
+# Each tuple contains (question, category) for better organization
+SAMPLE_QUESTIONS_BY_CATEGORY = {
+    "Sports": [
+        "Who won the most recent Formula 1 World Championship?",
+        "Who won the most recent Super Bowl?",
+        "What were the results of the latest NBA Finals?",
+    ],
+    "Finance": [
+        "What was the stock price of NVIDIA at close yesterday?",
+        "What is the current price of Bitcoin?",
+        "What were the key points from the latest Federal Reserve meeting?",
+    ],
+    "Technology": [
+        "What is the latest AI model from Google?",
+        "What new features were announced in the latest iPhone?",
+        "What are the recent developments in quantum computing?",
+    ],
+    "Business": [
+        "When did Parallel Web Systems announce their Series A?",
+        "What was discussed in the latest Tesla earnings call?",
+        "What are the recent major tech company layoffs?",
+    ],
+    "Science & Health": [
+        "What are the latest findings from the James Webb Space Telescope?",
+        "What new treatments for cancer were recently approved by the FDA?",
+        "What are the current global climate change statistics?",
+    ],
+    "Current Events": [
+        "What are today's top news headlines?",
+        "What major world events happened this week?",
+        "What are the current weather conditions in New York City?",
+    ],
+}
+
+# Flattened list for backwards compatibility
 SAMPLE_QUESTIONS = [
     "Who won the most recent Formula 1 World Championship?",
     "What was the stock price of NVIDIA at close yesterday?",
     "Who won the most recent Super Bowl?",
     "When did Parallel Web Systems announce their Series A?",
     "What is the latest AI model from Google?",
+    "What are the latest findings from the James Webb Space Telescope?",
+    "What are today's top news headlines?",
 ]
 
 
@@ -334,13 +371,19 @@ def main() -> None:
         help="Run in interactive mode to ask your own questions",
     )
     parser.add_argument(
+        "--check",
+        "-c",
+        action="store_true",
+        help="Only run setup validation (check credentials and configuration)",
+    )
+    parser.add_argument(
         "--num",
         "-n",
         type=int,
-        default=5,
+        default=3,
         choices=range(1, len(SAMPLE_QUESTIONS) + 1),
         metavar=f"1-{len(SAMPLE_QUESTIONS)}",
-        help=f"Number of sample questions to run (default: 5, max: {len(SAMPLE_QUESTIONS)})",
+        help=f"Number of sample questions to run (default: 3, max: {len(SAMPLE_QUESTIONS)})",
     )
     parser.add_argument(
         "--model",
@@ -370,21 +413,24 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    # Check required environment variables
-    project_id = os.environ.get("GOOGLE_CLOUD_PROJECT")
-    parallel_api_key = os.environ.get("PARALLEL_API_KEY")
+    # Validate setup before proceeding
+    # This gives users clear feedback on what's missing
+    print("Checking setup...")
+    status = validate_setup()
+
+    if not status.is_valid:
+        print("\n" + str(status))
+        sys.exit(1)
+
+    print(str(status))
+
+    # If --check flag was passed, exit after validation
+    if args.check:
+        sys.exit(0 if status.is_valid else 1)
+
+    project_id = status.project_id
     location = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
-
-    if not project_id:
-        print("Error: GOOGLE_CLOUD_PROJECT environment variable is not set.")
-        print("Please set it with: export GOOGLE_CLOUD_PROJECT='your-project-id'")
-        sys.exit(1)
-
-    if not parallel_api_key:
-        print("Error: PARALLEL_API_KEY environment variable is not set.")
-        print("Please set it with: export PARALLEL_API_KEY='your-api-key'")
-        print("Get your API key from: https://parallel.ai/products/search")
-        sys.exit(1)
+    parallel_api_key = os.environ.get("PARALLEL_API_KEY")
 
     # Initialize client
     try:
@@ -393,7 +439,7 @@ def main() -> None:
             location=location,
             parallel_api_key=parallel_api_key,
         )
-        print(f"Initialized client for project: {project_id}")
+        print(f"\nInitialized client for project: {project_id}")
     except Exception as e:
         print(f"\nError initializing client: {e}")
         print("\nMake sure you have authenticated with Google Cloud:")

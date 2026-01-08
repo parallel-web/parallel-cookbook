@@ -7,15 +7,155 @@ Gemini models using Parallel's web search API for real-time information.
 
 from __future__ import annotations
 
-import json
 import os
+import time
 from dataclasses import dataclass, field
 from typing import Any
 
 import google.auth
+import google.auth.exceptions
 import google.auth.transport.requests
 import requests
 from pydantic import BaseModel
+
+
+class SetupError(Exception):
+    """Raised when there's a configuration or authentication issue."""
+
+    pass
+
+
+@dataclass
+class SetupStatus:
+    """Result of setup validation check.
+
+    Attributes:
+        is_valid: Whether all checks passed.
+        project_id: The GCP project ID found (or None).
+        parallel_api_key_set: Whether a Parallel API key is configured.
+        gcp_auth_valid: Whether GCP authentication is working.
+        errors: List of error messages for failed checks.
+        warnings: List of warning messages for potential issues.
+    """
+
+    is_valid: bool
+    project_id: str | None
+    parallel_api_key_set: bool
+    gcp_auth_valid: bool
+    errors: list[str] = field(default_factory=list)
+    warnings: list[str] = field(default_factory=list)
+
+    def __str__(self) -> str:
+        """Format status as a human-readable string."""
+        lines = ["Setup Status:", "-" * 40]
+
+        # Status indicator
+        status = "READY" if self.is_valid else "NOT READY"
+        lines.append(f"Status: {status}")
+        lines.append("")
+
+        # Configuration
+        lines.append("Configuration:")
+        lines.append(f"  GCP Project: {self.project_id or 'NOT SET'}")
+        lines.append(f"  Parallel API Key: {'SET' if self.parallel_api_key_set else 'NOT SET'}")
+        lines.append(f"  GCP Authentication: {'VALID' if self.gcp_auth_valid else 'INVALID'}")
+
+        # Errors
+        if self.errors:
+            lines.append("")
+            lines.append("Errors:")
+            for error in self.errors:
+                lines.append(f"  - {error}")
+
+        # Warnings
+        if self.warnings:
+            lines.append("")
+            lines.append("Warnings:")
+            for warning in self.warnings:
+                lines.append(f"  - {warning}")
+
+        # Help
+        if not self.is_valid:
+            lines.append("")
+            lines.append("To fix:")
+            if not self.project_id:
+                lines.append("  export GOOGLE_CLOUD_PROJECT='your-project-id'")
+            if not self.parallel_api_key_set:
+                lines.append("  export PARALLEL_API_KEY='your-api-key'")
+                lines.append("  Get your key at: https://parallel.ai/products/search")
+            if not self.gcp_auth_valid:
+                lines.append("  gcloud auth application-default login")
+
+        return "\n".join(lines)
+
+
+def validate_setup(
+    project_id: str | None = None,
+    parallel_api_key: str | None = None,
+) -> SetupStatus:
+    """Validate that all required configuration is in place.
+
+    This function checks:
+    1. GCP project ID is set (via argument or environment variable)
+    2. Parallel API key is set (via argument or environment variable)
+    3. GCP authentication is working (can obtain access token)
+
+    Args:
+        project_id: Optional project ID to check (falls back to env var).
+        parallel_api_key: Optional API key to check (falls back to env var).
+
+    Returns:
+        SetupStatus with validation results.
+
+    Example:
+        status = validate_setup()
+        if not status.is_valid:
+            print(status)  # Shows errors and how to fix
+            sys.exit(1)
+    """
+    errors: list[str] = []
+    warnings: list[str] = []
+
+    # Check project ID
+    found_project_id = project_id or os.environ.get("GOOGLE_CLOUD_PROJECT")
+    if not found_project_id:
+        errors.append("GOOGLE_CLOUD_PROJECT environment variable is not set")
+
+    # Check Parallel API key
+    found_api_key = parallel_api_key or os.environ.get("PARALLEL_API_KEY")
+    parallel_api_key_set = bool(found_api_key)
+    if not parallel_api_key_set:
+        errors.append("PARALLEL_API_KEY environment variable is not set")
+
+    # Check GCP authentication
+    gcp_auth_valid = False
+    try:
+        credentials, _ = google.auth.default()
+        auth_req = google.auth.transport.requests.Request()
+        credentials.refresh(auth_req)
+        if credentials.token:
+            gcp_auth_valid = True
+    except google.auth.exceptions.DefaultCredentialsError:
+        errors.append("GCP credentials not found. Run: gcloud auth application-default login")
+    except google.auth.exceptions.RefreshError as e:
+        errors.append(f"GCP credentials expired or invalid: {e}")
+    except Exception as e:
+        errors.append(f"GCP authentication error: {e}")
+
+    # Add warnings for common issues
+    if found_project_id and not found_project_id.replace("-", "").replace("_", "").isalnum():
+        warnings.append(f"Project ID '{found_project_id}' may be invalid")
+
+    is_valid = len(errors) == 0
+
+    return SetupStatus(
+        is_valid=is_valid,
+        project_id=found_project_id,
+        parallel_api_key_set=parallel_api_key_set,
+        gcp_auth_valid=gcp_auth_valid,
+        errors=errors,
+        warnings=warnings,
+    )
 
 
 class GroundingConfig(BaseModel):
@@ -106,7 +246,7 @@ class GroundedResponse:
     grounding_supports: list[dict[str, Any]] = field(default_factory=list)
 
     @classmethod
-    def from_api_response(cls, response: dict[str, Any]) -> "GroundedResponse":
+    def from_api_response(cls, response: dict[str, Any]) -> GroundedResponse:
         """Create a GroundedResponse from an API response.
 
         Args:
@@ -114,29 +254,58 @@ class GroundedResponse:
 
         Returns:
             A GroundedResponse instance.
+
+        API Response Structure (simplified):
+        ```json
+        {
+            "candidates": [{
+                "content": {
+                    "parts": [{"text": "The generated response..."}],
+                    "role": "model"
+                },
+                "groundingMetadata": {
+                    "webSearchQueries": ["query1", "query2"],
+                    "groundingChunks": [
+                        {"web": {"uri": "https://...", "title": "Page Title"}}
+                    ],
+                    "groundingSupports": [
+                        {"segment": {...}, "groundingChunkIndices": [0, 1]}
+                    ]
+                }
+            }]
+        }
+        ```
         """
-        # Extract text from candidates
+        # Step 1: Extract the generated text from the response
+        # The API returns an array of "candidates" (possible responses).
+        # We use the first candidate's content, which contains "parts" with the text.
         text = ""
         candidates = response.get("candidates", [])
         if candidates:
+            # Navigate: candidates[0] -> content -> parts[0] -> text
             content = candidates[0].get("content", {})
             parts = content.get("parts", [])
             if parts:
                 text = parts[0].get("text", "")
 
-        # Extract grounding metadata
+        # Step 2: Initialize containers for grounding metadata
         sources: list[GroundingSource] = []
         web_search_queries: list[str] = []
         grounding_supports: list[dict[str, Any]] = []
 
+        # Step 3: Extract grounding metadata from the first candidate
+        # This metadata is only present when grounding is enabled and web search was performed
         grounding_metadata = candidates[0].get("groundingMetadata", {}) if candidates else {}
 
-        # Extract web search queries
+        # Step 4: Extract the search queries that the model decided to execute
+        # These show what the model searched for to answer your question
         web_search_queries = grounding_metadata.get("webSearchQueries", [])
 
-        # Extract grounding chunks (sources)
+        # Step 5: Extract grounding chunks (the actual source URLs and titles)
+        # Each chunk represents a web page that was used to ground the response
         grounding_chunks = grounding_metadata.get("groundingChunks", [])
         for chunk in grounding_chunks:
+            # Each chunk has a "web" object with URI and title
             web_info = chunk.get("web", {})
             if web_info:
                 sources.append(
@@ -146,7 +315,9 @@ class GroundedResponse:
                     )
                 )
 
-        # Extract grounding supports
+        # Step 6: Extract grounding supports (maps response segments to sources)
+        # This shows which parts of the response are supported by which sources
+        # Useful for building citation UI (e.g., inline citations)
         grounding_supports = grounding_metadata.get("groundingSupports", [])
 
         return cls(
@@ -233,10 +404,40 @@ class GroundedGeminiClient:
         self._credentials, _ = google.auth.default()
         self._auth_req = google.auth.transport.requests.Request()
 
+        # Token caching: store token and expiry time
+        # This avoids refreshing the token on every request
+        self._cached_token: str | None = None
+        self._token_expiry: float = 0  # Unix timestamp
+
     def _get_access_token(self) -> str:
-        """Get a fresh access token for API requests."""
+        """Get an access token for API requests, using cache when possible.
+
+        Token Caching Strategy:
+        - Tokens are cached and reused until they expire
+        - Refresh happens 60 seconds before expiry to avoid edge cases
+        - For production high-volume usage, consider using a shared token cache
+
+        Returns:
+            A valid access token string.
+        """
+        # Check if we have a cached token that's still valid
+        # We refresh 60 seconds early to avoid edge cases
+        current_time = time.time()
+        if self._cached_token and current_time < (self._token_expiry - 60):
+            return self._cached_token
+
+        # Refresh the token
         self._credentials.refresh(self._auth_req)
-        return self._credentials.token
+        self._cached_token = self._credentials.token
+
+        # Cache expiry time (tokens typically last 1 hour)
+        # Use the credential's expiry if available, otherwise assume 1 hour
+        if hasattr(self._credentials, "expiry") and self._credentials.expiry:
+            self._token_expiry = self._credentials.expiry.timestamp()
+        else:
+            self._token_expiry = current_time + 3600  # Default: 1 hour
+
+        return self._cached_token
 
     def _get_endpoint_url(self, model_id: str) -> str:
         """Get the Vertex AI endpoint URL for the given model.

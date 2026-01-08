@@ -63,7 +63,7 @@ Grounding with Parallel on Vertex AI connects Gemini models to Parallel's LLM-op
 ### 1. Clone and Setup
 
 ```bash
-cd vertex
+cd vertex_ai_demo
 
 # Install dependencies using uv
 uv sync
@@ -85,7 +85,32 @@ export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
 export PARALLEL_API_KEY="your-parallel-api-key"
 ```
 
-### 3. Run the Demo
+### 3. Validate Setup
+
+```bash
+# Check that everything is configured correctly
+python demo.py --check
+```
+
+### 4. Try the Quickstart
+
+The fastest way to get started is with our minimal example:
+
+```bash
+python quickstart.py
+```
+
+Or in Python:
+
+```python
+from vertex_parallel import GroundedGeminiClient
+
+client = GroundedGeminiClient()
+response = client.generate("Who won the most recent Super Bowl?")
+print(response.text)
+```
+
+### 5. Run the Full Demo
 
 ```bash
 # Run with sample questions (shows grounded vs ungrounded comparison)
@@ -105,6 +130,20 @@ python demo.py --full
 ```
 
 The demo compares responses **with** and **without** Parallel grounding for questions about recent events, showing how grounding provides access to real-time web information.
+
+### 6. Interactive Tutorial
+
+For a step-by-step learning experience, open the Jupyter notebook:
+
+```bash
+# Install notebook dependencies
+pip install -e ".[notebook]"
+# Or with uv
+uv sync --extra notebook
+
+# Launch the tutorial
+jupyter notebook tutorial.ipynb
+```
 
 ## Usage
 
@@ -152,6 +191,21 @@ response = client.generate(
     temperature=0.2,
     system_instruction="Provide a concise summary with key dates.",
 )
+```
+
+### Validate Setup
+
+Before running your code, you can validate that all credentials are configured correctly:
+
+```python
+from vertex_parallel import validate_setup
+
+status = validate_setup()
+print(status)
+
+if not status.is_valid:
+    # status shows exactly what's missing and how to fix it
+    exit(1)
 ```
 
 ### Convenience Function
@@ -223,14 +277,16 @@ class GroundedResponse:
 ## Project Structure
 
 ```
-vertex/
+vertex_ai_demo/
 ├── src/vertex_parallel/     # Source code
 │   ├── __init__.py         # Package exports
 │   └── client.py           # Main client implementation
 ├── tests/                   # Test suite
 │   ├── conftest.py         # Test fixtures
 │   └── test_client.py      # Unit tests
-├── demo.py                  # Demo script
+├── quickstart.py           # Minimal example (~15 lines)
+├── demo.py                  # Full demo script with comparisons
+├── tutorial.ipynb          # Interactive Jupyter tutorial
 ├── pyproject.toml          # Project configuration
 ├── README.md               # This file
 ├── .env.example            # Environment variable template

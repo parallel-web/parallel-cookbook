@@ -23,14 +23,20 @@ Example usage:
 
 from vertex_parallel.client import (
     GroundedGeminiClient,
-    GroundingConfig,
     GroundedResponse,
+    GroundingConfig,
+    GroundingSource,
+    SetupStatus,
+    validate_setup,
 )
 
 __all__ = [
     "GroundedGeminiClient",
-    "GroundingConfig",
     "GroundedResponse",
+    "GroundingConfig",
+    "GroundingSource",
+    "SetupStatus",
+    "validate_setup",
 ]
 
 __version__ = "0.1.0"

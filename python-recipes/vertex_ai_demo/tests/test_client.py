@@ -6,7 +6,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from vertex_parallel import GroundedGeminiClient, GroundingConfig, GroundedResponse
+from vertex_parallel import GroundedGeminiClient, GroundedResponse, GroundingConfig
 
 
 class TestGroundingConfig:
@@ -198,7 +198,7 @@ class TestGroundedGeminiClient:
             parallel_api_key="test-key",
         )
 
-        response = client.generate(
+        _response = client.generate(
             "What is the CEO of Example Corp?",
             model_id="gemini-2.5-flash",
             system_instruction="Be concise.",
@@ -227,7 +227,7 @@ class TestGroundedGeminiClient:
             parallel_api_key="test-key",
         )
 
-        response = client.generate_with_context(
+        _response = client.generate_with_context(
             prompt="What is the current stock price of {company}?",
             context={"company": "Apple", "ticker": "AAPL"},
         )
