@@ -469,7 +469,7 @@ def main() -> None:
     print("Demo Complete!")
     print("=" * 80)
     print("\nFor more information, see the README.md file.")
-    print("Documentation: https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-parallel")
+    print("Documentation: https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-parallel")
 
 
 if __name__ == "__main__":

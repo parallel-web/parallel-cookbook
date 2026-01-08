@@ -245,7 +245,7 @@ response = generate_grounded_response(
 
 ### Supported Models
 
-See the [official documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-parallel) for the latest list.
+See the [official documentation](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-parallel) for the latest list.
 
 **Gemini 3 (Preview)**
 - `gemini-3.0-flash`
@@ -358,7 +358,7 @@ print(response.grounding_supports)
 ## Related Resources
 
 - [Vertex AI Grounding Documentation](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview)
-- [Grounding with Parallel on Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-parallel)
+- [Grounding with Parallel on Vertex AI](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-parallel)
 - [Parallel Web Search API](https://docs.parallel.ai)
 - [Parallel Pricing](https://parallel.ai/pricing)
 - [Google Gen AI SDK](https://googleapis.github.io/python-genai/)

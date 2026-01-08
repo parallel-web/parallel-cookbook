@@ -348,7 +348,7 @@ class GroundedGeminiClient:
     """
 
     # Models that support Parallel grounding (see docs for latest list)
-    # https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-parallel
+    # https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-parallel
     SUPPORTED_MODELS = [
         # Gemini 3 models (preview)
         "gemini-3.0-flash",
