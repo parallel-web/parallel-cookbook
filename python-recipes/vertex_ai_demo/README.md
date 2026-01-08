@@ -211,7 +211,7 @@ if not status.is_valid:
 ### Convenience Function
 
 ```python
-from vertex_parallel.client import generate_grounded_response
+from vertex_parallel import generate_grounded_response
 
 # One-off grounded request
 response = generate_grounded_response(
@@ -258,7 +258,9 @@ See the [official documentation](https://docs.cloud.google.com/vertex-ai/generat
 - `gemini-2.5-flash-lite`
 
 **Gemini 2.0**
-- `gemini-2.0-flash` (default)
+- `gemini-2.0-flash`
+
+The default model is `gemini-2.5-flash`.
 
 ## API Response
 

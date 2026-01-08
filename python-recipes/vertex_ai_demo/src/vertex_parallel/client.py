@@ -22,8 +22,6 @@ from pydantic import BaseModel
 class SetupError(Exception):
     """Raised when there's a configuration or authentication issue."""
 
-    pass
-
 
 @dataclass
 class SetupStatus:
@@ -454,7 +452,7 @@ class GroundedGeminiClient:
     def generate(
         self,
         prompt: str,
-        model_id: str = "gemini-2.0-flash",
+        model_id: str = "gemini-2.5-flash",
         system_instruction: str | None = None,
         temperature: float | None = None,
         max_output_tokens: int | None = None,
@@ -464,7 +462,7 @@ class GroundedGeminiClient:
 
         Args:
             prompt: The user prompt/question.
-            model_id: The Gemini model to use. Defaults to gemini-2.0-flash.
+            model_id: The Gemini model to use. Defaults to gemini-2.5-flash.
             system_instruction: Optional system instruction.
             temperature: Optional temperature setting (0.0-2.0).
             max_output_tokens: Optional max output tokens.
@@ -520,7 +518,7 @@ class GroundedGeminiClient:
         self,
         prompt: str,
         context: dict[str, Any],
-        model_id: str = "gemini-2.0-flash",
+        model_id: str = "gemini-2.5-flash",
         **kwargs: Any,
     ) -> GroundedResponse:
         """Generate a grounded response with additional context.
@@ -565,7 +563,7 @@ def generate_grounded_response(
     project_id: str | None = None,
     location: str = "us-central1",
     parallel_api_key: str | None = None,
-    model_id: str = "gemini-2.0-flash",
+    model_id: str = "gemini-2.5-flash",
     **kwargs: Any,
 ) -> GroundedResponse:
     """Convenience function for one-off grounded requests.

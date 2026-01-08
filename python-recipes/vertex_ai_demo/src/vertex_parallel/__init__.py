@@ -15,7 +15,7 @@ Example usage:
 
     response = client.generate(
         prompt="What are the latest developments in AI?",
-        model_id="gemini-2.0-flash"
+        model_id="gemini-2.5-flash"
     )
     print(response.text)
     print(response.sources)
@@ -27,6 +27,7 @@ from vertex_parallel.client import (
     GroundingConfig,
     GroundingSource,
     SetupStatus,
+    generate_grounded_response,
     validate_setup,
 )
 
@@ -36,6 +37,7 @@ __all__ = [
     "GroundingConfig",
     "GroundingSource",
     "SetupStatus",
+    "generate_grounded_response",
     "validate_setup",
 ]
 

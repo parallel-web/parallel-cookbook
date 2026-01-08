@@ -36,9 +36,10 @@ import textwrap
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
+# This must happen before importing modules that read env vars at import time
 load_dotenv()
 
-import google.auth
+import google.auth  # noqa: E402
 import google.auth.transport.requests
 import requests
 
@@ -275,7 +276,7 @@ def run_sample_questions(
                 except Exception:
                     print(f"[Detail] {e.response.text[:500]}")
         except Exception as e:
-            print(f"\n[Error] Failed to process question: {e}")
+            print(f"\n[Error] Failed to process question: {type(e).__name__}: {e}")
 
 
 def run_interactive_mode(
@@ -343,7 +344,7 @@ def run_interactive_mode(
             print("\n\nGoodbye!")
             break
         except Exception as e:
-            print(f"\n[Error] {e}")
+            print(f"\n[Error] {type(e).__name__}: {e}")
 
 
 def main() -> None:
