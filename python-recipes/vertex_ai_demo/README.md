@@ -177,7 +177,7 @@ from vertex_parallel import GroundedGeminiClient, GroundingConfig
 config = GroundingConfig(
     api_key="your-parallel-api-key",
     max_results=5,                    # Max search results (1-20)
-    include_domains=["reuters.com", "bbc.com"],  # Only these domains
+    include_domains=["https://docs.cloud.google.com/", "https://docs.parallel.ai/"],  # Only these domains
     exclude_domains=[".gov"],         # Exclude these domains
 )
 
