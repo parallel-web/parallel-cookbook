@@ -177,8 +177,8 @@ from vertex_parallel import GroundedGeminiClient, GroundingConfig
 config = GroundingConfig(
     api_key="your-parallel-api-key",
     max_results=5,                    # Max search results (1-20)
-    include_domains=["reuters.com", "bbc.com"],  # Only these domains
-    exclude_domains=[".gov"],         # Exclude these domains
+    include_domains=["www.example.com"],  # Only these domains
+    exclude_domains=[],         # Exclude these domains
 )
 
 client = GroundedGeminiClient(
