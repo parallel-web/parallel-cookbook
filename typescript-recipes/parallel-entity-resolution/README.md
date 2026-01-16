@@ -14,29 +14,11 @@ This API finds all social media profiles belonging to a single person. Give it a
 
 ## Why It Matters
 
-### For Sales & Revenue
-
-- **Richer prospect intelligence**: Find prospects' GitHub repos, technical blogs, conference talks beyond LinkedIn
-- **Better qualification**: A CTO active on GitHub is different from one who isn't
-- **Warmer introductions**: Discover mutual connections across any platform
-
-### For Recruiting
-
-- **Complete candidate profiles**: Evaluate technical skills (GitHub), communication (Twitter), thought leadership (blogs)
-- **Passive sourcing**: Find engineers active on GitHub but not updating LinkedIn
-- **Cultural fit**: See how candidates present themselves across contexts
-
-### For Customer Success
-
-- **Relationship intelligence**: Identify vocal advocates and at-risk customers
-- **Multi-channel engagement**: Meet champions where they are
-- **Expansion signals**: Track when decision-makers change roles
-
-### For Data Quality
-
-- **CRM deduplication**: Merge duplicate records by linking profiles to single entities
-- **Enrichment at scale**: Turn sparse contact data into rich profiles
-- **Attribution accuracy**: Know which database profiles are the same person
+- Sales & Revenue: Find prospects' complete digital footprint beyond LinkedIn for richer intelligence
+- Recruiting: Evaluate technical skills (GitHub), communication (Twitter), and thought leadership in one view
+- Customer Success: Identify vocal advocates and at-risk customers across all their active channels
+- Data Quality: Merge duplicate CRM records by linking profiles to single verified entities
+- SaaS Products: Understand your users by connecting their product usage to their public presence
 
 ## How It Works
 
@@ -45,6 +27,8 @@ This API finds all social media profiles belonging to a single person. Give it a
 3. Returns structured profile data with confidence indicators
 
 Built using [Parallel's Task API](https://docs.parallel.ai/task-api/guides/choose-a-processor) and [OAuth Provider](https://docs.parallel.ai/integrations/oauth-provider).
+
+![](view.drawio.png)
 
 ## Quick Start
 
@@ -98,9 +82,17 @@ const { profiles } = await result.json();
 
 ## Field Explanations
 
-**`is_self_proclaimed`**: Profile was discovered through the person's own references. Either directly mentioned in input, linked from a mentioned profile, or linked transitively. High confidence indicator.
+**`is_self_proclaimed`**: Whether this profile was discovered through the input's chain of references.
 
-**`is_self_referring`**: Profile links back to other profiles in the result set. Bidirectional verification increases confidence.
+`true` if:
+
+1.  directly mentioned in the original input,
+2.  linked from a profile mentioned in the input, or
+3.  linked from any profile in this chain (transitive relationship).
+
+`false` if discovered only through external search without a self-reference chain.",
+
+**`is_self_referring`**: Whether this profile links back to input profile(s) or other found profile(s)
 
 **`match_reasoning`**: Human-readable explanation of why the AI matched this profile. Use for quality assurance and debugging.
 
