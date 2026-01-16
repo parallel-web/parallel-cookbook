@@ -46,6 +46,8 @@ This API finds all social media profiles belonging to a single person. Give it a
 
 Built using [Parallel's Task API](https://docs.parallel.ai/task-api/guides/choose-a-processor) and [OAuth Provider](https://docs.parallel.ai/integrations/oauth-provider).
 
+![](view.drawio.png)
+
 ## Quick Start
 
 ```ts example.ts
