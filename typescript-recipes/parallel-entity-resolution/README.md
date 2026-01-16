@@ -14,29 +14,11 @@ This API finds all social media profiles belonging to a single person. Give it a
 
 ## Why It Matters
 
-### For Sales & Revenue
-
-- **Richer prospect intelligence**: Find prospects' GitHub repos, technical blogs, conference talks beyond LinkedIn
-- **Better qualification**: A CTO active on GitHub is different from one who isn't
-- **Warmer introductions**: Discover mutual connections across any platform
-
-### For Recruiting
-
-- **Complete candidate profiles**: Evaluate technical skills (GitHub), communication (Twitter), thought leadership (blogs)
-- **Passive sourcing**: Find engineers active on GitHub but not updating LinkedIn
-- **Cultural fit**: See how candidates present themselves across contexts
-
-### For Customer Success
-
-- **Relationship intelligence**: Identify vocal advocates and at-risk customers
-- **Multi-channel engagement**: Meet champions where they are
-- **Expansion signals**: Track when decision-makers change roles
-
-### For Data Quality
-
-- **CRM deduplication**: Merge duplicate records by linking profiles to single entities
-- **Enrichment at scale**: Turn sparse contact data into rich profiles
-- **Attribution accuracy**: Know which database profiles are the same person
+- Sales & Revenue: Find prospects' complete digital footprint beyond LinkedIn for richer intelligence
+- Recruiting: Evaluate technical skills (GitHub), communication (Twitter), and thought leadership in one view
+- Customer Success: Identify vocal advocates and at-risk customers across all their active channels
+- Data Quality: Merge duplicate CRM records by linking profiles to single verified entities
+- SaaS Products: Understand your users by connecting their product usage to their public presence
 
 ## How It Works
 
