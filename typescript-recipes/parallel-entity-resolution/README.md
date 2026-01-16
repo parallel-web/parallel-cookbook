@@ -98,9 +98,17 @@ const { profiles } = await result.json();
 
 ## Field Explanations
 
-**`is_self_proclaimed`**: Profile was discovered through the person's own references. Either directly mentioned in input, linked from a mentioned profile, or linked transitively. High confidence indicator.
+**`is_self_proclaimed`**: Whether this profile was discovered through the input's chain of references.
 
-**`is_self_referring`**: Profile links back to other profiles in the result set. Bidirectional verification increases confidence.
+`true` if:
+
+1.  directly mentioned in the original input,
+2.  linked from a profile mentioned in the input, or
+3.  linked from any profile in this chain (transitive relationship).
+
+`false` if discovered only through external search without a self-reference chain.",
+
+**`is_self_referring`**: Whether this profile links back to input profile(s) or other found profile(s)
 
 **`match_reasoning`**: Human-readable explanation of why the AI matched this profile. Use for quality assurance and debugging.
 
