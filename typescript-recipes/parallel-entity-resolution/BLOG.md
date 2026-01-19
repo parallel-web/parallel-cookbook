@@ -187,6 +187,8 @@ npm install
 npm run dev
 ```
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/71sd3V18Jng?si=HeEVgkWN6nmPK0YF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Resources
 
 - [Live Demo](https://entity-resolution-demo.parallel.ai)
