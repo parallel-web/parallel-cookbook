@@ -134,7 +134,7 @@ async function handleOAuthCallback(
       const response = new Response("", { status: 302, headers });
       return response;
     } else {
-      console.log({ tokenData });
+      console.log({ tokenData, hostname: url.hostname });
       return new Response("Failed to exchange token", { status: 400 });
     }
   } catch (error) {
