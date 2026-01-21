@@ -134,7 +134,6 @@ async function handleOAuthCallback(
       const response = new Response("", { status: 302, headers });
       return response;
     } else {
-      console.log({ tokenData, hostname: url.hostname });
       return new Response("Failed to exchange token", { status: 400 });
     }
   } catch (error) {
@@ -362,11 +361,14 @@ function getApiKey(request: Request): string | null {
 }
 
 function parseCookies(cookieString: string): Record<string, string> {
-  return cookieString.split(";").reduce((cookies, cookie) => {
-    const [name, value] = cookie.trim().split("=");
-    if (name && value) {
-      cookies[name] = decodeURIComponent(value);
-    }
-    return cookies;
-  }, {} as Record<string, string>);
+  return cookieString.split(";").reduce(
+    (cookies, cookie) => {
+      const [name, value] = cookie.trim().split("=");
+      if (name && value) {
+        cookies[name] = decodeURIComponent(value);
+      }
+      return cookies;
+    },
+    {} as Record<string, string>,
+  );
 }
