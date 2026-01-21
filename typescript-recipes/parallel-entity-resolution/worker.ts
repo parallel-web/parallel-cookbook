@@ -134,7 +134,6 @@ async function handleOAuthCallback(
       const response = new Response("", { status: 302, headers });
       return response;
     } else {
-      console.log({ tokenData });
       return new Response("Failed to exchange token", { status: 400 });
     }
   } catch (error) {
@@ -246,7 +245,6 @@ Be thorough but conservative - only return profiles you're confident about belon
         },
       });
     } else {
-      console.dir(result.error?.detail, { depth: 99 });
       return new Response(
         JSON.stringify({ error: "Failed to create resolution task" }),
         {
@@ -362,11 +360,14 @@ function getApiKey(request: Request): string | null {
 }
 
 function parseCookies(cookieString: string): Record<string, string> {
-  return cookieString.split(";").reduce((cookies, cookie) => {
-    const [name, value] = cookie.trim().split("=");
-    if (name && value) {
-      cookies[name] = decodeURIComponent(value);
-    }
-    return cookies;
-  }, {} as Record<string, string>);
+  return cookieString.split(";").reduce(
+    (cookies, cookie) => {
+      const [name, value] = cookie.trim().split("=");
+      if (name && value) {
+        cookies[name] = decodeURIComponent(value);
+      }
+      return cookies;
+    },
+    {} as Record<string, string>,
+  );
 }

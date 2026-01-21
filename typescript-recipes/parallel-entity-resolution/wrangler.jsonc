@@ -4,13 +4,16 @@
   "name": "entity-resolution-parallel",
   "main": "worker.ts",
   "assets": { "directory": "./" },
-  "compatibility_date": "2025-09-27",
+  "compatibility_date": "2026-01-16",
   "observability": { "logs": { "enabled": true } },
-  "routes": [
-    {
-      "custom_domain": true,
-      "pattern": "entity-resolution-demo.parallel.ai"
+  "env": {
+    "prod": {
+      "routes": [
+        {
+          "custom_domain": true,
+          "pattern": "entity-resolution-demo.parallel.ai"
+        }
+      ]
     }
-  ],
-  "env": { "localhost": { "routes": [] } }
+  }
 }
