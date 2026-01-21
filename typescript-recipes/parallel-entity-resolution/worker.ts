@@ -245,7 +245,6 @@ Be thorough but conservative - only return profiles you're confident about belon
         },
       });
     } else {
-      console.dir(result.error?.detail, { depth: 99 });
       return new Response(
         JSON.stringify({ error: "Failed to create resolution task" }),
         {
