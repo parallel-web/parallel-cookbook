@@ -1,33 +1,10 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
-import { createClient, SupabaseClient } from "jsr:@supabase/supabase-js@2";
 import Parallel from "npm:parallel-web@0.2.4";
-
-// CORS headers - set APP_URL secret for specific domain, or "*" for all origins
-const corsHeaders = {
-  "Access-Control-Allow-Origin": Deno.env.get("APP_URL") || "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform",
-};
+import { jsonResponse, handleCors } from "../_shared/response.ts";
+import { createSupabaseClient } from "../_shared/supabase.ts";
 
 const UUID_REGEX =
   /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
-
-function jsonResponse(
-  body: Record<string, unknown>,
-  status = 200
-): Response {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
-  });
-}
-
-function createSupabaseClient(): SupabaseClient {
-  return createClient(
-    Deno.env.get("SUPABASE_URL")!,
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-  );
-}
 
 /**
  * Static output schema for enrichment.
@@ -120,9 +97,8 @@ const outputSchema = {
 // -----------------------------------------------------------------------------
 
 Deno.serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
-  }
+  const corsResponse = handleCors(req);
+  if (corsResponse) return corsResponse;
 
   const supabase = createSupabaseClient();
   let companyId: string | undefined;
@@ -184,8 +160,8 @@ Deno.serve(async (req) => {
         website: company.website || undefined,
       },
       // Change processor based on your speed/cost/quality needs:
-      // lite-fast, lite, base, core, pro, ultra
-      processor: "lite-fast",
+      // base-fast, base, pro-fast, pro, ultra-fast, ultra
+      processor: "base-fast",
       task_spec: {
         output_schema: {
           type: "json",

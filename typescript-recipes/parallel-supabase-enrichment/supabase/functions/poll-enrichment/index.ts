@@ -1,23 +1,8 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
-import { createClient } from "jsr:@supabase/supabase-js@2";
+import type { SupabaseClient } from "jsr:@supabase/supabase-js@2";
 import Parallel from "npm:parallel-web@0.2.4";
-
-// CORS headers - set APP_URL secret for specific domain, or "*" for all origins
-const corsHeaders = {
-  "Access-Control-Allow-Origin": Deno.env.get("APP_URL") || "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type, x-supabase-client-platform",
-};
-
-function jsonResponse(
-  body: Record<string, unknown>,
-  status = 200
-): Response {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { ...corsHeaders, "Content-Type": "application/json" },
-  });
-}
+import { jsonResponse, handleCors } from "../_shared/response.ts";
+import { createSupabaseClient } from "../_shared/supabase.ts";
 
 /**
  * Poll for enrichment results on pending tasks.
@@ -30,15 +15,11 @@ function jsonResponse(
  * https://supabase.com/docs/guides/functions/schedule-functions
  */
 Deno.serve(async (req) => {
-  if (req.method === "OPTIONS") {
-    return new Response("ok", { headers: corsHeaders });
-  }
+  const corsResponse = handleCors(req);
+  if (corsResponse) return corsResponse;
 
   try {
-    const supabase = createClient(
-      Deno.env.get("SUPABASE_URL")!,
-      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
-    );
+    const supabase = createSupabaseClient();
 
     const parallelApiKey = Deno.env.get("PARALLEL_API_KEY");
     if (!parallelApiKey) {
@@ -76,7 +57,7 @@ type PollResult = { id: string; status: string; error?: string };
 
 async function pollCompany(
   parallel: Parallel,
-  supabase: ReturnType<typeof createClient>,
+  supabase: SupabaseClient,
   company: { id: string; parallel_run_id: string }
 ): Promise<PollResult> {
   try {

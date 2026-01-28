@@ -12,7 +12,12 @@ const STATUS_COLORS: Record<string, string> = {
 
 const POLL_INTERVAL_MS = 10000;
 
-function Spinner(): JSX.Element {
+function formatValue(value: unknown): string {
+  if (value == null || value === "null" || value === "") return "-";
+  return String(value);
+}
+
+function Spinner(): React.ReactNode {
   return (
     <svg className="animate-spin h-3 w-3 mr-1" viewBox="0 0 24 24">
       <circle
@@ -33,7 +38,7 @@ function Spinner(): JSX.Element {
   );
 }
 
-export default function Home(): JSX.Element {
+export default function Home(): React.ReactNode {
   const [companies, setCompanies] = useState<Company[]>([]);
   const [companyName, setCompanyName] = useState("Parallel Web Systems");
   const [website, setWebsite] = useState("parallel.ai");
@@ -52,7 +57,9 @@ export default function Home(): JSX.Element {
       )
       .subscribe();
 
-    // Poll for long-running tasks
+    // Poll for tasks that exceed the Edge Function timeout (50s).
+    // Realtime handles most updates instantly, but long-running enrichments
+    // may still be processing on Parallel's side after the function returns.
     const pollInterval = setInterval(() => {
       fetch("/api/poll", { method: "POST" }).catch((err) =>
         console.error("Poll error:", err)
@@ -260,7 +267,7 @@ export default function Home(): JSX.Element {
                           key={field.key}
                           className="px-4 py-4 text-sm text-gray-600"
                         >
-                          {String(company.enriched_data?.[field.key] || "-")}
+                          {formatValue(company.enriched_data?.[field.key])}
                         </td>
                       ))}
                       <td className="px-4 py-4">

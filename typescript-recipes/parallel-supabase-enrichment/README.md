@@ -2,7 +2,7 @@
 
 Build a real-time data enrichment pipeline using [Supabase Edge Functions](https://supabase.com/docs/guides/functions) and [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart).
 
-This cookbook demonstrates how to create a Clay-like experience where users input minimal data (e.g., company names) and get back enriched information automatically.
+This cookbook demonstrates how to create a data enrichment experience where users input minimal data (e.g., company names) and get back enriched information automatically.
 
 ![Screenshot](screenshot.png)
 
@@ -155,6 +155,8 @@ parallel-supabase-enrichment/
 
 The enrichment schema is defined in the Edge Function. To change what data gets enriched:
 
+> **Important**: When you modify `outputSchema` in the Edge Function, also update `ENRICHMENT_FIELDS` in `web/lib/supabase.ts` to display the new columns in the table.
+
 ### Option 1: Static Schema (Simpler)
 
 Edit `supabase/functions/enrich-company/index.ts`:
@@ -193,7 +195,7 @@ The Edge Function will automatically build the schema from these definitions.
 
 ### Parallel Processors
 
-The Edge Function uses `lite-fast` by default. See [processor options](https://docs.parallel.ai/task-api/guides/choose-a-processor) and [pricing](https://docs.parallel.ai/resources/pricing) to choose the right one for your use case.
+The Edge Function uses `base-fast` by default. See [processor options](https://docs.parallel.ai/task-api/guides/choose-a-processor) and [pricing](https://docs.parallel.ai/resources/pricing) to choose the right one for your use case.
 
 ```typescript
 const taskRun = await parallel.taskRun.create({
