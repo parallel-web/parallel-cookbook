@@ -1,1 +1,39 @@
+# OS
 .DS_Store
+Thumbs.db
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Node.js
+node_modules/
+.next/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env/
+*.egg-info/
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+.env*.local
+
+# Playwright
+.playwright-mcp*
+
+# Misc
+*.log
+.cache/

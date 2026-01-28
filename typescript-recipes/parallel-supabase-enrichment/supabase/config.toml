@@ -1,0 +1,38 @@
+# Supabase local development configuration
+# See: https://supabase.com/docs/guides/cli/config
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[db]
+port = 54322
+major_version = 17
+
+[studio]
+enabled = true
+port = 54323
+api_url = "http://127.0.0.1"
+
+[auth]
+enabled = true
+site_url = "http://127.0.0.1:3000"
+
+[edge_runtime]
+enabled = true
+policy = "per_worker"
+inspector_port = 8083
+
+[realtime]
+enabled = true
+
+# Disable JWT verification for public Edge Functions
+# These are called from the browser with the publishable key
+[functions.enrich-company]
+verify_jwt = false
+
+[functions.poll-enrichment]
+verify_jwt = false
