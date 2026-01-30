@@ -1,8 +1,8 @@
 # Data Enrichment with Supabase + Parallel
 
-Build a real-time data enrichment pipeline using [Supabase Edge Functions](https://supabase.com/docs/guides/functions) and [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart).
+Enrich your Supabase data with live web intelligence using [Supabase Edge Functions](https://supabase.com/docs/guides/functions) and [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart).
 
-This cookbook demonstrates how to create a data enrichment experience where users input minimal data (e.g., company names) and get back enriched information automatically.
+This cookbook demonstrates how to build a data enrichment pipeline where users input minimal data (e.g., company names) and Parallel automatically researches the web to fill in the details.
 
 ![Screenshot](screenshot.png)
 
