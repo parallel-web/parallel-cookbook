@@ -1,0 +1,7 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "walmart-shopping-assistant",
+  "main": "worker.ts",
+  "compatibility_date": "2025-07-14",
+  "observability": { "logs": { "enabled": true } }
+}

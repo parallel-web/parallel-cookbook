@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Shopping Assistant</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'FT System Mono';
+            src: url('https://assets.p0web.com/FTSystemMono-Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Gerstner Programm';
+            src: url('https://assets.p0web.com/Gerstner-ProgrammRegular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        body {
+            font-family: 'FT System Mono', monospace;
+            background-color: #fcfcfa;
+            color: #150f11;
+        }
+
+        .heading-font {
+            font-family: 'Gerstner Programm', serif;
+        }
+
+        .search-result {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tool-call {
+            background: linear-gradient(135deg, #fbc42420, #0554e220);
+            border-left: 4px solid #fbc424;
+        }
+
+        .reasoning-section {
+            background: linear-gradient(135deg, #6366f120, #e0e7ff30);
+            border-left: 4px solid #6366f1;
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        .reasoning-section .markdown-content {
+            font-size: 0.8rem;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+
+        .loading-dots {
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .spinner {
+            border: 2px solid #0554e2;
+            border-top: 2px solid #fbc424;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        /* Update the existing .markdown-content styles with these additions/changes */
+
+        .markdown-content {
+            line-height: 1.6;
+            overflow-x: auto;
+            padding-right: 8px;
+            word-wrap: break-word;
+            /* Add this */
+        }
+
+        /* Improve list rendering */
+        .markdown-content ul,
+        .markdown-content ol {
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+            list-style-position: outside;
+            /* Add this to ensure bullets/numbers show */
+        }
+
+        /* Ensure list items have proper styling */
+        .markdown-content ul {
+            list-style-type: disc;
+            /* Explicitly set bullet style */
+        }
+
+        .markdown-content ol {
+            list-style-type: decimal;
+            /* Explicitly set numbering */
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.5em;
+            /* Increase from 0.25em for better spacing */
+            display: list-item;
+            /* Explicitly set display type */
+            line-height: 1.5;
+        }
+
+        /* Nested lists */
+        .markdown-content ul ul,
+        .markdown-content ol ol,
+        .markdown-content ul ol,
+        .markdown-content ol ul {
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            padding-left: 1.2em;
+        }
+
+        .markdown-content ul ul {
+            list-style-type: circle;
+        }
+
+        .markdown-content ul ul ul {
+            list-style-type: square;
+        }
+
+        /* Ensure proper spacing around lists */
+        .markdown-content p+ul,
+        .markdown-content p+ol {
+            margin-top: -0.5em;
+        }
+
+        .markdown-content ul+p,
+        .markdown-content ol+p {
+            margin-top: 0.5em;
+        }
+
+        /* Handle list items with paragraphs */
+        .markdown-content li p {
+            margin-bottom: 0.5em;
+        }
+
+        .markdown-content li p:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* Custom scrollbar for markdown content */
+        .markdown-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .markdown-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 3px;
+        }
+
+        .markdown-content::-webkit-scrollbar-thumb {
+            background: #0554e2;
+            border-radius: 3px;
+        }
+
+        .markdown-content::-webkit-scrollbar-thumb:hover {
+            background: #fbc424;
+        }
+
+        .markdown-content h1,
+        .markdown-content h2,
+        .markdown-content h3,
+        .markdown-content h4,
+        .markdown-content h5,
+        .markdown-content h6 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+        }
+
+        .markdown-content h1 {
+            font-size: 1.5em;
+        }
+
+        .markdown-content h2 {
+            font-size: 1.3em;
+        }
+
+        .markdown-content h3 {
+            font-size: 1.1em;
+        }
+
+        .markdown-content p {
+            margin-bottom: 1em;
+        }
+
+        .markdown-content ul,
+        .markdown-content ol {
+            margin-bottom: 1em;
+            padding-left: 1.5em;
+        }
+
+        .markdown-content li {
+            margin-bottom: 0.25em;
+        }
+
+        .markdown-content blockquote {
+            border-left: 4px solid #0554e2;
+            padding-left: 1em;
+            margin: 1em 0;
+            font-style: italic;
+            color: #666;
+        }
+
+        .markdown-content code {
+            background-color: #f5f5f5;
+            padding: 0.125em 0.25em;
+            border-radius: 0.25em;
+            font-family: 'FT System Mono', monospace;
+            font-size: 0.9em;
+        }
+
+        .markdown-content pre {
+            background-color: #f5f5f5;
+            padding: 1em;
+            border-radius: 0.5em;
+            overflow-x: auto;
+            margin: 1em 0;
+        }
+
+        .markdown-content pre code {
+            background: none;
+            padding: 0;
+        }
+
+        .markdown-content a {
+            color: #fbc424;
+            text-decoration: none;
+        }
+
+        .markdown-content a:hover {
+            text-decoration: underline;
+        }
+
+        .markdown-content strong {
+            font-weight: 500;
+        }
+
+        .finish-indicator {
+            background: linear-gradient(135deg, #10b98120, #dcfce720);
+            border-left: 4px solid #10b981;
+        }
+
+        /* Mobile-first responsive design */
+        @media (max-width: 640px) {
+            .container {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+
+            .search-input-container {
+                padding: 0.75rem;
+            }
+
+            .search-btn {
+                right: 0.5rem;
+                top: 0.5rem;
+                bottom: 0.5rem;
+                padding-left: 0.75rem;
+                padding-right: 0.75rem;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+    <div id="app" class="container mx-auto px-2 sm:px-4 py-4 sm:py-8 max-w-4xl">
+        <!-- Header -->
+        <div class="text-center mb-8 sm:mb-12">
+            <img src="https://media.brand.dev/ea1d1c38-badc-4104-bd85-66083f798494.svg" alt="Walmart"
+                class="mx-auto mb-4 h-8 sm:h-10">
+            <h1 class="heading-font text-2xl sm:text-4xl font-bold mb-2">Shopping Assistant</h1>
+            <p class="text-gray-600 text-sm sm:text-base">Save Money. Live Better.</p>
+        </div>
+
+        <!-- Search Interface -->
+        <div id="search-interface" class="space-y-4 sm:space-y-6">
+            <div
+                class="relative flex flex-row items-center gap-4 pr-2 search-input-container bg-white border-2 border-gray-200 rounded-lg focus-within:border-yellow-300 transition-colors">
+                <input type="text" id="search-input" placeholder="What are you shopping for?"
+                    class="w-full lg:px-4 sm:px-6 py-3 sm:py-4 text-sm lg:text-lg bg-transparent focus:outline-none">
+                <button id="search-btn"
+                    class="search-btn h-12 px-3 sm:px-6 text-white rounded-md transition-colors font-medium text-sm sm:text-base"
+                    style="background-color: #fbc424;">
+                    Search
+                </button>
+            </div>
+
+            <div class="flex justify-center">
+                <button id="config-btn" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700 underline">
+                    Configure System Prompt
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Results Interface -->
+        <div id="results-interface" class="hidden">
+            <div class="flex items-center justify-between mb-4 sm:mb-6">
+                <h2 class="text-xl sm:text-2xl font-bold">Shopping Results</h2>
+                <button id="new-search-btn"
+                    class="px-3 sm:px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 transition-colors text-sm sm:text-base">
+                    New Search
+                </button>
+            </div>
+
+            <div id="results-content" class="space-y-4 sm:space-y-6">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading-state" class="hidden text-center py-8 sm:py-12">
+            <div class="spinner w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-4"></div>
+            <p class="text-gray-600 text-sm sm:text-base">Finding the best products for you...</p>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-12 sm:mt-16 pt-6 sm:pt-8 border-t border-gray-200 text-center">
+            <div
+                class="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-xs sm:text-sm text-gray-500">
+                <span>Powered by Parallel AI & Cerebras</span>
+                <span class="hidden sm:inline">•</span>
+                <a href="https://www.walmart.com" target="_blank" style="color: #0554e2;" class="hover:underline">
+                    Learn more about Walmart
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Config Modal -->
+    <div id="config-modal"
+        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-2 sm:p-4 z-50">
+        <div class="bg-white rounded-lg p-4 sm:p-6 max-w-2xl w-full max-h-[90vh] sm:max-h-96">
+            <h3 class="text-lg sm:text-xl font-bold mb-4">System Prompt Configuration</h3>
+            <textarea id="system-prompt"
+                class="w-full h-32 sm:h-48 p-3 sm:p-4 border border-gray-200 rounded-lg resize-none focus:outline-none text-sm sm:text-base"
+                style="border-color: #fbc424;"
+                placeholder="Enter custom system prompt..."></textarea>
+            <div class="flex justify-end space-x-2 sm:space-x-3 mt-4">
+                <button id="cancel-config"
+                    class="px-3 sm:px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300 text-sm sm:text-base">
+                    Cancel
+                </button>
+                <button id="save-config"
+                    class="px-3 sm:px-4 py-2 text-white rounded-md text-sm sm:text-base"
+                    style="background-color: #fbc424;">
+                    Save
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSystemPrompt = '';
+        let abortController = null;
+        let currentMode = 'text'; // 'text' or 'reasoning'
+
+        // DOM Elements
+        const searchInterface = document.getElementById('search-interface');
+        const resultsInterface = document.getElementById('results-interface');
+        const loadingState = document.getElementById('loading-state');
+        const searchInput = document.getElementById('search-input');
+        const searchBtn = document.getElementById('search-btn');
+        const newSearchBtn = document.getElementById('new-search-btn');
+        const resultsContent = document.getElementById('results-content');
+        const configModal = document.getElementById('config-modal');
+        const configBtn = document.getElementById('config-btn');
+        const systemPromptTextarea = document.getElementById('system-prompt');
+        const saveConfigBtn = document.getElementById('save-config');
+        const cancelConfigBtn = document.getElementById('cancel-config');
+
+        // Configure marked options
+        marked.setOptions({
+            breaks: true,
+            gfm: true
+        });
+
+        // Event Listeners
+        searchBtn.addEventListener('click', startResearch);
+        newSearchBtn.addEventListener('click', showSearchInterface);
+        configBtn.addEventListener('click', showConfigModal);
+        saveConfigBtn.addEventListener('click', saveConfig);
+        cancelConfigBtn.addEventListener('click', hideConfigModal);
+
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') startResearch();
+        });
+
+        // Functions
+        function showSearchInterface() {
+            searchInterface.classList.remove('hidden');
+            resultsInterface.classList.add('hidden');
+            loadingState.classList.add('hidden');
+            resultsContent.innerHTML = '';
+            searchInput.value = '';
+            currentMode = 'text';
+            if (abortController) {
+                abortController.abort();
+                abortController = null;
+            }
+        }
+
+        function showLoadingState() {
+            searchInterface.classList.add('hidden');
+            resultsInterface.classList.add('hidden');
+            loadingState.classList.remove('hidden');
+        }
+
+        function showResults() {
+            searchInterface.classList.add('hidden');
+            resultsInterface.classList.remove('hidden');
+            loadingState.classList.add('hidden');
+        }
+
+        function showConfigModal() {
+            systemPromptTextarea.value = currentSystemPrompt;
+            configModal.classList.remove('hidden');
+        }
+
+        function hideConfigModal() {
+            configModal.classList.add('hidden');
+        }
+
+        function saveConfig() {
+            currentSystemPrompt = systemPromptTextarea.value;
+            hideConfigModal();
+        }
+
+        async function startResearch() {
+            const query = searchInput.value.trim();
+            if (!query) return;
+
+            showLoadingState();
+            currentMode = 'text';
+
+            // Abort any existing request
+            if (abortController) {
+                abortController.abort();
+            }
+
+            abortController = new AbortController();
+
+            try {
+                const response = await fetch('/api/shopping-search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        systemPrompt: currentSystemPrompt || undefined,
+                    }),
+                    signal: abortController.signal,
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const reader = response.body?.getReader();
+                const decoder = new TextDecoder();
+
+                if (!reader) {
+                    throw new Error('No response body');
+                }
+
+                let buffer = '';
+                showResults(); // Show results interface when stream starts
+
+                while (true) {
+                    const { done, value } = await reader.read();
+
+                    if (done) break;
+
+                    buffer += decoder.decode(value, { stream: true });
+
+                    // Process complete lines
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop() || ''; // Keep the last incomplete line in buffer
+
+                    for (const line of lines) {
+                        if (line.startsWith('data: ')) {
+                            const data = line.slice(6);
+                            if (data === '[DONE]') {
+                                return;
+                            }
+
+                            try {
+                                const chunk = JSON.parse(data);
+                                handleStreamChunk(chunk);
+                            } catch (error) {
+                                console.error('Error parsing chunk:', error, data);
+                            }
+                        }
+                    }
+                }
+
+            } catch (error) {
+                if (error.name === 'AbortError') {
+                    console.log('Request was aborted');
+                } else {
+                    console.error('Shopping search error:', error);
+                    showError(`Search failed: ${error.message}`);
+                }
+            } finally {
+                abortController = null;
+            }
+        }
+
+        function handleStreamChunk(chunk) {
+            switch (chunk.type) {
+                case 'text-delta':
+                    if (currentMode === 'reasoning') {
+                        finalizeCurrentSection();
+                        currentMode = 'text';
+                    }
+                    appendText(chunk.text || '');
+                    break;
+                case 'reasoning-delta':
+                    if (currentMode === 'text') {
+                        finalizeCurrentSection();
+                        currentMode = 'reasoning';
+                    }
+                    appendReasoning(chunk.text || '');
+                    break;
+                case 'tool-call':
+                    finalizeCurrentSection();
+                    addToolCall(chunk);
+                    break;
+                case 'tool-result':
+                    addToolResult(chunk);
+                    break;
+                case 'error':
+                    showError(chunk.error?.message || chunk.error?.lastError?.data?.message);
+                    break;
+                case 'finish':
+                    finalizeCurrentSection();
+                    addFinishIndicator(chunk.finishReason);
+                    console.log('Shopping search completed with reason:', chunk.finishReason);
+                    break;
+            }
+        }
+
+        function appendText(text) {
+            if (!text) return;
+
+            let currentElement = resultsContent.querySelector('.current-text');
+            if (!currentElement) {
+                currentElement = document.createElement('div');
+                currentElement.className = 'current-text bg-white border border-gray-200 rounded-lg p-3 sm:p-4 mb-4 search-result';
+
+                // Create the markdown content container
+                const markdownContainer = document.createElement('div');
+                markdownContainer.className = 'markdown-content';
+                currentElement.appendChild(markdownContainer);
+
+                resultsContent.appendChild(currentElement);
+            }
+
+            // Store the raw text
+            if (!currentElement.rawText) {
+                currentElement.rawText = '';
+            }
+            currentElement.rawText += text;
+
+            // Render markdown
+            const textContainer = currentElement.querySelector('.markdown-content');
+            if (textContainer) {
+                textContainer.innerHTML = marked.parse(currentElement.rawText);
+            }
+        }
+
+        function appendReasoning(text) {
+            if (!text) return;
+
+            let currentElement = resultsContent.querySelector('.current-reasoning');
+            if (!currentElement) {
+                currentElement = document.createElement('div');
+                currentElement.className = 'current-reasoning reasoning-section p-3 sm:p-4 rounded-lg mb-4 search-result';
+
+                // Add reasoning header
+                const header = document.createElement('div');
+                header.className = 'flex items-center mb-2';
+                header.innerHTML = `
+                    <div class="w-3 h-3 bg-indigo-500 rounded-full mr-2"></div>
+                    <span class="font-medium text-xs sm:text-sm text-indigo-700">🧠 AI Reasoning</span>
+                `;
+                currentElement.appendChild(header);
+
+                // Create the markdown content container
+                const markdownContainer = document.createElement('div');
+                markdownContainer.className = 'markdown-content';
+                currentElement.appendChild(markdownContainer);
+
+                resultsContent.appendChild(currentElement);
+            }
+
+            // Store the raw text
+            if (!currentElement.rawText) {
+                currentElement.rawText = '';
+            }
+            currentElement.rawText += text;
+
+            // Render markdown
+            const textContainer = currentElement.querySelector('.markdown-content');
+            if (textContainer) {
+                textContainer.innerHTML = marked.parse(currentElement.rawText);
+            }
+        }
+
+        function finalizeCurrentSection() {
+            const currentTextElement = resultsContent.querySelector('.current-text');
+            if (currentTextElement) {
+                currentTextElement.classList.remove('current-text');
+            }
+
+            const currentReasoningElement = resultsContent.querySelector('.current-reasoning');
+            if (currentReasoningElement) {
+                currentReasoningElement.classList.remove('current-reasoning');
+            }
+        }
+
+        function addToolCall(toolCall) {
+            finalizeCurrentSection();
+
+            const toolCallElement = document.createElement('div');
+            toolCallElement.className = 'tool-call p-3 sm:p-4 rounded-lg mb-4 search-result';
+
+            const objective = toolCall.args?.objective || toolCall.input?.objective || 'Searching for products...';
+            const searchQueries = toolCall.args?.search_queries || toolCall.input?.search_queries || [];
+
+            toolCallElement.innerHTML = `
+                <div class="flex items-center mb-2">
+                    <div class="w-3 h-3 rounded-full mr-2 animate-pulse" style="background-color: #fbc424;"></div>
+                    <span class="font-medium text-sm sm:text-base">🛍️ Searching Products</span>
+                </div>
+                <div class="text-xs sm:text-sm text-gray-600">
+                    <div class="mb-1"><strong>Looking for:</strong> ${objective}</div>
+                    ${searchQueries.length > 0 ? `<div><strong>Queries:</strong> ${searchQueries.join(', ')}</div>` : ''}
+                </div>
+            `;
+            resultsContent.appendChild(toolCallElement);
+        }
+
+
+        /**
+         * Creates a URL with text fragments that will highlight the excerpts when clicked
+         * @param {string} originalUrl - The original URL
+         * @param {string[]} excerpts - Array of text excerpts to highlight
+         * @returns {string} URL with text fragments for highlighting
+         */
+        function createHighlightUrl(originalUrl, excerpts) {
+            if (!excerpts || !Array.isArray(excerpts) || excerpts.length === 0) {
+                return originalUrl;
+            }
+
+            // Clean and prepare excerpts
+            const textFragments = excerpts
+                .map(excerpt => {
+                    if (typeof excerpt !== 'string') return '';
+
+                    // Remove trailing ".." or "..." and trim whitespace
+                    return excerpt.replace(/\.{2,}$/, '').trim();
+                })
+                .filter(excerpt => excerpt.length > 0)
+                .map(encodeURIComponent); // Remove empty excerpts
+
+            if (textFragments.length === 0) {
+                return originalUrl;
+            }
+
+
+            // Create the text fragment parameter
+            const fragmentParam = textFragments.map(fragment => `text=${fragment}`).join('&');
+
+            // Add text fragments to URL
+            const separator = originalUrl.includes('#') ? '&' : '#:~:';
+            return `${originalUrl}${separator}${fragmentParam}`;
+        }
+
+        function addToolResult(toolResult) {
+            const results = toolResult?.output?.results;
+            if (!results) {
+                return;
+            }
+
+            const resultElement = document.createElement('div');
+            resultElement.className = 'bg-gray-50 border border-gray-200 rounded-lg p-3 sm:p-4 mb-4 search-result';
+
+            // Count total excerpts
+            const totalExcerpts = results.slice(0, 5).reduce((sum, result) => sum + (result.excerpts?.length || 0), 0);
+
+            let resultsHtml = `
+        <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center font-medium text-xs sm:text-sm">
+                <div class="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                Products Found
+            </div>
+            ${totalExcerpts > 0 ? `
+                <button class="excerpts-toggle-btn text-xs hover:underline" style="color: #fbc424;" data-expanded="false">
+                    Show Excerpts (${totalExcerpts})
+                </button>
+            ` : ''}
+        </div>
+    `;
+
+            if (results && Array.isArray(results)) {
+                const lastIndex = results.slice(0, 5).length - 1;
+                results.slice(0, 5).forEach((result, index) => {
+                    const notLast = index < lastIndex;
+                    const urlWithTextHighlights = createHighlightUrl(result.url, result.excerpts || []);
+                    const hasExcerpts = result.excerpts && result.excerpts.length > 0;
+
+                    resultsHtml += `
+                <div class="mb-3 pb-3 ${notLast ? 'border-b border-gray-200' : ''}" data-result-index="${index}">
+                    <div class="font-medium mb-1">
+                        <a href="${urlWithTextHighlights}" target="_blank" class="hover:underline text-xs sm:text-sm" style="color: #fbc424;">${escapeHtml(result.title)}</a>
+                    </div>
+                    <div class="text-xs text-gray-500 truncate mb-2">${escapeHtml(result.url)}</div>
+                    ${hasExcerpts ? `
+                        <div class="excerpts-container hidden">
+                            <div class="text-xs font-medium text-gray-600 mb-1">Excerpts:</div>
+                            <div class="space-y-1">
+                                ${result.excerpts.map(excerpt => `<pre class="text-xs text-gray-600 bg-white p-2 rounded border-l-2 whitespace-pre-wrap break-words" style="border-color: #fbc424;">${escapeHtml(excerpt)}</pre>`).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+                });
+
+                if (results.length > 5) {
+                    resultsHtml += `<div class="text-xs text-gray-500 text-center pt-2">+ ${results.length - 5} more results</div>`;
+                }
+            } else {
+                resultsHtml += '<div class="text-xs sm:text-sm text-gray-500">No results available</div>';
+            }
+
+            resultElement.innerHTML = resultsHtml;
+
+            // Add event listener for the toggle button
+            const toggleBtn = resultElement.querySelector('.excerpts-toggle-btn');
+            if (toggleBtn) {
+                toggleBtn.addEventListener('click', function () {
+                    const isExpanded = this.dataset.expanded === 'true';
+                    const excerptContainers = resultElement.querySelectorAll('.excerpts-container');
+
+                    if (isExpanded) {
+                        // Hide excerpts
+                        excerptContainers.forEach(container => container.classList.add('hidden'));
+                        this.textContent = `Show Excerpts (${totalExcerpts})`;
+                        this.dataset.expanded = 'false';
+                    } else {
+                        // Show excerpts
+                        excerptContainers.forEach(container => container.classList.remove('hidden'));
+                        this.textContent = `Hide Excerpts`;
+                        this.dataset.expanded = 'true';
+                    }
+                });
+            }
+
+            resultsContent.appendChild(resultElement);
+        }
+
+        // Add this helper function to escape HTML
+        function escapeHtml(text) {
+            if (!text) return '';
+
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        function addFinishIndicator(finishReason) {
+            const finishElement = document.createElement('div');
+            finishElement.className = 'finish-indicator p-3 sm:p-4 rounded-lg mb-4 search-result';
+
+            const reasonText = finishReason || 'completed';
+            const reasonDisplay = reasonText.charAt(0).toUpperCase() + reasonText.slice(1);
+
+            finishElement.innerHTML = `
+                <div class="flex items-center">
+                    <div class="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
+                    <span class="font-medium text-sm sm:text-base text-green-700">✅ Shopping Search Complete</span>
+                    <span class="ml-2 text-xs text-green-600">• ${reasonDisplay}</span>
+                </div>
+            `;
+            resultsContent.appendChild(finishElement);
+        }
+
+        function showError(error) {
+            showResults(); // Make sure results interface is visible
+            finalizeCurrentSection(); // Finalize any current section
+
+            const errorElement = document.createElement('div');
+            errorElement.className = 'bg-red-50 border border-red-200 text-red-700 px-3 sm:px-4 py-3 rounded-lg mb-4 search-result';
+            errorElement.innerHTML = `<div class="flex items-center text-sm sm:text-base"><div class="w-3 h-3 bg-red-500 rounded-full mr-2"></div><strong>Error:</strong> ${error}</div>`;
+            resultsContent.appendChild(errorElement);
+        }
+
+        // Initialize
+        showSearchInterface();
+    </script>
+</body>
+
+</html>
