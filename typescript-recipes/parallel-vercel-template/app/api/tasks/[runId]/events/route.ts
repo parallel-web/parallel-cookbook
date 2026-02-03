@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import Parallel from "parallel-web";
 
 export async function GET(
   request: NextRequest,
@@ -14,27 +15,43 @@ export async function GET(
     return new Response("PARALLEL_API_KEY is not configured", { status: 500 });
   }
 
-  const eventsUrl = `https://api.parallel.ai/v1beta/tasks/runs/${runId}/events`;
-
   try {
-    const response = await fetch(eventsUrl, {
-      method: "GET",
-      headers: {
-        "x-api-key": process.env.PARALLEL_API_KEY,
-        "parallel-beta": "events-sse-2025-07-24",
-        Accept: "text/event-stream",
+    const client = new Parallel({
+      apiKey: process.env.PARALLEL_API_KEY,
+    });
+
+    // Use the SDK's beta.taskRun.events() method to get the event stream
+    const eventStream = await client.beta.taskRun.events(runId);
+
+    // Create a ReadableStream that converts SDK events to SSE format
+    const stream = new ReadableStream({
+      async start(controller) {
+        const encoder = new TextEncoder();
+
+        try {
+          for await (const event of eventStream) {
+            // Format as SSE: "data: <json>\n\n"
+            const sseMessage = `data: ${JSON.stringify(event)}\n\n`;
+            controller.enqueue(encoder.encode(sseMessage));
+          }
+          controller.close();
+        } catch (error) {
+          // Send error event before closing
+          const errorEvent = {
+            type: "error",
+            error: {
+              message: error instanceof Error ? error.message : "Stream error",
+            },
+          };
+          controller.enqueue(
+            encoder.encode(`data: ${JSON.stringify(errorEvent)}\n\n`)
+          );
+          controller.close();
+        }
       },
     });
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      return new Response(`Parallel API error: ${errorText}`, {
-        status: response.status,
-      });
-    }
-
-    // Stream the response through
-    return new Response(response.body, {
+    return new Response(stream, {
       headers: {
         "Content-Type": "text/event-stream",
         "Cache-Control": "no-cache",

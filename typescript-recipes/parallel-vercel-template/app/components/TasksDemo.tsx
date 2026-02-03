@@ -264,13 +264,26 @@ export default function TasksDemo() {
           data,
         });
 
-        // Check for completion
-        if (data.type === "task_run.state" && data.status === "completed") {
-          const output = data.output
-            ? typeof data.output === "string"
-              ? data.output
-              : JSON.stringify(data.output, null, 2)
-            : null;
+        // Check for completion - status is nested in run.status for task_run.state events
+        const status = data.run?.status || data.status;
+        
+        if (data.type === "task_run.state" && status === "completed") {
+          // Output can be at top level or nested
+          const rawOutput = data.output;
+          let output: string | null = null;
+          
+          if (rawOutput) {
+            if (typeof rawOutput === "string") {
+              output = rawOutput;
+            } else if (rawOutput.content) {
+              // SDK returns { type: "text"|"json", content: ... }
+              output = typeof rawOutput.content === "string"
+                ? rawOutput.content
+                : JSON.stringify(rawOutput.content, null, 2);
+            } else {
+              output = JSON.stringify(rawOutput, null, 2);
+            }
+          }
 
           updateTask(runId, {
             status: "completed",
@@ -282,10 +295,10 @@ export default function TasksDemo() {
         }
 
         // Check for failure
-        if (data.type === "task_run.state" && data.status === "failed") {
+        if (data.type === "task_run.state" && status === "failed") {
           updateTask(runId, {
             status: "failed",
-            error: data.error?.message || "Task failed",
+            error: data.run?.error?.message || data.error?.message || "Task failed",
           });
 
           eventSource.close();

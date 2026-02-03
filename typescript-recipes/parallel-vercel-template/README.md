@@ -1,36 +1,137 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Parallel + Vercel Template
 
-## Getting Started
+A Next.js template demonstrating how to integrate Parallel's web research APIs with Vercel. This template provides a complete demo application showcasing the Search, Extract, and Tasks APIs with real-time SSE streaming.
 
-First, run the development server:
+## Features
+
+| Feature | Description |
+|---------|-------------|
+| **Search API** | Natural language web search with mode selection (one-shot vs agentic) |
+| **Extract API** | Content extraction from URLs with objective-focused filtering |
+| **Tasks API** | Deep research tasks with real-time SSE event streaming |
+| **Session Persistence** | Search/Extract results persist in sessionStorage, Tasks persist in localStorage |
+| **Status Recovery** | Automatically checks and updates pending task statuses on page reload |
+
+## Architecture
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│   React UI      │────▶│  Next.js API    │────▶│  Parallel API   │
+│   Components    │     │  Routes         │     │  (parallel-web) │
+└─────────────────┘     └─────────────────┘     └─────────────────┘
+        │                       │
+        │ sessionStorage        │ SDK calls
+        │ localStorage          │
+        ▼                       ▼
+┌─────────────────┐     ┌─────────────────┐
+│  SearchDemo     │     │  /api/search    │  → client.beta.search()
+│  ExtractDemo    │     │  /api/extract   │  → client.beta.extract()
+│  TasksDemo      │     │  /api/tasks     │  → client.taskRun.create()
+└─────────────────┘     │  /api/tasks/[id]/status  │  → client.taskRun.retrieve()
+                        │  /api/tasks/[id]/events  │  → client.beta.taskRun.events()
+                        └─────────────────┘
+```
+
+### How It Works
+
+1. **Search**: User enters a search objective and optional queries → API calls `client.beta.search()` → Returns ranked results with excerpts
+2. **Extract**: User enters URLs and optional objective → API calls `client.beta.extract()` → Returns extracted content
+3. **Tasks**: User enters a research task → API calls `client.taskRun.create()` → SSE stream delivers real-time progress → Final output displayed on completion
+
+## Quick Start
+
+### Prerequisites
+
+- Node.js 18+
+- A [Parallel API key](https://vercel.com/parallel-ai/~/integrations/parallel) (via Vercel Integration)
+
+### 1. Clone and Install
+
+```bash
+cd typescript-recipes/parallel-vercel-template
+npm install
+```
+
+### 2. Configure Environment
+
+```bash
+cp .env.example .env.local
+```
+
+Edit `.env.local` with your Parallel API key:
+
+```
+PARALLEL_API_KEY=your-api-key-here
+```
+
+### 3. Run the Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the demo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+parallel-vercel-template/
+├── app/
+│   ├── api/
+│   │   ├── search/route.ts        # Search API endpoint
+│   │   ├── extract/route.ts       # Extract API endpoint
+│   │   └── tasks/
+│   │       ├── route.ts           # Create task endpoint
+│   │       └── [runId]/
+│   │           ├── status/route.ts  # Task status polling
+│   │           └── events/route.ts  # SSE event streaming
+│   ├── components/
+│   │   ├── SearchDemo.tsx         # Search UI with mode toggle
+│   │   ├── ExtractDemo.tsx        # Extract UI
+│   │   └── TasksDemo.tsx          # Tasks UI with SSE streaming
+│   ├── page.tsx                   # Main page with tabs
+│   ├── layout.tsx                 # App layout
+│   └── globals.css                # Tailwind styles
+├── public/
+│   ├── parallel-symbol.svg        # Parallel logo (dark)
+│   └── parallel-symbol-white.svg  # Parallel logo (white)
+├── .env.example                   # Environment template
+├── package.json
+└── README.md
+```
 
-## Learn More
+## Deploying to Vercel
 
-To learn more about Next.js, take a look at the following resources:
+1. Push to your GitHub repository
+2. Import the project in [Vercel](https://vercel.com/new)
+3. Add `PARALLEL_API_KEY` to Environment Variables
+4. Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Using Vercel Integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The easiest way to get an API key is through the [Parallel Vercel Integration](https://vercel.com/parallel-ai/~/integrations/parallel):
 
-## Deploy on Vercel
+1. Install the integration on your Vercel project
+2. The `PARALLEL_API_KEY` environment variable is automatically added
+3. Access the Parallel playground by clicking "Open in Parallel Web Systems"
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Exploring More APIs
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Want to try the **Monitor** or **FindAll** APIs? 
+
+Go to your [Vercel Integration page](https://vercel.com/parallel-ai/~/integrations/parallel), select a project, and click **"Open in Parallel Web Systems"** to access the full playground.
+
+## Resources
+
+- [Parallel Documentation](https://docs.parallel.ai)
+- [Search API Reference](https://docs.parallel.ai/api-reference/search-beta/search)
+- [Extract API Reference](https://docs.parallel.ai/api-reference/extract-beta/extract)
+- [Tasks API Reference](https://docs.parallel.ai/api-reference/tasks-v1/create-task-run)
+- [SSE Streaming Guide](https://docs.parallel.ai/task-api/task-sse)
+- [Pricing](https://docs.parallel.ai/resources/pricing)
+- [parallel-web npm package](https://www.npmjs.com/package/parallel-web)
+- [Vercel Integration](https://vercel.com/parallel-ai/~/integrations/parallel)
+
+## License
+
+MIT
