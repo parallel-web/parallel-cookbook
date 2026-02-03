@@ -32,27 +32,32 @@ export default function Home() {
     <div className="flex min-h-screen items-start justify-center bg-zinc-50 font-sans dark:bg-zinc-950 py-8 px-4">
       <main className="w-full max-w-3xl">
         {/* Header */}
-        <div className="text-center mb-8">
-          <div className="flex items-center justify-center gap-3 mb-4">
+        <div className="text-center mb-8 bg-zinc-900 rounded-xl shadow-sm border border-zinc-800 p-6">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            {/* Parallel Logo (white) */}
+            <img
+              src="/parallel-symbol-white.svg"
+              alt="Parallel"
+              className="w-10 h-10"
+            />
+            <span className="text-2xl text-zinc-500">+</span>
+            {/* Vercel Logo (white) */}
             <svg
               className="w-10 h-10"
-              viewBox="0 0 100 100"
+              viewBox="0 0 1155 1000"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <rect width="100" height="100" rx="20" fill="#FB631B" />
               <path
-                d="M30 35h40M30 50h40M30 65h25"
-                stroke="white"
-                strokeWidth="6"
-                strokeLinecap="round"
+                d="m577.3 0 577.4 1000H0z"
+                fill="white"
               />
             </svg>
-            <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-100">
-              Parallel SDK Demo
-            </h1>
           </div>
-          <p className="text-zinc-600 dark:text-zinc-400 max-w-md mx-auto">
+          <h1 className="text-3xl font-bold text-white mb-2">
+            Parallel + Vercel Template Demo
+          </h1>
+          <p className="text-zinc-400 max-w-md mx-auto">
             Explore Parallel&apos;s Search, Extract, and Tasks APIs with this
             interactive demo.
           </p>
@@ -61,23 +66,23 @@ export default function Home() {
               href="https://docs.parallel.ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-blue-400 hover:underline"
             >
               Documentation
             </a>
             <a
-              href="https://platform.parallel.ai"
+              href="https://vercel.com/parallel-ai/~/integrations/parallel"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-blue-400 hover:underline"
             >
               Get API Key
             </a>
             <a
-              href="https://github.com/parallel-web/parallel-cookbook"
+              href="https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-vercel-template"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-blue-400 hover:underline"
             >
               GitHub
             </a>
@@ -119,7 +124,30 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="mt-8 text-center text-sm text-zinc-500 dark:text-zinc-400">
+        <footer className="mt-8 text-center text-sm text-zinc-500 dark:text-zinc-400 space-y-4">
+          {/* Playground tip */}
+          <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 p-4">
+            <p className="text-zinc-600 dark:text-zinc-300">
+              Want to try the <strong>Monitor</strong> or <strong>FindAll</strong> APIs?
+            </p>
+            <p className="mt-1">
+              Go to your{" "}
+              <a
+                href="https://vercel.com/parallel-ai/~/integrations/parallel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Vercel Integration page
+              </a>
+              , select a project, and click{" "}
+              <span className="font-medium text-zinc-700 dark:text-zinc-300">
+                &quot;Open in Parallel Web Systems&quot;
+              </span>{" "}
+              to access the playground.
+            </p>
+          </div>
+
           <p>
             Built with{" "}
             <a

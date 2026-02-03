@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Parallel SDK Demo",
+  title: "Parallel + Vercel Template Demo",
   description: "Interactive demo of Parallel's Search, Extract, and Tasks APIs",
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface ExtractResult {
   url: string;
@@ -14,12 +14,72 @@ interface ExtractResponse {
   error?: string;
 }
 
+interface StoredExtractState {
+  urls: string;
+  objective: string;
+  results: ExtractResult[];
+  error: string | null;
+}
+
+const STORAGE_KEY = "parallel-extract-demo";
+
+function getStoredState(): StoredExtractState | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = sessionStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      return JSON.parse(stored);
+    }
+  } catch {
+    // Ignore errors
+  }
+  return null;
+}
+
+function saveState(state: StoredExtractState) {
+  if (typeof window === "undefined") return;
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch {
+    // Ignore errors
+  }
+}
+
+function clearState() {
+  if (typeof window === "undefined") return;
+  try {
+    sessionStorage.removeItem(STORAGE_KEY);
+  } catch {
+    // Ignore errors
+  }
+}
+
 export default function ExtractDemo() {
   const [urls, setUrls] = useState("");
   const [objective, setObjective] = useState("");
   const [results, setResults] = useState<ExtractResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  // Load state from sessionStorage on mount
+  useEffect(() => {
+    const stored = getStoredState();
+    if (stored) {
+      setUrls(stored.urls);
+      setObjective(stored.objective);
+      setResults(stored.results);
+      setError(stored.error);
+    }
+    setIsHydrated(true);
+  }, []);
+
+  // Save state to sessionStorage when results change (after hydration)
+  useEffect(() => {
+    if (isHydrated && results.length > 0) {
+      saveState({ urls, objective, results, error });
+    }
+  }, [results, error, urls, objective, isHydrated]);
 
   const handleExtract = async () => {
     const urlList = urls
@@ -28,6 +88,9 @@ export default function ExtractDemo() {
       .filter(Boolean);
 
     if (urlList.length === 0) return;
+
+    // Clear previous state when starting a new extraction
+    clearState();
 
     setLoading(true);
     setError(null);
@@ -57,16 +120,34 @@ export default function ExtractDemo() {
     }
   };
 
+  const handleClear = () => {
+    clearState();
+    setUrls("");
+    setObjective("");
+    setResults([]);
+    setError(null);
+  };
+
   return (
     <div className="space-y-6">
       <div className="space-y-4">
         <div>
-          <label
-            htmlFor="urls"
-            className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1"
-          >
-            URLs to Extract (one per line)
-          </label>
+          <div className="flex items-center justify-between mb-1">
+            <label
+              htmlFor="urls"
+              className="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+            >
+              URLs to Extract (one per line)
+            </label>
+            <a
+              href="https://docs.parallel.ai/api-reference/extract-beta/extract"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-green-600 dark:text-green-400 hover:underline"
+            >
+              API Docs
+            </a>
+          </div>
           <textarea
             id="urls"
             value={urls}
@@ -97,13 +178,23 @@ export default function ExtractDemo() {
           </p>
         </div>
 
-        <button
-          onClick={handleExtract}
-          disabled={loading || !urls.trim()}
-          className="w-full py-3 px-4 bg-green-600 hover:bg-green-700 disabled:bg-zinc-400 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-        >
-          {loading ? "Extracting..." : "Extract Content"}
-        </button>
+        <div className="flex gap-3">
+          <button
+            onClick={handleExtract}
+            disabled={loading || !urls.trim()}
+            className="flex-1 py-3 px-4 bg-green-600 hover:bg-green-700 disabled:bg-zinc-400 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          >
+            {loading ? "Extracting..." : "Extract Content"}
+          </button>
+          {(results.length > 0 || urls || objective) && (
+            <button
+              onClick={handleClear}
+              className="py-3 px-4 bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600 text-zinc-700 dark:text-zinc-300 font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2"
+            >
+              Clear
+            </button>
+          )}
+        </div>
       </div>
 
       {error && (

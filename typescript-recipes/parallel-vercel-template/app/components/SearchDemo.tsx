@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface SearchResult {
   title: string;
@@ -13,16 +13,84 @@ interface SearchResponse {
   error?: string;
 }
 
+type SearchMode = "one-shot" | "agentic";
+
+interface StoredSearchState {
+  objective: string;
+  searchQueries: string;
+  mode: SearchMode;
+  results: SearchResult[];
+  error: string | null;
+}
+
+const STORAGE_KEY = "parallel-search-demo";
+
+function getStoredState(): StoredSearchState | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = sessionStorage.getItem(STORAGE_KEY);
+    if (stored) {
+      return JSON.parse(stored);
+    }
+  } catch {
+    // Ignore errors
+  }
+  return null;
+}
+
+function saveState(state: StoredSearchState) {
+  if (typeof window === "undefined") return;
+  try {
+    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch {
+    // Ignore errors
+  }
+}
+
+function clearState() {
+  if (typeof window === "undefined") return;
+  try {
+    sessionStorage.removeItem(STORAGE_KEY);
+  } catch {
+    // Ignore errors
+  }
+}
+
 export default function SearchDemo() {
   const [objective, setObjective] = useState("");
   const [searchQueries, setSearchQueries] = useState("");
+  const [mode, setMode] = useState<SearchMode>("one-shot");
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  // Load state from sessionStorage on mount
+  useEffect(() => {
+    const stored = getStoredState();
+    if (stored) {
+      setObjective(stored.objective);
+      setSearchQueries(stored.searchQueries);
+      setMode(stored.mode || "one-shot");
+      setResults(stored.results);
+      setError(stored.error);
+    }
+    setIsHydrated(true);
+  }, []);
+
+  // Save state to sessionStorage when results change (after hydration)
+  useEffect(() => {
+    if (isHydrated && results.length > 0) {
+      saveState({ objective, searchQueries, mode, results, error });
+    }
+  }, [results, error, objective, searchQueries, mode, isHydrated]);
 
   const handleSearch = async () => {
     if (!objective.trim()) return;
 
+    // Clear previous state when starting a new search
+    clearState();
+    
     setLoading(true);
     setError(null);
     setResults([]);
@@ -37,6 +105,7 @@ export default function SearchDemo() {
             .split(",")
             .map((q) => q.trim())
             .filter(Boolean),
+          mode,
           maxResults: 10,
         }),
       });
@@ -55,16 +124,35 @@ export default function SearchDemo() {
     }
   };
 
+  const handleClear = () => {
+    clearState();
+    setObjective("");
+    setSearchQueries("");
+    setMode("one-shot");
+    setResults([]);
+    setError(null);
+  };
+
   return (
     <div className="space-y-6">
       <div className="space-y-4">
         <div>
-          <label
-            htmlFor="objective"
-            className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-1"
-          >
-            Search Objective
-          </label>
+          <div className="flex items-center justify-between mb-1">
+            <label
+              htmlFor="objective"
+              className="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+            >
+              Search Objective
+            </label>
+            <a
+              href="https://docs.parallel.ai/api-reference/search-beta/search"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              API Docs
+            </a>
+          </div>
           <textarea
             id="objective"
             value={objective}
@@ -92,13 +180,58 @@ export default function SearchDemo() {
           />
         </div>
 
-        <button
-          onClick={handleSearch}
-          disabled={loading || !objective.trim()}
-          className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-400 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-        >
-          {loading ? "Searching..." : "Search"}
-        </button>
+        <div>
+          <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300 mb-2">
+            Mode
+          </label>
+          <div className="flex gap-2">
+            <button
+              type="button"
+              onClick={() => setMode("one-shot")}
+              className={`flex-1 py-2 px-3 text-sm font-medium rounded-lg border transition-colors ${
+                mode === "one-shot"
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-700"
+              }`}
+            >
+              One-shot
+            </button>
+            <button
+              type="button"
+              onClick={() => setMode("agentic")}
+              className={`flex-1 py-2 px-3 text-sm font-medium rounded-lg border transition-colors ${
+                mode === "agentic"
+                  ? "bg-blue-600 text-white border-blue-600"
+                  : "bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-700"
+              }`}
+            >
+              Agentic
+            </button>
+          </div>
+          <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+            {mode === "one-shot"
+              ? "Comprehensive results with longer excerpts for single-query answers"
+              : "Concise, token-efficient results for use in agentic loops"}
+          </p>
+        </div>
+
+        <div className="flex gap-3">
+          <button
+            onClick={handleSearch}
+            disabled={loading || !objective.trim()}
+            className="flex-1 py-3 px-4 bg-blue-600 hover:bg-blue-700 disabled:bg-zinc-400 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          >
+            {loading ? "Searching..." : "Search"}
+          </button>
+          {(results.length > 0 || objective || searchQueries) && (
+            <button
+              onClick={handleClear}
+              className="py-3 px-4 bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600 text-zinc-700 dark:text-zinc-300 font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2"
+            >
+              Clear
+            </button>
+          )}
+        </div>
       </div>
 
       {error && (

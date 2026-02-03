@@ -24,14 +24,25 @@ export async function POST(request: NextRequest) {
       apiKey: process.env.PARALLEL_API_KEY,
     });
 
+    const selectedProcessor = processor || "lite";
+    
+    // Auto schema is only supported for pro and ultra processors
+    const supportsAutoSchema = ["pro", "ultra"].includes(selectedProcessor);
+    
     const taskRun = await client.taskRun.create({
       input,
-      processor: processor || "lite",
-      task_spec: {
-        output_schema: {
-          type: "auto",
-        },
-      },
+      processor: selectedProcessor,
+      task_spec: supportsAutoSchema
+        ? {
+            output_schema: {
+              type: "auto",
+            },
+          }
+        : {
+            output_schema: {
+              type: "text",
+            },
+          },
     });
 
     return NextResponse.json(taskRun);

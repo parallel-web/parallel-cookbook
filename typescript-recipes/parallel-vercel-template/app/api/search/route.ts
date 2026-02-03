@@ -4,7 +4,7 @@ import Parallel from "parallel-web";
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { objective, searchQueries, maxResults } = body;
+    const { objective, searchQueries, mode, maxResults } = body;
 
     if (!objective) {
       return NextResponse.json(
@@ -27,6 +27,7 @@ export async function POST(request: NextRequest) {
     const searchResult = await client.beta.search({
       objective,
       search_queries: searchQueries || undefined,
+      mode: mode || "one-shot",
       max_results: maxResults || 10,
       max_chars_per_result: 2500,
     });
