@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
+import { parseTaskOutput } from "@/lib/parallel";
 
 interface TaskEvent {
   type: string;
@@ -162,13 +163,7 @@ export default function TasksDemo() {
           if (statusData) {
             if (statusData.status === "completed") {
               // Task completed while we were away
-              const output = statusData.output
-                ? typeof statusData.output === "string"
-                  ? statusData.output
-                  : typeof statusData.output.content === "string"
-                    ? statusData.output.content
-                    : JSON.stringify(statusData.output.content || statusData.output, null, 2)
-                : null;
+              const output = parseTaskOutput(statusData.output);
 
               setTasks((prev) =>
                 prev.map((t) =>
@@ -268,22 +263,7 @@ export default function TasksDemo() {
         const status = data.run?.status || data.status;
         
         if (data.type === "task_run.state" && status === "completed") {
-          // Output can be at top level or nested
-          const rawOutput = data.output;
-          let output: string | null = null;
-          
-          if (rawOutput) {
-            if (typeof rawOutput === "string") {
-              output = rawOutput;
-            } else if (rawOutput.content) {
-              // SDK returns { type: "text"|"json", content: ... }
-              output = typeof rawOutput.content === "string"
-                ? rawOutput.content
-                : JSON.stringify(rawOutput.content, null, 2);
-            } else {
-              output = JSON.stringify(rawOutput, null, 2);
-            }
-          }
+          const output = parseTaskOutput(data.output);
 
           updateTask(runId, {
             status: "completed",

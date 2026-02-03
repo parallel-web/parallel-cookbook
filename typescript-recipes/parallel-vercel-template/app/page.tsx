@@ -36,7 +36,7 @@ export default function Home() {
           <div className="flex items-center justify-center gap-4 mb-4">
             {/* Parallel Logo (white) */}
             <img
-              src="/parallel-symbol-white.svg"
+              src="https://assets.p0web.com/white-parallel-symbol-270.svg"
               alt="Parallel"
               className="w-10 h-10"
             />

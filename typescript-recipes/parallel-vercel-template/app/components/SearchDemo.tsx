@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSessionStorage } from "@/hooks/useSessionStorage";
 
 interface SearchResult {
   title: string;
@@ -23,77 +24,39 @@ interface StoredSearchState {
   error: string | null;
 }
 
-const STORAGE_KEY = "parallel-search-demo";
-
-function getStoredState(): StoredSearchState | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const stored = sessionStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      return JSON.parse(stored);
-    }
-  } catch {
-    // Ignore errors
-  }
-  return null;
-}
-
-function saveState(state: StoredSearchState) {
-  if (typeof window === "undefined") return;
-  try {
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  } catch {
-    // Ignore errors
-  }
-}
-
-function clearState() {
-  if (typeof window === "undefined") return;
-  try {
-    sessionStorage.removeItem(STORAGE_KEY);
-  } catch {
-    // Ignore errors
-  }
-}
+const INITIAL_STATE: StoredSearchState = {
+  objective: "",
+  searchQueries: "",
+  mode: "one-shot",
+  results: [],
+  error: null,
+};
 
 export default function SearchDemo() {
-  const [objective, setObjective] = useState("");
-  const [searchQueries, setSearchQueries] = useState("");
-  const [mode, setMode] = useState<SearchMode>("one-shot");
-  const [results, setResults] = useState<SearchResult[]>([]);
+  const [storedState, setStoredState, clearStoredState, isHydrated] =
+    useSessionStorage<StoredSearchState>("parallel-search-demo", INITIAL_STATE);
+
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [isHydrated, setIsHydrated] = useState(false);
 
-  // Load state from sessionStorage on mount
-  useEffect(() => {
-    const stored = getStoredState();
-    if (stored) {
-      setObjective(stored.objective);
-      setSearchQueries(stored.searchQueries);
-      setMode(stored.mode || "one-shot");
-      setResults(stored.results);
-      setError(stored.error);
-    }
-    setIsHydrated(true);
-  }, []);
+  const { objective, searchQueries, mode, results, error } = storedState;
 
-  // Save state to sessionStorage when results change (after hydration)
-  useEffect(() => {
-    if (isHydrated && results.length > 0) {
-      saveState({ objective, searchQueries, mode, results, error });
-    }
-  }, [results, error, objective, searchQueries, mode, isHydrated]);
+  const setObjective = (value: string) =>
+    setStoredState((prev) => ({ ...prev, objective: value }));
+  const setSearchQueries = (value: string) =>
+    setStoredState((prev) => ({ ...prev, searchQueries: value }));
+  const setMode = (value: SearchMode) =>
+    setStoredState((prev) => ({ ...prev, mode: value }));
+  const setResults = (value: SearchResult[]) =>
+    setStoredState((prev) => ({ ...prev, results: value }));
+  const setError = (value: string | null) =>
+    setStoredState((prev) => ({ ...prev, error: value }));
 
   const handleSearch = async () => {
     if (!objective.trim()) return;
 
-    // Clear previous state when starting a new search
-    clearState();
-    
+    // Clear previous results when starting a new search
+    setStoredState((prev) => ({ ...prev, results: [], error: null }));
     setLoading(true);
-    setError(null);
-    setResults([]);
 
     try {
       const response = await fetch("/api/search", {
@@ -125,13 +88,13 @@ export default function SearchDemo() {
   };
 
   const handleClear = () => {
-    clearState();
-    setObjective("");
-    setSearchQueries("");
-    setMode("one-shot");
-    setResults([]);
-    setError(null);
+    clearStoredState();
   };
+
+  // Don't render content until hydrated to avoid hydration mismatch
+  if (!isHydrated) {
+    return <div className="space-y-6" />;
+  }
 
   return (
     <div className="space-y-6">

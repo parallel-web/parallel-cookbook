@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { useSessionStorage } from "@/hooks/useSessionStorage";
 
 interface ExtractResult {
   url: string;
@@ -21,65 +22,29 @@ interface StoredExtractState {
   error: string | null;
 }
 
-const STORAGE_KEY = "parallel-extract-demo";
-
-function getStoredState(): StoredExtractState | null {
-  if (typeof window === "undefined") return null;
-  try {
-    const stored = sessionStorage.getItem(STORAGE_KEY);
-    if (stored) {
-      return JSON.parse(stored);
-    }
-  } catch {
-    // Ignore errors
-  }
-  return null;
-}
-
-function saveState(state: StoredExtractState) {
-  if (typeof window === "undefined") return;
-  try {
-    sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-  } catch {
-    // Ignore errors
-  }
-}
-
-function clearState() {
-  if (typeof window === "undefined") return;
-  try {
-    sessionStorage.removeItem(STORAGE_KEY);
-  } catch {
-    // Ignore errors
-  }
-}
+const INITIAL_STATE: StoredExtractState = {
+  urls: "",
+  objective: "",
+  results: [],
+  error: null,
+};
 
 export default function ExtractDemo() {
-  const [urls, setUrls] = useState("");
-  const [objective, setObjective] = useState("");
-  const [results, setResults] = useState<ExtractResult[]>([]);
+  const [storedState, setStoredState, clearStoredState, isHydrated] =
+    useSessionStorage<StoredExtractState>("parallel-extract-demo", INITIAL_STATE);
+
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [isHydrated, setIsHydrated] = useState(false);
 
-  // Load state from sessionStorage on mount
-  useEffect(() => {
-    const stored = getStoredState();
-    if (stored) {
-      setUrls(stored.urls);
-      setObjective(stored.objective);
-      setResults(stored.results);
-      setError(stored.error);
-    }
-    setIsHydrated(true);
-  }, []);
+  const { urls, objective, results, error } = storedState;
 
-  // Save state to sessionStorage when results change (after hydration)
-  useEffect(() => {
-    if (isHydrated && results.length > 0) {
-      saveState({ urls, objective, results, error });
-    }
-  }, [results, error, urls, objective, isHydrated]);
+  const setUrls = (value: string) =>
+    setStoredState((prev) => ({ ...prev, urls: value }));
+  const setObjective = (value: string) =>
+    setStoredState((prev) => ({ ...prev, objective: value }));
+  const setResults = (value: ExtractResult[]) =>
+    setStoredState((prev) => ({ ...prev, results: value }));
+  const setError = (value: string | null) =>
+    setStoredState((prev) => ({ ...prev, error: value }));
 
   const handleExtract = async () => {
     const urlList = urls
@@ -89,12 +54,9 @@ export default function ExtractDemo() {
 
     if (urlList.length === 0) return;
 
-    // Clear previous state when starting a new extraction
-    clearState();
-
+    // Clear previous results when starting a new extraction
+    setStoredState((prev) => ({ ...prev, results: [], error: null }));
     setLoading(true);
-    setError(null);
-    setResults([]);
 
     try {
       const response = await fetch("/api/extract", {
@@ -121,12 +83,13 @@ export default function ExtractDemo() {
   };
 
   const handleClear = () => {
-    clearState();
-    setUrls("");
-    setObjective("");
-    setResults([]);
-    setError(null);
+    clearStoredState();
   };
+
+  // Don't render content until hydrated to avoid hydration mismatch
+  if (!isHydrated) {
+    return <div className="space-y-6" />;
+  }
 
   return (
     <div className="space-y-6">

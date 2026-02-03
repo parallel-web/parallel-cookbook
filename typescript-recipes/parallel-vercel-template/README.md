@@ -92,9 +92,6 @@ parallel-vercel-template/
 │   ├── page.tsx                   # Main page with tabs
 │   ├── layout.tsx                 # App layout
 │   └── globals.css                # Tailwind styles
-├── public/
-│   ├── parallel-symbol.svg        # Parallel logo (dark)
-│   └── parallel-symbol-white.svg  # Parallel logo (white)
 ├── .env.example                   # Environment template
 ├── package.json
 └── README.md

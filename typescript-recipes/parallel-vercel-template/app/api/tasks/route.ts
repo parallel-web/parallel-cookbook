@@ -1,5 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import Parallel from "parallel-web";
+import {
+  getParallelClient,
+  ParallelConfigError,
+  errorResponse,
+  TASK_DEFAULTS,
+} from "@/lib/parallel";
 
 export async function POST(request: NextRequest) {
   try {
@@ -7,28 +12,15 @@ export async function POST(request: NextRequest) {
     const { input, processor } = body;
 
     if (!input) {
-      return NextResponse.json(
-        { error: "input is required" },
-        { status: 400 }
-      );
+      return errorResponse("input is required", 400);
     }
 
-    if (!process.env.PARALLEL_API_KEY) {
-      return NextResponse.json(
-        { error: "PARALLEL_API_KEY is not configured" },
-        { status: 500 }
-      );
-    }
+    const client = getParallelClient();
 
-    const client = new Parallel({
-      apiKey: process.env.PARALLEL_API_KEY,
-    });
+    const selectedProcessor = processor || TASK_DEFAULTS.DEFAULT_PROCESSOR;
+    const supportsAutoSchema =
+      TASK_DEFAULTS.PROCESSORS_WITH_AUTO_SCHEMA.includes(selectedProcessor);
 
-    const selectedProcessor = processor || "lite";
-    
-    // Auto schema is only supported for pro and ultra processors
-    const supportsAutoSchema = ["pro", "ultra"].includes(selectedProcessor);
-    
     const taskRun = await client.taskRun.create({
       input,
       processor: selectedProcessor,
@@ -47,10 +39,13 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json(taskRun);
   } catch (error) {
+    if (error instanceof ParallelConfigError) {
+      return errorResponse(error.message, 500);
+    }
     console.error("Tasks API error:", error);
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Task creation failed" },
-      { status: 500 }
+    return errorResponse(
+      error instanceof Error ? error.message : "Task creation failed",
+      500
     );
   }
 }

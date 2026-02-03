@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import Parallel from "parallel-web";
+import { getParallelClient, ParallelConfigError } from "@/lib/parallel";
 
 export async function GET(
   request: NextRequest,
@@ -8,17 +8,11 @@ export async function GET(
   const { runId } = await params;
 
   if (!runId) {
-    return new Response("runId is required", { status: 400 });
-  }
-
-  if (!process.env.PARALLEL_API_KEY) {
-    return new Response("PARALLEL_API_KEY is not configured", { status: 500 });
+    return Response.json({ error: "runId is required" }, { status: 400 });
   }
 
   try {
-    const client = new Parallel({
-      apiKey: process.env.PARALLEL_API_KEY,
-    });
+    const client = getParallelClient();
 
     // Use the SDK's beta.taskRun.events() method to get the event stream
     const eventStream = await client.beta.taskRun.events(runId);
@@ -59,9 +53,12 @@ export async function GET(
       },
     });
   } catch (error) {
+    if (error instanceof ParallelConfigError) {
+      return Response.json({ error: error.message }, { status: 500 });
+    }
     console.error("SSE proxy error:", error);
-    return new Response(
-      error instanceof Error ? error.message : "SSE connection failed",
+    return Response.json(
+      { error: error instanceof Error ? error.message : "SSE connection failed" },
       { status: 500 }
     );
   }

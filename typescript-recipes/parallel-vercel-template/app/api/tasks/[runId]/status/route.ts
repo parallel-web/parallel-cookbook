@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import Parallel from "parallel-web";
+import {
+  getParallelClient,
+  ParallelConfigError,
+  errorResponse,
+} from "@/lib/parallel";
 
 export async function GET(
   request: NextRequest,
@@ -8,20 +12,11 @@ export async function GET(
   const { runId } = await params;
 
   if (!runId) {
-    return NextResponse.json({ error: "runId is required" }, { status: 400 });
-  }
-
-  if (!process.env.PARALLEL_API_KEY) {
-    return NextResponse.json(
-      { error: "PARALLEL_API_KEY is not configured" },
-      { status: 500 }
-    );
+    return errorResponse("runId is required", 400);
   }
 
   try {
-    const client = new Parallel({
-      apiKey: process.env.PARALLEL_API_KEY,
-    });
+    const client = getParallelClient();
 
     // Retrieve the task run status
     const taskRun = await client.taskRun.retrieve(runId);
@@ -34,8 +29,13 @@ export async function GET(
           status: taskRun.status,
           output: result.output,
         });
-      } catch {
-        // Result might not be ready yet
+      } catch (error) {
+        // Result not yet available for completed task - return status only
+        console.debug(
+          "Task completed but result not available yet:",
+          runId,
+          error instanceof Error ? error.message : error
+        );
         return NextResponse.json({
           status: taskRun.status,
         });
@@ -55,10 +55,13 @@ export async function GET(
       status: taskRun.status,
     });
   } catch (error) {
+    if (error instanceof ParallelConfigError) {
+      return errorResponse(error.message, 500);
+    }
     console.error("Task status error:", error);
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Failed to get task status" },
-      { status: 500 }
+    return errorResponse(
+      error instanceof Error ? error.message : "Failed to get task status",
+      500
     );
   }
 }

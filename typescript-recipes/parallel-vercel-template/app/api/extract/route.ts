@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
-import Parallel from "parallel-web";
+import {
+  getParallelClient,
+  ParallelConfigError,
+  errorResponse,
+} from "@/lib/parallel";
 
 export async function POST(request: NextRequest) {
   try {
@@ -7,36 +11,27 @@ export async function POST(request: NextRequest) {
     const { urls, objective } = body;
 
     if (!urls || !Array.isArray(urls) || urls.length === 0) {
-      return NextResponse.json(
-        { error: "urls array is required" },
-        { status: 400 }
-      );
+      return errorResponse("urls array is required", 400);
     }
 
-    if (!process.env.PARALLEL_API_KEY) {
-      return NextResponse.json(
-        { error: "PARALLEL_API_KEY is not configured" },
-        { status: 500 }
-      );
-    }
-
-    const client = new Parallel({
-      apiKey: process.env.PARALLEL_API_KEY,
-    });
+    const client = getParallelClient();
 
     const extractResult = await client.beta.extract({
       urls,
-      objective: objective || undefined,
+      objective: objective?.trim() || undefined,
       excerpts: true,
       full_content: false,
     });
 
     return NextResponse.json(extractResult);
   } catch (error) {
+    if (error instanceof ParallelConfigError) {
+      return errorResponse(error.message, 500);
+    }
     console.error("Extract API error:", error);
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Extract failed" },
-      { status: 500 }
+    return errorResponse(
+      error instanceof Error ? error.message : "Extract failed",
+      500
     );
   }
 }
