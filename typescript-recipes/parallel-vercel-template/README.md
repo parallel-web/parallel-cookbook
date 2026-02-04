@@ -2,7 +2,10 @@
 
 A Next.js template demonstrating how to integrate Parallel's web research APIs with Vercel. This template provides a complete demo application showcasing the Search, Extract, and Tasks APIs with real-time SSE streaming.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparallel-web%2Fparallel-cookbook%2Ftree%2Fmain%2Ftypescript-recipes%2Fparallel-vercel-template&demo-title=Parallel%20Vercel%20Demo&demo-description=Explore%20Parallel's%20Search%2C%20Extract%2C%20and%20Tasks%20APIs%20with%20this%20interactive%20demo.&demo-url=https%3A%2F%2Fparallel-vercel-template-cookbook.vercel.app%2F&integration-ids=oac_qjiYAM8BTtX0UDS6HEPY97nU&products=%5B%7B%22type%22%3A%22integration%22%2C%22integrationSlug%22%3A%22parallel%22%2C%22productSlug%22%3A%22parallel%22%2C%22protocol%22%3A%22ai%22%7D%5D)
+View the demo at:
+[https://parallel-vercel-template-cookbook.vercel.app/](https://parallel-vercel-template-cookbook.vercel.app/)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparallel-web%2Fparallel-cookbook%2Ftree%2Fmain%2Ftypescript-recipes%2Fparallel-vercel-template&project-name=parallel-vercel-template&repository-name=parallel-vercel-template&demo-title=Parallel%20Vercel%20Demo&demo-description=Explore%20Parallel's%20Search%2C%20Extract%2C%20and%20Tasks%20APIs%20with%20this%20interactive%20demo.&demo-url=https%3A%2F%2Fparallel-cookbook-parallel-ai.vercel.app&demo-image=https%3A%2F%2Fassets.parallel.ai%2Fcookbook%2Fvercel_cookbook_picture.png&integration-ids=oac_qjiYAM8BTtX0UDS6HEPY97nU)
 
 ## Features
 
@@ -45,7 +48,7 @@ A Next.js template demonstrating how to integrate Parallel's web research APIs w
 ### Prerequisites
 
 - Node.js 18+
-- A [Parallel API key](https://vercel.com/parallel-ai/~/integrations/parallel) (via Vercel Integration)
+- A [Parallel API key](https://vercel.com/marketplace/parallel) (via Vercel Integration)
 
 ### 1. Clone and Install
 
@@ -108,7 +111,7 @@ parallel-vercel-template/
 
 ### Using Vercel Integration
 
-The easiest way to get an API key is through the [Parallel Vercel Integration](https://vercel.com/parallel-ai/~/integrations/parallel):
+The easiest way to get an API key is through the [Parallel Vercel Integration](https://vercel.com/marketplace/parallel):
 
 1. Install the integration on your Vercel project
 2. The `PARALLEL_API_KEY` environment variable is automatically added
@@ -118,7 +121,7 @@ The easiest way to get an API key is through the [Parallel Vercel Integration](h
 
 Want to try the **Monitor** or **FindAll** APIs?
 
-Go to your [Vercel Integration page](https://vercel.com/parallel-ai/~/integrations/parallel), select a project, and click **"Open in Parallel Web Systems"** to access the full playground.
+Go to your [Vercel Integration page](https://vercel.com/marketplace/parallel), select a project, and click **"Open in Parallel Web Systems"** to access the full playground.
 
 ## Resources
 
@@ -129,7 +132,7 @@ Go to your [Vercel Integration page](https://vercel.com/parallel-ai/~/integratio
 - [SSE Streaming Guide](https://docs.parallel.ai/task-api/task-sse)
 - [Pricing](https://docs.parallel.ai/resources/pricing)
 - [parallel-web npm package](https://www.npmjs.com/package/parallel-web)
-- [Vercel Integration](https://vercel.com/parallel-ai/~/integrations/parallel)
+- [Vercel Integration](https://vercel.com/marketplace/parallel)
 
 ## License
 
