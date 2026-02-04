@@ -48,10 +48,7 @@ export default function Home() {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path
-                d="m577.3 0 577.4 1000H0z"
-                fill="white"
-              />
+              <path d="m577.3 0 577.4 1000H0z" fill="white" />
             </svg>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">
@@ -71,7 +68,7 @@ export default function Home() {
               Documentation
             </a>
             <a
-              href="https://vercel.com/parallel-ai/~/integrations/parallel"
+              href="https://vercel.com/marketplace/parallel"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
@@ -128,12 +125,13 @@ export default function Home() {
           {/* Playground tip */}
           <div className="bg-white dark:bg-zinc-900 rounded-lg border border-zinc-200 dark:border-zinc-800 p-4">
             <p className="text-zinc-600 dark:text-zinc-300">
-              Want to try the <strong>Monitor</strong> or <strong>FindAll</strong> APIs?
+              Want to try the <strong>Monitor</strong> or{" "}
+              <strong>FindAll</strong> APIs?
             </p>
             <p className="mt-1">
               Go to your{" "}
               <a
-                href="https://vercel.com/parallel-ai/~/integrations/parallel"
+                href="https://vercel.com/marketplace/parallel"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 dark:text-blue-400 hover:underline"
