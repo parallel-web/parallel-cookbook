@@ -14,8 +14,7 @@ class TestGroundingConfig:
 
     def test_default_config(self):
         """Test default configuration values."""
-        config = GroundingConfig(api_key="test-key")
-        assert config.api_key == "test-key"
+        config = GroundingConfig()
         assert config.max_results == 10
         assert config.max_chars_per_result == 30000
         assert config.max_chars_total == 100000
@@ -25,7 +24,6 @@ class TestGroundingConfig:
     def test_custom_config(self):
         """Test custom configuration values."""
         config = GroundingConfig(
-            api_key="test-key",
             max_results=5,
             max_chars_per_result=10000,
             max_chars_total=50000,
@@ -40,18 +38,16 @@ class TestGroundingConfig:
 
     def test_to_grounding_spec_minimal(self):
         """Test conversion to grounding spec with minimal config."""
-        config = GroundingConfig(api_key="test-key")
+        config = GroundingConfig()
         spec = config.to_grounding_spec()
 
         assert "parallelAiSearch" in spec
-        assert spec["parallelAiSearch"]["api_key"] == "test-key"
         # Default values should not be included in customConfigs
         assert "customConfigs" not in spec["parallelAiSearch"]
 
     def test_to_grounding_spec_full(self):
         """Test conversion to grounding spec with all options."""
         config = GroundingConfig(
-            api_key="test-key",
             max_results=5,
             max_chars_per_result=10000,
             max_chars_total=50000,
@@ -61,7 +57,6 @@ class TestGroundingConfig:
         spec = config.to_grounding_spec()
 
         parallel_config = spec["parallelAiSearch"]
-        assert parallel_config["api_key"] == "test-key"
         assert "customConfigs" in parallel_config
         custom = parallel_config["customConfigs"]
         assert custom["max_results"] == 5
@@ -121,38 +116,27 @@ class TestGroundedGeminiClient:
         client = GroundedGeminiClient(
             project_id="test-project",
             location="us-central1",
-            parallel_api_key="test-key",
         )
 
         assert client.project_id == "test-project"
         assert client.location == "us-central1"
-        assert client.grounding_config.api_key == "test-key"
 
     def test_init_with_env_vars(self, mock_auth, env_vars):
         """Test client initialization from environment variables."""
         client = GroundedGeminiClient()
 
         assert client.project_id == "test-project"
-        assert client.grounding_config.api_key == "test-api-key"
 
     def test_init_missing_project(self, mock_auth):
         """Test that missing project ID raises error."""
         with pytest.raises(ValueError, match="project_id must be provided"):
-            GroundedGeminiClient(parallel_api_key="test-key")
-
-    def test_init_missing_api_key(self, mock_auth, monkeypatch):
-        """Test that missing API key raises error."""
-        # Clear the environment variable if set
-        monkeypatch.delenv("PARALLEL_API_KEY", raising=False)
-        with pytest.raises(ValueError, match="parallel_api_key must be provided"):
-            GroundedGeminiClient(project_id="test-project")
+            GroundedGeminiClient()
 
     def test_get_endpoint_url(self, mock_auth):
         """Test endpoint URL generation."""
         client = GroundedGeminiClient(
             project_id="my-project",
             location="us-central1",
-            parallel_api_key="test-key",
         )
 
         url = client._get_endpoint_url("gemini-2.0-flash")
@@ -169,7 +153,6 @@ class TestGroundedGeminiClient:
 
         client = GroundedGeminiClient(
             project_id="test-project",
-            parallel_api_key="test-key",
         )
 
         response = client.generate("What is the CEO of Example Corp?")
@@ -195,7 +178,6 @@ class TestGroundedGeminiClient:
 
         client = GroundedGeminiClient(
             project_id="test-project",
-            parallel_api_key="test-key",
         )
 
         _response = client.generate(
@@ -224,7 +206,6 @@ class TestGroundedGeminiClient:
 
         client = GroundedGeminiClient(
             project_id="test-project",
-            parallel_api_key="test-key",
         )
 
         _response = client.generate_with_context(

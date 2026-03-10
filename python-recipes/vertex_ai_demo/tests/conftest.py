@@ -86,7 +86,6 @@ def env_vars():
     """Set up environment variables for testing."""
     original_env = os.environ.copy()
     os.environ["GOOGLE_CLOUD_PROJECT"] = "test-project"
-    os.environ["PARALLEL_API_KEY"] = "test-api-key"
     os.environ["GOOGLE_CLOUD_LOCATION"] = "us-central1"
     yield
     os.environ.clear()

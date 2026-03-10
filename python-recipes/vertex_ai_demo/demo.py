@@ -8,13 +8,11 @@ responses with and without grounding for questions about recent events.
 
 Prerequisites:
     1. Google Cloud project with Vertex AI API enabled
-    2. Parallel API key from https://parallel.ai/products/search
-    3. Google Cloud authentication (gcloud auth application-default login)
+    2. Google Cloud authentication (gcloud auth application-default login)
 
 Usage:
     # Set required environment variables
     export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
-    export PARALLEL_API_KEY="your-parallel-api-key"
 
     # Run the demo with sample questions
     python demo.py
@@ -361,7 +359,6 @@ def main() -> None:
 
             Environment Variables:
               GOOGLE_CLOUD_PROJECT    Your GCP project ID (required)
-              PARALLEL_API_KEY        Your Parallel API key (required)
               GOOGLE_CLOUD_LOCATION   GCP region (default: us-central1)
         """),
     )
@@ -431,14 +428,12 @@ def main() -> None:
 
     project_id = status.project_id
     location = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
-    parallel_api_key = os.environ.get("PARALLEL_API_KEY")
 
     # Initialize client
     try:
         client = GroundedGeminiClient(
             project_id=project_id,
             location=location,
-            parallel_api_key=parallel_api_key,
         )
         print(f"\nInitialized client for project: {project_id}")
     except Exception as e:

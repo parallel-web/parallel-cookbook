@@ -30,7 +30,6 @@ class SetupStatus:
     Attributes:
         is_valid: Whether all checks passed.
         project_id: The GCP project ID found (or None).
-        parallel_api_key_set: Whether a Parallel API key is configured.
         gcp_auth_valid: Whether GCP authentication is working.
         errors: List of error messages for failed checks.
         warnings: List of warning messages for potential issues.
@@ -38,7 +37,6 @@ class SetupStatus:
 
     is_valid: bool
     project_id: str | None
-    parallel_api_key_set: bool
     gcp_auth_valid: bool
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
@@ -55,7 +53,6 @@ class SetupStatus:
         # Configuration
         lines.append("Configuration:")
         lines.append(f"  GCP Project: {self.project_id or 'NOT SET'}")
-        lines.append(f"  Parallel API Key: {'SET' if self.parallel_api_key_set else 'NOT SET'}")
         lines.append(f"  GCP Authentication: {'VALID' if self.gcp_auth_valid else 'INVALID'}")
 
         # Errors
@@ -78,9 +75,6 @@ class SetupStatus:
             lines.append("To fix:")
             if not self.project_id:
                 lines.append("  export GOOGLE_CLOUD_PROJECT='your-project-id'")
-            if not self.parallel_api_key_set:
-                lines.append("  export PARALLEL_API_KEY='your-api-key'")
-                lines.append("  Get your key at: https://parallel.ai/products/search")
             if not self.gcp_auth_valid:
                 lines.append("  gcloud auth application-default login")
 
@@ -89,18 +83,15 @@ class SetupStatus:
 
 def validate_setup(
     project_id: str | None = None,
-    parallel_api_key: str | None = None,
 ) -> SetupStatus:
     """Validate that all required configuration is in place.
 
     This function checks:
     1. GCP project ID is set (via argument or environment variable)
-    2. Parallel API key is set (via argument or environment variable)
-    3. GCP authentication is working (can obtain access token)
+    2. GCP authentication is working (can obtain access token)
 
     Args:
         project_id: Optional project ID to check (falls back to env var).
-        parallel_api_key: Optional API key to check (falls back to env var).
 
     Returns:
         SetupStatus with validation results.
@@ -118,12 +109,6 @@ def validate_setup(
     found_project_id = project_id or os.environ.get("GOOGLE_CLOUD_PROJECT")
     if not found_project_id:
         errors.append("GOOGLE_CLOUD_PROJECT environment variable is not set")
-
-    # Check Parallel API key
-    found_api_key = parallel_api_key or os.environ.get("PARALLEL_API_KEY")
-    parallel_api_key_set = bool(found_api_key)
-    if not parallel_api_key_set:
-        errors.append("PARALLEL_API_KEY environment variable is not set")
 
     # Check GCP authentication
     gcp_auth_valid = False
@@ -149,7 +134,6 @@ def validate_setup(
     return SetupStatus(
         is_valid=is_valid,
         project_id=found_project_id,
-        parallel_api_key_set=parallel_api_key_set,
         gcp_auth_valid=gcp_auth_valid,
         errors=errors,
         warnings=warnings,
@@ -160,7 +144,6 @@ class GroundingConfig(BaseModel):
     """Configuration for Parallel web search grounding.
 
     Attributes:
-        api_key: Parallel API key for web search.
         max_results: Maximum number of search results (1-20, default 10).
         max_chars_per_result: Max characters per result excerpt (1000-100000, default 30000).
         max_chars_total: Max total characters from all excerpts (1000-1000000, default 100000).
@@ -168,7 +151,6 @@ class GroundingConfig(BaseModel):
         exclude_domains: Optional list of domains to exclude (max 10).
     """
 
-    api_key: str
     max_results: int = 10
     max_chars_per_result: int = 30000
     max_chars_total: int = 100000
@@ -177,9 +159,7 @@ class GroundingConfig(BaseModel):
 
     def to_grounding_spec(self) -> dict[str, Any]:
         """Convert to Vertex AI grounding specification format."""
-        parallel_config: dict[str, Any] = {
-            "api_key": self.api_key,
-        }
+        parallel_config: dict[str, Any] = {}
 
         # Build customConfigs if any non-default values are set
         custom_configs: dict[str, Any] = {}
@@ -337,7 +317,6 @@ class GroundedGeminiClient:
         client = GroundedGeminiClient(
             project_id="my-project",
             location="us-central1",
-            parallel_api_key="my-parallel-key"
         )
         response = client.generate("What is the latest news about AI?")
         print(response.text)
@@ -364,7 +343,6 @@ class GroundedGeminiClient:
         self,
         project_id: str | None = None,
         location: str = "us-central1",
-        parallel_api_key: str | None = None,
         grounding_config: GroundingConfig | None = None,
     ):
         """Initialize the client.
@@ -373,8 +351,6 @@ class GroundedGeminiClient:
             project_id: Google Cloud project ID. If not provided, will attempt
                 to get from GOOGLE_CLOUD_PROJECT environment variable.
             location: Google Cloud region. Defaults to us-central1.
-            parallel_api_key: Parallel API key. If not provided, will attempt
-                to get from PARALLEL_API_KEY environment variable.
             grounding_config: Optional GroundingConfig for advanced settings.
         """
         self.project_id = project_id or os.environ.get("GOOGLE_CLOUD_PROJECT")
@@ -385,18 +361,8 @@ class GroundedGeminiClient:
 
         self.location = location or os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
 
-        # Get Parallel API key
-        api_key = parallel_api_key or os.environ.get("PARALLEL_API_KEY")
-        if not api_key:
-            raise ValueError(
-                "parallel_api_key must be provided or PARALLEL_API_KEY must be set"
-            )
-
         # Set up grounding config
-        if grounding_config:
-            self.grounding_config = grounding_config
-        else:
-            self.grounding_config = GroundingConfig(api_key=api_key)
+        self.grounding_config = grounding_config or GroundingConfig()
 
         # Initialize credentials
         self._credentials, _ = google.auth.default()
@@ -562,7 +528,6 @@ def generate_grounded_response(
     prompt: str,
     project_id: str | None = None,
     location: str = "us-central1",
-    parallel_api_key: str | None = None,
     model_id: str = "gemini-2.5-flash",
     **kwargs: Any,
 ) -> GroundedResponse:
@@ -572,7 +537,6 @@ def generate_grounded_response(
         prompt: The user prompt/question.
         project_id: Google Cloud project ID.
         location: Google Cloud region.
-        parallel_api_key: Parallel API key.
         model_id: The Gemini model to use.
         **kwargs: Additional arguments passed to generate().
 
@@ -583,13 +547,11 @@ def generate_grounded_response(
         response = generate_grounded_response(
             "What are the latest breakthroughs in quantum computing?",
             project_id="my-project",
-            parallel_api_key="my-key",
         )
         print(response.text)
     """
     client = GroundedGeminiClient(
         project_id=project_id,
         location=location,
-        parallel_api_key=parallel_api_key,
     )
     return client.generate(prompt, model_id=model_id, **kwargs)

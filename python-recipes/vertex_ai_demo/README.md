@@ -54,9 +54,8 @@ Grounding with Parallel on Vertex AI connects Gemini models to Parallel's LLM-op
 
 1. **Google Cloud Project** with billing enabled
 2. **Vertex AI API** enabled in your project
-3. **Parallel API Key** from [parallel.ai/products/search](https://parallel.ai/products/search)
-4. **Python 3.10+** and **uv** package manager
-5. **Google Cloud authentication** configured
+3. **Python 3.10+** and **uv** package manager
+4. **Google Cloud authentication** configured
 
 ## Quick Start
 
@@ -80,9 +79,6 @@ gcloud auth application-default login
 
 # Set your project
 export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
-
-# Set your Parallel API key
-export PARALLEL_API_KEY="your-parallel-api-key"
 ```
 
 ### 3. Validate Setup
@@ -155,7 +151,6 @@ from vertex_parallel import GroundedGeminiClient
 # Initialize the client
 client = GroundedGeminiClient(
     project_id="your-project-id",
-    parallel_api_key="your-parallel-api-key",
 )
 
 # Generate a grounded response
@@ -175,7 +170,6 @@ from vertex_parallel import GroundedGeminiClient, GroundingConfig
 
 # Configure grounding options
 config = GroundingConfig(
-    api_key="your-parallel-api-key",
     max_results=5,                    # Max search results (1-20)
     include_domains=["www.example.com"],  # Only these domains
     exclude_domains=[],         # Exclude these domains
@@ -217,7 +211,6 @@ from vertex_parallel import generate_grounded_response
 response = generate_grounded_response(
     prompt="What are the latest breakthroughs in quantum computing?",
     project_id="your-project",
-    parallel_api_key="your-key",
 )
 ```
 
@@ -228,7 +221,6 @@ response = generate_grounded_response(
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `GOOGLE_CLOUD_PROJECT` | Google Cloud project ID | Yes |
-| `PARALLEL_API_KEY` | Parallel API key | Yes |
 | `GOOGLE_CLOUD_LOCATION` | GCP region (default: us-central1) | No |
 | `GOOGLE_APPLICATION_CREDENTIALS` | Path to service account JSON | No |
 
@@ -236,7 +228,6 @@ response = generate_grounded_response(
 
 | Parameter | Description | Default | Range |
 |-----------|-------------|---------|-------|
-| `api_key` | Parallel API key | Required | - |
 | `max_results` | Max search results | 10 | 1-20 |
 | `max_chars_per_result` | Max chars per result excerpt | 30,000 | 1,000-100,000 |
 | `max_chars_total` | Max total chars from all excerpts | 100,000 | 1,000-1,000,000 |
@@ -338,11 +329,7 @@ The default quota is 60 prompts per minute. To increase rate limits, contact [su
    gcloud services enable aiplatform.googleapis.com
    ```
 
-3. **Invalid API Key**
-   - Verify your Parallel API key at [parallel.ai](https://parallel.ai)
-   - Ensure the key has web search permissions
-
-4. **Rate Limiting**
+3. **Rate Limiting**
    - Default quota is 60 requests/minute
    - Contact support for higher limits
 

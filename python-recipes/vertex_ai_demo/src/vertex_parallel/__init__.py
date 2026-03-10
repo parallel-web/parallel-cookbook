@@ -10,7 +10,6 @@ Example usage:
     client = GroundedGeminiClient(
         project_id="your-project",
         location="us-central1",
-        parallel_api_key="your-parallel-key"
     )
 
     response = client.generate(
