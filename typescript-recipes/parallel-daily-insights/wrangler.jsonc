@@ -5,10 +5,12 @@
   "compatibility_date": "2025-08-14",
   "assets": { "directory": "./public", "binding": "ASSETS" },
   "observability": { "logs": { "enabled": true } },
+  // Create your own KV namespace and replace `id` below:
+  //   wrangler kv:namespace create DAILY_INSIGHTS
   "kv_namespaces": [
     {
       "binding": "DAILY_INSIGHTS",
-      "id": "68b24836e5354bfcbcf43202c65db332",
+      "id": "<YOUR_KV_NAMESPACE_ID>",
       "experimental_remote": true
     }
   ],

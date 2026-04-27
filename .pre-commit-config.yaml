@@ -1,0 +1,28 @@
+# Run these checks before every commit. Install once per clone:
+#   brew install pre-commit   # or: pip install pre-commit
+#   pre-commit install
+#
+# The same hooks run in CI via .github/workflows/pre-commit.yml, so what
+# passes locally passes there.
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: detect-private-key
+
+  # Secret / sensitive-ID scanning (uses .gitleaks.toml)
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.21.2
+    hooks:
+      - id: gitleaks
+
+  # Block committing real .env / .dev.vars files (any non-.example variant)
+  - repo: local
+    hooks:
+      - id: forbid-env-files
+        name: Refuse to commit .env / .dev.vars (use .example variants instead)
+        entry: "Commit blocked: do not commit .env or .dev.vars files. Use the .example variant for documentation."
+        language: fail
+        files: '(?:^|/)(\.env(\..+)?|\.dev\.vars(\..+)?)$'
+        exclude: '\.example$'

@@ -26,10 +26,15 @@ venv/
 dist/
 build/
 
-# Environment files
+# Environment files (never commit — use .env.example / .dev.vars.example instead)
 .env
 .env.local
 .env*.local
+.dev.vars
+.dev.vars.local
+
+# Cloudflare Workers build/dev artifacts
+.wrangler/
 
 # Playwright
 .playwright-mcp*

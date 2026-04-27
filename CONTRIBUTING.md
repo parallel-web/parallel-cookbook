@@ -122,11 +122,32 @@ Before opening a PR, double-check:
 
 - [ ] Recipe runs end-to-end from a fresh clone using only the README
 - [ ] Live demo URL is reachable and shows what the README claims
-- [ ] No API keys, secrets, or `.env` files committed (use `.env.example`)
+- [ ] No API keys, secrets, or `.env` / `.dev.vars` files committed (use `.example` variants)
+- [ ] No hardcoded Cloudflare account IDs or KV namespace IDs — use `<YOUR_KV_NAMESPACE_ID>` placeholders and document `wrangler kv:namespace create` in the README
+- [ ] Production-only routes live under `env.production` in `wrangler.jsonc`, not the default config
 - [ ] Lockfile committed (`package-lock.json`, `pnpm-lock.yaml`, or `uv.lock`)
 - [ ] LICENSE included (MIT preferred)
 - [ ] Title and description fit on one line each
 - [ ] Recipe added to **both** `README.md` and `website/cookbook.json`
+
+### Enable pre-commit
+
+The repo uses [pre-commit](https://pre-commit.com) to scan for secrets, infra IDs, and basic hygiene before every commit. The exact same hooks run in CI via [`.github/workflows/pre-commit.yml`](.github/workflows/pre-commit.yml), so what passes locally passes in CI.
+
+Set up once per clone:
+
+```bash
+brew install pre-commit   # or: pip install pre-commit
+pre-commit install
+```
+
+What's enforced (see [`.pre-commit-config.yaml`](.pre-commit-config.yaml) for the full list):
+
+- **Secret scanning** via [gitleaks](https://github.com/gitleaks/gitleaks) using [`.gitleaks.toml`](.gitleaks.toml) — blocks Parallel/Cerebras/Groq API keys, Cloudflare account IDs, and hardcoded KV namespace IDs.
+- **Refuse to commit `.env` / `.dev.vars` files** (use `.example` variants instead).
+- JSON/YAML syntax validation, trailing-whitespace, end-of-file, large-file, merge-conflict-marker, private-key detection.
+
+False positive? Add an entry to the `[allowlist]` section of `.gitleaks.toml` and explain why in the PR.
 
 ---
 

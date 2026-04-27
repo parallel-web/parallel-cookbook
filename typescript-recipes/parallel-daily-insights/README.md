@@ -25,3 +25,19 @@ Another mistake it made is thinking it could request a lot of scattered informat
 ## Result
 
 The task specification has gone through a few iterations to improve confidence — see the [SPEC.md](./SPEC.md) for the current version.
+
+## Deploy
+
+```bash
+# 1. Create a KV namespace and copy the returned id into wrangler.jsonc
+wrangler kv:namespace create DAILY_INSIGHTS
+
+# 2. Set secrets (Parallel API key + a webhook signing secret you choose)
+wrangler secret put PARALLEL_API_KEY
+wrangler secret put PARALLEL_WEBHOOK_SECRET
+
+# 3. After `wrangler deploy`, set WEBHOOK_BASE_URL to the deployed URL
+wrangler secret put WEBHOOK_BASE_URL   # e.g. https://parallel-daily-insights.your-subdomain.workers.dev
+```
+
+To bind to a custom domain, add a `routes` entry to `wrangler.jsonc` or pass `--route` to `wrangler deploy`.
