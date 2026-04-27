@@ -8,9 +8,11 @@ Prerequisites:
     1. pip install vertex-parallel-grounding
     2. export GOOGLE_CLOUD_PROJECT="your-project-id"
        (or set in .env file)
-    3. export PARALLEL_API_KEY="your-api-key"
-       (or set in .env file)
-    4. gcloud auth application-default login
+    3. gcloud auth application-default login
+    4. Parallel auth — choose one:
+       a) Google Cloud Marketplace subscription (no env var needed), or
+       b) Bring Your Own Key: export PARALLEL_API_KEY="your-parallel-key"
+          (or set in .env file)
 """
 
 from dotenv import load_dotenv

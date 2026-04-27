@@ -14,8 +14,8 @@ class TestGroundingConfig:
 
     def test_default_config(self):
         """Test default configuration values."""
-        config = GroundingConfig(api_key="test-key")
-        assert config.api_key == "test-key"
+        config = GroundingConfig()
+        assert config.api_key is None
         assert config.max_results == 10
         assert config.max_chars_per_result == 30000
         assert config.max_chars_total == 100000
@@ -32,20 +32,29 @@ class TestGroundingConfig:
             include_domains=["example.com"],
             exclude_domains=["blocked.com"],
         )
+        assert config.api_key == "test-key"
         assert config.max_results == 5
         assert config.max_chars_per_result == 10000
         assert config.max_chars_total == 50000
         assert config.include_domains == ["example.com"]
         assert config.exclude_domains == ["blocked.com"]
 
-    def test_to_grounding_spec_minimal(self):
-        """Test conversion to grounding spec with minimal config."""
-        config = GroundingConfig(api_key="test-key")
+    def test_to_grounding_spec_marketplace(self):
+        """Marketplace mode: no api_key is emitted in the spec."""
+        config = GroundingConfig()
         spec = config.to_grounding_spec()
 
         assert "parallelAiSearch" in spec
-        assert spec["parallelAiSearch"]["api_key"] == "test-key"
+        assert "api_key" not in spec["parallelAiSearch"]
         # Default values should not be included in customConfigs
+        assert "customConfigs" not in spec["parallelAiSearch"]
+
+    def test_to_grounding_spec_byok(self):
+        """BYOK mode: api_key is emitted in the spec."""
+        config = GroundingConfig(api_key="test-key")
+        spec = config.to_grounding_spec()
+
+        assert spec["parallelAiSearch"]["api_key"] == "test-key"
         assert "customConfigs" not in spec["parallelAiSearch"]
 
     def test_to_grounding_spec_full(self):
@@ -116,43 +125,54 @@ class TestGroundedResponse:
 class TestGroundedGeminiClient:
     """Tests for GroundedGeminiClient."""
 
-    def test_init_with_params(self, mock_auth):
-        """Test client initialization with explicit parameters."""
+    def test_init_with_params(self, mock_auth, monkeypatch):
+        """Marketplace mode: no API key is configured."""
+        monkeypatch.delenv("PARALLEL_API_KEY", raising=False)
         client = GroundedGeminiClient(
             project_id="test-project",
             location="us-central1",
-            parallel_api_key="test-key",
         )
 
         assert client.project_id == "test-project"
         assert client.location == "us-central1"
-        assert client.grounding_config.api_key == "test-key"
+        assert client.grounding_config.api_key is None
 
-    def test_init_with_env_vars(self, mock_auth, env_vars):
+    def test_init_byok_with_param(self, mock_auth, monkeypatch):
+        """BYOK mode: parallel_api_key is accepted and plumbed through."""
+        monkeypatch.delenv("PARALLEL_API_KEY", raising=False)
+        client = GroundedGeminiClient(
+            project_id="test-project",
+            parallel_api_key="my-byok-key",
+        )
+
+        assert client.grounding_config.api_key == "my-byok-key"
+
+    def test_init_byok_from_env(self, mock_auth, monkeypatch):
+        """BYOK mode: PARALLEL_API_KEY env var is picked up automatically."""
+        monkeypatch.setenv("PARALLEL_API_KEY", "env-byok-key")
+        client = GroundedGeminiClient(project_id="test-project")
+
+        assert client.grounding_config.api_key == "env-byok-key"
+
+    def test_init_with_env_vars(self, mock_auth, env_vars, monkeypatch):
         """Test client initialization from environment variables."""
+        monkeypatch.delenv("PARALLEL_API_KEY", raising=False)
         client = GroundedGeminiClient()
 
         assert client.project_id == "test-project"
-        assert client.grounding_config.api_key == "test-api-key"
+        assert client.grounding_config.api_key is None
 
-    def test_init_missing_project(self, mock_auth):
+    def test_init_missing_project(self, mock_auth, monkeypatch):
         """Test that missing project ID raises error."""
+        monkeypatch.delenv("GOOGLE_CLOUD_PROJECT", raising=False)
         with pytest.raises(ValueError, match="project_id must be provided"):
-            GroundedGeminiClient(parallel_api_key="test-key")
-
-    def test_init_missing_api_key(self, mock_auth, monkeypatch):
-        """Test that missing API key raises error."""
-        # Clear the environment variable if set
-        monkeypatch.delenv("PARALLEL_API_KEY", raising=False)
-        with pytest.raises(ValueError, match="parallel_api_key must be provided"):
-            GroundedGeminiClient(project_id="test-project")
+            GroundedGeminiClient()
 
     def test_get_endpoint_url(self, mock_auth):
         """Test endpoint URL generation."""
         client = GroundedGeminiClient(
             project_id="my-project",
             location="us-central1",
-            parallel_api_key="test-key",
         )
 
         url = client._get_endpoint_url("gemini-2.0-flash")
@@ -160,8 +180,9 @@ class TestGroundedGeminiClient:
         assert url == expected
 
     @patch("requests.post")
-    def test_generate(self, mock_post, mock_auth, sample_api_response):
-        """Test the generate method."""
+    def test_generate(self, mock_post, mock_auth, sample_api_response, monkeypatch):
+        """Test the generate method in Marketplace mode (no api_key sent)."""
+        monkeypatch.delenv("PARALLEL_API_KEY", raising=False)
         mock_response = MagicMock()
         mock_response.json.return_value = sample_api_response
         mock_response.raise_for_status = MagicMock()
@@ -169,7 +190,6 @@ class TestGroundedGeminiClient:
 
         client = GroundedGeminiClient(
             project_id="test-project",
-            parallel_api_key="test-key",
         )
 
         response = client.generate("What is the CEO of Example Corp?")
@@ -183,7 +203,31 @@ class TestGroundedGeminiClient:
         request_body = call_args.kwargs["json"]
         assert "contents" in request_body
         assert "tools" in request_body
-        assert "parallelAiSearch" in request_body["tools"][0]
+        parallel_tool = request_body["tools"][0]["parallelAiSearch"]
+        # Marketplace: api_key must NOT be present in the request body
+        assert "api_key" not in parallel_tool
+
+    @patch("requests.post")
+    def test_generate_byok_sends_api_key(
+        self, mock_post, mock_auth, sample_api_response, monkeypatch
+    ):
+        """BYOK mode: api_key is included in the request body."""
+        monkeypatch.delenv("PARALLEL_API_KEY", raising=False)
+        mock_response = MagicMock()
+        mock_response.json.return_value = sample_api_response
+        mock_response.raise_for_status = MagicMock()
+        mock_post.return_value = mock_response
+
+        client = GroundedGeminiClient(
+            project_id="test-project",
+            parallel_api_key="my-byok-key",
+        )
+
+        client.generate("What is the CEO of Example Corp?")
+
+        request_body = mock_post.call_args.kwargs["json"]
+        parallel_tool = request_body["tools"][0]["parallelAiSearch"]
+        assert parallel_tool["api_key"] == "my-byok-key"
 
     @patch("requests.post")
     def test_generate_with_options(self, mock_post, mock_auth, sample_api_response):
@@ -195,7 +239,6 @@ class TestGroundedGeminiClient:
 
         client = GroundedGeminiClient(
             project_id="test-project",
-            parallel_api_key="test-key",
         )
 
         _response = client.generate(
@@ -224,7 +267,6 @@ class TestGroundedGeminiClient:
 
         client = GroundedGeminiClient(
             project_id="test-project",
-            parallel_api_key="test-key",
         )
 
         _response = client.generate_with_context(

@@ -8,13 +8,16 @@ responses with and without grounding for questions about recent events.
 
 Prerequisites:
     1. Google Cloud project with Vertex AI API enabled
-    2. Parallel API key from https://parallel.ai/products/search
-    3. Google Cloud authentication (gcloud auth application-default login)
+    2. Google Cloud authentication (gcloud auth application-default login)
+    3. Parallel auth via one of:
+         - Google Cloud Marketplace subscription, or
+         - PARALLEL_API_KEY env var (Bring Your Own Key)
 
 Usage:
     # Set required environment variables
     export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
-    export PARALLEL_API_KEY="your-parallel-api-key"
+    # Optional for BYOK:
+    # export PARALLEL_API_KEY="your-parallel-api-key"
 
     # Run the demo with sample questions
     python demo.py
@@ -361,7 +364,9 @@ def main() -> None:
 
             Environment Variables:
               GOOGLE_CLOUD_PROJECT    Your GCP project ID (required)
-              PARALLEL_API_KEY        Your Parallel API key (required)
+              PARALLEL_API_KEY        Parallel API key (optional; only for BYOK
+                                      mode — leave unset to use a Google Cloud
+                                      Marketplace subscription)
               GOOGLE_CLOUD_LOCATION   GCP region (default: us-central1)
         """),
     )
@@ -433,14 +438,17 @@ def main() -> None:
     location = os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
     parallel_api_key = os.environ.get("PARALLEL_API_KEY")
 
-    # Initialize client
+    # Initialize client. parallel_api_key is optional: when None, the client
+    # runs in Google Cloud Marketplace mode (subscription required); when
+    # set, the client authenticates BYOK with the Parallel API key.
     try:
         client = GroundedGeminiClient(
             project_id=project_id,
             location=location,
             parallel_api_key=parallel_api_key,
         )
-        print(f"\nInitialized client for project: {project_id}")
+        mode = "BYOK" if parallel_api_key else "Google Cloud Marketplace"
+        print(f"\nInitialized client for project: {project_id} ({mode} auth)")
     except Exception as e:
         print(f"\nError initializing client: {e}")
         print("\nMake sure you have authenticated with Google Cloud:")

@@ -30,16 +30,17 @@ class SetupStatus:
     Attributes:
         is_valid: Whether all checks passed.
         project_id: The GCP project ID found (or None).
-        parallel_api_key_set: Whether a Parallel API key is configured.
         gcp_auth_valid: Whether GCP authentication is working.
+        auth_mode: Which Parallel auth mode is configured:
+            "byok" if a Parallel API key is set, otherwise "marketplace".
         errors: List of error messages for failed checks.
         warnings: List of warning messages for potential issues.
     """
 
     is_valid: bool
     project_id: str | None
-    parallel_api_key_set: bool
     gcp_auth_valid: bool
+    auth_mode: str
     errors: list[str] = field(default_factory=list)
     warnings: list[str] = field(default_factory=list)
 
@@ -55,8 +56,14 @@ class SetupStatus:
         # Configuration
         lines.append("Configuration:")
         lines.append(f"  GCP Project: {self.project_id or 'NOT SET'}")
-        lines.append(f"  Parallel API Key: {'SET' if self.parallel_api_key_set else 'NOT SET'}")
         lines.append(f"  GCP Authentication: {'VALID' if self.gcp_auth_valid else 'INVALID'}")
+        if self.auth_mode == "byok":
+            lines.append("  Parallel Auth: BYOK (PARALLEL_API_KEY is set)")
+        else:
+            lines.append(
+                "  Parallel Auth: Google Cloud Marketplace "
+                "(no PARALLEL_API_KEY; requires an active subscription)"
+            )
 
         # Errors
         if self.errors:
@@ -78,9 +85,6 @@ class SetupStatus:
             lines.append("To fix:")
             if not self.project_id:
                 lines.append("  export GOOGLE_CLOUD_PROJECT='your-project-id'")
-            if not self.parallel_api_key_set:
-                lines.append("  export PARALLEL_API_KEY='your-api-key'")
-                lines.append("  Get your key at: https://parallel.ai/products/search")
             if not self.gcp_auth_valid:
                 lines.append("  gcloud auth application-default login")
 
@@ -93,14 +97,25 @@ def validate_setup(
 ) -> SetupStatus:
     """Validate that all required configuration is in place.
 
+    Two Parallel auth modes are supported:
+
+    * **Google Cloud Marketplace**: No API key required. Subscribe to Parallel
+      Web Search on Google Cloud Marketplace and use the same GCP project for
+      Vertex AI requests.
+    * **Bring Your Own Key (BYOK)**: Set ``PARALLEL_API_KEY`` (or pass
+      ``parallel_api_key``) to authenticate requests with a key from
+      https://platform.parallel.ai.
+
     This function checks:
-    1. GCP project ID is set (via argument or environment variable)
-    2. Parallel API key is set (via argument or environment variable)
-    3. GCP authentication is working (can obtain access token)
+    1. GCP project ID is set (via argument or environment variable).
+    2. GCP authentication is working (can obtain access token).
+    3. Detects whether ``PARALLEL_API_KEY`` is set to report the auth mode.
 
     Args:
         project_id: Optional project ID to check (falls back to env var).
-        parallel_api_key: Optional API key to check (falls back to env var).
+        parallel_api_key: Optional Parallel API key to check (falls back to
+            ``PARALLEL_API_KEY`` env var). If neither is set, Marketplace
+            mode is assumed.
 
     Returns:
         SetupStatus with validation results.
@@ -119,11 +134,11 @@ def validate_setup(
     if not found_project_id:
         errors.append("GOOGLE_CLOUD_PROJECT environment variable is not set")
 
-    # Check Parallel API key
+    # Determine Parallel auth mode. Presence of a key => BYOK; otherwise
+    # assume Marketplace (requires an active subscription, which we can't
+    # verify from the client).
     found_api_key = parallel_api_key or os.environ.get("PARALLEL_API_KEY")
-    parallel_api_key_set = bool(found_api_key)
-    if not parallel_api_key_set:
-        errors.append("PARALLEL_API_KEY environment variable is not set")
+    auth_mode = "byok" if found_api_key else "marketplace"
 
     # Check GCP authentication
     gcp_auth_valid = False
@@ -144,13 +159,21 @@ def validate_setup(
     if found_project_id and not found_project_id.replace("-", "").replace("_", "").isalnum():
         warnings.append(f"Project ID '{found_project_id}' may be invalid")
 
+    if auth_mode == "marketplace":
+        warnings.append(
+            "No PARALLEL_API_KEY detected; assuming Google Cloud Marketplace "
+            "subscription. Subscribe at "
+            "https://console.cloud.google.com/marketplace/product/parallel-web-systems-public/parallel-web-systems "
+            "or set PARALLEL_API_KEY to use BYOK."
+        )
+
     is_valid = len(errors) == 0
 
     return SetupStatus(
         is_valid=is_valid,
         project_id=found_project_id,
-        parallel_api_key_set=parallel_api_key_set,
         gcp_auth_valid=gcp_auth_valid,
+        auth_mode=auth_mode,
         errors=errors,
         warnings=warnings,
     )
@@ -159,8 +182,18 @@ def validate_setup(
 class GroundingConfig(BaseModel):
     """Configuration for Parallel web search grounding.
 
+    Supports both Parallel auth modes on Vertex AI:
+
+    * **Google Cloud Marketplace**: Leave ``api_key`` unset. Authentication
+      is handled by your GCP project's Marketplace subscription.
+    * **Bring Your Own Key (BYOK)**: Set ``api_key`` to a Parallel API key
+      from https://platform.parallel.ai. The key is included in each
+      grounded request.
+
     Attributes:
-        api_key: Parallel API key for web search.
+        api_key: Optional Parallel API key. When set, requests are
+            authenticated in BYOK mode. When ``None``, Marketplace mode is
+            used and no ``api_key`` field is sent.
         max_results: Maximum number of search results (1-20, default 10).
         max_chars_per_result: Max characters per result excerpt (1000-100000, default 30000).
         max_chars_total: Max total characters from all excerpts (1000-1000000, default 100000).
@@ -168,7 +201,7 @@ class GroundingConfig(BaseModel):
         exclude_domains: Optional list of domains to exclude (max 10).
     """
 
-    api_key: str
+    api_key: str | None = None
     max_results: int = 10
     max_chars_per_result: int = 30000
     max_chars_total: int = 100000
@@ -176,10 +209,17 @@ class GroundingConfig(BaseModel):
     exclude_domains: list[str] | None = None
 
     def to_grounding_spec(self) -> dict[str, Any]:
-        """Convert to Vertex AI grounding specification format."""
-        parallel_config: dict[str, Any] = {
-            "api_key": self.api_key,
-        }
+        """Convert to Vertex AI grounding specification format.
+
+        If ``api_key`` is set, it is included in the ``parallelAiSearch``
+        object (BYOK mode). Otherwise the key is omitted and authentication
+        falls back to the Google Cloud Marketplace subscription.
+        """
+        parallel_config: dict[str, Any] = {}
+
+        # BYOK: include api_key only when explicitly provided.
+        if self.api_key:
+            parallel_config["api_key"] = self.api_key
 
         # Build customConfigs if any non-default values are set
         custom_configs: dict[str, Any] = {}
@@ -331,14 +371,28 @@ class GroundedGeminiClient:
     """Client for making grounded requests to Gemini via Vertex AI.
 
     This client uses the Vertex AI REST API to make requests to Gemini models
-    with Parallel web search grounding enabled.
+    with Parallel web search grounding enabled. It supports both Parallel
+    auth modes:
 
-    Example:
+    * **Google Cloud Marketplace** (default when no key is provided): the
+      GCP project's Marketplace subscription authenticates the request.
+    * **Bring Your Own Key (BYOK)**: pass ``parallel_api_key`` or set the
+      ``PARALLEL_API_KEY`` environment variable, and the key is included
+      in each request.
+
+    Example (Marketplace):
         client = GroundedGeminiClient(
             project_id="my-project",
             location="us-central1",
-            parallel_api_key="my-parallel-key"
         )
+
+    Example (BYOK):
+        client = GroundedGeminiClient(
+            project_id="my-project",
+            location="us-central1",
+            parallel_api_key="your-parallel-key",
+        )
+
         response = client.generate("What is the latest news about AI?")
         print(response.text)
         for source in response.sources:
@@ -373,9 +427,13 @@ class GroundedGeminiClient:
             project_id: Google Cloud project ID. If not provided, will attempt
                 to get from GOOGLE_CLOUD_PROJECT environment variable.
             location: Google Cloud region. Defaults to us-central1.
-            parallel_api_key: Parallel API key. If not provided, will attempt
-                to get from PARALLEL_API_KEY environment variable.
+            parallel_api_key: Optional Parallel API key for Bring Your Own
+                Key (BYOK) mode. If not provided, falls back to the
+                ``PARALLEL_API_KEY`` environment variable. If neither is set,
+                the client runs in Google Cloud Marketplace mode and no key
+                is sent in requests.
             grounding_config: Optional GroundingConfig for advanced settings.
+                If it already has ``api_key`` set, that takes precedence.
         """
         self.project_id = project_id or os.environ.get("GOOGLE_CLOUD_PROJECT")
         if not self.project_id:
@@ -385,18 +443,20 @@ class GroundedGeminiClient:
 
         self.location = location or os.environ.get("GOOGLE_CLOUD_LOCATION", "us-central1")
 
-        # Get Parallel API key
-        api_key = parallel_api_key or os.environ.get("PARALLEL_API_KEY")
-        if not api_key:
-            raise ValueError(
-                "parallel_api_key must be provided or PARALLEL_API_KEY must be set"
-            )
+        # Resolve Parallel API key (BYOK). May be None => Marketplace mode.
+        resolved_api_key = parallel_api_key or os.environ.get("PARALLEL_API_KEY")
 
-        # Set up grounding config
-        if grounding_config:
-            self.grounding_config = grounding_config
+        # Set up grounding config. If the caller passed a config without an
+        # api_key, inject the resolved key so BYOK works without the caller
+        # having to set it in two places.
+        if grounding_config is None:
+            self.grounding_config = GroundingConfig(api_key=resolved_api_key)
         else:
-            self.grounding_config = GroundingConfig(api_key=api_key)
+            self.grounding_config = grounding_config
+            if self.grounding_config.api_key is None and resolved_api_key:
+                self.grounding_config = self.grounding_config.model_copy(
+                    update={"api_key": resolved_api_key}
+                )
 
         # Initialize credentials
         self._credentials, _ = google.auth.default()
@@ -572,18 +632,26 @@ def generate_grounded_response(
         prompt: The user prompt/question.
         project_id: Google Cloud project ID.
         location: Google Cloud region.
-        parallel_api_key: Parallel API key.
+        parallel_api_key: Optional Parallel API key (BYOK). If omitted and
+            ``PARALLEL_API_KEY`` is not set, requests use the Google Cloud
+            Marketplace subscription.
         model_id: The Gemini model to use.
         **kwargs: Additional arguments passed to generate().
 
     Returns:
         A GroundedResponse containing the text and sources.
 
-    Example:
+    Example (Marketplace):
         response = generate_grounded_response(
             "What are the latest breakthroughs in quantum computing?",
             project_id="my-project",
-            parallel_api_key="my-key",
+        )
+
+    Example (BYOK):
+        response = generate_grounded_response(
+            "What are the latest breakthroughs in quantum computing?",
+            project_id="my-project",
+            parallel_api_key="your-parallel-key",
         )
         print(response.text)
     """

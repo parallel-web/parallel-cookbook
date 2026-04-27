@@ -54,9 +54,13 @@ Grounding with Parallel on Vertex AI connects Gemini models to Parallel's LLM-op
 
 1. **Google Cloud Project** with billing enabled
 2. **Vertex AI API** enabled in your project
-3. **Parallel API Key** from [parallel.ai/products/search](https://parallel.ai/products/search)
+3. **Parallel auth** configured via one of:
+   - **Google Cloud Marketplace** (recommended): an active [Parallel Web Search subscription](https://console.cloud.google.com/marketplace/product/parallel-web-systems-public/parallel-web-systems) on your GCP project — no API key needed, or
+   - **Bring Your Own Key (BYOK)**: a Parallel API key from [platform.parallel.ai](https://platform.parallel.ai)
 4. **Python 3.10+** and **uv** package manager
 5. **Google Cloud authentication** configured
+
+See the [Parallel + Vertex AI integration docs](https://docs.parallel.ai/integrations/google-vertex) for a comparison of the two modes.
 
 ## Quick Start
 
@@ -81,8 +85,10 @@ gcloud auth application-default login
 # Set your project
 export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
 
-# Set your Parallel API key
-export PARALLEL_API_KEY="your-parallel-api-key"
+# Optional: only if using Bring Your Own Key (BYOK) instead of a
+# Google Cloud Marketplace subscription.
+# Get a key from https://platform.parallel.ai
+# export PARALLEL_API_KEY="your-parallel-api-key"
 ```
 
 ### 3. Validate Setup
@@ -147,15 +153,16 @@ jupyter notebook tutorial.ipynb
 
 ## Usage
 
-### Basic Usage
+### Basic Usage (Google Cloud Marketplace)
+
+When your GCP project has a Parallel Web Search Marketplace subscription, no API key is needed.
 
 ```python
 from vertex_parallel import GroundedGeminiClient
 
-# Initialize the client
+# Initialize the client (Marketplace mode)
 client = GroundedGeminiClient(
     project_id="your-project-id",
-    parallel_api_key="your-parallel-api-key",
 )
 
 # Generate a grounded response
@@ -168,14 +175,33 @@ print(response.text)
 print(f"Sources: {[s.uri for s in response.sources]}")
 ```
 
+### Basic Usage (Bring Your Own Key)
+
+Pass `parallel_api_key` (or set `PARALLEL_API_KEY`) to authenticate with a Parallel key instead.
+
+```python
+from vertex_parallel import GroundedGeminiClient
+
+client = GroundedGeminiClient(
+    project_id="your-project-id",
+    parallel_api_key="your-parallel-api-key",
+)
+
+response = client.generate("Who won the most recent FIFA World Cup?")
+print(response.text)
+```
+
+> Note: If both a Marketplace subscription and an API key are present, the API key takes precedence.
+
 ### With Custom Configuration
 
 ```python
 from vertex_parallel import GroundedGeminiClient, GroundingConfig
 
-# Configure grounding options
+# Configure grounding options. Leave api_key unset for Marketplace mode,
+# or pass a key for BYOK.
 config = GroundingConfig(
-    api_key="your-parallel-api-key",
+    # api_key="your-parallel-api-key",  # Uncomment for BYOK
     max_results=5,                    # Max search results (1-20)
     include_domains=["www.example.com"],  # Only these domains
     exclude_domains=[],         # Exclude these domains
@@ -213,11 +239,17 @@ if not status.is_valid:
 ```python
 from vertex_parallel import generate_grounded_response
 
-# One-off grounded request
+# Marketplace
 response = generate_grounded_response(
     prompt="What are the latest breakthroughs in quantum computing?",
     project_id="your-project",
-    parallel_api_key="your-key",
+)
+
+# BYOK
+response = generate_grounded_response(
+    prompt="What are the latest breakthroughs in quantum computing?",
+    project_id="your-project",
+    parallel_api_key="your-parallel-api-key",
 )
 ```
 
@@ -228,7 +260,7 @@ response = generate_grounded_response(
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `GOOGLE_CLOUD_PROJECT` | Google Cloud project ID | Yes |
-| `PARALLEL_API_KEY` | Parallel API key | Yes |
+| `PARALLEL_API_KEY` | Parallel API key. Only required for Bring Your Own Key (BYOK) mode; leave unset when using a Google Cloud Marketplace subscription | No |
 | `GOOGLE_CLOUD_LOCATION` | GCP region (default: us-central1) | No |
 | `GOOGLE_APPLICATION_CREDENTIALS` | Path to service account JSON | No |
 
@@ -236,7 +268,7 @@ response = generate_grounded_response(
 
 | Parameter | Description | Default | Range |
 |-----------|-------------|---------|-------|
-| `api_key` | Parallel API key | Required | - |
+| `api_key` | Parallel API key for BYOK mode. Leave unset for Marketplace. | None | - |
 | `max_results` | Max search results | 10 | 1-20 |
 | `max_chars_per_result` | Max chars per result excerpt | 30,000 | 1,000-100,000 |
 | `max_chars_total` | Max total chars from all excerpts | 100,000 | 1,000-1,000,000 |
@@ -322,7 +354,7 @@ Using Grounding with Parallel incurs the following charges:
 
 ## Quota
 
-The default quota is 60 prompts per minute. To increase rate limits, contact [support@parallel.ai](mailto:support@parallel.ai) and your Google account team.
+The default quota is 200 prompts per minute. To increase rate limits, contact your Google account team (Marketplace) or [support@parallel.ai](mailto:support@parallel.ai) (BYOK) with your use case.
 
 ## Troubleshooting
 
@@ -338,12 +370,18 @@ The default quota is 60 prompts per minute. To increase rate limits, contact [su
    gcloud services enable aiplatform.googleapis.com
    ```
 
-3. **Invalid API Key**
-   - Verify your Parallel API key at [parallel.ai](https://parallel.ai)
+3. **Marketplace subscription missing**
+   - If you're not using BYOK, make sure the GCP project you pass to
+     `GroundedGeminiClient` has an active
+     [Parallel Web Search Marketplace subscription](https://console.cloud.google.com/marketplace/product/parallel-web-systems-public/parallel-web-systems).
+   - Otherwise set `PARALLEL_API_KEY` (or pass `parallel_api_key`) to use BYOK.
+
+4. **Invalid API Key (BYOK only)**
+   - Verify your Parallel API key at [platform.parallel.ai](https://platform.parallel.ai)
    - Ensure the key has web search permissions
 
-4. **Rate Limiting**
-   - Default quota is 60 requests/minute
+5. **Rate Limiting**
+   - Default quota is 200 requests/minute
    - Contact support for higher limits
 
 ### Logs and Debugging

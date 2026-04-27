@@ -2,15 +2,28 @@
 Vertex AI + Parallel Web Search Grounding Integration.
 
 This module provides utilities for using Parallel web search as a grounding
-source for Gemini models on Vertex AI.
+source for Gemini models on Vertex AI. Two auth modes are supported:
 
-Example usage:
+* **Google Cloud Marketplace**: Subscribe to Parallel Web Search on GCP
+  Marketplace and no API key is required in requests.
+* **Bring Your Own Key (BYOK)**: Pass a Parallel API key (or set
+  ``PARALLEL_API_KEY``) to authenticate requests directly.
+
+Example (Marketplace):
     from vertex_parallel import GroundedGeminiClient
 
     client = GroundedGeminiClient(
         project_id="your-project",
         location="us-central1",
-        parallel_api_key="your-parallel-key"
+    )
+
+Example (BYOK):
+    from vertex_parallel import GroundedGeminiClient
+
+    client = GroundedGeminiClient(
+        project_id="your-project",
+        location="us-central1",
+        parallel_api_key="your-parallel-key",
     )
 
     response = client.generate(
