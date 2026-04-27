@@ -4,6 +4,7 @@
 export interface Env {
   PARALLEL_API_KEY: string;
   PARALLEL_WEBHOOK_SECRET: string;
+  WEBHOOK_BASE_URL: string;
   DAILY_INSIGHTS: KVNamespace;
   ASSETS: Fetcher;
 }
@@ -97,7 +98,7 @@ async function runDailyTasks(env: Env) {
 }
 
 async function createTaskRun(task: Task, env: Env) {
-  const webhookUrl = `https://daily.p0web.com/webhook`;
+  const webhookUrl = `${env.WEBHOOK_BASE_URL}/webhook`;
 
   const response = await fetch("https://api.parallel.ai/v1/tasks/runs", {
     method: "POST",

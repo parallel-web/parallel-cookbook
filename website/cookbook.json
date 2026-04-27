@@ -23,7 +23,7 @@
       "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse",
       "websiteUrl": "https://oss.parallel.ai/tasks-sse/",
       "creators": ["janwilmake"],
-      "imageUrl": "http://svg.quickog.com/https://sse.p0web.com/og.svg",
+      "imageUrl": null,
       "tags": ["realtime", "task", "sse", "oauth", "cloudflare"]
     },
     {
@@ -35,7 +35,7 @@
       "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent-cerebras",
       "websiteUrl": "https://oss.parallel.ai/agent/",
       "creators": ["janwilmake"],
-      "imageUrl": "https://svg.quickog.com/https://agent.p0web.com/og.svg",
+      "imageUrl": null,
       "tags": ["agent", "search", "cloudflare", "typescript"]
     },
     {
@@ -57,9 +57,9 @@
       "title": "Daily Insights",
       "description": "Cron-triggered daily research feed. Schedules Tasks, persists to KV, publishes a public data feed.",
       "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-daily-insights",
-      "websiteUrl": "https://daily.p0web.com",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-daily-insights",
       "creators": ["janwilmake"],
-      "imageUrl": "http://svg.quickog.com/https://daily.p0web.com/og.svg",
+      "imageUrl": null,
       "tags": ["monitoring", "task", "webhooks", "cloudflare"]
     },
     {
@@ -177,9 +177,9 @@
       "title": "Tasks via MCP + OAuth",
       "description": "X login, authorize MCPs, and execute Tasks using Model Context Protocol integration.",
       "repoUrl": "https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling",
-      "websiteUrl": "https://mcp.p0web.com",
+      "websiteUrl": "https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling",
       "creators": ["janwilmake"],
-      "imageUrl": "http://svg.quickog.com/https://mcp.p0web.com/og.svg",
+      "imageUrl": null,
       "tags": ["mcp", "oauth", "task"]
     },
     {

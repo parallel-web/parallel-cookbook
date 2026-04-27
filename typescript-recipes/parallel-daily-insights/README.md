@@ -24,4 +24,4 @@ Another mistake it made is thinking it could request a lot of scattered informat
 
 ## Result
 
-You can see the result at https://daily.p0web.com. The task specification has gone through a few iterations to improve confidence — see the [SPEC.md](./SPEC.md) for the current version.
+The task specification has gone through a few iterations to improve confidence — see the [SPEC.md](./SPEC.md) for the current version.

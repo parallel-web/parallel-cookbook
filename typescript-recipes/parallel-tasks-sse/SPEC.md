@@ -1,7 +1,7 @@
 PROMPT:
 https://docs.parallel.ai/api-reference/task-api-v1/create-task-run.md
 https://docs.parallel.ai/api-reference/task-api-v1/stream-task-run-events.md
-https://assets.p0web.com
+https://assets.parallel.ai
 docs: https://pastebin.contextarea.com/e7bqy1n.md
 
 Create a html that:

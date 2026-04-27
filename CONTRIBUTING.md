@@ -108,7 +108,7 @@ After your recipe is in place, add an entry to two places so it shows up everywh
 
 ### Tags
 
-Use lowercase, hyphenated tags drawn from this controlled vocabulary so filters on [p0web.com](https://p0web.com) stay clean:
+Use lowercase, hyphenated tags drawn from this controlled vocabulary so filters stay clean:
 
 - **API surface**: `search`, `extract`, `task`, `deep-research`, `ingest`, `mcp`, `webhooks`, `sse`, `oauth`
 - **Stack**: `cloudflare`, `vercel`, `nextjs`, `supabase`, `vertex-ai`, `python`, `typescript`, `temporal`
@@ -140,7 +140,7 @@ We'll feature standout community projects on the website.
 
 ## Improving the Cookbook
 
-Documentation, organization, the [`p0web.com`](https://p0web.com) site, and the [`task-best-practices.md`](task-best-practices.md) guide are all fair game for PRs. For larger reorgs (new top-level categories, folder moves), open an issue first so we can align before you build.
+Documentation, organization, the [`website/`](website/) sources, and the [`task-best-practices.md`](task-best-practices.md) guide are all fair game for PRs. For larger reorgs (new top-level categories, folder moves), open an issue first so we can align before you build.
 
 ## Code of Conduct
 

@@ -4,7 +4,7 @@
 
 **Full-stack recipes, examples, and templates for building with the [Parallel Web APIs](https://docs.parallel.ai).**
 
-[Docs](https://docs.parallel.ai) · [Live Cookbook](https://p0web.com) · [API Reference](https://docs.parallel.ai/api-reference) · [@p0](https://x.com/p0)
+[Docs](https://docs.parallel.ai) · [API Reference](https://docs.parallel.ai/api-reference) · [Platform](https://platform.parallel.ai) · [@p0](https://x.com/p0)
 
 </div>
 
@@ -114,7 +114,7 @@ Recurring research, cron jobs, and webhook delivery.
 
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
-| [**Daily Insights**](typescript-recipes/parallel-daily-insights) | Cron-triggered daily research feed — runs Tasks on a schedule, persists to KV, publishes a public data feed. Includes a `SPEC.md` showing the task spec used. | `Task` `Webhooks` `Cron` | Cloudflare Workers · KV | [Live](https://daily.p0web.com) |
+| [**Daily Insights**](typescript-recipes/parallel-daily-insights) | Cron-triggered daily research feed — runs Tasks on a schedule, persists to KV, publishes a public data feed. Includes a `SPEC.md` showing the task spec used. | `Task` `Webhooks` `Cron` | Cloudflare Workers · KV | – |
 
 ### Deep Research & Notebooks
 
