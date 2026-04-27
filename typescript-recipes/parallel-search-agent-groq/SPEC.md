@@ -1,6 +1,3 @@
-RULES:
-https://uithub.com/janwilmake/gists/tree/main/named-codeblocks.md
-
 PROMPT:
 In this guide, we'll build a Web Research Agent accessible over a simple frontend.
 

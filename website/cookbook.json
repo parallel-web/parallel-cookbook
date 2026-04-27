@@ -1,94 +1,222 @@
 {
-  "drafts": [
-    {
-      "slug": "parallel-csv",
-      "popular": false,
-      "featured": false,
-      "title": "Ingest to batch tasks",
-      "description": "Using Parallel Ingest and Task Group API for efficient CSV processing and batch operations",
-      "repoUrl": "https://github.com/janwilmake/parallel-csv",
-      "websiteUrl": "https://csv.p0web.com",
-      "creators": ["janwilmake"],
-      "imageUrl": null,
-      "tags": ["ingest", "batch", "csv"]
-    },
-
-    {
-      "slug": "universal-mcp-oauth",
-      "popular": false,
-      "featured": true,
-      "title": "Tasks using MCP",
-      "description": "X Login, authorize MCPs, and execute tasks using Model Context Protocol integration",
-      "repoUrl": "https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling",
-      "websiteUrl": "https://mcp.p0web.com",
-      "creators": ["janwilmake"],
-      "imageUrl": "http://svg.quickog.com/https://mcp.p0web.com/og.svg",
-      "tags": ["mcp", "oauth", "tasks"]
-    }
-  ],
+  "drafts": [],
 
   "cookbooks": [
     {
-      "slug": "parallel-tasks-sse",
-      "popular": false,
+      "slug": "parallel-vercel-template",
+      "popular": true,
       "featured": true,
-      "title": "Tasks using SSE",
-      "description": "Real-time task execution with Server-Sent Events for live updates and progress tracking",
+      "title": "Vercel Template",
+      "description": "Next.js demo of Search, Extract, and Tasks with real-time SSE streaming. One-click deploy with Vercel marketplace integration.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-vercel-template",
+      "websiteUrl": "https://parallel-vercel-template-cookbook.vercel.app/",
+      "creators": ["parallel-web"],
+      "imageUrl": "https://assets.parallel.ai/cookbook/vercel_cookbook_picture.png",
+      "tags": ["template", "search", "extract", "task", "sse", "vercel", "nextjs"]
+    },
+    {
+      "slug": "parallel-tasks-sse",
+      "popular": true,
+      "featured": true,
+      "title": "Tasks Playground (SSE)",
+      "description": "Full-featured Task manager with real-time SSE events across every processor. OAuth 2.1 with PKCE and dynamic client registration.",
       "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse",
-      "websiteUrl": "https://sse.p0web.com",
+      "websiteUrl": "https://oss.parallel.ai/tasks-sse/",
       "creators": ["janwilmake"],
       "imageUrl": "http://svg.quickog.com/https://sse.p0web.com/og.svg",
-      "tags": ["realtime", "tasks", "sse"]
+      "tags": ["realtime", "task", "sse", "oauth", "cloudflare"]
+    },
+    {
+      "slug": "parallel-search-agent-cerebras",
+      "popular": true,
+      "featured": true,
+      "title": "Search Agent (Cerebras)",
+      "description": "Multi-turn web research agent on Cerebras (GPT-OSS / Qwen). Iterative multi-angle searches with the Vercel AI SDK.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent-cerebras",
+      "websiteUrl": "https://oss.parallel.ai/agent/",
+      "creators": ["janwilmake"],
+      "imageUrl": "https://svg.quickog.com/https://agent.p0web.com/og.svg",
+      "tags": ["agent", "search", "cloudflare", "typescript"]
+    },
+    {
+      "slug": "parallel-search-agent-groq",
+      "popular": false,
+      "featured": false,
+      "title": "Search Agent (Groq)",
+      "description": "Same agent architecture, Llama 4 Maverick on Groq with 128k context for long-running research sessions.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent-groq",
+      "websiteUrl": "https://oss.parallel.ai/agent/",
+      "creators": ["janwilmake"],
+      "imageUrl": null,
+      "tags": ["agent", "search", "cloudflare", "typescript"]
     },
     {
       "slug": "parallel-daily-insights",
-      "popular": false,
+      "popular": true,
       "featured": true,
-      "title": "Recurring Tasks and Webhooks",
-      "description": "Active monitoring using cron jobs and KV storage for scheduled tasks and webhook handling",
+      "title": "Daily Insights",
+      "description": "Cron-triggered daily research feed. Schedules Tasks, persists to KV, publishes a public data feed.",
       "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-daily-insights",
       "websiteUrl": "https://daily.p0web.com",
       "creators": ["janwilmake"],
       "imageUrl": "http://svg.quickog.com/https://daily.p0web.com/og.svg",
-      "tags": ["cron", "webhooks", "monitoring"]
+      "tags": ["monitoring", "task", "webhooks", "cloudflare"]
     },
     {
-      "slug": "web-search-agent",
-      "popular": false,
+      "slug": "parallel-supabase-enrichment",
+      "popular": true,
       "featured": true,
-      "title": "Web Search Agent",
-      "description": "Using an AI agent for web search and information retrieval",
-      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent",
-      "websiteUrl": "https://agent.p0web.com",
-      "creators": ["janwilmake"],
-      "imageUrl": "https://svg.quickog.com/https://agent.p0web.com/og.svg",
-      "tags": ["agent", "search", "mcp"]
+      "title": "Supabase Enrichment",
+      "description": "Real-time enrichment pipeline. INSERT a row, an Edge Function fires a Task, results stream back via Supabase Realtime.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-supabase-enrichment",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-supabase-enrichment",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["enrichment", "task", "webhooks", "supabase", "nextjs"]
     },
-
     {
-      "slug": "parallel-spreadsheet",
+      "slug": "parallel-entity-resolution",
       "popular": false,
       "featured": false,
-      "title": "Parallel Spreadsheet",
-      "description": "Next.js project that provides AI-powered spreadsheet enrichment using Parallel AI for live web research",
-      "repoUrl": "https://github.com/zahidkhawaja/parallel-spreadsheet",
-      "websiteUrl": "https://github.com/zahidkhawaja/parallel-spreadsheet",
-      "creators": ["zahidkhawaja"],
+      "title": "Entity Resolution",
+      "description": "Find every social profile for a single person across platforms in one Task.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-entity-resolution",
+      "websiteUrl": "https://entity-resolution-demo.parallel.ai",
+      "creators": ["janwilmake"],
       "imageUrl": null,
-      "tags": ["nextjs", "typescript", "spreadsheet"]
+      "tags": ["entity-resolution", "task", "oauth", "cloudflare"]
     },
-
+    {
+      "slug": "parallel-fact-checker-cerebras",
+      "popular": false,
+      "featured": false,
+      "title": "Fact Checker (Cerebras)",
+      "description": "Extract claims from a passage, run Search per claim, stream verdicts in real time.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-fact-checker-cerebras",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-fact-checker-cerebras",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["fact-checking", "search", "extract", "cloudflare"]
+    },
+    {
+      "slug": "market-analysis-demo",
+      "popular": true,
+      "featured": false,
+      "title": "Market Analysis Demo",
+      "description": "Flask app that turns a market-research prompt into a streamed report with email delivery. SSE progress and webhook completion.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/market-analysis-demo",
+      "websiteUrl": "https://market-analysis-demo.parallel.ai/",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["deep-research", "task", "sse", "webhooks", "python"]
+    },
+    {
+      "slug": "vertex-ai-grounding",
+      "popular": false,
+      "featured": false,
+      "title": "Vertex AI Grounding",
+      "description": "Ground Gemini on Vertex AI with the Parallel Search API for current, cited responses. Marketplace and BYOK auth.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/vertex_ai_demo",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/vertex_ai_demo",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["search", "vertex-ai", "python"]
+    },
+    {
+      "slug": "competitive-analysis-demo",
+      "popular": false,
+      "featured": false,
+      "title": "Competitive Analysis",
+      "description": "Web Enrichment + Reddit MCP combined to produce competitive briefs.",
+      "repoUrl": "https://github.com/parallel-web/competitive-analysis-demo/tree/main",
+      "websiteUrl": "https://competitive-analysis-demo.parallel.ai/",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["task", "mcp", "python"]
+    },
+    {
+      "slug": "deep-research-notebook",
+      "popular": false,
+      "featured": false,
+      "title": "Deep Research Notebook",
+      "description": "Interactive Jupyter walkthrough of Deep Research — text and JSON outputs, citations, confidence scores, webhook patterns.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/blob/main/python-recipes/Deep_Research_Recipe.ipynb",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/blob/main/python-recipes/Deep_Research_Recipe.ipynb",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["deep-research", "task", "webhooks", "python", "notebook"]
+    },
+    {
+      "slug": "large-scale-tasks",
+      "popular": false,
+      "featured": false,
+      "title": "Large-Scale Tasks",
+      "description": "Production batch script for 1k+ row CSVs. Three-stage enqueue → fetch → merge with retry, dry-run, and idempotent state.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/blob/main/python-recipes/Large_Scale_Tasks_Recipe.py",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/blob/main/python-recipes/Large_Scale_Tasks_Recipe.py",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["batch", "task", "python"]
+    },
+    {
+      "slug": "task-group-temporal",
+      "popular": false,
+      "featured": false,
+      "title": "Task Groups + Temporal",
+      "description": "Combine Task Groups with Temporal workflow orchestration for enterprise-grade durability.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/blob/main/python-recipes/Task_Group_Temporal_Recipe.py",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/blob/main/python-recipes/Task_Group_Temporal_Recipe.py",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["task", "temporal", "python"]
+    },
+    {
+      "slug": "universal-mcp-oauth",
+      "popular": false,
+      "featured": false,
+      "title": "Tasks via MCP + OAuth",
+      "description": "X login, authorize MCPs, and execute Tasks using Model Context Protocol integration.",
+      "repoUrl": "https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling",
+      "websiteUrl": "https://mcp.p0web.com",
+      "creators": ["janwilmake"],
+      "imageUrl": "http://svg.quickog.com/https://mcp.p0web.com/og.svg",
+      "tags": ["mcp", "oauth", "task"]
+    },
     {
       "slug": "basedpeople",
       "popular": false,
       "featured": false,
       "title": "Based People",
-      "description": "Never miss what tech leaders actually say",
+      "description": "Never miss what tech leaders actually say.",
       "repoUrl": "https://github.com/janwilmake/basedpeople",
       "websiteUrl": "https://basedpeople.com",
       "creators": ["janwilmake"],
       "imageUrl": null,
-      "tags": ["community", "workers", "typescript"]
+      "tags": ["monitoring", "cloudflare", "typescript"]
+    },
+    {
+      "slug": "parallel-spreadsheet",
+      "popular": false,
+      "featured": false,
+      "title": "Parallel Spreadsheet",
+      "description": "Next.js project that provides AI-powered spreadsheet enrichment using Parallel for live web research.",
+      "repoUrl": "https://github.com/zahidkhawaja/parallel-spreadsheet",
+      "websiteUrl": "https://github.com/zahidkhawaja/parallel-spreadsheet",
+      "creators": ["zahidkhawaja"],
+      "imageUrl": null,
+      "tags": ["enrichment", "nextjs", "typescript"]
+    },
+    {
+      "slug": "scira",
+      "popular": true,
+      "featured": false,
+      "title": "Scira",
+      "description": "Open-source AI-powered search engine. 10k+ stars on GitHub, Parallel-powered.",
+      "repoUrl": "https://github.com/zaidmukaddam/scira",
+      "websiteUrl": "https://scira.ai",
+      "creators": ["zaidmukaddam"],
+      "imageUrl": null,
+      "tags": ["agent", "search", "nextjs", "vercel"]
     }
   ]
 }

@@ -35,7 +35,7 @@ Recurring Tasks Using cronjobs and KV
 - Links of tasks go to `/{slug}`
 - Styleguide: https://assets.p0web.com/llms.txt
 - Use CSS to adjust theme based on system theme
-- Add gh icon that links to https://github.com/janwilmake/parallel-daily-insights
+- Add gh icon that links to https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-daily-insights
 - Use parallel icon and logo.
 
 `feed.html`:
