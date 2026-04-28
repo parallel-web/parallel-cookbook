@@ -1,0 +1,15 @@
+[project]
+name = "deepagents-due-diligence"
+version = "0.1.0"
+description = "Company due diligence agent built on Deep Agents and Parallel."
+requires-python = ">=3.11"
+dependencies = [
+  "deepagents>=0.5.3",
+  "langchain-parallel>=0.4.0",
+  "langchain-anthropic>=0.3.0",
+  "parallel-web>=0.1.0",
+  "pydantic>=2.0",
+]
+
+[tool.uv]
+package = false

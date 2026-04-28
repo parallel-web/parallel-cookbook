@@ -124,6 +124,7 @@ Long-running, exploratory research with structured outputs and citations.
 | --- | --- | --- | --- | --- |
 | [**Market Analysis Demo**](python-recipes/market-analysis-demo) | Flask app that turns a market-research prompt into a streamed report with email delivery. SSE progress + webhook completion. | `Task` `Deep Research` `SSE` `Webhooks` | Python · Flask · Postgres · Resend | [Live](https://market-analysis-demo.parallel.ai) |
 | [**Deep Research Notebook**](python-recipes/Deep_Research_Recipe.ipynb) | Interactive Jupyter walkthrough of Deep Research — text + JSON outputs, citations, confidence scores, webhook patterns. | `Deep Research` `Webhooks` | Jupyter · Python | – |
+| [**Due Diligence Agent (Deep Agents)**](python-recipes/parallel-deepagents-due-diligence) | Multi-agent DD on LangChain Deep Agents — five Phase-1 subagents + per-competitor Phase-2 fan-out. `parse_basis` for per-field confidence, `previous_interaction_id` for chained follow-ups, disk-backed workpapers. Validated on Rivian: 14 min, 10 Task calls, 33KB cited memo. | `Task` `Search` | Python · LangChain · Deep Agents | [Sample memo](python-recipes/parallel-deepagents-due-diligence/reports/workpapers/rivian-due-diligence-report.md) |
 
 ### Identity & Entity Resolution
 
