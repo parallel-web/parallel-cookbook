@@ -1,6 +1,3 @@
-RULES:
-https://uithub.com/janwilmake/gists/tree/main/named-codeblocks.md
-
 PROMPT:
 In this guide, we'll build a Web Research Agent accessible over a simple frontend.
 
@@ -36,7 +33,7 @@ Please note:
 - No Durable objects needed, just return the text string back from the worker to the html directly
 - Don't use fetch, rather , use search from the parallel-web typescript SDK
 - use CEREBRAS_API_KEY and PARALLEL_API_KEY in .env
-- use https://assets.p0web.com for branding, and cdn.tailwindcss.com for styling
+- use https://assets.parallel.ai for branding, and cdn.tailwindcss.com for styling
 - ensure to define `inputSchema` for the tool, not `parameters`
 - use `createCerebras` with the API key to get a cerebras provider
 - define the HTML in a separate file

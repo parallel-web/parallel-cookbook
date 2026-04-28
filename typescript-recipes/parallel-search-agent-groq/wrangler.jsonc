@@ -8,24 +8,25 @@
       "enabled": true
     }
   },
-  "routes": [
-    // Please note, the more simple setup for a domain looks like this:
-    // {"custom_domain": true,"pattern": "yourdomain.com"}
-    {
-      "zone_name": "parallel.ai",
-      "pattern": "oss.parallel.ai/agents/groq-search",
-      "custom_domain": false
-    },
-    {
-      "zone_name": "parallel.ai",
-      "pattern": "oss.parallel.ai/agents/groq-search/*",
-      "custom_domain": false
-    }
-  ],
+
+  // Create your own KV namespace and replace `id` below:
+  //   wrangler kv:namespace create RATE_LIMIT_KV
   "kv_namespaces": [
     {
       "binding": "RATE_LIMIT_KV",
-      "id": "befe4fbf3b1e454799d2e07e5b04a8f4"
+      "id": "<YOUR_KV_NAMESPACE_ID>"
     }
-  ]
+  ],
+
+  // To deploy under your own domain, set the route here or via
+  // `wrangler deploy --route yourdomain.com`. Default config has no routes
+  // so `wrangler deploy` won't try to bind to anything you don't own.
+  "env": {
+    "production": {
+      "routes": [
+        { "zone_name": "parallel.ai", "pattern": "oss.parallel.ai/agents/groq-search", "custom_domain": false },
+        { "zone_name": "parallel.ai", "pattern": "oss.parallel.ai/agents/groq-search/*", "custom_domain": false }
+      ]
+    }
+  }
 }

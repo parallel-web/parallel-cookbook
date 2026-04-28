@@ -1,16 +1,19 @@
 {
   "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
-  "account_id": "aceab98f1a2fc658ed4e20bc307fa65a",
   "name": "entity-resolution-parallel",
   "main": "worker.ts",
   "assets": { "directory": "./" },
   "compatibility_date": "2025-09-27",
   "observability": { "logs": { "enabled": true } },
-  "routes": [
-    {
-      "custom_domain": true,
-      "pattern": "entity-resolution-demo.parallel.ai"
+
+  // To deploy under your own domain, set the route here or via
+  // `wrangler deploy --route yourdomain.com`. Default config has no routes
+  // so `wrangler deploy` won't try to bind to anything you don't own.
+  "env": {
+    "production": {
+      "routes": [
+        { "custom_domain": true, "pattern": "entity-resolution-demo.parallel.ai" }
+      ]
     }
-  ],
-  "env": { "localhost": { "routes": [] } }
+  }
 }

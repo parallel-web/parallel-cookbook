@@ -24,6 +24,20 @@ Another mistake it made is thinking it could request a lot of scattered informat
 
 ## Result
 
-You can see the result at https://daily.p0web.com. After the 25th of august 2025 the results should be better due to improved task specification and schedule. I also added a [remix button](https://github.com/janwilmake/forgithub.remix) button in the bottom corner that allows easily giving this worker your own twist. Clicking this button will take the spec allow you to generate a variation of it. Give it a spin! You can see my previous generation [here](https://letmeprompt.com/recurring-tasks-us-b0nl4w0)
+The task specification has gone through a few iterations to improve confidence — see the [SPEC.md](./SPEC.md) for the current version.
 
-[![](https://remix.forgithub.com/badge)](https://remix.forgithub.com/janwilmake/parallel-daily-insights)
+## Deploy
+
+```bash
+# 1. Create a KV namespace and copy the returned id into wrangler.jsonc
+wrangler kv:namespace create DAILY_INSIGHTS
+
+# 2. Set secrets (Parallel API key + a webhook signing secret you choose)
+wrangler secret put PARALLEL_API_KEY
+wrangler secret put PARALLEL_WEBHOOK_SECRET
+
+# 3. After `wrangler deploy`, set WEBHOOK_BASE_URL to the deployed URL
+wrangler secret put WEBHOOK_BASE_URL   # e.g. https://parallel-daily-insights.your-subdomain.workers.dev
+```
+
+To bind to a custom domain, add a `routes` entry to `wrangler.jsonc` or pass `--route` to `wrangler deploy`.

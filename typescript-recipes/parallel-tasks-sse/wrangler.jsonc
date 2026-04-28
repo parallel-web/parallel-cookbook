@@ -1,23 +1,21 @@
 {
   "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
   "name": "parallel-tasks-sse",
-  "account_id": "aceab98f1a2fc658ed4e20bc307fa65a",
   "compatibility_date": "2025-07-14",
   "main": "main.ts",
   "assets": { "directory": "./" },
   "observability": { "logs": { "enabled": true } },
-  "routes": [
-    // NB: please note that in several places in the code we assume /tasks-sse/ is the path prefix.
-    // When changing to your own domain, it's adviced to use `custom_domain:true` with a pattern without path, and update the code accordingly so your links don't have this prefix.
-    {
-      "zone_name": "parallel.ai",
-      "pattern": "oss.parallel.ai/tasks-sse",
-      "custom_domain": false
-    },
-    {
-      "zone_name": "parallel.ai",
-      "pattern": "oss.parallel.ai/tasks-sse/*",
-      "custom_domain": false
+
+  // NB: this recipe assumes /tasks-sse/ as the path prefix in several places.
+  // To deploy under your own domain: replace `env.production.routes` with a
+  // single `{"custom_domain": true, "pattern": "yourdomain.com"}` and update
+  // the code so links no longer carry the /tasks-sse prefix.
+  "env": {
+    "production": {
+      "routes": [
+        { "zone_name": "parallel.ai", "pattern": "oss.parallel.ai/tasks-sse", "custom_domain": false },
+        { "zone_name": "parallel.ai", "pattern": "oss.parallel.ai/tasks-sse/*", "custom_domain": false }
+      ]
     }
-  ]
+  }
 }

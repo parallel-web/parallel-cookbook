@@ -4,28 +4,18 @@
   "main": "worker.ts",
   "compatibility_date": "2025-07-14",
   "observability": { "logs": { "enabled": true } },
-  "routes": [
-    // Please note, the more simple setup for a domain looks like this:
-    // {"custom_domain": true,"pattern": "yourdomain.com"}
-    {
-      "zone_name": "parallel.ai",
-      "pattern": "oss.parallel.ai/agent",
-      "custom_domain": false
-    },
-    {
-      "zone_name": "parallel.ai",
-      "pattern": "oss.parallel.ai/agent/*",
-      "custom_domain": false
-    },
-    {
-      "zone_name": "parallel.ai",
-      "pattern": "oss.parallel.ai/agents/cerebras-search",
-      "custom_domain": false
-    },
-    {
-      "zone_name": "parallel.ai",
-      "pattern": "oss.parallel.ai/agents/cerebras-search/*",
-      "custom_domain": false
+
+  // To deploy under your own domain, set the route here or via
+  // `wrangler deploy --route yourdomain.com`. Default config has no routes
+  // so `wrangler deploy` won't try to bind to anything you don't own.
+  "env": {
+    "production": {
+      "routes": [
+        { "zone_name": "parallel.ai", "pattern": "oss.parallel.ai/agent", "custom_domain": false },
+        { "zone_name": "parallel.ai", "pattern": "oss.parallel.ai/agent/*", "custom_domain": false },
+        { "zone_name": "parallel.ai", "pattern": "oss.parallel.ai/agents/cerebras-search", "custom_domain": false },
+        { "zone_name": "parallel.ai", "pattern": "oss.parallel.ai/agents/cerebras-search/*", "custom_domain": false }
+      ]
     }
-  ]
+  }
 }

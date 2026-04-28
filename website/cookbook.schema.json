@@ -45,9 +45,9 @@
             }
           },
           "imageUrl": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "uri",
-            "description": "Preview image URL for the cookbook"
+            "description": "Preview image URL for the cookbook (null if no image is available)"
           },
           "tags": {
             "type": "array",

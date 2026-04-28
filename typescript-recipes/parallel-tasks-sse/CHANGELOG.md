@@ -11,7 +11,7 @@
 Context:
 
 - https://uithub.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-tasks-sse
-- https://assets.p0web.com
+- https://assets.parallel.ai
 - https://docs.parallel.ai/api-reference/task-api-v1/stream-task-run-events.md
 - https://docs.parallel.ai/task-api/features/task-sse.md
 

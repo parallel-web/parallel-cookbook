@@ -21,7 +21,7 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/agent" || url.pathname === "/agent/") {
-      // redirect from oss.p0web.com/agent to /agent/ to ensure api call works
+      // redirect /agent → /agents/cerebras-search/ so relative API calls work
       return new Response(null, {
         status: 302,
         headers: { Location: "/agents/cerebras-search/" },
