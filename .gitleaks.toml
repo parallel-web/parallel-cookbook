@@ -1,18 +1,21 @@
 # Gitleaks config for the Parallel Cookbook.
-# Extends the default ruleset and adds a few Parallel/Cookbook-specific rules.
-# Run locally: `gitleaks detect --staged` (or `--source .` for the full tree).
+# Extends the default ruleset (~150 rules covering AWS/GitHub/Stripe/OpenAI/etc.)
+# with Parallel-specific API key patterns and a small allowlist for the
+# placeholder values our docs use.
+#
+# Run locally: `pre-commit run gitleaks --all-files`
 
 [extend]
 useDefault = true
 
 # ---------------------------------------------------------------------------
-# Custom rules
+# Custom rules — Parallel and partner-provider keys not covered by defaults
 # ---------------------------------------------------------------------------
 
 [[rules]]
 id = "parallel-api-key"
 description = "Parallel API key"
-# Parallel keys observed: ~40-char URL-safe base64-ish; appear after PARALLEL_API_KEY=
+# Parallel keys are 40-char URL-safe strings assigned after PARALLEL_API_KEY=
 regex = '''(?i)PARALLEL_API_KEY\s*=\s*["']?([A-Za-z0-9_\-]{32,})'''
 secretGroup = 1
 keywords = ["parallel_api_key"]
@@ -29,22 +32,8 @@ description = "Groq API key"
 regex = '''gsk_[A-Za-z0-9]{40,}'''
 keywords = ["gsk_"]
 
-[[rules]]
-id = "cloudflare-account-id"
-description = "Cloudflare account_id in wrangler config"
-# 32-char lowercase hex inside a wrangler "account_id" field
-regex = '''"account_id"\s*:\s*"[a-f0-9]{32}"'''
-keywords = ["account_id"]
-
-[[rules]]
-id = "cloudflare-kv-id-literal"
-description = "Hardcoded Cloudflare KV namespace id (use a placeholder)"
-# Catches a 32-char hex `id` next to a `kv_namespaces` `binding`
-regex = '''"binding"\s*:\s*"[A-Z0-9_]+"\s*,\s*"id"\s*:\s*"[a-f0-9]{32}"'''
-keywords = ["kv_namespaces", "binding"]
-
 # ---------------------------------------------------------------------------
-# Allowlist
+# Allowlist — placeholder values used in docs and .example files
 # ---------------------------------------------------------------------------
 
 [allowlist]
@@ -56,10 +45,8 @@ paths = [
   '''(?i)task-best-practices\.md$''',
 ]
 
-# Common placeholder/example values used in docs and .env.example files.
 regexes = [
   '''your[_-]?(api[_-]?key|parallel[_-]?api[_-]?key|cerebras[_-]?api[_-]?key|groq[_-]?api[_-]?key)''',
   '''<YOUR_[A-Z0-9_]+>''',
   '''(?i)(your-api-key-here|your-parallel-api-key|your-key|api-key-here|placeholder)''',
-  '''csk-[fa-z0-9]{8}\.{3,}''',
 ]

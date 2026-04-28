@@ -141,13 +141,15 @@ brew install pre-commit   # or: pip install pre-commit
 pre-commit install
 ```
 
-What's enforced (see [`.pre-commit-config.yaml`](.pre-commit-config.yaml) for the full list):
+What's enforced (see [`.pre-commit-config.yaml`](.pre-commit-config.yaml) for the exact list):
 
-- **Secret scanning** via [gitleaks](https://github.com/gitleaks/gitleaks) using [`.gitleaks.toml`](.gitleaks.toml) — blocks Parallel/Cerebras/Groq API keys, Cloudflare account IDs, and hardcoded KV namespace IDs.
-- **Refuse to commit `.env` / `.dev.vars` files** (use `.example` variants instead).
-- JSON/YAML syntax validation, trailing-whitespace, end-of-file, large-file, merge-conflict-marker, private-key detection.
+- **`detect-private-key`** — blocks SSH/RSA/EC/OpenSSH private keys.
+- **`gitleaks`** — secret scanning using [`.gitleaks.toml`](.gitleaks.toml). Inherits ~150 default rules (AWS/GitHub/Stripe/OpenAI/etc.) and adds custom rules for Parallel, Cerebras, and Groq API keys. Allowlists placeholder strings like `your-api-key-here` and `<YOUR_API_KEY>`.
+- **`forbid-env-files`** — refuses to commit `.env` or `.dev.vars` files (use the `.example` variant instead).
 
 False positive? Add an entry to the `[allowlist]` section of `.gitleaks.toml` and explain why in the PR.
+
+> Note on Cloudflare IDs: `account_id` and KV namespace IDs are public identifiers, not secrets — but please use `<YOUR_KV_NAMESPACE_ID>` placeholders in committed `wrangler.jsonc` files anyway, so recipes are portable for forks. This is a code-review check, not enforced by the scanner.
 
 ---
 
