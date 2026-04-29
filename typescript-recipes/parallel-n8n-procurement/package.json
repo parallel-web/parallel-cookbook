@@ -1,0 +1,27 @@
+{
+  "name": "parallel-n8n-procurement",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Vendor Risk Monitoring system: Parallel AI Task/Monitor APIs + n8n orchestration + Slack alerts",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "generate:workflows": "npm run build && node dist/src/workflows/generate-all.js ./n8n-workflows",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5.5.0",
+    "vitest": "^2.1.0"
+  }
+}

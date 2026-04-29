@@ -1,0 +1,56 @@
+{
+  "vendors": [
+    {
+      "vendor_name": "Acme Corp",
+      "vendor_domain": "https://acme.com",
+      "vendor_category": "technology",
+      "monitoring_priority": "high",
+      "active": true,
+      "monitor_ids": ["mon_acme_legal_001", "mon_acme_cyber_001", "mon_acme_fin_001", "mon_acme_lead_001", "mon_acme_esg_001"],
+      "last_synced_at": "2026-03-01T00:00:00.000Z",
+      "next_research_date": "2026-03-08T00:00:00.000Z"
+    },
+    {
+      "vendor_name": "GlobalTech Solutions",
+      "vendor_domain": "https://globaltech.io",
+      "vendor_category": "technology",
+      "monitoring_priority": "high",
+      "active": true,
+      "monitor_ids": ["mon_gt_legal_001", "mon_gt_cyber_001", "mon_gt_fin_001", "mon_gt_lead_001", "mon_gt_esg_001"],
+      "last_synced_at": "2026-03-01T00:00:00.000Z",
+      "next_research_date": "2026-03-08T00:00:00.000Z"
+    },
+    {
+      "vendor_name": "FinServ Partners",
+      "vendor_domain": "https://finserv.com",
+      "vendor_category": "financial_services",
+      "monitoring_priority": "medium",
+      "active": true,
+      "monitor_ids": ["mon_fs_legal_001", "mon_fs_cyber_001", "mon_fs_fin_001"],
+      "last_synced_at": "2026-03-01T00:00:00.000Z",
+      "next_research_date": "2026-03-10T00:00:00.000Z"
+    },
+    {
+      "vendor_name": "Precision Manufacturing",
+      "vendor_domain": "https://precisionmfg.com",
+      "vendor_category": "manufacturing",
+      "monitoring_priority": "low",
+      "active": true,
+      "monitor_ids": ["mon_pm_legal_001", "mon_pm_fin_001"],
+      "last_synced_at": "2026-03-01T00:00:00.000Z",
+      "next_research_date": "2026-03-15T00:00:00.000Z"
+    },
+    {
+      "vendor_name": "EcoGreen Services",
+      "vendor_domain": "https://ecogreen.com",
+      "vendor_category": "other",
+      "monitoring_priority": "low",
+      "active": true,
+      "monitor_ids": ["mon_eg_legal_001", "mon_eg_fin_001"],
+      "last_synced_at": "2026-03-01T00:00:00.000Z",
+      "next_research_date": "2026-03-15T00:00:00.000Z"
+    }
+  ],
+  "last_sync_timestamp": "2026-03-01T00:00:00.000Z",
+  "total_count": 5
+}

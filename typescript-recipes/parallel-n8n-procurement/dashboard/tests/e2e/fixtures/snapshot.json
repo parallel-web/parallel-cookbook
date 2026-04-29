@@ -1,0 +1,339 @@
+{
+  "lastUpdated": "2026-04-29T15:30:00Z",
+  "metrics": [
+    {
+      "label": "Portfolio risk posture",
+      "value": "1 CRITICAL / 1 HIGH",
+      "trend": "2 vendors require immediate review",
+      "tone": "critical"
+    },
+    {
+      "label": "Research cadence",
+      "value": "3 due today",
+      "trend": "2 audit log entries recorded today",
+      "tone": "warning"
+    },
+    {
+      "label": "Monitor fleet health",
+      "value": "5 active",
+      "trend": "Webhook healthy, live snapshot generated",
+      "tone": "positive"
+    },
+    {
+      "label": "Action queue",
+      "value": "2 escalations",
+      "trend": "1 due in the next 12h",
+      "tone": "default"
+    }
+  ],
+  "riskDistribution": [
+    { "label": "LOW", "count": 0 },
+    { "label": "MEDIUM", "count": 1 },
+    { "label": "HIGH", "count": 1 },
+    { "label": "CRITICAL", "count": 1 }
+  ],
+  "researchSummary": {
+    "totalDue": 3,
+    "totalResearched": 2,
+    "totalFailed": 0,
+    "adverseCount": 2,
+    "batchesExecuted": 1,
+    "duration": "live"
+  },
+  "health": {
+    "totalMonitors": 5,
+    "activeCount": 5,
+    "failedCount": 0,
+    "orphanCount": 0,
+    "recreated": 0,
+    "webhookHealthy": true
+  },
+  "feed": [
+    {
+      "vendorName": "GlobalTech Solutions",
+      "title": "Ransomware disclosure under active investigation",
+      "severity": "CRITICAL",
+      "timestamp": "46 minutes ago",
+      "detail": "The vendor confirmed restricted access to internal systems and initiated incident response.",
+      "sourceUrl": "https://security.example.com/globaltech-ransomware"
+    },
+    {
+      "vendorName": "Acme Corp",
+      "title": "Credit downgrade and covenant pressure",
+      "severity": "HIGH",
+      "timestamp": "2 hours ago",
+      "detail": "A downgrade flagged worsening leverage and short-term covenant pressure.",
+      "sourceUrl": "https://finance.example.com/acme-downgrade"
+    }
+  ],
+  "actionQueue": [
+    {
+      "vendorName": "GlobalTech Solutions",
+      "owner": "Security operations",
+      "deadline": "Due in 12h",
+      "action": "Validate breach scope, review contingency supplier path, and notify accountable stakeholders.",
+      "riskLevel": "CRITICAL"
+    },
+    {
+      "vendorName": "Acme Corp",
+      "owner": "Procurement finance",
+      "deadline": "Due in 24h",
+      "action": "Update the vendor risk memo and confirm mitigation owner.",
+      "riskLevel": "HIGH"
+    }
+  ],
+  "vendors": [
+    {
+      "id": "globaltech-solutions",
+      "vendorName": "GlobalTech Solutions",
+      "vendorDomain": "https://globaltech.example",
+      "vendorCategory": "technology",
+      "monitoringPriority": "high",
+      "relationshipOwner": "Priya Shah",
+      "region": "Global",
+      "riskLevel": "CRITICAL",
+      "overallRiskLevel": "CRITICAL",
+      "score": 94,
+      "actionRequired": true,
+      "adverseFlag": true,
+      "recommendation": "suspend_relationship",
+      "summary": "GlobalTech Solutions has an active ransomware disclosure with customer exposure still under investigation.",
+      "movement": "+18 live snapshot",
+      "lastAssessmentDate": "2026-04-29",
+      "nextResearchDate": "2026-04-29",
+      "triggeredOverrides": ["active_data_breach"],
+      "dimensions": [
+        {
+          "key": "financial_health",
+          "label": "Financial health",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active financial findings in the current monitoring window."
+        },
+        {
+          "key": "legal_regulatory",
+          "label": "Legal & regulatory",
+          "severity": "MEDIUM",
+          "status": "watch",
+          "findings": "Customer notification obligations may apply."
+        },
+        {
+          "key": "cybersecurity",
+          "label": "Cybersecurity",
+          "severity": "CRITICAL",
+          "status": "watch",
+          "findings": "Ransomware disclosure remains under active investigation."
+        },
+        {
+          "key": "leadership_governance",
+          "label": "Leadership & governance",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active governance findings in the current monitoring window."
+        },
+        {
+          "key": "esg_reputation",
+          "label": "ESG & reputation",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active reputation findings in the current monitoring window."
+        }
+      ],
+      "adverseEvents": [
+        {
+          "title": "Ransomware disclosure under active investigation",
+          "date": "2026-04-29",
+          "category": "cybersecurity",
+          "severity": "CRITICAL",
+          "description": "The vendor confirmed restricted access to internal systems and initiated incident response.",
+          "sourceUrl": "https://security.example.com/globaltech-ransomware"
+        }
+      ],
+      "evidence": [
+        {
+          "title": "Ransomware disclosure under active investigation",
+          "publication": "Security desk",
+          "publishedAt": "2026-04-29",
+          "materiality": "Customer exposure and supplier continuity are not yet confirmed.",
+          "href": "https://security.example.com/globaltech-ransomware"
+        }
+      ],
+      "monitors": [
+        {
+          "dimension": "cybersecurity",
+          "cadence": "daily",
+          "status": "active",
+          "query": "\"GlobalTech Solutions\" ransomware vendor risk",
+          "lastEvent": "46 minutes ago"
+        },
+        {
+          "dimension": "legal_regulatory",
+          "cadence": "weekly",
+          "status": "active",
+          "query": "\"GlobalTech Solutions\" customer notification regulatory risk",
+          "lastEvent": "46 minutes ago"
+        }
+      ]
+    },
+    {
+      "id": "acme-corp",
+      "vendorName": "Acme Corp",
+      "vendorDomain": "https://acme.example",
+      "vendorCategory": "technology",
+      "monitoringPriority": "high",
+      "relationshipOwner": "Jordan Hall",
+      "region": "North America",
+      "riskLevel": "HIGH",
+      "overallRiskLevel": "HIGH",
+      "score": 78,
+      "actionRequired": true,
+      "adverseFlag": true,
+      "recommendation": "initiate_contingency",
+      "summary": "Acme Corp shows deteriorating financial signals and short-term covenant pressure.",
+      "movement": "+11 live snapshot",
+      "lastAssessmentDate": "2026-04-29",
+      "nextResearchDate": "2026-04-29",
+      "triggeredOverrides": [],
+      "dimensions": [
+        {
+          "key": "financial_health",
+          "label": "Financial health",
+          "severity": "HIGH",
+          "status": "watch",
+          "findings": "Credit downgrade flagged worsening leverage."
+        },
+        {
+          "key": "legal_regulatory",
+          "label": "Legal & regulatory",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active legal findings in the current monitoring window."
+        },
+        {
+          "key": "cybersecurity",
+          "label": "Cybersecurity",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active cyber findings in the current monitoring window."
+        },
+        {
+          "key": "leadership_governance",
+          "label": "Leadership & governance",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active governance findings in the current monitoring window."
+        },
+        {
+          "key": "esg_reputation",
+          "label": "ESG & reputation",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active reputation findings in the current monitoring window."
+        }
+      ],
+      "adverseEvents": [
+        {
+          "title": "Credit downgrade and covenant pressure",
+          "date": "2026-04-29",
+          "category": "financial_health",
+          "severity": "HIGH",
+          "description": "A downgrade flagged worsening leverage and short-term covenant pressure.",
+          "sourceUrl": "https://finance.example.com/acme-downgrade"
+        }
+      ],
+      "evidence": [
+        {
+          "title": "Credit downgrade and covenant pressure",
+          "publication": "Finance desk",
+          "publishedAt": "2026-04-29",
+          "materiality": "Backup supplier readiness should be reviewed.",
+          "href": "https://finance.example.com/acme-downgrade"
+        }
+      ],
+      "monitors": [
+        {
+          "dimension": "financial_health",
+          "cadence": "daily",
+          "status": "active",
+          "query": "\"Acme Corp\" credit downgrade covenant vendor risk",
+          "lastEvent": "2 hours ago"
+        }
+      ]
+    },
+    {
+      "id": "bluepeak-logistics",
+      "vendorName": "BluePeak Logistics",
+      "vendorDomain": "https://bluepeak.example",
+      "vendorCategory": "logistics",
+      "monitoringPriority": "medium",
+      "relationshipOwner": "Morgan Chen",
+      "region": "United States",
+      "riskLevel": "MEDIUM",
+      "overallRiskLevel": "MEDIUM",
+      "score": 52,
+      "actionRequired": false,
+      "adverseFlag": false,
+      "recommendation": "escalate_review",
+      "summary": "BluePeak Logistics remains serviceable with labor disruption monitoring still active.",
+      "movement": "+3 live snapshot",
+      "lastAssessmentDate": "2026-04-28",
+      "nextResearchDate": "2026-04-29",
+      "triggeredOverrides": [],
+      "dimensions": [
+        {
+          "key": "financial_health",
+          "label": "Financial health",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active financial findings in the current monitoring window."
+        },
+        {
+          "key": "legal_regulatory",
+          "label": "Legal & regulatory",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active legal findings in the current monitoring window."
+        },
+        {
+          "key": "cybersecurity",
+          "label": "Cybersecurity",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active cyber findings in the current monitoring window."
+        },
+        {
+          "key": "leadership_governance",
+          "label": "Leadership & governance",
+          "severity": "LOW",
+          "status": "stable",
+          "findings": "No active governance findings in the current monitoring window."
+        },
+        {
+          "key": "esg_reputation",
+          "label": "ESG & reputation",
+          "severity": "MEDIUM",
+          "status": "watch",
+          "findings": "Labor disruption monitoring remains active."
+        }
+      ],
+      "adverseEvents": [],
+      "evidence": [],
+      "monitors": [
+        {
+          "dimension": "esg_reputation",
+          "cadence": "weekly",
+          "status": "active",
+          "query": "\"BluePeak Logistics\" labor disruption vendor risk",
+          "lastEvent": "1 day ago"
+        },
+        {
+          "dimension": "financial_health",
+          "cadence": "monthly",
+          "status": "active",
+          "query": "\"BluePeak Logistics\" financial health vendor risk",
+          "lastEvent": "No event yet"
+        }
+      ]
+    }
+  ]
+}

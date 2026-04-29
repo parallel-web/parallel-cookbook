@@ -63,6 +63,18 @@
       "tags": ["monitoring", "task", "webhooks", "cloudflare"]
     },
     {
+      "slug": "parallel-n8n-procurement",
+      "popular": false,
+      "featured": false,
+      "title": "n8n Vendor Risk Monitoring",
+      "description": "Procurement workflow that researches vendors, deploys monitors, scores risk, routes Slack alerts, and logs an audit trail.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-n8n-procurement",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-n8n-procurement",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["n8n", "procurement", "tasks", "monitors"]
+    },
+    {
       "slug": "parallel-supabase-enrichment",
       "popular": true,
       "featured": true,
