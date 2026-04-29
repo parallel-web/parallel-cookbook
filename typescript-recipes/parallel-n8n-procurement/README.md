@@ -1,0 +1,143 @@
+# Parallel n8n Procurement
+
+Vendor risk monitoring with Parallel Tasks, Parallel Monitors, n8n, Google Sheets, and Slack.
+
+This recipe turns a vendor spreadsheet into an automated procurement intelligence pipeline. It researches vendors on a schedule, deploys persistent monitors for breaking events, scores findings with deterministic rules, routes alerts to Slack, and writes an audit trail back to Google Sheets.
+
+## What It Demonstrates
+
+- Parallel Task API for scheduled vendor due diligence
+- Parallel Monitor API for ongoing vendor event detection
+- A single importable n8n workflow with no cross-workflow ID wiring
+- Google Sheets as the vendor registry and audit log
+- Slack alerts, digests, operations reports, and ad-hoc slash-command research
+- TypeScript workflow generators and tests for repeatable n8n JSON output
+
+## Quick Start
+
+```bash
+npm ci
+npm run check
+npm test
+npm run generate:workflows
+```
+
+Import `n8n-workflows/workflow-combined.json` into n8n. See [SETUP.md](SETUP.md) for the full setup path.
+
+## How It Works
+
+```text
+Google Sheets Vendors tab
+        |
+        v
+Vendor Sync every 6h  ----->  Deploy vendor monitors
+        |                              |
+        v                              v
+Deep Research daily 2 AM        Monitor event webhooks
+        |                              |
+        +-----------> Risk Scoring <---+
+                         |
+                         v
+              Slack routing + Audit Log
+```
+
+The combined n8n workflow contains 48 nodes, 42 connections, 5 webhook triggers, 2 schedule triggers, and zero `executeWorkflow` or `executeWorkflowTrigger` nodes. That means it can be imported as one workflow without manually wiring workflow IDs after import.
+
+### Vendor Sync
+
+The workflow reads the `Vendors` and `Registry` tabs from Google Sheets, computes additions, removals, and priority changes, then creates or deletes monitor records as needed.
+
+### Deep Research
+
+Scheduled research builds vendor risk prompts and submits Parallel research tasks. Results are normalized, scored, routed, and logged.
+
+### Continuous Monitoring
+
+Each active vendor gets monitors based on priority. High-priority vendors get broader daily coverage; lower-priority vendors get a smaller set of monitor queries. Monitor events are enriched, deduplicated, scored, and routed through the same alerting path as scheduled research.
+
+### Ad-Hoc Research
+
+A Slack slash command can trigger a one-off vendor assessment. The workflow acknowledges the command immediately, starts a Parallel research task, then posts the scored result back to Slack when the callback arrives.
+
+## Primary Workflow
+
+Use this file for normal deployments:
+
+| File | Purpose |
+| --- | --- |
+| `n8n-workflows/workflow-combined.json` | Canonical single-import workflow for n8n Cloud or self-hosted n8n |
+
+The individual workflow files are included as advanced references for teams that want to inspect or split the pipeline:
+
+| File | Purpose |
+| --- | --- |
+| `workflow1-vendor-sync.json` | Vendor registry diff and monitor lifecycle |
+| `workflow2-deep-research.json` | Scheduled vendor research |
+| `workflow3-risk-scoring.json` | Shared scoring and routing logic |
+| `workflow4-monitors.json` | Monitor deployment and event handling |
+| `workflow5-adhoc.json` | Slack slash-command research |
+
+## Required Inputs
+
+Set these as n8n variables and, if running the TypeScript helpers locally, in `.env`:
+
+| Variable | Description |
+| --- | --- |
+| `PARALLEL_API_KEY` | Parallel API key |
+| `GOOGLE_SHEET_ID` | Google Sheet ID that contains the vendor registry tabs |
+| `SLACK_WEBHOOK_URL` | Slack incoming webhook URL |
+| `N8N_WEBHOOK_BASE_URL` | Public base URL for the n8n instance |
+
+Optional settings are documented in [.env.example](.env.example).
+
+## Google Sheets Tabs
+
+Import the CSV files in `templates/` as these tabs:
+
+| CSV | Tab name |
+| --- | --- |
+| `vendors-tab.csv` | `Vendors` |
+| `registry-tab.csv` | `Registry` |
+| `audit-log-tab.csv` | `Audit Log` |
+| `monitors-tab.csv` | `Monitors` |
+
+The seed vendor file includes 15 sample vendors so the pipeline can be tested immediately.
+
+## Project Structure
+
+```text
+parallel-n8n-procurement/
+  n8n-workflows/        Importable n8n workflow JSON
+  templates/            Google Sheets CSV tab templates
+  src/
+    config/             Environment validation
+    models/             TypeScript models and API shapes
+    services/           Risk scoring, research orchestration, Slack, monitors
+    workflows/          n8n workflow generators
+  tests/                Unit, workflow, integration, and scale tests
+  SETUP.md              Step-by-step deployment guide
+  parallel_procurement.md
+  sample-setup.md
+```
+
+## Validation
+
+The recipe includes tests for the service layer, model validation, workflow generation, integration scenarios, and scale simulations.
+
+```bash
+npm run check
+npm test
+npm run generate:workflows
+```
+
+Expected current baseline:
+
+- `npm run check` passes with `tsc --noEmit`
+- `npm test` passes with 565 tests
+- `npm run generate:workflows` regenerates the committed workflow JSON files
+
+## Notes
+
+- The workflow JSON uses placeholder credentials and n8n variables. Do not commit real API keys, Slack tokens, webhook secrets, or Google credentials.
+- `workflow-combined.json` is the supported import path. The split workflow files are for reference and advanced customization.
+- The Next.js dashboard from the original integration demo is intentionally not included here so the cookbook PR stays focused on the reusable n8n recipe.
