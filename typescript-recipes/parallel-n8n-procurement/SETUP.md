@@ -1,6 +1,7 @@
 # Parallel n8n Procurement Setup
 
 This guide gets the combined vendor-risk workflow running in n8n with Google Sheets and Slack.
+It also covers the live Next.js dashboard included in `dashboard/`.
 
 ## 1. Prerequisites
 
@@ -128,7 +129,57 @@ Run these tests in order:
 
 The scheduled triggers run vendor sync and research automatically after activation.
 
-## 8. Troubleshooting
+## 8. Run the Dashboard
+
+The dashboard reads the combined workflow's `procurement-dashboard-snapshot` webhook. It does not include a runtime mock fallback.
+
+Create `dashboard/.env.local`:
+
+```bash
+PROCUREMENT_DASHBOARD_SNAPSHOT_URL=https://YOUR_N8N_HOST/webhook/procurement-dashboard-snapshot
+```
+
+Then run:
+
+```bash
+cd dashboard
+npm ci
+npm run check
+npm run dev
+```
+
+Open the local Next.js URL printed by `npm run dev`.
+
+For production builds:
+
+```bash
+npm run build
+npm start
+```
+
+The dashboard includes:
+
+| Surface | Path |
+| --- | --- |
+| Overview | `/` |
+| Attention queue | `/attention` |
+| Portfolio manager | `/portfolio` |
+| Monitor feed | `/feed` |
+| Observe topology | `/observe` |
+| Vendor detail | `/vendors/:vendorId` |
+
+## 9. Dashboard E2E Tests
+
+Playwright tests use a local mocked snapshot endpoint for browser coverage and API contract checks.
+
+```bash
+cd dashboard
+npm run test:e2e
+```
+
+These tests do not require n8n Cloud. Before marking a PR ready, still smoke test the dashboard against the real imported workflow webhook.
+
+## 10. Troubleshooting
 
 | Symptom | Check |
 | --- | --- |
@@ -137,8 +188,10 @@ The scheduled triggers run vendor sync and research automatically after activati
 | Slack messages fail | Confirm the Slack app is installed, the bot token credential is selected, and the bot is in the target channels |
 | Slash command times out | Confirm the Slack request URL points to the active n8n webhook path |
 | Task callbacks do not arrive | Confirm `N8N_WEBHOOK_BASE_URL` is public and has no trailing slash |
+| Dashboard shows setup state | Confirm `PROCUREMENT_DASHBOARD_SNAPSHOT_URL` is set to the active n8n snapshot webhook |
+| Dashboard says the snapshot is invalid | Confirm the imported workflow JSON has the current `Snapshot: Build Payload` node |
 
-## 9. Keeping Workflow JSON in Sync
+## 11. Keeping Workflow JSON in Sync
 
 When changing workflow generator code:
 

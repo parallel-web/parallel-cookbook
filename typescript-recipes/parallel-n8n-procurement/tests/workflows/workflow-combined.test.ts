@@ -139,6 +139,18 @@ describe("Combined Workflow — triggers", () => {
     expect(wh).toBeDefined();
     expect(wh!.parameters.httpMethod).toBe("GET");
   });
+
+  it("builds the dashboard view model from sheet data", () => {
+    const node = wf.nodes.find((n) => n.name === "Snapshot: Build Payload");
+    expect(node).toBeDefined();
+
+    const code = String(node!.parameters.jsCode);
+    expect(code).toContain("lastUpdated");
+    expect(code).toContain("riskDistribution");
+    expect(code).toContain("researchSummary");
+    expect(code).toContain("actionQueue");
+    expect(code).toContain("vendors");
+  });
 });
 
 describe("Combined Workflow — Sync flow (WF1)", () => {

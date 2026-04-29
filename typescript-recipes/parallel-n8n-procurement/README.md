@@ -11,6 +11,7 @@ This recipe turns a vendor spreadsheet into an automated procurement intelligenc
 - A single importable n8n workflow with no cross-workflow ID wiring
 - Google Sheets as the vendor registry and audit log
 - Slack alerts, digests, operations reports, and ad-hoc slash-command research
+- A live Next.js dashboard for portfolio triage, feeds, and Observe topology review
 - TypeScript workflow generators and tests for repeatable n8n JSON output
 
 ## Quick Start
@@ -22,7 +23,7 @@ npm test
 npm run generate:workflows
 ```
 
-Import `n8n-workflows/workflow-combined.json` into n8n. See [SETUP.md](SETUP.md) for the full setup path.
+Import `n8n-workflows/workflow-combined.json` into n8n. Then point the dashboard app at the combined workflow's `procurement-dashboard-snapshot` webhook. See [SETUP.md](SETUP.md) for the full setup path.
 
 ## How It Works
 
@@ -39,6 +40,9 @@ Deep Research daily 2 AM        Monitor event webhooks
                          |
                          v
               Slack routing + Audit Log
+                         |
+                         v
+              Dashboard snapshot webhook
 ```
 
 The combined n8n workflow contains 48 nodes, 42 connections, 5 webhook triggers, 2 schedule triggers, and zero `executeWorkflow` or `executeWorkflowTrigger` nodes. That means it can be imported as one workflow without manually wiring workflow IDs after import.
@@ -58,6 +62,10 @@ Each active vendor gets monitors based on priority. High-priority vendors get br
 ### Ad-Hoc Research
 
 A Slack slash command can trigger a one-off vendor assessment. The workflow acknowledges the command immediately, starts a Parallel research task, then posts the scored result back to Slack when the callback arrives.
+
+### Dashboard
+
+The `dashboard/` directory contains the full Next.js procurement dashboard. It is live-data only: runtime pages require `PROCUREMENT_DASHBOARD_SNAPSHOT_URL`, which should point to the combined workflow's `procurement-dashboard-snapshot` webhook. The dashboard includes overview, attention queue, portfolio manager, feed, Observe topology, and vendor detail pages.
 
 ## Primary Workflow
 
@@ -87,6 +95,7 @@ Set these as n8n variables and, if running the TypeScript helpers locally, in `.
 | `GOOGLE_SHEET_ID` | Google Sheet ID that contains the vendor registry tabs |
 | `SLACK_WEBHOOK_URL` | Slack incoming webhook URL |
 | `N8N_WEBHOOK_BASE_URL` | Public base URL for the n8n instance |
+| `PROCUREMENT_DASHBOARD_SNAPSHOT_URL` | Dashboard runtime URL for the n8n `procurement-dashboard-snapshot` webhook |
 
 Optional settings are documented in [.env.example](.env.example).
 
@@ -107,6 +116,7 @@ The seed vendor file includes 15 sample vendors so the pipeline can be tested im
 
 ```text
 parallel-n8n-procurement/
+  dashboard/            Live Next.js portfolio and Observe dashboard
   n8n-workflows/        Importable n8n workflow JSON
   templates/            Google Sheets CSV tab templates
   src/
@@ -130,14 +140,25 @@ npm test
 npm run generate:workflows
 ```
 
+Dashboard validation:
+
+```bash
+cd dashboard
+npm ci
+npm run check
+npm run build
+npm run test:e2e
+```
+
 Expected current baseline:
 
 - `npm run check` passes with `tsc --noEmit`
-- `npm test` passes with 565 tests
+- `npm test` passes with 566 tests
 - `npm run generate:workflows` regenerates the committed workflow JSON files
+- Dashboard `npm run check`, `npm run build`, and `npm run test:e2e` pass with the mocked snapshot endpoint
 
 ## Notes
 
 - The workflow JSON uses placeholder credentials and n8n variables. Do not commit real API keys, Slack tokens, webhook secrets, or Google credentials.
 - `workflow-combined.json` is the supported import path. The split workflow files are for reference and advanced customization.
-- The Next.js dashboard from the original integration demo is intentionally not included here so the cookbook PR stays focused on the reusable n8n recipe.
+- The dashboard uses a local mocked snapshot endpoint only in Playwright tests. Runtime app code has no mock fallback.

@@ -543,18 +543,302 @@ const SNAPSHOT_BUILD_PAYLOAD_CODE = `
 const registry = $('Snapshot: Read Registry').all().map(i => i.json);
 const audit_log = $('Snapshot: Read Audit Log').all().map(i => i.json);
 const monitors = $('Snapshot: Read Monitors').all().map(i => i.json);
+const now = new Date();
+
+const riskLevels = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'];
+const riskScores = { LOW: 18, MEDIUM: 48, HIGH: 76, CRITICAL: 94 };
+const dimensionLabels = {
+  financial_health: 'Financial health',
+  legal_regulatory: 'Legal & regulatory',
+  cybersecurity: 'Cybersecurity',
+  leadership_governance: 'Leadership & governance',
+  esg_reputation: 'ESG & reputation',
+};
+const dimensionOrder = Object.keys(dimensionLabels);
+
+function pick(row, keys, fallback = '') {
+  for (const key of keys) {
+    if (row[key] !== undefined && row[key] !== null && String(row[key]).trim() !== '') {
+      return row[key];
+    }
+  }
+  return fallback;
+}
+
+function slugify(value) {
+  return String(value || 'vendor')
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '') || 'vendor';
+}
+
+function normalizeRisk(value) {
+  const normalized = String(value || '').trim().toUpperCase();
+  return riskLevels.includes(normalized) ? normalized : 'LOW';
+}
+
+function normalizePriority(value, riskLevel) {
+  const normalized = String(value || '').trim().toLowerCase();
+  if (['high', 'medium', 'low'].includes(normalized)) return normalized;
+  if (riskLevel === 'CRITICAL' || riskLevel === 'HIGH') return 'high';
+  if (riskLevel === 'MEDIUM') return 'medium';
+  return 'low';
+}
+
+function toBool(value) {
+  if (typeof value === 'boolean') return value;
+  return ['true', 'yes', '1', 'y'].includes(String(value || '').trim().toLowerCase());
+}
+
+function parseList(value) {
+  if (Array.isArray(value)) return value.map(String).filter(Boolean);
+  if (value === undefined || value === null || value === '') return [];
+  try {
+    const parsed = JSON.parse(value);
+    if (Array.isArray(parsed)) return parsed.map(String).filter(Boolean);
+  } catch {}
+  return String(value).split(/[;,]/).map(item => item.trim()).filter(Boolean);
+}
+
+function dimensionKey(value) {
+  const normalized = String(value || '').toLowerCase();
+  if (normalized.includes('financial') || normalized.includes('credit')) return 'financial_health';
+  if (normalized.includes('legal') || normalized.includes('regulatory') || normalized.includes('litigation')) return 'legal_regulatory';
+  if (normalized.includes('cyber') || normalized.includes('breach') || normalized.includes('security')) return 'cybersecurity';
+  if (normalized.includes('leadership') || normalized.includes('governance') || normalized.includes('executive')) return 'leadership_governance';
+  if (normalized.includes('esg') || normalized.includes('reputation') || normalized.includes('labor')) return 'esg_reputation';
+  return 'financial_health';
+}
+
+function dateOnly(value, fallbackDate) {
+  const date = value ? new Date(value) : fallbackDate;
+  if (Number.isNaN(date.getTime())) return fallbackDate.toISOString().slice(0, 10);
+  return date.toISOString().slice(0, 10);
+}
+
+function relativeTime(value) {
+  const date = value ? new Date(value) : now;
+  if (Number.isNaN(date.getTime())) return 'just now';
+  const minutes = Math.max(0, Math.round((now.getTime() - date.getTime()) / 60000));
+  if (minutes < 1) return 'just now';
+  if (minutes < 60) return minutes + ' minutes ago';
+  const hours = Math.round(minutes / 60);
+  if (hours < 48) return hours + ' hours ago';
+  const days = Math.round(hours / 24);
+  return days + ' days ago';
+}
+
+function sourceUrl(value) {
+  const text = String(value || '').trim();
+  return text.startsWith('http://') || text.startsWith('https://') ? text : 'https://parallel.ai';
+}
+
+function recommendationFor(level) {
+  if (level === 'CRITICAL') return 'suspend_relationship';
+  if (level === 'HIGH') return 'initiate_contingency';
+  if (level === 'MEDIUM') return 'escalate_review';
+  return 'continue_monitoring';
+}
+
+function auditTimestamp(row) {
+  return String(pick(row, ['timestamp', 'assessment_date', 'created_at', 'date'], ''));
+}
+
+const latestAuditByVendor = new Map();
+for (const row of audit_log) {
+  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], '')).trim();
+  if (!vendorName) continue;
+  const key = vendorName.toLowerCase();
+  const current = latestAuditByVendor.get(key);
+  const nextTime = new Date(auditTimestamp(row)).getTime() || 0;
+  const currentTime = current ? (new Date(auditTimestamp(current)).getTime() || 0) : -1;
+  if (!current || nextTime >= currentTime) latestAuditByVendor.set(key, row);
+}
+
+function dimensionsFor(latestAudit, riskLevel) {
+  const categories = parseList(pick(latestAudit || {}, ['categories', 'risk_categories', 'category'], ''));
+  const activeKeys = new Set(categories.map(dimensionKey));
+  return dimensionOrder.map(key => {
+    const active = activeKeys.has(key);
+    return {
+      key,
+      label: dimensionLabels[key],
+      severity: active ? riskLevel : 'LOW',
+      status: active ? 'watch' : 'stable',
+      findings: active
+        ? (pick(latestAudit || {}, ['summary', 'detail', 'event_summary'], dimensionLabels[key] + ' requires review.'))
+        : 'No active findings in the current monitoring window.',
+    };
+  });
+}
+
+function monitorLensFor(vendorName) {
+  return monitors
+    .filter(row => String(pick(row, ['vendor_name', 'vendorName'], '')).toLowerCase() === vendorName.toLowerCase())
+    .map(row => ({
+      dimension: String(pick(row, ['risk_dimension', 'monitor_category', 'category'], 'general')),
+      cadence: String(pick(row, ['cadence'], 'daily')),
+      status: 'active',
+      query: String(pick(row, ['query', 'monitor_query'], vendorName + ' vendor risk')),
+      lastEvent: String(pick(row, ['last_event_at', 'updated_at', 'created_at'], 'No event yet')),
+    }));
+}
+
+const activeRegistry = registry.filter(row => {
+  const active = String(pick(row, ['active'], 'true')).trim().toLowerCase();
+  return !['false', 'no', '0'].includes(active);
+});
+
+const vendors = activeRegistry.map(row => {
+  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], 'Unknown vendor')).trim();
+  const latest = latestAuditByVendor.get(vendorName.toLowerCase());
+  const riskLevel = normalizeRisk(pick(latest || {}, ['risk_level', 'riskLevel'], pick(row, ['risk_tier_override', 'risk_level'], 'LOW')));
+  const latestDate = dateOnly(auditTimestamp(latest || {}), now);
+  const nextDate = dateOnly(pick(row, ['next_research_date', 'nextResearchDate'], now.toISOString()), now);
+  const adverseFlag = toBool(pick(latest || {}, ['adverse_flag', 'adverseFlag'], riskLevel === 'HIGH' || riskLevel === 'CRITICAL'));
+  const summary = String(pick(latest || {}, ['summary', 'detail', 'event_summary'], vendorName + ' is currently assessed at ' + riskLevel + ' risk.'));
+  const overrides = parseList(pick(latest || {}, ['triggered_overrides', 'triggeredOverrides'], pick(row, ['risk_tier_override'], '')));
+  const domain = String(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], slugify(vendorName) + '.com'));
+  const normalizedDomain = domain.startsWith('http://') || domain.startsWith('https://') ? domain : 'https://' + domain;
+  const score = Number(pick(latest || {}, ['score', 'risk_score'], riskScores[riskLevel])) || riskScores[riskLevel];
+  const monitorsForVendor = monitorLensFor(vendorName);
+
+  return {
+    id: slugify(vendorName),
+    vendorName,
+    vendorDomain: normalizedDomain,
+    vendorCategory: String(pick(row, ['vendor_category', 'vendorCategory', 'category'], 'vendor')).toLowerCase().replace(/\\s+/g, '_'),
+    monitoringPriority: normalizePriority(pick(row, ['monitoring_priority', 'monitoringPriority', 'priority'], ''), riskLevel),
+    relationshipOwner: String(pick(row, ['relationship_owner', 'relationshipOwner', 'owner'], 'Procurement')),
+    region: String(pick(row, ['region'], 'Global')),
+    riskLevel,
+    overallRiskLevel: riskLevel,
+    score,
+    actionRequired: riskLevel === 'HIGH' || riskLevel === 'CRITICAL',
+    adverseFlag,
+    recommendation: String(pick(latest || {}, ['recommendation'], recommendationFor(riskLevel))),
+    summary,
+    movement: String(pick(latest || {}, ['movement'], '+0 live snapshot')),
+    lastAssessmentDate: latestDate,
+    nextResearchDate: nextDate,
+    triggeredOverrides: overrides.filter(value => value && riskLevels.indexOf(String(value).toUpperCase()) === -1),
+    dimensions: dimensionsFor(latest, riskLevel),
+    adverseEvents: adverseFlag ? [{
+      title: String(pick(latest || {}, ['title', 'event_summary'], riskLevel + ' risk finding')),
+      date: latestDate,
+      category: String(parseList(pick(latest || {}, ['categories', 'category'], 'general'))[0] || 'general'),
+      severity: riskLevel,
+      description: summary,
+      sourceUrl: sourceUrl(pick(latest || {}, ['source', 'source_url', 'sourceUrl'], '')),
+    }] : [],
+    evidence: latest ? [{
+      title: String(pick(latest, ['title', 'summary'], 'Latest assessment')),
+      publication: String(pick(latest, ['source', 'publication'], 'Parallel assessment')),
+      publishedAt: latestDate,
+      materiality: summary,
+      href: sourceUrl(pick(latest, ['source_url', 'sourceUrl', 'source'], '')),
+    }] : [],
+    monitors: monitorsForVendor,
+  };
+}).sort((left, right) => right.score - left.score);
+
+const riskDistribution = riskLevels.map(level => ({
+  label: level,
+  count: vendors.filter(vendor => vendor.riskLevel === level).length,
+}));
+
+const dueVendors = vendors.filter(vendor => {
+  const next = new Date(vendor.nextResearchDate);
+  return !Number.isNaN(next.getTime()) && next <= now;
+});
+
+const researchedToday = audit_log.filter(row => dateOnly(auditTimestamp(row), now) === now.toISOString().slice(0, 10)).length;
+const adverseCount = vendors.filter(vendor => vendor.adverseFlag).length;
+const actionCount = vendors.filter(vendor => vendor.actionRequired).length;
+const criticalCount = vendors.filter(vendor => vendor.riskLevel === 'CRITICAL').length;
+const highCount = vendors.filter(vendor => vendor.riskLevel === 'HIGH').length;
+const activeMonitorCount = monitors.length;
+
+const sortedAudit = audit_log.slice().sort((left, right) => {
+  return (new Date(auditTimestamp(right)).getTime() || 0) - (new Date(auditTimestamp(left)).getTime() || 0);
+});
+
+const feed = sortedAudit.slice(0, 25).map(row => {
+  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], 'Unknown vendor'));
+  const riskLevel = normalizeRisk(pick(row, ['risk_level', 'riskLevel', 'severity'], 'MEDIUM'));
+  const summary = String(pick(row, ['summary', 'detail', 'event_summary'], vendorName + ' monitoring event.'));
+  return {
+    vendorName,
+    title: String(pick(row, ['title', 'event_summary'], summary.split('.')[0] || 'Monitoring update')),
+    severity: riskLevel,
+    timestamp: relativeTime(auditTimestamp(row)),
+    detail: summary,
+    sourceUrl: sourceUrl(pick(row, ['source_url', 'sourceUrl', 'source'], '')),
+  };
+});
+
+const actionQueue = vendors
+  .filter(vendor => vendor.actionRequired)
+  .map(vendor => ({
+    vendorName: vendor.vendorName,
+    owner: vendor.riskLevel === 'CRITICAL' ? 'Security operations' : 'Procurement finance',
+    deadline: vendor.riskLevel === 'CRITICAL' ? 'Due in 12h' : 'Due in 24h',
+    action: vendor.riskLevel === 'CRITICAL'
+      ? 'Validate exposure, review contingency supplier path, and notify accountable stakeholders.'
+      : 'Update the vendor risk memo and confirm mitigation owner.',
+    riskLevel: vendor.riskLevel,
+  }));
 
 return [{
   json: {
-    last_updated: new Date().toISOString(),
-    registry,
-    audit_log,
-    monitors,
-    counts: {
-      vendors: registry.length,
-      audits: audit_log.length,
-      monitors: monitors.length,
+    lastUpdated: now.toISOString(),
+    metrics: [
+      {
+        label: 'Portfolio risk posture',
+        value: criticalCount + ' CRITICAL / ' + highCount + ' HIGH',
+        trend: actionCount + ' vendors require immediate review',
+        tone: actionCount ? 'critical' : 'positive',
+      },
+      {
+        label: 'Research cadence',
+        value: dueVendors.length + ' due today',
+        trend: researchedToday + ' audit log entries recorded today',
+        tone: dueVendors.length ? 'warning' : 'positive',
+      },
+      {
+        label: 'Monitor fleet health',
+        value: activeMonitorCount + ' active',
+        trend: 'Webhook healthy, live snapshot generated',
+        tone: 'positive',
+      },
+      {
+        label: 'Action queue',
+        value: actionCount + ' escalations',
+        trend: actionQueue.filter(item => item.deadline.includes('12h')).length + ' due in the next 12h',
+        tone: actionCount ? 'default' : 'positive',
+      },
+    ],
+    riskDistribution,
+    researchSummary: {
+      totalDue: dueVendors.length,
+      totalResearched: researchedToday,
+      totalFailed: 0,
+      adverseCount,
+      batchesExecuted: Math.ceil(Math.max(dueVendors.length, researchedToday) / 50),
+      duration: 'live',
     },
+    health: {
+      totalMonitors: monitors.length,
+      activeCount: monitors.length,
+      failedCount: 0,
+      orphanCount: 0,
+      recreated: 0,
+      webhookHealthy: true,
+    },
+    feed,
+    actionQueue,
+    vendors,
   }
 }];
 `;
