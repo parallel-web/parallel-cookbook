@@ -1494,13 +1494,11 @@ select {
   margin-bottom: 14px;
 }
 
-.manage-menu-wrap,
-.row-menu-wrap {
+.manage-menu-wrap {
   position: relative;
 }
 
-.manage-menu-button,
-.row-menu-button {
+.manage-menu-button {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #fff;
@@ -1511,8 +1509,7 @@ select {
   cursor: pointer;
 }
 
-.manage-menu-button:hover,
-.row-menu-button:hover {
+.manage-menu-button:hover {
   background: var(--surface-2);
 }
 
@@ -1521,14 +1518,7 @@ select {
   font-size: 0.88rem;
 }
 
-.row-menu-button {
-  width: 32px;
-  height: 32px;
-  justify-content: center;
-}
-
-.manage-menu,
-.row-menu {
+.manage-menu {
   position: absolute;
   right: 0;
   top: calc(100% + 8px);
@@ -1541,8 +1531,7 @@ select {
   z-index: 10;
 }
 
-.manage-menu button,
-.row-menu button {
+.manage-menu button {
   width: 100%;
   border: none;
   border-radius: 10px;
@@ -1555,9 +1544,14 @@ select {
   cursor: pointer;
 }
 
-.manage-menu button:hover,
-.row-menu button:hover {
+.manage-menu button:hover {
   background: var(--surface-2);
+}
+
+.manage-menu button:disabled,
+.vendor-form-actions button:disabled {
+  cursor: not-allowed;
+  opacity: 0.52;
 }
 
 .vendor-form {
@@ -1601,6 +1595,29 @@ select {
   color: var(--text);
 }
 
+.portfolio-status {
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #f7f6f3;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.portfolio-status.error {
+  border-color: #efb9b9;
+  background: #fff5f5;
+  color: var(--critical);
+}
+
+.portfolio-status.success {
+  border-color: #b9d7c6;
+  background: #f4fbf7;
+  color: var(--low);
+}
+
 .portfolio-table {
   display: grid;
   gap: 4px;
@@ -1609,7 +1626,7 @@ select {
 .portfolio-table-head,
 .portfolio-table-row {
   display: grid;
-  grid-template-columns: minmax(220px, 1.35fr) minmax(110px, 0.7fr) minmax(120px, 0.8fr) minmax(100px, 0.65fr) minmax(110px, 0.7fr) minmax(72px, 0.34fr) minmax(80px, 0.36fr) 48px;
+  grid-template-columns: minmax(220px, 1.35fr) minmax(110px, 0.7fr) minmax(120px, 0.8fr) minmax(100px, 0.65fr) minmax(110px, 0.7fr) minmax(72px, 0.34fr) minmax(80px, 0.36fr) minmax(68px, 0.34fr);
   gap: 10px;
   align-items: center;
 }
@@ -1663,6 +1680,20 @@ select {
   font-family: var(--font-serif), serif;
   font-size: 1.3rem;
   line-height: 1;
+}
+
+.portfolio-sync-cell {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 9px;
+  background: #fff;
+  color: var(--muted);
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
 }
 
 .portfolio-helper {

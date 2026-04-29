@@ -183,6 +183,28 @@ export function generateCombinedWorkflow(): N8nWorkflow {
     googleSheetsNode("Snapshot: Read Audit Log", "read", "Audit Log", [580, 3200]),
     googleSheetsNode("Snapshot: Read Monitors", "read", "Monitors", [820, 3200]),
     codeNode("Snapshot: Build Payload", SNAPSHOT_BUILD_PAYLOAD_CODE, [1060, 3200]),
+
+    // ── REGION 8: PORTFOLIO MUTATIONS (dashboard write-back) ───────────
+    {
+      id: "portfolio-mutation-webhook-1",
+      name: "Portfolio: Mutation Webhook",
+      type: "n8n-nodes-base.webhook",
+      position: [100, 3600] as [number, number],
+      typeVersion: 2,
+      parameters: {
+        path: "procurement-portfolio-mutation",
+        httpMethod: "POST",
+        responseMode: "lastNode",
+        options: {},
+      },
+    },
+    googleSheetsNode("Portfolio: Read Vendors", "read", "Vendors", [340, 3600]),
+    googleSheetsNode("Portfolio: Read Registry", "read", "Registry", [580, 3600]),
+    codeNode("Portfolio: Build Vendor Rows", PORTFOLIO_BUILD_VENDOR_ROWS_CODE, [820, 3600]),
+    googleSheetsNode("Portfolio: Write Vendors", "update", "Vendors", [1060, 3600]),
+    codeNode("Portfolio: Build Registry Rows", PORTFOLIO_BUILD_REGISTRY_ROWS_CODE, [1300, 3600]),
+    googleSheetsNode("Portfolio: Write Registry", "update", "Registry", [1540, 3600]),
+    codeNode("Portfolio: Mutation Result", PORTFOLIO_MUTATION_RESULT_CODE, [1780, 3600]),
   ];
 
   const connections = buildConnections([
@@ -253,6 +275,15 @@ export function generateCombinedWorkflow(): N8nWorkflow {
     connect("Snapshot: Read Registry", "Snapshot: Read Audit Log"),
     connect("Snapshot: Read Audit Log", "Snapshot: Read Monitors"),
     connect("Snapshot: Read Monitors", "Snapshot: Build Payload"),
+
+    // ── PORTFOLIO MUTATION connections ─────────────────────────────────
+    connect("Portfolio: Mutation Webhook", "Portfolio: Read Vendors"),
+    connect("Portfolio: Read Vendors", "Portfolio: Read Registry"),
+    connect("Portfolio: Read Registry", "Portfolio: Build Vendor Rows"),
+    connect("Portfolio: Build Vendor Rows", "Portfolio: Write Vendors"),
+    connect("Portfolio: Write Vendors", "Portfolio: Build Registry Rows"),
+    connect("Portfolio: Build Registry Rows", "Portfolio: Write Registry"),
+    connect("Portfolio: Write Registry", "Portfolio: Mutation Result"),
   ]);
 
   return buildWorkflow(
@@ -267,17 +298,39 @@ export function generateCombinedWorkflow(): N8nWorkflow {
 // updated to use prefixed node names.
 
 const SYNC_DIFF_CODE = `
-const incoming = $('Sync: Read Vendor List').all().map(i => i.json);
-const previous = $('Sync: Read Previous Registry').all().map(i => i.json);
+const rawIncoming = $('Sync: Read Vendor List').all().map(i => i.json);
+const rawPrevious = $('Sync: Read Previous Registry').all().map(i => i.json);
 
-const incomingMap = new Map(incoming.map(v => [v.vendor_domain, v]));
-const previousMap = new Map(previous.map(v => [v.vendor_domain, v]));
+function isActive(row) {
+  const value = String(row.active ?? 'TRUE').trim().toLowerCase();
+  return !['false', 'no', '0', 'inactive'].includes(value);
+}
 
-const added = incoming.filter(v => !previousMap.has(v.vendor_domain));
-const removed = previous.filter(v => !incomingMap.has(v.vendor_domain));
+function key(row) {
+  return String(row.vendor_domain || row.domain || row.vendor_name || '').trim().toLowerCase();
+}
+
+function hasMonitorIds(row) {
+  const ids = row.monitor_ids ?? row.monitorIds ?? '';
+  if (Array.isArray(ids)) return ids.length > 0;
+  return String(ids).trim() !== '' && String(ids).trim() !== '[]';
+}
+
+const incoming = rawIncoming.filter(isActive).filter(v => key(v));
+const previous = rawPrevious.filter(isActive).filter(v => key(v));
+const previousWithMonitors = rawPrevious.filter(v => key(v) && hasMonitorIds(v));
+
+const incomingMap = new Map(incoming.map(v => [key(v), v]));
+const previousMap = new Map(previous.map(v => [key(v), v]));
+
+const added = incoming.filter(v => {
+  const prev = previousMap.get(key(v));
+  return !prev || !hasMonitorIds(prev);
+});
+const removed = previousWithMonitors.filter(v => !incomingMap.has(key(v)) || !isActive(v));
 const modified = incoming.filter(v => {
-  const prev = previousMap.get(v.vendor_domain);
-  return prev && (prev.monitoring_priority !== v.monitoring_priority || prev.vendor_category !== v.vendor_category);
+  const prev = previousMap.get(key(v));
+  return prev && hasMonitorIds(prev) && (prev.monitoring_priority !== v.monitoring_priority || prev.vendor_category !== v.vendor_category);
 });
 
 return [{ json: { added, removed, modified, unchanged_count: incoming.length - added.length - modified.length } }];
@@ -539,6 +592,263 @@ const data = $input.first().json;
 return [{ json: { ...data, digest_formatted: true } }];
 `;
 
+const PORTFOLIO_BUILD_VENDOR_ROWS_CODE = `
+const incoming = $('Portfolio: Mutation Webhook').first().json || {};
+const headers = incoming.headers || {};
+const body = incoming.body && typeof incoming.body === 'object' ? incoming.body : incoming;
+const currentRows = $('Portfolio: Read Vendors').all().map(i => i.json);
+const now = new Date().toISOString();
+
+const seedVendors = [
+  { vendorName: 'Microsoft', vendorDomain: 'https://microsoft.com', vendorCategory: 'technology', monitoringPriority: 'high' },
+  { vendorName: 'Amazon Web Services', vendorDomain: 'https://aws.amazon.com', vendorCategory: 'technology', monitoringPriority: 'high' },
+  { vendorName: 'Salesforce', vendorDomain: 'https://salesforce.com', vendorCategory: 'technology', monitoringPriority: 'high' },
+  { vendorName: 'JPMorgan Chase', vendorDomain: 'https://jpmorganchase.com', vendorCategory: 'financial_services', monitoringPriority: 'high' },
+  { vendorName: 'Goldman Sachs', vendorDomain: 'https://goldmansachs.com', vendorCategory: 'financial_services', monitoringPriority: 'medium' },
+  { vendorName: 'UnitedHealth Group', vendorDomain: 'https://unitedhealthgroup.com', vendorCategory: 'healthcare', monitoringPriority: 'high' },
+  { vendorName: 'Pfizer', vendorDomain: 'https://pfizer.com', vendorCategory: 'healthcare', monitoringPriority: 'medium' },
+  { vendorName: 'Johnson & Johnson', vendorDomain: 'https://jnj.com', vendorCategory: 'healthcare', monitoringPriority: 'medium' },
+  { vendorName: 'Siemens', vendorDomain: 'https://siemens.com', vendorCategory: 'manufacturing', monitoringPriority: 'medium' },
+  { vendorName: 'Caterpillar', vendorDomain: 'https://caterpillar.com', vendorCategory: 'manufacturing', monitoringPriority: 'low' },
+  { vendorName: 'Deloitte', vendorDomain: 'https://deloitte.com', vendorCategory: 'professional_services', monitoringPriority: 'medium' },
+  { vendorName: 'Accenture', vendorDomain: 'https://accenture.com', vendorCategory: 'professional_services', monitoringPriority: 'medium' },
+  { vendorName: 'Stripe', vendorDomain: 'https://stripe.com', vendorCategory: 'financial_services', monitoringPriority: 'high' },
+  { vendorName: 'CrowdStrike', vendorDomain: 'https://crowdstrike.com', vendorCategory: 'technology', monitoringPriority: 'high' },
+  { vendorName: '3M', vendorDomain: 'https://3m.com', vendorCategory: 'manufacturing', monitoringPriority: 'low' },
+];
+
+function pick(row, keys, fallback = '') {
+  for (const key of keys) {
+    if (row[key] !== undefined && row[key] !== null && String(row[key]).trim() !== '') {
+      return row[key];
+    }
+  }
+  return fallback;
+}
+
+function headerValue(name) {
+  const target = name.toLowerCase();
+  for (const [key, value] of Object.entries(headers)) {
+    if (key.toLowerCase() === target) return Array.isArray(value) ? value[0] : value;
+  }
+  return '';
+}
+
+function isTruthy(value) {
+  return ['true', 'yes', '1', 'y'].includes(String(value || '').trim().toLowerCase());
+}
+
+function isActive(row) {
+  const value = String(pick(row, ['active'], 'TRUE')).trim().toLowerCase();
+  return !['false', 'no', '0', 'inactive'].includes(value);
+}
+
+function normalizeDomain(value, name) {
+  const fallback = String(name || 'vendor').toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.example';
+  const raw = String(value || fallback).trim();
+  return raw.startsWith('http://') || raw.startsWith('https://') ? raw : 'https://' + raw;
+}
+
+function keyFor(row) {
+  return String(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], pick(row, ['vendor_name', 'vendorName', 'name'], '')))
+    .trim()
+    .toLowerCase();
+}
+
+function normalizePriority(value) {
+  const normalized = String(value || '').trim().toLowerCase();
+  return ['high', 'medium', 'low'].includes(normalized) ? normalized : 'medium';
+}
+
+function normalizeRisk(value) {
+  const normalized = String(value || '').trim().toUpperCase();
+  return ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'].includes(normalized) ? normalized : '';
+}
+
+function sheetRowFromInput(input) {
+  const vendorName = String(input.vendorName || input.vendor_name || '').trim();
+  if (!vendorName) throw new Error('Portfolio mutation vendorName is required.');
+  const domain = normalizeDomain(input.vendorDomain || input.vendor_domain, vendorName);
+  return {
+    vendor_name: vendorName,
+    vendor_domain: domain,
+    vendor_category: String(input.vendorCategory || input.vendor_category || 'vendor').trim().toLowerCase().replace(/\\s+/g, '_'),
+    risk_tier_override: normalizeRisk(input.riskLevel || input.risk_level),
+    active: 'TRUE',
+    monitoring_priority: normalizePriority(input.monitoringPriority || input.monitoring_priority),
+    relationship_owner: String(input.relationshipOwner || input.relationship_owner || 'Procurement').trim(),
+    region: String(input.region || 'Global').trim(),
+    risk_score: input.score !== undefined ? String(input.score) : '',
+    next_research_date: String(input.nextResearchDate || input.next_research_date || ''),
+    last_synced_at: now,
+    dashboard_managed: 'TRUE',
+  };
+}
+
+function normalizeExistingRow(row) {
+  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], '')).trim();
+  if (!vendorName) return null;
+  return {
+    vendor_name: vendorName,
+    vendor_domain: normalizeDomain(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], ''), vendorName),
+    vendor_category: String(pick(row, ['vendor_category', 'vendorCategory', 'category'], 'vendor')).trim().toLowerCase().replace(/\\s+/g, '_'),
+    risk_tier_override: String(pick(row, ['risk_tier_override', 'riskTierOverride', 'risk_level', 'riskLevel'], '')),
+    active: isActive(row) ? 'TRUE' : 'FALSE',
+    monitoring_priority: normalizePriority(pick(row, ['monitoring_priority', 'monitoringPriority', 'priority'], '')),
+    relationship_owner: String(pick(row, ['relationship_owner', 'relationshipOwner', 'owner'], 'Procurement')),
+    region: String(pick(row, ['region'], 'Global')),
+    risk_score: String(pick(row, ['risk_score', 'riskScore', 'score'], '')),
+    next_research_date: String(pick(row, ['next_research_date', 'nextResearchDate'], '')),
+    last_synced_at: String(pick(row, ['last_synced_at', 'lastSyncedAt'], '')),
+    dashboard_managed: isTruthy(pick(row, ['dashboard_managed', 'dashboardManaged'], '')) ? 'TRUE' : 'FALSE',
+  };
+}
+
+function seedRow(input) {
+  return {
+    vendor_name: input.vendorName,
+    vendor_domain: input.vendorDomain,
+    vendor_category: input.vendorCategory,
+    risk_tier_override: '',
+    active: 'TRUE',
+    monitoring_priority: input.monitoringPriority,
+    relationship_owner: 'Procurement',
+    region: 'Global',
+    risk_score: '',
+    next_research_date: '',
+    last_synced_at: now,
+    dashboard_managed: 'FALSE',
+  };
+}
+
+const expectedToken = String($vars?.PROCUREMENT_DASHBOARD_WRITE_TOKEN || '').trim();
+if (!expectedToken) {
+  throw new Error('Set n8n variable PROCUREMENT_DASHBOARD_WRITE_TOKEN before enabling portfolio write-back.');
+}
+
+const actualToken = String(headerValue('x-procurement-dashboard-token') || '').trim();
+if (actualToken !== expectedToken) {
+  throw new Error('Unauthorized portfolio mutation.');
+}
+
+const action = body.action;
+if (!['addVendor', 'uploadVendors', 'resetSeedVendors'].includes(action)) {
+  throw new Error('Unsupported portfolio mutation action.');
+}
+
+const rowsByKey = new Map();
+for (const row of currentRows) {
+  const normalized = normalizeExistingRow(row);
+  if (normalized) rowsByKey.set(keyFor(normalized), normalized);
+}
+
+if (action === 'addVendor') {
+  const row = sheetRowFromInput(body.vendor || {});
+  rowsByKey.set(keyFor(row), row);
+}
+
+if (action === 'uploadVendors') {
+  const vendors = Array.isArray(body.vendors) ? body.vendors : [];
+  if (!vendors.length) throw new Error('uploadVendors requires at least one vendor.');
+  for (const vendor of vendors) {
+    const row = sheetRowFromInput(vendor || {});
+    rowsByKey.set(keyFor(row), row);
+  }
+}
+
+if (action === 'resetSeedVendors') {
+  const seedRows = seedVendors.map(seedRow);
+  const seedKeys = new Set(seedRows.map(keyFor));
+  for (const row of rowsByKey.values()) {
+    if (!seedKeys.has(keyFor(row)) && row.dashboard_managed === 'TRUE') {
+      row.active = 'FALSE';
+      row.last_synced_at = now;
+    }
+  }
+  for (const row of seedRows) {
+    rowsByKey.set(keyFor(row), row);
+  }
+}
+
+return Array.from(rowsByKey.values()).map(row => ({ json: row }));
+`;
+
+const PORTFOLIO_BUILD_REGISTRY_ROWS_CODE = `
+const vendorRows = $('Portfolio: Build Vendor Rows').all().map(i => i.json);
+const registryRows = $('Portfolio: Read Registry').all().map(i => i.json);
+const now = new Date().toISOString();
+
+function pick(row, keys, fallback = '') {
+  for (const key of keys) {
+    if (row[key] !== undefined && row[key] !== null && String(row[key]).trim() !== '') {
+      return row[key];
+    }
+  }
+  return fallback;
+}
+
+function normalizeDomain(value, name) {
+  const fallback = String(name || 'vendor').toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.example';
+  const raw = String(value || fallback).trim();
+  return raw.startsWith('http://') || raw.startsWith('https://') ? raw : 'https://' + raw;
+}
+
+function keyFor(row) {
+  return String(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], pick(row, ['vendor_name', 'vendorName', 'name'], '')))
+    .trim()
+    .toLowerCase();
+}
+
+const registryByKey = new Map();
+for (const row of registryRows) {
+  const key = keyFor(row);
+  if (key) registryByKey.set(key, row);
+}
+
+return vendorRows.map(row => {
+  const previous = registryByKey.get(keyFor(row)) || {};
+  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], pick(previous, ['vendor_name', 'vendorName', 'name'], 'Unknown vendor')));
+  const domain = normalizeDomain(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], pick(previous, ['vendor_domain', 'vendorDomain', 'domain'], '')), vendorName);
+
+  return {
+    json: {
+      vendor_name: vendorName,
+      vendor_domain: domain,
+      vendor_category: String(pick(row, ['vendor_category', 'vendorCategory', 'category'], pick(previous, ['vendor_category', 'vendorCategory', 'category'], 'vendor'))),
+      risk_tier_override: String(pick(row, ['risk_tier_override', 'riskTierOverride'], pick(previous, ['risk_tier_override', 'riskTierOverride'], ''))),
+      active: String(pick(row, ['active'], pick(previous, ['active'], 'TRUE'))),
+      monitoring_priority: String(pick(row, ['monitoring_priority', 'monitoringPriority', 'priority'], pick(previous, ['monitoring_priority', 'monitoringPriority', 'priority'], 'medium'))),
+      monitor_ids: String(pick(previous, ['monitor_ids', 'monitorIds'], '')),
+      next_research_date: String(pick(row, ['next_research_date', 'nextResearchDate'], pick(previous, ['next_research_date', 'nextResearchDate'], ''))),
+      last_synced_at: now,
+      relationship_owner: String(pick(row, ['relationship_owner', 'relationshipOwner', 'owner'], pick(previous, ['relationship_owner', 'relationshipOwner', 'owner'], 'Procurement'))),
+      region: String(pick(row, ['region'], pick(previous, ['region'], 'Global'))),
+      risk_score: String(pick(row, ['risk_score', 'riskScore', 'score'], pick(previous, ['risk_score', 'riskScore', 'score'], ''))),
+      dashboard_managed: String(pick(row, ['dashboard_managed', 'dashboardManaged'], pick(previous, ['dashboard_managed', 'dashboardManaged'], 'FALSE'))),
+    },
+  };
+});
+`;
+
+const PORTFOLIO_MUTATION_RESULT_CODE = `
+const incoming = $('Portfolio: Mutation Webhook').first().json || {};
+const body = incoming.body && typeof incoming.body === 'object' ? incoming.body : incoming;
+const action = body.action || 'unknown';
+const affected = action === 'uploadVendors'
+  ? (Array.isArray(body.vendors) ? body.vendors.length : 0)
+  : action === 'addVendor'
+    ? 1
+    : $('Portfolio: Build Vendor Rows').all().length;
+
+return [{
+  json: {
+    ok: true,
+    action,
+    affected,
+  },
+}];
+`;
+
 const SNAPSHOT_BUILD_PAYLOAD_CODE = `
 const registry = $('Snapshot: Read Registry').all().map(i => i.json);
 const audit_log = $('Snapshot: Read Audit Log').all().map(i => i.json);
@@ -701,7 +1011,7 @@ const vendors = activeRegistry.map(row => {
   const overrides = parseList(pick(latest || {}, ['triggered_overrides', 'triggeredOverrides'], pick(row, ['risk_tier_override'], '')));
   const domain = String(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], slugify(vendorName) + '.com'));
   const normalizedDomain = domain.startsWith('http://') || domain.startsWith('https://') ? domain : 'https://' + domain;
-  const score = Number(pick(latest || {}, ['score', 'risk_score'], riskScores[riskLevel])) || riskScores[riskLevel];
+  const score = Number(pick(latest || {}, ['score', 'risk_score'], pick(row, ['risk_score', 'riskScore', 'score'], riskScores[riskLevel]))) || riskScores[riskLevel];
   const monitorsForVendor = monitorLensFor(vendorName);
 
   return {

@@ -20,6 +20,9 @@ export default defineConfig({
     {
       command: "node tests/e2e/mock-snapshot-server.mjs",
       url: `http://127.0.0.1:${mockPort}/health`,
+      env: {
+        PROCUREMENT_DASHBOARD_WRITE_TOKEN: "test-write-token",
+      },
       reuseExistingServer: !process.env.CI,
     },
     {
@@ -27,6 +30,8 @@ export default defineConfig({
       url: `http://127.0.0.1:${appPort}`,
       env: {
         PROCUREMENT_DASHBOARD_SNAPSHOT_URL: `http://127.0.0.1:${mockPort}/snapshot`,
+        PROCUREMENT_DASHBOARD_MUTATION_URL: `http://127.0.0.1:${mockPort}/mutation`,
+        PROCUREMENT_DASHBOARD_WRITE_TOKEN: "test-write-token",
       },
       reuseExistingServer: !process.env.CI,
     },

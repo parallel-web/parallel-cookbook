@@ -327,7 +327,7 @@ Setup takes 30 minutes. You need three accounts:
 
 The system ships with everything pre-built:
 
-- **A single combined workflow** (48 nodes, zero cross-workflow wiring) ready to import into n8n
+- **A single combined workflow** (56 nodes, zero cross-workflow wiring) ready to import into n8n
 - **Google Sheets templates** with 15 seed vendors across five industries so you can test immediately
 - **A step-by-step setup guide** covering credential configuration, environment variables, and activation testing
 

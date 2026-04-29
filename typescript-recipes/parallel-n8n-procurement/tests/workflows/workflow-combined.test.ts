@@ -63,8 +63,8 @@ describe("Combined Workflow — structure", () => {
     validateWorkflow(wf);
   });
 
-  it("has expected node count (~48)", () => {
-    expect(wf.nodes.length).toBe(48);
+  it("has expected node count (~56)", () => {
+    expect(wf.nodes.length).toBe(56);
   });
 
   it("has no duplicate node names", () => {
@@ -94,8 +94,8 @@ describe("Combined Workflow — triggers", () => {
     expect(hasNodeName(wf, "Research: Daily 6AM Trigger")).toBe(true);
   });
 
-  it("has 5 webhook triggers and no Parallel trigger dependency", () => {
-    expect(getNodesByType(wf, "webhook")).toHaveLength(5);
+  it("has 6 webhook triggers and no Parallel trigger dependency", () => {
+    expect(getNodesByType(wf, "webhook")).toHaveLength(6);
     const parallelTriggers = wf.nodes.filter((n) =>
       n.type.includes("parallelMonitorTrigger") || n.type.includes("parallelTrigger"),
     );
@@ -140,6 +140,15 @@ describe("Combined Workflow — triggers", () => {
     expect(wh!.parameters.httpMethod).toBe("GET");
   });
 
+  it("has portfolio mutation webhook trigger", () => {
+    const wh = wf.nodes.find(
+      (n) => n.type === "n8n-nodes-base.webhook" && String(n.parameters.path).includes("procurement-portfolio-mutation"),
+    );
+    expect(wh).toBeDefined();
+    expect(wh!.parameters.httpMethod).toBe("POST");
+    expect(wh!.parameters.responseMode).toBe("lastNode");
+  });
+
   it("builds the dashboard view model from sheet data", () => {
     const node = wf.nodes.find((n) => n.name === "Snapshot: Build Payload");
     expect(node).toBeDefined();
@@ -150,6 +159,26 @@ describe("Combined Workflow — triggers", () => {
     expect(code).toContain("researchSummary");
     expect(code).toContain("actionQueue");
     expect(code).toContain("vendors");
+  });
+
+  it("builds portfolio mutation rows with shared-secret validation", () => {
+    const node = wf.nodes.find((n) => n.name === "Portfolio: Build Vendor Rows");
+    expect(node).toBeDefined();
+
+    const code = String(node!.parameters.jsCode);
+    expect(code).toContain("PROCUREMENT_DASHBOARD_WRITE_TOKEN");
+    expect(code).toContain("x-procurement-dashboard-token");
+    expect(code).toContain("addVendor");
+    expect(code).toContain("uploadVendors");
+    expect(code).toContain("resetSeedVendors");
+    expect(code).toContain("dashboard_managed");
+  });
+
+  it("connects portfolio mutation writes to Vendors and Registry", () => {
+    expect(connectsTo(wf, "Portfolio: Mutation Webhook", "Portfolio: Read Vendors")).toBe(true);
+    expect(connectsTo(wf, "Portfolio: Build Vendor Rows", "Portfolio: Write Vendors")).toBe(true);
+    expect(connectsTo(wf, "Portfolio: Build Registry Rows", "Portfolio: Write Registry")).toBe(true);
+    expect(connectsTo(wf, "Portfolio: Write Registry", "Portfolio: Mutation Result")).toBe(true);
   });
 });
 
@@ -168,6 +197,8 @@ describe("Combined Workflow — Sync flow (WF1)", () => {
     const code = String(diff!.parameters.jsCode);
     expect(code).toContain("Sync: Read Vendor List");
     expect(code).toContain("Sync: Read Previous Registry");
+    expect(code).toContain("rawIncoming.filter(isActive)");
+    expect(code).toContain("hasMonitorIds");
   });
 });
 

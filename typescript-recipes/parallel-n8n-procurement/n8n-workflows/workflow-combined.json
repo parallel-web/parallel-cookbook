@@ -92,7 +92,7 @@
       "typeVersion": 2,
       "parameters": {
         "mode": "runOnceForAllItems",
-        "jsCode": "\nconst incoming = $('Sync: Read Vendor List').all().map(i => i.json);\nconst previous = $('Sync: Read Previous Registry').all().map(i => i.json);\n\nconst incomingMap = new Map(incoming.map(v => [v.vendor_domain, v]));\nconst previousMap = new Map(previous.map(v => [v.vendor_domain, v]));\n\nconst added = incoming.filter(v => !previousMap.has(v.vendor_domain));\nconst removed = previous.filter(v => !incomingMap.has(v.vendor_domain));\nconst modified = incoming.filter(v => {\n  const prev = previousMap.get(v.vendor_domain);\n  return prev && (prev.monitoring_priority !== v.monitoring_priority || prev.vendor_category !== v.vendor_category);\n});\n\nreturn [{ json: { added, removed, modified, unchanged_count: incoming.length - added.length - modified.length } }];\n"
+        "jsCode": "\nconst rawIncoming = $('Sync: Read Vendor List').all().map(i => i.json);\nconst rawPrevious = $('Sync: Read Previous Registry').all().map(i => i.json);\n\nfunction isActive(row) {\n  const value = String(row.active ?? 'TRUE').trim().toLowerCase();\n  return !['false', 'no', '0', 'inactive'].includes(value);\n}\n\nfunction key(row) {\n  return String(row.vendor_domain || row.domain || row.vendor_name || '').trim().toLowerCase();\n}\n\nfunction hasMonitorIds(row) {\n  const ids = row.monitor_ids ?? row.monitorIds ?? '';\n  if (Array.isArray(ids)) return ids.length > 0;\n  return String(ids).trim() !== '' && String(ids).trim() !== '[]';\n}\n\nconst incoming = rawIncoming.filter(isActive).filter(v => key(v));\nconst previous = rawPrevious.filter(isActive).filter(v => key(v));\nconst previousWithMonitors = rawPrevious.filter(v => key(v) && hasMonitorIds(v));\n\nconst incomingMap = new Map(incoming.map(v => [key(v), v]));\nconst previousMap = new Map(previous.map(v => [key(v), v]));\n\nconst added = incoming.filter(v => {\n  const prev = previousMap.get(key(v));\n  return !prev || !hasMonitorIds(prev);\n});\nconst removed = previousWithMonitors.filter(v => !incomingMap.has(key(v)) || !isActive(v));\nconst modified = incoming.filter(v => {\n  const prev = previousMap.get(key(v));\n  return prev && hasMonitorIds(prev) && (prev.monitoring_priority !== v.monitoring_priority || prev.vendor_category !== v.vendor_category);\n});\n\nreturn [{ json: { added, removed, modified, unchanged_count: incoming.length - added.length - modified.length } }];\n"
       }
     },
     {
@@ -1056,7 +1056,167 @@
       "typeVersion": 2,
       "parameters": {
         "mode": "runOnceForAllItems",
-        "jsCode": "\nconst registry = $('Snapshot: Read Registry').all().map(i => i.json);\nconst audit_log = $('Snapshot: Read Audit Log').all().map(i => i.json);\nconst monitors = $('Snapshot: Read Monitors').all().map(i => i.json);\nconst now = new Date();\n\nconst riskLevels = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'];\nconst riskScores = { LOW: 18, MEDIUM: 48, HIGH: 76, CRITICAL: 94 };\nconst dimensionLabels = {\n  financial_health: 'Financial health',\n  legal_regulatory: 'Legal & regulatory',\n  cybersecurity: 'Cybersecurity',\n  leadership_governance: 'Leadership & governance',\n  esg_reputation: 'ESG & reputation',\n};\nconst dimensionOrder = Object.keys(dimensionLabels);\n\nfunction pick(row, keys, fallback = '') {\n  for (const key of keys) {\n    if (row[key] !== undefined && row[key] !== null && String(row[key]).trim() !== '') {\n      return row[key];\n    }\n  }\n  return fallback;\n}\n\nfunction slugify(value) {\n  return String(value || 'vendor')\n    .toLowerCase()\n    .trim()\n    .replace(/[^a-z0-9]+/g, '-')\n    .replace(/^-+|-+$/g, '') || 'vendor';\n}\n\nfunction normalizeRisk(value) {\n  const normalized = String(value || '').trim().toUpperCase();\n  return riskLevels.includes(normalized) ? normalized : 'LOW';\n}\n\nfunction normalizePriority(value, riskLevel) {\n  const normalized = String(value || '').trim().toLowerCase();\n  if (['high', 'medium', 'low'].includes(normalized)) return normalized;\n  if (riskLevel === 'CRITICAL' || riskLevel === 'HIGH') return 'high';\n  if (riskLevel === 'MEDIUM') return 'medium';\n  return 'low';\n}\n\nfunction toBool(value) {\n  if (typeof value === 'boolean') return value;\n  return ['true', 'yes', '1', 'y'].includes(String(value || '').trim().toLowerCase());\n}\n\nfunction parseList(value) {\n  if (Array.isArray(value)) return value.map(String).filter(Boolean);\n  if (value === undefined || value === null || value === '') return [];\n  try {\n    const parsed = JSON.parse(value);\n    if (Array.isArray(parsed)) return parsed.map(String).filter(Boolean);\n  } catch {}\n  return String(value).split(/[;,]/).map(item => item.trim()).filter(Boolean);\n}\n\nfunction dimensionKey(value) {\n  const normalized = String(value || '').toLowerCase();\n  if (normalized.includes('financial') || normalized.includes('credit')) return 'financial_health';\n  if (normalized.includes('legal') || normalized.includes('regulatory') || normalized.includes('litigation')) return 'legal_regulatory';\n  if (normalized.includes('cyber') || normalized.includes('breach') || normalized.includes('security')) return 'cybersecurity';\n  if (normalized.includes('leadership') || normalized.includes('governance') || normalized.includes('executive')) return 'leadership_governance';\n  if (normalized.includes('esg') || normalized.includes('reputation') || normalized.includes('labor')) return 'esg_reputation';\n  return 'financial_health';\n}\n\nfunction dateOnly(value, fallbackDate) {\n  const date = value ? new Date(value) : fallbackDate;\n  if (Number.isNaN(date.getTime())) return fallbackDate.toISOString().slice(0, 10);\n  return date.toISOString().slice(0, 10);\n}\n\nfunction relativeTime(value) {\n  const date = value ? new Date(value) : now;\n  if (Number.isNaN(date.getTime())) return 'just now';\n  const minutes = Math.max(0, Math.round((now.getTime() - date.getTime()) / 60000));\n  if (minutes < 1) return 'just now';\n  if (minutes < 60) return minutes + ' minutes ago';\n  const hours = Math.round(minutes / 60);\n  if (hours < 48) return hours + ' hours ago';\n  const days = Math.round(hours / 24);\n  return days + ' days ago';\n}\n\nfunction sourceUrl(value) {\n  const text = String(value || '').trim();\n  return text.startsWith('http://') || text.startsWith('https://') ? text : 'https://parallel.ai';\n}\n\nfunction recommendationFor(level) {\n  if (level === 'CRITICAL') return 'suspend_relationship';\n  if (level === 'HIGH') return 'initiate_contingency';\n  if (level === 'MEDIUM') return 'escalate_review';\n  return 'continue_monitoring';\n}\n\nfunction auditTimestamp(row) {\n  return String(pick(row, ['timestamp', 'assessment_date', 'created_at', 'date'], ''));\n}\n\nconst latestAuditByVendor = new Map();\nfor (const row of audit_log) {\n  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], '')).trim();\n  if (!vendorName) continue;\n  const key = vendorName.toLowerCase();\n  const current = latestAuditByVendor.get(key);\n  const nextTime = new Date(auditTimestamp(row)).getTime() || 0;\n  const currentTime = current ? (new Date(auditTimestamp(current)).getTime() || 0) : -1;\n  if (!current || nextTime >= currentTime) latestAuditByVendor.set(key, row);\n}\n\nfunction dimensionsFor(latestAudit, riskLevel) {\n  const categories = parseList(pick(latestAudit || {}, ['categories', 'risk_categories', 'category'], ''));\n  const activeKeys = new Set(categories.map(dimensionKey));\n  return dimensionOrder.map(key => {\n    const active = activeKeys.has(key);\n    return {\n      key,\n      label: dimensionLabels[key],\n      severity: active ? riskLevel : 'LOW',\n      status: active ? 'watch' : 'stable',\n      findings: active\n        ? (pick(latestAudit || {}, ['summary', 'detail', 'event_summary'], dimensionLabels[key] + ' requires review.'))\n        : 'No active findings in the current monitoring window.',\n    };\n  });\n}\n\nfunction monitorLensFor(vendorName) {\n  return monitors\n    .filter(row => String(pick(row, ['vendor_name', 'vendorName'], '')).toLowerCase() === vendorName.toLowerCase())\n    .map(row => ({\n      dimension: String(pick(row, ['risk_dimension', 'monitor_category', 'category'], 'general')),\n      cadence: String(pick(row, ['cadence'], 'daily')),\n      status: 'active',\n      query: String(pick(row, ['query', 'monitor_query'], vendorName + ' vendor risk')),\n      lastEvent: String(pick(row, ['last_event_at', 'updated_at', 'created_at'], 'No event yet')),\n    }));\n}\n\nconst activeRegistry = registry.filter(row => {\n  const active = String(pick(row, ['active'], 'true')).trim().toLowerCase();\n  return !['false', 'no', '0'].includes(active);\n});\n\nconst vendors = activeRegistry.map(row => {\n  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], 'Unknown vendor')).trim();\n  const latest = latestAuditByVendor.get(vendorName.toLowerCase());\n  const riskLevel = normalizeRisk(pick(latest || {}, ['risk_level', 'riskLevel'], pick(row, ['risk_tier_override', 'risk_level'], 'LOW')));\n  const latestDate = dateOnly(auditTimestamp(latest || {}), now);\n  const nextDate = dateOnly(pick(row, ['next_research_date', 'nextResearchDate'], now.toISOString()), now);\n  const adverseFlag = toBool(pick(latest || {}, ['adverse_flag', 'adverseFlag'], riskLevel === 'HIGH' || riskLevel === 'CRITICAL'));\n  const summary = String(pick(latest || {}, ['summary', 'detail', 'event_summary'], vendorName + ' is currently assessed at ' + riskLevel + ' risk.'));\n  const overrides = parseList(pick(latest || {}, ['triggered_overrides', 'triggeredOverrides'], pick(row, ['risk_tier_override'], '')));\n  const domain = String(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], slugify(vendorName) + '.com'));\n  const normalizedDomain = domain.startsWith('http://') || domain.startsWith('https://') ? domain : 'https://' + domain;\n  const score = Number(pick(latest || {}, ['score', 'risk_score'], riskScores[riskLevel])) || riskScores[riskLevel];\n  const monitorsForVendor = monitorLensFor(vendorName);\n\n  return {\n    id: slugify(vendorName),\n    vendorName,\n    vendorDomain: normalizedDomain,\n    vendorCategory: String(pick(row, ['vendor_category', 'vendorCategory', 'category'], 'vendor')).toLowerCase().replace(/\\s+/g, '_'),\n    monitoringPriority: normalizePriority(pick(row, ['monitoring_priority', 'monitoringPriority', 'priority'], ''), riskLevel),\n    relationshipOwner: String(pick(row, ['relationship_owner', 'relationshipOwner', 'owner'], 'Procurement')),\n    region: String(pick(row, ['region'], 'Global')),\n    riskLevel,\n    overallRiskLevel: riskLevel,\n    score,\n    actionRequired: riskLevel === 'HIGH' || riskLevel === 'CRITICAL',\n    adverseFlag,\n    recommendation: String(pick(latest || {}, ['recommendation'], recommendationFor(riskLevel))),\n    summary,\n    movement: String(pick(latest || {}, ['movement'], '+0 live snapshot')),\n    lastAssessmentDate: latestDate,\n    nextResearchDate: nextDate,\n    triggeredOverrides: overrides.filter(value => value && riskLevels.indexOf(String(value).toUpperCase()) === -1),\n    dimensions: dimensionsFor(latest, riskLevel),\n    adverseEvents: adverseFlag ? [{\n      title: String(pick(latest || {}, ['title', 'event_summary'], riskLevel + ' risk finding')),\n      date: latestDate,\n      category: String(parseList(pick(latest || {}, ['categories', 'category'], 'general'))[0] || 'general'),\n      severity: riskLevel,\n      description: summary,\n      sourceUrl: sourceUrl(pick(latest || {}, ['source', 'source_url', 'sourceUrl'], '')),\n    }] : [],\n    evidence: latest ? [{\n      title: String(pick(latest, ['title', 'summary'], 'Latest assessment')),\n      publication: String(pick(latest, ['source', 'publication'], 'Parallel assessment')),\n      publishedAt: latestDate,\n      materiality: summary,\n      href: sourceUrl(pick(latest, ['source_url', 'sourceUrl', 'source'], '')),\n    }] : [],\n    monitors: monitorsForVendor,\n  };\n}).sort((left, right) => right.score - left.score);\n\nconst riskDistribution = riskLevels.map(level => ({\n  label: level,\n  count: vendors.filter(vendor => vendor.riskLevel === level).length,\n}));\n\nconst dueVendors = vendors.filter(vendor => {\n  const next = new Date(vendor.nextResearchDate);\n  return !Number.isNaN(next.getTime()) && next <= now;\n});\n\nconst researchedToday = audit_log.filter(row => dateOnly(auditTimestamp(row), now) === now.toISOString().slice(0, 10)).length;\nconst adverseCount = vendors.filter(vendor => vendor.adverseFlag).length;\nconst actionCount = vendors.filter(vendor => vendor.actionRequired).length;\nconst criticalCount = vendors.filter(vendor => vendor.riskLevel === 'CRITICAL').length;\nconst highCount = vendors.filter(vendor => vendor.riskLevel === 'HIGH').length;\nconst activeMonitorCount = monitors.length;\n\nconst sortedAudit = audit_log.slice().sort((left, right) => {\n  return (new Date(auditTimestamp(right)).getTime() || 0) - (new Date(auditTimestamp(left)).getTime() || 0);\n});\n\nconst feed = sortedAudit.slice(0, 25).map(row => {\n  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], 'Unknown vendor'));\n  const riskLevel = normalizeRisk(pick(row, ['risk_level', 'riskLevel', 'severity'], 'MEDIUM'));\n  const summary = String(pick(row, ['summary', 'detail', 'event_summary'], vendorName + ' monitoring event.'));\n  return {\n    vendorName,\n    title: String(pick(row, ['title', 'event_summary'], summary.split('.')[0] || 'Monitoring update')),\n    severity: riskLevel,\n    timestamp: relativeTime(auditTimestamp(row)),\n    detail: summary,\n    sourceUrl: sourceUrl(pick(row, ['source_url', 'sourceUrl', 'source'], '')),\n  };\n});\n\nconst actionQueue = vendors\n  .filter(vendor => vendor.actionRequired)\n  .map(vendor => ({\n    vendorName: vendor.vendorName,\n    owner: vendor.riskLevel === 'CRITICAL' ? 'Security operations' : 'Procurement finance',\n    deadline: vendor.riskLevel === 'CRITICAL' ? 'Due in 12h' : 'Due in 24h',\n    action: vendor.riskLevel === 'CRITICAL'\n      ? 'Validate exposure, review contingency supplier path, and notify accountable stakeholders.'\n      : 'Update the vendor risk memo and confirm mitigation owner.',\n    riskLevel: vendor.riskLevel,\n  }));\n\nreturn [{\n  json: {\n    lastUpdated: now.toISOString(),\n    metrics: [\n      {\n        label: 'Portfolio risk posture',\n        value: criticalCount + ' CRITICAL / ' + highCount + ' HIGH',\n        trend: actionCount + ' vendors require immediate review',\n        tone: actionCount ? 'critical' : 'positive',\n      },\n      {\n        label: 'Research cadence',\n        value: dueVendors.length + ' due today',\n        trend: researchedToday + ' audit log entries recorded today',\n        tone: dueVendors.length ? 'warning' : 'positive',\n      },\n      {\n        label: 'Monitor fleet health',\n        value: activeMonitorCount + ' active',\n        trend: 'Webhook healthy, live snapshot generated',\n        tone: 'positive',\n      },\n      {\n        label: 'Action queue',\n        value: actionCount + ' escalations',\n        trend: actionQueue.filter(item => item.deadline.includes('12h')).length + ' due in the next 12h',\n        tone: actionCount ? 'default' : 'positive',\n      },\n    ],\n    riskDistribution,\n    researchSummary: {\n      totalDue: dueVendors.length,\n      totalResearched: researchedToday,\n      totalFailed: 0,\n      adverseCount,\n      batchesExecuted: Math.ceil(Math.max(dueVendors.length, researchedToday) / 50),\n      duration: 'live',\n    },\n    health: {\n      totalMonitors: monitors.length,\n      activeCount: monitors.length,\n      failedCount: 0,\n      orphanCount: 0,\n      recreated: 0,\n      webhookHealthy: true,\n    },\n    feed,\n    actionQueue,\n    vendors,\n  }\n}];\n"
+        "jsCode": "\nconst registry = $('Snapshot: Read Registry').all().map(i => i.json);\nconst audit_log = $('Snapshot: Read Audit Log').all().map(i => i.json);\nconst monitors = $('Snapshot: Read Monitors').all().map(i => i.json);\nconst now = new Date();\n\nconst riskLevels = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'];\nconst riskScores = { LOW: 18, MEDIUM: 48, HIGH: 76, CRITICAL: 94 };\nconst dimensionLabels = {\n  financial_health: 'Financial health',\n  legal_regulatory: 'Legal & regulatory',\n  cybersecurity: 'Cybersecurity',\n  leadership_governance: 'Leadership & governance',\n  esg_reputation: 'ESG & reputation',\n};\nconst dimensionOrder = Object.keys(dimensionLabels);\n\nfunction pick(row, keys, fallback = '') {\n  for (const key of keys) {\n    if (row[key] !== undefined && row[key] !== null && String(row[key]).trim() !== '') {\n      return row[key];\n    }\n  }\n  return fallback;\n}\n\nfunction slugify(value) {\n  return String(value || 'vendor')\n    .toLowerCase()\n    .trim()\n    .replace(/[^a-z0-9]+/g, '-')\n    .replace(/^-+|-+$/g, '') || 'vendor';\n}\n\nfunction normalizeRisk(value) {\n  const normalized = String(value || '').trim().toUpperCase();\n  return riskLevels.includes(normalized) ? normalized : 'LOW';\n}\n\nfunction normalizePriority(value, riskLevel) {\n  const normalized = String(value || '').trim().toLowerCase();\n  if (['high', 'medium', 'low'].includes(normalized)) return normalized;\n  if (riskLevel === 'CRITICAL' || riskLevel === 'HIGH') return 'high';\n  if (riskLevel === 'MEDIUM') return 'medium';\n  return 'low';\n}\n\nfunction toBool(value) {\n  if (typeof value === 'boolean') return value;\n  return ['true', 'yes', '1', 'y'].includes(String(value || '').trim().toLowerCase());\n}\n\nfunction parseList(value) {\n  if (Array.isArray(value)) return value.map(String).filter(Boolean);\n  if (value === undefined || value === null || value === '') return [];\n  try {\n    const parsed = JSON.parse(value);\n    if (Array.isArray(parsed)) return parsed.map(String).filter(Boolean);\n  } catch {}\n  return String(value).split(/[;,]/).map(item => item.trim()).filter(Boolean);\n}\n\nfunction dimensionKey(value) {\n  const normalized = String(value || '').toLowerCase();\n  if (normalized.includes('financial') || normalized.includes('credit')) return 'financial_health';\n  if (normalized.includes('legal') || normalized.includes('regulatory') || normalized.includes('litigation')) return 'legal_regulatory';\n  if (normalized.includes('cyber') || normalized.includes('breach') || normalized.includes('security')) return 'cybersecurity';\n  if (normalized.includes('leadership') || normalized.includes('governance') || normalized.includes('executive')) return 'leadership_governance';\n  if (normalized.includes('esg') || normalized.includes('reputation') || normalized.includes('labor')) return 'esg_reputation';\n  return 'financial_health';\n}\n\nfunction dateOnly(value, fallbackDate) {\n  const date = value ? new Date(value) : fallbackDate;\n  if (Number.isNaN(date.getTime())) return fallbackDate.toISOString().slice(0, 10);\n  return date.toISOString().slice(0, 10);\n}\n\nfunction relativeTime(value) {\n  const date = value ? new Date(value) : now;\n  if (Number.isNaN(date.getTime())) return 'just now';\n  const minutes = Math.max(0, Math.round((now.getTime() - date.getTime()) / 60000));\n  if (minutes < 1) return 'just now';\n  if (minutes < 60) return minutes + ' minutes ago';\n  const hours = Math.round(minutes / 60);\n  if (hours < 48) return hours + ' hours ago';\n  const days = Math.round(hours / 24);\n  return days + ' days ago';\n}\n\nfunction sourceUrl(value) {\n  const text = String(value || '').trim();\n  return text.startsWith('http://') || text.startsWith('https://') ? text : 'https://parallel.ai';\n}\n\nfunction recommendationFor(level) {\n  if (level === 'CRITICAL') return 'suspend_relationship';\n  if (level === 'HIGH') return 'initiate_contingency';\n  if (level === 'MEDIUM') return 'escalate_review';\n  return 'continue_monitoring';\n}\n\nfunction auditTimestamp(row) {\n  return String(pick(row, ['timestamp', 'assessment_date', 'created_at', 'date'], ''));\n}\n\nconst latestAuditByVendor = new Map();\nfor (const row of audit_log) {\n  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], '')).trim();\n  if (!vendorName) continue;\n  const key = vendorName.toLowerCase();\n  const current = latestAuditByVendor.get(key);\n  const nextTime = new Date(auditTimestamp(row)).getTime() || 0;\n  const currentTime = current ? (new Date(auditTimestamp(current)).getTime() || 0) : -1;\n  if (!current || nextTime >= currentTime) latestAuditByVendor.set(key, row);\n}\n\nfunction dimensionsFor(latestAudit, riskLevel) {\n  const categories = parseList(pick(latestAudit || {}, ['categories', 'risk_categories', 'category'], ''));\n  const activeKeys = new Set(categories.map(dimensionKey));\n  return dimensionOrder.map(key => {\n    const active = activeKeys.has(key);\n    return {\n      key,\n      label: dimensionLabels[key],\n      severity: active ? riskLevel : 'LOW',\n      status: active ? 'watch' : 'stable',\n      findings: active\n        ? (pick(latestAudit || {}, ['summary', 'detail', 'event_summary'], dimensionLabels[key] + ' requires review.'))\n        : 'No active findings in the current monitoring window.',\n    };\n  });\n}\n\nfunction monitorLensFor(vendorName) {\n  return monitors\n    .filter(row => String(pick(row, ['vendor_name', 'vendorName'], '')).toLowerCase() === vendorName.toLowerCase())\n    .map(row => ({\n      dimension: String(pick(row, ['risk_dimension', 'monitor_category', 'category'], 'general')),\n      cadence: String(pick(row, ['cadence'], 'daily')),\n      status: 'active',\n      query: String(pick(row, ['query', 'monitor_query'], vendorName + ' vendor risk')),\n      lastEvent: String(pick(row, ['last_event_at', 'updated_at', 'created_at'], 'No event yet')),\n    }));\n}\n\nconst activeRegistry = registry.filter(row => {\n  const active = String(pick(row, ['active'], 'true')).trim().toLowerCase();\n  return !['false', 'no', '0'].includes(active);\n});\n\nconst vendors = activeRegistry.map(row => {\n  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], 'Unknown vendor')).trim();\n  const latest = latestAuditByVendor.get(vendorName.toLowerCase());\n  const riskLevel = normalizeRisk(pick(latest || {}, ['risk_level', 'riskLevel'], pick(row, ['risk_tier_override', 'risk_level'], 'LOW')));\n  const latestDate = dateOnly(auditTimestamp(latest || {}), now);\n  const nextDate = dateOnly(pick(row, ['next_research_date', 'nextResearchDate'], now.toISOString()), now);\n  const adverseFlag = toBool(pick(latest || {}, ['adverse_flag', 'adverseFlag'], riskLevel === 'HIGH' || riskLevel === 'CRITICAL'));\n  const summary = String(pick(latest || {}, ['summary', 'detail', 'event_summary'], vendorName + ' is currently assessed at ' + riskLevel + ' risk.'));\n  const overrides = parseList(pick(latest || {}, ['triggered_overrides', 'triggeredOverrides'], pick(row, ['risk_tier_override'], '')));\n  const domain = String(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], slugify(vendorName) + '.com'));\n  const normalizedDomain = domain.startsWith('http://') || domain.startsWith('https://') ? domain : 'https://' + domain;\n  const score = Number(pick(latest || {}, ['score', 'risk_score'], pick(row, ['risk_score', 'riskScore', 'score'], riskScores[riskLevel]))) || riskScores[riskLevel];\n  const monitorsForVendor = monitorLensFor(vendorName);\n\n  return {\n    id: slugify(vendorName),\n    vendorName,\n    vendorDomain: normalizedDomain,\n    vendorCategory: String(pick(row, ['vendor_category', 'vendorCategory', 'category'], 'vendor')).toLowerCase().replace(/\\s+/g, '_'),\n    monitoringPriority: normalizePriority(pick(row, ['monitoring_priority', 'monitoringPriority', 'priority'], ''), riskLevel),\n    relationshipOwner: String(pick(row, ['relationship_owner', 'relationshipOwner', 'owner'], 'Procurement')),\n    region: String(pick(row, ['region'], 'Global')),\n    riskLevel,\n    overallRiskLevel: riskLevel,\n    score,\n    actionRequired: riskLevel === 'HIGH' || riskLevel === 'CRITICAL',\n    adverseFlag,\n    recommendation: String(pick(latest || {}, ['recommendation'], recommendationFor(riskLevel))),\n    summary,\n    movement: String(pick(latest || {}, ['movement'], '+0 live snapshot')),\n    lastAssessmentDate: latestDate,\n    nextResearchDate: nextDate,\n    triggeredOverrides: overrides.filter(value => value && riskLevels.indexOf(String(value).toUpperCase()) === -1),\n    dimensions: dimensionsFor(latest, riskLevel),\n    adverseEvents: adverseFlag ? [{\n      title: String(pick(latest || {}, ['title', 'event_summary'], riskLevel + ' risk finding')),\n      date: latestDate,\n      category: String(parseList(pick(latest || {}, ['categories', 'category'], 'general'))[0] || 'general'),\n      severity: riskLevel,\n      description: summary,\n      sourceUrl: sourceUrl(pick(latest || {}, ['source', 'source_url', 'sourceUrl'], '')),\n    }] : [],\n    evidence: latest ? [{\n      title: String(pick(latest, ['title', 'summary'], 'Latest assessment')),\n      publication: String(pick(latest, ['source', 'publication'], 'Parallel assessment')),\n      publishedAt: latestDate,\n      materiality: summary,\n      href: sourceUrl(pick(latest, ['source_url', 'sourceUrl', 'source'], '')),\n    }] : [],\n    monitors: monitorsForVendor,\n  };\n}).sort((left, right) => right.score - left.score);\n\nconst riskDistribution = riskLevels.map(level => ({\n  label: level,\n  count: vendors.filter(vendor => vendor.riskLevel === level).length,\n}));\n\nconst dueVendors = vendors.filter(vendor => {\n  const next = new Date(vendor.nextResearchDate);\n  return !Number.isNaN(next.getTime()) && next <= now;\n});\n\nconst researchedToday = audit_log.filter(row => dateOnly(auditTimestamp(row), now) === now.toISOString().slice(0, 10)).length;\nconst adverseCount = vendors.filter(vendor => vendor.adverseFlag).length;\nconst actionCount = vendors.filter(vendor => vendor.actionRequired).length;\nconst criticalCount = vendors.filter(vendor => vendor.riskLevel === 'CRITICAL').length;\nconst highCount = vendors.filter(vendor => vendor.riskLevel === 'HIGH').length;\nconst activeMonitorCount = monitors.length;\n\nconst sortedAudit = audit_log.slice().sort((left, right) => {\n  return (new Date(auditTimestamp(right)).getTime() || 0) - (new Date(auditTimestamp(left)).getTime() || 0);\n});\n\nconst feed = sortedAudit.slice(0, 25).map(row => {\n  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], 'Unknown vendor'));\n  const riskLevel = normalizeRisk(pick(row, ['risk_level', 'riskLevel', 'severity'], 'MEDIUM'));\n  const summary = String(pick(row, ['summary', 'detail', 'event_summary'], vendorName + ' monitoring event.'));\n  return {\n    vendorName,\n    title: String(pick(row, ['title', 'event_summary'], summary.split('.')[0] || 'Monitoring update')),\n    severity: riskLevel,\n    timestamp: relativeTime(auditTimestamp(row)),\n    detail: summary,\n    sourceUrl: sourceUrl(pick(row, ['source_url', 'sourceUrl', 'source'], '')),\n  };\n});\n\nconst actionQueue = vendors\n  .filter(vendor => vendor.actionRequired)\n  .map(vendor => ({\n    vendorName: vendor.vendorName,\n    owner: vendor.riskLevel === 'CRITICAL' ? 'Security operations' : 'Procurement finance',\n    deadline: vendor.riskLevel === 'CRITICAL' ? 'Due in 12h' : 'Due in 24h',\n    action: vendor.riskLevel === 'CRITICAL'\n      ? 'Validate exposure, review contingency supplier path, and notify accountable stakeholders.'\n      : 'Update the vendor risk memo and confirm mitigation owner.',\n    riskLevel: vendor.riskLevel,\n  }));\n\nreturn [{\n  json: {\n    lastUpdated: now.toISOString(),\n    metrics: [\n      {\n        label: 'Portfolio risk posture',\n        value: criticalCount + ' CRITICAL / ' + highCount + ' HIGH',\n        trend: actionCount + ' vendors require immediate review',\n        tone: actionCount ? 'critical' : 'positive',\n      },\n      {\n        label: 'Research cadence',\n        value: dueVendors.length + ' due today',\n        trend: researchedToday + ' audit log entries recorded today',\n        tone: dueVendors.length ? 'warning' : 'positive',\n      },\n      {\n        label: 'Monitor fleet health',\n        value: activeMonitorCount + ' active',\n        trend: 'Webhook healthy, live snapshot generated',\n        tone: 'positive',\n      },\n      {\n        label: 'Action queue',\n        value: actionCount + ' escalations',\n        trend: actionQueue.filter(item => item.deadline.includes('12h')).length + ' due in the next 12h',\n        tone: actionCount ? 'default' : 'positive',\n      },\n    ],\n    riskDistribution,\n    researchSummary: {\n      totalDue: dueVendors.length,\n      totalResearched: researchedToday,\n      totalFailed: 0,\n      adverseCount,\n      batchesExecuted: Math.ceil(Math.max(dueVendors.length, researchedToday) / 50),\n      duration: 'live',\n    },\n    health: {\n      totalMonitors: monitors.length,\n      activeCount: monitors.length,\n      failedCount: 0,\n      orphanCount: 0,\n      recreated: 0,\n      webhookHealthy: true,\n    },\n    feed,\n    actionQueue,\n    vendors,\n  }\n}];\n"
+      }
+    },
+    {
+      "id": "portfolio-mutation-webhook-1",
+      "name": "Portfolio: Mutation Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        3600
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "procurement-portfolio-mutation",
+        "httpMethod": "POST",
+        "responseMode": "lastNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "node-48",
+      "name": "Portfolio: Read Vendors",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        340,
+        3600
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Vendors"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-49",
+      "name": "Portfolio: Read Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        580,
+        3600
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-50",
+      "name": "Portfolio: Build Vendor Rows",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        3600
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst incoming = $('Portfolio: Mutation Webhook').first().json || {};\nconst headers = incoming.headers || {};\nconst body = incoming.body && typeof incoming.body === 'object' ? incoming.body : incoming;\nconst currentRows = $('Portfolio: Read Vendors').all().map(i => i.json);\nconst now = new Date().toISOString();\n\nconst seedVendors = [\n  { vendorName: 'Microsoft', vendorDomain: 'https://microsoft.com', vendorCategory: 'technology', monitoringPriority: 'high' },\n  { vendorName: 'Amazon Web Services', vendorDomain: 'https://aws.amazon.com', vendorCategory: 'technology', monitoringPriority: 'high' },\n  { vendorName: 'Salesforce', vendorDomain: 'https://salesforce.com', vendorCategory: 'technology', monitoringPriority: 'high' },\n  { vendorName: 'JPMorgan Chase', vendorDomain: 'https://jpmorganchase.com', vendorCategory: 'financial_services', monitoringPriority: 'high' },\n  { vendorName: 'Goldman Sachs', vendorDomain: 'https://goldmansachs.com', vendorCategory: 'financial_services', monitoringPriority: 'medium' },\n  { vendorName: 'UnitedHealth Group', vendorDomain: 'https://unitedhealthgroup.com', vendorCategory: 'healthcare', monitoringPriority: 'high' },\n  { vendorName: 'Pfizer', vendorDomain: 'https://pfizer.com', vendorCategory: 'healthcare', monitoringPriority: 'medium' },\n  { vendorName: 'Johnson & Johnson', vendorDomain: 'https://jnj.com', vendorCategory: 'healthcare', monitoringPriority: 'medium' },\n  { vendorName: 'Siemens', vendorDomain: 'https://siemens.com', vendorCategory: 'manufacturing', monitoringPriority: 'medium' },\n  { vendorName: 'Caterpillar', vendorDomain: 'https://caterpillar.com', vendorCategory: 'manufacturing', monitoringPriority: 'low' },\n  { vendorName: 'Deloitte', vendorDomain: 'https://deloitte.com', vendorCategory: 'professional_services', monitoringPriority: 'medium' },\n  { vendorName: 'Accenture', vendorDomain: 'https://accenture.com', vendorCategory: 'professional_services', monitoringPriority: 'medium' },\n  { vendorName: 'Stripe', vendorDomain: 'https://stripe.com', vendorCategory: 'financial_services', monitoringPriority: 'high' },\n  { vendorName: 'CrowdStrike', vendorDomain: 'https://crowdstrike.com', vendorCategory: 'technology', monitoringPriority: 'high' },\n  { vendorName: '3M', vendorDomain: 'https://3m.com', vendorCategory: 'manufacturing', monitoringPriority: 'low' },\n];\n\nfunction pick(row, keys, fallback = '') {\n  for (const key of keys) {\n    if (row[key] !== undefined && row[key] !== null && String(row[key]).trim() !== '') {\n      return row[key];\n    }\n  }\n  return fallback;\n}\n\nfunction headerValue(name) {\n  const target = name.toLowerCase();\n  for (const [key, value] of Object.entries(headers)) {\n    if (key.toLowerCase() === target) return Array.isArray(value) ? value[0] : value;\n  }\n  return '';\n}\n\nfunction isTruthy(value) {\n  return ['true', 'yes', '1', 'y'].includes(String(value || '').trim().toLowerCase());\n}\n\nfunction isActive(row) {\n  const value = String(pick(row, ['active'], 'TRUE')).trim().toLowerCase();\n  return !['false', 'no', '0', 'inactive'].includes(value);\n}\n\nfunction normalizeDomain(value, name) {\n  const fallback = String(name || 'vendor').toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.example';\n  const raw = String(value || fallback).trim();\n  return raw.startsWith('http://') || raw.startsWith('https://') ? raw : 'https://' + raw;\n}\n\nfunction keyFor(row) {\n  return String(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], pick(row, ['vendor_name', 'vendorName', 'name'], '')))\n    .trim()\n    .toLowerCase();\n}\n\nfunction normalizePriority(value) {\n  const normalized = String(value || '').trim().toLowerCase();\n  return ['high', 'medium', 'low'].includes(normalized) ? normalized : 'medium';\n}\n\nfunction normalizeRisk(value) {\n  const normalized = String(value || '').trim().toUpperCase();\n  return ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL'].includes(normalized) ? normalized : '';\n}\n\nfunction sheetRowFromInput(input) {\n  const vendorName = String(input.vendorName || input.vendor_name || '').trim();\n  if (!vendorName) throw new Error('Portfolio mutation vendorName is required.');\n  const domain = normalizeDomain(input.vendorDomain || input.vendor_domain, vendorName);\n  return {\n    vendor_name: vendorName,\n    vendor_domain: domain,\n    vendor_category: String(input.vendorCategory || input.vendor_category || 'vendor').trim().toLowerCase().replace(/\\s+/g, '_'),\n    risk_tier_override: normalizeRisk(input.riskLevel || input.risk_level),\n    active: 'TRUE',\n    monitoring_priority: normalizePriority(input.monitoringPriority || input.monitoring_priority),\n    relationship_owner: String(input.relationshipOwner || input.relationship_owner || 'Procurement').trim(),\n    region: String(input.region || 'Global').trim(),\n    risk_score: input.score !== undefined ? String(input.score) : '',\n    next_research_date: String(input.nextResearchDate || input.next_research_date || ''),\n    last_synced_at: now,\n    dashboard_managed: 'TRUE',\n  };\n}\n\nfunction normalizeExistingRow(row) {\n  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], '')).trim();\n  if (!vendorName) return null;\n  return {\n    vendor_name: vendorName,\n    vendor_domain: normalizeDomain(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], ''), vendorName),\n    vendor_category: String(pick(row, ['vendor_category', 'vendorCategory', 'category'], 'vendor')).trim().toLowerCase().replace(/\\s+/g, '_'),\n    risk_tier_override: String(pick(row, ['risk_tier_override', 'riskTierOverride', 'risk_level', 'riskLevel'], '')),\n    active: isActive(row) ? 'TRUE' : 'FALSE',\n    monitoring_priority: normalizePriority(pick(row, ['monitoring_priority', 'monitoringPriority', 'priority'], '')),\n    relationship_owner: String(pick(row, ['relationship_owner', 'relationshipOwner', 'owner'], 'Procurement')),\n    region: String(pick(row, ['region'], 'Global')),\n    risk_score: String(pick(row, ['risk_score', 'riskScore', 'score'], '')),\n    next_research_date: String(pick(row, ['next_research_date', 'nextResearchDate'], '')),\n    last_synced_at: String(pick(row, ['last_synced_at', 'lastSyncedAt'], '')),\n    dashboard_managed: isTruthy(pick(row, ['dashboard_managed', 'dashboardManaged'], '')) ? 'TRUE' : 'FALSE',\n  };\n}\n\nfunction seedRow(input) {\n  return {\n    vendor_name: input.vendorName,\n    vendor_domain: input.vendorDomain,\n    vendor_category: input.vendorCategory,\n    risk_tier_override: '',\n    active: 'TRUE',\n    monitoring_priority: input.monitoringPriority,\n    relationship_owner: 'Procurement',\n    region: 'Global',\n    risk_score: '',\n    next_research_date: '',\n    last_synced_at: now,\n    dashboard_managed: 'FALSE',\n  };\n}\n\nconst expectedToken = String($vars?.PROCUREMENT_DASHBOARD_WRITE_TOKEN || '').trim();\nif (!expectedToken) {\n  throw new Error('Set n8n variable PROCUREMENT_DASHBOARD_WRITE_TOKEN before enabling portfolio write-back.');\n}\n\nconst actualToken = String(headerValue('x-procurement-dashboard-token') || '').trim();\nif (actualToken !== expectedToken) {\n  throw new Error('Unauthorized portfolio mutation.');\n}\n\nconst action = body.action;\nif (!['addVendor', 'uploadVendors', 'resetSeedVendors'].includes(action)) {\n  throw new Error('Unsupported portfolio mutation action.');\n}\n\nconst rowsByKey = new Map();\nfor (const row of currentRows) {\n  const normalized = normalizeExistingRow(row);\n  if (normalized) rowsByKey.set(keyFor(normalized), normalized);\n}\n\nif (action === 'addVendor') {\n  const row = sheetRowFromInput(body.vendor || {});\n  rowsByKey.set(keyFor(row), row);\n}\n\nif (action === 'uploadVendors') {\n  const vendors = Array.isArray(body.vendors) ? body.vendors : [];\n  if (!vendors.length) throw new Error('uploadVendors requires at least one vendor.');\n  for (const vendor of vendors) {\n    const row = sheetRowFromInput(vendor || {});\n    rowsByKey.set(keyFor(row), row);\n  }\n}\n\nif (action === 'resetSeedVendors') {\n  const seedRows = seedVendors.map(seedRow);\n  const seedKeys = new Set(seedRows.map(keyFor));\n  for (const row of rowsByKey.values()) {\n    if (!seedKeys.has(keyFor(row)) && row.dashboard_managed === 'TRUE') {\n      row.active = 'FALSE';\n      row.last_synced_at = now;\n    }\n  }\n  for (const row of seedRows) {\n    rowsByKey.set(keyFor(row), row);\n  }\n}\n\nreturn Array.from(rowsByKey.values()).map(row => ({ json: row }));\n"
+      }
+    },
+    {
+      "id": "node-51",
+      "name": "Portfolio: Write Vendors",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1060,
+        3600
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Vendors"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    },
+    {
+      "id": "node-52",
+      "name": "Portfolio: Build Registry Rows",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1300,
+        3600
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst vendorRows = $('Portfolio: Build Vendor Rows').all().map(i => i.json);\nconst registryRows = $('Portfolio: Read Registry').all().map(i => i.json);\nconst now = new Date().toISOString();\n\nfunction pick(row, keys, fallback = '') {\n  for (const key of keys) {\n    if (row[key] !== undefined && row[key] !== null && String(row[key]).trim() !== '') {\n      return row[key];\n    }\n  }\n  return fallback;\n}\n\nfunction normalizeDomain(value, name) {\n  const fallback = String(name || 'vendor').toLowerCase().replace(/[^a-z0-9]+/g, '-') + '.example';\n  const raw = String(value || fallback).trim();\n  return raw.startsWith('http://') || raw.startsWith('https://') ? raw : 'https://' + raw;\n}\n\nfunction keyFor(row) {\n  return String(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], pick(row, ['vendor_name', 'vendorName', 'name'], '')))\n    .trim()\n    .toLowerCase();\n}\n\nconst registryByKey = new Map();\nfor (const row of registryRows) {\n  const key = keyFor(row);\n  if (key) registryByKey.set(key, row);\n}\n\nreturn vendorRows.map(row => {\n  const previous = registryByKey.get(keyFor(row)) || {};\n  const vendorName = String(pick(row, ['vendor_name', 'vendorName', 'name'], pick(previous, ['vendor_name', 'vendorName', 'name'], 'Unknown vendor')));\n  const domain = normalizeDomain(pick(row, ['vendor_domain', 'vendorDomain', 'domain'], pick(previous, ['vendor_domain', 'vendorDomain', 'domain'], '')), vendorName);\n\n  return {\n    json: {\n      vendor_name: vendorName,\n      vendor_domain: domain,\n      vendor_category: String(pick(row, ['vendor_category', 'vendorCategory', 'category'], pick(previous, ['vendor_category', 'vendorCategory', 'category'], 'vendor'))),\n      risk_tier_override: String(pick(row, ['risk_tier_override', 'riskTierOverride'], pick(previous, ['risk_tier_override', 'riskTierOverride'], ''))),\n      active: String(pick(row, ['active'], pick(previous, ['active'], 'TRUE'))),\n      monitoring_priority: String(pick(row, ['monitoring_priority', 'monitoringPriority', 'priority'], pick(previous, ['monitoring_priority', 'monitoringPriority', 'priority'], 'medium'))),\n      monitor_ids: String(pick(previous, ['monitor_ids', 'monitorIds'], '')),\n      next_research_date: String(pick(row, ['next_research_date', 'nextResearchDate'], pick(previous, ['next_research_date', 'nextResearchDate'], ''))),\n      last_synced_at: now,\n      relationship_owner: String(pick(row, ['relationship_owner', 'relationshipOwner', 'owner'], pick(previous, ['relationship_owner', 'relationshipOwner', 'owner'], 'Procurement'))),\n      region: String(pick(row, ['region'], pick(previous, ['region'], 'Global'))),\n      risk_score: String(pick(row, ['risk_score', 'riskScore', 'score'], pick(previous, ['risk_score', 'riskScore', 'score'], ''))),\n      dashboard_managed: String(pick(row, ['dashboard_managed', 'dashboardManaged'], pick(previous, ['dashboard_managed', 'dashboardManaged'], 'FALSE'))),\n    },\n  };\n});\n"
+      }
+    },
+    {
+      "id": "node-53",
+      "name": "Portfolio: Write Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1540,
+        3600
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    },
+    {
+      "id": "node-54",
+      "name": "Portfolio: Mutation Result",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1780,
+        3600
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst incoming = $('Portfolio: Mutation Webhook').first().json || {};\nconst body = incoming.body && typeof incoming.body === 'object' ? incoming.body : incoming;\nconst action = body.action || 'unknown';\nconst affected = action === 'uploadVendors'\n  ? (Array.isArray(body.vendors) ? body.vendors.length : 0)\n  : action === 'addVendor'\n    ? 1\n    : $('Portfolio: Build Vendor Rows').all().length;\n\nreturn [{\n  json: {\n    ok: true,\n    action,\n    affected,\n  },\n}];\n"
       }
     }
   ],
@@ -1578,6 +1738,83 @@
         [
           {
             "node": "Snapshot: Build Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Portfolio: Mutation Webhook": {
+      "main": [
+        [
+          {
+            "node": "Portfolio: Read Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Portfolio: Read Vendors": {
+      "main": [
+        [
+          {
+            "node": "Portfolio: Read Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Portfolio: Read Registry": {
+      "main": [
+        [
+          {
+            "node": "Portfolio: Build Vendor Rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Portfolio: Build Vendor Rows": {
+      "main": [
+        [
+          {
+            "node": "Portfolio: Write Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Portfolio: Write Vendors": {
+      "main": [
+        [
+          {
+            "node": "Portfolio: Build Registry Rows",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Portfolio: Build Registry Rows": {
+      "main": [
+        [
+          {
+            "node": "Portfolio: Write Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Portfolio: Write Registry": {
+      "main": [
+        [
+          {
+            "node": "Portfolio: Mutation Result",
             "type": "main",
             "index": 0
           }

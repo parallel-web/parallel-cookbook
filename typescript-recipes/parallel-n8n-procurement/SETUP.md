@@ -82,7 +82,7 @@ In n8n, import only this file for the normal setup:
 n8n-workflows/workflow-combined.json
 ```
 
-This is the canonical workflow. It has 48 nodes, 42 connections, and no `executeWorkflow` nodes, so there is no separate workflow-ID wiring step.
+This is the canonical workflow. It has 56 nodes, 49 connections, and no `executeWorkflow` nodes, so there is no separate workflow-ID wiring step.
 
 The other workflow JSON files are included for advanced users who want to inspect or split the system.
 
@@ -104,6 +104,7 @@ Set these n8n variables:
 | `GOOGLE_SHEET_ID` | Yes | `1abc...xyz` |
 | `SLACK_WEBHOOK_URL` | Yes | `https://hooks.slack.com/services/...` |
 | `N8N_WEBHOOK_BASE_URL` | Yes | `https://your-workspace.app.n8n.cloud` |
+| `PROCUREMENT_DASHBOARD_WRITE_TOKEN` | Yes for dashboard writes | `replace-with-a-long-random-secret` |
 | `SLACK_ALERT_TARGET` | No | `#procurement-critical` |
 
 Use `N8N_WEBHOOK_BASE_URL` without a trailing slash. The workflow builds callback URLs such as:
@@ -131,12 +132,14 @@ The scheduled triggers run vendor sync and research automatically after activati
 
 ## 8. Run the Dashboard
 
-The dashboard reads the combined workflow's `procurement-dashboard-snapshot` webhook. It does not include a runtime mock fallback.
+The dashboard reads the combined workflow's `procurement-dashboard-snapshot` webhook and writes portfolio add/upload/reset actions through `procurement-portfolio-mutation`. It does not include a runtime mock fallback.
 
 Create `dashboard/.env.local`:
 
 ```bash
 PROCUREMENT_DASHBOARD_SNAPSHOT_URL=https://YOUR_N8N_HOST/webhook/procurement-dashboard-snapshot
+PROCUREMENT_DASHBOARD_MUTATION_URL=https://YOUR_N8N_HOST/webhook/procurement-portfolio-mutation
+PROCUREMENT_DASHBOARD_WRITE_TOKEN=replace-with-the-same-token-set-in-n8n
 ```
 
 Then run:
@@ -168,9 +171,11 @@ The dashboard includes:
 | Observe topology | `/observe` |
 | Vendor detail | `/vendors/:vendorId` |
 
+Portfolio add, CSV upload, and reset are backend-backed. The dashboard calls its local `POST /api/portfolio/mutation` route, which proxies to n8n with the `x-procurement-dashboard-token` header. n8n validates the token, writes `Vendors` and `Registry`, and the dashboard refreshes from the live snapshot. Reset restores the shipped seed vendors and marks dashboard-added non-seed vendors inactive. Monitor creation and deletion still happen when the existing manual or scheduled sync path runs.
+
 ## 9. Dashboard E2E Tests
 
-Playwright tests use a local mocked snapshot endpoint for browser coverage and API contract checks.
+Playwright tests use local mocked snapshot and mutation endpoints for browser coverage and API contract checks.
 
 ```bash
 cd dashboard
@@ -189,6 +194,7 @@ These tests do not require n8n Cloud. Before marking a PR ready, still smoke tes
 | Slash command times out | Confirm the Slack request URL points to the active n8n webhook path |
 | Task callbacks do not arrive | Confirm `N8N_WEBHOOK_BASE_URL` is public and has no trailing slash |
 | Dashboard shows setup state | Confirm `PROCUREMENT_DASHBOARD_SNAPSHOT_URL` is set to the active n8n snapshot webhook |
+| Portfolio writes fail | Confirm `PROCUREMENT_DASHBOARD_MUTATION_URL` points to the active n8n mutation webhook and both sides use the same `PROCUREMENT_DASHBOARD_WRITE_TOKEN` |
 | Dashboard says the snapshot is invalid | Confirm the imported workflow JSON has the current `Snapshot: Build Payload` node |
 
 ## 11. Keeping Workflow JSON in Sync

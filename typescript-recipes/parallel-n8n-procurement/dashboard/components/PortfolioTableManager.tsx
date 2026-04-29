@@ -3,7 +3,7 @@
 import type { ChangeEvent, FormEvent } from "react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import { MoreHorizontal, Plus, RotateCcw, Trash2, Upload } from "lucide-react";
+import { MoreHorizontal, Plus, RotateCcw, Upload } from "lucide-react";
 import { useDashboardData } from "@/components/DashboardDataProvider";
 import {
   type RiskDimension,
@@ -11,8 +11,11 @@ import {
   type RiskLevel,
   type VendorProfile,
 } from "@/lib/dashboard-types";
-
-const STORAGE_KEY = "parallel-procurement-vendors";
+import type {
+  PortfolioMutationRequest,
+  PortfolioMutationResponse,
+  PortfolioMutationVendorInput,
+} from "@/lib/portfolio-mutations";
 
 type VendorDraft = {
   vendorName: string;
@@ -53,10 +56,6 @@ function formatDate(input: string) {
   }).format(new Date(input));
 }
 
-function movementValue(movement: string) {
-  return movement.match(/[+-]\d+/)?.[0] ?? movement;
-}
-
 function normalizeRiskLevel(value: string | undefined): RiskLevel {
   const normalized = value?.trim().toUpperCase();
   if (normalized === "LOW" || normalized === "MEDIUM" || normalized === "HIGH" || normalized === "CRITICAL") {
@@ -77,6 +76,10 @@ function csvCells(line: string) {
   return line
     .split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/)
     .map((cell) => cell.trim().replace(/^"|"$/g, ""));
+}
+
+function csvHeaderKey(header: string) {
+  return header.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
 function defaultDimensions(level: RiskLevel): RiskDimension[] {
@@ -127,6 +130,20 @@ function buildVendor(draft: VendorDraft, lastUpdated: string): VendorProfile {
   };
 }
 
+function vendorToMutationInput(vendor: VendorProfile): PortfolioMutationVendorInput {
+  return {
+    vendorName: vendor.vendorName,
+    vendorDomain: vendor.vendorDomain,
+    vendorCategory: vendor.vendorCategory,
+    relationshipOwner: vendor.relationshipOwner,
+    region: vendor.region,
+    monitoringPriority: vendor.monitoringPriority,
+    riskLevel: vendor.riskLevel,
+    score: vendor.score,
+    nextResearchDate: vendor.nextResearchDate,
+  };
+}
+
 function parseCsv(text: string, lastUpdated: string) {
   const lines = text
     .split(/\r?\n/)
@@ -137,7 +154,7 @@ function parseCsv(text: string, lastUpdated: string) {
     return [];
   }
 
-  const headers = csvCells(lines[0]).map((header) => header.toLowerCase());
+  const headers = csvCells(lines[0]).map(csvHeaderKey);
 
   return lines.slice(1).map((line) => {
     const values = csvCells(line);
@@ -165,32 +182,6 @@ function parseCsv(text: string, lastUpdated: string) {
   }).filter((vendor): vendor is VendorProfile => Boolean(vendor));
 }
 
-function readStoredVendors(seedVendors: VendorProfile[]) {
-  if (typeof window === "undefined") {
-    return seedVendors;
-  }
-
-  const raw = window.localStorage.getItem(STORAGE_KEY);
-  if (!raw) {
-    return seedVendors;
-  }
-
-  try {
-    const parsed = JSON.parse(raw) as VendorProfile[];
-    return parsed.length ? parsed : seedVendors;
-  } catch {
-    return seedVendors;
-  }
-}
-
-function mergeVendors(current: VendorProfile[], incoming: VendorProfile[]) {
-  const merged = new Map(current.map((vendor) => [vendor.id, vendor]));
-  incoming.forEach((vendor) => {
-    merged.set(vendor.id, vendor);
-  });
-  return Array.from(merged.values()).sort((left, right) => right.score - left.score);
-}
-
 function RiskSignal({ level }: { level: RiskLevel }) {
   return (
     <span className={`risk-signal ${level.toLowerCase()}`}>
@@ -206,19 +197,16 @@ export function PortfolioTableManager() {
   const [vendors, setVendors] = useState<VendorProfile[]>(data.vendors);
   const [menuOpen, setMenuOpen] = useState(false);
   const [formOpen, setFormOpen] = useState(false);
-  const [rowMenuOpen, setRowMenuOpen] = useState<string | null>(null);
   const [draft, setDraft] = useState<VendorDraft>(defaultDraft);
+  const [mutationError, setMutationError] = useState<string | null>(null);
+  const [mutationMessage, setMutationMessage] = useState<string | null>(null);
+  const [pendingAction, setPendingAction] = useState<PortfolioMutationRequest["action"] | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const manageMenuRef = useRef<HTMLDivElement>(null);
-  const rowMenuRefs = useRef<Record<string, HTMLSpanElement | null>>({});
 
   useEffect(() => {
-    setVendors(readStoredVendors(data.vendors));
+    setVendors(data.vendors);
   }, [data.vendors]);
-
-  useEffect(() => {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(vendors));
-  }, [vendors]);
 
   useEffect(() => {
     function handlePointerDown(event: MouseEvent) {
@@ -227,18 +215,11 @@ export function PortfolioTableManager() {
       if (manageMenuRef.current && !manageMenuRef.current.contains(target)) {
         setMenuOpen(false);
       }
-
-      if (rowMenuOpen) {
-        const activeRowMenu = rowMenuRefs.current[rowMenuOpen];
-        if (activeRowMenu && !activeRowMenu.contains(target)) {
-          setRowMenuOpen(null);
-        }
-      }
     }
 
     document.addEventListener("mousedown", handlePointerDown);
     return () => document.removeEventListener("mousedown", handlePointerDown);
-  }, [rowMenuOpen]);
+  }, []);
 
   const rows = useMemo(() => vendors.slice().sort((left, right) => right.score - left.score), [vendors]);
 
@@ -255,7 +236,34 @@ export function PortfolioTableManager() {
 
   const resetVendors = () => {
     setMenuOpen(false);
-    setVendors(data.vendors);
+    void runMutation({ action: "resetSeedVendors" }, "Demo portfolio restored from the backend seed set.");
+  };
+
+  const runMutation = async (request: PortfolioMutationRequest, successMessage: string) => {
+    setPendingAction(request.action);
+    setMutationError(null);
+    setMutationMessage(null);
+
+    try {
+      const response = await fetch("/api/portfolio/mutation", {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json" },
+        body: JSON.stringify(request),
+      });
+
+      const body = (await response.json().catch(() => ({ ok: false, error: "Portfolio mutation returned invalid JSON." }))) as PortfolioMutationResponse;
+
+      if (!response.ok || !body.ok) {
+        throw new Error(body.error || `Portfolio mutation failed with HTTP ${response.status}.`);
+      }
+
+      setMutationMessage(successMessage);
+      router.refresh();
+    } catch (error) {
+      setMutationError(error instanceof Error ? error.message : "Portfolio mutation failed.");
+    } finally {
+      setPendingAction(null);
+    }
   };
 
   const handleCsvUpload = async (event: ChangeEvent<HTMLInputElement>) => {
@@ -265,7 +273,12 @@ export function PortfolioTableManager() {
     const text = await file.text();
     const imported = parseCsv(text, data.lastUpdated);
     if (imported.length) {
-      setVendors((current) => mergeVendors(current, imported));
+      await runMutation(
+        { action: "uploadVendors", vendors: imported.map(vendorToMutationInput) },
+        `${imported.length} vendors uploaded through n8n.`,
+      );
+    } else {
+      setMutationError("Upload did not contain any vendor rows.");
     }
     event.target.value = "";
   };
@@ -273,16 +286,8 @@ export function PortfolioTableManager() {
   const handleAddVendor = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const vendor = buildVendor(draft, data.lastUpdated);
-    setVendors((current) => mergeVendors(current, [vendor]));
+    void runMutation({ action: "addVendor", vendor: vendorToMutationInput(vendor) }, `${vendor.vendorName} saved through n8n.`);
     setFormOpen(false);
-  };
-
-  const deleteVendor = (vendorId: string) => {
-    const vendor = vendors.find((entry) => entry.id === vendorId);
-    if (!vendor) return;
-    if (!window.confirm(`Delete ${vendor.vendorName}?`)) return;
-    setVendors((current) => current.filter((entry) => entry.id !== vendorId));
-    setRowMenuOpen(null);
   };
 
   return (
@@ -296,15 +301,15 @@ export function PortfolioTableManager() {
           </button>
           {menuOpen ? (
             <div className="manage-menu">
-              <button type="button" onClick={openUpload}>
+              <button type="button" onClick={openUpload} disabled={Boolean(pendingAction)}>
                 <Upload size={14} />
                 Upload CSV
               </button>
-              <button type="button" onClick={openAdd}>
+              <button type="button" onClick={openAdd} disabled={Boolean(pendingAction)}>
                 <Plus size={14} />
                 Add vendor
               </button>
-              <button type="button" onClick={resetVendors}>
+              <button type="button" onClick={resetVendors} disabled={Boolean(pendingAction)}>
                 <RotateCcw size={14} />
                 Reset demo data
               </button>
@@ -335,13 +340,17 @@ export function PortfolioTableManager() {
           <input value={draft.score} onChange={(event) => setDraft((current) => ({ ...current, score: event.target.value }))} type="number" min="0" max="100" placeholder="Score" required />
           <input value={draft.nextResearchDate} onChange={(event) => setDraft((current) => ({ ...current, nextResearchDate: event.target.value }))} type="date" required />
           <div className="vendor-form-actions">
-            <button type="submit">Save vendor</button>
-            <button type="button" className="secondary" onClick={() => setFormOpen(false)}>
+            <button type="submit" disabled={Boolean(pendingAction)}>Save vendor</button>
+            <button type="button" className="secondary" onClick={() => setFormOpen(false)} disabled={Boolean(pendingAction)}>
               Cancel
             </button>
           </div>
         </form>
       ) : null}
+
+      {mutationError ? <div className="portfolio-status error" role="alert">{mutationError}</div> : null}
+      {mutationMessage ? <div className="portfolio-status success" role="status">{mutationMessage}</div> : null}
+      {pendingAction ? <div className="portfolio-status" role="status">Syncing portfolio changes through n8n...</div> : null}
 
       <div className="portfolio-table">
         <div className="portfolio-table-head">
@@ -352,7 +361,7 @@ export function PortfolioTableManager() {
           <span>Level</span>
           <span>Score</span>
           <span>Next</span>
-          <span>Manage</span>
+          <span>Status</span>
         </div>
 
         {rows.map((vendor) => (
@@ -381,32 +390,7 @@ export function PortfolioTableManager() {
             </span>
             <span className="portfolio-score">{vendor.score}</span>
             <span>{formatDate(vendor.nextResearchDate)}</span>
-            <span className="row-menu-wrap" ref={(node) => { rowMenuRefs.current[vendor.id] = node; }}>
-              <button
-                type="button"
-                className="row-menu-button"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  setRowMenuOpen((current) => (current === vendor.id ? null : vendor.id));
-                }}
-              >
-                <MoreHorizontal size={16} />
-              </button>
-              {rowMenuOpen === vendor.id ? (
-                <div className="row-menu">
-                  <button
-                    type="button"
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      deleteVendor(vendor.id);
-                    }}
-                  >
-                    <Trash2 size={14} />
-                    Delete vendor
-                  </button>
-                </div>
-              ) : null}
-            </span>
+            <span className="portfolio-sync-cell">n8n</span>
           </div>
         ))}
       </div>
