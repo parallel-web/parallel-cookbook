@@ -19,7 +19,7 @@ This cookbook builds an agent that doesn't make that trade-off. **Deep Agents is
 
 Where the canonical Deep Agents [`deep_research` example](https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research) pairs the harness with generic web search and produces an open-ended prose report, this recipe is the citation-grade vertical companion — every claim is tied to a Basis-backed source, every uncertain finding is flagged for human verification, and the output is a structured DD memo with named sections.
 
-We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `pro-fast` Task processor: a [cited memo](reports/workpapers/rivian-due-diligence-report.md) with [eight supporting workpapers](reports/workpapers/) persisted to local disk; ~10 Task API calls; wall-clock and full metrics in the [Cost and latency](#cost-and-latency) section below. More on what the agent actually produced further on.
+We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `pro-fast` Task processor: **23 minutes wall-clock, 9 Task API calls, a [37KB cited memo](reports/workpapers/rivian-due-diligence-report.md) with [eight supporting workpapers](reports/workpapers/) persisted to local disk** (~189 KB total). More on what the agent actually produced further on.
 
 ## Overview
 
@@ -277,27 +277,29 @@ for chunk in agent.stream(
 
 ## What the agent produced
 
-The Rivian run came back with the things you'd hope a competent junior analyst's first draft would catch — and a few that they might not. The full output is in [`reports/workpapers/`](reports/workpapers/): eight subagent workpapers and a synthesized [`rivian-due-diligence-report.md`](reports/workpapers/rivian-due-diligence-report.md).
+The Rivian run came back with the things you'd hope a competent junior analyst's first draft would catch — and a few that you'd hope they'd catch but might not. The full output is in [`reports/workpapers/`](reports/workpapers/): eight subagent workpapers and a synthesized [`rivian-due-diligence-report.md`](reports/workpapers/rivian-due-diligence-report.md).
 
-**A structural fragility finding the financial track surfaced on its own.** The [financial-health workpaper](reports/workpapers/financial-health.md) flagged that Rivian's Q4 2025 automotive gross profit had turned negative — driven by a $270M decline in regulatory credit sales. That's the kind of finding a one-shot research summary tends to miss because it requires connecting the headline gross-profit number to the line item that produced it. From the [final memo](reports/workpapers/rivian-due-diligence-report.md):
+**The quality-of-earnings finding.** The [financial-health workpaper](reports/workpapers/financial-health.md) and the orchestrator's synthesis caught that Rivian's headline FY2025 milestone — its first-ever annual gross profit, $144M — was entirely funded by VW JV software/services revenue. The automotive segment itself lost ~$432M at the gross level. The [final memo](reports/workpapers/rivian-due-diligence-report.md) flags this directly:
 
-> *Q4 2025 automotive gross profit turned negative primarily due to a $270M decline in regulatory credit sales. This volatility — driven by policy/regulatory decisions outside Rivian's control — makes near-term profitability fragile. Investors should model scenarios with and without regulatory credit income.*
+> *Continued negative automotive gross margins masked by JV-derived software revenue.*
 
-**A non-obvious competitive advantage from the Phase-2 fan-out.** The [`competitor-tesla`](reports/workpapers/competitor-tesla.md) subagent pulled out a near-term price-of-purchase advantage you wouldn't get from a generic "Rivian's competitors are Tesla, Ford, GM" paragraph:
+That's quality-of-earnings reasoning of the kind a credit committee or KYB reviewer would expect — pulling apart a headline number to see what funded it. Hard to surface from a one-shot research call; surfaces naturally when the financial subagent and the competitive-landscape subagent's revenue-mix data both end up in the orchestrator's synthesis context.
 
-> *"R1T qualifies for IRA EV tax credits (~$7,500); Cybertruck does not — a meaningful price-of-purchase advantage for Rivian in the near term."*
+**An open OSHA fatality investigation the litigation track caught.** The [litigation-regulatory workpaper](reports/workpapers/litigation-regulatory.md) flagged a March 5, 2026 worker death at Rivian's Normal, Illinois facility — and the orchestrator's synthesis connected it to a documented pattern of prior OSHA "serious" citations, escalating it as a high-risk item rather than a one-off. From the final memo:
 
-The same fan-out caught Mercedes's "[technology-open](reports/workpapers/competitor-mercedes.md)" pivot — a 23% YoY decline in BEV deliveries plus an explicit slowing of EV commitment, suggesting Mercedes is becoming a less aggressive near-term competitor in the premium-SUV segment that Rivian's R1S sits in.
+> *On March 5, 2026, a 61-year-old worker (Kevin Lancaster) was killed after being pinned between a semi-trailer and a loading dock at Rivian's Normal, Illinois warehouse. An OSHA fatality investigation is open; penalties and citation determinations are pending. This event occurs against a backdrop of a pattern of OSHA serious citations at the Normal facility… This is not an isolated incident — it is the most severe escalation of a documented safety compliance concern.*
 
-**A disclosure-adequacy red flag.** The [litigation-regulatory workpaper](reports/workpapers/litigation-regulatory.md) caught that a December 2024 TechCrunch investigation referred to executive harassment lawsuits as "previously unreported" — and connected the dots to a question the orchestrator carried into the final memo: *"The 'previously unreported' characterization raises a disclosure adequacy concern — reviewers should verify completeness in Rivian's SEC filings' legal proceedings section."* That's analyst-grade reasoning across what was found and what should be on file.
+That escalation reasoning — "this is part of a pattern, not a one-off" — is exactly what `previous_interaction_id` was used for. The litigation subagent saw the fatality news, surfaced a low-confidence flag on related citation history, then chained a targeted OSHA-IMIS-focused follow-up that pulled the prior citation pattern into the same workpaper.
 
-**Calibrated risk severity with explicit verification asks.** The [final memo](reports/workpapers/rivian-due-diligence-report.md) tiers every risk by severity (🔴 high / 🟡 medium / 🟢 resolved) and includes a "Confidence and Verification Notes" section that numbers ten specific findings with a calibrated confidence rating and the exact source-of-truth a reviewer should chase — *Crews v. Rivian* PACER docket, the 10-K balance sheet for cash-on-hand, Schedule 13D/G for the VW equity stake, the 10-K legal proceedings section for employment lawsuit completeness. Every shaky finding has a named verification path.
+**A sharper competitor pick from Phase-2 fan-out.** The [competitive-landscape](reports/workpapers/competitive-landscape.md) subagent picked **Tesla, Ford, and Kia** as the three competitors — a notable choice. Tesla and Ford are the obvious volume comparables; Kia is the non-obvious one. The orchestrator's reasoning, captured in [`competitor-kia.md`](reports/workpapers/competitor-kia.md): the Kia EV9 posted **22,017 US sales in 2024**, won the **2024 North American Utility Vehicle of the Year**, and targets exactly the three-row family-SUV niche Rivian's R1S sits in. The fan-out meant Kia got the same depth-of-investigation as Tesla — corporate snapshot, Hyundai Motor Group ownership structure, the IRA-driven Georgia battery JV — rather than being a one-line mention.
+
+**Calibrated risk severity with explicit verification asks.** The [final memo](reports/workpapers/rivian-due-diligence-report.md) tiers every risk by severity (🔴 high / 🟡 medium / 🟢 resolved) and ends with a "Key Risk Flags and Areas Requiring Further Investigation" section enumerating ten specific items with named verification paths — *Crews v. Rivian* final hearing on May 15, 2026; the OSHA fatality investigation's expected penalty range and willful-violation potential; the trajectory of automotive gross margin as R2 volumes scale; whether the ~$270M Q4 2025 decline in regulatory credit sales is timing-related or structural. Every shaky finding has a named source-of-truth a human can chase.
 
 None of this is magic. It's what you get when the underlying research API returns calibrated confidence per field and the agent has the affordance to chain a follow-up. The architecture just makes "ask sharper questions when the first answer is shaky" a first-class behavior.
 
 ### Cost and latency
 
-The Rivian run hit roughly 10 Task API calls — five Phase-1 packed calls plus two chained follow-ups (financial-health and litigation-regulatory each chained one when a low-confidence field surfaced) plus three Phase-2 competitor-analysis instances.
+The Rivian run hit **9 Task API calls in ~23 minutes** at the default `pro-fast` processor — five Phase-1 packed calls plus one chained follow-up (litigation-regulatory chained when an OSHA fatality surfaced and warranted deeper investigation) plus three Phase-2 competitor-analysis instances.
 
 Per-call latency by tier (from [Parallel pricing](https://docs.parallel.ai/getting-started/pricing)):
 
