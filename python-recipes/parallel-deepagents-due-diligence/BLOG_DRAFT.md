@@ -3,39 +3,31 @@
 *Automate multi-step company research with agentic orchestration and structured web intelligence.*
 
 - **Tags:** Cookbook
-- **Reading time:** ~10 min
+- **Reading time:** ~8 min
 - **GitHub:** [parallel-cookbook/python-recipes/parallel-deepagents-due-diligence](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence)
-- **Sample output:** [Rivian DD memo](reports/workpapers/rivian-due-diligence-report.md) and [eight workpapers](reports/workpapers/) — no setup needed to read.
+- **Sample output:** [Rivian DD memo](reports/workpapers/rivian-due-diligence-report.md) and [eight workpapers](reports/workpapers/)
 
 ---
 
-Company due diligence is a workflow that shows up everywhere in financial services. PE analysts screen deals. Bank credit teams assess borrowers. Compliance teams onboard new entities under KYB and EDD obligations. Insurance underwriters evaluate commercial policyholders. Vendor-risk teams scrutinize prospective suppliers. The research follows a consistent pattern: take a company, investigate it across several dimensions, produce a structured intelligence report where every claim has a source trail and any uncertain finding is flagged for human verification.
+Company due diligence is a workflow that shows up everywhere in financial services. PE analysts screen deals, bank credit teams assess borrowers, compliance teams onboard new entities, insurance underwriters evaluate commercial policyholders. The research follows a consistent pattern. Take a company, investigate it across several dimensions, produce a structured intelligence report where every claim has a source trail.
 
-The accountability bar is what makes this hard to automate well. A bank's KYB file or a credit committee's deal memo is a defensible artifact — every claim eventually traces to a source, every uncertain item gets a follow-up. Most "research agent" demos handle the search-and-summarize half cleanly but treat their own confidence as opaque. They produce confident-sounding paragraphs whether the underlying source was a clean SEC filing or a stale forum post.
-
-This cookbook builds an agent that doesn't make that trade-off. **LangChain's Deep Agents is the harness**, [**Parallel** is the research substrate](https://docs.parallel.ai/task-api/task-quickstart). [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) provides three primitives the recipe leans on — a [planning tool](https://docs.langchain.com/oss/python/deepagents/overview) (`write_todos`), [subagents](https://docs.langchain.com/oss/python/deepagents/subagents) with isolated message histories, and a [virtual filesystem](https://docs.langchain.com/oss/python/deepagents/filesystem) for offloading raw research. [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart) returns structured findings annotated with [Basis](https://docs.parallel.ai/task-api/guides/access-research-basis) — a per-field object containing source citations, the model's reasoning, and a high/medium/low confidence rating attached to each output field, rather than a single document-level relevance score. And [`previous_interaction_id`](https://docs.parallel.ai/task-api/guides/interactions) lets the agent chain a follow-up query that inherits the prior research thread's source context, so "verify the field that came back at low confidence" doesn't restart cold.
-
-This recipe sits alongside the Deep Agents [`deep_research` example](https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research) as a citation-grade vertical companion: same harness, swap the research substrate for Parallel's Task API, and the output becomes a structured DD memo where every claim is tied to a Basis source and every uncertain finding is flagged for human verification.
-
-We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `pro-fast` Task processor: **~23 minutes wall-clock, 9 Task API calls, a [cited DD memo](reports/workpapers/rivian-due-diligence-report.md) with [eight supporting workpapers](reports/workpapers/) persisted to local disk**. More on what the agent actually produced further on.
+This cookbook builds an agent that automates that workflow by combining LangChain's [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) for orchestration and [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart) for web research. Deep Agents handles planning, subagent delegation, and context management. Parallel handles the actual research, returning structured findings with per-field citations, reasoning traces, and calibrated confidence scores via [Basis](https://docs.parallel.ai/task-api/guides/access-research-basis). When findings from one track raise new questions, Parallel's [interactive research](https://docs.parallel.ai/task-api/guides/interactions) feature lets the agent chain follow-up queries with full context from the prior research thread.
 
 ## Overview
 
-The agent orchestrates the research in three phases.
-
-**Phase 1** dispatches five research subagents in parallel. Each has a focused system prompt and produces its own workpaper file:
+The agent orchestrates five research tracks, each handled by a dedicated subagent:
 
 - **Corporate profile** — legal entity structure, key officers, founding history, headcount, office locations
 - **Financial health** — funding history, revenue signals, valuation indicators, profitability markers
 - **Litigation and regulatory** — lawsuits, SEC filings, sanctions screening, regulatory actions, settlements
 - **News and reputation** — recent press coverage, leadership changes, controversy flags, media sentiment
-- **Competitive landscape** — identifies the target's positioning and returns three named competitors that Phase 2 fans out on (this subagent does not produce per-competitor profiles itself)
+- **Competitive landscape** — identifies the top three direct competitors and the target's positioning
 
-**Phase 2** is a [subagent fan-out](https://docs.langchain.com/oss/python/deepagents/subagents) — once `competitive-landscape` returns the named competitor list, the orchestrator dispatches **one separate `competitor-analysis` subagent instance per competitor**, in parallel. Each instance runs against its own isolated message history. The reason that matters: each `competitor-analysis` run burns through its own ~10–20K tokens of raw research material — pricing tables, product specs, recent press, financial figures — and only a distilled workpaper file ends up in the synthesis context. Without isolation, three competitors' raw findings would stack into the orchestrator's window and crowd out the cross-reference reasoning that has to happen in Phase 3.
+Once `competitive-landscape` returns its named list, the orchestrator dispatches a separate `competitor-analysis` subagent **once per competitor**, in parallel — the canonical Deep Agents fan-out shape, with each instance running in its own isolated context. The orchestrator then reads every workpaper, cross-references for contradictions and low-confidence findings, runs ad-hoc lookups via Parallel's Search API when discrepancies surface, and writes the final report with risk flags and citation trails.
 
-**Phase 3** is synthesis: the orchestrator reads every workpaper from disk, cross-references for contradictions and low-confidence findings, runs ad-hoc lookups via [`ParallelWebSearchTool`](https://docs.parallel.ai/search/search-quickstart) when discrepancies surface (~1–3s and a fraction of a cent per call — much cheaper than spinning up another Task call to disambiguate one fact), and writes the final memo with risk flags and citation trails.
+DD requires this multi-step architecture because earlier findings change what needs to be investigated next. If the corporate profile reveals the target is a subsidiary, the financial analysis needs to cover the parent. If the litigation scan surfaces an SEC investigation, the risk assessment changes. Deep Agents' planning tool lets the orchestrator adapt when findings shift the research plan.
 
-DD requires this multi-step architecture rather than a single API call because earlier findings change what needs to be investigated next. If `corporate-profile` reveals the target is a subsidiary, the financial analysis needs to cover the parent. If the litigation scan surfaces an SEC investigation, the risk assessment shifts. The Phase-2 fan-out matches the subagent shape Deep Agents was designed around: spawning N instances of the same subagent type for N parallel investigations, with isolated message histories per instance.
+Each research track uses a `pro-fast` processor Task API call. Validated end-to-end on Rivian Automotive (NASDAQ: RIVN): nine calls in ~23 minutes. See [Parallel pricing](https://docs.parallel.ai/getting-started/pricing) for current rates.
 
 ## Implementation
 
@@ -50,15 +42,19 @@ export ANTHROPIC_API_KEY="your-anthropic-api-key"
 export PARALLEL_API_KEY="your-parallel-api-key"
 ```
 
-### The research tool
+### Defining the Parallel research tools
 
-Every subagent calls a single tool — `research_task` — that takes a query and a description of the desired output, runs a Parallel Task API call under the hood, and returns the structured findings *plus* a list of any fields whose confidence came back at low. If that warning is non-empty, the subagent's reasoning loop knows to chain a follow-up query that re-asks specifically about those fields, anchored to the same research thread via `previous_interaction_id`. Roughly twenty lines of code on top of the SDK:
+We define two tools. The first wraps Parallel's Task API for structured research with Basis-aware confidence handling. The second uses the LangChain integration's web search tool for quick factual lookups during synthesis.
 
 ```python
 from typing import Optional
 
 from langchain_core.tools import tool
-from langchain_parallel import ParallelTaskRunTool, parse_basis
+from langchain_parallel import (
+    ParallelTaskRunTool,
+    ParallelWebSearchTool,
+    parse_basis,
+)
 
 
 @tool
@@ -70,8 +66,8 @@ def research_task(
     """Run structured web research via Parallel's Task API.
 
     Returns findings with per-field citations and confidence scores (Basis).
-    Use ``previous_interaction_id`` to chain a follow-up query that builds
-    on a prior research session.
+    Use previous_interaction_id to chain follow-up queries that build on
+    prior research context.
     """
     runner = ParallelTaskRunTool(
         processor="pro-fast",
@@ -100,152 +96,118 @@ def research_task(
             + ", ".join(parsed["low_confidence_fields"])
         )
     return response
+
+
+# Quick search tool for fast factual lookups during synthesis
+quick_search = ParallelWebSearchTool()
 ```
 
-Three things happen on top of the SDK call. The wrapper routes through `ParallelTaskRunTool` for structured task execution. It calls `parse_basis(result)` to extract per-field citations and the names of any fields whose confidence came back as `"low"`. And it surfaces those field names as an explicit `low_confidence_warning` in the tool's return value, so the calling subagent's reasoning loop can see them and decide to chain a follow-up.
+The tool does three things beyond a raw API call. It calls `parse_basis(result)` to extract per-field citations and the names of any low-confidence fields. It surfaces those names as an explicit `low_confidence_warning` in the tool's return value, so the calling subagent's reasoning loop can decide to chain a follow-up. And it returns the `interaction_id` so the chained call can anchor to the same research thread via `previous_interaction_id`.
 
-That last part is the load-bearing detail. The agent doesn't have to silently trust whatever Parallel returns — it can read the warning, see that `current_ceo` came back at low confidence, and chain a follow-up query that anchors to the same research thread via `previous_interaction_id`.
+### Defining the research subagents
 
-To make Basis tangible, here's what one `research_task` call returns when a field comes back uncertain:
-
-```python
->>> result = research_task.invoke({
-...     "query": "Rivian Automotive FY2025 financial overview",
-...     "output_description": "automotive_gross_margin_fy2025, jv_software_revenue_fy2025, doe_loan_status",
-... })
->>> result["citations_by_field"]
-{
-    "automotive_gross_margin_fy2025": [{"url": "https://www.sec.gov/Archives/edgar/data/1874178/...10-K-2025.htm", ...}],
-    "jv_software_revenue_fy2025":     [{"url": "https://www.reuters.com/business/autos/...", ...}],
-    "doe_loan_status":                [{"url": "https://www.energy.gov/lpo/articles/rivian", ...}],
-}
->>> result.get("low_confidence_warning")
-'These fields came back with low confidence and should be verified, ideally by chaining a follow-up query with previous_interaction_id: jv_software_revenue_fy2025'
->>> result["interaction_id"]
-'trun_a1b2c3d4...'
-```
-
-The `low_confidence_warning` is what triggers the chained follow-up. The subagent re-asks specifically about `jv_software_revenue_fy2025`, passing `previous_interaction_id="trun_a1b2c3d4..."` so the new call inherits the prior thread's source context — and Parallel returns a sharper answer because it knows what's already been investigated.
-
-### Subagents
-
-Each research track gets its own subagent dict — a name, a description, a focused system prompt, and the `research_task` tool. The Phase-1 subagents are tightly budgeted (one packed Task call plus an optional chained follow-up if Basis flags a low-confidence field) so total run cost stays bounded.
+Each research track gets its own subagent with a specialized system prompt and access to the `research_task` tool.
 
 ```python
 corporate_profile_subagent = {
     "name": "corporate-profile",
-    "description": (
-        "Research corporate structure, leadership, founding history, "
-        "and headcount for the target company."
-    ),
+    "description": "Research corporate structure, leadership, founding history, and headcount",
     "system_prompt": """You are a corporate research analyst.
 
-Budget: 1 research_task call, plus at most 1 chained follow-up if and
-only if the first result includes a low_confidence_warning on an
-important field.
-
-Make a single research_task call requesting all of these fields in one
-output_description:
-- Legal entity name, incorporation jurisdiction, founding date
+Given a company, use the research_task tool to find:
+- Legal entity name, incorporation state/country, founding date
 - Current CEO and key executives (names, titles, approximate tenure)
 - Headquarters location and major office locations
 - Employee headcount (current and recent trend)
 - Corporate structure (parent company, major subsidiaries)
 
-If a low_confidence_warning surfaces, chain a single follow-up using
-previous_interaction_id to verify the flagged fields.
+For the output_description parameter, request these as structured fields.
+
+If the result includes a low_confidence_warning, chain a follow-up query
+using the returned interaction_id to verify the flagged fields.
 
 Write your findings (including citations_by_field) to corporate-profile.md.""",
     "tools": [research_task],
 }
 ```
 
-The same pattern repeats for `financial_health_subagent`, `litigation_subagent`, `news_reputation_subagent`, and `competitive_landscape_subagent`. The full set is in [`agent.py`](agent.py).
+The other Phase-1 subagents (`financial-health`, `litigation-regulatory`, `news-reputation`, `competitive-landscape`) follow the same shape with their own focused prompts. The full set is in [`agent.py`](agent.py).
 
-The Phase-2 subagent is what differentiates this recipe. Instead of asking `competitive-landscape` to produce deep per-competitor profiles, we have it identify three named competitors and let the orchestrator fan out:
+The Phase-2 fan-out subagent is invoked once per competitor identified by `competitive-landscape`:
 
 ```python
 competitor_analysis_subagent = {
     "name": "competitor-analysis",
-    "description": (
-        "Produce a focused profile of one named competitor — used as a "
-        "fan-out subagent invoked once per competitor identified by "
-        "competitive-landscape."
-    ),
-    "system_prompt": """You are a competitive intelligence researcher
-investigating ONE competitor company at a time.
-
-Budget: exactly 1 research_task call.
+    "description": "Produce a focused profile of one named competitor",
+    "system_prompt": """You are a competitive intelligence researcher.
 
 The orchestrator will pass you a single competitor name and the original
-DD target name. Make one research_task call requesting:
-- Brief corporate snapshot (HQ, public/private, headcount, founding year)
-- Most recent revenue and growth signals (estimated if private)
-- Funding or market cap status (last raise / current cap)
+DD target. Make one research_task call requesting:
+- Corporate snapshot (HQ, public/private, headcount, founding year)
+- Most recent revenue and growth signals
+- Funding or market cap status
 - Product / positioning vs. the original DD target
 - Recent strategic moves in the last 12 months
 - Notable strengths and weaknesses relative to the target
 
-Write your findings to competitor-<slug>.md, where <slug> is the
-competitor's name lowercased and hyphenated.""",
+Write your findings to competitor-<slug>.md.""",
     "tools": [research_task],
 }
 ```
 
-### The orchestrator
+### Creating the orchestrator agent
+
+The main agent coordinates the subagents, reviews findings for contradictions, and produces the final report. We back it with a [`FilesystemBackend`](https://docs.langchain.com/oss/python/deepagents/filesystem) so workpapers and the final memo persist to disk under `./reports/` rather than evaporating with the agent state.
 
 ```python
 from pathlib import Path
 
 from deepagents import create_deep_agent
 from deepagents.backends.filesystem import FilesystemBackend
-from langchain_parallel import ParallelWebSearchTool
 
 REPORTS_DIR = Path("./reports")
 REPORTS_DIR.mkdir(parents=True, exist_ok=True)
 
-DILIGENCE_INSTRUCTIONS = """\
+diligence_instructions = """\
 You are a senior due diligence analyst managing a team of specialized
 researchers. Your job is to produce a comprehensive company intelligence
-report where every claim has a verifiable source trail.
+report with verifiable claims.
 
-## Process
+## Your Process
 
-1. Plan: Use write_todos to lay out the diligence in three phases.
+1. **Plan the research**: Use write_todos to lay out the diligence as a
+   checklist. Phase 1 dispatches the five Phase-1 subagents. Phase 2
+   dispatches one competitor-analysis subagent per competitor identified
+   by competitive-landscape.
 
-2. Phase 1 — parallel research: Use the task tool to dispatch
+2. **Phase 1 — parallel research**: Use the task tool to dispatch
    corporate-profile, financial-health, litigation-regulatory,
    news-reputation, and competitive-landscape concurrently.
 
-3. Phase 2 — competitor fan-out: After competitive-landscape completes,
-   read competitive-landscape.md and parse the three named competitors.
-   For EACH competitor, dispatch a separate competitor-analysis subagent
-   instance via the task tool — pass the competitor's name and the
-   original DD target. Dispatch all 3 in parallel.
+3. **Phase 2 — competitor fan-out**: Read competitive-landscape.md and
+   parse the three named competitors. Dispatch a separate
+   competitor-analysis subagent instance per competitor, in parallel.
 
-4. Review and cross-reference: Read every workpaper file. Look for
-   contradictions across tracks, low-confidence findings, and gaps. Use
-   the parallel_web_search tool for ad-hoc lookups when investigating
-   discrepancies.
+4. **Review and cross-reference**: Read every workpaper. Look for
+   contradictions, low-confidence findings, and gaps. Use quick_search
+   for ad-hoc lookups during synthesis.
 
-5. Phase 3 — synthesize the report with executive summary, corporate
-   profile, financial overview, litigation/regulatory risk assessment,
-   news/reputation analysis, competitive landscape (with per-competitor
+5. **Synthesize the report** with: executive summary, corporate profile,
+   financial overview, litigation and regulatory risk assessment, news
+   and reputation analysis, competitive landscape (with per-competitor
    sub-sections), confidence and verification notes, and key risk flags.
 
 ## Citation and Confidence Guidelines
 
 - Include source URLs for key claims.
-- Call out any finding where confidence was low — these need human
-  verification.
+- Call out any finding where confidence was low. These need human verification.
 - If two tracks produced contradictory information, note the discrepancy
-  explicitly and include citations from both sources.
-- This report is a draft for human review, not a final memo.
+  explicitly with citations from both sources.
 """
 
 agent = create_deep_agent(
     model="anthropic:claude-sonnet-4-6",
-    tools=[ParallelWebSearchTool()],
+    tools=[quick_search],
     subagents=[
         corporate_profile_subagent,
         financial_health_subagent,
@@ -254,18 +216,10 @@ agent = create_deep_agent(
         competitive_landscape_subagent,
         competitor_analysis_subagent,
     ],
-    system_prompt=DILIGENCE_INSTRUCTIONS,
+    system_prompt=diligence_instructions,
     backend=FilesystemBackend(root_dir=REPORTS_DIR, virtual_mode=True),
 )
 ```
-
-A few details worth flagging:
-
-[`FilesystemBackend(root_dir="./reports", virtual_mode=True)`](https://docs.langchain.com/oss/python/deepagents/filesystem) is what makes the workpapers persist to disk. Deep Agents ships with a [state-backed filesystem](https://docs.langchain.com/oss/python/deepagents/filesystem) by default, where workpapers live as agent state and evaporate when the run ends — fine for demos, less useful when you want a 37 KB memo and eight workpapers you can `cat`, grep, paste into a review. **`virtual_mode=True` is critical** — with the default (`False`), an agent that picks an absolute path like `/workpapers/foo.md` will write to the actual filesystem root, *not* under `./reports/`. That's not a silent failure; it's the file ending up somewhere unexpected. Setting `virtual_mode=True` anchors the agent's virtual paths to your `root_dir`.
-
-[`ParallelWebSearchTool()`](https://docs.parallel.ai/search/search-quickstart) is the orchestrator-only quick-lookup tool. The Search API returns LLM-optimized excerpts in 1–3 seconds at ~$0.005 per call — perfect for "is this $5.4B revenue figure for FY2024 or FY2025?" sanity passes during synthesis, where firing another Task call would be overkill.
-
-Sonnet 4.6 is a deliberate orchestrator pick — it handles the multi-phase planning, cross-reference reasoning, and final memo synthesis without the cost of Opus, while the heavy research lifting happens inside Parallel's Task API rather than in the orchestrator's tokens. Swap via `model=` in `create_deep_agent`; any LangChain-compatible chat model identifier works.
 
 ### Running the agent
 
@@ -273,18 +227,20 @@ Sonnet 4.6 is a deliberate orchestrator pick — it handles the multi-phase plan
 result = agent.invoke({
     "messages": [{
         "role": "user",
-        "content": "Conduct a full due diligence report on Rivian Automotive."
+        "content": "Conduct a full due diligence report on Rivian Automotive",
     }]
 })
 
 print(result["messages"][-1].content)
 ```
 
-For long-running sessions, stream the agent's progress to see planning, subagent dispatches, and the per-competitor fan-out in real time. Pass `subgraphs=True` to surface events from inside subagent execution:
+### Streaming execution progress
+
+For long-running diligence runs, stream the agent's progress to see planning, tool calls, and subagent activity in real time. Pass `subgraphs=True` to receive events from inside subagent execution.
 
 ```python
 for chunk in agent.stream(
-    {"messages": [{"role": "user", "content": "Conduct a full due diligence report on Rivian Automotive."}]},
+    {"messages": [{"role": "user", "content": "Conduct a full due diligence report on Rivian Automotive"}]},
     stream_mode="updates",
     subgraphs=True,
     version="v2",
@@ -294,71 +250,18 @@ for chunk in agent.stream(
         print(f"{source} {chunk.get('data')}")
 ```
 
-## What the agent produced
+## Who this is for
 
-The Rivian run came back with the things you'd hope a competent junior analyst's first draft would catch — and a few that you'd hope they'd catch but might not. The full output is in [`reports/workpapers/`](reports/workpapers/): eight subagent workpapers and a synthesized [`rivian-due-diligence-report.md`](reports/workpapers/rivian-due-diligence-report.md).
+This architecture applies to any team running structured research workflows on companies, including deal screening, credit underwriting, KYB/KYC onboarding, M&A target evaluation, and vendor risk assessment.
 
-**The quality-of-earnings finding.** The [financial-health workpaper](reports/workpapers/financial-health.md) and the orchestrator's synthesis caught that Rivian's headline FY2025 milestone — its first-ever annual gross profit, $144M — was entirely funded by VW JV software/services revenue. The automotive segment itself lost ~$432M at the gross level. The [final memo](reports/workpapers/rivian-due-diligence-report.md) flags this directly:
-
-> *Continued negative automotive gross margins masked by JV-derived software revenue.*
-
-That's quality-of-earnings reasoning of the kind a credit committee or KYB reviewer would expect — pulling apart a headline number to see what funded it. Hard to surface from a one-shot research call; surfaces naturally when the financial subagent and the competitive-landscape subagent's revenue-mix data both end up in the orchestrator's synthesis context.
-
-**An open OSHA fatality investigation the litigation track caught.** The [litigation-regulatory workpaper](reports/workpapers/litigation-regulatory.md) flagged a March 5, 2026 worker death at Rivian's Normal, Illinois facility — and the orchestrator's synthesis connected it to a documented pattern of prior OSHA "serious" citations, escalating it as a high-risk item rather than a one-off. From the final memo:
-
-> *On March 5, 2026, a 61-year-old worker (Kevin Lancaster) was killed after being pinned between a semi-trailer and a loading dock at Rivian's Normal, Illinois warehouse. An OSHA fatality investigation is open; penalties and citation determinations are pending. This event occurs against a backdrop of a pattern of OSHA serious citations at the Normal facility… This is not an isolated incident — it is the most severe escalation of a documented safety compliance concern.*
-
-That escalation reasoning — "this is part of a pattern, not a one-off" — is exactly what `previous_interaction_id` was used for. The litigation subagent saw the fatality news, surfaced a low-confidence flag on related citation history, then chained a targeted OSHA-IMIS-focused follow-up that pulled the prior citation pattern into the same workpaper.
-
-**A sharper competitor pick from Phase-2 fan-out.** The [competitive-landscape](reports/workpapers/competitive-landscape.md) subagent picked **Tesla, Ford, and Kia** as the three competitors — a notable choice. Tesla and Ford are the obvious volume comparables; Kia is the non-obvious one. The orchestrator's reasoning, captured in [`competitor-kia.md`](reports/workpapers/competitor-kia.md): the Kia EV9 posted **22,017 US sales in 2024**, won the **2024 North American Utility Vehicle of the Year**, and targets exactly the three-row family-SUV niche Rivian's R1S sits in. The fan-out meant Kia got the same depth-of-investigation as Tesla — corporate snapshot, Hyundai Motor Group ownership structure, the IRA-driven Georgia battery JV — rather than being a one-line mention.
-
-**Calibrated risk severity with explicit verification asks.** The [final memo](reports/workpapers/rivian-due-diligence-report.md) tiers every risk by severity (🔴 high / 🟡 medium / 🟢 resolved) and ends with a "Key Risk Flags and Areas Requiring Further Investigation" section enumerating ten specific items with named verification paths — *Crews v. Rivian* final hearing on May 15, 2026; the OSHA fatality investigation's expected penalty range and willful-violation potential; the trajectory of automotive gross margin as R2 volumes scale; whether the ~$270M Q4 2025 decline in regulatory credit sales is timing-related or structural. Every shaky finding has a named source-of-truth a human can chase.
-
-None of this is magic. It's what you get when the underlying research API returns calibrated confidence per field and the agent has the affordance to chain a follow-up. The architecture just makes "ask sharper questions when the first answer is shaky" a first-class behavior.
-
-### Cost and latency
-
-The Rivian run hit **9 Task API calls in ~23 minutes** at the default `pro-fast` processor — five Phase-1 packed calls plus one chained follow-up (litigation-regulatory chained when an OSHA fatality surfaced and warranted deeper investigation) plus three Phase-2 competitor-analysis instances.
-
-Per-call latency by tier (from [Parallel pricing](https://docs.parallel.ai/getting-started/pricing)):
-
-| Tier | Per-call latency | Best for |
-|---|---|---|
-| `core-fast` | 15s – 100s | Faster draft, useful for iterating on prompts |
-| `pro-fast` *(recipe default)* | 30s – 5min | Higher-stakes DD with deeper reasoning per call |
-| `ultra` | 5min – 25min | Investment-committee-grade output |
-
-Phase 1 runs concurrently and Phase 2 fans out, so the per-run wall-clock is roughly two parallel batches of the slowest call in each, plus orchestrator synthesis. See the pricing page for per-call cost.
-
-### Extensions
-
-The five Phase-1 tracks are a starting point — each new domain is a new subagent dict with a focused prompt and the same `research_task` tool. A few natural extensions on the Parallel side:
-
-- Swap `competitive-landscape` for [**FindAll**](https://docs.parallel.ai/findall-api/findall-quickstart) when the diligence task is "find every subsidiary that satisfies condition X" or "find every vendor in category Y," not just "name three competitors." FindAll is purpose-built for evaluated entity discovery — exactly the shape of beneficial-ownership tracing in KYB or supplier-mapping in vendor risk.
-- Plug the final memo into [**Monitor**](https://docs.parallel.ai/monitor-api/monitor-quickstart) for ongoing post-deal surveillance — a credit-team's syndicate refresh, a portfolio-company quarterly health check, or a vendor's ongoing risk file.
-- Run the recipe at portfolio scale with [**`ParallelEnrichment`**](https://docs.parallel.ai/task-api/group-api) — DD-lite across fifty deal-screening targets in one batch instead of fifty one-shot agent runs.
-- Tier up to the `ultra` Task processor when you need [Deep Research](https://docs.parallel.ai/task-api/examples/task-deep-research)–grade reasoning per subagent, e.g. for IC-grade investment memos.
-
-Deep Agents itself has primitives we don't exercise here that are worth knowing about as you adapt the recipe — [`interrupt_on`](https://docs.langchain.com/oss/python/deepagents/overview) for human-in-the-loop sign-off before the synthesis pass (analyst approval gates), [`checkpointer`](https://docs.langchain.com/oss/python/deepagents/overview) so a 14-minute run can resume from a crash, and [skills / memory](https://docs.langchain.com/oss/python/deepagents/overview) for cross-run learning of preferred sources and verification heuristics.
-
-## Run it yourself
-
-```bash
-git clone https://github.com/parallel-web/parallel-cookbook
-cd parallel-cookbook/python-recipes/parallel-deepagents-due-diligence
-
-uv venv
-uv pip install -e .
-cp .env.example .env  # then fill in ANTHROPIC_API_KEY + PARALLEL_API_KEY (get a Parallel key at platform.parallel.ai)
-
-uv run python agent.py
-```
-
-The recipe ships with the full Rivian sample run committed under [`reports/workpapers/`](reports/workpapers/) — start with the [synthesized memo](reports/workpapers/rivian-due-diligence-report.md) and the [Tesla competitor workpaper](reports/workpapers/competitor-tesla.md) for a sense of the artifact shape before committing your own keys.
+The five research tracks here are a starting point. Swap in tracks relevant to your workflow: add management background checks and beneficial ownership tracing for compliance-heavy diligence, add IP portfolio analysis for M&A screening, add SOC 2 verification for vendor assessment. Each additional track is a new subagent dict with a system prompt and the same `research_task` tool.
 
 ## Resources
 
-- [Full source code](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence) and [sample Rivian run](reports/workpapers/) on GitHub
-- [Deep Agents documentation](https://docs.langchain.com/oss/python/deepagents/overview) — the harness
-- [Parallel Task API](https://docs.parallel.ai/task-api/task-quickstart), [Basis](https://docs.parallel.ai/task-api/guides/access-research-basis), and [interactive research](https://docs.parallel.ai/task-api/guides/interactions) — the research substrate
-- [`langchain-parallel` SDK](https://github.com/parallel-web/langchain-parallel) and [Parallel API keys](https://platform.parallel.ai)
+- [Full source code](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence)
+- [Deep Agents documentation](https://docs.langchain.com/oss/python/deepagents/overview)
+- [Parallel Task API](https://docs.parallel.ai/task-api/task-quickstart)
+- [Parallel Basis and citations](https://docs.parallel.ai/task-api/guides/access-research-basis)
+- [Parallel interactive research](https://docs.parallel.ai/task-api/guides/interactions)
+- [`langchain-parallel` SDK](https://github.com/parallel-web/langchain-parallel)
+- [Get a Parallel API key](https://platform.parallel.ai)
