@@ -5,7 +5,7 @@
 **Tags:** Cookbook
 **Reading time:** ~10 min
 **GitHub:** [parallel-cookbook/python-recipes/parallel-deepagents-due-diligence](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence)
-**Sample output:** [Rivian DD memo](reports/workpapers/rivian-due-diligence-report.md) (33 KB) and [eight workpapers](reports/workpapers/) — no setup needed to read.
+**Sample output:** [Rivian DD memo](reports/workpapers/rivian-due-diligence-report.md) (37 KB) and [eight workpapers](reports/workpapers/) — no setup needed to read.
 
 > **Who this is for:** engineers building research workflows for bank credit and lending, KYB / EDD onboarding, insurance underwriting, PE / VC / corp dev deal screening, vendor and supplier risk, or compliance and AML. The recipe also adapts cleanly to non-DD research patterns where calibrated confidence and citation trails matter — newsletter prep, candidate background research, market sizing.
 
@@ -107,6 +107,27 @@ def research_task(
 Three things happen on top of the SDK call. The wrapper routes through `ParallelTaskRunTool` for structured task execution. It calls `parse_basis(result)` to extract per-field citations and the names of any fields whose confidence came back as `"low"`. And it surfaces those field names as an explicit `low_confidence_warning` in the tool's return value, so the calling subagent's reasoning loop can see them and decide to chain a follow-up.
 
 That last part is the load-bearing detail. The agent doesn't have to silently trust whatever Parallel returns — it can read the warning, see that `current_ceo` came back at low confidence, and chain a follow-up query that anchors to the same research thread via `previous_interaction_id`.
+
+To make Basis tangible, here's what one `research_task` call returns when a field comes back uncertain:
+
+```python
+>>> result = research_task.invoke({
+...     "query": "Rivian Automotive FY2025 financial overview",
+...     "output_description": "automotive_gross_margin_fy2025, jv_software_revenue_fy2025, doe_loan_status",
+... })
+>>> result["citations_by_field"]
+{
+    "automotive_gross_margin_fy2025": [{"url": "https://www.sec.gov/Archives/edgar/data/1874178/...10-K-2025.htm", ...}],
+    "jv_software_revenue_fy2025":     [{"url": "https://www.reuters.com/business/autos/...", ...}],
+    "doe_loan_status":                [{"url": "https://www.energy.gov/lpo/articles/rivian", ...}],
+}
+>>> result.get("low_confidence_warning")
+'These fields came back with low confidence and should be verified, ideally by chaining a follow-up query with previous_interaction_id: jv_software_revenue_fy2025'
+>>> result["interaction_id"]
+'trun_a1b2c3d4...'
+```
+
+The `low_confidence_warning` is what triggers the chained follow-up. The subagent re-asks specifically about `jv_software_revenue_fy2025`, passing `previous_interaction_id="trun_a1b2c3d4..."` so the new call inherits the prior thread's source context — and Parallel returns a sharper answer because it knows what's already been investigated.
 
 ### Subagents
 
@@ -242,7 +263,7 @@ agent = create_deep_agent(
 
 A few details worth flagging:
 
-[`FilesystemBackend(root_dir="./reports", virtual_mode=True)`](https://docs.langchain.com/oss/python/deepagents/filesystem) is what makes the workpapers persist to disk. Deep Agents ships with a [state-backed filesystem](https://docs.langchain.com/oss/python/deepagents/filesystem) by default, where workpapers live as agent state and evaporate when the run ends — fine for demos, less useful when you want a 33KB memo and eight workpapers you can `cat`, grep, paste into a review. **`virtual_mode=True` is critical** — with the default (`False`), an agent that picks an absolute path like `/workpapers/foo.md` will write to the actual filesystem root, *not* under `./reports/`. That's not a silent failure; it's the file ending up somewhere unexpected. Setting `virtual_mode=True` anchors the agent's virtual paths to your `root_dir`.
+[`FilesystemBackend(root_dir="./reports", virtual_mode=True)`](https://docs.langchain.com/oss/python/deepagents/filesystem) is what makes the workpapers persist to disk. Deep Agents ships with a [state-backed filesystem](https://docs.langchain.com/oss/python/deepagents/filesystem) by default, where workpapers live as agent state and evaporate when the run ends — fine for demos, less useful when you want a 37 KB memo and eight workpapers you can `cat`, grep, paste into a review. **`virtual_mode=True` is critical** — with the default (`False`), an agent that picks an absolute path like `/workpapers/foo.md` will write to the actual filesystem root, *not* under `./reports/`. That's not a silent failure; it's the file ending up somewhere unexpected. Setting `virtual_mode=True` anchors the agent's virtual paths to your `root_dir`.
 
 [`ParallelWebSearchTool()`](https://docs.parallel.ai/search/search-quickstart) is the orchestrator-only quick-lookup tool. The Search API returns LLM-optimized excerpts in 1–3 seconds at ~$0.005 per call — perfect for "is this $5.4B revenue figure for FY2024 or FY2025?" sanity passes during synthesis, where firing another Task call would be overkill.
 
@@ -341,5 +362,5 @@ The recipe ships with the full Rivian sample run committed under [`reports/workp
 
 - [Full source code](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence) and [sample Rivian run](reports/workpapers/) on GitHub
 - [Deep Agents documentation](https://docs.langchain.com/oss/python/deepagents/overview) — the harness
-- [Parallel Task API](https://docs.parallel.ai/task-api/task-quickstart), [Basis](https://docs.parallel.ai/task-api/guides/basis), and [interactive research](https://docs.parallel.ai/task-api/guides/interactions) — the research substrate
+- [Parallel Task API](https://docs.parallel.ai/task-api/task-quickstart), [Basis](https://docs.parallel.ai/task-api/guides/access-research-basis), and [interactive research](https://docs.parallel.ai/task-api/guides/interactions) — the research substrate
 - [`langchain-parallel` SDK](https://github.com/parallel-web/langchain-parallel) and [Parallel API keys](https://platform.parallel.ai)
