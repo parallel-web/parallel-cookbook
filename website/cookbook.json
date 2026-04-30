@@ -147,6 +147,18 @@
       "tags": ["deep-research", "task", "webhooks", "python", "notebook"]
     },
     {
+      "slug": "parallel-deepagents-due-diligence",
+      "popular": false,
+      "featured": false,
+      "title": "Due Diligence Agent (Deep Agents)",
+      "description": "Multi-agent due diligence recipe on LangChain's Deep Agents harness. Five Phase-1 subagents plus per-competitor Phase-2 fan-out. Uses parse_basis for per-field confidence and previous_interaction_id for chained follow-ups. Workpapers persist to disk via FilesystemBackend. Validated end-to-end on Rivian: 14 min, 10 Task calls, 33KB cited memo with comparative competitor analysis.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence",
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["deep-research", "task", "search", "python", "deepagents", "langchain"]
+    },
+    {
       "slug": "large-scale-tasks",
       "popular": false,
       "featured": false,
