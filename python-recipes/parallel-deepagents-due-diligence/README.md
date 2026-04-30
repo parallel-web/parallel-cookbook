@@ -1,17 +1,8 @@
-# Due Diligence Agent — Deep Agents + Parallel
+# Building a due diligence agent with Deep Agents and Parallel
 
-A multi-agent due diligence recipe built on LangChain's Deep Agents harness and Parallel's Task API. Run-time validated on Rivian: 14:36 wall-clock, 10 Task calls, [a 33KB cited memo + 8 supporting workpapers](reports/workpapers/) on disk.
+**A research agent that reasons over its own confidence and chains follow-up queries when it isn't sure.**
 
-> One-sentence pitch: a research agent that reasons over its own confidence (Parallel Basis) and chains follow-up queries (`previous_interaction_id`) when a finding is uncertain.
-
-## What it shows
-
-- **`ParallelTaskRunTool`** + `parse_basis` — structured per-entity research with per-field citations and calibrated confidence; the wrapper surfaces low-confidence fields explicitly so the subagent's reasoning can decide to chain a follow-up.
-- **Deep Agents fan-out pattern** — Phase-2 spawns one `competitor-analysis` subagent instance per competitor identified by `competitive-landscape`, demonstrating the canonical "N parallel investigations of the same subagent type" pattern in deepagents.
-- **Disk-backed `FilesystemBackend`** — every workpaper and the synthesized memo persist to `./reports/workpapers/` so the artifact is auditable, not ephemeral.
-- **`ParallelWebSearchTool`** as orchestrator's quick-lookup for ad-hoc cross-reference verification.
-
-Most research agents do one search, take what they get, and move on. This recipe shows a different pattern: an agent that examines the confidence of its own findings and chains follow-up queries when a result is uncertain. Deep Agents handles orchestration — planning, subagent delegation, virtual filesystem. Parallel's Task API returns structured findings with per-field citations and calibrated confidence via Basis. Parallel's `previous_interaction_id` lets the agent pick up where a prior query left off — context preserved, follow-up question added.
+Most research agents do one search, take what they get, and move on. This recipe shows a different pattern: an agent that examines the confidence of its own findings and chains follow-up queries when a result is uncertain. Deep Agents handles the orchestration — planning, subagent delegation, virtual filesystem. Parallel's Task API returns structured findings with per-field citations and calibrated confidence via Basis. Parallel's `previous_interaction_id` lets the agent pick up where a prior query left off — context preserved, follow-up question added.
 
 The worked example is **company due diligence**: take a target, investigate it across five dimensions in parallel, produce a structured report where every claim has a source trail. DD shows up in PE deal screening, credit underwriting, KYB onboarding, M&A target evaluation, and vendor risk. But the pattern underneath — typed-output research with confidence-driven follow-ups — works for any multi-source research task: newsletter prep, lead generation, comparison shopping, market sizing, candidate background checks. Swap the subagents and you have a different agent.
 
@@ -33,7 +24,7 @@ The agent runs in three phases — Phase 2 fans out a per-competitor subagent, w
 
 DD requires this multi-step architecture because earlier findings change what needs to be investigated next. If `corporate-profile` reveals the target is a subsidiary, financial analysis covers the parent. If `competitive-landscape` returns 4 competitors, Phase 2 spawns 4 parallel investigations rather than packing everything into one mega-call. Deep Agents' `write_todos` planner sequences this naturally.
 
-Each research call uses a `core-fast` processor Task API call by default. A typical run completes in **15–25 minutes** including the per-competitor fan-out. See [Parallel pricing](https://docs.parallel.ai/getting-started/pricing) for current rates.
+Each research call uses a `pro-fast` processor Task API call by default — deeper reasoning per call than `core-fast`, agent-loop friendly latency. See [Parallel pricing](https://docs.parallel.ai/getting-started/pricing) for current rates.
 
 ## Run it
 
@@ -84,7 +75,7 @@ def research_task(query: str, output_description: str, previous_interaction_id: 
     prior research context.
     """
     runner = ParallelTaskRunTool(
-        processor="core-fast",
+        processor="pro-fast",
         task_output_schema=output_description,
     )
     invoke_args: dict = {"input": query}
@@ -159,11 +150,12 @@ agent = create_deep_agent(
 
 ## Cost and latency
 
-A typical full run produces 25–40 Task API calls — five Phase-1 tracks (with chained follow-ups on low-confidence findings), plus one fan-out per competitor in Phase 2 (3–5 competitors × ~3 calls each). The Rivian sample in [`sample_output_rivian.md`](sample_output_rivian.md) was generated at the default `core-fast` tier.
+A typical full run produces 8–12 Task API calls — five Phase-1 tracks (one packed call each plus a couple of chained follow-ups on low-confidence findings) plus three Phase-2 competitor-analysis instances. The Rivian sample in [`sample_output_rivian.md`](sample_output_rivian.md) was generated at the default `pro-fast` tier.
 
 | Tier | Per-run estimate | When to use |
 |---|---|---|
-| `core-fast` per subagent (default) | ~$0.75–1.50, ~15–25 min | Standard DD draft — agent-loop friendly latency |
+| `core-fast` | ~$0.75–1.50, ~15–25 min | Faster draft, useful for iterating on prompts |
+| `pro-fast` per subagent (default) | depends on processor pricing | Higher-stakes DD with deeper reasoning per call |
 | `core` per subagent | ~$1–2, ~25–40 min | Deeper non-`-fast` variant of `core` |
 | Tier-up to `pro-fast` | ~$3–6, ~25–45 min | Higher-stakes DD with richer reasoning per track |
 | Tier-up to `ultra` | ~$30–80, 90–180 min | Investment-committee-grade output |

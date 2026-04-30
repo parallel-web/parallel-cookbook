@@ -73,7 +73,7 @@ def research_task(
           consider chaining a follow-up to verify those specific fields.
     """
     runner = ParallelTaskRunTool(
-        processor="core-fast",
+        processor="pro-fast",
         task_output_schema=output_description,
     )
     invoke_args: dict = {"input": query}

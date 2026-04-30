@@ -5,6 +5,9 @@
 **Tags:** Cookbook
 **Reading time:** ~10 min
 **GitHub:** [parallel-cookbook/python-recipes/parallel-deepagents-due-diligence](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence)
+**Sample output:** [Rivian DD memo](reports/workpapers/rivian-due-diligence-report.md) (33 KB) and [eight workpapers](reports/workpapers/) — no setup needed to read.
+
+> **Who this is for:** engineers building research workflows for bank credit and lending, KYB / EDD onboarding, insurance underwriting, PE / VC / corp dev deal screening, vendor and supplier risk, or compliance and AML. The recipe also adapts cleanly to non-DD research patterns where calibrated confidence and citation trails matter — newsletter prep, candidate background research, market sizing.
 
 ---
 
@@ -12,9 +15,11 @@ Company due diligence is a workflow that shows up everywhere in financial servic
 
 The accountability bar is what makes this hard to automate well. A bank's KYB file or a credit committee's deal memo is a defensible artifact — every claim eventually traces to a source, every uncertain item gets a follow-up. Most "research agent" demos handle the search-and-summarize half cleanly but treat their own confidence as opaque. They produce confident-sounding paragraphs whether the underlying source was a clean SEC filing or a stale forum post.
 
-This cookbook builds an agent that doesn't make that trade-off. **Deep Agents is the harness**, [**Parallel** is the research substrate](https://docs.parallel.ai/task-api/task-quickstart). [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) provides four primitives the recipe leans on — a [planning tool](https://docs.langchain.com/oss/python/deepagents/overview#planning) (`write_todos`), [subagents](https://docs.langchain.com/oss/python/deepagents/subagents) with isolated context, a [virtual filesystem](https://docs.langchain.com/oss/python/deepagents/filesystem) for offloading raw research, and middleware for control. [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart) returns structured findings annotated with [Basis](https://docs.parallel.ai/task-api/guides/basis) — a per-field object containing source citations, the model's reasoning, and a high/medium/low confidence rating attached to each output field. And [`previous_interaction_id`](https://docs.parallel.ai/task-api/guides/interactions) lets the agent chain a follow-up query that inherits the prior research thread's source context, so "verify the field that came back at low confidence" doesn't restart cold.
+This cookbook builds an agent that doesn't make that trade-off. **Deep Agents is the harness**, [**Parallel** is the research substrate](https://docs.parallel.ai/task-api/task-quickstart). [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) provides three primitives the recipe leans on — a [planning tool](https://docs.langchain.com/oss/python/deepagents/overview) (`write_todos`), [subagents](https://docs.langchain.com/oss/python/deepagents/subagents) with isolated message histories, and a [virtual filesystem](https://docs.langchain.com/oss/python/deepagents/filesystem) for offloading raw research. [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart) returns structured findings annotated with [Basis](https://docs.parallel.ai/task-api/guides/access-research-basis) — a per-field object containing source citations, the model's reasoning, and a high/medium/low confidence rating attached to each output field, rather than a single document-level relevance score. And [`previous_interaction_id`](https://docs.parallel.ai/task-api/guides/interactions) lets the agent chain a follow-up query that inherits the prior research thread's source context, so "verify the field that came back at low confidence" doesn't restart cold.
 
-We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `core-fast` Task processor: **14 minutes wall-clock, 10 Task API calls, a [33KB cited memo](reports/workpapers/rivian-due-diligence-report.md) with [eight supporting workpapers](reports/workpapers/) persisted to local disk**. More on what the agent actually produced below.
+Where the canonical Deep Agents [`deep_research` example](https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research) pairs the harness with generic web search and produces an open-ended prose report, this recipe is the citation-grade vertical companion — every claim is tied to a Basis-backed source, every uncertain finding is flagged for human verification, and the output is a structured DD memo with named sections.
+
+We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `pro-fast` Task processor: a [cited memo](reports/workpapers/rivian-due-diligence-report.md) with [eight supporting workpapers](reports/workpapers/) persisted to local disk; ~10 Task API calls; wall-clock and full metrics in the [Cost and latency](#cost-and-latency) section below. More on what the agent actually produced further on.
 
 ## Overview
 
@@ -26,7 +31,7 @@ The agent orchestrates the research in three phases.
 - **Financial health** — funding history, revenue signals, valuation indicators, profitability markers
 - **Litigation and regulatory** — lawsuits, SEC filings, sanctions screening, regulatory actions, settlements
 - **News and reputation** — recent press coverage, leadership changes, controversy flags, media sentiment
-- **Competitive landscape** — identifies the top three competitors and the target's positioning (does not produce per-competitor profiles — that's Phase 2)
+- **Competitive landscape** — identifies the target's positioning and returns three named competitors that Phase 2 fans out on (this subagent does not produce per-competitor profiles itself)
 
 **Phase 2** is a [subagent fan-out](https://docs.langchain.com/oss/python/deepagents/subagents) — once `competitive-landscape` returns the named competitor list, the orchestrator dispatches **one separate `competitor-analysis` subagent instance per competitor**, in parallel. Each instance runs against its own isolated message history. The reason that matters: each `competitor-analysis` run burns through its own ~10–20K tokens of raw research material — pricing tables, product specs, recent press, financial figures — and only a distilled workpaper file ends up in the synthesis context. Without isolation, three competitors' raw findings would stack into the orchestrator's window and crowd out the cross-reference reasoning that has to happen in Phase 3.
 
@@ -49,7 +54,7 @@ export PARALLEL_API_KEY="your-parallel-api-key"
 
 ### The research tool
 
-The whole recipe sits on top of a roughly twenty-line wrapper around `langchain-parallel`'s `ParallelTaskRunTool` and `parse_basis` helper:
+Every subagent calls a single tool — `research_task` — that takes a query and a description of the desired output, runs a Parallel Task API call under the hood, and returns the structured findings *plus* a list of any fields whose confidence came back at low. If that warning is non-empty, the subagent's reasoning loop knows to chain a follow-up query that re-asks specifically about those fields, anchored to the same research thread via `previous_interaction_id`. Roughly twenty lines of code on top of the SDK:
 
 ```python
 from typing import Optional
@@ -71,7 +76,7 @@ def research_task(
     on a prior research session.
     """
     runner = ParallelTaskRunTool(
-        processor="core-fast",
+        processor="pro-fast",
         task_output_schema=output_description,
     )
     invoke_args: dict = {"input": query}
@@ -241,6 +246,8 @@ A few details worth flagging:
 
 [`ParallelWebSearchTool()`](https://docs.parallel.ai/search/search-quickstart) is the orchestrator-only quick-lookup tool. The Search API returns LLM-optimized excerpts in 1–3 seconds at ~$0.005 per call — perfect for "is this $5.4B revenue figure for FY2024 or FY2025?" sanity passes during synthesis, where firing another Task call would be overkill.
 
+Sonnet 4.6 is a deliberate orchestrator pick — it handles the multi-phase planning, cross-reference reasoning, and final memo synthesis without the cost of Opus, while the heavy research lifting happens inside Parallel's Task API rather than in the orchestrator's tokens. Swap via `model=` in `create_deep_agent`; any LangChain-compatible chat model identifier works.
+
 ### Running the agent
 
 ```python
@@ -290,7 +297,17 @@ None of this is magic. It's what you get when the underlying research API return
 
 ### Cost and latency
 
-The Rivian run hit **10 Task API calls in ~14 minutes** at the default `core-fast` processor — five Phase-1 packed calls (with a couple of chained follow-ups for low-confidence fields) plus three Phase-2 competitor-analysis instances. Per-call latency varies by tier: `core-fast` is 15s–100s/call, `pro-fast` is 30s–5min/call, `ultra` is 5–25min/call. Tier up to `pro-fast` for higher-stakes diligence and `ultra` for investment-committee-grade output. See [Parallel pricing](https://docs.parallel.ai/getting-started/pricing) for current rates.
+The Rivian run hit roughly 10 Task API calls — five Phase-1 packed calls plus two chained follow-ups (financial-health and litigation-regulatory each chained one when a low-confidence field surfaced) plus three Phase-2 competitor-analysis instances.
+
+Per-call latency by tier (from [Parallel pricing](https://docs.parallel.ai/getting-started/pricing)):
+
+| Tier | Per-call latency | Best for |
+|---|---|---|
+| `core-fast` | 15s – 100s | Faster draft, useful for iterating on prompts |
+| `pro-fast` *(recipe default)* | 30s – 5min | Higher-stakes DD with deeper reasoning per call |
+| `ultra` | 5min – 25min | Investment-committee-grade output |
+
+Phase 1 runs concurrently and Phase 2 fans out, so the per-run wall-clock is roughly two parallel batches of the slowest call in each, plus orchestrator synthesis. See the pricing page for per-call cost.
 
 ### Extensions
 
@@ -311,7 +328,7 @@ cd parallel-cookbook/python-recipes/parallel-deepagents-due-diligence
 
 uv venv
 uv pip install -e .
-cp .env.example .env  # then fill in ANTHROPIC_API_KEY + PARALLEL_API_KEY
+cp .env.example .env  # then fill in ANTHROPIC_API_KEY + PARALLEL_API_KEY (get a Parallel key at platform.parallel.ai)
 
 uv run python agent.py
 ```
