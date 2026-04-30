@@ -14,7 +14,7 @@ The accountability bar is what makes this hard to automate well. A bank's KYB fi
 
 This cookbook builds an agent that doesn't make that trade-off. It combines [**Deep Agents**](https://github.com/langchain-ai/deepagents) for orchestration and [**Parallel's Task API**](https://docs.parallel.ai/task-api/task-quickstart) for the underlying research. Deep Agents handles the planning, subagent delegation, and context management. Parallel handles the actual research, returning structured findings with per-field citations, reasoning traces, and calibrated confidence scores via [Basis](https://docs.parallel.ai/task-api/guides/basis). When findings from one track raise new questions, Parallel's [interactive research](https://docs.parallel.ai/task-api/guides/interactions) feature (`previous_interaction_id`) lets the agent chain follow-up queries with full context from the prior research thread.
 
-We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `core-fast` Task processor: **14 minutes wall-clock, 10 Task API calls, a 33KB cited memo with eight supporting workpapers persisted to local disk**. More on what the agent actually produced below.
+We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `core-fast` Task processor: **14 minutes wall-clock, 10 Task API calls, a [33KB cited memo](reports/workpapers/rivian-due-diligence-report.md) with [eight supporting workpapers](reports/workpapers/) persisted to local disk**. More on what the agent actually produced below.
 
 ## Overview
 
@@ -275,19 +275,19 @@ for chunk in agent.stream(
 
 ## What the agent produced
 
-The Rivian run came back with the things you'd hope a competent junior analyst's first draft would catch — and a few that you'd hope they'd catch but might not.
+The Rivian run came back with the things you'd hope a competent junior analyst's first draft would catch — and a few that you'd hope they'd catch but might not. The full output is in [`reports/workpapers/`](reports/workpapers/) — eight subagent workpapers and a synthesized [`rivian-due-diligence-report.md`](reports/workpapers/rivian-due-diligence-report.md).
 
-**A funding-figure cross-reference resolution.** The financial-health workpaper initially had Rivian's total raised at ~$3.7B. The corporate-profile workpaper had figures that pointed higher. The orchestrator caught the discrepancy during synthesis and corrected the final memo:
+**A funding-figure cross-reference resolution.** The [financial-health workpaper](reports/workpapers/financial-health.md) initially had Rivian's total raised at ~$3.7B. The [corporate-profile workpaper](reports/workpapers/corporate-profile.md) had figures that pointed higher. The orchestrator caught the discrepancy during synthesis and corrected the [final memo](reports/workpapers/rivian-due-diligence-report.md):
 
 > *"One research track reported ~$3.7B total raised — this figure reflected pre-Series F data; the confirmed total through Series G is ~$6.3B."*
 
-**A specific JV-conflict finding.** The Phase-2 fan-out for VW (the Scout Motors angle) surfaced something a generic "list of competitors" paragraph wouldn't have:
+**A specific JV-conflict finding.** The Phase-2 fan-out for VW (the Scout Motors angle) surfaced something a generic "list of competitors" paragraph wouldn't have. From [`competitor-mercedes.md`](reports/workpapers/competitor-mercedes.md), [`competitor-tesla.md`](reports/workpapers/competitor-tesla.md), and [`competitor-ford.md`](reports/workpapers/competitor-ford.md) the synthesis pulled out:
 
 > *"VW/Scout conflict of interest — no public non-compete provisions identified in JV disclosures; intensifies post-2027 when Scout launches an explicit ~$20K undercutter of R1T."*
 
-**A material correction the synthesis flagged.** Phase-1 financial-health initially under-weighted Rivian's $6.6B DOE ATVM loan. The orchestrator flagged it during cross-reference and the final memo reads: *"DOE ATVM loan — $6.57B finalized early 2026 — underweighted in base workpaper, flagged as material correction."*
+**A material correction the synthesis flagged.** Phase-1 [financial-health](reports/workpapers/financial-health.md) initially under-weighted Rivian's $6.6B DOE ATVM loan. The orchestrator flagged it during cross-reference and the final memo reads: *"DOE ATVM loan — $6.57B finalized early 2026 — underweighted in base workpaper, flagged as material correction."*
 
-**Calibrated risk severity.** The litigation-regulatory section ranks each finding by severity tier (red/orange/green) with explicit verification asks at the bottom — Crews v. Rivian securities settlement (preliminary approval; final hearing May 15, 2026), Tesla trade-secret case (PACER verification needed), Bosch breach-of-contract dispute, NHTSA recall pattern.
+**Calibrated risk severity.** The [litigation-regulatory workpaper](reports/workpapers/litigation-regulatory.md) ranks each finding by severity tier (red/orange/green) with explicit verification asks at the bottom — Crews v. Rivian securities settlement (preliminary approval; final hearing May 15, 2026), Tesla trade-secret case (PACER verification needed), Bosch breach-of-contract dispute, NHTSA recall pattern.
 
 None of this is magic. It's what you get when an agent has access to per-field confidence and the affordance to chain a follow-up. The architecture just makes "ask sharper questions when the first answer is shaky" a first-class behavior.
 
@@ -330,7 +330,7 @@ cp .env.example .env  # then fill in ANTHROPIC_API_KEY + PARALLEL_API_KEY
 uv run python agent.py
 ```
 
-The recipe ships with the full Rivian sample run committed under [`reports/workpapers/`](reports/workpapers/) so you can preview the artifact shape before committing your own keys.
+The recipe ships with the full Rivian sample run committed under [`reports/workpapers/`](reports/workpapers/) — start with the [synthesized memo](reports/workpapers/rivian-due-diligence-report.md) and the [Tesla competitor workpaper](reports/workpapers/competitor-tesla.md) for a sense of the artifact shape before committing your own keys.
 
 ## Resources
 
