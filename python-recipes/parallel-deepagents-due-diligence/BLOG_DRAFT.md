@@ -2,12 +2,10 @@
 
 *Automate multi-step company research with agentic orchestration and structured web intelligence.*
 
-**Tags:** Cookbook
-**Reading time:** ~10 min
-**GitHub:** [parallel-cookbook/python-recipes/parallel-deepagents-due-diligence](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence)
-**Sample output:** [Rivian DD memo](reports/workpapers/rivian-due-diligence-report.md) (37 KB) and [eight workpapers](reports/workpapers/) — no setup needed to read.
-
-> **Who this is for:** engineers building research workflows for bank credit and lending, KYB / EDD onboarding, insurance underwriting, PE / VC / corp dev deal screening, vendor and supplier risk, or compliance and AML. The recipe also adapts cleanly to non-DD research patterns where calibrated confidence and citation trails matter — newsletter prep, candidate background research, market sizing.
+- **Tags:** Cookbook
+- **Reading time:** ~10 min
+- **GitHub:** [parallel-cookbook/python-recipes/parallel-deepagents-due-diligence](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence)
+- **Sample output:** [Rivian DD memo](reports/workpapers/rivian-due-diligence-report.md) and [eight workpapers](reports/workpapers/) — no setup needed to read.
 
 ---
 
@@ -15,11 +13,11 @@ Company due diligence is a workflow that shows up everywhere in financial servic
 
 The accountability bar is what makes this hard to automate well. A bank's KYB file or a credit committee's deal memo is a defensible artifact — every claim eventually traces to a source, every uncertain item gets a follow-up. Most "research agent" demos handle the search-and-summarize half cleanly but treat their own confidence as opaque. They produce confident-sounding paragraphs whether the underlying source was a clean SEC filing or a stale forum post.
 
-This cookbook builds an agent that doesn't make that trade-off. **Deep Agents is the harness**, [**Parallel** is the research substrate](https://docs.parallel.ai/task-api/task-quickstart). [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) provides three primitives the recipe leans on — a [planning tool](https://docs.langchain.com/oss/python/deepagents/overview) (`write_todos`), [subagents](https://docs.langchain.com/oss/python/deepagents/subagents) with isolated message histories, and a [virtual filesystem](https://docs.langchain.com/oss/python/deepagents/filesystem) for offloading raw research. [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart) returns structured findings annotated with [Basis](https://docs.parallel.ai/task-api/guides/access-research-basis) — a per-field object containing source citations, the model's reasoning, and a high/medium/low confidence rating attached to each output field, rather than a single document-level relevance score. And [`previous_interaction_id`](https://docs.parallel.ai/task-api/guides/interactions) lets the agent chain a follow-up query that inherits the prior research thread's source context, so "verify the field that came back at low confidence" doesn't restart cold.
+This cookbook builds an agent that doesn't make that trade-off. **LangChain's Deep Agents is the harness**, [**Parallel** is the research substrate](https://docs.parallel.ai/task-api/task-quickstart). [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview) provides three primitives the recipe leans on — a [planning tool](https://docs.langchain.com/oss/python/deepagents/overview) (`write_todos`), [subagents](https://docs.langchain.com/oss/python/deepagents/subagents) with isolated message histories, and a [virtual filesystem](https://docs.langchain.com/oss/python/deepagents/filesystem) for offloading raw research. [Parallel's Task API](https://docs.parallel.ai/task-api/task-quickstart) returns structured findings annotated with [Basis](https://docs.parallel.ai/task-api/guides/access-research-basis) — a per-field object containing source citations, the model's reasoning, and a high/medium/low confidence rating attached to each output field, rather than a single document-level relevance score. And [`previous_interaction_id`](https://docs.parallel.ai/task-api/guides/interactions) lets the agent chain a follow-up query that inherits the prior research thread's source context, so "verify the field that came back at low confidence" doesn't restart cold.
 
 Where the canonical Deep Agents [`deep_research` example](https://github.com/langchain-ai/deepagents/tree/main/examples/deep_research) pairs the harness with generic web search and produces an open-ended prose report, this recipe is the citation-grade vertical companion — every claim is tied to a Basis-backed source, every uncertain finding is flagged for human verification, and the output is a structured DD memo with named sections.
 
-We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `pro-fast` Task processor: **23 minutes wall-clock, 9 Task API calls, a [37KB cited memo](reports/workpapers/rivian-due-diligence-report.md) with [eight supporting workpapers](reports/workpapers/) persisted to local disk** (~189 KB total). More on what the agent actually produced further on.
+We validated the recipe end-to-end on Rivian Automotive (NASDAQ: RIVN). At the default `pro-fast` Task processor: **~23 minutes wall-clock, 9 Task API calls, a [cited DD memo](reports/workpapers/rivian-due-diligence-report.md) with [eight supporting workpapers](reports/workpapers/) persisted to local disk**. More on what the agent actually produced further on.
 
 ## Overview
 
