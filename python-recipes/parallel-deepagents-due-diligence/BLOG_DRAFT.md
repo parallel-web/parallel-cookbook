@@ -3,7 +3,6 @@
 *Automate multi-step company research with agentic orchestration and structured web intelligence.*
 
 - **Tags:** Cookbook
-- **Reading time:** ~8 min
 - **GitHub:** [parallel-cookbook/python-recipes/parallel-deepagents-due-diligence](https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-deepagents-due-diligence)
 - **Sample output:** [Rivian DD memo](reports/workpapers/rivian-due-diligence-report.md) and [eight workpapers](reports/workpapers/)
 
