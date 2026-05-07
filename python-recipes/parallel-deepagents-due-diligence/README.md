@@ -2,6 +2,8 @@
 
 **A research agent that reasons over its own confidence and chains follow-up queries when it isn't sure.**
 
+> Companion to the LangChain blog post: [Building a Company Due Diligence Agent with Deep Agents, LangSmith, and Parallel](https://www.langchain.com/blog/building-a-company-due-diligence-agent-with-deep-agents-langsmith-and-parallel).
+
 Most research agents do one search, take what they get, and move on. This recipe shows a different pattern: an agent that examines the confidence of its own findings and chains follow-up queries when a result is uncertain. Deep Agents handles the orchestration — planning, subagent delegation, virtual filesystem. Parallel's Task API returns structured findings with per-field citations and calibrated confidence via Basis. Parallel's `previous_interaction_id` lets the agent pick up where a prior query left off — context preserved, follow-up question added.
 
 The worked example is **company due diligence**: take a target, investigate it across five dimensions in parallel, produce a structured report where every claim has a source trail. DD shows up in PE deal screening, credit underwriting, KYB onboarding, M&A target evaluation, and vendor risk. But the pattern underneath — typed-output research with confidence-driven follow-ups — works for any multi-source research task: newsletter prep, lead generation, comparison shopping, market sizing, candidate background checks. Swap the subagents and you have a different agent.
@@ -199,6 +201,7 @@ This agent produces a **draft** for human review, not a final memo. Web sources 
 
 ## Resources
 
+- [LangChain blog: Building a Company Due Diligence Agent with Deep Agents, LangSmith, and Parallel](https://www.langchain.com/blog/building-a-company-due-diligence-agent-with-deep-agents-langsmith-and-parallel)
 - [Deep Agents documentation](https://docs.langchain.com/oss/python/deepagents/overview)
 - [Parallel Task API](https://docs.parallel.ai/task-api/task-quickstart)
 - [Parallel Basis and Citations](https://docs.parallel.ai/task-api/guides/basis)
