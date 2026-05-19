@@ -1,0 +1,15 @@
+{
+  "type": "monitor.event.detected",
+  "data": {
+    "monitor_id": "mon_acme_legal_001",
+    "event": {
+      "event_group_id": "eg_20260305_001"
+    },
+    "metadata": {
+      "vendor_name": "Acme Corp",
+      "vendor_domain": "https://acme.com",
+      "monitor_category": "Legal & Regulatory",
+      "risk_dimension": "legal"
+    }
+  }
+}

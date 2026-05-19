@@ -1,0 +1,260 @@
+{
+  "name": "Workflow 4: Monitor Deployment & Event Routing",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Deploy Trigger",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        100,
+        100
+      ],
+      "typeVersion": 1,
+      "parameters": {}
+    },
+    {
+      "id": "node-2",
+      "name": "Generate Monitor Queries",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nfunction escapeVendorName(name) {\n  return String(name == null ? \"\" : name).replace(/\"/g, \"'\").replace(/\\s+/g, \" \").trim();\n}\nconst vendor = $input.first ? $input.first().json : $json;\nif (!vendor || !vendor.vendor_name) {\n  throw new Error(\"Generate Monitor Queries received empty vendor input. Pass vendor_name/vendor_domain in webhook payload.\");\n}\nconst safeName = escapeVendorName(vendor.vendor_name);\nconst templates = [\n  { dim: \"legal\", cat: \"Legal & Regulatory\", q: '\"' + safeName + '\" lawsuit OR litigation OR regulatory action OR SEC investigation OR enforcement' },\n  { dim: \"cyber\", cat: \"Cybersecurity\", q: '\"' + safeName + '\" data breach OR cybersecurity incident OR ransomware OR vulnerability disclosure' },\n  { dim: \"financial\", cat: \"Financial Health\", q: '\"' + safeName + '\" bankruptcy OR financial distress OR credit downgrade OR debt default OR layoffs' },\n  { dim: \"leadership\", cat: \"Leadership & Governance\", q: '\"' + safeName + '\" CEO departure OR executive change OR acquisition OR merger OR leadership' },\n  { dim: \"esg\", cat: \"ESG & Reputation\", q: '\"' + safeName + '\" recall OR safety violation OR environmental fine OR labor dispute OR ESG controversy' },\n];\nconst frequency = vendor.monitoring_priority === \"low\" ? \"7d\" : \"1d\";\nconst selected = vendor.monitoring_priority === \"high\" ? templates\n  : vendor.monitoring_priority === \"medium\" ? templates.slice(0, 3)\n  : [templates[0], templates[2]];\n\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      event_summary: { type: \"string\" },\n      severity: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      adverse: { type: \"boolean\" },\n      event_type: { type: \"string\" }\n    },\n    required: [\"event_summary\",\"severity\",\"adverse\",\"event_type\"]\n  }\n};\n\nreturn selected.map(t => {\n  const isHighSignal = vendor.monitoring_priority === \"high\" && (t.dim === \"cyber\" || t.dim === \"legal\");\n  return {\n    json: {\n      vendor_name: vendor.vendor_name,\n      vendor_domain: vendor.vendor_domain,\n      monitorPayload: {\n        type: \"event_stream\",\n        frequency,\n        processor: isHighSignal ? \"base\" : \"lite\",\n        settings: {\n          query: t.q,\n          output_schema: outputSchema,\n          include_backfill: false,\n          advanced_settings: { location: \"us\" }\n        },\n        webhook: {\n          url: ($vars.N8N_WEBHOOK_BASE_URL || \"\") + \"/webhook/monitor-events\",\n          event_types: [\"monitor.event.detected\"]\n        },\n        metadata: {\n          vendor_name: vendor.vendor_name,\n          vendor_domain: vendor.vendor_domain,\n          monitor_category: t.cat,\n          risk_dimension: t.dim\n        }\n      }\n    }\n  };\n});\n"
+      }
+    },
+    {
+      "id": "node-3",
+      "name": "Loop Monitors",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        580,
+        100
+      ],
+      "typeVersion": 3,
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "node-4",
+      "name": "Create Monitor",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst payload = $json.monitorPayload;\nif (!payload) {\n  throw new Error('Create Monitor: missing monitorPayload on input item.');\n}\nconst monitor = await client.monitor.create(payload);\nreturn [{ json: {\n  ...$json,\n  monitor_id: monitor.monitor_id,\n  monitor,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-5",
+      "name": "Record Monitor IDs",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1060,
+        100
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Monitors"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    },
+    {
+      "id": "node-6",
+      "name": "Monitor Event Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        500
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/monitor-events",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-7",
+      "name": "Parse Webhook Payload",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        500
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst payload = $input.first().json;\nreturn [{ json: {\n  monitor_id: payload.data.monitor_id,\n  event_group_id: payload.data.event.event_group_id,\n  metadata: payload.data.metadata || {},\n} }];\n"
+      }
+    },
+    {
+      "id": "node-8",
+      "name": "Fetch Event Details",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        580,
+        500
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst monitorId = $json.monitor_id;\nconst eventGroupId = $json.event_group_id;\nif (!monitorId || !eventGroupId) {\n  throw new Error('Fetch Event Details: missing monitor_id or event_group_id.');\n}\nconst page = await client.monitor.events(monitorId, { event_group_id: eventGroupId });\nreturn [{ json: { ...$json, events: page.events || [] } }];\n"
+      }
+    },
+    {
+      "id": "node-9",
+      "name": "Enrich & Classify Event",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        500
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst data = $input.first().json;\nconst events = Array.isArray(data.events) ? data.events : [];\nconst entry = events.find(e => !e.event_type || e.event_type === 'event_stream');\n\nlet output = {};\nlet basis = [];\nif (entry && entry.output) {\n  basis = Array.isArray(entry.output.basis) ? entry.output.basis : [];\n  const content = entry.output.content;\n  if (entry.output.type === 'json' && content && typeof content === 'object') {\n    output = content;\n  } else if (entry.output.type === 'text' && typeof content === 'string') {\n    output = { event_summary: content, severity: 'LOW', adverse: false, event_type: 'unknown' };\n  }\n}\n\nreturn [{ json: {\n  monitor_id: data.monitor_id,\n  event_group_id: data.event_group_id,\n  metadata: data.metadata || {},\n  event_id: entry ? entry.event_id : null,\n  event_date: entry ? entry.event_date : null,\n  event_summary: output.event_summary || '',\n  severity: output.severity || 'LOW',\n  adverse: !!output.adverse,\n  event_type: output.event_type || (data.metadata && data.metadata.risk_dimension) || 'unknown',\n  basis,\n  source: 'monitor_event',\n} }];\n"
+      }
+    },
+    {
+      "id": "node-10",
+      "name": "Score Event (WF3)",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        1060,
+        500
+      ],
+      "typeVersion": 1,
+      "parameters": {
+        "source": "parameter",
+        "workflowId": ""
+      }
+    }
+  ],
+  "connections": {
+    "Deploy Trigger": {
+      "main": [
+        [
+          {
+            "node": "Generate Monitor Queries",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Monitor Queries": {
+      "main": [
+        [
+          {
+            "node": "Loop Monitors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Monitors": {
+      "main": [
+        [
+          {
+            "node": "Create Monitor",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Record Monitor IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Monitor": {
+      "main": [
+        [
+          {
+            "node": "Loop Monitors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor Event Webhook": {
+      "main": [
+        [
+          {
+            "node": "Parse Webhook Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Webhook Payload": {
+      "main": [
+        [
+          {
+            "node": "Fetch Event Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Event Details": {
+      "main": [
+        [
+          {
+            "node": "Enrich & Classify Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enrich & Classify Event": {
+      "main": [
+        [
+          {
+            "node": "Score Event (WF3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    "n8n-procurement",
+    "vendor-risk"
+  ]
+}

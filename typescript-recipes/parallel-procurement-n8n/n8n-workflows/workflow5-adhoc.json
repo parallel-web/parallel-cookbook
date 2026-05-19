@@ -1,0 +1,233 @@
+{
+  "name": "Workflow 5: Ad-Hoc Research via Slack",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Slack Command",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/slack-command",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-2",
+      "name": "Parse Command",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst payload = $input.first().json;\nconst vendor_name = (payload.text || '').trim();\nif (!vendor_name) throw new Error('Vendor name is required. Usage: /vendor-research {vendor_name}');\n\nconst prompt = 'Conduct a comprehensive vendor risk assessment of \"' + vendor_name + '\". ' +\n  'Investigate financial health, legal & regulatory, cybersecurity, leadership & governance, ESG & reputation. ' +\n  'Classify each finding by severity (LOW/MEDIUM/HIGH/CRITICAL) and include source URLs.';\n\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      vendor_name: { type: \"string\" },\n      overall_risk_level: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      financial_health: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      legal_regulatory: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      cybersecurity: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      leadership_governance: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      esg_reputation: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      adverse_events: { type: \"array\", items: { type: \"object\" } },\n      recommendation: { type: \"string\" },\n    },\n    required: [\"vendor_name\",\"overall_risk_level\",\"recommendation\"]\n  }\n};\n\nreturn [{ json: {\n  vendor_name,\n  channel_id: payload.channel_id || payload.channel,\n  user_name: payload.user_name || payload.user,\n  response_url: payload.response_url,\n  prompt,\n  outputSchema,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-3",
+      "name": "Send Acknowledgment",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        580,
+        300
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.channel_id }}"
+        },
+        "text": "={{ \"\\ud83d\\udd0d Starting deep research on *\" + $json.vendor_name + \"*. This typically takes 15-30 minutes...\" }}",
+        "otherOptions": {}
+      }
+    },
+    {
+      "id": "node-4",
+      "name": "Start Research Task",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst item = $json;\nconst run = await client.taskRun.create({\n  input: item.prompt,\n  processor: $vars.RESEARCH_PROCESSOR || 'ultra8x',\n  task_spec: { output_schema: item.outputSchema },\n  webhook: {\n    url: ($vars.N8N_WEBHOOK_BASE_URL || '') + '/webhook/adhoc-result',\n    event_types: ['task_run.status'],\n  },\n});\nreturn [{ json: {\n  vendor_name: item.vendor_name,\n  channel_id: item.channel_id,\n  user_name: item.user_name,\n  run_id: run.run_id,\n  status: run.status,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-5",
+      "name": "Result Callback",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/adhoc-result",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-6",
+      "name": "Extract Run ID",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst d = $input.first().json;\nconst run_id = d.run_id || (d.data && d.data.run_id);\nconst status = d.status || (d.data && d.data.status);\nif (status && status !== 'completed') {\n  return [];\n}\nreturn [{ json: { run_id, status } }];\n"
+      }
+    },
+    {
+      "id": "node-7",
+      "name": "Get Research Result",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        580,
+        700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst runId = $json.run_id;\nif (!runId) {\n  throw new Error('Get Research Result: missing run_id on input.');\n}\nconst result = await client.taskRun.result(runId);\nreturn [{ json: {\n  ...$json,\n  research_output: result.output && result.output.content,\n  basis: (result.output && result.output.basis) || [],\n  source: 'adhoc',\n} }];\n"
+      }
+    },
+    {
+      "id": "node-8",
+      "name": "Score Result (WF3)",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        820,
+        700
+      ],
+      "typeVersion": 1,
+      "parameters": {
+        "source": "parameter",
+        "workflowId": ""
+      }
+    },
+    {
+      "id": "node-9",
+      "name": "Post Thread Reply",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1060,
+        700
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.channel_id }}"
+        },
+        "text": "={{ $json.text }}",
+        "otherOptions": {}
+      }
+    }
+  ],
+  "connections": {
+    "Slack Command": {
+      "main": [
+        [
+          {
+            "node": "Parse Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Command": {
+      "main": [
+        [
+          {
+            "node": "Send Acknowledgment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Acknowledgment": {
+      "main": [
+        [
+          {
+            "node": "Start Research Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Result Callback": {
+      "main": [
+        [
+          {
+            "node": "Extract Run ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Run ID": {
+      "main": [
+        [
+          {
+            "node": "Get Research Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Research Result": {
+      "main": [
+        [
+          {
+            "node": "Score Result (WF3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Score Result (WF3)": {
+      "main": [
+        [
+          {
+            "node": "Post Thread Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    "n8n-procurement",
+    "vendor-risk"
+  ]
+}

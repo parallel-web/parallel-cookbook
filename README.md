@@ -115,6 +115,7 @@ Recurring research, cron jobs, and webhook delivery.
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
 | [**Daily Insights**](typescript-recipes/parallel-daily-insights) | Cron-triggered daily research feed — runs Tasks on a schedule, persists to KV, publishes a public data feed. Includes a `SPEC.md` showing the task spec used. | `Task` `Webhooks` `Cron` | Cloudflare Workers · KV | – |
+| [**Procurement Vendor Risk (n8n)**](typescript-recipes/parallel-procurement-n8n) | n8n-orchestrated daily Deep Research + V1 event-stream monitors across six risk dimensions per vendor, with deterministic scoring, cited audit log, and severity routing into Slack. Ships an optional Next.js + Supabase BYOK dashboard. | `Task` `Deep Research` `Monitors` `Webhooks` | n8n · TypeScript · Next.js · Supabase | – |
 
 ### Deep Research & Notebooks
 

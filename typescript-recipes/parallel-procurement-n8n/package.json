@@ -1,0 +1,35 @@
+{
+  "name": "parallel-procurement-n8n",
+  "version": "0.1.0",
+  "description": "Vendor Risk Monitoring system: Parallel Task and Monitor APIs + n8n orchestration + Slack alerts",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/parallel-web/parallel-cookbook.git",
+    "directory": "typescript-recipes/parallel-procurement-n8n"
+  },
+  "bugs": {
+    "url": "https://github.com/parallel-web/parallel-cookbook/issues"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check": "tsc --noEmit",
+    "test": "vitest run --config vitest.workspace.ts",
+    "test:watch": "vitest --config vitest.workspace.ts"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0",
+    "parallel-web": "^0.5.0",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5.5.0",
+    "vitest": "^4.1.6"
+  }
+}
