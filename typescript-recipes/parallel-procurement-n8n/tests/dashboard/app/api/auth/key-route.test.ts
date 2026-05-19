@@ -157,6 +157,45 @@ describe("POST /api/auth/key", () => {
     expect(accountUpdates).toEqual([]);
   });
 
+  it("returns the same generic error for a bad Parallel key on an unknown email", async () => {
+    testParallelKey.mockResolvedValueOnce({ ok: false, error: "Parallel rejected this key" });
+
+    const res = await callSignin({
+      email: "stranger@example.com",
+      apiKey: "parallel-bad-key",
+    });
+
+    expect(res.status).toBe(401);
+    expect(await res.json()).toMatchObject({
+      ok: false,
+      error: "Email or Parallel API key is incorrect",
+    });
+    expect(setSessionCookie).not.toHaveBeenCalled();
+    expect(addIntegration).not.toHaveBeenCalled();
+  });
+
+  it("returns the same generic error for a bad Parallel key on a known email", async () => {
+    accounts.set("acct-1", {
+      id: "acct-1",
+      email_hash: "hash:buyer@example.com",
+      onboarded_at: "2026-01-01T00:00:00.000Z",
+    });
+    testParallelKey.mockResolvedValueOnce({ ok: false, error: "Parallel rejected this key" });
+
+    const res = await callSignin({
+      email: "buyer@example.com",
+      apiKey: "parallel-bad-key",
+    });
+
+    expect(res.status).toBe(401);
+    expect(await res.json()).toMatchObject({
+      ok: false,
+      error: "Email or Parallel API key is incorrect",
+    });
+    expect(setSessionCookie).not.toHaveBeenCalled();
+    expect(addIntegration).not.toHaveBeenCalled();
+  });
+
   it("creates a new account and stores the first Parallel integration", async () => {
     const res = await callSignin({
       email: "new@example.com",

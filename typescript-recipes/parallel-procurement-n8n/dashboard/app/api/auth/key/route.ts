@@ -30,13 +30,15 @@ export async function POST(request: NextRequest) {
   // Validate against Parallel before we persist anything. This proves the
   // presented key is usable, but it is not identity proof for an existing
   // account; that check happens below by matching the stored secret hash.
+  // Defer reporting failure until after the account lookup so that callers
+  // cannot distinguish "bad key" from "key valid, wrong email" — that
+  // distinction would be a credential-stuffing enumeration oracle.
   const test = await testParallelKey(apiKey);
-  if (!test.ok) {
-    return NextResponse.json(
-      { ok: false, error: test.error ?? "Parallel rejected this key" },
+  const genericAuthError = () =>
+    NextResponse.json(
+      { ok: false, error: "Email or Parallel API key is incorrect" },
       { status: 401 },
     );
-  }
 
   const emailHash = await sha256Hex(email);
 
@@ -62,6 +64,12 @@ export async function POST(request: NextRequest) {
     accountId = existing.id;
     onboarded = !!existing.onboarded_at;
 
+    // If Parallel rejected the key we still fall through to the secret-hash
+    // check so the response is indistinguishable from a wrong-email attempt.
+    if (!test.ok) {
+      return genericAuthError();
+    }
+
     const apiKeyHash = await sha256Hex(apiKey);
     const { data: matchingIntegration, error: integrationLookupErr } = await db()
       .from("integrations")
@@ -81,14 +89,17 @@ export async function POST(request: NextRequest) {
     }
 
     if (!matchingIntegration) {
-      return NextResponse.json(
-        { ok: false, error: "Email or Parallel API key is incorrect" },
-        { status: 401 },
-      );
+      return genericAuthError();
     }
 
     await db().from("accounts").update({ email }).eq("id", accountId);
   } else {
+    // No account yet — a bad Parallel key here must produce the same
+    // response as the wrong-email branch above to avoid revealing whether
+    // the email is registered.
+    if (!test.ok) {
+      return genericAuthError();
+    }
     const { data: created, error: createErr } = await db()
       .from("accounts")
       .insert({ email, email_hash: emailHash })
