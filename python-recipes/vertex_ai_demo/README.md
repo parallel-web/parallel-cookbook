@@ -151,6 +151,17 @@ uv sync --extra notebook
 jupyter notebook tutorial.ipynb
 ```
 
+### 7. Enrichment Cookbook
+
+For a full production pattern built on this client — verifiable company and people
+enrichment with typed outputs and mechanically verified citations — see
+[`gemini_search_enrichment.ipynb`](gemini_search_enrichment.ipynb)
+(also available as [Markdown](gemini_search_enrichment.md)):
+
+```bash
+jupyter notebook gemini_search_enrichment.ipynb
+```
+
 ## Usage
 
 ### Basic Usage (Google Cloud Marketplace)
@@ -321,6 +332,8 @@ vertex_ai_demo/
 ├── quickstart.py           # Minimal example (~15 lines)
 ├── demo.py                  # Full demo script with comparisons
 ├── tutorial.ipynb          # Interactive Jupyter tutorial
+├── gemini_search_enrichment.ipynb  # Cookbook: verifiable company & people enrichment
+├── gemini_search_enrichment.md     # Markdown export of the cookbook
 ├── pyproject.toml          # Project configuration
 ├── README.md               # This file
 ├── .env.example            # Environment variable template
