@@ -115,6 +115,7 @@ Recurring research, cron jobs, and webhook delivery.
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
 | [**Daily Insights**](typescript-recipes/parallel-daily-insights) | Cron-triggered daily research feed — runs Tasks on a schedule, persists to KV, publishes a public data feed. Includes a `SPEC.md` showing the task spec used. | `Task` `Webhooks` `Cron` | Cloudflare Workers · KV | – |
+| [**Datacenter Monitor**](https://github.com/khushishelat/datacenter-map-demo) | Live map of 2,800+ U.S. datacenters — discovered by iterative Task runs (shard-by-state + `previous_interaction_id` loop-until-dry), enriched with 25 cited fields via Task Groups, and watched by 31 event monitors + 200 daily snapshots with field-level diffs. | `Task` `Task Group` `Monitor` `Webhooks` `SSE` | Next.js · Vercel | [Live](https://datacenter-map-demo.vercel.app) |
 
 ### Deep Research & Notebooks
 
