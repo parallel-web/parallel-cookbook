@@ -5,7 +5,7 @@ Quickstart: Vertex AI + Parallel Web Search Grounding
 This minimal example shows how to get started in ~10 lines of code.
 
 Prerequisites:
-    1. pip install vertex-parallel-grounding
+    1. pip install gemini-parallel-grounding
     2. export GOOGLE_CLOUD_PROJECT="your-project-id"
        (or set in .env file)
     3. gcloud auth application-default login
@@ -19,7 +19,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-from vertex_parallel import GroundedGeminiClient
+from gemini_parallel import GroundedGeminiClient
 
 # Initialize client (uses environment variables by default)
 client = GroundedGeminiClient()

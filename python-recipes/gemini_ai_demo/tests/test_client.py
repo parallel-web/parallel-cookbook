@@ -6,7 +6,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from vertex_parallel import GroundedGeminiClient, GroundedResponse, GroundingConfig
+from gemini_parallel import GroundedGeminiClient, GroundedResponse, GroundingConfig
 
 
 class TestGroundingConfig:

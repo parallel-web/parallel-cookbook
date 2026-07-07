@@ -46,7 +46,7 @@ import google.auth  # noqa: E402
 import google.auth.transport.requests
 import requests
 
-from vertex_parallel import GroundedGeminiClient, GroundedResponse, validate_setup
+from gemini_parallel import GroundedGeminiClient, GroundedResponse, validate_setup
 
 # Sample questions organized by domain to show diverse use cases
 # Each tuple contains (question, category) for better organization
