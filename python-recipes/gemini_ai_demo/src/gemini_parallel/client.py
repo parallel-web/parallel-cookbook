@@ -316,15 +316,18 @@ class GroundedResponse:
         """
         # Step 1: Extract the generated text from the response
         # The API returns an array of "candidates" (possible responses).
-        # We use the first candidate's content, which contains "parts" with the text.
+        # We use the first candidate's content, joining all its text parts.
+        # Thinking models (e.g. gemini-3.5-flash) may emit "thought" parts
+        # before the answer and split the answer across parts, so we skip
+        # thoughts and concatenate the rest.
         text = ""
         candidates = response.get("candidates", [])
         if candidates:
-            # Navigate: candidates[0] -> content -> parts[0] -> text
             content = candidates[0].get("content", {})
             parts = content.get("parts", [])
-            if parts:
-                text = parts[0].get("text", "")
+            text = "".join(
+                part.get("text", "") for part in parts if not part.get("thought")
+            )
 
         # Step 2: Initialize containers for grounding metadata
         sources: list[GroundingSource] = []
@@ -506,7 +509,12 @@ class GroundedGeminiClient:
         Returns:
             The full endpoint URL.
         """
-        base_url = f"https://{self.location}-aiplatform.googleapis.com/v1"
+        # The global endpoint has no regional host prefix.
+        if self.location == "global":
+            host = "aiplatform.googleapis.com"
+        else:
+            host = f"{self.location}-aiplatform.googleapis.com"
+        base_url = f"https://{host}/v1"
         return f"{base_url}/projects/{self.project_id}/locations/{self.location}/publishers/google/models/{model_id}:generateContent"
 
     def generate(
@@ -517,6 +525,8 @@ class GroundedGeminiClient:
         temperature: float | None = None,
         max_output_tokens: int | None = None,
         grounding_config: GroundingConfig | None = None,
+        grounded: bool = True,
+        generation_config: dict[str, Any] | None = None,
     ) -> GroundedResponse:
         """Generate a grounded response using Gemini with Parallel web search.
 
@@ -527,6 +537,14 @@ class GroundedGeminiClient:
             temperature: Optional temperature setting (0.0-2.0).
             max_output_tokens: Optional max output tokens.
             grounding_config: Optional override for grounding configuration.
+            grounded: When False, no tools are attached and the model answers
+                without web search. Useful for tool-free extraction calls
+                (e.g. structured output with a responseSchema), which cannot
+                be combined with grounding in a single request.
+            generation_config: Optional extra generationConfig fields merged
+                into the request (e.g. responseMimeType, responseSchema,
+                thinkingConfig). The temperature / max_output_tokens
+                arguments take precedence on conflict.
 
         Returns:
             A GroundedResponse containing the text and sources.
@@ -545,17 +563,18 @@ class GroundedGeminiClient:
                     "parts": [{"text": prompt}],
                 }
             ],
-            "tools": [config.to_grounding_spec()],
         }
+        if grounded:
+            request_body["tools"] = [config.to_grounding_spec()]
 
         # Add optional parameters
-        generation_config: dict[str, Any] = {}
+        merged_generation_config: dict[str, Any] = dict(generation_config or {})
         if temperature is not None:
-            generation_config["temperature"] = temperature
+            merged_generation_config["temperature"] = temperature
         if max_output_tokens is not None:
-            generation_config["maxOutputTokens"] = max_output_tokens
-        if generation_config:
-            request_body["generationConfig"] = generation_config
+            merged_generation_config["maxOutputTokens"] = max_output_tokens
+        if merged_generation_config:
+            request_body["generationConfig"] = merged_generation_config
 
         if system_instruction:
             request_body["systemInstruction"] = {

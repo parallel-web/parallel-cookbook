@@ -10,7 +10,7 @@ source for Gemini models on Vertex AI. Two auth modes are supported:
   ``PARALLEL_API_KEY``) to authenticate requests directly.
 
 Example (Marketplace):
-    from vertex_parallel import GroundedGeminiClient
+    from gemini_parallel import GroundedGeminiClient
 
     client = GroundedGeminiClient(
         project_id="your-project",
@@ -18,7 +18,7 @@ Example (Marketplace):
     )
 
 Example (BYOK):
-    from vertex_parallel import GroundedGeminiClient
+    from gemini_parallel import GroundedGeminiClient
 
     client = GroundedGeminiClient(
         project_id="your-project",
@@ -34,7 +34,7 @@ Example (BYOK):
     print(response.sources)
 """
 
-from vertex_parallel.client import (
+from gemini_parallel.client import (
     GroundedGeminiClient,
     GroundedResponse,
     GroundingConfig,

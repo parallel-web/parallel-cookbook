@@ -67,7 +67,7 @@ See the [Parallel + Vertex AI integration docs](https://docs.parallel.ai/integra
 ### 1. Clone and Setup
 
 ```bash
-cd vertex_ai_demo
+cd gemini_ai_demo
 
 # Install dependencies using uv
 uv sync
@@ -109,7 +109,7 @@ python quickstart.py
 Or in Python:
 
 ```python
-from vertex_parallel import GroundedGeminiClient
+from gemini_parallel import GroundedGeminiClient
 
 client = GroundedGeminiClient()
 response = client.generate("Who won the most recent Super Bowl?")
@@ -151,6 +151,16 @@ uv sync --extra notebook
 jupyter notebook tutorial.ipynb
 ```
 
+### 7. Enrichment Cookbook
+
+For a full production pattern built on this client — verifiable company and people
+enrichment with typed outputs and mechanically verified citations — see
+[`gemini_search_enrichment.ipynb`](gemini_search_enrichment.ipynb):
+
+```bash
+jupyter notebook gemini_search_enrichment.ipynb
+```
+
 ## Usage
 
 ### Basic Usage (Google Cloud Marketplace)
@@ -158,7 +168,7 @@ jupyter notebook tutorial.ipynb
 When your GCP project has a Parallel Web Search Marketplace subscription, no API key is needed.
 
 ```python
-from vertex_parallel import GroundedGeminiClient
+from gemini_parallel import GroundedGeminiClient
 
 # Initialize the client (Marketplace mode)
 client = GroundedGeminiClient(
@@ -180,7 +190,7 @@ print(f"Sources: {[s.uri for s in response.sources]}")
 Pass `parallel_api_key` (or set `PARALLEL_API_KEY`) to authenticate with a Parallel key instead.
 
 ```python
-from vertex_parallel import GroundedGeminiClient
+from gemini_parallel import GroundedGeminiClient
 
 client = GroundedGeminiClient(
     project_id="your-project-id",
@@ -196,7 +206,7 @@ print(response.text)
 ### With Custom Configuration
 
 ```python
-from vertex_parallel import GroundedGeminiClient, GroundingConfig
+from gemini_parallel import GroundedGeminiClient, GroundingConfig
 
 # Configure grounding options. Leave api_key unset for Marketplace mode,
 # or pass a key for BYOK.
@@ -224,7 +234,7 @@ response = client.generate(
 Before running your code, you can validate that all credentials are configured correctly:
 
 ```python
-from vertex_parallel import validate_setup
+from gemini_parallel import validate_setup
 
 status = validate_setup()
 print(status)
@@ -237,7 +247,7 @@ if not status.is_valid:
 ### Convenience Function
 
 ```python
-from vertex_parallel import generate_grounded_response
+from gemini_parallel import generate_grounded_response
 
 # Marketplace
 response = generate_grounded_response(
@@ -311,8 +321,8 @@ class GroundedResponse:
 ## Project Structure
 
 ```
-vertex_ai_demo/
-├── src/vertex_parallel/     # Source code
+gemini_ai_demo/
+├── src/gemini_parallel/     # Source code
 │   ├── __init__.py         # Package exports
 │   └── client.py           # Main client implementation
 ├── tests/                   # Test suite
@@ -321,6 +331,7 @@ vertex_ai_demo/
 ├── quickstart.py           # Minimal example (~15 lines)
 ├── demo.py                  # Full demo script with comparisons
 ├── tutorial.ipynb          # Interactive Jupyter tutorial
+├── gemini_search_enrichment.ipynb  # Cookbook: verifiable company & people enrichment
 ├── pyproject.toml          # Project configuration
 ├── README.md               # This file
 ├── .env.example            # Environment variable template
@@ -334,7 +345,7 @@ vertex_ai_demo/
 uv run pytest tests/ -v
 
 # Run with coverage
-uv run pytest tests/ --cov=src/vertex_parallel
+uv run pytest tests/ --cov=src/gemini_parallel
 
 # Run specific test
 uv run pytest tests/test_client.py::TestGroundedGeminiClient -v

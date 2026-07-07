@@ -1,4 +1,4 @@
-"""Pytest configuration and fixtures for vertex-parallel tests."""
+"""Pytest configuration and fixtures for gemini-parallel tests."""
 
 from __future__ import annotations
 
