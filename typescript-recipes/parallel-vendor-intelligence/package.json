@@ -2,7 +2,7 @@
   "name": "parallel-vendor-intelligence",
   "version": "0.1.0",
   "private": true,
-  "description": "Scripts-first vendor intelligence enrichment and monitoring with Parallel",
+  "description": "Scripts-first vendor risk research and monitoring with Parallel",
   "license": "MIT",
   "type": "module",
   "engines": {
@@ -12,12 +12,11 @@
     "bootstrap": "tsx scripts/bootstrap.ts",
     "check-updates": "tsx scripts/check-updates.ts",
     "cleanup": "tsx scripts/cleanup.ts",
-    "build": "tsc",
-    "check": "tsc --noEmit",
+    "check": "tsc",
     "test": "vitest run",
     "test:live": "RUN_LIVE_TESTS=1 vitest run tests/live.test.ts --reporter=verbose",
     "test:watch": "vitest",
-    "smoke:live": "tsx scripts/live-contract.ts"
+    "validate": "npm run check && npm test"
   },
   "dependencies": {
     "dotenv": "17.4.2",

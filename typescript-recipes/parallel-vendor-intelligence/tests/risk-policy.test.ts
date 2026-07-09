@@ -74,17 +74,47 @@ describe("scoreReport", () => {
     expect(assessment.citations).toEqual([]);
   });
 
-  it("selects exact top-level evidence citations and deduplicates URLs", () => {
-    const assessment = scoreReport(vendorReport({ cybersecurity: "HIGH" }), undefined, [
-      basis("cybersecurity", "https://source.test/item"),
-      basis("financial_health", "https://source.test/item"),
+  it("preserves field attribution while deduplicating the same field and URL", () => {
+    const assessment = scoreReport(
+      vendorReport({ cybersecurity: "HIGH", financial_health: "MEDIUM" }),
+      undefined,
+      [
+        basis("cybersecurity", "https://source.test/item"),
+        basis("cybersecurity", "https://source.test/item"),
+        basis("financial_health", "https://source.test/item"),
+      ],
+    );
+    expect(assessment.citations).toEqual([
+      expect.objectContaining({ field: "cybersecurity", url: "https://source.test/item" }),
+      expect.objectContaining({ field: "financial_health", url: "https://source.test/item" }),
     ]);
+  });
+
+  it("attributes nested Task basis paths to their top-level risk fields", () => {
+    const report = vendorReport(
+      { cybersecurity: "HIGH" },
+      [
+        {
+          category: "breach",
+          severity: "MEDIUM",
+          title: "Incident",
+          summary: "A confirmed incident occurred.",
+        },
+      ],
+    );
+    const assessment = scoreReport(report, undefined, [
+      basis("cybersecurity.summary", "https://source.test/security"),
+      basis("adverse_events.0.summary", "https://source.test/incident"),
+    ]);
+
     expect(assessment.citations).toEqual([
       expect.objectContaining({
         field: "cybersecurity",
-        url: "https://source.test/item",
-        reasoning: "cybersecurity reasoning",
-        confidence: "high",
+        url: "https://source.test/security",
+      }),
+      expect.objectContaining({
+        field: "adverse_events",
+        url: "https://source.test/incident",
       }),
     ]);
   });

@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   ChangeInvestigationSchema,
   buildBaselineTaskParams,
+  buildChangeInvestigationTaskParams,
   normalizeVendorDomain,
   RISK_DIMENSIONS,
   VENDOR_REPORT_OUTPUT_SCHEMA,
@@ -113,7 +114,7 @@ describe("vendor assessment contract", () => {
       domain: "https://EXAMPLE.com/path",
       riskFloor: "MEDIUM",
     });
-    const params = buildBaselineTaskParams(vendor);
+    const params = buildBaselineTaskParams(vendor, "core");
 
     expect(params.input).toMatchObject({
       vendor_name: "Example",
@@ -132,6 +133,28 @@ describe("vendor assessment contract", () => {
         open_questions: [],
         recommended_human_action: "urgent_human_review",
       }),
+    ).toThrow();
+  });
+
+  it("rejects unknown changed fields before building focused research input", () => {
+    expect(() =>
+      Reflect.apply(buildChangeInvestigationTaskParams, undefined, [
+        {
+          vendor: { name: "Example", domain: "example.com" },
+          eventId: "event-1",
+          changedFields: ["unknown_field"],
+          previousReport: validReport,
+          currentReport: validReport,
+          policyDecision: {
+            threshold: "HIGH",
+            previousLevel: "LOW",
+            currentLevel: "LOW",
+            requiresHumanReview: false,
+            reasons: [],
+          },
+          processor: "pro",
+        },
+      ]),
     ).toThrow();
   });
 });

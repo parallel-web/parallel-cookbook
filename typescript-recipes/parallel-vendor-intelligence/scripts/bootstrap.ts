@@ -12,10 +12,13 @@ import { VendorSchema } from "../src/schema.js";
 const { values } = parseArgs({
   options: {
     vendors: { type: "string", short: "v", default: "examples/vendors.json" },
+    "retry-failed": { type: "boolean", default: false },
   },
 });
 
 const vendorPath = resolve(process.cwd(), values.vendors!);
 const vendors = z.array(VendorSchema).parse(JSON.parse(await readFile(vendorPath, "utf8")));
-const summary = await createVendorIntelligenceFromEnv().bootstrap(vendors);
+const summary = await createVendorIntelligenceFromEnv().bootstrap(vendors, {
+  retryFailed: values["retry-failed"],
+});
 console.log(JSON.stringify(summary, null, 2));

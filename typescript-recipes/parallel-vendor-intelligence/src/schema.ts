@@ -4,10 +4,12 @@ import { z } from "zod";
 
 import type {
   JsonSchema,
+  MonitorCreateParams,
   TaskRunCreateParams,
-} from "parallel-web/resources/task-run";
+} from "./parallel-port.js";
 
 export const SPEC_VERSION = 1;
+export const RECIPE_METADATA = "vendor-intel";
 
 export const RiskLevelSchema = z.enum(["LOW", "MEDIUM", "HIGH", "CRITICAL"]);
 export type RiskLevel = z.infer<typeof RiskLevelSchema>;
@@ -52,6 +54,11 @@ export const RISK_DIMENSIONS = [
 ] as const;
 
 export type RiskDimensionKey = (typeof RISK_DIMENSIONS)[number]["key"];
+export const EvidenceFieldSchema = z.enum([
+  ...RISK_DIMENSIONS.map(({ key }) => key),
+  "adverse_events",
+]);
+export type EvidenceField = z.infer<typeof EvidenceFieldSchema>;
 
 const RiskDimensionSchema = z
   .object({
@@ -191,7 +198,10 @@ export const CHANGE_INVESTIGATION_OUTPUT_SCHEMA = asTaskJsonSchema(
  * Build the stable Task contract that a snapshot Monitor will re-run.
  * Volatile values such as the current date intentionally do not appear here.
  */
-export function buildBaselineTaskParams(vendorInput: Vendor): TaskRunCreateParams {
+export function buildBaselineTaskParams(
+  vendorInput: Vendor,
+  processor: string,
+): TaskRunCreateParams {
   const vendor = VendorSchema.parse(vendorInput);
 
   return {
@@ -201,13 +211,13 @@ export function buildBaselineTaskParams(vendorInput: Vendor): TaskRunCreateParam
       vendor_name: vendor.name,
       vendor_domain: vendor.domain,
     },
-    processor: "core",
+    processor,
     task_spec: {
       input_schema: VENDOR_TASK_INPUT_SCHEMA,
       output_schema: VENDOR_REPORT_OUTPUT_SCHEMA,
     },
     metadata: {
-      recipe: "vendor-intel",
+      recipe: RECIPE_METADATA,
       vendor: vendor.domain,
       spec: SPEC_VERSION,
     },
@@ -218,7 +228,7 @@ export function buildBaselineTaskParams(vendorInput: Vendor): TaskRunCreateParam
 export function buildChangeInvestigationTaskParams(input: {
   vendor: Vendor;
   eventId: string;
-  changedFields: readonly string[];
+  changedFields: readonly EvidenceField[];
   previousReport: VendorReport;
   currentReport: VendorReport;
   previousInteractionId?: string;
@@ -229,20 +239,15 @@ export function buildChangeInvestigationTaskParams(input: {
     requiresHumanReview: boolean;
     reasons: readonly unknown[];
   };
-  processor?: string;
+  processor: string;
 }): TaskRunCreateParams {
   const vendor = VendorSchema.parse(input.vendor);
+  const changedFields = z.array(EvidenceFieldSchema).parse(input.changedFields);
   const previousValues = Object.fromEntries(
-    input.changedFields.map((field) => [
-      field,
-      input.previousReport[field as keyof VendorReport],
-    ]),
+    changedFields.map((field) => [field, input.previousReport[field]]),
   );
   const currentValues = Object.fromEntries(
-    input.changedFields.map((field) => [
-      field,
-      input.currentReport[field as keyof VendorReport],
-    ]),
+    changedFields.map((field) => [field, input.currentReport[field]]),
   );
 
   return {
@@ -252,12 +257,12 @@ export function buildChangeInvestigationTaskParams(input: {
       vendor_name: vendor.name,
       vendor_domain: vendor.domain,
       monitor_event_id: input.eventId,
-      changed_fields: [...input.changedFields],
+      changed_fields: changedFields,
       previous_values: previousValues,
       current_values: currentValues,
       policy_decision: input.policyDecision,
     },
-    processor: input.processor ?? "pro",
+    processor: input.processor,
     ...(input.previousInteractionId
       ? { previous_interaction_id: input.previousInteractionId }
       : {}),
@@ -265,9 +270,29 @@ export function buildChangeInvestigationTaskParams(input: {
       output_schema: CHANGE_INVESTIGATION_OUTPUT_SCHEMA,
     },
     metadata: {
-      recipe: "vendor-intel",
+      recipe: RECIPE_METADATA,
       vendor: vendor.domain,
       event: input.eventId,
+    },
+  };
+}
+
+export function buildSnapshotMonitorParams(input: {
+  vendor: Vendor;
+  baselineRunId: string;
+  frequency: string;
+  processor: "lite" | "base";
+}): MonitorCreateParams {
+  const vendor = VendorSchema.parse(input.vendor);
+  return {
+    type: "snapshot",
+    frequency: input.frequency,
+    processor: input.processor,
+    settings: { task_run_id: input.baselineRunId },
+    metadata: {
+      recipe: RECIPE_METADATA,
+      vendor: vendor.domain,
+      spec: String(SPEC_VERSION),
     },
   };
 }

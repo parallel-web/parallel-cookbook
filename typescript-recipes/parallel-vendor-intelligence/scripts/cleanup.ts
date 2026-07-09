@@ -1,7 +1,17 @@
 import "dotenv/config";
 
+import { parseArgs } from "node:util";
+
 import { createVendorIntelligenceFromEnv } from "../src/config.js";
 
-const summary = await createVendorIntelligenceFromEnv().cleanup();
+const { values } = parseArgs({
+  options: {
+    vendor: { type: "string", multiple: true },
+  },
+});
+
+const summary = await createVendorIntelligenceFromEnv().cleanup({
+  ...(values.vendor ? { vendors: values.vendor } : {}),
+});
 console.log(JSON.stringify(summary, null, 2));
-if (summary.failures.length > 0) process.exitCode = 1;
+if (summary.monitors.some(({ status }) => status === "failed")) process.exitCode = 1;

@@ -1,65 +1,136 @@
-import type { Monitor, MonitorSnapshotEvent } from "parallel-web/resources/monitor";
-import type { FieldBasis, TaskRunResult } from "parallel-web/resources/task-run";
-
-import type { ParallelPort } from "./parallel-port.js";
+import type {
+  FieldBasis,
+  Monitor,
+  MonitorErrorEvent,
+  MonitorSnapshotEvent,
+  ParallelPort,
+  SnapshotMonitor,
+  TaskRunResult,
+} from "./parallel-port.js";
 import {
-  compareRisk,
   decideFollowUp,
-  EvidenceFieldSchema,
+  POLICY_VERSION,
   scoreReport,
-  type EvidenceField,
-  type FollowUpDecision,
   type RiskAssessment,
 } from "./risk-policy.js";
 import {
   buildBaselineTaskParams,
   buildChangeInvestigationTaskParams,
+  buildSnapshotMonitorParams,
   ChangeInvestigationSchema,
+  normalizeVendorDomain,
+  RECIPE_METADATA,
   SPEC_VERSION,
   VendorReportSchema,
   VendorSchema,
-  type RiskLevel,
+  type ChangeInvestigation,
+  type EvidenceField,
   type Vendor,
   type VendorReport,
 } from "./schema.js";
 import {
+  EventLedgerEntrySchema,
   FieldBasisSchema,
-  type EventLedgerEntry,
+  FollowUpRequiredDecisionSchema,
+  NoFollowUpDecisionSchema,
+  type EventEvidence,
   FileStateStore,
   type RecipeState,
+  type TaskFailure,
+  type TaskRef,
+  type VendorState,
 } from "./state.js";
+import {
+  InvalidSnapshotEventError,
+  rawSnapshotEvent,
+  reconstructSnapshotEvent,
+  restoredSnapshotEvent,
+  type SnapshotEventInput,
+} from "./snapshot-events.js";
+import { InvalidTaskOutputError, TaskRunner } from "./task-runner.js";
+import {
+  VendorIntelligenceConfigSchema,
+  type VendorIntelligenceConfig,
+} from "./vendor-config.js";
 
-const RECIPE_METADATA = "vendor-intel";
-
-export interface VendorIntelligenceConfig {
-  monitorFrequency: string;
-  followUpRiskThreshold: RiskLevel;
-  baselineProcessor: string;
-  monitorProcessor: "lite" | "base";
-  followUpProcessor: string;
-  taskResultPollSeconds: number;
-  taskResultMaxWaitMilliseconds: number;
-  taskResultRetryDelayMilliseconds: number;
+export interface Diagnostic {
+  code: string;
+  message: string;
+  vendor?: string;
+  resourceId?: string;
 }
 
-export const DEFAULT_CONFIG: VendorIntelligenceConfig = {
-  monitorFrequency: "1d",
-  followUpRiskThreshold: "HIGH",
-  baselineProcessor: "core",
-  monitorProcessor: "lite",
-  followUpProcessor: "pro",
-  taskResultPollSeconds: 25,
-  taskResultMaxWaitMilliseconds: 15 * 60 * 1_000,
-  taskResultRetryDelayMilliseconds: 250,
-};
+export interface AssessmentView {
+  source:
+    | { kind: "baseline"; runId: string }
+    | {
+        kind: "monitor_event";
+        monitorId: string;
+        eventId: string;
+        eventDate: string | null;
+      };
+  observedAt: string;
+  report: VendorReport;
+  basis: FieldBasis[];
+  risk: RiskAssessment & { policyVersion: number };
+}
 
 export interface BootstrapSummary {
   vendors: number;
   baselinesCreated: number;
+  baselinesResumed: number;
   baselinesReused: number;
   monitorsCreated: number;
   monitorsAdopted: number;
   monitorsReused: number;
+  results: Array<{
+    vendor: Vendor;
+    baseline: {
+      action: "created" | "resumed" | "reused";
+      runId: string;
+      interactionId?: string;
+      warnings: string[];
+    };
+    monitor: {
+      action: "created" | "adopted" | "reused";
+      monitorId: string;
+      frequency: string;
+      processor: "lite" | "base";
+    };
+    assessment: AssessmentView;
+  }>;
+  omittedActiveVendors: Array<{ vendor: string; monitorId: string }>;
+  warnings: Diagnostic[];
+}
+
+export type FollowUpView =
+  | { status: "not_required" }
+  | { status: "pending"; runId?: string }
+  | {
+      status: "completed";
+      runId: string;
+      investigation: ChangeInvestigation;
+      basis: FieldBasis[];
+      warnings: string[];
+    }
+  | {
+      status: "failed";
+      runId: string;
+      message: string;
+      failedAt: string;
+    };
+
+export interface ChangeView {
+  vendor: Vendor;
+  event: {
+    monitorId: string;
+    eventId: string;
+    eventDate: string | null;
+    changedFields: EvidenceField[];
+  };
+  assessment: AssessmentView;
+  decision: EventEvidence["decision"];
+  followUp: FollowUpView;
 }
 
 export interface CheckSummary {
@@ -68,47 +139,28 @@ export interface CheckSummary {
   followUpDecisions: number;
   followUpTasksCreated: number;
   followUpsCompleted: number;
-  humanEscalations: number;
-  assessments: CheckAssessmentSummary[];
-  warnings: string[];
-  errors: string[];
-}
-
-export interface CheckAssessmentSummary {
-  vendor: string;
-  monitorId: string;
-  eventId: string;
-  changedFields: EvidenceField[];
-  risk: {
-    level: RiskAssessment["level"];
-    guidance: RiskAssessment["guidance"];
-    reasons: RiskAssessment["reasons"];
-    citations: RiskAssessment["citations"];
-  };
-  followUp: {
-    required: boolean;
-    reasons: FollowUpDecision["reasons"];
-    runId?: string;
-    completed: boolean;
-  };
+  humanReviewsRequired: number;
+  changes: ChangeView[];
+  warnings: Diagnostic[];
+  errors: Diagnostic[];
 }
 
 export interface CleanupSummary {
-  attempted: string[];
-  cancelled: string[];
-  failures: Array<{ monitorId: string; message: string }>;
+  scope: { kind: "all" } | { kind: "vendors"; vendors: string[] };
+  monitors: Array<
+    | { vendor: string; monitorId: string; status: "cancelled" | "already_cancelled" }
+    | { vendor: string; monitorId: string; status: "failed"; message: string }
+  >;
+  warnings: Diagnostic[];
 }
 
-type Logger = Pick<Console, "log" | "warn" | "error">;
-
+type Reporter = (message: string) => void;
 function errorMessage(error: unknown): string {
-  return error instanceof Error ? error.message : String(error);
-}
-
-function errorStatus(error: unknown): number | undefined {
-  if (typeof error !== "object" || error === null || !("status" in error)) return undefined;
-  const status = (error as { status?: unknown }).status;
-  return typeof status === "number" ? status : undefined;
+  if (error instanceof Error) return error.message;
+  if (typeof error === "object" && error !== null && "message" in error) {
+    return String((error as { message: unknown }).message);
+  }
+  return String(error);
 }
 
 function assertCurrentSpec(state: RecipeState): void {
@@ -119,8 +171,15 @@ function assertCurrentSpec(state: RecipeState): void {
   }
 }
 
-function parseBasis(value: unknown): FieldBasis[] {
-  return FieldBasisSchema.array().parse(value ?? []) as FieldBasis[];
+function parseTaskBasis(value: unknown, taskLabel: string): FieldBasis[] {
+  try {
+    return FieldBasisSchema.array().parse(value ?? []);
+  } catch (error) {
+    throw new InvalidTaskOutputError(
+      `${taskLabel} returned an invalid evidence basis: ${errorMessage(error)}`,
+      { cause: error },
+    );
+  }
 }
 
 function isSnapshotEvent(value: unknown): value is MonitorSnapshotEvent {
@@ -133,8 +192,13 @@ function isSnapshotEvent(value: unknown): value is MonitorSnapshotEvent {
   );
 }
 
-function isMonitorError(value: unknown): value is { error_message: string; timestamp: string } {
-  return typeof value === "object" && value !== null && "error_message" in value;
+function isMonitorError(value: unknown): value is MonitorErrorEvent {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "error_message" in value &&
+    "timestamp" in value
+  );
 }
 
 function isSnapshotMonitorForBaseline(
@@ -143,11 +207,10 @@ function isSnapshotMonitorForBaseline(
   baselineRunId: string,
   frequency: string,
   processor: "lite" | "base",
-): boolean {
+): monitor is SnapshotMonitor {
   return (
     monitor.type === "snapshot" &&
     monitor.status === "active" &&
-    "task_run_id" in monitor.settings &&
     monitor.settings.task_run_id === baselineRunId &&
     monitor.frequency === frequency &&
     monitor.processor === processor &&
@@ -157,74 +220,78 @@ function isSnapshotMonitorForBaseline(
   );
 }
 
-export function reconstructSnapshotEvent(event: MonitorSnapshotEvent): {
-  previousReport: VendorReport;
-  currentReport: VendorReport;
-  currentBasis: FieldBasis[];
-  changedFields: EvidenceField[];
-} {
-  if (event.previous_output.type !== "json" || event.changed_output.type !== "json") {
-    throw new Error(`Snapshot event ${event.event_id} must contain JSON outputs.`);
-  }
-
-  const previousReport = VendorReportSchema.parse(event.previous_output.content);
-  const changedFields = EvidenceFieldSchema.array().parse(
-    Object.keys(event.changed_output.content),
-  );
-  const currentReport = VendorReportSchema.parse({
-    ...event.previous_output.content,
-    ...event.changed_output.content,
-  });
-
-  const basis = new Map<string, FieldBasis>();
-  for (const entry of parseBasis(event.previous_output.basis)) basis.set(entry.field, entry);
-  for (const field of changedFields) {
-    basis.delete(field);
-    for (const existingField of [...basis.keys()]) {
-      if (existingField.startsWith(`${field}.`)) basis.delete(existingField);
-    }
-  }
-  for (const entry of parseBasis(event.changed_output.basis)) basis.set(entry.field, entry);
-
-  return {
-    previousReport,
-    currentReport,
-    currentBasis: [...basis.values()],
-    changedFields,
-  };
-}
-
 function taskWarnings(result: TaskRunResult): string[] {
   return (result.run.warnings ?? []).map((warning) => warning.message);
 }
 
+function lastFailure(entry: { failedAttempts: TaskFailure[] }): TaskFailure {
+  const failure = entry.failedAttempts.at(-1);
+  if (!failure) throw new Error("Failed state is missing its Task failure.");
+  return failure;
+}
+
 export class VendorIntelligence {
+  private readonly client: ParallelPort;
+  private readonly store: FileStateStore;
+  private readonly config: VendorIntelligenceConfig;
   private readonly now: () => Date;
   private readonly sleep: (milliseconds: number) => Promise<void>;
-  private readonly logger: Logger;
+  private readonly report: Reporter;
+  private readonly tasks: TaskRunner;
 
-  constructor(
-    private readonly options: {
-      client: ParallelPort;
-      store: FileStateStore;
-      config: VendorIntelligenceConfig;
-      now?: () => Date;
-      sleep?: (milliseconds: number) => Promise<void>;
-      logger?: Logger;
-    },
-  ) {
+  constructor(options: {
+    client: ParallelPort;
+    store: FileStateStore;
+    config: VendorIntelligenceConfig;
+    now?: () => Date;
+    sleep?: (milliseconds: number) => Promise<void>;
+    reporter?: Reporter;
+  }) {
+    this.client = options.client;
+    this.store = options.store;
+    this.config = VendorIntelligenceConfigSchema.parse(options.config);
     this.now = options.now ?? (() => new Date());
     this.sleep =
       options.sleep ??
       ((milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds)));
-    this.logger = options.logger ?? console;
+    this.report = options.reporter ?? ((message) => console.error(message));
+    this.tasks = new TaskRunner({
+      client: this.client,
+      pollSeconds: this.config.taskResultPollSeconds,
+      maxWaitMilliseconds: this.config.taskResultMaxWaitMilliseconds,
+      retryDelayMilliseconds: this.config.taskResultRetryDelayMilliseconds,
+      now: this.now,
+      sleep: this.sleep,
+    });
   }
 
-  async bootstrap(vendorInputs: Vendor[]): Promise<BootstrapSummary> {
+  async bootstrap(
+    vendorInputs: Vendor[],
+    options: { retryFailed?: boolean } = {},
+  ): Promise<BootstrapSummary> {
+    return this.store.withCommandLock("bootstrap", () =>
+      this.bootstrapUnlocked(vendorInputs, options),
+    );
+  }
+
+  async checkForUpdates(
+    options: { retryFailed?: boolean } = {},
+  ): Promise<CheckSummary> {
+    return this.store.withCommandLock("check-updates", () =>
+      this.checkForUpdatesUnlocked(options),
+    );
+  }
+
+  async cleanup(options: { vendors?: string[] } = {}): Promise<CleanupSummary> {
+    return this.store.withCommandLock("cleanup", () => this.cleanupUnlocked(options));
+  }
+
+  private async bootstrapUnlocked(
+    vendorInputs: Vendor[],
+    options: { retryFailed?: boolean },
+  ): Promise<BootstrapSummary> {
     const vendors = vendorInputs.map((vendor) => VendorSchema.parse(vendor));
-    if (vendors.length === 0) {
-      throw new Error("Provide at least one vendor to bootstrap.");
-    }
+    if (vendors.length === 0) throw new Error("Provide at least one vendor to bootstrap.");
     const domains = new Set<string>();
     for (const vendor of vendors) {
       if (domains.has(vendor.domain)) {
@@ -232,161 +299,313 @@ export class VendorIntelligence {
       }
       domains.add(vendor.domain);
     }
-    const initial = await this.options.store.read();
+
+    const initial = await this.store.read();
     assertCurrentSpec(initial);
     const summary: BootstrapSummary = {
       vendors: vendors.length,
       baselinesCreated: 0,
+      baselinesResumed: 0,
       baselinesReused: 0,
       monitorsCreated: 0,
       monitorsAdopted: 0,
       monitorsReused: 0,
+      results: [],
+      omittedActiveVendors: [],
+      warnings: [],
     };
 
-    for (const vendor of vendors) {
-      await this.options.store.update((state) => {
-        const existing = state.vendors[vendor.domain];
-        if (!existing) {
-          state.vendors[vendor.domain] = {
-            vendor,
-            baseline: { stage: "pending" },
-            events: {},
-          };
-          return;
-        }
-        if (existing.baseline.stage !== "pending" && existing.vendor.name !== vendor.name) {
-          throw new Error(
-            `Vendor ${vendor.domain} was bootstrapped as ${existing.vendor.name}; changing its name would diverge from the saved Task input. Restore that name or clean up and reset state.`,
-          );
-        }
-        existing.vendor = vendor;
-        if (existing.baseline.stage === "completed") {
-          existing.baseline.assessment = scoreReport(
-            existing.baseline.report,
-            vendor.riskFloor,
-            existing.baseline.basis,
-          );
-        }
-        if (existing.latest) {
-          existing.latest.assessment = scoreReport(
-            existing.latest.report,
-            vendor.riskFloor,
-            existing.latest.basis,
-          );
-        }
-      });
-
-      let state = await this.options.store.read();
-      let vendorState = state.vendors[vendor.domain]!;
-
-      if (vendorState.baseline.stage !== "completed") {
-        let runId: string;
-        let interactionId: string | undefined;
-        if (vendorState.baseline.stage === "running") {
-          runId = vendorState.baseline.runId;
-          interactionId = vendorState.baseline.interactionId;
-        } else {
-          const params = buildBaselineTaskParams(vendor);
-          const run = await this.options.client.taskRun.create({
-            ...params,
-            processor: this.options.config.baselineProcessor,
-          });
-          runId = run.run_id;
-          interactionId = run.interaction_id;
-          await this.options.store.update((current) => {
-            current.vendors[vendor.domain]!.baseline = {
-              stage: "running",
-              runId,
-              interactionId,
-              startedAt: this.now().toISOString(),
-            };
-          });
-          summary.baselinesCreated += 1;
-        }
-
-        const result = await this.waitForTaskResult(runId);
-        if (result.output.type !== "json") {
-          throw new Error(`Baseline Task ${runId} returned ${result.output.type}, expected JSON.`);
-        }
-        const report = VendorReportSchema.parse(result.output.content);
-        const basis = parseBasis(result.output.basis);
-        const assessment = scoreReport(report, vendor.riskFloor, basis);
-        const warnings = taskWarnings(result);
-        for (const warning of warnings) this.logger.warn(`Baseline ${runId}: ${warning}`);
-        const observedAt = this.now().toISOString();
-        await this.options.store.update((current) => {
-          const record = current.vendors[vendor.domain]!;
-          record.baseline = {
-            stage: "completed",
-            runId,
-            interactionId,
-            report,
-            basis,
-            assessment,
-            observedAt,
-            ...(warnings.length > 0 ? { warnings } : {}),
-          };
-          record.latest = { report, basis, assessment, observedAt };
+    for (const [domain, saved] of Object.entries(initial.vendors)) {
+      if (!domains.has(domain) && saved.monitor?.status === "active") {
+        summary.omittedActiveVendors.push({
+          vendor: domain,
+          monitorId: saved.monitor.monitorId,
         });
-      } else {
-        summary.baselinesReused += 1;
+        summary.warnings.push({
+          code: "omitted_active_vendor",
+          vendor: domain,
+          resourceId: saved.monitor.monitorId,
+          message: `${domain} remains monitored because bootstrap is additive. Run cleanup -- --vendor ${domain} to cancel its state-owned Monitor.`,
+        });
       }
+    }
 
-      state = await this.options.store.read();
-      vendorState = state.vendors[vendor.domain]!;
-      if (vendorState.baseline.stage !== "completed") {
+    for (const vendor of vendors) {
+      await this.upsertVendor(vendor);
+      const baseline = await this.ensureBaseline(vendor, options.retryFailed === true, summary);
+      const monitor = await this.ensureMonitor(vendor, baseline.run.runId, summary);
+      const completed = (await this.store.read()).vendors[vendor.domain]!.baseline;
+      if (completed.stage !== "completed") {
         throw new Error(`Baseline for ${vendor.domain} did not reach completed state.`);
       }
-      if (vendorState.monitor?.status === "active") {
-        const localMonitor = vendorState.monitor;
-        const remote = await this.options.client.monitor.retrieve(localMonitor.monitorId);
-        if (remote.status === "cancelled") {
-          await this.markMonitorCancelled(vendor.domain, localMonitor.monitorId);
-        } else if (
-          isSnapshotMonitorForBaseline(
-            remote,
-            vendor,
-            vendorState.baseline.runId,
-            this.options.config.monitorFrequency,
-            this.options.config.monitorProcessor,
-          )
-        ) {
-          summary.monitorsReused += 1;
-          continue;
-        } else {
-          throw new Error(
-            `Stored Monitor ${localMonitor.monitorId} no longer matches the baseline, metadata, frequency, or processor. Run cleanup before changing Monitor configuration.`,
-          );
-        }
-      }
-
-      const adopted = await this.findAdoptableMonitor(vendor, vendorState.baseline.runId);
-      if (adopted) {
-        await this.saveActiveMonitor(vendor, vendorState.baseline.runId, adopted);
-        summary.monitorsAdopted += 1;
-        continue;
-      }
-
-      const monitor = await this.options.client.monitor.create({
-        type: "snapshot",
-        frequency: this.options.config.monitorFrequency,
-        processor: this.options.config.monitorProcessor,
-        settings: { task_run_id: vendorState.baseline.runId },
-        metadata: {
-          recipe: RECIPE_METADATA,
-          vendor: vendor.domain,
-          spec: String(SPEC_VERSION),
+      summary.results.push({
+        vendor,
+        baseline: {
+          action: baseline.action,
+          runId: completed.run.runId,
+          ...(completed.run.interactionId
+            ? { interactionId: completed.run.interactionId }
+            : {}),
+          warnings: completed.evidence.warnings,
         },
+        monitor: {
+          action: monitor.action,
+          monitorId: monitor.monitor.monitor_id,
+          frequency: monitor.monitor.frequency,
+          processor: monitor.monitor.processor,
+        },
+        assessment: this.assessmentView(
+          vendor,
+          { kind: "baseline", runId: completed.run.runId },
+          completed.evidence.report,
+          completed.evidence.basis,
+          completed.evidence.observedAt,
+        ),
       });
-      await this.saveActiveMonitor(vendor, vendorState.baseline.runId, monitor);
-      summary.monitorsCreated += 1;
     }
 
     return summary;
   }
 
-  async checkForUpdates(): Promise<CheckSummary> {
-    const initial = await this.options.store.read();
+  private async upsertVendor(vendor: Vendor): Promise<void> {
+    await this.store.update((state) => {
+      const existing = state.vendors[vendor.domain];
+      if (!existing) {
+        state.vendors[vendor.domain] = {
+          vendor,
+          baseline: { stage: "not_started", failedAttempts: [] },
+          events: {},
+        };
+        return;
+      }
+      if (existing.baseline.stage !== "not_started" && existing.vendor.name !== vendor.name) {
+        throw new Error(
+          `Vendor ${vendor.domain} was bootstrapped as ${existing.vendor.name}; changing its name would diverge from the saved Task input. Restore that name or clean up and reset state.`,
+        );
+      }
+      existing.vendor = vendor;
+    });
+  }
+
+  private async ensureBaseline(
+    vendor: Vendor,
+    retryFailed: boolean,
+    summary: BootstrapSummary,
+  ): Promise<{ run: TaskRef; action: "created" | "resumed" | "reused" }> {
+    let baseline = (await this.store.read()).vendors[vendor.domain]!.baseline;
+    if (baseline.stage === "completed") {
+      summary.baselinesReused += 1;
+      return { run: baseline.run, action: "reused" };
+    }
+    if (baseline.stage === "failed" && !retryFailed) {
+      const failure = lastFailure(baseline);
+      throw new Error(
+        `Baseline Task ${failure.run.runId} failed permanently: ${failure.message}. Re-run bootstrap with --retry-failed to create a replacement Task.`,
+      );
+    }
+
+    let run: TaskRef;
+    let action: "created" | "resumed";
+    const failedAttempts = baseline.failedAttempts;
+    if (baseline.stage === "running") {
+      run = baseline.run;
+      action = "resumed";
+      summary.baselinesResumed += 1;
+      this.report(`Resuming baseline Task ${run.runId} for ${vendor.domain}...`);
+    } else {
+      const created = await this.client.taskRun.create(
+        buildBaselineTaskParams(vendor, this.config.baselineProcessor),
+        { maxRetries: 0 },
+      );
+      run = {
+        runId: created.run_id,
+        interactionId: created.interaction_id,
+        startedAt: this.now().toISOString(),
+      };
+      await this.store.update((state) => {
+        state.vendors[vendor.domain]!.baseline = {
+          stage: "running",
+          run,
+          failedAttempts,
+        };
+      });
+      action = "created";
+      summary.baselinesCreated += 1;
+      this.report(`Created baseline Task ${run.runId} for ${vendor.domain}; waiting...`);
+    }
+
+    try {
+      const result = await this.tasks.wait(run.runId);
+      if (result.run.run_id !== run.runId || result.run.status !== "completed") {
+        throw new InvalidTaskOutputError(
+          `Baseline Task ${run.runId} returned an inconsistent completed result.`,
+        );
+      }
+      if (result.output.type !== "json") {
+        throw new InvalidTaskOutputError(
+          `Baseline Task ${run.runId} returned ${result.output.type}, expected JSON.`,
+        );
+      }
+      let report: VendorReport;
+      try {
+        report = VendorReportSchema.parse(result.output.content);
+      } catch (error) {
+        throw new InvalidTaskOutputError(
+          `Baseline Task ${run.runId} returned invalid vendor intelligence: ${errorMessage(error)}`,
+          { cause: error },
+        );
+      }
+      const basis = parseTaskBasis(result.output.basis, `Baseline Task ${run.runId}`);
+      const warnings = taskWarnings(result);
+      const completedRun: TaskRef = {
+        ...run,
+        interactionId: result.run.interaction_id || run.interactionId,
+      };
+      const observedAt = this.now().toISOString();
+      await this.store.update((state) => {
+        state.vendors[vendor.domain]!.baseline = {
+          stage: "completed",
+          run: completedRun,
+          failedAttempts,
+          evidence: { report, basis, observedAt, warnings },
+        };
+      });
+      for (const warning of warnings) this.report(`Baseline ${run.runId}: ${warning}`);
+      return { run: completedRun, action };
+    } catch (error) {
+      const failure = this.tasks.failure(error, run);
+      if (failure) {
+        await this.store.update((state) => {
+          state.vendors[vendor.domain]!.baseline = {
+            stage: "failed",
+            failedAttempts: [...failedAttempts, failure],
+          };
+        });
+        throw new Error(
+          `Baseline Task ${run.runId} failed permanently: ${failure.message}. Re-run bootstrap with --retry-failed to create a replacement Task.`,
+          { cause: error },
+        );
+      }
+      throw error;
+    }
+  }
+
+  private async ensureMonitor(
+    vendor: Vendor,
+    baselineRunId: string,
+    summary: BootstrapSummary,
+  ): Promise<{
+    monitor: SnapshotMonitor;
+    action: "created" | "adopted" | "reused";
+  }> {
+    let vendorState = (await this.store.read()).vendors[vendor.domain]!;
+    if (vendorState.monitor?.status === "active") {
+      const local = vendorState.monitor;
+      const remote = await this.client.monitor.retrieve(local.monitorId);
+      if (remote.status === "cancelled") {
+        await this.markMonitorCancelled(vendor.domain, local.monitorId);
+      } else if (
+        isSnapshotMonitorForBaseline(
+          remote,
+          vendor,
+          baselineRunId,
+          this.config.monitorFrequency,
+          this.config.monitorProcessor,
+        )
+      ) {
+        summary.monitorsReused += 1;
+        return { monitor: remote, action: "reused" };
+      } else {
+        throw new Error(
+          `Stored Monitor ${local.monitorId} no longer matches the baseline, metadata, frequency, or processor. Run cleanup before changing Monitor configuration.`,
+        );
+      }
+    }
+
+    const adopted = await this.findAdoptableMonitor(vendor, baselineRunId);
+    if (adopted) {
+      await this.saveActiveMonitor(vendor, baselineRunId, adopted);
+      summary.monitorsAdopted += 1;
+      return { monitor: adopted, action: "adopted" };
+    }
+
+    let monitor: SnapshotMonitor;
+    try {
+      monitor = await this.client.monitor.create(
+        buildSnapshotMonitorParams({
+          vendor,
+          baselineRunId,
+          frequency: this.config.monitorFrequency,
+          processor: this.config.monitorProcessor,
+        }),
+        { maxRetries: 0 },
+      );
+    } catch (createError) {
+      try {
+        const recovered = await this.findAdoptableMonitor(vendor, baselineRunId);
+        if (recovered) {
+          await this.saveActiveMonitor(vendor, baselineRunId, recovered);
+          summary.monitorsAdopted += 1;
+          this.report(
+            `Recovered snapshot Monitor ${recovered.monitor_id} after an ambiguous create response.`,
+          );
+          return { monitor: recovered, action: "adopted" };
+        }
+      } catch (recoveryError) {
+        throw new Error(
+          `Monitor creation for ${vendor.domain} failed and recovery could not list matching Monitors. Re-run bootstrap; it will adopt a matching Monitor before creating another. Recovery error: ${errorMessage(recoveryError)}`,
+          { cause: createError },
+        );
+      }
+      throw new Error(
+        `Monitor creation for ${vendor.domain} did not return a confirmed response. Re-run bootstrap; it will adopt any matching Monitor before creating another.`,
+        { cause: createError },
+      );
+    }
+    const createdMonitor: Monitor = monitor;
+    if (
+      !isSnapshotMonitorForBaseline(
+        createdMonitor,
+        vendor,
+        baselineRunId,
+        this.config.monitorFrequency,
+        this.config.monitorProcessor,
+      )
+    ) {
+      let cancellation = "Automatic cancellation failed; cancel it manually.";
+      try {
+        const cancelled = await this.client.monitor.cancel(monitor.monitor_id);
+        const confirmed =
+          cancelled.status === "cancelled"
+            ? cancelled
+            : await this.client.monitor.retrieve(monitor.monitor_id);
+        if (confirmed.status === "cancelled") {
+          cancellation = "The mismatched Monitor was cancelled automatically.";
+        }
+      } catch {
+        try {
+          const confirmed = await this.client.monitor.retrieve(monitor.monitor_id);
+          if (confirmed.status === "cancelled") {
+            cancellation = "The mismatched Monitor was already cancelled remotely.";
+          }
+        } catch {
+          // The error below retains the known Monitor ID for manual recovery.
+        }
+      }
+      throw new Error(
+        `Created Monitor ${monitor.monitor_id} did not match the requested baseline, metadata, frequency, or processor and was not saved. ${cancellation}`,
+      );
+    }
+    await this.saveActiveMonitor(vendor, baselineRunId, monitor);
+    summary.monitorsCreated += 1;
+    this.report(`Created snapshot Monitor ${monitor.monitor_id} for ${vendor.domain}.`);
+    return { monitor, action: "created" };
+  }
+
+  private async checkForUpdatesUnlocked(options: {
+    retryFailed?: boolean;
+  }): Promise<CheckSummary> {
+    const initial = await this.store.read();
     assertCurrentSpec(initial);
     const summary: CheckSummary = {
       monitorsChecked: 0,
@@ -394,179 +613,735 @@ export class VendorIntelligence {
       followUpDecisions: 0,
       followUpTasksCreated: 0,
       followUpsCompleted: 0,
-      humanEscalations: 0,
-      assessments: [],
+      humanReviewsRequired: 0,
+      changes: [],
       warnings: [],
       errors: [],
     };
     const blockedMonitors = new Set<string>();
 
     for (const [domain, vendorState] of Object.entries(initial.vendors)) {
-      const pending = Object.values(vendorState.events).filter(
-        (entry) => entry.stage === "follow_up_pending",
-      );
-      for (const entry of pending) {
+      for (const entry of Object.values(vendorState.events)) {
         try {
-          await this.completeFollowUp(domain, entry.eventId, summary);
+          if (entry.stage === "event_failed") {
+            if (options.retryFailed) {
+              await this.retryFailedEvent(domain, entry.eventId, summary);
+            } else {
+              this.addDiagnostic(summary.errors, {
+                code: "event_requires_retry",
+                vendor: domain,
+                resourceId: entry.eventId,
+                message: `Event ${entry.eventId} could not be validated. Re-run check-updates with --retry-failed after correcting the cause.`,
+              });
+            }
+          } else if (entry.stage === "follow_up_failed") {
+            if (options.retryFailed) {
+              await this.queueFailedFollowUp(domain, entry.eventId);
+              await this.completeFollowUp(domain, entry.eventId, summary);
+            } else {
+              this.upsertChange(vendorState.vendor, entry, summary);
+              const failure = lastFailure(entry);
+              this.addDiagnostic(summary.errors, {
+                code: "follow_up_requires_retry",
+                vendor: domain,
+                resourceId: failure.run.runId,
+                message: `Follow-up Task ${failure.run.runId} failed permanently. Re-run check-updates with --retry-failed to create a replacement Task.`,
+              });
+            }
+          } else if (
+            entry.stage === "follow_up_queued" ||
+            entry.stage === "follow_up_running"
+          ) {
+            await this.completeFollowUp(domain, entry.eventId, summary);
+          }
         } catch (error) {
           const message = `Could not resume event ${entry.eventId}: ${errorMessage(error)}`;
-          summary.errors.push(message);
-          this.logger.error(message);
-          blockedMonitors.add(entry.monitorId);
+          this.addDiagnostic(summary.errors, {
+            code: "event_resume_failed",
+            vendor: domain,
+            resourceId: entry.eventId,
+            message,
+          });
+          const currentEntry = (await this.store.read()).vendors[domain]?.events[
+            entry.eventId
+          ];
+          if (
+            (currentEntry?.stage === "follow_up_queued" ||
+              currentEntry?.stage === "follow_up_running") &&
+            vendorState.monitor?.status === "active"
+          ) {
+            blockedMonitors.add(vendorState.monitor.monitorId);
+          }
           break;
         }
       }
     }
 
-    const refreshed = await this.options.store.read();
+    const refreshed = await this.store.read();
     for (const [domain, vendorState] of Object.entries(refreshed.vendors)) {
       const monitor = vendorState.monitor;
       if (!monitor || monitor.status !== "active" || blockedMonitors.has(monitor.monitorId)) {
         continue;
       }
       summary.monitorsChecked += 1;
-
       try {
-        const events: MonitorSnapshotEvent[] = [];
-        const seen = new Set<string>();
-        const reportedExecutionErrors = new Set(monitor.reportedExecutionErrors ?? []);
-        const newExecutionErrorFingerprints: string[] = [];
-        let cursor: string | undefined;
-        do {
-          const page = await this.options.client.monitor.events(monitor.monitorId, {
-            limit: 100,
-            include_completions: false,
-            ...(cursor ? { cursor } : {}),
-          });
-          for (const warning of page.warnings ?? []) {
-            const message = `${monitor.monitorId}: ${warning.message}`;
-            summary.warnings.push(message);
-            this.logger.warn(message);
-          }
-          for (const event of page.events) {
-            if (isSnapshotEvent(event) && !seen.has(event.event_id)) {
-              seen.add(event.event_id);
-              events.push(event);
-            } else if (isMonitorError(event)) {
-              const fingerprint = `${event.timestamp}\u0000${event.error_message}`;
-              if (!reportedExecutionErrors.has(fingerprint)) {
-                reportedExecutionErrors.add(fingerprint);
-                newExecutionErrorFingerprints.push(fingerprint);
-                const message = `${monitor.monitorId} execution error: ${event.error_message}`;
-                summary.errors.push(message);
-                this.logger.error(message);
-              }
-            }
-          }
-          cursor = page.next_cursor ?? undefined;
-        } while (cursor);
-
-        if (monitor.newestObservedEventId && !seen.has(monitor.newestObservedEventId)) {
-          const message = `${monitor.monitorId}: prior event ${monitor.newestObservedEventId} is outside the retained Monitor history; processing every retained unseen event.`;
-          summary.warnings.push(message);
-          this.logger.warn(message);
-        }
-
-        let newestDurableEventId: string | undefined;
-        for (const event of [...events].reverse()) {
-          const currentState = await this.options.store.read();
-          const existing = currentState.vendors[domain]?.events[event.event_id];
-          if (existing?.stage === "completed") {
-            newestDurableEventId = event.event_id;
-            continue;
-          }
-          try {
-            if (!existing) {
-              await this.recordSnapshotEvent(domain, monitor.monitorId, event, summary);
-            }
-            newestDurableEventId = event.event_id;
-            const afterRecord = await this.options.store.read();
-            if (afterRecord.vendors[domain]?.events[event.event_id]?.stage === "follow_up_pending") {
-              await this.completeFollowUp(domain, event.event_id, summary);
-            }
-          } catch (error) {
-            const message = `Could not process event ${event.event_id}: ${errorMessage(error)}`;
-            summary.errors.push(message);
-            this.logger.error(message);
-            break;
-          }
-        }
-
-        const durableState = await this.options.store.read();
-        const newestDurableEntry = events
-          .map((event) => durableState.vendors[domain]?.events[event.event_id])
-          .find((entry): entry is EventLedgerEntry => entry !== undefined);
-        await this.options.store.update((state) => {
-          const record = state.vendors[domain];
-          const currentMonitor = record?.monitor;
-          if (!record || !currentMonitor || currentMonitor.status !== "active") return;
-          currentMonitor.lastCheckedAt = this.now().toISOString();
-          if (newestDurableEventId) {
-            currentMonitor.newestObservedEventId = newestDurableEventId;
-          }
-          if (newExecutionErrorFingerprints.length > 0) {
-            currentMonitor.reportedExecutionErrors = [
-              ...(currentMonitor.reportedExecutionErrors ?? []),
-              ...newExecutionErrorFingerprints,
-            ].slice(-100);
-          }
-          if (newestDurableEntry) {
-            record.latest = {
-              report: newestDurableEntry.currentReport,
-              basis: newestDurableEntry.currentBasis,
-              assessment: newestDurableEntry.currentAssessment,
-              observedAt: newestDurableEntry.firstSeenAt,
-              eventId: newestDurableEntry.eventId,
-            };
-          }
-        });
+        await this.checkMonitor(domain, monitor, summary);
       } catch (error) {
-        const message = `Could not check Monitor ${monitor.monitorId}: ${errorMessage(error)}`;
-        summary.errors.push(message);
-        this.logger.error(message);
+        this.addDiagnostic(summary.errors, {
+          code: "monitor_check_failed",
+          vendor: domain,
+          resourceId: monitor.monitorId,
+          message: `Could not check Monitor ${monitor.monitorId}: ${errorMessage(error)}`,
+        });
       }
     }
 
+    summary.humanReviewsRequired = summary.changes.filter(
+      ({ assessment }) => assessment.risk.requiresHumanReview,
+    ).length;
     return summary;
   }
 
-  async cleanup(): Promise<CleanupSummary> {
-    const state = await this.options.store.read();
-    const summary: CleanupSummary = { attempted: [], cancelled: [], failures: [] };
+  private async checkMonitor(
+    domain: string,
+    monitor: Extract<NonNullable<VendorState["monitor"]>, { status: "active" }>,
+    summary: CheckSummary,
+  ): Promise<void> {
+    const history = await this.fetchMonitorHistory(domain, monitor.monitorId, summary);
+    if (monitor.newestObservedEventId && !history.seen.has(monitor.newestObservedEventId)) {
+      this.addDiagnostic(summary.warnings, {
+        code: "monitor_history_gap",
+        vendor: domain,
+        resourceId: monitor.monitorId,
+        message: `${monitor.monitorId}: prior event ${monitor.newestObservedEventId} is outside retained Monitor history; processing every retained unseen event.`,
+      });
+    }
 
-    for (const [domain, vendorState] of Object.entries(state.vendors)) {
-      const monitor = vendorState.monitor;
-      if (!monitor || monitor.status === "cancelled") continue;
-      summary.attempted.push(monitor.monitorId);
-      this.logger.log(`Cancelling Monitor ${monitor.monitorId} for ${domain}...`);
+    let newestDurableEventId: string | undefined;
+    for (const event of [...history.events].reverse()) {
+      const currentState = await this.store.read();
+      const existing = currentState.vendors[domain]?.events[event.event_id];
+      if (existing) {
+        newestDurableEventId = event.event_id;
+        continue;
+      }
 
-      let cancelled = false;
       try {
-        await this.options.client.monitor.cancel(monitor.monitorId);
-        cancelled = true;
+        const recorded = await this.recordSnapshotEvent(
+          domain,
+          monitor.monitorId,
+          event,
+          summary,
+          true,
+        );
+        newestDurableEventId = event.event_id;
+        if (recorded.stage === "follow_up_queued") {
+          await this.completeFollowUp(domain, event.event_id, summary);
+        }
+      } catch (error) {
+        if (error instanceof InvalidSnapshotEventError) {
+          await this.recordFailedSnapshotEvent(domain, monitor.monitorId, event, error);
+          newestDurableEventId = event.event_id;
+          this.addDiagnostic(summary.errors, {
+            code: "invalid_snapshot_event",
+            vendor: domain,
+            resourceId: event.event_id,
+            message: error.message,
+          });
+          summary.newEvents += 1;
+          continue;
+        }
+        this.addDiagnostic(summary.errors, {
+          code: "event_processing_failed",
+          vendor: domain,
+          resourceId: event.event_id,
+          message: `Could not process event ${event.event_id}: ${errorMessage(error)}`,
+        });
+        break;
+      }
+    }
+
+    const durable = await this.store.read();
+    const newestValid = history.events
+      .map((event) => durable.vendors[domain]?.events[event.event_id])
+      .find(
+        (entry): entry is EventEvidence => entry !== undefined && entry.stage !== "event_failed",
+      );
+    await this.store.update((state) => {
+      const record = state.vendors[domain];
+      const currentMonitor = record?.monitor;
+      if (!record || !currentMonitor || currentMonitor.status !== "active") return;
+      currentMonitor.lastCheckedAt = this.now().toISOString();
+      if (newestDurableEventId) currentMonitor.newestObservedEventId = newestDurableEventId;
+      if (history.newErrorFingerprints.length > 0) {
+        currentMonitor.reportedExecutionErrors = [
+          ...history.newErrorFingerprints,
+          ...(currentMonitor.reportedExecutionErrors ?? []),
+        ].filter((value, index, values) => values.indexOf(value) === index).slice(0, 100);
+      }
+      if (newestValid) record.latestEventId = newestValid.eventId;
+    });
+  }
+
+  private async fetchMonitorHistory(
+    domain: string,
+    monitorId: string,
+    summary: CheckSummary,
+  ): Promise<{
+    events: MonitorSnapshotEvent[];
+    seen: Set<string>;
+    newErrorFingerprints: string[];
+  }> {
+    const state = await this.store.read();
+    const monitor = state.vendors[domain]?.monitor;
+    const previouslyReported = new Set(
+      monitor?.status === "active" ? monitor.reportedExecutionErrors ?? [] : [],
+    );
+    const seenThisFetch = new Set<string>();
+    const events: MonitorSnapshotEvent[] = [];
+    const seen = new Set<string>();
+    const newErrorFingerprints: string[] = [];
+    let reachedKnownExecutionError = false;
+    const cursors = new Set<string>();
+    let cursor: string | undefined;
+
+    do {
+      const page = await this.client.monitor.events(monitorId, {
+        limit: 100,
+        include_completions: false,
+        ...(cursor ? { cursor } : {}),
+      });
+      for (const warning of page.warnings ?? []) {
+        this.addDiagnostic(summary.warnings, {
+          code: "monitor_warning",
+          vendor: domain,
+          resourceId: monitorId,
+          message: `${monitorId}: ${warning.message}`,
+        });
+      }
+      for (const event of page.events) {
+        if (isSnapshotEvent(event) && !seen.has(event.event_id)) {
+          seen.add(event.event_id);
+          events.push(event);
+        } else if (isMonitorError(event)) {
+          const fingerprint = `${event.timestamp}\u0000${event.error_message}`;
+          if (previouslyReported.has(fingerprint)) {
+            reachedKnownExecutionError = true;
+          } else if (!reachedKnownExecutionError && !seenThisFetch.has(fingerprint)) {
+            seenThisFetch.add(fingerprint);
+            newErrorFingerprints.push(fingerprint);
+            this.addDiagnostic(summary.errors, {
+              code: "monitor_execution_error",
+              vendor: domain,
+              resourceId: monitorId,
+              message: `${monitorId} execution error: ${event.error_message}`,
+            });
+          }
+        }
+      }
+      const next = page.next_cursor ?? undefined;
+      if (next && cursors.has(next)) {
+        throw new Error(`Monitor ${monitorId} returned a repeated pagination cursor.`);
+      }
+      if (next) cursors.add(next);
+      cursor = next;
+    } while (cursor);
+
+    return { events, seen, newErrorFingerprints };
+  }
+
+  private async recordSnapshotEvent(
+    domain: string,
+    monitorId: string,
+    event: SnapshotEventInput,
+    summary: CheckSummary,
+    countAsNew: boolean,
+    firstSeenAt?: string,
+  ): Promise<EventEvidence> {
+    const state = await this.store.read();
+    const vendorState = state.vendors[domain];
+    if (!vendorState) throw new Error(`No local vendor state for ${domain}.`);
+    const reconstructed = reconstructSnapshotEvent(event);
+    const previousAssessment = scoreReport(
+      reconstructed.previousReport,
+      vendorState.vendor.riskFloor,
+      reconstructed.previousBasis,
+    );
+    const currentAssessment = scoreReport(
+      reconstructed.currentReport,
+      vendorState.vendor.riskFloor,
+      reconstructed.currentBasis,
+    );
+    const decision = decideFollowUp({
+      previousReport: reconstructed.previousReport,
+      currentReport: reconstructed.currentReport,
+      changedFields: reconstructed.changedFields,
+      threshold: this.config.followUpRiskThreshold,
+      riskFloor: vendorState.vendor.riskFloor,
+      previousAssessment,
+      currentAssessment,
+    });
+    const evaluatedAt = this.now().toISOString();
+    const firstObservedAt = firstSeenAt ?? evaluatedAt;
+    const historicalDecision = decision.runFollowUp
+      ? FollowUpRequiredDecisionSchema.parse({
+          ...decision,
+          policyVersion: POLICY_VERSION,
+          evaluatedAt,
+          ...(vendorState.vendor.riskFloor
+            ? { riskFloor: vendorState.vendor.riskFloor }
+            : {}),
+        })
+      : NoFollowUpDecisionSchema.parse({
+          ...decision,
+          policyVersion: POLICY_VERSION,
+          evaluatedAt,
+          ...(vendorState.vendor.riskFloor
+            ? { riskFloor: vendorState.vendor.riskFloor }
+            : {}),
+        });
+    const common = {
+      eventId: event.event_id,
+      monitorId,
+      eventDate: event.event_date,
+      eventGroupId: event.event_group_id,
+      firstSeenAt: firstObservedAt,
+      previousReport: reconstructed.previousReport,
+      previousBasis: reconstructed.previousBasis,
+      currentReport: reconstructed.currentReport,
+      currentBasis: reconstructed.currentBasis,
+    };
+    const entry = EventLedgerEntrySchema.parse(
+      decision.runFollowUp
+        ? {
+            stage: "follow_up_queued",
+            ...common,
+            decision: historicalDecision,
+            failedAttempts: [],
+          }
+        : {
+            stage: "completed_without_follow_up",
+            ...common,
+            decision: historicalDecision,
+            completedAt: evaluatedAt,
+          },
+    ) as EventEvidence;
+
+    await this.store.update((current) => {
+      const existing = current.vendors[domain]!.events[event.event_id];
+      if (!existing || existing.stage === "event_failed") {
+        current.vendors[domain]!.events[event.event_id] = entry;
+      }
+    });
+    this.upsertChange(vendorState.vendor, entry, summary);
+    if (countAsNew) summary.newEvents += 1;
+    if (countAsNew && decision.runFollowUp) summary.followUpDecisions += 1;
+    return entry;
+  }
+
+  private async recordFailedSnapshotEvent(
+    domain: string,
+    monitorId: string,
+    event: MonitorSnapshotEvent,
+    error: InvalidSnapshotEventError,
+  ): Promise<void> {
+    const now = this.now().toISOString();
+    const failed = EventLedgerEntrySchema.parse({
+      stage: "event_failed",
+      eventId: event.event_id,
+      monitorId,
+      eventDate: event.event_date,
+      eventGroupId: event.event_group_id,
+      firstSeenAt: now,
+      rawEvent: rawSnapshotEvent(event),
+      failure: {
+        kind: "invalid_event",
+        message: error.message,
+        failedAt: now,
+        attempts: 1,
+      },
+    });
+    await this.store.update((state) => {
+      if (!state.vendors[domain]!.events[event.event_id]) {
+        state.vendors[domain]!.events[event.event_id] = failed;
+      }
+    });
+  }
+
+  private async retryFailedEvent(
+    domain: string,
+    eventId: string,
+    summary: CheckSummary,
+  ): Promise<void> {
+    const state = await this.store.read();
+    const entry = state.vendors[domain]?.events[eventId];
+    if (!entry || entry.stage !== "event_failed") return;
+    try {
+      const restored = restoredSnapshotEvent(entry.rawEvent);
+      const recorded = await this.recordSnapshotEvent(
+        domain,
+        entry.monitorId,
+        restored,
+        summary,
+        false,
+        entry.firstSeenAt,
+      );
+      await this.advanceLatestIfCurrentlyObserved(domain, recorded);
+      if (recorded.stage === "follow_up_queued") {
+        await this.completeFollowUp(domain, eventId, summary);
+      }
+    } catch (error) {
+      if (!(error instanceof InvalidSnapshotEventError)) throw error;
+      await this.store.update((current) => {
+        const failed = current.vendors[domain]?.events[eventId];
+        if (!failed || failed.stage !== "event_failed") return;
+        failed.failure = {
+          ...failed.failure,
+          message: error.message,
+          failedAt: this.now().toISOString(),
+          attempts: failed.failure.attempts + 1,
+        };
+      });
+      this.addDiagnostic(summary.errors, {
+        code: "invalid_snapshot_event",
+        vendor: domain,
+        resourceId: eventId,
+        message: error.message,
+      });
+    }
+  }
+
+  private async queueFailedFollowUp(domain: string, eventId: string): Promise<void> {
+    await this.store.update((state) => {
+      const entry = state.vendors[domain]?.events[eventId];
+      if (!entry || entry.stage !== "follow_up_failed") return;
+      state.vendors[domain]!.events[eventId] = EventLedgerEntrySchema.parse({
+        ...entry,
+        stage: "follow_up_queued",
+      });
+    });
+  }
+
+  private async advanceLatestIfCurrentlyObserved(
+    domain: string,
+    candidate: EventEvidence,
+  ): Promise<void> {
+    await this.store.update((state) => {
+      const vendor = state.vendors[domain];
+      if (!vendor) return;
+      if (
+        vendor.monitor?.status === "active" &&
+        vendor.monitor.newestObservedEventId === candidate.eventId
+      ) {
+        vendor.latestEventId = candidate.eventId;
+      }
+    });
+  }
+
+  private async completeFollowUp(
+    domain: string,
+    eventId: string,
+    summary: CheckSummary,
+  ): Promise<void> {
+    let state = await this.store.read();
+    const vendorState = state.vendors[domain];
+    let entry = vendorState?.events[eventId];
+    if (!vendorState || !entry || entry.stage === "event_failed") {
+      throw new Error(`No follow-up event ${eventId} for ${domain}.`);
+    }
+    if (
+      entry.stage === "completed_without_follow_up" ||
+      entry.stage === "follow_up_completed" ||
+      entry.stage === "follow_up_failed"
+    ) {
+      this.upsertChange(vendorState.vendor, entry, summary);
+      return;
+    }
+
+    let run: TaskRef;
+    if (entry.stage === "follow_up_running") {
+      run = entry.run;
+      this.report(`Resuming follow-up Task ${run.runId} for event ${eventId}...`);
+    } else {
+      const created = await this.client.taskRun.create(
+        buildChangeInvestigationTaskParams({
+          vendor: vendorState.vendor,
+          eventId,
+          changedFields: entry.decision.changedFields,
+          previousReport: entry.previousReport,
+          currentReport: entry.currentReport,
+          ...(vendorState.baseline.stage === "completed" &&
+          vendorState.baseline.run.interactionId
+            ? { previousInteractionId: vendorState.baseline.run.interactionId }
+            : {}),
+          policyDecision: {
+            threshold: entry.decision.threshold,
+            previousLevel: entry.decision.previousLevel,
+            currentLevel: entry.decision.currentLevel,
+            requiresHumanReview: entry.decision.requiresHumanReview,
+            reasons: entry.decision.reasons,
+          },
+          processor: this.config.followUpProcessor,
+        }),
+        { maxRetries: 0 },
+      );
+      run = {
+        runId: created.run_id,
+        interactionId: created.interaction_id,
+        startedAt: this.now().toISOString(),
+      };
+      await this.store.update((current) => {
+        const currentEntry = current.vendors[domain]!.events[eventId]!;
+        if (currentEntry.stage !== "follow_up_queued") return;
+        current.vendors[domain]!.events[eventId] = EventLedgerEntrySchema.parse({
+          ...currentEntry,
+          stage: "follow_up_running",
+          run,
+        });
+      });
+      summary.followUpTasksCreated += 1;
+      this.report(`Created follow-up Task ${run.runId} for event ${eventId}; waiting...`);
+    }
+
+    state = await this.store.read();
+    entry = state.vendors[domain]?.events[eventId];
+    if (!entry || entry.stage === "event_failed") {
+      throw new Error(`Follow-up event ${eventId} disappeared for ${domain}.`);
+    }
+    this.upsertChange(vendorState.vendor, entry, summary);
+
+    try {
+      const result = await this.tasks.wait(run.runId);
+      if (result.run.run_id !== run.runId || result.run.status !== "completed") {
+        throw new InvalidTaskOutputError(
+          `Follow-up Task ${run.runId} returned an inconsistent completed result.`,
+        );
+      }
+      if (result.output.type !== "json") {
+        throw new InvalidTaskOutputError(
+          `Follow-up Task ${run.runId} returned ${result.output.type}, expected JSON.`,
+        );
+      }
+      let investigation: ChangeInvestigation;
+      try {
+        investigation = ChangeInvestigationSchema.parse(result.output.content);
+      } catch (error) {
+        throw new InvalidTaskOutputError(
+          `Follow-up Task ${run.runId} returned an invalid investigation: ${errorMessage(error)}`,
+          { cause: error },
+        );
+      }
+      const basis = parseTaskBasis(result.output.basis, `Follow-up Task ${run.runId}`);
+      const warnings = taskWarnings(result);
+      const completedAt = this.now().toISOString();
+      await this.store.update((current) => {
+        const currentEntry = current.vendors[domain]!.events[eventId]!;
+        if (currentEntry.stage !== "follow_up_running") return;
+        current.vendors[domain]!.events[eventId] = EventLedgerEntrySchema.parse({
+          ...currentEntry,
+          stage: "follow_up_completed",
+          run: {
+            ...run,
+            interactionId: result.run.interaction_id || run.interactionId,
+          },
+          investigation,
+          basis,
+          warnings,
+          completedAt,
+        });
+      });
+      summary.followUpsCompleted += 1;
+      for (const warning of warnings) this.report(`Follow-up ${run.runId}: ${warning}`);
+      state = await this.store.read();
+      entry = state.vendors[domain]!.events[eventId]!;
+      if (entry.stage !== "event_failed") {
+        this.upsertChange(vendorState.vendor, entry, summary);
+      }
+    } catch (error) {
+      const failure = this.tasks.failure(error, run);
+      if (!failure) throw error;
+      await this.store.update((current) => {
+        const currentEntry = current.vendors[domain]!.events[eventId]!;
+        if (currentEntry.stage !== "follow_up_running") return;
+        current.vendors[domain]!.events[eventId] = EventLedgerEntrySchema.parse({
+          ...currentEntry,
+          stage: "follow_up_failed",
+          failedAttempts: [...currentEntry.failedAttempts, failure],
+        });
+      });
+      const failed = (await this.store.read()).vendors[domain]!.events[eventId]!;
+      if (failed.stage !== "event_failed") {
+        this.upsertChange(vendorState.vendor, failed, summary);
+      }
+      this.addDiagnostic(summary.errors, {
+        code: "follow_up_terminal_failure",
+        vendor: domain,
+        resourceId: run.runId,
+        message: `Follow-up Task ${run.runId} failed permanently: ${failure.message}`,
+      });
+    }
+  }
+
+  private upsertChange(
+    vendor: Vendor,
+    entry: EventEvidence,
+    summary: CheckSummary,
+  ): void {
+    const assessment = this.assessmentView(
+      vendor,
+      {
+        kind: "monitor_event",
+        monitorId: entry.monitorId,
+        eventId: entry.eventId,
+        eventDate: entry.eventDate,
+      },
+      entry.currentReport,
+      entry.currentBasis,
+      entry.firstSeenAt,
+    );
+    let followUp: FollowUpView;
+    if (entry.stage === "completed_without_follow_up") {
+      followUp = { status: "not_required" };
+    } else if (entry.stage === "follow_up_queued") {
+      followUp = { status: "pending" };
+    } else if (entry.stage === "follow_up_running") {
+      followUp = { status: "pending", runId: entry.run.runId };
+    } else if (entry.stage === "follow_up_failed") {
+      const failure = lastFailure(entry);
+      followUp = {
+        status: "failed",
+        runId: failure.run.runId,
+        message: failure.message,
+        failedAt: failure.failedAt,
+      };
+    } else {
+      followUp = {
+        status: "completed",
+        runId: entry.run.runId,
+        investigation: entry.investigation,
+        basis: entry.basis,
+        warnings: entry.warnings,
+      };
+    }
+    const value: ChangeView = {
+      vendor,
+      event: {
+        monitorId: entry.monitorId,
+        eventId: entry.eventId,
+        eventDate: entry.eventDate,
+        changedFields: entry.decision.changedFields,
+      },
+      assessment,
+      decision: entry.decision,
+      followUp,
+    };
+    const index = summary.changes.findIndex(
+      (candidate) =>
+        candidate.vendor.domain === vendor.domain && candidate.event.eventId === entry.eventId,
+    );
+    if (index === -1) summary.changes.push(value);
+    else summary.changes[index] = value;
+  }
+
+  private assessmentView(
+    vendor: Vendor,
+    source: AssessmentView["source"],
+    report: VendorReport,
+    basis: FieldBasis[],
+    observedAt: string,
+  ): AssessmentView {
+    return {
+      source,
+      observedAt,
+      report,
+      basis,
+      risk: {
+        ...scoreReport(report, vendor.riskFloor, basis),
+        policyVersion: POLICY_VERSION,
+      },
+    };
+  }
+
+  private async cleanupUnlocked(options: { vendors?: string[] }): Promise<CleanupSummary> {
+    const requested = options.vendors?.map(normalizeVendorDomain);
+    const uniqueRequested = requested ? [...new Set(requested)] : undefined;
+    const summary: CleanupSummary = {
+      scope: uniqueRequested
+        ? { kind: "vendors", vendors: uniqueRequested }
+        : { kind: "all" },
+      monitors: [],
+      warnings: [],
+    };
+    const state = await this.store.read();
+    const domains = uniqueRequested ?? Object.keys(state.vendors);
+
+    for (const domain of domains) {
+      const vendorState = state.vendors[domain];
+      if (!vendorState) {
+        summary.warnings.push({
+          code: "unknown_vendor",
+          vendor: domain,
+          message: `No saved vendor state exists for ${domain}.`,
+        });
+        continue;
+      }
+      const monitor = vendorState.monitor;
+      if (!monitor) {
+        summary.warnings.push({
+          code: "no_monitor",
+          vendor: domain,
+          message: `${domain} has no state-owned Monitor.`,
+        });
+        continue;
+      }
+      if (monitor.status === "cancelled") {
+        summary.monitors.push({
+          vendor: domain,
+          monitorId: monitor.monitorId,
+          status: "already_cancelled",
+        });
+        continue;
+      }
+
+      this.report(`Cancelling Monitor ${monitor.monitorId} for ${domain}...`);
+      let resultStatus: "cancelled" | "already_cancelled" = "cancelled";
+      try {
+        const cancellation = await this.client.monitor.cancel(monitor.monitorId);
+        if (cancellation.status !== "cancelled") {
+          const confirmed = await this.client.monitor.retrieve(monitor.monitorId);
+          if (confirmed.status !== "cancelled") {
+            throw new Error(`Monitor ${monitor.monitorId} did not reach cancelled status.`);
+          }
+        }
       } catch (cancelError) {
         try {
-          const remote = await this.options.client.monitor.retrieve(monitor.monitorId);
-          cancelled = remote.status === "cancelled";
+          const remote = await this.client.monitor.retrieve(monitor.monitorId);
+          if (remote.status !== "cancelled") throw cancelError;
+          resultStatus = "already_cancelled";
         } catch {
-          // Preserve the original cancellation error below.
-        }
-        if (!cancelled) {
-          summary.failures.push({
+          summary.monitors.push({
+            vendor: domain,
             monitorId: monitor.monitorId,
+            status: "failed",
             message: errorMessage(cancelError),
           });
           continue;
         }
       }
 
-      summary.cancelled.push(monitor.monitorId);
       try {
         await this.markMonitorCancelled(domain, monitor.monitorId);
-        this.logger.log(`Cancelled Monitor ${monitor.monitorId}.`);
-      } catch (error) {
-        summary.failures.push({
+        summary.monitors.push({
+          vendor: domain,
           monitorId: monitor.monitorId,
+          status: resultStatus,
+        });
+        this.report(`Cancelled Monitor ${monitor.monitorId}.`);
+      } catch (error) {
+        summary.monitors.push({
+          vendor: domain,
+          monitorId: monitor.monitorId,
+          status: "failed",
           message: `Remote cancellation succeeded, but local state was not updated: ${errorMessage(error)}`,
         });
       }
@@ -575,41 +1350,15 @@ export class VendorIntelligence {
     return summary;
   }
 
-  private async waitForTaskResult(runId: string): Promise<TaskRunResult> {
-    const deadline = Date.now() + this.options.config.taskResultMaxWaitMilliseconds;
-    let lastError: unknown;
-
-    while (Date.now() < deadline) {
-      try {
-        return await this.options.client.taskRun.result(
-          runId,
-          { timeout: this.options.config.taskResultPollSeconds },
-          { maxRetries: 0 },
-        );
-      } catch (error) {
-        lastError = error;
-        if (errorStatus(error) !== 408) throw error;
-      }
-
-      if (Date.now() < deadline) {
-        await this.sleep(this.options.config.taskResultRetryDelayMilliseconds);
-      }
-    }
-
-    throw new Error(
-      `Task ${runId} did not complete within ${this.options.config.taskResultMaxWaitMilliseconds}ms.`,
-      { cause: lastError },
-    );
-  }
-
   private async findAdoptableMonitor(
     vendor: Vendor,
     baselineRunId: string,
-  ): Promise<Monitor | undefined> {
-    const candidates: Monitor[] = [];
+  ): Promise<SnapshotMonitor | undefined> {
+    const candidates: SnapshotMonitor[] = [];
+    const cursors = new Set<string>();
     let cursor: string | undefined;
     do {
-      const page = await this.options.client.monitor.list({
+      const page = await this.client.monitor.list({
         limit: 100,
         status: ["active"],
         type: ["snapshot"],
@@ -621,12 +1370,17 @@ export class VendorIntelligence {
             monitor,
             vendor,
             baselineRunId,
-            this.options.config.monitorFrequency,
-            this.options.config.monitorProcessor,
+            this.config.monitorFrequency,
+            this.config.monitorProcessor,
           ),
         ),
       );
-      cursor = page.next_cursor ?? undefined;
+      const next = page.next_cursor ?? undefined;
+      if (next && cursors.has(next)) {
+        throw new Error("Monitor listing returned a repeated pagination cursor.");
+      }
+      if (next) cursors.add(next);
+      cursor = next;
     } while (cursor);
 
     if (candidates.length > 1) {
@@ -640,9 +1394,9 @@ export class VendorIntelligence {
   private async saveActiveMonitor(
     vendor: Vendor,
     baselineRunId: string,
-    monitor: Monitor,
+    monitor: SnapshotMonitor,
   ): Promise<void> {
-    await this.options.store.update((state) => {
+    await this.store.update((state) => {
       state.vendors[vendor.domain]!.monitor = {
         status: "active",
         monitorId: monitor.monitor_id,
@@ -655,7 +1409,7 @@ export class VendorIntelligence {
   }
 
   private async markMonitorCancelled(domain: string, monitorId: string): Promise<void> {
-    await this.options.store.update((state) => {
+    await this.store.update((state) => {
       const record = state.vendors[domain]?.monitor;
       if (!record || record.status !== "active" || record.monitorId !== monitorId) return;
       state.vendors[domain]!.monitor = {
@@ -670,182 +1424,8 @@ export class VendorIntelligence {
     });
   }
 
-  private async recordSnapshotEvent(
-    domain: string,
-    monitorId: string,
-    event: MonitorSnapshotEvent,
-    summary: CheckSummary,
-  ): Promise<void> {
-    const state = await this.options.store.read();
-    const vendorState = state.vendors[domain];
-    if (!vendorState) throw new Error(`No local vendor state for ${domain}.`);
-    const reconstructed = reconstructSnapshotEvent(event);
-    const previousBasis = parseBasis(
-      event.previous_output.type === "json" ? event.previous_output.basis : [],
-    );
-    const previousAssessment = scoreReport(
-      reconstructed.previousReport,
-      vendorState.vendor.riskFloor,
-      previousBasis,
-    );
-    const currentAssessment = scoreReport(
-      reconstructed.currentReport,
-      vendorState.vendor.riskFloor,
-      reconstructed.currentBasis,
-    );
-    const decision = decideFollowUp({
-      previousReport: reconstructed.previousReport,
-      currentReport: reconstructed.currentReport,
-      changedFields: reconstructed.changedFields,
-      threshold: this.options.config.followUpRiskThreshold,
-      riskFloor: vendorState.vendor.riskFloor,
-      previousAssessment,
-      currentAssessment,
-    });
-    const now = this.now().toISOString();
-    const entry: EventLedgerEntry = {
-      eventId: event.event_id,
-      monitorId,
-      eventDate: event.event_date,
-      eventGroupId: event.event_group_id,
-      firstSeenAt: now,
-      changedFields: reconstructed.changedFields,
-      previousReport: reconstructed.previousReport,
-      previousBasis,
-      previousAssessment,
-      currentReport: reconstructed.currentReport,
-      currentBasis: reconstructed.currentBasis,
-      currentAssessment,
-      decision,
-      stage: decision.runFollowUp ? "follow_up_pending" : "completed",
-      ...(!decision.runFollowUp ? { completedAt: now } : {}),
-    };
-
-    await this.options.store.update((current) => {
-      const record = current.vendors[domain]!;
-      if (!record.events[event.event_id]) record.events[event.event_id] = entry;
-    });
-    this.upsertAssessmentSummary(domain, entry, summary);
-    summary.newEvents += 1;
-    if (decision.runFollowUp) summary.followUpDecisions += 1;
-    if (
-      decision.runFollowUp &&
-      (compareRisk(previousAssessment.level, "HIGH") >= 0 ||
-        compareRisk(currentAssessment.level, "HIGH") >= 0)
-    ) {
-      summary.humanEscalations += 1;
-    }
-  }
-
-  private async completeFollowUp(
-    domain: string,
-    eventId: string,
-    summary: CheckSummary,
-  ): Promise<void> {
-    const state = await this.options.store.read();
-    const vendorState = state.vendors[domain];
-    const entry = vendorState?.events[eventId];
-    if (!vendorState || !entry) throw new Error(`No pending event ${eventId} for ${domain}.`);
-    if (entry.stage === "completed") return;
-    this.upsertAssessmentSummary(domain, entry, summary);
-
-    let runId = entry.followUp?.runId;
-    try {
-      if (!runId) {
-        const run = await this.options.client.taskRun.create(
-          buildChangeInvestigationTaskParams({
-            vendor: vendorState.vendor,
-            eventId,
-            changedFields: entry.changedFields,
-            previousReport: entry.previousReport,
-            currentReport: entry.currentReport,
-            ...(vendorState.baseline.stage === "completed" &&
-            vendorState.baseline.interactionId
-              ? { previousInteractionId: vendorState.baseline.interactionId }
-              : {}),
-            policyDecision: {
-              threshold: entry.decision.threshold,
-              previousLevel: entry.decision.previousLevel,
-              currentLevel: entry.decision.currentLevel,
-              requiresHumanReview: entry.decision.requiresHumanReview,
-              reasons: entry.decision.reasons,
-            },
-            processor: this.options.config.followUpProcessor,
-          }),
-        );
-        runId = run.run_id;
-        await this.options.store.update((current) => {
-          const currentEntry = current.vendors[domain]!.events[eventId]!;
-          currentEntry.followUp = { ...currentEntry.followUp, runId };
-          delete currentEntry.lastError;
-        });
-        summary.followUpTasksCreated += 1;
-      }
-
-      const result = await this.waitForTaskResult(runId);
-      if (result.output.type !== "json") {
-        throw new Error(`Follow-up Task ${runId} returned ${result.output.type}, expected JSON.`);
-      }
-      const investigation = ChangeInvestigationSchema.parse(result.output.content);
-      const basis = parseBasis(result.output.basis);
-      const warnings = taskWarnings(result);
-      for (const warning of warnings) this.logger.warn(`Follow-up ${runId}: ${warning}`);
-      const completedAt = this.now().toISOString();
-      await this.options.store.update((current) => {
-        const currentEntry = current.vendors[domain]!.events[eventId]!;
-        currentEntry.followUp = {
-          runId,
-          investigation,
-          basis,
-          completedAt,
-          ...(warnings.length > 0 ? { warnings } : {}),
-        };
-        currentEntry.stage = "completed";
-        currentEntry.completedAt = completedAt;
-        delete currentEntry.lastError;
-      });
-      const completedEntry = (await this.options.store.read()).vendors[domain]!.events[eventId]!;
-      this.upsertAssessmentSummary(domain, completedEntry, summary);
-      summary.followUpsCompleted += 1;
-    } catch (error) {
-      await this.options.store.update((current) => {
-        const currentEntry = current.vendors[domain]!.events[eventId]!;
-        currentEntry.lastError = {
-          message: errorMessage(error),
-          at: this.now().toISOString(),
-        };
-      });
-      throw error;
-    }
-  }
-
-  private upsertAssessmentSummary(
-    domain: string,
-    entry: EventLedgerEntry,
-    summary: CheckSummary,
-  ): void {
-    const value: CheckAssessmentSummary = {
-      vendor: domain,
-      monitorId: entry.monitorId,
-      eventId: entry.eventId,
-      changedFields: entry.changedFields,
-      risk: {
-        level: entry.currentAssessment.level,
-        guidance: entry.currentAssessment.guidance,
-        reasons: entry.currentAssessment.reasons,
-        citations: entry.currentAssessment.citations,
-      },
-      followUp: {
-        required: entry.decision.runFollowUp,
-        reasons: entry.decision.reasons,
-        ...(entry.followUp?.runId ? { runId: entry.followUp.runId } : {}),
-        completed: entry.stage === "completed" && entry.decision.runFollowUp,
-      },
-    };
-    const existing = summary.assessments.findIndex(
-      (candidate) => candidate.vendor === domain && candidate.eventId === entry.eventId,
-    );
-    if (existing === -1) summary.assessments.push(value);
-    else summary.assessments[existing] = value;
+  private addDiagnostic(target: Diagnostic[], diagnostic: Diagnostic): void {
+    target.push(diagnostic);
+    this.report(diagnostic.message);
   }
 }

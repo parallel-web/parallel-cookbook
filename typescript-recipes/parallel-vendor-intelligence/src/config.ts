@@ -3,34 +3,36 @@ import { resolve } from "node:path";
 import Parallel from "parallel-web";
 
 import type { ParallelPort } from "./parallel-port.js";
-import { RiskLevelSchema } from "./schema.js";
+import { createParallelPort } from "./parallel-sdk-adapter.js";
 import { FileStateStore } from "./state.js";
+import { VendorIntelligence } from "./vendor-intelligence.js";
 import {
   DEFAULT_CONFIG,
-  VendorIntelligence,
+  VendorIntelligenceConfigSchema,
   type VendorIntelligenceConfig,
-} from "./vendor-intelligence.js";
-
-export function parseMonitorFrequency(value: string): string {
-  const match = /^(\d+)([hdw])$/.exec(value);
-  if (!match) throw new Error("MONITOR_FREQUENCY must look like 12h, 1d, or 2w.");
-  const amount = Number(match[1]);
-  const unit = match[2]!;
-  const hours = amount * (unit === "h" ? 1 : unit === "d" ? 24 : 24 * 7);
-  if (hours < 1 || hours > 30 * 24) {
-    throw new Error("MONITOR_FREQUENCY must be between 1h and 30d.");
-  }
-  return value;
-}
+} from "./vendor-config.js";
 
 export function configFromEnv(
   env: NodeJS.ProcessEnv,
 ): Pick<VendorIntelligenceConfig, "monitorFrequency" | "followUpRiskThreshold"> {
+  const parsed = VendorIntelligenceConfigSchema.parse({
+    ...DEFAULT_CONFIG,
+    ...configValuesFromEnv(env),
+  });
   return {
-    monitorFrequency: parseMonitorFrequency(env.MONITOR_FREQUENCY ?? "1d"),
-    followUpRiskThreshold: RiskLevelSchema.parse(
-      env.FOLLOW_UP_RISK_THRESHOLD ?? "HIGH",
-    ),
+    monitorFrequency: parsed.monitorFrequency,
+    followUpRiskThreshold: parsed.followUpRiskThreshold,
+  };
+}
+
+function configValuesFromEnv(env: NodeJS.ProcessEnv): Record<string, unknown> {
+  return {
+    ...(env.MONITOR_FREQUENCY !== undefined
+      ? { monitorFrequency: env.MONITOR_FREQUENCY }
+      : {}),
+    ...(env.FOLLOW_UP_RISK_THRESHOLD !== undefined
+      ? { followUpRiskThreshold: env.FOLLOW_UP_RISK_THRESHOLD }
+      : {}),
   };
 }
 
@@ -46,14 +48,14 @@ export function createVendorIntelligenceFromEnv(
   if (!apiKey && !options.client) {
     throw new Error("PARALLEL_API_KEY is required.");
   }
-  const teachingConfig = configFromEnv(env);
-  const config: VendorIntelligenceConfig = {
+  const config = VendorIntelligenceConfigSchema.parse({
     ...DEFAULT_CONFIG,
-    ...teachingConfig,
+    ...configValuesFromEnv(env),
     ...options.config,
-  };
+  });
   const client: ParallelPort =
-    options.client ?? new Parallel({ apiKey: apiKey!, timeout: 60_000 });
+    options.client ??
+    createParallelPort(new Parallel({ apiKey: apiKey!, timeout: 60_000 }));
 
   return new VendorIntelligence({
     client,

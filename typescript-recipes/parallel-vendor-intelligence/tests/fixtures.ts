@@ -1,9 +1,10 @@
-import type { Monitor, MonitorSnapshotEvent } from "parallel-web/resources/monitor";
 import type {
   FieldBasis,
+  MonitorSnapshotEvent,
+  SnapshotMonitor,
   TaskRun,
   TaskRunResult,
-} from "parallel-web/resources/task-run";
+} from "../src/parallel-port.js";
 
 import {
   RISK_DIMENSIONS,
@@ -43,16 +44,12 @@ export function taskRun(runId = "run-1"): TaskRun {
     run_id: runId,
     interaction_id: `interaction-${runId}`,
     status: "queued",
-    is_active: true,
-    processor: "core",
-    created_at: "2026-07-09T00:00:00.000Z",
-    modified_at: "2026-07-09T00:00:00.000Z",
   };
 }
 
 export function reportResult(report: VendorReport, runId = "run-1"): TaskRunResult {
   return {
-    run: { ...taskRun(runId), status: "completed", is_active: false },
+    run: { ...taskRun(runId), status: "completed" },
     output: {
       type: "json",
       content: report,
@@ -70,7 +67,7 @@ export const investigation: ChangeInvestigation = {
 
 export function investigationResult(runId = "follow-1"): TaskRunResult {
   return {
-    run: { ...taskRun(runId), status: "completed", is_active: false },
+    run: { ...taskRun(runId), status: "completed" },
     output: {
       type: "json",
       content: investigation,
@@ -83,7 +80,7 @@ export function snapshotMonitor(
   monitorId = "monitor-1",
   baselineRunId = "run-1",
   status: "active" | "cancelled" = "active",
-): Monitor {
+): SnapshotMonitor {
   return {
     monitor_id: monitorId,
     type: "snapshot",

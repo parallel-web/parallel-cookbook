@@ -1,10 +1,11 @@
-import type { FieldBasis } from "parallel-web/resources/task-run";
 import { z } from "zod";
 
+import type { FieldBasis } from "./parallel-port.js";
 import {
+  EvidenceFieldSchema,
   RISK_DIMENSIONS,
   RiskLevelSchema,
-  type RiskDimensionKey,
+  type EvidenceField,
   type RiskLevel,
   type VendorReport,
 } from "./schema.js";
@@ -16,18 +17,14 @@ const RISK_ORDER: Record<RiskLevel, number> = {
   CRITICAL: 3,
 };
 
+export const POLICY_VERSION = 1;
+
 const GUIDANCE = {
   LOW: "continue_monitoring",
   MEDIUM: "analyst_review",
   HIGH: "urgent_human_review",
   CRITICAL: "immediate_human_escalation",
 } as const;
-
-export const EvidenceFieldSchema = z.enum([
-  ...RISK_DIMENSIONS.map(({ key }) => key),
-  "adverse_events",
-]);
-export type EvidenceField = z.infer<typeof EvidenceFieldSchema>;
 
 const SeverityCountsSchema = z.object({
   LOW: z.number().int().nonnegative(),
@@ -123,14 +120,13 @@ function maxRisk(levels: RiskLevel[]): RiskLevel {
 }
 
 function basisField(entry: FieldBasis): EvidenceField | undefined {
-  return RISK_DIMENSIONS.some(({ key }) => key === entry.field)
-    ? (entry.field as RiskDimensionKey)
-    : entry.field === "adverse_events"
-      ? "adverse_events"
-      : undefined;
+  const root = /^[^.[\]]+/.exec(entry.field)?.[0];
+  const dimension = RISK_DIMENSIONS.find(({ key }) => key === root);
+  if (dimension) return dimension.key;
+  return root === "adverse_events" ? "adverse_events" : undefined;
 }
 
-export function selectCitations(
+function selectCitations(
   basis: FieldBasis[] = [],
   fields: readonly EvidenceField[],
 ): RiskAssessment["citations"] {
@@ -143,8 +139,9 @@ export function selectCitations(
     if (!field || !wanted.has(field)) continue;
 
     for (const citation of entry.citations ?? []) {
-      if (seen.has(citation.url)) continue;
-      seen.add(citation.url);
+      const identity = `${field}\u0000${citation.url}`;
+      if (seen.has(identity)) continue;
+      seen.add(identity);
       citations.push({
         field,
         url: citation.url,
