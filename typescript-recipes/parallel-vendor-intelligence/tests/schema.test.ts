@@ -35,7 +35,16 @@ describe("vendor domain normalization", () => {
     expect(normalizeVendorDomain(input)).toBe(expected);
   });
 
-  it.each(["", "localhost", "mailto:test@example.com", "https://user:pass@example.com"])(
+  it.each([
+    "",
+    "localhost",
+    "127.0.0.1",
+    "https://10.0.0.1",
+    "foo..com",
+    "-bad.example.com",
+    "mailto:test@example.com",
+    "https://user:pass@example.com",
+  ])(
     "rejects unsupported input %s",
     (input) => {
       expect(() => normalizeVendorDomain(input)).toThrow();
@@ -114,14 +123,14 @@ describe("vendor assessment contract", () => {
     expect(JSON.stringify(params)).not.toContain("assessment_date");
   });
 
-  it("constrains follow-up actions to safe human-review guidance", () => {
+  it("rejects model-owned human guidance from focused follow-ups", () => {
     expect(() =>
       ChangeInvestigationSchema.parse({
         what_changed: "A change",
         confirmed_facts: [],
         business_impact: "Impact",
         open_questions: [],
-        recommended_human_action: "terminate_vendor",
+        recommended_human_action: "urgent_human_review",
       }),
     ).toThrow();
   });

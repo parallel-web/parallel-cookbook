@@ -47,6 +47,7 @@ export {
 } from "./vendor-intelligence.js";
 export type {
   BootstrapSummary,
+  CheckAssessmentSummary,
   CheckSummary,
   CleanupSummary,
   VendorIntelligenceConfig,

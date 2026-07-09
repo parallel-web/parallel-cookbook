@@ -95,6 +95,7 @@ async function seedCompletedVendor(
       baseline: {
         stage: "completed",
         runId: `run-${inputVendor.domain}`,
+        interactionId: `interaction-run-${inputVendor.domain}`,
         report,
         basis: [],
         assessment,
@@ -136,6 +137,20 @@ afterEach(async () => {
 });
 
 describe("bootstrap", () => {
+  it("rejects an empty list and duplicate normalized domains before API calls", async () => {
+    const test = await runtime();
+
+    await expect(test.service.bootstrap([])).rejects.toThrow("at least one vendor");
+    await expect(
+      test.service.bootstrap([
+        vendor,
+        { name: "Duplicate", domain: "https://EXAMPLE.com/path" },
+      ]),
+    ).rejects.toThrow("duplicate normalized domain example.com");
+    expect(test.taskCreate).not.toHaveBeenCalled();
+    expect(test.monitorCreate).not.toHaveBeenCalled();
+  });
+
   it("persists the run before completing a baseline, creates one snapshot Monitor, and reuses both", async () => {
     const test = await runtime();
     const first = await test.service.bootstrap([vendor]);
@@ -159,9 +174,11 @@ describe("bootstrap", () => {
       settings: { task_run_id: "run-1" },
       metadata: { recipe: "vendor-intel", vendor: "example.com", spec: "1" },
     });
-    expect((await test.store.read()).vendors["example.com"]?.baseline.stage).toBe(
-      "completed",
-    );
+    const firstState = (await test.store.read()).vendors["example.com"];
+    expect(firstState?.baseline.stage).toBe("completed");
+    if (firstState?.baseline.stage !== "completed") throw new Error("missing baseline");
+    expect(firstState.baseline.basis).toEqual([basis("cybersecurity")]);
+    expect(firstState.latest?.basis).toEqual([basis("cybersecurity")]);
 
     const second = await test.service.bootstrap([vendor]);
     expect(second).toMatchObject({ baselinesReused: 1, monitorsReused: 1 });
@@ -300,6 +317,20 @@ describe("snapshot reconstruction", () => {
 });
 
 describe("checkForUpdates", () => {
+  it("treats an empty Monitor event page as a successful check", async () => {
+    const test = await runtime();
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1" });
+    test.monitorEvents.mockResolvedValue({ events: [] });
+
+    await expect(test.service.checkForUpdates()).resolves.toMatchObject({
+      monitorsChecked: 1,
+      newEvents: 0,
+      assessments: [],
+      warnings: [],
+      errors: [],
+    });
+  });
+
   it("records a low-signal event without creating a follow-up Task", async () => {
     const test = await runtime();
     const previous = vendorReport();
@@ -356,7 +387,7 @@ describe("checkForUpdates", () => {
     expect(test.taskCreate).toHaveBeenCalledWith(
       expect.objectContaining({
         processor: "pro",
-        previous_interaction_id: "high-event",
+        previous_interaction_id: "interaction-run-example.com",
         input: expect.objectContaining({
           monitor_event_id: "high-event",
           changed_fields: ["cybersecurity"],
@@ -371,9 +402,53 @@ describe("checkForUpdates", () => {
     const entry = (await test.store.read()).vendors[vendor.domain]?.events["high-event"];
     expect(entry?.stage).toBe("completed");
     expect(entry?.followUp?.investigation?.what_changed).toContain("security event");
+    expect(summary.assessments).toEqual([
+      expect.objectContaining({
+        vendor: "example.com",
+        eventId: "high-event",
+        risk: expect.objectContaining({
+          level: "HIGH",
+          guidance: "urgent_human_review",
+          citations: [expect.objectContaining({ url: "https://example.com/cybersecurity" })],
+        }),
+        followUp: expect.objectContaining({
+          required: true,
+          runId: "follow-1",
+          completed: true,
+        }),
+      }),
+    ]);
 
     await test.service.checkForUpdates();
     expect(test.taskCreate).toHaveBeenCalledTimes(1);
+  });
+
+  it("deduplicates a persisted event in a fresh service instance", async () => {
+    const test = await runtime();
+    const previous = vendorReport();
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1", report: previous });
+    const event = snapshotEvent({
+      eventId: "persisted-event",
+      previous,
+      changed: {
+        financial_health: { ...previous.financial_health, summary: "A detail changed." },
+      },
+    });
+    test.monitorEvents.mockResolvedValue({ events: [event] });
+    expect((await test.service.checkForUpdates()).newEvents).toBe(1);
+
+    const freshService = new VendorIntelligence({
+      client: test.client,
+      store: test.store,
+      config: DEFAULT_CONFIG,
+      now: () => fixedNow,
+      sleep: async () => {},
+      logger: test.logger,
+    });
+    expect((await freshService.checkForUpdates()).newEvents).toBe(0);
+    expect(Object.keys((await test.store.read()).vendors[vendor.domain]!.events)).toEqual([
+      "persisted-event",
+    ]);
   });
 
   it("paginates the retained window, deduplicates, and processes oldest first", async () => {
@@ -452,6 +527,10 @@ describe("checkForUpdates", () => {
     const summary = await test.service.checkForUpdates();
     expect(test.taskCreate).not.toHaveBeenCalled();
     expect(summary.followUpsCompleted).toBe(1);
+    expect(summary.assessments[0]).toMatchObject({
+      eventId: "pending-event",
+      followUp: { runId: "saved-follow-up", completed: true },
+    });
     expect(test.taskResult).toHaveBeenCalledWith(
       "saved-follow-up",
       { timeout: 25 },
@@ -478,6 +557,20 @@ describe("checkForUpdates", () => {
         }),
       ],
     });
+    expect((await test.service.checkForUpdates()).warnings[0]).toContain(
+      "outside the retained Monitor history",
+    );
+  });
+
+  it("warns when the entire previously observed history has expired", async () => {
+    const test = await runtime();
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1" });
+    await test.store.update((state) => {
+      const monitor = state.vendors[vendor.domain]!.monitor;
+      if (monitor?.status === "active") monitor.newestObservedEventId = "expired-event";
+    });
+    test.monitorEvents.mockResolvedValue({ events: [] });
+
     expect((await test.service.checkForUpdates()).warnings[0]).toContain(
       "outside the retained Monitor history",
     );
@@ -621,6 +714,53 @@ describe("checkForUpdates", () => {
     );
     expect(state.vendors[vendor.domain]?.events["newer-first-monitor-event"]).toBeUndefined();
     expect(state.vendors[secondVendor.domain]?.events["second-monitor-event"]?.stage).toBe(
+      "completed",
+    );
+  });
+});
+
+describe("fixture pipeline", () => {
+  it("bootstraps, investigates a material event, and cleans up its Monitor", async () => {
+    const test = await runtime();
+    const baseline = vendorReport();
+    test.taskResult.mockResolvedValue(reportResult(baseline));
+
+    const bootstrapped = await test.service.bootstrap([vendor]);
+    expect(bootstrapped).toMatchObject({ baselinesCreated: 1, monitorsCreated: 1 });
+
+    test.monitorEvents.mockResolvedValue({
+      events: [
+        snapshotEvent({
+          eventId: "pipeline-material-event",
+          previous: baseline,
+          changed: {
+            cybersecurity: vendorReport({ cybersecurity: "HIGH" }).cybersecurity,
+          },
+          changedBasis: [basis("cybersecurity")],
+        }),
+      ],
+    });
+    test.taskCreate.mockResolvedValue(taskRun("pipeline-follow-up"));
+    test.taskResult.mockResolvedValue(investigationResult("pipeline-follow-up"));
+
+    const checked = await test.service.checkForUpdates();
+    expect(checked).toMatchObject({
+      newEvents: 1,
+      followUpTasksCreated: 1,
+      followUpsCompleted: 1,
+      assessments: [
+        expect.objectContaining({
+          eventId: "pipeline-material-event",
+          risk: expect.objectContaining({ level: "HIGH" }),
+        }),
+      ],
+    });
+
+    const cleaned = await test.service.cleanup();
+    expect(cleaned).toMatchObject({ cancelled: ["monitor-1"], failures: [] });
+    const state = await test.store.read();
+    expect(state.vendors[vendor.domain]?.monitor?.status).toBe("cancelled");
+    expect(state.vendors[vendor.domain]?.events["pipeline-material-event"]?.stage).toBe(
       "completed",
     );
   });

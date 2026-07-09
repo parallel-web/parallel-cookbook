@@ -1,3 +1,5 @@
+import { isIP } from "node:net";
+
 import { z } from "zod";
 
 import type {
@@ -106,12 +108,6 @@ export const ChangeInvestigationSchema = z
     confirmed_facts: z.array(z.string().min(1)),
     business_impact: z.string().min(1),
     open_questions: z.array(z.string().min(1)),
-    recommended_human_action: z.enum([
-      "continue_monitoring",
-      "analyst_review",
-      "urgent_human_review",
-      "immediate_human_escalation",
-    ]),
   })
   .strict();
 export type ChangeInvestigation = z.infer<typeof ChangeInvestigationSchema>;
@@ -137,8 +133,21 @@ export function normalizeVendorDomain(value: string): string {
   }
 
   const hostname = url.hostname.toLowerCase().replace(/\.$/, "");
-  if (!hostname || !hostname.includes(".")) {
-    throw new Error(`Vendor domain must be a public hostname: ${value}`);
+  const labels = hostname.split(".");
+  const validLabels = labels.every(
+    (label) =>
+      label.length >= 1 &&
+      label.length <= 63 &&
+      /^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/.test(label),
+  );
+  if (
+    !hostname ||
+    hostname.length > 253 ||
+    labels.length < 2 ||
+    !validLabels ||
+    isIP(hostname) !== 0
+  ) {
+    throw new Error(`Vendor domain must be a valid DNS hostname: ${value}`);
   }
 
   return hostname;
@@ -212,6 +221,7 @@ export function buildChangeInvestigationTaskParams(input: {
   changedFields: readonly string[];
   previousReport: VendorReport;
   currentReport: VendorReport;
+  previousInteractionId?: string;
   policyDecision: {
     threshold: RiskLevel;
     previousLevel: RiskLevel;
@@ -238,7 +248,7 @@ export function buildChangeInvestigationTaskParams(input: {
   return {
     input: {
       objective:
-        "Investigate the detected vendor-intelligence change. Confirm what changed, explain its business impact, identify unresolved questions, and recommend only a human review action.",
+        "Investigate the detected vendor-intelligence change. Confirm what changed, explain its business impact, and identify unresolved questions. Do not choose a vendor action; deterministic policy owns that decision.",
       vendor_name: vendor.name,
       vendor_domain: vendor.domain,
       monitor_event_id: input.eventId,
@@ -248,7 +258,9 @@ export function buildChangeInvestigationTaskParams(input: {
       policy_decision: input.policyDecision,
     },
     processor: input.processor ?? "pro",
-    previous_interaction_id: input.eventId,
+    ...(input.previousInteractionId
+      ? { previous_interaction_id: input.previousInteractionId }
+      : {}),
     task_spec: {
       output_schema: CHANGE_INVESTIGATION_OUTPUT_SCHEMA,
     },

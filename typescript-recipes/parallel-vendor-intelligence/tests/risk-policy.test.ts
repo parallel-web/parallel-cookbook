@@ -36,6 +36,25 @@ describe("scoreReport", () => {
     expect(assessment.adverseDetected).toBe(true);
   });
 
+  it("requires analyst review for a medium adverse event", () => {
+    const assessment = scoreReport(
+      vendorReport({}, [
+        {
+          category: "operations",
+          severity: "MEDIUM",
+          title: "Regional service disruption",
+          summary: "A limited disruption may affect delivery.",
+        },
+      ]),
+    );
+    expect(assessment).toMatchObject({
+      level: "MEDIUM",
+      adverseDetected: true,
+      requiresHumanReview: true,
+      guidance: "analyst_review",
+    });
+  });
+
   it("does not call several medium dimensions an adverse event", () => {
     const assessment = scoreReport(
       vendorReport({

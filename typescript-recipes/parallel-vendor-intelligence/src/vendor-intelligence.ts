@@ -69,8 +69,28 @@ export interface CheckSummary {
   followUpTasksCreated: number;
   followUpsCompleted: number;
   humanEscalations: number;
+  assessments: CheckAssessmentSummary[];
   warnings: string[];
   errors: string[];
+}
+
+export interface CheckAssessmentSummary {
+  vendor: string;
+  monitorId: string;
+  eventId: string;
+  changedFields: EvidenceField[];
+  risk: {
+    level: RiskAssessment["level"];
+    guidance: RiskAssessment["guidance"];
+    reasons: RiskAssessment["reasons"];
+    citations: RiskAssessment["citations"];
+  };
+  followUp: {
+    required: boolean;
+    reasons: FollowUpDecision["reasons"];
+    runId?: string;
+    completed: boolean;
+  };
 }
 
 export interface CleanupSummary {
@@ -202,6 +222,16 @@ export class VendorIntelligence {
 
   async bootstrap(vendorInputs: Vendor[]): Promise<BootstrapSummary> {
     const vendors = vendorInputs.map((vendor) => VendorSchema.parse(vendor));
+    if (vendors.length === 0) {
+      throw new Error("Provide at least one vendor to bootstrap.");
+    }
+    const domains = new Set<string>();
+    for (const vendor of vendors) {
+      if (domains.has(vendor.domain)) {
+        throw new Error(`Vendor input contains duplicate normalized domain ${vendor.domain}.`);
+      }
+      domains.add(vendor.domain);
+    }
     const initial = await this.options.store.read();
     assertCurrentSpec(initial);
     const summary: BootstrapSummary = {
@@ -365,6 +395,7 @@ export class VendorIntelligence {
       followUpTasksCreated: 0,
       followUpsCompleted: 0,
       humanEscalations: 0,
+      assessments: [],
       warnings: [],
       errors: [],
     };
@@ -430,11 +461,7 @@ export class VendorIntelligence {
           cursor = page.next_cursor ?? undefined;
         } while (cursor);
 
-        if (
-          monitor.newestObservedEventId &&
-          events.length > 0 &&
-          !seen.has(monitor.newestObservedEventId)
-        ) {
+        if (monitor.newestObservedEventId && !seen.has(monitor.newestObservedEventId)) {
           const message = `${monitor.monitorId}: prior event ${monitor.newestObservedEventId} is outside the retained Monitor history; processing every retained unseen event.`;
           summary.warnings.push(message);
           this.logger.warn(message);
@@ -698,6 +725,7 @@ export class VendorIntelligence {
       const record = current.vendors[domain]!;
       if (!record.events[event.event_id]) record.events[event.event_id] = entry;
     });
+    this.upsertAssessmentSummary(domain, entry, summary);
     summary.newEvents += 1;
     if (decision.runFollowUp) summary.followUpDecisions += 1;
     if (
@@ -719,6 +747,7 @@ export class VendorIntelligence {
     const entry = vendorState?.events[eventId];
     if (!vendorState || !entry) throw new Error(`No pending event ${eventId} for ${domain}.`);
     if (entry.stage === "completed") return;
+    this.upsertAssessmentSummary(domain, entry, summary);
 
     let runId = entry.followUp?.runId;
     try {
@@ -730,6 +759,10 @@ export class VendorIntelligence {
             changedFields: entry.changedFields,
             previousReport: entry.previousReport,
             currentReport: entry.currentReport,
+            ...(vendorState.baseline.stage === "completed" &&
+            vendorState.baseline.interactionId
+              ? { previousInteractionId: vendorState.baseline.interactionId }
+              : {}),
             policyDecision: {
               threshold: entry.decision.threshold,
               previousLevel: entry.decision.previousLevel,
@@ -771,6 +804,8 @@ export class VendorIntelligence {
         currentEntry.completedAt = completedAt;
         delete currentEntry.lastError;
       });
+      const completedEntry = (await this.options.store.read()).vendors[domain]!.events[eventId]!;
+      this.upsertAssessmentSummary(domain, completedEntry, summary);
       summary.followUpsCompleted += 1;
     } catch (error) {
       await this.options.store.update((current) => {
@@ -782,5 +817,35 @@ export class VendorIntelligence {
       });
       throw error;
     }
+  }
+
+  private upsertAssessmentSummary(
+    domain: string,
+    entry: EventLedgerEntry,
+    summary: CheckSummary,
+  ): void {
+    const value: CheckAssessmentSummary = {
+      vendor: domain,
+      monitorId: entry.monitorId,
+      eventId: entry.eventId,
+      changedFields: entry.changedFields,
+      risk: {
+        level: entry.currentAssessment.level,
+        guidance: entry.currentAssessment.guidance,
+        reasons: entry.currentAssessment.reasons,
+        citations: entry.currentAssessment.citations,
+      },
+      followUp: {
+        required: entry.decision.runFollowUp,
+        reasons: entry.decision.reasons,
+        ...(entry.followUp?.runId ? { runId: entry.followUp.runId } : {}),
+        completed: entry.stage === "completed" && entry.decision.runFollowUp,
+      },
+    };
+    const existing = summary.assessments.findIndex(
+      (candidate) => candidate.vendor === domain && candidate.eventId === entry.eventId,
+    );
+    if (existing === -1) summary.assessments.push(value);
+    else summary.assessments[existing] = value;
   }
 }

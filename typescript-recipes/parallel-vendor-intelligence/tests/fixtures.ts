@@ -66,7 +66,6 @@ export const investigation: ChangeInvestigation = {
   confirmed_facts: ["The event is confirmed by public reporting."],
   business_impact: "A human should assess exposure and contingency plans.",
   open_questions: ["Does the incident affect shared data?"],
-  recommended_human_action: "urgent_human_review",
 };
 
 export function investigationResult(runId = "follow-1"): TaskRunResult {
