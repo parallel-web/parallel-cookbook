@@ -1,0 +1,334 @@
+{
+  "name": "Workflow 1: Vendor Ingestion & Sync",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Daily Sync Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        100,
+        300
+      ],
+      "typeVersion": 1.2,
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24,
+              "triggerAtHour": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "node-2",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        100,
+        500
+      ],
+      "typeVersion": 1,
+      "parameters": {}
+    },
+    {
+      "id": "node-3",
+      "name": "Read Vendor List",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        340,
+        300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Vendors"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-4",
+      "name": "Read Previous Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        580,
+        300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-5",
+      "name": "Compute Diff",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst incoming = $('Read Vendor List').all().map(i => i.json);\nconst previous = $('Read Previous Registry').all().map(i => i.json);\n\nconst incomingMap = new Map(incoming.map(v => [v.vendor_domain, v]));\nconst previousMap = new Map(previous.map(v => [v.vendor_domain, v]));\n\nconst added = incoming.filter(v => !previousMap.has(v.vendor_domain));\nconst removed = previous.filter(v => !incomingMap.has(v.vendor_domain));\nconst modified = incoming.filter(v => {\n  const prev = previousMap.get(v.vendor_domain);\n  return prev && (prev.monitoring_priority !== v.monitoring_priority || prev.vendor_category !== v.vendor_category);\n});\n\nreturn [{ json: { added, removed, modified, unchanged_count: incoming.length - added.length - modified.length } }];\n"
+      }
+    },
+    {
+      "id": "node-6",
+      "name": "Loop Added Vendors",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        1060,
+        100
+      ],
+      "typeVersion": 3,
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "node-7",
+      "name": "Build Monitor Payload",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1300,
+        100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nfunction escapeVendorName(name) {\n  return String(name == null ? \"\" : name).replace(/\"/g, \"'\").replace(/\\s+/g, \" \").trim();\n}\nconst vendor = $input.first ? $input.first().json : $json;\nif (!vendor || !vendor.vendor_name) {\n  throw new Error(\"Build Monitor Payload received an empty vendor row.\");\n}\nconst safeName = escapeVendorName(vendor.vendor_name);\nconst templates = [\n  { dim: \"legal\", cat: \"Legal & Regulatory\", q: '\"' + safeName + '\" lawsuit OR litigation OR regulatory action OR SEC investigation OR enforcement' },\n  { dim: \"cyber\", cat: \"Cybersecurity\", q: '\"' + safeName + '\" data breach OR cybersecurity incident OR ransomware OR vulnerability disclosure' },\n  { dim: \"financial\", cat: \"Financial Health\", q: '\"' + safeName + '\" bankruptcy OR financial distress OR credit downgrade OR debt default OR layoffs' },\n  { dim: \"leadership\", cat: \"Leadership & Governance\", q: '\"' + safeName + '\" CEO departure OR executive change OR acquisition OR merger OR leadership' },\n  { dim: \"esg\", cat: \"ESG & Reputation\", q: '\"' + safeName + '\" recall OR safety violation OR environmental fine OR labor dispute OR ESG controversy' },\n];\nconst frequency = vendor.monitoring_priority === \"low\" ? \"7d\" : \"1d\";\nconst selected = vendor.monitoring_priority === \"high\" ? templates\n  : vendor.monitoring_priority === \"medium\" ? templates.slice(0, 3)\n  : [templates[0], templates[2]];\n\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      event_summary: { type: \"string\" },\n      severity: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      adverse: { type: \"boolean\" },\n      event_type: { type: \"string\" }\n    },\n    required: [\"event_summary\",\"severity\",\"adverse\",\"event_type\"]\n  }\n};\n\nreturn selected.map(t => {\n  const isHighSignal = vendor.monitoring_priority === \"high\" && (t.dim === \"cyber\" || t.dim === \"legal\");\n  return {\n    json: {\n      vendor_name: vendor.vendor_name,\n      vendor_domain: vendor.vendor_domain,\n      monitorPayload: {\n        type: \"event_stream\",\n        frequency,\n        processor: isHighSignal ? \"base\" : \"lite\",\n        settings: {\n          query: t.q,\n          output_schema: outputSchema,\n          include_backfill: false,\n          advanced_settings: { location: \"us\" }\n        },\n        webhook: {\n          url: ($vars.N8N_WEBHOOK_BASE_URL || \"\") + \"/webhook/parallel-monitor-event\",\n          event_types: [\"monitor.event.detected\"]\n        },\n        metadata: {\n          vendor_name: vendor.vendor_name,\n          vendor_domain: vendor.vendor_domain,\n          monitor_category: t.cat,\n          risk_dimension: t.dim\n        }\n      }\n    }\n  };\n});\n"
+      }
+    },
+    {
+      "id": "node-8",
+      "name": "Create Monitor",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1540,
+        100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst payload = $json.monitorPayload;\nif (!payload) {\n  throw new Error('Create Monitor: missing monitorPayload on input item.');\n}\nconst monitor = await client.monitor.create(payload);\nreturn [{ json: {\n  ...$json,\n  monitor_id: monitor.monitor_id,\n  monitor,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-9",
+      "name": "Loop Removed Vendors",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        1060,
+        500
+      ],
+      "typeVersion": 3,
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "node-10",
+      "name": "Cancel Monitor",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1300,
+        500
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst monitorId = $json.monitor_id || $json.id;\nif (!monitorId) {\n  return [{ json: { ...$json, skipped: true, reason: 'no monitor_id' } }];\n}\ntry {\n  const monitor = await client.monitor.cancel(monitorId);\n  return [{ json: { ...$json, cancelled: true, status: monitor.status } }];\n} catch (err) {\n  return [{ json: { ...$json, cancelled: false, error: String(err.message || err) } }];\n}\n"
+      }
+    },
+    {
+      "id": "node-11",
+      "name": "Update Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1780,
+        300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily Sync Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Vendor List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Vendor List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Vendor List": {
+      "main": [
+        [
+          {
+            "node": "Read Previous Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Previous Registry": {
+      "main": [
+        [
+          {
+            "node": "Compute Diff",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compute Diff": {
+      "main": [
+        [
+          {
+            "node": "Loop Added Vendors",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Loop Removed Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Added Vendors": {
+      "main": [
+        [
+          {
+            "node": "Build Monitor Payload",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Update Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Monitor Payload": {
+      "main": [
+        [
+          {
+            "node": "Create Monitor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Monitor": {
+      "main": [
+        [
+          {
+            "node": "Loop Added Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Removed Vendors": {
+      "main": [
+        [
+          {
+            "node": "Cancel Monitor",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Update Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cancel Monitor": {
+      "main": [
+        [
+          {
+            "node": "Loop Removed Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    "n8n-procurement",
+    "vendor-risk"
+  ]
+}

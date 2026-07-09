@@ -1,0 +1,1570 @@
+{
+  "name": "Vendor Risk Monitoring — Combined Workflow",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Sync: Daily Midnight Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        100,
+        -300
+      ],
+      "typeVersion": 1.2,
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24,
+              "triggerAtHour": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "node-2",
+      "name": "Sync: Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        100,
+        -100
+      ],
+      "typeVersion": 1,
+      "parameters": {}
+    },
+    {
+      "id": "node-3",
+      "name": "Sync: Read Vendor List",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        340,
+        -300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Vendors"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-4",
+      "name": "Sync: Read Previous Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        580,
+        -300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-5",
+      "name": "Sync: Compute Diff",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        -300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst incoming = $('Sync: Read Vendor List').all().map(i => i.json);\nconst previous = $('Sync: Read Previous Registry').all().map(i => i.json);\n\nconst incomingMap = new Map(incoming.map(v => [v.vendor_domain, v]));\nconst previousMap = new Map(previous.map(v => [v.vendor_domain, v]));\n\nconst added = incoming.filter(v => !previousMap.has(v.vendor_domain));\nconst removed = previous.filter(v => !incomingMap.has(v.vendor_domain));\nconst modified = incoming.filter(v => {\n  const prev = previousMap.get(v.vendor_domain);\n  return prev && (prev.monitoring_priority !== v.monitoring_priority || prev.vendor_category !== v.vendor_category);\n});\n\nreturn [{ json: { added, removed, modified, unchanged_count: incoming.length - added.length - modified.length } }];\n"
+      }
+    },
+    {
+      "id": "node-6",
+      "name": "Sync: Loop Added Vendors",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        1060,
+        -500
+      ],
+      "typeVersion": 3,
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "node-7",
+      "name": "Sync: Build Monitor Payload",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1300,
+        -500
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nfunction escapeVendorName(name) {\n  return String(name == null ? \"\" : name).replace(/\"/g, \"'\").replace(/\\s+/g, \" \").trim();\n}\nconst vendor = $input.first ? $input.first().json : $json;\nif (!vendor || !vendor.vendor_name) {\n  throw new Error(\"Sync: Build Monitor Payload received empty vendor input. Ensure Vendors sheet has vendor_name.\");\n}\nconst safeName = escapeVendorName(vendor.vendor_name);\nconst templates = [\n  { dim: \"legal\", cat: \"Legal & Regulatory\", q: '\"' + safeName + '\" lawsuit OR litigation OR regulatory action OR SEC investigation OR enforcement' },\n  { dim: \"cyber\", cat: \"Cybersecurity\", q: '\"' + safeName + '\" data breach OR cybersecurity incident OR ransomware OR vulnerability disclosure' },\n  { dim: \"financial\", cat: \"Financial Health\", q: '\"' + safeName + '\" bankruptcy OR financial distress OR credit downgrade OR debt default OR layoffs' },\n  { dim: \"leadership\", cat: \"Leadership & Governance\", q: '\"' + safeName + '\" CEO departure OR executive change OR acquisition OR merger OR leadership' },\n  { dim: \"esg\", cat: \"ESG & Reputation\", q: '\"' + safeName + '\" recall OR safety violation OR environmental fine OR labor dispute OR ESG controversy' },\n];\nconst frequency = vendor.monitoring_priority === \"low\" ? \"7d\" : \"1d\";\nconst selected = vendor.monitoring_priority === \"high\" ? templates\n  : vendor.monitoring_priority === \"medium\" ? templates.slice(0, 3)\n  : [templates[0], templates[2]];\n\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      event_summary: { type: \"string\" },\n      severity: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      adverse: { type: \"boolean\" },\n      event_type: { type: \"string\" }\n    },\n    required: [\"event_summary\",\"severity\",\"adverse\",\"event_type\"]\n  }\n};\n\nreturn selected.map(t => {\n  const isHighSignal = vendor.monitoring_priority === \"high\" && (t.dim === \"cyber\" || t.dim === \"legal\");\n  return {\n    json: {\n      vendor_name: vendor.vendor_name,\n      vendor_domain: vendor.vendor_domain,\n      monitorPayload: {\n        type: \"event_stream\",\n        frequency,\n        processor: isHighSignal ? \"base\" : \"lite\",\n        settings: {\n          query: t.q,\n          output_schema: outputSchema,\n          include_backfill: false,\n          advanced_settings: { location: \"us\" }\n        },\n        webhook: {\n          url: ($vars.N8N_WEBHOOK_BASE_URL || \"\") + \"/webhook/parallel-monitor-event\",\n          event_types: [\"monitor.event.detected\"]\n        },\n        metadata: {\n          vendor_name: vendor.vendor_name,\n          vendor_domain: vendor.vendor_domain,\n          monitor_category: t.cat,\n          risk_dimension: t.dim\n        }\n      }\n    }\n  };\n});\n"
+      }
+    },
+    {
+      "id": "node-8",
+      "name": "Sync: Create Monitor",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1540,
+        -500
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst payload = $json.monitorPayload;\nif (!payload) {\n  throw new Error('Create Monitor: missing monitorPayload on input item.');\n}\nconst monitor = await client.monitor.create(payload);\nreturn [{ json: {\n  ...$json,\n  monitor_id: monitor.monitor_id,\n  monitor,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-9",
+      "name": "Sync: Loop Removed Vendors",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        1060,
+        -100
+      ],
+      "typeVersion": 3,
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "node-10",
+      "name": "Sync: Cancel Monitor",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1300,
+        -100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst monitorId = $json.monitor_id || $json.id;\nif (!monitorId) {\n  return [{ json: { ...$json, skipped: true, reason: 'no monitor_id' } }];\n}\ntry {\n  const monitor = await client.monitor.cancel(monitorId);\n  return [{ json: { ...$json, cancelled: true, status: monitor.status } }];\n} catch (err) {\n  return [{ json: { ...$json, cancelled: false, error: String(err.message || err) } }];\n}\n"
+      }
+    },
+    {
+      "id": "node-11",
+      "name": "Sync: Update Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1780,
+        -300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    },
+    {
+      "id": "node-12",
+      "name": "Research: Daily 6AM Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        100,
+        300
+      ],
+      "typeVersion": 1.2,
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24,
+              "triggerAtHour": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "node-13",
+      "name": "Research: Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        100,
+        500
+      ],
+      "typeVersion": 1,
+      "parameters": {}
+    },
+    {
+      "id": "node-14",
+      "name": "Research: Read Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        340,
+        300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-15",
+      "name": "Research: Filter Due Vendors",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        580,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst today = new Date().toISOString().slice(0, 10);\nconst vendors = $input.all().map(i => i.json);\nconst due = vendors.filter(v => {\n  if (v.active === false || v.active === \"false\") return false;\n  if (!v.next_research_date) return true;\n  return v.next_research_date.slice(0, 10) <= today;\n});\nreturn due.map(v => ({ json: v }));\n"
+      }
+    },
+    {
+      "id": "node-16",
+      "name": "Research: Run Task Group",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst vendors = $input.all().map(i => i.json);\nif (vendors.length === 0) {\n  return [{ json: { vendors: [], runs: [] } }];\n}\n\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      vendor_name: { type: \"string\" },\n      overall_risk_level: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      financial_health: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      legal_regulatory: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      cybersecurity: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      leadership_governance: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      esg_reputation: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      adverse_events: { type: \"array\", items: { type: \"object\" } },\n      recommendation: { type: \"string\" },\n    },\n    required: [\"vendor_name\",\"overall_risk_level\",\"financial_health\",\"legal_regulatory\",\"cybersecurity\",\"leadership_governance\",\"esg_reputation\",\"adverse_events\",\"recommendation\"]\n  }\n};\n\nconst group = await client.taskGroup.create({});\nconst taskgroupId = group.taskgroup_id;\nconst processor = $vars.RESEARCH_PROCESSOR || 'ultra8x';\n\n// Batch in groups of 50 (matches the PRD limit and the TS BatchPlanner).\nconst BATCH = 50;\nconst runIdByDomain = new Map();\nconst orderedDomains = [];\nfor (let i = 0; i < vendors.length; i += BATCH) {\n  const chunk = vendors.slice(i, i + BATCH);\n  const inputs = chunk.map(v => ({\n    input: 'Conduct a vendor risk assessment of ' + v.vendor_name + ' (' + v.vendor_domain + ').',\n    processor,\n  }));\n  const resp = await client.taskGroup.addRuns(taskgroupId, {\n    inputs,\n    default_task_spec: { output_schema: outputSchema },\n  });\n  resp.run_ids.forEach((runId, idx) => {\n    const dom = chunk[idx].vendor_domain;\n    runIdByDomain.set(runId, dom);\n    orderedDomains.push(dom);\n  });\n}\n\n// Poll the group until is_active=false. Hold a soft 1h ceiling matching\n// the TS pollTaskGroupUntilComplete default.\nconst startedAt = Date.now();\nconst TIMEOUT_MS = 60 * 60 * 1000;\nlet timedOut = false;\nwhile (Date.now() - startedAt < TIMEOUT_MS) {\n  const status = await client.taskGroup.retrieve(taskgroupId);\n  if (!status.status.is_active) { timedOut = false; break; }\n  await new Promise(r => setTimeout(r, 60000));\n  timedOut = true;\n}\n\n// Drain completed runs (and basis) via the streaming getRuns API.\nconst runs = [];\nconst stream = await client.taskGroup.getRuns(taskgroupId, { include_output: true });\nfor await (const event of stream) {\n  if (event && event.type === 'task_run.state' && event.run) {\n    runs.push({\n      run_id: event.run.run_id,\n      status: event.run.status,\n      output: event.output || null,\n    });\n  }\n}\n\n// Finding 18: log how many vendors are still in flight after the 1h cap\n// so operators don't silently re-cycle the same vendors every day.\nconst TERMINAL = new Set(['completed', 'failed', 'cancelled']);\nconst inFlight = runs.filter(r => !TERMINAL.has(r.status)).length;\nconst opsReport = {\n  taskgroup_id: taskgroupId,\n  total_vendors: vendors.length,\n  total_runs: runs.length,\n  in_flight_count: inFlight,\n  timed_out: !!timedOut && inFlight > 0,\n};\n\nreturn [{ json: { vendors, runs, runIdByDomain: Array.from(runIdByDomain.entries()), orderedDomains, taskgroup_id: taskgroupId, ops_report: opsReport } }];\n"
+      }
+    },
+    {
+      "id": "node-17",
+      "name": "Research: Parse Results",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1060,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst data = $input.first().json;\nconst vendors = data.vendors || [];\nconst runs = data.runs || [];\nconst runIdToDomain = new Map(data.runIdByDomain || []);\nconst byDomain = new Map(vendors.map(v => [v.vendor_domain, v]));\n\nreturn runs\n  .filter(r => r.status === 'completed' && r.output)\n  .map(r => {\n    const domain = runIdToDomain.get(r.run_id);\n    const vendor = byDomain.get(domain) || {};\n    return {\n      json: {\n        vendor,\n        research_output: r.output.content || r.output,\n        basis: r.output.basis || [],\n        run_id: r.run_id,\n        status: r.status,\n        source: 'deep_research',\n      }\n    };\n  });\n"
+      }
+    },
+    {
+      "id": "node-18",
+      "name": "Monitor: Deploy Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        900
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/deploy-monitors",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-19",
+      "name": "Monitor: Generate Queries",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        900
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nfunction escapeVendorName(name) {\n  return String(name == null ? \"\" : name).replace(/\"/g, \"'\").replace(/\\s+/g, \" \").trim();\n}\nconst vendor = $input.first ? $input.first().json : $json;\nif (!vendor || !vendor.vendor_name) {\n  throw new Error(\"Monitor: Generate Queries received empty vendor input. Pass vendor_name/vendor_domain in webhook payload.\");\n}\nconst safeName = escapeVendorName(vendor.vendor_name);\nconst templates = [\n  { dim: \"legal\", cat: \"Legal & Regulatory\", q: '\"' + safeName + '\" lawsuit OR litigation OR regulatory action OR SEC investigation OR enforcement' },\n  { dim: \"cyber\", cat: \"Cybersecurity\", q: '\"' + safeName + '\" data breach OR cybersecurity incident OR ransomware OR vulnerability disclosure' },\n  { dim: \"financial\", cat: \"Financial Health\", q: '\"' + safeName + '\" bankruptcy OR financial distress OR credit downgrade OR debt default OR layoffs' },\n  { dim: \"leadership\", cat: \"Leadership & Governance\", q: '\"' + safeName + '\" CEO departure OR executive change OR acquisition OR merger OR leadership' },\n  { dim: \"esg\", cat: \"ESG & Reputation\", q: '\"' + safeName + '\" recall OR safety violation OR environmental fine OR labor dispute OR ESG controversy' },\n];\nconst frequency = vendor.monitoring_priority === \"low\" ? \"7d\" : \"1d\";\nconst selected = vendor.monitoring_priority === \"high\" ? templates\n  : vendor.monitoring_priority === \"medium\" ? templates.slice(0, 3)\n  : [templates[0], templates[2]];\n\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      event_summary: { type: \"string\" },\n      severity: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      adverse: { type: \"boolean\" },\n      event_type: { type: \"string\" }\n    },\n    required: [\"event_summary\",\"severity\",\"adverse\",\"event_type\"]\n  }\n};\n\nreturn selected.map(t => {\n  const isHighSignal = vendor.monitoring_priority === \"high\" && (t.dim === \"cyber\" || t.dim === \"legal\");\n  return {\n    json: {\n      vendor_name: vendor.vendor_name,\n      vendor_domain: vendor.vendor_domain,\n      monitorPayload: {\n        type: \"event_stream\",\n        frequency,\n        processor: isHighSignal ? \"base\" : \"lite\",\n        settings: {\n          query: t.q,\n          output_schema: outputSchema,\n          include_backfill: false,\n          advanced_settings: { location: \"us\" }\n        },\n        webhook: {\n          url: ($vars.N8N_WEBHOOK_BASE_URL || \"\") + \"/webhook/parallel-monitor-event\",\n          event_types: [\"monitor.event.detected\"]\n        },\n        metadata: {\n          vendor_name: vendor.vendor_name,\n          vendor_domain: vendor.vendor_domain,\n          monitor_category: t.cat,\n          risk_dimension: t.dim\n        }\n      }\n    }\n  };\n});\n"
+      }
+    },
+    {
+      "id": "node-20",
+      "name": "Monitor: Loop Monitors",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        580,
+        900
+      ],
+      "typeVersion": 3,
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      }
+    },
+    {
+      "id": "node-21",
+      "name": "Monitor: Create Monitor",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        900
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst payload = $json.monitorPayload;\nif (!payload) {\n  throw new Error('Create Monitor: missing monitorPayload on input item.');\n}\nconst monitor = await client.monitor.create(payload);\nreturn [{ json: {\n  ...$json,\n  monitor_id: monitor.monitor_id,\n  monitor,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-22",
+      "name": "Monitor: Record Monitor IDs",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1060,
+        900
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Monitors"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    },
+    {
+      "id": "node-23",
+      "name": "Monitor: Event Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        1300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/parallel-monitor-event",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-24",
+      "name": "Monitor: Parse Webhook",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        1300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst payload = $input.first().json;\nreturn [{ json: {\n  monitor_id: payload.data.monitor_id,\n  event_group_id: payload.data.event.event_group_id,\n  metadata: payload.data.metadata || {},\n} }];\n"
+      }
+    },
+    {
+      "id": "node-25",
+      "name": "Monitor: Fetch Event Details",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        580,
+        1300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst monitorId = $json.monitor_id;\nconst eventGroupId = $json.event_group_id;\nif (!monitorId || !eventGroupId) {\n  throw new Error('Fetch Event Details: missing monitor_id or event_group_id.');\n}\nconst page = await client.monitor.events(monitorId, { event_group_id: eventGroupId });\nreturn [{ json: { ...$json, events: page.events || [] } }];\n"
+      }
+    },
+    {
+      "id": "node-26",
+      "name": "Monitor: Enrich & Classify Event",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        1300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst data = $input.first().json;\nconst events = Array.isArray(data.events) ? data.events : [];\nconst entry = events.find(e => !e.event_type || e.event_type === 'event_stream');\n\nlet output = {};\nlet basis = [];\nif (entry && entry.output) {\n  basis = Array.isArray(entry.output.basis) ? entry.output.basis : [];\n  const content = entry.output.content;\n  if (entry.output.type === 'json' && content && typeof content === 'object') {\n    output = content;\n  } else if (entry.output.type === 'text' && typeof content === 'string') {\n    output = { event_summary: content, severity: 'LOW', adverse: false, event_type: 'unknown' };\n  }\n}\n\nconst vendorContext = data.metadata || {};\nreturn [{ json: {\n  monitor_id: data.monitor_id,\n  event_group_id: data.event_group_id,\n  metadata: vendorContext,\n  vendor: {\n    vendor_name: vendorContext.vendor_name,\n    vendor_domain: vendorContext.vendor_domain,\n  },\n  event_id: entry ? entry.event_id : null,\n  event_date: entry ? entry.event_date : null,\n  event_summary: output.event_summary || '',\n  severity: output.severity || 'LOW',\n  adverse: !!output.adverse,\n  event_type: output.event_type || vendorContext.risk_dimension || 'unknown',\n  basis,\n  source: 'monitor_event',\n  // Repeat dimension values at the top level so the inline scorer can\n  // map them onto the dimensions schema for a single-dimension event.\n  research_output: {\n    [vendorContext.risk_dimension || 'event']: {\n      status: output.severity || 'LOW',\n      severity: output.severity || 'LOW',\n      findings: output.event_summary || '',\n    }\n  },\n  run_id: entry ? entry.event_id : data.event_group_id,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-27",
+      "name": "AdHoc: Slack Command",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        1700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/slack-command",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-28",
+      "name": "AdHoc: Parse Command",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        1700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst payload = $input.first().json;\nconst vendor_name = (payload.text || '').trim();\nif (!vendor_name) throw new Error('Vendor name is required. Usage: /vendor-research {vendor_name}');\n\nconst prompt = 'Conduct a comprehensive vendor risk assessment of \"' + vendor_name + '\". ' +\n  'Investigate financial health, legal & regulatory, cybersecurity, leadership & governance, ESG & reputation. ' +\n  'Classify each finding by severity (LOW/MEDIUM/HIGH/CRITICAL) and include source URLs.';\n\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      vendor_name: { type: \"string\" },\n      overall_risk_level: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      financial_health: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      legal_regulatory: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      cybersecurity: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      leadership_governance: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      esg_reputation: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      adverse_events: { type: \"array\", items: { type: \"object\" } },\n      recommendation: { type: \"string\" },\n    },\n    required: [\"vendor_name\",\"overall_risk_level\",\"recommendation\"]\n  }\n};\n\nreturn [{ json: {\n  vendor_name,\n  channel_id: payload.channel_id || payload.channel,\n  user_name: payload.user_name || payload.user,\n  response_url: payload.response_url,\n  prompt,\n  outputSchema,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-29",
+      "name": "AdHoc: Send Acknowledgment",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        580,
+        1700
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.channel_id }}"
+        },
+        "text": "={{ \"\\ud83d\\udd0d Starting deep research on *\" + $json.vendor_name + \"*. This typically takes 15-30 minutes...\" }}",
+        "otherOptions": {}
+      }
+    },
+    {
+      "id": "node-30",
+      "name": "AdHoc: Start Research Task",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        1700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst item = $json;\nconst run = await client.taskRun.create({\n  input: item.prompt,\n  processor: $vars.RESEARCH_PROCESSOR || 'ultra8x',\n  task_spec: { output_schema: item.outputSchema },\n  webhook: {\n    url: ($vars.N8N_WEBHOOK_BASE_URL || '') + '/webhook/parallel-task-completion',\n    event_types: ['task_run.status'],\n  },\n});\nreturn [{ json: {\n  vendor_name: item.vendor_name,\n  channel_id: item.channel_id,\n  user_name: item.user_name,\n  run_id: run.run_id,\n  status: run.status,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-31",
+      "name": "AdHoc: Result Callback",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        2100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/parallel-task-completion",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-32",
+      "name": "AdHoc: Extract Run ID",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        2100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst d = $input.first().json;\nconst run_id = d.run_id || (d.data && d.data.run_id);\nconst status = d.status || (d.data && d.data.status);\nif (status && status !== 'completed') {\n  return [];\n}\nreturn [{ json: {\n  ...d,\n  run_id,\n  status,\n} }];\n"
+      }
+    },
+    {
+      "id": "node-33",
+      "name": "AdHoc: Fetch Result",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        580,
+        2100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "// Parallel TypeScript SDK — call client.monitor.* / client.taskRun.* /\n// client.taskGroup.* directly. Requires NODE_FUNCTION_ALLOW_EXTERNAL=parallel-web\n// on self-hosted n8n; n8n Cloud allowlists it for the procurement template.\nconst ParallelMod = require('parallel-web');\nconst Parallel = ParallelMod.default || ParallelMod;\nconst client = new Parallel({ apiKey: $vars.PARALLEL_API_KEY });\n\nconst runId = $json.run_id;\nif (!runId) throw new Error('AdHoc: Fetch Result — missing run_id.');\nconst result = await client.taskRun.result(runId);\nreturn [{ json: {\n  ...$json,\n  research_output: result.output && result.output.content,\n  basis: (result.output && result.output.basis) || [],\n} }];\n"
+      }
+    },
+    {
+      "id": "node-34",
+      "name": "AdHoc: Tag Source",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        2100
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst data = $input.first().json || {};\nreturn [{ json: { ...data, source: 'adhoc' } }];\n"
+      }
+    },
+    {
+      "id": "node-35",
+      "name": "Scoring: Risk Scorer",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1300,
+        2700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst input = $input.first().json;\nconst output = input.research_output || input;\nconst vendor = input.vendor || {};\nconst basis = Array.isArray(input.basis) ? input.basis : (Array.isArray(output.basis) ? output.basis : []);\n\nconst RISK_ORDER = { LOW: 0, MEDIUM: 1, HIGH: 2, CRITICAL: 3 };\nconst CONFIDENCE_RANK = { low: 1, medium: 2, high: 3 };\nconst DIMENSION_KEYS = ['financial_health','legal_regulatory','cybersecurity','leadership_governance','esg_reputation'];\n\n// ── Step 1: severity aggregation ─────────────────────────────────────\nconst counts = { CRITICAL: 0, HIGH: 0, MEDIUM: 0, LOW: 0 };\nconst categories = [];\nconst mediumCats = [];\nfor (const dim of DIMENSION_KEYS) {\n  const sev = ((output[dim] && output[dim].severity) || 'LOW').toUpperCase();\n  counts[sev] = (counts[sev] || 0) + 1;\n  if (sev === 'CRITICAL' || sev === 'HIGH') categories.push(dim);\n  if (sev === 'MEDIUM') mediumCats.push(dim);\n}\n\n// ── Step 2: risk level assignment ────────────────────────────────────\nlet risk_level, adverse_flag;\nif (counts.CRITICAL > 0) { risk_level = 'CRITICAL'; adverse_flag = true; }\nelse if (counts.HIGH >= 1) { risk_level = 'HIGH'; adverse_flag = true; }\nelse if (counts.MEDIUM >= 3) { risk_level = 'MEDIUM'; adverse_flag = new Set(mediumCats).size >= 2; }\nelse if (counts.MEDIUM >= 1) { risk_level = 'MEDIUM'; adverse_flag = false; }\nelse { risk_level = 'LOW'; adverse_flag = false; }\n\nif (counts.MEDIUM >= 3 && adverse_flag) {\n  for (const cat of mediumCats) {\n    if (!categories.includes(cat)) categories.push(cat);\n  }\n}\n\n// ── Step 3: overrides ────────────────────────────────────────────────\nconst overrides = [];\nif (((output.cybersecurity && output.cybersecurity.status) || '').toUpperCase() === 'CRITICAL') {\n  if (RISK_ORDER[risk_level] < RISK_ORDER.CRITICAL) risk_level = 'CRITICAL';\n  adverse_flag = true;\n  overrides.push('active_data_breach');\n  if (!categories.includes('cybersecurity')) categories.push('cybersecurity');\n}\nif (((output.legal_regulatory && output.legal_regulatory.status) || '').toUpperCase() === 'CRITICAL') {\n  if (RISK_ORDER[risk_level] < RISK_ORDER.HIGH) risk_level = 'HIGH';\n  adverse_flag = true;\n  overrides.push('active_government_litigation');\n  if (!categories.includes('legal_regulatory')) categories.push('legal_regulatory');\n}\n\n// risk_tier_override on the Vendors sheet acts as a FLOOR — never scores below.\nconst tierOverride = vendor.risk_tier_override || input.risk_tier_override;\nif (tierOverride && RISK_ORDER[tierOverride] != null && RISK_ORDER[tierOverride] > RISK_ORDER[risk_level]) {\n  risk_level = tierOverride;\n  overrides.push('risk_tier_override_' + tierOverride);\n}\n\n// ── Step 4: derived fields ───────────────────────────────────────────\nconst action_required = risk_level === 'HIGH' || risk_level === 'CRITICAL';\nconst recMap = { LOW: 'continue_monitoring', MEDIUM: 'escalate_review', HIGH: 'initiate_contingency', CRITICAL: 'suspend_relationship' };\nconst recommendation = recMap[risk_level];\nconst vendor_name = output.vendor_name || vendor.vendor_name || 'Unknown';\nconst summary = vendor_name + ' assessed at ' + risk_level + ' risk. ' + (adverse_flag ? 'Adverse conditions detected.' : 'No adverse conditions.');\n\n// ── Step 5: basis plumbing (top citation per triggered dimension) ───\nconst basisByDim = {};\nfor (const entry of basis) {\n  const field = entry.field || '';\n  const dim = DIMENSION_KEYS.find(d => field === d || field.startsWith(d + '.'));\n  if (!dim) continue;\n  if (!basisByDim[dim]) basisByDim[dim] = [];\n  basisByDim[dim].push(entry);\n}\n\nconst topCitations = [];\nfor (const dim of categories) {\n  const entries = basisByDim[dim];\n  if (!entries || entries.length === 0) continue;\n  const sorted = entries.slice().sort((a, b) =>\n    (CONFIDENCE_RANK[(b.confidence || '').toLowerCase()] || 0) -\n    (CONFIDENCE_RANK[(a.confidence || '').toLowerCase()] || 0)\n  );\n  for (const entry of sorted) {\n    const cite = (entry.citations || [])[0];\n    if (!cite || !cite.url) continue;\n    topCitations.push({\n      dimension: dim,\n      url: cite.url,\n      title: cite.title || null,\n      reasoning: entry.reasoning || null,\n      confidence: entry.confidence || null,\n    });\n    break;\n  }\n  if (topCitations.length >= 3) break;\n}\nconst top = topCitations[0] || null;\n\nreturn [{\n  json: {\n    vendor_name, risk_level, adverse_flag, action_required, recommendation,\n    summary, categories, severity_counts: counts, triggered_overrides: overrides,\n    assessment_date: new Date().toISOString().slice(0, 10),\n    source: input.source || 'deep_research',\n    run_id: input.run_id || '',\n    // Audit-row columns — surface the top citation alongside the existing\n    // fields so the row alone answers \"why was this flagged\".\n    top_citation_url: top ? top.url : null,\n    top_citation_title: top ? top.title : null,\n    confidence: top ? top.confidence : null,\n    top_citations: topCitations,\n    basis_per_dimension: basisByDim,\n  }\n}];\n"
+      }
+    },
+    {
+      "id": "node-36",
+      "name": "Scoring: Route by Risk Level",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        1540,
+        2700
+      ],
+      "typeVersion": 3.2,
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.risk_level }}",
+                    "rightValue": "CRITICAL",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "CRITICAL"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.risk_level }}",
+                    "rightValue": "HIGH",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "HIGH"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.risk_level }}",
+                    "rightValue": "MEDIUM",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MEDIUM"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.risk_level }}",
+                    "rightValue": "LOW",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "LOW"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      }
+    },
+    {
+      "id": "node-37",
+      "name": "Scoring: Alert Critical",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1780,
+        2300
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $vars.SLACK_ALERT_TARGET || '@sahithjagarlamudi' }}"
+        },
+        "text": "={{ \"\\ud83d\\udd34 CRITICAL: \" + $json.vendor_name + \" — \" + $json.summary + ($json.top_citation_url ? \"\\nSource: <\" + $json.top_citation_url + \"|\" + ($json.top_citation_title || $json.top_citation_url) + \">\" : \"\") }}",
+        "otherOptions": {}
+      }
+    },
+    {
+      "id": "node-38",
+      "name": "Scoring: Alert High",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1780,
+        2500
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $vars.SLACK_ALERT_TARGET || '@sahithjagarlamudi' }}"
+        },
+        "text": "={{ \"\\ud83d\\udfe0 HIGH: \" + $json.vendor_name + \" — \" + $json.summary + ($json.top_citation_url ? \"\\nSource: <\" + $json.top_citation_url + \"|\" + ($json.top_citation_title || $json.top_citation_url) + \">\" : \"\") }}",
+        "otherOptions": {}
+      }
+    },
+    {
+      "id": "node-39",
+      "name": "Scoring: Format Digest",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1780,
+        2700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst data = $input.first().json;\nreturn [{ json: { ...data, digest_formatted: true } }];\n"
+      }
+    },
+    {
+      "id": "node-40",
+      "name": "Scoring: Log Low",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1780,
+        2900
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return [$input.first()];"
+      }
+    },
+    {
+      "id": "node-41",
+      "name": "Scoring: Audit Log",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        2020,
+        2700
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Audit Log"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    },
+    {
+      "id": "node-42",
+      "name": "Scoring: Route Back",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        2260,
+        2700
+      ],
+      "typeVersion": 3.2,
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.source }}",
+                    "rightValue": "deep_research",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "deep_research"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.source }}",
+                    "rightValue": "adhoc",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "adhoc"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.source }}",
+                    "rightValue": "monitor_event",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "monitor_event"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      }
+    },
+    {
+      "id": "node-43",
+      "name": "Research: Update Research Dates",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        2500,
+        2500
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    },
+    {
+      "id": "node-44",
+      "name": "AdHoc: Post Thread Reply",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        2500,
+        2900
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.channel_id }}"
+        },
+        "text": "={{ \"\\ud83d\\udcca *\" + $json.vendor_name + \"* assessed at *\" + $json.risk_level + \"* risk.\\n\" + $json.summary + ($json.top_citation_url ? \"\\nSource: <\" + $json.top_citation_url + \"|\" + ($json.top_citation_title || $json.top_citation_url) + \">\" : \"\") }}",
+        "otherOptions": {}
+      }
+    },
+    {
+      "id": "snapshot-webhook-1",
+      "name": "Snapshot: Dashboard Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        3300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "procurement-dashboard-snapshot",
+        "httpMethod": "GET",
+        "responseMode": "lastNode",
+        "options": {}
+      }
+    },
+    {
+      "id": "node-45",
+      "name": "Snapshot: Verify Token",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        220,
+        3300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst expected = $vars.PROCUREMENT_SNAPSHOT_TOKEN;\nif (!expected) {\n  throw new Error('snapshot: PROCUREMENT_SNAPSHOT_TOKEN env var is not set. Refusing to serve unauthenticated snapshot.');\n}\nconst query = $json.query || {};\nconst headers = $json.headers || {};\nconst presented = query.t || headers['x-procurement-token'] || '';\nif (typeof presented !== 'string' || presented.length === 0 || presented.length > 256) {\n  throw new Error('snapshot: missing or malformed token');\n}\nif (presented.length !== expected.length) {\n  throw new Error('snapshot: token rejected');\n}\nlet diff = 0;\nfor (let i = 0; i < expected.length; i++) {\n  diff |= expected.charCodeAt(i) ^ presented.charCodeAt(i);\n}\nif (diff !== 0) {\n  throw new Error('snapshot: token rejected');\n}\nreturn [{ json: $json }];\n"
+      }
+    },
+    {
+      "id": "node-46",
+      "name": "Snapshot: Read Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        340,
+        3200
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-47",
+      "name": "Snapshot: Read Audit Log",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        580,
+        3200
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Audit Log"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-48",
+      "name": "Snapshot: Read Monitors",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        820,
+        3200
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Monitors"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-49",
+      "name": "Snapshot: Build Payload",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1060,
+        3200
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst registry = $('Snapshot: Read Registry').all().map(i => i.json);\nconst audit_log = $('Snapshot: Read Audit Log').all().map(i => i.json);\nconst monitors = $('Snapshot: Read Monitors').all().map(i => i.json);\n\nreturn [{\n  json: {\n    last_updated: new Date().toISOString(),\n    registry,\n    audit_log,\n    monitors,\n    counts: {\n      vendors: registry.length,\n      audits: audit_log.length,\n      monitors: monitors.length,\n    },\n  }\n}];\n"
+      }
+    }
+  ],
+  "connections": {
+    "Sync: Daily Midnight Trigger": {
+      "main": [
+        [
+          {
+            "node": "Sync: Read Vendor List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Sync: Read Vendor List",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Read Vendor List": {
+      "main": [
+        [
+          {
+            "node": "Sync: Read Previous Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Read Previous Registry": {
+      "main": [
+        [
+          {
+            "node": "Sync: Compute Diff",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Compute Diff": {
+      "main": [
+        [
+          {
+            "node": "Sync: Loop Added Vendors",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Sync: Loop Removed Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Loop Added Vendors": {
+      "main": [
+        [
+          {
+            "node": "Sync: Build Monitor Payload",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sync: Update Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Build Monitor Payload": {
+      "main": [
+        [
+          {
+            "node": "Sync: Create Monitor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Create Monitor": {
+      "main": [
+        [
+          {
+            "node": "Sync: Loop Added Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Loop Removed Vendors": {
+      "main": [
+        [
+          {
+            "node": "Sync: Cancel Monitor",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Sync: Update Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sync: Cancel Monitor": {
+      "main": [
+        [
+          {
+            "node": "Sync: Loop Removed Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research: Daily 6AM Trigger": {
+      "main": [
+        [
+          {
+            "node": "Research: Read Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research: Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Research: Read Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research: Read Registry": {
+      "main": [
+        [
+          {
+            "node": "Research: Filter Due Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research: Filter Due Vendors": {
+      "main": [
+        [
+          {
+            "node": "Research: Run Task Group",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research: Run Task Group": {
+      "main": [
+        [
+          {
+            "node": "Research: Parse Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Research: Parse Results": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Risk Scorer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor: Deploy Webhook": {
+      "main": [
+        [
+          {
+            "node": "Monitor: Generate Queries",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor: Generate Queries": {
+      "main": [
+        [
+          {
+            "node": "Monitor: Loop Monitors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor: Loop Monitors": {
+      "main": [
+        [
+          {
+            "node": "Monitor: Create Monitor",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Monitor: Record Monitor IDs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor: Create Monitor": {
+      "main": [
+        [
+          {
+            "node": "Monitor: Loop Monitors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor: Event Trigger": {
+      "main": [
+        [
+          {
+            "node": "Monitor: Parse Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor: Parse Webhook": {
+      "main": [
+        [
+          {
+            "node": "Monitor: Fetch Event Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor: Fetch Event Details": {
+      "main": [
+        [
+          {
+            "node": "Monitor: Enrich & Classify Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Monitor: Enrich & Classify Event": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Risk Scorer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AdHoc: Slack Command": {
+      "main": [
+        [
+          {
+            "node": "AdHoc: Parse Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AdHoc: Parse Command": {
+      "main": [
+        [
+          {
+            "node": "AdHoc: Send Acknowledgment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AdHoc: Send Acknowledgment": {
+      "main": [
+        [
+          {
+            "node": "AdHoc: Start Research Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AdHoc: Result Callback": {
+      "main": [
+        [
+          {
+            "node": "AdHoc: Extract Run ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AdHoc: Extract Run ID": {
+      "main": [
+        [
+          {
+            "node": "AdHoc: Fetch Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AdHoc: Fetch Result": {
+      "main": [
+        [
+          {
+            "node": "AdHoc: Tag Source",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AdHoc: Tag Source": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Risk Scorer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scoring: Risk Scorer": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Route by Risk Level",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scoring: Route by Risk Level": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Alert Critical",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Scoring: Alert High",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Scoring: Format Digest",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Scoring: Log Low",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scoring: Alert Critical": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scoring: Alert High": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scoring: Format Digest": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scoring: Log Low": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scoring: Audit Log": {
+      "main": [
+        [
+          {
+            "node": "Scoring: Route Back",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Scoring: Route Back": {
+      "main": [
+        [
+          {
+            "node": "Research: Update Research Dates",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AdHoc: Post Thread Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Snapshot: Dashboard Webhook": {
+      "main": [
+        [
+          {
+            "node": "Snapshot: Verify Token",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Snapshot: Verify Token": {
+      "main": [
+        [
+          {
+            "node": "Snapshot: Read Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Snapshot: Read Registry": {
+      "main": [
+        [
+          {
+            "node": "Snapshot: Read Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Snapshot: Read Audit Log": {
+      "main": [
+        [
+          {
+            "node": "Snapshot: Read Monitors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Snapshot: Read Monitors": {
+      "main": [
+        [
+          {
+            "node": "Snapshot: Build Payload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    "n8n-procurement",
+    "vendor-risk"
+  ]
+}

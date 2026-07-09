@@ -63,6 +63,18 @@
       "tags": ["monitoring", "task", "webhooks", "cloudflare"]
     },
     {
+      "slug": "parallel-procurement-n8n",
+      "popular": false,
+      "featured": false,
+      "title": "Procurement Vendor Risk Monitor (n8n)",
+      "description": "n8n-orchestrated daily Deep Research and V1 event-stream monitors across six vendor risk dimensions. Deterministic scoring, cited audit log, severity routing into Slack, optional Next.js + Supabase BYOK dashboard.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-procurement-n8n",
+      "websiteUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-procurement-n8n",
+      "creators": ["sahith-3694"],
+      "imageUrl": null,
+      "tags": ["monitoring", "task", "deep-research", "webhooks", "enrichment", "nextjs", "supabase", "typescript"]
+    },
+    {
       "slug": "parallel-supabase-enrichment",
       "popular": true,
       "featured": true,

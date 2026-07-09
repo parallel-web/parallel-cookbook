@@ -1,0 +1,341 @@
+{
+  "name": "Workflow 3: Risk Scoring & Slack Delivery",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Receive Research Output",
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "position": [
+        100,
+        300
+      ],
+      "typeVersion": 1,
+      "parameters": {}
+    },
+    {
+      "id": "node-2",
+      "name": "Risk Scorer",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst input = $input.first().json;\nconst output = input.research_output || input;\nconst vendor = input.vendor || {};\nconst basis = Array.isArray(input.basis) ? input.basis : (Array.isArray(output.basis) ? output.basis : []);\n\nconst RISK_ORDER = { LOW: 0, MEDIUM: 1, HIGH: 2, CRITICAL: 3 };\nconst CONFIDENCE_RANK = { low: 1, medium: 2, high: 3 };\nconst DIMENSION_KEYS = ['financial_health','legal_regulatory','cybersecurity','leadership_governance','esg_reputation'];\n\n// ── Step 1: severity aggregation ─────────────────────────────────────\nconst counts = { CRITICAL: 0, HIGH: 0, MEDIUM: 0, LOW: 0 };\nconst categories = [];\nconst mediumCats = [];\nfor (const dim of DIMENSION_KEYS) {\n  const sev = ((output[dim] && output[dim].severity) || 'LOW').toUpperCase();\n  counts[sev] = (counts[sev] || 0) + 1;\n  if (sev === 'CRITICAL' || sev === 'HIGH') categories.push(dim);\n  if (sev === 'MEDIUM') mediumCats.push(dim);\n}\n\n// ── Step 2: risk level assignment ────────────────────────────────────\nlet risk_level, adverse_flag;\nif (counts.CRITICAL > 0) { risk_level = 'CRITICAL'; adverse_flag = true; }\nelse if (counts.HIGH >= 1) { risk_level = 'HIGH'; adverse_flag = true; }\nelse if (counts.MEDIUM >= 3) { risk_level = 'MEDIUM'; adverse_flag = new Set(mediumCats).size >= 2; }\nelse if (counts.MEDIUM >= 1) { risk_level = 'MEDIUM'; adverse_flag = false; }\nelse { risk_level = 'LOW'; adverse_flag = false; }\n\nif (counts.MEDIUM >= 3 && adverse_flag) {\n  for (const cat of mediumCats) {\n    if (!categories.includes(cat)) categories.push(cat);\n  }\n}\n\n// ── Step 3: overrides ────────────────────────────────────────────────\nconst overrides = [];\nif (((output.cybersecurity && output.cybersecurity.status) || '').toUpperCase() === 'CRITICAL') {\n  if (RISK_ORDER[risk_level] < RISK_ORDER.CRITICAL) risk_level = 'CRITICAL';\n  adverse_flag = true;\n  overrides.push('active_data_breach');\n  if (!categories.includes('cybersecurity')) categories.push('cybersecurity');\n}\nif (((output.legal_regulatory && output.legal_regulatory.status) || '').toUpperCase() === 'CRITICAL') {\n  if (RISK_ORDER[risk_level] < RISK_ORDER.HIGH) risk_level = 'HIGH';\n  adverse_flag = true;\n  overrides.push('active_government_litigation');\n  if (!categories.includes('legal_regulatory')) categories.push('legal_regulatory');\n}\n\n// risk_tier_override on the Vendors sheet acts as a FLOOR — never scores below.\nconst tierOverride = vendor.risk_tier_override || input.risk_tier_override;\nif (tierOverride && RISK_ORDER[tierOverride] != null && RISK_ORDER[tierOverride] > RISK_ORDER[risk_level]) {\n  risk_level = tierOverride;\n  overrides.push('risk_tier_override_' + tierOverride);\n}\n\n// ── Step 4: derived fields ───────────────────────────────────────────\nconst action_required = risk_level === 'HIGH' || risk_level === 'CRITICAL';\nconst recMap = { LOW: 'continue_monitoring', MEDIUM: 'escalate_review', HIGH: 'initiate_contingency', CRITICAL: 'suspend_relationship' };\nconst recommendation = recMap[risk_level];\nconst vendor_name = output.vendor_name || vendor.vendor_name || 'Unknown';\nconst summary = vendor_name + ' assessed at ' + risk_level + ' risk. ' + (adverse_flag ? 'Adverse conditions detected.' : 'No adverse conditions.');\n\n// ── Step 5: basis plumbing (top citation per triggered dimension) ───\nconst basisByDim = {};\nfor (const entry of basis) {\n  const field = entry.field || '';\n  const dim = DIMENSION_KEYS.find(d => field === d || field.startsWith(d + '.'));\n  if (!dim) continue;\n  if (!basisByDim[dim]) basisByDim[dim] = [];\n  basisByDim[dim].push(entry);\n}\n\nconst topCitations = [];\nfor (const dim of categories) {\n  const entries = basisByDim[dim];\n  if (!entries || entries.length === 0) continue;\n  const sorted = entries.slice().sort((a, b) =>\n    (CONFIDENCE_RANK[(b.confidence || '').toLowerCase()] || 0) -\n    (CONFIDENCE_RANK[(a.confidence || '').toLowerCase()] || 0)\n  );\n  for (const entry of sorted) {\n    const cite = (entry.citations || [])[0];\n    if (!cite || !cite.url) continue;\n    topCitations.push({\n      dimension: dim,\n      url: cite.url,\n      title: cite.title || null,\n      reasoning: entry.reasoning || null,\n      confidence: entry.confidence || null,\n    });\n    break;\n  }\n  if (topCitations.length >= 3) break;\n}\nconst top = topCitations[0] || null;\n\nreturn [{\n  json: {\n    vendor_name, risk_level, adverse_flag, action_required, recommendation,\n    summary, categories, severity_counts: counts, triggered_overrides: overrides,\n    assessment_date: new Date().toISOString().slice(0, 10),\n    source: input.source || 'deep_research',\n    run_id: input.run_id || '',\n    // Audit-row columns — surface the top citation alongside the existing\n    // fields so the row alone answers \"why was this flagged\".\n    top_citation_url: top ? top.url : null,\n    top_citation_title: top ? top.title : null,\n    confidence: top ? top.confidence : null,\n    top_citations: topCitations,\n    basis_per_dimension: basisByDim,\n  }\n}];\n"
+      }
+    },
+    {
+      "id": "node-3",
+      "name": "Route by Risk Level",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        580,
+        300
+      ],
+      "typeVersion": 3.2,
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.risk_level }}",
+                    "rightValue": "CRITICAL",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "CRITICAL"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.risk_level }}",
+                    "rightValue": "HIGH",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "HIGH"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.risk_level }}",
+                    "rightValue": "MEDIUM",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "MEDIUM"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict"
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.risk_level }}",
+                    "rightValue": "LOW",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "LOW"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      }
+    },
+    {
+      "id": "node-4",
+      "name": "Alert Critical",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        820,
+        -100
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "#procurement-critical"
+        },
+        "text": "={{ \"\\ud83d\\udd34 CRITICAL: \" + $json.vendor_name + \" — \" + $json.summary + ($json.top_citation_url ? \"\\nSource: <\" + $json.top_citation_url + \"|\" + ($json.top_citation_title || $json.top_citation_url) + \">\" : \"\") }}",
+        "otherOptions": {}
+      }
+    },
+    {
+      "id": "node-5",
+      "name": "Alert High",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        820,
+        100
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "#procurement-alerts"
+        },
+        "text": "={{ \"\\ud83d\\udfe0 HIGH: \" + $json.vendor_name + \" — \" + $json.summary + ($json.top_citation_url ? \"\\nSource: <\" + $json.top_citation_url + \"|\" + ($json.top_citation_title || $json.top_citation_url) + \">\" : \"\") }}",
+        "otherOptions": {}
+      }
+    },
+    {
+      "id": "node-6",
+      "name": "Format Digest Entry",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst data = $input.first().json;\nreturn [{ json: { ...data, digest_formatted: true } }];\n"
+      }
+    },
+    {
+      "id": "node-7",
+      "name": "Log Low Risk",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        820,
+        500
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return [$input.first()];"
+      }
+    },
+    {
+      "id": "node-8",
+      "name": "Audit Log",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        1060,
+        300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Audit Log"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Receive Research Output": {
+      "main": [
+        [
+          {
+            "node": "Risk Scorer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Risk Scorer": {
+      "main": [
+        [
+          {
+            "node": "Route by Risk Level",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route by Risk Level": {
+      "main": [
+        [
+          {
+            "node": "Alert Critical",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Alert High",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Format Digest Entry",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Log Low Risk",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Alert Critical": {
+      "main": [
+        [
+          {
+            "node": "Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Alert High": {
+      "main": [
+        [
+          {
+            "node": "Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Digest Entry": {
+      "main": [
+        [
+          {
+            "node": "Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Low Risk": {
+      "main": [
+        [
+          {
+            "node": "Audit Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    "n8n-procurement",
+    "vendor-risk"
+  ]
+}
