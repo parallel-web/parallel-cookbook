@@ -11,7 +11,7 @@ import { VendorSchema } from "../src/schema.js";
 
 const { values } = parseArgs({
   options: {
-    vendors: { type: "string", short: "v", default: "vendors.example.json" },
+    vendors: { type: "string", short: "v", default: "examples/vendors.json" },
   },
 });
 

@@ -1,0 +1,34 @@
+%%{init: {"theme":"base","fontFamily":"Gerstner Programm, Arial, sans-serif","themeVariables":{"background":"#FCFCFA","primaryColor":"#FCFCFA","primaryTextColor":"#1D1B16","primaryBorderColor":"#1D1B16","lineColor":"#E5E5E5","secondaryColor":"#F5F5F5","tertiaryColor":"#FCFCFA"},"flowchart":{"curve":"linear","htmlLabels":true,"nodeSpacing":28,"rankSpacing":42}}}%%
+flowchart TB
+  subgraph baselinePhase["Baseline"]
+    direction LR
+    vendors["examples/vendors.json"] --> bootstrap["bootstrap<br/>load + validate"]
+    bootstrap --> baseline["Structured Task Run<br/>core"]
+    baseline --> policy["Validate report + basis<br/>deterministic risk policy"]
+  end
+
+  monitor["Snapshot Monitor<br/>lite"]
+
+  subgraph updatePhase["Changes"]
+    direction LR
+    check["check-updates"] --> events["Poll retained events<br/>dedupe + oldest first"]
+    events --> gate{"Material change?"}
+    gate -->|No| audit["Persist cited assessment"]
+    gate -->|Yes| follow["Focused investigation<br/>pro"]
+    follow --> human["Persist investigation<br/>deterministic human action"]
+  end
+
+  policy --> monitor -->|"run check-updates"| check
+  cleanup["cleanup"] -. "cancel state-owned" .-> monitor
+
+  classDef primary fill:#FCFCFA,stroke:#1D1B16,color:#1D1B16,stroke-width:1px;
+  classDef secondary fill:#F5F5F5,stroke:#D8D0BF,color:#434343,stroke-width:1px;
+  classDef accent fill:#FCFCFA,stroke:#FB631B,color:#1D1B16,stroke-width:2px;
+  class vendors,bootstrap,baseline,policy,monitor,check primary;
+  class events,audit,cleanup secondary;
+  class gate,follow,human accent;
+  style baselinePhase fill:#FCFCFA,stroke:#E5E5E5,color:#858483;
+  style updatePhase fill:#FCFCFA,stroke:#E5E5E5,color:#858483;
+  linkStyle default stroke:#E5E5E5,stroke-width:1.5px;
+  linkStyle 6,7 stroke:#FB631B,stroke-width:2.5px;
+  linkStyle 9 stroke:#1D1B16,stroke-width:1.5px;
