@@ -1,0 +1,210 @@
+# Parallel n8n Procurement Setup
+
+This guide gets the combined vendor-risk workflow running in n8n with Google Sheets and Slack.
+It also covers the live Next.js dashboard included in `dashboard/`.
+
+## 1. Prerequisites
+
+You need:
+
+| Requirement | Purpose |
+| --- | --- |
+| Parallel API key | Runs research tasks and monitor operations |
+| n8n Cloud or self-hosted n8n | Hosts the workflow |
+| Google account | Stores vendor registry, monitor records, and audit logs |
+| Slack workspace admin access | Creates alert channels and the slash command |
+| Node.js 20+ | Validates and regenerates workflow JSON locally |
+
+## 2. Validate the Recipe Locally
+
+```bash
+npm ci
+npm run check
+npm test
+npm run generate:workflows
+```
+
+`npm run generate:workflows` rebuilds the JSON files in `n8n-workflows/` from the TypeScript workflow generators.
+
+## 3. Create the Google Sheet
+
+Create a spreadsheet named `Vendor Risk Registry`, then import each file in `templates/` as a separate tab:
+
+| File | Tab name |
+| --- | --- |
+| `vendors-tab.csv` | `Vendors` |
+| `registry-tab.csv` | `Registry` |
+| `audit-log-tab.csv` | `Audit Log` |
+| `monitors-tab.csv` | `Monitors` |
+
+Copy the spreadsheet ID from the URL:
+
+```text
+https://docs.google.com/spreadsheets/d/SHEET_ID_HERE/edit
+```
+
+The `Vendors` tab includes sample vendors. Replace them with your own vendors or keep them for a first test run.
+
+## 4. Prepare Slack
+
+Create these channels:
+
+| Channel | Purpose |
+| --- | --- |
+| `#procurement-critical` | Critical and high-severity alerts |
+| `#procurement-alerts` | Standard monitor and research notifications |
+| `#procurement-digest` | Batched medium-severity findings |
+| `#vendor-risk-ops` | Workflow health and run summaries |
+
+Create a Slack app with these bot scopes:
+
+- `chat:write`
+- `chat:write.public`
+- `commands`
+- `incoming-webhook`
+
+Install the app to your workspace and keep the bot token. Add a slash command:
+
+| Field | Value |
+| --- | --- |
+| Command | `/vendor-research` |
+| Request URL | `https://YOUR_N8N_HOST/webhook/slack-command` |
+| Short description | `Run ad-hoc vendor research` |
+| Usage hint | `[vendor name or domain]` |
+
+You can update the request URL after importing and activating the workflow if your n8n webhook URL differs.
+
+## 5. Import the n8n Workflow
+
+In n8n, import only this file for the normal setup:
+
+```text
+n8n-workflows/workflow-combined.json
+```
+
+This is the canonical workflow. It has 56 nodes, 49 connections, and no `executeWorkflow` nodes, so there is no separate workflow-ID wiring step.
+
+The other workflow JSON files are included for advanced users who want to inspect or split the system.
+
+## 6. Configure Credentials and Variables
+
+In n8n, configure these credentials:
+
+| Credential | Used by |
+| --- | --- |
+| Google Sheets OAuth2 | All Google Sheets nodes |
+| Slack API bot token | Slack message and slash-command response nodes |
+| HTTP Header Auth, if requested by n8n | HTTP Request nodes that call Parallel APIs |
+
+Set these n8n variables:
+
+| Variable | Required | Example |
+| --- | --- | --- |
+| `PARALLEL_API_KEY` | Yes | `pws_...` |
+| `GOOGLE_SHEET_ID` | Yes | `1abc...xyz` |
+| `SLACK_WEBHOOK_URL` | Yes | `https://hooks.slack.com/services/...` |
+| `N8N_WEBHOOK_BASE_URL` | Yes | `https://your-workspace.app.n8n.cloud` |
+| `PROCUREMENT_DASHBOARD_WRITE_TOKEN` | Yes for dashboard writes | `replace-with-a-long-random-secret` |
+| `SLACK_ALERT_TARGET` | No | `#procurement-critical` |
+
+Use `N8N_WEBHOOK_BASE_URL` without a trailing slash. The workflow builds callback URLs such as:
+
+```text
+https://your-workspace.app.n8n.cloud/webhook/parallel-task-completion
+```
+
+If n8n prompts for an HTTP Header Auth credential, set the header name to `x-api-key` and the value to your Parallel API key.
+
+## 7. Activate and Test
+
+Run these tests in order:
+
+1. Execute `Sync: Manual Trigger`.
+2. Confirm the `Registry` tab is populated from the `Vendors` tab.
+3. Confirm monitor records are created in the `Monitors` tab.
+4. Execute `Research: Manual Trigger`.
+5. Confirm the `Audit Log` tab receives a scored assessment.
+6. Confirm Slack receives alerts for HIGH or CRITICAL findings.
+7. Activate the workflow.
+8. In Slack, run `/vendor-research microsoft.com`.
+
+The scheduled triggers run vendor sync and research automatically after activation.
+
+## 8. Run the Dashboard
+
+The dashboard reads the combined workflow's `procurement-dashboard-snapshot` webhook and writes portfolio add/upload/reset actions through `procurement-portfolio-mutation`. It does not include a runtime mock fallback.
+
+Create `dashboard/.env.local`:
+
+```bash
+PROCUREMENT_DASHBOARD_SNAPSHOT_URL=https://YOUR_N8N_HOST/webhook/procurement-dashboard-snapshot
+PROCUREMENT_DASHBOARD_MUTATION_URL=https://YOUR_N8N_HOST/webhook/procurement-portfolio-mutation
+PROCUREMENT_DASHBOARD_WRITE_TOKEN=replace-with-the-same-token-set-in-n8n
+```
+
+Then run:
+
+```bash
+cd dashboard
+npm ci
+npm run check
+npm run dev
+```
+
+Open the local Next.js URL printed by `npm run dev`.
+
+For production builds:
+
+```bash
+npm run build
+npm start
+```
+
+The dashboard includes:
+
+| Surface | Path |
+| --- | --- |
+| Overview | `/` |
+| Attention queue | `/attention` |
+| Portfolio manager | `/portfolio` |
+| Monitor feed | `/feed` |
+| Observe topology | `/observe` |
+| Vendor detail | `/vendors/:vendorId` |
+
+Portfolio add, CSV upload, and reset are backend-backed. The dashboard calls its local `POST /api/portfolio/mutation` route, which proxies to n8n with the `x-procurement-dashboard-token` header. n8n validates the token, writes `Vendors` and `Registry`, and the dashboard refreshes from the live snapshot. Reset restores the shipped seed vendors and marks dashboard-added non-seed vendors inactive. Monitor creation and deletion still happen when the existing manual or scheduled sync path runs.
+
+## 9. Dashboard E2E Tests
+
+Playwright tests use local mocked snapshot and mutation endpoints for browser coverage and API contract checks.
+
+```bash
+cd dashboard
+npm run test:e2e
+```
+
+These tests do not require n8n Cloud. Before marking a PR ready, still smoke test the dashboard against the real imported workflow webhook.
+
+## 10. Troubleshooting
+
+| Symptom | Check |
+| --- | --- |
+| Google Sheets nodes fail | Confirm the imported tab names match exactly: `Vendors`, `Registry`, `Audit Log`, `Monitors` |
+| Parallel calls fail | Confirm `PARALLEL_API_KEY` is set in n8n variables and any HTTP Header Auth credential |
+| Slack messages fail | Confirm the Slack app is installed, the bot token credential is selected, and the bot is in the target channels |
+| Slash command times out | Confirm the Slack request URL points to the active n8n webhook path |
+| Task callbacks do not arrive | Confirm `N8N_WEBHOOK_BASE_URL` is public and has no trailing slash |
+| Dashboard shows setup state | Confirm `PROCUREMENT_DASHBOARD_SNAPSHOT_URL` is set to the active n8n snapshot webhook |
+| Portfolio writes fail | Confirm `PROCUREMENT_DASHBOARD_MUTATION_URL` points to the active n8n mutation webhook and both sides use the same `PROCUREMENT_DASHBOARD_WRITE_TOKEN` |
+| Dashboard says the snapshot is invalid | Confirm the imported workflow JSON has the current `Snapshot: Build Payload` node |
+
+## 11. Keeping Workflow JSON in Sync
+
+When changing workflow generator code:
+
+```bash
+npm run generate:workflows
+npm run check
+npm test
+```
+
+Commit both the TypeScript generator changes and the regenerated JSON files.

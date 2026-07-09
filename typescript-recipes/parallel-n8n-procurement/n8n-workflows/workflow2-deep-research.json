@@ -1,0 +1,454 @@
+{
+  "name": "Workflow 2: Scheduled Deep Research",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Daily 6AM Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        100,
+        300
+      ],
+      "typeVersion": 1.2,
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24,
+              "triggerAtHour": 6
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "node-2",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        100,
+        500
+      ],
+      "typeVersion": 1,
+      "parameters": {}
+    },
+    {
+      "id": "node-3",
+      "name": "Read Registry",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        340,
+        300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "read",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {}
+      }
+    },
+    {
+      "id": "node-4",
+      "name": "Filter Due Vendors",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        580,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst today = new Date().toISOString().slice(0, 10);\nconst vendors = $input.all().map(i => i.json);\nconst due = vendors.filter(v => {\n  if (v.active === false || v.active === \"false\") return false;\n  if (!v.next_research_date) return true;\n  return v.next_research_date.slice(0, 10) <= today;\n});\nreturn due.map(v => ({ json: v }));\n"
+      }
+    },
+    {
+      "id": "node-5",
+      "name": "Create Task Group",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        820,
+        300
+      ],
+      "typeVersion": 4.2,
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.parallel.ai/v1beta/tasks/groups",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $vars.PARALLEL_API_KEY }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({}) }}"
+      }
+    },
+    {
+      "id": "node-6",
+      "name": "Build Task Runs",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        1060,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst vendors = $('Filter Due Vendors').all().map(i => i.json);\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      vendor_name: { type: \"string\" },\n      overall_risk_level: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      financial_health: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      legal_regulatory: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      cybersecurity: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      leadership_governance: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      esg_reputation: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } }, required: [\"status\",\"findings\",\"severity\"] },\n      adverse_events: { type: \"array\", items: { type: \"object\" } },\n      recommendation: { type: \"string\" },\n    },\n    required: [\"vendor_name\",\"overall_risk_level\",\"financial_health\",\"legal_regulatory\",\"cybersecurity\",\"leadership_governance\",\"esg_reputation\",\"adverse_events\",\"recommendation\"]\n  }\n};\nconst inputs = vendors.map(v => ({\n  input: \"Conduct a vendor risk assessment of \" + v.vendor_name + \" (\" + v.vendor_domain + \").\",\n  processor: \"ultra8x\"\n}));\nreturn [{ json: { runsPayload: JSON.stringify({ inputs, default_task_spec: { output_schema: outputSchema } }) } }];\n"
+      }
+    },
+    {
+      "id": "node-7",
+      "name": "Add Runs to Group",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1300,
+        300
+      ],
+      "typeVersion": 4.2,
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.parallel.ai/v1beta/tasks/groups/{{ $('Create Task Group').item.json.taskgroup_id }}/runs",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $vars.PARALLEL_API_KEY }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.runsPayload }}"
+      }
+    },
+    {
+      "id": "node-8",
+      "name": "Wait 60s",
+      "type": "n8n-nodes-base.wait",
+      "position": [
+        1540,
+        300
+      ],
+      "typeVersion": 1.1,
+      "parameters": {
+        "amount": 60,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "node-9",
+      "name": "Poll Group Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1780,
+        300
+      ],
+      "typeVersion": 4.2,
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.parallel.ai/v1beta/tasks/groups/{{ $('Create Task Group').item.json.taskgroup_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $vars.PARALLEL_API_KEY }}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "node-10",
+      "name": "Is Complete?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        2020,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "leftValue": "={{ $json.status.is_active }}",
+              "rightValue": "false",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              },
+              "id": "condition-0"
+            }
+          ],
+          "combinator": "and"
+        }
+      }
+    },
+    {
+      "id": "node-11",
+      "name": "Get Results",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2260,
+        300
+      ],
+      "typeVersion": 4.2,
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.parallel.ai/v1beta/tasks/groups/{{ $('Create Task Group').item.json.taskgroup_id }}/runs?include_output=true",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $vars.PARALLEL_API_KEY }}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "node-12",
+      "name": "Parse Results",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        2500,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst results = $input.all().map(i => i.json);\nconst vendors = $('Filter Due Vendors').all().map(i => i.json);\nconst parsed = results.filter(r => r.status === \"completed\" && r.output).map((r, i) => ({\n  json: {\n    vendor: vendors[i] || {},\n    research_output: r.output.content || r.output,\n    run_id: r.run_id,\n    status: r.status,\n  }\n}));\nreturn parsed;\n"
+      }
+    },
+    {
+      "id": "node-13",
+      "name": "Score & Route (WF3)",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        2740,
+        300
+      ],
+      "typeVersion": 1,
+      "parameters": {
+        "source": "parameter",
+        "workflowId": ""
+      }
+    },
+    {
+      "id": "node-14",
+      "name": "Update Research Dates",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        2980,
+        300
+      ],
+      "typeVersion": 4.5,
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $vars.GOOGLE_SHEET_ID }}"
+        },
+        "sheetName": {
+          "__rl": true,
+          "mode": "name",
+          "value": "Registry"
+        },
+        "options": {},
+        "columns": {
+          "mappingMode": "autoMapInputData"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Daily 6AM Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Read Registry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Read Registry": {
+      "main": [
+        [
+          {
+            "node": "Filter Due Vendors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter Due Vendors": {
+      "main": [
+        [
+          {
+            "node": "Create Task Group",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Task Group": {
+      "main": [
+        [
+          {
+            "node": "Build Task Runs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Build Task Runs": {
+      "main": [
+        [
+          {
+            "node": "Add Runs to Group",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add Runs to Group": {
+      "main": [
+        [
+          {
+            "node": "Wait 60s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait 60s": {
+      "main": [
+        [
+          {
+            "node": "Poll Group Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Poll Group Status": {
+      "main": [
+        [
+          {
+            "node": "Is Complete?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Complete?": {
+      "main": [
+        [
+          {
+            "node": "Get Results",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait 60s",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Results": {
+      "main": [
+        [
+          {
+            "node": "Parse Results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Results": {
+      "main": [
+        [
+          {
+            "node": "Score & Route (WF3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Score & Route (WF3)": {
+      "main": [
+        [
+          {
+            "node": "Update Research Dates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    "n8n-procurement",
+    "vendor-risk"
+  ]
+}

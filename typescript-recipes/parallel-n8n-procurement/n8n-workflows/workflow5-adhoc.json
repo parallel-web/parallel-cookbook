@@ -1,0 +1,259 @@
+{
+  "name": "Workflow 5: Ad-Hoc Research via Slack",
+  "nodes": [
+    {
+      "id": "node-1",
+      "name": "Slack Command",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/slack-command",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-2",
+      "name": "Parse Command",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        300
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "\nconst payload = $input.first().json;\nconst vendor_name = (payload.text || '').trim();\nif (!vendor_name) throw new Error('Vendor name is required. Usage: /vendor-research {vendor_name}');\n\nconst prompt = 'Conduct a comprehensive vendor risk assessment of \"' + vendor_name + '\". ' +\n  'Investigate financial health, legal & regulatory, cybersecurity, leadership & governance, ESG & reputation. ' +\n  'Classify each finding by severity (LOW/MEDIUM/HIGH/CRITICAL) and include source URLs.';\n\nconst outputSchema = {\n  type: \"json\",\n  json_schema: {\n    type: \"object\",\n    properties: {\n      vendor_name: { type: \"string\" },\n      overall_risk_level: { type: \"string\", enum: [\"LOW\",\"MEDIUM\",\"HIGH\",\"CRITICAL\"] },\n      financial_health: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      legal_regulatory: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      cybersecurity: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      leadership_governance: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      esg_reputation: { type: \"object\", properties: { status: { type: \"string\" }, findings: { type: \"string\" }, severity: { type: \"string\" } } },\n      adverse_events: { type: \"array\", items: { type: \"object\" } },\n      recommendation: { type: \"string\" },\n    },\n    required: [\"vendor_name\",\"overall_risk_level\",\"recommendation\"]\n  }\n};\n\nreturn [{ json: {\n  vendor_name,\n  channel_id: payload.channel_id || payload.channel,\n  user_name: payload.user_name || payload.user,\n  response_url: payload.response_url,\n  taskPayload: JSON.stringify({\n    input: prompt,\n    processor: \"ultra8x\",\n    task_spec: { output_schema: outputSchema },\n    webhook: { url: $vars.N8N_WEBHOOK_BASE_URL + \"/webhook/adhoc-result\", events: [\"task_run.status\"] }\n  })\n} }];\n"
+      }
+    },
+    {
+      "id": "node-3",
+      "name": "Send Acknowledgment",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        580,
+        300
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.channel_id }}"
+        },
+        "text": "={{ \"\\ud83d\\udd0d Starting deep research on *\" + $json.vendor_name + \"*. This typically takes 15-30 minutes...\" }}",
+        "otherOptions": {}
+      }
+    },
+    {
+      "id": "node-4",
+      "name": "Start Research Task",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        820,
+        300
+      ],
+      "typeVersion": 4.2,
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.parallel.ai/v1/tasks/runs",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $vars.PARALLEL_API_KEY }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ $json.taskPayload }}"
+      },
+      "notes": "Creates a single deep research run with webhook callback"
+    },
+    {
+      "id": "node-5",
+      "name": "Result Callback",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "path": "/webhook/adhoc-result",
+        "httpMethod": "POST",
+        "responseMode": "onReceived"
+      }
+    },
+    {
+      "id": "node-6",
+      "name": "Extract Run ID",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        340,
+        700
+      ],
+      "typeVersion": 2,
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "const d = $input.first().json;\nreturn [{ json: { run_id: d.run_id || d.data?.run_id, status: d.status || d.data?.status } }];"
+      }
+    },
+    {
+      "id": "node-7",
+      "name": "Get Research Result",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        580,
+        700
+      ],
+      "typeVersion": 4.2,
+      "parameters": {
+        "method": "GET",
+        "url": "=https://api.parallel.ai/v1/tasks/runs/{{ $json.run_id }}/result",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $vars.PARALLEL_API_KEY }}"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "node-8",
+      "name": "Score Result (WF3)",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "position": [
+        820,
+        700
+      ],
+      "typeVersion": 1,
+      "parameters": {
+        "source": "parameter",
+        "workflowId": ""
+      }
+    },
+    {
+      "id": "node-9",
+      "name": "Post Thread Reply",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1060,
+        700
+      ],
+      "typeVersion": 2.2,
+      "parameters": {
+        "resource": "message",
+        "operation": "post",
+        "channel": {
+          "__rl": true,
+          "mode": "name",
+          "value": "={{ $json.channel_id }}"
+        },
+        "text": "={{ $json.text }}",
+        "otherOptions": {}
+      }
+    }
+  ],
+  "connections": {
+    "Slack Command": {
+      "main": [
+        [
+          {
+            "node": "Parse Command",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Command": {
+      "main": [
+        [
+          {
+            "node": "Send Acknowledgment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Acknowledgment": {
+      "main": [
+        [
+          {
+            "node": "Start Research Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Result Callback": {
+      "main": [
+        [
+          {
+            "node": "Extract Run ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Run ID": {
+      "main": [
+        [
+          {
+            "node": "Get Research Result",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Research Result": {
+      "main": [
+        [
+          {
+            "node": "Score Result (WF3)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Score Result (WF3)": {
+      "main": [
+        [
+          {
+            "node": "Post Thread Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "tags": [
+    "n8n-procurement",
+    "vendor-risk"
+  ]
+}

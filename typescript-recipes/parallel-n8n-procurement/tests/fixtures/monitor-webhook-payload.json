@@ -1,0 +1,27 @@
+{
+  "type": "monitor.event.detected",
+  "data": {
+    "monitor_id": "mon_acme_legal_001",
+    "event": {
+      "event_group_id": "eg_20260305_001",
+      "event_id": "evt_001",
+      "event_date": "2026-03-05",
+      "output": {
+        "event_summary": "Federal court rules against Acme Corp in patent infringement case, awarding $45M in damages",
+        "severity": "HIGH",
+        "adverse": true,
+        "event_type": "legal_regulatory"
+      },
+      "source_urls": [
+        "https://www.reuters.com/legal/acme-patent-ruling-2026",
+        "https://www.law360.com/articles/acme-infringement"
+      ]
+    },
+    "metadata": {
+      "vendor_name": "Acme Corp",
+      "vendor_domain": "https://acme.com",
+      "monitor_category": "Legal & Regulatory",
+      "risk_dimension": "legal"
+    }
+  }
+}

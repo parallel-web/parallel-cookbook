@@ -1,0 +1,49 @@
+{
+  "vendor_name": "Acme Corp",
+  "assessment_date": "2026-03-05",
+  "overall_risk_level": "HIGH",
+  "financial_health": {
+    "status": "warning",
+    "findings": "Revenue declined 15% YoY. Credit rating downgraded from A to BBB by Moody's in January 2026. Debt-to-equity ratio increased to 2.8x.",
+    "severity": "HIGH"
+  },
+  "legal_regulatory": {
+    "status": "issues",
+    "findings": "Pending SEC investigation into accounting practices. Class action lawsuit filed by shareholders in Q4 2025.",
+    "severity": "MEDIUM"
+  },
+  "cybersecurity": {
+    "status": "stable",
+    "findings": "SOC 2 Type II certified. No known breaches in past 24 months. Regular penetration testing disclosed.",
+    "severity": "LOW"
+  },
+  "leadership_governance": {
+    "status": "stable",
+    "findings": "CFO departure in November 2025 with successor appointed. Board composition stable.",
+    "severity": "LOW"
+  },
+  "esg_reputation": {
+    "status": "stable",
+    "findings": "No significant environmental or labor issues. ESG rating maintained at B+.",
+    "severity": "LOW"
+  },
+  "adverse_events": [
+    {
+      "title": "Moody's Credit Downgrade",
+      "date": "2026-01-15",
+      "category": "financial",
+      "severity": "HIGH",
+      "source_url": "https://www.moodys.com/research/acme-downgrade-2026",
+      "description": "Moody's downgraded Acme Corp from A to BBB citing deteriorating cash flow and rising debt levels."
+    },
+    {
+      "title": "SEC Investigation Disclosed",
+      "date": "2025-12-01",
+      "category": "legal",
+      "severity": "MEDIUM",
+      "source_url": "https://www.sec.gov/litigation/acme-investigation",
+      "description": "SEC opened formal investigation into revenue recognition practices following whistleblower complaint."
+    }
+  ],
+  "recommendation": "ESCALATE"
+}
