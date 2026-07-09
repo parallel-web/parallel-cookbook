@@ -115,6 +115,7 @@ Recurring research, cron jobs, and webhook delivery.
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
 | [**Daily Insights**](typescript-recipes/parallel-daily-insights) | Cron-triggered daily research feed — runs Tasks on a schedule, persists to KV, publishes a public data feed. Includes a `SPEC.md` showing the task spec used. | `Task` `Webhooks` `Cron` | Cloudflare Workers · KV | – |
+| [**Vendor Intelligence**](typescript-recipes/parallel-vendor-intelligence) | Builds cited vendor-risk baselines, watches structured changes with snapshot Monitors, and runs focused follow-up research only when deterministic policy marks a change as material. | `Task` `Deep Research` `Monitors` | TypeScript · Local scripts | – |
 
 ### Deep Research & Notebooks
 
