@@ -21,6 +21,7 @@ git clone https://github.com/parallel-web/parallel-cookbook.git
 cd parallel-cookbook/typescript-recipes/parallel-vendor-intelligence
 npm ci
 cp .env.example .env
+chmod 600 .env
 ```
 
 Add your key to `.env`:
@@ -145,6 +146,12 @@ npm run check-updates -- --retry-failed
 ```
 
 The recipe does not automatically retry a request that creates a paid Task or Monitor. The API cannot safely tell whether a lost response created the resource, so an automatic retry could spend credits twice. If the state file is malformed, the recipe stops instead of silently resetting it. Back up the file and recover any recorded Monitor IDs before removing the state directory.
+
+If a process stops while recovering a stale command lock, the error names the recovery-marker file. First confirm that no recipe command is still running. Then delete that file and run the command again:
+
+```bash
+rm -rf .vendor-intelligence/command.lock.reclaim
+```
 
 ## Customize the policy
 

@@ -4,6 +4,7 @@ import type { FieldBasis } from "./parallel-port.js";
 import {
   EvidenceFieldSchema,
   VendorReportSchema,
+  evidenceFieldForPath,
   type EvidenceField,
   type VendorReport,
 } from "./schema.js";
@@ -92,9 +93,8 @@ export function reconstructSnapshotEvent(event: SnapshotEventInput): {
     const basis = new Map<string, FieldBasis>();
     for (const entry of previousBasis) basis.set(entry.field, entry);
     for (const field of changedFields) {
-      basis.delete(field);
       for (const existingField of [...basis.keys()]) {
-        if (existingField.startsWith(`${field}.`)) basis.delete(existingField);
+        if (evidenceFieldForPath(existingField) === field) basis.delete(existingField);
       }
     }
     for (const entry of parseBasis(event.changed_output.basis)) basis.set(entry.field, entry);

@@ -5,6 +5,7 @@ import {
   EvidenceFieldSchema,
   RISK_DIMENSIONS,
   RiskLevelSchema,
+  evidenceFieldForPath,
   type EvidenceField,
   type RiskLevel,
   type VendorReport,
@@ -119,13 +120,6 @@ function maxRisk(levels: RiskLevel[]): RiskLevel {
   );
 }
 
-function basisField(entry: FieldBasis): EvidenceField | undefined {
-  const root = /^[^.[\]]+/.exec(entry.field)?.[0];
-  const dimension = RISK_DIMENSIONS.find(({ key }) => key === root);
-  if (dimension) return dimension.key;
-  return root === "adverse_events" ? "adverse_events" : undefined;
-}
-
 function selectCitations(
   basis: FieldBasis[] = [],
   fields: readonly EvidenceField[],
@@ -135,7 +129,7 @@ function selectCitations(
   const citations: RiskAssessment["citations"] = [];
 
   for (const entry of basis) {
-    const field = basisField(entry);
+    const field = evidenceFieldForPath(entry.field);
     if (!field || !wanted.has(field)) continue;
 
     for (const citation of entry.citations ?? []) {
@@ -222,14 +216,10 @@ export function decideFollowUp(input: {
   changedFields: readonly string[];
   threshold: RiskLevel;
   riskFloor?: RiskLevel;
-  previousAssessment?: RiskAssessment;
-  currentAssessment?: RiskAssessment;
 }): FollowUpDecision {
   const changedFields = z.array(EvidenceFieldSchema).parse(input.changedFields);
-  const previousAssessment =
-    input.previousAssessment ?? scoreReport(input.previousReport, input.riskFloor);
-  const currentAssessment =
-    input.currentAssessment ?? scoreReport(input.currentReport, input.riskFloor);
+  const previousAssessment = scoreReport(input.previousReport, input.riskFloor);
+  const currentAssessment = scoreReport(input.currentReport, input.riskFloor);
   const reasons: FollowUpDecision["reasons"] = [];
 
   for (const { key } of RISK_DIMENSIONS) {

@@ -60,6 +60,13 @@ export const EvidenceFieldSchema = z.enum([
 ]);
 export type EvidenceField = z.infer<typeof EvidenceFieldSchema>;
 
+/** Map SDK basis paths such as `cybersecurity.summary` to the report field they support. */
+export function evidenceFieldForPath(path: string): EvidenceField | undefined {
+  const root = /^[^.[\]]+/.exec(path)?.[0];
+  const parsed = EvidenceFieldSchema.safeParse(root);
+  return parsed.success ? parsed.data : undefined;
+}
+
 const RiskDimensionSchema = z
   .object({
     severity: RiskLevelSchema.describe(

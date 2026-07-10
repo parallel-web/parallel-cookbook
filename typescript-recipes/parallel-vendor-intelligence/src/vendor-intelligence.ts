@@ -862,24 +862,12 @@ export class VendorIntelligence {
     const vendorState = state.vendors[domain];
     if (!vendorState) throw new Error(`No local vendor state for ${domain}.`);
     const reconstructed = reconstructSnapshotEvent(event);
-    const previousAssessment = scoreReport(
-      reconstructed.previousReport,
-      vendorState.vendor.riskFloor,
-      reconstructed.previousBasis,
-    );
-    const currentAssessment = scoreReport(
-      reconstructed.currentReport,
-      vendorState.vendor.riskFloor,
-      reconstructed.currentBasis,
-    );
     const decision = decideFollowUp({
       previousReport: reconstructed.previousReport,
       currentReport: reconstructed.currentReport,
       changedFields: reconstructed.changedFields,
       threshold: this.config.followUpRiskThreshold,
       riskFloor: vendorState.vendor.riskFloor,
-      previousAssessment,
-      currentAssessment,
     });
     const evaluatedAt = this.now().toISOString();
     const firstObservedAt = firstSeenAt ?? evaluatedAt;

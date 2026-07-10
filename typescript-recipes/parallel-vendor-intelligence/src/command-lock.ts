@@ -50,14 +50,58 @@ async function describeLock(lockPath: string): Promise<string | undefined> {
     : undefined;
 }
 
-async function reclaimStaleLock(lockPath: string): Promise<boolean> {
+async function recoveryGuardError(guardPath: string): Promise<Error> {
+  const owner = await readOwner(guardPath);
+  if (owner) {
+    if (owner.hostname === hostname() && !processIsAlive(owner.pid)) {
+      return new Error(
+        `A previous command stopped while recovering a stale lock (${owner.command}, pid ${owner.pid}). Verify that no vendor-intelligence command is running, delete ${guardPath}, and retry.`,
+      );
+    }
+    return new Error(
+      `Another vendor-intelligence command is recovering a stale lock (${owner.command}, pid ${owner.pid}, since ${owner.acquiredAt}). Wait for it to finish before retrying.`,
+    );
+  }
+
+  try {
+    const details = await stat(guardPath);
+    if (Date.now() - details.mtimeMs >= INITIALIZATION_GRACE_MS) {
+      return new Error(
+        `An incomplete stale-lock recovery marker remains at ${guardPath}. Verify that no vendor-intelligence command is running, delete that file, and retry.`,
+      );
+    }
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      return new Error("The stale-lock recovery marker changed. Retry the command.");
+    }
+    throw error;
+  }
+
+  return new Error(
+    "Another vendor-intelligence command is initializing stale-lock recovery. Wait for it to finish before retrying.",
+  );
+}
+
+async function reclaimStaleLock(lockPath: string, guardOwner: LockOwner): Promise<boolean> {
   // Only one contender may inspect-and-reclaim. Without this guard, a slower
   // contender could rename a fresh lock created after another reclaimed the stale one.
   const guardPath = `${lockPath}.reclaim`;
+  let guardHandle: FileHandle | undefined;
   try {
-    await mkdir(guardPath, { mode: 0o700 });
+    guardHandle = await open(guardPath, "wx", 0o600);
+    await guardHandle.writeFile(`${JSON.stringify(guardOwner, null, 2)}\n`, "utf8");
+    await guardHandle.sync();
+    if ((await readOwner(guardPath))?.token !== guardOwner.token) {
+      throw new Error("Stale-lock recovery ownership changed during acquisition.");
+    }
   } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "EEXIST") return false;
+    if (guardHandle) {
+      await releaseOwnedLock(guardPath, guardOwner.token, guardHandle);
+      guardHandle = undefined;
+    }
+    if ((error as NodeJS.ErrnoException).code === "EEXIST") {
+      throw await recoveryGuardError(guardPath);
+    }
     throw error;
   }
 
@@ -70,7 +114,8 @@ async function reclaimStaleLock(lockPath: string): Promise<boolean> {
         const details = await stat(lockPath);
         if (Date.now() - details.mtimeMs < INITIALIZATION_GRACE_MS) return false;
       } catch (error) {
-        return (error as NodeJS.ErrnoException).code === "ENOENT";
+        if ((error as NodeJS.ErrnoException).code === "ENOENT") return true;
+        throw error;
       }
     }
 
@@ -78,12 +123,15 @@ async function reclaimStaleLock(lockPath: string): Promise<boolean> {
     try {
       await rename(lockPath, quarantinePath);
     } catch (error) {
-      return (error as NodeJS.ErrnoException).code === "ENOENT";
+      if ((error as NodeJS.ErrnoException).code === "ENOENT") return true;
+      throw error;
     }
     await rm(quarantinePath, { force: true });
     return true;
   } finally {
-    await rm(guardPath, { recursive: true, force: true });
+    if (guardHandle) {
+      await releaseOwnedLock(guardPath, guardOwner.token, guardHandle);
+    }
   }
 }
 
@@ -136,7 +184,7 @@ export async function withCommandLock<T>(input: {
         handle = undefined;
       }
       if ((error as NodeJS.ErrnoException).code !== "EEXIST" || attempt > 0) throw error;
-      if (!(await reclaimStaleLock(input.lockPath))) {
+      if (!(await reclaimStaleLock(input.lockPath, owner))) {
         const current = await describeLock(input.lockPath);
         throw new Error(
           `Another vendor-intelligence command is active${current ? ` (${current})` : ""}. Wait for it to finish before retrying.`,

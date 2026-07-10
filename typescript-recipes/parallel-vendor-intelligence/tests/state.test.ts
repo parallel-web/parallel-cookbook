@@ -6,7 +6,7 @@ import { join } from "node:path";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { FileStateStore, STATE_VERSION } from "../src/state.js";
-import { basis, investigation, vendorReport } from "./fixtures.js";
+import { vendorReport } from "./fixtures.js";
 
 const directories: string[] = [];
 
@@ -21,47 +21,6 @@ afterEach(async () => {
     directories.splice(0).map((directory) => rm(directory, { recursive: true, force: true })),
   );
 });
-
-function legacyEvent(
-  eventId: string,
-  options: {
-    runFollowUp: boolean;
-    stage: "follow_up_pending" | "completed";
-    followUp?: Record<string, unknown>;
-  },
-) {
-  const report = vendorReport();
-  return {
-    eventId,
-    monitorId: "monitor-1",
-    eventDate: "2026-07-09",
-    eventGroupId: `group-${eventId}`,
-    firstSeenAt: "2026-07-09T01:00:00.000Z",
-    changedFields: ["financial_health"],
-    previousReport: report,
-    previousBasis: [],
-    previousAssessment: { stale: true },
-    currentReport: report,
-    currentBasis: [],
-    currentAssessment: { stale: true },
-    decision: {
-      runFollowUp: options.runFollowUp,
-      threshold: "HIGH",
-      previousLevel: "LOW",
-      currentLevel: "LOW",
-      changedFields: ["financial_health"],
-      requiresHumanReview: options.runFollowUp,
-      reasons: options.runFollowUp
-        ? [{ kind: "vendor_floor", level: "HIGH" }]
-        : [],
-    },
-    stage: options.stage,
-    ...(options.followUp ? { followUp: options.followUp } : {}),
-    ...(options.stage === "completed"
-      ? { completedAt: "2026-07-09T02:00:00.000Z" }
-      : {}),
-  };
-}
 
 describe("FileStateStore", () => {
   it("returns an empty current-version state when the file is absent", async () => {
@@ -260,6 +219,29 @@ describe("FileStateStore", () => {
     expect(results.filter(({ status }) => status === "rejected")).toHaveLength(1);
   });
 
+  it("identifies an orphaned stale-lock recovery marker", async () => {
+    const { store } = await temporaryStore();
+    const deadOwner = {
+      version: 1,
+      token: randomUUID(),
+      pid: 2_147_483_647,
+      hostname: hostname(),
+      command: "cleanup",
+      acquiredAt: "2026-07-09T00:00:00.000Z",
+    };
+    await writeFile(store.lockPath, `${JSON.stringify(deadOwner)}\n`);
+    await writeFile(`${store.lockPath}.reclaim`, `${JSON.stringify(deadOwner)}\n`);
+
+    await expect(
+      store.withCommandLock("cleanup", async () => "unsafe"),
+    ).rejects.toThrow(`${store.lockPath}.reclaim`);
+
+    await rm(`${store.lockPath}.reclaim`);
+    await expect(store.withCommandLock("cleanup", async () => "reclaimed")).resolves.toBe(
+      "reclaimed",
+    );
+  });
+
   it("does not delete a replacement lock owned by another token", async () => {
     const { store } = await temporaryStore();
     const replacement = {
@@ -278,131 +260,14 @@ describe("FileStateStore", () => {
     });
   });
 
-  it("migrates v1 on read and writes a one-time backup before the first v2 update", async () => {
+  it("rejects unsupported state versions", async () => {
     const { store } = await temporaryStore();
-    const legacy = {
-      stateVersion: 1,
+    const unsupported = {
+      stateVersion: 99,
       specVersion: 1,
-      vendors: {
-        "example.com": {
-          vendor: { name: "Example", domain: "example.com" },
-          baseline: { stage: "pending" },
-          events: {},
-        },
-      },
+      vendors: {},
     };
-    await writeFile(store.statePath, `${JSON.stringify(legacy)}\n`);
-    expect((await store.read()).vendors["example.com"]?.baseline.stage).toBe("not_started");
-    expect(JSON.parse(await readFile(store.statePath, "utf8")).stateVersion).toBe(1);
-
-    await store.update((state) => {
-      state.vendors["example.com"]!.vendor.riskFloor = "MEDIUM";
-    });
-    expect(JSON.parse(await readFile(store.statePath, "utf8")).stateVersion).toBe(2);
-    expect(JSON.parse(await readFile(`${store.statePath}.v1.bak`, "utf8"))).toEqual(legacy);
-  });
-
-  it("migrates completed v1 lifecycle states without inventing Task start times", async () => {
-    const { store } = await temporaryStore();
-    const report = vendorReport();
-    const legacy = {
-      stateVersion: 1,
-      specVersion: 1,
-      vendors: {
-        "example.com": {
-          vendor: { name: "Example", domain: "example.com", riskFloor: "HIGH" },
-          baseline: {
-            stage: "completed",
-            runId: "baseline-1",
-            interactionId: "interaction-1",
-            report,
-            basis: [basis("cybersecurity")],
-            assessment: { stale: true },
-            observedAt: "2026-07-09T00:30:00.000Z",
-          },
-          monitor: {
-            status: "active",
-            monitorId: "monitor-1",
-            baselineRunId: "baseline-1",
-            frequency: "1d",
-            processor: "lite",
-            createdAt: "2026-07-09T00:45:00.000Z",
-          },
-          events: {
-            noFollowUp: legacyEvent("noFollowUp", {
-              runFollowUp: false,
-              stage: "completed",
-            }),
-            queued: legacyEvent("queued", {
-              runFollowUp: true,
-              stage: "follow_up_pending",
-            }),
-            running: legacyEvent("running", {
-              runFollowUp: true,
-              stage: "follow_up_pending",
-              followUp: { runId: "follow-running" },
-            }),
-            completed: legacyEvent("completed", {
-              runFollowUp: true,
-              stage: "completed",
-              followUp: {
-                runId: "follow-completed",
-                investigation,
-                basis: [basis("what_changed")],
-                warnings: ["warning"],
-                completedAt: "2026-07-09T03:00:00.000Z",
-              },
-            }),
-          },
-          latest: { eventId: "completed", derivedAssessment: { stale: true } },
-        },
-      },
-    };
-    await writeFile(store.statePath, `${JSON.stringify(legacy)}\n`);
-
-    const migrated = await store.read();
-    const saved = migrated.vendors["example.com"];
-    expect(saved?.baseline.stage).toBe("completed");
-    if (saved?.baseline.stage !== "completed") throw new Error("missing baseline");
-    expect(saved.baseline.run.startedAt).toBeUndefined();
-    expect(saved.events.noFollowUp?.stage).toBe("completed_without_follow_up");
-    expect(saved.events.queued?.stage).toBe("follow_up_queued");
-    expect(saved.events.running?.stage).toBe("follow_up_running");
-    expect(saved.events.completed?.stage).toBe("follow_up_completed");
-    const running = saved.events.running;
-    const completed = saved.events.completed;
-    expect(running?.stage === "follow_up_running" ? running.run.startedAt : null).toBeUndefined();
-    expect(completed?.stage === "follow_up_completed" ? completed.run.startedAt : null).toBeUndefined();
-    expect(
-      completed?.stage === "follow_up_completed" ? completed.decision.riskFloor : null,
-    ).toBeUndefined();
-    expect(
-      completed?.stage === "follow_up_completed" ? completed.decision.policyVersion : null,
-    ).toBe(1);
-    expect(saved.latestEventId).toBe("completed");
-  });
-
-  it("rejects an incomplete v1 event marked as a completed follow-up", async () => {
-    const { store } = await temporaryStore();
-    const legacy = {
-      stateVersion: 1,
-      specVersion: 1,
-      vendors: {
-        "example.com": {
-          vendor: { name: "Example", domain: "example.com" },
-          baseline: { stage: "pending" },
-          events: {
-            incomplete: legacyEvent("incomplete", {
-              runFollowUp: true,
-              stage: "completed",
-              followUp: { runId: "follow-incomplete" },
-            }),
-          },
-        },
-      },
-    };
-    await writeFile(store.statePath, `${JSON.stringify(legacy)}\n`);
-
+    await writeFile(store.statePath, `${JSON.stringify(unsupported)}\n`);
     await expect(store.read()).rejects.toThrow("Cannot read vendor intelligence state");
   });
 

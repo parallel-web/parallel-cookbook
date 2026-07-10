@@ -100,9 +100,9 @@ After your recipe is in place, add an entry to two places so it shows up everywh
      "websiteUrl": "https://your-demo.example.com",
      "creators": ["yourgithub"],
      "imageUrl": "https://svg.quickog.com/https://your-demo.example.com/og.svg",
-       "tags": ["task", "sse", "cloudflare"]
-     }
-     ```
+     "tags": ["task", "sse", "cloudflare"]
+   }
+   ```
 
    Use `null` for `websiteUrl` when an accepted local recipe has no hosted demo. The Cookbook hides the Demo button for those entries.
 

@@ -15,14 +15,13 @@ import { withCommandLock } from "./command-lock.js";
 import { FollowUpDecisionSchema } from "./risk-policy.js";
 import {
   ChangeInvestigationSchema,
-  EvidenceFieldSchema,
   RiskLevelSchema,
   SPEC_VERSION,
   VendorReportSchema,
   VendorSchema,
 } from "./schema.js";
 
-export const STATE_VERSION = 2;
+export const STATE_VERSION = 1;
 
 const CitationSchema = z.object({
   url: z.string(),
@@ -301,7 +300,6 @@ export const RecipeStateSchema = z
 
 export type RecipeState = z.infer<typeof RecipeStateSchema>;
 export type VendorState = z.infer<typeof VendorStateSchema>;
-type BaselineState = z.infer<typeof BaselineStateSchema>;
 type EventLedgerEntry = z.infer<typeof EventLedgerEntrySchema>;
 export type EventEvidence = Exclude<EventLedgerEntry, { stage: "event_failed" }>;
 export type TaskFailure = z.infer<typeof TaskFailureSchema>;
@@ -310,197 +308,6 @@ export type RawSnapshotEvent = z.infer<typeof RawSnapshotEventSchema>;
 
 export function emptyRecipeState(): RecipeState {
   return { stateVersion: STATE_VERSION, specVersion: SPEC_VERSION, vendors: {} };
-}
-
-const LegacyBaselineSchema = z.discriminatedUnion("stage", [
-  z.object({ stage: z.literal("pending") }),
-  z.object({
-    stage: z.literal("running"),
-    runId: z.string(),
-    interactionId: z.string().optional(),
-    startedAt: z.string(),
-  }),
-  z.object({
-    stage: z.literal("completed"),
-    runId: z.string(),
-    interactionId: z.string().optional(),
-    report: VendorReportSchema,
-    basis: z.array(FieldBasisSchema),
-    assessment: z.unknown(),
-    observedAt: z.string(),
-    warnings: z.array(z.string()).optional(),
-  }),
-]);
-
-const LegacyMonitorSchema = MonitorStateSchema;
-const LegacyFollowUpSchema = z.object({
-  runId: z.string().optional(),
-  investigation: ChangeInvestigationSchema.optional(),
-  basis: z.array(FieldBasisSchema).optional(),
-  completedAt: z.string().optional(),
-  warnings: z.array(z.string()).optional(),
-});
-const LegacyEventSchema = z.object({
-  eventId: z.string(),
-  monitorId: z.string(),
-  eventDate: z.string().nullable(),
-  eventGroupId: z.string(),
-  firstSeenAt: z.string(),
-  changedFields: z.array(EvidenceFieldSchema),
-  previousReport: VendorReportSchema,
-  previousBasis: z.array(FieldBasisSchema),
-  previousAssessment: z.unknown(),
-  currentReport: VendorReportSchema,
-  currentBasis: z.array(FieldBasisSchema),
-  currentAssessment: z.unknown(),
-  decision: FollowUpDecisionSchema,
-  stage: z.enum(["follow_up_pending", "completed"]),
-  followUp: LegacyFollowUpSchema.optional(),
-  completedAt: z.string().optional(),
-  lastError: z.unknown().optional(),
-});
-const LegacyRecipeStateSchema = z.object({
-  stateVersion: z.literal(1),
-  specVersion: z.number().int().positive(),
-  vendors: z.record(
-    z.string(),
-    z.object({
-      vendor: VendorSchema,
-      baseline: LegacyBaselineSchema,
-      latest: z
-        .object({
-          eventId: z.string().optional(),
-        })
-        .passthrough()
-        .optional(),
-      monitor: LegacyMonitorSchema.optional(),
-      events: z.record(z.string(), LegacyEventSchema),
-    }),
-  ),
-});
-const LEGACY_V1_POLICY_VERSION = 1;
-
-function migrateV1ToV2(input: unknown): RecipeState {
-  const legacy = LegacyRecipeStateSchema.parse(input);
-  const vendors: RecipeState["vendors"] = {};
-
-  for (const [domain, vendorState] of Object.entries(legacy.vendors)) {
-    let baseline: BaselineState;
-    if (vendorState.baseline.stage === "pending") {
-      baseline = { stage: "not_started", failedAttempts: [] };
-    } else if (vendorState.baseline.stage === "running") {
-      baseline = {
-        stage: "running",
-        run: {
-          runId: vendorState.baseline.runId,
-          ...(vendorState.baseline.interactionId
-            ? { interactionId: vendorState.baseline.interactionId }
-            : {}),
-          startedAt: vendorState.baseline.startedAt,
-        },
-        failedAttempts: [],
-      };
-    } else {
-      baseline = {
-        stage: "completed",
-        run: {
-          runId: vendorState.baseline.runId,
-          ...(vendorState.baseline.interactionId
-            ? { interactionId: vendorState.baseline.interactionId }
-            : {}),
-        },
-        failedAttempts: [],
-        evidence: {
-          report: vendorState.baseline.report,
-          basis: vendorState.baseline.basis,
-          observedAt: vendorState.baseline.observedAt,
-          warnings: vendorState.baseline.warnings ?? [],
-        },
-      };
-    }
-
-    const events: VendorState["events"] = {};
-    for (const [eventId, event] of Object.entries(vendorState.events)) {
-      const decision = {
-        ...event.decision,
-        policyVersion: LEGACY_V1_POLICY_VERSION,
-        evaluatedAt: event.firstSeenAt,
-      };
-      const evidence = {
-        eventId: event.eventId,
-        monitorId: event.monitorId,
-        eventDate: event.eventDate,
-        eventGroupId: event.eventGroupId,
-        firstSeenAt: event.firstSeenAt,
-        previousReport: event.previousReport,
-        previousBasis: event.previousBasis,
-        currentReport: event.currentReport,
-        currentBasis: event.currentBasis,
-      };
-
-      if (!event.decision.runFollowUp) {
-        events[eventId] = CompletedWithoutFollowUpSchema.parse({
-          stage: "completed_without_follow_up",
-          ...evidence,
-          decision,
-          completedAt: event.completedAt ?? event.firstSeenAt,
-        });
-      } else if (event.stage === "follow_up_pending") {
-        events[eventId] = event.followUp?.runId
-          ? FollowUpRunningSchema.parse({
-              stage: "follow_up_running",
-              ...evidence,
-              decision,
-              run: {
-                runId: event.followUp.runId,
-              },
-              failedAttempts: [],
-            })
-          : FollowUpQueuedSchema.parse({
-              stage: "follow_up_queued",
-              ...evidence,
-              decision,
-              failedAttempts: [],
-            });
-      } else {
-        if (
-          !event.followUp?.runId ||
-          !event.followUp.investigation ||
-          !event.followUp.completedAt
-        ) {
-          throw new Error(`Cannot migrate incomplete completed follow-up ${eventId}.`);
-        }
-        events[eventId] = FollowUpCompletedSchema.parse({
-          stage: "follow_up_completed",
-          ...evidence,
-          decision,
-          run: {
-            runId: event.followUp.runId,
-          },
-          failedAttempts: [],
-          investigation: event.followUp.investigation,
-          basis: event.followUp.basis ?? [],
-          warnings: event.followUp.warnings ?? [],
-          completedAt: event.followUp.completedAt,
-        });
-      }
-    }
-
-    const latestEventId = vendorState.latest?.eventId;
-    vendors[domain] = {
-      vendor: vendorState.vendor,
-      baseline,
-      ...(vendorState.monitor ? { monitor: vendorState.monitor } : {}),
-      events,
-      ...(latestEventId && events[latestEventId] ? { latestEventId } : {}),
-    };
-  }
-
-  return RecipeStateSchema.parse({
-    stateVersion: STATE_VERSION,
-    specVersion: legacy.specVersion,
-    vendors,
-  });
 }
 
 export class FileStateStore {
@@ -515,15 +322,13 @@ export class FileStateStore {
   }
 
   async read(): Promise<RecipeState> {
-    return (await this.load()).state;
+    return this.load();
   }
 
   async update(mutator: (state: RecipeState) => void): Promise<void> {
-    const loaded = await this.load();
-    const next = structuredClone(loaded.state);
+    const next = structuredClone(await this.load());
     mutator(next);
     const validated = RecipeStateSchema.parse(next);
-    if (loaded.legacyRaw !== undefined) await this.backUpLegacyState(loaded.legacyRaw);
     await this.write(validated);
   }
 
@@ -536,40 +341,28 @@ export class FileStateStore {
     });
   }
 
-  private async load(): Promise<{ state: RecipeState; legacyRaw?: string }> {
+  private async load(): Promise<RecipeState> {
     let raw: string;
     try {
       raw = await readFile(this.statePath, "utf8");
     } catch (error) {
       if ((error as NodeJS.ErrnoException).code === "ENOENT") {
-        return { state: emptyRecipeState() };
+        return emptyRecipeState();
       }
       throw error;
     }
 
     try {
       const parsed = JSON.parse(raw) as { stateVersion?: unknown };
-      if (parsed.stateVersion === 1) {
-        return { state: migrateV1ToV2(parsed), legacyRaw: raw };
-      }
       if (parsed.stateVersion !== STATE_VERSION) {
         throw new Error(`Unsupported state version ${String(parsed.stateVersion)}.`);
       }
-      return { state: RecipeStateSchema.parse(parsed) };
+      return RecipeStateSchema.parse(parsed);
     } catch (error) {
       throw new Error(
         `Cannot read vendor intelligence state at ${this.statePath}. Back up and repair the file before running another command.`,
         { cause: error },
       );
-    }
-  }
-
-  private async backUpLegacyState(raw: string): Promise<void> {
-    const backupPath = `${this.statePath}.v1.bak`;
-    try {
-      await writeFile(backupPath, raw, { encoding: "utf8", flag: "wx", mode: 0o600 });
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code !== "EEXIST") throw error;
     }
   }
 
@@ -586,5 +379,4 @@ export class FileStateStore {
       throw error;
     }
   }
-
 }
