@@ -14,15 +14,15 @@ For anything not covered here, open an [issue](https://github.com/parallel-web/p
 
 ## Submitting a Recipe
 
-A recipe is a self-contained working application with a live demo and a clear pedagogical point. Every recipe in the cookbook should answer *"why would someone copy this?"* in one sentence.
+A recipe is a self-contained working example with a clear pedagogical point. Every recipe in the cookbook should answer *"why would someone copy this?"* in one sentence. Hosted applications should include a live demo or deploy path. Local scripts and notebooks can omit a demo when the local workflow is the point and the README includes an end-to-end verification path.
 
 ### What makes a good recipe
 
 | ✅ Good | ❌ Avoid |
 | --- | --- |
 | Solves one specific problem (e.g. "stream Task progress to a UI") | Tries to demo every Parallel API at once (templates are the exception) |
-| Shipped with a live demo URL | Local-only with no deploy story |
-| Has a one-click deploy button or `DEPLOY.md` | Requires hand-rolling infra to try it |
+| Has a live demo, deploy path, or verified local workflow | Uses a fake demo link or leaves the reader without a way to test it |
+| Documents deployment when hosting is part of the recipe | Requires infrastructure that the README does not explain |
 | Real research/data domain (companies, papers, news) | "Hello world" toy data |
 | README explains the *design decisions*, not just setup | README is just `npm install && npm run dev` |
 | Uses our latest API surfaces (Search, Extract, Task SSE, Ingest) | Wraps deprecated endpoints |
@@ -56,7 +56,7 @@ Every recipe README should hit these sections, roughly in this order:
 ```markdown
 # <Recipe Title>
 
-One-sentence pitch. Live demo: <url>
+One-sentence pitch. Live demo: <url, when available>
 
 [Deploy button or link to DEPLOY.md]
 
@@ -100,9 +100,11 @@ After your recipe is in place, add an entry to two places so it shows up everywh
      "websiteUrl": "https://your-demo.example.com",
      "creators": ["yourgithub"],
      "imageUrl": "https://svg.quickog.com/https://your-demo.example.com/og.svg",
-     "tags": ["task", "sse", "cloudflare"]
-   }
-   ```
+       "tags": ["task", "sse", "cloudflare"]
+     }
+     ```
+
+   Use `null` for `websiteUrl` when an accepted local recipe has no hosted demo. The Cookbook hides the Demo button for those entries.
 
    Reviewers set `featured` / `popular`.
 
@@ -121,7 +123,7 @@ Propose new tags in your PR if none of these fit.
 Before opening a PR, double-check:
 
 - [ ] Recipe runs end-to-end from a fresh clone using only the README
-- [ ] Live demo URL is reachable and shows what the README claims
+- [ ] Live demo URL is reachable and shows what the README claims, when the recipe has one
 - [ ] No API keys, secrets, or `.env` / `.dev.vars` files committed (use `.example` variants)
 - [ ] No hardcoded Cloudflare account IDs or KV namespace IDs — use `<YOUR_KV_NAMESPACE_ID>` placeholders and document `wrangler kv:namespace create` in the README
 - [ ] Production-only routes live under `env.production` in `wrangler.jsonc`, not the default config
