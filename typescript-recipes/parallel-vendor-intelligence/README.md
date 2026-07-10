@@ -2,7 +2,7 @@
 
 Research a vendor once, monitor the same risk report for changes, and investigate only the changes that cross your review threshold.
 
-![Vendor intelligence flow](docs/vendor-intelligence-flow.svg)
+![Vendor intelligence flow](docs/vendor-intelligence-flow-infographic.png)
 
 This recipe uses the Parallel Task API and Monitor API through three local commands:
 
