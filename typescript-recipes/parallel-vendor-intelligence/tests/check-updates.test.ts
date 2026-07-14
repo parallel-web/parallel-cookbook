@@ -550,4 +550,329 @@ describe("snapshot reconstruction and update checks", () => {
       expect.stringContaining("older new failure"),
     ]);
   });
+
+  it("reconstructs sequential empty-previous patches oldest to newest", async () => {
+    const test = await runtime();
+    const baseline = vendorReport();
+    const firstFinancial = {
+      ...baseline.financial_health,
+      summary: "First observed financial change.",
+    };
+    const secondLegal = {
+      ...baseline.legal_regulatory,
+      summary: "Later legal change.",
+    };
+    const first: MonitorSnapshotEvent = {
+      event_id: "partial-first",
+      event_group_id: "group-partial-first",
+      event_date: "2026-07-13",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: {
+        type: "json",
+        content: { financial_health: firstFinancial },
+        basis: [basis("financial_health", "https://first.test/financial")],
+      },
+    };
+    const second: MonitorSnapshotEvent = {
+      event_id: "partial-second",
+      event_group_id: "group-partial-second",
+      event_date: "2026-07-14",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: {
+        type: "json",
+        content: { legal_regulatory: secondLegal },
+        basis: [basis("legal_regulatory", "https://second.test/legal")],
+      },
+    };
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1", report: baseline });
+    await test.store.update((state) => {
+      const completed = state.vendors[vendor.domain]?.baseline;
+      if (completed?.stage !== "completed") throw new Error("missing baseline");
+      completed.evidence.basis = [
+        basis("cybersecurity", "https://baseline.test/security"),
+        basis("financial_health", "https://baseline.test/financial"),
+      ];
+    });
+    test.monitorEvents.mockResolvedValue({ events: [second, first] });
+
+    const summary = await test.service.checkForUpdates();
+    expect(summary.changes.map(({ event }) => event.eventId)).toEqual([
+      "partial-first",
+      "partial-second",
+    ]);
+    const saved = (await test.store.read()).vendors[vendor.domain]?.events["partial-second"];
+    expect(saved?.stage).toBe("completed_without_follow_up");
+    if (!saved || saved.stage === "event_failed") throw new Error("missing second event");
+    expect(saved.previousReport.financial_health).toEqual(firstFinancial);
+    expect(saved.currentReport.legal_regulatory).toEqual(secondLegal);
+    expect(saved.currentBasis).toEqual([
+      basis("cybersecurity", "https://baseline.test/security"),
+      basis("financial_health", "https://first.test/financial"),
+      basis("legal_regulatory", "https://second.test/legal"),
+    ]);
+  });
+
+  it("blocks an empty-previous patch after an invalid predecessor", async () => {
+    const test = await runtime();
+    const baseline = vendorReport();
+    const invalid: MonitorSnapshotEvent = {
+      event_id: "invalid-predecessor",
+      event_group_id: "group-invalid-predecessor",
+      event_date: "2026-07-13",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: { type: "json", content: { unknown_field: true }, basis: [] },
+    };
+    const dependent: MonitorSnapshotEvent = {
+      event_id: "dependent-partial",
+      event_group_id: "group-dependent-partial",
+      event_date: "2026-07-14",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: {
+        type: "json",
+        content: {
+          financial_health: {
+            ...baseline.financial_health,
+            summary: "Must not merge into stale baseline state.",
+          },
+        },
+        basis: [],
+      },
+    };
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1", report: baseline });
+    test.monitorEvents.mockResolvedValue({ events: [dependent, invalid] });
+
+    const summary = await test.service.checkForUpdates();
+    expect(summary.errors).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ resourceId: "invalid-predecessor" }),
+        expect.objectContaining({
+          resourceId: "dependent-partial",
+          message: expect.stringContaining("no complete predecessor"),
+        }),
+      ]),
+    );
+    const state = await test.store.read();
+    expect(state.vendors[vendor.domain]?.events["invalid-predecessor"]?.stage).toBe(
+      "event_failed",
+    );
+    expect(state.vendors[vendor.domain]?.events["dependent-partial"]?.stage).toBe(
+      "event_failed",
+    );
+    expect(state.vendors[vendor.domain]?.latestEventId).toBeUndefined();
+  });
+
+  it("resumes after an invalid event when the API supplies a complete predecessor", async () => {
+    const test = await runtime();
+    const baseline = vendorReport();
+    const invalid: MonitorSnapshotEvent = {
+      event_id: "invalid-before-rebase",
+      event_group_id: "group-invalid-before-rebase",
+      event_date: "2026-07-13",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: { type: "json", content: { unknown_field: true }, basis: [] },
+    };
+    const completeRebase = snapshotEvent({
+      eventId: "complete-rebase",
+      previous: vendorReport({ operational_resilience: "MEDIUM" }),
+      changed: {
+        legal_regulatory: {
+          ...baseline.legal_regulatory,
+          summary: "Complete predecessor restored the chain.",
+        },
+      },
+    });
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1", report: baseline });
+    test.monitorEvents.mockResolvedValue({ events: [completeRebase, invalid] });
+
+    const summary = await test.service.checkForUpdates();
+    expect(summary.changes.map(({ event }) => event.eventId)).toEqual(["complete-rebase"]);
+    const state = await test.store.read();
+    expect(state.vendors[vendor.domain]?.events["invalid-before-rebase"]?.stage).toBe(
+      "event_failed",
+    );
+    expect(state.vendors[vendor.domain]?.events["complete-rebase"]?.stage).toBe(
+      "completed_without_follow_up",
+    );
+    expect(state.vendors[vendor.domain]?.latestEventId).toBe("complete-rebase");
+  });
+
+  it("seeds a retained-history gap from the latest durable checkpoint", async () => {
+    const test = await runtime();
+    const baseline = vendorReport();
+    const first: MonitorSnapshotEvent = {
+      event_id: "checkpoint",
+      event_group_id: "group-checkpoint",
+      event_date: "2026-07-13",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: {
+        type: "json",
+        content: {
+          financial_health: {
+            ...baseline.financial_health,
+            summary: "Durable checkpoint value.",
+          },
+        },
+        basis: [],
+      },
+    };
+    const afterGap: MonitorSnapshotEvent = {
+      event_id: "after-gap",
+      event_group_id: "group-after-gap",
+      event_date: "2026-07-14",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: {
+        type: "json",
+        content: {
+          legal_regulatory: {
+            ...baseline.legal_regulatory,
+            summary: "Retained event after the checkpoint.",
+          },
+        },
+        basis: [],
+      },
+    };
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1", report: baseline });
+    test.monitorEvents.mockResolvedValueOnce({ events: [first] });
+    await test.service.checkForUpdates();
+    test.monitorEvents.mockResolvedValue({ events: [afterGap] });
+
+    const summary = await test.service.checkForUpdates();
+    expect(summary.warnings).toContainEqual(
+      expect.objectContaining({ code: "monitor_history_gap" }),
+    );
+    const saved = (await test.store.read()).vendors[vendor.domain]?.events["after-gap"];
+    expect(saved?.stage).toBe("completed_without_follow_up");
+    if (!saved || saved.stage === "event_failed") throw new Error("missing gap event");
+    expect(saved.previousReport.financial_health.summary).toBe("Durable checkpoint value.");
+  });
+
+  it("retries an empty-previous failed event from its persisted prior snapshot", async () => {
+    const test = await runtime();
+    const baseline = vendorReport();
+    const event: MonitorSnapshotEvent = {
+      event_id: "retry-with-snapshot",
+      event_group_id: "group-retry-with-snapshot",
+      event_date: "2026-07-14",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: { type: "json", content: { unknown_field: true }, basis: [] },
+    };
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1", report: baseline });
+    test.monitorEvents.mockResolvedValueOnce({ events: [event] }).mockResolvedValue({ events: [] });
+    await test.service.checkForUpdates();
+    expect((await test.service.checkForUpdates()).errors).toContainEqual(
+      expect.objectContaining({
+        code: "event_requires_retry",
+        message: expect.stringContaining("unknown_field"),
+      }),
+    );
+    await test.store.update((state) => {
+      const failed = state.vendors[vendor.domain]?.events["retry-with-snapshot"];
+      if (!failed || failed.stage !== "event_failed") throw new Error("missing failure");
+      expect(failed.priorSnapshot?.report).toEqual(baseline);
+      failed.rawEvent.changedOutput.content = {
+        financial_health: {
+          ...baseline.financial_health,
+          summary: "Recovered deterministically.",
+        },
+      };
+    });
+
+    const summary = await test.service.checkForUpdates({ retryFailed: true });
+    expect(summary.errors).toEqual([]);
+    const recovered = (await test.store.read()).vendors[vendor.domain]?.events[
+      "retry-with-snapshot"
+    ];
+    expect(recovered?.stage).toBe("completed_without_follow_up");
+    expect(test.taskCreate).not.toHaveBeenCalled();
+  });
+
+  it("recovers a safe legacy first event but rejects ambiguous legacy recovery", async () => {
+    const safe = await runtime();
+    const baseline = vendorReport();
+    const legacy: MonitorSnapshotEvent = {
+      event_id: "legacy-first",
+      event_group_id: "group-legacy-first",
+      event_date: "2026-07-14",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: { type: "json", content: { unknown_field: true }, basis: [] },
+    };
+    await seedCompletedVendor(safe.store, { monitorId: "monitor-1", report: baseline });
+    safe.monitorEvents.mockResolvedValueOnce({ events: [legacy] }).mockResolvedValue({ events: [] });
+    await safe.service.checkForUpdates();
+    await safe.store.update((state) => {
+      const failed = state.vendors[vendor.domain]?.events["legacy-first"];
+      if (!failed || failed.stage !== "event_failed") throw new Error("missing legacy event");
+      delete failed.priorSnapshot;
+      failed.rawEvent.changedOutput.content = {
+        financial_health: baseline.financial_health,
+      };
+    });
+    expect((await safe.service.checkForUpdates({ retryFailed: true })).errors).toEqual([]);
+
+    const ambiguous = await runtime();
+    const valid = snapshotEvent({
+      eventId: "prior-valid",
+      previous: baseline,
+      changed: { financial_health: baseline.financial_health },
+    });
+    const ambiguousFailure: MonitorSnapshotEvent = {
+      ...legacy,
+      event_id: "legacy-ambiguous",
+      event_group_id: "group-legacy-ambiguous",
+    };
+    await seedCompletedVendor(ambiguous.store, {
+      monitorId: "monitor-1",
+      report: baseline,
+    });
+    ambiguous.monitorEvents
+      .mockResolvedValueOnce({ events: [ambiguousFailure, valid] })
+      .mockResolvedValue({ events: [] });
+    await ambiguous.service.checkForUpdates();
+    await ambiguous.store.update((state) => {
+      const failed = state.vendors[vendor.domain]?.events["legacy-ambiguous"];
+      if (!failed || failed.stage !== "event_failed") throw new Error("missing ambiguity");
+      delete failed.priorSnapshot;
+      failed.rawEvent.changedOutput.content = {
+        legal_regulatory: baseline.legal_regulatory,
+      };
+    });
+
+    const rejected = await ambiguous.service.checkForUpdates({ retryFailed: true });
+    expect(rejected.errors).toContainEqual(
+      expect.objectContaining({
+        resourceId: "legacy-ambiguous",
+        message: expect.stringContaining("no unambiguous predecessor"),
+      }),
+    );
+    expect(
+      (await ambiguous.store.read()).vendors[vendor.domain]?.events["legacy-ambiguous"]
+        ?.stage,
+    ).toBe("event_failed");
+  });
+
+  it("does not duplicate a paid follow-up Task when history is replayed", async () => {
+    const test = await runtime();
+    const baseline = vendorReport();
+    const high: MonitorSnapshotEvent = {
+      event_id: "one-paid-follow-up",
+      event_group_id: "group-one-paid-follow-up",
+      event_date: "2026-07-14",
+      previous_output: { type: "json", content: {}, basis: [] },
+      changed_output: {
+        type: "json",
+        content: {
+          cybersecurity: vendorReport({ cybersecurity: "HIGH" }).cybersecurity,
+        },
+        basis: [],
+      },
+    };
+    await seedCompletedVendor(test.store, { monitorId: "monitor-1", report: baseline });
+    test.monitorEvents.mockResolvedValue({ events: [high] });
+    test.taskCreate.mockResolvedValue(taskRun("only-follow-up"));
+    test.taskResult.mockResolvedValue(investigationResult("only-follow-up"));
+
+    expect((await test.service.checkForUpdates()).followUpTasksCreated).toBe(1);
+    expect((await test.service.checkForUpdates()).newEvents).toBe(0);
+    expect(test.taskCreate).toHaveBeenCalledTimes(1);
+  });
 });

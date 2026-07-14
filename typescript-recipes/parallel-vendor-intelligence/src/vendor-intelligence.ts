@@ -45,6 +45,7 @@ import {
   rawSnapshotEvent,
   reconstructSnapshotEvent,
   restoredSnapshotEvent,
+  type EvidenceSnapshot,
   type SnapshotEventInput,
 } from "./snapshot-events.js";
 import { InvalidTaskOutputError, TaskRunner } from "./task-runner.js";
@@ -631,7 +632,7 @@ export class VendorIntelligence {
                 code: "event_requires_retry",
                 vendor: domain,
                 resourceId: entry.eventId,
-                message: `Event ${entry.eventId} could not be validated. Re-run check-updates with --retry-failed after correcting the cause.`,
+                message: `Event ${entry.eventId} could not be validated: ${entry.failure.message} Re-run check-updates with --retry-failed after correcting the cause.`,
               });
             }
           } else if (entry.stage === "follow_up_failed") {
@@ -708,6 +709,9 @@ export class VendorIntelligence {
     summary: CheckSummary,
   ): Promise<void> {
     const history = await this.fetchMonitorHistory(domain, monitor.monitorId, summary);
+    const stateBeforeHistory = await this.store.read();
+    const vendorState = stateBeforeHistory.vendors[domain];
+    if (!vendorState) throw new Error(`No local vendor state for ${domain}.`);
     if (monitor.newestObservedEventId && !history.seen.has(monitor.newestObservedEventId)) {
       this.addDiagnostic(summary.warnings, {
         code: "monitor_history_gap",
@@ -718,11 +722,16 @@ export class VendorIntelligence {
     }
 
     let newestDurableEventId: string | undefined;
+    let cursor = this.initialEvidenceCursor(vendorState, history.seen);
     for (const event of [...history.events].reverse()) {
       const currentState = await this.store.read();
       const existing = currentState.vendors[domain]?.events[event.event_id];
       if (existing) {
         newestDurableEventId = event.event_id;
+        cursor =
+          existing.stage === "event_failed"
+            ? undefined
+            : { report: existing.currentReport, basis: existing.currentBasis };
         continue;
       }
 
@@ -733,15 +742,25 @@ export class VendorIntelligence {
           event,
           summary,
           true,
+          undefined,
+          cursor,
         );
         newestDurableEventId = event.event_id;
+        cursor = { report: recorded.currentReport, basis: recorded.currentBasis };
         if (recorded.stage === "follow_up_queued") {
           await this.completeFollowUp(domain, event.event_id, summary);
         }
       } catch (error) {
         if (error instanceof InvalidSnapshotEventError) {
-          await this.recordFailedSnapshotEvent(domain, monitor.monitorId, event, error);
+          await this.recordFailedSnapshotEvent(
+            domain,
+            monitor.monitorId,
+            event,
+            error,
+            cursor,
+          );
           newestDurableEventId = event.event_id;
+          cursor = undefined;
           this.addDiagnostic(summary.errors, {
             code: "invalid_snapshot_event",
             vendor: domain,
@@ -781,6 +800,30 @@ export class VendorIntelligence {
       }
       if (newestValid) record.latestEventId = newestValid.eventId;
     });
+  }
+
+  private initialEvidenceCursor(
+    vendorState: VendorState,
+    retainedEventIds: ReadonlySet<string>,
+  ): EvidenceSnapshot | undefined {
+    if (vendorState.baseline.stage !== "completed") return undefined;
+    const checkpoint =
+      vendorState.monitor?.status === "active"
+        ? vendorState.monitor.newestObservedEventId
+        : undefined;
+    if (checkpoint && !retainedEventIds.has(checkpoint)) {
+      const latest = vendorState.latestEventId
+        ? vendorState.events[vendorState.latestEventId]
+        : undefined;
+      if (latest && latest.stage !== "event_failed") {
+        return { report: latest.currentReport, basis: latest.currentBasis };
+      }
+      return undefined;
+    }
+    return {
+      report: vendorState.baseline.evidence.report,
+      basis: vendorState.baseline.evidence.basis,
+    };
   }
 
   private async fetchMonitorHistory(
@@ -857,11 +900,12 @@ export class VendorIntelligence {
     summary: CheckSummary,
     countAsNew: boolean,
     firstSeenAt?: string,
+    fallback?: EvidenceSnapshot,
   ): Promise<EventEvidence> {
     const state = await this.store.read();
     const vendorState = state.vendors[domain];
     if (!vendorState) throw new Error(`No local vendor state for ${domain}.`);
-    const reconstructed = reconstructSnapshotEvent(event);
+    const reconstructed = reconstructSnapshotEvent(event, fallback);
     const decision = decideFollowUp({
       previousReport: reconstructed.previousReport,
       currentReport: reconstructed.currentReport,
@@ -932,6 +976,7 @@ export class VendorIntelligence {
     monitorId: string,
     event: MonitorSnapshotEvent,
     error: InvalidSnapshotEventError,
+    priorSnapshot?: EvidenceSnapshot,
   ): Promise<void> {
     const now = this.now().toISOString();
     const failed = EventLedgerEntrySchema.parse({
@@ -942,6 +987,7 @@ export class VendorIntelligence {
       eventGroupId: event.event_group_id,
       firstSeenAt: now,
       rawEvent: rawSnapshotEvent(event),
+      ...(priorSnapshot ? { priorSnapshot } : {}),
       failure: {
         kind: "invalid_event",
         message: error.message,
@@ -966,6 +1012,7 @@ export class VendorIntelligence {
     if (!entry || entry.stage !== "event_failed") return;
     try {
       const restored = restoredSnapshotEvent(entry.rawEvent);
+      const fallback = entry.priorSnapshot ?? this.legacyRetryFallback(state, domain, eventId);
       const recorded = await this.recordSnapshotEvent(
         domain,
         entry.monitorId,
@@ -973,6 +1020,7 @@ export class VendorIntelligence {
         summary,
         false,
         entry.firstSeenAt,
+        fallback,
       );
       await this.advanceLatestIfCurrentlyObserved(domain, recorded);
       if (recorded.stage === "follow_up_queued") {
@@ -997,6 +1045,39 @@ export class VendorIntelligence {
         message: error.message,
       });
     }
+  }
+
+  private legacyRetryFallback(
+    state: RecipeState,
+    domain: string,
+    eventId: string,
+  ): EvidenceSnapshot | undefined {
+    const vendor = state.vendors[domain];
+    const entry = vendor?.events[eventId];
+    if (!vendor || !entry || entry.stage !== "event_failed") return undefined;
+    const content = entry.rawEvent.previousOutput.content;
+    if (
+      typeof content !== "object" ||
+      content === null ||
+      Array.isArray(content) ||
+      Object.keys(content).length > 0
+    ) {
+      return undefined;
+    }
+    const isOnlyEvent = Object.keys(vendor.events).length === 1;
+    const isInitialCheckpoint =
+      vendor.monitor?.status === "active" &&
+      vendor.monitor.newestObservedEventId === eventId;
+    if (isOnlyEvent && isInitialCheckpoint && vendor.baseline.stage === "completed") {
+      return {
+        report: vendor.baseline.evidence.report,
+        basis: vendor.baseline.evidence.basis,
+      };
+    }
+    throw new InvalidSnapshotEventError(
+      eventId,
+      `Snapshot event ${eventId} is invalid: legacy failed state has an empty previous_output but no unambiguous predecessor. Re-fetch the event history or repair the saved prior snapshot before retrying.`,
+    );
   }
 
   private async queueFailedFollowUp(domain: string, eventId: string): Promise<void> {

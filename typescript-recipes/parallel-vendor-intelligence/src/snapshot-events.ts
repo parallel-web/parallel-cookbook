@@ -33,6 +33,11 @@ export class InvalidSnapshotEventError extends Error {
   }
 }
 
+export interface EvidenceSnapshot {
+  report: VendorReport;
+  basis: FieldBasis[];
+}
+
 function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
 }
@@ -61,8 +66,11 @@ export function restoredSnapshotEvent(event: RawSnapshotEvent): SnapshotEventInp
   };
 }
 
-/** Validate a partial snapshot and replace changed top-level evidence atomically. */
-export function reconstructSnapshotEvent(event: SnapshotEventInput): {
+/** Apply a partial snapshot to a complete predecessor and replace changed evidence atomically. */
+export function reconstructSnapshotEvent(
+  event: SnapshotEventInput,
+  fallback?: EvidenceSnapshot,
+): {
   previousReport: VendorReport;
   currentReport: VendorReport;
   previousBasis: FieldBasis[];
@@ -80,16 +88,33 @@ export function reconstructSnapshotEvent(event: SnapshotEventInput): {
     const changedContent = z
       .record(z.string(), z.unknown())
       .parse(event.changed_output.content);
-    const previousReport = VendorReportSchema.parse(previousContent);
-    const changedFields = z
-      .array(EvidenceFieldSchema)
-      .parse(Object.keys(changedContent));
+    const previousIsEmpty = Object.keys(previousContent).length === 0;
+    if (previousIsEmpty && !fallback) {
+      throw new Error(
+        "Snapshot previous_output is empty and no complete predecessor is available.",
+      );
+    }
+    const previousReport = previousIsEmpty
+      ? VendorReportSchema.parse(fallback?.report)
+      : VendorReportSchema.parse(previousContent);
+    const changedKeys = Object.keys(changedContent);
+    const unknownFields = changedKeys.filter(
+      (field) => !EvidenceFieldSchema.safeParse(field).success,
+    );
+    if (unknownFields.length > 0) {
+      throw new Error(
+        `Snapshot changed_output contains unknown top-level fields: ${unknownFields.join(", ")}.`,
+      );
+    }
+    const changedFields = z.array(EvidenceFieldSchema).parse(changedKeys);
     const currentReport = VendorReportSchema.parse({
-      ...previousContent,
+      ...previousReport,
       ...changedContent,
     });
 
-    const previousBasis = parseBasis(event.previous_output.basis);
+    const previousBasis = previousIsEmpty
+      ? FieldBasisSchema.array().parse(fallback?.basis)
+      : parseBasis(event.previous_output.basis);
     const basis = new Map<string, FieldBasis>();
     for (const entry of previousBasis) basis.set(entry.field, entry);
     for (const field of changedFields) {

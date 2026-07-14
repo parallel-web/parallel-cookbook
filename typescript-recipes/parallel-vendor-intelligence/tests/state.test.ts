@@ -315,4 +315,71 @@ describe("FileStateStore", () => {
     }
     expect(historical.decision.policyVersion).toBe(99);
   });
+
+  it("reads legacy failed events that predate persisted prior snapshots", async () => {
+    const { store } = await temporaryStore();
+    const report = vendorReport();
+    const observedAt = "2026-07-09T00:00:00.000Z";
+    await writeFile(
+      store.statePath,
+      `${JSON.stringify({
+        stateVersion: STATE_VERSION,
+        specVersion: 1,
+        vendors: {
+          "example.com": {
+            vendor: { name: "Example", domain: "example.com" },
+            baseline: {
+              stage: "completed",
+              run: { runId: "baseline-1", interactionId: "interaction-1" },
+              failedAttempts: [],
+              evidence: { report, basis: [], observedAt, warnings: [] },
+            },
+            monitor: {
+              status: "active",
+              monitorId: "monitor-1",
+              baselineRunId: "baseline-1",
+              frequency: "1d",
+              processor: "lite",
+              createdAt: observedAt,
+              newestObservedEventId: "legacy-failure",
+            },
+            events: {
+              "legacy-failure": {
+                stage: "event_failed",
+                eventId: "legacy-failure",
+                monitorId: "monitor-1",
+                eventDate: "2026-07-09",
+                eventGroupId: "group-legacy-failure",
+                firstSeenAt: observedAt,
+                rawEvent: {
+                  eventId: "legacy-failure",
+                  eventGroupId: "group-legacy-failure",
+                  eventDate: "2026-07-09",
+                  previousOutput: { type: "json", content: {}, basis: [] },
+                  changedOutput: {
+                    type: "json",
+                    content: { unknown_field: true },
+                    basis: [],
+                  },
+                },
+                failure: {
+                  kind: "invalid_event",
+                  message: "legacy validation failure",
+                  failedAt: observedAt,
+                  attempts: 1,
+                },
+              },
+            },
+          },
+        },
+      })}\n`,
+    );
+
+    const failed = (await store.read()).vendors["example.com"]?.events[
+      "legacy-failure"
+    ];
+    expect(failed?.stage).toBe("event_failed");
+    if (!failed || failed.stage !== "event_failed") throw new Error("missing failure");
+    expect(failed.priorSnapshot).toBeUndefined();
+  });
 });

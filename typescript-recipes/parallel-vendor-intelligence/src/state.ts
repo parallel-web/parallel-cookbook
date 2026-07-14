@@ -209,6 +209,12 @@ const EventFailedSchema = z.object({
   eventGroupId: z.string().min(1),
   firstSeenAt: z.string().min(1),
   rawEvent: RawSnapshotEventSchema,
+  priorSnapshot: z
+    .object({
+      report: VendorReportSchema,
+      basis: z.array(FieldBasisSchema),
+    })
+    .optional(),
   failure: z.object({
     kind: z.literal("invalid_event"),
     message: z.string().min(1),
