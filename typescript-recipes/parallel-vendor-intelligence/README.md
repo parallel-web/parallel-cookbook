@@ -7,7 +7,7 @@ Research a vendor once, monitor the same risk report for changes, and investigat
 This recipe uses the Parallel Task API and Monitor API through three local commands:
 
 - `bootstrap` researches each vendor and starts a snapshot Monitor.
-- `check-updates` reads new Monitor events and runs follow-up research when a change is material.
+- `check-updates` reconstructs new Monitor events, assesses risk deterministically, and optionally runs focused follow-up research when a change crosses the threshold.
 - `cleanup` cancels the Monitors recorded in this recipe's local state.
 
 Parallel provides the researched evidence. The recipe validates that evidence and applies a deterministic risk policy, so the final risk level and human-review guidance do not depend on another model call.
@@ -75,6 +75,55 @@ Leave the Monitor active if you want it to keep watching the vendor. Run the upd
 npm run --silent check-updates | jq
 ```
 
+When a change is found, the command emits one structured summary. This abridged example uses sample IDs, findings, and citations rather than output from a specific live run:
+
+```json
+{
+  "monitorsChecked": 1,
+  "newEvents": 1,
+  "followUpDecisions": 1,
+  "followUpTasksCreated": 1,
+  "followUpsCompleted": 1,
+  "humanReviewsRequired": 1,
+  "changes": [
+    {
+      "vendor": { "name": "Cloudflare", "domain": "cloudflare.com" },
+      "event": {
+        "monitorId": "monitor_...",
+        "eventId": "mevt_...",
+        "eventDate": "2026-07-14",
+        "changedFields": ["cybersecurity"]
+      },
+      "assessment": {
+        "risk": {
+          "level": "HIGH",
+          "requiresHumanReview": true,
+          "guidance": "urgent_human_review"
+        }
+      },
+      "decision": {
+        "runFollowUp": true,
+        "threshold": "HIGH",
+        "previousLevel": "MEDIUM",
+        "currentLevel": "HIGH"
+      },
+      "followUp": {
+        "status": "completed",
+        "runId": "trun_...",
+        "investigation": {
+          "what_changed": "A newly reported security incident changed the assessment.",
+          "confirmed_facts": ["The incident was confirmed in public reporting."],
+          "business_impact": "Review exposure and contingency plans.",
+          "open_questions": ["Does the incident affect shared data?"]
+        }
+      }
+    }
+  ],
+  "warnings": [],
+  "errors": []
+}
+```
+
 An empty `changes` list is a successful result; it means there are no new Monitor events to process. Running `bootstrap` again reuses the completed baseline and matching active Monitor.
 
 When you are finished, cancel every Monitor owned by this recipe:
@@ -125,6 +174,10 @@ Repeat `--vendor` to cancel several vendors. Run cleanup without flags to cancel
 
 A vendor `riskFloor` at or above `FOLLOW_UP_RISK_THRESHOLD` also triggers investigation for any changed risk field. Tasks and active Monitors consume Parallel credits. Completed Tasks remain in your account history and cannot be cancelled.
 
+The risk assessment and threshold decision are completed before any optional follow-up Task. Follow-up research adds confirmed facts, business impact, open questions, and citations; it does not rescore the report or replace the deterministic decision.
+
+`adverse_events` are discrete, evidence-backed events returned by the Task, such as a breach or lawsuit. Their severity participates in aggregate scoring, and the presence of any supported adverse event requires human review even when its severity is `LOW`.
+
 `check-updates` reports each processed event with its changed fields, current assessment, policy decision, and one follow-up status:
 
 - `not_required`: the change did not cross the threshold.
@@ -134,7 +187,7 @@ A vendor `riskFloor` at or above `FOLLOW_UP_RISK_THRESHOLD` also triggers invest
 
 ## State and recovery
 
-The recipe stores Task IDs, Monitor IDs, evidence, and processed event IDs in `.vendor-intelligence/state.json`. Writes are validated and atomic. A command lock prevents two lifecycle commands from changing the same state at once.
+The recipe stores Task IDs, Monitor IDs, evidence snapshots, and processed event IDs in `.vendor-intelligence/state.json`. Writes are validated and atomic. A command lock prevents two lifecycle commands from changing the same state at once. Monitor patches are applied oldest to newest to a known complete predecessor; an invalid event blocks dependent partial patches until a complete event rebases the chain.
 
 Commands are safe to repeat. A repeated command resumes a running Task, reuses a matching Monitor, and skips Monitor events it has already processed. Cleanup only cancels Monitor IDs found in local state.
 
