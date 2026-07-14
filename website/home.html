@@ -360,6 +360,11 @@
                 });
             }
 
+            function createDemoLink(cookbook, className) {
+                if (!cookbook.websiteUrl) return '';
+                return `<a href="${cookbook.websiteUrl}" class="${className}" target="_blank" rel="noopener" onclick="event.stopPropagation();">Demo</a>`;
+            }
+
             function createCard(cookbook) {
                 const card = document.createElement('div');
                 card.className = 'group';
@@ -368,6 +373,7 @@
                 const imageContent = hasImage ? `<img src="${cookbook.imageUrl}" alt="${cookbook.title}" class="w-full h-full object-cover">` : cookbook.title;
                 const bgColor = hasImage ? 'transparent' : `linear-gradient(135deg, ${stringToColor(cookbook.repoUrl)} 0%, ${stringToColor(cookbook.repoUrl + 'salt')} 100%)`;
                 const descriptionHtml = `<p class="text-white/80 text-sm mt-2">${cookbook.description}</p>`
+                const demoButton = createDemoLink(cookbook, 'flex-1 bg-[var(--color-signal)] text-white px-4 py-2 rounded-md font-mono text-sm text-center no-underline hover:opacity-80');
 
                 card.innerHTML = `
                     <div class="relative rounded-lg overflow-hidden aspect-[16/9]">
@@ -382,7 +388,7 @@
                                 </div>
                                 <div class="flex gap-2">
                                     <a href="${cookbook.repoUrl}" class="flex-1 bg-white text-[var(--color-index-black)] px-4 py-2 rounded-md font-mono text-sm text-center no-underline hover:bg-[var(--color-signal)] hover:text-white" target="_blank" rel="noopener" onclick="event.stopPropagation();">Code</a>
-                                    <a href="${cookbook.websiteUrl}" class="flex-1 bg-[var(--color-signal)] text-white px-4 py-2 rounded-md font-mono text-sm text-center no-underline hover:opacity-80" target="_blank" rel="noopener" onclick="event.stopPropagation();">Demo</a>
+                                    ${demoButton}
                                 </div>
                             </div>
                         </a>
@@ -445,6 +451,7 @@
                 const hasImage = cookbook.imageUrl && cookbook.imageUrl !== '/assets/placeholder.png';
                 const imageContent = hasImage ? `<img src="${cookbook.imageUrl}" alt="${cookbook.title}" class="w-full h-full object-cover rounded-lg">` : '';
                 const bgColor = hasImage ? 'transparent' : `linear-gradient(135deg, ${stringToColor(cookbook.repoUrl)} 0%, ${stringToColor(cookbook.repoUrl + 'salt')} 100%)`;
+                const demoButton = createDemoLink(cookbook, 'px-3 py-1.5 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)] whitespace-nowrap');
 
                 item.innerHTML = `
                     <div class="w-20 h-12 rounded-lg flex items-center justify-center text-white font-mono font-medium text-xs overflow-hidden" style="background: ${bgColor};">
@@ -461,7 +468,7 @@
                     <div class="flex gap-1 items-center flex-wrap">${creators}</div>
                     <div class="flex flex-row gap-2">
                         <a href="${cookbook.repoUrl}" class="px-3 py-1.5 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)] whitespace-nowrap" target="_blank" rel="noopener">Code</a>
-                        <a href="${cookbook.websiteUrl}" class="px-3 py-1.5 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)] whitespace-nowrap" target="_blank" rel="noopener">Demo</a>
+                        ${demoButton}
                     </div>
                 `;
                 return item;
@@ -489,6 +496,7 @@
                 const hasImage = cookbook.imageUrl && cookbook.imageUrl !== '/assets/placeholder.png';
                 const imageContent = hasImage ? `<img src="${cookbook.imageUrl}" alt="${cookbook.title}" class="w-full h-full object-cover rounded-lg">` : '';
                 const bgColor = hasImage ? 'transparent' : `linear-gradient(135deg, ${stringToColor(cookbook.repoUrl)} 0%, ${stringToColor(cookbook.repoUrl + 'salt')} 100%)`;
+                const demoButton = createDemoLink(cookbook, 'flex-1 px-3 py-2 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)]');
 
                 card.innerHTML = `
                     <div class="flex items-start gap-3">
@@ -508,7 +516,7 @@
                             <div class="flex flex-wrap gap-1 mb-3">${tags}</div>
                             <div class="flex gap-2">
                                 <a href="${cookbook.repoUrl}" class="flex-1 px-3 py-2 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)]" target="_blank" rel="noopener">Code</a>
-                                <a href="${cookbook.websiteUrl}" class="flex-1 px-3 py-2 border border-[var(--color-border)] rounded text-sm text-center font-mono transition-all text-[var(--color-text)] no-underline hover:bg-[var(--color-signal)] hover:text-white hover:border-[var(--color-signal)]" target="_blank" rel="noopener">Demo</a>
+                                ${demoButton}
                             </div>
                         </div>
                     </div>

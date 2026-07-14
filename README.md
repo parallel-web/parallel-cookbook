@@ -10,7 +10,7 @@
 
 ---
 
-The Parallel Cookbook is a curated set of recipes that show how to build real applications on Parallel's web research stack — **Search**, **Extract**, **Task**, **Ingest**, and **MCP**. Each recipe is a working app with a live demo, a deploy button, and prose that explains the design decisions.
+The Parallel Cookbook is a curated set of recipes that show how to build with Parallel's web research stack — **Search**, **Extract**, **Task**, **Ingest**, and **MCP**. Each recipe is a working example with a clear way to run or deploy it and prose that explains the design decisions.
 
 > **New here?** Start with the [Vercel Template](typescript-recipes/parallel-vercel-template) (TypeScript) or the [Deep Research notebook](python-recipes/Deep_Research_Recipe.ipynb) (Python) for an end-to-end tour of the platform.
 
@@ -115,6 +115,7 @@ Recurring research, cron jobs, and webhook delivery.
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
 | [**Daily Insights**](typescript-recipes/parallel-daily-insights) | Cron-triggered daily research feed — runs Tasks on a schedule, persists to KV, publishes a public data feed. Includes a `SPEC.md` showing the task spec used. | `Task` `Webhooks` `Cron` | Cloudflare Workers · KV | – |
+| [**Vendor Intelligence**](typescript-recipes/parallel-vendor-intelligence) | Researches vendor risk, watches the structured report for changes, and runs follow-up research only when a change crosses the review threshold. | `Task` `Deep Research` `Monitors` | TypeScript · Local scripts | – |
 
 ### Deep Research & Notebooks
 

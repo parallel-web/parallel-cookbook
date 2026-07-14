@@ -1,0 +1,32 @@
+{
+  "name": "parallel-vendor-intelligence",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scripts-first vendor risk research and monitoring with Parallel",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "bootstrap": "tsx scripts/bootstrap.ts",
+    "check-updates": "tsx scripts/check-updates.ts",
+    "cleanup": "tsx scripts/cleanup.ts",
+    "check": "tsc",
+    "test": "vitest run",
+    "test:live": "RUN_LIVE_TESTS=1 vitest run tests/live.test.ts --reporter=verbose",
+    "test:watch": "vitest",
+    "validate": "npm run check && npm test"
+  },
+  "dependencies": {
+    "dotenv": "17.4.2",
+    "parallel-web": "1.1.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.19.43",
+    "tsx": "4.23.0",
+    "typescript": "5.9.3",
+    "vitest": "4.1.10"
+  }
+}

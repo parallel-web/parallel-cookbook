@@ -34,9 +34,9 @@
             "description": "GitHub repository URL"
           },
           "websiteUrl": {
-            "type": "string",
+            "type": ["string", "null"],
             "format": "uri",
-            "description": "Live demo website URL"
+            "description": "Live demo website URL, or null when the recipe has no hosted demo"
           },
           "creators": {
             "type": "array",
