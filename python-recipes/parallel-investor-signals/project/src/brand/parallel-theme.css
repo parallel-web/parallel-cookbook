@@ -1,0 +1,131 @@
+/* ==========================================================================
+   Parallel brand theme — drop-in CSS
+   Source of truth: the official Parallel docs (docs.json colors + style.css).
+   Import this once at the app root, then use the CSS variables below.
+   ========================================================================== */
+
+/* --- Brand fonts (canonical, hosted by Parallel) -------------------------- */
+/* Gerstner Programm = display/body. FT System Mono = code/mono.
+   These are proprietary fonts served from Parallel's CDN; if they fail to
+   load (offline, or licensing), the fallback stacks below take over cleanly. */
+
+@font-face {
+  font-family: "Gerstner Programm";
+  src: url("https://assets.p0web.com/Gerstner-ProgrammRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gerstner Programm";
+  src: url("https://assets.p0web.com/Gerstner-ProgrammMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FT System Mono";
+  src: url("https://assets.p0web.com/FTSystemMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FT System Mono";
+  src: url("https://assets.p0web.com/FTSystemMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Design tokens -------------------------------------------------------- */
+:root {
+  /* Brand */
+  --parallel-orange: #fb631b; /* primary — the single accent. Use sparingly. */
+  --parallel-ink: #1d1c1a;    /* near-black brand ink (logo fill on light) */
+
+  /* Fonts */
+  --font-sans: "Gerstner Programm", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: "FT System Mono", ui-monospace, SFMono-Regular, Menlo, Consolas,
+    monospace;
+
+  /* Radius (docs use rounded-md everywhere for cards + code) */
+  --radius: 0.375rem;
+
+  /* Semantic — LIGHT theme (docs default appearance) */
+  --bg: #fcfcfa;         /* app background (warm off-white) */
+  --surface: #f6f6f6;    /* cards / panels */
+  --surface-2: #eeeeee;  /* active/selected surface */
+  --border: #e5e5e5;
+  --text: #1d1c1a;       /* primary text */
+  --text-muted: #4b5563;
+  --accent: var(--parallel-orange);
+  --on-accent: #fcfcfa;  /* text/icon on an orange fill */
+}
+
+/* Semantic — DARK theme. Toggle by adding class="dark" on <html>/<body>,
+   or rely on prefers-color-scheme below. */
+.dark,
+:root[data-theme="dark"] {
+  --bg: #1d1b16;         /* warm near-black */
+  --surface: #1a1a1a;
+  --surface-2: #2a2a2a;
+  --border: #2a2a2a;
+  --text: #fcfcfa;
+  --text-muted: #9ca3af;
+  --accent: var(--parallel-orange);
+  --on-accent: #fcfcfa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]):not(.light) {
+    --bg: #1d1b16;
+    --surface: #1a1a1a;
+    --surface-2: #2a2a2a;
+    --border: #2a2a2a;
+    --text: #fcfcfa;
+    --text-muted: #9ca3af;
+  }
+}
+
+/* --- Base element styling ------------------------------------------------- */
+html,
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Parallel headings read at medium weight (500), not bold — a signature of
+   the brand's restrained, editorial feel. */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+/* Utility surfaces you can apply directly */
+.parallel-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.parallel-btn {
+  background-color: var(--accent);
+  color: var(--on-accent);
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-weight: 500;
+}

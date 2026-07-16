@@ -116,6 +116,7 @@ Recurring research, cron jobs, and webhook delivery.
 | --- | --- | --- | --- | --- |
 | [**Daily Insights**](typescript-recipes/parallel-daily-insights) | Cron-triggered daily research feed — runs Tasks on a schedule, persists to KV, publishes a public data feed. Includes a `SPEC.md` showing the task spec used. | `Task` `Webhooks` `Cron` | Cloudflare Workers · KV | – |
 | [**Vendor Intelligence**](typescript-recipes/parallel-vendor-intelligence) | Researches vendor risk, watches the structured report for changes, and runs follow-up research only when a change crosses the review threshold. | `Task` `Deep Research` `Monitors` | TypeScript · Local scripts | – |
+| [**Investor Signals + Sales Enrichment**](python-recipes/parallel-investor-signals) | Track VC funds *you* choose for new AI-native rounds — one daily Monitor per fund, each detection chain-verified by a follow-up Task, scored, CRM-checked, and posted to Slack — plus a cited company-enrichment app. Bring your own watchlist and CRM; includes an `AGENTS.md` one-command setup. | `Task` `Monitors` `Webhooks` `Cron` | Python · FastAPI · React · Vercel | – |
 
 ### Deep Research & Notebooks
 

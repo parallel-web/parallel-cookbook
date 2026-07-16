@@ -1,0 +1,34 @@
+[project]
+name = "parallel-investor-signals"
+version = "1.0.0"
+description = "Investor signals + cited sales enrichment on the Parallel Task & Monitor APIs"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = ["project/backend/.venv", "project/node_modules", "project/dist"]
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "F",   # pyflakes
+  "I",   # isort
+  "B",   # bugbear
+  "UP",  # pyupgrade
+]
+ignore = [
+  "E501",  # line length is advisory here; docstrings/tables read better long
+  "E402",  # several modules intentionally import after load_dotenv()/sys.path setup
+]
+
+[tool.ruff.lint.per-file-ignores]
+# monitor scripts use the config-module sys.path bridge before backend imports
+"monitor/*.py" = ["I001"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::DeprecationWarning"]

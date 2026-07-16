@@ -1,0 +1,5 @@
+# Vercel Python function deps (subset of backend/requirements.txt — no
+# uvicorn/uvloop/watchfiles: Vercel provides the ASGI server).
+fastapi==0.139.0
+parallel-web==1.1.0
+python-dotenv==1.2.2

@@ -3,6 +3,18 @@
 
   "cookbooks": [
     {
+      "slug": "parallel-investor-signals",
+      "popular": false,
+      "featured": false,
+      "title": "Investor Signals + Sales Enrichment",
+      "description": "Track VC funds you choose for new AI-native rounds with daily Monitors + chained verification, and enrich any company into a fully-cited account brief. Bring your own watchlist and CRM.",
+      "repoUrl": "https://github.com/parallel-web/parallel-cookbook/tree/main/python-recipes/parallel-investor-signals",
+      "websiteUrl": null,
+      "creators": ["parallel-web"],
+      "imageUrl": null,
+      "tags": ["task", "monitoring", "webhooks", "enrichment", "python"]
+    },
+    {
       "slug": "parallel-vercel-template",
       "popular": true,
       "featured": true,
