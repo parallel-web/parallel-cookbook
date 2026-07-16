@@ -2,41 +2,41 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-black.svg)](LICENSE)
 
-**A GTM intelligence stack built on the [Parallel](https://parallel.ai) Task & Monitor APIs** — two production-grade workflows that replace stale data-vendor subscriptions with live, cited web research:
+**A GTM intelligence stack built on the [Parallel](https://parallel.ai) Task & Monitor APIs**: two production-grade workflows that replace stale data-vendor subscriptions with live, cited web research:
 
-1. **Investor Signals pipeline** — you pick the VC funds you want to track. Daily Parallel Monitors watch each fund for new AI-native investments (seed–Series B), verify every detection with a chained research task, check your CRM, score priority, and deliver a weekly Slack digest with warm-intro paths.
-2. **Sales Enrichment app** — type a company, get a fully-sourced account brief in ~1 minute: firmographics, funding, tech stack, buying signals, decision-maker contacts. Every field traceable to the exact web page it came from. Bulk CSV mode included.
+1. **Investor Signals pipeline**: you pick the VC funds you want to track. Daily Parallel Monitors watch each fund for new AI-native investments (seed–Series B), verify every detection with a chained research task, check your CRM, score priority, and deliver a weekly Slack digest with warm-intro paths.
+2. **Sales Enrichment app**: type a company, get a fully-sourced account brief in ~1 minute: firmographics, funding, tech stack, buying signals, decision-maker contacts. Every field traceable to the exact web page it came from. Bulk CSV mode included.
 
-> **You bring the watchlist.** Nothing about which funds to track is hardcoded — you list your own in `monitor/investors.json` (gitignored, never committed). See [Choose the funds you track](#1-choose-the-funds-you-track).
+> **You bring the watchlist.** Nothing about which funds to track is hardcoded. You list your own in `monitor/investors.json` (gitignored, never committed). See [Choose the funds you track](#1-choose-the-funds-you-track).
 
-![Results view — every field cited, with confidence ratings](docs/results-light.png)
+![Results view: every field cited, with confidence ratings](docs/results-light.png)
 
 ## Why this exists
 
 Data vendors ship you a **snapshot of a database**. This stack runs **live web research at request time**:
 
-- **Fresh, not stale** — funding rounds and hiring surges from this week, not last year's crawl.
-- **Grounded, not asserted** — every value carries citations with source excerpts. A value with no supporting citation renders blank: the backend **never fabricates** (enforced server-side, covered by tests).
-- **Honest about uncertainty** — per-field confidence ratings; contact emails are either citation-backed or clearly labeled as inferred patterns, never "verified."
+- **Fresh, not stale**: funding rounds and hiring surges from this week, not last year's crawl.
+- **Grounded, not asserted**: every value carries citations with source excerpts. A value with no supporting citation renders blank: the backend **never fabricates** (enforced server-side, covered by tests).
+- **Honest about uncertainty**: per-field confidence ratings; contact emails are either citation-backed or clearly labeled as inferred patterns, never "verified."
 
 ## What it shows
 
-- **Task API with structured output + research basis** — per-field citations, excerpts, and confidence on every enriched value.
-- **Monitor API (`event_stream`)** — one daily monitor per fund, cheap wide detection with structured, cited output.
-- **The monitor → task chain** — each detected event is passed as `previous_interaction_id` to a follow-up Task that verifies it with fresh citations. Detection is tuned for recall; verification for precision.
-- **Webhooks + Cron** — real-time push via a serverless receiver, or a scheduled weekly digest.
+- **Task API with structured output + research basis**: per-field citations, excerpts, and confidence on every enriched value.
+- **Monitor API (`event_stream`)**: one daily monitor per fund, cheap wide detection with structured, cited output.
+- **The monitor → task chain**: each detected event is passed as `previous_interaction_id` to a follow-up Task that verifies it with fresh citations. Detection is tuned for recall; verification for precision.
+- **Webhooks + Cron**: real-time push via a serverless receiver, or a scheduled weekly digest.
 - A credibility rule, priority policy, and Slack formatting that are all **one source of truth**, shared across the CLI pipeline, the web app, and the serverless webhook.
 
 ---
 
 ## Setup for humans
 
-Everything you need to run this locally, step by step. If you'd rather have a coding agent do it for you, hand it [`AGENTS.md`](AGENTS.md) — a single paste-in prompt that sets the whole thing up (see [One-command agent setup](#one-command-agent-setup)).
+Everything you need to run this locally, step by step. If you'd rather have a coding agent do it for you, hand it [`AGENTS.md`](AGENTS.md), a single paste-in prompt that sets the whole thing up (see [One-command agent setup](#one-command-agent-setup)).
 
 ### Prerequisites
 
 - **Node ≥ 20** and **Python ≥ 3.12**
-- A **Parallel API key** — create one at [platform.parallel.ai](https://platform.parallel.ai)
+- A **Parallel API key**: create one at [platform.parallel.ai](https://platform.parallel.ai)
 - *(optional)* a Slack incoming webhook, and an [Attio](https://attio.com) API key, for delivery + live CRM checks
 
 ### 0. Clone and install
@@ -51,7 +51,7 @@ make setup          # venv + backend deps + dev tools + frontend deps + scaffold
 `make setup` copies `.env.example` to `.env`. Open `.env` and set at least:
 
 ```dotenv
-PARALLEL_API_KEY=your_key_here      # server-side only — never exposed to the browser
+PARALLEL_API_KEY=your_key_here      # server-side only; never exposed to the browser
 DEMO_PASSWORD=pick-any-passphrase   # the app's access gate is CLOSED until this is set
 ```
 
@@ -59,14 +59,14 @@ Every variable is documented in [`.env.example`](.env.example). All optional int
 
 ### 1. Choose the funds you track
 
-The watchlist is **yours** — the repo ships no baked-in list. Copy the example and edit it:
+The watchlist is **yours**: the repo ships no baked-in list. Copy the example and edit it:
 
 ```bash
 cp monitor/investors.example.json monitor/investors.json
 ```
 
 ```jsonc
-// monitor/investors.json  (gitignored — your target list stays private)
+// monitor/investors.json  (gitignored: your target list stays private)
 {
   "investors": [
     "Sequoia Capital",
@@ -76,7 +76,7 @@ cp monitor/investors.example.json monitor/investors.json
 }
 ```
 
-List funds by the name they go by in the press. `monitor/investors.json` is gitignored, so your target list never lands in git. (You can also set an `INVESTORS="Fund A,Fund B"` env var, which overrides the file — handy in CI.)
+List funds by the name they go by in the press. `monitor/investors.json` is gitignored, so your target list never lands in git. (You can also set an `INVESTORS="Fund A,Fund B"` env var, which overrides the file, handy in CI.)
 
 ### 2. Run the enrichment app
 
@@ -100,15 +100,15 @@ python monitor/check.py                # any cadence: drain + verify new events 
 python monitor/slack_notify.py --preview   # inspect the Slack format, dry-run
 ```
 
-`check.py` is the recurring entry point — run it manually, via cron, or wire it to a scheduler. Full pipeline details, design decisions, and Slack conventions are in [`monitor/README-monitor.md`](monitor/README-monitor.md).
+`check.py` is the recurring entry point: run it manually, via cron, or wire it to a scheduler. Full pipeline details, design decisions, and Slack conventions are in [`monitor/README-monitor.md`](monitor/README-monitor.md).
 
-**Optional — label companies you already know.** To tag signals as "known" vs "net-new," derive a names-only list from any CRM/portfolio CSV export:
+**Optional, label companies you already know.** To tag signals as "known" vs "net-new," derive a names-only list from any CRM/portfolio CSV export:
 
 ```bash
 python monitor/build_portfolio.py data/your-companies.csv --name-col Company
 ```
 
-The raw CSV (`data/`) and the derived `portfolio_names.json` are both gitignored — only a fictional example fixture is committed.
+The raw CSV (`data/`) and the derived `portfolio_names.json` are both gitignored; only a fictional example fixture is committed.
 
 ### 4. Run the tests
 
@@ -160,7 +160,7 @@ Key design decisions, all covered by the test suite:
 │   │   └── main.py               # routes, access gate, webhook receiver, cron endpoint
 │   └── src/                  #   React + TypeScript + Tailwind
 ├── monitor/                  # the pipeline CLI (watchlist, monitors, sweep, drain, notify)
-│   ├── investors.example.json    # sample watchlist — copy to investors.json and make it yours
+│   ├── investors.example.json    # sample watchlist: copy to investors.json and make it yours
 │   └── config.py                 # watchlist loader + query/schema/processor tuning surface
 ├── tests/                    # backend unit + integration tests (pytest)
 ├── AGENTS.md                 # paste-in onboarding prompt for a coding agent
@@ -175,7 +175,7 @@ All via environment (see [`.env.example`](.env.example)):
 | Variable | Required | Purpose |
 |---|---|---|
 | `PARALLEL_API_KEY` | ✅ | Parallel API access (server-side only) |
-| `DEMO_PASSWORD` | ✅ | Access-gate passphrase — the API is closed without it |
+| `DEMO_PASSWORD` | ✅ | Access-gate passphrase; the API is closed without it |
 | `INVESTORS` | – | Comma-separated watchlist override (otherwise read from `investors.json`) |
 | `SLACK_WEBHOOK_URL` | for Slack | Incoming webhook; unset = delivery quietly disabled |
 | `APP_URL` | for Slack links | Deployed app URL for "Enrich →" deep links |
@@ -183,7 +183,7 @@ All via environment (see [`.env.example`](.env.example)):
 | `WEBHOOK_SECRET` | for real-time push | Shared secret on the monitor webhook receiver |
 | `ATTIO_API_KEY` | for CRM checks | Live in-pipeline / deal / owner lookups + record links |
 
-Beyond the watchlist, the two other tuning surfaces are the **priority thresholds** (`investor_core.STAGE_WEIGHT`, `priority_for`) and the **fit rubric** — the 1–10 prospect-scoring prompt (`investor_core.FIT_RUBRIC`). Adapt all three to your product and funds.
+Beyond the watchlist, the two other tuning surfaces are the **priority thresholds** (`investor_core.STAGE_WEIGHT`, `priority_for`) and the **fit rubric**: the 1–10 prospect-scoring prompt (`investor_core.FIT_RUBRIC`). Adapt all three to your product and funds.
 
 ## Deployment (Vercel)
 
@@ -205,19 +205,19 @@ python monitor/monitors.py set-webhook https://<your-app>.vercel.app
 ```
 
 Notes:
-- `maxDuration` is 300s — "Fast" lookups (~60–85s) fit comfortably; the deeper processor tier can exceed it.
-- Bulk-mode job state is in-memory and does not survive serverless instance hops — run bulk against a persistent backend.
+- `maxDuration` is 300s. "Fast" lookups (~60–80s) fit comfortably; the deeper processor tier can exceed it.
+- Bulk-mode job state is in-memory and does not survive serverless instance hops; run bulk against a persistent backend.
 - The Signals UI tab is dev-only by default; set `VITE_SHOW_SIGNALS=1` at build time to expose it on a deploy. Slack is the intended production delivery channel.
 
 ## One-command agent setup
 
-If you use a coding agent (Claude Code, Cursor, etc.), [`AGENTS.md`](AGENTS.md) is a self-contained onboarding prompt. Paste it into the agent from a fresh clone and it will: install everything, scaffold `.env`, help you set your watchlist, run the app, and — with your say-so — create the monitors and run the pipeline. It's the fastest path from clone to running.
+If you use a coding agent (Claude Code, Cursor, etc.), [`AGENTS.md`](AGENTS.md) is a self-contained onboarding prompt. Paste it into the agent from a fresh clone and it will: install everything, scaffold `.env`, help you set your watchlist, run the app, and, with your say-so, create the monitors and run the pipeline. It's the fastest path from clone to running.
 
 ## Documentation
 
-- [`project/README.md`](project/README.md) — web app details, project structure, walkthrough
-- [`monitor/README-monitor.md`](monitor/README-monitor.md) — pipeline architecture, design decisions, Slack conventions
-- [`AGENTS.md`](AGENTS.md) — paste-in agent onboarding
+- [`project/README.md`](project/README.md): web app details, project structure, walkthrough
+- [`monitor/README-monitor.md`](monitor/README-monitor.md): pipeline architecture, design decisions, Slack conventions
+- [`AGENTS.md`](AGENTS.md): paste-in agent onboarding
 
 ## License
 
