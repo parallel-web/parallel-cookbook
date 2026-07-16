@@ -9,6 +9,14 @@ export type Mode = "home" | "single" | "bulk" | "signals";
 export const SHOW_SIGNALS =
   import.meta.env.DEV || import.meta.env.VITE_SHOW_SIGNALS === "1";
 
+// Bulk needs a persistent backend: job state lives in memory and the work
+// continues after the kickoff response, neither of which survives serverless
+// instance hops. So Bulk shows in local dev and is hidden on deploys by
+// default. Self-hosting the backend on a persistent host? Set VITE_ENABLE_BULK=1
+// (the backend also refuses bulk when it detects a serverless runtime).
+export const SHOW_BULK =
+  import.meta.env.DEV || import.meta.env.VITE_ENABLE_BULK === "1";
+
 const MODE_LABEL: Record<Mode, string> = {
   home: "Home",
   single: "Enrich",
@@ -16,9 +24,12 @@ const MODE_LABEL: Record<Mode, string> = {
   signals: "Signals",
 };
 
-const VISIBLE_MODES: Mode[] = SHOW_SIGNALS
-  ? ["home", "single", "bulk", "signals"]
-  : ["home", "single", "bulk"];
+const VISIBLE_MODES: Mode[] = [
+  "home",
+  "single",
+  ...(SHOW_BULK ? (["bulk"] as Mode[]) : []),
+  ...(SHOW_SIGNALS ? (["signals"] as Mode[]) : []),
+];
 
 // Top bar: real Parallel wordmark (correct variant per theme), the product
 // name, a Home/Enrich/Bulk mode switch, and a theme toggle.

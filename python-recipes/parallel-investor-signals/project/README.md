@@ -113,7 +113,7 @@ In `backend/parallel_client.py` (see its header comment): the processor tiers in
 
 ## Notes & limits
 
-- Bulk job state is in-memory, restarting the backend clears running jobs.
+- Bulk job state is in-memory, so restarting the backend clears running jobs. Bulk therefore needs a persistent backend: it's available locally (and when self-hosting on a persistent host), and is disabled on serverless deploys (the backend returns 501 and the Bulk tab is hidden unless you set `VITE_ENABLE_BULK=1`).
 - Saved profiles + session cache are per-browser localStorage, personal to each rep's browser, not shared across machines. A saved profile auto-updates when you refresh its data or pin an ask-bar answer.
 - Ask-bar / bulk custom questions are session-only by design, a page refresh starts clean.
 - A single Fast lookup is ~60–80s (two concurrent live research runs); an ask-bar question is a single run and returns faster. The loading state narrates the work; it's a feature of the story, not dead air.

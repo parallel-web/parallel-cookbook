@@ -61,17 +61,21 @@ House style, all in `build_signal_blocks`:
 
 There are two delivery paths:
 
-- **Weekly digest**: one message on a schedule (Vercel Cron hits `/api/signals/weekly-digest`), rolling up the week's qualifying rounds.
-- **Real-time webhook**: Parallel calls `/api/monitor/webhook` on `monitor.event.detected`; the FastAPI receiver parses the event → runs the chained verification Task → applies the priority gate → posts to Slack. `metadata.fund` routes the event; digest-priority events don't ping.
+- **Weekly digest**: one message on a schedule (Vercel Cron hits `/api/signals/weekly-digest`), rolling up the week's qualifying rounds. The route requires `CRON_SECRET` (Bearer auth) and is disabled without it; the cron time is UTC (see the top-level README's deployment notes on UTC/DST).
+- **Real-time webhook**: Parallel calls `/api/monitor/webhook` on `monitor.event.detected`; the FastAPI receiver verifies the signature → parses the event → runs the chained verification Task → CRM check → priority gate → Slack. `metadata.fund` routes the event; digest-priority events don't ping. It dedupes retries by `webhook-id`.
 
 Enable end-to-end push (no cron, no polling):
 
 ```bash
-# 1. Add SLACK_WEBHOOK_URL (and optionally WEBHOOK_SECRET) to .env + your host env
+# 1. Set WEBHOOK_SECRET to your Parallel account webhook secret (whsec_…, from
+#    Parallel → Settings → Webhooks) plus SLACK_WEBHOOK_URL, on .env + your host.
 # 2. Point the monitors at the deployed receiver:
 python monitor/monitors.py set-webhook https://<your-app>.vercel.app
-# From then on: monitor fires → host verifies via chained Task → Slack ping.
+# From then on: monitor fires → Parallel signs the delivery → the receiver
+# verifies the signature → chained Task → Slack ping.
 ```
+
+The receiver **fails closed**: it rejects any delivery whose Standard Webhooks signature it can't verify with `WEBHOOK_SECRET`, so it never processes an unsigned request or spends credits on a forged one.
 
 Test formatting anytime: `python monitor/slack_notify.py --preview` (dry-run) / `--send`.
 

@@ -28,9 +28,30 @@ from common import (
     load_portfolio, print_signal, read_json, run_structured_task, utcnow,
     write_json,
 )
-from config import ROUND_SCHEMA, VERIFY_PROCESSOR, priority_for, verify_input
-from backend.investor_core import notify_signals_sync, slack_enabled
-from backend.crm import check_pipeline, pipeline_label
+from config import ROUND_SCHEMA, VERIFY_PROCESSOR, verify_input
+from backend.investor_core import notify_signals_sync, qualify_signal, slack_enabled
+from backend.crm import check_pipeline
+
+# Safety bound on cursor-following so a huge backlog can't loop unbounded.
+_MAX_EVENT_PAGES = 50
+
+
+def events_for_monitor(c, monitor_id: str, per_page: int = 100) -> list:
+    """All events for a monitor, following next_cursor (the API pages results;
+    a single fixed page would silently drop events on a backlog)."""
+    out: list = []
+    cursor = None
+    for _ in range(_MAX_EVENT_PAGES):
+        kwargs = {"limit": per_page}
+        if cursor:
+            kwargs["cursor"] = cursor
+        page = c.monitor.events(monitor_id, **kwargs)
+        out.extend(getattr(page, "events", None) or [])
+        cursor = getattr(page, "next_cursor", None)
+        if not cursor:
+            return out
+    print(f"[check] event page cap ({_MAX_EVENT_PAGES}) hit for {monitor_id}; some events may be omitted")
+    return out
 
 
 def parse_event_content(event) -> dict:
@@ -72,21 +93,16 @@ def verify_event(c, fund: str, detected: dict, event_id: str) -> list:
     return out
 
 
-def main() -> None:
-    raw = "--raw" in sys.argv
-    c = client()
-    portfolio = load_portfolio()
-    monitors = read_json(MONITORS_FILE, {})
-    if not monitors:
-        raise SystemExit("No monitors yet — run: python monitor/monitors.py create")
+def drain_events(c, portfolio: dict, monitors: dict, seen: set, *, raw: bool = False) -> list:
+    """Drain unseen events across all monitors into fully-qualified signals.
 
-    state = read_json(STATE_FILE, {"seen_event_ids": []})
-    seen = set(state["seen_event_ids"])
-    new_signals = []
-
+    THE ONE drain path — shared by this CLI and the web app's local refresh, so
+    they can't drift. Mutates `seen` with handled event ids. Each verified round
+    goes through `qualify_signal` (CRM check → known/net-new flag → pipeline label
+    → CRM link → priority), identical to the weekly digest and the webhook."""
+    new_signals: list = []
     for fund, info in monitors.items():
-        result = c.monitor.events(info["monitor_id"], limit=50)
-        events = list(getattr(result, "events", None) or [])
+        events = events_for_monitor(c, info["monitor_id"])
         fresh = [e for e in events if e.event_id not in seen]
         print(f"[check] {fund}: {len(events)} events, {len(fresh)} new")
 
@@ -119,24 +135,26 @@ def main() -> None:
                 })
                 continue
 
-            # Chained verification (previous_interaction_id = event_id)
+            # Chained verification (previous_interaction_id = event_id), then the
+            # shared qualification (live CRM check + priority + label).
             for r in verify_event(c, fund, detected, e.event_id):
-                known = bool(known_portco(r.get("company", ""), portfolio))
-                # Live CRM pipeline check (falls back to the local known-companies
-                # label when no CRM is configured).
                 match = check_pipeline(r.get("domain"), r.get("company", ""))
-                in_pipeline = match["in_crm"] if match else known
-                new_signals.append({
-                    **r,
-                    "known_portco": in_pipeline,
-                    "pipeline_label": pipeline_label(match, known),
-                    "crm_url": (match or {}).get("url"),
-                    "priority": priority_for(
-                        r.get("round_stage", ""), r.get("amount_usd_millions", 0),
-                        r.get("parallel_fit_rating", 0), bool(in_pipeline),
-                    ),
-                    **base,
-                })
+                new_signals.append(qualify_signal(r, fund, portfolio, base, match))
+    return new_signals
+
+
+def main() -> None:
+    raw = "--raw" in sys.argv
+    c = client()
+    portfolio = load_portfolio()
+    monitors = read_json(MONITORS_FILE, {})
+    if not monitors:
+        raise SystemExit("No monitors yet — run: python monitor/monitors.py create")
+
+    state = read_json(STATE_FILE, {"seen_event_ids": []})
+    seen = set(state["seen_event_ids"])
+
+    new_signals = drain_events(c, portfolio, monitors, seen, raw=raw)
 
     state["seen_event_ids"] = sorted(seen)
     write_json(STATE_FILE, state)

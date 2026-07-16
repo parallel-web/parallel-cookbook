@@ -116,7 +116,16 @@ def check_pipeline(domain: str | None, company: str) -> dict[str, Any] | None:
 
         rec = records[0]
         values = rec.get("values", {})
+        # NOTE: associated_deals is EVERY related deal, including Won and Lost —
+        # it is not an active-pipeline count. `crm.pipeline_label` therefore calls
+        # this "associated deals", not "active deals". For a true active count,
+        # fetch each referenced deal (GET /objects/deals/records/{id}), read its
+        # stage, and filter to your open stages.
         deal_count = len(values.get("associated_deals", []) or [])
+        # Best-effort company-level owner. Attio's standard owner lives on the
+        # DEAL (Deal.owner), not the company; account_owner is a non-standard
+        # attribute that may be absent — resolve the deal owner instead if you
+        # need authoritative coverage.
         owner = None
         owners = values.get("account_owner") or []
         if owners:

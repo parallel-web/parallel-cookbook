@@ -157,6 +157,44 @@ def is_known_portco(company: str, portfolio: dict[str, Any]) -> bool:
     return norm_company(company) in portfolio
 
 
+def qualify_signal(
+    r: dict[str, Any],
+    fund: str,
+    portfolio: dict[str, Any],
+    base: dict[str, Any] | None = None,
+    crm_match: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Turn a verified round into a fully-qualified signal — ONE implementation
+    shared by the CLI drain (check.py), the local web drain, the weekly digest,
+    and the webhook receiver, so none of them can drift.
+
+    `crm_match` is the CRM lookup result (or None); callers fetch it in whatever
+    way suits them (sync in scripts, `asyncio.to_thread` in async routes) and
+    pass it in. Applies the known-vs-net-new flag (CRM wins over the local list),
+    the pipeline label, the CRM deep link, and the priority score in lockstep."""
+    from . import crm  # local import: keeps httpx/CRM deps out of import time
+
+    company = r.get("company", "")
+    known_local = is_known_portco(company, portfolio)
+    in_pipeline = bool(crm_match["in_crm"]) if crm_match else known_local
+    signal = {
+        **r,
+        **(base or {}),
+        "fund_watched": fund,
+        "known_portco": in_pipeline,
+        "pipeline_label": crm.pipeline_label(crm_match, known_local),
+        "crm_url": (crm_match or {}).get("url"),
+        "priority": priority_for(
+            r.get("round_stage", ""),
+            r.get("amount_usd_millions", 0),
+            r.get("parallel_fit_rating", 0),
+            in_pipeline,
+        ),
+    }
+    signal.setdefault("detected_via", "monitor")
+    return signal
+
+
 # --------------------------------------------------- async chained verification
 async def averify_event(client: Any, detected: dict[str, Any], event_id: str) -> list[dict[str, Any]]:
     """Async flavor of the monitor→task chain (used by the serverless webhook):

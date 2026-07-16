@@ -78,17 +78,23 @@ def check_pipeline(domain: str | None, company: str) -> dict[str, Any] | None:
 
 def pipeline_label(match: dict[str, Any] | None, known_company: bool) -> str:
     """Human line for the Slack message. A live CRM match wins; the local
-    known-companies list is the fallback when no CRM answered."""
+    known-companies list is the fallback when no CRM answered.
+
+    Deliberately says "in CRM" and "associated deals", NOT "in pipeline / active
+    deals": a company record existing in the CRM does not by itself establish an
+    open deal. `deal_count` is the number of associated deals across all stages
+    (see the adapter). Filter by stage in the adapter if you want a true
+    active-pipeline count."""
     name = crm_name()
     if match is None:
         return ("On your known-companies list (CRM check unavailable)" if known_company
                 else "Not on your known-companies list (CRM check unavailable)")
     if not match.get("in_crm"):
-        return "Not in Pipeline"
-    bits = [f"In Pipeline ({name})"]
+        return f"Not in {name}"
+    bits = [f"In {name}"]
     if match.get("deal_count"):
         n = match["deal_count"]
-        bits.append(f"{n} active deal{'s' if n > 1 else ''}")
+        bits.append(f"{n} associated deal{'s' if n > 1 else ''}")
     if match.get("owner"):
         bits.append(f"owner: {match['owner']}")
-    return " — ".join(bits)
+    return ", ".join(bits)

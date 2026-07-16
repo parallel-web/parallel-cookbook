@@ -552,6 +552,23 @@ def _infer_email(name: str | None, domain: str | None) -> dict[str, Any]:
     return {"value": f"{first}.{last}@{clean_domain}", "confidence": "inferred", "citations": []}
 
 
+_DOMAIN_RE = re.compile(r"^[a-z0-9][a-z0-9-]*(\.[a-z0-9-]+)+$")
+
+
+def _normalize_domain(value: str) -> str | None:
+    """Strip protocol/path/whitespace to a bare host, lowercased."""
+    host = value.strip().lower().replace("https://", "").replace("http://", "")
+    host = host.split("/")[0].strip("/").strip()
+    return host or None
+
+
+def _looks_like_domain(value: str) -> bool:
+    """A user-supplied query that is itself a domain (e.g. 'ramp.com') — trusted
+    input, unlike a model-produced domain, which must carry a citation."""
+    host = _normalize_domain(value)
+    return bool(host) and bool(_DOMAIN_RE.match(host))
+
+
 # ==============================================================================
 # PUBLIC API
 # ==============================================================================
@@ -680,10 +697,21 @@ def to_research_brief(
 
     _cn = acc_content.get("company_name")
     company_name = _cn if isinstance(_cn, str) and not _is_empty(_cn) else query
-    # domain is a plain string in the contract (used for email inference too);
-    # take the researched value if present regardless of citation strictness.
+    # domain is a plain string in the contract, but it feeds the company website
+    # AND email synthesis, so ONE uncited domain would amplify into several
+    # actionable-looking (but ungrounded) values. Apply the same credibility rule
+    # as every other field: trust it only if the user typed a domain (their own
+    # input, not model output) or the researched domain carries a citation.
     raw_domain = acc_content.get("domain")
-    domain = raw_domain.strip() if isinstance(raw_domain, str) and not _is_empty(raw_domain) else None
+    domain = None
+    if isinstance(query, str) and _looks_like_domain(query):
+        domain = _normalize_domain(query)
+    elif (
+        isinstance(raw_domain, str)
+        and not _is_empty(raw_domain)
+        and _citations_from(acc_basis.get("domain"))
+    ):
+        domain = _normalize_domain(raw_domain)
 
     firmographics = {
         "industry": af("industry"),

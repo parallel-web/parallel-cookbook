@@ -9,6 +9,7 @@ is monkeypatched.
 
 from __future__ import annotations
 
+import base64
 import os
 import sys
 from pathlib import Path
@@ -16,7 +17,10 @@ from pathlib import Path
 # Deterministic test configuration — must precede backend imports.
 os.environ.setdefault("PARALLEL_API_KEY", "test-parallel-key")
 os.environ["DEMO_PASSWORD"] = "test-passphrase"
-os.environ["WEBHOOK_SECRET"] = "test-webhook-secret"
+# A valid Standard Webhooks secret (whsec_ + base64 key) so signature tests can
+# actually sign a request the receiver will accept.
+WEBHOOK_SECRET = "whsec_" + base64.b64encode(b"test-webhook-signing-key-000001").decode()
+os.environ["WEBHOOK_SECRET"] = WEBHOOK_SECRET
 os.environ["CRON_SECRET"] = "test-cron-secret"
 os.environ["APP_URL"] = "https://example.test"
 os.environ.pop("SLACK_WEBHOOK_URL", None)  # Slack always disabled in tests

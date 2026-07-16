@@ -16,7 +16,9 @@ import asyncio
 import csv
 import hmac
 import io
+import json
 import os
+import time
 import uuid
 from datetime import UTC, datetime
 from typing import Any
@@ -26,8 +28,12 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
 from . import parallel_client as pc
-from . import signals_service
+from . import signals_service, webhook_verify
 from .models import BulkRequest, EnrichRequest
+
+# True on Vercel (and similar) serverless hosts, where per-instance in-memory
+# state (bulk jobs) and post-response work are unreliable. Set by the platform.
+_IS_SERVERLESS = bool(os.environ.get("VERCEL") or os.environ.get("AWS_LAMBDA_FUNCTION_NAME"))
 
 app = FastAPI(title="Parallel Sales Enrichment API", version="1.0.0")
 
@@ -127,42 +133,83 @@ async def signals_refresh() -> dict[str, Any]:
 @app.get("/api/signals/weekly-digest")
 @app.post("/api/signals/weekly-digest")
 async def weekly_digest(request: Request) -> dict[str, Any]:
-    """Monday-9AM-PT recap of last week's rounds (digest spec): one
-    headline + a thread with every verified, CRM-checked, scored signal.
-    Invoked by Vercel Cron (Authorization: Bearer CRON_SECRET, sent
-    automatically when that env var is set) or manually with ?key=WEBHOOK_SECRET."""
+    """Weekly recap of last week's rounds (digest spec): one headline + a thread
+    with every verified, CRM-checked, scored signal.
+
+    Auth FAILS CLOSED: this route is exempt from the passphrase gate, so it is
+    protected only by CRON_SECRET. Vercel Cron sends `Authorization: Bearer
+    <CRON_SECRET>` automatically when the var is set. If CRON_SECRET is unset the
+    route is disabled (503) rather than open — a missing secret never means
+    'public'. To trigger manually, set CRON_SECRET and send the same Bearer header."""
     cron_secret = os.environ.get("CRON_SECRET")
-    manual_secret = os.environ.get("WEBHOOK_SECRET")
-    auth_ok = (
-        (cron_secret and request.headers.get("authorization") == f"Bearer {cron_secret}")
-        or (manual_secret and request.query_params.get("key") == manual_secret)
-        or (not cron_secret and not manual_secret)
-    )
-    if not auth_ok:
-        raise HTTPException(401, "bad digest key")
+    if not cron_secret:
+        raise HTTPException(503, "Weekly digest disabled: set CRON_SECRET to enable it.")
+    if not hmac.compare_digest(
+        request.headers.get("authorization", ""), f"Bearer {cron_secret}"
+    ):
+        raise HTTPException(401, "missing or invalid cron authorization")
     result = await signals_service.run_weekly_digest()
     # stdout lands in the platform function logs — invocation observability
     print(f"[weekly-digest] {result}")
     return result
 
 
+# Best-effort in-memory idempotency for webhook retries, keyed by webhook-id.
+# Parallel retries failed/timed-out deliveries (Standard Webhooks), so without
+# dedupe a retry would re-run the verification Task (spend) and re-post alerts.
+# This survives only within one process/instance — on serverless it is a soft
+# guard, not a guarantee. For production, dedupe against a durable store (Redis,
+# a DB unique key on webhook-id) and, ideally, ACK immediately then process the
+# event on a queue rather than inline as below.
+_SEEN_WEBHOOK_IDS: dict[str, float] = {}
+_SEEN_MAX = 4000
+
+
+def _webhook_already_seen(webhook_id: str) -> bool:
+    if webhook_id in _SEEN_WEBHOOK_IDS:
+        return True
+    _SEEN_WEBHOOK_IDS[webhook_id] = time.time()
+    if len(_SEEN_WEBHOOK_IDS) > _SEEN_MAX:  # trim oldest half
+        for k in sorted(_SEEN_WEBHOOK_IDS, key=_SEEN_WEBHOOK_IDS.get)[: _SEEN_MAX // 2]:
+            _SEEN_WEBHOOK_IDS.pop(k, None)
+    return False
+
+
 @app.post("/api/monitor/webhook")
 async def monitor_webhook(request: Request) -> dict[str, Any]:
-    """Parallel calls this when a fund monitor detects a change (a standard
-    webhook receiver). Exempt from the access gate; protected instead by an
-    optional shared secret (?key=WEBHOOK_SECRET, set when registering the
-    webhook via monitors.py set-webhook). Flow per event: parse → verify via a
-    chained follow-up Task → priority → Slack ping. Stateless: Parallel fires
-    once per event group, so no seen-tracking is needed here."""
+    """Parallel calls this when a fund monitor detects a change.
+
+    Exempt from the passphrase gate; secured instead by verifying the Standard
+    Webhooks signature against WEBHOOK_SECRET (your account webhook secret,
+    `whsec_...`, from Parallel → Settings → Webhooks). FAILS CLOSED: no secret
+    configured or a bad/missing signature → rejected, never processed. Retries
+    are deduped by webhook-id so a redelivery doesn't double-spend or double-post.
+
+    Flow per event: verify signature → dedupe → parse → chained follow-up Task →
+    CRM check → priority → Slack ping. NOTE: research + delivery run inline here
+    for recipe simplicity; a production receiver should ACK 2xx immediately and
+    process on a durable queue (see the idempotency note above)."""
     from parallel import AsyncParallel
 
+    from . import crm
     from . import investor_core as core
 
+    # 1) Verify the signature (fail closed).
+    body = await request.body()
     secret = os.environ.get("WEBHOOK_SECRET")
-    if secret and request.query_params.get("key") != secret:
-        raise HTTPException(401, "bad webhook key")
+    if not secret:
+        raise HTTPException(503, "Webhook receiver disabled: set WEBHOOK_SECRET (your Parallel account webhook secret).")
+    try:
+        webhook_verify.verify(body, request.headers, secret)
+    except webhook_verify.WebhookVerificationError as exc:
+        raise HTTPException(401, f"webhook signature verification failed: {exc}") from exc
 
-    payload = await request.json()
+    # 2) Idempotency: drop retries of an event we've already handled.
+    webhook_id = request.headers.get("webhook-id", "")
+    if webhook_id and _webhook_already_seen(webhook_id):
+        return {"ok": True, "duplicate": True}
+
+    payload = json.loads(body)
     if payload.get("type") != "monitor.event.detected":
         return {"ok": True, "ignored": True}
 
@@ -188,23 +235,20 @@ async def monitor_webhook(request: Request) -> dict[str, Any]:
             if not company or company.upper() == "NA":
                 continue
             for r in await core.averify_event(client, detected, e.event_id):
-                known = core.is_known_portco(r.get("company", ""), portfolio)
-                signal = {
-                    **r,
-                    "known_portco": known,
-                    "priority": core.priority_for(
-                        r.get("round_stage", ""), r.get("amount_usd_millions", 0),
-                        r.get("parallel_fit_rating", 0), known,
-                    ),
-                    "fund_watched": fund,
-                    "detected_via": "monitor",
-                }
+                # Live CRM check (same as the digest + CLI paths), off-thread so
+                # the sync httpx call doesn't block the event loop.
+                match = await asyncio.to_thread(
+                    crm.check_pipeline, r.get("domain"), r.get("company", "")
+                )
+                signal = core.qualify_signal(
+                    r, fund, portfolio, {"detected_via": "monitor", "event_id": e.event_id}, match
+                )
                 # Trigger policy: only high/medium ping; digest-priority events
                 # are dropped here (they surface in the app's live view).
                 if signal["priority"] in ("high", "medium"):
                     if await core.apost_to_slack(
                         core.build_signal_blocks(signal),
-                        f"{signal.get('company')} — {signal.get('round_stage')}",
+                        f"{signal.get('company')}, {signal.get('round_stage')}",
                     ):
                         posted += 1
     finally:
@@ -302,6 +346,18 @@ async def enrich_bulk(req: BulkRequest) -> dict[str, Any]:
     endpoint for progress + results."""
     if not pc.api_key_loaded():
         raise HTTPException(500, "Server missing PARALLEL_API_KEY.")
+    if _IS_SERVERLESS:
+        # Bulk needs a persistent process: job state lives in memory and the work
+        # continues after the response returns. Serverless instances can freeze or
+        # be recycled between the kickoff and the poll, so refuse rather than
+        # start a job that may silently stall. Run bulk against a local/self-hosted
+        # backend, or wire it to durable background infrastructure.
+        raise HTTPException(
+            501,
+            "Bulk mode is unavailable on serverless deployments (in-memory job "
+            "state does not survive instance hops). Run it against a local or "
+            "self-hosted backend.",
+        )
     companies = [r.company for r in req.rows]
     custom_defs = [d.model_dump() for d in req.custom_fields]
     job_id = uuid.uuid4().hex
@@ -340,6 +396,18 @@ def bulk_status(job_id: str) -> dict[str, Any]:
 
 
 # --------------------------------------------------------------- csv export ---
+# Cells that a spreadsheet would evaluate as a formula. Web-/user-derived text
+# (company names, notes, custom answers) is written verbatim, so a value like
+# "=HYPERLINK(...)" or "+cmd" could execute when a rep opens the CSV in Excel or
+# Sheets. We prefix such cells with a single quote in the CSV only; the JSON API
+# response keeps the original, unaltered value.
+_CSV_FORMULA_LEAD = ("=", "+", "-", "@", "\t", "\r", "\n")
+
+
+def _csv_safe(value: str) -> str:
+    return "'" + value if value and value[0] in _CSV_FORMULA_LEAD else value
+
+
 def _flat(field: Any) -> str:
     """Field<T>.value -> human string ('' if null). Handles str, list, and the
     buying_signals list-of-objects."""
@@ -452,7 +520,8 @@ def bulk_export_csv(job_id: str) -> StreamingResponse:
         }
         for key, header in custom_cols:
             row[header] = _flat(cf_map.get(key))
-        return row
+        # Neutralize formula injection on every textual cell before it's written.
+        return {k: _csv_safe(v if isinstance(v, str) else str(v)) for k, v in row.items()}
 
     buf = io.StringIO()
     writer = csv.DictWriter(buf, fieldnames=columns)

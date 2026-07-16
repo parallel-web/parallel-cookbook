@@ -49,11 +49,11 @@ def test_enrich_button_deep_links_into_the_app(sample_signal):
 def test_pipeline_line_links_to_crm_when_in_pipeline(sample_signal):
     s = {
         **sample_signal,
-        "pipeline_label": "In Pipeline (Attio) — 1 active deal — owner: Sam Rep",
+        "pipeline_label": "In Attio, 1 associated deal, owner: Sam Rep",
         "crm_url": "https://app.attio.com/ws/company/rid/overview",
     }
     text = _text_of(core.build_signal_blocks(s))
-    assert "<https://app.attio.com/ws/company/rid/overview|In Pipeline (Attio)" in text
+    assert "<https://app.attio.com/ws/company/rid/overview|In Attio" in text
 
 
 def test_na_fields_are_omitted_not_rendered(sample_signal):
@@ -97,11 +97,13 @@ def test_weekly_digest_is_one_message_with_all_startups(sample_signal):
 
 def test_pipeline_label_permutations():
     assert pipeline_label(None, True).startswith("On your known-companies list")
-    assert pipeline_label({"in_crm": False, "deal_count": 0, "owner": None, "record_id": None, "url": None}, False) == "Not in Pipeline"
+    # A company merely present in the CRM must NOT claim "active deal"/"in pipeline".
+    assert pipeline_label({"in_crm": False, "deal_count": 0, "owner": None, "record_id": None, "url": None}, False) == "Not in Attio"
     label = pipeline_label(
         {"in_crm": True, "deal_count": 2, "owner": "Sam Rep", "record_id": "r", "url": "u"},
         True,
     )
-    assert "In Pipeline (Attio)" in label
-    assert "2 active deals" in label
+    assert "In Attio" in label
+    assert "2 associated deals" in label
+    assert "active deal" not in label
     assert "owner: Sam Rep" in label

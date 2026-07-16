@@ -50,6 +50,42 @@ _APP_TAG = "inv-monitor-mvp"
 # monitor/ scripts and the webhook receiver).
 from . import investor_core as _core  # noqa: E402
 
+# Safety bound on cursor-following so a huge backlog can't loop unbounded.
+_MAX_PAGES = 50
+
+
+async def _all_active_monitors(client: AsyncParallel) -> list[Any]:
+    """Every active monitor, following next_cursor (the API pages results, so a
+    single fixed page would silently omit monitors on a larger installation)."""
+    out: list[Any] = []
+    cursor: str | None = None
+    for _ in range(_MAX_PAGES):
+        kwargs: dict[str, Any] = {"limit": 100, "status": ["active"]}
+        if cursor:
+            kwargs["cursor"] = cursor
+        page = await client.monitor.list(**kwargs)
+        out.extend(getattr(page, "monitors", None) or getattr(page, "data", None) or [])
+        cursor = getattr(page, "next_cursor", None)
+        if not cursor:
+            break
+    return out
+
+
+async def _all_events(client: AsyncParallel, monitor_id: str, per_page: int = 100) -> list[Any]:
+    """Every event for a monitor, following next_cursor."""
+    out: list[Any] = []
+    cursor: str | None = None
+    for _ in range(_MAX_PAGES):
+        kwargs: dict[str, Any] = {"limit": per_page}
+        if cursor:
+            kwargs["cursor"] = cursor
+        page = await client.monitor.events(monitor_id, **kwargs)
+        out.extend(getattr(page, "events", None) or [])
+        cursor = getattr(page, "next_cursor", None)
+        if not cursor:
+            break
+    return out
+
 
 # ------------------------------------------------------------ verified mode --
 def _list_signals_local() -> dict[str, Any]:
@@ -66,17 +102,17 @@ def _list_signals_local() -> dict[str, Any]:
 
 
 def _drain_local() -> dict[str, Any]:
-    """Local: drain unseen events through the chained verification (see
-    monitor/check.py — reused as the single source of truth)."""
-    from check import parse_event_content, verify_event  # type: ignore
+    """Local: drain unseen events through THE shared drain path (check.drain_events),
+    so the web refresh produces exactly the same fully-qualified signals as the
+    CLI — CRM check, pipeline label, and priority included (no drift). The CLI
+    additionally pings Slack; a UI refresh deliberately does not."""
+    from check import drain_events  # type: ignore — the one drain implementation
     from common import (  # type: ignore
         MONITORS_FILE,
         STATE_FILE,
         append_signals,
-        known_portco,
         load_portfolio,
         read_json,
-        utcnow,
         write_json,
     )
     from common import (
@@ -88,38 +124,14 @@ def _drain_local() -> dict[str, Any]:
     monitors = read_json(MONITORS_FILE, {})
     state = read_json(STATE_FILE, {"seen_event_ids": []})
     seen = set(state["seen_event_ids"])
+    before = len(seen)
 
-    new_signals: list[dict[str, Any]] = []
-    checked = 0
-    for fund, info in monitors.items():
-        result = c.monitor.events(info["monitor_id"], limit=50)
-        for e in list(getattr(result, "events", None) or []):
-            if e.event_id in seen:
-                continue
-            seen.add(e.event_id)
-            checked += 1
-            detected = parse_event_content(e)
-            company = (detected.get("company_name") or "").strip()
-            if not company or company.upper() == "NA":
-                continue
-            base = {
-                "fund_watched": fund,
-                "detected_via": "monitor",
-                "event_id": e.event_id,
-                "event_date": str(getattr(e, "event_date", "") or ""),
-                "detected_at": utcnow(),
-            }
-            for r in verify_event(c, fund, detected, e.event_id):
-                new_signals.append({
-                    **r,
-                    "known_portco": bool(known_portco(r.get("company", ""), portfolio)),
-                    **base,
-                })
+    new_signals = drain_events(c, portfolio, monitors, seen)
 
     state["seen_event_ids"] = sorted(seen)
     write_json(STATE_FILE, state)
     added = append_signals(new_signals)
-    return {"available": True, "mode": "verified", "checked": checked, "added": added}
+    return {"available": True, "mode": "verified", "checked": len(seen) - before, "added": added}
 
 
 # ----------------------------------------------------------------- live mode --
@@ -134,8 +146,7 @@ async def _list_signals_live() -> dict[str, Any]:
     portfolio = _core.load_bundled_portfolio()
     client = AsyncParallel(api_key=key, timeout=60.0)
     try:
-        listing = await client.monitor.list(limit=50, status="active")
-        all_monitors = getattr(listing, "monitors", None) or getattr(listing, "data", None) or []
+        all_monitors = await _all_active_monitors(client)
         ours = [
             m for m in all_monitors
             if (getattr(m, "metadata", None) or {}).get("app") == _APP_TAG
@@ -144,11 +155,11 @@ async def _list_signals_live() -> dict[str, Any]:
         async def events_for(m: Any) -> list[dict[str, Any]]:
             fund = (getattr(m, "metadata", None) or {}).get("fund", "watched fund")
             try:
-                result = await client.monitor.events(m.monitor_id, limit=25)
+                events = await _all_events(client, m.monitor_id)
             except Exception:  # noqa: BLE001 — one monitor failing shouldn't blank the page
                 return []
             out = []
-            for e in (getattr(result, "events", None) or []):
+            for e in events:
                 d = _core.parse_event_content(e)
                 company = (d.get("company_name") or "").strip()
                 if not company or company.upper() == "NA":
@@ -200,9 +211,14 @@ def within_last_days(date_str: str, days: int, now: datetime | None = None) -> b
 
 
 async def run_weekly_digest() -> dict[str, Any]:
-    """The Monday-9AM-PT recap (digest spec): collect last week's monitor
-    events, verify each via the chained Task, CRM-check pipeline status,
-    score priority, and post one headline + a thread of every round.
+    """The weekly recap (digest spec): collect last week's monitor events,
+    verify each via the chained Task, CRM-check pipeline status, score priority,
+    and post one headline + a thread of every round.
+
+    Scheduled by Vercel Cron at 15:00 UTC every Monday (see vercel.json). That is
+    a FIXED UTC time: Vercel evaluates cron in UTC, so it lands at 07:00 PT under
+    PDT and 08:00 PT under PST and does not auto-adjust for daylight saving. Pick
+    the UTC hour you want, or gate on Pacific time in code if 9 AM PT matters.
 
     Serverless-safe: events come straight from the Parallel API (stateless),
     verification fans out concurrently, CRM checks run in threads."""
@@ -218,9 +234,8 @@ async def run_weekly_digest() -> dict[str, Any]:
     portfolio = core.load_bundled_portfolio()
     client = AsyncParallel(api_key=key, timeout=300.0)
     try:
-        listing = await client.monitor.list(limit=50, status="active")
         monitors = [
-            m for m in (getattr(listing, "monitors", None) or getattr(listing, "data", None) or [])
+            m for m in await _all_active_monitors(client)
             if (getattr(m, "metadata", None) or {}).get("app") == _APP_TAG
         ]
 
@@ -229,10 +244,10 @@ async def run_weekly_digest() -> dict[str, Any]:
         for m in monitors:
             fund = (getattr(m, "metadata", None) or {}).get("fund", "watched fund")
             try:
-                result = await client.monitor.events(m.monitor_id, limit=50)
+                events = await _all_events(client, m.monitor_id)
             except Exception:  # noqa: BLE001
                 continue
-            for e in (getattr(result, "events", None) or []):
+            for e in events:
                 d = core.parse_event_content(e)
                 company = (d.get("company_name") or "").strip()
                 if not company or company.upper() == "NA":
@@ -268,17 +283,15 @@ async def run_weekly_digest() -> dict[str, Any]:
             seen.add(k)
             unique.append(s)
 
-        # 3. Pipeline status (live CRM when configured, local fallback) + priority.
+        # 3. Qualify each signal through the SHARED path (CRM check → known/net-new
+        # flag → pipeline label → CRM link → priority), identical to the CLI drain
+        # and the webhook. CRM lookups run off-thread (sync httpx).
+        qualified: list[dict[str, Any]] = []
         for s in unique:
-            known = core.is_known_portco(s.get("company", ""), portfolio)
             match = await asyncio.to_thread(
                 crm.check_pipeline, s.get("domain"), s.get("company", ""))
-            s["known_portco"] = match["in_crm"] if match else known
-            s["pipeline_label"] = crm.pipeline_label(match, known)
-            s["crm_url"] = (match or {}).get("url")
-            s["priority"] = core.priority_for(
-                s.get("round_stage", ""), s.get("amount_usd_millions", 0),
-                s.get("parallel_fit_rating", 0), bool(s["known_portco"]))
+            qualified.append(core.qualify_signal(s, s.get("fund_watched", ""), portfolio, None, match))
+        unique = qualified
 
         # 4. Post: headline + thread (bot token) or flat fallback (webhook).
         week_label = (datetime.now(UTC) - timedelta(days=7)).strftime("%B %-d")

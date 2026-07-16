@@ -79,16 +79,16 @@ def set_webhook() -> None:
     """Point every monitor's webhook at the deployed receiver (the webhook
     push pattern — no cron, no polling). Usage:
         python monitors.py set-webhook https://<your-deployment>.vercel.app
-    Appends ?key=WEBHOOK_SECRET if that env var is set (set the same value in
-    Vercel so the receiver can validate)."""
-    import os
+
+    No secret goes in the URL. Parallel signs every delivery (Standard Webhooks)
+    with your account webhook secret; the receiver verifies that signature. Set
+    WEBHOOK_SECRET on the deployment to your account secret (Parallel → Settings
+    → Webhooks, `whsec_...`) so the receiver can verify — and never expose it in
+    a query string."""
     if len(sys.argv) < 3:
         raise SystemExit("usage: python monitors.py set-webhook <app-base-url>")
     base = sys.argv[2].rstrip("/")
     url = f"{base}/api/monitor/webhook"
-    secret = os.environ.get("WEBHOOK_SECRET")
-    if secret:
-        url += f"?key={secret}"
     c = client()
     ours = read_json(MONITORS_FILE, {})
     for fund, info in ours.items():

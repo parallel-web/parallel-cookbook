@@ -13,7 +13,7 @@ import {
 import { useTheme } from "./lib/useTheme";
 import { clearAccessKey, getAccessKey } from "./lib/auth";
 import { PasswordGate } from "./components/PasswordGate";
-import { Header, SHOW_SIGNALS, type Mode } from "./components/Header";
+import { Header, SHOW_BULK, SHOW_SIGNALS, type Mode } from "./components/Header";
 import { EnrichSearchBar } from "./components/EnrichSearchBar";
 import { AskBar } from "./components/AskBar";
 import { BriefHeader } from "./components/BriefHeader";
@@ -290,7 +290,7 @@ export default function App() {
             </>
           )}
 
-          {mode === "bulk" && (
+          {mode === "bulk" && SHOW_BULK && (
             <Suspense fallback={<div className="parallel-card mt-6 px-5 py-8 font-mono text-[13px] text-muted">Loading…</div>}>
               <BulkPanel depth={depth} />
             </Suspense>

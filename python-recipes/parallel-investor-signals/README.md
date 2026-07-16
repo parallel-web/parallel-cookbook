@@ -179,9 +179,9 @@ All via environment (see [`.env.example`](.env.example)):
 | `INVESTORS` | – | Comma-separated watchlist override (otherwise read from `investors.json`) |
 | `SLACK_WEBHOOK_URL` | for Slack | Incoming webhook; unset = delivery quietly disabled |
 | `APP_URL` | for Slack links | Deployed app URL for "Enrich →" deep links |
-| `CRON_SECRET` | for weekly digest | Auth for the Vercel cron (sent as a Bearer header automatically) |
-| `WEBHOOK_SECRET` | for real-time push | Shared secret on the monitor webhook receiver |
-| `ATTIO_API_KEY` | for CRM checks | Live in-pipeline / deal / owner lookups + record links |
+| `CRON_SECRET` | required for digest | Bearer auth for the weekly-digest cron; the route is **disabled (503)** until this is set (never public) |
+| `WEBHOOK_SECRET` | required for webhook | Your Parallel **account webhook secret** (`whsec_…`); the receiver verifies the Standard Webhooks signature and **fails closed** without it |
+| `ATTIO_API_KEY` | for CRM checks | Live CRM presence / associated-deal / owner lookups + record links (reference adapter) |
 
 Beyond the watchlist, the two other tuning surfaces are the **priority thresholds** (`investor_core.STAGE_WEIGHT`, `priority_for`) and the **fit rubric**: the 1–10 prospect-scoring prompt (`investor_core.FIT_RUBRIC`). Adapt all three to your product and funds.
 
@@ -200,13 +200,18 @@ vercel env add DEMO_PASSWORD production
 To turn on real-time Slack pings from the deployed receiver (no cron, no polling):
 
 ```bash
-# with SLACK_WEBHOOK_URL (and optionally WEBHOOK_SECRET) set in both .env and Vercel:
+# Set WEBHOOK_SECRET on the deployment to your Parallel account webhook secret
+# (whsec_…, from Parallel → Settings → Webhooks), plus SLACK_WEBHOOK_URL, then:
 python monitor/monitors.py set-webhook https://<your-app>.vercel.app
 ```
 
+The receiver verifies the Standard Webhooks signature Parallel adds to every delivery and rejects anything unsigned or unverifiable, so no secret ever rides in the URL.
+
 Notes:
 - `maxDuration` is 300s. "Fast" lookups (~60–80s) fit comfortably; the deeper processor tier can exceed it.
-- Bulk-mode job state is in-memory and does not survive serverless instance hops; run bulk against a persistent backend.
+- **Cron time is UTC.** `vercel.json` runs the digest at `0 15 * * 1` (15:00 UTC Monday). Vercel evaluates cron in UTC and does not track daylight saving, so pick the UTC hour you want rather than assuming a fixed Pacific time. The route also requires `CRON_SECRET`.
+- **Bulk mode is local/self-host only.** Job state is in-memory and the work runs after the response returns, neither of which survives serverless instance hops, so the deployed backend refuses bulk (501) and the Bulk tab is hidden on deploys by default. Run it against a local or persistent backend (set `VITE_ENABLE_BULK=1` to re-expose the tab there).
+- The webhook receiver runs research inline for simplicity; a production receiver should ACK 2xx immediately and process on a durable queue, deduping by `webhook-id`.
 - The Signals UI tab is dev-only by default; set `VITE_SHOW_SIGNALS=1` at build time to expose it on a deploy. Slack is the intended production delivery channel.
 
 ## One-command agent setup
