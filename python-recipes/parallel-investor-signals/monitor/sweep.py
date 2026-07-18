@@ -20,7 +20,7 @@ from common import (
     append_signals, client, known_portco, load_portfolio, print_signal,
     run_structured_task, utcnow,
 )
-from config import INVESTORS, ROUND_SCHEMA, SWEEP_PROCESSOR, priority_for, sweep_input
+from config import ROUND_SCHEMA, SWEEP_PROCESSOR, priority_for, require_investors, sweep_input
 
 
 def sweep_fund(c, fund: str, portfolio) -> list:
@@ -54,7 +54,7 @@ def sweep_fund(c, fund: str, portfolio) -> list:
 
 
 def main() -> None:
-    funds = [" ".join(sys.argv[1:])] if len(sys.argv) > 1 else INVESTORS
+    funds = [" ".join(sys.argv[1:])] if len(sys.argv) > 1 else require_investors()
     c = client()
     portfolio = load_portfolio()
 

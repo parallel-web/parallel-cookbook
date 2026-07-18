@@ -97,20 +97,19 @@ def _member_name(membership_id: str) -> str | None:
 
 
 def check_pipeline(domain: str | None, company: str) -> dict[str, Any] | None:
-    """Look a company up in Attio by domain (precise) then name (fallback).
+    """Look a company up in Attio by its verified domain.
 
-    Returns None when Attio is unavailable/unreachable (caller falls back to
-    the local known-companies label), else the normalized CRM match shape
-    documented in crm.py: {in_crm, record_id, deal_count, owner, url}.
+    A company name alone is not a safe identity key: substring queries can match
+    an unrelated record. Without a domain, return None so callers use the local
+    known-companies fallback instead of asserting a false CRM match.
     """
     if not enabled():
         return None
+    clean_domain = (domain or "").strip().lower()
+    if not clean_domain or clean_domain == "na":
+        return None
     try:
-        records: list[dict[str, Any]] = []
-        if domain and domain != "NA":
-            records = _query_companies({"domains": domain.strip().lower()})
-        if not records and company:
-            records = _query_companies({"name": {"$contains": company.strip()}})
+        records = _query_companies({"domains": clean_domain})
         if not records:
             return {"in_crm": False, "record_id": None, "deal_count": 0, "owner": None, "url": None}
 

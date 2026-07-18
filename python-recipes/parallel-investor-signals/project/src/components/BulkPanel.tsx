@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Papa from "papaparse";
 import type { BulkJob, CustomFieldDef, Depth, ResearchBrief } from "../types";
-import { bulkExportUrl, pollBulk, startBulk } from "../lib/api";
+import { downloadBulkExport, pollBulk, startBulk } from "../lib/api";
 import { usableDefs } from "../lib/customFields";
 import { CustomFieldsEditor } from "./CustomFieldsEditor";
 
@@ -67,6 +67,16 @@ export function BulkPanel({ depth }: { depth: Depth }) {
       setJob({ job_id, status: "running", done: 0, total: companies.length, results: [] });
     } catch (e) {
       setError(e instanceof Error ? e.message : "Failed to start enrichment.");
+    }
+  };
+
+  const exportCsv = async () => {
+    if (!job) return;
+    setError(null);
+    try {
+      await downloadBulkExport(job.job_id);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Failed to export the CSV.");
     }
   };
 
@@ -151,12 +161,12 @@ export function BulkPanel({ depth }: { depth: Depth }) {
               <span className="uppercase">{job.status}</span>
             </div>
             {job.status === "done" && (
-              <a
-                href={bulkExportUrl(job.job_id)}
+              <button
+                onClick={exportCsv}
                 className="parallel-btn px-3 py-1.5 text-[12px]"
               >
                 Export enriched CSV ↓
-              </a>
+              </button>
             )}
           </div>
 

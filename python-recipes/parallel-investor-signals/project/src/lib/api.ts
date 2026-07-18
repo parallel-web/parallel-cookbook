@@ -98,12 +98,20 @@ export async function pollBulk(jobId: string): Promise<BulkJob> {
   return res.json();
 }
 
-// URL for the streaming CSV export (opened directly by the browser, which
-// can't send headers — the gate also accepts the key as a query param).
-export function bulkExportUrl(jobId: string): string {
-  const key = getAccessKey();
-  const qs = key ? `?key=${encodeURIComponent(key)}` : "";
-  return `/api/enrich/bulk/${jobId}/export.csv${qs}`;
+export async function downloadBulkExport(jobId: string): Promise<void> {
+  const res = await fetch(`/api/enrich/bulk/${jobId}/export.csv`, {
+    headers: authHeaders(),
+  });
+  if (!res.ok) await parseError(res);
+
+  const url = URL.createObjectURL(await res.blob());
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `enrichment-${jobId.slice(0, 8)}.csv`;
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
 }
 
 // --- Investor-monitoring signals ---

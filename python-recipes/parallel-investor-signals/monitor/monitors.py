@@ -19,15 +19,16 @@ import sys
 
 from common import MONITORS_FILE, client, read_json, write_json, utcnow
 from config import (
-    INVESTORS, MONITOR_FREQUENCY, MONITOR_OUTPUT_SCHEMA, MONITOR_PROCESSOR,
-    monitor_query,
+    MONITOR_FREQUENCY, MONITOR_OUTPUT_SCHEMA, MONITOR_PROCESSOR, monitor_query,
+    require_investors,
 )
 
 
 def create() -> None:
+    funds = require_investors()
     c = client()
     ours = read_json(MONITORS_FILE, {})
-    for fund in INVESTORS:
+    for fund in funds:
         if fund in ours:
             print(f"[skip] {fund} → {ours[fund]['monitor_id']}")
             continue

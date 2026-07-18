@@ -1,7 +1,6 @@
 // Demo access key handling. The passphrase the user enters at the gate is
-// kept in localStorage and attached to every /api request (x-demo-key header;
-// ?key= param for direct browser downloads). The backend enforces it — this
-// file is just plumbing, not the security boundary.
+// kept in localStorage and attached to every /api request in the x-demo-key
+// header. The backend enforces it — this file is plumbing, not the boundary.
 
 const KEY = "pse-access-key";
 
