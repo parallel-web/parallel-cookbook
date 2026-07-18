@@ -155,8 +155,8 @@ async def weekly_digest(request: Request) -> dict[str, Any]:
 
 
 # Best-effort in-memory idempotency for webhook retries, keyed by webhook-id.
-# Parallel retries failed/timed-out deliveries (Standard Webhooks), so without
-# dedupe a retry would re-run the verification Task (spend) and re-post alerts.
+# Reserving before the side effects prevents concurrent duplicate processing;
+# failed attempts release their reservation so Standard Webhooks can retry.
 # This survives only within one process/instance — on serverless it is a soft
 # guard, not a guarantee. For production, dedupe against a durable store (Redis,
 # a DB unique key on webhook-id) and, ideally, ACK immediately then process the
@@ -165,14 +165,20 @@ _SEEN_WEBHOOK_IDS: dict[str, float] = {}
 _SEEN_MAX = 4000
 
 
-def _webhook_already_seen(webhook_id: str) -> bool:
+def _reserve_webhook(webhook_id: str) -> bool:
+    """Reserve a delivery ID. False means another attempt owns/completed it."""
     if webhook_id in _SEEN_WEBHOOK_IDS:
-        return True
+        return False
     _SEEN_WEBHOOK_IDS[webhook_id] = time.time()
     if len(_SEEN_WEBHOOK_IDS) > _SEEN_MAX:  # trim oldest half
         for k in sorted(_SEEN_WEBHOOK_IDS, key=_SEEN_WEBHOOK_IDS.get)[: _SEEN_MAX // 2]:
             _SEEN_WEBHOOK_IDS.pop(k, None)
-    return False
+    return True
+
+
+def _release_webhook(webhook_id: str) -> None:
+    """Make a failed delivery retryable without weakening in-flight dedupe."""
+    _SEEN_WEBHOOK_IDS.pop(webhook_id, None)
 
 
 @app.post("/api/monitor/webhook")
@@ -185,7 +191,7 @@ async def monitor_webhook(request: Request) -> dict[str, Any]:
     configured or a bad/missing signature → rejected, never processed. Retries
     are deduped by webhook-id so a redelivery doesn't double-spend or double-post.
 
-    Flow per event: verify signature → dedupe → parse → chained follow-up Task →
+    Flow per event: verify signature → parse → dedupe → chained follow-up Task →
     CRM check → priority → Slack ping. NOTE: research + delivery run inline here
     for recipe simplicity; a production receiver should ACK 2xx immediately and
     process on a durable queue (see the idempotency note above)."""
@@ -204,11 +210,8 @@ async def monitor_webhook(request: Request) -> dict[str, Any]:
     except webhook_verify.WebhookVerificationError as exc:
         raise HTTPException(401, f"webhook signature verification failed: {exc}") from exc
 
-    # 2) Idempotency: drop retries of an event we've already handled.
-    webhook_id = request.headers.get("webhook-id", "")
-    if webhook_id and _webhook_already_seen(webhook_id):
-        return {"ok": True, "duplicate": True}
-
+    # 2) Validate the delivery before reserving its ID. Configuration or payload
+    # errors must remain retryable once corrected.
     payload = json.loads(body)
     if payload.get("type") != "monitor.event.detected":
         return {"ok": True, "ignored": True}
@@ -224,35 +227,46 @@ async def monitor_webhook(request: Request) -> dict[str, Any]:
     if not key:
         raise HTTPException(500, "Server missing PARALLEL_API_KEY.")
 
-    portfolio = core.load_bundled_portfolio()
-    client = AsyncParallel(api_key=key, timeout=300.0)
-    posted = 0
+    # 3) Reserve immediately before side effects. Keep the reservation after a
+    # successful response; release it on errors/cancellation so retries can run.
+    webhook_id = request.headers.get("webhook-id", "")
+    if webhook_id and not _reserve_webhook(webhook_id):
+        return {"ok": True, "duplicate": True}
+
     try:
-        result = await client.monitor.events(monitor_id, event_group_id=group_id)
-        for e in (getattr(result, "events", None) or []):
-            detected = core.parse_event_content(e)
-            company = (detected.get("company_name") or "").strip()
-            if not company or company.upper() == "NA":
-                continue
-            for r in await core.averify_event(client, detected, e.event_id):
-                # Live CRM check (same as the digest + CLI paths), off-thread so
-                # the sync httpx call doesn't block the event loop.
-                match = await asyncio.to_thread(
-                    crm.check_pipeline, r.get("domain"), r.get("company", "")
-                )
-                signal = core.qualify_signal(
-                    r, fund, portfolio, {"detected_via": "monitor", "event_id": e.event_id}, match
-                )
-                # Trigger policy: only high/medium ping; digest-priority events
-                # are dropped here (they surface in the app's live view).
-                if signal["priority"] in ("high", "medium"):
-                    if await core.apost_to_slack(
-                        core.build_signal_blocks(signal),
-                        f"{signal.get('company')}, {signal.get('round_stage')}",
-                    ):
-                        posted += 1
-    finally:
-        await client.close()
+        portfolio = core.load_bundled_portfolio()
+        client = AsyncParallel(api_key=key, timeout=300.0)
+        posted = 0
+        try:
+            result = await client.monitor.events(monitor_id, event_group_id=group_id)
+            for e in (getattr(result, "events", None) or []):
+                detected = core.parse_event_content(e)
+                company = (detected.get("company_name") or "").strip()
+                if not company or company.upper() == "NA":
+                    continue
+                for r in await core.averify_event(client, detected, e.event_id):
+                    # Live CRM check (same as the digest + CLI paths), off-thread so
+                    # the sync httpx call doesn't block the event loop.
+                    match = await asyncio.to_thread(
+                        crm.check_pipeline, r.get("domain"), r.get("company", "")
+                    )
+                    signal = core.qualify_signal(
+                        r, fund, portfolio, {"detected_via": "monitor", "event_id": e.event_id}, match
+                    )
+                    # Trigger policy: only high/medium ping; digest-priority events
+                    # are dropped here (they surface in the app's live view).
+                    if signal["priority"] in ("high", "medium"):
+                        if await core.apost_to_slack(
+                            core.build_signal_blocks(signal),
+                            f"{signal.get('company')}, {signal.get('round_stage')}",
+                        ):
+                            posted += 1
+        finally:
+            await client.close()
+    except (Exception, asyncio.CancelledError):
+        if webhook_id:
+            _release_webhook(webhook_id)
+        raise
     return {"ok": True, "posted": posted}
 
 
@@ -387,6 +401,7 @@ def bulk_status(job_id: str) -> dict[str, Any]:
             "serverless hosting. Run bulk mode against the local backend.",
         )
     return {
+        "job_id": job_id,
         "status": job["status"],
         "done": job["done"],
         "total": job["total"],
