@@ -1,4 +1,4 @@
-"""The access gate: server-side enforcement, exemptions, and query-param path."""
+"""The access gate: server-side enforcement and explicit exemptions."""
 
 import base64
 import hashlib
@@ -50,10 +50,9 @@ def test_health_is_exempt_and_never_leaks_the_key(client):
     assert "test-parallel-key" not in r.text
 
 
-def test_key_accepted_via_query_param_for_downloads(client):
-    # The CSV export link is a plain <a>, which can't send headers.
+def test_key_rejected_in_query_params(client):
     r = client.get("/api/auth/check?key=test-passphrase")
-    assert r.status_code == 200
+    assert r.status_code == 401
 
 
 def test_monitor_webhook_exempt_from_demo_gate_but_verifies_signature(client):

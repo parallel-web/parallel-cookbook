@@ -73,11 +73,10 @@ def _key_ok(candidate: str | None) -> bool:
 
 @app.middleware("http")
 async def demo_access_gate(request: Request, call_next):
-    """Require the passphrase on all /api routes (header or, for direct browser
-    downloads like the CSV export link, a ?key= query param)."""
+    """Require the passphrase in a header on every protected API route."""
     path = request.url.path
     if path.startswith("/api") and path not in _GATE_EXEMPT:
-        supplied = request.headers.get("x-demo-key") or request.query_params.get("key")
+        supplied = request.headers.get("x-demo-key")
         if not _key_ok(supplied):
             detail = (
                 "Access gate not configured. Set the DEMO_PASSWORD environment "

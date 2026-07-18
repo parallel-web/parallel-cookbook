@@ -42,16 +42,14 @@ from backend.investor_core import (  # noqa: E402,F401 — re-exported for sweep
 # Resolution order:
 #   1. INVESTORS env var — comma-separated, wins if set (handy for CI / one-offs)
 #   2. monitor/investors.json — your real watchlist (gitignored, never committed)
-#   3. monitor/investors.example.json — the sample list, so a fresh clone runs
 #
 # investors.json is gitignored on purpose: your target list is your strategy.
 _MONITOR_DIR = Path(__file__).resolve().parent
 _INVESTORS_FILE = _MONITOR_DIR / "investors.json"
-_INVESTORS_EXAMPLE = _MONITOR_DIR / "investors.example.json"
 
 
 def load_investors() -> list[str]:
-    """Resolve the fund watchlist (env → investors.json → investors.example.json).
+    """Resolve the user's fund watchlist (environment, then investors.json).
 
     Accepts either a bare JSON array (["Fund A", "Fund B"]) or an object with an
     "investors" key ({"investors": ["Fund A", …]}). Blank/dupe entries dropped."""
@@ -59,9 +57,8 @@ def load_investors() -> list[str]:
     if env and env.strip():
         raw: list = [p for p in (s.strip() for s in env.split(",")) if p]
     else:
-        path = _INVESTORS_FILE if _INVESTORS_FILE.exists() else _INVESTORS_EXAMPLE
         try:
-            data = json.loads(path.read_text())
+            data = json.loads(_INVESTORS_FILE.read_text())
         except (OSError, json.JSONDecodeError):
             return []
         raw = data.get("investors", []) if isinstance(data, dict) else (data or [])
@@ -75,6 +72,16 @@ def load_investors() -> list[str]:
 
 
 INVESTORS = load_investors()
+
+
+def require_investors() -> list[str]:
+    """Return the configured watchlist or stop before any paid API call."""
+    if not INVESTORS:
+        raise SystemExit(
+            "No investors configured — copy monitor/investors.example.json to "
+            "monitor/investors.json and add the funds you want to track."
+        )
+    return INVESTORS
 
 
 # Detection query for the daily event_stream monitor of one fund.
