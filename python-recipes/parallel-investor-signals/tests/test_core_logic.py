@@ -77,6 +77,16 @@ def test_empty_and_na_values_are_nulled_even_with_citations():
         assert pc._field(empty, fb)["value"] is None
 
 
+def test_custom_answers_never_fall_back_to_the_wrong_question():
+    defs = [{"question": "Question one?"}, {"question": "Question two?"}]
+    answers = [{"question": "Question two?", "answer": "Answer two"}]
+
+    assert pc._match_answers_to_defs(defs, answers, {}) == [
+        (None, None),
+        ("Answer two", None),
+    ]
+
+
 # ------------------------------------------------------------- email rule ----
 def test_inferred_email_is_pattern_based_and_marked():
     field = pc._infer_email("Ada Lovelace", "acme.ai")

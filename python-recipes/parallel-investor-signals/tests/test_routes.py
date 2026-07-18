@@ -62,6 +62,20 @@ def test_bulk_unknown_job_is_a_friendly_404(client):
     assert "in-memory" in r.json()["detail"]
 
 
+def test_bulk_status_preserves_job_id(client):
+    job_id = "testjob123"
+    main._BULK_JOBS[job_id] = {
+        "status": "running", "done": 0, "total": 1,
+        "results": [], "custom_defs": [],
+    }
+    try:
+        r = client.get(f"/api/enrich/bulk/{job_id}", headers=GATE_HEADERS)
+        assert r.status_code == 200
+        assert r.json()["job_id"] == job_id
+    finally:
+        main._BULK_JOBS.pop(job_id, None)
+
+
 def test_csv_export_flattens_the_brief(client):
     job_id = "testjob123"
     main._BULK_JOBS[job_id] = {

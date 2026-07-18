@@ -479,11 +479,11 @@ def _match_answers_to_defs(
 ) -> list[tuple[str | None, Any]]:
     """
     Realign the model's `answers` array to the requested defs. Returns a list
-    parallel to `defs` of (answer_value, element_basis). Matches primarily by
-    the echoed `question` text (robust to reordering/dropping), falling back to
-    positional order. A def with no matching answer gets (None, None) so it
-    nulls out downstream — honest, never mis-attributed. Element basis is the
-    per-element `answers.<i>` entry (with graceful fallback to the group basis).
+    parallel to `defs` of (answer_value, element_basis). Matches only by the
+    echoed `question` text, which is required by the output schema. A def with
+    no exact normalized match gets (None, None) so it nulls out downstream —
+    honest, never mis-attributed. Element basis is the per-element
+    `answers.<i>` entry (with graceful fallback to the group basis).
     """
     by_q: dict[str, int] = {}
     for i, a in enumerate(answers):
@@ -494,13 +494,11 @@ def _match_answers_to_defs(
 
     used: set = set()
     out: list[tuple[str | None, Any]] = []
-    for i, d in enumerate(defs):
+    for d in defs:
         dq = _normalize_q(d.get("question"))
         idx: int | None = None
         if dq and dq in by_q and by_q[dq] not in used:
             idx = by_q[dq]
-        elif i < len(answers) and i not in used and isinstance(answers[i], dict):
-            idx = i  # positional fallback
         if idx is None:
             out.append((None, None))
             continue
