@@ -39,9 +39,8 @@ uv run python quickstart.py
 ```
 
 The default question compares NVIDIA and AMD's most recently reported
-quarterly data-center revenue and asks Parallel to use only official company
-sources. The command prints the grounded answer followed by a numbered source
-list:
+quarterly data-center revenue. The command prints the grounded answer followed
+by a numbered source list:
 
 ```text
 <grounded comparison of the latest reported quarters>
@@ -63,10 +62,12 @@ uv run python quickstart.py \
 The request itself uses the stock OpenAI SDK:
 
 ```python
+import os
+
 from openai import OpenAI
 
 client = OpenAI(
-    api_key=PARALLEL_API_KEY,
+    api_key=os.environ["PARALLEL_API_KEY"],
     base_url="https://api.parallel.ai/v1",
 )
 
@@ -86,16 +87,12 @@ Parallel exposes one model, `parallel`. Set `reasoning.effort` to `low`,
 ## Reading citations
 
 Citations are standard Responses API `url_citation` annotations attached to
-output-text content parts. `extract_citations()` walks every output item,
-keeps HTTPS URL citations, and deduplicates them by URL before rendering the
-source list.
+output-text content parts. `parse_response()` walks every output item and
+deduplicates citations by URL before rendering the source list.
 
-The script treats a missing answer or missing citations as a contract error
-instead of silently printing an ungrounded-looking result. Citation annotations
-depend on the underlying research run's basis and can occasionally be absent,
-so the command retries that contract failure up to two times. It prints each
-retry to stderr; one invocation can therefore make between one and three billed
-Responses calls.
+The script makes exactly one billed Responses call. It reports a clear contract
+error if that call returns no answer or no URL citations; it does not hide the
+failure behind additional research requests.
 
 ## Migrating an OpenAI Responses call
 
@@ -131,8 +128,7 @@ uv run pytest -m "not live"
 ```
 
 The billed live smoke test is doubly opt-in: it requires both a key and an
-explicit flag. Because it exercises the same bounded retry path as the command,
-it can make up to three Responses calls.
+explicit flag, and it makes exactly one Responses call.
 
 ```bash
 PARALLEL_API_KEY="your-api-key-here" \
@@ -141,8 +137,8 @@ uv run pytest -m live -v
 ```
 
 The live test verifies that the response mentions both companies and includes
-at least one valid HTTPS citation. It intentionally does not freeze financial
-figures that will become stale.
+at least one URL citation. It intentionally does not freeze financial figures
+that will become stale.
 
 ## License
 

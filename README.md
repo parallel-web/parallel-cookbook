@@ -12,7 +12,7 @@
 
 The Parallel Cookbook is a curated set of recipes that show how to build with Parallel's web research stack — **Responses**, **Search**, **Extract**, **Task**, **Ingest**, and **MCP**. Each recipe is a working example with a clear way to run or deploy it and prose that explains the design decisions.
 
-> **New here?** Get a cited answer with the [Responses API Quickstart](python-recipes/parallel-responses-quickstart), or explore the full platform with the [Vercel Template](typescript-recipes/parallel-vercel-template) (TypeScript) and [Deep Research notebook](python-recipes/Deep_Research_Recipe.ipynb) (Python).
+> **New here?** Start with the [Vercel Template](typescript-recipes/parallel-vercel-template) (TypeScript) or the [Deep Research notebook](python-recipes/Deep_Research_Recipe.ipynb) (Python) for an end-to-end tour of the platform.
 
 ## Contents
 
@@ -35,8 +35,6 @@ The Parallel Cookbook is a curated set of recipes that show how to build with Pa
 ## Quick Start
 
 Get an API key at [platform.parallel.ai](https://platform.parallel.ai), then pick your stack.
-
-Already use the OpenAI SDK? The [Responses API Quickstart](python-recipes/parallel-responses-quickstart) shows how to get a cited, web-grounded answer with only a Parallel API key.
 
 **TypeScript / Node**
 
