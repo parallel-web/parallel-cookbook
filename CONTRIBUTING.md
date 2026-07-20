@@ -112,7 +112,7 @@ After your recipe is in place, add an entry to two places so it shows up everywh
 
 Use lowercase, hyphenated tags drawn from this controlled vocabulary so filters stay clean:
 
-- **API surface**: `search`, `extract`, `task`, `deep-research`, `ingest`, `mcp`, `webhooks`, `sse`, `oauth`
+- **API surface**: `responses`, `search`, `extract`, `task`, `deep-research`, `ingest`, `mcp`, `webhooks`, `sse`, `oauth`
 - **Stack**: `cloudflare`, `vercel`, `nextjs`, `supabase`, `vertex-ai`, `python`, `typescript`, `temporal`
 - **Pattern**: `agent`, `enrichment`, `monitoring`, `realtime`, `batch`, `fact-checking`, `template`, `entity-resolution`
 
