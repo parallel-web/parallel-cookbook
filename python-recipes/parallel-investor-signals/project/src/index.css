@@ -1,0 +1,54 @@
+@import "tailwindcss";
+/* Parallel brand tokens + fonts (CSS variables, light/dark). Imported once. */
+@import "./brand/parallel-theme.css";
+
+/* Dark mode is driven by an explicit data-theme attribute set in the app
+   (so the in-app toggle wins over the OS preference). Declared before @theme
+   so Tailwind knows how to generate `dark:` utilities. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+/* Map the Parallel brand CSS variables onto Tailwind's theme so we can use
+   utility classes like bg-bg, text-muted, border-line, font-mono, rounded-brand.
+   `inline` means these resolve to the live CSS var (so dark-mode flips work). */
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-ink: var(--text);
+  --color-muted: var(--text-muted);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --radius-brand: var(--radius);
+}
+
+html, body, #root { min-height: 100%; }
+body { margin: 0; }
+
+/* Thin, brand-tinted scrollbars — keeps the analyst-console feel calm. */
+* { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+
+/* Staggered fade-up reveal for freshly-loaded results. Applied to the direct
+   children of any .reveal container; delays via nth-child keep it orchestrated
+   (one moment, not scattered effects). Disabled by the reduced-motion rule. */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal > * { animation: fade-up 0.45s ease-out both; }
+.reveal > *:nth-child(2) { animation-delay: 0.07s; }
+.reveal > *:nth-child(3) { animation-delay: 0.14s; }
+.reveal > *:nth-child(4) { animation-delay: 0.21s; }
+.reveal > *:nth-child(5) { animation-delay: 0.28s; }
+
+/* Respect reduced motion everywhere. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
