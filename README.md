@@ -10,9 +10,9 @@
 
 ---
 
-The Parallel Cookbook is a curated set of recipes that show how to build with Parallel's web research stack — **Search**, **Extract**, **Task**, **Ingest**, and **MCP**. Each recipe is a working example with a clear way to run or deploy it and prose that explains the design decisions.
+The Parallel Cookbook is a curated set of recipes that show how to build with Parallel's web research stack — **Responses**, **Search**, **Extract**, **Task**, **Ingest**, and **MCP**. Each recipe is a working example with a clear way to run or deploy it and prose that explains the design decisions.
 
-> **New here?** Start with the [Vercel Template](typescript-recipes/parallel-vercel-template) (TypeScript) or the [Deep Research notebook](python-recipes/Deep_Research_Recipe.ipynb) (Python) for an end-to-end tour of the platform.
+> **New here?** Get a cited answer with the [Responses API Quickstart](python-recipes/parallel-responses-quickstart), or explore the full platform with the [Vercel Template](typescript-recipes/parallel-vercel-template) (TypeScript) and [Deep Research notebook](python-recipes/Deep_Research_Recipe.ipynb) (Python).
 
 ## Contents
 
@@ -35,6 +35,8 @@ The Parallel Cookbook is a curated set of recipes that show how to build with Pa
 ## Quick Start
 
 Get an API key at [platform.parallel.ai](https://platform.parallel.ai), then pick your stack.
+
+Already use the OpenAI SDK? The [Responses API Quickstart](python-recipes/parallel-responses-quickstart) shows how to get a cited, web-grounded answer with only a Parallel API key.
 
 **TypeScript / Node**
 
@@ -71,14 +73,15 @@ print(run.output)
 
 ## Recipes by Category
 
-Every recipe in this repo is listed below, grouped by what you're trying to build. Looking for a specific API surface? Search for the badge — `Search`, `Extract`, `Task`, `SSE`, `Webhooks`, `MCP`, `OAuth`, `Ingest`.
+Every recipe in this repo is listed below, grouped by what you're trying to build. Looking for a specific API surface? Search for the badge — `Responses`, `Search`, `Extract`, `Task`, `SSE`, `Webhooks`, `MCP`, `OAuth`, `Ingest`.
 
 ### Templates & Starters
 
-Multi-API starter projects — fork these first.
+Quickstarts and starter projects — copy these first.
 
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
+| [**Responses API Quickstart**](python-recipes/parallel-responses-quickstart) | Ask a current multi-source question with the OpenAI SDK and print a cited, web-grounded answer from Parallel. | `Responses` | Python · OpenAI SDK | – |
 | [**Vercel Template**](typescript-recipes/parallel-vercel-template) | Next.js demo of Search + Extract + Tasks with SSE in a single app. Includes Vercel marketplace integration for one-click API key. | `Search` `Extract` `Task` `SSE` | Next.js · Vercel | [Live](https://parallel-vercel-template-cookbook.vercel.app/) · [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparallel-web%2Fparallel-cookbook%2Ftree%2Fmain%2Ftypescript-recipes%2Fparallel-vercel-template&project-name=parallel-vercel-template&repository-name=parallel-vercel-template&integration-ids=oac_qjiYAM8BTtX0UDS6HEPY97nU) |
 
 ### Agents & Search

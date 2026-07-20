@@ -1,0 +1,25 @@
+[project]
+name = "parallel-responses-quickstart"
+version = "0.1.0"
+description = "Minimal cited research with Parallel's OpenAI-compatible Responses API"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "openai>=2.0.0,<3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0,<10",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = [
+    "live: opt-in test that calls the billed Parallel API",
+]
