@@ -6,6 +6,8 @@ A live map of U.S. datacenter infrastructure, built end-to-end on [Parallel](htt
 
 Everything here — the facility list, the 25 fields per facility, the AI-impact classifications, the weekly brief — is generated data. Nothing is hand-curated. This README documents exactly how it was produced so you can reproduce or extend it.
 
+> **Note on data:** this repo ships a **51-facility sample** (one per state) in `public/data/` so the app runs immediately after cloning. The [live demo](https://datacenter-demo.app) shows the full ~2,700-facility dataset. Run the pipeline below to regenerate the full set into `public/data/`.
+
 ---
 
 ## How the data was built
@@ -92,7 +94,7 @@ npm install
 cp .env.local.example .env.local   # add your keys
 ```
 
-Then run the pipeline (each stage is optional — the repo ships with the generated data already in `public/data/`):
+Then run the pipeline to regenerate the full dataset (the repo ships only a 51-facility sample in `public/data/`; each stage is optional):
 
 ```bash
 # 1. discover facilities
