@@ -6,7 +6,7 @@ A live map of U.S. datacenter infrastructure, built end-to-end on [Parallel](htt
 
 Everything here — the facility list, the 25 fields per facility, the AI-impact classifications, the weekly brief — is generated data. Nothing is hand-curated. This README documents exactly how it was produced so you can reproduce or extend it.
 
-> **Note on data:** this repo ships a **51-facility sample** (one per state) in `public/data/` so the app runs immediately after cloning. The [live demo](https://datacenter-demo.app) shows the full ~2,700-facility dataset. Run the pipeline below to regenerate the full set into `public/data/`.
+> **Note on data:** this repo ships a **51-facility sample** (one per state) in `public/data/` so the app runs immediately after cloning. The [live demo](https://datacenter-demo.app) shows the full ~2,700-facility dataset. Run the pipeline below to regenerate the full set into `public/data/`. Monitor IDs in `src/data/` ship blank on purpose — run `setup-monitors.ts` and `create-snapshots.ts` to create your own against your account.
 
 ---
 
