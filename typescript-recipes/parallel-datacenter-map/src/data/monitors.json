@@ -1,0 +1,356 @@
+{
+  "region-nova": {
+    "monitorId": "",
+    "name": "Northern Virginia",
+    "class": "region",
+    "query": "Data center developments in Loudoun and Prince William County, Virginia: Dominion Energy interconnection and large-load filings, SCC transmission approvals, county zoning and special-exception votes. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Northern Virginia",
+    "states": [
+      "VA"
+    ]
+  },
+  "region-atlanta": {
+    "monitorId": "",
+    "name": "Atlanta / Georgia",
+    "class": "region",
+    "query": "Data center developments in Georgia (metro Atlanta, Fayette, Coweta, DeKalb counties): Georgia Power interconnection actions, county rezoning approvals and denials, development moratoria. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Atlanta, GA",
+    "states": [
+      "GA"
+    ]
+  },
+  "region-ohio": {
+    "monitorId": "",
+    "name": "Central Ohio",
+    "class": "region",
+    "query": "Data center developments in central Ohio (New Albany, Columbus, Licking County, Etna Township): AEP Ohio power agreements and tariff disputes, township zoning bans, statewide moratorium legislation. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Central Ohio",
+    "states": [
+      "OH"
+    ]
+  },
+  "region-phoenix": {
+    "monitorId": "",
+    "name": "Phoenix / Arizona",
+    "class": "region",
+    "query": "Data center developments in metro Phoenix and Maricopa County, Arizona: APS and SRP power capacity, groundwater restrictions, municipal water-use caps for data centers, Pinal County developments. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Phoenix, AZ",
+    "states": [
+      "AZ"
+    ]
+  },
+  "region-utah": {
+    "monitorId": "",
+    "name": "Utah",
+    "class": "region",
+    "query": "Data center developments in Utah (Eagle Mountain, Salt Lake City corridor, West Jordan): Rocky Mountain Power load commitments, municipal water and power approvals, West Valley and Iron County permits. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Utah",
+    "states": [
+      "UT"
+    ]
+  },
+  "region-texas": {
+    "monitorId": "",
+    "name": "Texas",
+    "class": "region",
+    "query": "Data center developments in Texas: ERCOT large-load interconnection rules and Batch Zero process, grid-reliability legislation, PUCT actions, municipal approvals in Dallas, San Antonio, and Red Oak. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Texas",
+    "states": [
+      "TX"
+    ]
+  },
+  "region-pnw": {
+    "monitorId": "",
+    "name": "Pacific Northwest",
+    "class": "region",
+    "query": "Data center developments in Washington and Oregon (Seattle, Hillsboro, Quincy, The Dalles): Seattle municipal moratoria, BPA and PSE power constraints, Bonneville Power Administration capacity, Oregon permitting. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Pacific Northwest",
+    "states": [
+      "WA",
+      "OR"
+    ]
+  },
+  "region-florida": {
+    "monitorId": "",
+    "name": "Florida",
+    "class": "region",
+    "query": "Data center developments in Florida: county moratoria and rezoning freezes (Citrus, Palm Coast, Flagler, Lake), FPL power agreements, hurricane resilience requirements. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Florida",
+    "states": [
+      "FL"
+    ]
+  },
+  "region-norcal": {
+    "monitorId": "",
+    "name": "Northern California",
+    "class": "region",
+    "query": "Data center developments in Northern California (Silicon Valley, Santa Clara, Sacramento, Stockton): PG&E power capacity and interconnection, CPUC filings, Santa Clara city approvals, Bay Area environmental review. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Northern California",
+    "states": [
+      "CA"
+    ]
+  },
+  "region-socal": {
+    "monitorId": "",
+    "name": "Southern California",
+    "class": "region",
+    "query": "Data center developments in Southern California (Los Angeles, Inland Empire, San Diego): SCE and LADWP power capacity, SCAQMD air quality permits, water restrictions, Riverside and San Bernardino county approvals. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Southern California",
+    "states": [
+      "CA"
+    ]
+  },
+  "region-chicago": {
+    "monitorId": "",
+    "name": "Chicago / Illinois",
+    "class": "region",
+    "query": "Data center developments in Illinois (Chicago, Elk Grove Village, Aurora, Joliet): ComEd power capacity and interconnection, Cook and DuPage county approvals, Illinois tax incentive programs. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Chicago, IL",
+    "states": [
+      "IL"
+    ]
+  },
+  "region-nymetro": {
+    "monitorId": "",
+    "name": "New York Metro",
+    "class": "region",
+    "query": "Data center developments in New Jersey and New York: PSE&G and ConEd interconnection capacity, NJ Board of Public Utilities filings, NYC and Newark zoning, New York State moratorium proposals. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "New York Metro",
+    "states": [
+      "NJ",
+      "NY"
+    ]
+  },
+  "region-newengland": {
+    "monitorId": "",
+    "name": "New England",
+    "class": "region",
+    "query": "Data center developments in New England (Massachusetts, Connecticut, New Hampshire): Eversource and National Grid power capacity, Boston-area and Hartford zoning, Maine renewable-powered DC proposals. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "New England",
+    "states": [
+      "MA",
+      "CT",
+      "NH",
+      "ME",
+      "RI",
+      "VT"
+    ]
+  },
+  "region-minnesota": {
+    "monitorId": "",
+    "name": "Minnesota",
+    "class": "region",
+    "query": "Data center developments in Minnesota (Minneapolis, Shakopee, Chaska): Xcel Energy power capacity, Shakopee and Scott County approvals, Minnesota legislative actions on data centers. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Minnesota",
+    "states": [
+      "MN"
+    ]
+  },
+  "region-michigan": {
+    "monitorId": "",
+    "name": "Michigan",
+    "class": "region",
+    "query": "Data center developments in Michigan (Detroit, Grand Rapids, West Michigan): DTE Energy and Consumers Energy power capacity, county economic incentives, Michigan Strategic Fund approvals. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Michigan",
+    "states": [
+      "MI"
+    ]
+  },
+  "region-kentucky": {
+    "monitorId": "",
+    "name": "Kentucky",
+    "class": "region",
+    "query": "Data center developments in Kentucky (Louisville, Lexington, Bowling Green): LG&E and KU power agreements, Kentucky economic development incentives, TVA-connected sites. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Kentucky",
+    "states": [
+      "KY"
+    ]
+  },
+  "region-nevada": {
+    "monitorId": "",
+    "name": "Las Vegas / Nevada",
+    "class": "region",
+    "query": "Data center developments in Nevada (Las Vegas, Reno, Henderson): NV Energy power capacity, Southern Nevada Water Authority restrictions, Clark County approvals, Switch and other operator expansions. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Nevada",
+    "states": [
+      "NV"
+    ]
+  },
+  "region-dcmetro": {
+    "monitorId": "",
+    "name": "DC Metro / Maryland",
+    "class": "region",
+    "query": "Data center developments in Maryland and Washington DC metro (Prince George's County, Frederick, Loudoun adjacent): BGE and Pepco power capacity, PJM interconnection for MD sites, county zoning, Frederick County data center ordinances. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "DC Metro",
+    "states": [
+      "MD",
+      "DC",
+      "DE"
+    ]
+  },
+  "region-tennessee": {
+    "monitorId": "",
+    "name": "Tennessee",
+    "class": "region",
+    "query": "Data center developments in Tennessee (Nashville, Clarksville, Chattanooga): TVA power agreements and industrial rates, Clarksville campus developments, state economic incentives. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Tennessee",
+    "states": [
+      "TN"
+    ]
+  },
+  "region-midwest": {
+    "monitorId": "",
+    "name": "Kansas City / Midwest",
+    "class": "region",
+    "query": "Data center developments in the central Midwest (Missouri, Kansas, Nebraska, Iowa): Evergy and MidAmerican Energy power capacity, Kansas City metro approvals, Iowa and Nebraska economic incentives. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Central Midwest",
+    "states": [
+      "MO",
+      "KS",
+      "NE",
+      "IA"
+    ]
+  },
+  "region-carolinas": {
+    "monitorId": "",
+    "name": "Carolinas",
+    "class": "region",
+    "query": "Data center developments in North and South Carolina: Duke Energy power capacity and interconnection, Charlotte and Raleigh-Durham area approvals, Stokes County and rural county rezoning controversies. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Carolinas",
+    "states": [
+      "NC",
+      "SC"
+    ]
+  },
+  "region-colorado": {
+    "monitorId": "",
+    "name": "Colorado",
+    "class": "region",
+    "query": "Data center developments in Colorado (Denver, Aurora, Colorado Springs): Xcel Energy power capacity, Aurora and Douglas County approvals, Colorado water court filings. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Colorado",
+    "states": [
+      "CO"
+    ]
+  },
+  "region-pennsylvania": {
+    "monitorId": "",
+    "name": "Pennsylvania",
+    "class": "region",
+    "query": "Data center developments in Pennsylvania (Philadelphia, Lehigh Valley, Pittsburgh): PECO and PPL Electric power capacity, Lehigh Valley zoning, Pennsylvania economic incentive programs. Track: utility interconnection and power capacity filings, rezoning and special-use permit applications and decisions, moratoria or development freezes, community opposition and litigation, water-use restrictions or drought actions, large land assemblies and site transactions, hyperscaler expansion announcements, operator M&A or ownership changes, and construction milestones.",
+    "frequency": "1h",
+    "region": "Pennsylvania",
+    "states": [
+      "PA"
+    ]
+  },
+  "facility-qts-cedar-rapids": {
+    "monitorId": "",
+    "name": "QTS Cedar Rapids",
+    "class": "facility",
+    "query": "QTS Data Centers Cedar Rapids, Iowa campus: Alliant Energy and ITC Midwest power agreements, Linn County approvals, construction progress. Track any material development including power interconnection filings, zoning or permit actions, construction milestones, ownership or tenant changes, community opposition, and water or environmental restrictions.",
+    "frequency": "1h",
+    "region": "Iowa",
+    "facilityCode": "QTS-CR",
+    "states": [
+      "IA"
+    ]
+  },
+  "facility-qts-new-albany": {
+    "monitorId": "",
+    "name": "QTS New Albany",
+    "class": "facility",
+    "query": "QTS Data Centers New Albany, Ohio campus expansion: AEP Ohio power agreements, New Albany and Licking County zoning, construction milestones. Track any material development including power interconnection filings, zoning or permit actions, construction milestones, ownership or tenant changes, community opposition, and water or environmental restrictions.",
+    "frequency": "1h",
+    "region": "Central Ohio",
+    "facilityCode": "QTS-NA",
+    "states": [
+      "OH"
+    ]
+  },
+  "facility-qts-eagle-mountain": {
+    "monitorId": "",
+    "name": "QTS Eagle Mountain",
+    "class": "facility",
+    "query": "QTS Data Centers Eagle Mountain, Utah campus: Rocky Mountain Power commitments, Eagle Mountain City water rights and municipal actions. Track any material development including power interconnection filings, zoning or permit actions, construction milestones, ownership or tenant changes, community opposition, and water or environmental restrictions.",
+    "frequency": "1h",
+    "region": "Utah",
+    "facilityCode": "QTS-EM",
+    "states": [
+      "UT"
+    ]
+  },
+  "facility-qts-manassas": {
+    "monitorId": "",
+    "name": "QTS Manassas",
+    "class": "facility",
+    "query": "QTS Data Centers Manassas, Virginia expansion: Prince William County zoning votes, Dominion Energy interconnection filings, community opposition. Track any material development including power interconnection filings, zoning or permit actions, construction milestones, ownership or tenant changes, community opposition, and water or environmental restrictions.",
+    "frequency": "1h",
+    "region": "Northern Virginia",
+    "facilityCode": "QTS-MAN",
+    "states": [
+      "VA"
+    ]
+  },
+  "facility-qts-fayetteville": {
+    "monitorId": "",
+    "name": "QTS Fayetteville",
+    "class": "facility",
+    "query": "QTS Data Centers Fayetteville and Atlanta, Georgia campuses: Fayette County rezoning, Georgia Power interconnection, local government actions. Track any material development including power interconnection filings, zoning or permit actions, construction milestones, ownership or tenant changes, community opposition, and water or environmental restrictions.",
+    "frequency": "1h",
+    "region": "Atlanta, GA",
+    "facilityCode": "QTS-FAY",
+    "states": [
+      "GA"
+    ]
+  },
+  "facility-qts-aurora": {
+    "monitorId": "",
+    "name": "QTS Aurora-Denver",
+    "class": "facility",
+    "query": "QTS Data Centers Aurora, Colorado campus expansion: Xcel Energy power agreements, Aurora city approvals, construction milestones. Track any material development including power interconnection filings, zoning or permit actions, construction milestones, ownership or tenant changes, community opposition, and water or environmental restrictions.",
+    "frequency": "1h",
+    "region": "Colorado",
+    "facilityCode": "QTS-AUR",
+    "states": [
+      "CO"
+    ]
+  },
+  "discovery-hyperscale": {
+    "monitorId": "",
+    "name": "New Hyperscale Sites",
+    "class": "discovery",
+    "query": "Newly disclosed or rumored hyperscale data center projects in the U.S.: large land assemblies (500+ acres), new substation load studies, county rezoning filings consistent with 200MW+ campuses, and reports of hyperscaler site selection activity where no operator has confirmed. Include brownfield or failed-industrial sites with grid access being repurposed for data centers.",
+    "frequency": "1h",
+    "region": "National"
+  },
+  "discovery-power-markets": {
+    "monitorId": "",
+    "name": "Power-First Emerging Markets",
+    "class": "discovery",
+    "query": "U.S. regions newly attracting data center investment due to available power: utility announcements of large-load data center customers, new generation (gas, nuclear, SMR) tied to data center campuses, and secondary markets (Louisiana, Mississippi, Indiana, Wyoming, Alabama, Idaho, Wisconsin) seeing their first large-scale data center proposals or groundbreakings.",
+    "frequency": "1h",
+    "region": "National"
+  }
+}

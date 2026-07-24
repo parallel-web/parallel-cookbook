@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Gerstner Programm', var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-mono: 'FT System Mono', var(--font-geist-mono), 'SF Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* Brand palette */
+  --color-off-white: #F9F8F4;
+  --color-brand: #FB631B;
+  --color-brand-hover: #F4793F;
+  --color-orange-tint: #F79A6F;
+  --color-orange-light: #F9BC9F;
+  --color-orange-wash: #FCDDCF;
+  --color-index-black: #1D1B16;
+  --color-neural: #D8D0BF;
+
+  /* Greys */
+  --color-grey-100: #F6F6F6;
+  --color-grey-200: #EEEEEE;
+  --color-grey-300: #E5E5E5;
+  --color-grey-400: #D6D6D6;
+  --color-grey-500: #ADADAC;
+  --color-grey-600: #858483;
+  --color-grey-700: #5C5B59;
+  --color-grey-800: #434343;
+  --color-grey-900: #181818;
+
+  /* Semantic */
+  --color-success: #69BE78;
+  --color-error: #E14942;
+}
+
+body {
+  background: var(--color-off-white);
+  color: var(--color-index-black);
+  font-family: var(--font-sans);
+}
+
+/* Leaflet overrides */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Popup must render above everything on the map */
+.leaflet-pane.leaflet-popup-pane {
+  z-index: 800 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 4px;
+  padding: 0;
+  border: 1px solid var(--color-grey-300);
+  box-shadow: 0 4px 12px rgba(29, 27, 22, 0.1);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--color-index-black);
+}
+
+.leaflet-popup-close-button {
+  color: var(--color-grey-600) !important;
+  font-size: 18px !important;
+  padding: 4px 8px !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(249, 248, 244, 0.8) !important;
+  color: var(--color-grey-600) !important;
+}
+
+.leaflet-control-attribution a {
+  color: var(--color-grey-700) !important;
+}
+
+/* Hover tooltip styling */
+.facility-tooltip {
+  background: white !important;
+  border: 1px solid var(--color-grey-300) !important;
+  border-radius: 4px !important;
+  padding: 6px 10px !important;
+  box-shadow: 0 2px 8px rgba(29, 27, 22, 0.08) !important;
+  font-family: var(--font-sans) !important;
+}
+
+.facility-tooltip::before {
+  border-top-color: var(--color-grey-300) !important;
+}
+
+/* Pulse animation for monitor status dot */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
