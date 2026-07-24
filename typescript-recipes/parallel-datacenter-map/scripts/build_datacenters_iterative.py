@@ -4,10 +4,10 @@ Build a US datacenter list with Parallel ultra2x — iterative / paginated.
 
 THE IDEA (why this works)
 ─────────────────────────
-A single broad "find all US datacenters" query plateaus fast (~50): the model
-recalls the facilities it has the most training-signal about (hyperscaler
-campuses) and can't reach the long tail of ~1,800 colocation/enterprise/edge
-operators. Two techniques fix that:
+Exhaustively enumerating US datacenters is a decomposition problem. The market
+is a long tail of ~1,800 colocation, enterprise, telecom, and edge operators with
+no public registry, and a broad, unscoped query surfaces the most prominent
+facilities first. Reaching the full tail takes two techniques:
 
   1. SHARD by geography. Scope every query to ONE state so enumeration
      (reading directories) is the natural move instead of dumping a global

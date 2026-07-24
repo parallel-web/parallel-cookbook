@@ -16,7 +16,7 @@ The whole dataset is a pipeline of Parallel Task API runs. Each stage is a scrip
 
 ### 1. Discover the facilities — `build_datacenters_iterative.py`
 
-There is no clean public registry of U.S. datacenters, so we enumerate them with the Task API. A single "find all US datacenters" query plateaus around ~50 results — the model returns the hyperscaler campuses it has the most signal about and can't reach the long tail of ~1,800 colocation, enterprise, telecom, and edge operators. Two techniques fix that:
+There is no clean public registry of U.S. datacenters, so we enumerate them with the Task API. The market is a long tail of ~1,800 colocation, enterprise, telecom, and edge operators, and enumerating them exhaustively is a decomposition problem: a broad, unscoped query surfaces the most prominent facilities first, so reaching the full tail takes two techniques:
 
 1. **Shard by geography.** Scope every query to *one state*. Enumerating a single state (reading facility directories) is the natural move, instead of dumping a global top-of-mind list. Ashburn alone goes 13 → ~90 this way.
 2. **Paginate via interactions (loop-until-dry).** After the first pass for a state, keep asking for *net-new* facilities while passing `previous_interaction_id`. The model carries its own memory of what it already returned in that thread, so we never paste a list of known facilities into the prompt. Loop until a page stops adding results.
