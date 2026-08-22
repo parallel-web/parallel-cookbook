@@ -88,7 +88,7 @@ LLM agents that use Parallel's Search API as a tool with the Vercel AI SDK.
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
 | [**Search Agent (Cerebras)**](typescript-recipes/parallel-search-agent-cerebras) | Multi-turn web research agent backed by Cerebras (GPT-OSS / Qwen). Iterative multi-angle searches, full-stack with vanilla JS frontend. | `Search` | Cloudflare Workers · Cerebras · AI SDK | [Live](https://oss.parallel.ai/agent/) |
-| [**Search Agent (Groq)**](typescript-recipes/parallel-search-agent-groq) | Same agent shape, Llama 4 Maverick on Groq with 128k context for long sessions. | `Search` | Cloudflare Workers · Groq · AI SDK | [Live](https://oss.parallel.ai/agent/) |
+| [**Search Agent (Groq)**](typescript-recipes/parallel-search-agent-groq) | Llama 4 Maverick agent with measured Search latency, retrieved context, provider-reported tokens, and configurable cost estimates. | `Search` | Cloudflare Workers · Groq · AI SDK | [Live](https://oss.parallel.ai/agent/) |
 
 ### Data Enrichment
 
