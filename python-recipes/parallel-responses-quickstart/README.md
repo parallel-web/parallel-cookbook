@@ -90,9 +90,11 @@ Citations are standard Responses API `url_citation` annotations attached to
 output-text content parts. `parse_response()` walks every output item and
 deduplicates citations by URL before rendering the source list.
 
-The script makes exactly one billed Responses call. It reports a clear contract
-error if that call returns no answer or no URL citations; it does not hide the
-failure behind additional research requests.
+The script invokes `client.responses.create(...)` once. It reports a clear
+contract error if the result has no answer or URL citations, without making
+another research call to repair the result. The SDK's
+[automatic HTTP retries](https://developers.openai.com/api/reference/python/#retries)
+still apply, so one invocation can send more than one HTTP request.
 
 ## Migrating an OpenAI Responses call
 
@@ -128,7 +130,8 @@ uv run pytest -m "not live"
 ```
 
 The billed live smoke test is doubly opt-in: it requires both a key and an
-explicit flag, and it makes exactly one Responses call.
+explicit flag. It invokes `client.responses.create(...)` once, with the same
+SDK retry behavior described above.
 
 ```bash
 PARALLEL_API_KEY="your-api-key-here" \

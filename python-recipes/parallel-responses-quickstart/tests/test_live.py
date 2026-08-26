@@ -1,7 +1,6 @@
 import os
 
 import pytest
-
 from openai import OpenAI
 
 from quickstart import (
