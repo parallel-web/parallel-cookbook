@@ -200,7 +200,7 @@ PARALLEL_SEARCH_MODE=basic
 Every completed agent response reports:
 
 - **Measured:** successful Search calls, Search mode, per-call and aggregate client-side Search latency, returned source and excerpt counts, Unicode excerpt characters, serialized tool-result bytes, and total wall-clock workflow duration.
-- **Provider-reported:** aggregated model input, output, and total token counts from the AI SDK's final `totalUsage` event. A missing count remains `null`; excerpt characters and bytes are never presented as tokens.
+- **Provider-reported:** model input, output, and total token counts summed across the AI SDK's `finish-step` events. If any step omits a count, that workflow count remains `null` instead of reporting a partial sum. Excerpt characters and bytes are never presented as tokens.
 - **Assumed and estimated:** Search and model costs derived from your configured per-unit rates. The total remains `null` until both model rates and actual input/output token counts are available.
 
 Search prices default to the [published Parallel pricing](https://docs.parallel.ai/getting-started/pricing): `turbo` and `fast` are `$1 / 1,000 requests`, while `basic` and `advanced` are `$5 / 1,000 requests`, each including ten results. These defaults are pricing assumptions, not billing receipts. Verify current pricing and override them if your plan differs:
@@ -234,9 +234,12 @@ const stream = new ReadableStream({
   async start(controller) {
     try {
       for await (const chunk of result.fullStream) {
+        if (chunk.type === "finish-step") {
+          economics.recordModelUsage(chunk.usage);
+        }
         const event =
           chunk.type === "finish"
-            ? { ...chunk, economics: economics.summarize(chunk.totalUsage) }
+            ? { ...chunk, economics: economics.summarize() }
             : chunk;
         const data = `data: ${JSON.stringify(event)}\n\n`;
         controller.enqueue(encoder.encode(data));

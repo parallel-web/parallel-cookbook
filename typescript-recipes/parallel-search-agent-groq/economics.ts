@@ -92,8 +92,30 @@ export function createEconomicsTracker(
   let excerptCount = 0;
   let excerptCharacters = 0;
   let serializedResultBytes = 0;
+  let modelUsage: {
+    inputTokens: number | null;
+    outputTokens: number | null;
+    totalTokens: number | null;
+  } | null = null;
 
   return {
+    recordModelUsage(usage?: ModelUsage) {
+      const totals = modelUsage ?? {
+        inputTokens: 0,
+        outputTokens: 0,
+        totalTokens: 0,
+      };
+
+      // SDK totalUsage sums available counts, hiding steps with missing usage.
+      // A workflow count is known only when every model step reported it.
+      for (const key of ["inputTokens", "outputTokens", "totalTokens"] as const) {
+        const count = readTokenCount(usage?.[key]);
+        const total = totals[key];
+        totals[key] = total === null || count === null ? null : total + count;
+      }
+      modelUsage = totals;
+    },
+
     recordSearch(searchResult: SearchResult, elapsedMs: number) {
       if (!Number.isFinite(elapsedMs) || elapsedMs < 0) {
         throw new Error("Search latency must be a non-negative, finite number");
@@ -113,10 +135,10 @@ export function createEconomicsTracker(
       }
     },
 
-    summarize(usage?: ModelUsage) {
-      const inputTokens = readTokenCount(usage?.inputTokens);
-      const outputTokens = readTokenCount(usage?.outputTokens);
-      const totalTokens = readTokenCount(usage?.totalTokens);
+    summarize() {
+      const inputTokens = modelUsage?.inputTokens ?? null;
+      const outputTokens = modelUsage?.outputTokens ?? null;
+      const totalTokens = modelUsage?.totalTokens ?? null;
       const searchCostUsd = roundUsd(
         (searchLatenciesMs.length * config.searchUsdPer1k) / 1_000
       );

@@ -167,11 +167,14 @@ IMPORTANT: Always start by using the search tool - do not provide answers withou
           async start(controller) {
             try {
               for await (const chunk of result.fullStream) {
+                if (chunk.type === "finish-step") {
+                  economics.recordModelUsage(chunk.usage);
+                }
                 const event =
                   chunk.type === "finish"
                     ? {
                         ...chunk,
-                        economics: economics.summarize(chunk.totalUsage),
+                        economics: economics.summarize(),
                       }
                     : chunk;
                 const data = `data: ${JSON.stringify(event)}\n\n`;
