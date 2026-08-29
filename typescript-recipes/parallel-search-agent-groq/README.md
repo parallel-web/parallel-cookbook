@@ -2,7 +2,7 @@
 
 [![janwilmake/parallel-search-agent context](https://badge.forgithub.com/janwilmake/parallel-search-agent?lines=false)](https://uithub.com/janwilmake/parallel-search-agent?lines=false) [![](https://remix.forgithub.com/badge)](https://remix.forgithub.com/janwilmake/parallel-search-agent)
 
-This guide demonstrates how to build a web research agent that combines Parallel's Search API with streaming AI inference. By the end, you'll have a complete search agent with a simple frontend that shows searches, results, and AI responses as they stream in real-time.
+This guide demonstrates how to build a web research agent that combines Parallel's GA Search API with streaming AI inference. By the end, you'll have a complete search agent that shows searches, results, AI responses, measured retrieval and model usage, and clearly labeled cost estimates as they stream in real time.
 
 Complete app available at: https://oss.parallel.ai/agent/
 
@@ -14,6 +14,7 @@ The search agent we're building includes:
 - User-editable system prompt in config modal
 - Agent connection through Parallel Search API tool use
 - Streaming searches, search results, AI reasoning, and AI responses
+- Measured Search latency and context volume, provider-reported model tokens, and configurable cost assumptions
 - Clean rendering of results as they arrive
 
 Our technology stack:
@@ -50,15 +51,36 @@ Now that we understand the architectural advantages, let's walk through building
 ### Dependencies and Setup
 
 ```bash
-npm i ai zod @ai-sdk/groq
+cd typescript-recipes/parallel-search-agent-groq
+npm install
+cp .env.example .dev.vars
 ```
+
+Add your `PARALLEL_API_KEY` and `GROQ_API_KEY` to `.dev.vars`. Then run the deterministic economics tests and start the existing local worker:
+
+```bash
+npm test
+npm run dev
+```
+
+Open the Wrangler URL printed in your terminal, normally `http://localhost:8787`, or inspect the complete event stream directly:
+
+```bash
+curl -N http://localhost:8787/ \
+  -H 'Content-Type: application/json' \
+  -d '{"query":"What recent product changes should an AI developer know about Parallel Search?"}'
+```
+
+The final `finish` event includes an `economics` object. Each invocation makes real model and Search API calls, so latency, returned context, token usage, and estimated cost vary. The tests require no API keys, network access, or model calls.
 
 To prevent TypeScript's "Type instantiation is excessively deep" error, zod requires a version suffix. Import the required functions:
 
 ```typescript
+import Parallel from "parallel-web";
 import { createGroq } from "@ai-sdk/groq";
 import { streamText, tool, stepCountIs } from "ai";
 import { z } from "zod/v4";
+import { createEconomicsTracker, readEconomicsConfig } from "./economics";
 ```
 
 ### Defining the Search Tool
@@ -66,20 +88,27 @@ import { z } from "zod/v4";
 This section covers setting up the core search functionality that will power our AI agent:
 
 ```typescript
-//define execution of the tool
+const economicsConfig = readEconomicsConfig(env);
+const economics = createEconomicsTracker(economicsConfig);
+
 const execute = async ({ objective }) => {
   const parallel = new Parallel({
     apiKey: env.PARALLEL_API_KEY,
   });
 
-  const searchResult = await parallel.beta.search({
+  const startedAt = performance.now();
+  const searchResult = await parallel.search({
     objective,
-    search_queries: undefined,
-    processor: "base",
-    // Keep reasonable to balance context and token usage
-    max_results: 10,
-    max_chars_per_result: 1000,
+    search_queries: [objective],
+    mode: economicsConfig.searchMode,
+    max_chars_total: 25_000,
+    advanced_settings: {
+      max_results: 10,
+      excerpt_settings: { max_chars_per_result: 2_500 },
+    },
   });
+
+  economics.recordSearch(searchResult, performance.now() - startedAt);
   return searchResult;
 };
 
@@ -99,6 +128,7 @@ const searchTool = tool({
   inputSchema: z.object({
     objective: z
       .string()
+      .max(200)
       .describe(
         "Natural-language description of your research goal (max 200 characters)"
       ),
@@ -109,9 +139,9 @@ const searchTool = tool({
 
 ### Key implementation choices:
 
-- We choose "objective" over "search_queries" because it allows for natural language description of research goals, making the tool more intuitive for the AI to use
-- The "base" processor prioritizes speed while "pro" focuses on freshness and quality - choose based on your use case requirements
-- Token limits are balanced to provide sufficient context without overwhelming the model
+- The model writes a natural-language objective, and the Search tool also supplies it as the nonempty `search_queries` array required by GA Search.
+- `basic` preserves the closest GA equivalent to the legacy one-shot integration. Set `PARALLEL_SEARCH_MODE=turbo`, `fast`, `basic`, or `advanced` to compare modes on your own workload.
+- The existing limit of ten sources with at most 2,500 excerpt characters each remains in place. Character and byte measurements describe retrieved context, not tokenizer output.
 
 ## Creating the Streaming Agent
 
@@ -157,12 +187,41 @@ The `stepCountIs(25)` parameter allows the agent to make multiple search calls a
 
 The system prompt guides the agent to conduct multiple searches from different perspectives, which is crucial for comprehensive research.
 
-`.env`
+`.dev.vars`
 
 ```bash
 GROQ_API_KEY=YOUR_KEY
 PARALLEL_API_KEY=YOUR_KEY
+PARALLEL_SEARCH_MODE=basic
 ```
+
+## Measure the actual integration economics
+
+Every completed agent response reports:
+
+- **Measured:** successful Search calls, Search mode, per-call and aggregate client-side Search latency, returned source and excerpt counts, Unicode excerpt characters, serialized tool-result bytes, and total wall-clock workflow duration.
+- **Provider-reported:** model input, output, and total token counts summed across the AI SDK's `finish-step` events. If any step omits a count, that workflow count remains `null` instead of reporting a partial sum. Excerpt characters and bytes are never presented as tokens.
+- **Assumed and estimated:** Search and model costs derived from your configured per-unit rates. The total remains `null` until both model rates and actual input/output token counts are available.
+
+Search prices default to the [published Parallel pricing](https://docs.parallel.ai/getting-started/pricing): `turbo` and `fast` are `$1 / 1,000 requests`, while `basic` and `advanced` are `$5 / 1,000 requests`, each including ten results. These defaults are pricing assumptions, not billing receipts. Verify current pricing and override them if your plan differs:
+
+```bash
+# Example configuration only. Replace the model rates with your actual plan.
+PARALLEL_SEARCH_MODE=turbo
+PARALLEL_SEARCH_USD_PER_1K=1
+MODEL_INPUT_USD_PER_1M=YOUR_INPUT_PRICE_PER_MILLION
+MODEL_OUTPUT_USD_PER_1M=YOUR_OUTPUT_PRICE_PER_MILLION
+```
+
+The estimate uses `search calls × Search price / 1,000` and `(input tokens × input price + output tokens × output price) / 1,000,000`. This recipe requests at most the ten results included in the published Search price. It does not estimate cache discounts, reasoning-specific token rates, taxes, provider credits, unsuccessful requests, or contractual discounts. No benchmark, competitor comparison, or representative latency is implied: run the workflow with your own keys and inputs to collect real measurements.
+
+For a credential-free, reproducible check of Unicode context measurement, multi-call aggregation, GA mode pricing, missing provider usage, invalid configuration, and model-cost arithmetic:
+
+```bash
+npm test
+```
+
+The fixture values in those tests are deterministic arithmetic examples, not live benchmark results.
 
 ## Streaming Response Handler
 
@@ -175,7 +234,14 @@ const stream = new ReadableStream({
   async start(controller) {
     try {
       for await (const chunk of result.fullStream) {
-        const data = `data: ${JSON.stringify(chunk)}\n\n`;
+        if (chunk.type === "finish-step") {
+          economics.recordModelUsage(chunk.usage);
+        }
+        const event =
+          chunk.type === "finish"
+            ? { ...chunk, economics: economics.summarize() }
+            : chunk;
+        const data = `data: ${JSON.stringify(event)}\n\n`;
         controller.enqueue(encoder.encode(data));
       }
       controller.enqueue(encoder.encode("data: [DONE]\n\n"));
@@ -366,7 +432,7 @@ function handleStreamChunk(chunk) {
       break;
     case "finish":
       finalizeCurrentSection();
-      addFinishIndicator(chunk.finishReason);
+      addFinishIndicator(chunk.finishReason, chunk.economics);
       console.log("Research completed with reason:", chunk.finishReason);
       break;
   }
@@ -384,6 +450,8 @@ The complete source files provide essential context for both backend logic and f
 Essential source files:
 
 - `worker.ts` - Complete backend implementation
+- `economics.ts` - Measured retrieval, provider usage, and explicit pricing assumptions
+- `economics.test.mjs` - Deterministic, credential-free regression coverage
 - `index.html` - Frontend with streaming UI
 
 These files contain the complete TypeScript definitions and HTML implementation that are essential for understanding the full integration between the Parallel Search API and the streaming frontend.
@@ -401,7 +469,7 @@ The guide uses Llama 4 Maverick 17B on Groq, which provides excellent speed and 
 This demonstration omits several production requirements:
 Authentication: No user authentication is implemented
 
-- Rate limiting: Currently limited only by API budgets
+- Rate limiting: Uses the configured Cloudflare KV namespace; configure your own namespace for deployment
 - Error handling: Basic error handling is shown but could be expanded
 - Monitoring: No observability or logging beyond basic console output
 
@@ -413,4 +481,6 @@ Resources:
 
 - [Complete source code](https://github.com/parallel-web/parallel-cookbook/tree/main/typescript-recipes/parallel-search-agent)
 - [Parallel API documentation](https://docs.parallel.ai/)
+- [Search migration guide](https://docs.parallel.ai/search/search-migration-guide)
+- [Current Search pricing](https://docs.parallel.ai/getting-started/pricing)
 - [Get Parallel API keys](https://platform.parallel.ai/)

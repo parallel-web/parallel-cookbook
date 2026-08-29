@@ -1,8 +1,9 @@
 /// <reference types="@cloudflare/workers-types" />
-import { Parallel } from "parallel-web";
+import Parallel from "parallel-web";
 import { createGroq } from "@ai-sdk/groq";
 import { streamText, tool, stepCountIs } from "ai";
 import { z } from "zod/v4";
+import { createEconomicsTracker, readEconomicsConfig } from "./economics";
 import { rateLimitMiddleware } from "./ratelimit";
 //@ts-ignore
 import indexHtml from "./index.html";
@@ -11,6 +12,10 @@ export interface Env {
   PARALLEL_API_KEY: string;
   GROQ_API_KEY: string;
   RATE_LIMIT_KV: KVNamespace;
+  PARALLEL_SEARCH_MODE?: string;
+  PARALLEL_SEARCH_USD_PER_1K?: string;
+  MODEL_INPUT_USD_PER_1M?: string;
+  MODEL_OUTPUT_USD_PER_1M?: string;
 }
 
 function getClientIP(request: Request): string {
@@ -81,26 +86,27 @@ export default {
           return new Response("Query is required", { status: 400 });
         }
 
+        const economicsConfig = readEconomicsConfig(env);
+        const economics = createEconomicsTracker(economicsConfig);
+
         const execute = async ({ objective }) => {
           const parallel = new Parallel({
             apiKey: env.PARALLEL_API_KEY,
           });
 
-          const searchResult = await parallel.beta.search({
-            // Choose objective or search queries. We choose objective because it allows natural language way of describing what you're looking for
+          const searchStartedAt = performance.now();
+          const searchResult = await parallel.search({
             objective,
-            search_queries: undefined,
-            // "base" works best for apps where speed is important, while "pro" is better when freshness and content-quality is critical
-            processor: "base",
-
-            source_policy: {
-              exclude_domains: undefined,
-              include_domains: undefined,
+            search_queries: [objective],
+            mode: economicsConfig.searchMode,
+            max_chars_total: 25_000,
+            advanced_settings: {
+              max_results: 10,
+              excerpt_settings: { max_chars_per_result: 2_500 },
             },
-            max_results: 10,
-            // Keep low to save tokens
-            max_chars_per_result: 2500,
           });
+          economics.recordSearch(searchResult, performance.now() - searchStartedAt);
+
           return searchResult;
         };
 
@@ -120,6 +126,7 @@ export default {
           inputSchema: z.object({
             objective: z
               .string()
+              .max(200)
               .describe(
                 "Natural-language description of your research goal (max 200 characters)"
               ),
@@ -160,7 +167,17 @@ IMPORTANT: Always start by using the search tool - do not provide answers withou
           async start(controller) {
             try {
               for await (const chunk of result.fullStream) {
-                const data = `data: ${JSON.stringify(chunk)}\n\n`;
+                if (chunk.type === "finish-step") {
+                  economics.recordModelUsage(chunk.usage);
+                }
+                const event =
+                  chunk.type === "finish"
+                    ? {
+                        ...chunk,
+                        economics: economics.summarize(),
+                      }
+                    : chunk;
+                const data = `data: ${JSON.stringify(event)}\n\n`;
                 controller.enqueue(encoder.encode(data));
               }
               controller.enqueue(encoder.encode("data: [DONE]\n\n"));
