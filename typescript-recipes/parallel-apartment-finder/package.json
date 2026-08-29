@@ -1,0 +1,38 @@
+{
+  "name": "parallel-apartment-finder",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fontsource-variable/geist": "^5.2.8",
+    "@fontsource-variable/geist-mono": "^5.2.8",
+    "@tailwindcss/postcss": "^4.2.4",
+    "leaflet": "^1.9.4",
+    "next": "^15.3.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "shadcn": "^4.7.0",
+    "tailwindcss": "^4.2.4"
+  },
+  "overrides": {
+    "postcss": "^8.5.10"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/leaflet": "^1.9.21",
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.2.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.5.0",
+    "typescript": "~6.0.2",
+    "typescript-eslint": "^8.58.2"
+  }
+}

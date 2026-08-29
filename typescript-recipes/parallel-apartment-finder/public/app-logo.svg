@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 56">
+  <!-- Lockup: house mark + wordmark. Geist Medium when available; SVG rendered
+       via <img> falls back to Helvetica/Arial at the same weight. -->
+  <g transform="translate(2,4) scale(0.75)">
+    <path d="M32 4 L58 26 V53 Q58 60 51 60 H13 Q6 60 6 53 V26 Z" fill="#1D1B16"/>
+    <g fill="#FCFCFA">
+      <rect x="13" y="28" width="10" height="10" rx="2"/>
+      <rect x="27" y="28" width="10" height="10" rx="2" fill="#FB631B"/>
+      <rect x="41" y="28" width="10" height="10" rx="2"/>
+      <rect x="13" y="42" width="10" height="10" rx="2"/>
+      <rect x="41" y="42" width="10" height="10" rx="2"/>
+      <rect x="27" y="42" width="10" height="18" rx="2"/>
+    </g>
+  </g>
+  <text x="58" y="36" font-family="Geist, 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="500" letter-spacing="-0.2" fill="#1D1B16">Apartment Finder</text>
+</svg>
