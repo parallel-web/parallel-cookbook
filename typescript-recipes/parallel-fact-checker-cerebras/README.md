@@ -96,7 +96,7 @@ RULES:
     });
 
     // Stream facts as they're extracted
-    for await (const chunk of factsResult.textStream) {
+    for await (const chunk of modelText(factsResult)) {
       // Parse complete FACT: lines and emit them immediately
       // ...
     }
@@ -123,12 +123,14 @@ async function verifyFact(
 ): Promise<void> {
   try {
     // Search for evidence using Parallel
-    const searchResult = await parallel.beta.search({
+    const searchResult = await parallel.search({
       objective: `Find reliable sources to verify or refute this claim: "${fact.text}"`,
       search_queries: [fact.text],
-      processor: "base",
-      max_results: 5,
-      max_chars_per_result: 2000,
+      mode: "basic",
+      advanced_settings: {
+        max_results: 5,
+        excerpt_settings: { max_chars_per_result: 2000 },
+      },
     });
 
     // Have LLM analyze the evidence
@@ -148,7 +150,7 @@ EXPLANATION: [Brief 1-2 sentence explanation]`,
 Evidence from web search:
 ${JSON.stringify(searchResult.results?.slice(0, 3).map(r => ({
   title: r.title,
-  excerpt: r.excerpts?.slice(0, 500)
+  excerpt: r.excerpts?.join("\n").slice(0, 2000)
 })), null, 2)}`,
       maxOutputTokens: 500,
     });
@@ -176,11 +178,10 @@ await Promise.all(
 When a user provides a URL, we extract the content using Parallel's Extract API:
 
 ```typescript
-const extractResult = await parallel.beta.extract({
+const extractResult = await parallel.extract({
   urls: [extractUrl],
   objective: "Extract the article text and key claims from this webpage",
-  excerpts: true,
-  full_content: false,
+  advanced_settings: { full_content: false },
 });
 
 const rawContent = extractResult.results[0].full_content ||
@@ -213,6 +214,8 @@ sendSSE(controller, encoder, { type: "fact_verdict", factId, status, explanation
 sendSSE(controller, encoder, { type: "warning", message: "Content was truncated for this demo" });
 sendSSE(controller, encoder, { type: "error", error: "Demo is experiencing high traffic. Please try again later." });
 ```
+
+The `modelText` helper consumes the AI SDK's `fullStream` and throws on error events. Reading `textStream` alone silently filters those events out, which can make failed inference look like content with no claims. Only an actual empty response should be reported as having no verifiable claims.
 
 The frontend handles these events to update the UI in real-time, showing facts as they're extracted and verdicts as they arrive.
 
@@ -296,6 +299,16 @@ Extract content from URL and fact-check it. Content is truncated to 5,000 charac
 | `warning` | Warning message (e.g., content truncated, rate limit hit) |
 | `error` | Error occurred |
 | `complete` | Processing finished |
+
+## Validation and operations
+
+Run `npm test` for regression tests and `npm run typecheck` for TypeScript validation. Test both pasted text and URL input with working keys before deployment.
+
+The public demo runs as the `cerebras-fact-checker` Cloudflare Worker. Worker invocation logs are enabled in `wrangler.jsonc`. In Cloudflare, use Workers & Pages to inspect this Worker's Metrics and Observability views. Request counts include page loads and API requests; filter by `/check` and `/extract` where possible. A streamed application error can still return HTTP 200, so HTTP success counts alone do not measure successful fact checks.
+
+There is no browser analytics or conversion-event instrumentation in this recipe. Cloudflare traffic and logs can help diagnose usage and failures, but they do not provide a visitor-to-successful-check funnel. Parallel org usage counts API calls, which can include several searches per fact-checking session.
+
+If the deployed demo fails while local tests work, inspect the deployed Worker's inference errors and the credentials in the correct environment. Do not copy a personal key into the public demo. Provision the demo's own service credentials, then test both input paths again.
 
 ## Demo Limitations
 
