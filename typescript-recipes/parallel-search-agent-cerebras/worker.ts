@@ -48,20 +48,17 @@ export default {
             apiKey: env.PARALLEL_API_KEY,
           });
 
-          const searchResult = await parallel.beta.search({
-            // Choose objective or search queries. We choose objective because it allows natural language way of describing what you're looking for
+          const searchResult = await parallel.search({
             objective,
-            search_queries: undefined,
-            // "base" works best for apps where speed is important, while "pro" is better when freshness and content-quality is critical
-            processor: "base",
-
-            source_policy: {
-              exclude_domains: undefined,
-              include_domains: undefined,
+            // Reuse the tool's objective as the required query without another inference call.
+            search_queries: [objective],
+            // Keep search latency low for the interactive agent.
+            mode: "basic",
+            advanced_settings: {
+              max_results: 10,
+              // Keep low to save tokens.
+              excerpt_settings: { max_chars_per_result: 2500 },
             },
-            max_results: 10,
-            // Keep low to save tokens
-            max_chars_per_result: 2500,
           });
           return searchResult;
         };
