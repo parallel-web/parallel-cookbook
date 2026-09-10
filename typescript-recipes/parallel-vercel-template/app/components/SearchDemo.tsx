@@ -108,7 +108,7 @@ export default function SearchDemo() {
               Search Objective
             </label>
             <a
-              href="https://docs.parallel.ai/api-reference/search-beta/search"
+              href="https://docs.parallel.ai/api-reference/search/search"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
