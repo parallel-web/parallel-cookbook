@@ -160,7 +160,7 @@ How Parallel composes with cloud AI platforms.
 
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
-| [**Vertex AI Grounding**](python-recipes/gemini_ai_demo) | Ground Gemini on Vertex AI with the Parallel Search API for current, cited responses. Supports both GCP Marketplace and BYOK auth. | `Search` | Python · Google Vertex AI | – |
+| [**Gemini + Parallel Enrichment**](python-recipes/gemini_ai_demo) | Fill missing company, people, and product details with Gemini and Parallel, using Google’s native SDK. Returns structured records with sources attached. | `Search` | Python · Google Vertex AI | – |
 | [**Competitive Analysis**](https://github.com/parallel-web/competitive-analysis-demo) | Web Enrichment + Reddit MCP combined to produce competitive briefs. | `Task` `MCP` | Python | [Live](https://competitive-analysis-demo.parallel.ai/) |
 
 ## Community Examples
