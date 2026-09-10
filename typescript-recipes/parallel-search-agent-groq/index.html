@@ -752,7 +752,7 @@
                 case 'finish':
                     finalizeCurrentSection();
                     removeLoadingIndicator();
-                    addFinishIndicator(chunk.finishReason);
+                    addFinishIndicator(chunk.finishReason, chunk.economics);
                     console.log('Research completed with reason:', chunk.finishReason);
                     break;
             }
@@ -987,7 +987,7 @@
             return div.innerHTML;
         }
 
-        function addFinishIndicator(finishReason) {
+        function addFinishIndicator(finishReason, economics) {
             const finishElement = document.createElement('div');
             finishElement.className = 'finish-indicator p-4 sm:p-5 rounded mb-4 search-result';
 
@@ -1001,6 +1001,46 @@
                     <span class="ml-2 text-xs text-light-secondary">• ${reasonDisplay}</span>
                 </div>
             `;
+
+            if (economics) {
+                const details = document.createElement('dl');
+                details.className = 'mt-3 grid gap-2 text-xs sm:text-sm text-light-secondary';
+
+                const measuredTokens = economics.inference.inputTokens === null || economics.inference.outputTokens === null
+                    ? 'Unavailable from the model provider'
+                    : `${economics.inference.inputTokens.toLocaleString()} input / ${economics.inference.outputTokens.toLocaleString()} output`;
+                const modelCost = economics.inference.estimatedCostUsd === null
+                    ? 'Unavailable until model rates and token usage are provided'
+                    : `$${economics.inference.estimatedCostUsd.toFixed(6)}`;
+                const totalCost = economics.workflow.estimatedTotalCostUsd === null
+                    ? 'Unavailable until model rates and token usage are provided'
+                    : `$${economics.workflow.estimatedTotalCostUsd.toFixed(6)}`;
+                const rows = [
+                    ['Measured search calls', `${economics.search.calls} (${economics.search.mode})`],
+                    ['Measured search latency', `${economics.search.totalLatencyMs.toLocaleString()} ms across all calls`],
+                    ['Measured retrieved context', `${economics.search.excerptCharacters.toLocaleString()} excerpt characters; ${economics.search.serializedResultBytes.toLocaleString()} tool-result JSON bytes`],
+                    ['Provider-reported model tokens', measuredTokens],
+                    ['Estimated search cost', `$${economics.search.estimatedCostUsd.toFixed(6)} at $${economics.search.assumedUsdPer1k}/1,000 calls`],
+                    ['Estimated model cost', modelCost],
+                    ['Measured workflow duration', `${economics.workflow.elapsedMs.toLocaleString()} ms`],
+                    ['Estimated total cost', totalCost],
+                ];
+
+                for (const [label, value] of rows) {
+                    const row = document.createElement('div');
+                    const term = document.createElement('dt');
+                    const description = document.createElement('dd');
+
+                    row.className = 'flex flex-wrap justify-between gap-x-4';
+                    term.textContent = label;
+                    description.textContent = value;
+                    row.append(term, description);
+                    details.appendChild(row);
+                }
+
+                finishElement.appendChild(details);
+            }
+
             resultsContent.appendChild(finishElement);
         }
 
