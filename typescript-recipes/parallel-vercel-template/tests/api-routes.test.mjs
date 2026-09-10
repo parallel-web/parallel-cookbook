@@ -50,14 +50,14 @@ test("routes serialize v1 requests and preserve response and Task contracts", as
       objective: "AI safety", search_queries: ["AI safety"], mode: "basic",
       advanced_settings: { max_results: 10, excerpt_settings: { max_chars_per_result: 2500 } },
     } });
-    await search.POST(post({ objective: "AI safety", searchQueries: [" alignment ", " "], mode: "agentic", maxResults: 3 }));
+    await search.POST(post({ objective: "AI safety", searchQueries: [" alignment ", " "], mode: "advanced", maxResults: 3 }));
     assert.deepEqual(calls.at(-1).body.search_queries, ["alignment"]);
     assert.equal(calls.at(-1).body.mode, "advanced");
     assert.equal(calls.at(-1).body.advanced_settings.max_results, 3);
     await search.POST(post({ objective: "AI safety", searchQueries: [" "] }));
     assert.deepEqual(calls.at(-1).body.search_queries, ["AI safety"]);
     const count = calls.length;
-    for (const body of [{ objective: " " }, { objective: "x", searchQueries: "x" }, { objective: "x", mode: "invalid" }]) {
+    for (const body of [{ objective: " " }, { objective: "x", searchQueries: "x" }, { objective: "x", mode: "invalid" }, { objective: "x", mode: "agentic" }]) {
       assert.equal((await search.POST(post(body))).status, 400);
     }
     assert.equal(calls.length, count);

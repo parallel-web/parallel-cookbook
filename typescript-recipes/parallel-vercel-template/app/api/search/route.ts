@@ -23,13 +23,7 @@ export async function POST(request: NextRequest) {
       return errorResponse("searchQueries must be an array of strings", 400);
     }
 
-    // Preserve the demo's legacy mode selections using their current equivalents.
-    const searchMode =
-      mode === "agentic"
-        ? "advanced"
-        : mode === "one-shot" || !mode
-          ? "basic"
-          : mode;
+    const searchMode = mode || "basic";
     if (!["turbo", "fast", "basic", "advanced"].includes(searchMode)) {
       return errorResponse("Unsupported search mode", 400);
     }

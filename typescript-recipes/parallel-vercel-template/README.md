@@ -39,7 +39,7 @@ View the demo at:
 
 ### How It Works
 
-1. **Search**: User enters a search objective and optional queries → API calls `client.search()` → Returns ranked results with excerpts. The route uses the objective as a query when queries are omitted, and maps one-shot to `basic` and agentic to `advanced`
+1. **Search**: User enters a search objective and optional queries → API calls `client.search()` → Returns ranked results with excerpts. The route uses the objective as a query when queries are omitted, with a choice of `basic` or `advanced` search
 2. **Extract**: User enters URLs and optional objective → API calls `client.extract()` → Returns extracted content
 3. **Tasks**: User enters a research task → API calls `client.taskRun.create()` → SSE stream delivers real-time progress → Final output displayed on completion
 
