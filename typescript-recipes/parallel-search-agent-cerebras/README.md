@@ -50,12 +50,13 @@ Now that we understand the architectural advantages, let's walk through building
 ### Dependencies and Setup
 
 ```bash
-npm i ai zod @ai-sdk/cerebras
+npm i ai zod @ai-sdk/cerebras parallel-web@^1.3.3
 ```
 
 To prevent TypeScript's "Type instantiation is excessively deep" error, zod requires a version suffix. Import the required functions:
 
 ```typescript
+import { Parallel } from "parallel-web";
 import { createCerebras } from "@ai-sdk/cerebras";
 import { streamText, tool, stepCountIs } from "ai";
 import { z } from "zod/v4";
@@ -72,13 +73,17 @@ const execute = async ({ objective }) => {
     apiKey: env.PARALLEL_API_KEY,
   });
 
-  const searchResult = await parallel.beta.search({
+  const searchResult = await parallel.search({
     objective,
-    search_queries: undefined,
-    processor: "base",
-    // Keep reasonable to balance context and token usage
-    max_results: 10,
-    max_chars_per_result: 1000,
+    // Reuse the tool's objective as the required query without another inference call.
+    search_queries: [objective],
+    // Keep search latency low for the interactive agent.
+    mode: "basic",
+    advanced_settings: {
+      max_results: 10,
+      // Keep low to save tokens.
+      excerpt_settings: { max_chars_per_result: 2500 },
+    },
   });
   return searchResult;
 };
@@ -109,9 +114,9 @@ const searchTool = tool({
 
 ### Key implementation choices:
 
-- We choose "objective" over "search_queries" because it allows for natural language description of research goals, making the tool more intuitive for the AI to use
-- The "base" processor prioritizes speed while "pro" focuses on freshness and quality - choose based on your use case requirements
-- Token limits are balanced to provide sufficient context without overwhelming the model
+- The tool accepts a natural-language `objective` and reuses it as the required `search_queries` entry, so it needs no extra inference call. The API recommends concise keyword queries; a separate query field is an option if you want to tune retrieval.
+- We set `mode: "basic"` to keep latency low for the interactive agent. Omitting the mode would use `advanced`.
+- `advanced_settings` limits results to 10 and excerpts to 2,500 characters per result, matching the worker.
 
 ## Creating the Streaming Agent
 
