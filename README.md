@@ -47,7 +47,9 @@ npm install parallel-web
 import Parallel from "parallel-web";
 const client = new Parallel({ apiKey: process.env.PARALLEL_API_KEY });
 
-const result = await client.beta.search({
+const result = await client.search({
+  mode: "advanced",
+  search_queries: ["AI startup funding rounds 2026", "AI startup funding announcements 2026"],
   objective: "Find the latest funding round announcements for AI startups in 2026",
 });
 console.log(result.results);
