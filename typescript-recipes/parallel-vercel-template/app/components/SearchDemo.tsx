@@ -14,7 +14,7 @@ interface SearchResponse {
   error?: string;
 }
 
-type SearchMode = "one-shot" | "agentic";
+type SearchMode = "basic" | "advanced";
 
 interface StoredSearchState {
   objective: string;
@@ -27,14 +27,14 @@ interface StoredSearchState {
 const INITIAL_STATE: StoredSearchState = {
   objective: "",
   searchQueries: "",
-  mode: "one-shot",
+  mode: "basic",
   results: [],
   error: null,
 };
 
 export default function SearchDemo() {
   const [storedState, setStoredState, clearStoredState, isHydrated] =
-    useSessionStorage<StoredSearchState>("parallel-search-demo", INITIAL_STATE);
+    useSessionStorage<StoredSearchState>("parallel-search-demo-v1", INITIAL_STATE);
 
   const [loading, setLoading] = useState(false);
 
@@ -108,7 +108,7 @@ export default function SearchDemo() {
               Search Objective
             </label>
             <a
-              href="https://docs.parallel.ai/api-reference/search-beta/search"
+              href="https://docs.parallel.ai/api-reference/search/search"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
@@ -150,31 +150,31 @@ export default function SearchDemo() {
           <div className="flex gap-2">
             <button
               type="button"
-              onClick={() => setMode("one-shot")}
+              onClick={() => setMode("basic")}
               className={`flex-1 py-2 px-3 text-sm font-medium rounded-lg border transition-colors ${
-                mode === "one-shot"
+                mode === "basic"
                   ? "bg-blue-600 text-white border-blue-600"
                   : "bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-700"
               }`}
             >
-              One-shot
+              Basic
             </button>
             <button
               type="button"
-              onClick={() => setMode("agentic")}
+              onClick={() => setMode("advanced")}
               className={`flex-1 py-2 px-3 text-sm font-medium rounded-lg border transition-colors ${
-                mode === "agentic"
+                mode === "advanced"
                   ? "bg-blue-600 text-white border-blue-600"
                   : "bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 border-zinc-300 dark:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-zinc-700"
               }`}
             >
-              Agentic
+              Advanced
             </button>
           </div>
           <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
-            {mode === "one-shot"
-              ? "Comprehensive results with longer excerpts for single-query answers"
-              : "Concise, token-efficient results for use in agentic loops"}
+            {mode === "basic"
+              ? "Low-latency search, best with 2-3 focused queries"
+              : "Higher-quality search with more advanced retrieval and compression"}
           </p>
         </div>
 

@@ -11,18 +11,38 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { objective, searchQueries, mode, maxResults } = body;
 
-    if (!objective) {
+    if (typeof objective !== "string" || !objective.trim()) {
       return errorResponse("objective is required", 400);
     }
 
+    if (
+      searchQueries !== undefined &&
+      (!Array.isArray(searchQueries) ||
+        searchQueries.some((query: unknown) => typeof query !== "string"))
+    ) {
+      return errorResponse("searchQueries must be an array of strings", 400);
+    }
+
+    const searchMode = mode || "basic";
+    if (!["turbo", "fast", "basic", "advanced"].includes(searchMode)) {
+      return errorResponse("Unsupported search mode", 400);
+    }
+    const queries = (searchQueries ?? [])
+      .map((query: string) => query.trim())
+      .filter(Boolean);
     const client = getParallelClient();
 
-    const searchResult = await client.beta.search({
+    const searchResult = await client.search({
       objective,
-      search_queries: searchQueries || undefined,
-      mode: mode || "one-shot",
-      max_results: maxResults || SEARCH_DEFAULTS.MAX_RESULTS,
-      max_chars_per_result: SEARCH_DEFAULTS.MAX_CHARS_PER_RESULT,
+      // Keep objective-only submissions working with v1's required queries.
+      search_queries: queries.length ? queries : [objective.trim()],
+      mode: searchMode,
+      advanced_settings: {
+        max_results: maxResults || SEARCH_DEFAULTS.MAX_RESULTS,
+        excerpt_settings: {
+          max_chars_per_result: SEARCH_DEFAULTS.MAX_CHARS_PER_RESULT,
+        },
+      },
     });
 
     return NextResponse.json(searchResult);

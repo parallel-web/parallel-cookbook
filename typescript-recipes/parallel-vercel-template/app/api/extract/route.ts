@@ -16,11 +16,11 @@ export async function POST(request: NextRequest) {
 
     const client = getParallelClient();
 
-    const extractResult = await client.beta.extract({
+    const extractResult = await client.extract({
       urls,
       objective: objective?.trim() || undefined,
-      excerpts: true,
-      full_content: false,
+      // Excerpts are enabled by default in v1.
+      advanced_settings: { full_content: false },
     });
 
     return NextResponse.json(extractResult);

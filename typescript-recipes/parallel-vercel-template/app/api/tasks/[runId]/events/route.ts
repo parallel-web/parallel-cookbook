@@ -14,8 +14,7 @@ export async function GET(
   try {
     const client = getParallelClient();
 
-    // Use the SDK's beta.taskRun.events() method to get the event stream
-    const eventStream = await client.beta.taskRun.events(runId);
+    const eventStream = await client.taskRun.events(runId);
 
     // Create a ReadableStream that converts SDK events to SSE format
     const stream = new ReadableStream({

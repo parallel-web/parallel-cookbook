@@ -29,18 +29,18 @@ View the demo at:
         │ localStorage          │
         ▼                       ▼
 ┌─────────────────┐     ┌─────────────────┐
-│  SearchDemo     │     │  /api/search    │  → client.beta.search()
-│  ExtractDemo    │     │  /api/extract   │  → client.beta.extract()
+│  SearchDemo     │     │  /api/search    │  → client.search()
+│  ExtractDemo    │     │  /api/extract   │  → client.extract()
 │  TasksDemo      │     │  /api/tasks     │  → client.taskRun.create()
 └─────────────────┘     │  /api/tasks/[id]/status  │  → client.taskRun.retrieve()
-                        │  /api/tasks/[id]/events  │  → client.beta.taskRun.events()
+                        │  /api/tasks/[id]/events  │  → client.taskRun.events()
                         └─────────────────┘
 ```
 
 ### How It Works
 
-1. **Search**: User enters a search objective and optional queries → API calls `client.beta.search()` → Returns ranked results with excerpts
-2. **Extract**: User enters URLs and optional objective → API calls `client.beta.extract()` → Returns extracted content
+1. **Search**: User enters a search objective and optional queries → API calls `client.search()` → Returns ranked results with excerpts. The route uses the objective as a query when queries are omitted, with a choice of `basic` or `advanced` search
+2. **Extract**: User enters URLs and optional objective → API calls `client.extract()` → Returns extracted content
 3. **Tasks**: User enters a research task → API calls `client.taskRun.create()` → SSE stream delivers real-time progress → Final output displayed on completion
 
 ## Quick Start
@@ -126,8 +126,8 @@ Go to your [Vercel Integration page](https://vercel.com/marketplace/parallel), s
 ## Resources
 
 - [Parallel Documentation](https://docs.parallel.ai)
-- [Search API Reference](https://docs.parallel.ai/api-reference/search-beta/search)
-- [Extract API Reference](https://docs.parallel.ai/api-reference/extract-beta/extract)
+- [Search API Reference](https://docs.parallel.ai/api-reference/search/search)
+- [Extract API Reference](https://docs.parallel.ai/api-reference/extract/extract)
 - [Tasks API Reference](https://docs.parallel.ai/api-reference/tasks-v1/create-task-run)
 - [SSE Streaming Guide](https://docs.parallel.ai/task-api/task-sse)
 - [Pricing](https://docs.parallel.ai/resources/pricing)

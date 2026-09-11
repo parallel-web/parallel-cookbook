@@ -103,7 +103,7 @@ export default function ExtractDemo() {
               URLs to Extract (one per line)
             </label>
             <a
-              href="https://docs.parallel.ai/api-reference/extract-beta/extract"
+              href="https://docs.parallel.ai/api-reference/extract/extract"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-green-600 dark:text-green-400 hover:underline"
