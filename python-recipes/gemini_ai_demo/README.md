@@ -1,54 +1,39 @@
-# Vertex AI Gemini with Parallel Web Search Grounding
+# Enrich data with Gemini and Parallel Web Search
 
-This integration demonstrates how to use [Parallel's Web Search API](https://parallel.ai) as a grounding source for Gemini models on Google Cloud Vertex AI. Grounding with Parallel enables Gemini to access real-time web information to provide accurate, up-to-date responses.
+Have a company name and website, but need the missing details? The [enrichment notebook](gemini_search_enrichment.ipynb) shows how to research a company with Gemini and Parallel, then turn the answer into a record with sources attached.
 
-## Overview
+It follows one company from input to result, then reuses the same code for a person and a product. You'll use Google's native `parallel_ai_search` tool throughout. Read about [the Parallel and Google Cloud integration](https://parallel.ai/blog/google-cloud-partnership).
 
-Grounding with Parallel on Vertex AI connects Gemini models to Parallel's LLM-optimized web search index. This ensures responses are:
+## Run the notebook
 
-- **Current**: Access to live information from billions of web pages
-- **Accurate**: Responses grounded in verifiable sources
-- **Cited**: Sources are returned with each response for verification
+From the repository root:
 
-### Use Cases
-
-- **Information Enrichment**: Complete or enrich entity data with current web information
-- **Multi-hop Agents**: Deep web searches for complex questions
-- **Research Assistants**: Employee-facing tools for reports using latest web data
-- **Consumer Applications**: Retail and travel apps with informed purchase decisions
-- **Automated Agents**: News analysis, KYC checks, and other automated tasks
-- **Vertical Agents**: Sales, coding, and finance agents with current context
-
-## Architecture
-
+```bash
+cd python-recipes/gemini_ai_demo
+uv sync --frozen --extra notebook
+export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
+gcloud auth application-default login
+uv run --frozen --extra notebook jupyter notebook gemini_search_enrichment.ipynb
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    Your Application                          │
-│  client.generate("What is the latest news about AI?")       │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  Vertex AI Gemini API                        │
-│  - Receives prompt with Parallel grounding config           │
-│  - Model determines search queries needed                   │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│                 Parallel Web Search API                      │
-│  - Executes semantic web searches                           │
-│  - Returns LLM-optimized content and citations              │
-└─────────────────────────────────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  Grounded Response                           │
-│  - Generated text with real-time information                │
-│  - Source citations for verification                        │
-│  - Search queries executed                                  │
-└─────────────────────────────────────────────────────────────┘
+
+Your Google Cloud project needs billing and the Vertex AI API enabled. For Parallel, enter an API key at the notebook's hidden prompt, or leave it blank if your project has a [Marketplace grounding subscription](https://console.cloud.google.com/marketplace/product/parallel-web-systems-public/parallel-web-systems). You can also set `PARALLEL_API_KEY` before launching Jupyter. A supplied key takes precedence over Marketplace billing.
+
+The notebook uses `google-genai` directly and is self-contained. It checks record identity, citation URLs, and coverage of populated fields. Review the sources before using the facts. Google generation and grounding, plus Parallel search, may incur charges; see [billing details](https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/grounding/grounding-with-parallel#billing).
+
+## Check the code
+
+```bash
+uv run --frozen --extra dev pytest tests/ -q
 ```
+
+The tests exercise the notebook's local checks and the separate REST client. They don't make API calls. To check the live integration, restart the notebook kernel and run all cells with your Google credentials and Parallel access.
+
+## Other examples
+
+The older [quickstart](quickstart.py), [command-line demo](demo.py), and [introductory tutorial](tutorial.ipynb) use the local `GroundedGeminiClient` REST wrapper. The enrichment notebook doesn't depend on that wrapper.
+
+<details>
+<summary>REST client setup and reference</summary>
 
 ## Prerequisites
 
@@ -149,16 +134,6 @@ uv sync --extra notebook
 
 # Launch the tutorial
 jupyter notebook tutorial.ipynb
-```
-
-### 7. Enrichment Cookbook
-
-For a full production pattern built on this client — verifiable company and people
-enrichment with typed outputs and mechanically verified citations — see
-[`gemini_search_enrichment.ipynb`](gemini_search_enrichment.ipynb):
-
-```bash
-jupyter notebook gemini_search_enrichment.ipynb
 ```
 
 ## Usage
@@ -331,24 +306,11 @@ gemini_ai_demo/
 ├── quickstart.py           # Minimal example (~15 lines)
 ├── demo.py                  # Full demo script with comparisons
 ├── tutorial.ipynb          # Interactive Jupyter tutorial
-├── gemini_search_enrichment.ipynb  # Cookbook: verifiable company & people enrichment
+├── gemini_search_enrichment.ipynb  # Cookbook: company, people & product enrichment
 ├── pyproject.toml          # Project configuration
 ├── README.md               # This file
 ├── .env.example            # Environment variable template
 └── .gitignore              # Git ignore patterns
-```
-
-## Testing
-
-```bash
-# Run all tests
-uv run pytest tests/ -v
-
-# Run with coverage
-uv run pytest tests/ --cov=src/gemini_parallel
-
-# Run specific test
-uv run pytest tests/test_client.py::TestGroundedGeminiClient -v
 ```
 
 ## Pricing
@@ -423,3 +385,5 @@ See repository root for license information.
 Your use of Parallel requires Google Cloud to send certain Customer Data to Parallel for processing. Your use of the Parallel service is governed by:
 - [Parallel's Terms of Use](https://parallel.ai/customer-terms)
 - [Parallel's Acceptable Use Policy](https://parallel.ai/acceptable-use-policy)
+
+</details>
