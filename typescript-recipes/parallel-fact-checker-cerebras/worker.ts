@@ -38,6 +38,30 @@ function sendSSE(controller: ReadableStreamDefaultController, encoder: TextEncod
   controller.enqueue(encoder.encode(`data: ${JSON.stringify(data)}\n\n`));
 }
 
+// Only these errors contain messages intended for the public demo UI.
+class DemoError extends Error {}
+
+function publicErrorMessage(error: any): string {
+  if (error instanceof DemoError) return error.message;
+  const cause = error?.lastError ?? error;
+  const status = cause?.statusCode ?? cause?.status;
+  if (status === 429) return "Service is currently rate limited. Please try again in a moment.";
+  if (status === 401 || status === 403) {
+    return "The demo cannot access an upstream service. Please contact the demo owner.";
+  }
+  if (status === 402) return "The demo's service credits are unavailable. Please contact the demo owner.";
+  return "The fact-checking service is unavailable. Please try again later.";
+}
+
+// AI SDK textStream filters out error events. Consume fullStream so a failed
+// inference request cannot look like empty content or an unsupported claim.
+async function* modelText(result: ReturnType<typeof streamText>): AsyncGenerator<string> {
+  for await (const part of result.fullStream) {
+    if (part.type === "error") throw part.error;
+    if (part.type === "text-delta") yield part.text;
+  }
+}
+
 // Parse a fact line with format: FACT: [source span] ||| [claim]
 function parseFactLine(line: string): { sourceSpan: string; text: string } | null {
   const factContent = line.replace("FACT:", "").trim();
@@ -90,7 +114,7 @@ RULES:
     let currentText = "";
     let totalResponse = "";
 
-    for await (const chunk of factsResult.textStream) {
+    for await (const chunk of modelText(factsResult)) {
       currentText += chunk;
       totalResponse += chunk;
 
@@ -132,7 +156,7 @@ RULES:
     // If no facts were found, throw so outer handler can deal with it
     if (extractedFacts.length === 0) {
       console.log("No facts extracted. Response length:", totalResponse.length);
-      throw new Error("No facts could be extracted from the content.");
+      throw new DemoError("No verifiable claims were found in the content.");
     }
   } catch (error: any) {
     console.error("Error extracting facts:", error);
@@ -155,12 +179,14 @@ async function verifyFact(
     sendSSE(controller, encoder, { type: "fact_status", factId: fact.id, status: "searching" });
 
     // Search for evidence
-    const searchResult = await parallel.beta.search({
+    const searchResult = await parallel.search({
       objective: `Find reliable sources to verify or refute this claim: "${fact.text}"`,
       search_queries: [fact.text],
-      processor: "base",
-      max_results: 5,
-      max_chars_per_result: 2000,
+      mode: "basic",
+      advanced_settings: {
+        max_results: 5,
+        excerpt_settings: { max_chars_per_result: 2000 },
+      },
     });
 
     // Get verdict from LLM
@@ -180,7 +206,7 @@ EXPLANATION: [Brief 1-2 sentence explanation of your reasoning]`,
 Evidence from web search:
 ${JSON.stringify(searchResult.results?.slice(0, 3).map((r: any) => ({
   title: r.title,
-  excerpt: r.excerpts?.slice(0, 500)
+  excerpt: r.excerpts?.join("\n").slice(0, 2000)
 })), null, 2)}
 
 Analyze this evidence and provide your verdict.`,
@@ -188,20 +214,17 @@ Analyze this evidence and provide your verdict.`,
     });
 
     let verdictText = "";
-    for await (const chunk of verdictResult.textStream) {
+    for await (const chunk of modelText(verdictResult)) {
       verdictText += chunk;
     }
 
-    // Parse verdict
-    let status: Fact["status"] = "unsure";
-    if (verdictText.includes("VERDICT: VERIFIED") || verdictText.includes("VERDICT:VERIFIED")) {
-      status = "verified";
-    } else if (verdictText.includes("VERDICT: FALSE") || verdictText.includes("VERDICT:FALSE")) {
-      status = "false";
+    const verdictMatch = verdictText.match(/^VERDICT:\s*(VERIFIED|FALSE|UNSURE)\s*$/im);
+    const explanationMatch = verdictText.match(/^EXPLANATION:[ \t]*(.+)/im);
+    if (!verdictMatch || !explanationMatch) {
+      throw new DemoError("The fact-checking service returned an incomplete verdict. Please try again.");
     }
-
-    const explanationMatch = verdictText.match(/EXPLANATION:\s*(.+)/is);
-    const explanation = explanationMatch ? explanationMatch[1].trim().split('\n')[0] : "";
+    const status = verdictMatch[1].toLowerCase() as Fact["status"];
+    const explanation = explanationMatch[1].trim();
 
     const references = searchResult.results?.slice(0, 3).map((r: any) => ({
       title: r.title || "Source",
@@ -219,27 +242,7 @@ Analyze this evidence and provide your verdict.`,
   } catch (error: any) {
     console.error(`Error verifying fact ${fact.id}:`, error);
 
-    // Check for rate limit errors (various patterns from different APIs)
-    const errorStr = JSON.stringify(error) + (error?.message || '') + (error?.lastError?.message || '');
-    const isRateLimit = error?.statusCode === 429 ||
-      error?.lastError?.statusCode === 429 ||
-      errorStr.includes("too_many_requests") ||
-      errorStr.includes("high traffic") ||
-      errorStr.includes("rate limit") ||
-      errorStr.includes("limit exceeded") ||
-      errorStr.includes("RetryError");
-
-    const explanation = isRateLimit
-      ? "Rate limited - please try again later"
-      : "Could not verify due to an error";
-
-    // Send rate limit warning to UI
-    if (isRateLimit) {
-      sendSSE(controller, encoder, {
-        type: "warning",
-        message: "Demo is experiencing high traffic. Some claims could not be verified."
-      });
-    }
+    const explanation = publicErrorMessage(error);
 
     sendSSE(controller, encoder, {
       type: "fact_verdict",
@@ -294,22 +297,21 @@ export default {
               // Phase 1: Extract content from URL using Parallel
               sendSSE(controller, encoder, { type: "phase", phase: "extracting_url" });
 
-              const extractResult = await parallel.beta.extract({
+              const extractResult = await parallel.extract({
                 urls: [extractUrl],
                 objective: "Extract the article text and key claims from this webpage",
-                excerpts: true,
-                full_content: false,
+                advanced_settings: { full_content: false },
               });
 
               if (!extractResult.results || extractResult.results.length === 0) {
-                throw new Error("Could not extract content from URL");
+                throw new DemoError("Could not extract content from URL");
               }
 
               const rawContent = extractResult.results[0].full_content ||
                 extractResult.results[0].excerpts?.join('\n\n') || '';
 
               if (!rawContent) {
-                throw new Error("No content found at URL");
+                throw new DemoError("No content found at URL");
               }
 
               // Truncate content if needed
@@ -346,11 +348,7 @@ export default {
               controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             } catch (error: any) {
               console.error("Stream error:", error);
-              // Send user-friendly error message
-              const errorMsg = error?.message?.includes("limit") || error?.message?.includes("rate") || error?.message?.includes("Retry")
-                ? "Service is currently rate limited. Please try again in a moment."
-                : error.message || "An error occurred";
-              sendSSE(controller, encoder, { type: "error", error: errorMsg });
+              sendSSE(controller, encoder, { type: "error", error: publicErrorMessage(error) });
               sendSSE(controller, encoder, { type: "complete" });
               controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             } finally {
@@ -426,11 +424,7 @@ export default {
               controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             } catch (error: any) {
               console.error("Stream error:", error);
-              // Send user-friendly error message
-              const errorMsg = error?.message?.includes("limit") || error?.message?.includes("rate") || error?.message?.includes("Retry")
-                ? "Service is currently rate limited. Please try again in a moment."
-                : error.message || "An error occurred";
-              sendSSE(controller, encoder, { type: "error", error: errorMsg });
+              sendSSE(controller, encoder, { type: "error", error: publicErrorMessage(error) });
               sendSSE(controller, encoder, { type: "complete" });
               controller.enqueue(encoder.encode("data: [DONE]\n\n"));
             } finally {
