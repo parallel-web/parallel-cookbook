@@ -27,8 +27,10 @@ How it works
 Things the API will not do for you
 - Runs cannot be cancelled once created. Run `plan`, then a small pilot, then
   the full job. Submit high-priority rows first.
-- Your rate limit controls intake, not throughput. Measure a ~5k pilot to
-  learn runs/hour for your processor and spec, then extrapolate.
+- Your rate limit controls intake, not throughput. Pilot at least 5k runs on
+  your real processor and spec, watch `status` until the running count stops
+  climbing, and measure runs/hour from that plateau. Concurrency ramps up, so
+  a small pilot timed end to end understates steady-state throughput.
 
 Requires Python 3.11+ and `pip install parallel-web>=1.3`. Set PARALLEL_API_KEY.
 """
@@ -144,7 +146,7 @@ def plan(n_runs: int, rate_limit: float, runs_per_group: int) -> dict[str, Any]:
         "task_groups": math.ceil(n_runs / runs_per_group),
         "submit_rate_runs_per_min": per_min,
         "enqueue_minutes": round(n_runs / per_min, 1),
-        "note": "Enqueue time only. Execution time depends on processor, spec, and platform load: run a ~5k pilot and extrapolate.",
+        "note": "Enqueue time only. Execution time depends on processor, spec, and platform load: pilot at least 5k runs, measure runs/hour after the running count plateaus, then extrapolate.",
     }
 
 
