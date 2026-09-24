@@ -176,6 +176,7 @@ Built something you want featured? [Open a PR](CONTRIBUTING.md).
 | [Scira (10k+ ⭐)](https://github.com/zaidmukaddam/scira) | [@zaidmukaddam](https://x.com/zaidmukaddam/status/1958583204635439264) | Next.js · Vercel |
 | [Based People](https://github.com/janwilmake/basedpeople) | [@janwilmake](https://github.com/janwilmake) | Cloudflare Workers · TypeScript |
 | [Tasks via MCP + OAuth](https://github.com/janwilmake/universal-mcp-oauth/tree/main/examples/parallel-tool-calling) | [@janwilmake](https://github.com/janwilmake) | Cloudflare Workers · TypeScript |
+| [Giving a task run ears](https://github.com/deapi-ai/parallel-mcp-demo) | [@deapi-ai](https://github.com/deapi-ai) | Python · MCP |
 
 ## Resources & Utilities
 
