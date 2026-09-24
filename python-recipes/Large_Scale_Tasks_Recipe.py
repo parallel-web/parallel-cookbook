@@ -1,519 +1,358 @@
+"""Run a large CSV through the Parallel Task Group API.
 
-"""Script to run large scale batches of tasks.
+One file, four commands, resumable. Built from the pattern we use for
+customer batches in the hundreds of thousands to millions of runs.
 
-## Overview
+    python Large_Scale_Tasks_Recipe.py plan   --input rows.csv --rate-limit 2000
+    python Large_Scale_Tasks_Recipe.py submit --input rows.csv --task-spec spec.json \\
+        --processor core --id-column row_id --work-dir jobs/run1
+    python Large_Scale_Tasks_Recipe.py status --work-dir jobs/run1 --wait
+    python Large_Scale_Tasks_Recipe.py export --work-dir jobs/run1 --output results.jsonl
 
-An overview of the workflow (when running end-to-end):
-1. Enqueue all files.
-  - Artifacts created: output_dir/{input_file_name}_runs.csv
-    This file is used to store the runs. Each file corresponds to one task group.
-  - Note: Non validated files are not enqueued
-2. Fetch all results.
-  - Artifacts created: output_dir/results/{input_file_name}_results.csv and
-    output_dir/runs/{input_file_name}_runs.csv
-    The runs directory is used to store the results. Results for each input file is stored in
-    the results directory at output_dir/{input_file_name}_runs.csv.
-3. Merge results.
-  - Artifacts created: output_dir/merged_results.csv
-    This merges results from the input and output directories and combines them into a single file.
-    The output columns will contain dictionary values that you will have to parse.
+How it works
+- One CSV row becomes one run. Every column except --id-column is sent as a
+  string field of the input object, or pass --input-json-column to send one
+  column as a JSON payload.
+- Runs are added 1,000 per request (the API maximum) with refresh_status=False,
+  sharded into Task Groups of --runs-per-group.
+- Submission is paced at 90% of --rate-limit (runs per minute), because the
+  quota counts runs, not requests. A steady rate beats one burst: it enqueues
+  cleanly and surfaces a bad spec after thousands of rows, not millions.
+- Every add_runs response is appended to work-dir/runs.jsonl before the next
+  request goes out, so a crash or re-run never resubmits a paid run.
+- status polls each group summary (one cheap GET per group). export streams
+  each group's runs to disk with include_output and checks that every input
+  row came back exactly once. It exits 2 if anything is missing or duplicated.
 
-## Setup:
-### Inputs:
-- make sure that the input folder is defined
-- if input size is >1k rows, split it into multiple files so that no file has more than 1k rows
-- Each input file should be a valid csv.
-- all input files should be in the same input directory
-- Input files shouldn't end with the _tgrp_runs.csv suffix.
-### Outputs:
-- Make sure that the output directory has been created
-### Environment variables
-- PARALLEL_API_KEY is set as an environment variable.
+Things the API will not do for you
+- Runs cannot be cancelled once created. Run `plan`, then a small pilot, then
+  the full job. Submit high-priority rows first.
+- Your rate limit controls intake, not throughput. Pilot at least 5k runs on
+  your real processor and spec, watch `status` until the running count stops
+  climbing, and measure runs/hour from that plateau. Concurrency ramps up, so
+  a small pilot timed end to end understates steady-state throughput.
 
-## Dependencies:
-- pandas
-- parallel-web>=0.2.0
-
-## Running the script
-
-It is strongly recommended to start a dry run first to verify all inputs are correct.
-
-To run, use: `python3 combined_script.py --input-dir <input_dir> --output-dir <output_dir> --processor <processor> --dry-run`
-Once you don't receive any errors, remove the --dry-run flag and run again.
-In case there are csv files that are not valid and are not fixable, you can skip them by adding the --skip-invalid flag.
+Requires Python 3.11+ and `pip install parallel-web>=1.3`. Set PARALLEL_API_KEY.
 """
 
-import os
-from typing import Literal
-import pandas as pd
-from collections.abc import Iterator
+from __future__ import annotations
 
-
-import time
 import argparse
-import logging
-
-import pandas as pd
-from parallel import Parallel
-from parallel.types import TaskRunJsonOutput
+import csv
+import json
+import math
+import sys
+import time
+from pathlib import Path
 from typing import Any
-import pandas as pd
+
+MAX_RUNS_PER_REQUEST = 1_000  # API limit, do not raise
+RATE_LIMIT_TARGET = 0.9  # fraction of the quota to use
+POLL_INTERVAL_S = 60
+
+csv.field_size_limit(10**9)
 
 
-from parallel.types.beta import BetaRunInputParam
-
-#########################     UTILITY FUNCTIONS    #########################
-
-class ValidationError(Exception):
-    """Error raised when a file fails validation."""
-
-    pass
-
-class NonRetryableError(Exception):
-    """Error raised when a file fails validation."""
-
-    pass
-
-def load_csv(file: str) -> pd.DataFrame:
-    """Load a CSV file safely.
-    
-    Empty columns should not be treated as a float.
-    """
-    return pd.read_csv(file, na_filter=False)
-
-def iter_files(input_dir: str) -> Iterator[str]:
-    """Iterate over all files in a directory."""
-    if not os.path.exists(input_dir):
-        raise ValidationError(f"Directory {input_dir} does not exist.")
-    file_found = False
-    for file in os.listdir(input_dir):
-        if file.endswith(".csv"):
-            file_found = True
-            yield os.path.join(input_dir, file)
-    if not file_found:
-        raise ValidationError(f"No CSV files found in {input_dir}.")
-
-Stages = Literal["runs", "results"]
-
-class FileManager:
-    """Manages file names and paths for a given output directory."""
-
-    def __init__(self, output_dir: str):
-        self.output_dir = output_dir
-
-    def output_file_path(self, input_filename: str, *, stage: Stages) -> str:
-        """Get the output file path for a given input file and stage."""
-        RUN_STATE_FILE_SUFFIX = "_tgrp_runs.csv"
-        if input_filename.endswith(RUN_STATE_FILE_SUFFIX):
-            input_filename = os.path.basename(input_filename).rstrip(RUN_STATE_FILE_SUFFIX)
-        else:
-            input_filename = os.path.basename(input_filename).rstrip(".csv")
-        RESULT_STATE_FILE_SUFFIX = "_results.csv"
-        subdir = stage
-        if not os.path.exists(os.path.join(self.output_dir, subdir)):
-            os.makedirs(os.path.join(self.output_dir, subdir))
-        match stage:
-            case "results":
-                filename = f"{input_filename}{RESULT_STATE_FILE_SUFFIX}"
-            case "runs":
-                filename = f"{input_filename}{RUN_STATE_FILE_SUFFIX}"
-        return os.path.join(self.output_dir, subdir, filename)
+# ----------------------------------------------------------------------------- input
 
 
-    @staticmethod
-    def validate_file(file: str):
-        """Validate a file."""
-        if not os.path.exists(file):
-            raise ValidationError(f"File {file} does not exist.")
-        FILE_LENGTH_LIMIT = 1000
+def read_rows(path: str, id_column: str) -> list[dict[str, str]]:
+    with open(path, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    if not rows:
+        sys.exit(f"{path}: no rows")
+    if id_column not in rows[0]:
+        sys.exit(f"{path}: missing id column {id_column!r}. Columns: {list(rows[0])}")
+    ids = [r[id_column] for r in rows]
+    if len(set(ids)) != len(ids):
+        sys.exit(f"{path}: {len(ids) - len(set(ids))} duplicate values in {id_column!r}")
+    return rows
+
+
+def build_input(row: dict[str, str], id_column: str, json_column: str | None) -> Any:
+    if json_column:
         try:
-            input_df = pd.read_csv(file)
-        except Exception as e:
-            raise NonRetryableError(f"Incorrect csv file {file}: {e}")
-        if len(input_df) > FILE_LENGTH_LIMIT:
-            raise ValidationError(
-                f"File {file} has more than {FILE_LENGTH_LIMIT} rows (len={len(input_df)})."
-            )
+            return json.loads(row[json_column])
+        except (KeyError, json.JSONDecodeError) as e:
+            sys.exit(f"row {row.get(id_column)}: bad JSON in {json_column!r}: {e}")
+    return {k: v for k, v in row.items() if k != id_column}
 
 
-    def already_enqueued(self, input_file_name: str) -> bool:
-        """Check if a file has already been submitted for a run.
-
-        This is proxied by the presence of a file in the output directory.
-        """
-        run_file_name = self.output_file_path(input_file_name, stage="runs")
-        return  os.path.exists(run_file_name)
+# ----------------------------------------------------------------------------- state
 
 
-    def already_fetched(self, run_file_name: str) -> bool:
-        """Check if a file has already been fetched.
+class Job:
+    """Append-only state in a work directory. Safe to re-run any command."""
 
-        This is proxied by the presence of a file in the output directory.
-        """
-        result_file_name = self.output_file_path(run_file_name, stage="results")
-        return os.path.exists(result_file_name)
+    def __init__(self, work_dir: str):
+        self.dir = Path(work_dir)
+        self.dir.mkdir(parents=True, exist_ok=True)
+        self.config_path = self.dir / "config.json"
+        self.groups_path = self.dir / "groups.jsonl"
+        self.runs_path = self.dir / "runs.jsonl"
 
-    def get_output_dir(self, stage: Stages) -> str:
-        """Get the output directory."""
-        match stage:
-            case "runs":
-                return os.path.join(self.output_dir, "runs")
-            case "results":
-                return os.path.join(self.output_dir, "results")
+    def save_config(self, cfg: dict[str, Any]) -> None:
+        if self.config_path.exists():
+            existing = json.loads(self.config_path.read_text())
+            if existing != cfg:
+                sys.exit(f"{self.config_path} already exists with different settings. Use a new --work-dir.")
+        self.config_path.write_text(json.dumps(cfg, indent=2))
+
+    def config(self) -> dict[str, Any]:
+        if not self.config_path.exists():
+            sys.exit(f"no job at {self.dir}; run submit first")
+        return json.loads(self.config_path.read_text())
+
+    def groups(self) -> list[str]:
+        return [json.loads(l)["task_group_id"] for l in _lines(self.groups_path)]
+
+    def add_group(self, task_group_id: str) -> None:
+        _append(self.groups_path, {"task_group_id": task_group_id, "created_at": time.time()})
+
+    def submitted(self) -> dict[str, dict[str, str]]:
+        """row_id -> {run_id, task_group_id}"""
+        out: dict[str, dict[str, str]] = {}
+        for l in _lines(self.runs_path):
+            rec = json.loads(l)
+            out[rec["row_id"]] = rec
+        return out
+
+    def add_runs(self, task_group_id: str, pairs: list[tuple[str, str]]) -> None:
+        with open(self.runs_path, "a", encoding="utf-8") as f:
+            for row_id, run_id in pairs:
+                f.write(json.dumps({"row_id": row_id, "run_id": run_id, "task_group_id": task_group_id}) + "\n")
+            f.flush()
 
 
-#########################     Task configuration    #########################
+def _lines(path: Path) -> list[str]:
+    return [l for l in path.read_text().splitlines() if l.strip()] if path.exists() else []
 
 
-OUTPUT_COLS = ["match_1", "match_2", "match_3", "match_4", "match_5"]
+def _append(path: Path, rec: dict[str, Any]) -> None:
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(rec) + "\n")
+        f.flush()
 
-def build_task_spec(domains: list[str], source_rootdomain_name: str) -> dict[str, Any]:
-    if len(domains) != len(OUTPUT_COLS):
-        raise ValidationError(f"Number of domains ({len(domains)}) does not match number of output columns ({len(OUTPUT_COLS)})")
 
+# ----------------------------------------------------------------------------- plan
+
+
+def plan(n_runs: int, rate_limit: float, runs_per_group: int) -> dict[str, Any]:
+    per_min = rate_limit * RATE_LIMIT_TARGET
+    posts = math.ceil(n_runs / MAX_RUNS_PER_REQUEST)
     return {
-        "input_schema": {
-            "json_schema": {
-                "type": "object",
-                "required": ["ManufacturerPartID", "SKU", "ManufacturerPartNumber", "OptionName", "UPC", "AdditionalUPC", "PrName", "ProductDescription", "MarketingCategory", "Class", "Manufacturer", "URL"],
-                "properties": {
-                    "ManufacturerPartID": {
-                        "description": "Manufacturer part ID of the product to find matches for.",
-                        "type": "string",
-                    },
-                    "SKU": {
-                        "description": "SKU identifier of the product to find match for.",
-                        "type": "string",
-                    },
-                    "ManufacturerPartNumber": {
-                        "description": "Manufacturer part number (MPN) of the product to find matches for.",
-                        "type": "string",
-                    },
-                    "OptionName": {
-                        "description": "",
-                        "type": "string",
-                    },
-                    "UPC": {
-                        "description": "The UPC of the product to find matches for.",
-                        "type": "string",
-                    },
-                    "AdditionalUPC": {
-                        "description": "",
-                        "type": "string",
-                    },
-                    "PrName": {
-                        "description": "The name of the product to find matches for.",
-                        "type": "string",
-                    },
-                    "ProductDescription": {
-                        "description": "The description of the product to find matches for.",
-                        "type": "string",
-                    },
-                    "MarketingCategory": {
-                        "description": "The category of the product to find matches for.",
-                        "type": "string",
-                    },
-                    "Class": {
-                        "description": "The class of the product to find matches for.",
-                        "type": "string",
-                    },
-                    "Manufacturer": {
-                        "description": "Name of manufacturer of the product to find matches for.",
-                        "type": "string",
-                    },
-                    "URL": {
-                        "description": f"The direct URL to the {source_rootdomain_name} product page. Use this URL to first extract all the product details including manufacturer, part number, product name, specifications, dimensions, weight, price, etc. before matching.",
-                        "type": "string",
-                    }
-                },
-            }
-        },
-        "output_schema": {
-            "json_schema": {
-                "type": "object",
-                "required": OUTPUT_COLS,
-                "description": (
-                    f"An exact match to the given product on target domains: {domains}. The match must have the same make and model -- i.e. the same manufacturer name and other details.\n"
-                    "Matching Criteria (in order of priority):\n"
-                    "1. **UPC (Universal Product Code) - Exact match** 2. **Manufacturer Part Number (MPN) - Exact match** 3. **Manufacturer Name** – Must match or be a known alias/brand variation 4. **Product Title/Option Name** – High similarity 5. **Product Class/Category** – Must be consistent 6. ** **Visual Match** (if available) – Product images should be visually identical "
-                ),
-                "properties": {
-                    OUTPUT_COLS[i]: {
-                        "description": f"The exact match to the original product on {domains[i]}.",
-                        "properties": {
-                            "product_url": {
-                                "description": f"The direct URL of the matched {domains[i]} product page (must be from {domains[i]}). URL that is not from {domains[i]} is invalid and not considered a match. Must be a valid URL that opens up to the actual product page directly. If no match, return empty string.",
-                                "type": "string",
-                            },
-                            "product_description": {
-                                "description": f"The description of the matched {domains[i]} product page. If a description is not available, return 'Description unavailable.'. If no match, return empty string.",
-                                "type": "string",
-                            },
-                            "product_price": {
-                                "description": "The price of the matched product, including currency symbol (e.g., '$5.99'). If unavailable, return 'Price Not Available'. If no match, return empty string.",
-                                "type": "string",
-                            },
-                            "product_in_stock": {
-                                "description": "An indication whether the matched product is in-stock or not. If no match, return empty string.",
-                                "enum": ["yes", "no", ""],
-                                "type": "string",
-                            }
-                        },
-                        "type": "object",
-                    } for i in range(len(OUTPUT_COLS))
-                },
-            }
-        },
+        "runs": n_runs,
+        "posts": posts,
+        "task_groups": math.ceil(n_runs / runs_per_group),
+        "submit_rate_runs_per_min": per_min,
+        "enqueue_minutes": round(n_runs / per_min, 1),
+        "note": "Enqueue time only. Execution time depends on processor, spec, and platform load: pilot at least 5k runs, measure runs/hour after the running count plateaus, then extrapolate.",
     }
 
-def create_run_payloads(
-        chunk_df: pd.DataFrame, source_rootdomain_name: str, processor: str
-) -> dict[str, BetaRunInputParam]:
-    # Build inputs across domains
-    run_map : dict[str, BetaRunInputParam] = {}
-    for row in chunk_df.itertuples():
-        row_domains = [row.competitor1, row.competitor2, row.competitor3, row.competitor4, row.competitor5]
-        product_data = {
-            "ManufacturerPartID": row.ManufacturerPartID,
-            "SKU": row.SKU,
-            "ManufacturerPartNumber": row.ManufacturerPartNumber,
-            "OptionName": row.OptionName,
-            "UPC": row.UPC,
-            "AdditionalUPC": row.AdditionalUPC,
-            "PrName": row.PrName,
-            "ProductDescription": row.ProductDescription,
-            "MarketingCategory": row.MarketingCategory,
-            "Class": row.Class,
-            "Manufacturer": row.Manufacturer,
-            "URL": row.URL,
-            "domains": row_domains
+
+# ----------------------------------------------------------------------------- submit
+
+
+def cmd_submit(args: argparse.Namespace) -> None:
+    from parallel import Parallel
+
+    rows = read_rows(args.input, args.id_column)
+    task_spec = json.loads(Path(args.task_spec).read_text())
+    job = Job(args.work_dir)
+    job.save_config(
+        {
+            "input": str(Path(args.input).resolve()),
+            "id_column": args.id_column,
+            "input_json_column": args.input_json_column,
+            "processor": args.processor,
+            "runs_per_group": args.runs_per_group,
+            "label": args.label,
         }
-        mpn_str = str(row.ManufacturerPartNumber)
-
-        task_spec = build_task_spec(row_domains, source_rootdomain_name)
-        run_map[mpn_str] = BetaRunInputParam(
-            input=product_data,
-            processor=processor,
-            task_spec=task_spec,
-            metadata={"manufacturerPartId": product_data.get("ManufacturerPartID", ""), "taskType": "match_search"},
-            source_policy={"include_domains": row_domains},
-        )
-
-    return run_map
-
-#########################    Execution script    #########################
-
-# Flags
-DRY_RUN = False
-SKIP_INVALID = False
-ENQUEUE_SLEEP_TIME = 5
-FETCH_SLEEP_TIME = 60
-
-SOURCE_ROOTDOMAIN_NAME = "Wayfair"
-
-OUTPUT_DIR: str | None = None
-
-# initialize logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
-
-# set the env variable PARALLEL_API_KEY or specify the api key explicitly
-# via client = Parallel(api_key="your_api_key")
-client = Parallel()
-
-taskGroupIdCol = "TaskGroupID"
-runIdCol = "RunId"
-mergeIdCol = "ManufacturerPartNumber"
-
-def enqueue_one(filepath: str, processor: str, file_manager: FileManager) -> bool:
-    """Enqueue a file after validation. Wraps errors for retries."""
-    try:
-        return _enqueue_one(filepath, processor, file_manager)
-    except ValidationError:
-        raise
-    except Exception as e:
-        logger.error(f"Error enqueuing file {filepath}: {e}. Will retry.")
-        return False
-
-def _enqueue_one(filepath: str, processor: str, file_manager: FileManager) -> bool:
-    """Enqueue a file after validation.
-
-    Each file corresponds to one task group.
-    """
-    try:
-        file_manager.validate_file(filepath)
-    except NonRetryableError as e:
-        if not SKIP_INVALID:
-            raise ValidationError(f"File {filepath} failed .") from e
-        logger.error(f"File {filepath} failed validation: {e}. It will be skipped.")
-        return True
-    except ValidationError as e:
-        logger.error(f"File {filepath} failed validation: {e}")
-        raise ValidationError("Files failed validation. Please check logs for more details.") from e
-    input_df = load_csv(filepath)
-    if DRY_RUN:
-        logger.info(f"Skipping enqueue for file {filepath} due to dry run.")
-        return True
-
-    # enqueue
-    input_map = create_run_payloads(input_df, SOURCE_ROOTDOMAIN_NAME, processor)
-    tgroup = client.beta.task_group.create()
-    run_responses = client.beta.task_group.add_runs(tgroup.task_group_id, inputs=[v for _,v in input_map.items()])
-
-    # write to state file in output directory
-    state_map: list[dict[str, str]] = []
-    for i, run_key in enumerate(input_map):
-        state_map.append({
-            mergeIdCol: run_key,
-            runIdCol: run_responses.run_ids[i],
-            taskGroupIdCol: tgroup.task_group_id
-        })
-
-    logger.info(f"Processed file {filepath} with {len(state_map)} runs.")
-    pd.DataFrame(state_map).to_csv(file_manager.output_file_path(filepath, stage="runs"), index=False)
-    return True
-
-
-def enqueue_all(input_dir: str, processor: str, file_manager: FileManager):
-    """Enqueue all files in the input directory.
-
-    Depending on the mode, it might raise an error.
-    """
-    logger.info("DRY RUN" if DRY_RUN else "Live Run")
-    while True:
-        all_completed = True
-        for file in iter_files(input_dir):
-            if file_manager.already_enqueued(file):
-                logger.info(f"File {file} is already enqueued, skipping.")
-                continue
-            completed = enqueue_one(file, processor, file_manager)
-            if not completed:
-                all_completed = False
-
-        if all_completed:
-            logger.info("All files enqueued successfully.")
-            break
-        logger.info(f"Some files failed to enqueue. Waiting {ENQUEUE_SLEEP_TIME} seconds before retrying.")
-        if DRY_RUN:
-            logger.info("Breaking out of enqueue loop due to dry run.")
-            break
-        time.sleep(ENQUEUE_SLEEP_TIME)
-
-
-def fetch_all(file_manager: FileManager):
-    """Fetch all results from the output directory."""
-    while True:
-        all_completed = True
-        for file in iter_files(file_manager.get_output_dir("runs")):
-            if file_manager.already_fetched(file):
-                logger.info(f"Results for file {file} already fetched, skipping")
-                continue
-            completed = fetch_one(file, file_manager)
-            # heuristic to reduce poll count
-            # early exit and sleep
-            if not completed: # still active
-                all_completed = False
-                break
-        if all_completed:
-            break
-        time.sleep(FETCH_SLEEP_TIME)
-
-
-
-def fetch_one(run_file: str, file_manager: FileManager) -> bool:
-    """Fetch a single result from the output directory. Wraps errors for retries."""
-    try:
-        logger.info(f"Fetching result from file {run_file}")
-        return _fetch_one(run_file, file_manager)
-    except Exception as e:
-        logger.error(f"Error fetching result from file {run_file}: {e}")
-        return False
-
-def _fetch_one(run_file: str, file_manager: FileManager) -> bool:
-    """Fetch a single result from the output directory.
-
-    Poll until the task group is complete. Once it is finished, fetch the result.
-    """
-    run_df = load_csv(run_file)
-    # each file has just one task group
-    tgroup_id = str(run_df[taskGroupIdCol][0])
-    tgroup = client.beta.task_group.retrieve(tgroup_id)
-    if tgroup.status.is_active:
-        logger.info(f"File {run_file} (Task group {tgroup_id}) is still active, skipping")
-        return False
-    results: list[dict[str, str]] = []
-    for _, row in run_df.iterrows():
-        run_id = str(row[runIdCol])
-        result = None
-        try:
-            result = client.task_run.result(run_id)
-        except Exception as e:
-            # taskgroup is done, which means the run failed.
-            logger.error(f"Run {run_id} in file {run_file} failed. Most likely failed. Error: {e}")
-            continue
-        if not isinstance(result.output, TaskRunJsonOutput):
-            logger.error(f"Result for run {run_id} in file {run_file} is not a JSON output, skipping")
-            continue
-
-        results.append({
-            mergeIdCol: str(row[mergeIdCol]),
-            runIdCol: run_id,
-            taskGroupIdCol: tgroup_id,
-            **{OUTPUT_COLS[i]: result.output.content.get(OUTPUT_COLS[i], None) for i in range(len(OUTPUT_COLS))} # pyright: ignore[reportArgumentType]
-        })
-    pd.DataFrame(results).to_csv(file_manager.output_file_path(run_file, stage="results"), index=False)
-    return True
-
-
-def merge_results(input_dir: str, file_manager: FileManager):
-    """Merge results from the input and output directory."""
-    df_list: list[pd.DataFrame] = []
-    for input_file in iter_files(input_dir):
-        if not file_manager.already_fetched(input_file):
-            logger.info(f"Results for file {input_file} not fetched, skipping for merge.")
-            continue
-        result_df = load_csv(file_manager.output_file_path(input_file, stage="results"))
-        input_df = load_csv(input_file)
-        print(file_manager.output_file_path(input_file, stage="results"))
-        merged_df = pd.merge(input_df, result_df, on=mergeIdCol, how="left")
-        df_list.append(merged_df)
-    merged_df = pd.concat(df_list)
-    merged_df.to_csv(file_manager.output_file_path("merged", stage="results"), index=False)
-
-def run_batch(input_dir: str, output_dir: str, processor: str):
-    """Run a batch of files in the input directory.
-
-    This is a three step process:
-    1. Enqueue all files in the input directory.
-    2. Fetch results until complete.
-    3. Merge results.
-
-    This should be an idempotent operation, meaning that running it on the same input,
-    should not incur any additional cost/time.
-    """
-    file_manager = FileManager(output_dir)
-    enqueue_all(input_dir, processor, file_manager)
-    if DRY_RUN:
-        logger.info("Dry run complete.")
+    )
+    done = job.submitted()
+    pending = [r for r in rows if r[args.id_column] not in done]
+    print(f"{len(rows)} rows, {len(done)} already submitted, {len(pending)} to go")
+    if args.dry_run or not pending:
+        print(json.dumps(plan(len(pending), args.rate_limit, args.runs_per_group), indent=2))
         return
-    logger.info("Fetching results.")
-    fetch_all(file_manager)
-    logger.info("Merging results.")
-    merge_results(input_dir, file_manager)
+
+    client = Parallel()
+    per_request_s = 60.0 * MAX_RUNS_PER_REQUEST / (args.rate_limit * RATE_LIMIT_TARGET)
+    groups = job.groups()
+    group_fill = _group_fill(job)
+
+    i = 0
+    while i < len(pending):
+        # pick a group with room, or create one
+        gid = next((g for g in groups if group_fill.get(g, 0) < args.runs_per_group), None)
+        if gid is None:
+            gid = client.task_group.create(metadata={"label": args.label} if args.label else None).task_group_id
+            job.add_group(gid)
+            groups.append(gid)
+        room = args.runs_per_group - group_fill.get(gid, 0)
+        batch = pending[i : i + min(MAX_RUNS_PER_REQUEST, room)]
+        inputs = [
+            {
+                "input": build_input(r, args.id_column, args.input_json_column),
+                "processor": args.processor,
+                "metadata": {"row_id": r[args.id_column], **({"label": args.label} if args.label else {})},
+            }
+            for r in batch
+        ]
+        started = time.monotonic()
+        resp = client.task_group.add_runs(gid, inputs=inputs, default_task_spec=task_spec, refresh_status=False)
+        if len(resp.run_ids) != len(batch):
+            sys.exit(f"server returned {len(resp.run_ids)} run ids for {len(batch)} inputs; reconcile {gid} before continuing")
+        job.add_runs(gid, list(zip((r[args.id_column] for r in batch), resp.run_ids)))
+        group_fill[gid] = group_fill.get(gid, 0) + len(batch)
+        i += len(batch)
+        print(f"  {i}/{len(pending)} submitted ({gid})")
+        time.sleep(max(0.0, per_request_s - (time.monotonic() - started)))
+    print("done. next: status --wait, then export")
+
+
+def _group_fill(job: Job) -> dict[str, int]:
+    fill: dict[str, int] = {}
+    for rec in job.submitted().values():
+        fill[rec["task_group_id"]] = fill.get(rec["task_group_id"], 0) + 1
+    return fill
+
+
+# ----------------------------------------------------------------------------- status
+
+
+def cmd_status(args: argparse.Namespace) -> None:
+    from parallel import Parallel
+
+    job = Job(args.work_dir)
+    client = Parallel()
+    while True:
+        counts: dict[str, int] = {}
+        active = 0
+        for gid in job.groups():
+            st = client.task_group.retrieve(gid).status
+            active += st.is_active
+            for k, v in (st.task_run_status_counts or {}).items():
+                counts[k] = counts.get(k, 0) + v
+        total = sum(counts.values())
+        done = counts.get("completed", 0) + counts.get("failed", 0) + counts.get("cancelled", 0)
+        print(f"{time.strftime('%H:%M:%S')} {done}/{total} finished  {counts}  active_groups={active}")
+        if not active or not args.wait:
+            return
+        time.sleep(POLL_INTERVAL_S)
+
+
+# ----------------------------------------------------------------------------- export
+
+
+def cmd_export(args: argparse.Namespace) -> None:
+    from parallel import Parallel
+
+    job = Job(args.work_dir)
+    client = Parallel()
+    expected = job.submitted()
+    run_to_row = {rec["run_id"]: row_id for row_id, rec in expected.items()}
+    seen: dict[str, int] = {}
+    n_written = n_failed = n_active = 0
+
+    with open(args.output, "w", encoding="utf-8") as out:
+        for gid in job.groups():
+            for event in client.task_group.get_runs(gid, include_input=args.include_input, include_output=True):
+                if event.type != "task_run.state":
+                    print(f"  stream error in {gid}: {event}", file=sys.stderr)
+                    continue
+                run = event.run
+                row_id = run_to_row.get(run.run_id)
+                if row_id is None:
+                    print(f"  unexpected run {run.run_id} in {gid}", file=sys.stderr)
+                    seen["__unexpected__"] = seen.get("__unexpected__", 0) + 1
+                    continue
+                if run.is_active:
+                    n_active += 1
+                    continue
+                seen[row_id] = seen.get(row_id, 0) + 1
+                rec: dict[str, Any] = {"row_id": row_id, "run_id": run.run_id, "status": run.status}
+                if event.output is not None:
+                    rec["output"] = event.output.content
+                    rec["basis"] = [b.model_dump() for b in event.output.basis]
+                if run.status == "failed":
+                    n_failed += 1
+                    rec["error"] = run.error.model_dump() if run.error else None
+                if args.include_input and event.input is not None:
+                    rec["input"] = event.input.input
+                out.write(json.dumps(rec, default=str) + "\n")
+                n_written += 1
+
+    missing = [r for r in expected if r not in seen]
+    duplicated = {r: c for r, c in seen.items() if c > 1 and r != "__unexpected__"}
+    report = {
+        "expected_rows": len(expected),
+        "written": n_written,
+        "failed": n_failed,
+        "still_active": n_active,
+        "missing": len(missing),
+        "duplicated": len(duplicated),
+        "unexpected": seen.get("__unexpected__", 0),
+        "ok": not missing and not duplicated and not n_active and not seen.get("__unexpected__"),
+    }
+    Path(args.output + ".validation.json").write_text(json.dumps({**report, "missing_row_ids": missing[:1000]}, indent=2))
+    print(json.dumps(report, indent=2))
+    if not report["ok"]:
+        sys.exit(2)
+
+
+# ----------------------------------------------------------------------------- cli
+
+
+def cmd_plan(args: argparse.Namespace) -> None:
+    n = args.runs if args.runs else len(read_rows(args.input, args.id_column))
+    print(json.dumps(plan(n, args.rate_limit, args.runs_per_group), indent=2))
+
+
+def build_parser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
+    sub = p.add_subparsers(dest="command", required=True)
+
+    def common(sp: argparse.ArgumentParser) -> None:
+        sp.add_argument("--rate-limit", type=float, default=2000, help="your Tasks quota in runs per minute (default 2000)")
+        sp.add_argument("--runs-per-group", type=int, default=10_000, help="runs per Task Group (default 10000)")
+
+    a = sub.add_parser("plan", help="count runs, requests, groups and enqueue time. No API calls")
+    a.add_argument("--input")
+    a.add_argument("--runs", type=int, help="instead of --input, plan for this many runs")
+    a.add_argument("--id-column", default="row_id")
+    common(a)
+    a.set_defaults(func=cmd_plan)
+
+    s = sub.add_parser("submit", help="create runs; re-run to resume")
+    s.add_argument("--input", required=True)
+    s.add_argument("--task-spec", required=True, help="JSON file with output_schema (and optional input_schema)")
+    s.add_argument("--processor", required=True)
+    s.add_argument("--work-dir", required=True)
+    s.add_argument("--id-column", default="row_id")
+    s.add_argument("--input-json-column", help="send this column parsed as JSON instead of all columns")
+    s.add_argument("--label", help="batch label stored in run and group metadata")
+    s.add_argument("--dry-run", action="store_true", help="validate the CSV and print the plan only")
+    common(s)
+    s.set_defaults(func=cmd_submit)
+
+    t = sub.add_parser("status", help="progress across all groups")
+    t.add_argument("--work-dir", required=True)
+    t.add_argument("--wait", action="store_true", help=f"poll every {POLL_INTERVAL_S}s until no group is active")
+    t.set_defaults(func=cmd_status)
+
+    e = sub.add_parser("export", help="write results.jsonl and validate; exit 2 if rows are missing")
+    e.add_argument("--work-dir", required=True)
+    e.add_argument("--output", required=True)
+    e.add_argument("--include-input", action="store_true")
+    e.set_defaults(func=cmd_export)
+    return p
+
+
+def main(argv: list[str] | None = None) -> None:
+    args = build_parser().parse_args(argv)
+    args.func(args)
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--input-dir", type=str, required=True)
-    parser.add_argument("--output-dir", type=str, required=True)
-    parser.add_argument("--processor", type=str, required=True)
-    parser.add_argument("--dry-run", action="store_true")
-    parser.add_argument("--skip-invalid", action="store_true")
-    args = parser.parse_args()
-    
-    if args.dry_run:
-        DRY_RUN = True
-    if args.skip_invalid:
-        SKIP_INVALID = True
-    run_batch(args.input_dir, args.output_dir, args.processor)
-
+    main()
