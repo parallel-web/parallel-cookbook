@@ -18,8 +18,10 @@ How it works
 - Submission is paced at 90% of --rate-limit (runs per minute), because the
   quota counts runs, not requests. A steady rate beats one burst: it enqueues
   cleanly and surfaces a bad spec after thousands of rows, not millions.
-- Every add_runs response is appended to work-dir/runs.jsonl before the next
-  request goes out, so a crash or re-run never resubmits a paid run.
+- Each batch is recorded in work-dir/pending.json before submission, with SDK
+  retries disabled. On resume, its runs are recovered from server metadata;
+  an incomplete or ambiguous batch stops submission instead of risking duplicates.
+  Keep the work directory and use only one submit process per job.
 - status polls each group summary (one cheap GET per group). export streams
   each group's runs to disk with include_output and checks that every input
   row came back exactly once. It exits 2 if anything is missing or duplicated.
@@ -41,6 +43,7 @@ import argparse
 import csv
 import json
 import math
+import os
 import sys
 import time
 from pathlib import Path
@@ -82,7 +85,7 @@ def build_input(row: dict[str, str], id_column: str, json_column: str | None) ->
 
 
 class Job:
-    """Append-only state in a work directory. Safe to re-run any command."""
+    """Submission receipts and an in-flight batch in a work directory."""
 
     def __init__(self, work_dir: str):
         self.dir = Path(work_dir)
@@ -90,13 +93,15 @@ class Job:
         self.config_path = self.dir / "config.json"
         self.groups_path = self.dir / "groups.jsonl"
         self.runs_path = self.dir / "runs.jsonl"
+        self.pending_path = self.dir / "pending.json"
 
     def save_config(self, cfg: dict[str, Any]) -> None:
         if self.config_path.exists():
             existing = json.loads(self.config_path.read_text())
             if existing != cfg:
                 sys.exit(f"{self.config_path} already exists with different settings. Use a new --work-dir.")
-        self.config_path.write_text(json.dumps(cfg, indent=2))
+            return
+        _write_new(self.config_path, cfg)
 
     def config(self) -> dict[str, Any]:
         if not self.config_path.exists():
@@ -122,6 +127,67 @@ class Job:
             for row_id, run_id in pairs:
                 f.write(json.dumps({"row_id": row_id, "run_id": run_id, "task_group_id": task_group_id}) + "\n")
             f.flush()
+            os.fsync(f.fileno())
+        _sync_directory(self.dir)
+
+    def begin_batch(self, task_group_id: str, row_ids: list[str]) -> None:
+        _write_new(self.pending_path, {"task_group_id": task_group_id, "row_ids": row_ids})
+
+    def finish_batch(self) -> None:
+        self.pending_path.unlink()
+
+    def recover_batch(self, client: Any) -> None:
+        if not self.pending_path.exists():
+            return
+        pending = json.loads(self.pending_path.read_text())
+        gid = pending["task_group_id"]
+        row_ids = set(pending["row_ids"])
+        recovered: dict[str, str] = {}
+        with client.task_group.get_runs(gid) as events:
+            for event in events:
+                if event.type != "task_run.state":
+                    sys.exit(f"stream error reconciling {gid}; keep {self.pending_path} and retry submit later")
+                row_id = (event.run.metadata or {}).get("row_id")
+                if row_id not in row_ids:
+                    continue
+                if row_id in recovered:
+                    sys.exit(f"duplicate runs for row {row_id!r} in {gid}; manual reconciliation required")
+                recovered[row_id] = event.run.run_id
+        if recovered.keys() != row_ids:
+            sys.exit(
+                f"unresolved batch in {gid}: found {len(recovered)}/{len(row_ids)} rows. "
+                f"Keep {self.pending_path} and retry submit later. If it remains incomplete, "
+                "reconcile the group manually; missing runs may still be created. Do not resubmit the batch."
+            )
+        submitted = self.submitted()
+        pairs = []
+        for row_id, run_id in recovered.items():
+            if row_id in submitted:
+                rec = submitted[row_id]
+                if rec["run_id"] != run_id or rec["task_group_id"] != gid:
+                    sys.exit(f"conflicting receipt for row {row_id!r}; manual reconciliation required")
+            else:
+                pairs.append((row_id, run_id))
+        self.add_runs(gid, pairs)
+        self.finish_batch()
+
+
+def _write_new(path: Path, rec: dict[str, Any]) -> None:
+    # A partial file must stop resume, never authorize another paid POST.
+    with open(path, "x", encoding="utf-8") as f:
+        f.write(json.dumps(rec))
+        f.flush()
+        os.fsync(f.fileno())
+    _sync_directory(path.parent)
+
+
+def _sync_directory(path: Path) -> None:
+    if os.name == "posix":
+        fd = os.open(path, os.O_RDONLY)
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
 
 
 def _lines(path: Path) -> list[str]:
@@ -132,6 +198,7 @@ def _append(path: Path, rec: dict[str, Any]) -> None:
     with open(path, "a", encoding="utf-8") as f:
         f.write(json.dumps(rec) + "\n")
         f.flush()
+        os.fsync(f.fileno())
 
 
 # ----------------------------------------------------------------------------- plan
@@ -167,8 +234,11 @@ def cmd_submit(args: argparse.Namespace) -> None:
             "processor": args.processor,
             "runs_per_group": args.runs_per_group,
             "label": args.label,
+            "expected_row_ids": [r[args.id_column] for r in rows],
         }
     )
+    if not args.dry_run and job.pending_path.exists():
+        job.recover_batch(Parallel(max_retries=0))
     done = job.submitted()
     pending = [r for r in rows if r[args.id_column] not in done]
     print(f"{len(rows)} rows, {len(done)} already submitted, {len(pending)} to go")
@@ -176,7 +246,7 @@ def cmd_submit(args: argparse.Namespace) -> None:
         print(json.dumps(plan(len(pending), args.rate_limit, args.runs_per_group), indent=2))
         return
 
-    client = Parallel()
+    client = Parallel(max_retries=0)
     per_request_s = 60.0 * MAX_RUNS_PER_REQUEST / (args.rate_limit * RATE_LIMIT_TARGET)
     groups = job.groups()
     group_fill = _group_fill(job)
@@ -199,11 +269,13 @@ def cmd_submit(args: argparse.Namespace) -> None:
             }
             for r in batch
         ]
+        job.begin_batch(gid, [r[args.id_column] for r in batch])
         started = time.monotonic()
         resp = client.task_group.add_runs(gid, inputs=inputs, default_task_spec=task_spec, refresh_status=False)
         if len(resp.run_ids) != len(batch):
             sys.exit(f"server returned {len(resp.run_ids)} run ids for {len(batch)} inputs; reconcile {gid} before continuing")
         job.add_runs(gid, list(zip((r[args.id_column] for r in batch), resp.run_ids)))
+        job.finish_batch()
         group_fill[gid] = group_fill.get(gid, 0) + len(batch)
         i += len(batch)
         print(f"  {i}/{len(pending)} submitted ({gid})")
@@ -250,8 +322,12 @@ def cmd_export(args: argparse.Namespace) -> None:
 
     job = Job(args.work_dir)
     client = Parallel()
-    expected = job.submitted()
-    run_to_row = {rec["run_id"]: row_id for row_id, rec in expected.items()}
+    cfg = job.config()
+    if "expected_row_ids" not in cfg:
+        sys.exit("job has no original row manifest; reconcile it against the original CSV before exporting")
+    expected = set(cfg["expected_row_ids"])
+    submitted = job.submitted()
+    run_to_row = {rec["run_id"]: row_id for row_id, rec in submitted.items() if row_id in expected}
     seen: dict[str, int] = {}
     n_written = n_failed = n_active = 0
 
@@ -293,7 +369,8 @@ def cmd_export(args: argparse.Namespace) -> None:
         "missing": len(missing),
         "duplicated": len(duplicated),
         "unexpected": seen.get("__unexpected__", 0),
-        "ok": not missing and not duplicated and not n_active and not seen.get("__unexpected__"),
+        "unresolved_batch": job.pending_path.exists(),
+        "ok": not missing and not duplicated and not n_active and not seen.get("__unexpected__") and not job.pending_path.exists(),
     }
     Path(args.output + ".validation.json").write_text(json.dumps({**report, "missing_row_ids": missing[:1000]}, indent=2))
     print(json.dumps(report, indent=2))
