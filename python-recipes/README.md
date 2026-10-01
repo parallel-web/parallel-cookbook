@@ -34,18 +34,19 @@ Shows how to combine Parallel's Task Group API with Temporal's workflow orchestr
 
 ### 📊 [Large Scale Tasks Recipe](./Large_Scale_Tasks_Recipe.py)
 
-Production-ready batch processing for large datasets
+Resumable batch processing for large CSVs with Task Groups
 
-A robust script for processing large batches of CSV files using Parallel's Task Group API. Handles product matching across multiple e-commerce domains with comprehensive error handling, validation, and resumable operations.
+One file, four commands: `plan` sizes the job with no API calls, `submit` adds runs 1,000 per request at a steady rate under your quota and checkpoints every run id before the next request, `status` polls group summaries, and `export` streams results to JSONL and checks that every original input row came back exactly once, including rows never submitted. Use one submit process per work directory, and keep the original CSV and task spec unchanged when resuming.
+
+Submission records each batch before sending it and disables SDK retries for non-idempotent POSTs. After an interruption, re-run `submit` to recover the batch by its server-side row metadata. If any rows are missing or duplicated, submission stops: keep `pending.json`, retry later, and manually reconcile the group if it remains unresolved. Do not delete the checkpoint or start those rows in another work directory; the original request may still be creating paid runs. Jobs created before the original-row manifest was introduced require manual reconciliation before reuse.
 
 **Key Features:**
 
-- Batch processing of 1000+ row CSV files
-- Three-stage pipeline: enqueue → fetch → merge
-- Comprehensive error handling and retry logic
-- Dry-run mode for validation
-- Idempotent operations for production reliability
-- File validation and state management
+- Paced submission against your Tasks rate limit (runs per minute)
+- Interrupted-batch recovery with an append-only run log
+- Task Group sharding with `refresh_status=False`
+- JSONL export with per-field basis and a validation report
+- Notes on what the API will not do (no cancel, rate limit is intake not throughput)
 
 ## Getting Started
 

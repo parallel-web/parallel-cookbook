@@ -109,7 +109,7 @@ Take a thin input (a name, a domain) and return structured, cited fields.
 | Recipe | Description | APIs | Stack | Demo |
 | --- | --- | --- | --- | --- |
 | [**Supabase Enrichment**](typescript-recipes/parallel-supabase-enrichment) | Real-time enrichment pipeline — INSERT a company, an Edge Function fires a Task, results stream back via Supabase Realtime. | `Task` `Webhooks` | Next.js · Supabase Edge Functions · Postgres | – |
-| [**Large-Scale Tasks**](python-recipes/Large_Scale_Tasks_Recipe.py) | Production batch script for 1k+ row CSVs — three-stage enqueue → fetch → merge with retry, dry-run, and idempotent state. | `Task Group` | Python | – |
+| [**Large-Scale Tasks**](python-recipes/Large_Scale_Tasks_Recipe.py) | Resumable batch runner for CSVs of any size — plan, paced submit at 1,000 runs/request, status, JSONL export with row-level validation. | `Task Group` | Python | – |
 | [**Task Group + Temporal**](python-recipes/Task_Group_Temporal_Recipe.py) | Combine Task Groups with Temporal workflow orchestration for enterprise-grade durability. | `Task Group` | Python · Temporal | – |
 
 ### Realtime Streaming (SSE)
