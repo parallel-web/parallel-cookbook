@@ -215,7 +215,7 @@ sendSSE(controller, encoder, { type: "warning", message: "Content was truncated 
 sendSSE(controller, encoder, { type: "error", error: "Demo is experiencing high traffic. Please try again later." });
 ```
 
-The `modelText` helper consumes the AI SDK's `fullStream` and throws on error events. Reading `textStream` alone silently filters those events out, which can make failed inference look like content with no claims. Only an actual empty response should be reported as having no verifiable claims.
+The `modelText` helper consumes the AI SDK's `fullStream`, throws on error events, and requires a normal completion before accepting the output. Reading `textStream` alone silently filters errors out, which can make failed inference look like content with no claims. Responses stopped by a token limit, content filtering, or an interrupted stream are reported as incomplete. Verdicts also need a valid label and a nonblank explanation.
 
 The frontend handles these events to update the UI in real-time, showing facts as they're extracted and verdicts as they arrive.
 

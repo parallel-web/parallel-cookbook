@@ -9,10 +9,10 @@ const requests: Array<{ url: string; body: any }> = [];
 let inference: Array<() => Response>;
 let searchStatus: number;
 
-function textResponse(text: string): Response {
+function textResponse(text: string, finishReason: string | null = "stop"): Response {
   const chunks = [
     { choices: [{ index: 0, delta: { content: text }, finish_reason: null }] },
-    { choices: [{ index: 0, delta: {}, finish_reason: "stop" }] },
+    { choices: [{ index: 0, delta: {}, finish_reason: finishReason }] },
   ];
   return new Response(chunks.map(chunk => `data: ${JSON.stringify(chunk)}\n\n`).join("") + "data: [DONE]\n\n", {
     headers: { "Content-Type": "text/event-stream" },
@@ -120,6 +120,30 @@ describe("fact checker with the real provider SDKs", () => {
     expect(result.find(event => event.type === "fact_verdict")).toMatchObject({
       status: "unsure", explanation: expect.stringContaining("incomplete verdict"), references: [],
     });
+  });
+
+  it("rejects a whitespace-only explanation", async () => {
+    inference[1] = () => textResponse("VERDICT: VERIFIED\nEXPLANATION:   ");
+    const result = await events("/check", { content: claim });
+    expect(result.find(event => event.type === "fact_verdict")).toMatchObject({
+      status: "unsure", explanation: expect.stringContaining("incomplete verdict"), references: [],
+    });
+  });
+
+  it.each(["length", "content_filter", null])("rejects a verdict with finish reason %s", async finishReason => {
+    inference[1] = () => textResponse("VERDICT: VERIFIED\nEXPLANATION: Sources confirm", finishReason);
+    const result = await events("/check", { content: claim });
+    expect(result.find(event => event.type === "fact_verdict")).toMatchObject({
+      status: "unsure", explanation: expect.stringContaining("incomplete response"), references: [],
+    });
+  });
+
+  it("does not verify claims from an interrupted extraction", async () => {
+    inference = [() => textResponse(`FACT: ${claim} ||| ${claim}\n`, "length")];
+    const result = await events("/check", { content: claim });
+    expect(result.find(event => event.type === "error")?.error).toContain("incomplete response");
+    expect(result.some(event => event.type === "fact_verdict")).toBe(false);
+    expect(requests.some(request => request.url.endsWith("/search"))).toBe(false);
   });
 
   it("reports exhausted search credits without exposing provider details", async () => {

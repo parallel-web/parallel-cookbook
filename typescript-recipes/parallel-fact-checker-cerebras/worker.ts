@@ -56,9 +56,15 @@ function publicErrorMessage(error: any): string {
 // AI SDK textStream filters out error events. Consume fullStream so a failed
 // inference request cannot look like empty content or an unsupported claim.
 async function* modelText(result: ReturnType<typeof streamText>): AsyncGenerator<string> {
+  let completed = false;
   for await (const part of result.fullStream) {
     if (part.type === "error") throw part.error;
     if (part.type === "text-delta") yield part.text;
+    if (part.type === "finish") completed = part.finishReason === "stop";
+  }
+  // A length limit, filtered response, or missing finish reason is not a verdict.
+  if (!completed) {
+    throw new DemoError("The fact-checking service returned an incomplete response. Please try again.");
   }
 }
 
@@ -220,11 +226,11 @@ Analyze this evidence and provide your verdict.`,
 
     const verdictMatch = verdictText.match(/^VERDICT:\s*(VERIFIED|FALSE|UNSURE)\s*$/im);
     const explanationMatch = verdictText.match(/^EXPLANATION:[ \t]*(.+)/im);
-    if (!verdictMatch || !explanationMatch) {
+    const explanation = explanationMatch?.[1].trim();
+    if (!verdictMatch || !explanation) {
       throw new DemoError("The fact-checking service returned an incomplete verdict. Please try again.");
     }
     const status = verdictMatch[1].toLowerCase() as Fact["status"];
-    const explanation = explanationMatch[1].trim();
 
     const references = searchResult.results?.slice(0, 3).map((r: any) => ({
       title: r.title || "Source",
