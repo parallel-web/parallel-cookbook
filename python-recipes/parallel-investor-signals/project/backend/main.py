@@ -23,7 +23,10 @@ import uuid
 from datetime import UTC, datetime
 from typing import Any
 
-from fastapi import FastAPI, HTTPException, Request
+import hmac
+import os
+
+from fastapi import Depends, FastAPI, Header, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 
@@ -270,7 +273,19 @@ async def monitor_webhook(request: Request) -> dict[str, Any]:
 
 
 # ------------------------------------------------------------------ enrich ----
-@app.post("/api/enrich")
+_BACKEND_API_KEY = os.environ.get("BACKEND_API_KEY")
+
+
+def _require_api_key(x_api_key: str | None = Header(default=None, alias="X-API-Key")) -> None:
+    """Shared-secret gate for the (expensive) enrichment endpoints, so they
+    cannot be triggered by unauthenticated callers. Fails closed if unset."""
+    if not _BACKEND_API_KEY:
+        raise HTTPException(500, "Server missing BACKEND_API_KEY.")
+    if not x_api_key or not hmac.compare_digest(x_api_key, _BACKEND_API_KEY):
+        raise HTTPException(401, "Invalid or missing API key.")
+
+
+@app.post("/api/enrich", dependencies=[Depends(_require_api_key)])
 async def enrich(req: EnrichRequest) -> dict[str, Any]:
     """Single-company enrichment -> one cited ResearchBrief."""
     if not pc.api_key_loaded():
@@ -285,7 +300,7 @@ async def enrich(req: EnrichRequest) -> dict[str, Any]:
 
 
 # ----------------------------------------------------- custom-only enrich ----
-@app.post("/api/enrich/custom")
+@app.post("/api/enrich/custom", dependencies=[Depends(_require_api_key)])
 async def enrich_custom(req: EnrichRequest) -> dict[str, Any]:
     """Research ONLY the requested custom fields for one company — no account/
     contacts re-run. Lets the UI append answers to an already-loaded brief."""
@@ -353,7 +368,7 @@ def _error_brief(
     return brief
 
 
-@app.post("/api/enrich/bulk")
+@app.post("/api/enrich/bulk", dependencies=[Depends(_require_api_key)])
 async def enrich_bulk(req: BulkRequest) -> dict[str, Any]:
     """Kick off a bulk enrichment. Returns {job_id} immediately; poll the status
     endpoint for progress + results."""
