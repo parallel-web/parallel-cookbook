@@ -48,6 +48,19 @@ Submission records each batch before sending it and disables SDK retries for non
 - JSONL export with per-field basis and a validation report
 - Notes on what the API will not do (no cancel, rate limit is intake not throughput)
 
+### 📈 [Equity Tear Sheets](./parallel-tear-sheets)
+
+Cited two-page PDF tear sheets for a CSV of public companies
+
+One command turns a CSV of tickers into a PDF per company: profile, four years of reported financials, market data, recent news, signals, a bull and bear case, and a research basis page listing every field's citations, reasoning and confidence. Tested on 23 companies across sectors and reporting currencies.
+
+**Key Features:**
+
+- Five focused Task runs per company in one Task Group, plus a thesis run on their facts
+- Source policies per section: SEC filings and company sites for financials, a 90-day window for news
+- Derived metrics, headlines and arithmetic cross-checks computed in Python, not researched
+- Resumable: interrupted submissions are reconciled before new runs start
+
 ## Getting Started
 
 Each recipe includes detailed setup instructions and dependencies. Install the Parallel Python SDK to get started:

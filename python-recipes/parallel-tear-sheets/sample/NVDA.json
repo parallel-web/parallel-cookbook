@@ -1,0 +1,1052 @@
+{
+  "company": {
+    "company_name": "NVIDIA",
+    "ticker": "NVDA",
+    "website": "nvidia.com"
+  },
+  "runs": {
+    "profile": {
+      "run_id": "srun_8f80e83578b5402442adbf96b236dd86",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "leadership": [
+          {
+            "title": "Founder, President and CEO",
+            "name": "Jensen Huang"
+          },
+          {
+            "title": "Executive Vice President and Chief Financial Officer",
+            "name": "Colette M. Kress"
+          },
+          {
+            "title": "EVP, Worldwide Field Operations",
+            "name": "Nick Parker"
+          },
+          {
+            "title": "EVP, Operations",
+            "name": "Debora Shoquist"
+          }
+        ],
+        "business_description": "NVIDIA sells GPUs, CPUs, data-center systems, networking products, software and services, as well as graphics, gaming, automotive and AI platforms. Its customers include cloud providers, AI model makers, enterprises, startups, public-sector entities, gamers, and channel partners such as OEMs, ODMs and distributors. Revenue comes from sales of its computing, networking, graphics and automotive products and platforms, along with paid licenses for NVIDIA AI Enterprise and virtual-GPU software.",
+        "company_overview": {
+          "founded_year": "1993",
+          "headquarters": "Santa Clara, California, United States",
+          "industry": "Semiconductors",
+          "sector": "Information Technology",
+          "employees": 42000.0,
+          "legal_name": "NVIDIA Corporation",
+          "exchange": "NASDAQ"
+        },
+        "revenue_segments": [
+          {
+            "segment": "Compute & Networking",
+            "revenue_m": 193479.0
+          },
+          {
+            "segment": "Graphics",
+            "revenue_m": 22459.0
+          }
+        ],
+        "competitors": [
+          {
+            "ticker": "AMD",
+            "company_name": "Advanced Micro Devices, Inc."
+          },
+          {
+            "ticker": "INTC",
+            "company_name": "Intel Corporation"
+          },
+          {
+            "ticker": "AVGO",
+            "company_name": "Broadcom Inc."
+          },
+          {
+            "ticker": "QCOM",
+            "company_name": "Qualcomm Incorporated"
+          }
+        ]
+      },
+      "basis": [
+        {
+          "field": "leadership",
+          "reasoning": "NVIDIA\u2019s current investor management page identifies Jensen Huang as Founder, President and CEO, Colette Kress as EVP and CFO, Nick Parker as EVP for Worldwide Field Operations, and Debora Shoquist as EVP of Operations. The latest annual filing supplies Kress\u2019s full middle initial and confirms her executive officer title.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/governance/management-team/default.aspx",
+              "title": "\n\tNVIDIA Corporation - Governance - Management Team\n"
+            },
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "business_description",
+          "reasoning": "The annual report describes NVIDIA\u2019s two business segments and their platform offerings, identifies data-center and other customer groups and channel partners, and states that it offers paid licenses for enterprise AI and virtual-GPU software. Those details support the three-sentence summary of products, buyers, and revenue sources.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "company_overview",
+          "reasoning": "The annual filing says NVIDIA was co-founded in 1993, gives its Santa Clara headquarters, registrant legal name, Nasdaq listing and approximately 42,000 employees at fiscal 2026 year-end. S&P DJI\u2019s exhibit explicitly labels Nvidia\u2019s GICS sector as Information Technology and industry as Semiconductors. The employee figure is rounded from the report\u2019s approximate count.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            },
+            {
+              "url": "https://www.spglobal.com/spdji/en/documents/education/education-an-overview-of-gics-and-sp-500-sector-industry-indices.pdf",
+              "title": "An Overview of GICS and S&P 500 Sector & Industry Indices"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "revenue_segments",
+          "reasoning": "The FY2026 Form 10-K table is headed Revenue by Reportable Segments, states amounts in millions, identifies the year ended January 25, 2026, and reports Compute & Networking at $193,479 million and Graphics at $22,459 million. The entries are ordered largest first.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "competitors",
+          "reasoning": "NVIDIA\u2019s FY2026 filing names AMD and Intel among suppliers competing in GPUs and accelerated computing, and also lists Broadcom and Qualcomm among competitors in SoC and networking product categories. SEC and company investor evidence supplies their public trading symbols. These four are selected as listed peers across NVIDIA\u2019s directly overlapping chip and networking markets.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            },
+            {
+              "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+              "title": "Company Tickers Exchange"
+            },
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+              "title": "intc-20251227"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "leadership.0",
+          "reasoning": "NVIDIA\u2019s investor management page names Jensen Huang and gives his Founder, President and CEO title.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/governance/management-team/default.aspx",
+              "title": "\n\tNVIDIA Corporation - Governance - Management Team\n"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "leadership.1",
+          "reasoning": "The investor page lists Colette Kress as EVP and CFO; the latest annual filing gives the full name Colette M. Kress and the full title.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/governance/management-team/default.aspx",
+              "title": "\n\tNVIDIA Corporation - Governance - Management Team\n"
+            },
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "leadership.2",
+          "reasoning": "NVIDIA\u2019s investor management page lists Nick Parker as EVP, Worldwide Field Operations.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/governance/management-team/default.aspx",
+              "title": "\n\tNVIDIA Corporation - Governance - Management Team\n"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "leadership.3",
+          "reasoning": "NVIDIA\u2019s investor management page lists Debora Shoquist as EVP, Operations.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/governance/management-team/default.aspx",
+              "title": "\n\tNVIDIA Corporation - Governance - Management Team\n"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "revenue_segments.0",
+          "reasoning": "The FY2026 segment table reports Compute & Networking revenue of $193,479 million.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "revenue_segments.1",
+          "reasoning": "The FY2026 segment table reports Graphics revenue of $22,459 million.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "competitors.0",
+          "reasoning": "The filing identifies Advanced Micro Devices as a GPU and accelerated-computing competitor; the SEC ticker listing identifies its symbol as AMD.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            },
+            {
+              "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+              "title": "Company Tickers Exchange"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors.1",
+          "reasoning": "The filing identifies Intel as a GPU and accelerated-computing competitor; Intel\u2019s SEC filing gives the Nasdaq symbol INTC.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            },
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086326000011/intc-20251227.htm",
+              "title": "intc-20251227"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors.2",
+          "reasoning": "The filing names Broadcom in competing SoC and networking categories; the SEC ticker listing identifies Broadcom Inc. as AVGO.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            },
+            {
+              "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+              "title": "Company Tickers Exchange"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors.3",
+          "reasoning": "The filing names Qualcomm in the competing SoC category; the SEC ticker listing identifies Qualcomm Incorporated as QCOM.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/files/doc_financials/2026/q4/10K-NVDA.pdf",
+              "title": "NVIDIA CORPORATION \u2014 FORM 10-K, fiscal year ended January 25, 2026"
+            },
+            {
+              "url": "https://www.sec.gov/files/company_tickers_exchange.json",
+              "title": "Company Tickers Exchange"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "error": null
+    },
+    "financials": {
+      "run_id": "srun_8f80e83578b54024471324316735cd9b",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "reporting_currency": "USD",
+        "balance_sheet": {
+          "cash_and_investments_m": 99369.0,
+          "total_debt_m": 33366.0,
+          "shares_outstanding_m": 24100.0,
+          "as_of": "2026-07-26"
+        },
+        "annual_financials": [
+          {
+            "fiscal_year": "FY2023",
+            "period_end": "2023-01-29",
+            "revenue_m": 26974.0,
+            "operating_income_m": 4224.0,
+            "net_income_m": 4368.0,
+            "diluted_eps": 0.17,
+            "operating_cash_flow_m": 5641.0,
+            "capex_m": 1833.0
+          },
+          {
+            "fiscal_year": "FY2024",
+            "period_end": "2024-01-28",
+            "revenue_m": 60922.0,
+            "operating_income_m": 32972.0,
+            "net_income_m": 29760.0,
+            "diluted_eps": 1.19,
+            "operating_cash_flow_m": 28090.0,
+            "capex_m": 1069.0
+          },
+          {
+            "fiscal_year": "FY2025",
+            "period_end": "2025-01-26",
+            "revenue_m": 130497.0,
+            "operating_income_m": 81453.0,
+            "net_income_m": 72880.0,
+            "diluted_eps": 2.94,
+            "operating_cash_flow_m": 64089.0,
+            "capex_m": 3236.0
+          },
+          {
+            "fiscal_year": "FY2026",
+            "period_end": "2026-01-25",
+            "revenue_m": 215938.0,
+            "operating_income_m": 130387.0,
+            "net_income_m": 120067.0,
+            "diluted_eps": 4.9,
+            "operating_cash_flow_m": 102718.0,
+            "capex_m": 6042.0
+          }
+        ],
+        "latest_period": {
+          "diluted_eps": 2.46,
+          "guidance": "For Q3 FY2027, NVIDIA expects revenue of $108.0 billion, plus or minus 2%, with no Data Center compute revenue from China assumed.",
+          "net_income_m": 59688.0,
+          "revenue_m": 96221.0,
+          "reported_on": "2026-08-26",
+          "revenue_yoy_pct": 106.0,
+          "period_end": "2026-07-26",
+          "label": "Q2 FY2027"
+        }
+      },
+      "basis": [
+        {
+          "field": "reporting_currency",
+          "reasoning": "NVIDIA\u2019s audited consolidated income statement is denominated with dollar signs and identifies its units as millions; the financial statement currency is therefore USD.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "balance_sheet",
+          "reasoning": "The Q2 FY2027 balance sheet gives cash and cash equivalents of 22,443, marketable debt securities of 34,143, and marketable equity securities of 42,783, all under current assets; these sum to 99,369 million. Short-term debt of 1,000 plus long-term debt of 32,366 equals 33,366 million, excluding separately listed operating lease liabilities. The filing cover reports 24.1 billion shares outstanding as of August 21, 2026, equivalent to 24,100 million at the filing\u2019s stated precision; the balance sheet date is July 26, 2026.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "annual_financials",
+          "reasoning": "The FY2026 10-K statements provide income and cash-flow data for FY2026, FY2025, and FY2024; the FY2025 10-K supplies FY2023 as well. Together, their year/date headings establish the complete four-year sequence, and the tables directly report revenue, operating income, net income, diluted EPS, operating cash flow, and purchases related to property/equipment and intangible assets (reported here as positive capex).",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            },
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm",
+              "title": "nvda-20250126"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "latest_period",
+          "reasoning": "NVIDIA\u2019s August 26, 2026 release reports Q2 FY2027, ended July 26, 2026, including GAAP revenue of 96,221 million, net income of 59,688 million, diluted EPS of 2.46, and year-over-year revenue growth of 106%. The release gives Q3 FY2027 revenue outlook of $108.0 billion, plus or minus 2%, without assuming Data Center compute revenue from China. NVIDIA\u2019s investor-relations page identifies this Q2 release as its latest report.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000073/q2fy27pr.htm",
+              "title": "sec.gov"
+            },
+            {
+              "url": "https://investor.nvidia.com/financial-info/financial-reports-and-sec-filings/default.aspx",
+              "title": "\n\tNVIDIA Corporation - Financial Reports\n"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "annual_financials.0",
+          "reasoning": "The annual report tables directly report the FY2023 income statement amounts and diluted EPS, together with net cash provided by operating activities and purchases related to property/equipment and intangible assets; the fiscal year-end date is shown in the statement headings.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581025000023/nvda-20250126.htm",
+              "title": "nvda-20250126"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "annual_financials.1",
+          "reasoning": "The annual report tables directly report the FY2024 income statement amounts and diluted EPS, together with net cash provided by operating activities and purchases related to property/equipment and intangible assets; the fiscal year-end date is shown in the statement headings.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "annual_financials.2",
+          "reasoning": "The annual report tables directly report the FY2025 income statement amounts and diluted EPS, together with net cash provided by operating activities and purchases related to property/equipment and intangible assets; the fiscal year-end date is shown in the statement headings.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "annual_financials.3",
+          "reasoning": "The annual report tables directly report the FY2026 income statement amounts and diluted EPS, together with net cash provided by operating activities and purchases related to property/equipment and intangible assets; the fiscal year-end date is shown in the statement headings.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "error": null
+    },
+    "market": {
+      "run_id": "srun_8f80e83578b540244b7888c862b905d0",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "analyst_consensus": {
+          "rating": "Strong Buy",
+          "mean_price_target": 328.95,
+          "as_of": "2026-10-27",
+          "analyst_count": 62.0
+        },
+        "market_data": {
+          "trailing_pe": 27.39,
+          "dividend_yield_pct": 0.46,
+          "price": 217.94,
+          "high_52w": 243.37,
+          "low_52w": 164.27,
+          "market_cap_usd_b": 5259.0,
+          "price_date": "2026-10-27",
+          "price_currency": "USD"
+        }
+      },
+      "basis": [
+        {
+          "field": "analyst_consensus",
+          "reasoning": "The recent Investing.com summary reports a Strong Buy consensus and a 12-month average target of $328.95. Its rating distribution is 59 Buy, 2 Hold, and 1 Sell, totaling 62 analysts; the summary is dated 2026-10-27.",
+          "citations": [
+            {
+              "url": "https://www.investing.com/equities/nvidia-corp-consensus-estimates",
+              "title": "NVIDIA (NVDA) Stock Forecast & Price Target - Investing.com"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "market_data",
+          "reasoning": "Yahoo Finance gives the 52-week range ($164.27\u2013$243.37), TTM P/E (27.39), and forward dividend yield (0.46%). Its historical-price table identifies the October 27, 2026 close as $217.94 in USD. FinanceCharts reports the market capitalization as $5.259T alongside that close, converted to $5,259.0 billion.",
+          "citations": [
+            {
+              "url": "https://finance.yahoo.com/quote/NVDA/",
+              "title": "NVIDIA Corporation (NVDA) Stock Price, News, Quote & History - Yahoo Finance"
+            },
+            {
+              "url": "https://finance.yahoo.com/quote/NVDA/history/",
+              "title": "NVIDIA Corporation (NVDA) Stock Historical Prices & Data - Yahoo Finance"
+            },
+            {
+              "url": "https://www.financecharts.com/stocks/NVDA/summary/price",
+              "title": "NVIDIA (NVDA) Stock Price History Charts (NASDAQ: NVDA)"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "error": null
+    },
+    "news": {
+      "run_id": "srun_8f80e83578b540244fdded678f8bc459",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "upcoming_catalysts": [
+          {
+            "event": "NVIDIA is scheduled to report its third-quarter fiscal 2027 results after market close.",
+            "expected_date": "2026-11-17"
+          },
+          {
+            "event": "NVIDIA GTC Washington, D.C. runs November 30\u2013December 3, with CEO Jensen Huang\u2019s keynote scheduled during the conference.",
+            "expected_date": "2026-11-30"
+          },
+          {
+            "event": "NVIDIA and its partners expect to begin delivering modular AI factories worldwide.",
+            "expected_date": "2027-01"
+          },
+          {
+            "event": "NVIDIA\u2019s fourth-quarter fiscal 2027 earnings are forecast for February 24; the date is inferred rather than confirmed.",
+            "expected_date": "2027-02-24"
+          }
+        ],
+        "recent_developments": [
+          {
+            "date": "2026-10-27",
+            "headline": "Oracle Vera Rubin Expansion",
+            "detail": "NVIDIA and Oracle expanded plans for Vera Rubin NVL72 systems at multi-gigawatt scale and announced general availability of Vera Rubin systems and Vera CPUs on OCI, broadening the deployment path for NVIDIA AI infrastructure."
+          },
+          {
+            "date": "2026-10-26",
+            "headline": "Meta AI Collaboration Expanded",
+            "detail": "Meta expanded its planned deployment of NVIDIA Vera Rubin, Vera CPUs, Spectrum-X and BlueField-4 for AI workloads, while NVIDIA said it would invest $3 billion in Meta\u2019s equity offering, deepening a major customer relationship."
+          },
+          {
+            "date": "2026-10-21",
+            "headline": "Supply-Chain Capacity Agreements",
+            "detail": "NVIDIA announced manufacturing and supply-chain capacity agreements, including substrate commitments expected to raise capacity 2.5 times over three years, intended to support growth and strengthen supply resilience."
+          },
+          {
+            "date": "2026-10-21",
+            "headline": "DSX POD AI Factory Design",
+            "detail": "NVIDIA introduced DSX POD, a modular reference design for Vera Rubin AI factories that partners are expected to deliver worldwide in early 2027, potentially shortening site deployment time."
+          },
+          {
+            "date": "2026-09-28",
+            "headline": "Share Buyback Authorization Increased",
+            "detail": "NVIDIA increased its share-repurchase authorization by $150 billion and said it expects to execute the remaining program through fiscal 2028, adding a substantial capital-return authorization."
+          }
+        ]
+      },
+      "basis": [
+        {
+          "field": "upcoming_catalysts",
+          "reasoning": "The cited evidence identifies the confirmed November 17 earnings call, dates the GTC conference and keynote, anticipates worldwide modular AI factory delivery in early 2027, and gives an inferred February 24, 2027 fourth-quarter earnings date.",
+          "citations": [
+            {
+              "url": "https://finance.yahoo.com/quote/NVDA/earnings/NVDA-Q2-2027-earnings_call-676136.html",
+              "title": "NVIDIA Corporation (NVDA) Q2 FY2027 earnings call transcript"
+            },
+            {
+              "url": "https://www.nvidia.com/gtc/dc",
+              "title": "AI Conference - NVIDIA GTC Washington, D.C. | Nov 30\u2013Dec 3, 2026"
+            },
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment",
+              "title": "NVIDIA Introduces DSX POD AI Factories to Accelerate Europe's Infrastructure Deployment | NVIDIA Newsroom"
+            },
+            {
+              "url": "https://www.wallstreethorizon.com/nvidia-earnings-calendar",
+              "title": "Nvidia Earnings Date, Report, Conference Call, Forecasted Dates (NVDA)"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments",
+          "reasoning": "The cited NVIDIA announcements document the Oracle expansion, Meta collaboration and investment, supply-chain capacity agreements, DSX POD introduction, and increased repurchase authorization within the requested 90-day window; these are ordered by announcement date.",
+          "citations": [
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
+              "title": "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure | NVIDIA Newsroom"
+            },
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+              "title": "NVIDIA and Meta to Expand Collaboration on Muse and Muse Family of Models Amid Robust Growth | NVIDIA Newsroom"
+            },
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
+              "title": "NVIDIA and Supply Chain Partners Expand Capacity to Accelerate AI Infrastructure Buildout | NVIDIA Newsroom"
+            },
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment",
+              "title": "NVIDIA Introduces DSX POD AI Factories to Accelerate Europe's Infrastructure Deployment | NVIDIA Newsroom"
+            },
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase",
+              "title": "NVIDIA Announces a $150 Billion Share Repurchase Authorization Increase | NVIDIA Newsroom"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "upcoming_catalysts.0",
+          "reasoning": "The earnings-call transcript states that the third-quarter fiscal 2027 results call is scheduled for November 17.",
+          "citations": [
+            {
+              "url": "https://finance.yahoo.com/quote/NVDA/earnings/NVDA-Q2-2027-earnings_call-676136.html",
+              "title": "NVIDIA Corporation (NVDA) Q2 FY2027 earnings call transcript"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "upcoming_catalysts.1",
+          "reasoning": "NVIDIA\u2019s GTC page gives the November 30\u2013December 3 conference dates and identifies the CEO keynote during the event.",
+          "citations": [
+            {
+              "url": "https://www.nvidia.com/gtc/dc",
+              "title": "AI Conference - NVIDIA GTC Washington, D.C. | Nov 30\u2013Dec 3, 2026"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "upcoming_catalysts.2",
+          "reasoning": "NVIDIA says its partners expect to deliver modular AI factories worldwide in early 2027.",
+          "citations": [
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment",
+              "title": "NVIDIA Introduces DSX POD AI Factories to Accelerate Europe's Infrastructure Deployment | NVIDIA Newsroom"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "upcoming_catalysts.3",
+          "reasoning": "The earnings-calendar source marks February 24, 2027 as an inferred Q4 date, so it is presented as forecast rather than confirmed.",
+          "citations": [
+            {
+              "url": "https://www.wallstreethorizon.com/nvidia-earnings-calendar",
+              "title": "Nvidia Earnings Date, Report, Conference Call, Forecasted Dates (NVDA)"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments.0",
+          "reasoning": "The October 27 NVIDIA and Oracle announcement describes a multi-gigawatt Vera Rubin expansion and availability on OCI.",
+          "citations": [
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-and-oracle-expand-nvidia-vera-rubin-to-multi-gigawatt-scale-and-bring-nvidia-vera-cpu-to-oracle-cloud-infrastructure",
+              "title": "NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure | NVIDIA Newsroom"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments.1",
+          "reasoning": "The October 26 NVIDIA and Meta announcement describes expanded AI infrastructure deployment and NVIDIA\u2019s $3 billion investment in Meta\u2019s equity offering.",
+          "citations": [
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-and-meta-to-expand-collaboration-on-muse-and-muse-family-of-models-amid-robust-growth",
+              "title": "NVIDIA and Meta to Expand Collaboration on Muse and Muse Family of Models Amid Robust Growth | NVIDIA Newsroom"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments.2",
+          "reasoning": "The October 21 announcement describes new supply agreements and manufacturing capacity, including the projected substrate capacity increase.",
+          "citations": [
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-and-supply-chain-partners-expand-capacity-to-accelerate-ai-infrastructure-buildout",
+              "title": "NVIDIA and Supply Chain Partners Expand Capacity to Accelerate AI Infrastructure Buildout | NVIDIA Newsroom"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments.3",
+          "reasoning": "The October 21 announcement introduced DSX POD and says partner delivery of modular AI factories is planned for early 2027.",
+          "citations": [
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment",
+              "title": "NVIDIA Introduces DSX POD AI Factories to Accelerate Europe's Infrastructure Deployment | NVIDIA Newsroom"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments.4",
+          "reasoning": "The September 28 announcement states that NVIDIA increased its repurchase authorization by $150 billion and expects to execute the remaining program through fiscal 2028.",
+          "citations": [
+            {
+              "url": "https://nvidianews.nvidia.com/news/nvidia-announces-a-150-billion-share-repurchase-authorization-increase",
+              "title": "NVIDIA Announces a $150 Billion Share Repurchase Authorization Increase | NVIDIA Newsroom"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "error": null
+    },
+    "signals": {
+      "run_id": "srun_8f80e83578b54024544351fa70ab4a2a",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "balance_sheet_strength": "fortress",
+        "beat_revenue_consensus": "yes",
+        "customer_over_10pct": "yes",
+        "active_buyback": "yes",
+        "ceo_or_cfo_change_12m": "no",
+        "profitable_ttm": "yes",
+        "outlook_change": "raised",
+        "material_legal_matter": "yes"
+      },
+      "basis": [
+        {
+          "field": "balance_sheet_strength",
+          "reasoning": "At the July 26, 2026 period end, the 10-Q reports $56.6 billion in cash, cash equivalents and marketable debt securities plus $42.8 billion in marketable equity securities. The balance sheet shows $1.0 billion short-term and $32.4 billion long-term debt, so cash and debt securities alone exceed debt by about $23.2 billion; current assets also substantially exceed current liabilities. This supports fortress strength.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "beat_revenue_consensus",
+          "reasoning": "For the latest reported quarter, CNBC\u2019s LSEG comparison gives revenue of $96.22 billion against a $92.17 billion estimate, so reported revenue exceeded consensus.",
+          "citations": [
+            {
+              "url": "https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html",
+              "title": "Nvidia (NVDA) Q2 2027 earnings report: Live updates"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "customer_over_10pct",
+          "reasoning": "NVIDIA\u2019s FY2026 annual report states that one direct customer represented 22% of total revenue and another represented 14%, each at least 10%.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "active_buyback",
+          "reasoning": "NVIDIA\u2019s September 28, 2026 announcement says the Board added $150 billion to its existing repurchase program and increased the remaining authorization to $235 billion; the program is active.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-a-150-Billion-Share-Repurchase-Authorization-Increase/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA Announces a $150 Billion Share Repurchase Authorization Increase\n"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "ceo_or_cfo_change_12m",
+          "reasoning": "Earnings-call records in November 2025 and August 2026 identify Jensen Huang as CEO and Colette Kress as CFO at both points within the 12-month window. No CEO/CFO change is evidenced; this conclusion is based on the same incumbents being reported at those points rather than an explicit statement that no interim change occurred.",
+          "citations": [
+            {
+              "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+              "title": "NVIDIA Corp."
+            },
+            {
+              "url": "https://s201.q4cdn.com/141608511/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf?push_animated=1&show_loading=0&theme=light&webview_progress_bar=1",
+              "title": "NVIDIA Corp."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "profitable_ttm",
+          "reasoning": "The FY2026 10-K reports annual net income of $120.067 billion. The latest 10-Q reports six-month net income of $118.010 billion for H1 FY2027 versus $45.197 billion for H1 FY2026. Thus trailing four-quarter net income is approximately $120.067B + $118.010B \u2212 $45.197B = $192.880B, positive.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            },
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "outlook_change",
+          "reasoning": "At the latest results announcement, NVIDIA guided to $108 billion in Q3 revenue, while the contemporaneous analyst expectation was $104.2 billion. I classify this materially above-consensus forward outlook as raised; the company did not explicitly describe it as a revision to a previously issued Q3 guide, so this label reflects the outlook\u2019s direction versus expectations.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-Financial-Results-for-Second-Quarter-Fiscal-2027",
+              "title": "\n\tNVIDIA Corporation - NVIDIA Announces Financial Results for Second Quarter Fiscal 2027\n"
+            },
+            {
+              "url": "https://www.cnbc.com/2026/08/26/nvidia-nvda-earnings-report-q2-2027-live-updates.html",
+              "title": "Nvidia (NVDA) Q2 2027 earnings report: Live updates"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "material_legal_matter",
+          "reasoning": "The latest 10-Q describes a securities class action for which the district court granted class certification in March 2026, and also states the company remains engaged in regulatory and government inquiries and investigations. This supports a currently disclosed material legal matter.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "error": null
+    },
+    "thesis": {
+      "run_id": "srun_8f80e83578b540247e2ad54837fb3050",
+      "status": "completed",
+      "processor": "pro",
+      "content": {
+        "investment_summary": "NVIDIA is a full-stack accelerated-computing supplier built around GPUs and the CUDA software ecosystem. Q2 FY2027 revenue rose 106% year over year to $96.2 billion, including $89.0 billion from Data Center, while Oracle and Meta announced expanded deployment plans. The stock debate is whether that growth can remain durable despite concentrated customers, $279 billion of supply commitments and restrictions on China sales.",
+        "bear_case": [
+          "Three direct customers represented 44% of H1 FY2027 revenue\u201416%, 15% and 13%\u2014leaving results sensitive to purchasing decisions at a handful of counterparties.",
+          "Supply commitments reached $279 billion in July, versus $119 billion the previous quarter; long-term capacity agreements have already increased product costs, raising downside exposure if demand disappoints.",
+          "China access is impaired: NVIDIA says export controls have harmed its competitive position, while Chinese authorities encourage customers to buy domestic alternatives."
+        ],
+        "key_risks": [
+          "Export controls, licensing decisions and Chinese procurement pressure could further restrict demand and shift customers toward domestic competitors.",
+          "Geopolitical disruption could interrupt NVIDIA\u2019s Asia-concentrated supply chain despite October agreements targeting a 2.5\u00d7 increase in substrate capacity over three years.",
+          "Customers\u2019 internally developed alternatives could replace NVIDIA solutions and reduce demand for its products and services.",
+          "Data-center, energy and financing constraints could delay customer deployments, including Oracle\u2019s planned multi-gigawatt expansion, and defer revenue."
+        ],
+        "bull_case": [
+          "AI infrastructure spending remains powerful: Q2 FY2027 revenue reached $96.2 billion, up 106% year over year, including $89.0 billion of Data Center revenue.",
+          "Oracle plans to expand Vera Rubin NVL72 systems to multi-gigawatt scale, while Meta plans broader deployments of NVIDIA processors and networking, supporting demand across the platform.",
+          "FY2026 generated approximately $96.7 billion of free cash flow\u2014$102.7 billion of operating cash flow less $6.0 billion of capex\u2014providing substantial self-funding capacity."
+        ]
+      },
+      "basis": [
+        {
+          "field": "investment_summary",
+          "reasoning": "The annual report describes the GPU/CUDA ecosystem and full-stack positioning. Quarterly revenue of $96.221 billion versus $46.743 billion implies approximately 106% growth, and Data Center revenue was $89.023 billion. Oracle and Meta announcements support expanded deployment plans, not recognized revenue. Customer concentration, supply commitments and export-control disclosures underpin the durability debate, which is analyst synthesis.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            },
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Oracle-Expand-NVIDIA-Vera-Rubin-to-Multi-Gigawatt-Scale-and-Bring-NVIDIA-Vera-CPU-to-Oracle-Cloud-Infrastructure/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure\n"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Meta-to-Expand-Collaboration-on-Muse-and-Muse-Family-of-Models-Amid-Robust-Growth/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Meta to Expand Collaboration on Muse and Muse Family of Models Amid Robust Growth\n"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "bear_case",
+          "reasoning": "The first-half customer shares sum to 44%. The quarterly filing reports supply commitments rising from $119 billion to $279 billion, while the annual report says capacity arrangements increased product costs. Export-control harm and Chinese encouragement of domestic competitors directly support the China concern. The investment consequences are reasoned downside scenarios.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            },
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "key_risks",
+          "reasoning": "Annual-report disclosures identify export and licensing restrictions, Chinese procurement pressure, Asian supply-chain concentration, geopolitical exposure, customer-developed substitutes and infrastructure-resource constraints. October announcements add the planned substrate expansion and Oracle deployment context. Applying the general infrastructure risk to Oracle is an explicitly conditional inference.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Supply Chain Partners Expand Capacity to Accelerate AI Infrastructure Buildout\n"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Oracle-Expand-NVIDIA-Vera-Rubin-to-Multi-Gigawatt-Scale-and-Bring-NVIDIA-Vera-CPU-to-Oracle-Cloud-Infrastructure/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure\n"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "bull_case",
+          "reasoning": "Reported quarterly results establish rapid revenue growth and Data Center scale. Oracle and Meta announcements support prospective adoption across systems, processors and networking. FY2026 operating cash flow of $102.718 billion less $6.042 billion of capital purchases gives $96.676 billion, rounded to $96.7 billion; its funding implications are analytical.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Oracle-Expand-NVIDIA-Vera-Rubin-to-Multi-Gigawatt-Scale-and-Bring-NVIDIA-Vera-CPU-to-Oracle-Cloud-Infrastructure/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure\n"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Meta-to-Expand-Collaboration-on-Muse-and-Muse-Family-of-Models-Amid-Robust-Growth/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Meta to Expand Collaboration on Muse and Muse Family of Models Amid Robust Growth\n"
+            },
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "bear_case.0",
+          "reasoning": "The three reported direct-customer shares are 16%, 15% and 13%, totaling 44% of first-half FY2027 revenue. Sensitivity to their purchasing decisions is the investment inference.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "bear_case.1",
+          "reasoning": "The filing reports the $119 billion-to-$279 billion increase, and the annual report states that supply and capacity arrangements increased product costs. Exposure to disappointing demand is a conditional downside interpretation.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            },
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "bear_case.2",
+          "reasoning": "NVIDIA directly reports competitive harm from export controls and Chinese encouragement of purchases from China-based competitors. Describing market access as impaired synthesizes those disclosures.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "key_risks.0",
+          "reasoning": "The disclosures connect export controls and license outcomes to competitive harm and identify Chinese pressure to purchase domestic alternatives.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "key_risks.1",
+          "reasoning": "The annual report identifies Asian supply-chain concentration and geopolitical threats to continuity. The October announcement targets a 2.5\u00d7 substrate-capacity increase over three years; it does not establish that geopolitical exposure has been eliminated.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Supply-Chain-Partners-Expand-Capacity-to-Accelerate-AI-Infrastructure-Buildout/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Supply Chain Partners Expand Capacity to Accelerate AI Infrastructure Buildout\n"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "key_risks.2",
+          "reasoning": "The annual report states that customers can develop replacement solutions and that unsuccessful competition can reduce demand.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "key_risks.3",
+          "reasoning": "The annual report links data-center, energy and capital availability to deployment timing and financial performance. Oracle provides a current example of planned infrastructure expansion, not evidence of an actual delay.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Oracle-Expand-NVIDIA-Vera-Rubin-to-Multi-Gigawatt-Scale-and-Bring-NVIDIA-Vera-CPU-to-Oracle-Cloud-Infrastructure/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure\n"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "bull_case.0",
+          "reasoning": "Quarterly revenue of $96.221 billion compared with $46.743 billion implies 105.85% growth, rounded to 106%; Data Center revenue was $89.023 billion. The spending characterization is analytical.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+              "title": "nvda-20260726"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "bull_case.1",
+          "reasoning": "Oracle announced a planned multi-gigawatt Vera Rubin expansion, while Meta described expanded processor and networking deployments. These support prospective platform adoption but are not guaranteed revenue.",
+          "citations": [
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Oracle-Expand-NVIDIA-Vera-Rubin-to-Multi-Gigawatt-Scale-and-Bring-NVIDIA-Vera-CPU-to-Oracle-Cloud-Infrastructure/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Oracle Expand NVIDIA Vera Rubin to Multi-Gigawatt Scale and Bring NVIDIA Vera CPU to Oracle Cloud Infrastructure\n"
+            },
+            {
+              "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Meta-to-Expand-Collaboration-on-Muse-and-Muse-Family-of-Models-Amid-Robust-Growth/default.aspx",
+              "title": "\n\tNVIDIA Corporation - NVIDIA and Meta to Expand Collaboration on Muse and Muse Family of Models Amid Robust Growth\n"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "bull_case.2",
+          "reasoning": "Subtracting FY2026 capital purchases of $6.042 billion from operating cash flow of $102.718 billion yields $96.676 billion, rounded to $96.7 billion. Substantial self-funding capacity is an inference from that cash generation.",
+          "citations": [
+            {
+              "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125.htm",
+              "title": "nvda-20260125"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "error": null
+    }
+  }
+}
