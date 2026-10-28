@@ -59,7 +59,7 @@ One command turns a CSV of tickers into a PDF per company: profile, four years o
 - Five focused Task runs per company in one Task Group, plus a thesis run on their facts
 - Source policies per section: SEC filings and company sites for financials, a 90-day window for news
 - Derived metrics, headlines and arithmetic cross-checks computed in Python, not researched
-- Resumable: run ids are saved as they are created, so a rerun never pays twice
+- Resumable: interrupted submissions are reconciled before new runs start
 
 ## Getting Started
 

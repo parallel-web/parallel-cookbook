@@ -12,9 +12,9 @@ run for the CSV. Per company:
   thesis                                       one pro run, started as soon as that company's
                                                sections finish, with their facts as its input
 
-Every run id is saved to <out>/state.json the moment it is created, so an
-interrupted run resumes where it stopped instead of paying for the same
-research twice. Results land in <out>/data/<TICKER>.json and PDFs in <out>/pdf/.
+Each batch is recorded in <out>/state.json before submission, with submission
+retries disabled. Interrupted submissions are reconciled against the Task Group
+before any new runs start. Results land in <out>/data/<TICKER>.json and PDFs in <out>/pdf/.
 """
 
 from __future__ import annotations
@@ -121,13 +121,46 @@ def thesis_run(company: dict, facts: dict) -> dict:
     }
 
 
+def recover_pending(client, job: Job) -> None:
+    """Recover an interrupted batch, or stop while its outcome is uncertain."""
+    if not job.state.get("pending"):
+        return
+    expected = {tuple(pair) for pair in job.state["pending"]}
+    recovered = {}
+    with client.task_group.get_runs(job.state["task_group_id"]) as events:
+        for event in events:
+            if event.type != "task_run.state":
+                sys.exit(f"Could not reconcile the pending batch. Keep {job.state_path} and retry later.")
+            metadata = event.run.metadata or {}
+            pair = (metadata.get("ticker"), metadata.get("section"))
+            if pair not in expected:
+                continue
+            if pair in recovered and recovered[pair] != event.run.run_id:
+                sys.exit(f"Duplicate runs for {pair}. Keep {job.state_path} and reconcile the Task Group manually.")
+            recovered[pair] = event.run.run_id
+    if recovered.keys() != expected:
+        sys.exit(
+            f"Pending batch is unresolved ({len(recovered)}/{len(expected)} runs found). "
+            f"Keep {job.state_path} and retry later; do not resubmit or delete the state file."
+        )
+    for (ticker, section), run_id in recovered.items():
+        job.runs(ticker)[section] = run_id
+    del job.state["pending"]
+    job.save()
+
+
 def submit(client, job: Job, runs: list[tuple[str, str, dict]]) -> None:
-    """Add runs to the job's group and record each run id before doing anything else."""
+    """Record each batch before its non-idempotent POST, then save the returned ids."""
+    if job.state.get("pending"):
+        sys.exit(f"An unresolved batch remains in {job.state_path}. Resume the job before submitting more runs.")
     for i in range(0, len(runs), MAX_RUNS_PER_REQUEST):
         batch = runs[i : i + MAX_RUNS_PER_REQUEST]
-        resp = client.task_group.add_runs(job.state["task_group_id"], inputs=[r for _, _, r in batch])
+        job.state["pending"] = [[ticker, section] for ticker, section, _ in batch]
+        job.save()
+        resp = client.with_options(max_retries=0).task_group.add_runs(job.state["task_group_id"], inputs=[r for _, _, r in batch])
         for (ticker, section, _), run_id in zip(batch, resp.run_ids, strict=True):
             job.runs(ticker)[section] = run_id
+        del job.state["pending"]
         job.save()
 
 
@@ -190,6 +223,7 @@ def research(client, job: Job, companies: list[dict]) -> None:
     if not job.state["task_group_id"]:
         job.state["task_group_id"] = client.task_group.create(metadata={"recipe": "parallel-tear-sheets"}).task_group_id
         job.save()
+    recover_pending(client, job)
     new = [(c["ticker"], s, section_run(c, s)) for c in companies for s in spec.SECTIONS if s not in job.runs(c["ticker"])]
     if new:
         print(f"Starting {len(new)} section runs in task group {job.state['task_group_id']}")
@@ -234,8 +268,10 @@ def main() -> None:
         except AuthenticationError:
             sys.exit("Parallel rejected PARALLEL_API_KEY. Check the key at https://platform.parallel.ai.")
 
-    written = render.render_all(job.out, companies)
+    written, incomplete = render.render_all(job.out, companies)
     print(f"Wrote {len(written)} tear sheets to {job.out / 'pdf'}" + (f" and {job.out / 'tearsheets.pdf'}" if written else ""))
+    if incomplete:
+        sys.exit(f"Incomplete output for {', '.join(incomplete)}. Check the saved research and render errors above.")
 
 
 if __name__ == "__main__":

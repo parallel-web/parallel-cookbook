@@ -76,7 +76,9 @@ companies.csv
 
 **Signals are Task fields, not a separate API.** The yes/no checks are one more `core` run, so they carry the same citations, reasoning and confidence as everything else and appear on the basis page.
 
-**Resumable by default.** Each run id is written to `out/state.json` the moment it is created. If the script stops, run the same command again: it reattaches to the Task Group and only starts what is missing. Task runs can't be cancelled once created, so pilot with `--limit` first. For CSVs in the tens of thousands, see the [Large Scale Tasks recipe](../Large_Scale_Tasks_Recipe.py).
+**Resumable by default.** Each batch is saved in `out/state.json` before submission, with automatic submission retries disabled. If the script stops, run the same command again: it recovers the pending batch's run ids from Task Group metadata before starting anything new. If any ids are missing or ambiguous, it stops without resubmitting. Keep the state file and retry later; if the batch remains unresolved, reconcile it manually. Use only one process per output folder. Task runs can't be cancelled once created, so pilot with `--limit` first. For CSVs in the tens of thousands, see the [Large Scale Tasks recipe](../Large_Scale_Tasks_Recipe.py).
+
+**Partial results.** Missing or failed sections are marked on the research basis page, and the command exits with a nonzero status if any company has incomplete research or could not render. Successful sections and PDFs are still saved. Citation numbers and source titles in the PDFs link to the original sources.
 
 ## Cost and time
 

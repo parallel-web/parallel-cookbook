@@ -19,6 +19,8 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader
 from markupsafe import Markup
 
+import spec
+
 ROOT = Path(__file__).parent
 MINUS = "−"
 INK, INK2, RULE2, CARD, ORANGE = "#1D1B16", "#5C5B59", "#D4D2CA", "#F2F1EE", "#FB631B"
@@ -178,7 +180,8 @@ EMPTY = {
 def merge(data: dict) -> tuple[dict, dict, list[str]]:
     """Combine a company's runs into one content dict; each basis entry remembers its run."""
     content, basis, failed = dict(EMPTY), {}, []
-    for section, run in (data.get("runs") or {}).items():
+    for section in (*spec.SECTIONS, "thesis"):
+        run = (data.get("runs") or {}).get(section, {})
         if not run.get("content"):
             failed.append(section)
             continue
@@ -199,7 +202,7 @@ def derive(c: dict) -> dict:
     """Computed metrics, KPI tiles and cross-checks. Nothing here is researched."""
     cur = c["reporting_currency"]
     years = [y for y in c["annual_financials"] if isinstance(y, dict)]
-    for prev, y in zip([None, *years[:-1]], years, strict=True):
+    for prev, y in pairwise([None, *years]):
         growth = ratio(y.get("revenue_m"), prev and prev.get("revenue_m"))
         y["revenue_yoy"] = growth - 1 if growth is not None and prev["revenue_m"] > 0 else None
         y["op_margin"] = ratio(y.get("operating_income_m"), y.get("revenue_m"))
@@ -350,7 +353,7 @@ class Sources:
         return out
 
     def listing(self) -> list[dict]:
-        return [{"n": i + 1, "domain": domain(u), "title": self.titles.get(u) or u.split("://", 1)[-1].split("/", 1)[-1]}
+        return [{"n": i + 1, "url": u, "domain": domain(u), "title": self.titles.get(u) or u.split("://", 1)[-1].split("/", 1)[-1]}
                 for i, u in enumerate(self.urls)]
 
     def domain_counts(self) -> list[tuple[str, int]]:
@@ -461,7 +464,7 @@ def font_css() -> str:
     return "\n".join([WEB_FONTS, *faces])
 
 
-def render_all(out: Path, companies: list[dict]) -> list[Path]:
+def render_all(out: Path, companies: list[dict]) -> tuple[list[Path], list[str]]:
     from weasyprint import HTML
 
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True)
@@ -474,11 +477,12 @@ def render_all(out: Path, companies: list[dict]) -> list[Path]:
         "lockup": Markup((ROOT / "assets" / "parallel-lockup.svg").read_text()),
     }
     (out / "pdf").mkdir(parents=True, exist_ok=True)
-    sheets, written = [], []
+    sheets, written, incomplete = [], [], []
     for company in companies:
         path = out / "data" / f"{slug(company['ticker'])}.json"
         if not path.exists():
             print(f"  {company['ticker']}: no research saved, skipped")
+            incomplete.append(company["ticker"])
             continue
         try:
             sheet = build(json.loads(path.read_text()))
@@ -486,9 +490,13 @@ def render_all(out: Path, companies: list[dict]) -> list[Path]:
             HTML(string=template.render(sheets=[sheet], **shared), base_url=str(ROOT)).write_pdf(pdf)
         except Exception as e:  # one malformed result should not stop the batch
             print(f"  {company['ticker']}: render failed: {e!r}")
+            incomplete.append(company["ticker"])
             continue
+        if sheet["failed"]:
+            print(f"  {company['ticker']}: incomplete research: {', '.join(sheet['failed'])}")
+            incomplete.append(company["ticker"])
         sheets.append(sheet)
         written.append(pdf)
     if sheets:
         HTML(string=template.render(sheets=sheets, **shared), base_url=str(ROOT)).write_pdf(out / "tearsheets.pdf")
-    return written
+    return written, incomplete
