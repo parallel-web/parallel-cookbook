@@ -110,6 +110,7 @@ Take a thin input (a name, a domain) and return structured, cited fields.
 | --- | --- | --- | --- | --- |
 | [**Supabase Enrichment**](typescript-recipes/parallel-supabase-enrichment) | Real-time enrichment pipeline — INSERT a company, an Edge Function fires a Task, results stream back via Supabase Realtime. | `Task` `Webhooks` | Next.js · Supabase Edge Functions · Postgres | – |
 | [**Large-Scale Tasks**](python-recipes/Large_Scale_Tasks_Recipe.py) | Resumable batch runner for CSVs of any size — plan, paced submit at 1,000 runs/request, status, JSONL export with row-level validation. | `Task Group` | Python | – |
+| [**Equity Tear Sheets**](python-recipes/parallel-tear-sheets) | Turn a CSV of public companies into cited two-page PDF tear sheets: five focused Task runs per company, a thesis run on their facts, and a research basis page for every field. | `Task Group` | Python · WeasyPrint | – |
 | [**Task Group + Temporal**](python-recipes/Task_Group_Temporal_Recipe.py) | Combine Task Groups with Temporal workflow orchestration for enterprise-grade durability. | `Task Group` | Python · Temporal | – |
 
 ### Realtime Streaming (SSE)

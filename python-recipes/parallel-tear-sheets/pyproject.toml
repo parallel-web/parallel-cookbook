@@ -1,0 +1,13 @@
+[project]
+name = "parallel-tear-sheets"
+version = "0.1.0"
+description = "Cited equity tear sheets for a CSV of companies, researched with the Parallel Task API and rendered to PDF"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+dependencies = [
+  "parallel-web>=1.3.7",
+  "jinja2>=3.1",
+  "weasyprint>=62",
+  "python-dotenv>=1.0",
+]

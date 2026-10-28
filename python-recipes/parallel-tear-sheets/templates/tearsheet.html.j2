@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Equity tear sheets</title>
+<style>
+{{ font_css }}
+:root {
+  --ink: #1D1B16; --ink2: #5C5B59; --ink3: #66635C; --rail: #B9B5AC; --rule2: #D4D2CA;
+  --card: #F2F1EE; --paper: #FCFCFA; --white: #FFFFFF; --orange: #FB631B;
+  --sans: 'Gerstner Programm', 'Geist', 'Helvetica Neue', Arial, sans-serif;
+  --mono: 'FT System Mono', 'Geist Mono', 'SF Mono', Menlo, monospace;
+  --display: 'NaN Holo', 'Gerstner Programm', 'Geist', 'Helvetica Neue', Arial, sans-serif;
+}
+@page {
+  size: 816px 1056px;
+  margin: 24px 32px 40px;
+  background: #FCFCFA;
+  @bottom-left { content: element(footer); vertical-align: top; padding-top: 12px; }
+  @bottom-right {
+    content: counter(page) " / " counter(pages); vertical-align: top; padding-top: 12px;
+    font-family: 'FT System Mono', 'Geist Mono', 'SF Mono', Menlo, monospace; font-size: 7px; letter-spacing: 0.05em; color: #5C5B59;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); color: var(--ink); font-size: 9px; line-height: 12px; font-feature-settings: "tnum" 1; }
+.sheet + .sheet { break-before: page; }
+.running { position: running(footer); font-family: var(--mono); font-size: 7px; line-height: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink2); }
+.running b { color: var(--ink); font-weight: 400; }
+
+/* type, from the Parallel print scale */
+.headline { font-family: var(--display); font-weight: 500; font-size: 23.375px; line-height: 26px; letter-spacing: -0.69px; }
+.t-stat { font-size: 32px; line-height: 36px; font-weight: 500; letter-spacing: -0.5px; }
+.cstat { font-size: 22px; line-height: 24px; font-weight: 500; letter-spacing: -0.4px; }
+.t-title { font-size: 14px; line-height: 16px; font-weight: 500; letter-spacing: -0.14px; }
+.t-body { font-size: 12px; line-height: 16px; }
+.t-note { font-size: 10px; line-height: 12px; color: var(--ink2); }
+.t-sample { font-size: 9px; line-height: 12px; color: var(--ink3); text-align: right; }
+.t-tech { font-family: var(--mono); font-size: 8px; line-height: 12px; color: var(--ink2); }
+.kick { font-family: var(--mono); font-size: 7px; line-height: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink2); }
+.subj { font-family: var(--mono); font-size: 6.5px; line-height: 9px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink2); }
+.topic { font-size: 10.5px; line-height: 12px; font-weight: 500; }
+.ex-q { font-size: 9.5px; line-height: 11.5px; }
+.ex-d { font-size: 9px; line-height: 11px; color: var(--ink2); }
+.ex-tag { font-family: var(--mono); font-size: 7px; line-height: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--orange); }
+.val { font-family: var(--mono); font-size: 8px; line-height: 12px; white-space: nowrap; }
+.ref { font-family: var(--mono); font-size: 6.5px; line-height: 0; color: var(--ink2); vertical-align: 1.5px; margin-left: 3px; letter-spacing: 0; white-space: nowrap; font-weight: 400; }
+.t-stat .ref, .headline .ref { vertical-align: 12px; }
+
+/* section anatomy */
+/* Sections flow from page to page; each one moves whole to the next page rather than splitting. */
+.sec, .page > .grid { margin-top: 16px; break-inside: avoid; }
+.grid > .sec { margin-top: 0; }
+.sheet > .page:first-child > .sec:first-child { margin-top: 0; }
+.basis { break-before: page; }
+.basis .sec { break-inside: auto; }
+.basis .row, .sources div { break-inside: avoid; }
+.rule { height: 0; border-top: 0.75px solid var(--ink); }
+.sec-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-top: 8px; min-height: 40px; padding-bottom: 8px; }
+.sec-head .t-title { flex: 1; }
+.sec-head .t-sample { flex: 0 0 auto; max-width: 236px; padding-top: 1px; }
+.grid .sec-head .t-title { white-space: nowrap; }
+.g-two .sec-head .t-sample { max-width: 200px; }
+.g-head, .g-stat { display: grid; grid-template-columns: 176px 560px; column-gap: 16px; }
+.g-two { display: grid; grid-template-columns: 368px 368px; column-gap: 16px; }
+.g-three { display: grid; grid-template-columns: 240px 240px 240px; column-gap: 16px; }
+.railed { border-left: 0.75px solid var(--rail); padding-left: 12px; }
+.wordmark svg { width: 132px; height: auto; display: block; margin-top: 8px; }
+.wordmark svg path { fill: var(--ink); }
+
+/* cards */
+.card { background: var(--card); border-radius: 4px; padding: 12px 16px; }
+.card.flush { padding: 8px 0 6px; }
+.card.flush > .row { padding-left: 16px; padding-right: 16px; }
+.row { display: flex; align-items: center; gap: 12px; padding-top: 5px; padding-bottom: 5px; position: relative; }
+.card.flush > .row + .row::before { content: ""; position: absolute; top: 0; left: 16px; right: 16px; border-top: 0.75px solid var(--rule2); }
+.row.top { align-items: flex-start; }
+
+/* market */
+.kpis { display: grid; grid-template-columns: repeat(5, 1fr); column-gap: 12px; }
+.kpi .v { font-size: 14px; line-height: 16px; font-weight: 500; letter-spacing: -0.14px; margin-top: 4px; white-space: nowrap; }
+.kpi .s { margin-top: 2px; }
+.range { display: flex; align-items: center; gap: 8px; margin-top: 8px; padding-top: 8px; border-top: 0.75px solid var(--rule2); }
+.range svg { display: block; }
+
+/* financial table */
+table.fin { width: 100%; border-collapse: collapse; }
+table.fin th { text-align: right; font-weight: 400; padding: 0 0 6px 8px; vertical-align: bottom; }
+table.fin th:first-child, table.fin td:first-child { text-align: left; padding-left: 0; }
+table.fin td { text-align: right; padding: 3px 0 3px 8px; border-top: 0.75px solid var(--rule2); }
+table.fin td.label { font-size: 9.5px; }
+table.fin tr.lead td.label { font-weight: 500; }
+table.fin tr.sub td { color: var(--ink2); border-top: 0; padding-top: 0; }
+table.fin th.lq, table.fin td.lq { padding-left: 16px; }
+.chart svg { display: block; margin-top: 8px; }
+
+/* signals */
+.signal-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 24px; padding: 4px 16px; }
+.sig { display: flex; align-items: center; gap: 8px; padding: 5px 0; border-bottom: 0.75px solid var(--rule2); }
+.sig:nth-last-child(-n+2) { border-bottom: 0; }
+.sig-label { flex: 1; font-size: 9.5px; line-height: 11.5px; white-space: nowrap; }
+.badge { display: inline-block; font-family: var(--mono); font-size: 7px; line-height: 10.5px; height: 12px; padding: 0 6px; border-radius: 6px; letter-spacing: 0.05em; text-transform: uppercase; background: var(--white); color: var(--ink2); border: 0.75px solid var(--rail); white-space: nowrap; }
+.badge.solid, .badge.conf-high { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.badge.conf-low { color: var(--orange); border-color: var(--orange); }
+
+/* lists */
+.idx { font-family: var(--mono); font-size: 7px; line-height: 11.5px; color: var(--ink2); width: 14px; flex: 0 0 14px; }
+.date { font-family: var(--mono); font-size: 7px; line-height: 12px; letter-spacing: 0.05em; color: var(--ink2); white-space: nowrap; flex: 0 0 52px; }
+.seg-track { flex: 0 0 72px; height: 4px; background: var(--rule2); position: relative; }
+.seg-track i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ink); }
+
+/* basis page */
+.b-left { flex: 0 0 156px; }
+.b-right { flex: 1; }
+.basis .card.flush > .row { padding-top: 3px; padding-bottom: 3px; }
+.cites { font-family: var(--mono); font-size: 6.5px; line-height: 9px; color: var(--ink2); white-space: nowrap; margin-left: 4px; }
+.cites b { color: var(--ink); font-weight: 400; margin-left: 6px; }
+.units { display: flex; flex-wrap: wrap; gap: 2px; margin-top: 6px; width: 120px; }
+.units i, .legend i { display: block; flex: 0 0 6.5px; width: 6.5px; height: 6.5px; border-radius: 1px; background: var(--rail); }
+.units i.u-high, .legend i.u-high { background: var(--ink); }
+.units i.u-low, .legend i.u-low { background: var(--orange); }
+.legend { display: flex; gap: 12px; margin-top: 6px; font-size: 9px; line-height: 12px; }
+.legend span { display: inline-flex; align-items: center; gap: 4px; }
+.check { display: flex; gap: 6px; padding: 4px 0; border-top: 0.75px solid var(--rule2); }
+.check .mark { font-family: var(--mono); font-size: 8px; width: 10px; }
+.check .mark.bad { color: var(--orange); }
+.sources { margin-top: 4px; }
+.sources div { font-family: var(--mono); font-size: 6.5px; line-height: 9px; color: var(--ink2); white-space: nowrap; overflow: hidden; padding: 2px 0 1px; border-top: 0.75px solid var(--rule2); }
+.sources b { color: var(--ink); font-weight: 400; }
+
+/* closing */
+.closing { margin-top: 24px; padding-top: 8px; border-top: 0.75px solid var(--ink); }
+.powered { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.cap { display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 16px; border-radius: 8px; background: var(--orange); }
+.cap svg { display: block; width: 60px; height: auto; }
+.cap svg path { fill: var(--paper); }
+</style>
+</head>
+<body>
+{% macro refs(src, field) -%}
+  {%- set r = src.refs(field) -%}{%- if r %}<span class="ref">[{{ r|join(",") }}]</span>{% endif -%}
+{%- endmacro %}
+
+{% for s in sheets %}
+{% set c = s.c %}{% set d = s.d %}{% set src = s.src %}
+{% set co = c.company_overview %}{% set m = c.market_data %}{% set lp = c.latest_period %}
+{% set years = d.years %}{% set last = d.last %}{% set prev = d.prev %}{% set cur = d.cur %}
+<section class="sheet">
+<div class="running"><b>{{ s.ticker }}</b> · Equity tear sheet · Researched with the Parallel Task API · {{ s.generated }}</div>
+
+<div class="page">
+  <!-- Header -->
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="g-head">
+      <div>
+        <div class="wordmark">{{ wordmark }}</div>
+        <div class="t-body" style="margin-top:16px">Equity tear sheet</div>
+        <div class="t-note">{{ s.generated|long_date }}</div>
+      </div>
+      <div style="padding-top:8px">
+        <div><span class="ex-tag">{% if co.exchange %}{{ co.exchange }}: {% endif %}{{ s.ticker }}</span> <span class="subj" style="margin-left:6px">{{ [co.sector, co.industry]|select|join(" · ") }}</span></div>
+        <div class="headline" style="margin-top:4px">{{ s.name }}{{ refs(src, "company_overview") }}</div>
+        <div class="subj" style="margin-top:4px">{{ [co.headquarters, ("Founded " ~ co.founded_year) if co.founded_year else "", (co.employees|num ~ " employees") if co.employees else ""]|select|join(" · ") }}</div>
+        {% if c.investment_summary %}<div class="t-body" style="margin-top:8px">{{ c.investment_summary|clip(500) }}{{ refs(src, "investment_summary") }}</div>{% endif %}
+        {% if c.business_description %}<div class="railed t-note" style="margin-top:12px">{{ c.business_description|clip(420) }}{{ refs(src, "business_description") }}</div>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Market -->
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">{{ s.claims.market }}</div>
+      <div class="t-sample">{% if m.price_date %}Close {{ m.price_date }}. {% endif %}{{ src.line("market_data", "analyst_consensus") }}</div>
+    </div>
+    <div class="g-stat">
+      <div>
+        <div class="t-stat">{{ m.price|price(d.pcur) }}{{ refs(src, "market_data") }}</div>
+        <div class="t-body">share price{% if d.pcur and d.pcur != "USD" %}, {{ d.pcur }}{% endif %}</div>
+      </div>
+      <div class="card">
+        <div class="kpis" style="grid-template-columns: repeat({{ d.kpis|length }}, 1fr)">
+          {% for k in d.kpis %}
+          <div class="kpi"><div class="kick">{{ k.label }}{% if k.label == "Consensus target" %}{{ refs(src, "analyst_consensus") }}{% endif %}</div>
+            <div class="v">{{ k.value }}{% if k.delta %} <span class="t-tech">{{ k.delta }}</span>{% endif %}</div><div class="subj s">{{ k.sub }}</div></div>
+          {% endfor %}
+        </div>
+        {% if s.range_bar %}
+        <div class="range">
+          <span class="kick" style="flex:0 0 96px">52-week range</span>
+          <span class="val">{{ m.low_52w|price(d.pcur) }}</span>{{ s.range_bar }}<span class="val">{{ m.high_52w|price(d.pcur) }}</span>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Financials -->
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">{{ s.claims.financials }}{{ refs(src, "annual_financials") }}</div>
+      <div class="t-sample">{% if cur %}{{ cur }}. {% endif %}{{ src.line("annual_financials", "latest_period", "balance_sheet") }}</div>
+    </div>
+    {% if years %}
+    <div class="grid g-two">
+      <div class="card chart">
+        <div class="cstat">{{ last.revenue_yoy|pct(true) if last.revenue_yoy is not none else last.revenue_m|money(cur) }}</div>
+        <div class="kick" style="margin-top:2px">{% if last.revenue_yoy is not none %}Revenue, {{ prev.fiscal_year|short_fy }} {{ prev.revenue_m|money(cur) }} to {{ last.fiscal_year|short_fy }} {{ last.revenue_m|money(cur) }}{% else %}Revenue, {{ last.fiscal_year|short_fy }}{% endif %}</div>
+        {{ s.charts.revenue }}
+      </div>
+      <div class="card chart">
+        <div class="cstat">{{ last.net_margin|pct if last.net_margin is not none else last.net_income_m|money(cur) }}</div>
+        <div class="kick" style="margin-top:2px">{% if last.net_margin is not none %}Net margin, {{ last.fiscal_year|short_fy }} net income {{ last.net_income_m|money(cur) }}{% else %}Net income, {{ last.fiscal_year|short_fy }}{% endif %}</div>
+        {{ s.charts.net_income }}
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <table class="fin">
+        <thead><tr>
+          <th class="kick">{{ cur or "" }}</th>
+          {% for y in years %}<th><div class="kick">{{ y.fiscal_year }}</div><div class="subj">{{ y.period_end }}</div></th>{% endfor %}
+          {% if lp.label %}<th class="lq"><div class="kick">{{ lp.label }}{{ refs(src, "latest_period") }}</div><div class="subj">{{ lp.period_end }}</div></th>{% endif %}
+        </tr></thead>
+        <tbody>
+          <tr class="lead"><td class="label">Revenue</td>{% for y in years %}<td class="val">{{ y.revenue_m|money(cur) }}</td>{% endfor %}{% if lp.label %}<td class="val lq">{{ lp.revenue_m|money(cur) }}</td>{% endif %}</tr>
+          <tr class="sub"><td class="subj">Growth</td>{% for y in years %}<td class="val">{{ y.revenue_yoy|pct(true) }}</td>{% endfor %}{% if lp.label %}<td class="val lq">{% if lp.revenue_yoy_pct is not none %}{{ (lp.revenue_yoy_pct / 100)|pct(true) }} YoY{% endif %}</td>{% endif %}</tr>
+          {% if d.has_op_income %}
+          <tr><td class="label">Operating income</td>{% for y in years %}<td class="val">{{ y.operating_income_m|money(cur) }}</td>{% endfor %}{% if lp.label %}<td class="lq"></td>{% endif %}</tr>
+          <tr class="sub"><td class="subj">Operating margin</td>{% for y in years %}<td class="val">{{ y.op_margin|pct }}</td>{% endfor %}{% if lp.label %}<td class="lq"></td>{% endif %}</tr>
+          {% endif %}
+          <tr><td class="label">Net income</td>{% for y in years %}<td class="val">{{ y.net_income_m|money(cur) }}</td>{% endfor %}{% if lp.label %}<td class="val lq">{{ lp.net_income_m|money(cur) }}</td>{% endif %}</tr>
+          <tr class="sub"><td class="subj">Net margin</td>{% for y in years %}<td class="val">{{ y.net_margin|pct }}</td>{% endfor %}{% if lp.label %}<td class="lq"></td>{% endif %}</tr>
+          <tr><td class="label">Diluted EPS</td>{% for y in years %}<td class="val">{{ y.diluted_eps|price(cur) }}</td>{% endfor %}{% if lp.label %}<td class="val lq">{{ lp.diluted_eps|price(cur) }}</td>{% endif %}</tr>
+          {% if not d.financial %}<tr><td class="label">Free cash flow</td>{% for y in years %}<td class="val">{{ y.fcf_m|money(cur) }}</td>{% endfor %}{% if lp.label %}<td class="lq"></td>{% endif %}</tr>{% endif %}
+        </tbody>
+      </table>
+    </div>
+    {% if lp.guidance %}<div class="railed t-note" style="margin-top:12px"><span class="kick">Outlook</span> {{ lp.guidance|clip(200)|trim|trim(".") }}.{% if lp.reported_on %} Reported {{ lp.reported_on }}.{% endif %}</div>{% endif %}
+    {% else %}
+    <div class="card"><div class="t-note">Financials could not be researched for this company.</div></div>
+    {% endif %}
+  </div>
+
+  <!-- Signals -->
+  {% if s.signals %}
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">{{ s.claims.signals }}</div>
+      <div class="t-sample">{{ src.line("balance_sheet_strength", *s.signals|map(attribute="field")) }}</div>
+    </div>
+    <div class="g-stat">
+      <div>
+        <div class="t-stat">{{ (c.balance_sheet_strength or "n/a")|capitalize }}{{ refs(src, "balance_sheet_strength") }}</div>
+        <div class="t-body">balance sheet</div>
+      </div>
+      <div class="card signal-grid">
+        {% for r in s.signals %}
+        <div class="sig"><span class="sig-label">{{ r.label }}{{ refs(src, r.field) }}</span><span class="badge{{ ' solid' if r.answer == 'yes' }}">{{ r.answer }}</span></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<div class="page">
+  <!-- Thesis -->
+  <div class="grid g-two">
+    {% for key, title in [("bull_case", "Bull case"), ("bear_case", "Bear case")] %}
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">{{ title }}</div><div class="t-sample">{{ src.line(key) }}</div></div>
+      <div class="card flush">
+        {% for p in c[key][:3] %}<div class="row top"><span class="idx">{{ "%02d"|format(loop.index) }}</span><span class="ex-q">{{ p|clip(210) }}{{ refs(src, key ~ "." ~ loop.index0) }}</span></div>
+        {% else %}<div class="row"><span class="t-note">Not available.</span></div>{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Risks -->
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head"><div class="t-title">Key risks</div><div class="t-sample">{{ src.line("key_risks") }}</div></div>
+    <div class="card flush">
+      {% for p in c.key_risks[:4] %}<div class="row top"><span class="idx">{{ "%02d"|format(loop.index) }}</span><span class="ex-q">{{ p|clip(190) }}{{ refs(src, "key_risks." ~ loop.index0) }}</span></div>
+      {% else %}<div class="row"><span class="t-note">Not available.</span></div>{% endfor %}
+    </div>
+  </div>
+
+  <!-- News -->
+  <div class="grid g-two">
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Recent developments</div><div class="t-sample">Last 90 days. {{ src.line("recent_developments") }}</div></div>
+      <div class="card flush">
+        {% for e in c.recent_developments[:4] %}
+        <div class="row top"><span class="date">{{ e.date }}</span><div><div class="topic">{{ e.headline }}{{ refs(src, "recent_developments." ~ loop.index0) }}</div><div class="ex-d" style="margin-top:2px">{{ e.detail|clip(190) }}</div></div></div>
+        {% else %}<div class="row"><span class="t-note">No material developments found.</span></div>{% endfor %}
+      </div>
+    </div>
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Upcoming catalysts</div><div class="t-sample">{{ src.line("upcoming_catalysts") }}</div></div>
+      <div class="card flush">
+        {% for e in c.upcoming_catalysts[:4] %}
+        <div class="row top"><span class="date">{{ e.expected_date }}</span><span class="ex-q">{{ e.event|clip(140) }}{{ refs(src, "upcoming_catalysts." ~ loop.index0) }}</span></div>
+        {% else %}<div class="row"><span class="t-note">None scheduled.</span></div>{% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Company -->
+  <div class="grid g-three">
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Segments{{ refs(src, "revenue_segments") }}</div></div>
+      <div class="card flush">
+        {% for g in s.segments[:5] %}
+        <div class="row"><span class="ex-q" style="flex:1">{{ g.segment }}</span><span class="seg-track"><i style="width: {{ (g.share * 100)|round(1) }}%"></i></span><span class="val" style="width:28px;text-align:right">{{ g.share|pct(false, 0) }}</span></div>
+        {% else %}
+        <div class="row"><span class="ex-q">{{ c.revenue_segments[0].segment if c.revenue_segments else "Not reported" }}</span></div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Leadership{{ refs(src, "leadership") }}</div></div>
+      <div class="card flush">
+        {% for p in c.leadership[:4] %}<div class="row top"><div><div class="ex-q">{{ p.name }}</div><div class="subj">{{ p.title|truncate(44, true, "…") }}</div></div></div>
+        {% else %}<div class="row"><span class="t-note">Not available.</span></div>{% endfor %}
+      </div>
+    </div>
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Competitors{{ refs(src, "competitors") }}</div></div>
+      <div class="card flush">
+        {% for p in c.competitors[:4] %}<div class="row"><span class="ex-q" style="flex:1">{{ p.company_name }}</span><span class="val">{{ p.ticker }}</span></div>
+        {% else %}<div class="row"><span class="t-note">Not available.</span></div>{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page basis">
+  <!-- Research basis -->
+  {% set rows = src.rows(c) %}
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">Research basis: {{ rows|length }} fields, {{ s.conf_counts.high }} high and {{ s.conf_counts.medium }} medium confidence{% if s.conf_counts.low %}, {{ s.conf_counts.low }} low{% endif %}</div>
+      <div class="t-sample">The Task API returns citations, reasoning and a confidence rating with every field.</div>
+    </div>
+    <div class="g-stat">
+      <div>
+        <div class="t-stat">{{ src.urls|length }}</div>
+        <div class="t-body">sources cited</div>
+        <div class="railed t-note" style="margin-top:8px">{% for dom, n in src.domain_counts()[:5] %}{{ dom }} {{ n }}{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
+        <div class="kick" style="margin-top:24px">Confidence by field</div>
+        <div class="units">{% for r in rows %}<i class="u-{{ r.confidence }}"></i>{% endfor %}</div>
+        <div class="legend"><span><i class="u-high"></i>High</span><span><i class="u-medium"></i>Medium</span><span><i class="u-low"></i>Low</span></div>
+        {% if d.checks %}
+        <div class="kick" style="margin-top:24px">Arithmetic checks</div>
+        {% for name, value, ok in d.checks %}
+        <div class="check"><span class="mark{{ '' if ok else ' bad' }}">{{ "✓" if ok else "!" }}</span><div><div class="ex-d" style="color:var(--ink)">{{ name }}</div><div class="subj">{{ value }}</div></div></div>
+        {% endfor %}
+        {% endif %}
+        {% if s.failed %}<div class="railed t-note" style="margin-top:16px">Runs that did not complete: {{ s.failed|join(", ") }}.</div>{% endif %}
+        <div class="kick" style="margin-top:24px">Sources</div>
+        <div class="sources">{% for x in src.listing() %}<div><b>[{{ x.n }}]</b> {{ x.title|truncate(32, true, "…") }}</div>{% endfor %}</div>
+        <div class="closing">
+          <div class="t-note">For research workflows only, not investment advice.</div>
+          <div class="powered" style="margin-top:12px"><span class="t-tech">Powered by</span><span class="cap">{{ lockup }}</span></div>
+        </div>
+      </div>
+      <div class="card flush">
+        <div class="row"><span class="kick b-left">Field and run</span><span class="kick">Why Parallel believes it, and where it came from</span></div>
+        {% for r in rows %}
+        <div class="row top">
+          <div class="b-left"><div class="topic">{{ r.label }}</div><div style="margin-top:2px"><span class="subj">{{ r.run }}</span> <span class="badge conf-{{ r.confidence }}">{{ r.confidence }}</span></div></div>
+          <div class="b-right ex-d" style="color:var(--ink)">{{ r.reasoning }}<span class="cites">{% for n in r.refs %}<b>[{{ n }}]</b> {{ src.urls[n - 1]|domain }}{% endfor %}</span></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endfor %}
+</body>
+</html>
