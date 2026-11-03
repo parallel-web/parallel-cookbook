@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Claim charts</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans+Condensed:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/* A litigation exhibit: landscape Letter, serif claim language, condensed labels, mono for numbers and URLs.
+   One accent (patent-office blue); green, amber and red appear only on verification marks. */
+:root {
+  --ink: #1B1B1A; --muted: #5E5A52; --hair: #D8D3C8; --panel: #F6F4EF; --accent: #1F3A68;
+  --pass: #2E6B3F; --warn: #A15C00; --fail: #A4262C;
+  --serif: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --label: 'IBM Plex Sans Condensed', 'Arial Narrow', Arial, sans-serif;
+  --mono: 'IBM Plex Mono', Menlo, 'Courier New', monospace;
+}
+
+@page {
+  size: 11in 8.5in;
+  margin: 0.7in 0.6in 0.68in;
+  @top-center { content: element(runhead); width: 9.8in; vertical-align: bottom; padding-bottom: 10pt; }
+  @bottom-left { content: "Draft for attorney review. Evidence gathering only; not an opinion on infringement or validity."; font: 400 7pt 'IBM Plex Sans Condensed', Arial, sans-serif; color: #5E5A52; vertical-align: top; padding-top: 8pt; }
+  @bottom-right { content: "Page " counter(page) " of " counter(pages); font: 400 7pt 'IBM Plex Mono', monospace; color: #5E5A52; vertical-align: top; padding-top: 8pt; }
+  @footnote { margin-top: 8pt; border-top: 0.5pt solid #D8D3C8; padding-top: 4pt; }
+}
+@page :first { @top-center { content: none; } }
+.run-head { position: running(runhead); display: flex; justify-content: space-between; border-bottom: 0.75pt solid var(--ink); padding-bottom: 3pt;
+            font: 500 7.5pt var(--label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.run-head b { font-weight: 500; color: var(--ink); letter-spacing: 0.1em; }
+
+* { box-sizing: border-box; }
+html { font: 400 9pt/1.38 var(--serif); color: var(--ink); }
+body { margin: 0; }
+a { color: inherit; text-decoration: none; }
+h1, h2, h3 { margin: 0; font-weight: 600; }
+p { margin: 0; }
+.label { font: 500 7pt/1.2 var(--label); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
+.mono { font-family: var(--mono); font-size: 7.6pt; }
+.muted { color: var(--muted); }
+.chart-doc + .chart-doc { break-before: page; }
+
+/* caption: the patent on the left, its record on the right */
+.caption { display: flex; gap: 0.35in; align-items: flex-start; border-bottom: 1.5pt solid var(--ink); padding-bottom: 9pt; }
+.caption .main { flex: 1; display: flex; flex-direction: column; gap: 4pt; }
+.caption h1 { font-size: 20pt; line-height: 1.1; letter-spacing: -0.01em; }
+.caption .ptitle { font-style: italic; font-size: 11pt; line-height: 1.3; max-width: 5.8in; }
+.caption .against { font-size: 9.5pt; margin-top: 3pt; }
+.caption .note { font-size: 8pt; color: var(--muted); max-width: 5.8in; }
+.record { width: 3.2in; display: flex; flex-direction: column; gap: 5pt; }
+.record .top { display: flex; justify-content: space-between; align-items: center; }
+.exhibit-box { border: 1pt solid var(--ink); padding: 3pt 9pt; font: 500 8.5pt var(--label); letter-spacing: 0.1em; text-transform: uppercase; }
+.record dl { margin: 0; display: flex; flex-wrap: wrap; border-top: 0.5pt solid var(--hair); }
+.record dt, .record dd { margin: 0; padding: 2pt 0; border-bottom: 0.5pt solid var(--hair); }
+.record dt { width: 30%; font: 500 6.8pt/1.6 var(--label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.record dd { width: 70%; font: 400 7.8pt/1.45 var(--mono); }
+.record .src { font-size: 7.2pt; color: var(--muted); }
+
+/* summary strip */
+.summary { display: flex; gap: 0.24in; padding: 7pt 0 8pt; border-bottom: 0.5pt solid var(--hair); margin-bottom: 6pt; align-items: baseline; }
+.summary div { display: flex; flex-direction: column; gap: 1pt; }
+.summary b { font: 600 12pt/1.1 var(--serif); }
+.summary .label { white-space: nowrap; }
+
+/* Coverage circles: full = documented, half = partial, empty = not found */
+.hb { display: inline-block; width: 8pt; height: 8pt; border-radius: 50%; border: 0.9pt solid var(--ink); vertical-align: -1pt; margin-right: 4pt; }
+.hb.documented { background: var(--ink); }
+.hb.partial { background: linear-gradient(to right, var(--ink) 50%, transparent 50%); }
+
+/* verification marks */
+.ck { font: 400 7pt/1.35 var(--label); letter-spacing: 0.02em; display: block; padding-left: 9pt; position: relative; }
+.ck::before, .dot { content: ""; position: absolute; left: 0; top: 2.2pt; width: 5pt; height: 5pt; border-radius: 50%; }
+.dot { position: static; display: inline-block; }
+.pass::before, .dot.pass { background: var(--pass); }
+.warn::before, .dot.warn { background: var(--warn); }
+.fail::before, .dot.fail { background: var(--fail); }
+.ck.warn { color: var(--warn); } .ck.fail { color: var(--fail); }
+.ck .d { color: var(--muted); }
+
+/* chart table */
+table { width: 100%; border-collapse: collapse; }
+thead { display: table-header-group; }
+th { text-align: left; font: 500 7pt/1.2 var(--label); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); padding: 0 8pt 5pt 0; border-bottom: 0.75pt solid var(--ink); vertical-align: bottom; }
+td { vertical-align: top; padding: 7pt 10pt 8pt 0; border-bottom: 0.5pt solid var(--hair); }
+tr { break-inside: avoid; }
+.chart col.c1 { width: 31%; } .chart col.c2 { width: 47%; } .chart col.c3 { width: 22%; }
+.el-id { font: 500 8pt var(--mono); color: var(--accent); display: block; margin-bottom: 2pt; }
+.el-text { font-size: 9pt; }
+.assess { font: 500 7.5pt var(--label); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 4pt; }
+blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.5pt solid var(--accent); }
+.summary-text { font-size: 8pt; color: var(--muted); }
+.basis-col .conf { font: 500 7.2pt var(--label); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 3pt; }
+.basis-col .when { font-size: 7.6pt; color: var(--muted); margin-top: 4pt; }
+.none { font-style: italic; color: var(--muted); }
+
+/* footnotes: Bluebook-style internet citations, with Id. and supra for repeats */
+.fn { float: footnote; font: 400 7pt/1.35 var(--serif); color: var(--ink); overflow-wrap: anywhere; }
+.fn .mono { font-size: 6.6pt; }
+::footnote-call { content: counter(footnote); font: 500 6pt var(--mono); vertical-align: super; line-height: 0; color: var(--accent); padding-left: 1pt; }
+::footnote-marker { content: counter(footnote) ". "; font: 500 6.5pt var(--mono); color: var(--accent); }
+
+/* appendices */
+.appendix { break-before: page; }
+.appendix-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1.5pt solid var(--ink); padding-bottom: 6pt; margin-bottom: 10pt; gap: 0.4in; }
+.appendix-head h2 { font-size: 15pt; white-space: nowrap; }
+.appendix-head p { font-size: 8.5pt; color: var(--muted); max-width: 5in; text-align: right; }
+.pa td { font-size: 8.5pt; }
+.pa .t { font-style: italic; }
+.sub { font: 500 7.5pt var(--label); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); margin: 14pt 0 4pt; }
+.basis-list { columns: 2; column-gap: 0.35in; }
+.basis-item { break-inside: avoid; padding: 6pt 0 8pt; border-bottom: 0.5pt solid var(--hair); }
+.basis-item .hd { display: flex; gap: 8pt; align-items: baseline; margin-bottom: 3pt; }
+.basis-item p { font-size: 8.2pt; }
+.basis-item ul { margin: 4pt 0 0; padding: 0; list-style: none; }
+.basis-item li { font-size: 7.6pt; color: var(--muted); }
+.matrix { table-layout: fixed; }
+.matrix col.item { width: 16%; } .matrix col.ck6 { width: 14%; }
+.matrix th { text-align: center; font-size: 6.6pt; padding: 0 4pt 5pt; }
+.matrix th:first-child { text-align: left; padding-left: 0; }
+.matrix td { text-align: center; padding: 2.5pt 4pt; font-size: 8pt; }
+.matrix td:first-child { text-align: left; padding-left: 0; font: 500 8pt var(--mono); }
+.matrix .na { color: var(--hair); }
+.flags { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 0.35in; }
+.flags li { break-inside: avoid; font-size: 7.8pt; padding: 3pt 0 3pt 9pt; border-bottom: 0.5pt solid var(--hair); position: relative; }
+.flags li .dot { position: absolute; left: 0; top: 6pt; }
+.flags b { font: 500 7.6pt var(--mono); }
+.method { table-layout: fixed; margin-bottom: 12pt; background: var(--panel); }
+.method td { width: 21.5%; padding: 8pt 10pt 9pt; border: none; }
+.method td.wm { width: 14%; }
+.method .label { display: block; margin-bottom: 2pt; }
+.method p { font-size: 7.5pt; }
+.method .mono { font-size: 6.6pt; overflow-wrap: anywhere; margin-top: 2pt; }
+.method svg { width: 54pt; height: auto; margin-top: 3pt; }
+
+/* exhibit index (book only) */
+.index h1 { font-size: 24pt; margin: 4pt 0; }
+.index .intro { font-size: 10pt; max-width: 6.6in; margin-bottom: 16pt; color: var(--muted); }
+.index td { font-size: 9pt; padding: 8pt 10pt 9pt 0; }
+.index .ex { font: 500 9pt var(--label); letter-spacing: 0.08em; }
+.index td.mono, .index th { white-space: nowrap; }
+.cov { white-space: nowrap; }
+.cov .hb { margin-right: 1.5pt; }
+</style>
+</head>
+<body>
+{% set SHORT = {"Element researched": "Researched", "Quote and source given": "Quote and source", "Quote found on the page": "Quote on page",
+                "Not a patent document": "Non-patent source", "Source cited in the research basis": "In research basis",
+                "Source dated": "Dated", "Published before the priority date": "Before priority date",
+                "Element labels match the claim": "Labels match claim", "Patent number matches the page": "Patent number",
+                "Claim 1 copied verbatim": "Claim 1 verbatim", "Dates parsed and in order": "Dates in order"} %}
+{% set ELEMENT_CHECKS = ["Element researched", "Quote and source given", "Quote found on the page", "Not a patent document", "Source cited in the research basis", "Source dated"] %}
+{% set PRIOR_CHECKS = ["Published before the priority date", "Not a patent document", "Quote found on the page", "Element labels match the claim"] %}
+{% set ASSESS = {"documented": "Documented", "partial": "Partial", "not_found": "Not found"} %}
+{% macro balls(s) %}<span class="cov">{% for _ in range(s.documented) %}<span class="hb documented"></span>{% endfor %}{% for _ in range(s.partial) %}<span class="hb partial"></span>{% endfor %}{% for _ in range(s.not_found) %}<span class="hb"></span>{% endfor %}</span>{% endmacro %}
+{% macro marks(checks, short=True) %}{% for k in checks if k.status != "n/a" and k.name != "Element researched" %}<span class="ck {{ k.status }}">{{ SHORT.get(k.name, k.name) if short else k.name }}{% if k.status != "pass" %} <span class="d">· {{ k.detail }}</span>{% endif %}</span>{% endfor %}{% endmacro %}
+{% macro cell(checks, name) %}{% set k = checks|selectattr("name", "equalto", name)|first %}{% if k and k.status != "n/a" %}<span class="dot {{ k.status }}"></span>{% else %}<span class="na">–</span>{% endif %}{% endmacro %}
+
+{% if index %}
+<div class="run-head"><span>Evidence-of-use claim charts</span><b>Exhibit index</b></div>
+<section class="index">
+  <span class="label">Evidence-of-use claim charts</span>
+  <h1>Exhibit index</h1>
+  <p class="intro">{{ charts|length }} charts, one per patent and product. Claim language is copied from Google Patents. Every quote, source and date was checked against a fresh copy of its page on {{ charts[0].checked|longdate }}; each exhibit ends with its verification log.</p>
+  <table>
+    <thead><tr><th>Exhibit</th><th>Patent</th><th>Charted against</th><th>Status</th><th>Claim 1 coverage</th><th>Quotes on page</th><th>Prior art</th><th>Checks flagged</th></tr></thead>
+    <tbody>
+    {% for c in charts %}
+      <tr><td class="ex">{{ c.exhibit }}</td>
+        <td><span class="mono">U.S. {{ c.patent.patent_number|patno }}</span><br><i>{{ c.patent.title }}</i></td>
+        <td>{{ c.row.product }}<br><span class="muted">{{ c.row.company }}</span></td>
+        <td>{{ c.patent.status or "Not stated" }}<br><span class="mono muted">{{ "expired" if "Expired" in (c.patent.status or "") else "expires" }} {{ c.patent.expiration }}</span></td>
+        <td>{{ balls(c.summary) }}<br><span class="mono muted">{{ c.summary.documented }} documented · {{ c.summary.partial }} partial · {{ c.summary.not_found }} not found</span></td>
+        <td class="mono">{{ c.summary.quotes_verified }} of {{ c.summary.quotes }}</td>
+        <td class="mono">{{ c.prior_art|length }} refs</td>
+        <td class="mono">{{ c.summary.checks_flagged }} of {{ c.summary.checks }}</td></tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</section>
+{% else %}
+{% for c in charts %}{% set p = c.patent %}{% set s = c.summary %}{% set ns = namespace(n=0, last="", seen={}) %}
+<article class="chart-doc">
+  <div class="run-head"><span>Evidence-of-use chart · U.S. Patent No. {{ p.patent_number|patno }} · Claim 1 · {{ c.row.product }}</span><b>Exhibit {{ c.exhibit }}</b></div>
+
+  <header class="caption">
+    <div class="main">
+      <span class="label">Evidence-of-use chart · Claim 1 of {{ p.claim_count }}</span>
+      <h1>U.S. Patent No. {{ p.patent_number|patno }}</h1>
+      <p class="ptitle">{{ p.title }}</p>
+      <p class="against"><span class="label">Charted against</span>&nbsp; {{ c.row.product }}{% if c.row.company %}, {{ c.row.company }}{% endif %}</p>
+      {% if c.row.note %}<p class="note">{{ c.row.note }}</p>{% endif %}
+    </div>
+    <div class="record">
+      <div class="top"><span class="label">Patent record</span><span class="exhibit-box">Exhibit {{ c.exhibit }}</span></div>
+      <dl>
+        <dt>Assignee</dt><dd>{{ p.assignee or "Not stated" }}</dd>
+        <dt>Priority</dt><dd>{{ p.priority_date|longdate }}</dd>
+        <dt>Issued</dt><dd>{{ p.grant_date|longdate }}</dd>
+        <dt>{{ "Expired" if "Expired" in (p.status or "") else "Expires" }}</dt><dd>{{ p.expiration|longdate }}</dd>
+        <dt>Status</dt><dd>{{ p.status or "Not stated" }}</dd>
+      </dl>
+      <p class="src">From <a href="{{ p.url }}">patents.google.com</a>, copy of {{ p.fetched|longdate }}. {{ p.checks|selectattr("status", "equalto", "pass")|list|length }} of {{ p.checks|length }} record checks passed.</p>
+    </div>
+  </header>
+
+  <div class="summary">
+    <div><b>{{ s.elements }}</b><span class="label">Claim elements</span></div>
+    <div><b><span class="hb documented"></span>{{ s.documented }}</b><span class="label">Documented</span></div>
+    <div><b><span class="hb partial"></span>{{ s.partial }}</b><span class="label">Partial</span></div>
+    <div><b><span class="hb"></span>{{ s.not_found }}</b><span class="label">Not found</span></div>
+    <div><b>{{ s.quotes_verified }}/{{ s.quotes }}</b><span class="label">Quotes verbatim on page</span></div>
+    <div><b>{{ s.sources }}</b><span class="label">Sources quoted</span></div>
+    <div><b>{{ s.checks_passed }}/{{ s.checks }}</b><span class="label">Checks passed</span></div>
+    <div><b>{{ c.checked|longdate }}</b><span class="label">Researched and checked</span></div>
+  </div>
+
+  <table class="chart">
+    <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
+    <thead><tr><th>Claim 1 (verbatim)</th><th>Public evidence</th><th>Basis and checks</th></tr></thead>
+    <tbody>
+    {% for e in c.elements %}
+      <tr>
+        <td><span class="el-id">{{ e.id }}</span><span class="el-text">{{ e.text }}</span></td>
+        <td>
+          <div class="assess"><span class="hb {{ e.assessment }}"></span>{{ ASSESS[e.assessment] }}</div>
+          {% if e.quote %}{% set ns.n = ns.n + 1 %}
+          <blockquote>“{{ e.quote }}”<span class="fn">{% if e.source_url == ns.last %}<i>Id.</i>{% elif e.source_url in ns.seen %}<i>{{ e.source_title }}</i>, <i>supra</i> note {{ ns.seen[e.source_url] }}.{% else %}<i>{{ e.source_title }}</i>, {{ e.domain }}{% if e.source_date %} ({{ e.source_date|longdate }}){% endif %}, <span class="mono">{{ e.source_url }}</span>{% if e.fetched %} (last visited {{ e.fetched|longdate }}){% endif %}.{% endif %}</span></blockquote>
+          {% if e.source_url not in ns.seen %}{% set _ = ns.seen.update({e.source_url: ns.n}) %}{% endif %}{% set ns.last = e.source_url %}
+          {% endif %}
+          {% if e.evidence_summary %}<p class="summary-text">{{ e.evidence_summary }}</p>{% else %}<p class="none">No public evidence found.</p>{% endif %}
+        </td>
+        <td class="basis-col">
+          {% if e.basis and e.basis.confidence %}<div class="conf">Confidence: {{ e.basis.confidence }}</div>{% endif %}
+          {{ marks(e.checks) }}
+          {% if e.source_date %}<p class="when">Dated {{ e.source_date|longdate }}, {{ e.term }}.</p>{% endif %}
+          {% set more = (e.basis.citations|map(attribute="url")|reject("equalto", e.source_url)|unique|list) if e.basis else [] %}
+          {% if more %}<p class="when">{{ more|length }} more supporting source{{ "s" if more|length > 1 }} in Appendix B.</p>{% endif %}
+        </td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+
+  <section class="appendix">
+    <div class="appendix-head"><h2>Appendix A · Prior art</h2><p>Non-patent literature published before the priority date of {{ p.priority_date|longdate }}. Dates are checked in Python; anything dated on or after it, or undated, is excluded.</p></div>
+    {% if c.prior_art %}
+    <table class="pa">
+      <thead><tr><th style="width:5%">Ref.</th><th style="width:9%">Published</th><th style="width:27%">Reference</th><th style="width:9%">Discloses</th><th style="width:32%">Passage</th><th style="width:18%">Checks</th></tr></thead>
+      <tbody>
+      {% for r in c.prior_art %}{% set ns.n = ns.n + 1 %}
+        <tr><td class="mono">{{ loop.index }}</td><td class="mono">{{ r.publication_date }}</td>
+          <td><span class="t">{{ r.title }}</span><br><span class="muted">{{ r.author_or_publisher }}</span><span class="fn">{{ r.author_or_publisher }}, <i>{{ r.title }}</i> ({{ r.publication_date|longdate }}), <span class="mono">{{ r.url }}</span>{% if r.fetched %} (last visited {{ r.fetched|longdate }}){% endif %}.</span></td>
+          <td class="mono">{{ r.labels|join(", ") }}</td>
+          <td>“{{ r.quote }}”</td>
+          <td>{{ marks(r.checks) }}</td></tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}<p class="none">No non-patent prior art passed the checks.</p>{% endif %}
+    {% if c.rejected %}
+    <p class="sub">Excluded by the checks</p>
+    <table class="pa"><tbody>
+    {% for r in c.rejected %}<tr><td class="mono" style="width:5%">{{ c.prior_art|length + loop.index }}</td><td style="width:41%"><span class="t">{{ r.title }}</span><br><span class="mono muted">{{ r.domain }}</span></td>
+      <td>{% for k in r.checks if k.status == "fail" %}<span class="ck fail">{{ k.name }} <span class="d">· {{ k.detail }}</span></span>{% endfor %}</td></tr>{% endfor %}
+    </tbody></table>
+    {% endif %}
+  </section>
+
+  <section class="appendix">
+    <div class="appendix-head"><h2>Appendix B · Research basis</h2><p>For each element: Parallel's reasoning, its confidence, and every source it cited. The quoted source is marked ▸.</p></div>
+    <div class="basis-list">
+    {% for e in c.elements if e.basis %}
+      <div class="basis-item">
+        <div class="hd"><span class="el-id">{{ e.id }}</span><span class="label">{{ ASSESS[e.assessment] }} · confidence {{ e.basis.confidence or "not given" }}</span></div>
+        <p>{{ e.basis.reasoning }}</p>
+        <ul>{% for cit in e.basis.citations %}<li>{{ "▸ " if cit.url == e.source_url }}{{ cit.title or cit.url }} · <span class="mono">{{ cit.url|replace("https://", "")|truncate(70, True, "…") }}</span></li>{% endfor %}</ul>
+      </div>
+    {% endfor %}
+    </div>
+  </section>
+
+  <section class="appendix">
+    <div class="appendix-head"><h2>Appendix C · Verification log</h2><p>Every check run on this exhibit. Green passed, amber needs a person to look, red failed; details for every flag follow the grid.</p></div>
+    <table class="method"><tr>
+      <td><span class="label">Claim language</span><p>Extract API on patents.google.com, copy of {{ p.fetched|longdate }}. Split into elements in Python; no model writes claim text.</p></td>
+      <td><span class="label">Evidence</span><p>Task API, {{ c.runs.processor }} processor, patent databases excluded.</p><p class="mono">{{ c.runs.evidence }}</p></td>
+      <td><span class="label">Prior art</span><p>Task API, {{ c.runs.processor }} processor, dates enforced in Python.</p><p class="mono">{{ c.runs.prior_art }}</p></td>
+      <td><span class="label">Quotes, sources and dates</span><p>Extract API re-reads every cited page from a copy at most a day old; Python compares each quote word for word and checks domains and dates.</p></td>
+      <td class="wm"><span class="label">Prepared with</span>{{ wordmark|safe }}</td>
+    </tr></table>
+    {% set cols %}<colgroup><col class="item">{% for _ in range(6) %}<col class="ck6">{% endfor %}</colgroup>{% endset %}
+    <table class="matrix">{{ cols }}
+      <thead><tr><th>Patent record</th>{% for k in p.checks %}<th>{{ SHORT[k.name] }}</th>{% endfor %}{% for _ in range(6 - p.checks|length) %}<th></th>{% endfor %}</tr></thead>
+      <tbody><tr><td>{{ p.patent_number }}</td>{% for k in p.checks %}<td><span class="dot {{ k.status }}"></span></td>{% endfor %}{% for _ in range(6 - p.checks|length) %}<td></td>{% endfor %}</tr></tbody>
+    </table>
+    <table class="matrix" style="margin-top:10pt">{{ cols }}
+      <thead><tr><th>Claim element</th>{% for n in ELEMENT_CHECKS %}<th>{{ SHORT[n] }}</th>{% endfor %}</tr></thead>
+      <tbody>{% for e in c.elements %}<tr><td>{{ e.id }}</td>{% for n in ELEMENT_CHECKS %}<td>{{ cell(e.checks, n) }}</td>{% endfor %}</tr>{% endfor %}</tbody>
+    </table>
+    {% if c.prior_art or c.rejected %}
+    <table class="matrix" style="margin-top:10pt">{{ cols }}
+      <thead><tr><th>Prior art</th>{% for n in PRIOR_CHECKS %}<th>{{ SHORT[n] }}</th>{% endfor %}{% for _ in range(2) %}<th></th>{% endfor %}</tr></thead>
+      <tbody>{% for r in c.prior_art + c.rejected %}<tr><td>Ref. {{ loop.index }}</td>{% for n in PRIOR_CHECKS %}<td>{{ cell(r.checks, n) }}</td>{% endfor %}<td></td><td></td></tr>{% endfor %}</tbody>
+    </table>
+    {% endif %}
+    {% set flagged = namespace(items=[]) %}
+    {% for k in p.checks if k.status in ("warn", "fail") %}{% set flagged.items = flagged.items + [("Patent record", k)] %}{% endfor %}
+    {% for e in c.elements %}{% for k in e.checks if k.status in ("warn", "fail") %}{% set flagged.items = flagged.items + [(e.id, k)] %}{% endfor %}{% endfor %}
+    {% for r in c.prior_art + c.rejected %}{% set i = loop.index %}{% for k in r.checks if k.status in ("warn", "fail") %}{% set flagged.items = flagged.items + [("Ref. " ~ i, k)] %}{% endfor %}{% endfor %}
+    <p class="sub">Flagged for review · {{ flagged.items|length }}</p>
+    {% if flagged.items %}<ul class="flags">{% for item, k in flagged.items %}<li><span class="dot {{ k.status }}"></span><b>{{ item }}</b> · {{ k.name }} · <span class="muted">{{ k.detail }}</span></li>{% endfor %}</ul>
+    {% else %}<p class="none">Nothing flagged.</p>{% endif %}
+  </section>
+</article>
+{% endfor %}
+{% endif %}
+</body>
+</html>

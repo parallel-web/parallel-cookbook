@@ -1,0 +1,739 @@
+{
+  "key": "US10469966B2--sonos-s2-controller-app-zone-scenes",
+  "row": {
+    "patent_number": "US10469966B2",
+    "product": "Sonos S2 Controller app (zone scenes)",
+    "company": "Sonos",
+    "note": "Sonos lists this patent for the S2 Controller on its patent marking page.",
+    "key": "US10469966B2--sonos-s2-controller-app-zone-scenes"
+  },
+  "patent": {
+    "assignee": "Sonos Inc",
+    "priority_date": "2006-09-12",
+    "grant_date": "2019-11-05",
+    "expiration": "2027-09-11",
+    "status": "Active",
+    "claim_count": 20,
+    "elements": [
+      {
+        "id": "1[pre]",
+        "text": "A computing device comprising: one or more processors;"
+      },
+      {
+        "id": "1[a]",
+        "text": "a non-transitory computer-readable medium; and program instructions stored on the non-transitory computer-readable medium that, when executed by the one or more processors, cause the computing device to perform functions comprising:"
+      },
+      {
+        "id": "1[b]",
+        "text": "while serving as a controller for a networked media playback system comprising a first zone player and at least two other zone players, wherein the first zone player is operating in a standalone mode in which the first zone player is configured to play back media individually:"
+      },
+      {
+        "id": "1[c]",
+        "text": "receiving a first request to create a first zone scene comprising a first predefined grouping of zone players including at least the first zone player and a second zone player that are to be configured for synchronous playback of media when the first zone scene is invoked;"
+      },
+      {
+        "id": "1[d]",
+        "text": "based on the first request, i) causing creation of the first zone scene, ii) causing an indication of the first zone scene to be transmitted to the first zone player, and iii) causing storage of the first zone scene;"
+      },
+      {
+        "id": "1[e]",
+        "text": "receiving a second request to create a second zone scene comprising a second predefined grouping of zone players including at least the first zone player and a third zone player that are to be configured for synchronous playback of media when the second zone scene is invoked, wherein the third zone player is different than the second zone player;"
+      },
+      {
+        "id": "1[f]",
+        "text": "based on the second request, i) causing creation of the second zone scene, ii) causing an indication of the second zone scene to be transmitted to the first zone player, and iii) causing storage of the second zone scene; displaying a representation of the first zone scene and a representation of the second zone scene; and while displaying the representation of the first zone scene and the representation of the second zone scene, receiving a third request to invoke the first zone scene; and"
+      },
+      {
+        "id": "1[g]",
+        "text": "based on the third request, causing the first zone player to transition from operating in the standalone mode to operating in accordance with the first predefined grouping of zone players such that the first zone player is configured to coordinate with at least the second zone player to output media in synchrony with output of media by at least the second zone player."
+      }
+    ],
+    "patent_number": "US10469966B2",
+    "url": "https://patents.google.com/patent/US10469966B2/en",
+    "title": "Zone scene management",
+    "fetched": "2026-11-03",
+    "checks": [
+      {
+        "name": "Patent number matches the page",
+        "status": "pass",
+        "detail": "US10469966B2"
+      },
+      {
+        "name": "Claim 1 copied verbatim",
+        "status": "pass",
+        "detail": "8 elements, each found on the page"
+      },
+      {
+        "name": "Dates parsed and in order",
+        "status": "pass",
+        "detail": "2006-09-12 ≤ 2019-11-05 ≤ 2027-09-11"
+      }
+    ]
+  },
+  "checked": "2026-11-03",
+  "elements": [
+    {
+      "id": "1[pre]",
+      "text": "A computing device comprising: one or more processors;",
+      "assessment": "partial",
+      "quote": "Free Sonos app guides you through setup and provides music control for everyone in the house on all their devices—phones, tablets, and computers.",
+      "source_date": "2022-03",
+      "source_url": "https://www.sonos.com/pdfs/productguides/en-us/sonos-user-guide.pdf",
+      "evidence_summary": "The official guide identifies phones, tablets, and computers as devices running the Sonos controller app. It does not expressly identify the processors in those host devices.",
+      "element_id": "1[pre]",
+      "source_title": "Sonos User Guide",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The guide directly identifies phones, tablets, and computers as controller-app hosts and carries a March 2022 date. The cited passage does not specify a host processor, so the assessment is partial rather than treating ordinary computing-device architecture as expressly documented.",
+        "citations": [
+          {
+            "url": "https://www.sonos.com/pdfs/productguides/en-us/sonos-user-guide.pdf",
+            "title": "sonos-user-guide"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "sonos.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[pre]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "sonos.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2022-03, from the research"
+        }
+      ]
+    },
+    {
+      "id": "1[a]",
+      "text": "a non-transitory computer-readable medium; and program instructions stored on the non-transitory computer-readable medium that, when executed by the one or more processors, cause the computing device to perform functions comprising:",
+      "assessment": "partial",
+      "quote": "Download the app from the app store on your mobile device. Open the app and we’ll guide you through setup.",
+      "source_date": "2022-03",
+      "source_url": "https://www.sonos.com/pdfs/productguides/en-us/sonos-user-guide.pdf",
+      "evidence_summary": "The S2 guide instructs users to install and run the controller app locally on a mobile device. It does not expressly describe the non-transitory storage medium or execution of stored instructions by processors.",
+      "element_id": "1[a]",
+      "source_title": "Sonos User Guide",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "Installation, downloading, opening, and using the S2 app to control the system establish locally running controller software. The passages do not expressly identify a non-transitory medium or processor-execution implementation; those details are therefore left as gaps.",
+        "citations": [
+          {
+            "url": "https://www.sonos.com/pdfs/productguides/en-us/sonos-user-guide.pdf",
+            "title": "sonos-user-guide"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "sonos.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[a]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "sonos.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2022-03, from the research"
+        }
+      ]
+    },
+    {
+      "id": "1[b]",
+      "text": "while serving as a controller for a networked media playback system comprising a first zone player and at least two other zone players, wherein the first zone player is operating in a standalone mode in which the first zone player is configured to play back media individually:",
+      "assessment": "partial",
+      "quote": "Saved groups are available on Sonos systems that contain three or more products. Sonos systems with one or two products will not see an option for saved groups.",
+      "source_date": "",
+      "source_url": "https://support.sonos.com/en/article/saved-groups",
+      "evidence_summary": "Saved-group functionality requires three or more Sonos products, and the user guide separately describes independent room playback. These sources do not establish the particular three-zone-player configuration or the first player’s standalone state during both preset-creation requests.",
+      "element_id": "1[b]",
+      "source_title": "Saved groups | Sonos",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "Support requires at least three products for saved groups, the guide describes independent listening, and developer documentation recognizes single-player groups. These are related capabilities, not an explicit account of the specified three-player configuration with the first player remaining standalone during preset creation.",
+        "citations": [
+          {
+            "url": "https://support.sonos.com/en/article/saved-groups",
+            "title": "Saved groups | Sonos"
+          },
+          {
+            "url": "https://www.sonos.com/pdfs/productguides/en-us/sonos-user-guide.pdf",
+            "title": "sonos-user-guide"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "support.sonos.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[b]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "support.sonos.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[c]",
+      "text": "receiving a first request to create a first zone scene comprising a first predefined grouping of zone players including at least the first zone player and a second zone player that are to be configured for synchronous playback of media when the first zone scene is invoked;",
+      "assessment": "documented",
+      "quote": "Select the rooms you want to include in your saved group.",
+      "source_date": "",
+      "source_url": "https://support.sonos.com/en/article/saved-groups",
+      "evidence_summary": "The saved-group creation workflow accepts the user’s chosen rooms and a group name, then saves that selection as a preset. Sonos’s S2 announcement explains that selecting the saved group automatically groups its players, and its grouping documentation specifies synchronized playback.",
+      "element_id": "1[c]",
+      "source_title": "Saved groups | Sonos",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The creation instructions expressly accept selected rooms and a name for a saved group. The S2 announcement explains invocation and automatic grouping, and grouping support states that grouped products play in sync; together these document the user-facing predefined-group creation behavior.",
+        "citations": [
+          {
+            "url": "https://support.sonos.com/en/article/saved-groups",
+            "title": "Saved groups | Sonos"
+          },
+          {
+            "url": "https://en.community.sonos.com/product-updates/introducing-s2-new-app-and-os-for-sonos-6841762",
+            "title": "Introducing S2, New App and OS for Sonos | Sonos Community"
+          },
+          {
+            "url": "https://support.sonos.com/en/article/group-and-ungroup-rooms",
+            "title": "Group and ungroup rooms | Sonos"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "support.sonos.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[c]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "support.sonos.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[d]",
+      "text": "based on the first request, i) causing creation of the first zone scene, ii) causing an indication of the first zone scene to be transmitted to the first zone player, and iii) causing storage of the first zone scene;",
+      "assessment": "partial",
+      "quote": "If you frequently add the same Sonos rooms together in a group, you can save that group as a preset in the Sonos app. This saved group will show as an option along the top of the Grouping menu.",
+      "source_date": "",
+      "source_url": "https://support.sonos.com/en/article/saved-groups",
+      "evidence_summary": "The app creates and retains a room-group preset for later selection. The source does not describe transmitting an indication of that saved preset to the first zone player or identify where the preset is stored.",
+      "element_id": "1[d]",
+      "source_title": "Saved groups | Sonos",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "Saving a selected room group and making it available for later selection supports creation and retention of the preset. None of these passages specifies transmission of the preset's indication to the first player or the storage location, so the compound element is only partially documented.",
+        "citations": [
+          {
+            "url": "https://support.sonos.com/en/article/saved-groups",
+            "title": "Saved groups | Sonos"
+          },
+          {
+            "url": "https://www.sonos.com/pdfs/productguides/en-us/sonos-user-guide.pdf",
+            "title": "sonos-user-guide"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "support.sonos.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[d]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "support.sonos.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[e]",
+      "text": "receiving a second request to create a second zone scene comprising a second predefined grouping of zone players including at least the first zone player and a third zone player that are to be configured for synchronous playback of media when the second zone scene is invoked, wherein the third zone player is different than the second zone player;",
+      "assessment": "partial",
+      "quote": "You can create, edit, and delete your saved groups using the Sonos app for iOS or Android.",
+      "source_date": "",
+      "source_url": "https://support.sonos.com/en/article/saved-groups",
+      "evidence_summary": "The app supports multiple saved groups and lets users choose each group’s rooms. The public instructions do not explicitly demonstrate two presets sharing the first player while containing different second and third players.",
+      "element_id": "1[e]",
+      "source_title": "Saved groups | Sonos",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "Plural saved groups and room-selection instructions support creating multiple presets with selected membership. The sources do not expressly show the required first-plus-second and first-plus-third overlapping memberships, which is the stated gap.",
+        "citations": [
+          {
+            "url": "https://support.sonos.com/en/article/saved-groups",
+            "title": "Saved groups | Sonos"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "support.sonos.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[e]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "support.sonos.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[f]",
+      "text": "based on the second request, i) causing creation of the second zone scene, ii) causing an indication of the second zone scene to be transmitted to the first zone player, and iii) causing storage of the second zone scene; displaying a representation of the first zone scene and a representation of the second zone scene; and while displaying the representation of the first zone scene and the representation of the second zone scene, receiving a third request to invoke the first zone scene; and",
+      "assessment": "partial",
+      "quote": "The names of your saved groups appear above your list of rooms.",
+      "source_date": "",
+      "source_url": "https://support.sonos.com/en/article/saved-groups",
+      "evidence_summary": "The documented workflow saves multiple presets, displays their names together, and lets the user select a saved group and Apply it. It does not describe sending the second preset’s indication to the first player or expressly demonstrate the two overlapping presets specified in the element.",
+      "element_id": "1[f]",
+      "source_title": "Saved groups | Sonos",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The support page describes retained presets, displays saved-group names above the room list, and directs users to select a saved name and Apply. It does not describe the second preset being transmitted to the first player or expressly show the specified overlapping pair of presets.",
+        "citations": [
+          {
+            "url": "https://support.sonos.com/en/article/saved-groups",
+            "title": "Saved groups | Sonos"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "support.sonos.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[f]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "support.sonos.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[g]",
+      "text": "based on the third request, causing the first zone player to transition from operating in the standalone mode to operating in accordance with the first predefined grouping of zone players such that the first zone player is configured to coordinate with at least the second zone player to output media in synchrony with output of media by at least the second zone player.",
+      "assessment": "partial",
+      "quote": "The new S2 app can save groups of rooms to create groups quickly and easily. Once a group is created, you can select it to start playing music and the players will automatically group up.",
+      "source_date": "2020-06-08",
+      "source_url": "https://en.community.sonos.com/product-updates/introducing-s2-new-app-and-os-for-sonos-6841762",
+      "evidence_summary": "Selecting a saved S2 group automatically groups its players, and Sonos separately documents that grouped products play the same content in sync. The sources do not explicitly trace the identified first player from standalone operation into that preset or describe its coordination role.",
+      "element_id": "1[g]",
+      "source_title": "Introducing S2, New App and OS for Sonos | Sonos Community",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The June 8, 2020 S2 announcement directly states that selecting a saved group automatically groups its players. Grouping support establishes synchronized content, but neither passage expressly traces the specified first player's standalone-to-group transition or identifies its coordination role.",
+        "citations": [
+          {
+            "url": "https://en.community.sonos.com/product-updates/introducing-s2-new-app-and-os-for-sonos-6841762",
+            "title": "Introducing S2, New App and OS for Sonos | Sonos Community"
+          },
+          {
+            "url": "https://support.sonos.com/en/article/group-and-ungroup-rooms",
+            "title": "Group and ungroup rooms | Sonos"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "en.community.sonos.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[g]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "en.community.sonos.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2020-06-08, from the research"
+        }
+      ]
+    }
+  ],
+  "prior_art": [
+    {
+      "title": "NetStreams Offers Additional Features forDigiLinX Multi-Room Audio System",
+      "quote": "Another highlight of the new firmware upgrade is “Zone-Grouping.” This lets installers designate and name particular groups of rooms or listening zones for homeowners to activate at any time.",
+      "author_or_publisher": "Brian Mitchell",
+      "elements_disclosed": "1[c] (partial), 1[d] (partial), 1[f] (partial), 1[g] (partial)",
+      "publication_date": "2005-02-11",
+      "url": "https://www.ecoustics.com/products/netstreams-offers-additional-features-fordigilinx",
+      "labels": [
+        "1[c]",
+        "1[d]",
+        "1[f]",
+        "1[g]"
+      ],
+      "domain": "ecoustics.com",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "2005-02-11 vs priority 2006-09-12"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "ecoustics.com"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[c], 1[d], 1[f], 1[g]"
+        }
+      ]
+    },
+    {
+      "title": "Sonos Digital Music System User Guide, Version 0504",
+      "quote": "A zone can be grouped together with any other zone(s) to form a zone group. This will cause all the zones in the zone group to play the same music. You can link or drop zones from a zone group while the music is playing.",
+      "author_or_publisher": "Sonos",
+      "elements_disclosed": "1[a] (partial), 1[b] (partial), 1[g] (partial)",
+      "publication_date": "2005-04",
+      "url": "https://fcc.report/FCC-ID/SBVCR002/664711.pdf",
+      "labels": [
+        "1[a]",
+        "1[b]",
+        "1[g]"
+      ],
+      "domain": "fcc.report",
+      "fetched": "2026-06-12",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "2005-04 vs priority 2006-09-12"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "fcc.report"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "verbatim on an older copy of 2026-06-12; a fresh copy was not available"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[a], 1[b], 1[g]"
+        }
+      ]
+    },
+    {
+      "title": "Review: Sonos Digital Music System",
+      "quote": "Using the Zone Menu, you can easily combine zones into linked zones that play the same music in sync.",
+      "author_or_publisher": "Dan Frakes",
+      "elements_disclosed": "1[b] (partial), 1[g] (partial)",
+      "publication_date": "2005-02-06",
+      "url": "https://www.macworld.com/article/174329/sonos-4.html",
+      "labels": [
+        "1[b]",
+        "1[g]"
+      ],
+      "domain": "macworld.com",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "2005-02-06 vs priority 2006-09-12"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "macworld.com"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[b], 1[g]"
+        }
+      ]
+    },
+    {
+      "title": "Sonos Digital Music System review: Sonos Digital Music System",
+      "quote": "Alternatively, the system can be instructed to play the same track on all your Zoneplayers, and in perfect synchronisation.",
+      "author_or_publisher": "Chris Stevens",
+      "elements_disclosed": "1[b] (partial), 1[g] (partial)",
+      "publication_date": "2005-10-21",
+      "url": "https://www.cnet.com/reviews/sonos-digital-music-system-review",
+      "labels": [
+        "1[b]",
+        "1[g]"
+      ],
+      "domain": "cnet.com",
+      "fetched": "2026-01-09",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "2005-10-21 vs priority 2006-09-12"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "cnet.com"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "verbatim on an older copy of 2026-01-09; a fresh copy was not available"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[b], 1[g]"
+        }
+      ]
+    },
+    {
+      "title": "NetStreams Releases Flagship IP-Based Audio Distribution System",
+      "quote": "Additionally, because all of the processing code is stored in flash memory, updates to allow DigiLinX to support other new digital audio formats will be easily available in the future.",
+      "author_or_publisher": "Brian Mitchell",
+      "elements_disclosed": "1[pre] (partial), 1[a] (partial)",
+      "publication_date": "2004-09-10",
+      "url": "https://www.ecoustics.com/products/netstreams-flagship-ip-based-audio-distribution",
+      "labels": [
+        "1[pre]",
+        "1[a]"
+      ],
+      "domain": "ecoustics.com",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "2004-09-10 vs priority 2006-09-12"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "ecoustics.com"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[pre], 1[a]"
+        }
+      ]
+    }
+  ],
+  "rejected": [],
+  "runs": {
+    "evidence": "srun_728f2b03f51547d34170747ea83f9414",
+    "prior_art": "srun_728f2b03f51547d34d05f738a0558ea1",
+    "processor": "pro"
+  },
+  "status": {
+    "evidence": "completed",
+    "prior_art": "completed"
+  }
+}

@@ -1,0 +1,416 @@
+{
+  "key": "US6285999B1--google-search-ranking-by-links-pagerank",
+  "row": {
+    "patent_number": "US6285999B1",
+    "product": "Google Search ranking by links (PageRank)",
+    "company": "Google",
+    "note": "Patent assigned to Google and Stanford; expired in 2018.",
+    "key": "US6285999B1--google-search-ranking-by-links-pagerank"
+  },
+  "patent": {
+    "assignee": "Google LLC",
+    "priority_date": "1997-01-10",
+    "grant_date": "2001-09-04",
+    "expiration": "2018-01-09",
+    "status": "Expired - Lifetime",
+    "claim_count": 29,
+    "elements": [
+      {
+        "id": "1[pre]",
+        "text": "A computer implemented method of scoring a plurality of linked documents, comprising:"
+      },
+      {
+        "id": "1[a]",
+        "text": "obtaining a plurality of documents, at least some of the documents being linked documents, at least some of the documents being linking documents, and at least some of the documents being both linked documents and linking documents, each of the linked documents being pointed to by a link in one or more of the linking documents;"
+      },
+      {
+        "id": "1[b]",
+        "text": "assigning a score to each of the linked documents based on scores of the one or more linking documents and"
+      },
+      {
+        "id": "1[c]",
+        "text": "processing the linked documents according to their scores."
+      }
+    ],
+    "patent_number": "US6285999B1",
+    "url": "https://patents.google.com/patent/US6285999B1/en",
+    "title": "Method for node ranking in a linked database",
+    "fetched": "2026-10-29",
+    "checks": [
+      {
+        "name": "Patent number matches the page",
+        "status": "pass",
+        "detail": "US6285999B1"
+      },
+      {
+        "name": "Claim 1 copied verbatim",
+        "status": "pass",
+        "detail": "4 elements, each found on the page"
+      },
+      {
+        "name": "Dates parsed and in order",
+        "status": "pass",
+        "detail": "1997-01-10 ≤ 2001-09-04 ≤ 2018-01-09"
+      }
+    ]
+  },
+  "checked": "2026-11-03",
+  "elements": [
+    {
+      "id": "1[pre]",
+      "text": "A computer implemented method of scoring a plurality of linked documents, comprising:",
+      "assessment": "documented",
+      "quote": "We use more than 200 signals, including our patented PageRank™ algorithm, to examine the entire link structure of the web and determine which pages are most important.",
+      "source_date": "",
+      "source_url": "https://web.archive.org/web/20100210175913/http:/www.google.com/corporate/tech.html",
+      "evidence_summary": "Google describes PageRank as an algorithm for determining page importance from the web’s link structure. Its engineering account also describes computer computation of the PageRank graph across millions of pages.",
+      "element_id": "1[pre]",
+      "source_title": "Technology Overview",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The quoted corporate description identifies PageRank as an algorithm analyzing linked pages to determine importance. The engineering blog explicitly describes workstation computation over 26 million pages, while the architecture description states that the links database is used to compute PageRanks for all documents. The computer-implementation support includes a retrospective account of the early system, and the quoted archived overview is undated.",
+        "citations": [
+          {
+            "url": "https://web.archive.org/web/20100210175913/http:/www.google.com/corporate/tech.html",
+            "title": "Corporate Information - Technology Overview"
+          },
+          {
+            "url": "http://googleblog.blogspot.com/2008/07/we-knew-web-was-big.html",
+            "title": "\nOfficial Google Blog: We knew the web was big...\n"
+          },
+          {
+            "url": "https://www.cs.cmu.edu/~christos/courses/826-resources/PAPERS%2BBOOK/google-anatomy.pdf",
+            "title": "The Anatomy of a Large-Scale Hypertextual Web Search Engine"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "web.archive.org",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[pre]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "web.archive.org"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[a]",
+      "text": "obtaining a plurality of documents, at least some of the documents being linked documents, at least some of the documents being linking documents, and at least some of the documents being both linked documents and linking documents, each of the linked documents being pointed to by a link in one or more of the linking documents;",
+      "assessment": "documented",
+      "quote": "We start at a set of well-connected initial pages and follow each of their links to new pages. Then we follow the links on those new pages to even more pages and so on, until we have a huge list of links.",
+      "source_date": "2008-07-25",
+      "source_url": "http://googleblog.blogspot.com/2008/07/we-knew-web-was-big.html",
+      "evidence_summary": "Google describes discovering pages by following links and then following outgoing links on the newly discovered pages. Those intermediate pages are both linked-to documents and linking documents.",
+      "element_id": "1[a]",
+      "source_title": "We knew the web was big...",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The two consecutive sentences describe following links from initial pages to new pages and then following links on those new pages. The intermediate pages therefore have incoming links and outgoing links, supporting the linked-and-linking document roles. The stated publication date falls within the supplied patent term; the mapping from traversal to obtaining documents requires a modest synthesis.",
+        "citations": [
+          {
+            "url": "http://googleblog.blogspot.com/2008/07/we-knew-web-was-big.html",
+            "title": "\nOfficial Google Blog: We knew the web was big...\n"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "googleblog.blogspot.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[a]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "fail",
+          "detail": "not on the page, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "googleblog.blogspot.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2008-07-25, from the research"
+        }
+      ]
+    },
+    {
+      "id": "1[b]",
+      "text": "assigning a score to each of the linked documents based on scores of the one or more linking documents and",
+      "assessment": "documented",
+      "quote": "PageRank also considers the importance of each page that casts a vote, as votes from some pages are considered to have greater value, thus giving the linked page greater value.",
+      "source_date": "",
+      "source_url": "https://web.archive.org/web/20100210175913/http:/www.google.com/corporate/tech.html",
+      "evidence_summary": "Google explains that a linking page’s importance affects the value its link contributes to the linked page. This describes assigning linked-page importance based on the importance of linking pages.",
+      "element_id": "1[b]",
+      "source_title": "Technology Overview",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The source explicitly states that the importance of a voting page affects the value given to the linked page. This directly supports importance-weighted contributions from linking documents. The archived source does not state a publication or update date.",
+        "citations": [
+          {
+            "url": "https://web.archive.org/web/20100210175913/http:/www.google.com/corporate/tech.html",
+            "title": "Corporate Information - Technology Overview"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "web.archive.org",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[b]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "web.archive.org"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[c]",
+      "text": "processing the linked documents according to their scores.",
+      "assessment": "documented",
+      "quote": "Pages that we believe are important pages receive a higher PageRank and are more likely to appear at the top of the search results.",
+      "source_date": "",
+      "source_url": "https://web.archive.org/web/20100210175913/http:/www.google.com/corporate/tech.html",
+      "evidence_summary": "Google describes using PageRank to influence the ordering of search results: higher-scored pages are more likely to appear near the top. PageRank is one ranking factor, not the sole determinant of result order.",
+      "element_id": "1[c]",
+      "source_title": "Technology Overview",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The source directly connects higher PageRank with a greater likelihood of appearing at the top of search results. Its description of more than 200 signals supports the qualification that PageRank influences ordering without being the sole ranking factor. The archived source is undated.",
+        "citations": [
+          {
+            "url": "https://web.archive.org/web/20100210175913/http:/www.google.com/corporate/tech.html",
+            "title": "Corporate Information - Technology Overview"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "web.archive.org",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[c]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "web.archive.org"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    }
+  ],
+  "prior_art": [
+    {
+      "title": "Search and Ranking Algorithms for Locating Resources on the World Wide Web",
+      "quote": "then the score of a document is propagated to the documents it references.",
+      "author_or_publisher": "Budi Yuwono; Dik L. Lee",
+      "elements_disclosed": "1[pre], 1[a], 1[b], 1[c]",
+      "publication_date": "1996",
+      "url": "https://www.cse.ust.hk/~dlee/Papers/ir/icde-wise-1996.pdf",
+      "labels": [
+        "1[pre]",
+        "1[a]",
+        "1[b]",
+        "1[c]"
+      ],
+      "domain": "cse.ust.hk",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "1996 vs priority 1997-01-10"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "cse.ust.hk"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[pre], 1[a], 1[b], 1[c]"
+        }
+      ]
+    },
+    {
+      "title": "Searching for Information in a Hypertext Medical Handbook",
+      "quote": "We used these syntactic relationships to propagate query-generated card weights through the hypertext document.",
+      "author_or_publisher": "Mark Edwin Frisse",
+      "elements_disclosed": "1[pre], 1[a], 1[c]",
+      "publication_date": "1987-11",
+      "url": "https://dl.acm.org/doi/pdf/10.1145/317426.317433",
+      "labels": [
+        "1[pre]",
+        "1[a]",
+        "1[c]"
+      ],
+      "domain": "dl.acm.org",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "1987-11 vs priority 1997-01-10"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "dl.acm.org"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[pre], 1[a], 1[c]"
+        }
+      ]
+    },
+    {
+      "title": "A Retrieval Model Incorporating Hypertext Links",
+      "quote": "This constraint is applied to each N node in turn (conceptually, at least) and the end result is a ranking of hypertext nodes according to the values of P(Q).",
+      "author_or_publisher": "W. B. Croft; H. Turtle",
+      "elements_disclosed": "1[pre], 1[a], 1[c]",
+      "publication_date": "1989-08-10",
+      "url": "https://web.cs.umass.edu/publication/docs/1989/UM-CS-1989-084.pdf",
+      "labels": [
+        "1[pre]",
+        "1[a]",
+        "1[c]"
+      ],
+      "domain": "web.cs.umass.edu",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "1989-08-10 vs priority 1997-01-10"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "web.cs.umass.edu"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[pre], 1[a], 1[c]"
+        }
+      ]
+    }
+  ],
+  "rejected": [],
+  "runs": {
+    "evidence": "srun_728f2b03f51547d37de8104ecebb09a0",
+    "prior_art": "srun_728f2b03f51547d3eb41c524e15b1a6f",
+    "processor": "pro"
+  },
+  "status": {
+    "evidence": "completed",
+    "prior_art": "completed"
+  }
+}

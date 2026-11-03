@@ -1,0 +1,902 @@
+{
+  "key": "US7479949B2--iphone-multi-touch-scrolling-and-swipe-g",
+  "row": {
+    "patent_number": "US7479949B2",
+    "product": "iPhone multi-touch scrolling and swipe gestures",
+    "company": "Apple",
+    "note": "Patent owner's own product.",
+    "key": "US7479949B2--iphone-multi-touch-scrolling-and-swipe-g"
+  },
+  "patent": {
+    "assignee": "Apple Inc",
+    "priority_date": "2006-09-06",
+    "grant_date": "2009-01-20",
+    "expiration": "2027-09-05",
+    "status": "Active",
+    "claim_count": 20,
+    "elements": [
+      {
+        "id": "1[pre]",
+        "text": "A computing device, comprising:"
+      },
+      {
+        "id": "1[a]",
+        "text": "a touch screen display;"
+      },
+      {
+        "id": "1[b]",
+        "text": "one or more processors;"
+      },
+      {
+        "id": "1[c]",
+        "text": "memory; and"
+      },
+      {
+        "id": "1[d]",
+        "text": "one or more programs, wherein the one or more programs are stored in the memory and configured to be executed by the one or more processors, the one or more programs including:"
+      },
+      {
+        "id": "1[e]",
+        "text": "instructions for detecting one or more finger contacts with the touch screen display;"
+      },
+      {
+        "id": "1[f]",
+        "text": "instructions for applying one or more heuristics to the one or more finger contacts to determine a command for the device; and"
+      },
+      {
+        "id": "1[g]",
+        "text": "instructions for processing the command;"
+      },
+      {
+        "id": "1[h]",
+        "text": "wherein the one or more heuristics comprise:"
+      },
+      {
+        "id": "1[i]",
+        "text": "a vertical screen scrolling heuristic for determining that the one or more finger contacts correspond to a one-dimensional vertical screen scrolling command rather than a two-dimensional screen translation command based on an angle of initial movement of a finger contact with respect to the touch screen display;"
+      },
+      {
+        "id": "1[j]",
+        "text": "a two-dimensional screen translation heuristic for determining that the one or more finger contacts correspond to the two-dimensional screen translation command rather than the one-dimensional vertical screen scrolling command based on the angle of initial movement of the finger contact with respect to the touch screen display; and"
+      },
+      {
+        "id": "1[k]",
+        "text": "a next item heuristic for determining that the one or more finger contacts correspond to a command to transition from displaying a respective item in a set of items to displaying a next item in the set of items."
+      }
+    ],
+    "patent_number": "US7479949B2",
+    "url": "https://patents.google.com/patent/US7479949B2/en",
+    "title": "Touch screen device, method, and graphical user interface for determining commands by applying heuristics",
+    "fetched": "2026-11-03",
+    "checks": [
+      {
+        "name": "Patent number matches the page",
+        "status": "pass",
+        "detail": "US7479949B2"
+      },
+      {
+        "name": "Claim 1 copied verbatim",
+        "status": "pass",
+        "detail": "12 elements, each found on the page"
+      },
+      {
+        "name": "Dates parsed and in order",
+        "status": "pass",
+        "detail": "2006-09-06 ≤ 2009-01-20 ≤ 2027-09-05"
+      }
+    ]
+  },
+  "checked": "2026-11-03",
+  "elements": [
+    {
+      "id": "1[pre]",
+      "text": "A computing device, comprising:",
+      "assessment": "documented",
+      "quote": "Both devices are powered by Apple A8 APL1011 system-on-chip processor and M8 second-generation motion coprocessor, with a Qualcomm MDM9625M LTE modem connecting to 4G.",
+      "source_date": "2014-09-19",
+      "source_url": "https://www.cnet.com/tech/mobile/see-inside-the-iphone-6-and-6-plus-with-new-teardown",
+      "evidence_summary": "The teardown report identifies computing hardware in iPhone 6 and iPhone 6 Plus, providing a concrete iPhone implementation for the device requirement.",
+      "element_id": "1[pre]",
+      "source_title": "See inside the iPhone 6 and 6 Plus with new teardown - CNET",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The iPhone teardown report identifies the processors and connectivity hardware in the two iPhone models. The displayed publication date supplies the source date; the computing-device characterization follows from the identified hardware.",
+        "citations": [
+          {
+            "url": "https://www.cnet.com/tech/mobile/see-inside-the-iphone-6-and-6-plus-with-new-teardown",
+            "title": "See inside the iPhone 6 and 6 Plus with new teardown - CNET"
+          }
+        ]
+      },
+      "fetched": "2026-01-13",
+      "domain": "cnet.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[pre]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "verbatim on an older copy of 2026-01-13; a fresh copy was not available"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "cnet.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2014-09-19, from the research"
+        }
+      ]
+    },
+    {
+      "id": "1[a]",
+      "text": "a touch screen display;",
+      "assessment": "documented",
+      "quote": "A few simple gestures—tap, drag, swipe, and pinch—are all you need to use iPhone and its apps.",
+      "source_date": "2015-06-15",
+      "source_url": "https://cdsassets.apple.com/live/6GJYWVAV/user/ma1724_iphone_user_guide.pdf",
+      "evidence_summary": "The iPhone user guide describes touchscreen interaction through tapping, dragging, swiping and pinching. Apple's iPhone 6 technical specifications separately identify its display as Multi‑Touch.",
+      "element_id": "1[a]",
+      "source_title": "iPhone User Guide",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The user guide supplies the quoted gesture-operation sentence, and Apple's specifications explicitly identify the iPhone 6 Multi-Touch display. The mapping combines these two descriptions; no publication date is assigned to the undated guide.",
+        "citations": [
+          {
+            "url": "https://cdsassets.apple.com/live/6GJYWVAV/user/ma1724_iphone_user_guide.pdf",
+            "title": "iPhone User Guide"
+          },
+          {
+            "url": "https://support.apple.com/en-us/111954",
+            "title": "iPhone 6 - Technical Specifications - Apple Support"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "cdsassets.apple.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[a]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "cdsassets.apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2015-06-15, from the page's metadata"
+        }
+      ]
+    },
+    {
+      "id": "1[b]",
+      "text": "one or more processors;",
+      "assessment": "documented",
+      "quote": "Both devices are powered by Apple A8 APL1011 system-on-chip processor and M8 second-generation motion coprocessor, with a Qualcomm MDM9625M LTE modem connecting to 4G.",
+      "source_date": "2014-09-19",
+      "source_url": "https://www.cnet.com/tech/mobile/see-inside-the-iphone-6-and-6-plus-with-new-teardown",
+      "evidence_summary": "The report identifies the A8 application processor and M8 motion coprocessor in iPhone 6 and iPhone 6 Plus.",
+      "element_id": "1[b]",
+      "source_title": "See inside the iPhone 6 and 6 Plus with new teardown - CNET",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The report explicitly identifies the A8 processor and M8 coprocessor. It is a secondary teardown report, so confidence is medium despite the direct statement.",
+        "citations": [
+          {
+            "url": "https://www.cnet.com/tech/mobile/see-inside-the-iphone-6-and-6-plus-with-new-teardown",
+            "title": "See inside the iPhone 6 and 6 Plus with new teardown - CNET"
+          }
+        ]
+      },
+      "fetched": "2026-01-13",
+      "domain": "cnet.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[b]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "verbatim on an older copy of 2026-01-13; a fresh copy was not available"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "cnet.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2014-09-19, from the research"
+        }
+      ]
+    },
+    {
+      "id": "1[c]",
+      "text": "memory; and",
+      "assessment": "documented",
+      "quote": "When an iOS device is turned on, its application processor immediately executes code from read-only memory known as the Boot ROM.",
+      "source_date": "2014-10",
+      "source_url": "https://www.apple.com/lae/privacy/docs/iOS_Security_Guide_Oct_2014.pdf",
+      "evidence_summary": "Apple documents read-only memory containing executable boot code in iOS devices.",
+      "element_id": "1[c]",
+      "source_title": "iOS Security",
+      "basis": {
+        "confidence": "high",
+        "reasoning": "Apple directly identifies read-only memory holding executable code. The guide's displayed October 2014 date supports the source date.",
+        "citations": [
+          {
+            "url": "https://www.apple.com/lae/privacy/docs/iOS_Security_Guide_Oct_2014.pdf",
+            "title": "iOS_Security_Guide_v39_FF"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "apple.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[c]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2014-10, from the research"
+        }
+      ]
+    },
+    {
+      "id": "1[d]",
+      "text": "one or more programs, wherein the one or more programs are stored in the memory and configured to be executed by the one or more processors, the one or more programs including:",
+      "assessment": "documented",
+      "quote": "When an iOS device is turned on, its application processor immediately executes code from read-only memory known as the Boot ROM.",
+      "source_date": "2014-10",
+      "source_url": "https://www.apple.com/lae/privacy/docs/iOS_Security_Guide_Oct_2014.pdf",
+      "evidence_summary": "Apple explicitly describes stored program code being executed by the application processor. The guide also describes executable app memory pages being checked as they are loaded, supporting the general stored-program architecture rather than identifying individual gesture routines.",
+      "element_id": "1[d]",
+      "source_title": "iOS Security",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "Processor execution from ROM directly supports stored executable programs, while executable app memory pages support the application-software context. The source does not individually identify the gesture routines, so confidence in the overall mapping is medium.",
+        "citations": [
+          {
+            "url": "https://www.apple.com/lae/privacy/docs/iOS_Security_Guide_Oct_2014.pdf",
+            "title": "iOS_Security_Guide_v39_FF"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "apple.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[d]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2014-10, from the research"
+        }
+      ]
+    },
+    {
+      "id": "1[e]",
+      "text": "instructions for detecting one or more finger contacts with the touch screen display;",
+      "assessment": "documented",
+      "quote": "In its default configuration, a view receives only the first UITouch object associated with an event, even if more than one finger is touching the view.",
+      "source_date": "",
+      "source_url": "https://developer.apple.com/documentation/uikit/handling-touches-in-your-view",
+      "evidence_summary": "UIKit represents finger contacts as touch objects and delivers them to views for event handling. The documentation expressly addresses events involving one or more fingers.",
+      "element_id": "1[e]",
+      "source_title": "Handling touches in your view | Apple Developer Documentation",
+      "basis": {
+        "confidence": "high",
+        "reasoning": "Apple documents touch objects delivered with events and expressly discusses multiple fingers touching a view. This directly supports software handling finger-contact events.",
+        "citations": [
+          {
+            "url": "https://developer.apple.com/documentation/uikit/handling-touches-in-your-view",
+            "title": "Handling touches in your view | Apple Developer Documentation"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "developer.apple.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[e]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "81% of the wording matches, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "developer.apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[f]",
+      "text": "instructions for applying one or more heuristics to the one or more finger contacts to determine a command for the device; and",
+      "assessment": "partial",
+      "quote": "Gesture recognizers encapsulate all of the logic needed to process and interpret incoming events for that view and match them to a known pattern.",
+      "source_date": "",
+      "source_url": "https://developer.apple.com/documentation/uikit/handling-uikit-gestures",
+      "evidence_summary": "UIKit documents pattern-based interpretation of touch events and notification of a target when a match occurs. This supports gesture-to-action interpretation, but does not disclose the particular heuristic rules used by built-in iPhone scrolling and swipe implementations.",
+      "element_id": "1[f]",
+      "source_title": "Handling UIKit gestures | Apple Developer Documentation",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "Matching incoming events against a known pattern and notifying a target supports gesture interpretation leading to an action. It does not identify the particular heuristic implementation in stock iPhone scrolling and swiping, which is why the assessment is partial.",
+        "citations": [
+          {
+            "url": "https://developer.apple.com/documentation/uikit/handling-uikit-gestures",
+            "title": "Handling UIKit gestures | Apple Developer Documentation"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "developer.apple.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[f]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "developer.apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[g]",
+      "text": "instructions for processing the command;",
+      "assessment": "documented",
+      "quote": "Recognition of a gesture results in the dispatch of an action message to a target for each of the associated pairs.",
+      "source_date": "",
+      "source_url": "https://developer.apple.com/documentation/uikit/uigesturerecognizer?language=objc",
+      "evidence_summary": "UIKit dispatches an action message to the associated target after recognizing a gesture, providing the mechanism for processing the recognized user command.",
+      "element_id": "1[g]",
+      "source_title": "UIGestureRecognizer | Apple Developer Documentation",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The recognizer dispatches an action message, and Apple's handling documentation explains that an action method provides a response. These describe processing a recognized gesture command, although they are framework-level rather than app-specific descriptions.",
+        "citations": [
+          {
+            "url": "https://developer.apple.com/documentation/uikit/uigesturerecognizer?language=objc",
+            "title": "UIGestureRecognizer | Apple Developer Documentation"
+          },
+          {
+            "url": "https://developer.apple.com/documentation/uikit/handling-uikit-gestures",
+            "title": "Handling UIKit gestures | Apple Developer Documentation"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "developer.apple.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[g]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "developer.apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[h]",
+      "text": "wherein the one or more heuristics comprise:",
+      "assessment": "partial",
+      "quote": "If this property is true and the user begins dragging in one general direction (horizontally or vertically), the scroll view disables scrolling in the other direction. If the drag direction is diagonal, then scrolling doesn’t lock and the user can drag in any direction until the drag completes.",
+      "source_date": "",
+      "source_url": "https://developer.apple.com/documentation/uikit/uiscrollview/isdirectionallockenabled",
+      "evidence_summary": "Apple documents directional locking and unrestricted diagonal dragging; its iPhone guide separately documents swipe-based photo navigation. These sources do not establish that the three specified heuristics operate together as the claimed initial-angle-based selection scheme.",
+      "element_id": "1[h]",
+      "source_title": "isDirectionalLockEnabled | Apple Developer Documentation",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The sources document directional locking, unrestricted diagonal dragging and photo swipe navigation separately. They do not establish a single combined implementation of the three specified heuristics or its initial-angle selection logic.",
+        "citations": [
+          {
+            "url": "https://developer.apple.com/documentation/uikit/uiscrollview/isdirectionallockenabled",
+            "title": "isDirectionalLockEnabled | Apple Developer Documentation"
+          },
+          {
+            "url": "https://cdsassets.apple.com/live/6GJYWVAV/user/ma1724_iphone_user_guide.pdf",
+            "title": "iPhone User Guide"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "developer.apple.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[h]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "91% of the wording matches, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "developer.apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[i]",
+      "text": "a vertical screen scrolling heuristic for determining that the one or more finger contacts correspond to a one-dimensional vertical screen scrolling command rather than a two-dimensional screen translation command based on an angle of initial movement of a finger contact with respect to the touch screen display;",
+      "assessment": "partial",
+      "quote": "If this property is true and the user begins dragging in one general direction (horizontally or vertically), the scroll view disables scrolling in the other direction.",
+      "source_date": "",
+      "source_url": "https://developer.apple.com/documentation/uikit/uiscrollview/isdirectionallockenabled",
+      "evidence_summary": "When directional locking is enabled, a generally vertical initial drag disables horizontal scrolling. The documentation does not specify an initial-movement-angle test or establish that this optional setting, whose default is false, is enabled in the relevant built-in iPhone views.",
+      "element_id": "1[i]",
+      "source_title": "isDirectionalLockEnabled | Apple Developer Documentation",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "The enabled property locks scrolling to the general direction in which dragging begins, including vertical dragging. Its default is false; the source does not disclose the angle test or demonstrate enabling it in a particular built-in view.",
+        "citations": [
+          {
+            "url": "https://developer.apple.com/documentation/uikit/uiscrollview/isdirectionallockenabled",
+            "title": "isDirectionalLockEnabled | Apple Developer Documentation"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "developer.apple.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[i]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "81% of the wording matches, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "developer.apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[j]",
+      "text": "a two-dimensional screen translation heuristic for determining that the one or more finger contacts correspond to the two-dimensional screen translation command rather than the one-dimensional vertical screen scrolling command based on the angle of initial movement of the finger contact with respect to the touch screen display; and",
+      "assessment": "partial",
+      "quote": "If the drag direction is diagonal, then scrolling doesn’t lock and the user can drag in any direction until the drag completes.",
+      "source_date": "",
+      "source_url": "https://developer.apple.com/documentation/uikit/uiscrollview/isdirectionallockenabled",
+      "evidence_summary": "Apple documents unrestricted dragging rather than axis locking when the drag is diagonal. It does not disclose how the initial movement angle is evaluated to select two-dimensional translation over vertical scrolling, or confirm the configuration of particular built-in iPhone views.",
+      "element_id": "1[j]",
+      "source_title": "isDirectionalLockEnabled | Apple Developer Documentation",
+      "basis": {
+        "confidence": "medium",
+        "reasoning": "Diagonal dragging is expressly described as remaining unlocked in any direction, supporting two-dimensional movement. The exact initial-angle decision mechanism and app-specific use remain undocumented by this source.",
+        "citations": [
+          {
+            "url": "https://developer.apple.com/documentation/uikit/uiscrollview/isdirectionallockenabled",
+            "title": "isDirectionalLockEnabled | Apple Developer Documentation"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "developer.apple.com",
+      "term": "",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[j]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "developer.apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "warn",
+          "detail": "no date on the page"
+        }
+      ]
+    },
+    {
+      "id": "1[k]",
+      "text": "a next item heuristic for determining that the one or more finger contacts correspond to a command to transition from displaying a respective item in a set of items to displaying a next item in the set of items.",
+      "assessment": "documented",
+      "quote": "While viewing a photo or video, tap to show and hide the controls. Swipe left or right to go forward or backward.",
+      "source_date": "2015-06-15",
+      "source_url": "https://cdsassets.apple.com/live/6GJYWVAV/user/ma1724_iphone_user_guide.pdf",
+      "evidence_summary": "The Photos instructions map a left or right swipe to moving forward or backward through displayed photos or videos, documenting swipe-to-next-item behavior.",
+      "element_id": "1[k]",
+      "source_title": "iPhone User Guide",
+      "basis": {
+        "confidence": "high",
+        "reasoning": "The contiguous Photos instructions directly associate left/right swipes with forward/backward item navigation, supporting the functional next-item behavior. No internal recognition algorithm is inferred.",
+        "citations": [
+          {
+            "url": "https://cdsassets.apple.com/live/6GJYWVAV/user/ma1724_iphone_user_guide.pdf",
+            "title": "iPhone User Guide"
+          }
+        ]
+      },
+      "fetched": "2026-11-03",
+      "domain": "cdsassets.apple.com",
+      "term": "during the patent term",
+      "checks": [
+        {
+          "name": "Element researched",
+          "status": "pass",
+          "detail": "1[k]"
+        },
+        {
+          "name": "Quote and source given",
+          "status": "pass",
+          "detail": "as required by the assessment"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "cdsassets.apple.com"
+        },
+        {
+          "name": "Source cited in the research basis",
+          "status": "pass",
+          "detail": "listed among the citations"
+        },
+        {
+          "name": "Source dated",
+          "status": "pass",
+          "detail": "2015-06-15, from the page's metadata"
+        }
+      ]
+    }
+  ],
+  "prior_art": [
+    {
+      "title": "AppLens and LaunchTile: Two Designs for One-Handed Thumb Use on Small Devices",
+      "quote": "Each AppLens gesture is uniquely defined by a slope and direction, or vector, which allows gestures to be robust and highly personalizable; users can issue gestures of any length (beyond an activation threshold of 20 pixels) anywhere on the touch-sensitive surface.",
+      "author_or_publisher": "Amy K. Karlson, Benjamin B. Bederson, John SanGiovanni",
+      "elements_disclosed": "1[pre], 1[a], 1[e], 1[f], 1[g]",
+      "publication_date": "2005-04",
+      "url": "http://www.cs.umd.edu/hcil/jazz/learn/papers/chi-applens-launchtile.pdf",
+      "labels": [
+        "1[pre]",
+        "1[a]",
+        "1[e]",
+        "1[f]",
+        "1[g]"
+      ],
+      "domain": "cs.umd.edu",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "2005-04 vs priority 2006-09-06"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "cs.umd.edu"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "89% of the wording matches, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[pre], 1[a], 1[e], 1[f], 1[g]"
+        }
+      ]
+    },
+    {
+      "title": "Gesture Registration, Relaxation, and Reuse for Multi-Point Direct-Touch Surfaces",
+      "quote": "When any two fingers are placed onto the table (Figure 2a), the gesture is registered and the stylus behaves as a writing tool.",
+      "author_or_publisher": "Mike Wu, Chia Shen, Kathy Ryall, Clifton Forlines, Ravin Balakrishnan",
+      "elements_disclosed": "1[pre], 1[a], 1[e], 1[f], 1[g]",
+      "publication_date": "2005-10",
+      "url": "https://www.merl.com/publications/docs/TR2005-109.pdf",
+      "labels": [
+        "1[pre]",
+        "1[a]",
+        "1[e]",
+        "1[f]",
+        "1[g]"
+      ],
+      "domain": "merl.com",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "2005-10 vs priority 2006-09-06"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "merl.com"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "pass",
+          "detail": "verbatim, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[pre], 1[a], 1[e], 1[f], 1[g]"
+        }
+      ]
+    },
+    {
+      "title": "Multi-Touch: A New Tactile 2-D Gesture Interface for Human-Computer Interaction",
+      "quote": "Asynchronous touches on a MTS are interpreted as conventional single-finger typing, while motions initiated by chords are interpreted as pointing, clicking, and other gesture commands.",
+      "author_or_publisher": "Wayne Westerman, John G. Elias, Alan Hedge",
+      "elements_disclosed": "1[f], 1[g]",
+      "publication_date": "2001",
+      "url": "https://www.openexhibits.org/wp-content/uploads/papers/HFES_multitouch_proceedings.pdf",
+      "labels": [
+        "1[f]",
+        "1[g]"
+      ],
+      "domain": "openexhibits.org",
+      "fetched": "2026-11-03",
+      "checks": [
+        {
+          "name": "Published before the priority date",
+          "status": "pass",
+          "detail": "2001 vs priority 2006-09-06"
+        },
+        {
+          "name": "Not a patent document",
+          "status": "pass",
+          "detail": "openexhibits.org"
+        },
+        {
+          "name": "Quote found on the page",
+          "status": "warn",
+          "detail": "62% of the wording matches, copy of 2026-11-03"
+        },
+        {
+          "name": "Element labels match the claim",
+          "status": "pass",
+          "detail": "1[f], 1[g]"
+        }
+      ]
+    }
+  ],
+  "rejected": [],
+  "runs": {
+    "evidence": "srun_728f2b03f51547d3aeca29547d158533",
+    "prior_art": "srun_728f2b03f51547d3ba5fac1e6bb07b7c",
+    "processor": "pro"
+  },
+  "status": {
+    "evidence": "completed",
+    "prior_art": "completed"
+  }
+}
