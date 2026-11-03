@@ -160,7 +160,7 @@ blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.
 <section class="index">
   <span class="label">Evidence-of-use claim charts</span>
   <h1>Exhibit index</h1>
-  <p class="intro">{{ charts|length }} charts, one per patent and product. Claim language is copied from Google Patents. Every quote, source and date was checked against a fresh copy of its page on {{ charts[0].checked|longdate }}; each exhibit ends with its verification log.</p>
+  <p class="intro">{{ charts|length }} charts, one per patent and product. Claim language is copied from Google Patents. Each exhibit lists its source checks and flags any missing research.</p>
   <table>
     <thead><tr><th>Exhibit</th><th>Patent</th><th>Charted against</th><th>Status</th><th>Claim 1 coverage</th><th>Quotes on page</th><th>Prior art</th><th>Checks flagged</th></tr></thead>
     <tbody>
@@ -169,9 +169,9 @@ blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.
         <td><span class="mono">U.S. {{ c.patent.patent_number|patno }}</span><br><i>{{ c.patent.title }}</i></td>
         <td>{{ c.row.product }}<br><span class="muted">{{ c.row.company }}</span></td>
         <td>{{ c.patent.status or "Not stated" }}<br><span class="mono muted">{{ "expired" if "Expired" in (c.patent.status or "") else "expires" }} {{ c.patent.expiration }}</span></td>
-        <td>{{ balls(c.summary) }}<br><span class="mono muted">{{ c.summary.documented }} documented · {{ c.summary.partial }} partial · {{ c.summary.not_found }} not found</span></td>
-        <td class="mono">{{ c.summary.quotes_verified }} of {{ c.summary.quotes }}</td>
-        <td class="mono">{{ c.prior_art|length }} refs</td>
+        <td>{% if c.status.evidence != "completed" %}Evidence task {{ c.status.evidence }}{% else %}{{ balls(c.summary) }}<br><span class="mono muted">{{ c.summary.documented }} documented · {{ c.summary.partial }} partial · {{ c.summary.not_found }} not found</span>{% endif %}</td>
+        <td class="mono">{% if c.status.evidence == "completed" %}{{ c.summary.quotes_verified }} of {{ c.summary.quotes }}{% else %}Unavailable{% endif %}</td>
+        <td class="mono">{% if c.status.prior_art == "completed" %}{{ c.prior_art|length }} refs{% else %}Task {{ c.status.prior_art }}{% endif %}</td>
         <td class="mono">{{ c.summary.checks_flagged }} of {{ c.summary.checks }}</td></tr>
     {% endfor %}
     </tbody>
@@ -203,6 +203,10 @@ blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.
     </div>
   </header>
 
+  {% if c.status.evidence != "completed" or c.status.prior_art != "completed" %}
+  <p><b>Incomplete research.</b> Evidence task: {{ c.status.evidence }}. Prior-art task: {{ c.status.prior_art }}.</p>
+  {% endif %}
+  {% if c.status.evidence == "completed" %}
   <div class="summary">
     <div><b>{{ s.elements }}</b><span class="label">Claim elements</span></div>
     <div><b><span class="hb documented"></span>{{ s.documented }}</b><span class="label">Documented</span></div>
@@ -214,6 +218,8 @@ blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.
     <div><b>{{ c.checked|longdate }}</b><span class="label">Researched and checked</span></div>
   </div>
 
+  {% endif %}
+  {% if c.status.evidence != "completed" %}<p>Evidence research is unavailable (task {{ c.status.evidence }}).</p>{% else %}
   <table class="chart">
     <colgroup><col class="c1"><col class="c2"><col class="c3"></colgroup>
     <thead><tr><th>Claim 1 (verbatim)</th><th>Public evidence</th><th>Basis and checks</th></tr></thead>
@@ -241,9 +247,12 @@ blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.
     </tbody>
   </table>
 
+  {% endif %}
+
   <section class="appendix">
-    <div class="appendix-head"><h2>Appendix A · Prior art</h2><p>Non-patent literature published before the priority date of {{ p.priority_date|longdate }}. Dates are checked in Python; anything dated on or after it, or undated, is excluded.</p></div>
-    {% if c.prior_art %}
+    <div class="appendix-head"><h2>Appendix A · Prior art</h2><p>Qualifying references need source metadata supporting a date before {{ p.priority_date|longdate }}. Other candidates and the reasons for exclusion appear below.</p></div>
+    {% if c.status.prior_art != "completed" %}<p>Prior-art research is unavailable (task {{ c.status.prior_art }}).</p>
+    {% elif c.prior_art %}
     <table class="pa">
       <thead><tr><th style="width:5%">Ref.</th><th style="width:9%">Published</th><th style="width:27%">Reference</th><th style="width:9%">Discloses</th><th style="width:32%">Passage</th><th style="width:18%">Checks</th></tr></thead>
       <tbody>
@@ -258,10 +267,10 @@ blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.
     </table>
     {% else %}<p class="none">No non-patent prior art passed the checks.</p>{% endif %}
     {% if c.rejected %}
-    <p class="sub">Excluded by the checks</p>
+    <p class="sub">Excluded or awaiting date verification</p>
     <table class="pa"><tbody>
-    {% for r in c.rejected %}<tr><td class="mono" style="width:5%">{{ c.prior_art|length + loop.index }}</td><td style="width:41%"><span class="t">{{ r.title }}</span><br><span class="mono muted">{{ r.domain }}</span></td>
-      <td>{% for k in r.checks if k.status == "fail" %}<span class="ck fail">{{ k.name }} <span class="d">· {{ k.detail }}</span></span>{% endfor %}</td></tr>{% endfor %}
+    {% for r in c.rejected %}<tr><td class="mono" style="width:5%">{{ c.prior_art|length + loop.index }}</td><td style="width:41%"><span class="t">{{ r.title }}</span><br><span class="mono muted">{{ r.url }}</span></td>
+      <td>{% for k in r.checks if k.status == "fail" or (k.name == "Published before the priority date" and k.status == "warn") %}<span class="ck {{ k.status }}">{{ k.name }} <span class="d">· {{ k.detail }}</span></span>{% endfor %}</td></tr>{% endfor %}
     </tbody></table>
     {% endif %}
   </section>
@@ -283,9 +292,9 @@ blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.
     <div class="appendix-head"><h2>Appendix C · Verification log</h2><p>Every check run on this exhibit. Green passed, amber needs a person to look, red failed; details for every flag follow the grid.</p></div>
     <table class="method"><tr>
       <td><span class="label">Claim language</span><p>Extract API on patents.google.com, copy of {{ p.fetched|longdate }}. Split into elements in Python; no model writes claim text.</p></td>
-      <td><span class="label">Evidence</span><p>Task API, {{ c.runs.processor }} processor, patent databases excluded.</p><p class="mono">{{ c.runs.evidence }}</p></td>
-      <td><span class="label">Prior art</span><p>Task API, {{ c.runs.processor }} processor, dates enforced in Python.</p><p class="mono">{{ c.runs.prior_art }}</p></td>
-      <td><span class="label">Quotes, sources and dates</span><p>Extract API re-reads every cited page from a copy at most a day old; Python compares each quote word for word and checks domains and dates.</p></td>
+      <td><span class="label">Evidence</span><p>Task API, {{ c.runs.processor }} processor, patent databases excluded.</p><p>{{ c.status.evidence }}</p></td>
+      <td><span class="label">Prior art</span><p>Task API, {{ c.runs.processor }} processor, dates enforced in Python.</p><p>{{ c.status.prior_art }}</p></td>
+      <td><span class="label">Quotes, sources and dates</span><p>Extract requests fresh copies. Python checks for a continuous quote and compares prior-art dates with publication metadata.</p></td>
       <td class="wm"><span class="label">Prepared with</span>{{ wordmark|safe }}</td>
     </tr></table>
     {% set cols %}<colgroup><col class="item">{% for _ in range(6) %}<col class="ck6">{% endfor %}</colgroup>{% endset %}
@@ -309,7 +318,7 @@ blockquote { margin: 0 0 4pt; font-size: 9pt; padding-left: 8pt; border-left: 1.
     {% for r in c.prior_art + c.rejected %}{% set i = loop.index %}{% for k in r.checks if k.status in ("warn", "fail") %}{% set flagged.items = flagged.items + [("Ref. " ~ i, k)] %}{% endfor %}{% endfor %}
     <p class="sub">Flagged for review · {{ flagged.items|length }}</p>
     {% if flagged.items %}<ul class="flags">{% for item, k in flagged.items %}<li><span class="dot {{ k.status }}"></span><b>{{ item }}</b> · {{ k.name }} · <span class="muted">{{ k.detail }}</span></li>{% endfor %}</ul>
-    {% else %}<p class="none">Nothing flagged.</p>{% endif %}
+    {% else %}<p class="none">{% if c.status.evidence == "completed" and c.status.prior_art == "completed" %}Nothing flagged.{% else %}Research incomplete. See task statuses above.{% endif %}</p>{% endif %}
   </section>
 </article>
 {% endfor %}

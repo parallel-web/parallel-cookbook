@@ -15,13 +15,14 @@ Each CSV row names a patent and a product (patent_number, product, company, opti
 
 Results land in <out>/data/<row>.json, so --render-only rebuilds every PDF without calling the API.
 The Task Group id is saved to <out>/runs.json before anything is submitted and every run is tagged with its
-row, so rerunning the same command resumes the same runs instead of paying for new ones.
+row. Rerunning resumes matching inputs and resubmits failed or cancelled tasks.
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import os
 import re
@@ -30,9 +31,12 @@ import sys
 import time
 from datetime import date, datetime
 from pathlib import Path
+from tempfile import NamedTemporaryFile, TemporaryDirectory
 from urllib.parse import urlparse
 
 from dotenv import load_dotenv
+from filelock import FileLock, Timeout
+from parallel import APIError
 
 ROOT = Path(__file__).parent
 PROCESSOR = "pro"
@@ -102,7 +106,7 @@ PRIOR_ART = spec(
 def norm(text: str) -> str:
     """Lowercase words and digits only, so typography and markup never decide a match."""
     text = text.translate(str.maketrans("‘’“”–—", "''\"\"--", "­"))
-    return re.sub(r"[^a-z0-9]+", " ", text.lower()).strip()
+    return " ".join(re.findall(r"[^\W_]+", text.lower()))
 
 
 def first(pattern: str, text: str) -> str | None:
@@ -114,7 +118,7 @@ def parse_patent(md: str) -> dict:
     """Read a Google Patents page (Extract markdown) into metadata and claim 1 elements. No model is involved."""
     pa = md.find("Priority Applications")
     claims = md[m.start():] if (m := re.search(r"#+ Claims \(", md)) else ""
-    claim1 = re.search(r"\n1\\?\.\s+(.*?)(?=\n\s*2\\?\.\s)", claims, re.S)
+    claim1 = re.search(r"\n1\\?\.\s+(.*?)(?=\n\s*2\\?\.\s)", claims, re.DOTALL)
     lines = [re.sub(r"\s+", " ", p).strip() for p in re.split(r"\n\s*\n", claim1.group(1))] if claim1 else []
     return {
         "assignee": first(r"Current Assignee[^\n]*\n\s+([^\n]+)", md),
@@ -210,21 +214,38 @@ def prior_art_run(record: dict) -> dict:
 def research(client, runs: dict[str, dict], state_path: Path) -> dict[str, dict]:
     """Run every task in one Task Group and return {key: result}.
 
-    The group id is saved before anything is submitted, and every run carries its key in metadata, so a rerun
-    finds the runs already in the group and submits only the missing ones: nothing is lost or paid for twice.
+    Resume matching inputs and retry failed or cancelled tasks when the user reruns the command.
     """
+    if not runs:
+        return {}
     state = json.loads(state_path.read_text()) if state_path.exists() else {}
     if not state.get("group"):
         state["group"] = client.task_group.create(metadata={"recipe": "parallel-claim-charts"}).task_group_id
-        state_path.write_text(json.dumps(state, indent=2))
+        write_json(state_path, state)
     group = state["group"]
-    existing = {(e.run.metadata or {}).get("key"): e.run.run_id for e in client.task_group.get_runs(group) if e.type == "task_run.state"}
+    # Older groups used truncated product names. Only reuse research for the same actual input.
+    by_input = {}
+    for event in client.task_group.get_runs(group, include_input=True):
+        if event.type != "task_run.state" or not event.input or event.run.status in ("failed", "cancelled"):
+            continue
+        saved_key = (event.run.metadata or {}).get("key", "")
+        payload = json.dumps(event.input.input, sort_keys=True)
+        by_input[saved_key, event.run.processor, payload] = event.run.run_id
+        by_input.setdefault((saved_key.partition(":")[0], event.run.processor, payload), event.run.run_id)
+    existing = {}
+    for key, request in runs.items():
+        payload = json.dumps(request["input"], sort_keys=True)
+        for candidate in (key, key.partition(":")[0]):
+            run_id = by_input.get((candidate, request["processor"], payload))
+            if run_id:
+                existing[key] = run_id
+                break
     new = [k for k in runs if k not in existing]
     if new:
         inputs = [runs[k] | {"metadata": {"key": k}} for k in new]
         ids = client.with_options(max_retries=0).task_group.add_runs(group, inputs=inputs).run_ids
         existing |= dict(zip(new, ids, strict=True))
-    wanted = {existing[k]: k for k in runs}
+    wanted = set(existing.values())
     print(f"  {len(wanted)} Task runs in group {group}: {len(new)} new, about ${len(new) * PRICE_PER_RUN:.2f} at list prices")
     started = time.time()
     while True:
@@ -237,12 +258,20 @@ def research(client, runs: dict[str, dict], state_path: Path) -> dict[str, dict]
     results = {}
     for e in client.task_group.get_runs(group, include_output=True):
         if e.type == "task_run.state" and e.run.run_id in wanted:
-            results[wanted[e.run.run_id]] = {
+            results[e.run.run_id] = {
                 "run_id": e.run.run_id, "status": e.run.status, "processor": e.run.processor,
                 "content": e.output.content if e.output else None,
                 "basis": [b.model_dump() for b in e.output.basis] if e.output else [],
             }
-    return results
+    by_key = {}
+    for key, run_id in existing.items():
+        result = results[run_id]
+        content = result["content"]
+        field = "elements" if key.startswith("evidence:") else "references"
+        if result["status"] == "completed" and not (isinstance(content, dict) and isinstance(content.get(field), list)):
+            sys.exit(f"Completed task has no {field} output. Rerun to retrieve the result before publishing.")
+        by_key[key] = result
+    return by_key
 
 
 # ----------------------------------------------------------------------------- 3. verify
@@ -267,9 +296,11 @@ def is_patent_source(url: str) -> bool:
     return any(host == d or host.endswith("." + d) for d in PATENT_SITES)
 
 
-def parse_date(value: str) -> str | None:
+def parse_date(value: str | None) -> str | None:
     """'2017-06-30', '2017-06' or '2017' if the value is a real calendar date, else None."""
-    value = (value or "").strip()[:10]
+    value = (value or "").strip()
+    if not re.fullmatch(r"[0-9]{4}(?:-[0-9]{2}(?:-[0-9]{2})?)?", value):
+        return None
     for fmt in ("%Y-%m-%d", "%Y-%m", "%Y"):
         try:
             datetime.strptime(value, fmt)
@@ -282,32 +313,36 @@ def parse_date(value: str) -> str | None:
 def before(value: str, limit: str) -> bool | None:
     """True if a (possibly partial) date is strictly before `limit`, None if they share the period."""
     limit = limit[:len(value)]
-    return True if value < limit else None if value == limit else False
+    if len(value) < 10 and value == limit:
+        return None
+    return value < limit
 
 
 def quote_match(quote: str, page: str) -> float:
-    """Share of the quote's 6-word runs found on the page: 1.0 is verbatim."""
+    """Share of six-word runs found anywhere on the normalized page, for partial-match diagnostics."""
     words = norm(quote).split()
     if not words or not page:
         return 0.0
+    page = f" {page} "
     if len(words) < 6:
-        return 1.0 if " ".join(words) in page else 0.0
+        return float(f" {' '.join(words)} " in page)
     runs = [" ".join(words[i:i + 6]) for i in range(len(words) - 5)]
-    return sum(r in page for r in runs) / len(runs)
+    return sum(f" {r} " in page for r in runs) / len(runs)
 
 
 def quote_check(quote: str, url: str, pages: dict) -> dict:
     page = pages.get(url) or {}
     if not page.get("text"):
         return check("Quote found on the page", False, warn=True, detail="page could not be fetched; check by hand")
-    share = quote_match(quote, page["text"])
     copy = f"copy of {page['fetched']}"
-    if share >= 0.95 and page.get("stale"):
-        return check("Quote found on the page", False, warn=True, detail=f"verbatim on an older {copy}; a fresh copy was not available")
-    if share >= 0.95:
+    normalized = norm(quote)
+    if normalized and f" {normalized} " in f" {page['text']} ":
+        if page.get("stale"):
+            return check("Quote found on the page", False, warn=True, detail=f"verbatim on an older {copy}; a fresh copy was not available")
         return check("Quote found on the page", True, detail=f"verbatim, {copy}")
+    share = quote_match(quote, page["text"])
     if share >= 0.6:
-        return check("Quote found on the page", False, warn=True, detail=f"{share:.0%} of the wording matches, {copy}")
+        return check("Quote found on the page", False, warn=True, detail=f"{share:.0%} of six-word spans match, no continuous quote on {copy}")
     return check("Quote found on the page", False, detail=f"not on the page, {copy}")
 
 
@@ -317,7 +352,7 @@ def fetch_pages(client, urls: set[str]) -> dict[str, dict]:
     for i in range(0, len(urls), 20):
         try:
             r = client.extract(urls=urls[i:i + 20], advanced_settings={"full_content": True, "fetch_policy": SOURCE_FETCH})
-        except Exception as exc:  # one bad batch should not stop the others
+        except APIError as exc:  # one failed Extract request should not stop the others
             print(f"  Extract failed for {len(urls[i:i + 20])} pages: {exc}")
             continue
         for res in r.results:
@@ -380,34 +415,45 @@ def term_label(dated: str | None, record: dict) -> str:
     return "during the patent term"
 
 
+def prior_date_check(raw: str, published: str | None, priority: str) -> tuple[str, dict]:
+    """Check the proposed publication date against the page metadata and the exclusive cutoff."""
+    claimed = parse_date(raw)
+    noted = bool(raw and not claimed)
+    if noted:
+        claimed = parse_date(first(r"\b(\d{4}-\d{2}-\d{2})\b", raw))
+    source = parse_date(published)
+    detail = f"research: {raw or 'undated'}; page metadata: {source or 'unavailable'}; priority: {priority}"
+    dates = [d for d in (claimed, source) if d]
+    dated = claimed or source or ""
+    conflicted = claimed and source and not (claimed.startswith(source) or source.startswith(claimed))
+    # A later metadata date can describe a republication. Require review outside the qualifying list.
+    if not dates or any(before(d, priority) is False for d in dates):
+        return dated, check("Published before the priority date", False, detail=detail)
+    confirmed = bool(source) and before(source, priority) is True and not (noted or conflicted)
+    if confirmed and claimed and len(claimed) > len(source):
+        confirmed = False  # the source doesn't substantiate the more precise date
+    return (source if confirmed else dated), check("Published before the priority date", confirmed, warn=True, detail=detail)
+
+
 def verify_prior_art(record: dict, result: dict, pages: dict) -> tuple[list[dict], list[dict]]:
-    """Split references into accepted and rejected; a reference is rejected if any check fails."""
+    """Keep candidates with unverified dates or failed checks outside the qualifying list."""
     ids = {e["id"] for e in record["elements"]}
     accepted, rejected = [], []
     for ref in (result.get("content") or {}).get("references", []):
-        raw = ref["publication_date"].strip()
-        dated, noted = parse_date(raw), None
-        if not dated:  # e.g. "Not printed; publicly archived on 2004-07-29": use the date, flag it for a person
-            noted = dated = first(r"(\d{4}-\d{2}-\d{2})", raw)
-        early = before(dated, record["priority_date"]) if dated else False
+        page = pages.get(ref["url"]) or {}
+        dated, date_check = prior_date_check(ref["publication_date"].strip(), page.get("published"), record["priority_date"])
         labels = re.findall(r"1\[(?:pre|[a-z])\]", ref["elements_disclosed"])
-        detail = f"{dated or 'undated'} vs priority {record['priority_date']}"
-        if early is None:
-            detail += ", same period: check by hand"
-        elif noted and early:
-            detail += f", read from the note “{raw}”: check by hand"
         checks = [
-            check("Published before the priority date", bool(early) and not noted, warn=early is None or bool(noted), detail=detail),
+            date_check,
             check("Not a patent document", not is_patent_source(ref["url"]) and not re.search(r"\b(US|EP|WO)\s?\d{6,}", ref["title"]), detail=domain(ref["url"])),
             quote_check(ref["quote"], ref["url"], pages),
             check("Element labels match the claim", bool(labels) and set(labels) <= ids, warn=True, detail=", ".join(labels) or "none"),
         ]
         if checks[2]["status"] == "fail":  # flag, don't reject: paywalled papers often hide their full text
             checks[2]["status"] = "warn"
-        page = pages.get(ref["url"]) or {}
         row = ref | {"publication_date": dated or ref["publication_date"], "labels": labels, "domain": domain(ref["url"]),
                      "fetched": page.get("fetched"), "checks": checks}
-        (rejected if any(c["status"] == "fail" for c in checks) else accepted).append(row)
+        (rejected if date_check["status"] != "pass" or any(c["status"] == "fail" for c in checks) else accepted).append(row)
     return accepted, rejected
 
 
@@ -456,7 +502,7 @@ def bluebook_date(value: str | None) -> str:
     return value or ""
 
 
-def render_all(out: Path, rows: list[dict]) -> list[Path]:
+def render_all(out: Path, charts: list[dict]) -> None:
     from jinja2 import Environment, FileSystemLoader
     from weasyprint import HTML
 
@@ -465,49 +511,87 @@ def render_all(out: Path, rows: list[dict]) -> list[Path]:
     env.filters["patno"] = lambda pn: re.sub(r"^US(\d+)([A-Z]\d?)$", lambda m: f"{int(m[1]):,} {m[2]}", pn)
     template = env.get_template("chart.html.j2")
     wordmark = (ROOT / "assets/parallel-wordmark.svg").read_text()
-    charts = []
-    for n, row in enumerate(rows, 1):
-        path = out / "data" / f"{row['key']}.json"
-        if path.exists():
-            chart = json.loads(path.read_text())
-            charts.append(chart | {"exhibit": f"A-{n}", "summary": summarize(chart)})
+    charts = [chart | {"exhibit": f"A-{n}", "summary": summarize(chart)} for n, chart in enumerate(charts, 1)]
     (out / "pdf").mkdir(parents=True, exist_ok=True)
-    docs, written = [], []
+    docs = []
     for chart in charts:
         doc = HTML(string=template.render(charts=[chart], wordmark=wordmark), base_url=str(ROOT)).render()
         doc.write_pdf(out / "pdf" / f"{chart['key']}.pdf")
         docs.append(doc)
-        written.append(out / "pdf" / f"{chart['key']}.pdf")
     if docs:
         index = HTML(string=template.render(charts=charts, wordmark=wordmark, index=True), base_url=str(ROOT)).render()
         index.copy([p for d in [index, *docs] for p in d.pages]).write_pdf(out / "claim-charts.pdf")
         with open(out / "portfolio.csv", "w", newline="") as f:
-            w = csv.writer(f)
+            w = csv.writer(f, lineterminator="\n")
             w.writerow(["exhibit", "patent_number", "title", "status", "expiration", "product", "elements", "documented",
-                        "partial", "not_found", "quotes_verified", "prior_art_refs", "checks_passed", "checks_flagged", "pdf"])
+                        "partial", "not_found", "quotes_verified", "prior_art_refs", "checks_passed", "checks_flagged", "pdf",
+                        "evidence_task", "prior_art_task"])
             for c in charts:
+                evidence_ok = c["status"]["evidence"] == "completed"
                 s, p = c["summary"], c["patent"]
                 w.writerow([c["exhibit"], p["patent_number"], p["title"], p["status"], p["expiration"], c["row"]["product"],
-                            s["elements"], s["documented"], s["partial"], s["not_found"], f"{s['quotes_verified']}/{s['quotes']}",
-                            len(c["prior_art"]), s["checks_passed"], s["checks_flagged"], f"pdf/{c['key']}.pdf"])
-    return written
+                            len(p["elements"]), *(s[k] if evidence_ok else "" for k in ("documented", "partial", "not_found")),
+                            f"{s['quotes_verified']}/{s['quotes']}" if evidence_ok else "",
+                            len(c["prior_art"]) if c["status"]["prior_art"] == "completed" else "",
+                            s["checks_passed"], s["checks_flagged"], f"pdf/{c['key']}.pdf",
+                            c["status"]["evidence"], c["status"]["prior_art"]])
 
 
 # ----------------------------------------------------------------------------- main
 
 
+def write_json(path: Path, value: dict) -> None:
+    with NamedTemporaryFile(mode="w", dir=path.parent, delete=False) as tmp:
+        json.dump(value, tmp, indent=2, ensure_ascii=False)
+    Path(tmp.name).replace(path)
+
+
 def read_rows(path: str) -> list[dict]:
+    fields = ("patent_number", "product", "company", "note")
     with open(path, newline="") as f:
-        rows = [{k: (v or "").strip() for k, v in r.items()} for r in csv.DictReader(f)]
-    for r in rows:
-        if not r.get("patent_number") or not r.get("product"):
-            sys.exit(f"Every row needs patent_number and product: {r}")
-        r["patent_number"] = r["patent_number"].replace(",", "").replace(" ", "").upper()
-        r["key"] = f"{r['patent_number']}--{re.sub(r'[^a-z0-9]+', '-', r['product'].lower()).strip('-')[:40]}"
+        rows = [{k: (r.get(k) or "").strip() for k in fields} for r in csv.DictReader(f)]
+    seen = set()
+    for line, r in enumerate(rows, 2):
+        pn = r["patent_number"] = r["patent_number"].replace(",", "").replace(" ", "").upper()
+        if not re.fullmatch(r"[A-Z0-9]+", pn) or not r["product"]:
+            sys.exit(f"CSV row {line} needs an alphanumeric publication number and a product.")
+        slug = re.sub(r"[^a-z0-9]+", "-", r["product"].lower()).strip("-")[:40]
+        digest = hashlib.sha256(json.dumps(r, sort_keys=True).encode()).hexdigest()[:24]
+        r["key"] = f"{pn}--{slug}-{digest}"
+        if r["key"] in seen:
+            sys.exit(f"Duplicate chart input on CSV row {line}.")
+        seen.add(r["key"])
     return rows
 
 
-def build(client, rows: list[dict], out: Path) -> None:
+def saved_charts(out: Path, rows: list[dict]) -> list[dict]:
+    charts = []
+    for row in rows:
+        path = out / "data" / f"{row['key']}.json"
+        if not path.exists() and (path.parent / f"{row['key'].rsplit('-', 1)[0]}.json").exists():
+            sys.exit("This cache predates the current verification rules. Run once without --render-only to recheck the sources.")
+        if path.exists():
+            chart = json.loads(path.read_text())
+            if chart["row"] != row or chart["key"] != row["key"]:
+                sys.exit(f"Cached chart does not match the requested row: {path.name}")
+            charts.append(chart)
+    return charts
+
+
+def clear_reports(out: Path) -> None:
+    """Remove only published recipe outputs. Cached research remains available for resume."""
+    portfolio = out / "portfolio.csv"
+    if portfolio.exists():
+        with portfolio.open(newline="") as f:
+            for row in csv.DictReader(f):
+                pdf = row.get("pdf") or ""
+                if re.fullmatch(r"pdf/[A-Z0-9]+--[a-z0-9-]*\.pdf", pdf):
+                    (out / pdf).unlink(missing_ok=True)
+        portfolio.unlink()
+    (out / "claim-charts.pdf").unlink(missing_ok=True)
+
+
+def build(client, rows: list[dict], out: Path) -> list[dict]:
     today = date.today().isoformat()
     (out / "data").mkdir(parents=True, exist_ok=True)
     print(f"1/4  Reading claim 1 of {len({r['patent_number'] for r in rows})} patents from Google Patents")
@@ -519,6 +603,11 @@ def build(client, rows: list[dict], out: Path) -> None:
     ok = [r for r in rows if not patents[r["patent_number"]].get("error")
           and all(c["status"] != "fail" for c in patents[r["patent_number"]]["checks"])]
 
+    valid_keys = {r["key"] for r in ok}
+    for r in rows:
+        if r["key"] not in valid_keys:
+            (out / "data" / f"{r['key']}.json").unlink(missing_ok=True)
+
     runs = {f"evidence:{r['key']}": evidence_run(r, patents[r["patent_number"]]) for r in ok}
     runs |= {f"prior_art:{pn}": prior_art_run(patents[pn]) for pn in sorted({r["patent_number"] for r in ok})}
     print(f"2/4  Researching {len(ok)} charts with {len(runs)} {PROCESSOR} Task runs")
@@ -529,16 +618,20 @@ def build(client, rows: list[dict], out: Path) -> None:
     print(f"3/4  Checking quotes against fresh copies of {len(urls)} pages")
     pages = fetch_pages(client, urls)
 
+    charts = []
     for r in ok:
         record, ev, pa = patents[r["patent_number"]], results[f"evidence:{r['key']}"], results[f"prior_art:{r['patent_number']}"]
-        accepted, rejected = verify_prior_art(record, pa, pages)
+        accepted, rejected = verify_prior_art(record, pa, pages) if pa["status"] == "completed" else ([], [])
+        elements = verify_evidence(record, ev, pages, today) if ev["status"] == "completed" else []
         chart = {
             "key": r["key"], "row": r, "patent": record, "checked": today,
-            "elements": verify_evidence(record, ev, pages, today), "prior_art": accepted, "rejected": rejected,
+            "elements": elements, "prior_art": accepted, "rejected": rejected,
             "runs": {"evidence": ev["run_id"], "prior_art": pa["run_id"], "processor": ev["processor"]},
             "status": {"evidence": ev["status"], "prior_art": pa["status"]},
         }
-        (out / "data" / f"{r['key']}.json").write_text(json.dumps(chart, indent=2, ensure_ascii=False))
+        write_json(out / "data" / f"{r['key']}.json", chart)
+        charts.append(chart)
+    return charts
 
 
 def main() -> None:
@@ -552,17 +645,34 @@ def main() -> None:
 
     ensure_pdf_support()
     rows, out = read_rows(args.csv)[: args.limit], Path(args.out)
+    client = None
     if not args.render_only:
         if not os.environ.get("PARALLEL_API_KEY"):
             sys.exit("Set PARALLEL_API_KEY in your environment or in a .env file (see .env.example).")
         from parallel import Parallel
 
-        build(Parallel(), rows, out)
-    print("4/4  Rendering")
-    written = render_all(out, rows)
-    print(f"Wrote {len(written)} claim charts to {out / 'pdf'}, plus {out / 'claim-charts.pdf'} and {out / 'portfolio.csv'}")
-    if len(written) < len(rows):
-        sys.exit(f"{len(rows) - len(written)} rows have no chart. See the messages above.")
+        client = Parallel()
+    out.mkdir(parents=True, exist_ok=True)
+    try:
+        with FileLock(out / ".claimchart.lock", timeout=0):
+            charts = saved_charts(out, rows) if args.render_only else build(client, rows, out)
+            print("4/4  Rendering")
+            with TemporaryDirectory(dir=out) as tmp:
+                staged = Path(tmp)
+                render_all(staged, charts)
+                clear_reports(out)
+                (out / "pdf").mkdir(exist_ok=True)
+                for artifact in staged.rglob("*"):
+                    if artifact.is_file():
+                        artifact.replace(out / artifact.relative_to(staged))
+    except Timeout:
+        sys.exit(f"Another claim chart command is using {out}.")
+    if charts:
+        print(f"Wrote {len(charts)} claim charts to {out / 'pdf'}, plus {out / 'claim-charts.pdf'} and {out / 'portfolio.csv'}")
+    missing = len(rows) - len(charts)
+    incomplete = sum(any(v != "completed" for v in c["status"].values()) for c in charts)
+    if missing or incomplete:
+        sys.exit(f"Incomplete: {missing} missing charts, {incomplete} with unsuccessful tasks. Run again without --render-only.")
 
 
 if __name__ == "__main__":

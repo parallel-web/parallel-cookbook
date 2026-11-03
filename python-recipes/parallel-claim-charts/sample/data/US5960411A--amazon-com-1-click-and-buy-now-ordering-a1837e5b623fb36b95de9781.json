@@ -1,11 +1,11 @@
 {
-  "key": "US5960411A--amazon-com-1-click-and-buy-now-ordering",
+  "key": "US5960411A--amazon-com-1-click-and-buy-now-ordering-a1837e5b623fb36b95de9781",
   "row": {
     "patent_number": "US5960411A",
     "product": "Amazon.com 1-Click and Buy Now ordering",
     "company": "Amazon",
     "note": "Patent owner's own product. Patent expired in 2017.",
-    "key": "US5960411A--amazon-com-1-click-and-buy-now-ordering"
+    "key": "US5960411A--amazon-com-1-click-and-buy-now-ordering-a1837e5b623fb36b95de9781"
   },
   "patent": {
     "assignee": "Amazon.com Inc",
@@ -75,13 +75,13 @@
     {
       "id": "1[pre]",
       "text": "A method of placing an order for an item comprising:",
+      "element_id": "1[pre]",
       "assessment": "documented",
       "quote": "1-Click securely stores billing and shipping information so that each customer needs only one click of the mouse to buy a selected item, rather than entering the same information over and over again for each purchase.",
-      "source_date": "1999-10-11",
       "source_url": "https://press.aboutamazon.com/1999/10/amazon-com-receives-patent-for-1-click",
-      "evidence_summary": "Amazon describes 1-Click as a way to buy a selected item with one click using stored billing and shipping information.",
-      "element_id": "1[pre]",
       "source_title": "Amazon.com Receives Patent for 1-click",
+      "source_date": "1999-10-11",
+      "evidence_summary": "Amazon describes 1-Click as a way to buy a selected item with one click using stored billing and shipping information.",
       "basis": {
         "confidence": "high",
         "reasoning": "Amazon's 1999 release directly describes purchasing a selected item with one click and using stored billing and shipping information.",
@@ -131,13 +131,13 @@
     {
       "id": "1[a]",
       "text": "under control of a client system, displaying information identifying the item; and",
+      "element_id": "1[a]",
       "assessment": "documented",
       "quote": "This page will contain information about the specific product and will have an option to ‘buy now with 1-Click.’",
-      "source_date": "",
       "source_url": "https://law.justia.com/cases/federal/district-courts/FSupp2/333/513/2500769/",
-      "evidence_summary": "The court record describes an Amazon product detail page containing information about the product and a 1-Click purchase option. The page does not show a publication date in the evidence reviewed.",
-      "element_id": "1[a]",
       "source_title": "IPXL Holdings, LLC v. Amazon.Com, Inc., 333 F. Supp. 2d 513 (E.D. Va. 2004)",
+      "source_date": "",
+      "evidence_summary": "The court record describes an Amazon product detail page containing information about the product and a 1-Click purchase option. The page does not show a publication date in the evidence reviewed.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The court record states that the product detail page contains information about the specific product and a 1-Click option.",
@@ -187,13 +187,13 @@
     {
       "id": "1[b]",
       "text": "in response to only a single action being performed, sending a request to order the item along with an identifier of a purchaser of the item to a server system;",
+      "element_id": "1[b]",
       "assessment": "partial",
       "quote": "1-Click securely stores billing and shipping information so that each customer needs only one click of the mouse to buy a selected item, rather than entering the same information over and over again for each purchase.",
-      "source_date": "1999-10-11",
       "source_url": "https://press.aboutamazon.com/1999/10/amazon-com-receives-patent-for-1-click",
-      "evidence_summary": "Amazon describes buying a selected item with one click; a court opinion separately says cookies transferred a sessionID in the accused system. The public evidence reviewed does not establish that a purchaser identifier was sent with that specific one-click order request.",
-      "element_id": "1[b]",
       "source_title": "Amazon.com Receives Patent for 1-click",
+      "source_date": "1999-10-11",
+      "evidence_summary": "Amazon describes buying a selected item with one click; a court opinion separately says cookies transferred a sessionID in the accused system. The public evidence reviewed does not establish that a purchaser identifier was sent with that specific one-click order request.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The release documents one-click purchase; the appellate opinion separately states that cookies transferred a sessionID in the accused system. The evidence does not explicitly connect that identifier transfer to the same one-click order request.",
@@ -247,13 +247,13 @@
     {
       "id": "1[c]",
       "text": "under control of a single-action ordering component of the server system, receiving the request;",
+      "element_id": "1[c]",
       "assessment": "partial",
       "quote": "By choosing the ‘buy now with 1-Click’ option from this product detail page, the user initiates the product ordering and shipping process.",
-      "source_date": "",
       "source_url": "https://law.justia.com/cases/federal/district-courts/FSupp2/333/513/2500769/",
-      "evidence_summary": "The court record describes the 1-Click option initiating the ordering and shipping process. It does not describe receipt by a particular server-side single-action ordering component.",
-      "element_id": "1[c]",
       "source_title": "IPXL Holdings, LLC v. Amazon.Com, Inc., 333 F. Supp. 2d 513 (E.D. Va. 2004)",
+      "source_date": "",
+      "evidence_summary": "The court record describes the 1-Click option initiating the ordering and shipping process. It does not describe receipt by a particular server-side single-action ordering component.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The court record describes the customer initiating the ordering and shipping process through the 1-Click option, but does not identify a server-side component receiving the request.",
@@ -303,13 +303,13 @@
     {
       "id": "1[d]",
       "text": "retrieving additional information previously stored for the purchaser identified by the identifier in the received request; and",
+      "element_id": "1[d]",
       "assessment": "partial",
       "quote": "Amazon’s customers can store payment information and shipping addresses in their Amazon customer accounts. This information can then be retrieved later when that customer uses the 1-Click features.",
-      "source_date": "2011-11-02",
       "source_url": "https://storage.courtlistener.com/harvard_pdf/772066.pdf",
-      "evidence_summary": "The appellate opinion says customer payment and shipping information is stored and can later be retrieved when the customer uses 1-Click. It does not expressly tie that retrieval to a purchaser identifier in the received request.",
-      "element_id": "1[d]",
       "source_title": "Amazon.com, Inc. v. Barnesandnoble.com, Inc., No. 00-1109 — U.S. Court of Appeals, Federal Circuit Opinion",
+      "source_date": "2011-11-02",
+      "evidence_summary": "The appellate opinion says customer payment and shipping information is stored and can later be retrieved when the customer uses 1-Click. It does not expressly tie that retrieval to a purchaser identifier in the received request.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The opinion states that payment details and shipping addresses are stored in customer accounts and can later be retrieved when that customer uses 1-Click; it does not explicitly state that the request identifier selects that customer.",
@@ -359,13 +359,13 @@
     {
       "id": "1[e]",
       "text": "generating an order to purchase the requested item for the purchaser identified by the identifier in the received request using the retrieved additional information; and",
+      "element_id": "1[e]",
       "assessment": "partial",
       "quote": "The customer's 1-Click order is placed in a holding state for 90 minutes.",
-      "source_date": "",
       "source_url": "https://law.justia.com/cases/federal/district-courts/FSupp2/333/513/2500769/",
-      "evidence_summary": "The court record describes a 1-Click order being placed and later finalized if not cancelled. The evidence does not specify that the order is generated using information retrieved for a purchaser identified in the request.",
-      "element_id": "1[e]",
       "source_title": "IPXL Holdings, LLC v. Amazon.Com, Inc., 333 F. Supp. 2d 513 (E.D. Va. 2004)",
+      "source_date": "",
+      "evidence_summary": "The court record describes a 1-Click order being placed and later finalized if not cancelled. The evidence does not specify that the order is generated using information retrieved for a purchaser identified in the request.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The court record confirms an order is placed in a holding state, but does not explain order-generation mechanics using information retrieved for an identified purchaser.",
@@ -415,13 +415,13 @@
     {
       "id": "1[f]",
       "text": "fulfilling the generated order to complete purchase of the item",
+      "element_id": "1[f]",
       "assessment": "documented",
       "quote": "Amazon then checks which items it can group together, calculates shipping costs, and then sends your order out for delivery.",
-      "source_date": "2017-08-02",
       "source_url": "https://www.howtogeek.com/320394/what-is-1-click-ordering-on-amazon-and-how-does-it-work",
-      "evidence_summary": "The 2017 description of Amazon 1-Click says Amazon sends the order out for delivery after grouping items and calculating shipping costs.",
-      "element_id": "1[f]",
       "source_title": "What Is 1-Click Ordering On Amazon and How Does It Work?",
+      "source_date": "2017-08-02",
+      "evidence_summary": "The 2017 description of Amazon 1-Click says Amazon sends the order out for delivery after grouping items and calculating shipping costs.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The 2017 article states that Amazon sends the order out for delivery after checking grouping and shipping costs.",
@@ -471,13 +471,13 @@
     {
       "id": "1[g]",
       "text": "whereby the item is ordered without using a shopping cart ordering model.",
+      "element_id": "1[g]",
       "assessment": "partial",
       "quote": "Once activated, you can skip the standard checkout process and buy something by clicking a single button.",
-      "source_date": "2003-08",
       "source_url": "https://www.oreilly.com/library/view/amazon-hacks/0596005423/ch02s04.html",
-      "evidence_summary": "The guide describes 1-Click as skipping standard checkout with a single button. It does not expressly establish that the ordering route avoids a shopping cart model.",
-      "element_id": "1[g]",
       "source_title": "Enable 1-Click Buying",
+      "source_date": "2003-08",
+      "evidence_summary": "The guide describes 1-Click as skipping standard checkout with a single button. It does not expressly establish that the ordering route avoids a shopping cart model.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The 2003 guide says 1-Click skips standard checkout, but does not specifically say it bypasses the shopping cart ordering model.",
@@ -525,14 +525,15 @@
       ]
     }
   ],
-  "prior_art": [
+  "prior_art": [],
+  "rejected": [
     {
       "title": "NetBill: An Internet Commerce System Optimized for Network-Delivered Services",
-      "quote": "The application can present the price quote to the consumer or it can approve the purchase without prompting the consumer. For example, the consumer may specify that her client software accept any price quote below some threshold amount; this relieves her of the burden of assenting to every low-value price quote via a dialog box.",
       "author_or_publisher": "Marvin Sirbu and J. D. Tygar",
-      "elements_disclosed": "1[a], 1[b], 1[c], 1[d], 1[f], 1[g]",
       "publication_date": "1995-08",
       "url": "https://kilthub.cmu.edu/ndownloader/files/12236102",
+      "elements_disclosed": "1[a], 1[b], 1[c], 1[d], 1[f], 1[g]",
+      "quote": "The application can present the price quote to the consumer or it can approve the purchase without prompting the consumer. For example, the consumer may specify that her client software accept any price quote below some threshold amount; this relieves her of the burden of assenting to every low-value price quote via a dialog box.",
       "labels": [
         "1[a]",
         "1[b]",
@@ -546,8 +547,8 @@
       "checks": [
         {
           "name": "Published before the priority date",
-          "status": "pass",
-          "detail": "1995-08 vs priority 1997-09-12"
+          "status": "warn",
+          "detail": "research: 1995-08; page metadata: unavailable; priority: 1997-09-12"
         },
         {
           "name": "Not a patent document",
@@ -568,11 +569,11 @@
     },
     {
       "title": "Payment Switches for Open Networks",
-      "quote": "The product description page is returned to the client and displayed. The client then activates one of the payment URLs to purchase the product the URL describes.",
       "author_or_publisher": "David K. Gifford, Lawrence C. Stewart, Andrew C. Payne, and G. Winfield Treese",
-      "elements_disclosed": "1[a], 1[f], 1[g]",
       "publication_date": "1995-07",
       "url": "https://usenix.org/legacy/publications/library/proceedings/ec95/full_papers/gifford.txt",
+      "elements_disclosed": "1[a], 1[f], 1[g]",
+      "quote": "The product description page is returned to the client and displayed. The client then activates one of the payment URLs to purchase the product the URL describes.",
       "labels": [
         "1[a]",
         "1[f]",
@@ -583,8 +584,8 @@
       "checks": [
         {
           "name": "Published before the priority date",
-          "status": "pass",
-          "detail": "1995-07 vs priority 1997-09-12"
+          "status": "warn",
+          "detail": "research: 1995-07; page metadata: unavailable; priority: 1997-09-12"
         },
         {
           "name": "Not a patent document",
@@ -605,11 +606,11 @@
     },
     {
       "title": "The Millicent Protocol for Inexpensive Electronic Commerce",
-      "quote": "To make a purchase, the customer sends the request, scrip, and a \"signature\" of the request to the vendor.",
       "author_or_publisher": "Steve Glassman, Mark Manasse, Martín Abadi, Paul Gauthier, and Patrick Sobalvarro",
-      "elements_disclosed": "1[f], 1[g]",
       "publication_date": "1995-12-11",
       "url": "https://www.w3.org/Conferences/WWW4/Papers/246",
+      "elements_disclosed": "1[f], 1[g]",
+      "quote": "To make a purchase, the customer sends the request, scrip, and a \"signature\" of the request to the vendor.",
       "labels": [
         "1[f]",
         "1[g]"
@@ -619,8 +620,8 @@
       "checks": [
         {
           "name": "Published before the priority date",
-          "status": "pass",
-          "detail": "1995-12-11 vs priority 1997-09-12"
+          "status": "warn",
+          "detail": "research: 1995-12-11; page metadata: unavailable; priority: 1997-09-12"
         },
         {
           "name": "Not a patent document",
@@ -641,11 +642,11 @@
     },
     {
       "title": "Perils and pitfalls of practical cybercommerce",
-      "quote": "When First Virtual processes a financial transaction, it looks up the buyer’s Virtual personal identification number (PIN) in its database and finds the buyer’s email address of record.",
       "author_or_publisher": "Nathaniel S. Borenstein et al.",
-      "elements_disclosed": "1[d]",
       "publication_date": "1996-06",
       "url": "https://dl.acm.org/doi/pdf/10.1145/228503.228510",
+      "elements_disclosed": "1[d]",
+      "quote": "When First Virtual processes a financial transaction, it looks up the buyer’s Virtual personal identification number (PIN) in its database and finds the buyer’s email address of record.",
       "labels": [
         "1[d]"
       ],
@@ -654,8 +655,8 @@
       "checks": [
         {
           "name": "Published before the priority date",
-          "status": "pass",
-          "detail": "1996-06 vs priority 1997-09-12"
+          "status": "warn",
+          "detail": "research: 1996-06; page metadata: unavailable; priority: 1997-09-12"
         },
         {
           "name": "Not a patent document",
@@ -675,10 +676,7 @@
       ]
     }
   ],
-  "rejected": [],
   "runs": {
-    "evidence": "srun_728f2b03f51547d3dfac42667b3dddba",
-    "prior_art": "srun_728f2b03f51547d31c23de36dda4f006",
     "processor": "pro"
   },
   "status": {

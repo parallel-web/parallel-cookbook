@@ -1,11 +1,11 @@
 {
-  "key": "US8046721B2--iphone-slide-to-unlock-ios-1-to-9",
+  "key": "US8046721B2--iphone-slide-to-unlock-ios-1-to-9-68423118794e1a83294df95a",
   "row": {
     "patent_number": "US8046721B2",
     "product": "iPhone slide to unlock (iOS 1 to 9)",
     "company": "Apple",
     "note": "Patent owner's own product. Patent expired in 2025.",
-    "key": "US8046721B2--iphone-slide-to-unlock-ios-1-to-9"
+    "key": "US8046721B2--iphone-slide-to-unlock-ios-1-to-9-68423118794e1a83294df95a"
   },
   "patent": {
     "assignee": "Apple Inc",
@@ -59,13 +59,13 @@
     {
       "id": "1[pre]",
       "text": "A method of unlocking a hand-held electronic device, the device including a touch-sensitive display, the method comprising:",
+      "element_id": "1[pre]",
       "assessment": "documented",
       "quote": "To unlock the first iPhone, you touched the arrow button on the lock screen and dragged it over to the right.",
-      "source_date": "2017-06-29",
       "source_url": "https://www.macworld.com/article/230231/original-2007-iphone-photo-album.html",
-      "evidence_summary": "The original iPhone is unlocked by touching an on-screen arrow and dragging it right, documenting a touch-display unlocking method.",
-      "element_id": "1[pre]",
       "source_title": "The original iPhone in photos: Looking back on the iPhone that started it all",
+      "source_date": "2017-06-29",
+      "evidence_summary": "The original iPhone is unlocked by touching an on-screen arrow and dragging it right, documenting a touch-display unlocking method.",
       "basis": {
         "confidence": "medium",
         "reasoning": "Macworld directly describes touching and dragging an on-screen arrow to unlock the original iPhone, and its title/date segments establish the source metadata. MacStories explicitly identifies the iPhone’s touch screen. These are review sources rather than primary technical documentation.",
@@ -119,13 +119,13 @@
     {
       "id": "1[a]",
       "text": "detecting a contact with the touch-sensitive display at a first predefined location corresponding to an unlock image;",
+      "element_id": "1[a]",
       "assessment": "documented",
       "quote": "To unlock the first iPhone, you touched the arrow button on the lock screen and dragged it over to the right.",
-      "source_date": "2017-06-29",
       "source_url": "https://www.macworld.com/article/230231/original-2007-iphone-photo-album.html",
-      "evidence_summary": "For the original arrow-slider implementation, the user begins by touching the displayed arrow button before dragging it right, supporting an initial graphical touch target. This evidence should not be generalized to every version in iOS 1–9: iOS 7 allowed unlocking swipes from anywhere on the lock screen.",
-      "element_id": "1[a]",
       "source_title": "The original iPhone in photos: Looking back on the iPhone that started it all",
+      "source_date": "2017-06-29",
+      "evidence_summary": "For the original arrow-slider implementation, the user begins by touching the displayed arrow button before dragging it right, supporting an initial graphical touch target. This evidence should not be generalized to every version in iOS 1–9: iOS 7 allowed unlocking swipes from anywhere on the lock screen.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The Macworld sentence identifies the displayed arrow as the initial touch target for the original implementation. The iOS 7 description permits swiping anywhere on the lock screen, supporting the explicit limitation on generalizing that fixed-target evidence across the entire requested version range.",
@@ -179,13 +179,13 @@
     {
       "id": "1[b]",
       "text": "continuously moving the unlock image on the touch-sensitive display in accordance with movement of the contact while continuous contact with the touch screen is maintained, wherein the unlock image is a graphical, interactive user-interface object with which a user interacts in order to unlock the device; and",
+      "element_id": "1[b]",
       "assessment": "partial",
       "quote": "As soon as you power it up, you’re presented with a software button with an arrow on it that sits at the bottom of the screen in a channel with the message ‘Slide to Unlock’ that animates to suggest that you slide the button to the right.",
-      "source_date": "",
       "source_url": "https://www.macstories.net/reviews/iphone-1-0-the-10th-anniversary-macstories-review",
-      "evidence_summary": "The review describes a graphical arrow button in a channel that users slide right, but does not explicitly describe uninterrupted contact or continuous tracking of the image with the finger. An iOS 7 review separately reports movement of a whole screen layer rather than a small slider, so the earlier mechanism is not established across the full iOS 1–9 range.",
-      "element_id": "1[b]",
       "source_title": "iPhone 1.0: The 10th Anniversary MacStories Review",
+      "source_date": "",
+      "evidence_summary": "The review describes a graphical arrow button in a channel that users slide right, but does not explicitly describe uninterrupted contact or continuous tracking of the image with the finger. An iOS 7 review separately reports movement of a whole screen layer rather than a small slider, so the earlier mechanism is not established across the full iOS 1–9 range.",
       "basis": {
         "confidence": "medium",
         "reasoning": "MacStories describes a software arrow button in a channel and direct finger manipulation of screen elements, supporting the graphical interactive-object portion. It does not explicitly describe uninterrupted contact or continuous image tracking. AppleInsider directly reports that iOS 7 moves an entire screen layer instead of the small slider, supporting the version caveat; no publication date was shown for the quoted MacStories page.",
@@ -239,13 +239,13 @@
     {
       "id": "1[c]",
       "text": "unlocking the hand-held electronic device if the moving the unlock image on the touch-sensitive display results in movement of the unlock image from the first predefined location to a predefined unlock region on the touch-sensitive display.",
+      "element_id": "1[c]",
       "assessment": "partial",
       "quote": "Either way, the on-screen slider appears, but your iPhone doesn’t actually awaken until you drag the slider to the right with your finger.",
-      "source_date": "2021-10-06",
       "source_url": "https://www.dummies.com/article/technology/electronics/cell-phones/iphones/how-to-lock-and-unlock-your-iphone-196930",
-      "evidence_summary": "The guide links a rightward finger drag of the on-screen slider to unlocking the iPhone. It does not identify the slider’s required destination or establish that reaching a predefined display region is the condition that triggers unlocking.",
-      "element_id": "1[c]",
       "source_title": "How to Lock and Unlock Your iPhone",
+      "source_date": "2021-10-06",
+      "evidence_summary": "The guide links a rightward finger drag of the on-screen slider to unlocking the iPhone. It does not identify the slider’s required destination or establish that reaching a predefined display region is the condition that triggers unlocking.",
       "basis": {
         "confidence": "medium",
         "reasoning": "The guide’s unlocking context and quoted instruction connect rightward finger dragging of the slider with unlocking. The cited passage supplies no required endpoint or predefined destination region, so it supports only a partial assessment. The page explicitly supplies the title and update date.",
@@ -293,14 +293,15 @@
       ]
     }
   ],
-  "prior_art": [
+  "prior_art": [],
+  "rejected": [
     {
       "title": "Touchscreen Toggle Switches: Push or Slide? Design Issues and Usability Study",
-      "quote": "Users can then grab the pointer and slide it to the other side. If the finger is released before reaching the other side the pointer springs back to its previous position.",
       "author_or_publisher": "Catherine Plaisant and Daniel Wallace",
-      "elements_disclosed": "1[a] (partial: contact on graphical slider), 1[b] (partial: dragging graphical pointer while maintaining contact), 1[c] (partial: endpoint-dependent state change; not handheld-device unlocking)",
       "publication_date": "1990-11",
       "url": "http://www.cs.umd.edu/hcil/trs/90-08/90-08.pdf",
+      "elements_disclosed": "1[a] (partial: contact on graphical slider), 1[b] (partial: dragging graphical pointer while maintaining contact), 1[c] (partial: endpoint-dependent state change; not handheld-device unlocking)",
+      "quote": "Users can then grab the pointer and slide it to the other side. If the finger is released before reaching the other side the pointer springs back to its previous position.",
       "labels": [
         "1[a]",
         "1[b]",
@@ -311,8 +312,8 @@
       "checks": [
         {
           "name": "Published before the priority date",
-          "status": "pass",
-          "detail": "1990-11 vs priority 2005-12-23"
+          "status": "warn",
+          "detail": "research: 1990-11; page metadata: unavailable; priority: 2005-12-23"
         },
         {
           "name": "Not a patent document",
@@ -333,11 +334,11 @@
     },
     {
       "title": "N1 Quick Start Guide, V0.5",
-      "quote": "The text “Right sweep to unlock” appears on the screen. Sweep right to unlock your unit.",
       "author_or_publisher": "Neonode",
-      "elements_disclosed": "1[pre], 1[c] (partial: touchscreen swipe unlocks the handheld device; no moving unlock image or image-target region disclosed)",
       "publication_date": "2004-07-29",
       "url": "https://www.courtlistener.com/docket/4178994/2121/15/apple-inc-v-samsung-electronics-co-ltd",
+      "elements_disclosed": "1[pre], 1[c] (partial: touchscreen swipe unlocks the handheld device; no moving unlock image or image-target region disclosed)",
+      "quote": "The text “Right sweep to unlock” appears on the screen. Sweep right to unlock your unit.",
       "labels": [
         "1[pre]",
         "1[c]"
@@ -348,7 +349,7 @@
         {
           "name": "Published before the priority date",
           "status": "warn",
-          "detail": "2004-07-29 vs priority 2005-12-23, read from the note “Not printed; publicly archived on 2004-07-29, before the priority date”: check by hand"
+          "detail": "research: Not printed; publicly archived on 2004-07-29, before the priority date; page metadata: unavailable; priority: 2005-12-23"
         },
         {
           "name": "Not a patent document",
@@ -368,10 +369,7 @@
       ]
     }
   ],
-  "rejected": [],
   "runs": {
-    "evidence": "srun_728f2b03f51547d3108e5b709ab6bb05",
-    "prior_art": "srun_728f2b03f51547d3897d9300ef73e67d",
     "processor": "pro"
   },
   "status": {

@@ -1,8 +1,13 @@
 """Offline tests for the parser, the checks and the template: uv run python -m unittest -v."""
 
+import csv
 import json
+import sys
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
+from types import SimpleNamespace
+from unittest.mock import Mock, patch
 
 from jinja2 import Environment, FileSystemLoader
 
@@ -126,10 +131,19 @@ class Checks(unittest.TestCase):
         pages["u"]["stale"] = True  # verbatim, but only on an old cached copy
         self.assertEqual(cc.quote_check("one two three four five six seven eight", "u", pages)["status"], "warn")
 
+    def test_verbatim_requires_contiguous_whole_words(self):
+        phrase = "allow users with an active account to approve every pending purchase in the current list without entering a second password or contacting the account administrator"
+        pages = {"u": {"text": cc.norm(phrase), "fetched": "2026-11-03"}}
+        self.assertEqual(cc.quote_check("Never " + phrase, "u", pages)["status"], "warn")
+        pages["u"]["text"] = "one two three four five six unrelated two three four five six seven"
+        self.assertEqual(cc.quote_check("one two three four five six seven", "u", pages)["status"], "warn")
+        pages["u"]["text"] = "unavailable"
+        self.assertEqual(cc.quote_check("available", "u", pages)["status"], "fail")
+
     def test_dates(self):
         self.assertEqual([cc.parse_date(v) for v in ("2017-06-30", "2017-06", "2017", "2017-13-01", "June 2017", "")],
                          ["2017-06-30", "2017-06", "2017", None, None, None])
-        self.assertEqual([cc.before(v, "2005-12-23") for v in ("1992-05", "2005", "2005-12-23", "2006")], [True, None, None, False])
+        self.assertEqual([cc.before(v, "2005-12-23") for v in ("1992-05", "2005", "2005-12-23", "2006")], [True, None, False, False])
         r = record()
         self.assertEqual([cc.term_label(d, r) for d in ("2008", "2009", "2017-06-30", "2028-01")],
                          ["before the patent issued", "during the patent term", "during the patent term", "after the patent expired"])
@@ -166,10 +180,110 @@ class Verify(unittest.TestCase):
         refs = [{"title": t, "author_or_publisher": "a", "publication_date": d, "url": u, "elements_disclosed": "1[a]", "quote": "q"}
                 for t, d, u in [("Early", "1992-05", "https://a.org/1"), ("Same year", "2006", "https://a.org/2"),
                                 ("Late", "2007-01", "https://a.org/3"), ("A patent", "1990", "https://patents.google.com/x")]]
-        accepted, rejected = cc.verify_prior_art(record(), {"content": {"references": refs}}, {})
-        self.assertEqual([r["title"] for r in accepted], ["Early", "Same year"])
-        self.assertEqual([r["title"] for r in rejected], ["Late", "A patent"])
-        self.assertEqual(accepted[1]["checks"][0]["status"], "warn")  # same period: flagged for a person
+        pages = {ref["url"]: {"published": ref["publication_date"]} for ref in refs}
+        accepted, rejected = cc.verify_prior_art(record(), {"content": {"references": refs}}, pages)
+        self.assertEqual([r["title"] for r in accepted], ["Early"])
+        self.assertEqual([r["title"] for r in rejected], ["Same year", "Late", "A patent"])
+        self.assertEqual(rejected[0]["checks"][0]["status"], "warn")
+
+    def test_cutoff_requires_source_support_and_excludes_known_late_dates(self):
+        cases = [
+            ("2001", "2001-08-01", "pass"), ("", "2001-08-01", "pass"),
+            ("2001-01-01", "2007-10-01", "fail"), ("2001", None, "warn"),
+            ("2001-03-01", "2001", "warn"), ("2004", "2003", "warn"),
+            ("2006-09-06", "2006-09-06", "fail"), ("2006-09", "2006-09", "warn"),
+            ("First publicly archived on 2007-10-01", None, "fail"),
+            ("First publicly archived on 2006-09-06", None, "fail"),
+            ("First publicly archived on 2001-02-30", None, "fail"),
+        ]
+        for claimed, source, expected in cases:
+            with self.subTest(claimed=claimed, source=source):
+                _, result = cc.prior_date_check(claimed, source, "2006-09-06")
+                self.assertEqual(result["status"], expected)
+
+
+class Workflow(unittest.TestCase):
+    def test_full_row_identity_survives_reordering_and_distinguishes_inputs(self):
+        product = "Business application suite for enterprise customers"
+        values = [(product + " Alpha", "A", "first"), (product + " Beta", "A", "first"),
+                  (product + " Alpha", "B", "first"), (product + " Alpha", "A", "second")]
+        def read(path, entries):
+            with path.open("w", newline="") as f:
+                writer = csv.writer(f)
+                writer.writerow(["patent_number", "product", "company", "note"])
+                writer.writerows(("US1", *entry) for entry in entries)
+            return [r["key"] for r in cc.read_rows(path)]
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp, "input.csv")
+            keys = read(path, values)
+            self.assertEqual(len(set(keys)), 4)
+            self.assertEqual(keys[::-1], read(path, values[::-1]))
+
+    def test_skipped_record_cannot_republish_previous_exhibit(self):
+        with TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            csv_path = out / "input.csv"
+            csv_path.write_text("patent_number,product,company,note\nUS1,Device,A,first customer\n")
+            old = cc.read_rows(csv_path)[0]
+            (out / "pdf").mkdir()
+            (out / "data").mkdir()
+            name = f"pdf/{old['key']}.pdf"
+            (out / name).write_bytes(b"private")
+            (out / "claim-charts.pdf").write_bytes(b"private")
+            (out / "portfolio.csv").write_text(f"pdf\n{name}\n")
+            cc.write_json(out / "data" / f"{old['key']}.json", {"row": old, "key": old["key"]})
+            csv_path.write_text(csv_path.read_text().replace("first customer", "second customer"))
+            self.assertEqual(cc.saved_charts(out, cc.read_rows(csv_path)), [])
+            with (patch.object(sys, "argv", ["cc", str(csv_path), "--out", tmp]),
+                  patch.object(cc, "ensure_pdf_support"), patch("parallel.Parallel"),
+                  patch.dict(cc.os.environ, PARALLEL_API_KEY="test"),
+                  patch.object(cc, "fetch_patents", return_value={"US1": {"error": "unreadable"}}),
+                  patch.object(cc, "render_all") as render):
+                with self.assertRaisesRegex(SystemExit, "1 missing"):
+                    cc.main()
+                self.assertEqual(render.call_args.args[1], [])
+            self.assertFalse(any((out / f).exists() for f in (name, "claim-charts.pdf", "portfolio.csv")))
+
+    def test_resume_uses_actual_inputs_and_retries_only_failed_task(self):
+        client = Mock()
+        def event(key, product, run_id, status):
+            run = SimpleNamespace(metadata={"key": key}, processor="pro", run_id=run_id, status=status)
+            return SimpleNamespace(type="task_run.state", run=run, input=SimpleNamespace(input={"product": product}),
+                                   output=SimpleNamespace(content={"references": [], "elements": []}, basis=[]))
+        events = [event("evidence:legacy", "other", "wrong", "completed"),
+                  event("evidence:legacy", "right", "reuse", "completed"),
+                  event("prior_art:p", "right", "old", "failed")]
+        finished = [*events, event("prior_art:p", "right", "retry", "completed")]
+        client.task_group.get_runs.side_effect = [events, finished, finished]
+        submit = client.with_options.return_value.task_group.add_runs
+        submit.return_value.run_ids = ["retry"]
+        tasks = {key: {"input": {"product": "right"}, "processor": "pro"} for key in ("evidence:new", "prior_art:p")}
+        with TemporaryDirectory() as tmp:
+            state = Path(tmp, "runs.json")
+            cc.write_json(state, {"group": "test-group"})
+            results = cc.research(client, tasks, state)
+        self.assertEqual([r["run_id"] for r in results.values()], ["reuse", "retry"])
+        self.assertEqual([r["metadata"]["key"] for r in submit.call_args.kwargs["inputs"]], ["prior_art:p"])
+
+    def test_failed_task_is_visible_and_commands_exit_incomplete(self):
+        chart = json.loads(next((ROOT / "sample/data").glob("*.json")).read_text())
+        chart.update(prior_art=[], rejected=[], status={"evidence": "completed", "prior_art": "failed"})
+        env = Environment(loader=FileSystemLoader(ROOT), autoescape=True)
+        env.filters.update(longdate=cc.bluebook_date, patno=str)
+        template = env.get_template("chart.html.j2")
+        ctx = {"charts": [chart | {"summary": cc.summarize(chart), "exhibit": "A-1"}], "wordmark": ""}
+        exhibit = template.render(**ctx)
+        self.assertIn("Prior-art research is unavailable (task failed)", exhibit)
+        self.assertNotIn("No non-patent prior art passed", exhibit)
+        self.assertIn("Task failed", template.render(index=True, **ctx))
+        with TemporaryDirectory() as tmp:
+            for mode in ([], ["--render-only"]):
+                with (patch.object(sys, "argv", ["cc", str(ROOT / "patents.csv"), "--limit", "1", "--out", tmp, *mode]),
+                      patch.object(cc, "ensure_pdf_support"), patch("parallel.Parallel"),
+                      patch.dict(cc.os.environ, PARALLEL_API_KEY="test"),
+                      patch.object(cc, "build", return_value=[chart]), patch.object(cc, "saved_charts", return_value=[chart]),
+                      patch.object(cc, "render_all"), self.assertRaisesRegex(SystemExit, "1 with unsuccessful tasks")):
+                    cc.main()
 
 
 class Template(unittest.TestCase):
