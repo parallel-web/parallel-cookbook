@@ -29,7 +29,7 @@ import re
 import string
 import sys
 import time
-from datetime import date, datetime
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from tempfile import NamedTemporaryFile, TemporaryDirectory
 from urllib.parse import urlparse
@@ -117,8 +117,15 @@ def first(pattern: str, text: str) -> str | None:
 def parse_patent(md: str) -> dict:
     """Read a Google Patents page (Extract markdown) into metadata and claim 1 elements. No model is involved."""
     pa = md.find("Priority Applications")
-    claims = md[m.start():] if (m := re.search(r"#+ Claims \(", md)) else ""
-    claim1 = re.search(r"\n1\\?\.\s+(.*?)(?=\n\s*2\\?\.\s)", claims, re.DOTALL)
+    heading = re.search(r"(?m)^#+ Claims \(\s*(\d+)\s*\)", md)
+    count = int(heading[1]) if heading else None
+    claims = md[heading.end():] if heading else ""
+    # Only accept the end of the claims section as a delimiter when no second claim is expected.
+    boundary = r"(?=\n\s*2\\?\.\s)"
+    if count == 1:
+        boundary = (r"(?=\n[ \t]*(?:#+\s|Priority Applications\b|Applications Claiming Priority\b|"
+                    r"Patent Citations\b|\||(?:\[)?US\d{2}/[\d,]+\b)|\Z)")
+    claim1 = re.search(r"\n[ \t]*1\\?\.[ \t\n]+(.*?)" + boundary, claims, re.DOTALL)
     lines = [re.sub(r"\s+", " ", p).strip() for p in re.split(r"\n\s*\n", claim1.group(1))] if claim1 else []
     return {
         "assignee": first(r"Current Assignee[^\n]*\n\s+([^\n]+)", md),
@@ -126,7 +133,7 @@ def parse_patent(md: str) -> dict:
         "grant_date": first(r"(\d{4}-\d{2}-\d{2})\s+Application granted", md),
         "expiration": first(r"(\d{4}-\d{2}-\d{2})\s+Anticipated expiration", md),
         "status": first(r"\n\s*Status\s+([^\n]+?)(?:\s+legal-status[^\n]*)?\n", md),
-        "claim_count": int(first(r"Claims \(\s*(\d+)\s*\)", md) or 0) or None,
+        "claim_count": count,
         "elements": split_elements([line for line in lines if line]),
     }
 
@@ -135,6 +142,8 @@ def split_elements(lines: list[str]) -> list[dict]:
     """Group claim lines into chart elements labelled 1[pre], 1[a], 1[b] ..."""
     if not lines:
         return []
+    if len(lines) == 1:
+        return [{"id": "1[a]", "text": lines[0]}]
     out, buf = [{"id": "1[pre]", "text": lines[0]}], []
     for line in lines[1:]:
         buf.append(line)
@@ -149,10 +158,11 @@ def split_elements(lines: list[str]) -> list[dict]:
 def patent_checks(pn: str, title: str, record: dict, page: str) -> list[dict]:
     page = norm(page)
     els = record["elements"]
+    minimum_elements = 1 if record.get("claim_count") == 1 else 2
     dates = [record[k] for k in ("priority_date", "grant_date", "expiration")]
     return [
         check("Patent number matches the page", pn.lower() in title.lower(), detail=title.split(" - ")[0]),
-        check("Claim 1 copied verbatim", len(els) >= 2 and all(norm(e["text"]) in page for e in els),
+        check("Claim 1 copied verbatim", len(els) >= minimum_elements and all(norm(e["text"]) in page for e in els),
               detail=f"{len(els)} elements, each found on the page"),
         check("Dates parsed and in order", all(dates) and dates == sorted(dates), detail=" ≤ ".join(d or "?" for d in dates)),
     ]
@@ -173,7 +183,7 @@ def fetch_patents(client, pns: list[str]) -> dict[str, dict]:
             continue
         record = parse_patent(res.full_content)
         record |= {"patent_number": pn, "url": url, "title": res.title.split(" - ", 1)[-1].replace("- Google Patents", "").strip(),
-                   "fetched": day(res.acquired_at)}
+                   "fetched": day(acquired_time(res))}
         record["checks"] = patent_checks(pn, res.title, record, res.full_content)
         records[pn] = record
     return records
@@ -224,9 +234,12 @@ def research(client, runs: dict[str, dict], state_path: Path) -> dict[str, dict]
         write_json(state_path, state)
     group = state["group"]
     # Older groups used truncated product names. Only reuse research for the same actual input.
+    incomplete = set(state.get("incomplete_runs", []))
     by_input = {}
     for event in client.task_group.get_runs(group, include_input=True):
         if event.type != "task_run.state" or not event.input or event.run.status in ("failed", "cancelled"):
+            continue
+        if event.run.run_id in incomplete:
             continue
         saved_key = (event.run.metadata or {}).get("key", "")
         payload = json.dumps(event.input.input, sort_keys=True)
@@ -287,6 +300,15 @@ def day(value) -> str | None:
     return str(value)[:10] if value else None
 
 
+def acquired_time(result) -> datetime | None:
+    value = getattr(result, "acquired_at", None)
+    try:
+        timestamp = value if isinstance(value, datetime) else datetime.fromisoformat(value)
+    except (TypeError, ValueError):
+        return None
+    return timestamp.astimezone(UTC) if timestamp.tzinfo else None
+
+
 def domain(url: str) -> str:
     return urlparse(url).netloc.lower().removeprefix("www.")
 
@@ -334,9 +356,11 @@ def quote_check(quote: str, url: str, pages: dict) -> dict:
     page = pages.get(url) or {}
     if not page.get("text"):
         return check("Quote found on the page", False, warn=True, detail="page could not be fetched; check by hand")
-    copy = f"copy of {page['fetched']}"
+    copy = f"copy of {page['fetched']}" if page.get("fetched") else "undated copy"
     normalized = norm(quote)
     if normalized and f" {normalized} " in f" {page['text']} ":
+        if not page.get("fetched"):
+            return check("Quote found on the page", False, warn=True, detail="verbatim, but the copy's age is unknown")
         if page.get("stale"):
             return check("Quote found on the page", False, warn=True, detail=f"verbatim on an older {copy}; a fresh copy was not available")
         return check("Quote found on the page", True, detail=f"verbatim, {copy}")
@@ -357,9 +381,12 @@ def fetch_pages(client, urls: set[str]) -> dict[str, dict]:
             continue
         for res in r.results:
             text = norm(res.full_content or "")
-            fetched = day(res.acquired_at) if text else None  # an empty copy was not really visited
-            stale = bool(fetched) and (date.today() - date.fromisoformat(fetched)).days > 2  # live fetch failed, cache was used
-            pages[res.url] = {"text": text, "fetched": fetched, "stale": stale, "published": day(res.publish_date)}
+            acquired = acquired_time(res) if text else None
+            age = datetime.now(UTC) - acquired if acquired else None
+            if age is not None and age < timedelta(0):
+                acquired = None
+            fresh = acquired is not None and age <= timedelta(seconds=SOURCE_FETCH["max_age_seconds"])
+            pages[res.url] = {"text": text, "fetched": day(acquired), "stale": not fresh, "published": day(res.publish_date)}
     return pages
 
 
@@ -376,7 +403,7 @@ def verify_evidence(record: dict, result: dict, pages: dict, today: str) -> list
     for el in record["elements"]:
         item = by_id.get(el["id"])
         if not item:
-            rows.append({**el, "assessment": "not_found", "checks": [check("Element researched", False, detail="missing from the research output")]})
+            rows.append({**el, "assessment": "unresearched", "checks": [check("Element researched", False, detail="missing from the research output")]})
             continue
         url, quote, found = item["source_url"].strip(), item["quote"].strip(), item["assessment"] != "not_found"
         cited = {c["url"] for c in item["basis"].get("citations") or []}
@@ -478,7 +505,7 @@ def summarize(chart: dict) -> dict:
     checks = chart["patent"]["checks"] + [c for x in els + refs + chart["rejected"] for c in x["checks"]]
     quotes = [c for x in els for c in x["checks"] if c["name"] == "Quote found on the page"]
     return {
-        **{k: sum(e["assessment"] == k for e in els) for k in ("documented", "partial", "not_found")},
+        **{k: sum(e["assessment"] == k for e in els) for k in ("documented", "partial", "not_found", "unresearched")},
         "elements": len(els),
         "quotes_verified": sum(c["status"] == "pass" for c in quotes),
         "quotes": len(quotes),
@@ -525,7 +552,7 @@ def render_all(out: Path, charts: list[dict]) -> None:
             w = csv.writer(f, lineterminator="\n")
             w.writerow(["exhibit", "patent_number", "title", "status", "expiration", "product", "elements", "documented",
                         "partial", "not_found", "quotes_verified", "prior_art_refs", "checks_passed", "checks_flagged", "pdf",
-                        "evidence_task", "prior_art_task"])
+                        "evidence_task", "prior_art_task", "unresearched"])
             for c in charts:
                 evidence_ok = c["status"]["evidence"] == "completed"
                 s, p = c["summary"], c["patent"]
@@ -534,7 +561,7 @@ def render_all(out: Path, charts: list[dict]) -> None:
                             f"{s['quotes_verified']}/{s['quotes']}" if evidence_ok else "",
                             len(c["prior_art"]) if c["status"]["prior_art"] == "completed" else "",
                             s["checks_passed"], s["checks_flagged"], f"pdf/{c['key']}.pdf",
-                            c["status"]["evidence"], c["status"]["prior_art"]])
+                            c["status"]["evidence"], c["status"]["prior_art"], s["unresearched"] if evidence_ok else ""])
 
 
 # ----------------------------------------------------------------------------- main
@@ -574,6 +601,17 @@ def saved_charts(out: Path, rows: list[dict]) -> list[dict]:
             chart = json.loads(path.read_text())
             if chart["row"] != row or chart["key"] != row["key"]:
                 sys.exit(f"Cached chart does not match the requested row: {path.name}")
+            # Older caches kept only the calendar day, insufficient for a cross-day freshness decision.
+            if "verification_version" not in chart:
+                for item in chart["elements"] + chart["prior_art"] + chart["rejected"]:
+                    if item.get("fetched") == chart["checked"]:
+                        continue
+                    if any(c["name"] == "Quote found on the page" and c["status"] == "pass" for c in item["checks"]):
+                        sys.exit("Cached quote freshness is uncertain. Run once without --render-only to recheck the sources.")
+            # Older caches recorded omitted elements as negative findings.
+            for element in chart["elements"]:
+                if any(c["name"] == "Element researched" and c["status"] == "fail" for c in element["checks"]):
+                    element["assessment"] = "unresearched"
             charts.append(chart)
     return charts
 
@@ -619,18 +657,26 @@ def build(client, rows: list[dict], out: Path) -> list[dict]:
     pages = fetch_pages(client, urls)
 
     charts = []
+    incomplete_runs = set()
     for r in ok:
         record, ev, pa = patents[r["patent_number"]], results[f"evidence:{r['key']}"], results[f"prior_art:{r['patent_number']}"]
         accepted, rejected = verify_prior_art(record, pa, pages) if pa["status"] == "completed" else ([], [])
         elements = verify_evidence(record, ev, pages, today) if ev["status"] == "completed" else []
+        if any(e["assessment"] == "unresearched" for e in elements):
+            incomplete_runs.add(ev["run_id"])
         chart = {
-            "key": r["key"], "row": r, "patent": record, "checked": today,
+            "key": r["key"], "row": r, "patent": record, "checked": today, "verification_version": 2,
             "elements": elements, "prior_art": accepted, "rejected": rejected,
             "runs": {"evidence": ev["run_id"], "prior_art": pa["run_id"], "processor": ev["processor"]},
             "status": {"evidence": ev["status"], "prior_art": pa["status"]},
         }
         write_json(out / "data" / f"{r['key']}.json", chart)
         charts.append(chart)
+    if incomplete_runs:
+        state_path = out / "runs.json"
+        state = json.loads(state_path.read_text())
+        state["incomplete_runs"] = sorted(incomplete_runs.union(state.get("incomplete_runs", [])))
+        write_json(state_path, state)
     return charts
 
 
@@ -671,8 +717,9 @@ def main() -> None:
         print(f"Wrote {len(charts)} claim charts to {out / 'pdf'}, plus {out / 'claim-charts.pdf'} and {out / 'portfolio.csv'}")
     missing = len(rows) - len(charts)
     incomplete = sum(any(v != "completed" for v in c["status"].values()) for c in charts)
-    if missing or incomplete:
-        sys.exit(f"Incomplete: {missing} missing charts, {incomplete} with unsuccessful tasks. Run again without --render-only.")
+    omitted = sum(e["assessment"] == "unresearched" for c in charts for e in c["elements"])
+    if missing or incomplete or omitted:
+        sys.exit(f"Incomplete: {missing} missing charts, {incomplete} with unsuccessful tasks, {omitted} unresearched elements. Run again without --render-only.")
 
 
 if __name__ == "__main__":

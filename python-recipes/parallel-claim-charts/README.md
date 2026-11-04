@@ -20,7 +20,7 @@ Turn a CSV of patents and products into evidence-of-use claim charts. Claim 1 is
 
 - **Claim language is copied, never generated.** [Extract](https://docs.parallel.ai/extract/extract-quickstart) reads the Google Patents page and a parser splits claim 1 into elements labelled `1[pre]`, `1[a]`, `1[b]`, the way claim charts cite them. A check confirms every element appears word for word on the page.
 - **One research run per chart.** A single `pro` Task run covers every element of the claim, with patent databases excluded so the patent can't become its own evidence. A second `pro` run per patent looks for non-patent prior art.
-- **Verification is visible.** A verbatim quote must match a continuous sequence of whole words after normalization. Prior-art candidates need a source-supported publication date before the patent’s priority date. The chart shows failed checks and candidates that need a person to verify them.
+- **Verification is visible.** A verbatim quote must match a continuous sequence of whole words after normalization. Prior-art candidates need a source-supported publication date before the patent’s priority date. A matching quote only passes when the copy has a known acquisition time within the last 24 hours. The chart shows failed checks and candidates that need a person to verify them.
 - **The basis is on the page.** Each row shows Parallel's confidence and the result of each check. Appendix B gives Parallel's reasoning and every source it cited for each element.
 - **Freshness is explicit.** Dated citations carry a research or metadata date and, when available, a "last visited" date, the date of the copy the quote was checked against. The patent record shows when its status was read, and each source is placed before, during or after the patent term.
 
@@ -73,7 +73,7 @@ Everything is in [`claimchart.py`](claimchart.py): the research specs, the parse
 | Data | Check | Fails when |
 | --- | --- | --- |
 | Patent record | Patent number matches the page | Google Patents returned a different patent |
-| | Claim 1 copied verbatim | An element is missing from the page, or claim 1 has fewer than two elements |
+| | Claim 1 copied verbatim | An element is missing from the page, or a multi-claim record yields fewer than two elements for claim 1 |
 | | Dates parsed and in order | Priority, grant and expiry dates are missing or out of order |
 | Each claim element | Element researched | The research skipped the element |
 | | Quote and source given | A documented or partial finding has no quote, or a not-found one does |
@@ -86,7 +86,7 @@ Everything is in [`claimchart.py`](claimchart.py): the research specs, the parse
 | | Quote found on the page | Flagged only: paywalled papers often hide their full text |
 | | Element labels match the claim | Flagged when it cites elements claim 1 doesn't have |
 
-A patent that fails a record check is skipped before any Task run is paid for. Excluded and date-unverified references appear on the exhibit with their URLs and reasons. An unsuccessful task marks the exhibit and portfolio incomplete and the command exits with an error.
+A patent that fails a record check is skipped before any Task run is paid for. Excluded and date-unverified references appear on the exhibit with their URLs and reasons. Unsuccessful tasks and omitted elements make the command exit with an error. The exhibit and portfolio list omitted elements as unresearched. Rerun the command to retry the affected task.
 
 ### Design decisions
 

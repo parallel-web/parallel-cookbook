@@ -4,12 +4,14 @@ import csv
 import json
 import sys
 import unittest
+from datetime import UTC, datetime, timedelta, timezone
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 from unittest.mock import Mock, patch
 
 from jinja2 import Environment, FileSystemLoader
+from parallel.types.extract_result import ExtractResult
 
 import claimchart as cc
 
@@ -98,6 +100,21 @@ class ParsePatent(unittest.TestCase):
         # a clause ending in a comma joins the next line, so the element reads as one limitation
         self.assertEqual(p["elements"][1]["text"], "under control of a client system, displaying information identifying the item; and")
 
+    def test_single_claim_ends_before_bibliography_or_at_eof(self):
+        prefix = PAGE_B.split("## Claims")[0]
+        claim = "An apparatus comprising a sensor."
+        for trailer in ("", "\n\nPriority Applications (1)\nmetadata", "\n## References\nmetadata",
+                        "\n\nUS12/345,678 2006-09-06 2008-04-11 Title\n## Priority Applications (1)"):
+            with self.subTest(trailer=trailer):
+                page = prefix + "## Claims (1)\n\n  1. " + claim + trailer
+                record = cc.parse_patent(page)
+                self.assertEqual(record["elements"], [{"id": "1[a]", "text": claim}])
+                self.assertEqual(cc.patent_checks("US1", "US1", record, page)[1]["status"], "pass")
+        multi = PAGE_B.split(r"2\. The device")[0]
+        self.assertEqual(cc.parse_patent(multi)["elements"], [])
+        single = multi.replace("Claims ( 20 )", "Claims ( 1 )")
+        self.assertEqual(cc.parse_patent(single)["elements"], cc.parse_patent(PAGE_B)["elements"])
+
     def test_layout_b(self):
         p = cc.parse_patent(PAGE_B)
         self.assertEqual((p["assignee"], p["status"], p["priority_date"]), ("Apple Inc", "Active", "2006-09-06"))
@@ -157,6 +174,27 @@ class Checks(unittest.TestCase):
 
 
 class Verify(unittest.TestCase):
+    def test_quote_freshness_uses_acquisition_time_and_handles_absent_sdk_field(self):
+        url = "https://example.org/doc"
+        now = datetime.now(UTC)
+        cases = [(now - timedelta(hours=23, minutes=59), "pass"), (now - timedelta(hours=24, minutes=1), "warn"),
+                 (now - timedelta(days=2), "warn"), (now + timedelta(hours=1), "warn"),
+                 (None, "warn"), ("bad-date", "warn"), (now.date().isoformat(), "warn")]
+        for timestamp, expected in cases:
+            with self.subTest(timestamp=timestamp):
+                result = ExtractResult(url=url, excerpts=[], full_content="Quoted text", title="US1")
+                if isinstance(timestamp, datetime):
+                    timestamp = timestamp.astimezone(timezone(timedelta(hours=-7))).isoformat()
+                if timestamp is not None:
+                    result.acquired_at = timestamp
+                client = Mock()
+                client.extract.return_value.results = [result]
+                pages = cc.fetch_pages(client, {url})
+                self.assertEqual(cc.quote_check("Quoted text", url, pages)["status"], expected)
+        result = ExtractResult(url="https://patents.google.com/patent/US1/en", excerpts=[], full_content=PAGE_B, title="US1")
+        client.extract.return_value.results = [result]
+        self.assertIsNone(cc.fetch_patents(client, ["US1"])["US1"]["fetched"])
+
     def test_every_element_gets_a_row_and_checks(self):
         r = record()
         result = {"content": {"elements": [
@@ -166,6 +204,7 @@ class Verify(unittest.TestCase):
         pages = {"https://example.com/guide": {"text": cc.norm("The touch screen display responds to fingers."), "fetched": "2026-11-03"}}
         rows = cc.verify_evidence(r, result, pages, "2026-11-03")
         self.assertEqual([x["id"] for x in rows], ["1[pre]", "1[a]"])
+        self.assertEqual(rows[0]["assessment"], "unresearched")
         self.assertEqual(rows[0]["checks"][0]["status"], "fail")  # missing from the research output
         status = {c["name"]: c["status"] for c in rows[1]["checks"]}
         self.assertEqual(set(status.values()), {"pass"}, status)
@@ -251,6 +290,7 @@ class Workflow(unittest.TestCase):
             return SimpleNamespace(type="task_run.state", run=run, input=SimpleNamespace(input={"product": product}),
                                    output=SimpleNamespace(content={"references": [], "elements": []}, basis=[]))
         events = [event("evidence:legacy", "other", "wrong", "completed"),
+                  event("evidence:legacy", "right", "omitted", "completed"),
                   event("evidence:legacy", "right", "reuse", "completed"),
                   event("prior_art:p", "right", "old", "failed")]
         finished = [*events, event("prior_art:p", "right", "retry", "completed")]
@@ -260,10 +300,61 @@ class Workflow(unittest.TestCase):
         tasks = {key: {"input": {"product": "right"}, "processor": "pro"} for key in ("evidence:new", "prior_art:p")}
         with TemporaryDirectory() as tmp:
             state = Path(tmp, "runs.json")
-            cc.write_json(state, {"group": "test-group"})
+            cc.write_json(state, {"group": "test-group", "incomplete_runs": ["omitted"]})
             results = cc.research(client, tasks, state)
         self.assertEqual([r["run_id"] for r in results.values()], ["reuse", "retry"])
         self.assertEqual([r["metadata"]["key"] for r in submit.call_args.kwargs["inputs"]], ["prior_art:p"])
+
+    def test_omitted_elements_mark_reports_incomplete_and_retry_only_evidence(self):
+        row = cc.read_rows(ROOT / "patents.csv")[0]
+        sample = json.loads((ROOT / "sample/data" / f"{row['key']}.json").read_text())
+        claim = sample["patent"]["elements"]
+        # The task explicitly researched the first element and omitted the others.
+        item = {"element_id": claim[0]["id"], "assessment": "not_found", "quote": "", "source_url": "",
+                "source_date": "", "source_title": "", "evidence_summary": ""}
+        ev = {"content": {"elements": [item]}, "basis": [], "status": "completed", "run_id": "ev", "processor": "pro"}
+        pa = dict(ev, content={"references": []}, run_id="pa")
+        with TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            cc.write_json(out / "runs.json", {"group": "test-group"})
+            with (patch.object(cc, "fetch_patents", return_value={row["patent_number"]: sample["patent"]}),
+                  patch.object(cc, "research", return_value={f"evidence:{row['key']}": ev, f"prior_art:{row['patent_number']}": pa})):
+                chart, = cc.build(Mock(), [row], out)
+            self.assertEqual(json.loads((out / "runs.json").read_text())["incomplete_runs"], ["ev"])
+            self.assertEqual(cc.summarize(chart)["not_found"], 1)
+            self.assertEqual(cc.summarize(chart)["unresearched"], len(claim) - 1)
+
+            # Run the CLI from a legacy cache; capture the HTML and CSV before PDF encoding.
+            del chart["verification_version"]
+            for e in chart["elements"]:
+                e["assessment"] = "not_found"
+            cc.write_json(out / "data" / f"{row['key']}.json", chart)
+            backend = Mock()
+            backend.HTML.return_value.render.return_value.pages = []
+            with (patch.object(sys, "argv", ["cc", str(ROOT / "patents.csv"), "--limit", "1", "--out", tmp, "--render-only"]),
+                  patch.object(cc, "ensure_pdf_support"), patch.dict(sys.modules, weasyprint=backend),
+                  self.assertRaisesRegex(SystemExit, "unresearched elements")):
+                cc.main()
+            exhibit, index = [call.kwargs["string"] for call in backend.HTML.call_args_list]
+            self.assertIn("Incomplete research.", exhibit)
+            self.assertEqual(exhibit.count("No public evidence found."), 1)
+            self.assertEqual(exhibit.count("The research omitted this element."), len(claim) - 1)
+            self.assertIn(f"incomplete ({len(claim) - 1} unresearched)", index)
+            with (out / "portfolio.csv").open() as f:
+                summary, = csv.DictReader(f)
+            self.assertEqual((summary["not_found"], summary["unresearched"]), ("1", str(len(claim) - 1)))
+
+    def test_old_cache_needs_a_recheck_for_ambiguous_quote_age(self):
+        row = cc.read_rows(ROOT / "patents.csv")[0]
+        name = f"{row['key']}.json"
+        chart = json.loads((ROOT / "sample/data" / name).read_text())
+        chart["elements"][0]["fetched"] = "2026-11-02"
+        with TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            (out / "data").mkdir()
+            cc.write_json(out / "data" / name, chart)
+            with self.assertRaisesRegex(SystemExit, "recheck the sources"):
+                cc.saved_charts(out, [row])
 
     def test_failed_task_is_visible_and_commands_exit_incomplete(self):
         chart = json.loads(next((ROOT / "sample/data").glob("*.json")).read_text())
