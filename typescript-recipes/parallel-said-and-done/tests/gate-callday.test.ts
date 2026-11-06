@@ -89,6 +89,25 @@ test("a Search hit whose Extract response contains only errors leaves the call w
 });
 
 
+test("a full third-party transcript must identify the issuer on the extracted page", async () => {
+  const apple = { ticker: "AAPL", name: "Apple Inc.", short: "Apple", website: "apple.com" };
+  const wrong = "https://stockanalysis.com/stocks/aple/transcripts/q3-2026";
+  const right = "https://stockanalysis.com/stocks/aapl/transcripts/q3-2026";
+  const title = "Apple Inc. Q3 2026 Earnings Call Transcript";
+  let results = [{ url: wrong, title }, { url: right, title }];
+  const client = new Parallel({ apiKey: "test", fetch: async (url, init) => {
+    if (String(url).endsWith("/search")) return Response.json({ search_id: "s", results });
+    const [page] = JSON.parse(String(init?.body)).urls;
+    return Response.json({ extract_id: "e", results: [{ url: page, full_content: "x".repeat(15_000),
+      title: page === wrong ? "Apple Hospitality REIT (APLE) Q3 2026 Earnings Call Transcript" : "Q3 2026 Earnings Call Transcript (AAPL)" }] });
+  } });
+  const record = newRecord("AAPL", "2026-10-27", "Q3 2026", { kind: "monitor", monitorId: null, eventId: null, eventGroupId: null, eventDate: null, content: { transcript_url: wrong }, citations: [] });
+  const read = () => readCall(client, apple, sheet, record, "test", async () => {});
+  assert.equal((await read()).extract?.url, right);
+  results = [{ url: wrong, title }];
+  assert.equal((await read()).status, "waiting_transcript");
+});
+
 test("a fresh checkout skips paid work on recorded snapshots", async () => {
   let requests = 0;
   const client = new Parallel({ apiKey: "test", fetch: async () => { requests++; throw new Error("Unexpected request"); } });

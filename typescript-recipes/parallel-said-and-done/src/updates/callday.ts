@@ -12,7 +12,7 @@ import { callDayExtractRequest, callDaySearchRequest } from "./spec";
 import { domainOf, keywords, keywordSet, markFigures, sentences, shared, stripMarkdown, substantiveFigures } from "../lib/text";
 
 export const PICK_RULE =
-  "Company page with “transcript” or “remarks” in the title, then transcript sites in rank order; the first that Extract returns in full is used";
+  "Monitor URL, then company remarks and transcript sites in search order. Extract must return a full transcript for this issuer and call.";
 
 /** A full call transcript runs 40,000+ characters; a paywall teaser or event page is far shorter. */
 export const MIN_TRANSCRIPT_CHARS = 15_000;
@@ -44,13 +44,31 @@ export function rankResults(response: SearchResponseLike, ownDomains: string[], 
   }));
 }
 
-/** Transcript candidates in pick-rule order, then the URL the monitor event named. */
-export function candidateUrls(rows: CallDayResult[], monitorUrl: string | null): string[] {
+function isIssuerPage(company: Company, url: string, title: string | null) {
+  const host = domainOf(url);
+  if (host === company.website || host.endsWith(`.${company.website}`)) return true;
+  if (!title) return false;
+  const symbols = title.matchAll(/\((?:[A-Z]+:\s*)?([A-Z][A-Z0-9.-]*)\)/g);
+  const tickers = [...symbols].map(match => match[1]);
+  if (tickers.includes(company.ticker)) return tickers.every(ticker => ticker === company.ticker);
+
+  const words = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const heading = ` ${words(title)} `;
+  const callLabel = /^(?:f?q[1-4]|[1-4]q|fy ?\d{2,4}|20\d\d|first|second|third|fourth|earnings|quarterly|prepared remarks|transcript)\b/;
+  return [company.name, company.short, company.ticker].some(alias => {
+    const name = ` ${words(alias)} `;
+    if (alias === company.ticker && !heading.startsWith(name)) return false;
+    const afterName = heading.split(name)[1];
+    return afterName !== undefined && (afterName === "" || callLabel.test(afterName));
+  });
+}
+
+function candidateUrls(rows: CallDayResult[], monitorUrl: string | null): string[] {
   const urls = [
     ...rows.filter((r) => r.own && /transcript|remarks/i.test(r.title)),
     ...rows.filter((r) => isTranscriptHost(r.url) && TX_TITLE.test(r.title)),
   ].map((r) => r.url);
-  if (monitorUrl) urls.push(monitorUrl);
+  if (monitorUrl) urls.unshift(monitorUrl);
   return [...new Set(urls)];
 }
 
@@ -205,7 +223,9 @@ export async function readCall(
   const searchResponse = (await client.search(searchRequest as never)) as unknown as SearchResponseLike;
   await onRaw("search", searchResponse.search_id, { request: searchRequest, response: searchResponse });
   const monitorUrl = typeof record.trigger.content?.transcript_url === "string" ? (record.trigger.content.transcript_url as string) : null;
-  const candidates = candidateUrls(rankResults(searchResponse, ownDomains, null).filter(r => sameCall(record.quarter, r, record.callDate)), monitorUrl && sameCall(record.quarter, { url: monitorUrl, title: null }, record.callDate) ? monitorUrl : null).slice(0, MAX_EXTRACT_TRIES);
+  const matchesCall = (source: { url: string; title: string | null }) => sameCall(record.quarter, source, record.callDate);
+  const rows = rankResults(searchResponse, ownDomains, null).filter(r => matchesCall(r) && isIssuerPage(company, r.url, r.title));
+  const candidates = candidateUrls(rows, monitorUrl && matchesCall({ url: monitorUrl, title: null }) ? monitorUrl : null).slice(0, MAX_EXTRACT_TRIES);
   if (candidates.length === 0) {
     return { ...record, search: { id: searchResponse.search_id, request: searchRequest, results: rankResults(searchResponse, ownDomains, null), pickRule: PICK_RULE }, status: "waiting_transcript" };
   }
@@ -216,12 +236,10 @@ export async function readCall(
     const extractRequest = { ...callDayExtractRequest(sheet, url, record.callDate), session_id: sessionId };
     const extractResponse = (await client.extract(extractRequest as never)) as unknown as ExtractResponseLike;
     await onRaw("extract", extractResponse.extract_id, { request: extractRequest, response: extractResponse });
-    const matching = extractResponse.results.filter(r => sameCall(record.quarter, { title: r.title ?? null, url: r.url }, record.callDate));
-    const chars = matching.reduce((n, r) => n + (r.full_content?.length ?? 0), 0);
-    // Match against the full transcript when Extract returned it, else against the excerpts.
-    const texts = matching.flatMap((r) => (r.full_content ? [r.full_content] : (r.excerpts ?? [])));
-    if (chars < MIN_TRANSCRIPT_CHARS) continue;
-    best = { url, id: extractResponse.extract_id, request: extractRequest, texts };
+    const page = extractResponse.results.find(r => matchesCall({ url: r.url, title: r.title ?? null }) &&
+      isIssuerPage(company, r.url, r.title ?? null) && (r.full_content?.length ?? 0) >= MIN_TRANSCRIPT_CHARS);
+    if (!page?.full_content) continue;
+    best = { url: page.url, id: extractResponse.extract_id, request: extractRequest, texts: [page.full_content] };
     break;
   }
   if (!best) return { ...record, search: { id: searchResponse.search_id, request: searchRequest, results: rankResults(searchResponse, ownDomains, null), pickRule: PICK_RULE }, status: "waiting_transcript" };

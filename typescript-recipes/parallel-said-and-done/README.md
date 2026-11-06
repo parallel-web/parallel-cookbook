@@ -66,6 +66,7 @@ pnpm sheet MSFT
 
 The CLI waits for the runs locally and reports how many histories and fact-checks reached the published sheet.
 If a stage stops after publication, fix the reported problem and run `pnpm deepen MSFT` to resume pending work.
+If a history failed twice, retry that promise with the printed command, for example `pnpm deepen --redo MSFT:P1`.
 If the connection dropped while creating a Task, check the Parallel dashboard before retrying. The run may have started.
 To stop recurring charges for this company, run `pnpm monitors cancel MSFT --yes`.
 
@@ -136,7 +137,8 @@ is deterministic:
 | `earnings_call_scheduled` | the date is after the latest call | Sets the next-call date. If that date passes with no "held" event, the call is processed anyway. |
 | `promise_update` | about a tracked promise, from the company's own site, SEC or a newswire, and newer than what the sheet has read | Extract reads the announcement, then the same update run and gate. |
 
-A call waits for a matching transcript with at least 15,000 characters of full text. A shorter transcript may need manual review.
+A call waits for at least 15,000 characters of transcript text from the company's website or a page whose title identifies the company.
+If the transcript is late, subsequent Monitor completions retry it for up to four days after the call. A shorter transcript may need manual review.
 
 Every Task run carries the configured webhook. When one finishes,
 [`pipeline/advance.ts`](src/pipeline/advance.ts) stores the result, then works

@@ -6,7 +6,8 @@
 import { publicError, type Parallel } from "../parallel/client";
 import { awaitResult } from "../parallel/task";
 import { readInflight } from "../store";
-import { onRunComplete } from "./advance";
+import { readManifest } from "../sheet/stored";
+import { MAX_FAILURES, onRunComplete } from "./advance";
 
 export async function drive(client: Parallel, tickers: string[], log: (line: string) => void) {
   const seen = new Set<string>();
@@ -16,6 +17,15 @@ export async function drive(client: Parallel, tickers: string[], log: (line: str
     const fresh = pending.filter(([, id]) => !seen.has(id));
     if (!fresh.length) {
       if (pending.length) errors.push(`Runs still in flight: ${pending.map(([t, id]) => `${t} ${id}`).join(", ")}`);
+      for (const t of tickers) {
+        const manifest = await readManifest(t);
+        for (const [stage, count] of Object.entries(manifest?.failures ?? {})) {
+          const [kind, pid] = stage.split(":");
+          if (kind === "trail-run" && count >= MAX_FAILURES && !manifest?.trails?.[pid]) {
+            errors.push(`${t} ${pid}: history failed ${count} times. Retry with pnpm deepen --redo ${t}:${pid}`);
+          }
+        }
+      }
       if (errors.length) throw new Error(errors.join("\n"));
       return;
     }

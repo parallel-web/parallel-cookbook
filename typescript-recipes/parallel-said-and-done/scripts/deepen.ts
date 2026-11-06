@@ -31,7 +31,7 @@ try {
   for (const [t, pid] of redo ?? []) {
     await withLock(t, async () => {
       const m = await readManifest(t);
-      if (!m?.trails?.[pid]) return log(`${t} ${pid}: no history to redo`);
+      if (!m || (!m.trails?.[pid] && !m.failures?.[`trail-run:${pid}`])) throw new Error(`${t} ${pid}: no history to redo`);
       const trails = { ...m.trails };
       const checks = { ...m.checks };
       const failures = { ...m.failures };
@@ -54,5 +54,5 @@ try {
   await drive(client, tickers, log);
 } catch (error) {
   console.error(publicError(error));
-  process.exit(1);
+  process.exitCode = 1;
 }

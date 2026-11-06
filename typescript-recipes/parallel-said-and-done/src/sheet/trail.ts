@@ -115,7 +115,7 @@ export const TRAIL_OUTPUT_SCHEMA = {
   additionalProperties: false,
 } as const;
 
-export function trailRequest(company: Company, sheet: SheetData, pid: string, asOf: string, processor: string = TRAIL_PROCESSOR) {
+export function trailRequest(company: Company, sheet: SheetData, pid: string, asOf = sheet.asOf, processor: string = TRAIL_PROCESSOR) {
   const p = sheet.promises.find((x) => x.id === pid);
   if (!p) throw new Error(`${company.ticker} has no ${pid}`);
   const draft = sheet.statements.filter((s) => s.promiseId === pid);

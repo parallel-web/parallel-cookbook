@@ -11,6 +11,7 @@ import { readManifest } from "../sheet/stored";
 import { webhookUrl } from "../pipeline/runs";
 import { companyFor, readCoverageConfig, readMonitor, readMonitors, readSheet, withLock, writeMonitor, type MonitorRecord } from "../store";
 import { onMonitorEvent, type MonitorEvent } from "./monitor-events";
+import { retryWaiting } from "./update";
 import { MONITOR_FREQUENCY, MONITOR_OUTPUT_SCHEMA, MONITOR_PROCESSOR, MONITOR_SPEC_KEY, monitorQuery } from "./spec";
 
 type Log = (line: string) => void;
@@ -168,10 +169,14 @@ export async function handleMonitorEvents(client: Parallel, ticker: string, even
  * A monitor webhook. The body is only a hint: the monitor must be one of ours,
  * and its events are fetched from the API by the execution's event group.
  */
-export async function onMonitorWebhook(client: Parallel, monitorId: string, eventGroupId: string, hintTicker: string | null, log: Log) {
+export async function onMonitorWebhook(client: Parallel, monitorId: string, eventGroupId: string | null, hintTicker: string | null, log: Log) {
   const hinted = hintTicker ? await readMonitor(hintTicker) : null;
   const record = hinted?.monitorId === monitorId ? hinted : (await readMonitors()).find((r) => r.monitorId === monitorId);
   if (!record || record.cancelledAt) return "ignored";
+  if (eventGroupId === null) {
+    await retryWaiting(client, { tickers: [record.ticker], log });
+    return "handled";
+  }
   const { events } = await client.monitor.events(monitorId, { event_group_id: eventGroupId });
   const handled = await handleMonitorEvents(client, record.ticker, events, log);
   log(`${record.ticker}: monitor webhook, ${events.length} events, ${handled} new`);

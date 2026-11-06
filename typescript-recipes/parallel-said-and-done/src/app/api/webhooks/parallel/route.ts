@@ -36,14 +36,13 @@ export async function POST(request: Request) {
   }
 
   const event = (data.event ?? {}) as Record<string, unknown>;
-  if (body?.type === "monitor.event.detected" && typeof data.monitor_id === "string" && typeof event.event_group_id === "string") {
+  const groupId = body?.type === "monitor.event.detected" && typeof event.event_group_id === "string" ? event.event_group_id : null;
+  if ((groupId || body?.type === "monitor.execution.completed") && typeof data.monitor_id === "string") {
     const { monitor_id: monitorId } = data;
-    const groupId = event.event_group_id;
     const ticker = typeof (data.metadata as Record<string, unknown> | undefined)?.ticker === "string" ? String((data.metadata as Record<string, unknown>).ticker) : null;
     after(() => onMonitorWebhook(client, monitorId, groupId, ticker, log).catch((error) => log(`webhook ${monitorId}: ${publicError(error)}`)));
     return Response.json({ ok: true });
   }
 
-  // monitor.execution.completed / failed and anything else: acknowledged, nothing to do.
   return Response.json({ ok: true, ignored: body?.type ?? "unknown" });
 }

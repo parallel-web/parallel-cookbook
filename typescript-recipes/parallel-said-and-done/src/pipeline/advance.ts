@@ -38,7 +38,7 @@ type Log = (line: string) => void;
 export type Step = { kind: "trail-run" | "check-run" | "resolve-run"; promise: string };
 
 /** A step that failed this many times is not retried automatically. */
-const MAX_FAILURES = 2;
+export const MAX_FAILURES = 2;
 
 /**
  * What to run next for one company, from its manifest and rebuilt sheet.
@@ -104,7 +104,7 @@ export async function advance(client: Parallel, ticker: string, log: Log): Promi
     for (const s of steps) {
       const request =
         s.kind === "trail-run"
-          ? trailRequest(company, sheet, s.promise, new Date().toISOString().slice(0, 10))
+          ? trailRequest(company, sheet, s.promise)
           : s.kind === "check-run"
             ? checkRequest(company, sheet, s.promise)
             : resolveRequest(company, sheet, s.promise, await checkRuns(s.promise));

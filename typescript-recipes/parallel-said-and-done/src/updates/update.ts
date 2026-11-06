@@ -235,7 +235,9 @@ export async function catchUpCalls(client: Parallel, options: { log: Log; today?
 /** Retries Search for calls whose transcript was not online yet (up to four days). */
 export async function retryWaiting(client: Parallel, options: { log: Log; tickers?: string[] }) {
   const now = Date.now();
-  for (const record of (await listCallDays()).filter((r) => r.status === "waiting_transcript" && (!options.tickers || options.tickers.includes(r.ticker)))) {
+  const records = await listCallDays(options.tickers?.length === 1 ? options.tickers[0] : undefined);
+  for (const record of records) {
+    if (record.status !== "waiting_transcript" || (options.tickers && !options.tickers.includes(record.ticker))) continue;
     if (!(await readManifest(record.ticker))) continue;
     if (now - new Date(`${record.callDate}T12:00:00Z`).getTime() > 4 * 86_400_000) continue;
     const url = typeof record.trigger.content?.source_url === "string" ? record.trigger.content.source_url : undefined;

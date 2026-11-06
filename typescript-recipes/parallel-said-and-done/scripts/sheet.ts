@@ -37,7 +37,7 @@ try {
   if (monitor) log(`${ticker}: monitor ${monitor.monitorId}${monitor.cancelledAt ? " (cancelled)" : ""}`);
   else console.error(`${ticker}: no monitor. Run pnpm monitors create ${ticker} to start one.`);
   if (driveError || histories !== total || checks !== total) {
-    throw new Error(`${ticker}: check the run log, then resume with pnpm deepen ${ticker}`);
+    throw new Error(`${ticker}: follow the retry instructions above, or run pnpm deepen ${ticker} for pending work`);
   }
   if (!monitor) process.exitCode = 1;
 } catch (error) {

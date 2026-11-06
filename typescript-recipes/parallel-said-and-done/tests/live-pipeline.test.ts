@@ -3,32 +3,36 @@ import { mkdtempSync, readFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { test } from "node:test";
+import { spawnSync } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import Parallel from "parallel-web";
 
 import type { StoredRun } from "../src/parallel/task";
-import { onRunComplete } from "../src/pipeline/advance";
+import { advance, onRunComplete } from "../src/pipeline/advance";
 import { drive } from "../src/pipeline/drive";
 import { reconcile } from "../src/pipeline/reconcile";
 import { startRun } from "../src/pipeline/runs";
 import { completeSheet } from "../src/sheet/make-sheet";
 import { readManifest, writeManifest, type Manifest } from "../src/sheet/stored";
 import { fileStorage, useStorage as setStorage } from "../src/storage";
-import { companyFor, readInflight, readMonitor, readPublishedSheet, writeInflight, writeRaw } from "../src/store";
-import { cancelMonitors, createMonitors, replaceMissing } from "../src/updates/monitors";
+import { companyFor, readInflight, readMonitor, readPublishedSheet, writeCallDay, writeInflight, writeRaw } from "../src/store";
+import { cancelMonitors, createMonitors, onMonitorWebhook, replaceMissing } from "../src/updates/monitors";
+
+import { newRecord } from "../src/updates/update";
 
 const ticker = "MSFT";
 const sheetFile = new URL("../data/sheets/MSFT.json", import.meta.url);
 const fixture: StoredRun = JSON.parse(readFileSync(new URL("./fixtures/sheet-run.json", import.meta.url), "utf8"));
 const initial: Manifest = { sheetRunId: "trun_register", images: false, taskGroupId: null, updates: [] };
 const quiet = () => {};
-function freshStore() {
-  const store = fileStorage(mkdtempSync(join(tmpdir(), "said-done-live-")));
+function freshStore(root = mkdtempSync(join(tmpdir(), "said-done-live-"))) {
+  const store = fileStorage(root);
   setStorage(store);
   return store;
 }
 
-async function liveStore() {
-  const store = freshStore();
+async function liveStore(root?: string) {
+  const store = freshStore(root);
   const snapshot = JSON.parse(readFileSync(sheetFile, "utf8"));
   await store.put("data/sheets/MSFT.json", JSON.stringify(snapshot));
   snapshot.runs[0].runId = initial.sheetRunId;
@@ -132,4 +136,49 @@ test("the local driver reports a history submission failure after the baseline p
   await assert.rejects(drive(client, [ticker], quiet), /402.*Insufficient credit for history/);
   assert.deepEqual(await readInflight(ticker), {});
   assert.equal((await readMonitor(ticker))?.monitorId, "mon_test");
+});
+
+test("the history stage inherits the register's research cutoff", async () => {
+  await liveStore();
+  const cutoff = "2026-07-31";
+  await writeRaw(ticker, "sheet-run", initial.sheetRunId, { ...fixture, input: { ...fixture.input, as_of_date: cutoff } });
+  const dates: string[] = [];
+  const client = new Parallel({ apiKey: "test", fetch: async (_url, init) => {
+    dates.push(JSON.parse(String(init?.body)).input.as_of_date);
+    return Response.json({ ...fixture.run, run_id: `trun_${dates.length}` });
+  } });
+  await advance(client, ticker, quiet);
+  assert.deepEqual(dates, Array(5).fill(cutoff));
+});
+
+test("a capped history reports its retry command and explicit redo reopens only that promise", async () => {
+  const root = mkdtempSync(join(tmpdir(), "said-done-redo-"));
+  await liveStore(root);
+  await writeManifest(ticker, { ...initial, failures: { "trail-run:P1": 2, "trail-run:P2": 2 } });
+  const client = new Parallel({ apiKey: "test" });
+  await assert.rejects(drive(client, [ticker], quiet), /pnpm deepen --redo MSFT:P1/);
+  const script = fileURLToPath(new URL("../scripts/deepen.ts", import.meta.url));
+  const redo = spawnSync(process.execPath, ["--import", import.meta.resolve("tsx"), script, "--redo", "MSFT:P1", "--clear-only"], {
+    cwd: root, env: { ...process.env, SAID_DONE_ROOT: root, BLOB_READ_WRITE_TOKEN: "" }, encoding: "utf8",
+  });
+  assert.equal(redo.status, 0, redo.stderr);
+  assert.deepEqual((await readManifest(ticker))?.failures, { "trail-run:P2": 2 });
+});
+
+test("a monitor completion retries a waiting transcript only for its enrolled company", async () => {
+  await liveStore();
+  const calls: string[] = [];
+  const client = new Parallel({ apiKey: "test", fetch: async url => {
+    const path = new URL(String(url)).pathname;
+    calls.push(path);
+    return Response.json(path === "/v1/monitors" ? { monitor_id: "mon_test" } : { search_id: "s", results: [] });
+  } });
+  await createMonitors(client, [ticker], quiet);
+  const date = new Date().toISOString().slice(0, 10);
+  const record = newRecord(ticker, date, "Q3 2026", { kind: "monitor", monitorId: "mon_test", eventId: null, eventGroupId: null, eventDate: null, content: null, citations: [] });
+  await writeCallDay({ ...record, status: "waiting_transcript" });
+  await onMonitorWebhook(client, "mon_unrelated", null, ticker, quiet);
+  assert.deepEqual(calls, ["/v1/monitors"]);
+  await onMonitorWebhook(client, "mon_test", null, ticker, quiet);
+  assert.deepEqual(calls, ["/v1/monitors", "/v1/search"]);
 });

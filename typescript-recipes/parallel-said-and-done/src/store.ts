@@ -125,8 +125,8 @@ export async function writeCallDay(record: CallDayRecord) {
   await writeJson(callDayPath(record.ticker, record.callDate, record.kind === "event" ? record.trigger.eventId : null), record);
 }
 
-export async function listCallDays(): Promise<CallDayRecord[]> {
-  const paths = (await storage().list("output/callday/")).filter((p) => p.endsWith(".json"));
+export async function listCallDays(ticker?: string): Promise<CallDayRecord[]> {
+  const paths = (await storage().list(`output/callday/${ticker ? `${ticker}-` : ""}`)).filter((p) => p.endsWith(".json"));
   const records = await Promise.all(paths.map((p) => readJson<CallDayRecord>(p)));
   return records.filter((r): r is CallDayRecord => r !== null).sort((a, b) => (a.callDate < b.callDate ? 1 : -1));
 }
