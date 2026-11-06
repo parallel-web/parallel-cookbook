@@ -7,6 +7,7 @@ import Parallel from "parallel-web";
 
 import type { StoredRun } from "../src/parallel/task";
 import { onRunComplete } from "../src/pipeline/advance";
+import { drive } from "../src/pipeline/drive";
 import { reconcile } from "../src/pipeline/reconcile";
 import { startRun } from "../src/pipeline/runs";
 import { completeSheet } from "../src/sheet/make-sheet";
@@ -100,4 +101,35 @@ test("two creators share one monitor and a stale repair cannot undo a cancellati
   await replaceMissing(client, beforeCancel, quiet);
   assert.deepEqual(requests, ["/v1/monitors", "/v1/monitors/mon_test/cancel"]);
   assert.ok((await readMonitor(ticker))?.cancelledAt);
+});
+
+test("a lost Task creation response never resubmits the paid request", async () => {
+  freshStore();
+  let posts = 0;
+  const client = new Parallel({ apiKey: "test", maxRetries: 1, fetch: async () => {
+    posts++;
+    if (posts === 1) throw new TypeError("connection closed after acceptance");
+    return Response.json(fixture.run);
+  } });
+  await assert.rejects(startRun(client, ticker, "sheet-run", { input: {}, processor: "ultra2x" }, "sheet@1"));
+  assert.equal(posts, 1);
+  assert.deepEqual(await readInflight(ticker), {});
+});
+
+test("the local driver reports a history submission failure after the baseline publishes", async () => {
+  await liveStore();
+  const id = initial.sheetRunId;
+  const run = { ...fixture.run, run_id: id, metadata: { app: "said-and-done", ticker } };
+  await writeInflight(ticker, { [id]: { kind: "sheet-run", spec: fixture.spec, startedAt: new Date().toISOString() } });
+  const client = new Parallel({ apiKey: "test", fetch: async url => {
+    const path = new URL(String(url)).pathname;
+    if (path.endsWith("/result")) return Response.json({ ...fixture.result, run });
+    if (path.endsWith(id)) return Response.json(run);
+    if (path.endsWith("/monitors")) return Response.json({ monitor_id: "mon_test" });
+    assert.equal(path, "/v1/tasks/runs");
+    return Response.json({ error: { message: "Insufficient credit for history" } }, { status: 402 });
+  } });
+  await assert.rejects(drive(client, [ticker], quiet), /402.*Insufficient credit for history/);
+  assert.deepEqual(await readInflight(ticker), {});
+  assert.equal((await readMonitor(ticker))?.monitorId, "mon_test");
 });

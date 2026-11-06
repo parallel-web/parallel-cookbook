@@ -19,7 +19,7 @@ export interface StoredRun {
 }
 
 export async function createRun(client: Parallel, request: TaskRunCreateParams & { input: Record<string, unknown> }, spec: string): Promise<StoredRun> {
-  const run = await client.taskRun.create(request);
+  const run = await client.taskRun.create(request, { maxRetries: 0 });
   return { run, input: request.input, spec, result: null, previousInteractionId: request.previous_interaction_id };
 }
 

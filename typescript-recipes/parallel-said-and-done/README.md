@@ -5,8 +5,8 @@ releases, and what happened. Live demo: [earnings-calls.paralleldemos.com](https
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparallel-web%2Fparallel-cookbook%2Ftree%2Fmain%2Ftypescript-recipes%2Fparallel-said-and-done&project-name=parallel-said-and-done&repository-name=parallel-said-and-done)
 
-Each company gets a one-page tear sheet: five promises still in play, every
-dated statement about them, how each one turned out, and the source evidence behind each statement.
+Each company gets a one-page tear sheet with its tracked promises, their dated
+statements and outcomes, and the source evidence the research found.
 
 ## What it shows
 
@@ -55,17 +55,19 @@ pnpm install
 pnpm dev            # http://localhost:3240, using the recorded data in data/; no API key needed
 ```
 
-To make or update sheets, add a key from [platform.parallel.ai](https://platform.parallel.ai)
-to `.env.local`:
+To research a company, set `PARALLEL_API_KEY` in `.env.local`. [Get an API key](https://platform.parallel.ai)
+
+The initial research costs about $8.10 per company before extra searches and checks.
+Publishing the baseline starts a recurring monitor (about $0.36 per month) that keeps running after the CLI exits.
 
 ```bash
-PARALLEL_API_KEY=...
-pnpm sheet MSFT     # build a sheet and run its history and fact-check stages
-pnpm deepen MSFT    # continue any pending quality stages for this company
+pnpm sheet MSFT
 ```
 
-Locally there is no public URL for webhooks, so each script waits on the runs
-it starts and handles their results the way the webhook route would.
+The CLI waits for the runs locally and reports how many histories and fact-checks reached the published sheet.
+If a stage stops after publication, fix the reported problem and run `pnpm deepen MSFT` to resume pending work.
+If the connection dropped while creating a Task, check the Parallel dashboard before retrying. The run may have started.
+To stop recurring charges for this company, run `pnpm monitors cancel MSFT --yes`.
 
 `pnpm test`, `pnpm lint`, `pnpm typecheck` and `pnpm build` run offline.
 
@@ -197,6 +199,7 @@ Extract, Search and Image Search add a few cents per sheet.
 
 ## Limits
 
+- Each promise has one timeline entry per date. Once the sheet covers a date, a second announcement about the same promise that day can be missed.
 - Stances and outcomes are Task judgments. Separate AI research runs assess the outcome status and flag unsupported details in its summary. Each statement links to its evidence when available.
 - About half the statements come from earnings calls; the rest come from
   company releases, prepared remarks, investor days, filings and shareholder
