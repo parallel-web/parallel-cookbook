@@ -6,6 +6,7 @@ import type { OutcomeKey, OutcomeStatus, Stance, StanceKey } from "./types";
 
 export const OUTCOME_KEY: Record<OutcomeStatus, OutcomeKey> = {
   delivered: "done",
+  delivered_late: "done",
   exceeded: "done",
   partly_delivered: "part",
   revised: "rev",

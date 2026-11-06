@@ -134,19 +134,25 @@
       "firstStated": "2025-09-25",
       "status": "missed",
       "k": "miss",
-      "outcomeSummary": "Fiscal 2026 ended with 28 warehouse openings, including three relocations, for 25 net new buildings, below the original opening plan.",
+      "outcomeSummary": "Reported 25 net new buildings for FY2026 from 28 openings, including three relocations; the original plan was 35 openings, including five relocations.",
       "citations": [
         {
-          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/2e58dc45-a55d-4c50-9771-1689e2a3239a.pdf",
-          "title": "Costco Wholesale Corporation — FORM 10-K, fiscal year ended August 30, 2026",
-          "domain": "d18rn0p25nwr6d.cloudfront.net",
-          "tier": "press"
-        },
-        {
-          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025/",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
           "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
           "domain": "stockanalysis.com",
           "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026",
+          "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
         },
         {
           "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2025-earnings-call-transcript",
@@ -171,7 +177,7 @@
         "missing": [
           {
             "date": "2026-05-28",
-            "what_was_said": "Management reported two relocations completed, with one more planned in Q4, implying three FY2026 relocations rather than the five originally planned. This distinguishes the reduced relocation component from the reduction in net-new openings.",
+            "what_was_said": "Management reported two relocations completed year to date and one more planned for Q4, implying three for FY2026 versus the five previously planned.",
             "call": "Q3 FY2026 earnings call"
           }
         ],
@@ -1188,7 +1194,7 @@
       "speaker": "Ron Vachris, President and CEO",
       "stance": "stated",
       "k": "s",
-      "summary": "Planned 35 warehouse openings in fiscal 2026, including five relocations.",
+      "summary": "Planned 35 openings in FY2026, including five relocations.",
       "quote": "We plan to open another 35 warehouses in fiscal year 2026, of which five are relocations.",
       "verbatim": {
         "text": "We plan to open another 35 warehouses in fiscal year 2026, of which five are relocations.",
@@ -1209,7 +1215,7 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025/",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
           "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
           "domain": "stockanalysis.com",
           "tier": "transcript"
@@ -1217,9 +1223,15 @@
       },
       "citations": [
         {
-          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025/",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
           "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
           "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       ],
@@ -1234,7 +1246,7 @@
       "speaker": "Ron Vachris, President and CEO",
       "stance": "lowered",
       "k": "c",
-      "summary": "Spain delays reduced fiscal 2026 guidance to 28 net openings; future annual goal remained 30 plus.",
+      "summary": "Spain delays lowered FY2026 net openings to 28; future years remained at 30 plus net openings annually.",
       "quote": "While delays with a couple of our buildings in Spain resulted in us revising our planned net new openings for fiscal year 2026 down to 28, we continue to plan for 30 plus net openings per year in future years.",
       "verbatim": {
         "text": "While delays with a couple of our buildings in Spain resulted in us revising our planned net new openings for fiscal year 2026 down to 28, we continue to plan for 30 plus net openings per year in future years.",
@@ -1255,17 +1267,17 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.roic.ai/quote/COST:US/transcripts/2026-year/1-quarter",
-          "title": "Costco Wholesale Corporation (COST US) Q1 FY2026 Earnings Call Transcript - December 11, 2025",
-          "domain": "roic.ai",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://www.roic.ai/quote/COST:US/transcripts/2026-year/1-quarter",
-          "title": "Costco Wholesale Corporation (COST US) Q1 FY2026 Earnings Call Transcript - December 11, 2025",
-          "domain": "roic.ai",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       ],
@@ -1280,30 +1292,38 @@
       "speaker": "Ron Vachris, President and CEO",
       "stance": "reaffirmed",
       "k": "h",
-      "summary": "Reaffirmed 28 net openings for fiscal '26; continued targeting 30-plus annually thereafter.",
-      "quote": "We currently expect to have 28 net new openings in fiscal year '26 and are targeting 30-plus new openings per year in the coming years.",
+      "summary": "Reaffirmed 28 net openings in FY2026 and 30-plus openings annually in coming years.",
+      "quote": "We currently expect to have 28 net new openings in fiscal year 2026 and are targeting 30-plus new openings per year in the coming years.",
       "verbatim": {
-        "text": "We currently expect to have 28 net new openings in fiscal year '26 and are targeting 30-plus new openings per year in the coming years.",
+        "text": "We currently expect to have 28 net new openings in fiscal year 2026 and are targeting 30-plus new openings per year in the coming years.",
         "segs": [
           {
-            "t": "We currently expect to have 28 net new openings in fiscal year '26 and are targeting 30-plus new openings per year in the coming years.",
+            "t": "We currently expect to have 28 net new openings in fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and are targeting 30-plus new openings per year in the coming years.",
             "h": 0
           }
         ],
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/2-quarter",
-          "title": "Costco Wholesale Corporation (COST) Q2 FY2026 Earnings Call Transcript - March 5, 2026",
-          "domain": "roic.ai",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/2-quarter",
-          "title": "Costco Wholesale Corporation (COST) Q2 FY2026 Earnings Call Transcript - March 5, 2026",
-          "domain": "roic.ai",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       ],
@@ -1318,7 +1338,7 @@
       "speaker": "Ron Vachris, President and CEO",
       "stance": "lowered",
       "k": "c",
-      "summary": "Reduced fiscal 2026 guidance to 26 net openings, down 2 buildings; those 2 shifted to fiscal 2027.",
+      "summary": "Lowered FY2026 net openings to 26, down 2 buildings; those 2 shifted to FY2027.",
       "quote": "Currently, expect to have 26 net new openings in fiscal year 2026, down 2 buildings from the prior call, with those 2 buildings now set to open in fiscal year 2027.",
       "verbatim": {
         "text": "Currently, expect to have 26 net new openings in fiscal year 2026, down 2 buildings from the prior call, with those 2 buildings now set to open in fiscal year 2027.",
@@ -1359,12 +1379,6 @@
           "title": "Costco Wholesale Corporation (COST) Q3 FY2026 Earnings Call Transcript - May 28, 2026",
           "domain": "roic.ai",
           "tier": "transcript"
-        },
-        {
-          "url": "https://www.fool.com/earnings/call-transcripts/2026/05/28/costco-cost-q3-2026-earnings-transcript",
-          "title": "Costco (COST) Q3 2026 Earnings Transcript | The Motley Fool",
-          "domain": "fool.com",
-          "tier": "transcript"
         }
       ],
       "confidence": "medium",
@@ -1378,7 +1392,7 @@
       "speaker": "Ron Vachris, President and CEO",
       "stance": "declared_done",
       "k": "d",
-      "summary": "Reported 28 warehouse openings, including three relocations, totaling 25 net new buildings for the fiscal year.",
+      "summary": "Reported FY2026 completion with 28 openings, three relocations and 25 net new buildings, below the original plan.",
       "quote": "For the fiscal year, we opened 28 new warehouses, including three relocations for a total of 25 net new buildings.",
       "verbatim": {
         "text": "For the fiscal year, we opened 28 new warehouses, including three relocations for a total of 25 net new buildings.",
@@ -1391,7 +1405,7 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026/",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026",
           "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
           "domain": "stockanalysis.com",
           "tier": "transcript"
@@ -1399,7 +1413,7 @@
       },
       "citations": [
         {
-          "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026/",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026",
           "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
           "domain": "stockanalysis.com",
           "tier": "transcript"
@@ -1417,12 +1431,12 @@
       "stance": "declared_done",
       "k": "d",
       "summary": "Confirmed 28 openings, including three relocations, in 2026; planned up to 33 openings, including five relocations, in 2027.",
-      "quote": "We opened 28 new warehouses, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027.",
+      "quote": "We opened 28 new warehous es, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027.",
       "verbatim": {
-        "text": "We opened 28 new warehouses, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027.",
+        "text": "We opened 28 new warehous es, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027.",
         "segs": [
           {
-            "t": "We opened 28 new warehouses, including three relocations, in ",
+            "t": "We opened 28 new warehous es, including three relocations, in ",
             "h": 0
           },
           {
@@ -1445,18 +1459,18 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/2e58dc45-a55d-4c50-9771-1689e2a3239a.pdf",
-          "title": "Costco Wholesale Corporation — FORM 10-K, fiscal year ended August 30, 2026",
-          "domain": "d18rn0p25nwr6d.cloudfront.net",
-          "tier": "press"
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
         }
       },
       "citations": [
         {
-          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/2e58dc45-a55d-4c50-9771-1689e2a3239a.pdf",
-          "title": "Costco Wholesale Corporation — FORM 10-K, fiscal year ended August 30, 2026",
-          "domain": "d18rn0p25nwr6d.cloudfront.net",
-          "tier": "press"
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
         }
       ],
       "confidence": "medium",
@@ -1916,6 +1930,22 @@
   "sources": [
     {
       "n": 1,
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+      "title": "cost-20260830",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2 P3 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
+      "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 3,
       "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/3-quarter",
       "title": "Costco Wholesale Corporation (COST) Q3 FY2026 Earnings Call Transcript - May 28, 2026",
       "domain": "roic.ai",
@@ -1923,7 +1953,7 @@
       "uses": "P2 P3 P5"
     },
     {
-      "n": 2,
+      "n": 4,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/09/29/costco-cost-q4-2026-earnings-call-transcript/",
       "title": "Costco (COST) Q4 2026 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -1931,15 +1961,15 @@
       "uses": "P2 P3 P5"
     },
     {
-      "n": 3,
-      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
-      "title": "cost-20260830",
-      "domain": "sec.gov",
-      "tier": "primary",
-      "uses": "P2 P5"
+      "n": 5,
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
+      "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3 P4"
     },
     {
-      "n": 4,
+      "n": 6,
       "url": "https://www.fool.com/earnings/call-transcripts/2025/03/06/costco-wholesale-cost-q2-2025-earnings-call-transc",
       "title": "Costco Wholesale (COST) Q2 2025 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -1947,23 +1977,23 @@
       "uses": "P1 P2"
     },
     {
-      "n": 5,
-      "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
-      "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "n": 7,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript",
+      "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
       "tier": "transcript",
-      "uses": "P4 P5"
+      "uses": "P3 P5"
     },
     {
-      "n": 6,
-      "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/2-quarter",
-      "title": "Costco Wholesale Corporation (COST) Q2 FY2026 Earnings Call Transcript - March 5, 2026",
-      "domain": "roic.ai",
+      "n": 8,
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026",
+      "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
       "tier": "transcript",
-      "uses": "P2 P3"
+      "uses": "P3 P5"
     },
     {
-      "n": 7,
+      "n": 9,
       "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2025-earnings-call-transcript",
       "title": "Costco Wholesale Corporation (COST) Q4 2025 Earnings Call Transcript - Alphastreet",
       "domain": "news.alphastreet.com",
@@ -1971,7 +2001,7 @@
       "uses": "P3 P4"
     },
     {
-      "n": 8,
+      "n": 10,
       "url": "https://s201.q4cdn.com/287523651/files/doc_financials/2024/ar/COST-2024-Annual-Report.pdf",
       "title": "2024",
       "domain": "s201.q4cdn.com",
@@ -1979,7 +2009,7 @@
       "uses": "P1"
     },
     {
-      "n": 9,
+      "n": 11,
       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
       "title": "cost-20250831",
       "domain": "sec.gov",
@@ -1987,7 +2017,7 @@
       "uses": "P2"
     },
     {
-      "n": 10,
+      "n": 12,
       "url": "https://s201.q4cdn.com/287523651/files/doc_events/2025/Jan/23/2025-Annual-Shareholders-Meeting-Presentation.pdf",
       "title": "PowerPoint Presentation",
       "domain": "s201.q4cdn.com",
@@ -1995,7 +2025,7 @@
       "uses": "P1"
     },
     {
-      "n": 11,
+      "n": 13,
       "url": "https://customerservice.costco.com/app/answers/answer_view/a_id/1015066/~/how-do-i-check-warehouse-inventory-and-prices%3F",
       "title": "How do I check warehouse inventory and prices?",
       "domain": "customerservice.costco.com",
@@ -2003,7 +2033,7 @@
       "uses": "P1"
     },
     {
-      "n": 12,
+      "n": 14,
       "url": "https://investor.costco.com/events-and-presentations/events/event-details/2025/Q2-2025-Earnings-Call/default.aspx",
       "title": "\n\tCostco Wholesale Corporation - Q2 2025 Earnings Call\n",
       "domain": "investor.costco.com",
@@ -2011,7 +2041,7 @@
       "uses": "P2"
     },
     {
-      "n": 13,
+      "n": 15,
       "url": "https://investor.costco.com/events-and-presentations/events/event-details/2025/Q4-2025-Earnings-Call/default.aspx",
       "title": "\n\tCostco Wholesale Corporation - Q4 2025 Earnings Call\n",
       "domain": "investor.costco.com",
@@ -2019,7 +2049,7 @@
       "uses": "P2"
     },
     {
-      "n": 14,
+      "n": 16,
       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/0000909832-25-000101-index.htm",
       "title": "EDGAR Filing Documents for 0000909832-25-000101",
       "domain": "sec.gov",
@@ -2027,7 +2057,7 @@
       "uses": "P2"
     },
     {
-      "n": 15,
+      "n": 17,
       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/0000909832-26-000093-index.htm",
       "title": "EDGAR Filing Documents for 0000909832-26-000093",
       "domain": "sec.gov",
@@ -2035,7 +2065,7 @@
       "uses": "P2"
     },
     {
-      "n": 16,
+      "n": 18,
       "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm",
       "title": "sec.gov",
       "domain": "sec.gov",
@@ -2043,7 +2073,7 @@
       "uses": "P5"
     },
     {
-      "n": 17,
+      "n": 19,
       "url": "https://www.fool.com/earnings/call-transcripts/2024/09/26/costco-wholesale-cost-q4-2024-earnings-call-transc",
       "title": "Costco Wholesale (COST) Q4 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2051,7 +2081,7 @@
       "uses": "P1"
     },
     {
-      "n": 18,
+      "n": 20,
       "url": "https://www.roic.ai/quote/COST/transcripts/2025-year/2-quarter",
       "title": "Costco Wholesale Corporation (COST) Q2 FY2025 Earnings Call Transcript - March 6, 2025",
       "domain": "roic.ai",
@@ -2059,28 +2089,12 @@
       "uses": "P2"
     },
     {
-      "n": 19,
+      "n": 21,
       "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-costco-q4-2025-beats-estimates-stock-rises-93CH-4256803",
       "title": "Earnings call transcript: Costco Q4 2025 beats estimates, stock rises By Investing.com",
       "domain": "investing.com",
       "tier": "transcript",
       "uses": "P2"
-    },
-    {
-      "n": 20,
-      "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025/",
-      "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
-      "tier": "transcript",
-      "uses": "P3"
-    },
-    {
-      "n": 21,
-      "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
-      "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
-      "tier": "transcript",
-      "uses": "P4"
     },
     {
       "n": 22,
@@ -2156,30 +2170,14 @@
     },
     {
       "n": 31,
-      "url": "https://www.roic.ai/quote/COST:US/transcripts/2026-year/1-quarter",
-      "title": "Costco Wholesale Corporation (COST US) Q1 FY2026 Earnings Call Transcript - December 11, 2025",
+      "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/2-quarter",
+      "title": "Costco Wholesale Corporation (COST) Q2 FY2026 Earnings Call Transcript - March 5, 2026",
       "domain": "roic.ai",
       "tier": "transcript",
-      "uses": "P3"
+      "uses": "P2"
     },
     {
       "n": 32,
-      "url": "https://www.fool.com/earnings/call-transcripts/2026/05/28/costco-cost-q3-2026-earnings-transcript",
-      "title": "Costco (COST) Q3 2026 Earnings Transcript | The Motley Fool",
-      "domain": "fool.com",
-      "tier": "transcript",
-      "uses": "P3"
-    },
-    {
-      "n": 33,
-      "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026/",
-      "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
-      "tier": "transcript",
-      "uses": "P3"
-    },
-    {
-      "n": 34,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript/",
       "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2187,7 +2185,7 @@
       "uses": "P4"
     },
     {
-      "n": 35,
+      "n": 33,
       "url": "https://finance.yahoo.com/quote/COST/earnings/COST-Q4-2026-earnings_call-682005.html?fr=sycsrp_catchall",
       "title": "Costco Wholesale Corporation (COST) Q4 FY2026  earnings call transcript",
       "domain": "finance.yahoo.com",
@@ -2195,15 +2193,7 @@
       "uses": "P4"
     },
     {
-      "n": 36,
-      "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript",
-      "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
-      "domain": "fool.com",
-      "tier": "transcript",
-      "uses": "P5"
-    },
-    {
-      "n": 37,
+      "n": 34,
       "url": "https://www.fool.com/earnings/call-transcripts/2023/09/26/costco-wholesale-cost-q4-2023-earnings-call-transc/",
       "title": "Costco Wholesale (COST) Q4 2023 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2211,7 +2201,7 @@
       "uses": "P1"
     },
     {
-      "n": 38,
+      "n": 35,
       "url": "https://stockanalysis.com/stocks/cost/transcripts/583851-q3-2026",
       "title": "Costco (COST) Q3 2026 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2219,15 +2209,7 @@
       "uses": "P4"
     },
     {
-      "n": 39,
-      "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026",
-      "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
-      "tier": "transcript",
-      "uses": "P5"
-    },
-    {
-      "n": 40,
+      "n": 36,
       "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q1-2026-earnings-call-transcript",
       "title": "Costco Wholesale Corporation (COST) Q1 2026 Earnings Call Transcript - Alphastreet",
       "domain": "news.alphastreet.com",
@@ -2235,15 +2217,7 @@
       "uses": "P2"
     },
     {
-      "n": 41,
-      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/2e58dc45-a55d-4c50-9771-1689e2a3239a.pdf",
-      "title": "Costco Wholesale Corporation — FORM 10-K, fiscal year ended August 30, 2026",
-      "domain": "d18rn0p25nwr6d.cloudfront.net",
-      "tier": "press",
-      "uses": "P3"
-    },
-    {
-      "n": 42,
+      "n": 37,
       "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2026-earnings-call-transcript",
       "title": "Costco Wholesale Corporation (COST) Q4 2026 Earnings Call Transcript - Alphastreet",
       "domain": "news.alphastreet.com",
@@ -2285,15 +2259,15 @@
       "kind": "trail",
       "spec": "trail@1",
       "processor": "ultra4x",
-      "createdAt": "2026-11-05T19:08:04.224002Z",
-      "completedAt": "2026-11-05T19:13:02.701379Z"
+      "createdAt": "2026-11-05T19:08:04.231770Z",
+      "completedAt": "2026-11-05T19:11:10.076636Z"
     },
     {
       "kind": "trail",
-      "spec": "trail@1",
+      "spec": "trail@2",
       "processor": "ultra4x",
-      "createdAt": "2026-11-05T19:08:04.231770Z",
-      "completedAt": "2026-11-05T19:11:10.076636Z"
+      "createdAt": "2026-11-06T04:55:52.633380Z",
+      "completedAt": "2026-11-06T05:03:33.270699Z"
     },
     {
       "kind": "check",
@@ -2320,15 +2294,15 @@
       "kind": "check",
       "spec": "check@2",
       "processor": "ultra",
-      "createdAt": "2026-11-05T19:41:16.973084Z",
-      "completedAt": "2026-11-05T19:47:50.897966Z"
+      "createdAt": "2026-11-05T19:41:16.980231Z",
+      "completedAt": "2026-11-05T19:45:20.763381Z"
     },
     {
       "kind": "check",
-      "spec": "check@2",
+      "spec": "check@3",
       "processor": "ultra",
-      "createdAt": "2026-11-05T19:41:16.980231Z",
-      "completedAt": "2026-11-05T19:45:20.763381Z"
+      "createdAt": "2026-11-06T05:03:34.542323Z",
+      "completedAt": "2026-11-06T05:07:13.412668Z"
     }
   ],
   "fills": {
@@ -2399,6 +2373,6 @@
     },
     "photo": null
   },
-  "version": 2,
-  "builtAt": "2026-11-06T00:56:26.872Z"
+  "version": 3,
+  "builtAt": "2026-11-06T05:07:14.775Z"
 }

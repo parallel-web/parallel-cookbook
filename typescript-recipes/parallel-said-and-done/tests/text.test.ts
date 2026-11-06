@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { containsVerbatim, figureValues, keywords, markFigures, recall, sentences, substantiveFigures } from "../src/lib/text";
+import { containsVerbatim, figureValues, keywords, markFigures, quoteLength, recall, sentences, substantiveFigures } from "../src/lib/text";
 
 test("marks money ranges, percentages, fiscal periods and years as figures", () => {
   const segs = markFigures("We anticipate 2026 capital expenditures of $135-145 billion, up 39% from FY25 in Q3.");
@@ -29,4 +29,11 @@ test("verbatim containment ignores case, curly quotes and spacing", () => {
 test("keywords drop stopwords and stem lightly", () => {
   assert.deepEqual(keywords("We are expanding our datacenters"), ["expand", "datacenter"]);
   assert.equal(recall("double widget output", "Widget output will double"), 1);
+});
+
+test("Chinese and Japanese sentences end at 。！？ and count as half a word per character", () => {
+  assert.deepEqual(sentences("品牌正式进入中国。活动现场，嘉宾参观了系列产品！欢迎分享"), ["品牌正式进入中国。", "活动现场，嘉宾参观了系列产品！", "欢迎分享"]);
+  assert.equal(quoteLength("品牌正式进入中国。"), 5);
+  assert.equal(quoteLength("NikeSKIMS 在中国"), 3);
+  assert.equal(quoteLength("Margins held at 12%."), 4);
 });

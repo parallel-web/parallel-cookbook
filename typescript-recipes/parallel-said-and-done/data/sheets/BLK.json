@@ -79,9 +79,9 @@
       "commitment": "Close the Preqin acquisition before the end of 2024.",
       "deadline": "end of 2024",
       "firstStated": "2024-06-30",
-      "status": "missed",
-      "k": "miss",
-      "outcomeSummary": "BlackRock completed the Preqin acquisition on March 3, 2025, missing its original year-end 2024 deadline but meeting the revised first quarter of 2025 timing.",
+      "status": "delivered_late",
+      "k": "done",
+      "outcomeSummary": "BlackRock completed the Preqin acquisition on March 3, 2025, after the original year-end 2024 target.",
       "citations": [
         {
           "url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312524172680/d797846dex991.htm",
@@ -90,15 +90,9 @@
           "tier": "primary"
         },
         {
-          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/blk-20240930.htm",
-          "title": "10-Q",
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525044184/d919939d8k.htm",
+          "title": "8-K",
           "domain": "sec.gov",
-          "tier": "primary"
-        },
-        {
-          "url": "https://s24.q4cdn.com/856567660/files/doc_financials/2025/Q1/BLK-1Q25-Earning-Release.pdf",
-          "title": "FINANCIAL RESULTS",
-          "domain": "s24.q4cdn.com",
           "tier": "primary"
         },
         {
@@ -118,7 +112,7 @@
       "outcomeDate": "2025-03-03",
       "factCheck": {
         "verdict": "correct",
-        "status": "missed",
+        "status": "delivered_late",
         "summaryErrors": [],
         "held": 0,
         "missing": [],
@@ -578,7 +572,7 @@
       "speaker": null,
       "stance": "stated",
       "k": "s",
-      "summary": "Preqin acquisition expected to close before year-end 2024, subject to regulatory approvals and customary closing conditions.",
+      "summary": "Expected Preqin to close before year-end 2024, subject to regulatory approvals and customary closing conditions.",
       "quote": "The transaction is expected to close before year-end 2024, subject to regulatory approvals and other customary closing conditions.",
       "verbatim": {
         "text": "The transaction is expected to close before year-end 2024, subject to regulatory approvals and other customary closing conditions.",
@@ -617,58 +611,6 @@
       "sourceType": "press_release"
     },
     {
-      "id": "BLK-P2-2024-07-01",
-      "promiseId": "P2",
-      "date": "2024-07-01",
-      "call": "BlackRock to Acquire Preqin investor call",
-      "speaker": "Martin Small, CFO",
-      "stance": "reaffirmed",
-      "k": "h",
-      "summary": "Expected closing before year-end 2024, subject to regulatory approvals and customary closing conditions.",
-      "quote": "At present, we expect the transaction to close before year-end 2024 subject to regulatory approvals and other customary closing conditions.",
-      "verbatim": {
-        "text": "At present, we expect the transaction to close before year-end 2024 subject to regulatory approvals and other customary closing conditions.",
-        "segs": [
-          {
-            "t": "At present, we expect the transaction to close before year-end ",
-            "h": 0
-          },
-          {
-            "t": "2024",
-            "h": 1
-          },
-          {
-            "t": " subject to regulatory approvals and other customary closing conditions.",
-            "h": 0
-          }
-        ],
-        "match": "exact",
-        "backing": {
-          "via": "task",
-          "url": "https://earningscalls.dev/transcripts/blackrock-inc_blk_earnings_call_transcript_2024-07-01",
-          "title": "BlackRock, Inc. (BLK) Earnings Call Transcript & Summary",
-          "domain": "earningscalls.dev",
-          "tier": "press"
-        }
-      },
-      "citations": [
-        {
-          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2024/BLK-Investor-Call/default.aspx",
-          "title": "\n\tBlackRock, Inc. - BlackRock to Acquire Preqin\n",
-          "domain": "ir.blackrock.com",
-          "tier": "primary"
-        },
-        {
-          "url": "https://earningscalls.dev/transcripts/blackrock-inc_blk_earnings_call_transcript_2024-07-01",
-          "title": "BlackRock, Inc. (BLK) Earnings Call Transcript & Summary",
-          "domain": "earningscalls.dev",
-          "tier": "press"
-        }
-      ],
-      "confidence": "medium",
-      "sourceType": "other"
-    },
-    {
       "id": "BLK-P2-2024-07-15",
       "promiseId": "P2",
       "date": "2024-07-15",
@@ -676,7 +618,7 @@
       "speaker": "Martin Small, CFO",
       "stance": "reaffirmed",
       "k": "h",
-      "summary": "Continued to expect the Preqin transaction to close before the end of the year.",
+      "summary": "Reaffirmed closing Preqin before the end of the year.",
       "quote": "And so, we think there's a lot of great opportunities here to continue to grow, and we're looking forward to closing the Preqin transaction before the end of the year.",
       "verbatim": {
         "text": "And so, we think there's a lot of great opportunities here to continue to grow, and we're looking forward to closing the Preqin transaction before the end of the year.",
@@ -689,7 +631,7 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript/",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
           "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
           "domain": "fool.com",
           "tier": "transcript"
@@ -697,7 +639,7 @@
       },
       "citations": [
         {
-          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript/",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
           "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
           "domain": "fool.com",
           "tier": "transcript"
@@ -714,7 +656,7 @@
       "speaker": "Martin Small, CFO",
       "stance": "softened",
       "k": "c",
-      "summary": "Expected Preqin closing around year-end 2024, subject to regulatory approvals and customary closing conditions.",
+      "summary": "Expected Preqin to close around year-end 2024, subject to regulatory approvals and customary closing conditions.",
       "quote": "At present, we expect our planned acquisition of Preqin to close around year-end 2024, subject to regulatory approvals and other customary closing conditions.",
       "verbatim": {
         "text": "At present, we expect our planned acquisition of Preqin to close around year-end 2024, subject to regulatory approvals and other customary closing conditions.",
@@ -735,17 +677,17 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://stockanalysis.com/stocks/blk/transcripts/213467-q3-2024",
-          "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript & Audio",
-          "domain": "stockanalysis.com",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://stockanalysis.com/stocks/blk/transcripts/213467-q3-2024",
-          "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript & Audio",
-          "domain": "stockanalysis.com",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       ],
@@ -760,7 +702,7 @@
       "speaker": null,
       "stance": "revised",
       "k": "c",
-      "summary": "Changed anticipated Preqin closing to the first quarter of 2025, subject to regulatory approvals and customary closing conditions.",
+      "summary": "Moved anticipated Preqin closing to the first quarter of 2025, subject to regulatory approvals and customary closing conditions.",
       "quote": "The Preqin Transaction is anticipated to close in the first quarter of 2025, subject to regulatory approvals and other customary closing conditions.",
       "verbatim": {
         "text": "The Preqin Transaction is anticipated to close in the first quarter of 2025, subject to regulatory approvals and other customary closing conditions.",
@@ -789,19 +731,13 @@
       },
       "citations": [
         {
-          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/0000950170-24-122256-index.html",
-          "title": "EDGAR Filing Documents for 0000950170-24-122256",
-          "domain": "sec.gov",
-          "tier": "primary"
-        },
-        {
           "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/blk-20240930.htm",
           "title": "10-Q",
           "domain": "sec.gov",
           "tier": "primary"
         }
       ],
-      "confidence": "high",
+      "confidence": "medium",
       "sourceType": "sec_filing"
     },
     {
@@ -841,24 +777,18 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://stockanalysis.com/stocks/blk/transcripts/242945-q4-2024",
-          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript & Audio",
-          "domain": "stockanalysis.com",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://stockanalysis.com/stocks/blk/transcripts/242945-q4-2024",
-          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript & Audio",
-          "domain": "stockanalysis.com",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
-        },
-        {
-          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/blk-20240930.htm",
-          "title": "10-Q",
-          "domain": "sec.gov",
-          "tier": "primary"
         }
       ],
       "confidence": "medium",
@@ -910,7 +840,7 @@
       "speaker": "Martin Small, CFO",
       "stance": "declared_done",
       "k": "d",
-      "summary": "Confirmed the Preqin transaction closed on March 3rd.",
+      "summary": "Confirmed that the Preqin transaction closed on March 3rd.",
       "quote": "Growth reflects sustained demand for our full range of Aladdin technology offerings and the closing of the Preqin transaction on March 3rd.",
       "verbatim": {
         "text": "Growth reflects sustained demand for our full range of Aladdin technology offerings and the closing of the Preqin transaction on March 3rd.",
@@ -1866,14 +1796,6 @@
     },
     {
       "n": 4,
-      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/blackrock-blk-q3-2026-earnings-call-transcript",
-      "title": "BlackRock (BLK) Q3 2026 Earnings Call Transcript | The Motley Fool",
-      "domain": "fool.com",
-      "tier": "transcript",
-      "uses": "P4 P5"
-    },
-    {
-      "n": 5,
       "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
       "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -1881,20 +1803,28 @@
       "uses": "P1 P2"
     },
     {
+      "n": 5,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/blackrock-blk-q3-2026-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
       "n": 6,
-      "url": "https://stockanalysis.com/stocks/blk/transcripts/306132-q1-2025",
-      "title": "BlackRock (BLK) Q1 2025 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
       "tier": "transcript",
       "uses": "P2 P3"
     },
     {
       "n": 7,
-      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/blk-20240930.htm",
-      "title": "10-Q",
-      "domain": "sec.gov",
-      "tier": "primary",
-      "uses": "P2"
+      "url": "https://stockanalysis.com/stocks/blk/transcripts/306132-q1-2025",
+      "title": "BlackRock (BLK) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
     },
     {
       "n": 8,
@@ -1938,22 +1868,14 @@
     },
     {
       "n": 13,
-      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2024/BLK-Investor-Call/default.aspx",
-      "title": "\n\tBlackRock, Inc. - BlackRock to Acquire Preqin\n",
-      "domain": "ir.blackrock.com",
-      "tier": "primary",
-      "uses": "P2"
-    },
-    {
-      "n": 14,
-      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/0000950170-24-122256-index.html",
-      "title": "EDGAR Filing Documents for 0000950170-24-122256",
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/blk-20240930.htm",
+      "title": "10-Q",
       "domain": "sec.gov",
       "tier": "primary",
       "uses": "P2"
     },
     {
-      "n": 15,
+      "n": 14,
       "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2025/BlackRock-Establishes-Preeminent-Private-Markets-Technology-and-Data-Provider-with-Close-of-Preqin-Acquisition/default.aspx",
       "title": "\n\tBlackRock, Inc. - BlackRock Establishes Preeminent Private Markets, Technology, and Data Provider with Close of Preqin Acquisition\n",
       "domain": "ir.blackrock.com",
@@ -1961,7 +1883,7 @@
       "uses": "P2"
     },
     {
-      "n": 16,
+      "n": 15,
       "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q4-2024-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
       "title": "\n\tBlackRock, Inc. - Q4 2024 BlackRock, Inc. Earnings Conference Call\n",
       "domain": "ir.blackrock.com",
@@ -1969,7 +1891,7 @@
       "uses": "P3"
     },
     {
-      "n": 17,
+      "n": 16,
       "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q1-2024-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
       "title": "\n\tBlackRock, Inc. - Q1 2025 BlackRock, Inc. Earnings Conference Call\n",
       "domain": "ir.blackrock.com",
@@ -1977,7 +1899,7 @@
       "uses": "P3"
     },
     {
-      "n": 18,
+      "n": 17,
       "url": "https://www.blackrock.com/corporate/newsroom/press-releases/article/corporate-one/press-releases/blackrock-acquires-hps-investment-partners",
       "title": "BlackRock Completes Acquisition of HPS Investment Partners",
       "domain": "blackrock.com",
@@ -1985,7 +1907,7 @@
       "uses": "P3"
     },
     {
-      "n": 19,
+      "n": 18,
       "url": "https://www.blackrock.com/corporate/newsroom/press-releases/announcement/blackrock-host-investor-day",
       "title": "BlackRock Host Investor Day 2025 | BlackRock",
       "domain": "blackrock.com",
@@ -1993,7 +1915,7 @@
       "uses": "P4"
     },
     {
-      "n": 20,
+      "n": 19,
       "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/BlackRock-Inc-2025-Investor-Day-2025-hCsOS3im8C/default.aspx",
       "title": "\n\tBlackRock, Inc. - BlackRock, Inc. 2025 Investor Day\n",
       "domain": "ir.blackrock.com",
@@ -2001,7 +1923,7 @@
       "uses": "P5"
     },
     {
-      "n": 21,
+      "n": 20,
       "url": "https://www.blackrock.com/corporate/newsroom/announcement/blackrock-host-investor-day",
       "title": "BlackRock hosts 2025 Investor Day | BlackRock",
       "domain": "blackrock.com",
@@ -2009,7 +1931,7 @@
       "uses": "P5"
     },
     {
-      "n": 22,
+      "n": 21,
       "url": "http://s24.q4cdn.com/856567660/files/doc_presentations/2025/BLK-Investor-Day-2025-WEB.pdf",
       "title": "BLK Investor Day 2025 - WEB",
       "domain": "s24.q4cdn.com",
@@ -2017,7 +1939,7 @@
       "uses": "P5"
     },
     {
-      "n": 23,
+      "n": 22,
       "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q3-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
       "title": "\n\tBlackRock, Inc. - Q3 2025 BlackRock, Inc. Earnings Conference Call\n",
       "domain": "ir.blackrock.com",
@@ -2025,7 +1947,7 @@
       "uses": "P5"
     },
     {
-      "n": 24,
+      "n": 23,
       "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q4-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
       "title": "\n\tBlackRock, Inc. - Q4 2025 BlackRock, Inc. Earnings Conference Call\n",
       "domain": "ir.blackrock.com",
@@ -2033,7 +1955,7 @@
       "uses": "P5"
     },
     {
-      "n": 25,
+      "n": 24,
       "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526153768/blk-ex99_2.htm",
       "title": "BlackRock, Inc. 8-K exhibit 99.2, filed April 14, 2026",
       "domain": "sec.gov",
@@ -2041,7 +1963,7 @@
       "uses": "P5"
     },
     {
-      "n": 26,
+      "n": 25,
       "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q3-2026-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
       "title": "\n\tBlackRock, Inc. - Q3 2026 BlackRock, Inc. Earnings Conference Call\n",
       "domain": "ir.blackrock.com",
@@ -2049,7 +1971,7 @@
       "uses": "P5"
     },
     {
-      "n": 27,
+      "n": 26,
       "url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312524229654/d856279d8k.htm",
       "title": "8-K",
       "domain": "sec.gov",
@@ -2057,15 +1979,15 @@
       "uses": "P1"
     },
     {
-      "n": 28,
-      "url": "https://s24.q4cdn.com/856567660/files/doc_financials/2025/Q1/BLK-1Q25-Earning-Release.pdf",
-      "title": "FINANCIAL RESULTS",
-      "domain": "s24.q4cdn.com",
+      "n": 27,
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525044184/d919939d8k.htm",
+      "title": "8-K",
+      "domain": "sec.gov",
       "tier": "primary",
       "uses": "P2"
     },
     {
-      "n": 29,
+      "n": 28,
       "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-completes-preqin-acquisition",
       "title": "BlackRock Completes Preqin Acquisition | BlackRock",
       "domain": "blackrock.com",
@@ -2073,7 +1995,7 @@
       "uses": "P2"
     },
     {
-      "n": 30,
+      "n": 29,
       "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525153573/d78785d8k.htm",
       "title": "8-K",
       "domain": "sec.gov",
@@ -2081,7 +2003,7 @@
       "uses": "P3"
     },
     {
-      "n": 31,
+      "n": 30,
       "url": "https://s24.q4cdn.com/856567660/files/doc_financials/2026/ar/BLK_AR25.pdf",
       "title": "Diversified growth. Unified platform.",
       "domain": "s24.q4cdn.com",
@@ -2089,7 +2011,7 @@
       "uses": "P3"
     },
     {
-      "n": 32,
+      "n": 31,
       "url": "https://s24.q4cdn.com/856567660/files/doc_financials/2026/Q3/BLK-3Q26-Earnings-Release.pdf",
       "title": "FINANCIAL RESULTS",
       "domain": "s24.q4cdn.com",
@@ -2097,15 +2019,7 @@
       "uses": "P5"
     },
     {
-      "n": 33,
-      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
-      "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
-      "domain": "fool.com",
-      "tier": "transcript",
-      "uses": "P3"
-    },
-    {
-      "n": 34,
+      "n": 32,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/07/22/blackrock-blk-q2-2026-earnings-call-transcript",
       "title": "BlackRock (BLK) Q2 2026 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2113,7 +2027,7 @@
       "uses": "P5"
     },
     {
-      "n": 35,
+      "n": 33,
       "url": "https://www.fool.com/earnings/call-transcripts/2024/04/12/blackrock-blk-q1-2024-earnings-call-transcript",
       "title": "BlackRock (BLK) Q1 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2121,7 +2035,7 @@
       "uses": "P1"
     },
     {
-      "n": 36,
+      "n": 34,
       "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript/",
       "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2129,31 +2043,15 @@
       "uses": "P1"
     },
     {
-      "n": 37,
-      "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript/",
-      "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "n": 35,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
       "tier": "transcript",
       "uses": "P2"
     },
     {
-      "n": 38,
-      "url": "https://stockanalysis.com/stocks/blk/transcripts/213467-q3-2024",
-      "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
-      "tier": "transcript",
-      "uses": "P2"
-    },
-    {
-      "n": 39,
-      "url": "https://stockanalysis.com/stocks/blk/transcripts/242945-q4-2024",
-      "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
-      "tier": "transcript",
-      "uses": "P2"
-    },
-    {
-      "n": 40,
+      "n": 36,
       "url": "https://stockanalysis.com/stocks/blk/transcripts/363595-q3-2025/",
       "title": "BlackRock (BLK) Q3 2025 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2161,7 +2059,7 @@
       "uses": "P4"
     },
     {
-      "n": 41,
+      "n": 37,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/04/21/blackrock-blk-q4-2025-earnings-transcript",
       "title": "BlackRock (BLK) Q4 2025 Earnings Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2169,7 +2067,7 @@
       "uses": "P4"
     },
     {
-      "n": 42,
+      "n": 38,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/04/14/blackrock-blk-q1-2026-earnings-call-transcript",
       "title": "BlackRock (BLK) Q1 2026 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2177,7 +2075,7 @@
       "uses": "P4"
     },
     {
-      "n": 43,
+      "n": 39,
       "url": "https://www.roic.ai/quote/BLK/transcripts/2026-year/2-quarter",
       "title": "BlackRock, Inc. (BLK) Q2 FY2026 Earnings Call Transcript - July 15, 2026",
       "domain": "roic.ai",
@@ -2185,7 +2083,7 @@
       "uses": "P4"
     },
     {
-      "n": 44,
+      "n": 40,
       "url": "https://www.roic.ai/quote/BLK/transcripts/2025-year/4-quarter",
       "title": "BlackRock, Inc. (BLK) Q4 FY2025 Earnings Call Transcript - January 15, 2026",
       "domain": "roic.ai",
@@ -2193,7 +2091,7 @@
       "uses": "P5"
     },
     {
-      "n": 45,
+      "n": 41,
       "url": "https://www.fool.com/earnings/call-transcripts/2024/01/12/blackrock-blk-q4-2023-earnings-call-transcript",
       "title": "BlackRock (BLK) Q4 2023 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2201,7 +2099,7 @@
       "uses": "P1"
     },
     {
-      "n": 46,
+      "n": 42,
       "url": "https://stockanalysis.com/stocks/blk/transcripts/398072-q4-2025",
       "title": "BlackRock (BLK) Q4 2025 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2209,15 +2107,7 @@
       "uses": "P5"
     },
     {
-      "n": 47,
-      "url": "https://earningscalls.dev/transcripts/blackrock-inc_blk_earnings_call_transcript_2024-07-01",
-      "title": "BlackRock, Inc. (BLK) Earnings Call Transcript & Summary",
-      "domain": "earningscalls.dev",
-      "tier": "press",
-      "uses": "P2"
-    },
-    {
-      "n": 48,
+      "n": 43,
       "url": "https://www.benzinga.com/markets/earnings/25/10/48203932/blackrock-q3-fy2025-earnings-call-transcript",
       "title": "BlackRock Q3 FY2025 Earnings Call Transcript - BlackRock (NYSE:BLK) - Benzinga",
       "domain": "benzinga.com",
@@ -2225,7 +2115,7 @@
       "uses": "P5"
     },
     {
-      "n": 49,
+      "n": 44,
       "url": "https://www.benzinga.com/markets/earnings/26/04/51810318/blackrock-q1-2026-earnings-call-transcript",
       "title": "BlackRock (BLK) Q1 2026 Earnings Call Transcript - BlackRock (NYSE:BLK)",
       "domain": "benzinga.com",
@@ -2253,13 +2143,6 @@
       "kind": "trail",
       "spec": "trail@1",
       "processor": "ultra4x",
-      "createdAt": "2026-11-05T19:08:04.924365Z",
-      "completedAt": "2026-11-05T19:13:30.933478Z"
-    },
-    {
-      "kind": "trail",
-      "spec": "trail@1",
-      "processor": "ultra4x",
       "createdAt": "2026-11-05T19:08:04.931459Z",
       "completedAt": "2026-11-05T19:12:26.236824Z"
     },
@@ -2278,18 +2161,18 @@
       "completedAt": "2026-11-05T19:14:11.887268Z"
     },
     {
-      "kind": "check",
-      "spec": "check@2",
-      "processor": "ultra",
-      "createdAt": "2026-11-05T19:41:18.208675Z",
-      "completedAt": "2026-11-05T19:47:29.649923Z"
+      "kind": "trail",
+      "spec": "trail@2",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-06T04:55:54.148953Z",
+      "completedAt": "2026-11-06T04:59:16.611500Z"
     },
     {
       "kind": "check",
       "spec": "check@2",
       "processor": "ultra",
-      "createdAt": "2026-11-05T19:41:18.215876Z",
-      "completedAt": "2026-11-05T19:47:29.728237Z"
+      "createdAt": "2026-11-05T19:41:18.208675Z",
+      "completedAt": "2026-11-05T19:47:29.649923Z"
     },
     {
       "kind": "check",
@@ -2311,6 +2194,13 @@
       "processor": "ultra",
       "createdAt": "2026-11-05T19:41:18.237331Z",
       "completedAt": "2026-11-05T19:45:58.324394Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@3",
+      "processor": "ultra",
+      "createdAt": "2026-11-06T04:59:18.576708Z",
+      "completedAt": "2026-11-06T05:06:58.473748Z"
     }
   ],
   "fills": {
@@ -2329,19 +2219,19 @@
         "id": "depth",
         "label": "At least 2 dated statements per promise",
         "result": "pass",
-        "detail": "33 statements"
+        "detail": "32 statements"
       },
       {
         "id": "cited",
         "label": "Statements with a cited source",
         "result": "pass",
-        "detail": "27 of 27 (100%)"
+        "detail": "26 of 26 (100%)"
       },
       {
         "id": "verbatim",
         "label": "Statements backed by verbatim source text",
         "result": "pass",
-        "detail": "27 of 27 (100%); 0 filled by Search or Extract"
+        "detail": "26 of 26 (100%); 0 filled by Search or Extract"
       },
       {
         "id": "dates",
@@ -2388,6 +2278,6 @@
       "rank": 10
     }
   },
-  "version": 2,
-  "builtAt": "2026-11-06T00:56:27.014Z"
+  "version": 3,
+  "builtAt": "2026-11-06T05:06:59.843Z"
 }

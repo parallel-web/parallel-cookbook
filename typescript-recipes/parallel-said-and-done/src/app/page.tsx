@@ -17,7 +17,7 @@ const FAN = [
   { left: 118, top: 8, rotate: 1 },
 ];
 
-/** A directory of companies: what each promised on earnings calls and how it turned out. */
+/** A directory of companies: what each promised investors and how it turned out. */
 export default async function Companies() {
   const { sheets, profiles, asOf } = await loadCoverage();
   const today = todayIso();
@@ -58,8 +58,8 @@ export default async function Companies() {
           <div className="hero-text">
             <h1>Said &amp; done.</h1>
             <p>
-              What {sheets.length} public companies promised on their earnings calls since {since}, and what happened. {promises} promises, each traced call by call
-              with word-for-word quotes from the source.
+              What {sheets.length} public companies promised investors since {since}, and what happened. {promises} promises from earnings calls and company
+              releases, each traced statement by statement with word-for-word quotes from the source.
             </p>
             <span className="live">
               <span className="live-dot" aria-hidden />

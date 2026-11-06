@@ -16,8 +16,9 @@ import { STANCE_DESCRIPTION } from "./trail";
  * check@1  verdicts without the sheet's definitions; most disputes were about
  *          what "partly delivered" or "revised" means, not about facts
  * check@2  the same outcome and stance definitions the sheet uses
+ * check@3  the delivered_late outcome
  */
-export const CHECK_SPEC_KEY = "check@2";
+export const CHECK_SPEC_KEY = "check@3";
 export const CHECK_PROCESSOR = "ultra";
 
 const INPUT_SCHEMA = {

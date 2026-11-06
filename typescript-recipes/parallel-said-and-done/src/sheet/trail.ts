@@ -15,7 +15,8 @@
 import type { Company, SheetData } from "../lib/types";
 import { OUTCOME_DESCRIPTION, OUTCOME_STATUSES, STANCES } from "./spec";
 
-export const TRAIL_SPEC_KEY = "trail@1";
+/** trail@2: the delivered_late outcome (sheet/spec.ts). */
+export const TRAIL_SPEC_KEY = "trail@2";
 export const TRAIL_PROCESSOR = "ultra4x";
 
 export const SOURCE_TYPES = [

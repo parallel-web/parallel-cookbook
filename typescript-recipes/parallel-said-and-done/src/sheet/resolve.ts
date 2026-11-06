@@ -11,7 +11,8 @@ import type { StoredRun } from "../parallel/task";
 import type { CheckOut } from "./check";
 import { OUTCOME_DESCRIPTION, OUTCOME_STATUSES } from "./spec";
 
-export const RESOLVE_SPEC_KEY = "resolve@1";
+/** resolve@2: the delivered_late outcome (sheet/spec.ts). */
+export const RESOLVE_SPEC_KEY = "resolve@2";
 export const RESOLVE_PROCESSOR = "ultra4x";
 
 const INPUT_SCHEMA = {

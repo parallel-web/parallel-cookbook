@@ -28,19 +28,13 @@
       "firstStated": "2025-01-28",
       "status": "missed",
       "k": "miss",
-      "outcomeSummary": "PW1100 MRO output increased 26% in 2025, missing the above 30% target. Fourth-quarter output grew 39%, while heavier shop visits increased 40%.",
+      "outcomeSummary": "PW1100 MRO output grew 26% in 2025, missing the above 30% target; fourth-quarter growth was 39%, with heavier shop visits up 40%.",
       "citations": [
         {
           "url": "https://www.fool.com/earnings/call-transcripts/2025/01/28/rtx-rtx-q4-2024-earnings-call-transcript",
           "title": "RTX (RTX) Q4 2024 Earnings Call Transcript | The Motley Fool",
           "domain": "fool.com",
           "tier": "transcript"
-        },
-        {
-          "url": "https://investors.rtx.com/static-files/10494d39-c1d0-4ff0-b945-1db5288a923b",
-          "title": "RTX Investor Webcast Q4 2025",
-          "domain": "investors.rtx.com",
-          "tier": "primary"
         },
         {
           "url": "https://investors.rtx.com/static-files/70003d43-015d-4396-baa0-409f1abf1323",
@@ -59,7 +53,7 @@
         "missing": [
           {
             "date": "2026-01-27",
-            "what_was_said": "Management reported: “MRO output was up 39% in the fourth quarter and up 26% for the full year, even as heavier shop visits increased 40% in 2025.” This establishes the final result below the original above-30% target.",
+            "what_was_said": "Management reported that PW1100 MRO output increased 26% for full-year 2025 and 39% in the fourth quarter, while heavier shop visits increased 40% in 2025. The full-year result fell short of the original above-30% growth target.",
             "call": "Q4 2025 earnings call"
           }
         ],
@@ -279,10 +273,10 @@
       "promiseId": "P1",
       "date": "2025-01-28",
       "call": "Q4 2024 earnings call",
-      "speaker": "Christopher T. Calio, President and CEO",
+      "speaker": "Christopher Calio, CEO",
       "stance": "stated",
       "k": "s",
-      "summary": "Following 30% MRO output growth, management targeted above 30% growth in 2025.",
+      "summary": "Targeted above 30% PW1100 MRO output growth in 2025, following 30% growth last year.",
       "quote": "Last year, MRO output was up 30% with a significant increase in forging production, and this year we expect MRO output to grow above 30%.",
       "verbatim": {
         "text": "Last year, MRO output was up 30% with a significant increase in forging production, and this year we expect MRO output to grow above 30%.",
@@ -329,23 +323,75 @@
           "title": "Q4 2024 RTX Earnings Conference Call | RTX",
           "domain": "investors.rtx.com",
           "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/239491-q4-2024/",
+          "title": "RTX Corporation (RTX) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
         }
       ],
       "confidence": "medium",
       "sourceType": "earnings_call"
     },
     {
+      "id": "RTX-P1-2025-02-19",
+      "promiseId": "P1",
+      "date": "2025-02-19",
+      "call": "Barclays 42nd Annual Industrial Select Conference",
+      "speaker": "Christopher Calio, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated similar PW1100 MRO output growth in 2025 after 30% growth in 2024, emphasizing material flow.",
+      "quote": "You know, as I said before, we saw a 30% year-over-year MRO output on the PW1100 last year at Pratt, and we need to see a continued growth, you know, at that level, which means you're gonna need material flow to do that.",
+      "verbatim": {
+        "text": "You know, as I said before, we saw a 30% year-over-year MRO output on the PW1100 last year at Pratt, and we need to see a continued growth, you know, at that level, which means you're gonna need material flow to do that.",
+        "segs": [
+          {
+            "t": "You know, as I said before, we saw a ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " year-over-year MRO output on the PW1100 last year at Pratt, and we need to see a continued growth, you know, at that level, which means you're gonna need material flow to do that.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/314736-barclays-42nd-annual-industrial-select-conference",
+          "title": "RTX Corporation (RTX) FY 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/314736-barclays-42nd-annual-industrial-select-conference",
+          "title": "RTX Corporation (RTX) FY 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
       "id": "RTX-P1-2025-04-22",
       "promiseId": "P1",
       "date": "2025-04-22",
       "call": "Q1 2025 earnings call",
-      "speaker": "Chris Calio, President and CEO",
+      "speaker": "Christopher Calio, CEO",
       "stance": "on_track",
       "k": "h",
-      "summary": "PW1100 MRO output rose 35% year-over-year and 14% sequentially; full-year growth remained on track for over 30%.",
-      "quote": "Starting with the GTF program, PW1100 MRO output was up 35% year-over-year and 14% sequentially, and we remain on track for over a 30% improvement for the full year.",
+      "summary": "PW1100 MRO output increased 35% year over year and 14% sequentially; full-year improvement remained on track for over 30%.",
+      "quote": "Starting with the GTF program, PW1100 MRO output was up 35% year over year and 14% sequentially, and we remain on track for over a 30% improvement for the full year.",
       "verbatim": {
-        "text": "Starting with the GTF program, PW1100 MRO output was up 35% year-over-year and 14% sequentially, and we remain on track for over a 30% improvement for the full year.",
+        "text": "Starting with the GTF program, PW1100 MRO output was up 35% year over year and 14% sequentially, and we remain on track for over a 30% improvement for the full year.",
         "segs": [
           {
             "t": "Starting with the GTF program, PW1100 MRO output was up ",
@@ -356,7 +402,7 @@
             "h": 1
           },
           {
-            "t": " year-over-year and ",
+            "t": " year over year and ",
             "h": 0
           },
           {
@@ -379,17 +425,17 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/1-quarter",
-          "title": "RTX Corporation (RTX.TO) Q1 FY2025 Earnings Call Transcript - April 22, 2025",
-          "domain": "roic.ai",
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/310265-q1-2025/",
+          "title": "RTX Corporation (RTX) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/1-quarter",
-          "title": "RTX Corporation (RTX.TO) Q1 FY2025 Earnings Call Transcript - April 22, 2025",
-          "domain": "roic.ai",
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/310265-q1-2025/",
+          "title": "RTX Corporation (RTX) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
           "tier": "transcript"
         },
         {
@@ -407,10 +453,10 @@
       "promiseId": "P1",
       "date": "2025-07-22",
       "call": "Q2 2025 earnings call",
-      "speaker": "Christopher Calio, Chairman and CEO",
+      "speaker": "Christopher Calio, CEO",
       "stance": "on_track",
       "k": "h",
-      "summary": "Full-year MRO output growth remained on track for over 30%, supporting lower AOGs in the second half.",
+      "summary": "Remained on track for over 30% full-year MRO output improvement, supporting lower AOGs in the second half.",
       "quote": "And we remain on track for over 30% MRO output improvement for the full year, which is a key enabler to reducing AOGs in the second half.",
       "verbatim": {
         "text": "And we remain on track for over 30% MRO output improvement for the full year, which is a key enabler to reducing AOGs in the second half.",
@@ -431,17 +477,17 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/2-quarter",
-          "title": "RTX Corporation (RTX.TO) Q2 FY2025 Earnings Call Transcript - July 22, 2025",
-          "domain": "roic.ai",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/08/05/rtx-rtx-q2-2025-earnings-call-transcript",
+          "title": "RTX (RTX) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/2-quarter",
-          "title": "RTX Corporation (RTX.TO) Q2 FY2025 Earnings Call Transcript - July 22, 2025",
-          "domain": "roic.ai",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/08/05/rtx-rtx-q2-2025-earnings-call-transcript",
+          "title": "RTX (RTX) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
           "tier": "transcript"
         },
         {
@@ -465,16 +511,16 @@
       "promiseId": "P1",
       "date": "2025-10-21",
       "call": "Q3 2025 earnings call",
-      "speaker": "Christopher Calio, Chairman and CEO",
+      "speaker": "Christopher Calio, CEO",
       "stance": "softened",
       "k": "c",
-      "summary": "Record PW1100 Gate 3 starts supported about 30% full-year MRO output growth, softening the previous over 30% target.",
-      "quote": "Exiting the third quarter, this material flow has supported a record high number of PW1100 Gate 3 starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about 30% MRO output growth for the year.",
+      "summary": "Full-year MRO output guidance softened from over 30% to about 30%, supported by record PW1100 gate three starts.",
+      "quote": "Exiting the third quarter, this material flow has supported a record high number of PW1100 gate three starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about 30% MRO output growth for the year.",
       "verbatim": {
-        "text": "Exiting the third quarter, this material flow has supported a record high number of PW1100 Gate 3 starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about 30% MRO output growth for the year.",
+        "text": "Exiting the third quarter, this material flow has supported a record high number of PW1100 gate three starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about 30% MRO output growth for the year.",
         "segs": [
           {
-            "t": "Exiting the third quarter, this material flow has supported a record high number of PW1100 Gate 3 starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about ",
+            "t": "Exiting the third quarter, this material flow has supported a record high number of PW1100 gate three starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about ",
             "h": 0
           },
           {
@@ -489,17 +535,17 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
-          "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
-          "domain": "roic.ai",
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/365429-q3-2025/",
+          "title": "RTX Corporation (RTX) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
-          "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
-          "domain": "roic.ai",
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/365429-q3-2025/",
+          "title": "RTX Corporation (RTX) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
           "tier": "transcript"
         },
         {
@@ -509,14 +555,114 @@
           "tier": "primary"
         },
         {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/08/05/rtx-rtx-q2-2025-earnings-call-transcript",
+          "title": "RTX (RTX) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P1-2025-11-03",
+      "promiseId": "P1",
+      "date": "2025-11-03",
+      "call": "Pratt & Whitney announces inaugural GTF MRO Network awards",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed about 30% full-year PW1100G-JM MRO output growth, versus 21% year-to-date growth.",
+      "quote": "As reported during RTX’s Q3 earnings, MRO output for the PW1100G-JM engine is up 21% year-to-date and is expected to reach about 30% for the full year.",
+      "verbatim": {
+        "text": "As reported during RTX’s Q3 earnings, MRO output for the PW1100G-JM engine is up 21% year-to-date and is expected to reach about 30% for the full year.",
+        "segs": [
+          {
+            "t": "As reported during RTX’s ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": " earnings, MRO output for the PW1100G-JM engine is up ",
+            "h": 0
+          },
+          {
+            "t": "21%",
+            "h": 1
+          },
+          {
+            "t": " year-to-date and is expected to reach about ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " for the full year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.rtx.com/news/news-center/2025/11/03/rtxs-pratt-whitney-announces-inaugural-gtf-mro-network-awards",
+          "title": "News | RTX’s Pratt & Whitney announces inaugural GTF MRO Network awards | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
           "url": "https://www.rtx.com/news/news-center/2025/11/03/rtxs-pratt-whitney-announces-inaugural-gtf-mro-network-awards",
           "title": "News | RTX’s Pratt & Whitney announces inaugural GTF MRO Network awards | RTX",
           "domain": "rtx.com",
           "tier": "primary"
         }
       ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "RTX-P1-2025-11-13",
+      "promiseId": "P1",
+      "date": "2025-11-13",
+      "call": "Baird 55th Annual Global Industrial Conference",
+      "speaker": "Neil Mitchill, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Maintained about 30% annual PW-1100 output growth, with 21% through nine months and October output in line with full-year expectations.",
+      "quote": "We've closed October, and October's output was in line with our full-year expectations.",
+      "verbatim": {
+        "text": "Neil Mitchill CFO and EVP, RTX We've closed October, and October's output was in line with our full-year expectations.",
+        "segs": [
+          {
+            "t": "Neil Mitchill CFO and EVP, RTX We've closed October, and October's output was in line with our full-year expectations.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/407301-baird-55th-annual-global-industrial-conference/",
+          "title": "RTX Corporation (RTX) FY 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/407301-baird-55th-annual-global-industrial-conference/",
+          "title": "RTX Corporation (RTX) FY 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
       "confidence": "medium",
-      "sourceType": "earnings_call"
+      "sourceType": "other"
     },
     {
       "id": "RTX-P2-2024-04-23",
@@ -1822,14 +1968,6 @@
     },
     {
       "n": 7,
-      "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
-      "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
-      "domain": "roic.ai",
-      "tier": "transcript",
-      "uses": "P1 P2"
-    },
-    {
-      "n": 8,
       "url": "https://investors.rtx.com/events-and-presentations",
       "title": "Events & Presentations | RTX",
       "domain": "investors.rtx.com",
@@ -1837,7 +1975,7 @@
       "uses": "P2"
     },
     {
-      "n": 9,
+      "n": 8,
       "url": "https://www.rtx.com/news/news-center/2026/03/13/rtxs-raytheon-completes-115-million-expansion-of-alabama-missile-integration-fa",
       "title": "News | RTX's Raytheon completes $115 million expansion of Alabama missile integration facility | RTX",
       "domain": "rtx.com",
@@ -1845,7 +1983,7 @@
       "uses": "P2"
     },
     {
-      "n": 10,
+      "n": 9,
       "url": "https://investors.rtx.com/static-files/46b42314-8297-41ea-91cd-4e4ddd2e9518",
       "title": "2026-10-20 8-K ER Exhibit 99",
       "domain": "investors.rtx.com",
@@ -1853,7 +1991,7 @@
       "uses": "P4"
     },
     {
-      "n": 11,
+      "n": 10,
       "url": "https://investors.rtx.com/events/event-details/q4-2024-rtx-earnings-conference-call",
       "title": "Q4 2024 RTX Earnings Conference Call | RTX",
       "domain": "investors.rtx.com",
@@ -1861,7 +1999,7 @@
       "uses": "P1"
     },
     {
-      "n": 12,
+      "n": 11,
       "url": "https://investors.rtx.com/events/event-details/q1-2025-rtx-earnings-conference-call",
       "title": "Q1 2025 RTX Earnings Conference Call | RTX",
       "domain": "investors.rtx.com",
@@ -1869,7 +2007,7 @@
       "uses": "P1"
     },
     {
-      "n": 13,
+      "n": 12,
       "url": "https://investors.rtx.com/events/event-details/q2-2025-rtx-earnings-conference-call",
       "title": "Q2 2025 RTX Earnings Conference Call | RTX",
       "domain": "investors.rtx.com",
@@ -1877,7 +2015,7 @@
       "uses": "P1"
     },
     {
-      "n": 14,
+      "n": 13,
       "url": "https://investors.rtx.com/static-files/4431ddf8-4a87-4a15-b16c-2cbfafe7e843",
       "title": "RTX Investor Webcast Q2 2025",
       "domain": "investors.rtx.com",
@@ -1885,7 +2023,7 @@
       "uses": "P1"
     },
     {
-      "n": 15,
+      "n": 14,
       "url": "https://investors.rtx.com/events/event-details/q3-2025-rtx-earnings-conference-call",
       "title": "Q3 2025 RTX Earnings Conference Call | RTX",
       "domain": "investors.rtx.com",
@@ -1893,7 +2031,7 @@
       "uses": "P1"
     },
     {
-      "n": 16,
+      "n": 15,
       "url": "https://www.rtx.com/news/news-center/2025/11/03/rtxs-pratt-whitney-announces-inaugural-gtf-mro-network-awards",
       "title": "News | RTX’s Pratt & Whitney announces inaugural GTF MRO Network awards | RTX",
       "domain": "rtx.com",
@@ -1901,7 +2039,7 @@
       "uses": "P1"
     },
     {
-      "n": 17,
+      "n": 16,
       "url": "https://investors.rtx.com/static-files/6d2e2fd9-aa0e-40e2-aa9f-a4051a058306",
       "title": "2026-01-27 8-K ER Exhibit 99",
       "domain": "investors.rtx.com",
@@ -1909,7 +2047,7 @@
       "uses": "P4"
     },
     {
-      "n": 18,
+      "n": 17,
       "url": "https://investors.rtx.com/static-files/369fdead-8ef6-4c51-a3c8-0fc05a553897",
       "title": "2026-07-23 8-K ER Exhibit 99",
       "domain": "investors.rtx.com",
@@ -1917,7 +2055,7 @@
       "uses": "P4"
     },
     {
-      "n": 19,
+      "n": 18,
       "url": "https://www.rtx.com/news/news-center/2026/02/04/rtxs-raytheon-partners-with-department-of-war-on-five-landmark-agreements-to-exp",
       "title": "News | RTX's Raytheon partners with Department of War on five landmark agreements to expand critical munition production | RTX",
       "domain": "rtx.com",
@@ -1925,7 +2063,7 @@
       "uses": "P5"
     },
     {
-      "n": 20,
+      "n": 19,
       "url": "https://investors.rtx.com/static-files/17f82efd-d9c0-46a4-bc59-984e9b81f27b",
       "title": "RTX Corp at Citi Global Industrial Tech and Mobility Conference on February 18, 2026 / 1:50PM",
       "domain": "investors.rtx.com",
@@ -1933,7 +2071,7 @@
       "uses": "P5"
     },
     {
-      "n": 21,
+      "n": 20,
       "url": "https://www.rtx.com/news/2026/04/20/scaling-up-to-deliver-with-speed",
       "title": "News | Scaling up to deliver with speed | RTX",
       "domain": "rtx.com",
@@ -1941,7 +2079,7 @@
       "uses": "P5"
     },
     {
-      "n": 22,
+      "n": 21,
       "url": "https://www.rtx.com/news/news-center/2026/08/17/rtxs-raytheon-awarded-seven-year-contract-for-tomahawk-cruise-missiles",
       "title": "News | RTX's Raytheon awarded seven-year contract for Tomahawk cruise missiles | RTX",
       "domain": "rtx.com",
@@ -1949,7 +2087,7 @@
       "uses": "P5"
     },
     {
-      "n": 23,
+      "n": 22,
       "url": "https://investors.rtx.com/static-files/b82026f9-070f-48f4-9f9f-251dc51776e9",
       "title": "RTX Corporation at Morgan Stanley Laguna Conference on September 15, 2026 / 3:30PM",
       "domain": "investors.rtx.com",
@@ -1957,7 +2095,7 @@
       "uses": "P5"
     },
     {
-      "n": 24,
+      "n": 23,
       "url": "https://www.rtx.com/news/news-center/2026/09/28/rtxs-raytheon-awarded-20-7-billion-multi-year-contract-for-amraam-under-landmar",
       "title": "News | RTX's Raytheon awarded $20.7 billion multi-year contract for AMRAAM under landmark production agreement | RTX",
       "domain": "rtx.com",
@@ -1965,7 +2103,7 @@
       "uses": "P5"
     },
     {
-      "n": 25,
+      "n": 24,
       "url": "https://www.rtx.com/news/news-center/2026/10/01/rtxs-raytheon-awarded-24-4-billion-multi-year-contract-for-sm-6-interceptors",
       "title": "News | RTX's Raytheon awarded $24.4 billion multi-year contract for SM-6 interceptors | RTX",
       "domain": "rtx.com",
@@ -1973,7 +2111,7 @@
       "uses": "P5"
     },
     {
-      "n": 26,
+      "n": 25,
       "url": "https://www.rtx.com/news/news-center/2026/10/08/rtxs-raytheon-awarded-6-3-billion-multi-year-contract-for-sm-3-ib-interceptors",
       "title": "News | RTX's Raytheon awarded $6.3 billion multi-year contract for SM-3 IB interceptors | RTX",
       "domain": "rtx.com",
@@ -1981,15 +2119,7 @@
       "uses": "P5"
     },
     {
-      "n": 27,
-      "url": "https://investors.rtx.com/static-files/10494d39-c1d0-4ff0-b945-1db5288a923b",
-      "title": "RTX Investor Webcast Q4 2025",
-      "domain": "investors.rtx.com",
-      "tier": "primary",
-      "uses": "P1"
-    },
-    {
-      "n": 28,
+      "n": 26,
       "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000031/rtx-20260930.htm",
       "title": "rtx-20260930",
       "domain": "sec.gov",
@@ -1997,7 +2127,7 @@
       "uses": "P3"
     },
     {
-      "n": 29,
+      "n": 27,
       "url": "https://www.rtx.com/news/news-center/2026/10/20/rtx-reports-q3-2026-results",
       "title": "News | RTX Reports Q3 2026 Results | RTX",
       "domain": "rtx.com",
@@ -2005,7 +2135,15 @@
       "uses": "P4"
     },
     {
-      "n": 30,
+      "n": 28,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/08/05/rtx-rtx-q2-2025-earnings-call-transcript",
+      "title": "RTX (RTX) Q2 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 29,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript",
       "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2013,7 +2151,7 @@
       "uses": "P3"
     },
     {
-      "n": 31,
+      "n": 30,
       "url": "https://stockanalysis.com/stocks/rtx/transcripts/713115-q3-2026/",
       "title": "RTX Corporation (RTX) Q3 2026 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2021,23 +2159,47 @@
       "uses": "P5"
     },
     {
+      "n": 31,
+      "url": "https://stockanalysis.com/stocks/rtx/transcripts/239491-q4-2024/",
+      "title": "RTX Corporation (RTX) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
       "n": 32,
-      "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/1-quarter",
-      "title": "RTX Corporation (RTX.TO) Q1 FY2025 Earnings Call Transcript - April 22, 2025",
-      "domain": "roic.ai",
+      "url": "https://stockanalysis.com/stocks/rtx/transcripts/314736-barclays-42nd-annual-industrial-select-conference",
+      "title": "RTX Corporation (RTX) FY 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
       "tier": "transcript",
       "uses": "P1"
     },
     {
       "n": 33,
-      "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/2-quarter",
-      "title": "RTX Corporation (RTX.TO) Q2 FY2025 Earnings Call Transcript - July 22, 2025",
-      "domain": "roic.ai",
+      "url": "https://stockanalysis.com/stocks/rtx/transcripts/310265-q1-2025/",
+      "title": "RTX Corporation (RTX) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
       "tier": "transcript",
       "uses": "P1"
     },
     {
       "n": 34,
+      "url": "https://stockanalysis.com/stocks/rtx/transcripts/365429-q3-2025/",
+      "title": "RTX Corporation (RTX) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 35,
+      "url": "https://stockanalysis.com/stocks/rtx/transcripts/407301-baird-55th-annual-global-industrial-conference/",
+      "title": "RTX Corporation (RTX) FY 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 36,
       "url": "https://www.fool.com/earnings/call-transcripts/2024/04/23/rtx-rtx-q1-2024-earnings-call-transcript?source=financialcontent",
       "title": "RTX (RTX) Q1 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2045,7 +2207,7 @@
       "uses": "P2"
     },
     {
-      "n": 35,
+      "n": 37,
       "url": "https://www.fool.com/earnings/call-transcripts/2024/07/25/rtx-rtx-q2-2024-earnings-call-transcript",
       "title": "RTX (RTX) Q2 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2053,7 +2215,7 @@
       "uses": "P2"
     },
     {
-      "n": 36,
+      "n": 38,
       "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/rtx-rtx-q3-2024-earnings-call-transcript",
       "title": "RTX (RTX) Q3 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2061,7 +2223,7 @@
       "uses": "P2"
     },
     {
-      "n": 37,
+      "n": 39,
       "url": "https://stockanalysis.com/stocks/rtx/transcripts/337848-q2-2025/",
       "title": "RTX Corporation (RTX) Q2 2025 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2069,7 +2231,15 @@
       "uses": "P2"
     },
     {
-      "n": 38,
+      "n": 40,
+      "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
+      "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 41,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/01/26/rtx-rtx-q3-2025-earnings-call-transcript",
       "title": "RTX (RTX) Q3 2025 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2077,7 +2247,7 @@
       "uses": "P2"
     },
     {
-      "n": 39,
+      "n": 42,
       "url": "https://www.nasdaq.com/articles/rtx-rtx-q1-2024-earnings-call-transcript",
       "title": "RTX (RTX) Q1 2024 Earnings Call Transcript | Nasdaq",
       "domain": "nasdaq.com",
@@ -2085,7 +2255,7 @@
       "uses": "P2"
     },
     {
-      "n": 40,
+      "n": 43,
       "url": "https://www.earningscall.ai/stock/transcript/RTX-2025-Q1",
       "title": "RTX Corporation Q1 2025 Earnings Call Transcript | Full Text",
       "domain": "earningscall.ai",
@@ -2101,13 +2271,6 @@
       "processor": "ultra2x",
       "createdAt": "2026-11-05T06:22:25.142559Z",
       "completedAt": "2026-11-05T06:31:24.742913Z"
-    },
-    {
-      "kind": "trail",
-      "spec": "trail@1",
-      "processor": "ultra4x",
-      "createdAt": "2026-11-05T19:08:07.114450Z",
-      "completedAt": "2026-11-05T19:13:52.655812Z"
     },
     {
       "kind": "trail",
@@ -2138,11 +2301,11 @@
       "completedAt": "2026-11-05T19:14:57.974512Z"
     },
     {
-      "kind": "check",
-      "spec": "check@2",
-      "processor": "ultra",
-      "createdAt": "2026-11-05T19:41:20.049068Z",
-      "completedAt": "2026-11-05T19:48:14.824354Z"
+      "kind": "trail",
+      "spec": "trail@2",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-06T04:55:57.898643Z",
+      "completedAt": "2026-11-06T05:00:59.810017Z"
     },
     {
       "kind": "check",
@@ -2171,6 +2334,13 @@
       "processor": "ultra",
       "createdAt": "2026-11-05T19:41:20.077323Z",
       "completedAt": "2026-11-05T19:53:45.185540Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@3",
+      "processor": "ultra",
+      "createdAt": "2026-11-06T05:01:01.192628Z",
+      "completedAt": "2026-11-06T05:01:59.599621Z"
     }
   ],
   "fills": {
@@ -2189,19 +2359,19 @@
         "id": "depth",
         "label": "At least 2 dated statements per promise",
         "result": "pass",
-        "detail": "33 statements"
+        "detail": "36 statements"
       },
       {
         "id": "cited",
         "label": "Statements with a cited source",
         "result": "pass",
-        "detail": "28 of 28 (100%)"
+        "detail": "31 of 31 (100%)"
       },
       {
         "id": "verbatim",
         "label": "Statements backed by verbatim source text",
         "result": "pass",
-        "detail": "28 of 28 (100%); 0 filled by Search or Extract"
+        "detail": "31 of 31 (100%); 0 filled by Search or Extract"
       },
       {
         "id": "dates",
@@ -2248,6 +2418,6 @@
       "rank": 1
     }
   },
-  "version": 2,
-  "builtAt": "2026-11-06T00:56:27.272Z"
+  "version": 3,
+  "builtAt": "2026-11-06T05:02:00.878Z"
 }

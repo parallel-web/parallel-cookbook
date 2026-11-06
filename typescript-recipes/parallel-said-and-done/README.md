@@ -1,7 +1,7 @@
 # Said & Done
 
-What 100 public companies promised on their earnings calls, and what happened.
-Live demo: [earnings-calls.paralleldemos.com](https://earnings-calls.paralleldemos.com)
+What 100 public companies promised investors, on earnings calls and in company
+releases, and what happened. Live demo: [earnings-calls.paralleldemos.com](https://earnings-calls.paralleldemos.com)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparallel-web%2Fparallel-cookbook%2Ftree%2Fmain%2Ftypescript-recipes%2Fparallel-said-and-done&project-name=parallel-said-and-done&repository-name=parallel-said-and-done)
 
@@ -13,7 +13,7 @@ from the source behind every line.
 
 Everything on screen comes from [Parallel](https://parallel.ai) APIs:
 
-- **Task API** researches each company and each promise, then fact-checks every outcome with independent runs.
+- **Task API** researches each company and each promise, then fact-checks every outcome with separate runs. The fact-check is AI research, not a person.
 - **Extract API** reads full pages to back statements with exact quotes.
 - **Search API** finds a page when none was cited.
 - **Image Search API** supplies logos and photos.
@@ -103,13 +103,13 @@ report to the webhook.
 | | Image Search | [`sheet/images.ts`](src/sheet/images.ts) | A logo and a header photo per company. |
 | | Task (`base`) | [`sheet/profile.ts`](src/sheet/profile.ts) | The GICS sector and industry, for the directory filters. |
 | 2. History | Task (`ultra4x`) | [`sheet/trail.ts`](src/sheet/trail.ts) | One run per promise rebuilds its history: every call since it was first made, each stance judged against the previous statement, the document type (call, earnings release, filing…), and outcome figures only as a source states them. |
-| 3. Fact-check | Task (`ultra`) | [`sheet/check.ts`](src/sheet/check.ts) | One independent run per promise, not chained to the others, checks the outcome and each statement's date and stance. If one check disputes an outcome, two more run. If most agree, a deeper run ([`sheet/resolve.ts`](src/sheet/resolve.ts)) settles it with sources, and a fresh check confirms the result. |
+| 3. Fact-check | Task (`ultra`) | [`sheet/check.ts`](src/sheet/check.ts) | One separate AI research run per promise, not chained to the runs that made the sheet, checks the outcome and each statement's date and stance. If one check disputes an outcome, two more run. If most agree, a deeper run ([`sheet/resolve.ts`](src/sheet/resolve.ts)) settles it with sources, and a fresh check confirms the result. |
 | Gate | (none) | [`sheet/build.ts`](src/sheet/build.ts), [`sheet/gate.ts`](src/sheet/gate.ts) | Holds back any quote whose source names a different call than the statement, and publishes to `data/` only if no check fails. |
 
 Every raw response is saved to `output/raw/` before anything is derived from
 it, so `pnpm rebuild` re-derives every sheet after a rule change with no API calls.
 
-**Why three stages.** We fact-checked 26 promises made by stage 1 alone. Every
+**Why three stages.** We ran the fact-check on 26 promises made by stage 1 alone. Every
 quote was real, but 4 of 137 statements were dated to the wrong call and 11
 earnings-release passages were labelled as calls. The fact-check also disagreed
 with 9% of the stances and found 2 errors in outcome summaries. With stages 2
@@ -117,8 +117,8 @@ and 3, the same 26 promises had no misdated statements, no mislabels, 2.8% stanc
 disagreements and no summary errors, with a third more statements, all quoted
 verbatim.
 
-Across all 100 companies, every published outcome is confirmed by an independent
-fact-check. Six were changed by the resolution step. 2,965 of 2,970 statements
+Across all 100 companies, every published outcome is confirmed by a separate
+AI fact-check run. Six were changed by the resolution step. 2,965 of 2,970 statements
 are backed by an exact quote.
 
 ### Keeping it current
@@ -196,9 +196,12 @@ Extract, Search and Image Search add a few cents per sheet.
 
 ## Limits
 
-- Stances and outcomes are judgments made by the Task and confirmed by an
-  independent Task. The verbatim quote beside each statement is what lets a
-  reader check them.
+- Stances and outcomes are AI judgments: made by one Task run and confirmed by
+  a separate one. No person reviews them. The verbatim quote and source beside
+  each statement are what let a reader check them.
+- About half the statements come from earnings calls; the rest come from
+  company releases, prepared remarks, investor days, filings and shareholder
+  letters. Each statement names its document.
 - Logos and photos are linked from their source pages, not copied. A broken link
   falls back to the ticker chip.
 - Not investment advice.

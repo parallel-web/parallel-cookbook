@@ -13,6 +13,7 @@ import {
   domainOf,
   keywordSet,
   markFigures,
+  quoteLength,
   recall,
   sentences,
   shared,
@@ -94,13 +95,11 @@ interface Window {
 /** The longest passage shown as a quote, in words. */
 export const MAX_QUOTE_WORDS = 60;
 
-const wordCount = (text: string) => text.split(/\s+/).length;
-
 /** A sentence too long to quote whole (often a bulleted list in a PDF) is split at semicolons, bullets and ", and" or ", but". */
 function pieces(sentence: string): string[] {
-  if (wordCount(sentence) <= MAX_QUOTE_WORDS) return [sentence];
+  if (quoteLength(sentence) <= MAX_QUOTE_WORDS) return [sentence];
   return sentence
-    .split(/(?<=;)\s+|\s+(?=•)|(?<=,)\s+(?=(?:and|but)\s)/)
+    .split(/(?<=;)\s+|(?<=；)\s*|\s+(?=•)|(?<=,)\s+(?=(?:and|but)\s)/)
     .map((p) => p.trim())
     .filter(Boolean);
 }
@@ -118,7 +117,7 @@ function windowsOf(citations: RawCitation[]): Window[] {
     }
   }
   return out.filter((w) => {
-    const words = wordCount(w.text);
+    const words = quoteLength(w.text);
     return words >= 6 && words <= MAX_QUOTE_WORDS;
   });
 }

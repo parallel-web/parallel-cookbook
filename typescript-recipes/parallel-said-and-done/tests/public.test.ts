@@ -6,6 +6,7 @@ import type { SheetData } from "../src/lib/types";
 import type { StoredRun } from "../src/parallel/task";
 import { buildSheet } from "../src/sheet/build";
 import { MAX_QUOTE_WORDS, findPassage } from "../src/sheet/evidence";
+import { quoteLength } from "../src/lib/text";
 import type { FillRecord } from "../src/sheet/fill";
 import { REQUEST_ID, publicSheet } from "../src/sheet/public";
 
@@ -59,7 +60,7 @@ test("a sentence too long to quote is cut at a clause break, still word for word
   );
   assert.ok(found);
   assert.equal(found.match, "exact");
-  assert.ok(found.text.split(/\s+/).length <= MAX_QUOTE_WORDS);
+  assert.ok(quoteLength(found.text) <= MAX_QUOTE_WORDS);
   assert.ok(excerpt.includes(found.text));
 });
 
@@ -70,7 +71,7 @@ test("published data has no request IDs and no quote over the limit", () => {
     assert.doesNotMatch(raw, REQUEST_ID, file);
     const sheet = JSON.parse(raw) as SheetData;
     for (const s of sheet.statements) {
-      if (s.verbatim) assert.ok(s.verbatim.text.split(/\s+/).length <= MAX_QUOTE_WORDS, `${s.id}: quote over ${MAX_QUOTE_WORDS} words`);
+      if (s.verbatim) assert.ok(quoteLength(s.verbatim.text) <= MAX_QUOTE_WORDS, `${s.id}: quote over ${MAX_QUOTE_WORDS} words`);
     }
   }
   assert.doesNotMatch(readFileSync(new URL("../data/profiles.json", import.meta.url), "utf8"), REQUEST_ID);

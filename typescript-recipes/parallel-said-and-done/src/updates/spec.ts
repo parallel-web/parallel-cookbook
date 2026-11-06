@@ -12,13 +12,14 @@
  *
  *   update@2  one earnings call
  *   update@3  an earnings call or a company statement between calls
+ *   update@4  the delivered_late outcome
  *   monitor@1 earnings calls only
  *   monitor@2 earnings calls, plus announcements about the tracked promises
  */
 import type { Company, SheetData } from "../lib/types";
 import { OUTCOME_DESCRIPTION, OUTCOME_STATUSES, nextCallFields, statementItem } from "../sheet/spec";
 
-export const UPDATE_SPEC_KEY = "update@3";
+export const UPDATE_SPEC_KEY = "update@4";
 export const UPDATE_PROCESSOR = "ultra";
 
 export const MONITOR_SPEC_KEY = "monitor@2";

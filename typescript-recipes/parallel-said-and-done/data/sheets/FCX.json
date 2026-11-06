@@ -26,25 +26,19 @@
       "commitment": "Be in a position to make an investment decision on the Bagdad expansion in 2025.",
       "deadline": "2025",
       "firstStated": "2024-04-23",
-      "status": "missed",
-      "k": "miss",
-      "outcomeSummary": "The original deadline was missed; Freeport announced Board approval of the $4.5 billion Bagdad expansion on November 4, 2026.",
+      "status": "delivered_late",
+      "k": "done",
+      "outcomeSummary": "Board approved the $4.5 billion Bagdad expansion on November 4, 2026, after the original 2025 decision target.",
       "citations": [
         {
-          "url": "https://www.roic.ai/quote/SIX-FCX/transcripts/2024-year/1-quarter",
-          "title": "Freeport-McMoRan, Inc. (FCX) Q1 FY2024 Earnings Call Transcript - April 23, 2024",
-          "domain": "roic.ai",
-          "tier": "transcript"
-        },
-        {
-          "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_260122.pdf",
-          "title": "4Q 2025 Exhibit 99.1",
+          "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_261104.pdf",
+          "title": "Freeport Announces Plans to Boost U.S. Copper & Molybdenum Production",
           "domain": "s22.q4cdn.com",
           "tier": "primary"
         },
         {
-          "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_261104.pdf",
-          "title": "Freeport Announces Plans to Boost U.S. Copper & Molybdenum Production",
+          "url": "https://s22.q4cdn.com/529358580/files/doc_presentations/2024/FCX_3Q24_CC.pdf",
+          "title": "FCX Conference Call Presentation",
           "domain": "s22.q4cdn.com",
           "tier": "primary"
         },
@@ -65,14 +59,14 @@
       "outcomeDate": "2026-11-04",
       "factCheck": {
         "verdict": "correct",
-        "status": "missed",
+        "status": "delivered_late",
         "summaryErrors": [],
         "held": 0,
         "missing": [
           {
             "date": "2026-01-22",
-            "what_was_said": "Management explicitly targeted an investment decision in the second half of 2026 and added $150 million of 2026 capital for Bagdad engineering and early works. This provided a more specific timetable than the earnings release's reference to a potential decision during 2026.",
-            "call": "4Q 2025 earnings call"
+            "what_was_said": "Management explicitly targeted an investment decision in the second half of 2026 and added $150 million of 2026 capital for Bagdad engineering and early works. This supplied a more specific revised timetable than the earnings release's reference to a potential decision during 2026.",
+            "call": "Q4 2025 earnings call"
           }
         ],
         "checks": 1,
@@ -319,11 +313,11 @@
       "id": "FCX-P1-2024-04-23",
       "promiseId": "P1",
       "date": "2024-04-23",
-      "call": "1Q 2024 earnings call",
+      "call": "Q1 2024 earnings call",
       "speaker": "Kathleen Quirk, President",
       "stance": "stated",
       "k": "s",
-      "summary": "Hoped for investment-decision readiness by the end of next year while monitoring Arizona labor conditions.",
+      "summary": "Hoped to be ready for a Bagdad investment decision by the end of 2025, earlier than the supplied first statement.",
       "quote": "We're also continuing to monitor labor market conditions in Arizona and hope to be in a position to make an investment decision by the end of next year.",
       "verbatim": {
         "text": "We're also continuing to monitor labor market conditions in Arizona and hope to be in a position to make an investment decision by the end of next year.",
@@ -336,22 +330,16 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.roic.ai/quote/SIX-FCX/transcripts/2024-year/1-quarter",
-          "title": "Freeport-McMoRan, Inc. (FCX) Q1 FY2024 Earnings Call Transcript - April 23, 2024",
-          "domain": "roic.ai",
+          "url": "https://stockanalysis.com/stocks/fcx/transcripts/165474-q1-2024",
+          "title": "Freeport-McMoRan (FCX) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://www.roic.ai/quote/SIX-FCX/transcripts/2024-year/1-quarter",
-          "title": "Freeport-McMoRan, Inc. (FCX) Q1 FY2024 Earnings Call Transcript - April 23, 2024",
-          "domain": "roic.ai",
-          "tier": "transcript"
-        },
-        {
-          "url": "https://stockanalysis.com/stocks/fcx/transcripts/154528-q4-2023",
-          "title": "Freeport-McMoRan (FCX) Q4 2023 Earnings Call Transcript & Audio",
+          "url": "https://stockanalysis.com/stocks/fcx/transcripts/165474-q1-2024",
+          "title": "Freeport-McMoRan (FCX) Q1 2024 Earnings Call Transcript & Audio",
           "domain": "stockanalysis.com",
           "tier": "transcript"
         }
@@ -363,11 +351,11 @@
       "id": "FCX-P1-2024-07-23",
       "promiseId": "P1",
       "date": "2024-07-23",
-      "call": "2Q 2024 earnings call",
+      "call": "Q2 2024 earnings call",
       "speaker": "Kathleen Quirk, President and CEO",
       "stance": "reaffirmed",
       "k": "h",
-      "summary": "Expected investment-decision readiness next year while monitoring conditions and de-risking.",
+      "summary": "Expected decision readiness in 2025, subject to conditions and progress on de-risking initiatives.",
       "quote": "We're monitoring conditions and progress with our de risking initiatives and expect to be in a position to make a decision on our investment next year.",
       "verbatim": {
         "text": "We're monitoring conditions and progress with our de risking initiatives and expect to be in a position to make a decision on our investment next year.",
@@ -401,11 +389,11 @@
       "id": "FCX-P1-2024-10-22",
       "promiseId": "P1",
       "date": "2024-10-22",
-      "call": "3Q 2024 earnings call",
+      "call": "Q3 2024 earnings call",
       "speaker": "Kathleen Quirk, President and CEO",
       "stance": "reaffirmed",
       "k": "h",
-      "summary": "Continued to expect decision readiness next year, subject to conditions and de-risking progress.",
+      "summary": "Continued to expect readiness for a Bagdad expansion decision in 2025.",
       "quote": "We're monitoring conditions and progress with our derisking initiatives and continue to expect to be in a position to make a decision next year on the expansion plans.",
       "verbatim": {
         "text": "We're monitoring conditions and progress with our derisking initiatives and continue to expect to be in a position to make a decision next year on the expansion plans.",
@@ -418,7 +406,7 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/freeport-mcmoran-fcx-q3-2024-earnings-call-transcr/",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/freeport-mcmoran-fcx-q3-2024-earnings-call-transcr",
           "title": "Freeport-McMoRan (FCX) Q3 2024 Earnings Call Transcript | The Motley Fool",
           "domain": "fool.com",
           "tier": "transcript"
@@ -426,7 +414,7 @@
       },
       "citations": [
         {
-          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/freeport-mcmoran-fcx-q3-2024-earnings-call-transcr/",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/freeport-mcmoran-fcx-q3-2024-earnings-call-transcr",
           "title": "Freeport-McMoRan (FCX) Q3 2024 Earnings Call Transcript | The Motley Fool",
           "domain": "fool.com",
           "tier": "transcript"
@@ -439,34 +427,34 @@
       "id": "FCX-P1-2025-01-23",
       "promiseId": "P1",
       "date": "2025-01-23",
-      "call": "4Q 2024 earnings call",
+      "call": "Q4 2024 earnings call",
       "speaker": "Kathleen Quirk, President and CEO",
-      "stance": "softened",
-      "k": "c",
-      "summary": "Kept year-end timing but weakened certainty from expectation to hope.",
-      "quote": "We're monitoring markets and site-specific factors and hope to be in a position to make a decision on the path forward by the year-end.",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Retained the year-end 2025 decision target while monitoring markets and site-specific factors.",
+      "quote": "We're monitoring markets and site-specific factors and hope to be in a position to make a decision on the path forward by the year end.",
       "verbatim": {
-        "text": "We're monitoring markets and site-specific factors and hope to be in a position to make a decision on the path forward by the year-end.",
+        "text": "We're monitoring markets and site-specific factors and hope to be in a position to make a decision on the path forward by the year end.",
         "segs": [
           {
-            "t": "We're monitoring markets and site-specific factors and hope to be in a position to make a decision on the path forward by the year-end.",
+            "t": "We're monitoring markets and site-specific factors and hope to be in a position to make a decision on the path forward by the year end.",
             "h": 0
           }
         ],
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/23/freeport-mcmoran-fcx-q4-2024-earnings-call-transcr",
-          "title": "Freeport-McMoRan (FCX) Q4 2024 Earnings Call Transcript | The Motley Fool",
-          "domain": "fool.com",
+          "url": "https://stockanalysis.com/stocks/fcx/transcripts/239694-q4-2024",
+          "title": "Freeport-McMoRan (FCX) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/23/freeport-mcmoran-fcx-q4-2024-earnings-call-transcr",
-          "title": "Freeport-McMoRan (FCX) Q4 2024 Earnings Call Transcript | The Motley Fool",
-          "domain": "fool.com",
+          "url": "https://stockanalysis.com/stocks/fcx/transcripts/239694-q4-2024",
+          "title": "Freeport-McMoRan (FCX) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
           "tier": "transcript"
         }
       ],
@@ -477,11 +465,11 @@
       "id": "FCX-P1-2025-04-24",
       "promiseId": "P1",
       "date": "2025-04-24",
-      "call": "1Q 2025 earnings call",
+      "call": "Q1 2025 earnings call",
       "speaker": "Kathleen Quirk, President and CEO",
       "stance": "reaffirmed",
       "k": "h",
-      "summary": "Linked updated economics to decision-making through the end of this year.",
+      "summary": "Refreshed project economics would inform decision-making through year-end 2025, alongside tariffs, autonomy and infrastructure readiness.",
       "quote": "That will be part of the decision-making that we make to the end of this year.",
       "verbatim": {
         "text": "That will be part of the decision-making that we make to the end of this year.",
@@ -506,6 +494,12 @@
           "title": "Freeport-McMoRan (FCX) Q1 2025 Earnings Call Transcript & Audio",
           "domain": "stockanalysis.com",
           "tier": "transcript"
+        },
+        {
+          "url": "https://s22.q4cdn.com/529358580/files/doc_presentations/2025/FCX_1Q25_CC.pdf",
+          "title": "FCX Conference Call Presentation",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
         }
       ],
       "confidence": "medium",
@@ -515,11 +509,11 @@
       "id": "FCX-P1-2025-07-23",
       "promiseId": "P1",
       "date": "2025-07-23",
-      "call": "2Q 2025 earnings call",
+      "call": "Q2 2025 earnings call",
       "speaker": "Kathleen Quirk, President and CEO",
       "stance": "softened",
       "k": "c",
-      "summary": "Used open-ended timing and sought tariff-cost clarity without repeating the year-end decision target.",
+      "summary": "Emphasized choosing the right start time and execution certainty, without repeating the 2025 decision deadline.",
       "quote": "The expansion obviously would give us more near-term production, near-term cash flows, but it's really a question of when, you know, when the right time is to start it.",
       "verbatim": {
         "text": "The expansion obviously would give us more near-term production, near-term cash flows, but it's really a question of when, you know, when the right time is to start it.",
@@ -544,6 +538,12 @@
           "title": "Freeport (FCX) Q2 2025 Earnings Call Transcript | The Motley Fool",
           "domain": "fool.com",
           "tier": "transcript"
+        },
+        {
+          "url": "http://s22.q4cdn.com/529358580/files/doc_presentations/2025/FCX_2Q25_CC.pdf",
+          "title": "FCX Conference Call Presentation",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
         }
       ],
       "confidence": "medium",
@@ -553,25 +553,19 @@
       "id": "FCX-P1-2025-11-18",
       "promiseId": "P1",
       "date": "2025-11-18",
-      "call": "Freeport Update Conference Call — 3Q 2025",
+      "call": "Q3 2025 update conference call",
       "speaker": null,
       "stance": "not_mentioned",
       "k": "x",
-      "summary": "Discussed doubling Bagdad production but did not address the pending investment-decision timetable.",
+      "summary": "Discussed doubling Bagdad production but did not address the pending investment-decision timing.",
       "quote": null,
       "verbatim": null,
       "citations": [
         {
-          "url": "https://stockanalysis.com/stocks/fcx/transcripts/366213-q3-2025",
-          "title": "Freeport-McMoRan (FCX) Q3 2025 Earnings Call Transcript & Audio",
-          "domain": "stockanalysis.com",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-freeportmcmoran-beats-q3-2025-earnings-forecasts-93CH-4365753",
+          "title": " Earnings call transcript: Freeport-McMoRan beats Q3 2025 earnings forecasts By Investing.com",
+          "domain": "investing.com",
           "tier": "transcript"
-        },
-        {
-          "url": "https://investors.fcx.com/investors/news-releases/news-release-details/2025/Freeport-Announces-Third-Quarter-2025-Reporting-Schedule-and-Conference-Call-Plans/default.aspx",
-          "title": "\n\tFreeport-McMoRan Inc. - Freeport Announces Third-Quarter 2025 Reporting Schedule and Conference Call Plans\n",
-          "domain": "investors.fcx.com",
-          "tier": "primary"
         }
       ],
       "confidence": "medium",
@@ -581,11 +575,11 @@
       "id": "FCX-P1-2026-01-22",
       "promiseId": "P1",
       "date": "2026-01-22",
-      "call": "Fourth-Quarter and Year Ended 2025 Results earnings release",
+      "call": "Q4 2025 earnings release",
       "speaker": null,
       "stance": "revised",
       "k": "c",
-      "summary": "Updating late 2023 studies ahead of a potential investment decision during 2026.",
+      "summary": "Updated late 2023 studies ahead of a potential investment decision during 2026, replacing the 2025 target.",
       "quote": "FCX completed technical and economic studies in late 2023 and is updating these studies in advance of a potential investment decision during 2026.",
       "verbatim": {
         "text": "FCX completed technical and economic studies in late 2023 and is updating these studies in advance of a potential investment decision during 2026.",
@@ -626,6 +620,12 @@
           "title": "4Q 2025 Exhibit 99.1",
           "domain": "s22.q4cdn.com",
           "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/fcx/transcripts/397490-q4-2025",
+          "title": "Freeport-McMoRan (FCX) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
         }
       ],
       "confidence": "high",
@@ -635,11 +635,11 @@
       "id": "FCX-P1-2026-04-23",
       "promiseId": "P1",
       "date": "2026-04-23",
-      "call": "1Q 2026 earnings call",
+      "call": "Q1 2026 earnings call",
       "speaker": "Kathleen Quirk, President and CEO",
       "stance": "on_track",
       "k": "h",
-      "summary": "Reported progress toward an investment decision, with engineering and economic evaluations advancing.",
+      "summary": "Engineering, cost checks and vendor pricing were advancing toward a potential investment decision in the second half of 2026.",
       "quote": "The expansion opportunity at Bagdad is moving toward an investment decision.",
       "verbatim": {
         "text": "The expansion opportunity at Bagdad is moving toward an investment decision.",
@@ -652,7 +652,7 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/freeport-fcx-q1-2026-earnings-transcript/",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/freeport-fcx-q1-2026-earnings-transcript",
           "title": "Freeport (FCX) Q1 2026 Earnings Transcript | The Motley Fool",
           "domain": "fool.com",
           "tier": "transcript"
@@ -660,10 +660,16 @@
       },
       "citations": [
         {
-          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/freeport-fcx-q1-2026-earnings-transcript/",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/freeport-fcx-q1-2026-earnings-transcript",
           "title": "Freeport (FCX) Q1 2026 Earnings Transcript | The Motley Fool",
           "domain": "fool.com",
           "tier": "transcript"
+        },
+        {
+          "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_260423.pdf",
+          "title": "1Q 2026 Exhibit 99.1",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
         }
       ],
       "confidence": "medium",
@@ -673,11 +679,11 @@
       "id": "FCX-P1-2026-07-23",
       "promiseId": "P1",
       "date": "2026-07-23",
-      "call": "2Q 2026 earnings call",
+      "call": "Q2 2026 earnings call",
       "speaker": "Kathleen Quirk, President and CEO",
       "stance": "reaffirmed",
       "k": "h",
-      "summary": "Finalizing the investment case; expected final-decision readiness in the second half of this year.",
+      "summary": "Finalizing Bagdad's investment case; expected to move toward a final decision in the second half of 2026.",
       "quote": "We're finalizing the investment case for a major expansion at our Bagdad mine in northwest Arizona and expect to be in a position to move towards a final decision in the second half of this year.",
       "verbatim": {
         "text": "We're finalizing the investment case for a major expansion at our Bagdad mine in northwest Arizona and expect to be in a position to move towards a final decision in the second half of this year.",
@@ -690,18 +696,24 @@
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://stockanalysis.com/stocks/fcx/transcripts/653699-q2-2026",
-          "title": "Freeport-McMoRan (FCX) Q2 2026 Earnings Call Transcript & Audio",
-          "domain": "stockanalysis.com",
+          "url": "https://finance.yahoo.com/quote/FCX/earnings/FCX-Q2-2026-earnings_call-653699.html",
+          "title": "Freeport-McMoRan, Inc. (FCX) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
           "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://stockanalysis.com/stocks/fcx/transcripts/653699-q2-2026",
-          "title": "Freeport-McMoRan (FCX) Q2 2026 Earnings Call Transcript & Audio",
-          "domain": "stockanalysis.com",
+          "url": "https://finance.yahoo.com/quote/FCX/earnings/FCX-Q2-2026-earnings_call-653699.html",
+          "title": "Freeport-McMoRan, Inc. (FCX) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
           "tier": "transcript"
+        },
+        {
+          "url": "https://s22.q4cdn.com/529358580/files/doc_presentations/2026/FCX_2Q26_CC.pdf",
+          "title": "PowerPoint Presentation",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
         }
       ],
       "confidence": "medium",
@@ -711,47 +723,45 @@
       "id": "FCX-P1-2026-10-27",
       "promiseId": "P1",
       "date": "2026-10-27",
-      "call": "Third-Quarter and Nine-Month 2026 Results earnings release",
-      "speaker": null,
+      "call": "Q3 2026 earnings call",
+      "speaker": "Kathleen Quirk, President and CEO",
       "stance": "revised",
       "k": "c",
-      "summary": "Narrowed the expected decision window to fourth-quarter 2026.",
-      "quote": "FCX expects to reach an investment decision on the expansion project in fourth-quarter 2026.",
+      "summary": "Specified fourth-quarter 2026 for the decision, narrowing the previous second-half window; board consideration remained pending.",
+      "quote": "We expect to make an investment decision on the Bagdad expansion in the fourth quarter.",
       "verbatim": {
-        "text": "FCX expects to reach an investment decision on the expansion project in fourth-quarter 2026.",
+        "text": "We expect to make an investment decision on the Bagdad expansion in the fourth quarter.",
         "segs": [
           {
-            "t": "FCX expects to reach an investment decision on the expansion project in fourth-quarter ",
-            "h": 0
-          },
-          {
-            "t": "2026",
-            "h": 1
-          },
-          {
-            "t": ".",
+            "t": "We expect to make an investment decision on the Bagdad expansion in the fourth quarter.",
             "h": 0
           }
         ],
         "match": "exact",
         "backing": {
           "via": "task",
-          "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000045/a3q2026exhibit991.htm",
-          "title": "sec.gov",
-          "domain": "sec.gov",
-          "tier": "primary"
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/freeport-mcmoran-fcx-q3-2026-earnings-call-transcript",
+          "title": "Freeport-McMoRan (FCX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
         }
       },
       "citations": [
         {
-          "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000045/a3q2026exhibit991.htm",
-          "title": "sec.gov",
-          "domain": "sec.gov",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/freeport-mcmoran-fcx-q3-2026-earnings-call-transcript",
+          "title": "Freeport-McMoRan (FCX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_261027_3Q_2026_Earnings_Release.pdf",
+          "title": "3Q 2026 Exhibit 99.1",
+          "domain": "s22.q4cdn.com",
           "tier": "primary"
         }
       ],
-      "confidence": "high",
-      "sourceType": "earnings_release"
+      "confidence": "medium",
+      "sourceType": "earnings_call"
     },
     {
       "id": "FCX-P1-2026-11-04",
@@ -761,8 +771,8 @@
       "speaker": null,
       "stance": "declared_done",
       "k": "d",
-      "summary": "Announced November 4, 2026: Board approved the $4.5 billion Bagdad expansion and modernization program.",
-      "quote": "PHOENIX, AZ, November 4, 2026 – Freeport (NYSE:FCX) announced today that its Board of Directors approved a $4.5 billion expansion and modernization program for its wholly owned Bagdad copper and molybdenum operation in northwest Arizona.",
+      "summary": "Board approved the $4.5 billion Bagdad expansion and modernization program, completing the decision after the original 2025 target.",
+      "quote": "Freeport (NYSE:FCX) announced today that its Board of Directors approved a $4.5 billion expansion and modernization program for its wholly owned Bagdad copper and molybdenum operation in northwest Arizona.",
       "verbatim": {
         "text": "PHOENIX, AZ, November 4, 2026 – Freeport (NYSE:FCX) announced today that its Board of Directors approved a $4.5 billion expansion and modernization program for its wholly owned Bagdad copper and molybdenum operation in northwest Arizona.",
         "segs": [
@@ -2133,22 +2143,6 @@
   "sources": [
     {
       "n": 1,
-      "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000045/a3q2026exhibit991.htm",
-      "title": "sec.gov",
-      "domain": "sec.gov",
-      "tier": "primary",
-      "uses": "P1 P2 P5"
-    },
-    {
-      "n": 2,
-      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/23/freeport-mcmoran-fcx-q4-2024-earnings-call-transcr",
-      "title": "Freeport-McMoRan (FCX) Q4 2024 Earnings Call Transcript | The Motley Fool",
-      "domain": "fool.com",
-      "tier": "transcript",
-      "uses": "P1 P2 P3"
-    },
-    {
-      "n": 3,
       "url": "https://stockanalysis.com/stocks/fcx/transcripts/309084-q1-2025",
       "title": "Freeport-McMoRan (FCX) Q1 2025 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2156,7 +2150,39 @@
       "uses": "P1 P2 P3"
     },
     {
+      "n": 2,
+      "url": "https://stockanalysis.com/stocks/fcx/transcripts/397490-q4-2025",
+      "title": "Freeport-McMoRan (FCX) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/freeport-mcmoran-fcx-q3-2026-earnings-call-transcript",
+      "title": "Freeport-McMoRan (FCX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P5"
+    },
+    {
       "n": 4,
+      "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000045/a3q2026exhibit991.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_260423.pdf",
+      "title": "1Q 2026 Exhibit 99.1",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P4"
+    },
+    {
+      "n": 6,
       "url": "https://s22.q4cdn.com/529358580/files/doc_news/2025/FCX_250723_2Q_2025_Earnings_Release.pdf",
       "title": "2Q 2025 Exhibit 99.1",
       "domain": "s22.q4cdn.com",
@@ -2164,7 +2190,7 @@
       "uses": "P2 P3"
     },
     {
-      "n": 5,
+      "n": 7,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000006/a4q2025exhibit991.htm",
       "title": "sec.gov",
       "domain": "sec.gov",
@@ -2172,7 +2198,7 @@
       "uses": "P2 P5"
     },
     {
-      "n": 6,
+      "n": 8,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000033/a2q2026exhibit991.htm",
       "title": "sec.gov",
       "domain": "sec.gov",
@@ -2180,15 +2206,15 @@
       "uses": "P2 P5"
     },
     {
-      "n": 7,
-      "url": "https://investors.fcx.com/investors/news-releases/news-release-details/2025/Freeport-Announces-Third-Quarter-2025-Reporting-Schedule-and-Conference-Call-Plans/default.aspx",
-      "title": "\n\tFreeport-McMoRan Inc. - Freeport Announces Third-Quarter 2025 Reporting Schedule and Conference Call Plans\n",
-      "domain": "investors.fcx.com",
+      "n": 9,
+      "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_261027_3Q_2026_Earnings_Release.pdf",
+      "title": "3Q 2026 Exhibit 99.1",
+      "domain": "s22.q4cdn.com",
       "tier": "primary",
-      "uses": "P1 P2"
+      "uses": "P1 P4"
     },
     {
-      "n": 8,
+      "n": 10,
       "url": "https://investors.fcx.com/investors/news-releases/news-release-details/2026/Freeport-Provides-Third-Quarter-2026-Operational-Update/default.aspx",
       "title": "\n\tFreeport-McMoRan Inc. - Freeport Provides Third-Quarter 2026 Operational Update\n",
       "domain": "investors.fcx.com",
@@ -2196,15 +2222,23 @@
       "uses": "P3 P4"
     },
     {
-      "n": 9,
-      "url": "https://stockanalysis.com/stocks/fcx/transcripts/366213-q3-2025",
-      "title": "Freeport-McMoRan (FCX) Q3 2025 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
+      "n": 11,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/23/freeport-mcmoran-fcx-q4-2024-earnings-call-transcr",
+      "title": "Freeport-McMoRan (FCX) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
       "tier": "transcript",
-      "uses": "P1 P2"
+      "uses": "P2 P3"
     },
     {
-      "n": 10,
+      "n": 12,
+      "url": "https://stockanalysis.com/stocks/fcx/transcripts/239694-q4-2024",
+      "title": "Freeport-McMoRan (FCX) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 13,
       "url": "https://www.fool.com/earnings/call-transcripts/2025/07/23/freeport-fcx-q2-2025-earnings-call-transcript",
       "title": "Freeport (FCX) Q2 2025 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2212,44 +2246,20 @@
       "uses": "P1 P2"
     },
     {
-      "n": 11,
-      "url": "https://stockanalysis.com/stocks/fcx/transcripts/653699-q2-2026",
-      "title": "Freeport-McMoRan (FCX) Q2 2026 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
+      "n": 14,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/freeport-fcx-q1-2026-earnings-transcript",
+      "title": "Freeport (FCX) Q1 2026 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
       "tier": "transcript",
       "uses": "P1 P2"
     },
     {
-      "n": 12,
+      "n": 15,
       "url": "https://www.roic.ai/quote/FCX/transcripts/2026-year/2-quarter",
       "title": "Freeport-McMoRan, Inc. (FCX) Q2 FY2026 Earnings Call Transcript - July 23, 2026",
       "domain": "roic.ai",
       "tier": "transcript",
       "uses": "P4 P5"
-    },
-    {
-      "n": 13,
-      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/freeport-mcmoran-fcx-q3-2026-earnings-call-transcript",
-      "title": "Freeport-McMoRan (FCX) Q3 2026 Earnings Call Transcript | The Motley Fool",
-      "domain": "fool.com",
-      "tier": "transcript",
-      "uses": "P2 P5"
-    },
-    {
-      "n": 14,
-      "url": "https://stockanalysis.com/stocks/fcx/transcripts/397490-q4-2025",
-      "title": "Freeport-McMoRan (FCX) Q4 2025 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
-      "tier": "transcript",
-      "uses": "P4 P5"
-    },
-    {
-      "n": 15,
-      "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_260122.pdf",
-      "title": "4Q 2025 Exhibit 99.1",
-      "domain": "s22.q4cdn.com",
-      "tier": "primary",
-      "uses": "P1"
     },
     {
       "n": 16,
@@ -2261,14 +2271,38 @@
     },
     {
       "n": 17,
-      "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_260423.pdf",
-      "title": "1Q 2026 Exhibit 99.1",
+      "url": "https://s22.q4cdn.com/529358580/files/doc_presentations/2025/FCX_1Q25_CC.pdf",
+      "title": "FCX Conference Call Presentation",
       "domain": "s22.q4cdn.com",
       "tier": "primary",
-      "uses": "P4"
+      "uses": "P1"
     },
     {
       "n": 18,
+      "url": "http://s22.q4cdn.com/529358580/files/doc_presentations/2025/FCX_2Q25_CC.pdf",
+      "title": "FCX Conference Call Presentation",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_260122.pdf",
+      "title": "4Q 2025 Exhibit 99.1",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://s22.q4cdn.com/529358580/files/doc_presentations/2026/FCX_2Q26_CC.pdf",
+      "title": "PowerPoint Presentation",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125925000002/fcx_4q24xccxfinal.htm",
       "title": "FREEPORT-MCMORAN INC 8-K exhibit 99.2, filed January 23, 2025",
       "domain": "sec.gov",
@@ -2276,7 +2310,7 @@
       "uses": "P2"
     },
     {
-      "n": 19,
+      "n": 22,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125925000014/a2025fcx1stqtrcc_final.htm",
       "title": "A2025Fcx1Stqtrcc Final",
       "domain": "sec.gov",
@@ -2284,7 +2318,7 @@
       "uses": "P2"
     },
     {
-      "n": 20,
+      "n": 23,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125925000028/a2025fcx2ndqtrcc_final.htm",
       "title": "A2025Fcx2Ndqtrcc Final",
       "domain": "sec.gov",
@@ -2292,7 +2326,7 @@
       "uses": "P2"
     },
     {
-      "n": 21,
+      "n": 24,
       "url": "https://s22.q4cdn.com/529358580/files/doc_news/2025/FCX_251023_3Q_2025_Earnings_Release.pdf",
       "title": "3Q 2025 Exhibit 99.1",
       "domain": "s22.q4cdn.com",
@@ -2300,7 +2334,7 @@
       "uses": "P2"
     },
     {
-      "n": 22,
+      "n": 25,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125925000052/fcxnov-18x2025cc_final.htm",
       "title": "FREEPORT-MCMORAN INC 8-K exhibit 99.2, filed November 18, 2025",
       "domain": "sec.gov",
@@ -2308,7 +2342,15 @@
       "uses": "P2"
     },
     {
-      "n": 23,
+      "n": 26,
+      "url": "https://investors.fcx.com/investors/news-releases/news-release-details/2025/Freeport-Announces-Third-Quarter-2025-Reporting-Schedule-and-Conference-Call-Plans/default.aspx",
+      "title": "\n\tFreeport-McMoRan Inc. - Freeport Announces Third-Quarter 2025 Reporting Schedule and Conference Call Plans\n",
+      "domain": "investors.fcx.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 27,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000006/fcx4q25cc_final.htm",
       "title": "Fcx4Q25Cc Final",
       "domain": "sec.gov",
@@ -2316,7 +2358,7 @@
       "uses": "P2"
     },
     {
-      "n": 24,
+      "n": 28,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000021/fcx1q26cc_final.htm",
       "title": "Fcx1Q26Cc Final",
       "domain": "sec.gov",
@@ -2324,7 +2366,7 @@
       "uses": "P2"
     },
     {
-      "n": 25,
+      "n": 29,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125925000002/a4q2024exhibit991.htm",
       "title": "sec.gov",
       "domain": "sec.gov",
@@ -2332,7 +2374,7 @@
       "uses": "P3"
     },
     {
-      "n": 26,
+      "n": 30,
       "url": "https://s22.q4cdn.com/529358580/files/doc_news/2025/FCX_250424_1Q_2025_Earnings_Release.pdf",
       "title": "1Q 2025 Exhibit 99.1",
       "domain": "s22.q4cdn.com",
@@ -2340,7 +2382,7 @@
       "uses": "P3"
     },
     {
-      "n": 27,
+      "n": 31,
       "url": "https://fcx.com/freeport-features/060925",
       "title": "PTFI Smelter Resumes Operation After ‘Maximum Efforts’ to Speed Repairs | Freeport-McMoRan",
       "domain": "fcx.com",
@@ -2348,7 +2390,7 @@
       "uses": "P3"
     },
     {
-      "n": 28,
+      "n": 32,
       "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_260723_2Q_2026_Earnings_Release.pdf",
       "title": "2Q 2026 Exhibit 99.1",
       "domain": "s22.q4cdn.com",
@@ -2356,7 +2398,7 @@
       "uses": "P4"
     },
     {
-      "n": 29,
+      "n": 33,
       "url": "https://investors.fcx.com/investors/news-releases/news-release-details/2026/Freeport-Provides-Third-Quarter-2026-Operational-Update/",
       "title": "\n\tFreeport-McMoRan Inc. - Freeport Provides Third-Quarter 2026 Operational Update\n",
       "domain": "investors.fcx.com",
@@ -2364,7 +2406,7 @@
       "uses": "P4"
     },
     {
-      "n": 30,
+      "n": 34,
       "url": "https://investors.fcx.com/investors/presentations/presentation-details/2026/FCX-3Q-2026-Conference-Call/default.aspx",
       "title": "\n\tFreeport-McMoRan Inc. - FCX 3Q 2026 Conference Call\n",
       "domain": "investors.fcx.com",
@@ -2372,7 +2414,7 @@
       "uses": "P4"
     },
     {
-      "n": 31,
+      "n": 35,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000021/a1q2026exhibit991.htm",
       "title": "sec.gov",
       "domain": "sec.gov",
@@ -2380,7 +2422,15 @@
       "uses": "P5"
     },
     {
-      "n": 32,
+      "n": 36,
+      "url": "https://s22.q4cdn.com/529358580/files/doc_presentations/2024/FCX_3Q24_CC.pdf",
+      "title": "FCX Conference Call Presentation",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 37,
       "url": "https://investors.fcx.com/investors/news-releases/news-release-details/2026/Freeport-Announces-Plans-to-Boost-U-S--Copper--Molybdenum-Production/default.aspx",
       "title": "\n\tFreeport-McMoRan Inc. - Freeport Announces Plans to Boost U.S. Copper & Molybdenum Production\n",
       "domain": "investors.fcx.com",
@@ -2388,7 +2438,7 @@
       "uses": "P1"
     },
     {
-      "n": 33,
+      "n": 38,
       "url": "https://www.sec.gov/Archives/edgar/data/831259/000083125926000045/fcx3q26cc_final.htm",
       "title": "FREEPORT-MCMORAN INC 8-K exhibit 99.2, filed October 27, 2026",
       "domain": "sec.gov",
@@ -2396,23 +2446,15 @@
       "uses": "P2"
     },
     {
-      "n": 34,
-      "url": "https://s22.q4cdn.com/529358580/files/doc_news/2026/FCX_261027_3Q_2026_Earnings_Release.pdf",
-      "title": "3Q 2026 Exhibit 99.1",
-      "domain": "s22.q4cdn.com",
-      "tier": "primary",
-      "uses": "P4"
-    },
-    {
-      "n": 35,
-      "url": "https://www.roic.ai/quote/SIX-FCX/transcripts/2024-year/1-quarter",
-      "title": "Freeport-McMoRan, Inc. (FCX) Q1 FY2024 Earnings Call Transcript - April 23, 2024",
-      "domain": "roic.ai",
+      "n": 39,
+      "url": "https://stockanalysis.com/stocks/fcx/transcripts/366213-q3-2025",
+      "title": "Freeport-McMoRan (FCX) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
       "tier": "transcript",
-      "uses": "P1"
+      "uses": "P2"
     },
     {
-      "n": 36,
+      "n": 40,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/freeport-mcmoran-fcx-q3-2026-earnings-call-transcript/?source=iedfolrf0000001",
       "title": "Freeport-McMoRan (FCX) Q3 2026 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2420,15 +2462,15 @@
       "uses": "P2"
     },
     {
-      "n": 37,
-      "url": "https://stockanalysis.com/stocks/fcx/transcripts/154528-q4-2023",
-      "title": "Freeport-McMoRan (FCX) Q4 2023 Earnings Call Transcript & Audio",
+      "n": 41,
+      "url": "https://stockanalysis.com/stocks/fcx/transcripts/165474-q1-2024",
+      "title": "Freeport-McMoRan (FCX) Q1 2024 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
       "tier": "transcript",
       "uses": "P1"
     },
     {
-      "n": 38,
+      "n": 42,
       "url": "https://stockanalysis.com/stocks/fcx/transcripts/186880-q2-2024",
       "title": "Freeport-McMoRan (FCX) Q2 2024 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2436,31 +2478,39 @@
       "uses": "P1"
     },
     {
-      "n": 39,
-      "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/freeport-mcmoran-fcx-q3-2024-earnings-call-transcr/",
+      "n": 43,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/freeport-mcmoran-fcx-q3-2024-earnings-call-transcr",
       "title": "Freeport-McMoRan (FCX) Q3 2024 Earnings Call Transcript | The Motley Fool",
       "domain": "fool.com",
       "tier": "transcript",
       "uses": "P1"
     },
     {
-      "n": 40,
-      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/freeport-fcx-q1-2026-earnings-transcript/",
-      "title": "Freeport (FCX) Q1 2026 Earnings Transcript | The Motley Fool",
-      "domain": "fool.com",
+      "n": 44,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-freeportmcmoran-beats-q3-2025-earnings-forecasts-93CH-4365753",
+      "title": " Earnings call transcript: Freeport-McMoRan beats Q3 2025 earnings forecasts By Investing.com",
+      "domain": "investing.com",
       "tier": "transcript",
       "uses": "P1"
     },
     {
-      "n": 41,
-      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/freeport-fcx-q1-2026-earnings-transcript",
-      "title": "Freeport (FCX) Q1 2026 Earnings Transcript | The Motley Fool",
-      "domain": "fool.com",
+      "n": 45,
+      "url": "https://finance.yahoo.com/quote/FCX/earnings/FCX-Q2-2026-earnings_call-653699.html",
+      "title": "Freeport-McMoRan, Inc. (FCX) Q2 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 46,
+      "url": "https://stockanalysis.com/stocks/fcx/transcripts/653699-q2-2026",
+      "title": "Freeport-McMoRan (FCX) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
       "tier": "transcript",
       "uses": "P2"
     },
     {
-      "n": 42,
+      "n": 47,
       "url": "https://www.roic.ai/quote/FCX:AR/transcripts/2025-year/4-quarter",
       "title": "Freeport-McMoRan Inc. (FCX AR) Q4 FY2025 Earnings Call Transcript - January 22, 2026",
       "domain": "roic.ai",
@@ -2468,7 +2518,7 @@
       "uses": "P4"
     },
     {
-      "n": 43,
+      "n": 48,
       "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/freeport-fcx-q1-2026-earnings-transcript/?referring_guid=c2ec6018-e065-435e-a3e8-e02517383d3f%3Futm_source%3Dstocklight&source=stocklight",
       "title": "Freeport (FCX) Q1 2026 Earnings Transcript | The Motley Fool",
       "domain": "fool.com",
@@ -2476,7 +2526,7 @@
       "uses": "P5"
     },
     {
-      "n": 44,
+      "n": 49,
       "url": "https://stockanalysis.com/stocks/fcx/transcripts/215014-q3-2024",
       "title": "Freeport-McMoRan (FCX) Q3 2024 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2484,15 +2534,7 @@
       "uses": "P1"
     },
     {
-      "n": 45,
-      "url": "https://stockanalysis.com/stocks/fcx/transcripts/239694-q4-2024",
-      "title": "Freeport-McMoRan (FCX) Q4 2024 Earnings Call Transcript & Audio",
-      "domain": "stockanalysis.com",
-      "tier": "transcript",
-      "uses": "P3"
-    },
-    {
-      "n": 46,
+      "n": 50,
       "url": "https://stockanalysis.com/stocks/fcx/transcripts/338267-q2-2025",
       "title": "Freeport-McMoRan (FCX) Q2 2025 Earnings Call Transcript & Audio",
       "domain": "stockanalysis.com",
@@ -2500,7 +2542,7 @@
       "uses": "P3"
     },
     {
-      "n": 47,
+      "n": 51,
       "url": "https://ptfi.co.id/site/uploads/images/682fc9a0dd08e-media-update-smelter-beroperasi-lebih-cepat-ceo-freeport-mcmoran-pastikan-langsung-ke-gresik-eng.pdf",
       "title": "Smelter Operates Faster, Freeport-McMoRan CEO Confirms Direct Visit to Gresik",
       "domain": "ptfi.co.id",
@@ -2508,7 +2550,7 @@
       "uses": "P3"
     },
     {
-      "n": 48,
+      "n": 52,
       "url": "https://news.alphastreet.com/freeport-mcmoran-inc-fcx-q3-2026-earnings-call-transcript",
       "title": "Freeport-McMoRan Inc (FCX) Q3 2026 Earnings Call Transcript - Alphastreet",
       "domain": "news.alphastreet.com",
@@ -2524,13 +2566,6 @@
       "processor": "ultra2x",
       "createdAt": "2026-11-05T06:22:25.182618Z",
       "completedAt": "2026-11-05T06:31:05.585985Z"
-    },
-    {
-      "kind": "trail",
-      "spec": "trail@1",
-      "processor": "ultra4x",
-      "createdAt": "2026-11-05T19:08:07.330980Z",
-      "completedAt": "2026-11-05T19:16:01.168543Z"
     },
     {
       "kind": "trail",
@@ -2561,11 +2596,11 @@
       "completedAt": "2026-11-05T19:14:03.955753Z"
     },
     {
-      "kind": "check",
-      "spec": "check@2",
-      "processor": "ultra",
-      "createdAt": "2026-11-05T19:41:20.385593Z",
-      "completedAt": "2026-11-05T19:50:52.665719Z"
+      "kind": "trail",
+      "spec": "trail@2",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-06T04:55:58.662921Z",
+      "completedAt": "2026-11-06T05:02:47.955161Z"
     },
     {
       "kind": "check",
@@ -2594,6 +2629,13 @@
       "processor": "ultra",
       "createdAt": "2026-11-05T19:41:20.415204Z",
       "completedAt": "2026-11-05T19:47:26.677007Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@3",
+      "processor": "ultra",
+      "createdAt": "2026-11-06T05:02:49.230074Z",
+      "completedAt": "2026-11-06T05:07:11.803385Z"
     }
   ],
   "fills": {
@@ -2664,6 +2706,6 @@
     },
     "photo": null
   },
-  "version": 2,
-  "builtAt": "2026-11-06T00:56:27.344Z"
+  "version": 3,
+  "builtAt": "2026-11-06T05:07:13.044Z"
 }

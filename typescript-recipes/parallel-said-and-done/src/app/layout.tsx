@@ -11,7 +11,7 @@ import "../components/tearsheet.css";
 
 export const metadata: Metadata = {
   title: "Said & Done · Parallel",
-  description: "What companies promised on earnings calls, and what happened. Every statement sourced, built with the Parallel Task, Extract, Search, Image Search and Monitor APIs.",
+  description: "What public companies promised investors on earnings calls and in company releases, and what happened. Every statement quoted from its source, built with the Parallel Task, Extract, Search, Image Search and Monitor APIs.",
 };
 
 // Written by scripts/copy-fonts.mjs only when the licensed brand fonts are present.

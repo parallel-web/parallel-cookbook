@@ -71,7 +71,7 @@ export function planNext(manifest: Manifest, sheet: SheetData): Step[] {
 }
 
 /** Two builds say the same thing to a reader. */
-function sameContent(a: SheetData, b: SheetData) {
+export function sameContent(a: SheetData, b: SheetData) {
   const strip = (s: SheetData) => JSON.stringify({ ...s, version: 0, builtAt: "" });
   return strip(a) === strip(b);
 }

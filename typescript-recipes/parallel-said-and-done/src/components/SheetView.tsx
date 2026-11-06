@@ -9,6 +9,13 @@ import { outcomeWord, sourceLine, statementsOf } from "../lib/view";
 import { Stance, StatementText } from "./Marks";
 import { TearSheet } from "./TearSheet";
 
+/** Who checked the outcome, in plain words: a separate AI research run, not a person. */
+function checkedBy(checks: number, agree: number) {
+  return checks > 1
+    ? `Outcome checked by ${checks} separate AI research runs (Parallel Task API) that read the sources on their own, not by a person: ${agree} of ${checks} found the same outcome.`
+    : "Outcome checked by a separate AI research run (Parallel Task API) that read the sources on its own, not by a person: it found the same outcome.";
+}
+
 const DOC: Record<string, string> = {
   earnings_release: "earnings release",
   prepared_remarks: "prepared remarks",
@@ -74,10 +81,16 @@ export function SheetView({ sheet, today, initialFocus }: { sheet: SheetData; to
           </span>
           <h2>{promise.label}</h2>
           <span style={{ color: "var(--ink-2)" }}>{promise.commitment}</span>
+          {(promise.status === "delivered_late" || promise.status === "missed") && promise.deadline ? (
+            <span className="lbl">
+              Due {promise.deadline}
+              {promise.outcomeDate ? ` · ${promise.status === "delivered_late" ? "done" : "reported"} ${fmtDate(promise.outcomeDate)}` : ""}
+            </span>
+          ) : null}
           {promise.factCheck && promise.factCheck.verdict === "correct" ? (
             <span className="check">
-              Outcome confirmed by independent fact-check.
-              {promise.factCheck.held ? ` ${promise.factCheck.held} statement${promise.factCheck.held === 1 ? "" : "s"} held back for a date it could not confirm.` : ""}
+              {checkedBy(promise.factCheck.checks ?? 1, promise.factCheck.agree ?? 1)}
+              {promise.factCheck.held ? ` ${promise.factCheck.held} statement${promise.factCheck.held === 1 ? "" : "s"} held back for a date the check could not confirm.` : ""}
             </span>
           ) : null}
         </div>

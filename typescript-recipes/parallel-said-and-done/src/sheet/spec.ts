@@ -11,16 +11,19 @@
  *   sheet@1  five promises investors tracked most closely
  *   sheet@2  at least three of the five still live (open, revised or addressed
  *            in the last 18 months), so new calls have something to update
+ *   sheet@3  outcome delivered_late: done in full after the original deadline,
+ *            no longer folded into missed (shared by every spec below)
  */
 import type { Company } from "../lib/types";
 
-export const SHEET_SPEC_KEY = "sheet@2";
+export const SHEET_SPEC_KEY = "sheet@3";
 
 /** ultra2x gave the most verbatim-backed statements per dollar in the comparison in README.md. */
 export const SHEET_PROCESSOR = "ultra2x";
 
 export const OUTCOME_STATUSES = [
   "delivered",
+  "delivered_late",
   "exceeded",
   "partly_delivered",
   "revised",
@@ -47,10 +50,12 @@ export type OutcomeStatus = (typeof OUTCOME_STATUSES)[number];
 export type Stance = (typeof STANCES)[number];
 
 export const OUTCOME_DESCRIPTION =
-  "Status as of as_of_date. delivered: done as promised. exceeded: done and beat the stated target. " +
+  "Status as of as_of_date. delivered: done as promised, by the deadline. delivered_late: done in full, but " +
+  "after the original deadline; outcome_date is when it was done. exceeded: done and beat the stated target. " +
   "partly_delivered: some of the target met, the rest missed or abandoned. revised: management changed the " +
   "target or date and it is still pending. open: still pending with the original target. missed: the deadline " +
-  "passed and it was not met. dropped: management abandoned it, or stopped mentioning it while it was unmet.";
+  "passed and the target was not met (a target met in full only after the deadline is delivered_late, not " +
+  "missed). dropped: management abandoned it, or stopped mentioning it while it was unmet.";
 
 export const STANCE_DESCRIPTION =
   "How this statement treats the promise. stated: first time it was made. reaffirmed: repeated unchanged. " +

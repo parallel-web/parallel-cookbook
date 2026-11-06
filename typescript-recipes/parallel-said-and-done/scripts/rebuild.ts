@@ -6,6 +6,7 @@
  *   pnpm rebuild --compare MSFT   score every stored sheet run (processor comparison)
  */
 import type { StoredRun } from "../src/parallel/task";
+import { sameContent } from "../src/pipeline/advance";
 import { buildSheet } from "../src/sheet/build";
 import { readManifest, rebuild } from "../src/sheet/stored";
 import { companyFor, listCallDays, listRaw, readCoverageConfig, readRaw, readSheet, writeCallDay, writeSheet } from "../src/store";
@@ -49,7 +50,8 @@ if (compare && compare !== "true") {
     if (!(await readManifest(ticker))) continue;
     const sheet = await rebuild(ticker);
     const current = await readSheet(ticker);
-    if (current && current.version === sheet.version) await writeSheet(sheet);
+    // Unchanged sheets keep their file (and builtAt), so a rebuild only touches what a rule change moved.
+    if (current && current.version === sheet.version && !sameContent(current, sheet)) await writeSheet(sheet);
     console.log(`${ticker}: v${sheet.version} ${sheet.statements.filter((s) => s.verbatim).length}/${sheet.statements.length} verbatim · gate ${sheet.gate.passed ? "pass" : "fail"}${current ? "" : " (not published)"}`);
   }
   for (const record of (await listCallDays()).filter((r) => tickers.includes(r.ticker))) {

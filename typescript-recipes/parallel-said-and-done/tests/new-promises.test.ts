@@ -99,3 +99,25 @@ test("a monitor's scheduled date replaces a missing next call", () => {
   });
   assert.deepEqual(withSchedule.nextCall, { date: "2027-01-28", time: null, quarter: "Q4 2026", source: "monitor" });
 });
+
+test("an announcement between calls is not a call: the latest call and next call stay put", () => {
+  const announcement = {
+    ...update,
+    input: { call_date: "2026-11-05", fiscal_quarter: "Example Corp Announces Quarterly Dividend", source_type: "company_statement" },
+    result: {
+      ...(update.result as object),
+      output: {
+        ...((update.result as unknown as { output: object }).output),
+        content: {
+          ...((update.result as unknown as { output: { content: object } }).output.content),
+          call_date: "2026-11-05",
+          fiscal_quarter: "Example Corp Announces Quarterly Dividend",
+          next_call_date: null,
+        },
+      },
+    },
+  } as unknown as StoredRun;
+  const withAnnouncement = buildSheet({ company, windowStart: "2021-01-01", sheetRun, updates: [update, announcement], fills: [], images: null, version: 3, builtAt: "2026-11-06T00:00:00Z" });
+  assert.deepEqual(withAnnouncement.latestCall, sheet.latestCall);
+  assert.deepEqual(withAnnouncement.nextCall, sheet.nextCall);
+});

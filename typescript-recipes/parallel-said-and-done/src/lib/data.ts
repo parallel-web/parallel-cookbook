@@ -1,12 +1,11 @@
 /**
  * Server-only reads of the published data. On the deployment that is the Blob
- * store the webhooks write to, cached for a minute, so a new version appears
- * within a minute of being published. Without Blob, or for a company not in
- * it yet, the pages read the data/ folder shipped with the app.
+ * store the webhooks write to, kept in memory for a minute per server
+ * instance, so a new version appears within a minute of being published.
+ * Without Blob, or for a company not in it yet, the pages read the data/
+ * folder shipped with the app.
  */
 import "server-only";
-
-import { unstable_cache } from "next/cache";
 
 import { readCoverageConfig, readProfiles, readPublishedSheet, type CompanyProfile } from "../store";
 import { fileStorage, storage } from "../storage";
@@ -25,21 +24,27 @@ async function bundled<T>(path: string): Promise<T | null> {
   return text === null ? null : (JSON.parse(text) as T);
 }
 
-const sheetFor = (ticker: string) =>
-  unstable_cache(
-    async () => (await readPublishedSheet(ticker)) ?? (storage().name === "blob" ? bundled<SheetData>(`data/sheets/${ticker}.json`) : null),
-    ["sheet", ticker],
-    { revalidate: REVALIDATE_SECONDS, tags: ["sheets"] },
-  )();
+// A plain in-memory cache: Next's data cache would also keep the Blob SDK's own fetch, and serve it stale.
+const memo = new Map<string, { at: number; value: Promise<unknown> }>();
+function cached<T>(key: string, load: () => Promise<T>): Promise<T> {
+  const hit = memo.get(key);
+  if (hit && Date.now() - hit.at < REVALIDATE_SECONDS * 1000) return hit.value as Promise<T>;
+  const value = load().catch((error) => {
+    memo.delete(key);
+    throw error;
+  });
+  memo.set(key, { at: Date.now(), value });
+  return value;
+}
 
-const profiles = unstable_cache(
-  async () => {
+const sheetFor = (ticker: string) =>
+  cached(`sheet:${ticker}`, async () => (await readPublishedSheet(ticker)) ?? (storage().name === "blob" ? bundled<SheetData>(`data/sheets/${ticker}.json`) : null));
+
+const profiles = () =>
+  cached("profiles", async () => {
     const stored = await readProfiles();
     return Object.keys(stored).length ? stored : ((await bundled<Record<string, CompanyProfile>>("data/profiles.json")) ?? {});
-  },
-  ["profiles"],
-  { revalidate: REVALIDATE_SECONDS, tags: ["sheets"] },
-);
+  });
 
 export async function loadCoverage(): Promise<Coverage> {
   const { companies } = readCoverageConfig();

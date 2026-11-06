@@ -56,11 +56,11 @@ export function TearSheet({
     { k: "Search+Extract", v: `${filled} ${filled === 1 ? "excerpt" : "excerpts"} added` },
     { k: "Excerpts", v: `${verbatim} of ${sheet.statements.length} statements` },
   ];
-  // Stages 2 and 3, when run: a history and an independent fact-check per promise.
+  // Stages 2 and 3, when run: a history and a separate AI fact-check run per promise.
   const histories = sheet.runs.filter((r) => r.kind === "trail").length;
   const checked = sheet.promises.filter((p) => p.factCheck);
   if (histories) made[1] = { k: "Run", v: `${sheetRun?.createdAt.slice(0, 10)} + ${histories} promise histories` };
-  if (checked.length) made.push({ k: "Fact-check", v: `${checked.filter((p) => p.factCheck!.verdict === "correct").length} of ${checked.length} outcomes confirmed` });
+  if (checked.length) made.push({ k: "AI fact-check", v: `${checked.filter((p) => p.factCheck!.verdict === "correct").length} of ${checked.length} outcomes confirmed` });
 
   return (
     <article className="ts" aria-label={`${sheet.name} promise tear sheet`}>

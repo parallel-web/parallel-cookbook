@@ -114,7 +114,7 @@ export interface BuildInput {
 
 const ISO_DATE = /^\d{4}-\d{2}-\d{2}$/;
 /** Outcomes that close a promise; a later "not mentioned" adds nothing to them. */
-const SETTLED = new Set<OutcomeStatus>(["delivered", "exceeded", "missed", "dropped"]);
+const SETTLED = new Set<OutcomeStatus>(["delivered", "delivered_late", "exceeded", "missed", "dropped"]);
 
 function outputOf<T>(stored: StoredRun): { content: T; basis: FieldBasis[] } {
   const output = (stored.result as TaskRunResult | null)?.output;
@@ -327,7 +327,7 @@ export function buildSheet(input: BuildInput): SheetData {
         firstStated: out.content.call_date,
         status: "open",
         k: "open",
-        outcomeSummary: `First stated on the ${out.content.fiscal_quarter} call; no outcome yet.`,
+        outcomeSummary: announcement ? `First stated in “${out.content.fiscal_quarter}”; no outcome yet.` : `First stated on the ${out.content.fiscal_quarter} call; no outcome yet.`,
         citations: dedupeCitations(rawCitations(b).map((c) => toCitation(c, ownDomains))),
         confidence: b?.confidence ?? null,
         addedOn: out.content.call_date,
@@ -337,7 +337,7 @@ export function buildSheet(input: BuildInput): SheetData {
       const first: StatementOut = {
         promise_id: id,
         date: out.content.call_date,
-        call: `${out.content.fiscal_quarter} earnings call`,
+        call: announcement ? out.content.fiscal_quarter : `${out.content.fiscal_quarter} earnings call`,
         speaker: np.speaker,
         stance: "stated",
         quote: np.quote,
@@ -347,8 +347,11 @@ export function buildSheet(input: BuildInput): SheetData {
       const st = toStatement(company, first, `new_promises.${i}`, out.basis, `${label} ${np.commitment}`, ownDomains, fills, update.run.run_id);
       byId.set(st.id, st);
     });
-    if (out.content.call_date >= latestCall.date) latestCall = { date: out.content.call_date, quarter: out.content.fiscal_quarter };
-    nextCall = { date: out.content.next_call_date, time: out.content.next_call_time, quarter: out.content.next_call_quarter };
+    // An announcement between calls is not a call: the latest and next call stay as the last call left them.
+    if (!announcement) {
+      if (out.content.call_date >= latestCall.date) latestCall = { date: out.content.call_date, quarter: out.content.fiscal_quarter };
+      nextCall = { date: out.content.next_call_date, time: out.content.next_call_time, quarter: out.content.next_call_quarter };
+    }
     asOf = horizon;
   }
 

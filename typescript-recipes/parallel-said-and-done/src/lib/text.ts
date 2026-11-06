@@ -41,7 +41,8 @@ export function sentences(text: string): string[] {
   const out: string[] = [];
   let start = 0;
   // A footnote marker after the stop ("travel. ⁹ Now…") still ends the sentence.
-  const re = /[.!?]["'”’)]?[⁰¹²³⁴-⁹]*\s+(?=[⁰¹²³⁴-⁹]*\s*["'“‘(]?[A-Z0-9$])/g;
+  // Chinese and Japanese end sentences with 。！？ and no space after them.
+  const re = /[.!?]["'”’)]?[⁰¹²³⁴-⁹]*\s+(?=[⁰¹²³⁴-⁹]*\s*["'“‘(]?[A-Z0-9$])|[。！？][”’」』）]?\s*/g;
   let m: RegExpExecArray | null;
   while ((m = re.exec(flat))) {
     const end = m.index + m[0].trimEnd().length;
@@ -178,3 +179,10 @@ export function domainOf(url: string): string {
   }
 }
 
+const CJK = /[\u3040-\u30ff\u3400-\u9fff\uf900-\ufaff]/g;
+
+/** Length of a passage in words. A Chinese or Japanese character counts as half a word, so 60 words is about 120 characters. */
+export function quoteLength(text: string): number {
+  const cjk = text.match(CJK)?.length ?? 0;
+  return text.replace(CJK, " ").split(/\s+/).filter(Boolean).length + Math.ceil(cjk / 2);
+}
