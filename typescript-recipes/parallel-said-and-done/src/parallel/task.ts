@@ -1,8 +1,8 @@
 /**
- * Task API: create runs, wait for results, run a Task Group. No app logic here;
- * the request bodies are built in src/sheet/spec.ts and src/updates/spec.ts.
+ * Task API: create runs and wait for results. No app logic here; the request
+ * bodies are built in src/sheet/*.ts and src/updates/spec.ts, and runs are
+ * started and tracked by src/pipeline/runs.ts.
  */
-import type { TaskGroupGetRunsResponse } from "parallel-web/resources/task-group";
 import type { FieldBasis, TaskRun, TaskRunCreateParams, TaskRunResult } from "parallel-web/resources/task-run";
 
 import type { Parallel } from "./client";
@@ -49,39 +49,4 @@ export async function awaitResult(
     onWait?.(Math.round(elapsed));
     if (elapsed > maxMinutes * 60) throw new Error(`Run ${runId} did not finish within ${maxMinutes} minutes`);
   }
-}
-
-type GroupRequest = TaskRunCreateParams & { input: Record<string, unknown>; metadata: Record<string, string> };
-
-/** Creates a Task Group and adds one run per request, all with the same task spec. */
-export async function startGroup(client: Parallel, requests: GroupRequest[], metadata: Record<string, string>) {
-  const group = await client.taskGroup.create({ metadata });
-  const added = await client.taskGroup.addRuns(group.taskgroup_id, {
-    default_task_spec: requests[0].task_spec,
-    inputs: requests.map((r) => ({ processor: r.processor, input: r.input, metadata: r.metadata, enable_events: false })),
-  });
-  return { groupId: group.taskgroup_id, runIds: added.run_ids };
-}
-
-/** Waits for a group to finish. Resumable: a dropped connection is logged and retried. */
-export async function awaitGroup(client: Parallel, groupId: string, log: (line: string) => void, maxMinutes = 150) {
-  const started = Date.now();
-  for (;;) {
-    const group = await client.taskGroup.retrieve(groupId).catch((error: Error) => {
-      log(`group ${groupId}: ${error.message}; retrying`);
-      return null;
-    });
-    if (group && !group.status.is_active) return group;
-    if (group) log(`group ${groupId}: ${JSON.stringify(group.status.task_run_status_counts)}`);
-    if (Date.now() - started > maxMinutes * 60_000) throw new Error(`group ${groupId} is still running; resume with --group ${groupId}`);
-    await new Promise((resolve) => setTimeout(resolve, 60_000));
-  }
-}
-
-/** Every run in a finished group, with its input and output. */
-export async function groupResults(client: Parallel, groupId: string) {
-  const stream = await client.taskGroup.getRuns(groupId, { include_input: true, include_output: true });
-  const runs: Extract<TaskGroupGetRunsResponse, { type: "task_run.state" }>[] = [];
-  for await (const event of stream) if (event.type === "task_run.state") runs.push(event);
-  return runs;
 }

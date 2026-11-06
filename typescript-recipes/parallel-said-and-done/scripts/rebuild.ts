@@ -10,15 +10,17 @@ import { buildSheet } from "../src/sheet/build";
 import { readManifest, rebuild } from "../src/sheet/stored";
 import { companyFor, listCallDays, listRaw, readCoverageConfig, readRaw, readSheet, writeCallDay, writeSheet } from "../src/store";
 import { rebuildCallDay } from "../src/updates/update";
-import { flag, positional } from "./lib/env";
+import { flag, loadEnv, positional } from "./lib/env";
+
+loadEnv();
 
 const compare = flag("compare");
 if (compare && compare !== "true") {
   const ticker = compare.toUpperCase();
   const company = companyFor(ticker);
   const { windowStart } = readCoverageConfig();
-  for (const id of listRaw(ticker, "sheet-run")) {
-    const stored = readRaw<StoredRun>(ticker, "sheet-run", id);
+  for (const id of await listRaw(ticker, "sheet-run")) {
+    const stored = await readRaw<StoredRun>(ticker, "sheet-run", id);
     if (!stored?.result || stored.result.run.status !== "completed") {
       console.log(`${id}: ${stored?.result?.run.status ?? "no result"}`);
       continue;
@@ -44,15 +46,15 @@ if (compare && compare !== "true") {
   const picked = positional().map((t) => t.toUpperCase());
   const tickers = picked.length ? picked : readCoverageConfig().companies.map((c) => c.ticker);
   for (const ticker of tickers) {
-    if (!readManifest(ticker)) continue;
-    const sheet = rebuild(ticker);
-    const current = readSheet(ticker);
-    if (current && current.version === sheet.version) writeSheet({ ...sheet, builtAt: sheet.builtAt });
+    if (!(await readManifest(ticker))) continue;
+    const sheet = await rebuild(ticker);
+    const current = await readSheet(ticker);
+    if (current && current.version === sheet.version) await writeSheet(sheet);
     console.log(`${ticker}: v${sheet.version} ${sheet.statements.filter((s) => s.verbatim).length}/${sheet.statements.length} verbatim · gate ${sheet.gate.passed ? "pass" : "fail"}${current ? "" : " (not published)"}`);
   }
-  for (const record of listCallDays().filter((r) => tickers.includes(r.ticker))) {
-    const next = rebuildCallDay(record);
-    writeCallDay(next);
+  for (const record of (await listCallDays()).filter((r) => tickers.includes(r.ticker))) {
+    const next = await rebuildCallDay(record);
+    await writeCallDay(next);
     console.log(`${record.ticker} ${record.callDate}: ${next.passages.filter((p) => p.promiseId).length} of ${next.passages.length} passages matched`);
   }
 }

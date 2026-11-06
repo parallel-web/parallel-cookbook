@@ -5,8 +5,9 @@
  */
 import type { Company } from "../lib/types";
 import type { Parallel } from "../parallel/client";
-import { awaitGroup, groupResults, startGroup } from "../parallel/task";
-import { readProfiles, writeProfiles, writeRaw } from "../store";
+import type { StoredRun } from "../parallel/task";
+import { startRun } from "../pipeline/runs";
+import { readProfiles, withLock, writeProfiles } from "../store";
 
 /**
  * profile@1  lite; once returned a sector that does not contain its industry
@@ -73,23 +74,22 @@ export function profileRequest(company: Company) {
   };
 }
 
-/** Profiles every company that has none yet, as one Task Group. */
-export async function profileCompanies(client: Parallel, companies: Company[], log: (line: string) => void) {
-  const have = readProfiles();
+/** Starts a profile run for a company with none on the current spec. Call with the company's lock held. */
+export async function startProfile(client: Parallel, company: Company) {
+  const have = await readProfiles();
   // A profile from an older spec is redone.
-  const todo = companies.filter((c) => have[c.ticker]?.spec !== PROFILE_SPEC_KEY);
-  if (!todo.length) return;
-  const { groupId, runIds } = await startGroup(client, todo.map(profileRequest), { app: "said-and-done", spec: PROFILE_SPEC_KEY });
-  log(`profiles: group ${groupId}, ${runIds.length} of ${todo.length} runs accepted`);
-  await awaitGroup(client, groupId, log);
-  const profiles = readProfiles();
-  for (const event of await groupResults(client, groupId)) {
-    const ticker = String((event.run.metadata as Record<string, unknown> | null)?.ticker ?? "");
-    const content = (event.output as { content?: { gics_sector?: string; gics_industry?: string } } | undefined)?.content;
-    if (!ticker || !content?.gics_sector) continue;
-    writeRaw(ticker, "profile", event.run.run_id, event);
-    profiles[ticker] = { sector: content.gics_sector, industry: content.gics_industry ?? "", spec: PROFILE_SPEC_KEY };
-  }
-  writeProfiles(profiles);
-  log(`profiles: ${Object.keys(profiles).length} companies profiled`);
+  if (have[company.ticker]?.spec === PROFILE_SPEC_KEY) return null;
+  return startRun(client, company.ticker, "profile-run", profileRequest(company), PROFILE_SPEC_KEY);
+}
+
+/** Records a finished profile run in data/profiles.json, which every company shares. */
+export async function recordProfile(ticker: string, stored: StoredRun) {
+  const content = (stored.result?.output as { content?: { gics_sector?: string; gics_industry?: string } } | undefined)?.content;
+  if (!content?.gics_sector) return false;
+  await withLock("profiles", async () => {
+    const profiles = await readProfiles();
+    profiles[ticker] = { sector: content.gics_sector!, industry: content.gics_industry ?? "", spec: PROFILE_SPEC_KEY };
+    await writeProfiles(profiles);
+  });
+  return true;
 }

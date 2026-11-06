@@ -18,8 +18,8 @@ const FAN = [
 ];
 
 /** A directory of companies: what each promised on earnings calls and how it turned out. */
-export default function Companies() {
-  const { sheets, profiles, asOf } = loadCoverage();
+export default async function Companies() {
+  const { sheets, profiles, asOf } = await loadCoverage();
   const today = todayIso();
   const promises = sheets.reduce((n, s) => n + s.promises.length, 0);
   const since = sheets.map((s) => s.windowStart).sort()[0]?.slice(0, 4) ?? "2021";

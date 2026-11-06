@@ -30,23 +30,26 @@ export interface Manifest {
   /** A resolution run per disputed promise, and the checks that disputed it (kept for provenance). */
   resolves?: Record<string, string>;
   disputed?: Record<string, string | string[]>;
+  /** Failed stage 2 and 3 runs by "kind:promise"; a step that failed twice is not retried automatically. */
+  failures?: Record<string, number>;
 }
 
-export function readManifest(ticker: string): Manifest | null {
+export async function readManifest(ticker: string): Promise<Manifest | null> {
   return readRaw<Manifest>(ticker, "manifest", "latest");
 }
 
-export function writeManifest(ticker: string, manifest: Manifest) {
-  writeRaw(ticker, "manifest", "latest", manifest);
+export async function writeManifest(ticker: string, manifest: Manifest) {
+  await writeRaw(ticker, "manifest", "latest", manifest);
 }
 
-export function readFills(ticker: string, runIds: string[]): FillRecord[] {
-  return runIds.flatMap((id) => readRaw<FillRecord[]>(ticker, "fills", id) ?? []);
+export async function readFills(ticker: string, runIds: string[]): Promise<FillRecord[]> {
+  return (await Promise.all(runIds.map((id) => readRaw<FillRecord[]>(ticker, "fills", id)))).flatMap((f) => f ?? []);
 }
 
-export function appendFills(ticker: string, runId: string, records: FillRecord[]) {
-  const existing = readRaw<FillRecord[]>(ticker, "fills", runId) ?? [];
-  writeRaw(ticker, "fills", runId, [...existing, ...records]);
+export async function appendFills(ticker: string, runId: string, records: FillRecord[]) {
+  if (!records.length) return;
+  const existing = (await readRaw<FillRecord[]>(ticker, "fills", runId)) ?? [];
+  await writeRaw(ticker, "fills", runId, [...existing, ...records]);
 }
 
 export function sessionId(ticker: string, runId: string) {
@@ -54,39 +57,38 @@ export function sessionId(ticker: string, runId: string) {
 }
 
 /** Rebuilds a sheet from stored responses only. */
-export function rebuild(ticker: string, builtAt = new Date().toISOString()): SheetData {
-  const manifest = readManifest(ticker);
-  if (!manifest) throw new Error(`No stored runs for ${ticker}; run npm run sheet -- ${ticker}`);
+export async function rebuild(ticker: string, builtAt = new Date().toISOString()): Promise<SheetData> {
+  const manifest = await readManifest(ticker);
+  if (!manifest) throw new Error(`No stored runs for ${ticker}; run pnpm sheet ${ticker}`);
   const company = companyFor(ticker);
   const { windowStart } = readCoverageConfig();
-  const sheetRun = readRaw<StoredRun>(ticker, "sheet-run", manifest.sheetRunId);
+  const done = (r: StoredRun | null): r is StoredRun => !!r?.result && r.result.run.status === "completed";
+  const stage = async (kind: "trail-run" | "check-run" | "resolve-run", ids: Record<string, string | string[]> | undefined) =>
+    (await Promise.all(Object.values(ids ?? {}).flat().map((id) => readRaw<StoredRun>(ticker, kind, id)))).filter(done);
+  const [sheetRun, updateRuns, trails, checks, resolves, imagesRecord] = await Promise.all([
+    readRaw<StoredRun>(ticker, "sheet-run", manifest.sheetRunId),
+    Promise.all(manifest.updates.filter((u) => u.status !== "held").map((u) => readRaw<StoredRun>(ticker, "update-run", u.runId))),
+    stage("trail-run", manifest.trails),
+    stage("check-run", manifest.checks),
+    stage("resolve-run", manifest.resolves),
+    manifest.images ? readRaw<ImagesRecord>(ticker, "images", "latest") : Promise.resolve(null),
+  ]);
   if (!sheetRun?.result) throw new Error(`Sheet run ${manifest.sheetRunId} has no stored result`);
-  const updates = manifest.updates
-    .filter((u) => u.status !== "held")
-    .map((u) => readRaw<StoredRun>(ticker, "update-run", u.runId))
-    .filter((u): u is StoredRun => !!u?.result && u.result.run.status === "completed");
-  const stage = (kind: "trail-run" | "check-run" | "resolve-run", ids: Record<string, string | string[]> | undefined) =>
-    Object.values(ids ?? {})
-      .flat()
-      .map((id) => readRaw<StoredRun>(ticker, kind, id))
-      .filter((r): r is StoredRun => !!r?.result && r.result.run.status === "completed");
-  const trails = stage("trail-run", manifest.trails);
-  const checks = stage("check-run", manifest.checks);
-  const resolves = stage("resolve-run", manifest.resolves);
-  const fills = readFills(ticker, [manifest.sheetRunId, ...updates.map((u) => u.run.run_id)]);
+  const updates = updateRuns.filter(done);
+  const fills = await readFills(ticker, [manifest.sheetRunId, ...updates.map((u) => u.run.run_id)]);
   const irUrl = ((sheetRun.result.output as { content?: { investor_relations_url?: string } }).content ?? {}).investor_relations_url ?? null;
-  const images = manifest.images ? picksFrom(readRaw<ImagesRecord>(ticker, "images", "latest"), company, irUrl) : null;
+  const images = manifest.images ? picksFrom(imagesRecord, company, irUrl) : null;
   const sheet = buildSheet({ company, windowStart, sheetRun, updates, trails, resolves, checks, fills, images, schedule: manifest.schedule ?? null, version: (manifest.baseVersion ?? 0) + 1 + updates.length, builtAt });
   if (manifest.taskGroupId) sheet.runs[0].taskGroupId = manifest.taskGroupId;
   return sheet;
 }
 
-/* Publishing: the home page reads data/index.json and data/sheets/. */
+/* Publishing: the pages read data/sheets/; output/index.json logs every published version. */
 
-export function publish(sheet: SheetData, entry: Omit<PublishedEntry, "ticker" | "version" | "publishedAt">): PublishedEntry {
-  writeSheet(sheet);
+export async function publish(sheet: SheetData, entry: Omit<PublishedEntry, "ticker" | "version" | "publishedAt">): Promise<PublishedEntry> {
+  await writeSheet(sheet);
   const { windowStart, companies } = readCoverageConfig();
-  const index: CoverageIndex = readIndex() ?? {
+  const index: CoverageIndex = (await readIndex()) ?? {
     schema: "said-done.index/1",
     windowStart,
     updatedAt: "",
@@ -98,21 +100,6 @@ export function publish(sheet: SheetData, entry: Omit<PublishedEntry, "ticker" |
   index.published = [...index.published.filter((p) => !(p.ticker === sheet.ticker && p.version === sheet.version)), published];
   index.updatedAt = published.publishedAt;
   index.order = companies.map((c) => c.ticker);
-  writeIndex(index);
+  await writeIndex(index);
   return published;
 }
-
-export function recordCoverageBuild(taskGroupId: string | null, processor: string, createdAt: string) {
-  const { windowStart, companies } = readCoverageConfig();
-  const index: CoverageIndex = readIndex() ?? {
-    schema: "said-done.index/1",
-    windowStart,
-    updatedAt: createdAt,
-    order: companies.map((c) => c.ticker),
-    published: [],
-    build: { taskGroupId, processor, spec: SHEET_SPEC_KEY, createdAt },
-  };
-  index.build = { taskGroupId, processor, spec: SHEET_SPEC_KEY, createdAt };
-  writeIndex(index);
-}
-

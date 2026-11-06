@@ -1,7 +1,7 @@
 # Said & Done
 
 What 100 public companies promised on their earnings calls, and what happened.
-Live demo: [parallel-said-and-done.vercel.app](https://parallel-said-and-done.vercel.app)
+Live demo: [earnings-calls.paralleldemos.com](https://earnings-calls.paralleldemos.com)
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparallel-web%2Fparallel-cookbook%2Ftree%2Fmain%2Ftypescript-recipes%2Fparallel-said-and-done&project-name=parallel-said-and-done&repository-name=parallel-said-and-done)
 
@@ -27,16 +27,25 @@ string and count rules. No other model is called.
 ```text
 config/companies.json   the only hand-entered data: which companies, names, websites
 data/                   what the pages read: published sheets and company profiles
-output/                 raw responses, the pipeline's full sheets, earlier versions, call-day records, monitor IDs (gitignored)
-src/parallel/           the parallel-web SDK client, Task runs and groups, Image Search
+output/                 raw responses, the pipeline's full sheets, runs in flight, call-day records, monitor records (gitignored)
+src/parallel/           the parallel-web SDK client, Task runs, Image Search
 src/sheet/              making a sheet: stages 1 to 3 and the gate
 src/updates/            keeping it current: monitors, call day, update runs
+src/pipeline/           what happens when a run finishes: the next step, the hourly reconcile, local runs
+src/app/api/            the webhook route and the hourly cron route
 src/app, components/    the pages: a company directory and one page per company
 scripts/                CLI entry points
 ```
 
-The pages are a Next.js app that reads `data/` from disk on each request. The
-pipeline is a set of CLI scripts that write it.
+```text
+Monitor (every 6 h) ──monitor.event.detected──▶ /api/webhooks/parallel ──▶ Search + Extract the call ──▶ update Task run
+Task run ──────────────task_run.status─────────▶ /api/webhooks/parallel ──▶ store result ──▶ next step ──▶ more Task runs, or publish
+Vercel Cron (hourly) ──────────────────────────▶ /api/cron/reconcile ─────▶ anything a webhook missed, new companies
+```
+
+State lives in [`src/storage.ts`](src/storage.ts): the app folder locally, a
+private Vercel Blob store on the deployment. The pages read published sheets
+from the same place.
 
 ## Quick Start
 
@@ -56,10 +65,29 @@ pnpm sheet MSFT     # stage 1 for one company
 pnpm deepen MSFT    # stages 2 and 3
 ```
 
+Locally there is no public URL for webhooks, so each script waits on the runs
+it starts and handles their results the way the webhook route would.
+
 `pnpm test`, `pnpm lint`, `pnpm typecheck` and `pnpm build` run offline.
 
-A deployment serves the `data/` it was built with and needs no API key. To
-update a deployed copy, run the pipeline, commit `data/` and redeploy.
+### Deploy
+
+The Deploy button gives a read-only copy: it serves the recorded `data/`,
+needs no key, and its webhook and cron routes do nothing. To keep a deployment
+current:
+
+1. Add `PARALLEL_API_KEY`, and connect a private Blob store to the project
+   (Storage → Blob), which sets `BLOB_READ_WRITE_TOKEN`.
+2. Set `WEBHOOK_URL` to `https://<your-domain>/api/webhooks/parallel`.
+3. Seed the store from this folder, with the store's token from `vercel env pull`:
+
+   ```bash
+   pnpm state push          # data/ and output/ → Blob
+   ```
+
+[`vercel.json`](vercel.json) runs the reconcile every hour. Its first run
+points every monitor at `WEBHOOK_URL`; from then on, Task runs and monitors
+report to the webhook.
 
 ## How it works
 
@@ -96,7 +124,7 @@ are backed by an exact quote.
 ### Keeping it current
 
 One `event_stream` monitor per company (`lite`, every 6 hours) reports
-structured events. Routing in [`updates/monitor-events.ts`](src/updates/monitor-events.ts)
+structured events to the webhook. Routing in [`updates/monitor-events.ts`](src/updates/monitor-events.ts)
 is deterministic:
 
 | Event | Acted on when | What runs |
@@ -105,19 +133,30 @@ is deterministic:
 | `earnings_call_scheduled` | the date is after the latest call | Sets the next-call date. If that date passes with no "held" event, the call is processed anyway. |
 | `promise_update` | about a tracked promise, from the company's own site, SEC or a newswire, and newer than what the sheet has read | Extract reads the announcement, then the same update run and gate. |
 
-After a poll publishes new versions, it re-runs stages 2 and 3 where needed:
-new promises get a history and a check, and changed outcomes get a fresh check.
+Every Task run carries the webhook. When one finishes,
+[`pipeline/advance.ts`](src/pipeline/advance.ts) stores the result, then works
+out the next step for that company from its stored state alone: a history for
+each new promise, Extract fills, a check for each outcome without a current one,
+a vote or a resolution for a dispute, and finally a new version if anything
+changed. A duplicate webhook, a retry, or a missed one picked up later by the
+hourly reconcile all land in the same place.
+
+**Webhook security.** The route never trusts the body. It takes only the run or
+monitor ID, fetches the run or the monitor's events with the app's own key, and
+acts only on runs it started and monitors it owns. A forged request can at most
+make it re-read its own state. Webhooks for one company are handled one at a
+time behind a lock.
 
 ```bash
 pnpm monitors create      # one monitor per company
-pnpm monitors poll        # the live loop; run it from any scheduler (cron, a CI job…)
+pnpm monitors poll        # locally: the reconcile, then wait on any runs it starts
 pnpm monitors list
-pnpm monitors cancel --yes
+pnpm monitors cancel --yes   # stays cancelled; the reconcile does not recreate it
 ```
 
 **Adding a company** is one line in [`config/companies.json`](config/companies.json)
-(ticker, name, website). The next poll makes its sheet, runs stages 2 and 3,
-looks up its sector and gives it a monitor.
+(ticker, name, website). After the next deploy, the hourly reconcile makes its
+sheet, runs stages 2 and 3, looks up its sector and gives it a monitor.
 
 ### Cost
 

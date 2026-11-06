@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
 export default async function CompanyPage({ params, searchParams }: { params: Promise<{ ticker: string }>; searchParams: Promise<{ focus?: string }> }) {
   const { ticker } = await params;
   const { focus } = await searchParams;
-  const sheet = loadSheet(ticker);
+  const sheet = await loadSheet(ticker);
   if (!sheet) notFound();
   return (
     <div>

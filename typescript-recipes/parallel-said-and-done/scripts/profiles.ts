@@ -5,13 +5,18 @@
  *   pnpm profiles
  */
 import { parallelClient, publicError } from "../src/parallel/client";
-import { profileCompanies } from "../src/sheet/profile";
-import { readCoverageConfig } from "../src/store";
+import { drive } from "../src/pipeline/drive";
+import { startProfile } from "../src/sheet/profile";
+import { readCoverageConfig, withLock } from "../src/store";
 import { loadEnv } from "./lib/env";
 
 loadEnv();
+const log = (line: string) => console.log(line);
 try {
-  await profileCompanies(parallelClient(), readCoverageConfig().companies, (line) => console.log(line));
+  const client = parallelClient();
+  const { companies } = readCoverageConfig();
+  for (const c of companies) await withLock(c.ticker, () => startProfile(client, c));
+  await drive(client, companies.map((c) => c.ticker), log);
 } catch (error) {
   console.error(publicError(error));
   process.exit(1);

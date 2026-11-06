@@ -1,9 +1,9 @@
 /**
- * The Parallel SDK client. Entrypoints (scripts, webhook routes) call
+ * The Parallel SDK client. Entrypoints (scripts, the webhook and cron routes) call
  * `parallelClient()` once and pass the client down; nothing else reads the key.
  *
  * Every API this app uses goes through it:
- *   client.taskRun / client.taskGroup   Task API          (src/parallel/task.ts)
+ *   client.taskRun                      Task API          (src/parallel/task.ts, src/pipeline/runs.ts)
  *   client.extract                      Extract API       (src/sheet/fill.ts, src/updates/callday.ts)
  *   client.search                       Search API        (same)
  *   POST /v1/images/search              Image Search API  (below; no SDK resource yet)

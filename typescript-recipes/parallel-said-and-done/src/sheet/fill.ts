@@ -116,21 +116,22 @@ export async function fillGaps(
   company: Company,
   sheet: SheetData,
   existing: FillRecord[],
-  options: { runId?: string; budget?: FillBudget; sessionId: string; log?: (line: string) => void },
+  options: { runId?: string; budget?: FillBudget; sessionId: string; log?: (line: string) => void; concurrency?: number },
 ): Promise<FillRecord[]> {
   const budget = options.budget ?? DEFAULT_FILL_BUDGET;
   const ownDomains = companyDomains(company.website, sheet.irUrl);
   const log = options.log ?? (() => {});
-  const records: FillRecord[] = [];
+  const done = new Set(existing.map((f) => `${f.runId}:${f.statementId}`));
+  // Calls are reserved before they are made, so statements filled in parallel share one budget.
   let extracts = 0;
   let searches = 0;
-  const done = new Set(existing.map((f) => `${f.runId}:${f.statementId}`));
+  const takeExtract = () => (extracts < budget.maxExtracts ? ((extracts += 1), true) : false);
+  const takeSearch = () => (searches < budget.maxSearches ? ((searches += 1), true) : false);
 
   const extract = async (s: Statement, label: string, urls: string[], urlFrom: ExtractStep["urlFrom"]): Promise<ExtractStep | null> => {
     const request = { ...fillExtractRequest(sheet, s, label, urls), session_id: options.sessionId };
     try {
       const response = (await client.extract(request as never)) as unknown as ExtractStep["response"];
-      extracts += 1;
       return { kind: "extract", request, response, urlFrom };
     } catch (error) {
       log(`  extract failed for ${s.id}: ${(error as Error).message}`);
@@ -138,39 +139,50 @@ export async function fillGaps(
     }
   };
 
-  for (const s of gapsOf(sheet, options.runId)) {
-    // Fill records are keyed to the run that made the statement, so a statement without one is skipped.
-    if (!s.runId || done.has(`${s.runId}:${s.id}`)) continue;
-    if (extracts >= budget.maxExtracts && searches >= budget.maxSearches) break;
+  const fillOne = async (s: Statement): Promise<FillRecord | null> => {
     const promise = sheet.promises.find((p) => p.id === s.promiseId);
-    if (!promise) continue;
+    if (!promise || !s.runId) return null;
     const target: MatchTarget = { quote: s.quote, summary: s.summary, topic: `${promise.label} ${promise.commitment}` };
     const record: FillRecord = { statementId: s.id, runId: s.runId, createdAt: new Date().toISOString(), steps: [] };
     const hit = () => verbatimFromFill(record, target, ownDomains) !== null;
 
     const cited = s.citations.map((c) => c.url).filter((u) => !/\.(mp3|mp4|m4a)(\?|$)/i.test(u));
-    if (cited.length && extracts < budget.maxExtracts) {
+    if (cited.length && takeExtract()) {
       const step = await extract(s, promise.label, cited, "task-citation");
       if (step) record.steps.push(step);
       log(`  extract ${step?.response.extract_id ?? "-"} ${s.id} (${cited.slice(0, 3).map(domainOf).join(", ")}): ${hit() ? "found" : "no match"}`);
     }
-    if (!hit() && searches < budget.maxSearches) {
+    if (!hit() && takeSearch()) {
       const request = { ...fillSearchRequest(company, s, promise.label), session_id: options.sessionId };
       const response = (await client.search(request as never)) as unknown as SearchStep["response"];
-      searches += 1;
       const picked = pickSearchResult(response.results ?? [], ownDomains);
       record.steps.push({ kind: "search", request, response, pickedRank: picked >= 0 ? picked + 1 : null });
       log(`  search ${response.search_id} ${s.id}: ${response.results?.length ?? 0} results, pick ${picked + 1}: ${hit() ? "found in excerpt" : "no match"}`);
       const pickedUrl = picked >= 0 ? response.results[picked].url : null;
-      if (!hit() && pickedUrl && !cited.slice(0, 3).includes(pickedUrl) && extracts < budget.maxExtracts) {
+      if (!hit() && pickedUrl && !cited.slice(0, 3).includes(pickedUrl) && takeExtract()) {
         const step = await extract(s, promise.label, [pickedUrl], "search");
         if (step) record.steps.push(step);
         log(`  extract ${step?.response.extract_id ?? "-"} ${s.id} (${domainOf(pickedUrl)}): ${hit() ? "found" : "no match"}`);
       }
     }
-    if (record.steps.length) records.push(record);
-  }
-  return records;
+    return record.steps.length ? record : null;
+  };
+
+  // Fill records are keyed to the run that made the statement, so a statement without one is skipped.
+  const queue = gapsOf(sheet, options.runId).filter((s) => s.runId && !done.has(`${s.runId}:${s.id}`));
+  const records: FillRecord[] = [];
+  await Promise.all(
+    Array.from({ length: options.concurrency ?? 4 }, async () => {
+      for (let s = queue.shift(); s; s = queue.shift()) {
+        if (extracts >= budget.maxExtracts && searches >= budget.maxSearches) return;
+        const record = await fillOne(s);
+        if (record) records.push(record);
+      }
+    }),
+  );
+  // Keep the sheet's statement order, so a rebuild picks fills deterministically.
+  const order = new Map(sheet.statements.map((s, i) => [s.id, i]));
+  return records.sort((a, b) => (order.get(a.statementId) ?? 0) - (order.get(b.statementId) ?? 0));
 }
 
 /** Extract request that fills a statement whose Task citations held no verbatim text. */

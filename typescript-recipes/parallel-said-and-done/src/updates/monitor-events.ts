@@ -78,21 +78,16 @@ function decideAnnouncement(sheet: SheetData | null, parsed: MonitorCallEvent, t
   return { action: "event", callDate: date, quarter: parsed.source_title?.trim() || "Company announcement", promiseId: promise.id, url: parsed.source_url };
 }
 
-/** Entry point for both the webhook route and the local poller. */
-export async function onMonitorEvent(
-  client: Parallel,
-  monitor: MonitorRecord,
-  event: MonitorEvent,
-  options: { webhookUrl: string | null; wait: boolean; log: Log },
-): Promise<CallDayRecord | null> {
-  writeRaw(monitor.ticker, "monitor-event", (event as { event_id: string }).event_id, event);
+/** One monitor event, from a webhook, a reconcile or a local poll. Call with the company's lock held. */
+export async function onMonitorEvent(client: Parallel, monitor: MonitorRecord, event: MonitorEvent, options: { log: Log }): Promise<CallDayRecord | null> {
+  await writeRaw(monitor.ticker, "monitor-event", (event as { event_id: string }).event_id, event);
   const parsed = parseMonitorEvent(event);
-  const sheet = readSheet(monitor.ticker);
+  const sheet = await readSheet(monitor.ticker);
   const decision = decide(sheet, parsed);
   options.log(`${monitor.ticker}: monitor event ${(event as { event_id: string }).event_id} → ${decision.action}${"reason" in decision ? ` (${decision.reason})` : ` ${decision.callDate}`}`);
   if (decision.action === "ignore") return null;
   if (decision.action === "schedule") {
-    recordSchedule(monitor.ticker, { date: decision.callDate, quarter: decision.quarter, eventId: (event as { event_id: string }).event_id }, options.log);
+    await recordSchedule(monitor.ticker, { date: decision.callDate, quarter: decision.quarter, eventId: (event as { event_id: string }).event_id }, options.log);
     return null;
   }
   const company = companyFor(monitor.ticker);

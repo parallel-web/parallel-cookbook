@@ -198,12 +198,12 @@ export async function readCall(
   sheet: SheetData,
   record: CallDayRecord,
   sessionId: string,
-  onRaw: (kind: "search" | "extract", id: string, payload: unknown) => void,
+  onRaw: (kind: "search" | "extract", id: string, payload: unknown) => Promise<void>,
 ): Promise<CallDayRecord> {
   const ownDomains = companyDomains(company.website, sheet.irUrl);
   const searchRequest = { ...callDaySearchRequest(company, { date: record.callDate, quarter: record.quarter }), session_id: sessionId };
   const searchResponse = (await client.search(searchRequest as never)) as unknown as SearchResponseLike;
-  onRaw("search", searchResponse.search_id, { request: searchRequest, response: searchResponse });
+  await onRaw("search", searchResponse.search_id, { request: searchRequest, response: searchResponse });
   const monitorUrl = typeof record.trigger.content?.transcript_url === "string" ? (record.trigger.content.transcript_url as string) : null;
   const candidates = candidateUrls(rankResults(searchResponse, ownDomains, null), monitorUrl).slice(0, MAX_EXTRACT_TRIES);
   if (candidates.length === 0) {
@@ -215,7 +215,7 @@ export async function readCall(
   for (const url of candidates) {
     const extractRequest = { ...callDayExtractRequest(sheet, url, record.callDate), session_id: sessionId };
     const extractResponse = (await client.extract(extractRequest as never)) as unknown as ExtractResponseLike;
-    onRaw("extract", extractResponse.extract_id, { request: extractRequest, response: extractResponse });
+    await onRaw("extract", extractResponse.extract_id, { request: extractRequest, response: extractResponse });
     const chars = extractResponse.results.reduce((n, r) => n + (r.full_content?.length ?? 0), 0);
     // Match against the full transcript when Extract returned it, else against the excerpts.
     const texts = extractResponse.results.flatMap((r) => (r.full_content ? [r.full_content] : (r.excerpts ?? [])));
@@ -241,11 +241,11 @@ export async function readSource(
   record: CallDayRecord,
   url: string,
   sessionId: string,
-  onRaw: (kind: "search" | "extract", id: string, payload: unknown) => void,
+  onRaw: (kind: "search" | "extract", id: string, payload: unknown) => Promise<void>,
 ): Promise<CallDayRecord> {
   const request = { ...callDayExtractRequest(sheet, url, record.callDate, "event"), session_id: sessionId };
   const response = (await client.extract(request as never)) as unknown as ExtractResponseLike;
-  onRaw("extract", response.extract_id, { request, response });
+  await onRaw("extract", response.extract_id, { request, response });
   const texts = response.results.flatMap((r) => (r.full_content ? [r.full_content] : (r.excerpts ?? [])));
   if (!texts.length) return { ...record, extract: { id: response.extract_id, request, url }, status: "waiting_transcript" };
   const passages = matchPassages(sheet, texts);

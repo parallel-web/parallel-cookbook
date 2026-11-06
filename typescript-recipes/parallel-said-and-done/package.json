@@ -19,9 +19,11 @@
     "callday": "tsx scripts/callday.ts",
     "rebuild": "tsx scripts/rebuild.ts",
     "profiles": "tsx scripts/profiles.ts",
-    "deepen": "tsx scripts/deepen.ts"
+    "deepen": "tsx scripts/deepen.ts",
+    "state": "tsx scripts/state.ts"
   },
   "dependencies": {
+    "@vercel/blob": "2.8.2",
     "geist": "^1.9.0",
     "next": "16.1.6",
     "parallel-web": "1.1.0",

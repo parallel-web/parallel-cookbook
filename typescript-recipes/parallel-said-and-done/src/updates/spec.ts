@@ -241,7 +241,6 @@ export function updateRunRequest(
   company: Company,
   sheet: SheetData,
   call: UpdateSource,
-  webhookUrl: string | null,
   processor: string = UPDATE_PROCESSOR,
 ) {
   const last = sheet.runs[sheet.runs.length - 1];
@@ -252,7 +251,6 @@ export function updateRunRequest(
     previous_interaction_id: last?.interactionId ?? null,
     metadata: { app: "said-and-done", spec: UPDATE_SPEC_KEY, ticker: company.ticker, call_date: call.date },
     enable_events: false,
-    ...(webhookUrl ? { webhook: { url: webhookUrl, event_types: ["task_run.status" as const] } } : {}),
   };
 }
 

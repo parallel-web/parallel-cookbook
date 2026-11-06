@@ -1,38 +1,38 @@
 /**
- * File store for pipeline state.
+ * Pipeline state, read and written through src/storage.ts (local files, or a
+ * private Vercel Blob store on the deployment). Same layout in both:
  *
- *   data/      what the pages read: published sheets and company profiles (tracked)
+ *   data/      what the pages read: published sheets and company profiles
  *   output/    everything else: raw API responses, the pipeline's full copy of each
- *              sheet, earlier versions, the publish log, call-day records, held
- *              drafts and monitor IDs (gitignored)
+ *              sheet, earlier versions, runs in flight, call-day records, held
+ *              drafts, monitor records and locks
  *
- * Paths resolve from the app root, so scripts, tests and route handlers agree.
+ * config/companies.json is code, not state: it ships with the app and is read from disk.
  */
-import { existsSync, mkdirSync, readFileSync, readdirSync, renameSync, writeFileSync } from "node:fs";
-import { dirname, join, resolve } from "node:path";
+import { existsSync, readFileSync } from "node:fs";
+import { join } from "node:path";
 
 import type { CallDayRecord, Company, CoverageIndex, SheetData } from "./lib/types";
 import { publicSheet } from "./sheet/public";
+import { APP_ROOT, storage } from "./storage";
 
-export const APP_ROOT = resolve(process.env.SAID_DONE_ROOT ?? process.cwd());
-const DATA = join(APP_ROOT, "data");
-const OUTPUT = join(APP_ROOT, "output");
+export { APP_ROOT };
 
-function readJson<T>(path: string): T | null {
-  if (!existsSync(path)) return null;
-  return JSON.parse(readFileSync(path, "utf8")) as T;
+async function readJson<T>(path: string): Promise<T | null> {
+  const text = await storage().get(path);
+  return text === null ? null : (JSON.parse(text) as T);
 }
 
-function writeJson(path: string, value: unknown) {
-  mkdirSync(dirname(path), { recursive: true });
-  const tmp = `${path}.tmp`;
-  writeFileSync(tmp, `${JSON.stringify(value, null, 2)}\n`);
-  renameSync(tmp, path);
+async function writeJson(path: string, value: unknown) {
+  await storage().put(path, `${JSON.stringify(value, null, 2)}\n`);
 }
+
+/* Coverage: which companies. */
 
 export function readCoverageConfig(): { windowStart: string; companies: Company[] } {
-  const raw = readJson<{ window_start: string; companies: Company[] }>(join(APP_ROOT, "config/companies.json"));
-  if (!raw) throw new Error("config/companies.json is missing");
+  const path = join(APP_ROOT, "config/companies.json");
+  if (!existsSync(path)) throw new Error("config/companies.json is missing");
+  const raw = JSON.parse(readFileSync(path, "utf8")) as { window_start: string; companies: Company[] };
   return { windowStart: raw.window_start, companies: raw.companies };
 }
 
@@ -44,22 +44,21 @@ export function companyFor(ticker: string): Company {
 
 /* Raw API responses: kept verbatim so sheets can be rebuilt without new calls. */
 
-export type RawKind = "manifest" | "sheet-run" | "update-run" | "fills" | "search" | "extract" | "images" | "monitor-event" | "profile" | "trail-run" | "check-run" | "resolve-run";
+export type RawKind = "manifest" | "sheet-run" | "update-run" | "fills" | "search" | "extract" | "images" | "monitor-event" | "profile-run" | "trail-run" | "check-run" | "resolve-run";
 
-export function writeRaw(ticker: string, kind: RawKind, id: string, payload: unknown) {
-  writeJson(join(OUTPUT, "raw", ticker, `${kind}-${id}.json`), payload);
+const rawPath = (ticker: string, kind: RawKind, id: string) => `output/raw/${ticker}/${kind}-${id}.json`;
+
+export async function writeRaw(ticker: string, kind: RawKind, id: string, payload: unknown) {
+  await writeJson(rawPath(ticker, kind, id), payload);
 }
 
-export function readRaw<T>(ticker: string, kind: RawKind, id: string): T | null {
-  return readJson<T>(join(OUTPUT, "raw", ticker, `${kind}-${id}.json`));
+export async function readRaw<T>(ticker: string, kind: RawKind, id: string): Promise<T | null> {
+  return readJson<T>(rawPath(ticker, kind, id));
 }
 
-export function listRaw(ticker: string, kind: RawKind): string[] {
-  const dir = join(OUTPUT, "raw", ticker);
-  if (!existsSync(dir)) return [];
-  return readdirSync(dir)
-    .filter((f) => f.startsWith(`${kind}-`) && f.endsWith(".json"))
-    .map((f) => f.slice(kind.length + 1, -5));
+export async function listRaw(ticker: string, kind: RawKind): Promise<string[]> {
+  const prefix = `output/raw/${ticker}/${kind}-`;
+  return (await storage().list(prefix)).filter((p) => p.endsWith(".json")).map((p) => p.slice(prefix.length, -5));
 }
 
 /*
@@ -68,62 +67,73 @@ export function listRaw(ticker: string, kind: RawKind): string[] {
  * copy the pages read to data/sheets/, without those IDs (src/sheet/public.ts).
  */
 
-/** The pipeline's copy, or the published one when this checkout has no output/ (a fresh clone). */
-export function readSheet(ticker: string): SheetData | null {
-  return readJson<SheetData>(join(OUTPUT, "sheets", `${ticker}.json`)) ?? readPublishedSheet(ticker);
+/** The pipeline's copy, or the published one when there is no output/ (a fresh clone). */
+export async function readSheet(ticker: string): Promise<SheetData | null> {
+  return (await readJson<SheetData>(`output/sheets/${ticker}.json`)) ?? readPublishedSheet(ticker);
 }
 
 /** What the pages read. */
-export function readPublishedSheet(ticker: string): SheetData | null {
-  return readJson<SheetData>(join(DATA, "sheets", `${ticker}.json`));
+export async function readPublishedSheet(ticker: string): Promise<SheetData | null> {
+  return readJson<SheetData>(`data/sheets/${ticker}.json`);
 }
 
-export function writeSheet(sheet: SheetData) {
-  const previous = readSheet(sheet.ticker);
+export async function writeSheet(sheet: SheetData) {
+  const previous = await readSheet(sheet.ticker);
   if (previous && previous.version !== sheet.version) {
-    writeJson(join(OUTPUT, "versions", `${sheet.ticker}.v${previous.version}.json`), previous);
+    await writeJson(`output/versions/${sheet.ticker}.v${previous.version}.json`, previous);
   }
-  writeJson(join(OUTPUT, "sheets", `${sheet.ticker}.json`), sheet);
-  writeJson(join(DATA, "sheets", `${sheet.ticker}.json`), publicSheet(sheet));
+  await writeJson(`output/sheets/${sheet.ticker}.json`, sheet);
+  await writeJson(`data/sheets/${sheet.ticker}.json`, publicSheet(sheet));
 }
 
-export function writeDraft(sheet: SheetData, label: string) {
-  writeJson(join(OUTPUT, "drafts", `${sheet.ticker}-${label}.json`), sheet);
+export async function writeDraft(sheet: SheetData, label: string) {
+  await writeJson(`output/drafts/${sheet.ticker}-${label}.json`, sheet);
 }
 
-export function readIndex(): CoverageIndex | null {
-  return readJson<CoverageIndex>(join(OUTPUT, "index.json"));
+export async function readIndex(): Promise<CoverageIndex | null> {
+  return readJson<CoverageIndex>("output/index.json");
 }
 
-export function writeIndex(index: CoverageIndex) {
-  writeJson(join(OUTPUT, "index.json"), index);
+export async function writeIndex(index: CoverageIndex) {
+  await writeJson("output/index.json", index);
 }
 
 /* Call-day records. */
 
-export function callDayPath(ticker: string, callDate: string) {
-  return join(OUTPUT, "callday", `${ticker}-${callDate}.json`);
+export async function readCallDay(ticker: string, callDate: string): Promise<CallDayRecord | null> {
+  return readJson<CallDayRecord>(`output/callday/${ticker}-${callDate}.json`);
 }
 
-export function readCallDay(ticker: string, callDate: string): CallDayRecord | null {
-  return readJson<CallDayRecord>(callDayPath(ticker, callDate));
+export async function writeCallDay(record: CallDayRecord) {
+  await writeJson(`output/callday/${record.ticker}-${record.callDate}.json`, record);
 }
 
-export function writeCallDay(record: CallDayRecord) {
-  writeJson(callDayPath(record.ticker, record.callDate), record);
+export async function listCallDays(): Promise<CallDayRecord[]> {
+  const paths = (await storage().list("output/callday/")).filter((p) => p.endsWith(".json"));
+  const records = await Promise.all(paths.map((p) => readJson<CallDayRecord>(p)));
+  return records.filter((r): r is CallDayRecord => r !== null).sort((a, b) => (a.callDate < b.callDate ? 1 : -1));
 }
 
-export function listCallDays(): CallDayRecord[] {
-  const dir = join(OUTPUT, "callday");
-  if (!existsSync(dir)) return [];
-  return readdirSync(dir)
-    .filter((f) => f.endsWith(".json"))
-    .map((f) => readJson<CallDayRecord>(join(dir, f)))
-    .filter((r): r is CallDayRecord => r !== null)
-    .sort((a, b) => (a.callDate < b.callDate ? 1 : -1));
+/* Task runs in flight, per company. Every run this app starts is recorded here until its result is handled. */
+
+export interface InflightRun {
+  kind: "sheet-run" | "update-run" | "trail-run" | "check-run" | "resolve-run" | "profile-run";
+  spec: string;
+  promise?: string;
+  startedAt: string;
+  /** Times handling its result failed; it is dropped after three. */
+  attempts?: number;
 }
 
-/* Monitors: live IDs stay out of version control. */
+export async function readInflight(ticker: string): Promise<Record<string, InflightRun>> {
+  return (await readJson<Record<string, InflightRun>>(`output/inflight/${ticker}.json`)) ?? {};
+}
+
+export async function writeInflight(ticker: string, runs: Record<string, InflightRun>) {
+  await writeJson(`output/inflight/${ticker}.json`, runs);
+}
+
+/* Monitors: one record per company, so events for different companies never contend. */
 
 export interface MonitorRecord {
   ticker: string;
@@ -133,32 +143,26 @@ export interface MonitorRecord {
   frequency: string;
   processor: string;
   createdAt: string;
-  /** Monitor events already handled, so webhook retries and polls are idempotent. */
+  /** The webhook the monitor reports to, if any. */
+  webhookUrl?: string | null;
+  /** Set by `pnpm monitors cancel`; a cancelled monitor is not recreated. */
+  cancelledAt?: string | null;
+  /** Monitor events already handled, so webhook retries, reconciles and polls are idempotent. */
   handledEventIds: string[];
 }
 
-export function readMonitors(): MonitorRecord[] {
-  return readJson<MonitorRecord[]>(join(OUTPUT, "monitors.json")) ?? [];
+export async function readMonitor(ticker: string): Promise<MonitorRecord | null> {
+  return readJson<MonitorRecord>(`output/monitors/${ticker}.json`);
 }
 
-export function writeMonitors(records: MonitorRecord[]) {
-  writeJson(join(OUTPUT, "monitors.json"), records);
+export async function readMonitors(): Promise<MonitorRecord[]> {
+  const paths = (await storage().list("output/monitors/")).filter((p) => p.endsWith(".json"));
+  const records = await Promise.all(paths.map((p) => readJson<MonitorRecord>(p)));
+  return records.filter((r): r is MonitorRecord => r !== null).sort((a, b) => a.ticker.localeCompare(b.ticker));
 }
 
-/* Sheet runs in flight, so a scheduled poll never starts a second run for the same company. */
-
-export interface PendingRun {
-  ticker: string;
-  groupId: string;
-  startedAt: string;
-}
-
-export function readPending(): PendingRun[] {
-  return readJson<PendingRun[]>(join(OUTPUT, "pending-sheets.json")) ?? [];
-}
-
-export function writePending(runs: PendingRun[]) {
-  writeJson(join(OUTPUT, "pending-sheets.json"), runs);
+export async function writeMonitor(record: MonitorRecord) {
+  await writeJson(`output/monitors/${record.ticker}.json`, record);
 }
 
 /* Company profiles: GICS sector and industry from a small Task run, for the directory filters. */
@@ -169,10 +173,39 @@ export interface CompanyProfile {
   spec: string;
 }
 
-export function readProfiles(): Record<string, CompanyProfile> {
-  return readJson<Record<string, CompanyProfile>>(join(DATA, "profiles.json")) ?? {};
+export async function readProfiles(): Promise<Record<string, CompanyProfile>> {
+  return (await readJson<Record<string, CompanyProfile>>("data/profiles.json")) ?? {};
 }
 
-export function writeProfiles(profiles: Record<string, CompanyProfile>) {
-  writeJson(join(DATA, "profiles.json"), profiles);
+export async function writeProfiles(profiles: Record<string, CompanyProfile>) {
+  await writeJson("data/profiles.json", profiles);
+}
+
+/*
+ * Locks. Webhooks for the same company can arrive together (five history runs
+ * finishing within seconds). Each handler takes the company's lock first, so
+ * state changes happen one at a time. A lock is a file created only if absent;
+ * one left behind by a crashed handler expires.
+ */
+
+const LOCK_TTL_MS = 15 * 60_000;
+
+export async function withLock<T>(key: string, fn: () => Promise<T>, options: { waitMs?: number } = {}): Promise<T> {
+  const path = `output/locks/${key}.json`;
+  const deadline = Date.now() + (options.waitMs ?? 10 * 60_000);
+  for (;;) {
+    if (await storage().put(path, JSON.stringify({ at: new Date().toISOString() }), { create: true })) break;
+    const held = await readJson<{ at: string }>(path).catch(() => null);
+    if (held && Date.now() - new Date(held.at).getTime() > LOCK_TTL_MS) {
+      await storage().del(path);
+      continue;
+    }
+    if (Date.now() > deadline) throw new Error(`${key} is busy; try again later`);
+    await new Promise((r) => setTimeout(r, 1500 + Math.random() * 1500));
+  }
+  try {
+    return await fn();
+  } finally {
+    await storage().del(path);
+  }
 }

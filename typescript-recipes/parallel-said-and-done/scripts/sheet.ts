@@ -1,31 +1,33 @@
 /**
- * Make one tear sheet: one Task run → verbatim backing from its citations →
- * Extract fills → Image Search → quality gate → publish to data/.
+ * Make one tear sheet locally: the sheet run, then evidence, Extract fills,
+ * Image Search, the gate and publishing, then stages 2 and 3 (a history and a
+ * fact-check per promise). Waits on each run here instead of a webhook.
  *
  *   pnpm sheet MSFT                    new sheet run
  *   pnpm sheet MSFT --processor ultra  pick the processor
- *   pnpm sheet MSFT --resume trun_…    finish a run that was already created
  *
- * The recipe is src/sheet/make-sheet.ts.
+ * The recipe is src/sheet/make-sheet.ts; what follows it is src/pipeline/advance.ts.
  */
 import { parallelClient, publicError } from "../src/parallel/client";
-import { makeSheet } from "../src/sheet/make-sheet";
+import { drive } from "../src/pipeline/drive";
+import { startSheet } from "../src/sheet/make-sheet";
+import { readSheet, withLock } from "../src/store";
 import { flag, loadEnv, positional, today } from "./lib/env";
 
 loadEnv();
-const [ticker] = positional();
-if (!ticker) {
-  console.error("usage: pnpm sheet <TICKER> [--processor ultra2x] [--resume <run_id>] [--as-of YYYY-MM-DD]");
+const [arg] = positional();
+if (!arg) {
+  console.error("usage: pnpm sheet <TICKER> [--processor ultra2x] [--as-of YYYY-MM-DD]");
   process.exit(1);
 }
+const ticker = arg.toUpperCase();
+const log = (line: string) => console.log(line);
 try {
-  const { sheet, published } = await makeSheet(parallelClient(), ticker.toUpperCase(), {
-    processor: flag("processor"),
-    resumeRunId: flag("resume"),
-    asOf: flag("as-of") ?? today(),
-    log: (line) => console.log(line),
-  });
-  console.log(published ? `published data/sheets/${sheet.ticker}.json (v${sheet.version})` : `held: output/drafts/${sheet.ticker}-v${sheet.version}.json`);
+  const client = parallelClient();
+  await withLock(ticker, () => startSheet(client, ticker, { processor: flag("processor"), asOf: flag("as-of") ?? today(), log }));
+  await drive(client, [ticker], log);
+  const sheet = await readSheet(ticker);
+  console.log(sheet ? `${ticker}: published v${sheet.version}` : `${ticker}: not published; see output/drafts`);
 } catch (error) {
   console.error(publicError(error));
   process.exit(1);
