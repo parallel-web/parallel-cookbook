@@ -268,8 +268,9 @@ a.plate { cursor: pointer; }
   transition: border-color 0.15s ease, transform 0.2s cubic-bezier(0.3, 0.7, 0.2, 1);
 }
 .card:hover { border-color: var(--ink); transform: translateY(-2px); }
-.card-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; height: 28px; }
-.card-logo { display: flex; align-items: center; height: 28px; max-width: 104px; }
+.card-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 8px; min-height: 28px; }
+.card-logo { display: flex; align-items: center; height: 28px; min-width: 0; max-width: 104px; }
+.card-top .status { flex: none; }
 .card-logo img { max-height: 26px; max-width: 104px; width: auto; height: auto; object-fit: contain; display: block; }
 .card-name { display: block; font-weight: 500; font-size: 15px; line-height: 20px; }
 .card-sub { display: block; font-family: var(--f-mono); font-size: 9.5px; line-height: 14px; letter-spacing: 0.03em; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -294,6 +295,28 @@ a.plate { cursor: pointer; }
 .sheet-fit { position: relative; margin: 0 auto; }
 .sheet-fit > div { position: absolute; left: 0; top: 0; transform-origin: 0 0; box-shadow: 0 0 0 0.75px var(--rule), 0 18px 40px rgba(29, 27, 22, 0.1); }
 .hint { margin-top: 12px; text-align: center; font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); }
+.promise-list { display: none; list-style: none; margin: 20px 0 0; padding: 0; border-top: 0.75px solid var(--ink); }
+.promise-list button {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  padding: 8px 6px;
+  border: 0;
+  border-bottom: 0.75px solid var(--rule);
+  background: none;
+  font: inherit;
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--ink);
+  text-align: left;
+  cursor: pointer;
+}
+.promise-list button[aria-pressed="true"] { background: var(--card); }
+.promise-list .pid { font-family: var(--f-mono); font-size: 11px; color: var(--ink-3); }
+.promise-list .outcome { font-family: var(--f-mono); font-size: 10px; line-height: 18px; letter-spacing: 0.04em; }
 .trail { max-width: 816px; margin: 40px auto 0; }
 .trail-head { display: flex; flex-direction: column; gap: 6px; padding-bottom: 14px; border-bottom: 0.75px solid var(--ink); }
 .trail-head h2 { font-size: 22px; line-height: 28px; font-weight: 500; letter-spacing: -0.3px; }
@@ -349,6 +372,9 @@ details > summary:hover { color: var(--ink); }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .card { padding: 12px; }
   .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; }
+  .promise-list { display: block; }
+  .hint { display: none; }
+  .trail { scroll-margin-top: 12px; }
   .dir-search { max-width: none; }
   .entry { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .entry .when { flex-direction: row; align-items: center; gap: 10px; }
@@ -360,6 +386,13 @@ details > summary:hover { color: var(--ink); }
   .excerpt { grid-template-columns: minmax(0, 1fr); gap: 4px; }
   .brand-name, .site-nav a { white-space: nowrap; }
   .site-nav { gap: 16px; }
+}
+@media (max-width: 520px) {
+  /* One card per row: the logo, status and tracks need the width. */
+  .grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .card { gap: 8px; }
+  .card-logo { max-width: 140px; }
+  .card-logo img { max-width: 140px; }
 }
 @media (max-width: 480px) {
   .brand img, .brand-divider { display: none; }

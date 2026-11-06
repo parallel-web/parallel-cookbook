@@ -73,6 +73,25 @@ export function SheetView({ sheet, today, initialFocus }: { sheet: SheetData; to
         </div>
       </div>
       <p className="hint no-print">Pick a promise on the sheet to see every statement about it.</p>
+      {/* On a phone the scaled sheet is too small to tap: the same promises as a list. */}
+      <ul className="promise-list no-print" aria-label="Promises">
+        {sheet.promises.map((p) => (
+          <li key={p.id}>
+            <button
+              type="button"
+              aria-pressed={p.id === promise.id}
+              onClick={() => {
+                pick(p.id);
+                document.querySelector(".trail")?.scrollIntoView({ behavior: "smooth", block: "start" });
+              }}
+            >
+              <span className="pid">{p.id}</span>
+              <span className="plabel">{p.label}</span>
+              <span className={`outcome outcome-${p.k}`}>{outcomeWord(p)}</span>
+            </button>
+          </li>
+        ))}
+      </ul>
 
       <section className="trail no-print" aria-live="polite">
         <div className="trail-head">
