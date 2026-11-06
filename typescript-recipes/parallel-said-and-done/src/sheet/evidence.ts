@@ -239,7 +239,7 @@ function isoDateIn(text: string | null | undefined): string | null {
  */
 export function sameCall(call: string, source: { title: string | null; url: string }, date: string): boolean {
   const dated = isoDateIn(source.title);
-  if (dated) return Math.abs(new Date(`${dated}T12:00:00Z`).getTime() - new Date(`${date}T12:00:00Z`).getTime()) <= 7 * 86_400_000;
+  if (dated && Math.abs(Date.parse(dated) - Date.parse(date)) > 7 * 86_400_000) return false;
   const a = periodOf(call);
   const b = periodOf(source.title) ?? periodOf(decodeURIComponent(source.url.split("?")[0].split("/").slice(-1)[0] ?? ""));
   if (!a || !b) return true;

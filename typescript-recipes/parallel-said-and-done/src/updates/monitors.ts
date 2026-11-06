@@ -6,6 +6,7 @@
  */
 import type { Company } from "../lib/types";
 import type { Parallel } from "../parallel/client";
+import { publishedManifest } from "../sheet/stored";
 import { webhookUrl } from "../pipeline/runs";
 import { companyFor, readCoverageConfig, readMonitor, readMonitors, readSheet, withLock, writeMonitor, type MonitorRecord } from "../store";
 import { onMonitorEvent, type MonitorEvent } from "./monitor-events";
@@ -57,6 +58,10 @@ async function createOne(client: Parallel, ticker: string): Promise<MonitorRecor
 /** A monitor for a company with a published sheet and none yet. */
 export async function ensureMonitor(client: Parallel, ticker: string, log: Log) {
   if (await readMonitor(ticker)) return;
+  if (!(await publishedManifest(ticker))) {
+    log(`${ticker}: run pnpm sheet ${ticker} before creating a monitor`);
+    return;
+  }
   const record = await createOne(client, ticker);
   log(`${ticker}: monitor ${record.monitorId}`);
 }
@@ -154,10 +159,10 @@ export async function onMonitorWebhook(client: Parallel, monitorId: string, even
 }
 
 /** Recent events for one monitor, for the reconcile. */
-export async function recentEvents(client: Parallel, monitorId: string, pages = 2): Promise<MonitorEvent[]> {
+export async function recentEvents(client: Parallel, monitorId: string): Promise<MonitorEvent[]> {
   const out: MonitorEvent[] = [];
   let cursor: string | null = null;
-  for (let page = 0; page < pages; page += 1) {
+  for (;;) {
     const res = await client.monitor.events(monitorId, { limit: 100, ...(cursor ? { cursor } : {}) });
     out.push(...res.events);
     cursor = (res as { next_cursor?: string | null }).next_cursor ?? null;

@@ -53,8 +53,7 @@ export function sentences(text: string): string[] {
   }
   const tail = flat.slice(start).trim();
   if (tail) out.push(tail);
-  // PDF page numbers and footnote markers land at the start of the next sentence ("9 We anticipate…").
-  return out.map((x) => x.replace(/^[⁰¹²³⁴-⁹]+\s*/, "").replace(/^\d{1,3}\s+(?=[A-Z][a-z])/, ""));
+  return out.map((x) => x.replace(/^[⁰¹²³⁴-⁹]+\s*/, ""));
 }
 
 const STOPWORDS = new Set(
@@ -106,7 +105,7 @@ export function shared(a: Set<string>, b: Set<string>): string[] {
  */
 const FIGURE = new RegExp(
   [
-    String.raw`\$\s?\d[\d,]*(?:\.\d+)?(?:\s?(?:-|–|to)\s?\$?\d[\d,]*(?:\.\d+)?)?(?:\s?(?:trillion|billion|million|thousand|bn|mn|[BMK])\b)?`,
+    String.raw`[$£€¥]\s?[-−]?\d[\d,]*(?:\.\d+)?(?:\s?(?:-|–|to)\s?\$?\d[\d,]*(?:\.\d+)?)?(?:\s?(?:trillion|billion|million|thousand|bn|mn|[BMK])\b)?`,
     String.raw`\b\d[\d,]*(?:\.\d+)?(?:\s?(?:-|–|to)\s?\d[\d,]*(?:\.\d+)?)?\s?(?:%|percent\b|percentage points?\b|basis points?\b|bps\b)`,
     String.raw`\b\d[\d,]*(?:\.\d+)?\s?(?:trillion|billion|million|thousand)\b`,
     String.raw`\b\d{1,3}(?:,\d{3})+\b`,
@@ -133,34 +132,35 @@ export function markFigures(text: string): Seg[] {
   return segs.length ? segs : [{ t: text, h: 0 }];
 }
 
-/** Numeric values inside the marked figures, for agreement checks ("$135 billion" → "135"). */
-export function figureValues(text: string): Set<string> {
-  const values = new Set<string>();
-  for (const m of text.matchAll(FIGURE)) {
-    for (const n of m[0].matchAll(/\d[\d,]*(?:\.\d+)?/g)) {
-      const v = n[0].replace(/,/g, "").replace(/\.0+$/, "");
-      if (v) values.add(v);
-    }
-  }
-  return values;
-}
-
-/** Figure values excluding years and fiscal-period labels (Q3, FY25, 1H 2026), which match too easily. */
+/** Comparable quantities, with currency, scale, rate units and sign preserved. */
 export function substantiveFigures(text: string): Set<string> {
   const out = new Set<string>();
   for (const m of text.matchAll(FIGURE)) {
-    const f = m[0];
-    if (/^(?:19|20)\d{2}$/.test(f) || /^(?:Q[1-4]|[12]H|H[12]|FY|fiscal\s)/i.test(f)) continue;
-    for (const v of figureValues(f)) out.add(v);
+    const f = m[0].toLowerCase();
+    if (/^(?:19|20)\d{2}$/.test(f) || /^(?:q[1-4]|[12]h|h[12]|fy|fiscal\s)/.test(f)) continue;
+    const scale = /(?:trillion)$/.test(f) ? 1e12 : /(?:billion|bn|b)$/.test(f) ? 1e9
+      : /(?:million|mn|m)$/.test(f) ? 1e6 : /(?:thousand|k)$/.test(f) ? 1e3 : 1;
+    const currency: Record<string, string> = { "$": "USD", "£": "GBP", "€": "EUR", "¥": "¥" };
+    const unit = currency[f[0]] ?? ( /percentage points?/.test(f) ? "pp"
+      : /basis points?|bps/.test(f) ? "bps" : /%|percent/.test(f) ? "%" : f.endsWith("x") ? "x" : "count");
+    const prefix = text.slice(0, m.index);
+    const negative = /(?:^|[\s(=:])[-−]\s*$/.test(prefix) || /^[$£€¥]\s*[-−]/.test(f);
+    for (const [i, number] of [...f.matchAll(/\d[\d,]*(?:\.\d+)?/g)].entries()) {
+      const value = Number(number[0].replaceAll(",", "")) * scale * (negative && i === 0 ? -1 : 1);
+      out.add(`${unit}:${Number(value.toPrecision(15))}`);
+    }
   }
   return out;
 }
 
 /** True when the normalized needle appears inside the normalized haystack. */
 export function containsVerbatim(haystack: string, needle: string): boolean {
-  const n = normalize(needle).replace(/[.,]+$/, "");
+  const quoteForm = (text: string) => stripMarkdown(text).normalize("NFC").toLowerCase()
+    .replace(/[‘’]/g, "'").replace(/[“”]/g, '"').replace(/[‐‑–—−]/g, "-").replace(/\s+/g, " ").trim();
+  const n = quoteForm(needle).replace(/[.,]+$/, "");
   if (n.length < 12) return false;
-  return normalize(haystack).includes(n);
+  const escaped = n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`(?<![\\p{L}\\p{N}])${escaped}(?![\\p{L}\\p{N}]|[.,]\\d)`, "u").test(quoteForm(haystack));
 }
 
 /** Share of the needle's keywords that appear in the candidate. */

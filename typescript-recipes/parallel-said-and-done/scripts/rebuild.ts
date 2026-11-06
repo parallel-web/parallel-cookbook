@@ -51,7 +51,7 @@ if (compare && compare !== "true") {
     const sheet = await rebuild(ticker);
     const current = await readSheet(ticker);
     // Unchanged sheets keep their file (and builtAt), so a rebuild only touches what a rule change moved.
-    if (current && current.version === sheet.version && !sameContent(current, sheet)) await writeSheet(sheet);
+    if (sheet.gate.passed && current && current.version === sheet.version && !sameContent(current, sheet)) await writeSheet(sheet);
     console.log(`${ticker}: v${sheet.version} ${sheet.statements.filter((s) => s.verbatim).length}/${sheet.statements.length} verbatim · gate ${sheet.gate.passed ? "pass" : "fail"}${current ? "" : " (not published)"}`);
   }
   for (const record of (await listCallDays()).filter((r) => tickers.includes(r.ticker))) {

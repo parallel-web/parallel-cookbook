@@ -7,7 +7,7 @@
  */
 import type { CoverageIndex, PublishedEntry, SheetData } from "../lib/types";
 import type { StoredRun } from "../parallel/task";
-import { companyFor, readCoverageConfig, readIndex, readRaw, writeIndex, writeRaw, writeSheet } from "../store";
+import { companyFor, readCoverageConfig, readIndex, readRaw, readSheet, writeIndex, writeRaw, writeSheet } from "../store";
 import { buildSheet, type ScheduledCall } from "./build";
 import type { FillRecord } from "./fill";
 import { picksFrom, type ImagesRecord } from "./images";
@@ -38,6 +38,11 @@ export async function readManifest(ticker: string): Promise<Manifest | null> {
   return readRaw<Manifest>(ticker, "manifest", "latest");
 }
 
+export async function publishedManifest(ticker: string): Promise<Manifest | null> {
+  const m = await readManifest(ticker);
+  return m && (await readSheet(ticker))?.runs[0]?.runId === m.sheetRunId ? m : null;
+}
+
 export async function writeManifest(ticker: string, manifest: Manifest) {
   await writeRaw(ticker, "manifest", "latest", manifest);
 }
@@ -57,7 +62,7 @@ export function sessionId(ticker: string, runId: string) {
 }
 
 /** Rebuilds a sheet from stored responses only. */
-export async function rebuild(ticker: string, builtAt = new Date().toISOString()): Promise<SheetData> {
+export async function rebuild(ticker: string, builtAt = new Date().toISOString(), candidateRunId?: string): Promise<SheetData> {
   const manifest = await readManifest(ticker);
   if (!manifest) throw new Error(`No stored runs for ${ticker}; run pnpm sheet ${ticker}`);
   const company = companyFor(ticker);
@@ -65,9 +70,12 @@ export async function rebuild(ticker: string, builtAt = new Date().toISOString()
   const done = (r: StoredRun | null): r is StoredRun => !!r?.result && r.result.run.status === "completed";
   const stage = async (kind: "trail-run" | "check-run" | "resolve-run", ids: Record<string, string | string[]> | undefined) =>
     (await Promise.all(Object.values(ids ?? {}).flat().map((id) => readRaw<StoredRun>(ticker, kind, id)))).filter(done);
+  const prior = manifest.updates.some(u => !u.status) ? await readSheet(ticker) : null;
+  const included = manifest.updates.filter(u => u.status === "published" || u.runId === candidateRunId ||
+    (!u.status && prior?.runs.some(r => r.kind === "update" && r.runId === u.runId)));
   const [sheetRun, updateRuns, trails, checks, resolves, imagesRecord] = await Promise.all([
     readRaw<StoredRun>(ticker, "sheet-run", manifest.sheetRunId),
-    Promise.all(manifest.updates.filter((u) => u.status !== "held").map((u) => readRaw<StoredRun>(ticker, "update-run", u.runId))),
+    Promise.all(included.map((u) => readRaw<StoredRun>(ticker, "update-run", u.runId))),
     stage("trail-run", manifest.trails),
     stage("check-run", manifest.checks),
     stage("resolve-run", manifest.resolves),

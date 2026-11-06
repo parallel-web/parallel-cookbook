@@ -10,7 +10,6 @@
  */
 import { parallelClient, publicError } from "../src/parallel/client";
 import { drive } from "../src/pipeline/drive";
-import { readManifest, writeManifest } from "../src/sheet/stored";
 import { readCallDay, withLock } from "../src/store";
 import { finishUpdate, startCallDay } from "../src/updates/update";
 import { flag, loadEnv, positional } from "./lib/env";
@@ -29,13 +28,9 @@ try {
   const client = parallelClient();
   if (flag("regate") === "true") {
     // Re-gate the stored update run, e.g. after a gate rule change. Reads the result back; fills only new gaps.
-    const runId = (await readCallDay(ticker, date))?.update?.runId;
+    const runId = (await readCallDay(ticker, date, flag("event")))?.update?.runId;
     if (!runId) throw new Error(`No update run recorded for ${ticker} ${date}`);
-    const { published } = await withLock(ticker, async () => {
-      const manifest = (await readManifest(ticker))!;
-      await writeManifest(ticker, { ...manifest, updates: manifest.updates.map((u) => (u.runId === runId ? { ...u, status: undefined } : u)) });
-      return finishUpdate(client, ticker, runId, null, log);
-    });
+    const { published } = await withLock(ticker, () => finishUpdate(client, ticker, runId, null, log));
     console.log(`${ticker} ${date}: ${published ? "published" : "held"}`);
   } else {
     const record = await withLock(ticker, () =>

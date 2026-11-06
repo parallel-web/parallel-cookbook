@@ -100,12 +100,29 @@ export async function writeIndex(index: CoverageIndex) {
 
 /* Call-day records. */
 
-export async function readCallDay(ticker: string, callDate: string): Promise<CallDayRecord | null> {
-  return readJson<CallDayRecord>(`output/callday/${ticker}-${callDate}.json`);
+function callDayPath(ticker: string, date: string, eventId?: string | null) {
+  const suffix = eventId ? `-event-${encodeURIComponent(eventId)}` : "";
+  return `output/callday/${ticker}-${date}${suffix}.json`;
+}
+
+export async function readCallDay(ticker: string, date: string, eventId?: string | null): Promise<CallDayRecord | null> {
+  if (eventId) {
+    const record = await readJson<CallDayRecord>(callDayPath(ticker, date, eventId));
+    if (record) return record;
+  }
+  const legacy = await readJson<CallDayRecord>(callDayPath(ticker, date));
+  if (legacy?.kind === "event") return legacy.trigger.eventId === eventId ? legacy : null;
+  return eventId ? null : legacy;
 }
 
 export async function writeCallDay(record: CallDayRecord) {
-  await writeJson(`output/callday/${record.ticker}-${record.callDate}.json`, record);
+  const base = callDayPath(record.ticker, record.callDate);
+  const legacy = await readJson<CallDayRecord>(base);
+  if (legacy?.kind === "event" && legacy.trigger.eventId) {
+    await writeJson(callDayPath(record.ticker, record.callDate, legacy.trigger.eventId), legacy);
+    await storage().del(base);
+  }
+  await writeJson(callDayPath(record.ticker, record.callDate, record.kind === "event" ? record.trigger.eventId : null), record);
 }
 
 export async function listCallDays(): Promise<CallDayRecord[]> {

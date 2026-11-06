@@ -99,13 +99,14 @@ export function evaluateSheet(sheet: SheetData, extra: { dropped: number; heldSa
 
   const checked = sheet.promises.filter((p) => p.factCheck);
   if (checked.length) {
-    const disputed = checked.filter((p) => p.factCheck!.verdict === "incorrect");
+    const confirmed = checked.filter((p) => p.factCheck!.verdict === "correct" && !p.factCheck!.summaryErrors.length);
+    const disputed = checked.filter((p) => !confirmed.includes(p));
     checks.push(
       check(
         "fact-check",
         "Outcomes confirmed by an independent fact-check",
-        disputed.length === 0 ? "pass" : disputed.length === 1 ? "warn" : "fail",
-        `${checked.length - disputed.length} of ${checked.length} confirmed${disputed.length ? `; disputed: ${disputed.map((p) => p.id).join(" ")}` : ""}`,
+        checked.filter(p => p.factCheck!.verdict === "incorrect").length > 1 ? "fail" : confirmed.length === sheet.promises.length ? "pass" : "warn",
+        `${confirmed.length} of ${sheet.promises.length} confirmed${disputed.length ? `; flagged: ${disputed.map((p) => p.id).join(" ")}` : ""}`,
       ),
     );
   }

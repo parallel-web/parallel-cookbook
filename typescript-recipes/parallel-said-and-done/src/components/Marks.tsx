@@ -14,6 +14,7 @@ export function Segs({ segs }: { segs: Seg[] }) {
 /** Verbatim text in quotation marks; otherwise the Task's summary in grey italics. */
 export function StatementText({ s }: { s: Statement }) {
   if (!s.verbatim) return <span className="summary"><Segs segs={segsOf(s)} /></span>;
+  if (s.verbatim.match === "matched") return <><span>Source excerpt: </span><Segs segs={s.verbatim.segs} /></>;
   return (
     <>
       “<Segs segs={s.verbatim.segs} />”

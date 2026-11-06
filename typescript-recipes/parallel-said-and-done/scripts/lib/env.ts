@@ -23,23 +23,26 @@ export function loadEnv(appRoot = process.cwd()) {
   }
 }
 
-export function flag(name: string): string | undefined {
+const valueFlags = ["as-of", "compare", "date", "event", "processor", "quarter"];
+
+export function flag(name: string, takesValue = valueFlags.includes(name)): string | undefined {
   const i = process.argv.indexOf(`--${name}`);
   if (i < 0) return undefined;
+  if (!takesValue) return "true";
   const next = process.argv[i + 1];
-  return next && !next.startsWith("--") ? next : "true";
+  if (!next || next.startsWith("--")) throw new Error(`Missing value for --${name}`);
+  return next;
 }
 
-export function positional(): string[] {
+export function positional(extraValueFlags: string[] = []): string[] {
   const out: string[] = [];
   for (let i = 2; i < process.argv.length; i += 1) {
-    const a = process.argv[i];
-    if (a.startsWith("--")) {
-      const next = process.argv[i + 1];
-      if (next && !next.startsWith("--")) i += 1;
-      continue;
+    const arg = process.argv[i];
+    if (!arg.startsWith("--")) out.push(arg);
+    else if ([...valueFlags, ...extraValueFlags].includes(arg.slice(2))) {
+      flag(arg.slice(2), true);
+      i += 1;
     }
-    out.push(a);
   }
   return out;
 }

@@ -15,11 +15,12 @@ export interface StoredRun {
   input: Record<string, unknown>;
   spec: string;
   result: TaskRunResult | null;
+  previousInteractionId?: string | null;
 }
 
 export async function createRun(client: Parallel, request: TaskRunCreateParams & { input: Record<string, unknown> }, spec: string): Promise<StoredRun> {
   const run = await client.taskRun.create(request);
-  return { run, input: request.input, spec, result: null };
+  return { run, input: request.input, spec, result: null, previousInteractionId: request.previous_interaction_id };
 }
 
 /**

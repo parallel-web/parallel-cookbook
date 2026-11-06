@@ -6,8 +6,7 @@ releases, and what happened. Live demo: [earnings-calls.paralleldemos.com](https
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fparallel-web%2Fparallel-cookbook%2Ftree%2Fmain%2Ftypescript-recipes%2Fparallel-said-and-done&project-name=parallel-said-and-done&repository-name=parallel-said-and-done)
 
 Each company gets a one-page tear sheet: five promises still in play, every
-dated statement about them, how each one turned out, and a word-for-word quote
-from the source behind every line.
+dated statement about them, how each one turned out, and the source evidence behind each statement.
 
 ## What it shows
 
@@ -61,8 +60,8 @@ to `.env.local`:
 
 ```bash
 PARALLEL_API_KEY=...
-pnpm sheet MSFT     # stage 1 for one company
-pnpm deepen MSFT    # stages 2 and 3
+pnpm sheet MSFT     # build a sheet and run its history and fact-check stages
+pnpm deepen MSFT    # continue any pending quality stages for this company
 ```
 
 Locally there is no public URL for webhooks, so each script waits on the runs
@@ -94,12 +93,12 @@ report to the webhook.
 ### Making a sheet
 
 [`src/sheet/make-sheet.ts`](src/sheet/make-sheet.ts) and
-[`src/sheet/deepen.ts`](src/sheet/deepen.ts) are the recipe. Each step is its own module.
+[`src/pipeline/advance.ts`](src/pipeline/advance.ts) are the recipe. Each step is its own module.
 
 | Stage | API | Module | What it does |
 | --- | --- | --- | --- |
 | 1. Sheet | Task (`ultra2x`) | [`sheet/spec.ts`](src/sheet/spec.ts) | One run per company picks five promises still in play and drafts their history. Its output schema is the sheet template. |
-| | Extract, Search | [`sheet/evidence.ts`](src/sheet/evidence.ts), [`sheet/fill.ts`](src/sheet/fill.ts) | A statement is shown in quotation marks only when its quote appears word for word in one of its own citations. Otherwise Extract reads the cited page in full, or Search finds one first. |
+| | Extract, Search | [`sheet/evidence.ts`](src/sheet/evidence.ts), [`sheet/fill.ts`](src/sheet/fill.ts) | The app distinguishes exact quote matches from related source excerpts. Otherwise Extract reads the cited page in full, or Search finds one first. |
 | | Image Search | [`sheet/images.ts`](src/sheet/images.ts) | A logo and a header photo per company. |
 | | Task (`base`) | [`sheet/profile.ts`](src/sheet/profile.ts) | The GICS sector and industry, for the directory filters. |
 | 2. History | Task (`ultra4x`) | [`sheet/trail.ts`](src/sheet/trail.ts) | One run per promise rebuilds its history: every call since it was first made, each stance judged against the previous statement, the document type (call, earnings release, filing…), and outcome figures only as a source states them. |
@@ -117,9 +116,10 @@ and 3, the same 26 promises had no misdated statements, no mislabels, 2.8% stanc
 disagreements and no summary errors, with a third more statements, all quoted
 verbatim.
 
-Across all 100 companies, every published outcome is confirmed by a separate
-AI fact-check run. Six were changed by the resolution step. 2,965 of 2,970 statements
-are backed by an exact quote.
+In the recorded snapshot, independent checks agreed with all 504 outcome statuses.
+Five checks flagged facts or figures in the summary. Those summaries are withheld in the reader.
+Of the 2,980 entries that report a statement, 2,858 have an exact quote match,
+117 have a related source excerpt, and five show a Task summary.
 
 ### Keeping it current
 
@@ -133,7 +133,9 @@ is deterministic:
 | `earnings_call_scheduled` | the date is after the latest call | Sets the next-call date. If that date passes with no "held" event, the call is processed anyway. |
 | `promise_update` | about a tracked promise, from the company's own site, SEC or a newswire, and newer than what the sheet has read | Extract reads the announcement, then the same update run and gate. |
 
-Every Task run carries the webhook. When one finishes,
+A call waits for a matching transcript with at least 15,000 characters of full text. A shorter transcript may need manual review.
+
+Every Task run carries the configured webhook. When one finishes,
 [`pipeline/advance.ts`](src/pipeline/advance.ts) stores the result, then works
 out the next step for that company from its stored state alone: a history for
 each new promise, Extract fills, a check for each outcome without a current one,
@@ -148,8 +150,8 @@ make it re-read its own state. Webhooks for one company are handled one at a
 time behind a lock.
 
 ```bash
-pnpm monitors create      # one monitor per company
-pnpm monitors poll        # locally: the reconcile, then wait on any runs it starts
+pnpm monitors create MSFT # for a locally generated sheet
+pnpm monitors poll MSFT   # reconcile this company and wait for its runs
 pnpm monitors list
 pnpm monitors cancel --yes   # stays cancelled; the reconcile does not recreate it
 ```
@@ -174,7 +176,7 @@ Extract, Search and Image Search add a few cents per sheet.
 
 - **Data.** Text in quotation marks is verbatim from a source, which is named
   underneath, and at most 60 words: a longer sentence is cut at a clause break,
-  never reworded. Where no verbatim text was found, the Task's summary shows in
+  never reworded. Related passages are labeled as source excerpts with no speaker attribution. Where no passage was found, the Task's summary shows in
   grey italics. No figure is typed by hand.
 - **Published copy.** The pipeline keeps each sheet in `output/sheets/` with the
   request IDs it needs to chain update runs. `data/` gets the same sheet without
@@ -196,9 +198,7 @@ Extract, Search and Image Search add a few cents per sheet.
 
 ## Limits
 
-- Stances and outcomes are AI judgments: made by one Task run and confirmed by
-  a separate one. No person reviews them. The verbatim quote and source beside
-  each statement are what let a reader check them.
+- Stances and outcomes are Task judgments. Separate AI research runs assess the outcome status and flag unsupported details in its summary. Each statement links to its evidence when available.
 - About half the statements come from earnings calls; the rest come from
   company releases, prepared remarks, investor days, filings and shareholder
   letters. Each statement names its document.

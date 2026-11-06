@@ -19,12 +19,13 @@ for (const ticker of tickers) {
     await withLock(ticker, async () => {
       const manifest = await readManifest(ticker);
       if (!manifest) return;
-      const before = await rebuild(ticker);
+      const before = await readSheet(ticker);
+      if (!before || before.runs[0]?.runId !== manifest.sheetRunId) return;
       const images = await searchImages(client, companyFor(ticker), before.photoSubject, `said-and-done-images-${ticker}`);
       await writeRaw(ticker, "images", "latest", images);
       await writeManifest(ticker, { ...manifest, images: true });
       const sheet = await rebuild(ticker);
-      if (await readSheet(ticker)) await writeSheet(sheet);
+      await writeSheet({ ...before, images: sheet.images });
       console.log(`${ticker}: logo ${sheet.images.logo?.imageUrl ?? "none"} · photo ${sheet.images.photo?.imageUrl ?? "none"}`);
     });
   } catch (error) {

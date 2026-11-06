@@ -61,7 +61,7 @@ export async function reconcile(client: Parallel, options: { tickers?: string[];
     await safely(`${r.ticker} monitor`)(async () => {
       let events;
       try {
-        events = await recentEvents(client, r.monitorId, 1);
+        events = await recentEvents(client, r.monitorId);
       } catch (error) {
         if (!notFound(error)) throw error;
         await withLock(r.ticker, () => replaceMissing(client, r, log));

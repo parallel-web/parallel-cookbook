@@ -6,7 +6,6 @@ import { TearSheet } from "../components/TearSheet";
 import { loadCoverage } from "../lib/data";
 import { fmtDate, todayIso } from "../lib/dates";
 import { asOfLine, callOf, countsOf, dueClass, dueWord, tally, trackOf } from "../lib/view";
-import { MONITOR_FREQUENCY } from "../updates/spec";
 
 export const dynamic = "force-dynamic";
 
@@ -59,11 +58,11 @@ export default async function Companies() {
             <h1>Said &amp; done.</h1>
             <p>
               What {sheets.length} public companies promised investors since {since}, and what happened. {promises} promises from earnings calls and company
-              releases, each traced statement by statement with word-for-word quotes from the source.
+              releases, each traced statement by statement with links to the sources.
             </p>
             <span className="live">
               <span className="live-dot" aria-hidden />
-              Monitors check each company every {MONITOR_FREQUENCY.replace("h", " hours")}. More companies are added all the time.
+              {asOfLine(asOf)}
             </span>
           </div>
           <div className="fan" aria-label="Three tear sheets, rendered from the template">

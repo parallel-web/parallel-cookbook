@@ -12,8 +12,8 @@ import { TearSheet } from "./TearSheet";
 /** Who checked the outcome, in plain words: a separate AI research run, not a person. */
 function checkedBy(checks: number, agree: number) {
   return checks > 1
-    ? `Outcome checked by ${checks} separate AI research runs (Parallel Task API) that read the sources on their own, not by a person: ${agree} of ${checks} found the same outcome.`
-    : "Outcome checked by a separate AI research run (Parallel Task API) that read the sources on its own, not by a person: it found the same outcome.";
+    ? `Outcome status checked by ${checks} separate AI research runs (Parallel Task API) that read the sources on their own, not by a person: ${agree} of ${checks} found the same outcome.`
+    : "Outcome status checked by a separate AI research run (Parallel Task API) that read the sources on its own, not by a person: it found the same outcome.";
 }
 
 const DOC: Record<string, string> = {
@@ -87,12 +87,12 @@ export function SheetView({ sheet, today, initialFocus }: { sheet: SheetData; to
               {promise.outcomeDate ? ` · ${promise.status === "delivered_late" ? "done" : "reported"} ${fmtDate(promise.outcomeDate)}` : ""}
             </span>
           ) : null}
-          {promise.factCheck && promise.factCheck.verdict === "correct" ? (
+          {promise.factCheck ? (
             <span className="check">
-              {checkedBy(promise.factCheck.checks ?? 1, promise.factCheck.agree ?? 1)}
+              {promise.factCheck.verdict === "correct" ? checkedBy(promise.factCheck.checks ?? 1, promise.factCheck.agree ?? 1) : promise.factCheck.verdict === "incorrect" ? "The independent AI check disputed the outcome status." : "The independent AI checks did not confirm the outcome status."}
               {promise.factCheck.held ? ` ${promise.factCheck.held} statement${promise.factCheck.held === 1 ? "" : "s"} held back for a date the check could not confirm.` : ""}
             </span>
-          ) : null}
+          ) : <span className="check">Outcome has no current independent check.</span>}
         </div>
         {trail.map((s) => (
           <div key={s.id} className="entry">
@@ -105,7 +105,7 @@ export function SheetView({ sheet, today, initialFocus }: { sheet: SheetData; to
                 <StatementText s={s} />
               </p>
               <p className="src">
-                {[s.call, s.sourceType && DOC[s.sourceType] && !s.call.toLowerCase().includes(DOC[s.sourceType]) ? DOC[s.sourceType] : null, s.speaker].filter(Boolean).join(" · ")}
+                {[s.call, s.sourceType && DOC[s.sourceType] && !s.call.toLowerCase().includes(DOC[s.sourceType]) ? DOC[s.sourceType] : null, s.verbatim?.match === "matched" ? null : s.speaker].filter(Boolean).join(" · ")}
                 {" · "}
                 {s.verbatim ? (
                   <a href={s.verbatim.backing.url} target="_blank" rel="noreferrer">
@@ -119,7 +119,9 @@ export function SheetView({ sheet, today, initialFocus }: { sheet: SheetData; to
           </div>
         ))}
         <p className="src" style={{ marginTop: 14, fontFamily: "var(--f-mono)", fontSize: 11, color: "var(--ink-3)" }}>
-          Outcome: {promise.outcomeSummary}
+          {promise.factCheck?.summaryErrors.length
+            ? `Outcome summary withheld. The independent check flagged this evidence: ${promise.factCheck.summaryErrors.join(" ")}`
+            : `Outcome: ${promise.outcomeSummary}`}
         </p>
       </section>
     </>

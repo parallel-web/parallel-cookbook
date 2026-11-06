@@ -18,7 +18,7 @@ import { startRun } from "../pipeline/runs";
 import { fillGaps } from "../sheet/fill";
 import { evaluateUpdate } from "../sheet/gate";
 import type { ScheduledCall } from "../sheet/build";
-import { appendFills, publish, readFills, readManifest, rebuild, sessionId, writeManifest } from "../sheet/stored";
+import { appendFills, publish, publishedManifest, readFills, readManifest, rebuild, sessionId, writeManifest } from "../sheet/stored";
 import { companyFor, listCallDays, readCallDay, readCoverageConfig, readRaw, readSheet, withLock, writeCallDay, writeDraft, writeRaw, writeSheet } from "../store";
 import { compareWithTask, coverageOf, matchPassages, rankResults, readCall, readSource, type ExtractResponseLike, type SearchResponseLike } from "./callday";
 import { companyDomains } from "../sheet/evidence";
@@ -60,7 +60,9 @@ export async function startCallDay(
   const company = companyFor(ticker);
   const sheet = await readSheet(ticker);
   if (!sheet) throw new Error(`No published sheet for ${ticker}`);
-  const existing = await readCallDay(ticker, call.date);
+  const manifest = await publishedManifest(ticker);
+  if (!manifest) throw new Error(`Run pnpm sheet ${ticker} before processing a call or announcement`);
+  const existing = await readCallDay(ticker, call.date, kind === "event" ? trigger.eventId : null);
   if (existing && existing.status !== "waiting_transcript" && !options.forceUpdate && !options.redo) {
     options.log(`${ticker} ${call.date}: already handled (${existing.status})`);
     return existing;
@@ -100,7 +102,6 @@ export async function startCallDay(
 
   const request = updateRunRequest(company, sheet, { date: call.date, quarter: call.quarter, transcriptUrl: record.extract?.url ?? null, kind });
   const stored = await startRun(client, ticker, "update-run", request, UPDATE_SPEC_KEY, { log: options.log });
-  const manifest = (await readManifest(ticker))!;
   await writeManifest(ticker, { ...manifest, updates: [...manifest.updates, { runId: stored.run.run_id, callDate: call.date, eventId: trigger.eventId }] });
   record = { ...record, status: "updating", update: { runId: stored.run.run_id, status: stored.run.status, processor: stored.run.processor } };
   await writeCallDay(record);
@@ -121,22 +122,25 @@ export async function finishUpdate(
   const final = result ?? (await client.taskRun.result(runId));
   await writeRaw(ticker, "update-run", runId, { ...stored, run: final.run, result: final });
   const callDate = String((stored.input as { call_date: string }).call_date);
-  let record = await readCallDay(ticker, callDate);
-  if (!record) throw new Error(`No call-day record for ${ticker} ${callDate}`);
+  const manifest = await readManifest(ticker);
+  const entry = manifest?.updates.find(u => u.runId === runId);
+  if (!manifest || !entry) throw new Error(`Update ${runId} does not belong to the current register`);
+  let record = await readCallDay(ticker, callDate, stored.input.source_type === "company_statement" ? entry.eventId : null);
+  if (!record || record.update?.runId !== runId) throw new Error(`No matching call-day record for ${ticker} ${callDate}`);
   if (final.run.status !== "completed") {
     record = { ...record, status: "held", update: { runId, status: final.run.status, processor: final.run.processor } };
     await writeCallDay(record);
     return { record, sheet: null, published: false };
   }
 
-  let sheet = await rebuild(ticker);
+  let sheet = await rebuild(ticker, undefined, runId);
   const fills = await fillGaps(client, company, sheet, await readFills(ticker, [runId]), {
     runId,
     sessionId: sessionId(ticker, runId),
     log,
   });
   await appendFills(ticker, runId, fills);
-  sheet = await rebuild(ticker);
+  sheet = await rebuild(ticker, undefined, runId);
   record = compareWithTask({ ...record, coverage: coverageOf(sheet, record.passages) }, sheet, runId);
   const gate = evaluateUpdate(sheet, record, runId);
   const passed = gate.passed && sheet.gate.passed;
@@ -148,7 +152,6 @@ export async function finishUpdate(
     sheetVersion: sheet.version,
   };
   for (const c of gate.checks) log(`  ${c.result.padEnd(4)} ${c.label}: ${c.detail}`);
-  const manifest = (await readManifest(ticker))!;
   await writeManifest(ticker, {
     ...manifest,
     updates: manifest.updates.map((u) => (u.runId === runId ? { ...u, status: passed ? "published" : "held" } : u)),
@@ -167,12 +170,12 @@ export async function finishUpdate(
 /** Re-derives a call-day record from its stored Search and Extract responses. No API calls. */
 export async function rebuildCallDay(record: CallDayRecord): Promise<CallDayRecord> {
   const sheet = await readSheet(record.ticker);
-  if (!sheet || !record.search) return record;
+  if (!sheet) return record;
   const company = companyFor(record.ticker);
   const ownDomains = companyDomains(company.website, sheet.irUrl);
-  const search = await readRaw<{ response: SearchResponseLike }>(record.ticker, "search", record.search.id);
+  const search = record.search && await readRaw<{ response: SearchResponseLike }>(record.ticker, "search", record.search.id);
   let next: CallDayRecord = record;
-  if (search) next = { ...next, search: { ...record.search, results: rankResults(search.response, ownDomains, record.extract?.url ?? null) } };
+  if (record.search && search) next = { ...next, search: { ...record.search, results: rankResults(search.response, ownDomains, record.extract?.url ?? null) } };
   const extract = record.extract ? await readRaw<{ response: ExtractResponseLike }>(record.ticker, "extract", record.extract.id) : null;
   if (extract) {
     const texts = extract.response.results.flatMap((r) => (r.full_content ? [r.full_content] : (r.excerpts ?? [])));
@@ -196,8 +199,9 @@ export async function recordSchedule(ticker: string, schedule: ScheduledCall, lo
   if (!manifest || !current) return;
   if (manifest.schedule?.date === schedule.date) return;
   await writeManifest(ticker, { ...manifest, schedule });
-  const sheet = await rebuild(ticker);
-  if (sheet.version === current.version) await writeSheet(sheet);
+  if (schedule.date > current.latestCall.date && schedule.date !== current.nextCall.date) {
+    await writeSheet({ ...current, nextCall: { date: schedule.date, quarter: schedule.quarter, time: null, source: "monitor" } });
+  }
   log(`${ticker}: next call set to ${schedule.date} from a monitor event`);
 }
 
@@ -214,7 +218,7 @@ export async function catchUpCalls(client: Parallel, options: { log: Log; today?
     const due = sheet?.nextCall.date;
     if (!sheet || !due || due <= sheet.latestCall.date) continue;
     const daysPast = (new Date(`${today}T12:00:00Z`).getTime() - new Date(`${due}T12:00:00Z`).getTime()) / 86_400_000;
-    if (daysPast < 1 || daysPast > 14 || (await readCallDay(company.ticker, due))) continue;
+    if (daysPast < 1 || daysPast > 14 || !(await publishedManifest(company.ticker)) || (await readCallDay(company.ticker, due))) continue;
     options.log(`${company.ticker}: no "held" event for the ${due} call; running on the scheduled date`);
     await withLock(company.ticker, () =>
       startCallDay(
@@ -232,6 +236,7 @@ export async function catchUpCalls(client: Parallel, options: { log: Log; today?
 export async function retryWaiting(client: Parallel, options: { log: Log; tickers?: string[] }) {
   const now = Date.now();
   for (const record of (await listCallDays()).filter((r) => r.status === "waiting_transcript" && (!options.tickers || options.tickers.includes(r.ticker)))) {
+    if (!(await publishedManifest(record.ticker))) continue;
     if (now - new Date(`${record.callDate}T12:00:00Z`).getTime() > 4 * 86_400_000) continue;
     const url = typeof record.trigger.content?.source_url === "string" ? record.trigger.content.source_url : undefined;
     await withLock(record.ticker, () =>

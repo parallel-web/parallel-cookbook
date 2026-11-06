@@ -21,3 +21,7 @@ test("a source from a different call is caught; unknown is let through", () => {
   assert.equal(sameCall("Q4 2025 earnings call", { title: "Uber Technologies, Inc.", url: "https://s23.q4cdn.com/files/doc_events/2026/Feb/04/Uber-Q4-25-Earnings-Call-Transcript.pdf" }, "2026-02-04"), true);
   assert.equal(sameCall("Q4 2024 earnings call", { title: "Q4'24 Prepared Remarks for Website", url }, "2025-02-20"), true);
 });
+
+test("a publication date near the call cannot override a contradictory fiscal quarter", () => {
+  assert.equal(sameCall("Q3 2026", { title: "2026-10-27 Q2 2026 transcript", url: "https://example.com/transcript" }, "2026-10-27"), false);
+});

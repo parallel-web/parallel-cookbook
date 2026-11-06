@@ -7,7 +7,7 @@ import type { Parallel } from "../parallel/client";
 
 import { STANCE_KEY } from "../lib/marks";
 import type { CallDayPassage, CallDayRecord, CallDayResult, Company, SheetData } from "../lib/types";
-import { companyDomains, isTranscriptHost, tierOf } from "../sheet/evidence";
+import { companyDomains, isTranscriptHost, sameCall, tierOf } from "../sheet/evidence";
 import { callDayExtractRequest, callDaySearchRequest } from "./spec";
 import { domainOf, keywords, keywordSet, markFigures, sentences, shared, stripMarkdown, substantiveFigures } from "../lib/text";
 
@@ -156,7 +156,7 @@ export function agreement(passage: string, task: string): { agree: CallDayPassag
   const b = substantiveFigures(task);
   const both = [...a].filter((x) => b.has(x));
   if (a.size === 0 || b.size === 0) return { agree: "none", shared: both };
-  if (both.length === Math.min(a.size, b.size)) return { agree: "same", shared: both };
+  if (both.length === a.size && both.length === b.size) return { agree: "same", shared: both };
   if (both.length > 0) return { agree: "part", shared: both };
   return { agree: "diff", shared: [] };
 }
@@ -168,7 +168,7 @@ export function compareWithTask(record: CallDayRecord, sheet: SheetData, updateR
     if (!p.promiseId) return { ...p, task: null, agree: "none" as const, shared: [] };
     const st = sheet.statements.find((s) => s.promiseId === p.promiseId && (updateRunId === null || s.runId === updateRunId) && near(s.date));
     if (!st || st.stance === "not_mentioned") return { ...p, task: null, agree: "none" as const, shared: [] };
-    const taskText = st.verbatim?.text ?? st.summary;
+    const taskText = st.summary;
     const { agree, shared: both } = agreement(p.text, taskText);
     return {
       ...p,
@@ -176,8 +176,8 @@ export function compareWithTask(record: CallDayRecord, sheet: SheetData, updateR
         statementId: st.id,
         stance: st.stance,
         k: STANCE_KEY[st.stance],
-        segs: st.verbatim?.segs ?? markFigures(st.summary),
-        verbatim: !!st.verbatim,
+        segs: markFigures(st.summary),
+        verbatim: false,
         domain: st.verbatim?.backing.domain ?? st.citations[0]?.domain ?? null,
       },
       agree,
@@ -205,24 +205,27 @@ export async function readCall(
   const searchResponse = (await client.search(searchRequest as never)) as unknown as SearchResponseLike;
   await onRaw("search", searchResponse.search_id, { request: searchRequest, response: searchResponse });
   const monitorUrl = typeof record.trigger.content?.transcript_url === "string" ? (record.trigger.content.transcript_url as string) : null;
-  const candidates = candidateUrls(rankResults(searchResponse, ownDomains, null), monitorUrl).slice(0, MAX_EXTRACT_TRIES);
+  const candidates = candidateUrls(rankResults(searchResponse, ownDomains, null).filter(r => sameCall(record.quarter, r, record.callDate)), monitorUrl && sameCall(record.quarter, { url: monitorUrl, title: null }, record.callDate) ? monitorUrl : null).slice(0, MAX_EXTRACT_TRIES);
   if (candidates.length === 0) {
     return { ...record, search: { id: searchResponse.search_id, request: searchRequest, results: rankResults(searchResponse, ownDomains, null), pickRule: PICK_RULE }, status: "waiting_transcript" };
   }
 
-  // Extract candidates in order until one returns a full transcript; keep the longest otherwise.
-  let best: { url: string; id: string; request: Record<string, unknown>; texts: string[]; chars: number } | null = null;
+  // A teaser or failed extraction cannot verify a call. Wait for a full candidate.
+  let best: { url: string; id: string; request: Record<string, unknown>; texts: string[] } | null = null;
   for (const url of candidates) {
     const extractRequest = { ...callDayExtractRequest(sheet, url, record.callDate), session_id: sessionId };
     const extractResponse = (await client.extract(extractRequest as never)) as unknown as ExtractResponseLike;
     await onRaw("extract", extractResponse.extract_id, { request: extractRequest, response: extractResponse });
-    const chars = extractResponse.results.reduce((n, r) => n + (r.full_content?.length ?? 0), 0);
+    const matching = extractResponse.results.filter(r => sameCall(record.quarter, { title: r.title ?? null, url: r.url }, record.callDate));
+    const chars = matching.reduce((n, r) => n + (r.full_content?.length ?? 0), 0);
     // Match against the full transcript when Extract returned it, else against the excerpts.
-    const texts = extractResponse.results.flatMap((r) => (r.full_content ? [r.full_content] : (r.excerpts ?? [])));
-    if (!best || chars > best.chars) best = { url, id: extractResponse.extract_id, request: extractRequest, texts, chars };
-    if (chars >= MIN_TRANSCRIPT_CHARS) break;
+    const texts = matching.flatMap((r) => (r.full_content ? [r.full_content] : (r.excerpts ?? [])));
+    if (chars < MIN_TRANSCRIPT_CHARS) continue;
+    best = { url, id: extractResponse.extract_id, request: extractRequest, texts };
+    break;
   }
-  const used = best!;
+  if (!best) return { ...record, search: { id: searchResponse.search_id, request: searchRequest, results: rankResults(searchResponse, ownDomains, null), pickRule: PICK_RULE }, status: "waiting_transcript" };
+  const used = best;
   const passages = matchPassages(sheet, used.texts);
   return {
     ...record,
@@ -247,7 +250,7 @@ export async function readSource(
   const response = (await client.extract(request as never)) as unknown as ExtractResponseLike;
   await onRaw("extract", response.extract_id, { request, response });
   const texts = response.results.flatMap((r) => (r.full_content ? [r.full_content] : (r.excerpts ?? [])));
-  if (!texts.length) return { ...record, extract: { id: response.extract_id, request, url }, status: "waiting_transcript" };
+  if (!texts.some(t => t.trim())) return { ...record, extract: { id: response.extract_id, request, url }, status: "waiting_transcript" };
   const passages = matchPassages(sheet, texts);
   return { ...record, extract: { id: response.extract_id, request, url }, passages, coverage: coverageOf(sheet, passages), status: "extracted" };
 }

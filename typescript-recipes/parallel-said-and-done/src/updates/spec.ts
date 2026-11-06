@@ -244,12 +244,13 @@ export function updateRunRequest(
   call: UpdateSource,
   processor: string = UPDATE_PROCESSOR,
 ) {
-  const last = sheet.runs[sheet.runs.length - 1];
+  const last = [...sheet.runs].reverse().find(r => r.kind === "update" || r.kind === "sheet");
+  if (!last?.interactionId) throw new Error(`Run pnpm sheet ${company.ticker} before updating the recorded snapshot`);
   return {
     processor,
     input: updateInput(company, sheet, call),
     task_spec: updateTaskSpec(),
-    previous_interaction_id: last?.interactionId ?? null,
+    previous_interaction_id: last.interactionId,
     metadata: { app: "said-and-done", spec: UPDATE_SPEC_KEY, ticker: company.ticker, call_date: call.date },
     enable_events: false,
   };

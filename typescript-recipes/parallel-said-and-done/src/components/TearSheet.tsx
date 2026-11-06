@@ -60,7 +60,7 @@ export function TearSheet({
   const histories = sheet.runs.filter((r) => r.kind === "trail").length;
   const checked = sheet.promises.filter((p) => p.factCheck);
   if (histories) made[1] = { k: "Run", v: `${sheetRun?.createdAt.slice(0, 10)} + ${histories} promise histories` };
-  if (checked.length) made.push({ k: "AI fact-check", v: `${checked.filter((p) => p.factCheck!.verdict === "correct").length} of ${checked.length} outcomes confirmed` });
+  if (checked.length) made.push({ k: "AI fact-check", v: `${checked.filter((p) => p.factCheck!.verdict === "correct" && !p.factCheck!.summaryErrors.length).length} of ${sheet.promises.length} outcomes confirmed` });
 
   return (
     <article className="ts" aria-label={`${sheet.name} promise tear sheet`}>
@@ -106,7 +106,7 @@ export function TearSheet({
           <span>Outcome</span>
         </div>
         {sheet.promises.map((p) => {
-          const ss = statementsOf(sheet, p.id);
+          const ss = statementsOf(sheet, p.id).filter(s => s.stance !== "not_mentioned");
           const track = trackOf(sheet, p.id);
           return (
             <div
@@ -146,7 +146,7 @@ export function TearSheet({
         <div className="ts-key">
           <span>
             <span className="ts-dot" />
-            Statement on a call
+            Statement
           </span>
           <span>
             <span className="ts-dot c" />
@@ -190,7 +190,7 @@ export function TearSheet({
           <div className="title">
             <span>Sources</span>
             <span className="m">
-              Top 5 of {sheet.sources.length} · {primary} company or SEC
+              Top 5 of {sheet.sources.length} · {primary} primary sources
             </span>
           </div>
           <div className="ts-list">

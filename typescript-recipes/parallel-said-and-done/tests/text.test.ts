@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 
-import { containsVerbatim, figureValues, keywords, markFigures, quoteLength, recall, sentences, substantiveFigures } from "../src/lib/text";
+import { containsVerbatim, keywords, markFigures, quoteLength, recall, sentences, substantiveFigures } from "../src/lib/text";
 
 test("marks money ranges, percentages, fiscal periods and years as figures", () => {
   const segs = markFigures("We anticipate 2026 capital expenditures of $135-145 billion, up 39% from FY25 in Q3.");
@@ -13,8 +13,8 @@ test("marks money ranges, percentages, fiscal periods and years as figures", () 
 });
 
 test("figure values compare across formatting", () => {
-  assert.deepEqual([...figureValues("$135 billion-$145 billion")].sort(), ["135", "145"]);
-  assert.deepEqual([...substantiveFigures("In Q3 2026 we spent $1,200 million")], ["1200"]);
+  assert.deepEqual([...substantiveFigures("$135 billion-$145 billion")].sort(), ["USD:135000000000", "USD:145000000000"]);
+  assert.deepEqual([...substantiveFigures("In Q3 2026 we spent $1,200 million")], ["USD:1200000000"]);
 });
 
 test("sentences keep abbreviations and decimals", () => {
@@ -36,4 +36,10 @@ test("Chinese and Japanese sentences end at 。！？ and count as half a word p
   assert.equal(quoteLength("品牌正式进入中国。"), 5);
   assert.equal(quoteLength("NikeSKIMS 在中国"), 3);
   assert.equal(quoteLength("Margins held at 12%."), 4);
+});
+
+test("exact matching keeps currencies distinct and does not match a numeric prefix", () => {
+  assert.equal(containsVerbatim("Our guidance is £500 million annually.", "Our guidance is €500 million annually."), false);
+  assert.equal(containsVerbatim("We raised guidance to 150 million.", "We raised guidance to 15"), false);
+  assert.deepEqual(sentences("25 Boeing aircraft were delivered."), ["25 Boeing aircraft were delivered."]);
 });

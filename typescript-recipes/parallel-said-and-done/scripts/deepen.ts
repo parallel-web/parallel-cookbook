@@ -22,8 +22,8 @@ import { readCoverageConfig, withLock } from "../src/store";
 import { flag, loadEnv, positional } from "./lib/env";
 
 loadEnv();
-const redo = flag("redo")?.split(",").map((s) => s.trim().toUpperCase().split(":") as [string, string]);
-const picked = positional().map((t) => t.toUpperCase());
+const redo = flag("redo", true)?.split(",").map((s) => s.trim().toUpperCase().split(":") as [string, string]);
+const picked = positional(["redo"]).map((t) => t.toUpperCase());
 const tickers = redo ? [...new Set(redo.map(([t]) => t))] : picked.length ? picked : readCoverageConfig().companies.map((c) => c.ticker);
 const log = (line: string) => console.log(line);
 try {

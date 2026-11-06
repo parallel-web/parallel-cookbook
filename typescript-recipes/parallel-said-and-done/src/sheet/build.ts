@@ -141,7 +141,7 @@ function runRef(stored: StoredRun, kind: RunRef["kind"], callDate?: string): Run
     createdAt: run.created_at ?? "",
     completedAt: run.modified_at ?? null,
     taskGroupId: run.taskgroup_id ?? null,
-    previousInteractionId: (stored.input as { previous_interaction_id?: string }).previous_interaction_id ?? null,
+    previousInteractionId: stored.previousInteractionId ?? null,
     ...(callDate ? { callDate } : {}),
   };
 }
@@ -251,17 +251,17 @@ export function buildSheet(input: BuildInput): SheetData {
   const runs: RunRef[] = [runRef(sheetRun, "sheet")];
 
   // Stage 2: a promise's own history run replaces the draft statements and outcome for it.
-  for (const trail of input.trails ?? []) {
-    if (trail.result?.run.status !== "completed") continue;
+  function applyHistory(trail: StoredRun) {
     const pid = String((trail.input as { promise_id?: string }).promise_id ?? "");
     const p = promises.find((x) => x.id === pid);
-    if (!p) continue;
+    if (!p) return;
     const out = outputOf<TrailOutput>(trail);
     const horizon = String((trail.input as { as_of_date?: string }).as_of_date ?? asOfInput);
-    for (const [id, st] of byId) if (st.promiseId === pid) byId.delete(id);
+    if (horizon > asOf) asOf = horizon;
+    for (const [id, st] of byId) if (st.promiseId === pid && st.date <= horizon) byId.delete(id);
     out.content.statements.forEach((s, i) => {
       const so: StatementOut = { ...s, promise_id: pid };
-      if (!validStatement(so, promiseIds, windowStart, horizon > asOfInput ? horizon : asOfInput)) {
+      if (!validStatement(so, promiseIds, windowStart, horizon)) {
         dropped += 1;
         return;
       }
@@ -274,7 +274,7 @@ export function buildSheet(input: BuildInput): SheetData {
     p.outcomeSummary = out.content.outcome_summary;
     p.outcomeDate = out.content.outcome_date;
     p.citations = dedupeCitations([...rawCitations(ob).map((c) => toCitation(c, ownDomains)), ...p.citations]);
-    const first = out.content.statements.map((x) => x.date).filter((d) => ISO_DATE.test(d)).sort()[0];
+    const first = [...byId.values()].filter((s) => s.promiseId === pid && s.stance !== "not_mentioned").map((s) => s.date).sort()[0];
     if (first) p.firstStated = first;
     if (ob?.confidence) p.confidence = ob.confidence;
     runs.push(runRef(trail, "trail"));
@@ -284,13 +284,20 @@ export function buildSheet(input: BuildInput): SheetData {
 
   // Promises whose outcome a later call's update run changed, and that call's date.
   const touchedAfter = new Map<string, string>();
-  const orderedUpdates = [...updates].sort((a, b) =>
-    String((a.input as { call_date: string }).call_date).localeCompare(String((b.input as { call_date: string }).call_date)),
-  );
-  for (const update of orderedUpdates) {
-    if (update.result?.run.status !== "completed") continue;
+  const timeline = [
+    ...updates.map(run => ({ run, history: false, date: String(run.input.call_date) })),
+    ...(input.trails ?? []).map(run => ({ run, history: true, date: String(run.input.as_of_date ?? asOfInput) })),
+  ].sort((a, b) => a.date.localeCompare(b.date) || (a.run.run.created_at ?? "").localeCompare(b.run.run.created_at ?? "") || Number(a.history) - Number(b.history));
+  for (const step of timeline) {
+    if (step.run.result?.run.status !== "completed") continue;
+    if (step.history) {
+      applyHistory(step.run);
+      continue;
+    }
+    const update = step.run;
     const out = outputOf<UpdateOutput>(update);
     const callDate = String((update.input as { call_date: string }).call_date);
+    if (out.content.call_date !== callDate) continue;
     runs.push(runRef(update, "update", callDate));
     const horizon = callDate > asOf ? callDate : asOf;
     // Silence about a promise that was already settled before this call is not news, and an
@@ -306,7 +313,10 @@ export function buildSheet(input: BuildInput): SheetData {
     out.content.promise_updates.forEach((u, i) => {
       const p = promises.find((x) => x.id === u.promise_id);
       if (!p) return;
-      if (u.outcome_status !== p.status || u.outcome_summary !== p.outcomeSummary) touchedAfter.set(p.id, callDate);
+      if (u.outcome_status !== p.status || u.outcome_summary !== p.outcomeSummary) {
+        touchedAfter.set(p.id, callDate);
+        p.outcomeDate = null;
+      }
       const b = basisFor(out.basis, `promise_updates.${i}`);
       p.status = u.outcome_status;
       p.k = OUTCOME_KEY[u.outcome_status] ?? p.k;
@@ -327,7 +337,7 @@ export function buildSheet(input: BuildInput): SheetData {
         firstStated: out.content.call_date,
         status: "open",
         k: "open",
-        outcomeSummary: announcement ? `First stated in “${out.content.fiscal_quarter}”; no outcome yet.` : `First stated on the ${out.content.fiscal_quarter} call; no outcome yet.`,
+        outcomeSummary: `First tracked on ${callDate}. No outcome yet.`,
         citations: dedupeCitations(rawCitations(b).map((c) => toCitation(c, ownDomains))),
         confidence: b?.confidence ?? null,
         addedOn: out.content.call_date,
@@ -347,9 +357,8 @@ export function buildSheet(input: BuildInput): SheetData {
       const st = toStatement(company, first, `new_promises.${i}`, out.basis, `${label} ${np.commitment}`, ownDomains, fills, update.run.run_id);
       byId.set(st.id, st);
     });
-    // An announcement between calls is not a call: the latest and next call stay as the last call left them.
-    if (!announcement) {
-      if (out.content.call_date >= latestCall.date) latestCall = { date: out.content.call_date, quarter: out.content.fiscal_quarter };
+    if (!announcement && callDate >= latestCall.date) {
+      latestCall = { date: callDate, quarter: out.content.fiscal_quarter };
       nextCall = { date: out.content.next_call_date, time: out.content.next_call_time, quarter: out.content.next_call_quarter };
     }
     asOf = horizon;
@@ -369,7 +378,7 @@ export function buildSheet(input: BuildInput): SheetData {
     if (!p) continue;
     // A later call's update run speaks for itself.
     const settledAsOf = String((r.input as { as_of_date?: string }).as_of_date ?? "");
-    if (runs.some((x) => x.kind === "update" && (x.callDate ?? "") > settledAsOf)) continue;
+    if ((touchedAfter.get(pid) ?? "") > settledAsOf || r.input.published_outcome !== `${p.status}: ${p.outcomeSummary}`) continue;
     const out = outputOf<ResolveOut>(r);
     const b = basisFor(out.basis, "outcome_summary") ?? basisFor(out.basis, "outcome_status");
     p.resolved = { runId: r.run.run_id, from: p.status, reason: out.content.reason };
@@ -394,12 +403,12 @@ export function buildSheet(input: BuildInput): SheetData {
     const p = promises.find((x) => x.id === pid)!;
     // A check made before a later call changed this outcome no longer vouches for it.
     const changed = touchedAfter.get(pid);
-    const checks = changed ? all.filter((c) => String((c.input as { as_of_date?: string }).as_of_date ?? "") >= changed) : all;
+    const checks = all.filter(c => c.input.claimed_outcome === `${p.status}: ${p.outcomeSummary}` && (!changed || String(c.input.as_of_date) >= changed));
     if (!checks.length) continue;
     const outs = checks.map((c) => ({ run: c, out: outputOf<CheckOut>(c).content }));
     const votes = { correct: 0, incorrect: 0, unclear: 0 };
     for (const o of outs) votes[o.out.outcome_verdict] += 1;
-    const verdict = votes.incorrect > votes.correct ? "incorrect" : votes.correct > votes.incorrect ? "correct" : "unclear";
+    const verdict = votes.incorrect * 2 > outs.length ? "incorrect" : votes.correct * 2 > outs.length ? "correct" : "unclear";
     const lead = outs.find((o) => o.out.outcome_verdict === verdict) ?? outs[0];
     const movedVotes = new Map<string, number>();
     for (const o of outs) for (const date of misdated(o.run.input as { claimed_statements: string }, o.out).keys()) movedVotes.set(date, (movedVotes.get(date) ?? 0) + 1);
@@ -414,7 +423,7 @@ export function buildSheet(input: BuildInput): SheetData {
       runId: lead.run.run.run_id,
       verdict,
       status: lead.out.outcome_status,
-      summaryErrors: lead.out.outcome_summary_errors,
+      summaryErrors: [...new Set(outs.flatMap(o => o.out.outcome_summary_errors))],
       held: moved.length,
       missing: lead.out.missing_statements,
       checks: outs.length,

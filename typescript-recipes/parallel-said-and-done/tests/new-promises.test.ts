@@ -1,11 +1,12 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
-
 import { buildSheet } from "../src/sheet/build";
 import { evaluateUpdate } from "../src/sheet/gate";
 import type { StoredRun } from "../src/parallel/task";
 import type { CallDayRecord } from "../src/lib/types";
+import { updateRunRequest } from "../src/updates/spec";
+import { evaluateSheet } from "../src/sheet/gate";
 
 const sheetRun = JSON.parse(readFileSync(new URL("./fixtures/sheet-run.json", import.meta.url), "utf8")) as StoredRun;
 const company = { ticker: "EXM", name: "Example Corp", short: "Example", website: "example.com" };
@@ -120,4 +121,45 @@ test("an announcement between calls is not a call: the latest call and next call
   const withAnnouncement = buildSheet({ company, windowStart: "2021-01-01", sheetRun, updates: [update, announcement], fills: [], images: null, version: 3, builtAt: "2026-11-06T00:00:00Z" });
   assert.deepEqual(withAnnouncement.latestCall, sheet.latestCall);
   assert.deepEqual(withAnnouncement.nextCall, sheet.nextCall);
+});
+
+
+const baseInput = { company, windowStart: "2021-01-01", sheetRun, updates: [update], fills: [], images: null, version: 2, builtAt: sheet.builtAt };
+
+test("an announcement does not advance the call calendar or invent an earnings call", () => {
+  const initial = buildSheet({ ...baseInput, updates: [] });
+  const event = { ...update, input: { ...update.input, source_type: "company_statement" } };
+  const result = buildSheet({ ...baseInput, updates: [event] });
+  assert.deepEqual(result.latestCall, initial.latestCall);
+  assert.deepEqual(result.nextCall, initial.nextCall);
+  assert.doesNotMatch(result.statements.find(s => s.promiseId === "P6")!.call, /earnings call/i);
+});
+
+test("the update chain follows the register even after independent checks", () => {
+  const last = { ...sheet.runs[0], kind: "check" as const, interactionId: "unrelated-check" };
+  const request = updateRunRequest(company, { ...sheet, runs: [...sheet.runs, last] }, { date: "2026-11-12", quarter: "Q4", transcriptUrl: null });
+  assert.equal(request.previous_interaction_id, "trun_update");
+});
+
+test("a history for a promise discovered by an update contributes its earlier statements", () => {
+  const trailRun = structuredClone(sheetRun.run);
+  trailRun.run_id = "trail-6";
+  trailRun.created_at = "2026-10-29T10:00:00Z";
+  const trail = { ...sheetRun, run: trailRun, input: { promise_id: "P6", as_of_date: "2026-10-29" },
+    result: { ...sheetRun.result!, output: { type: "json" as const, basis: [], content: { outcome_status: "revised", outcome_summary: "Management revised its target.", outcome_date: "2026-10-28",
+      statements: [{ date: "2026-07-20", call: "Q2 2026 earnings call", stance: "stated", speaker: null, quote: null, summary: "Initial margin guidance.", source_type: "earnings_call" }] } } } };
+  const result = buildSheet({ ...baseInput, trails: [trail] });
+  const p = result.promises.find(p => p.id === "P6")!;
+  assert.equal(p.firstStated, "2026-07-20");
+  assert.equal(p.status, "revised");
+  assert.equal(result.asOf, "2026-10-29");
+  assert.ok(result.runs.some(r => r.kind === "trail" && r.runId === "trail-6"));
+});
+
+test("unclear fact-checks never count as confirmed", () => {
+  const promises = sheet.promises.map(p => ({ ...p, factCheck: { verdict: "unclear" as const, status: p.status, held: 0, summaryErrors: [], missing: [] } }));
+  const report = evaluateSheet({ ...sheet, promises }, { dropped: 0 });
+  const check = report.checks.find(c => c.id === "fact-check")!;
+  assert.notEqual(check.result, "pass");
+  assert.match(check.detail, /^0 of /);
 });

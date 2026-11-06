@@ -26,7 +26,7 @@ import { fillGaps } from "../sheet/fill";
 import { completeSheet } from "../sheet/make-sheet";
 import { recordProfile } from "../sheet/profile";
 import { RESOLVE_SPEC_KEY, resolveRequest } from "../sheet/resolve";
-import { appendFills, publish, readFills, readManifest, rebuild, sessionId, writeManifest, type Manifest } from "../sheet/stored";
+import { appendFills, publish, publishedManifest, readFills, readManifest, rebuild, sessionId, writeManifest, type Manifest } from "../sheet/stored";
 import { TRAIL_SPEC_KEY, trailRequest } from "../sheet/trail";
 import { companyFor, readInflight, readRaw, readSheet, withLock, writeDraft, writeInflight, writeRaw } from "../store";
 import { ensureMonitor } from "../updates/monitors";
@@ -82,7 +82,7 @@ export function sameContent(a: SheetData, b: SheetData) {
  */
 export async function advance(client: Parallel, ticker: string, log: Log): Promise<Step[]> {
   if (Object.keys(await readInflight(ticker)).length) return [];
-  const manifest = await readManifest(ticker);
+  const manifest = await publishedManifest(ticker);
   if (!manifest) return [];
   const company = companyFor(ticker);
   let sheet = await rebuild(ticker);
@@ -118,7 +118,7 @@ export async function advance(client: Parallel, ticker: string, log: Log): Promi
   // Nothing left to run: publish if the sheet a reader would see has changed. Every change is a new version.
   const published = await readSheet(ticker);
   if (published && sameContent(published, sheet)) return [];
-  const live = manifest.updates.filter((u) => u.status !== "held").length;
+  const live = sheet.runs.filter(r => r.kind === "update").length;
   await writeManifest(ticker, { ...manifest, baseVersion: (published?.version ?? 0) - live });
   sheet = await rebuild(ticker);
   if (!sheet.gate.passed) {
