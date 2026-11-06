@@ -1,0 +1,2188 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "IBM",
+  "name": "International Business Machines Corporation",
+  "short": "IBM",
+  "website": "ibm.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.ibm.com/investor",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-21",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "IBM Quantum Starling computer",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Deliver fault-tolerant quantum by 2029",
+      "commitment": "Deliver the first large-scale, fault-tolerant quantum computer by 2029.",
+      "deadline": "2029",
+      "firstStated": "2023-12-04",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Starling remains targeted for 2029; IBM reported DARPA validation, not delivery. IBM dates the commitment to its 2023 roadmap.",
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:6c6c3b12-ff63-45f3-8eff-b519cba3372d/original/as/ibm_quantum_development_innovation-roadmap_explainer_nov_2025.pdf",
+          "title": "64/86/130pt title,  5 lines maximum,  sentence case",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bddaac4eb80",
+          "title": "IBM 3Q26 Earnings Prepared Remarks",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-10-22",
+            "what_was_said": "Management said it was “on a path to demonstrate the first error-corrected quantum computer by 2028.” This adds an intermediate demonstration milestone, not a replacement for the 2029 delivery target: IBM’s technical roadmap distinguishes a 2028 Starling proof-of-concept from the 2029 large-scale system.",
+            "call": "IBM 3Q 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "2026 revenue growth guidance",
+      "commitment": "Sustain constant-currency revenue growth of 5%-plus in 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-01-28",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "IBM lowered 2026 constant-currency revenue growth guidance from more than 5 percent to four-to-five percent and reaffirmed that range; full-year delivery remains pending.",
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2026-01-28-IBM-RELEASES-FOURTH-QUARTER-RESULTS",
+          "title": "IBM RELEASES FOURTH-QUARTER RESULTS",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://newsroom.ibm.com/2026-07-22-IBM-RELEASES-SECOND-QUARTER-RESULTS",
+          "title": "IBM RELEASES SECOND-QUARTER RESULTS - Jul 22, 2026",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-22",
+            "what_was_said": "Management identified the low end of the new 4%-5% revenue-growth range as its base case, reflecting the current environment. The high end assumed more typical pipeline conversion.",
+            "call": "2Q 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "2026 free-cash-flow growth",
+      "commitment": "Grow free cash flow about $1 billion year-over-year in 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-01-28",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Full-year free-cash-flow growth guidance increased to more than $1 billion year-over-year. Free cash flow was $7.8 billion year-to-date; full-year delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS",
+          "title": "IBM RELEASES THIRD-QUARTER RESULTS",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Confluent operational synergies",
+      "commitment": "Realize about $500 million of Confluent operational-spend run-rate synergies by the end of 2027.",
+      "deadline": "end of 2027",
+      "firstStated": "2025-12-08",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The target remains pending: about $500 million of operational-spend run-rate synergies by the end of 2027. IBM reported accelerated cost-synergy actions, not quantified completion.",
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "2026 productivity savings",
+      "commitment": "Generate an additional $1 billion of productivity savings in 2026, reaching $5.5 billion annual run-rate savings by year-end.",
+      "deadline": "end of 2026",
+      "firstStated": "2026-01-28",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Management reported productivity north of $5.5 billion, exceeding the year-end savings target.",
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-10-21",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "IBM-P1-2023-12-04",
+      "promiseId": "P1",
+      "date": "2023-12-04",
+      "call": "The hardware and software for the era of quantum utility is here",
+      "speaker": "Jay Gambetta, Vice President of IBM Quantum",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Starling targeted for 2029, executing 100 million gates over 200 qubits using error correction.",
+      "quote": "Then, in 2029, we hit an inflection point: executing 100 million gates over 200 qubits with our Starling processor employing error correction based on the novel Gross code.",
+      "verbatim": {
+        "text": "Then, in 2029, we hit an inflection point: executing 100 million gates over 200 qubits with our Starling processor employing error correction based on the novel Gross code Gross is a unit of a dozen dozen.",
+        "segs": [
+          {
+            "t": "Then, in ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ", we hit an inflection point: executing ",
+            "h": 0
+          },
+          {
+            "t": "100 million",
+            "h": 1
+          },
+          {
+            "t": " gates over 200 qubits with our Starling processor employing error correction based on the novel Gross code Gross is a unit of a dozen dozen.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://ibm.com/quantum/blog/quantum-roadmap-2033",
+          "title": "IBM Quantum System Two: the era of quantum utility is here | IBM Quantum Computing Blog",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://ibm.com/quantum/blog/quantum-roadmap-2033",
+          "title": "IBM Quantum System Two: the era of quantum utility is here | IBM Quantum Computing Blog",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:6c6c3b12-ff63-45f3-8eff-b519cba3372d/original/as/ibm_quantum_development_innovation-roadmap_explainer_nov_2025.pdf",
+          "title": "64/86/130pt title,  5 lines maximum,  sentence case",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.politico.com/newsletters/digital-future-daily/2023/12/04/ibm-promises-a-quantum-leap-00129969",
+          "title": "IBM promises a quantum leap - POLITICO",
+          "domain": "politico.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "IBM-P1-2024-01-24",
+      "promiseId": "P1",
+      "date": "2024-01-24",
+      "call": "IBM 4Q 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed quantum processors and systems without addressing the Starling delivery commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.ibm.com/investor/events/earnings-4q23",
+          "title": "IBM 4Q 2023 Earnings Announcement",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114324000007/ex991.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/ibm/transcripts/121239-q4-2023/",
+          "title": "International Business Machines (IBM) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2024-04-24",
+      "promiseId": "P1",
+      "date": "2024-04-24",
+      "call": "IBM 1Q 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed quantum installations and research without addressing the Starling delivery commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:eccf1770-80ad-4a4b-9539-52e77848ae72/original/as/ibm-1q24-earnings-prepared-remarks.pdf",
+          "title": "1Q24 Earnings Prepared Remarks",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114324000021/a1q24-ex99x1.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/24/international-business-machines-ibm-q1-2024-earnin/",
+          "title": "International Business Machines (IBM) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2024-07-24",
+      "promiseId": "P1",
+      "date": "2024-07-24",
+      "call": "IBM 2Q 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed Qiskit improvements without addressing the Starling delivery commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.ibm.com/investor/events/earnings-2q24",
+          "title": "IBM 2Q 2024 Earnings Announcement",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/ibm/transcripts/162688-q2-2024/",
+          "title": "International Business Machines (IBM) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2024-10-23",
+      "promiseId": "P1",
+      "date": "2024-10-23",
+      "call": "IBM 3Q 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed quantum data-center expansion without addressing the Starling delivery commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.ibm.com/investor/events/earnings-3q24",
+          "title": "IBM 3Q 2024 Earnings Announcement",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114324000045/ex-991.htm",
+          "title": "INTERNATIONAL BUSINESS MACHINES CORP 8-K exhibit 99.1, filed October 24, 2024",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/IBM/transcripts/2024-year/3-quarter",
+          "title": "International Business Machines Corporation (IBM) Q3 FY2024 Earnings Call Transcript - October 23, 2024",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2025-01-29",
+      "promiseId": "P1",
+      "date": "2025-01-29",
+      "call": "IBM 4Q 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed deployed quantum systems and research collaboration without addressing the Starling delivery commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ibm/transcripts/248298-q4-2024/",
+          "title": "International Business Machines (IBM) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114325000007/ibm_ex99x1.htm",
+          "title": "Ibm Ex99X1",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2025-04-23",
+      "promiseId": "P1",
+      "date": "2025-04-23",
+      "call": "IBM 1Q 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed a quantum-system deployment partnership without addressing the Starling delivery commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.ibm.com/investor/events/earnings-1q25",
+          "title": "IBM 1Q 2025 Earnings Announcement",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114325000031/ibmex99-1.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/ibm/transcripts/310651-q1-2025",
+          "title": "International Business Machines (IBM) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2025-06-10",
+      "promiseId": "P1",
+      "date": "2025-06-10",
+      "call": "IBM Sets the Course to Build World's First Large-Scale, Fault-Tolerant Quantum Computer at New IBM Quantum Data Center",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Starling targeted for 2029 in Poughkeepsie, with 20,000 times more operations than today's quantum computers.",
+      "quote": "Delivered by 2029, IBM Quantum Starling will be built in a new IBM Quantum Data Center in Poughkeepsie, New York and is expected to perform 20,000 times more operations than today's quantum computers.",
+      "verbatim": {
+        "text": "Delivered by 2029, IBM Quantum Starling will be built in a new IBM Quantum Data Center in Poughkeepsie, New York and is expected to perform 20,000 times more operations than today's quantum computers.",
+        "segs": [
+          {
+            "t": "Delivered by ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ", IBM Quantum Starling will be built in a new IBM Quantum Data Center in Poughkeepsie, New York and is expected to perform ",
+            "h": 0
+          },
+          {
+            "t": "20,000",
+            "h": 1
+          },
+          {
+            "t": " times more operations than today's quantum computers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.ibm.com/2025-06-10-IBM-Sets-the-Course-to-Build-Worlds-First-Large-Scale,-Fault-Tolerant-Quantum-Computer-at-New-IBM-Quantum-Data-Center",
+          "title": "IBM Sets the Course to Build World's First Large-Scale, Fault-Tolerant Quantum Computer at New IBM Quantum Data Center - Jun 10, 2025",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2025-06-10-IBM-Sets-the-Course-to-Build-Worlds-First-Large-Scale,-Fault-Tolerant-Quantum-Computer-at-New-IBM-Quantum-Data-Center",
+          "title": "IBM Sets the Course to Build World's First Large-Scale, Fault-Tolerant Quantum Computer at New IBM Quantum Data Center - Jun 10, 2025",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "IBM-P1-2025-07-23",
+      "promiseId": "P1",
+      "date": "2025-07-23",
+      "call": "IBM 2Q 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed a quantum-system deployment in Japan without addressing Starling’s delivery commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:6877b0fb-4e55-477b-ac56-a70804e0951f/original/as/ibm-2q25-earnings-transcript.pdf",
+          "title": "IBM 2Q25 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2025-10-22",
+      "promiseId": "P1",
+      "date": "2025-10-22",
+      "call": "IBM 3Q 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed an error-corrected computer by 2028, without addressing the large-scale fault-tolerant computer’s 2029 delivery.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1443d5f7d84f50bb",
+          "title": "IBM-3Q25-Earnings-Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2025-11-12",
+      "promiseId": "P1",
+      "date": "2025-11-12",
+      "call": "IBM Delivers New Quantum Processors, Software, and Algorithm Breakthroughs on Path to Advantage and Fault Tolerance",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported milestone progress toward the first large-scale, fault-tolerant quantum computer by 2029.",
+      "quote": "In a parallel path, IBM is rapidly delivering milestones towards building the world’s first large-scale, fault-tolerant quantum computer by 2029.",
+      "verbatim": {
+        "text": "In a parallel path, IBM is rapidly delivering milestones towards building the world’s first large-scale, fault-tolerant quantum computer by 2029.",
+        "segs": [
+          {
+            "t": "In a parallel path, IBM is rapidly delivering milestones towards building the world’s first large-scale, fault-tolerant quantum computer by ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.ibm.com/2025-11-12-ibm-delivers-new-quantum-processors,-software,-and-algorithm-breakthroughs-on-path-to-advantage-and-fault-tolerance",
+          "title": "IBM Delivers New Quantum Processors, Software, and Algorithm Breakthroughs on Path to Advantage and Fault Tolerance ",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2025-11-12-ibm-delivers-new-quantum-processors,-software,-and-algorithm-breakthroughs-on-path-to-advantage-and-fault-tolerance",
+          "title": "IBM Delivers New Quantum Processors, Software, and Algorithm Breakthroughs on Path to Advantage and Fault Tolerance ",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "IBM-P1-2026-01-28",
+      "promiseId": "P1",
+      "date": "2026-01-28",
+      "call": "IBM 4Q 2025 earnings call",
+      "speaker": "Arvind Krishna, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Remained on track to deliver the first large-scale, fault-tolerant quantum computer by 2029.",
+      "quote": "We remain on track to deliver the first large-scale, fault-tolerant quantum computer by 2029.",
+      "verbatim": {
+        "text": "We remain on track to deliver the first large-scale, fault-tolerant quantum computer by 2029.",
+        "segs": [
+          {
+            "t": "We remain on track to deliver the first large-scale, fault-tolerant quantum computer by ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2026-04-22",
+      "promiseId": "P1",
+      "date": "2026-04-22",
+      "call": "IBM 1Q 2026 earnings call",
+      "speaker": "Arvind Krishna, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported progress and remained on track for the first large-scale, fault-tolerant quantum computer by 2029.",
+      "quote": "We continue to make progress in Quantum and remain on track to deliver the first, large-scale fault- tolerant quantum computer by 2029.",
+      "verbatim": {
+        "text": "We continue to make progress in Quantum and remain on track to deliver the first, large-scale fault- tolerant quantum computer by 2029.",
+        "segs": [
+          {
+            "t": "We continue to make progress in Quantum and remain on track to deliver the first, large-scale fault- tolerant quantum computer by ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ibm.com/downloads/documents/us-en/15db806050424efc",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/15db806050424efc",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2026-06-02",
+      "promiseId": "P1",
+      "date": "2026-06-02",
+      "call": "IBM Commits More Than $10 Billion to Quantum Computing, Funding Its Roadmap from Today's Leading Systems to the World's First Fault-Tolerant Quantum Computers",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Starling in 2029, capable of executing 20,000 times more operations than today’s existing systems.",
+      "quote": "IBM has a clear path to delivering IBM Quantum Starling in 2029 - the world’s first large-scale, fault-tolerant quantum computer which will be capable of executing 20,000 times more operations than today’s existing systems.",
+      "verbatim": {
+        "text": "Roadmap to the World’s First Large-Scale, Fault-Tolerant Quantum Computer: IBM has a clear path to delivering IBM Quantum Starling in 2029 - the world’s first large-scale, fault-tolerant quantum computer which will be capable of executing 20,000 times more operations than today’s existing systems.",
+        "segs": [
+          {
+            "t": "Roadmap to the World’s First Large-Scale, Fault-Tolerant Quantum Computer: IBM has a clear path to delivering IBM Quantum Starling in ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": " - the world’s first large-scale, fault-tolerant quantum computer which will be capable of executing ",
+            "h": 0
+          },
+          {
+            "t": "20,000",
+            "h": 1
+          },
+          {
+            "t": " times more operations than today’s existing systems.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.ibm.com/2026-06-02-ibm-commits-more-than-10-billion-to-quantum-computing,-funding-its-roadmap-from-todays-leading-systems-to-the-worlds-first-fault-tolerant-quantum-computers",
+          "title": "IBM Commits More Than $10 Billion to Quantum Computing, Funding Its Roadmap from Today's Leading Systems to the World's First Fault-Tolerant Quantum Computers",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2026-06-02-ibm-commits-more-than-10-billion-to-quantum-computing,-funding-its-roadmap-from-todays-leading-systems-to-the-worlds-first-fault-tolerant-quantum-computers",
+          "title": "IBM Commits More Than $10 Billion to Quantum Computing, Funding Its Roadmap from Today's Leading Systems to the World's First Fault-Tolerant Quantum Computers",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "IBM-P1-2026-07-22",
+      "promiseId": "P1",
+      "date": "2026-07-22",
+      "call": "IBM 2Q 2026 earnings call",
+      "speaker": "Arvind Krishna, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Investment supports Starling in 2029, the world's first large-scale, fault-tolerant quantum computer.",
+      "quote": "This supports our road map to Starling in 2029, the world's first large scale, fault-tolerant quantum computer.",
+      "verbatim": {
+        "text": "This supports our road map to Starling in 2029, the world's first large scale, fault-tolerant quantum computer.",
+        "segs": [
+          {
+            "t": "This supports our road map to Starling in ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ", the world's first large scale, fault-tolerant quantum computer.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P1-2026-10-21",
+      "promiseId": "P1",
+      "date": "2026-10-21",
+      "call": "IBM 3Q 2026 earnings prepared remarks",
+      "speaker": "Arvind Krishna, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "DARPA selected IBM for Stage C, the third phase, validating its fault-tolerant quantum path; no delivery declaration or target change.",
+      "quote": "Recently, IBM was selected for Stage C, the third phase of the Quantum Benchmarking Initiative led by DARPA, the United States Defense Advanced Research Projects Agency, another validation of the strength of IBM's path to building a fault-tolerant quantum computer.",
+      "verbatim": {
+        "text": "Recently, IBM was selected for Stage C, the third phase of the Quantum Benchmarking Initiative led by DARPA, the United States Defense Advanced Research Projects Agency, another validation of the strength of IBM's path to building a fault-tolerant quantum computer.",
+        "segs": [
+          {
+            "t": "Recently, IBM was selected for Stage C, the third phase of the Quantum Benchmarking Initiative led by DARPA, the United States Defense Advanced Research Projects Agency, another validation of the strength of IBM's path to building a fault-tolerant quantum computer.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bddaac4eb80",
+          "title": "IBM 3Q26 Earnings Prepared Remarks",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ibm.com/investor/events/earnings-3q26",
+          "title": "IBM 3Q 2026 Earnings Announcement",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bddaac4eb80",
+          "title": "IBM 3Q26 Earnings Prepared Remarks",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "IBM-P2-2026-01-28",
+      "promiseId": "P2",
+      "date": "2026-01-28",
+      "call": "4Q 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set full-year 2026 constant-currency revenue growth guidance at more than 5 percent.",
+      "quote": "The company expects full-year constant currency revenue growth of more than 5 percent.",
+      "verbatim": {
+        "text": "Revenue: The company expects full-year constant currency revenue growth of more than 5 percent.",
+        "segs": [
+          {
+            "t": "Revenue: The company expects full-year constant currency revenue growth of more than ",
+            "h": 0
+          },
+          {
+            "t": "5 percent",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.ibm.com/2026-01-28-IBM-RELEASES-FOURTH-QUARTER-RESULTS",
+          "title": "IBM RELEASES FOURTH-QUARTER RESULTS",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2026-01-28-IBM-RELEASES-FOURTH-QUARTER-RESULTS",
+          "title": "IBM RELEASES FOURTH-QUARTER RESULTS",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "IBM-P2-2026-04-22",
+      "promiseId": "P2",
+      "date": "2026-04-22",
+      "call": "1Q 2026 earnings call",
+      "speaker": "James Kavanaugh, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 5-plus-percent constant-currency revenue growth in 2026 and free cash flow growth of about $1 billion year-over-year.",
+      "quote": "The strong start to the year drives our confidence in delivering constant currency revenue growth of 5-plus-percent in 2026 and free cash flow growth of about $1 billion year-over-year.",
+      "verbatim": {
+        "text": "The strong start to the year drives our confidence in delivering constant currency revenue growth of 5-plus-percent in 2026 and free cash flow growth of about $1 billion year-over-year.",
+        "segs": [
+          {
+            "t": "The strong start to the year drives our confidence in delivering constant currency revenue growth of 5-plus-percent in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and free cash flow growth of about ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " year-over-year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P2-2026-07-22",
+      "promiseId": "P2",
+      "date": "2026-07-22",
+      "call": "2Q 2026 earnings release",
+      "speaker": null,
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Lowered full-year 2026 constant-currency revenue growth guidance to four-to-five percent.",
+      "quote": "The company now expects full-year constant currency revenue growth in the range of four-to-five percent.",
+      "verbatim": {
+        "text": "Revenue: The company now expects full-year constant currency revenue growth in the range of four-to-five percent.",
+        "segs": [
+          {
+            "t": "Revenue: The company now expects full-year constant currency revenue growth in the range of four-to-five percent.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.ibm.com/2026-07-22-IBM-RELEASES-SECOND-QUARTER-RESULTS",
+          "title": "IBM RELEASES SECOND-QUARTER RESULTS - Jul 22, 2026",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2026-07-22-IBM-RELEASES-SECOND-QUARTER-RESULTS",
+          "title": "IBM RELEASES SECOND-QUARTER RESULTS - Jul 22, 2026",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "IBM-P2-2026-10-21",
+      "promiseId": "P2",
+      "date": "2026-10-21",
+      "call": "3Q 2026 earnings call",
+      "speaker": "James Kavanaugh, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 constant-currency revenue growth of four-to-five percent; raised free cash flow growth guidance to more than $1 billion.",
+      "quote": "We continue to expect revenue growth for 2026 in the range of four-to-five percent and are raising our expectation for free cash flow growth to more than $1 billion.",
+      "verbatim": {
+        "text": "We continue to expect revenue growth for 2026 in the range of four-to-five percent and are raising our expectation for free cash flow growth to more than $1 billion.",
+        "segs": [
+          {
+            "t": "We continue to expect revenue growth for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " in the range of four-to-five percent and are raising our expectation for free cash flow growth to more than ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P3-2026-01-28",
+      "promiseId": "P3",
+      "date": "2026-01-28",
+      "call": "4Q 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Initially projected full-year free-cash-flow growth of about $1 billion year-over-year.",
+      "quote": "Free cash flow: The company expects full-year free cash flow to increase by about $1 billion year-over-year",
+      "verbatim": {
+        "text": "Free cash flow: The company expects full-year free cash flow to increase by about $1 billion year-over-year",
+        "segs": [
+          {
+            "t": "Free cash flow: The company expects full-year free cash flow to increase by about ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " year-over-year",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.ibm.com/2026-01-28-IBM-RELEASES-FOURTH-QUARTER-RESULTS",
+          "title": "IBM RELEASES FOURTH-QUARTER RESULTS",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2026-01-28-IBM-RELEASES-FOURTH-QUARTER-RESULTS",
+          "title": "IBM RELEASES FOURTH-QUARTER RESULTS",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "IBM-P3-2026-04-22",
+      "promiseId": "P3",
+      "date": "2026-04-22",
+      "call": "1Q 2026 earnings call",
+      "speaker": "Jim Kavanaugh, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained about $1 billion full-year free-cash-flow growth, driven primarily by adjusted EBITDA growth.",
+      "quote": "For free cash flow, we continue to expect to grow about $1 billion for the full year, driven primarily by growth in adjusted EBITDA.",
+      "verbatim": {
+        "text": "For free cash flow, we continue to expect to grow about $1 billion for the full year, driven primarily by growth in adjusted EBITDA.",
+        "segs": [
+          {
+            "t": "For free cash flow, we continue to expect to grow about ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " for the full year, driven primarily by growth in adjusted EBITDA.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P3-2026-07-22",
+      "promiseId": "P3",
+      "date": "2026-07-22",
+      "call": "2Q 2026 earnings call",
+      "speaker": "Jim Kavanaugh, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained the full-year free-cash-flow growth target of about $1 billion.",
+      "quote": "For the full year, we continue to expect to grow free cash flow by about $1 billion.",
+      "verbatim": {
+        "text": "For the full year, we continue to expect to grow free cash flow by about $1 billion.",
+        "segs": [
+          {
+            "t": "For the full year, we continue to expect to grow free cash flow by about ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P3-2026-10-21",
+      "promiseId": "P3",
+      "date": "2026-10-21",
+      "call": "3Q 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year free-cash-flow growth guidance to more than $1 billion year-over-year.",
+      "quote": "Free cash flow: The company now expects full-year free cash flow to increase by more than $1 billion year-over-year",
+      "verbatim": {
+        "text": "Free cash flow: The company now expects full-year free cash flow to increase by more than $1 billion year-over-year",
+        "segs": [
+          {
+            "t": "Free cash flow: The company now expects full-year free cash flow to increase by more than ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " year-over-year",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS",
+          "title": "IBM RELEASES THIRD-QUARTER RESULTS",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS",
+          "title": "IBM RELEASES THIRD-QUARTER RESULTS",
+          "domain": "newsroom.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "IBM-P4-2025-12-08",
+      "promiseId": "P4",
+      "date": "2025-12-08",
+      "call": "IBM to Acquire Confluent investor update call",
+      "speaker": "Jim Kavanaugh, SVP and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Initially announced about $500 million of operational-spend run-rate synergies, without specifying a deadline.",
+      "quote": "We also expect to realize meaningful operational spend efficiencies, resulting in about $500 million of run-rate synergies.",
+      "verbatim": {
+        "text": "We also expect to realize meaningful operational spend efficiencies, resulting in about $500 million of run-rate synergies.",
+        "segs": [
+          {
+            "t": "We also expect to realize meaningful operational spend efficiencies, resulting in about ",
+            "h": 0
+          },
+          {
+            "t": "$500 million",
+            "h": 1
+          },
+          {
+            "t": " of run-rate synergies.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ibm/transcripts/528930-m-a-announcement/",
+          "title": "International Business Machines (IBM) Transcript: M&A Announcement",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ibm.com/investor/events/ibm-confluent",
+          "title": "IBM to Acquire Confluent",
+          "domain": "ibm.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/ibm/transcripts/528930-m-a-announcement/",
+          "title": "International Business Machines (IBM) Transcript: M&A Announcement",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1443d5e0094f4010",
+          "title": "IBM-Confuent-Charts-12-2025",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "IBM-P4-2026-01-28",
+      "promiseId": "P4",
+      "date": "2026-01-28",
+      "call": "4Q 2025 earnings call",
+      "speaker": "James Kavanaugh, SVP and Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed about $500 million of operational-spend run-rate synergies, specifying realization by the end of 2027.",
+      "quote": "We expect to realize about $500 million of operational spend run rate synergies by the end of 2027.",
+      "verbatim": {
+        "text": "We expect to realize about $500 million of operational spend run rate synergies by the end of 2027.",
+        "segs": [
+          {
+            "t": "We expect to realize about ",
+            "h": 0
+          },
+          {
+            "t": "$500 million",
+            "h": 1
+          },
+          {
+            "t": " of operational spend run rate synergies by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P4-2026-04-22",
+      "promiseId": "P4",
+      "date": "2026-04-22",
+      "call": "1Q 2026 earnings call",
+      "speaker": "James Kavanaugh, SVP and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Accelerating Confluent cost synergies supports operating pre-tax margin expansion of about 1 point this year; no revised synergy amount or deadline.",
+      "quote": "While we are absorbing incremental dilution, given the early closing of Confluent, actions we are taking to accelerate our cost synergies enable us to stay on track to expand operating pre-tax margins by about 1 point this year.",
+      "verbatim": {
+        "text": "While we are absorbing incremental dilution, given the early closing of Confluent, actions we are taking to accelerate our cost synergies enable us to stay on track to expand operating pre-tax margins by about 1 point this year.",
+        "segs": [
+          {
+            "t": "While we are absorbing incremental dilution, given the early closing of Confluent, actions we are taking to accelerate our cost synergies enable us to stay on track to expand operating pre-tax margins by about 1 point this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P4-2026-07-22",
+      "promiseId": "P4",
+      "date": "2026-07-22",
+      "call": "2Q 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific operational-spend synergy update; the on-track statement concerned Confluent’s overall business performance.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P4-2026-10-21",
+      "promiseId": "P4",
+      "date": "2026-10-21",
+      "call": "3Q 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific operational-spend synergy update; discussion of growth synergies did not change the cost-synergy target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P5-2026-01-28",
+      "promiseId": "P5",
+      "date": "2026-01-28",
+      "call": "IBM 4Q 2025 earnings call",
+      "speaker": "James Kavanaugh, Senior Vice President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected an incremental $1 billion in 2026, reaching $5.5 billion of annual run-rate savings by the end of 2026.",
+      "quote": "We continue to accelerate our productivity initiatives and now expect an incremental $1 billion of productivity savings this year, driving $5.5 billion of annual run rate savings by the end of 2026.",
+      "verbatim": {
+        "text": "We continue to accelerate our productivity initiatives and now expect an incremental $1 billion of productivity savings this year, driving $5.5 billion of annual run rate savings by the end of 2026.",
+        "segs": [
+          {
+            "t": "We continue to accelerate our productivity initiatives and now expect an incremental ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " of productivity savings this year, driving ",
+            "h": 0
+          },
+          {
+            "t": "$5.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of annual run rate savings by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+          "title": "IBM 4Q25 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P5-2026-04-22",
+      "promiseId": "P5",
+      "date": "2026-04-22",
+      "call": "IBM 1Q 2026 earnings call",
+      "speaker": "James Kavanaugh, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed an additional $1 billion expected in 2026, following $4.5 billion of productivity savings since 2023.",
+      "quote": "Since 2023, this has driven $4.5 billion of productivity savings, with an additional $1 billion expected in 2026.",
+      "verbatim": {
+        "text": "Since 2023, this has driven $4.5 billion of productivity savings, with an additional $1 billion expected in 2026.",
+        "segs": [
+          {
+            "t": "Since ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ", this has driven ",
+            "h": 0
+          },
+          {
+            "t": "$4.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of productivity savings, with an additional ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " expected in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+          "title": "IBM 1Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P5-2026-07-22",
+      "promiseId": "P5",
+      "date": "2026-07-22",
+      "call": "IBM 2Q 2026 earnings call",
+      "speaker": "James Kavanaugh, Senior Vice President and CFO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Productivity actions were ahead of plan; adjusted EBITDA and operating pre-tax margins expanded 20 and 30 basis points, respectively.",
+      "quote": "Despite this shortfall, productivity actions were ahead of plan, providing the flexibility to absorb Confluent related dilution, continued investing for growth and expanded adjusted EBITDA and operating pre-tax margins by 20 and 30 basis points, respectively.",
+      "verbatim": {
+        "text": "Despite this shortfall, productivity actions were ahead of plan, providing the flexibility to absorb Confluent related dilution, continued investing for growth and expanded adjusted EBITDA and operating pre-tax margins by 20 and 30 basis points, respectively.",
+        "segs": [
+          {
+            "t": "Despite this shortfall, productivity actions were ahead of plan, providing the flexibility to absorb Confluent related dilution, continued investing for growth and expanded adjusted EBITDA and operating pre-tax margins by 20 and ",
+            "h": 0
+          },
+          {
+            "t": "30 basis points",
+            "h": 1
+          },
+          {
+            "t": ", respectively.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+          "title": "IBM 2Q26 Earnings Transcript",
+          "domain": "www-api.ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "IBM-P5-2026-10-21",
+      "promiseId": "P5",
+      "date": "2026-10-21",
+      "call": "IBM 3Q 2026 earnings call",
+      "speaker": "James Kavanaugh, Senior Vice President and CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported productivity north of $5.5 billion, above the year-end target.",
+      "quote": "A few years in, we are now north of $5.5 billion of productivity out of this company.",
+      "verbatim": {
+        "text": "A few years in, we are now north of $5.5 billion of productivity out of this company.",
+        "segs": [
+          {
+            "t": "A few years in, we are now north of ",
+            "h": 0
+          },
+          {
+            "t": "$5.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of productivity out of this company.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+          "title": "IBM 3Q26 Earnings Transcript",
+          "domain": "ibm.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.ibm.com/downloads/documents/us-en/1550f7eea8c0ded7",
+      "title": "IBM 4Q25 Earnings Transcript",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.ibm.com/downloads/documents/us-en/17f55bd310d5fdd0",
+      "title": "IBM 3Q26 Earnings Transcript",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+      "title": "IBM 1Q26 Earnings Transcript",
+      "domain": "www-api.ibm.com",
+      "tier": "primary",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+      "title": "IBM 2Q26 Earnings Transcript",
+      "domain": "www-api.ibm.com",
+      "tier": "primary",
+      "uses": "P1 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A8764b655-abd0-4d0b-ab25-4b1e95b84d12/original/as/IBM-2Q26-Earnings-Transcript.pdf",
+      "title": "IBM 2Q26 Earnings Transcript",
+      "domain": "www-api.ibm.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://newsroom.ibm.com/2026-01-28-IBM-RELEASES-FOURTH-QUARTER-RESULTS",
+      "title": "IBM RELEASES FOURTH-QUARTER RESULTS",
+      "domain": "newsroom.ibm.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:6c6c3b12-ff63-45f3-8eff-b519cba3372d/original/as/ibm_quantum_development_innovation-roadmap_explainer_nov_2025.pdf",
+      "title": "64/86/130pt title,  5 lines maximum,  sentence case",
+      "domain": "www-api.ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 8,
+      "url": "https://www.ibm.com/downloads/documents/us-en/17f55bddaac4eb80",
+      "title": "IBM 3Q26 Earnings Prepared Remarks",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://newsroom.ibm.com/2026-07-22-IBM-RELEASES-SECOND-QUARTER-RESULTS",
+      "title": "IBM RELEASES SECOND-QUARTER RESULTS - Jul 22, 2026",
+      "domain": "newsroom.ibm.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 10,
+      "url": "https://newsroom.ibm.com/2026-10-21-IBM-RELEASES-THIRD-QUARTER-RESULTS",
+      "title": "IBM RELEASES THIRD-QUARTER RESULTS",
+      "domain": "newsroom.ibm.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 11,
+      "url": "http://ibm.com/quantum/blog/quantum-roadmap-2033",
+      "title": "IBM Quantum System Two: the era of quantum utility is here | IBM Quantum Computing Blog",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://www.ibm.com/investor/events/earnings-4q23",
+      "title": "IBM 4Q 2023 Earnings Announcement",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114324000007/ex991.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:eccf1770-80ad-4a4b-9539-52e77848ae72/original/as/ibm-1q24-earnings-prepared-remarks.pdf",
+      "title": "1Q24 Earnings Prepared Remarks",
+      "domain": "www-api.ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114324000021/a1q24-ex99x1.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://www.ibm.com/investor/events/earnings-2q24",
+      "title": "IBM 2Q 2024 Earnings Announcement",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://www.ibm.com/investor/events/earnings-3q24",
+      "title": "IBM 3Q 2024 Earnings Announcement",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114324000045/ex-991.htm",
+      "title": "INTERNATIONAL BUSINESS MACHINES CORP 8-K exhibit 99.1, filed October 24, 2024",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114325000007/ibm_ex99x1.htm",
+      "title": "Ibm Ex99X1",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://www.ibm.com/investor/events/earnings-1q25",
+      "title": "IBM 1Q 2025 Earnings Announcement",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://www.sec.gov/Archives/edgar/data/51143/000005114325000031/ibmex99-1.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 22,
+      "url": "https://newsroom.ibm.com/2025-06-10-IBM-Sets-the-Course-to-Build-Worlds-First-Large-Scale,-Fault-Tolerant-Quantum-Computer-at-New-IBM-Quantum-Data-Center",
+      "title": "IBM Sets the Course to Build World's First Large-Scale, Fault-Tolerant Quantum Computer at New IBM Quantum Data Center - Jun 10, 2025",
+      "domain": "newsroom.ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 23,
+      "url": "https://www-api.ibm.com/adobe/assets/urn:aaid:aem:6877b0fb-4e55-477b-ac56-a70804e0951f/original/as/ibm-2q25-earnings-transcript.pdf",
+      "title": "IBM 2Q25 Earnings Transcript",
+      "domain": "www-api.ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 24,
+      "url": "https://www.ibm.com/downloads/documents/us-en/1443d5f7d84f50bb",
+      "title": "IBM-3Q25-Earnings-Transcript",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 25,
+      "url": "https://newsroom.ibm.com/2025-11-12-ibm-delivers-new-quantum-processors,-software,-and-algorithm-breakthroughs-on-path-to-advantage-and-fault-tolerance",
+      "title": "IBM Delivers New Quantum Processors, Software, and Algorithm Breakthroughs on Path to Advantage and Fault Tolerance ",
+      "domain": "newsroom.ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://www.ibm.com/downloads/documents/us-en/15db806050424efc",
+      "title": "IBM 1Q26 Earnings Transcript",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://newsroom.ibm.com/2026-06-02-ibm-commits-more-than-10-billion-to-quantum-computing,-funding-its-roadmap-from-todays-leading-systems-to-the-worlds-first-fault-tolerant-quantum-computers",
+      "title": "IBM Commits More Than $10 Billion to Quantum Computing, Funding Its Roadmap from Today's Leading Systems to the World's First Fault-Tolerant Quantum Computers",
+      "domain": "newsroom.ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 28,
+      "url": "https://www.ibm.com/investor/events/earnings-3q26",
+      "title": "IBM 3Q 2026 Earnings Announcement",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 29,
+      "url": "https://www-api.ibm.com/adobe/assets/urn%3Aaaid%3Aaem%3A9acc8f7e-e388-4929-89e2-bd1fac8a27d3/original/as/ibm-1q26-earnings-transcript.pdf",
+      "title": "IBM 1Q26 Earnings Transcript",
+      "domain": "www-api.ibm.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 30,
+      "url": "https://www.ibm.com/investor/events/ibm-confluent",
+      "title": "IBM to Acquire Confluent",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 31,
+      "url": "https://www.ibm.com/downloads/documents/us-en/1443d5e0094f4010",
+      "title": "IBM-Confuent-Charts-12-2025",
+      "domain": "ibm.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 32,
+      "url": "https://stockanalysis.com/stocks/ibm/transcripts/121239-q4-2023/",
+      "title": "International Business Machines (IBM) Q4 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 33,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/04/24/international-business-machines-ibm-q1-2024-earnin/",
+      "title": "International Business Machines (IBM) Q1 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 34,
+      "url": "https://stockanalysis.com/stocks/ibm/transcripts/162688-q2-2024/",
+      "title": "International Business Machines (IBM) Q2 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 35,
+      "url": "https://www.roic.ai/quote/IBM/transcripts/2024-year/3-quarter",
+      "title": "International Business Machines Corporation (IBM) Q3 FY2024 Earnings Call Transcript - October 23, 2024",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 36,
+      "url": "https://stockanalysis.com/stocks/ibm/transcripts/248298-q4-2024/",
+      "title": "International Business Machines (IBM) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 37,
+      "url": "http://stockanalysis.com/stocks/ibm/transcripts/310651-q1-2025",
+      "title": "International Business Machines (IBM) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 38,
+      "url": "https://stockanalysis.com/stocks/ibm/transcripts/528930-m-a-announcement/",
+      "title": "International Business Machines (IBM) Transcript: M&A Announcement",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 39,
+      "url": "https://www.politico.com/newsletters/digital-future-daily/2023/12/04/ibm-promises-a-quantum-leap-00129969",
+      "title": "IBM promises a quantum leap - POLITICO",
+      "domain": "politico.com",
+      "tier": "press",
+      "uses": "P1"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.773295Z",
+      "completedAt": "2026-11-05T06:29:18.228780Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.045392Z",
+      "completedAt": "2026-11-05T19:15:54.630747Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.053297Z",
+      "completedAt": "2026-11-05T19:11:10.005955Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.061768Z",
+      "completedAt": "2026-11-05T19:11:17.990030Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.070040Z",
+      "completedAt": "2026-11-05T19:12:40.643493Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.077465Z",
+      "completedAt": "2026-11-05T19:12:19.477471Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.907209Z",
+      "completedAt": "2026-11-05T19:46:50.038627Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.914451Z",
+      "completedAt": "2026-11-05T19:44:05.245220Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.017952Z",
+      "completedAt": "2026-11-05T19:43:04.425115Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.025557Z",
+      "completedAt": "2026-11-05T19:45:01.021365Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.033017Z",
+      "completedAt": "2026-11-05T19:44:34.096275Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "33 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "23 of 23 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "23 of 23 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-21; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/IBM_1924_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:IBM_1924_logo.svg",
+      "title": "File:IBM 1924 logo.svg - Wikimedia Commons",
+      "width": 800,
+      "height": 769,
+      "rank": 9
+    },
+    "photo": {
+      "imageUrl": "https://newsroom.ibm.com/image/IBM_Quantum_Starling_Render_social.jpg",
+      "sourcePageUrl": "https://newsroom.ibm.com/2025-06-10-IBM-Sets-the-Course-to-Build-Worlds-First-Large-Scale,-Fault-Tolerant-Quantum-Computer-at-New-IBM-Quantum-Data-Center",
+      "title": "IBM Sets the Course to Build World's First Large-Scale, Fault-Tolerant Quantum  Computer at New IBM Quantum Data Center - Jun 10, 2025",
+      "width": 1200,
+      "height": 675,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.519Z"
+}

@@ -1,0 +1,49 @@
+{
+  "spec": "sheet@1",
+  "input": { "company_name": "Example Corp", "ticker": "EXM", "company_website": "example.com", "window_start": "2021-01-01", "as_of_date": "2026-10-22" },
+  "run": { "run_id": "trun_fixture", "interaction_id": "trun_fixture", "status": "completed", "is_active": false, "processor": "ultra2x", "metadata": { "ticker": "EXM" }, "created_at": "2026-10-22T00:00:00Z", "modified_at": "2026-10-22T00:10:00Z" },
+  "result": {
+    "run": { "run_id": "trun_fixture", "interaction_id": "trun_fixture", "status": "completed", "is_active": false, "processor": "ultra2x", "created_at": "2026-10-22T00:00:00Z", "modified_at": "2026-10-22T00:10:00Z" },
+    "output": {
+      "type": "json",
+      "content": {
+        "exchange": "NYSE",
+        "fiscal_year_end": "December 31",
+        "investor_relations_url": "https://investors.example.com/",
+        "latest_call_date": "2026-07-20",
+        "latest_call_quarter": "Q2 2026",
+        "next_call_date": "2026-10-27",
+        "next_call_time": "8:30 AM ET",
+        "next_call_quarter": "Q3 2026",
+        "photo_subject": "Example Corp widget factory",
+        "promises": [
+          { "promise_id": "P1", "label": "Double widget output", "commitment": "Double widget output to 2 million units by 2025.", "deadline": "2025", "first_stated_date": "2023-01-20", "outcome_status": "revised", "outcome_summary": "Target moved to 2026 at 1.6 million units." },
+          { "promise_id": "P2", "label": "Cut costs by $1 billion", "commitment": "Cut annual costs by $1 billion by end of 2024.", "deadline": "end of 2024", "first_stated_date": "2023-04-20", "outcome_status": "delivered", "outcome_summary": "Savings of $1.1 billion reported in January 2025." },
+          { "promise_id": "P3", "label": "Launch the Model Z", "commitment": "Launch Model Z in 2024.", "deadline": "2024", "first_stated_date": "2023-07-20", "outcome_status": "dropped", "outcome_summary": "Model Z cancelled in 2024." },
+          { "promise_id": "P4", "label": "Return 50% of free cash flow", "commitment": "Return half of free cash flow to shareholders.", "deadline": null, "first_stated_date": "2023-10-20", "outcome_status": "open", "outcome_summary": "Ongoing." },
+          { "promise_id": "P5", "label": "Open the Ohio plant", "commitment": "Open the Ohio plant in 2025.", "deadline": "2025", "first_stated_date": "2024-01-20", "outcome_status": "missed", "outcome_summary": "Plant still under construction." }
+        ],
+        "statements": [
+          { "promise_id": "P1", "date": "2023-01-20", "call": "Q4 2022 earnings call", "speaker": "Ann Lee, CEO", "stance": "stated", "quote": "We will double widget output to 2 million units by 2025.", "summary": "Widget output to double to 2 million units by 2025." },
+          { "promise_id": "P1", "date": "2024-07-20", "call": "Q2 2024 earnings call", "speaker": "Ann Lee, CEO", "stance": "lowered", "quote": "We now expect widget output of 1.6 million units, with the target moving to 2026.", "summary": "Widget target lowered to 1.6 million units and moved to 2026." },
+          { "promise_id": "P2", "date": "2023-04-20", "call": "Q1 2023 earnings call", "speaker": "Bo Diaz, CFO", "stance": "stated", "quote": null, "summary": "Cost program targets $1 billion of annual savings by the end of 2024." },
+          { "promise_id": "P2", "date": "2025-01-20", "call": "Q4 2024 earnings call", "speaker": "Bo Diaz, CFO", "stance": "declared_done", "quote": "We delivered $1.1 billion of savings, ahead of our target.", "summary": "Delivered $1.1 billion of cost savings." },
+          { "promise_id": "P3", "date": "2023-07-20", "call": "Q2 2023 earnings call", "speaker": "Ann Lee, CEO", "stance": "stated", "quote": "Model Z will launch in 2024.", "summary": "Model Z launch planned for 2024." },
+          { "promise_id": "P3", "date": "2024-04-20", "call": "Q1 2024 earnings call", "speaker": null, "stance": "not_mentioned", "quote": null, "summary": "Model Z not discussed." },
+          { "promise_id": "P4", "date": "2023-10-20", "call": "Q3 2023 earnings call", "speaker": "Bo Diaz, CFO", "stance": "stated", "quote": "We intend to return 50% of free cash flow to shareholders.", "summary": "Plan to return 50% of free cash flow." },
+          { "promise_id": "P4", "date": "2030-01-01", "call": "future call", "speaker": null, "stance": "reaffirmed", "quote": null, "summary": "Out of window." },
+          { "promise_id": "P5", "date": "2024-01-20", "call": "Q4 2023 earnings call", "speaker": "Ann Lee, CEO", "stance": "stated", "quote": "The Ohio plant opens in 2025.", "summary": "Ohio plant to open in 2025." },
+          { "promise_id": "P5", "date": "2025-10-20", "call": "Q3 2025 earnings call", "speaker": "Ann Lee, CEO", "stance": "revised", "quote": "Ohio construction continues and we now see opening in 2027.", "summary": "Ohio plant opening pushed to 2027." }
+        ]
+      },
+      "basis": [
+        { "field": "promises.0", "citations": [{ "url": "https://investors.example.com/q4-2022-transcript", "title": "Q4 2022 call", "excerpts": ["We will double widget output to 2 million units by 2025."] }], "reasoning": "", "confidence": "high" },
+        { "field": "statements.0", "citations": [{ "url": "https://investors.example.com/q4-2022-transcript", "title": "Q4 2022 Earnings Call Transcript", "excerpts": ["Good morning. We will double widget output to 2 million units by 2025. Thank you."] }], "reasoning": "", "confidence": "high" },
+        { "field": "statements.1", "citations": [{ "url": "https://www.example-transcripts.com/exm-q2-2024", "title": "EXM Q2 2024 transcript", "excerpts": ["We now expect widget output of 1.6 million units, with the target moving to 2026. Demand stays strong."] }], "reasoning": "", "confidence": "medium" },
+        { "field": "statements.2", "citations": [{ "url": "https://investors.example.com/q1-2023-transcript", "title": "Q1 2023 call", "excerpts": ["Our cost program will deliver $1 billion of annual savings by the end of 2024, across every business."] }], "reasoning": "", "confidence": "medium" },
+        { "field": "statements.3", "citations": [{ "url": "https://news.example.org/exm-savings", "title": "EXM hits savings goal", "excerpts": ["The company said costs fell sharply last year."] }], "reasoning": "", "confidence": "medium" },
+        { "field": "statements.4", "citations": [], "reasoning": "", "confidence": "low" }
+      ]
+    }
+  }
+}

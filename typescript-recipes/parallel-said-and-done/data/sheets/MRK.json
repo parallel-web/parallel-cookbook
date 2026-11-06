@@ -1,0 +1,2372 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "MRK",
+  "name": "Merck & Co., Inc.",
+  "short": "Merck",
+  "website": "merck.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.merck.com/investor-relations",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-29",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": "2027-02-02",
+    "time": "9:00 AM ET",
+    "quarter": "Q4 2026"
+  },
+  "photoSubject": "Merck Elkton Virginia manufacturing facility",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Expand pipeline commercial opportunity",
+      "commitment": "Advance pipeline programs representing over $50 billion of potential revenue opportunity; no realization deadline was specified on the initial call.",
+      "deadline": null,
+      "firstStated": "2025-02-04",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Merck raised the projected opportunity to over $70 billion by the mid-2030s. It remained prospective; management anticipated further upside without announcing a new amount.",
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_financials/2024/q4/MRK-USQ_Transcript_2025-02-04-5.pdf",
+          "title": "Q4 2024 Merck & Co Inc Earnings Call on February 04, 2025 / 2:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-07-29",
+            "what_was_said": "Management said Ohtuvayre added another multibillion-dollar opportunity that was not included in the original $50 billion estimate, and that further business development remained. No new aggregate amount was given.",
+            "call": "Q2 2025 earnings call"
+          },
+          {
+            "date": "2026-08-04",
+            "what_was_said": "Management said meaningful clinical de-risking of the $70 billion opportunity was occurring faster than expected. Positive sac-TMT and I-DXd readouts had already arrived, although January's outlook had anticipated those readouts in 2027.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-29",
+            "what_was_said": "Management explicitly expected to raise the $70 billion opportunity, citing the previously excluded Terns acquisition, PD-1/VEGF potential, broader sac-TMT indications and a stronger intismeran commercial profile. It did not announce a replacement aggregate amount.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Reinvest $3 billion annual savings",
+      "commitment": "Generate approximately $3 billion in annual cost savings by end-2027 and fully reinvest them in new product launches and the pipeline.",
+      "deadline": "end of 2027",
+      "firstStated": "2025-07-29",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Merck reported optimization benefits, but not completion of the $3.0 billion annual savings and full reinvestment target by the end of 2027.",
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-11.04.2026-10Q.pdf",
+          "title": "Merck & Co., Inc. — FORM 10-Q, quarterly period ended September 30, 2026",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/07/MRK-USQ_Transcript_2025-07-29.pdf",
+          "title": "Q2 2025 Merck & Co Inc Earnings Call on July 29, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-12.31.2025-10K-FINAL.pdf",
+          "title": "MRK 12.31.2025 10K",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-07-29",
+            "what_was_said": "CFO Caroline Litchfield explicitly committed to reinvesting all $3 billion of savings, particularly in R&D and SG&A as new products launch, alongside further investment. She also said overall investment would continue to increase. This clarifies that the initiative reallocates spending rather than promising a $3 billion reduction in total expenses.",
+            "call": "Q2 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Invest $70 billion domestically",
+      "commitment": "Invest more than $70 billion in expanded domestic manufacturing and R&D; no completion date was specified on the call.",
+      "deadline": null,
+      "firstStated": "2025-10-20",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Merck retained its more than $70 billion commitment and inaugurated ADVANCE; it had not reported completing the total investment or set a completion deadline.",
+      "citations": [
+        {
+          "url": "https://www.merck.com/stories/the-new-manufacturing-facilities-powering-our-us-growth",
+          "title": "The new R&D and manufacturing facilities powering our US growth - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/news/merck-inaugurates-state-of-the-art-advance-bioanalytical-facility-on-west-point-pennsylvania-campus",
+          "title": "Merck Inaugurates State-of-the-Art ADVANCE Bioanalytical Facility on West Point, Pennsylvania, Campus - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf",
+          "title": "Q3 2025 Merck & Co Inc Earnings Call on October 30, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Convert patients to KEYTRUDA QLEX",
+      "commitment": "Achieve 30% to 40% patient adoption of subcutaneous KEYTRUDA within 18 to 24 months.",
+      "deadline": "18 to 24 months",
+      "firstStated": "2025-06-02",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Adoption was increasing; management still targeted 30 percent to 40 percent U.S. adoption by the end of 2027, without declaring achievement.",
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf",
+          "title": "Q3 2025 Merck & Co Inc Earnings Call on October 30, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-10-30",
+            "what_was_said": "Management expected slower uptake during the first six months because temporary J-codes could cause longer reimbursement windows, leading some providers to wait for the permanent J-code. The slow initial ramp was anticipated, not presented as a reduction in the adoption target.",
+            "call": "Q3 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Repurchase $3 billion in 2026",
+      "commitment": "Repurchase approximately $3 billion of shares during 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-02-03",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Merck reported $2.3 billion repurchased during the first nine months of 2026 and continued to expect approximately $3.0 billion during 2026.",
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-11.04.2026-10Q.pdf",
+          "title": "Merck & Co., Inc. — FORM 10-Q, quarterly period ended September 30, 2026",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "MRK-P1-2025-02-04",
+      "promiseId": "P1",
+      "date": "2025-02-04",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced over $50 billion of potential revenue opportunity from pipeline programs; no realization deadline specified.",
+      "quote": "Based on the significant progress, we see over $50 billion of potential revenue opportunity from these programs.",
+      "verbatim": {
+        "text": "Based on the significant progress, we see over $50 billion of potential revenue opportunity from these programs.",
+        "segs": [
+          {
+            "t": "Based on the significant progress, we see over ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": " of potential revenue opportunity from these programs.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/488056881/files/doc_financials/2024/q4/MRK-USQ_Transcript_2025-02-04-5.pdf",
+          "title": "Q4 2024 Merck & Co Inc Earnings Call on February 04, 2025 / 2:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_financials/2024/q4/MRK-USQ_Transcript_2025-02-04-5.pdf",
+          "title": "Q4 2024 Merck & Co Inc Earnings Call on February 04, 2025 / 2:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P1-2025-04-24",
+      "promiseId": "P1",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Rob Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed over $50 billion of potential commercial opportunity, now explicitly described as by the mid-2030s.",
+      "quote": "Together, our efforts have resulted in an expanded late-phase pipeline, comprising programs having potential commercial opportunity of over $50 billion by the mid-2030s.",
+      "verbatim": {
+        "text": "Together, our efforts have resulted in an expanded late-phase pipeline, comprising programs having potential commercial opportunity of over $50 billion by the mid-2030s.",
+        "segs": [
+          {
+            "t": "Together, our efforts have resulted in an expanded late-phase pipeline, comprising programs having potential commercial opportunity of over ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": " by the mid-2030s.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://s21.q4cdn.com/488056881/files/doc_financials/2025/q1/MRK-USQ_Transcript_2025-04-24.pdf",
+          "title": "Q1 2025 Merck & Co Inc Earnings Call on April 24, 2025 / 1:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://s21.q4cdn.com/488056881/files/doc_financials/2025/q1/MRK-USQ_Transcript_2025-04-24.pdf",
+          "title": "Q1 2025 Merck & Co Inc Earnings Call on April 24, 2025 / 1:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_financials/2024/q4/Q4-2024-Merck-Earnings-Deck.pdf",
+          "title": "Q4 2024 Merck Earnings Deck",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P1-2025-07-29",
+      "promiseId": "P1",
+      "date": "2025-07-29",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed over $50 billion of potential opportunity across therapeutic areas.",
+      "quote": "Recall that we've given guidance in a broad sense to the fact that we see over $50 billion of potential opportunity from our different therapeutic areas, starting with oncology.",
+      "verbatim": {
+        "text": "Recall that we've given guidance in a broad sense to the fact that we see over $50 billion of potential opportunity from our different therapeutic areas, starting with oncology.",
+        "segs": [
+          {
+            "t": "Recall that we've given guidance in a broad sense to the fact that we see over ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": " of potential opportunity from our different therapeutic areas, starting with oncology.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/07/MRK-USQ_Transcript_2025-07-29.pdf",
+          "title": "Q2 2025 Merck & Co Inc Earnings Call on July 29, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/07/MRK-USQ_Transcript_2025-07-29.pdf",
+          "title": "Q2 2025 Merck & Co Inc Earnings Call on July 29, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P1-2025-10-30",
+      "promiseId": "P1",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed over $50 billion of revenue opportunity by the mid-2030s.",
+      "quote": "These programs will transform our commercial portfolio and fuel future growth, with over $50 billion of revenue opportunity by the mid-2030s, and we remain committed to the pursuit of disciplined, science- and value-driven business development to further augment our expansive pipeline.",
+      "verbatim": {
+        "text": "These programs will transform our commercial portfolio and fuel future growth, with over $50 billion of revenue opportunity by the mid-2030s, and we remain committed to the pursuit of disciplined, science- and value-driven business development to further augment our expansive pipeline.",
+        "segs": [
+          {
+            "t": "These programs will transform our commercial portfolio and fuel future growth, with over ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": " of revenue opportunity by the mid-2030s, and we remain committed to the pursuit of disciplined, science- and value-driven business development to further augment our expansive pipeline.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf",
+          "title": "Q3 2025 Merck & Co Inc Earnings Call on October 30, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf",
+          "title": "Q3 2025 Merck & Co Inc Earnings Call on October 30, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P1-2026-01-12",
+      "promiseId": "P1",
+      "date": "2026-01-12",
+      "call": "44th Annual J.P. Morgan Healthcare Conference",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised opportunity to more than $70 billion by the mid-2030s; expected $50 billion by the early 2030s.",
+      "quote": "The success and progress we've had, to date, now puts us in a position where we see visibility to more than $70 billion of commercial opportunity, as we look out to the mid-2030s.",
+      "verbatim": {
+        "text": "The success and progress we've had, to date, now puts us in a position where we see visibility to more than $70 billion of commercial opportunity, as we look out to the mid-2030s.",
+        "segs": [
+          {
+            "t": "The success and progress we've had, to date, now puts us in a position where we see visibility to more than ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " of commercial opportunity, as we look out to the mid-2030s.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-USQ_Transcript_2026-01-12.pdf?_sp=91ae7ff0-ff30-4209-9a19-71ea97cf36c2",
+          "title": "Merck & Co Inc at JPMorgan Healthcare Conference on January 13, 2026 / 12:30AM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-2026-JP-Morgan-Presentation.pdf",
+          "title": "MRK 2026 JP Morgan Presentation",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/events/44th-annual-j-p-morgan-healthcare-conference/",
+          "title": "44th Annual J.P. Morgan Healthcare Conference - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-USQ_Transcript_2026-01-12.pdf?_sp=91ae7ff0-ff30-4209-9a19-71ea97cf36c2",
+          "title": "Merck & Co Inc at JPMorgan Healthcare Conference on January 13, 2026 / 12:30AM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "MRK-P1-2026-02-03",
+      "promiseId": "P1",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed over $70 billion by mid-2030s, $20 billion above a year earlier and more than double consensus 2028 peak KEYTRUDA revenue of $35 billion.",
+      "quote": "As a result of this progress, we now have line of sight to over $70 billion of potential commercial opportunity by the mid-2030s, $20 billion more than just a year ago and more than double consensus 2028 peak KEYTRUDA revenue of $35 billion.",
+      "verbatim": {
+        "text": "As a result of this progress, we now have line of sight to over $70 billion of potential commercial opportunity by the mid-2030s, $20 billion more than just a year ago and more than double consensus 2028 peak KEYTRUDA revenue of $35 billion.",
+        "segs": [
+          {
+            "t": "As a result of this progress, we now have line of sight to over ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " of potential commercial opportunity by the mid-2030s, ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": " more than just a year ago and more than double consensus ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": " peak KEYTRUDA revenue of ",
+            "h": 0
+          },
+          {
+            "t": "$35 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-USQ_Transcript_2026-01-12.pdf?_sp=91ae7ff0-ff30-4209-9a19-71ea97cf36c2",
+          "title": "Merck & Co Inc at JPMorgan Healthcare Conference on January 13, 2026 / 12:30AM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P1-2026-04-30",
+      "promiseId": "P1",
+      "date": "2026-04-30",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed potential commercial opportunity of over $70 billion by the mid-2030s from 20-plus anticipated growth drivers.",
+      "quote": "We're confident that this change will best position us to deliver on a potential commercial opportunity of over $70 billion by the mid-2030s from these 20-plus anticipated new growth drivers alone.",
+      "verbatim": {
+        "text": "We're confident that this change will best position us to deliver on a potential commercial opportunity of over $70 billion by the mid-2030s from these 20-plus anticipated new growth drivers alone.",
+        "segs": [
+          {
+            "t": "We're confident that this change will best position us to deliver on a potential commercial opportunity of over ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " by the mid-2030s from these 20-plus anticipated new growth drivers alone.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P1-2026-08-04",
+      "promiseId": "P1",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed greater than $70 billion of commercial opportunity from over 20 new products, with earlier-than-expected clinical proof points.",
+      "quote": "Earlier this year, we provided insight into greater than $70 billion of commercial opportunity we have from over 20 new products that we expect will transform our portfolio.",
+      "verbatim": {
+        "text": "Earlier this year, we provided insight into greater than $70 billion of commercial opportunity we have from over 20 new products that we expect will transform our portfolio.",
+        "segs": [
+          {
+            "t": "Earlier this year, we provided insight into greater than ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " of commercial opportunity we have from over 20 new products that we expect will transform our portfolio.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P1-2026-10-29",
+      "promiseId": "P1",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $70 billion with increased confidence; anticipated raising the estimate later, without announcing a new amount.",
+      "quote": "But that said, what we've seen so far gives me great confidence and increased confidence in that $70 billion.",
+      "verbatim": {
+        "text": "But that said, what we've seen so far gives me great confidence and increased confidence in that $70 billion.",
+        "segs": [
+          {
+            "t": "But that said, what we've seen so far gives me great confidence and increased confidence in that ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P2-2025-07-29",
+      "promiseId": "P2",
+      "date": "2025-07-29",
+      "call": "Q2 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced $3.0 billion annual savings by the end of 2027, fully reinvested in new product launches and the pipeline.",
+      "quote": "This restructuring program is part of the multiyear optimization initiative expected to achieve $3.0 billion in annual cost savings by the end of 2027.",
+      "verbatim": {
+        "text": "This restructuring program is part of the multiyear optimization initiative expected to achieve $3.0 billion in annual cost savings by the end of 2027.",
+        "segs": [
+          {
+            "t": "This restructuring program is part of the multiyear optimization initiative expected to achieve ",
+            "h": 0
+          },
+          {
+            "t": "$3.0 billion",
+            "h": 1
+          },
+          {
+            "t": " in annual cost savings by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/news/merck-co-inc-rahway-n-j-usa-announces-second-quarter-2025-financial-results",
+          "title": "Merck & Co., Inc., Rahway, N.J., USA Announces Second-Quarter 2025 Financial Results - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/news/merck-co-inc-rahway-n-j-usa-announces-second-quarter-2025-financial-results",
+          "title": "Merck & Co., Inc., Rahway, N.J., USA Announces Second-Quarter 2025 Financial Results - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MRK-P2-2025-10-30",
+      "promiseId": "P2",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending savings and reinvestment commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf",
+          "title": "Q3 2025 Merck & Co Inc Earnings Call on October 30, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P2-2026-02-03",
+      "promiseId": "P2",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Optimization benefits offset increased investment in the innovative pipeline and key growth drivers; operating expenses were flat excluding charges.",
+      "quote": "Excluding these charges, operating expenses were flat, reflecting an increase in investment in support of our innovative pipeline and key growth drivers, offset by the benefits of our multiyear optimization initiative.",
+      "verbatim": {
+        "text": "Excluding these charges, operating expenses were flat, reflecting an increase in investment in support of our innovative pipeline and key growth drivers, offset by the benefits of our multiyear optimization initiative.",
+        "segs": [
+          {
+            "t": "Excluding these charges, operating expenses were flat, reflecting an increase in investment in support of our innovative pipeline and key growth drivers, offset by the benefits of our multiyear optimization initiative.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P2-2026-04-30",
+      "promiseId": "P2",
+      "date": "2026-04-30",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Operating expenses grew 2% excluding the charge; optimization benefits and sac-TMT external funding partially offset increased growth-driver investment.",
+      "quote": "Excluding this charge, operating expenses grew 2%, reflecting increased investments in support of our key growth drivers, partially offset by benefits of our multiyear optimization effort and recognition of a portion of the external funding for sac-TMT.",
+      "verbatim": {
+        "text": "Excluding this charge, operating expenses grew 2%, reflecting increased investments in support of our key growth drivers, partially offset by benefits of our multiyear optimization effort and recognition of a portion of the external funding for sac-TMT.",
+        "segs": [
+          {
+            "t": "Excluding this charge, operating expenses grew ",
+            "h": 0
+          },
+          {
+            "t": "2%",
+            "h": 1
+          },
+          {
+            "t": ", reflecting increased investments in support of our key growth drivers, partially offset by benefits of our multiyear optimization effort and recognition of a portion of the external funding for sac-TMT.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P2-2026-08-04",
+      "promiseId": "P2",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported optimization benefits and sac-TMT external funding partially offsetting increased operating investments; no quantified savings progress was provided.",
+      "quote": "Partially offset by benefits from our multi-year optimization effort and recognition of a portion of the external funding for sac-TMT development.",
+      "verbatim": {
+        "text": "Partially offset by benefits from our multi-year optimization effort and recognition of a portion of the external funding for sac-TMT development.",
+        "segs": [
+          {
+            "t": "Partially offset by benefits from our multi-year optimization effort and recognition of a portion of the external funding for sac-TMT development.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P2-2026-10-29",
+      "promiseId": "P2",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Ongoing optimization benefits and sac-TMT external funding partially offset increased operating expenses; no quantified savings progress was provided.",
+      "quote": "This increase was partially offset by benefits from our ongoing multi-year optimization effort and the recognition of a portion of the external funding for sac-TMT development.",
+      "verbatim": {
+        "text": "This increase was partially offset by benefits from our ongoing multi-year optimization effort and the recognition of a portion of the external funding for sac-TMT development.",
+        "segs": [
+          {
+            "t": "This increase was partially offset by benefits from our ongoing multi-year optimization effort and the recognition of a portion of the external funding for sac-TMT development.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P3-2025-10-20",
+      "promiseId": "P3",
+      "date": "2025-10-20",
+      "call": "Merck Breaks Ground on $3 Billion Center of Excellence for Pharmaceutical Manufacturing in Elkton, Virginia",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed more than $70 billion beginning in 2025 for domestic manufacturing and R&D, excluding future R&D business-development transactions; no completion deadline.",
+      "quote": "Merck’s investment in the Center of Excellence for Pharmaceutical Manufacturing is part of a more than $70 billion investment beginning in 2025 to expand domestic manufacturing and research and development — not including any future business development transactions in R&D — to drive its long-term growth and strengthen the status of the U.S. as a global leader in biopharmaceutical innovation.",
+      "verbatim": {
+        "text": "Merck’s investment in the Center of Excellence for Pharmaceutical Manufacturing is part of a more than $70 billion investment beginning in 2025 to expand domestic manufacturing and research and development — not including any future business development transactions in R&D — to drive its long-term growth and strengthen the status of the U.S. as a global leader in biopharmaceutical innovation.",
+        "segs": [
+          {
+            "t": "Merck’s investment in the Center of Excellence for Pharmaceutical Manufacturing is part of a more than ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " investment beginning in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " to expand domestic manufacturing and research and development — not including any future business development transactions in R&D — to drive its long-term growth and strengthen the status of the U.S. as a global leader in biopharmaceutical innovation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/news/merck-breaks-ground-on-3-billion-center-of-excellence-for-pharmaceutical-manufacturing-in-elkton-virginia",
+          "title": "Merck Breaks Ground on $3 Billion Center of Excellence for Pharmaceutical Manufacturing in Elkton, Virginia - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/news/merck-breaks-ground-on-3-billion-center-of-excellence-for-pharmaceutical-manufacturing-in-elkton-virginia",
+          "title": "Merck Breaks Ground on $3 Billion Center of Excellence for Pharmaceutical Manufacturing in Elkton, Virginia - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MRK-P3-2025-10-30",
+      "promiseId": "P3",
+      "date": "2025-10-30",
+      "call": "Third-Quarter 2025 Financial Results",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed more than $70 billion beginning in 2025 for domestic manufacturing and R&D, excluding future R&D business development.",
+      "quote": "This investment is part of the Company’s commitment to dedicate more than $70 billion beginning in 2025 to expand domestic manufacturing and R&D — not including any future business development in R&D — to drive its long-term growth and strengthen the U.S. as a global leader in biopharmaceutical innovation.",
+      "verbatim": {
+        "text": "This investment is part of the Company’s commitment to dedicate more than $70 billion beginning in 2025 to expand domestic manufacturing and R&D — not including any future business development in R&D — to drive its long-term growth and strengthen the U.S. as a global leader in biopharmaceutical innovation.",
+        "segs": [
+          {
+            "t": "This investment is part of the Company’s commitment to dedicate more than ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " beginning in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " to expand domestic manufacturing and R&D — not including any future business development in R&D — to drive its long-term growth and strengthen the U.S. as a global leader in biopharmaceutical innovation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/Merck-News-Release-10-30-25-Merck-Co.-Inc.-Rahway-N.J.-USA-Announces-Third-Quarter-2025-Financial-Results.pdf",
+          "title": "News Release",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/Merck-News-Release-10-30-25-Merck-Co.-Inc.-Rahway-N.J.-USA-Announces-Third-Quarter-2025-Financial-Results.pdf",
+          "title": "News Release",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MRK-P3-2025-12-19",
+      "promiseId": "P3",
+      "date": "2025-12-19",
+      "call": "Merck Reaches Agreement With U.S. Government to Expand Access to Medicines and Lower Costs for Americans",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed more than $70 billion over the next several years, including at least $12 billion in capital expenditures.",
+      "quote": "Over the next several years, Merck will invest more than $70 billion in capital and R&D spending, including at least $12 billion in capital expenditures, to drive long-term growth and strengthen the U.S. position as a global leader in biopharmaceutical innovation.",
+      "verbatim": {
+        "text": "Over the next several years, Merck will invest more than $70 billion in capital and R&D spending, including at least $12 billion in capital expenditures, to drive long-term growth and strengthen the U.S. position as a global leader in biopharmaceutical innovation.",
+        "segs": [
+          {
+            "t": "Over the next several years, Merck will invest more than ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " in capital and R&D spending, including at least ",
+            "h": 0
+          },
+          {
+            "t": "$12 billion",
+            "h": 1
+          },
+          {
+            "t": " in capital expenditures, to drive long-term growth and strengthen the U.S. position as a global leader in biopharmaceutical innovation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/news/merck-reaches-agreement-with-u-s-government-to-expand-access-to-medicines-and-lower-costs-for-americans/",
+          "title": "Merck Reaches Agreement With U.S. Government to Expand Access to Medicines and Lower Costs for Americans - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/news/merck-reaches-agreement-with-u-s-government-to-expand-access-to-medicines-and-lower-costs-for-americans/",
+          "title": "Merck Reaches Agreement With U.S. Government to Expand Access to Medicines and Lower Costs for Americans - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MRK-P3-2026-02-03",
+      "promiseId": "P3",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending domestic manufacturing and R&D investment commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P3-2026-04-30",
+      "promiseId": "P3",
+      "date": "2026-04-30",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending domestic manufacturing and R&D investment commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P3-2026-05-26",
+      "promiseId": "P3",
+      "date": "2026-05-26",
+      "call": "2026 Annual Shareholders Meeting",
+      "speaker": "Robert Davis, Chairman, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed more than $70 billion over the next several years for domestic manufacturing and R&D, excluding future business-development investments.",
+      "quote": "We're proud that in 2025 we committed to investing more than $70 billion over the next several years to expand domestic manufacturing and R&D -- not including investments associated with future business development -- all to drive long-term growth and strengthen the U.S. as a global leader in biopharmaceutical innovation.",
+      "verbatim": {
+        "text": "We're proud that in 2025 we committed to investing more than $70 billion over the next several years to expand domestic manufacturing and R&D -- not including investments associated with future business development -- all to drive long-term growth and strengthen the U.S. as a global leader in biopharmaceutical innovation.",
+        "segs": [
+          {
+            "t": "We're proud that in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " we committed to investing more than ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " over the next several years to expand domestic manufacturing and R&D -- not including investments associated with future business development -- all to drive long-term growth and strengthen the U.S. as a global leader in biopharmaceutical innovation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/04/MRK-USQ_Transcript_2026-05-26.pdf",
+          "title": "Merck & Co Inc Annual Shareholders Meeting on May 26, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/04/MRK-USQ_Transcript_2026-05-26.pdf",
+          "title": "Merck & Co Inc Annual Shareholders Meeting on May 26, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "MRK-P3-2026-08-04",
+      "promiseId": "P3",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending domestic manufacturing and R&D investment commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P3-2026-10-14",
+      "promiseId": "P3",
+      "date": "2026-10-14",
+      "call": "Merck Inaugurates State-of-the-Art ADVANCE Bioanalytical Facility on West Point, Pennsylvania, Campus",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "ADVANCE opened under the $70 billion commitment; approximately $550 million is being invested in ADVANCE and nearby Spring House R&D facilities.",
+      "quote": "As part of the company’s previously announced $70 billion commitment to domestic manufacturing and R&D, Merck is investing approximately $550 million in R&D facilities at ADVANCE and the nearby Spring House Innovation Park (SHIP).",
+      "verbatim": {
+        "text": "As part of the company’s previously announced $70 billion commitment to domestic manufacturing and R&D, Merck is investing approximately $550 million in R&D facilities at ADVANCE and the nearby Spring House Innovation Park (SHIP).",
+        "segs": [
+          {
+            "t": "As part of the company’s previously announced ",
+            "h": 0
+          },
+          {
+            "t": "$70 billion",
+            "h": 1
+          },
+          {
+            "t": " commitment to domestic manufacturing and R&D, Merck is investing approximately ",
+            "h": 0
+          },
+          {
+            "t": "$550 million",
+            "h": 1
+          },
+          {
+            "t": " in R&D facilities at ADVANCE and the nearby Spring House Innovation Park (SHIP).",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/news/merck-inaugurates-state-of-the-art-advance-bioanalytical-facility-on-west-point-pennsylvania-campus",
+          "title": "Merck Inaugurates State-of-the-Art ADVANCE Bioanalytical Facility on West Point, Pennsylvania, Campus - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/news/merck-inaugurates-state-of-the-art-advance-bioanalytical-facility-on-west-point-pennsylvania-campus",
+          "title": "Merck Inaugurates State-of-the-Art ADVANCE Bioanalytical Facility on West Point, Pennsylvania, Campus - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MRK-P3-2026-10-29",
+      "promiseId": "P3",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending domestic manufacturing and R&D investment commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P4-2025-06-02",
+      "promiseId": "P4",
+      "date": "2025-06-02",
+      "call": "Investor Event at ASCO 2025",
+      "speaker": "Chirfi Guindo, Senior Vice President and Chief Marketing Officer, Human Health",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Anticipated 30% to 40% peak U.S. adoption within 18 to 24 months, earlier than the supplied first-statement date.",
+      "quote": "In terms of adoption, we anticipate a peak uptake in the United States will reach between 30% and 40% within 18 to 24 months.",
+      "verbatim": {
+        "text": "In terms of adoption, we anticipate a peak uptake in the United States will reach between 30% and 40% within 18 to 24 months.",
+        "segs": [
+          {
+            "t": "In terms of adoption, we anticipate a peak uptake in the United States will reach between ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " within 18 to 24 months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2025/Jun/02/MRK-USQ_Transcript_2025-06-02.pdf",
+          "title": "Merck & Co Inc at ASCO Investor Meeting on June 02, 2025 / 11:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2025/Jun/02/MRK-USQ_Transcript_2025-06-02.pdf",
+          "title": "Merck & Co Inc at ASCO Investor Meeting on June 02, 2025 / 11:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "MRK-P4-2025-07-29",
+      "promiseId": "P4",
+      "date": "2025-07-29",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed subcutaneous KEYTRUDA but did not address the adoption target or timeframe.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/07/MRK-USQ_Transcript_2025-07-29.pdf",
+          "title": "Q2 2025 Merck & Co Inc Earnings Call on July 29, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P4-2025-09-04",
+      "promiseId": "P4",
+      "date": "2025-09-04",
+      "call": "Wells Fargo Healthcare Conference 2025",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected 30% to 40% adoption in an 18- to 24-month window, explicitly measured post-launch.",
+      "quote": "We're very excited about that and would expect adoption to be around 30% to 40% of the overall KEYTRUDA business in about an 18- to 24-month window, post-launch.",
+      "verbatim": {
+        "text": "We're very excited about that and would expect adoption to be around 30% to 40% of the overall KEYTRUDA business in about an 18- to 24-month window, post-launch.",
+        "segs": [
+          {
+            "t": "We're very excited about that and would expect adoption to be around ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " of the overall KEYTRUDA business in about an 18- to 24-month window, post-launch.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2025/Sep/04/MRK-USQ_Transcript_2025-09-04.pdf",
+          "title": "Merck & Co Inc at Wells Fargo Healthcare Conference on September 04, 2025 / 3:50PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2025/Sep/04/MRK-USQ_Transcript_2025-09-04.pdf",
+          "title": "Merck & Co Inc at Wells Fargo Healthcare Conference on September 04, 2025 / 3:50PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "MRK-P4-2025-10-30",
+      "promiseId": "P4",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 30% to 40% patient adoption within 18 to 24 months; launch remained on track.",
+      "quote": "We continue to expect that we're going to achieve 30% to 40% patient adoption and that, that will take us out to 18 to 24 months to achieve that.",
+      "verbatim": {
+        "text": "We continue to expect that we're going to achieve 30% to 40% patient adoption and that, that will take us out to 18 to 24 months to achieve that.",
+        "segs": [
+          {
+            "t": "We continue to expect that we're going to achieve ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " patient adoption and that, that will take us out to 18 to 24 months to achieve that.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf",
+          "title": "Q3 2025 Merck & Co Inc Earnings Call on October 30, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf",
+          "title": "Q3 2025 Merck & Co Inc Earnings Call on October 30, 2025 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P4-2026-01-12",
+      "promiseId": "P4",
+      "date": "2026-01-12",
+      "call": "44th Annual J.P. Morgan Healthcare Conference",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 30% to 40% adoption in the next 18 to 24 months; confidence remained high.",
+      "quote": "But, importantly, our confidence that we can achieve that 30% to 40% adoption in the next 18 to 24 months continues to be quite high.",
+      "verbatim": {
+        "text": "But, importantly, our confidence that we can achieve that 30% to 40% adoption in the next 18 to 24 months continues to be quite high.",
+        "segs": [
+          {
+            "t": "But, importantly, our confidence that we can achieve that ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " adoption in the next 18 to 24 months continues to be quite high.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-USQ_Transcript_2026-01-12.pdf",
+          "title": "Merck & Co Inc at JPMorgan Healthcare Conference on January 13, 2026 / 12:30AM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-USQ_Transcript_2026-01-12.pdf",
+          "title": "Merck & Co Inc at JPMorgan Healthcare Conference on January 13, 2026 / 12:30AM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.merck.com/news/merck-to-participate-in-the-44th-annual-j-p-morgan-healthcare-conference",
+          "title": "Merck to Participate in the 44th Annual J.P. Morgan Healthcare Conference - Merck.com",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "MRK-P4-2026-02-03",
+      "promiseId": "P4",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Davis, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained 30% to 40% adoption expectation as you get out to 2028; strategy unchanged.",
+      "quote": "As we think about the QLEX adoption, we continue to think we're going to see 30% to 40% adoption as you get out to 2028, and we will drive that as high as we can.",
+      "verbatim": {
+        "text": "As we think about the QLEX adoption, we continue to think we're going to see 30% to 40% adoption as you get out to 2028, and we will drive that as high as we can.",
+        "segs": [
+          {
+            "t": "As we think about the QLEX adoption, we continue to think we're going to see ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " adoption as you get out to ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ", and we will drive that as high as we can.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P4-2026-04-30",
+      "promiseId": "P4",
+      "date": "2026-04-30",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Received permanent J code on April the 1st; expected greater patient and health-system impact.",
+      "quote": "On April the 1st, we received the permanent J code, and we look forward to having an even greater impact on patients and health care systems.",
+      "verbatim": {
+        "text": "On April the 1st, we received the permanent J code, and we look forward to having an even greater impact on patients and health care systems.",
+        "segs": [
+          {
+            "t": "On April the 1st, we received the permanent J code, and we look forward to having an even greater impact on patients and health care systems.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P4-2026-06-01",
+      "promiseId": "P4",
+      "date": "2026-06-01",
+      "call": "Investor Event at ASCO 2026",
+      "speaker": "Jannie Oosthuizen, Executive Vice President and President, Oncology and MSD International",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Mid-single-digit adoption exiting the first quarter supported 30 percent to 40 percent peak adoption by the end of 2027.",
+      "quote": "The adoption rate exiting the first quarter was in the mid-single digits, supporting our confidence that we are on track to achieve 30 percent to 40 percent peak adoption by the end of 2027.",
+      "verbatim": {
+        "text": "The adoption rate exiting the first quarter was in the mid-single digits, supporting our confidence that we are on track to achieve 30 percent to 40 percent peak adoption by the end of 2027.",
+        "segs": [
+          {
+            "t": "The adoption rate exiting the first quarter was in the mid-single digits, supporting our confidence that we are on track to achieve ",
+            "h": 0
+          },
+          {
+            "t": "30 percent",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "40 percent",
+            "h": 1
+          },
+          {
+            "t": " peak adoption by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jun/01/MRK-USQ_Transcript_2026-06-01.pdf",
+          "title": "Merck & Co Inc Investor Event at ASCO on June 01, 2026 / 11:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jun/01/MRK-USQ_Transcript_2026-06-01.pdf",
+          "title": "Merck & Co Inc Investor Event at ASCO on June 01, 2026 / 11:00PM",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "MRK-P4-2026-08-04",
+      "promiseId": "P4",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Physician and patient adoption increased after April’s permanent J-code; confidence in the adoption trajectory continued.",
+      "quote": "We have seen physician and patient adoption increase since the permanent J-code was established in April.",
+      "verbatim": {
+        "text": "We have seen physician and patient adoption increase since the permanent J-code was established in April.",
+        "segs": [
+          {
+            "t": "We have seen physician and patient adoption increase since the permanent J-code was established in April.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P4-2026-10-29",
+      "promiseId": "P4",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Jannie Oosthuizen, Executive Vice President and President, Oncology and MSD International",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Positive trajectory following April 1 permanent J-Code supported 30 percent to 40 percent U.S. adoption by the end of 2027.",
+      "quote": "Since we received the permanent J-Code on April 1, it's really been a very positive trajectory and we feel good about the objective of getting to that 30 percent to 40 percent adoption in the United States by the end of 2027.",
+      "verbatim": {
+        "text": "Since we received the permanent J-Code on April 1, it's really been a very positive trajectory and we feel good about the objective of getting to that 30 percent to 40 percent adoption in the United States by the end of 2027.",
+        "segs": [
+          {
+            "t": "Since we received the permanent J-Code on April 1, it's really been a very positive trajectory and we feel good about the objective of getting to that ",
+            "h": 0
+          },
+          {
+            "t": "30 percent",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "40 percent",
+            "h": 1
+          },
+          {
+            "t": " adoption in the United States by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P5-2026-02-03",
+      "promiseId": "P5",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Guidance assumes approximately $3 billion of share repurchases in 2026; Merck remains committed to avoiding excess cash accumulation.",
+      "quote": "Our guidance assumes approximately $3 billion of share repurchases, and we remain committed to not having excess cash build on the balance sheet.",
+      "verbatim": {
+        "text": "Our guidance assumes approximately $3 billion of share repurchases, and we remain committed to not having excess cash build on the balance sheet.",
+        "segs": [
+          {
+            "t": "Our guidance assumes approximately ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " of share repurchases, and we remain committed to not having excess cash build on the balance sheet.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+          "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P5-2026-04-30",
+      "promiseId": "P5",
+      "date": "2026-04-30",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "On pace for approximately $3 billion of share repurchases in 2026, as previously communicated.",
+      "quote": "We are on pace for approximately $3 billion of share repurchases this year, as previously communicated.",
+      "verbatim": {
+        "text": "We are on pace for approximately $3 billion of share repurchases this year, as previously communicated.",
+        "segs": [
+          {
+            "t": "We are on pace for approximately ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " of share repurchases this year, as previously communicated.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+          "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P5-2026-08-04",
+      "promiseId": "P5",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "On pace for approximately $3 billion in share repurchases in 2026, as previously communicated.",
+      "quote": "We are on pace for approximately $3 billion in share repurchases this year as previously communicated.",
+      "verbatim": {
+        "text": "We are on pace for approximately $3 billion in share repurchases this year as previously communicated.",
+        "segs": [
+          {
+            "t": "We are on pace for approximately ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases this year as previously communicated.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+          "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MRK-P5-2026-10-29",
+      "promiseId": "P5",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Caroline Litchfield, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Remains on track for approximately $3 billion in share repurchases in 2026.",
+      "quote": "We remain on track for approximately $3 billion in share repurchases this year.",
+      "verbatim": {
+        "text": "We remain on track for approximately $3 billion in share repurchases this year.",
+        "segs": [
+          {
+            "t": "We remain on track for approximately ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+          "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+          "domain": "merck.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-USQ_Transcript_2026-10-29.pdf",
+      "title": "Q3 2026 Merck & Co Inc Earnings Call on October 29, 2026 / 1:00PM",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-USQ_Transcript_2026-02-03.pdf",
+      "title": "Q4 2025 Merck & Co Inc Earnings Call on February 03, 2026 / 2:00PM",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/05/MRK-USQ_Transcript_2026-04-30.pdf",
+      "title": "Q1 2026 Merck & Co Inc Earnings Call on April 30, 2026 / 1:00PM",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/08/MRK-USQ_Transcript_2026-08-04.pdf",
+      "title": "Q2 2026 Merck & Co Inc Earnings Call on August 04, 2026 / 1:00PM",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/MRK-USQ_Transcript_2025-10-30.pdf",
+      "title": "Q3 2025 Merck & Co Inc Earnings Call on October 30, 2025 / 1:00PM",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/07/MRK-USQ_Transcript_2025-07-29.pdf",
+      "title": "Q2 2025 Merck & Co Inc Earnings Call on July 29, 2025 / 1:00PM",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P1 P2 P4"
+    },
+    {
+      "n": 7,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/10/MRK-11.04.2026-10Q.pdf",
+      "title": "Merck & Co., Inc. — FORM 10-Q, quarterly period ended September 30, 2026",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://s21.q4cdn.com/488056881/files/doc_financials/2024/q4/MRK-USQ_Transcript_2025-02-04-5.pdf",
+      "title": "Q4 2024 Merck & Co Inc Earnings Call on February 04, 2025 / 2:00PM",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-USQ_Transcript_2026-01-12.pdf?_sp=91ae7ff0-ff30-4209-9a19-71ea97cf36c2",
+      "title": "Merck & Co Inc at JPMorgan Healthcare Conference on January 13, 2026 / 12:30AM",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://www.merck.com/news/merck-inaugurates-state-of-the-art-advance-bioanalytical-facility-on-west-point-pennsylvania-campus",
+      "title": "Merck Inaugurates State-of-the-Art ADVANCE Bioanalytical Facility on West Point, Pennsylvania, Campus - Merck.com",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 11,
+      "url": "http://s21.q4cdn.com/488056881/files/doc_financials/2025/q1/MRK-USQ_Transcript_2025-04-24.pdf",
+      "title": "Q1 2025 Merck & Co Inc Earnings Call on April 24, 2025 / 1:00PM",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://s21.q4cdn.com/488056881/files/doc_financials/2024/q4/Q4-2024-Merck-Earnings-Deck.pdf",
+      "title": "Q4 2024 Merck Earnings Deck",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-2026-JP-Morgan-Presentation.pdf",
+      "title": "MRK 2026 JP Morgan Presentation",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://www.merck.com/events/44th-annual-j-p-morgan-healthcare-conference/",
+      "title": "44th Annual J.P. Morgan Healthcare Conference - Merck.com",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://www.merck.com/news/merck-co-inc-rahway-n-j-usa-announces-second-quarter-2025-financial-results",
+      "title": "Merck & Co., Inc., Rahway, N.J., USA Announces Second-Quarter 2025 Financial Results - Merck.com",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 16,
+      "url": "https://www.merck.com/news/merck-breaks-ground-on-3-billion-center-of-excellence-for-pharmaceutical-manufacturing-in-elkton-virginia",
+      "title": "Merck Breaks Ground on $3 Billion Center of Excellence for Pharmaceutical Manufacturing in Elkton, Virginia - Merck.com",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/Merck-News-Release-10-30-25-Merck-Co.-Inc.-Rahway-N.J.-USA-Announces-Third-Quarter-2025-Financial-Results.pdf",
+      "title": "News Release",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://www.merck.com/news/merck-reaches-agreement-with-u-s-government-to-expand-access-to-medicines-and-lower-costs-for-americans/",
+      "title": "Merck Reaches Agreement With U.S. Government to Expand Access to Medicines and Lower Costs for Americans - Merck.com",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 19,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/04/MRK-USQ_Transcript_2026-05-26.pdf",
+      "title": "Merck & Co Inc Annual Shareholders Meeting on May 26, 2026 / 1:00PM",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 20,
+      "url": "https://s21.q4cdn.com/488056881/files/doc_events/2025/Jun/02/MRK-USQ_Transcript_2025-06-02.pdf",
+      "title": "Merck & Co Inc at ASCO Investor Meeting on June 02, 2025 / 11:00PM",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 21,
+      "url": "https://s21.q4cdn.com/488056881/files/doc_events/2025/Sep/04/MRK-USQ_Transcript_2025-09-04.pdf",
+      "title": "Merck & Co Inc at Wells Fargo Healthcare Conference on September 04, 2025 / 3:50PM",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 22,
+      "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jan/12/MRK-USQ_Transcript_2026-01-12.pdf",
+      "title": "Merck & Co Inc at JPMorgan Healthcare Conference on January 13, 2026 / 12:30AM",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 23,
+      "url": "https://www.merck.com/news/merck-to-participate-in-the-44th-annual-j-p-morgan-healthcare-conference",
+      "title": "Merck to Participate in the 44th Annual J.P. Morgan Healthcare Conference - Merck.com",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 24,
+      "url": "https://s21.q4cdn.com/488056881/files/doc_events/2026/Jun/01/MRK-USQ_Transcript_2026-06-01.pdf",
+      "title": "Merck & Co Inc Investor Event at ASCO on June 01, 2026 / 11:00PM",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 25,
+      "url": "https://www.merck.com/wp-content/uploads/sites/124/2026/02/MRK-12.31.2025-10K-FINAL.pdf",
+      "title": "MRK 12.31.2025 10K",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 26,
+      "url": "https://www.merck.com/stories/the-new-manufacturing-facilities-powering-our-us-growth",
+      "title": "The new R&D and manufacturing facilities powering our US growth - Merck.com",
+      "domain": "merck.com",
+      "tier": "primary",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P4",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.045614Z",
+      "completedAt": "2026-11-05T06:28:57.182976Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.728301Z",
+      "completedAt": "2026-11-05T19:14:25.870549Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.737520Z",
+      "completedAt": "2026-11-05T19:12:34.613746Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.746706Z",
+      "completedAt": "2026-11-05T19:13:04.711073Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.753725Z",
+      "completedAt": "2026-11-05T19:12:10.811721Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.761088Z",
+      "completedAt": "2026-11-05T19:11:29.798932Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.496631Z",
+      "completedAt": "2026-11-05T19:49:36.023945Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.503848Z",
+      "completedAt": "2026-11-05T19:48:57.150214Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.510914Z",
+      "completedAt": "2026-11-05T19:46:49.768421Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.518090Z",
+      "completedAt": "2026-11-05T19:47:28.449722Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.525166Z",
+      "completedAt": "2026-11-05T19:44:53.943035Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "38 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "32 of 32 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "32 of 32 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-29; next 2027-02-02"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/Merck_Logo.svg/1280px-Merck_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Merck_Logo.svg",
+      "title": "File:Merck Logo.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 383,
+      "rank": 3
+    },
+    "photo": {
+      "imageUrl": "https://www.merck.com/wp-content/uploads/sites/124/2025/10/Elkton-aerial-copy.jpg?w=1024",
+      "sourcePageUrl": "https://www.merck.com/stories/the-new-manufacturing-facilities-powering-our-us-growth/",
+      "title": "The new R&D and manufacturing facilities powering our US growth - Merck.com",
+      "width": 1024,
+      "height": 683,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.093Z"
+}

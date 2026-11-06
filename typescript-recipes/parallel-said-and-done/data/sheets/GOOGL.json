@@ -1,0 +1,2462 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "GOOGL",
+  "name": "Alphabet Inc.",
+  "short": "Alphabet",
+  "website": "abc.xyz",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://abc.xyz/investor",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-28",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Alphabet AI datacenters and Waymo robotaxis",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "2025 CapEx commitment",
+      "commitment": "Invest approximately $75 billion in CapEx in 2025, including approximately $16 billion to $18 billion in Q1.",
+      "deadline": "2025",
+      "firstStated": "2025-02-04",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Q1 CapEx was $17.2 billion. Full-year spending was $91.4 billion, within raised $91 billion to $93 billion guidance; the original approximately $75 billion forecast was increased.",
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/2025-q1-earnings-transcript.pdf",
+          "title": "2025_Q1_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Feb/04/2025_Q4_Earnings_Transcript.pdf",
+          "title": "2025_Q4_Earnings_Transcript.docx",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2025/Oct/29/2025_Q3_Earnings_Transcript.pdf",
+          "title": "2025_Q3_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q4/2024q4-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q4 2024",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2025/2024-Q4-Earnings-Call/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2024 Q4 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q4 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-02-04",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-02-04",
+            "what_was_said": "Management specified that the approximately $75 billion annual CapEx forecast included approximately $16 billion to $18 billion in the first quarter.",
+            "call": "Q4 and fiscal year 2024 earnings call"
+          },
+          {
+            "date": "2025-04-24",
+            "what_was_said": "Management explicitly reaffirmed approximately $75 billion in 2025 CapEx, while noting that quarterly spending could fluctuate with delivery timing and construction schedules.",
+            "call": "Q1 2025 earnings call"
+          },
+          {
+            "date": "2026-02-04",
+            "what_was_said": "Management explicitly reported CapEx of $27.9 billion for Q4 and $91.4 billion for full-year 2025, describing the result as in line with expectations.",
+            "call": "Q4 and fiscal year 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Wiz acquisition",
+      "commitment": "Acquire Wiz; management gave no closing deadline on the call.",
+      "deadline": null,
+      "firstStated": "2025-03-18",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Google completed the Wiz acquisition on March 11, 2026, consistent with the original investor presentation’s expected closing in 2026.",
+      "citations": [
+        {
+          "url": "https://www.googlecloudpresscorner.com/2026-03-11-Google-Completes-Acquisition-of-Wiz",
+          "title": "Google Completes Acquisition of Wiz - Mar 11, 2026",
+          "domain": "googlecloudpresscorner.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googex99231825.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q1-Earnings-Call",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q1 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q1-Earnings-Call-2026-nW8kCrBAKS/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q1 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-03-11",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "2026 CapEx commitment",
+      "commitment": "Increase 2026 CapEx further, with no amount specified at first.",
+      "deadline": "2026",
+      "firstStated": "2025-07-23",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Guidance was raised to $195-$205 billion for 2026 and reaffirmed; final full-year spending remained unreported.",
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf",
+          "title": "2026_Q2_Earnings_Transcript",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf",
+          "title": "2026_Q3_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q3 2026",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q2-Earnings-Call",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q2 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Waymo London service launch",
+      "commitment": "Waymo aimed to open service in London in 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-10-15",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "London commercial service remained pending under the 2026 target; autonomous testing had begun, while regulatory approvals were still required.",
+      "citations": [
+        {
+          "url": "https://waymo.com/blog/2025/10/hello-london-your-waymo-ride-is-arriving",
+          "title": "Hello London! Your Waymo ride is arriving",
+          "domain": "waymo.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://waymo.com/blog/shorts/autonomous-driving-in-london/",
+          "title": "April 14, 2026 - From the road - Waymo",
+          "domain": "waymo.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://waymo.com/blog/2026/09/visionforlondon",
+          "title": "Our Vision for London: How Waymo can Support a Safer, Connected UK Capital",
+          "domain": "waymo.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://waymo.com/waymo-in-uk",
+          "title": "Waymo in London | Learn about Waymo in the UK",
+          "domain": "waymo.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2025/Oct/29/2025_Q3_Earnings_Transcript.pdf",
+          "title": "2025_Q3_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "TPU system sales revenue ramp",
+      "commitment": "Begin recognizing a small portion of TPU agreement revenue later in 2026, with the vast majority in 2027.",
+      "deadline": "2027",
+      "firstStated": "2026-04-29",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Revenue recognition began in the second quarter of 2026; the significant majority remained expected in 2027, so the overall commitment was still pending.",
+      "citations": [
+        {
+          "url": "https://abc.xyz/files/doc_financials/2026/q3/GOOG-10-Q-Q3-2026.pdf",
+          "title": "GOOG 10-Q Q3 2026",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q1-Earnings-Call-2026-nW8kCrBAKS/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q1 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf",
+          "title": "2026_Q3_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-22",
+            "what_was_said": "Management said it began recognizing TPU system sales revenue and delivered systems to customer data centers for the first time in Q2. This confirms delivery of the commitment’s initial revenue-recognition milestone.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-28",
+            "what_was_said": "Management said TPU system sales were a meaningful contributor to Google Cloud revenue, demonstrating further progress beyond the initial Q2 recognition.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "GOOGL-P1-2025-02-04",
+      "promiseId": "P1",
+      "date": "2025-02-04",
+      "call": "Q4 and fiscal year 2024 earnings release",
+      "speaker": "Sundar Pichai, CEO of Alphabet and Google",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Initially forecast approximately $75 billion of capital expenditures in 2025.",
+      "quote": "We are confident about the opportunities ahead, and to accelerate our progress, we expect to invest approximately $75 billion in capital expenditures in 2025.",
+      "verbatim": {
+        "text": "We are confident about the opportunities ahead, and to accelerate our progress, we expect to invest approximately $75 billion in capital expenditures in 2025.",
+        "segs": [
+          {
+            "t": "We are confident about the opportunities ahead, and to accelerate our progress, we expect to invest approximately ",
+            "h": 0
+          },
+          {
+            "t": "$75 billion",
+            "h": 1
+          },
+          {
+            "t": " in capital expenditures in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q4/2024q4-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q4 2024",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q4/2024q4-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q4 2024",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "GOOGL-P1-2025-04-24",
+      "promiseId": "P1",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Q1 2025 purchases of property and equipment of $17,197 million, meeting the quarterly spending range.",
+      "quote": null,
+      "verbatim": {
+        "text": "Purchases of property and equipment (12,012) (17,197) Purchases of marketable securities (20,684) (18,453) Maturities and sales of marketable securities 24,985 20,345 Purchases of non-marketable securities (1,206) (958) Maturities and sales of non-marketable securities 313 259 Acquisitions, net of cash acquired,",
+        "segs": [
+          {
+            "t": "Purchases of property and equipment (",
+            "h": 0
+          },
+          {
+            "t": "12,012",
+            "h": 1
+          },
+          {
+            "t": ") (",
+            "h": 0
+          },
+          {
+            "t": "17,197",
+            "h": 1
+          },
+          {
+            "t": ") Purchases of marketable securities (",
+            "h": 0
+          },
+          {
+            "t": "20,684",
+            "h": 1
+          },
+          {
+            "t": ") (",
+            "h": 0
+          },
+          {
+            "t": "18,453",
+            "h": 1
+          },
+          {
+            "t": ") Maturities and sales of marketable securities ",
+            "h": 0
+          },
+          {
+            "t": "24,985",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "20,345",
+            "h": 1
+          },
+          {
+            "t": " Purchases of non-marketable securities (",
+            "h": 0
+          },
+          {
+            "t": "1,206",
+            "h": 1
+          },
+          {
+            "t": ") (958) Maturities and sales of non-marketable securities 313 259 Acquisitions, net of cash acquired,",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/2025q1-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q1 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Alphabet executives said on the Q1 2025 earnings release (2025-04-24) about 2025 CapEx commitment: Reported Q1 2025 purchases of property and equipment of $17,197 million, meeting the quarterly spending range."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/2025q1-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q1 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q4/2024-q4-earnings-transcript.pdf",
+          "title": "2024_Q4_Earnings_Transcript",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "GOOGL-P1-2025-07-23",
+      "promiseId": "P1",
+      "date": "2025-07-23",
+      "call": "Q2 2025 earnings release",
+      "speaker": "Sundar Pichai, CEO of Alphabet and Google",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2025 capital-expenditure guidance to approximately $85 billion from approximately $75 billion.",
+      "quote": "With this strong and growing demand for our Cloud products and services, we are increasing our investment in capital expenditures in 2025 to approximately $85 billion and are excited by the opportunity ahead.",
+      "verbatim": {
+        "text": "With this strong and growing demand for our Cloud products and services, we are increasing our investment in capital expenditures in 2025 to approximately $85 billion and are excited by the opportunity ahead.",
+        "segs": [
+          {
+            "t": "With this strong and growing demand for our Cloud products and services, we are increasing our investment in capital expenditures in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$85 billion",
+            "h": 1
+          },
+          {
+            "t": " and are excited by the opportunity ahead.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/2025q2-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q2 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/2025q2-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q2 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/2025-q1-earnings-transcript.pdf",
+          "title": "2025_Q1_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "GOOGL-P1-2025-10-29",
+      "promiseId": "P1",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2025 capital-expenditure guidance from $85 billion to $91 billion to $93 billion.",
+      "quote": "With the growth across our business and demand from Cloud customers, we now expect 2025 capital expenditures to be in a range of $91 billion to $93 billion.",
+      "verbatim": {
+        "text": "With the growth across our business and demand from Cloud customers, we now expect 2025 capital expenditures to be in a range of $91 billion to $93 billion.",
+        "segs": [
+          {
+            "t": "With the growth across our business and demand from Cloud customers, we now expect ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " capital expenditures to be in a range of ",
+            "h": 0
+          },
+          {
+            "t": "$91 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$93 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q3/2025q3-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q3 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q3/2025q3-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q3 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/2025-q2-earnings-transcript.pdf",
+          "title": "2025_Q2_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "GOOGL-P1-2026-02-04",
+      "promiseId": "P1",
+      "date": "2026-02-04",
+      "call": "Q4 and fiscal year 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported 2025 purchases of property and equipment of $91,447 million, within the revised annual guidance.",
+      "quote": null,
+      "verbatim": {
+        "text": "Less: purchases of property and equipment (17,197) (22,446) (23,953) (27,851) (91,447) Free cash flow $ 18,953 $ 5,301 $ 24,461 $ 24,551 $ 73,266 ...",
+        "segs": [
+          {
+            "t": "Less: purchases of property and equipment (",
+            "h": 0
+          },
+          {
+            "t": "17,197",
+            "h": 1
+          },
+          {
+            "t": ") (",
+            "h": 0
+          },
+          {
+            "t": "22,446",
+            "h": 1
+          },
+          {
+            "t": ") (",
+            "h": 0
+          },
+          {
+            "t": "23,953",
+            "h": 1
+          },
+          {
+            "t": ") (",
+            "h": 0
+          },
+          {
+            "t": "27,851",
+            "h": 1
+          },
+          {
+            "t": ") (",
+            "h": 0
+          },
+          {
+            "t": "91,447",
+            "h": 1
+          },
+          {
+            "t": ") Free cash flow ",
+            "h": 0
+          },
+          {
+            "t": "$ 18,953",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 5,301",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 24,461",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 24,551",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 73,266",
+            "h": 1
+          },
+          {
+            "t": " ...",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q4 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Alphabet executives said on the Q4 and fiscal year 2025 earnings release (2026-02-04) about 2025 CapEx commitment: Reported 2025 purchases of property and equipment of $91,447 million, within the revised annual guidance."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q4 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q3/2025q3-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q3 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "GOOGL-P2-2025-03-18",
+      "promiseId": "P2",
+      "date": "2025-03-18",
+      "call": "Google Announces Agreement to Acquire Wiz",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "On March 18, 2025, Google announced a $32 billion all-cash agreement to acquire Wiz, subject to closing adjustments.",
+      "quote": "(March 18, 2025)—Google LLC today announced it has signed a definitive agreement to acquire Wiz, Inc., a leading cloud security platform headquartered in New York, for $32 billion, subject to closing adjustments, in an all-cash transaction.",
+      "verbatim": {
+        "text": "(March 18, 2025)—Google LLC today announced it has signed a definitive agreement to acquire Wiz, Inc., a leading cloud security platform headquartered in New York, for $32 billion, subject to closing adjustments, in an all-cash transaction.",
+        "segs": [
+          {
+            "t": "(March 18, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ")—Google LLC today announced it has signed a definitive agreement to acquire Wiz, Inc., a leading cloud security platform headquartered in New York, for ",
+            "h": 0
+          },
+          {
+            "t": "$32 billion",
+            "h": 1
+          },
+          {
+            "t": ", subject to closing adjustments, in an all-cash transaction.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "GOOGL-P2-2025-04-24",
+      "promiseId": "P2",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Sundar Pichai, CEO, Alphabet and Google",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "The first earnings-call statement reiterated the previously announced acquisition, without specifying a closing deadline.",
+      "quote": "This quarter, we were excited to announce our intent to acquire Wiz, a leading cloud security platform that protects all major clouds and code environments.",
+      "verbatim": {
+        "text": "This quarter, we were excited to announce our intent to acquire Wiz, a leading cloud security platform that protects all major clouds and code environments.",
+        "segs": [
+          {
+            "t": "This quarter, we were excited to announce our intent to acquire Wiz, a leading cloud security platform that protects all major clouds and code environments.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q1-Earnings-Call/",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q1 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q1-Earnings-Call/",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q1 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P2-2025-07-23",
+      "promiseId": "P2",
+      "date": "2025-07-23",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Wiz acquisition was not mentioned while pending.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://alphabet2025ir.q4web.com/investor/events/event-details/2025/2025-Q2-Earnings-Call/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q2 Earnings Call\n",
+          "domain": "alphabet2025ir.q4web.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P2-2025-10-29",
+      "promiseId": "P2",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Wiz acquisition was not mentioned while pending.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2025/Oct/29/2025_Q3_Earnings_Transcript.pdf",
+          "title": "2025_Q3_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P2-2026-02-04",
+      "promiseId": "P2",
+      "date": "2026-02-04",
+      "call": "Q4 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Wiz acquisition was not mentioned while pending.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Feb/04/2025_Q4_Earnings_Transcript.pdf",
+          "title": "2025_Q4_Earnings_Transcript.docx",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P2-2026-03-11",
+      "promiseId": "P2",
+      "date": "2026-03-11",
+      "call": "Google Completes Acquisition of Wiz",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced completion of the Wiz acquisition; Wiz would join Google Cloud.",
+      "quote": "Google LLC today announced the completion of its acquisition of Wiz, a leading cloud and AI security platform headquartered in New York.",
+      "verbatim": {
+        "text": "Corporate Security Google Completes Acquisition of Wiz March 11, 2026 MOUNTAIN VIEW, Calif. and NEW YORK , March 11, 2026 / PRNewswire / -- Google LLC today announced the completion of its acquisition of Wiz, a leading cloud and AI security platform headquartered in New York.",
+        "segs": [
+          {
+            "t": "Corporate Security Google Completes Acquisition of Wiz March 11, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " MOUNTAIN VIEW, Calif. and NEW YORK , March 11, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " / PRNewswire / -- Google LLC today announced the completion of its acquisition of Wiz, a leading cloud and AI security platform headquartered in New York.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.googlecloudpresscorner.com/2026-03-11-Google-Completes-Acquisition-of-Wiz",
+          "title": "Google Completes Acquisition of Wiz - Mar 11, 2026",
+          "domain": "googlecloudpresscorner.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.googlecloudpresscorner.com/2026-03-11-Google-Completes-Acquisition-of-Wiz",
+          "title": "Google Completes Acquisition of Wiz - Mar 11, 2026",
+          "domain": "googlecloudpresscorner.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "GOOGL-P2-2026-04-29",
+      "promiseId": "P2",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed the acquisition closed in March and welcomed the Wiz team to Google Cloud.",
+      "quote": "And finally, we're excited to welcome the Wiz team to Google Cloud with the closing of the acquisition in March, and are very pleased with the performance to date.",
+      "verbatim": {
+        "text": "And finally, we're excited to welcome the Wiz team to Google Cloud with the closing of the acquisition in March, and are very pleased with the performance to date.",
+        "segs": [
+          {
+            "t": "And finally, we're excited to welcome the Wiz team to Google Cloud with the closing of the acquisition in March, and are very pleased with the performance to date.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf",
+          "title": "2026_Q1_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf",
+          "title": "2026_Q1_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P3-2025-07-23",
+      "promiseId": "P3",
+      "date": "2025-07-23",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected a further increase in 2026 CapEx, driven by customer demand and company-wide growth opportunities.",
+      "quote": "Looking out to 2026, we expect a further increase in CapEx due to the demand we're seeing from customers as well as growth opportunities across the company.",
+      "verbatim": {
+        "text": "Looking out to 2026, we expect a further increase in CapEx due to the demand we're seeing from customers as well as growth opportunities across the company.",
+        "segs": [
+          {
+            "t": "Looking out to ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect a further increase in CapEx due to the demand we're seeing from customers as well as growth opportunities across the company.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/2025-q2-earnings-transcript.pdf",
+          "title": "2025_Q2_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/2025-q2-earnings-transcript.pdf",
+          "title": "2025_Q2_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q2-Earnings-Call",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q2 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P3-2025-10-29",
+      "promiseId": "P3",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed a significant 2026 CapEx increase; promised more detail on the fourth quarter earnings call.",
+      "quote": "Looking out to 2026, we expect a significant increase in CapEx and will provide more detail on our fourth quarter earnings call.",
+      "verbatim": {
+        "text": "Looking out to 2026, we expect a significant increase in CapEx and will provide more detail on our fourth quarter earnings call.",
+        "segs": [
+          {
+            "t": "Looking out to ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect a significant increase in CapEx and will provide more detail on our fourth quarter earnings call.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2025/Oct/29/2025_Q3_Earnings_Transcript.pdf",
+          "title": "2025_Q3_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2025/Oct/29/2025_Q3_Earnings_Transcript.pdf",
+          "title": "2025_Q3_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q3-Earnings-Call-2025-4OI4Bac_Q9/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q3 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P3-2026-02-04",
+      "promiseId": "P3",
+      "date": "2026-02-04",
+      "call": "Alphabet Announces Fourth Quarter and Fiscal Year 2025 Results",
+      "speaker": "Sundar Pichai, CEO of Alphabet and Google",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Quantified 2026 CapEx at $175 to $185 billion to meet customer demand and growth opportunities.",
+      "quote": "To meet customer demand and capitalize on the growing opportunities we have ahead of us, our 2026 CapEx investments are anticipated to be in the range of $175 to $185 billion.",
+      "verbatim": {
+        "text": "To meet customer demand and capitalize on the growing opportunities we have ahead of us, our 2026 CapEx investments are anticipated to be in the range of $175 to $185 billion.",
+        "segs": [
+          {
+            "t": "To meet customer demand and capitalize on the growing opportunities we have ahead of us, our ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " CapEx investments are anticipated to be in the range of ",
+            "h": 0
+          },
+          {
+            "t": "$175 to $185 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q4 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q4 2025",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "GOOGL-P3-2026-04-29",
+      "promiseId": "P3",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full year 2026 CapEx to $180 to $190 billion from $175 to $185 billion, including Intersect investment after its March closing.",
+      "quote": "Moving to investment, we are updating our full year 2026 CapEx guidance range to $180 to $190 billion, up from our previous estimate of $175 to $185 billion, to now include investment related to the acquisition of Intersect, which closed in March.",
+      "verbatim": {
+        "text": "Moving to investment, we are updating our full year 2026 CapEx guidance range to $180 to $190 billion, up from our previous estimate of $175 to $185 billion, to now include investment related to the acquisition of Intersect, which closed in March.",
+        "segs": [
+          {
+            "t": "Moving to investment, we are updating our full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " CapEx guidance range to ",
+            "h": 0
+          },
+          {
+            "t": "$180 to $190 billion",
+            "h": 1
+          },
+          {
+            "t": ", up from our previous estimate of ",
+            "h": 0
+          },
+          {
+            "t": "$175 to $185 billion",
+            "h": 1
+          },
+          {
+            "t": ", to now include investment related to the acquisition of Intersect, which closed in March.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf",
+          "title": "2026_Q1_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf",
+          "title": "2026_Q1_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf",
+          "title": "GOOG Exhibit 99.1 Q1 2026",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P3-2026-06-03",
+      "promiseId": "P3",
+      "date": "2026-06-03",
+      "call": "Alphabet investor presentation: June 2026",
+      "speaker": "Anat Ashkenazi, SVP and Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed full-year 2026 CapEx of $180B to $190B.",
+      "quote": "For the full-year 2026, we expect our CapEx to be in the range of $180B to $190B.",
+      "verbatim": {
+        "text": "For the full-year 2026, we expect our CapEx to be in the range of $180B to $190B.",
+        "segs": [
+          {
+            "t": "For the full-year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect our CapEx to be in the range of ",
+            "h": 0
+          },
+          {
+            "t": "$180B",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$190B",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://blog.google/alphabet/investor-presentation-june-2026",
+          "title": "Alphabet investor presentation: June 2026",
+          "domain": "blog.google",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://blog.google/alphabet/investor-presentation-june-2026",
+          "title": "Alphabet investor presentation: June 2026",
+          "domain": "blog.google",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "GOOGL-P3-2026-07-22",
+      "promiseId": "P3",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full year 2026 CapEx to $195‑205 billion from $180‑190 billion.",
+      "quote": "Moving to investments, we are updating our full year 2026 CapEx guidance range to $195‑205 billion, up from our previous estimate of $180‑190 billion.",
+      "verbatim": {
+        "text": "Moving to investments, we are updating our full year 2026 CapEx guidance range to $195‑205 billion, up from our previous estimate of $180‑190 billion.",
+        "segs": [
+          {
+            "t": "Moving to investments, we are updating our full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " CapEx guidance range to ",
+            "h": 0
+          },
+          {
+            "t": "$195",
+            "h": 1
+          },
+          {
+            "t": "‑",
+            "h": 0
+          },
+          {
+            "t": "205 billion",
+            "h": 1
+          },
+          {
+            "t": ", up from our previous estimate of ",
+            "h": 0
+          },
+          {
+            "t": "$180",
+            "h": 1
+          },
+          {
+            "t": "‑",
+            "h": 0
+          },
+          {
+            "t": "190 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf",
+          "title": "2026_Q2_Earnings_Transcript",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf",
+          "title": "2026_Q2_Earnings_Transcript",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q2 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P3-2026-10-28",
+      "promiseId": "P3",
+      "date": "2026-10-28",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed unchanged full-year 2026 CapEx guidance of $195-$205 billion.",
+      "quote": "Moving to investments, our full-year 2026 CapEx guidance range of $195-$205 billion remain unchanged.",
+      "verbatim": {
+        "text": "Moving to investments, our full-year 2026 CapEx guidance range of $195-$205 billion remain unchanged.",
+        "segs": [
+          {
+            "t": "Moving to investments, our full-year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " CapEx guidance range of ",
+            "h": 0
+          },
+          {
+            "t": "$195-$205 billion",
+            "h": 1
+          },
+          {
+            "t": " remain unchanged.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf",
+          "title": "2026_Q3_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf",
+          "title": "2026_Q3_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q3 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P4-2025-10-15",
+      "promiseId": "P4",
+      "date": "2025-10-15",
+      "call": "Hello London! Your Waymo ride is arriving",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Waymo originally announced fully autonomous London rides in 2026, preceding the first earnings-call statement.",
+      "quote": "We’re bringing our fully autonomous ride-hailing service across the pond, where we intend to offer rides – with no human behind the wheel – in 2026.",
+      "verbatim": {
+        "text": "We’re bringing our fully autonomous ride-hailing service across the pond, where we intend to offer rides – with no human behind the wheel – in 2026.",
+        "segs": [
+          {
+            "t": "We’re bringing our fully autonomous ride-hailing service across the pond, where we intend to offer rides – with no human behind the wheel – in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://waymo.com/blog/2025/10/hello-london-your-waymo-ride-is-arriving",
+          "title": "Hello London! Your Waymo ride is arriving",
+          "domain": "waymo.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://waymo.com/blog/2025/10/hello-london-your-waymo-ride-is-arriving",
+          "title": "Hello London! Your Waymo ride is arriving",
+          "domain": "waymo.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "GOOGL-P4-2025-10-21",
+      "promiseId": "P4",
+      "date": "2025-10-21",
+      "call": "UK Safety and Accessibility Experts Ride with Waymo Ahead of Its London Launch",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Waymo repeated that its fully autonomous ride-hailing service was bound for London in 2026.",
+      "quote": "With Waymo announcing its fully autonomous ride-hailing service is bound for London in 2026, that hope will soon become a reality.",
+      "verbatim": {
+        "text": "With Waymo announcing its fully autonomous ride-hailing service is bound for London in 2026, that hope will soon become a reality.",
+        "segs": [
+          {
+            "t": "With Waymo announcing its fully autonomous ride-hailing service is bound for London in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", that hope will soon become a reality.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://blog.waymo.com/community/articles/uk-safety-and-accessibility-experts-ride-with-waymo-ahead-of-its-london",
+          "title": "UK Safety and Accessibility Experts Ride with Waymo Ahead of Its London Launch",
+          "domain": "blog.waymo.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://blog.waymo.com/community/articles/uk-safety-and-accessibility-experts-ride-with-waymo-ahead-of-its-london",
+          "title": "UK Safety and Accessibility Experts Ride with Waymo Ahead of Its London Launch",
+          "domain": "blog.waymo.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "GOOGL-P4-2025-10-29",
+      "promiseId": "P4",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Sundar Pichai, CEO, Alphabet and Google",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "First earnings-call repetition: London service was targeted for 2026; work toward Tokyo service continued.",
+      "quote": "Next year, Waymo aims to open service in London, and they're working to bring service to Tokyo.",
+      "verbatim": {
+        "text": "Next year, Waymo aims to open service in London, and they're working to bring service to Tokyo.",
+        "segs": [
+          {
+            "t": "Next year, Waymo aims to open service in London, and they're working to bring service to Tokyo.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2025/Oct/29/2025_Q3_Earnings_Transcript.pdf",
+          "title": "2025_Q3_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q3-Earnings-Call-2025-4OI4Bac_Q9/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q3 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2025/Oct/29/2025_Q3_Earnings_Transcript.pdf",
+          "title": "2025_Q3_Earnings_Transcript ",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P4-2026-01-28",
+      "promiseId": "P4",
+      "date": "2026-01-28",
+      "call": "US robotaxi group Waymo aims to launch in London by fourth quarter of 2026",
+      "speaker": "Ben Loewenstein, Head of Policy and Government Affairs, UK and Europe, Waymo",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Targeted London's fully driverless ride-hailing launch by the fourth quarter of 2026, retaining the existing calendar-year deadline.",
+      "quote": null,
+      "verbatim": {
+        "text": "LONDON, Jan 28 (Reuters) - U.S. robotaxi company Waymo said on Wednesday it was aiming to launch its fully driverless ride-hailing service in London by the fourth quarter of 2026.",
+        "segs": [
+          {
+            "t": "LONDON, Jan 28 (Reuters) - U.S. robotaxi company Waymo said on Wednesday it was aiming to launch its fully driverless ride-hailing service in London by the fourth quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.reuters.com/world/uk/us-robotaxi-group-waymo-aims-launch-london-by-fourth-quarter-2026-2026-01-28",
+          "title": "US robotaxi group Waymo aims to launch in London by fourth quarter of 2026 | Reuters",
+          "domain": "reuters.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.reuters.com/world/uk/us-robotaxi-group-waymo-aims-launch-london-by-fourth-quarter-2026-2026-01-28",
+          "title": "US robotaxi group Waymo aims to launch in London by fourth quarter of 2026 | Reuters",
+          "domain": "reuters.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "GOOGL-P4-2026-02-04",
+      "promiseId": "P4",
+      "date": "2026-02-04",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Sundar Pichai, CEO, Alphabet and Google",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Miami, its sixth market, launched two weeks earlier; Waymo planned U.S., U.K. and Japan expansion soon, without specifically repeating London's date.",
+      "quote": "Its sixth market, Miami, launched two weeks ago; and Waymo will soon expand its service to multiple cities across the U.S., and in the U.K., and Japan.",
+      "verbatim": {
+        "text": "Its sixth market, Miami, launched two weeks ago; and Waymo will soon expand its service to multiple cities across the U.S., and in the U.K., and Japan.",
+        "segs": [
+          {
+            "t": "Its sixth market, Miami, launched two weeks ago; and Waymo will soon expand its service to multiple cities across the U.S., and in the U.K., and Japan.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Feb/04/2025_Q4_Earnings_Transcript.pdf",
+          "title": "2025_Q4_Earnings_Transcript.docx",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2025 Q4 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Feb/04/2025_Q4_Earnings_Transcript.pdf",
+          "title": "2025_Q4_Earnings_Transcript.docx",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P4-2026-04-14",
+      "promiseId": "P4",
+      "date": "2026-04-14",
+      "call": "From the road — April 14, 2026",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Started autonomous London driving with trained specialists behind the wheel, describing progress toward fully autonomous ride-hailing that year, not a public launch.",
+      "quote": "We’re taking the next step toward bringing fully autonomous ride-hailing to London this year with the start of autonomous driving with trained specialists behind the wheel.",
+      "verbatim": {
+        "text": "We’re taking the next step toward bringing fully autonomous ride-hailing to London this year with the start of autonomous driving with trained specialists behind the wheel.",
+        "segs": [
+          {
+            "t": "We’re taking the next step toward bringing fully autonomous ride-hailing to London this year with the start of autonomous driving with trained specialists behind the wheel.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://waymo.com/blog/shorts/autonomous-driving-in-london/",
+          "title": "April 14, 2026 - From the road - Waymo",
+          "domain": "waymo.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://waymo.com/blog/shorts/autonomous-driving-in-london/",
+          "title": "April 14, 2026 - From the road - Waymo",
+          "domain": "waymo.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "GOOGL-P4-2026-04-29",
+      "promiseId": "P4",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The London service launch target was not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q1-Earnings-Call-2026-nW8kCrBAKS/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q1 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf",
+          "title": "2026_Q1_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P4-2026-07-22",
+      "promiseId": "P4",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The London service launch target was not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q2 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf",
+          "title": "2026_Q2_Earnings_Transcript",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P4-2026-08-26",
+      "promiseId": "P4",
+      "date": "2026-08-26",
+      "call": "London rollout of robotaxis delayed amid lack of guidance for firms to follow",
+      "speaker": "Ben Loewenstein, Head of Policy and Government Affairs, UK and Europe, Waymo",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Retained a year-end fully autonomous launch goal but would not confirm paid public rides within that timeframe; regulatory approvals remained outstanding.",
+      "quote": null,
+      "verbatim": {
+        "text": "He added that Waymo was working towards launching a fully autonomous service “by the end of this year” but would not say whether the company would be able to offer paid rides to the general public in that timeframe.",
+        "segs": [
+          {
+            "t": "He added that Waymo was working towards launching a fully autonomous service “by the end of this year” but would not say whether the company would be able to offer paid rides to the general public in that timeframe.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.theguardian.com/technology/2026/aug/26/london-rollout-robotaxis-delayed-uber-wayve",
+          "title": "London rollout of robotaxis delayed amid lack of guidance for firms to follow | Self-driving cars | The Guardian",
+          "domain": "theguardian.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.theguardian.com/technology/2026/aug/26/london-rollout-robotaxis-delayed-uber-wayve",
+          "title": "London rollout of robotaxis delayed amid lack of guidance for firms to follow | Self-driving cars | The Guardian",
+          "domain": "theguardian.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "GOOGL-P4-2026-09-24",
+      "promiseId": "P4",
+      "date": "2026-09-24",
+      "call": "Our Vision for London: How Waymo can Support a Safer, Connected UK Capital",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated London service plans, requiring DfT approval and TfL consent; the announcement did not repeat or change the launch deadline.",
+      "quote": "To serve Londoners, Waymo will utilise the Automated Passenger Services (APS) permitting scheme.",
+      "verbatim": {
+        "text": "To serve Londoners, Waymo will utilise the Automated Passenger Services (APS) permitting scheme.",
+        "segs": [
+          {
+            "t": "To serve Londoners, Waymo will utilise the Automated Passenger Services (APS) permitting scheme.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://waymo.com/blog/2026/09/visionforlondon",
+          "title": "Our Vision for London: How Waymo can Support a Safer, Connected UK Capital",
+          "domain": "waymo.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://waymo.com/blog/2026/09/visionforlondon",
+          "title": "Our Vision for London: How Waymo can Support a Safer, Connected UK Capital",
+          "domain": "waymo.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "GOOGL-P4-2026-10-28",
+      "promiseId": "P4",
+      "date": "2026-10-28",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The London service launch target was not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q3 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf",
+          "title": "2026_Q3_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P5-2026-04-29",
+      "promiseId": "P5",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expect a small percent of TPU agreement revenue later in 2026, with the vast majority in 2027.",
+      "quote": "We expect to begin recognizing a small percent of the revenues from these agreements later this year, with the vast majority of revenues to be realized in 2027.",
+      "verbatim": {
+        "text": "We expect to begin recognizing a small percent of the revenues from these agreements later this year, with the vast majority of revenues to be realized in 2027.",
+        "segs": [
+          {
+            "t": "We expect to begin recognizing a small percent of the revenues from these agreements later this year, with the vast majority of revenues to be realized in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/Alphabet-2026_Q1_Earnings_Transcript.pdf",
+          "title": "2026_Q1_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/Alphabet-2026_Q1_Earnings_Transcript.pdf",
+          "title": "2026_Q1_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q1-Earnings-Call-2026-nW8kCrBAKS/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q1 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P5-2026-07-22",
+      "promiseId": "P5",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Revenue recognition began in Q2; ramp continues throughout 2026, with the vast majority expected in 2027.",
+      "quote": "We'll continue to ramp up throughout 2026, but then you'll see the vast majority of the revenue from that agreement come through in 2027.",
+      "verbatim": {
+        "text": "We'll continue to ramp up throughout 2026, but then you'll see the vast majority of the revenue from that agreement come through in 2027.",
+        "segs": [
+          {
+            "t": "We'll continue to ramp up throughout ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", but then you'll see the vast majority of the revenue from that agreement come through in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf",
+          "title": "2026_Q2_Earnings_Transcript",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf",
+          "title": "2026_Q2_Earnings_Transcript",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q2 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "GOOGL-P5-2026-10-28",
+      "promiseId": "P5",
+      "date": "2026-10-28",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Anat Ashkenazi, SVP and CFO, Alphabet and Google",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "TPU system sales contributed revenue; expect continued scaling in Q4 and a meaningful revenue ramp in 2027.",
+      "quote": "In Google Cloud, we expect TPU system sales to continue to scale in Q4, followed by a meaningful revenue ramp in 2027.",
+      "verbatim": {
+        "text": "In Google Cloud, we expect TPU system sales to continue to scale in Q4, followed by a meaningful revenue ramp in 2027.",
+        "segs": [
+          {
+            "t": "In Google Cloud, we expect TPU system sales to continue to scale in ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ", followed by a meaningful revenue ramp in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf",
+          "title": "2026_Q3_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf",
+          "title": "2026_Q3_Earnings_Transcript - Google Docs",
+          "domain": "s206.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9/default.aspx?cb=202610281725",
+          "title": "\n\tAlphabet Investor Relations - 2026 Q3 Earnings Call\n",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        },
+        {
+          "url": "https://abc.xyz/files/doc_financials/2026/q3/GOOG-10-Q-Q3-2026.pdf",
+          "title": "GOOG 10-Q Q3 2026",
+          "domain": "abc.xyz",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_events/2025/Oct/29/2025_Q3_Earnings_Transcript.pdf",
+      "title": "2025_Q3_Earnings_Transcript ",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Oct/28/2026_Q3_Earnings_Transcript.pdf",
+      "title": "2026_Q3_Earnings_Transcript - Google Docs",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Jul/22/2026_Q2_Earnings_Transcript.pdf",
+      "title": "2026_Q2_Earnings_Transcript",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q1-Earnings-Call-2026-nW8kCrBAKS/default.aspx",
+      "title": "\n\tAlphabet Investor Relations - 2026 Q1 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Feb/04/2025_Q4_Earnings_Transcript.pdf",
+      "title": "2025_Q4_Earnings_Transcript.docx",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/2026_Q1_Earnings_Transcript.pdf",
+      "title": "2026_Q1_Earnings_Transcript - Google Docs",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 7,
+      "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q2-Earnings-Call-2026-GgTAq7Is0z/default.aspx",
+      "title": "\n\tAlphabet Investor Relations - 2026 Q2 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/2025-q2-earnings-transcript.pdf",
+      "title": "2025_Q2_Earnings_Transcript ",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 9,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf",
+      "title": "GOOG Exhibit 99.1 Q4 2025",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q3-Earnings-Call-2025-4OI4Bac_Q9/default.aspx",
+      "title": "\n\tAlphabet Investor Relations - 2025 Q3 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 11,
+      "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9",
+      "title": "\n\tAlphabet Investor Relations - 2026 Q3 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 12,
+      "url": "https://abc.xyz/investor/events/event-details/2026/2025-Q4-Earnings-Call-2026-Dr_C033hS6/default.aspx",
+      "title": "\n\tAlphabet Investor Relations - 2025 Q4 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P1 P4"
+    },
+    {
+      "n": 13,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q4/2024q4-alphabet-earnings-release.pdf",
+      "title": "GOOG Exhibit 99.1 Q4 2024",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/2025-q1-earnings-transcript.pdf",
+      "title": "2025_Q1_Earnings_Transcript ",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q3/2025q3-alphabet-earnings-release.pdf",
+      "title": "GOOG Exhibit 99.1 Q3 2025",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q2-Earnings-Call",
+      "title": "\n\tAlphabet Investor Relations - 2025 Q2 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://abc.xyz/files/doc_financials/2026/q3/GOOG-10-Q-Q3-2026.pdf",
+      "title": "GOOG 10-Q Q3 2026",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 18,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q1/2025q1-alphabet-earnings-release.pdf",
+      "title": "GOOG Exhibit 99.1 Q1 2025",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2024/q4/2024-q4-earnings-transcript.pdf",
+      "title": "2024_Q4_Earnings_Transcript",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2025/q2/2025q2-alphabet-earnings-release.pdf",
+      "title": "GOOG Exhibit 99.1 Q2 2025",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googexhibit99131825.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q1-Earnings-Call/",
+      "title": "\n\tAlphabet Investor Relations - 2025 Q1 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 23,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q1/2026q1-alphabet-earnings-release.pdf",
+      "title": "GOOG Exhibit 99.1 Q1 2026",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 24,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_events/2026/Apr/29/Alphabet-2026_Q1_Earnings_Transcript.pdf",
+      "title": "2026_Q1_Earnings_Transcript - Google Docs",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 25,
+      "url": "https://abc.xyz/investor/events/event-details/2026/2026-Q3-Earnings-Call-2026-Ujou16CTw9/default.aspx?cb=202610281725",
+      "title": "\n\tAlphabet Investor Relations - 2026 Q3 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 26,
+      "url": "https://abc.xyz/investor/events/event-details/2025/2024-Q4-Earnings-Call/default.aspx",
+      "title": "\n\tAlphabet Investor Relations - 2024 Q4 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204425000027/googex99231825.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 28,
+      "url": "https://abc.xyz/investor/events/event-details/2025/2025-Q1-Earnings-Call",
+      "title": "\n\tAlphabet Investor Relations - 2025 Q1 Earnings Call\n",
+      "domain": "abc.xyz",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 29,
+      "url": "https://s206.q4cdn.com/479360582/files/doc_financials/2026/q3/2026q3-alphabet-earnings-release.pdf",
+      "title": "GOOG Exhibit 99.1 Q3 2026",
+      "domain": "s206.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 30,
+      "url": "https://www.googlecloudpresscorner.com/2026-03-11-Google-Completes-Acquisition-of-Wiz",
+      "title": "Google Completes Acquisition of Wiz - Mar 11, 2026",
+      "domain": "googlecloudpresscorner.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 31,
+      "url": "https://waymo.com/blog/2025/10/hello-london-your-waymo-ride-is-arriving",
+      "title": "Hello London! Your Waymo ride is arriving",
+      "domain": "waymo.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 32,
+      "url": "https://waymo.com/blog/shorts/autonomous-driving-in-london/",
+      "title": "April 14, 2026 - From the road - Waymo",
+      "domain": "waymo.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 33,
+      "url": "https://waymo.com/blog/2026/09/visionforlondon",
+      "title": "Our Vision for London: How Waymo can Support a Safer, Connected UK Capital",
+      "domain": "waymo.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 34,
+      "url": "https://alphabet2025ir.q4web.com/investor/events/event-details/2025/2025-Q2-Earnings-Call/default.aspx",
+      "title": "\n\tAlphabet Investor Relations - 2025 Q2 Earnings Call\n",
+      "domain": "alphabet2025ir.q4web.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 35,
+      "url": "https://blog.google/alphabet/investor-presentation-june-2026",
+      "title": "Alphabet investor presentation: June 2026",
+      "domain": "blog.google",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 36,
+      "url": "https://blog.waymo.com/community/articles/uk-safety-and-accessibility-experts-ride-with-waymo-ahead-of-its-london",
+      "title": "UK Safety and Accessibility Experts Ride with Waymo Ahead of Its London Launch",
+      "domain": "blog.waymo.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 37,
+      "url": "https://www.reuters.com/world/uk/us-robotaxi-group-waymo-aims-launch-london-by-fourth-quarter-2026-2026-01-28",
+      "title": "US robotaxi group Waymo aims to launch in London by fourth quarter of 2026 | Reuters",
+      "domain": "reuters.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 38,
+      "url": "https://www.theguardian.com/technology/2026/aug/26/london-rollout-robotaxis-delayed-uber-wayve",
+      "title": "London rollout of robotaxis delayed amid lack of guidance for firms to follow | Self-driving cars | The Guardian",
+      "domain": "theguardian.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 39,
+      "url": "https://waymo.com/waymo-in-uk",
+      "title": "Waymo in London | Learn about Waymo in the UK",
+      "domain": "waymo.com",
+      "tier": "press",
+      "uses": "P4"
+    }
+  ],
+  "focus": "P4",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T05:51:03.395715Z",
+      "completedAt": "2026-11-05T05:56:41.707812Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.667626Z",
+      "completedAt": "2026-11-05T19:12:57.444124Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.674327Z",
+      "completedAt": "2026-11-05T19:14:25.139482Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.681134Z",
+      "completedAt": "2026-11-05T19:13:45.514492Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.687860Z",
+      "completedAt": "2026-11-05T19:12:50.066755Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.694621Z",
+      "completedAt": "2026-11-05T19:12:10.294832Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.450508Z",
+      "completedAt": "2026-11-05T19:45:55.440542Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.457711Z",
+      "completedAt": "2026-11-05T19:43:05.577418Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.465195Z",
+      "completedAt": "2026-11-05T19:43:34.517342Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.472871Z",
+      "completedAt": "2026-11-05T19:45:24.641484Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.481110Z",
+      "completedAt": "2026-11-05T19:43:27.213457Z"
+    }
+  ],
+  "fills": {
+    "filled": 2
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "33 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "27 of 27 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "27 of 27 (100%); 2 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-28; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Alphabet_Inc_Logo_2015.svg/3840px-Alphabet_Inc_Logo_2015.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Alphabet_Inc_Logo_2015.svg",
+      "title": "File:Alphabet Inc Logo 2015.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 931,
+      "rank": 1
+    },
+    "photo": null
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.312Z"
+}

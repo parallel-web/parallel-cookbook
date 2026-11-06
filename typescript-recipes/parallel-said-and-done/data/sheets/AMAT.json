@@ -1,0 +1,2844 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "AMAT",
+  "name": "Applied Materials, Inc.",
+  "short": "Applied Materials",
+  "website": "appliedmaterials.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Last Sunday in October",
+  "irUrl": "https://ir.appliedmaterials.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-08-13",
+    "quarter": "Q3 FY2026"
+  },
+  "nextCall": {
+    "date": "2026-11-12",
+    "time": "1:30 PM PT",
+    "quarter": "Q4 FY2026"
+  },
+  "photoSubject": "Applied Materials EPIC Center",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Double the dividend per share",
+      "commitment": "Increase the dividend at an accelerated rate over the next several years to double the previous dividend per share.",
+      "deadline": "Over the next several years",
+      "firstStated": "2023-03-13",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Quarterly dividend reached $0.53 per share; management reported more than doubling it from four years ago, and subsequently confirmed the dividend-doubling goal achieved.",
+      "citations": [
+        {
+          "url": "https://www.appliedmaterials.com/us/en/newsroom/press-releases/031326-applied-materials-raises-quarterly-cash-dividend-15-percent.html",
+          "title": "Applied Materials Raises Quarterly Cash Dividend by 15 Percent",
+          "domain": "appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/a495de7a-c54a-4a26-8aef-bd47edefbc2a",
+          "title": "Q2 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-03-13",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-05-14",
+            "what_was_said": "“In March, we announced a 15% increase to the quarterly cash dividend and achieved a goal we set several years ago to double the dividend per share.” This explicitly confirmed achievement of the original goal, beyond the same-day earnings release included as S12.",
+            "call": "Q2 Fiscal 2026 earnings call prepared remarks"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Double advanced-packaging revenue",
+      "commitment": "Double packaging revenues again in the next few years through adoption of 3D multi-die packaging.",
+      "deadline": "Next few years",
+      "firstStated": "2023-05-18",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Management continued targeting $3 billion or more; calendar 2026 packaging growth was forecast at more than 70%, without declaring the multi-year doubling achieved.",
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AMAT/earnings/AMAT-Q4-2025-earnings_call-375371.html/",
+          "title": "Applied Materials, Inc. (AMAT) Q4 FY2025  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/e9985149-77c2-4cf3-aaad-a579178cbfe4",
+          "title": "Q3 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/applied-materials-at-goldman-sachs-conference-ai-demand-lifts-outlook-93CH-4894689",
+          "title": "Applied Materials at Goldman Sachs conference: ai demand lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/a495de7a-c54a-4a26-8aef-bd47edefbc2a",
+          "title": "Q2 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+          "title": "Q3 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-11-13",
+            "what_was_said": "Management said packaging revenue had grown by around $500 million to about $1.5 billion, providing context for the continuing $3 billion-or-more target.",
+            "call": "Q4 Fiscal 2025 earnings call"
+          },
+          {
+            "date": "2026-05-14",
+            "what_was_said": "Management forecast packaging revenue growth of more than 50% in calendar 2026. This was a growth forecast, not a declaration that the multi-year doubling had been achieved.",
+            "call": "Q2 Fiscal 2026 earnings call prepared remarks"
+          },
+          {
+            "date": "2026-08-13",
+            "what_was_said": "Management increased its calendar 2026 packaging revenue growth forecast to more than 70%, while continuing to describe strong multi-year growth opportunities.",
+            "call": "Q3 Fiscal 2026 earnings call prepared remarks"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Open the EPIC Center",
+      "commitment": "Bring the EPIC Center online in fiscal 2026.",
+      "deadline": "Fiscal 2026",
+      "firstStated": "2023-08-17",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Applied announced the EPIC Center’s opening on Oct. 12, 2026, within fiscal 2026; the interim Spring 2026 operating target had shifted to Fall.",
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-unveils-5-billion-epic-center-silicon-valley",
+          "title": "Applied Materials Unveils $5 Billion EPIC Center in Silicon Valley to Accelerate Semiconductor Innovation for the AI Era | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/dfd7634b-5792-4110-b390-ec5307900881",
+          "title": "Q3 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+          "title": "Q3 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm",
+          "title": "amat-20260426",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-10-12",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Grow semiconductor equipment above 20%",
+      "commitment": "Grow the semiconductor equipment business more than 20% in calendar 2026.",
+      "deadline": "Calendar 2026",
+      "firstStated": "2026-02-12",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Raised calendar 2026 semiconductor-equipment growth guidance to more than 30 percent, then raised expectations again without a new percentage; the full-year commitment remained pending.",
+      "citations": [
+        {
+          "url": "http://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-second-quarter-2026-results",
+          "title": "Applied Materials Announces Second Quarter 2026 Results | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-third-quarter-2026-results",
+          "title": "Applied Materials Announces Third Quarter 2026 Results | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-applied-materials-beats-q3-2026-estimates-shares-fall-93CH-4859444",
+          "title": "Earnings call transcript: Applied Materials beats Q3 2026 estimates, shares fall By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+          "title": "Q1 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/amat/transcripts/557838-q3-2026/",
+          "title": "Applied Materials (AMAT) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Double cold-field e-beam revenue",
+      "commitment": "Double Cold Field Emission e-beam revenues to more than $1 billion in calendar 2026.",
+      "deadline": "Calendar 2026",
+      "firstStated": "2026-02-12",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The calendar 2026 CFE revenue-doubling target remains pending. No CFE-specific achievement or revision was disclosed; later revenue forecasts covered the broader eBeam portfolio.",
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+          "title": "Q1 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/amat/transcripts/543062-q2-2026",
+          "title": "Applied Materials (AMAT) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/amat/transcripts/557838-q3-2026/",
+          "title": "Applied Materials (AMAT) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.appliedmaterials.com/us/en/newsroom/press-releases/101326-applied-set-to-outperform-as-ai-drives-demand-for-wafer-fab-equipment.html",
+          "title": "Applied Materials Set to Outperform as AI Drives Sustained Demand for Wafer Fab Equipment",
+          "domain": "appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/e9985149-77c2-4cf3-aaad-a579178cbfe4",
+          "title": "Q3 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "AMAT-P1-2023-03-13",
+      "promiseId": "P1",
+      "date": "2023-03-13",
+      "call": "Applied Materials Increases Cash Dividend by 23.1 Percent and Announces New $10 Billion Share Repurchase Authorization",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Accelerated dividend increases could double the previous dividend per share over the next several years.",
+      "quote": "Given these trends, we believe our free cash flow will continue to grow over time and can support increasing the dividend at an accelerated rate and doubling the previous dividend per share over the next several years.",
+      "verbatim": {
+        "text": "Given these trends, we believe our free cash flow will continue to grow over time and can support increasing the dividend at an accelerated rate and doubling the previous dividend per share over the next several years.”",
+        "segs": [
+          {
+            "t": "Given these trends, we believe our free cash flow will continue to grow over time and can support increasing the dividend at an accelerated rate and doubling the previous dividend per share over the next several years.”",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-cash-dividend-231-percent-and",
+          "title": "Applied Materials Increases Cash Dividend by 23.1 Percent and Announces New $10 Billion Share Repurchase Authorization | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-cash-dividend-231-percent-and",
+          "title": "Applied Materials Increases Cash Dividend by 23.1 Percent and Announces New $10 Billion Share Repurchase Authorization | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMAT-P1-2023-05-18",
+      "promiseId": "P1",
+      "date": "2023-05-18",
+      "call": "Q2 Fiscal 2023 earnings call prepared remarks",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed accelerated dividend increases to double the previous dividend per share over the next several years.",
+      "quote": "We believe our free cash flow can continue to grow and support increasing the dividend at an accelerated rate over the next several years which would double our previous dividend per share.",
+      "verbatim": {
+        "text": "We believe our free cash flow can continue to grow and support increasing the dividend at an accelerated rate over the next several years which would double our previous dividend per share.",
+        "segs": [
+          {
+            "t": "We believe our free cash flow can continue to grow and support increasing the dividend at an accelerated rate over the next several years which would double our previous dividend per share.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/a495de7a-c54a-4a26-8aef-bd47edefbc2a",
+          "title": "Q2 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/a495de7a-c54a-4a26-8aef-bd47edefbc2a",
+          "title": "Q2 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2023-08-17",
+      "promiseId": "P1",
+      "date": "2023-08-17",
+      "call": "Q3 Fiscal 2023 earnings call prepared remarks",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Paid $268 million in dividends; dividend-per-share was $0.32, reflecting the 23% increase announced in March.",
+      "quote": "We paid $268 million in dividends and the dividend-per-share was $0.32, reflecting the 23% increase announced in March.",
+      "verbatim": {
+        "text": "We paid $268 million in dividends and the dividend-per-share was $0.32, reflecting the 23% increase announced in March.",
+        "segs": [
+          {
+            "t": "We paid ",
+            "h": 0
+          },
+          {
+            "t": "$268 million",
+            "h": 1
+          },
+          {
+            "t": " in dividends and the dividend-per-share was ",
+            "h": 0
+          },
+          {
+            "t": "$0.32",
+            "h": 1
+          },
+          {
+            "t": ", reflecting the ",
+            "h": 0
+          },
+          {
+            "t": "23%",
+            "h": 1
+          },
+          {
+            "t": " increase announced in March.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/dfd7634b-5792-4110-b390-ec5307900881",
+          "title": "Q3 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/dfd7634b-5792-4110-b390-ec5307900881",
+          "title": "Q3 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2023-11-16",
+      "promiseId": "P1",
+      "date": "2023-11-16",
+      "call": "Q4 Fiscal 2023 earnings call prepared remarks",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed doubling over the next several years; quarterly dividend per share had grown at a compound rate of more than 12%.",
+      "quote": "We’ve increased our quarterly dividend per share at a compound rate of more than 12% over this period and earlier this year, we announced our belief that our free cash flow can support doubling our previous dividend per share over the next several years.",
+      "verbatim": {
+        "text": "We’ve increased our quarterly dividend per share at a compound rate of more than 12% over this period and earlier this year, we announced our belief that",
+        "segs": [
+          {
+            "t": "We’ve increased our quarterly dividend per share at a compound rate of more than ",
+            "h": 0
+          },
+          {
+            "t": "12%",
+            "h": 1
+          },
+          {
+            "t": " over this period and earlier this year, we announced our belief that",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/4b72dc3d-43e4-476a-9549-8bb4914f22a9",
+          "title": "Static Files",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/4b72dc3d-43e4-476a-9549-8bb4914f22a9",
+          "title": "Static Files",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2024-02-15",
+      "promiseId": "P1",
+      "date": "2024-02-15",
+      "call": "Q1 Fiscal 2024 earnings call prepared remarks",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Dividend-doubling target not addressed in prepared remarks; historical dividend growth and routine distributions discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/b69d5cf1-b74a-4ad7-95f1-b22a879bef80",
+          "title": "Q1 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2024-03-11",
+      "promiseId": "P1",
+      "date": "2024-03-11",
+      "call": "Applied Materials Increases Cash Dividend by 25 Percent",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Approved a 25-percent quarterly dividend increase from $0.32 to $0.40 per share; retained the doubling ambition.",
+      "quote": "Applied Materials, Inc. today announced that its Board of Directors has approved a 25-percent increase in the quarterly cash dividend from $0.32 to $0.40 per share.",
+      "verbatim": {
+        "text": "SANTA CLARA, Calif. , March 11, 2024 (GLOBE NEWSWIRE) -- Applied Materials, Inc. today announced that its Board of Directors has approved a 25-percent increase in the quarterly cash dividend from $0.32 to $0.40 per share.",
+        "segs": [
+          {
+            "t": "SANTA CLARA, Calif. , March 11, ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " (GLOBE NEWSWIRE) -- Applied Materials, Inc. today announced that its Board of Directors has approved a 25-percent increase in the quarterly cash dividend from ",
+            "h": 0
+          },
+          {
+            "t": "$0.32 to $0.40",
+            "h": 1
+          },
+          {
+            "t": " per share.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-cash-dividend-25-percent",
+          "title": "Applied Materials Increases Cash Dividend by 25 Percent | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-cash-dividend-25-percent",
+          "title": "Applied Materials Increases Cash Dividend by 25 Percent | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMAT-P1-2024-05-16",
+      "promiseId": "P1",
+      "date": "2024-05-16",
+      "call": "Q2 Fiscal 2024 earnings call prepared remarks",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported a 23% dividend increase in March 2023 and a 25% increase in March of this year.",
+      "quote": "In March 2023, we announced a 23% increase in our dividend per share and in March of this year, we announced a 25% increase.",
+      "verbatim": {
+        "text": "In March 2023, we announced a 23% increase in our dividend per share and in March of this year, we announced a 25% increase.",
+        "segs": [
+          {
+            "t": "In March ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ", we announced a ",
+            "h": 0
+          },
+          {
+            "t": "23%",
+            "h": 1
+          },
+          {
+            "t": " increase in our dividend per share and in March of this year, we announced a ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": " increase.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/5b104f5c-246e-4ebd-8f8b-af2e1e4709da",
+          "title": "Q2 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/5b104f5c-246e-4ebd-8f8b-af2e1e4709da",
+          "title": "Q2 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2024-08-15",
+      "promiseId": "P1",
+      "date": "2024-08-15",
+      "call": "Q3 Fiscal 2024 earnings call prepared remarks",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Distributed nearly $1.2B, including the first $0.40 per-share dividend and $861M in buybacks.",
+      "quote": "We distributed nearly $1.2B to shareholders including the first $0.40 per-share dividend and $861M in stock buybacks.",
+      "verbatim": {
+        "text": "We distributed nearly $1.2B to shareholders including the first $0.40 per-share dividend and $861M in stock buybacks.",
+        "segs": [
+          {
+            "t": "We distributed nearly ",
+            "h": 0
+          },
+          {
+            "t": "$1.2B",
+            "h": 1
+          },
+          {
+            "t": " to shareholders including the first ",
+            "h": 0
+          },
+          {
+            "t": "$0.40",
+            "h": 1
+          },
+          {
+            "t": " per-share dividend and ",
+            "h": 0
+          },
+          {
+            "t": "$861M",
+            "h": 1
+          },
+          {
+            "t": " in stock buybacks.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/70588f70-62ad-4431-adff-ab0644d95bec",
+          "title": "Q3 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/70588f70-62ad-4431-adff-ab0644d95bec",
+          "title": "Q3 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2024-11-14",
+      "promiseId": "P1",
+      "date": "2024-11-14",
+      "call": "Q4 Fiscal 2024 earnings call prepared remarks",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Dividend-doubling target not addressed in prepared remarks; routine dividend and repurchase distributions reported.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/6b3eec28-ce0e-4053-a60d-dae2bd321158",
+          "title": "Q4 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2025-02-13",
+      "promiseId": "P1",
+      "date": "2025-02-13",
+      "call": "Q1 Fiscal 2025 earnings call prepared remarks",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Dividend-doubling target not addressed in prepared remarks; routine dividend and repurchase distributions reported.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/983655fe-97b7-479e-a4be-fd565ede7124",
+          "title": "Q1 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2025-03-10",
+      "promiseId": "P1",
+      "date": "2025-03-10",
+      "call": "Applied Materials Increases Quarterly Cash Dividend by 15 Percent and Announces New $10 Billion Share Repurchase Authorization",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Approved a 15-percent increase to $0.46 per share, marking eight consecutive years of higher dividends.",
+      "quote": "Applied Materials, Inc. today announced that its Board of Directors has approved a 15-percent increase in the quarterly cash dividend, marking eight consecutive years of higher dividends.",
+      "verbatim": {
+        "text": "SANTA CLARA, Calif. , March 10, 2025 (GLOBE NEWSWIRE) -- Applied Materials, Inc. today announced that its Board of Directors has approved a 15-percent increase in the quarterly cash dividend, marking eight consecutive years of higher dividends.",
+        "segs": [
+          {
+            "t": "SANTA CLARA, Calif. , March 10, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " (GLOBE NEWSWIRE) -- Applied Materials, Inc. today announced that its Board of Directors has approved a 15-percent increase in the quarterly cash dividend, marking eight consecutive years of higher dividends.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-quarterly-cash-dividend-15-percent",
+          "title": "Applied Materials Increases Quarterly Cash Dividend by 15 Percent and Announces New $10 Billion Share Repurchase Authorization | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-quarterly-cash-dividend-15-percent",
+          "title": "Applied Materials Increases Quarterly Cash Dividend by 15 Percent and Announces New $10 Billion Share Repurchase Authorization | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMAT-P1-2025-05-15",
+      "promiseId": "P1",
+      "date": "2025-05-15",
+      "call": "Q2 Fiscal 2025 earnings call prepared remarks",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Board approval during the quarter of a 15% dividend-per-share increase.",
+      "quote": "As previously announced, during the quarter, our Board of Directors approved a 15% increase to our dividend per share.",
+      "verbatim": {
+        "text": "As previously announced, during the quarter, our Board of Directors approved a 15% increase to our dividend per share.",
+        "segs": [
+          {
+            "t": "As previously announced, during the quarter, our Board of Directors approved a ",
+            "h": 0
+          },
+          {
+            "t": "15%",
+            "h": 1
+          },
+          {
+            "t": " increase to our dividend per share.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/12e4e543-3e22-460e-90bc-055c95eb0797",
+          "title": "Q2 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/12e4e543-3e22-460e-90bc-055c95eb0797",
+          "title": "Q2 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2025-08-14",
+      "promiseId": "P1",
+      "date": "2025-08-14",
+      "call": "Q3 Fiscal 2025 earnings call prepared remarks",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Dividend-doubling target not addressed in prepared remarks; routine dividend and repurchase distributions reported.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+          "title": "Q3 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2025-11-13",
+      "promiseId": "P1",
+      "date": "2025-11-13",
+      "call": "Q4 Fiscal 2025 earnings call prepared remarks",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Paid $1.4B in cash dividends; quarterly dividend per share increased 15% during the year to $0.46.",
+      "quote": "We paid $1.4B in cash dividends, and the quarterly dividend per share was increased by 15% during the year to $0.46.",
+      "verbatim": {
+        "text": "We paid $1.4B in cash dividends, and the quarterly dividend per share was increased by 15% during the year to $0.46.",
+        "segs": [
+          {
+            "t": "We paid ",
+            "h": 0
+          },
+          {
+            "t": "$1.4B",
+            "h": 1
+          },
+          {
+            "t": " in cash dividends, and the quarterly dividend per share was increased by ",
+            "h": 0
+          },
+          {
+            "t": "15%",
+            "h": 1
+          },
+          {
+            "t": " during the year to ",
+            "h": 0
+          },
+          {
+            "t": "$0.46",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/4d5a62a2-1796-4d11-ae7c-848c1ed7ea27",
+          "title": "Q4 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/4d5a62a2-1796-4d11-ae7c-848c1ed7ea27",
+          "title": "Q4 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2026-02-12",
+      "promiseId": "P1",
+      "date": "2026-02-12",
+      "call": "Q1 Fiscal 2026 earnings call prepared remarks",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Dividend-doubling target not addressed in prepared remarks; routine shareholder distributions reported.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+          "title": "Q1 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P1-2026-03-13",
+      "promiseId": "P1",
+      "date": "2026-03-13",
+      "call": "Applied Materials Raises Quarterly Cash Dividend by 15 Percent",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Approved a 15-percent increase from $0.46 to $0.53 per share; said dividends had more than doubled from four years ago.",
+      "quote": "“With the increase announced today, Applied Materials has more than doubled its dividend per share from four years ago,” said Brice Hill, Senior Vice President and CFO.",
+      "verbatim": {
+        "text": "“With the increase announced today, Applied Materials has more than doubled its dividend per share from four years ago,” said Brice Hill, Senior Vice President and CFO.",
+        "segs": [
+          {
+            "t": "“With the increase announced today, Applied Materials has more than doubled its dividend per share from four years ago,” said Brice Hill, Senior Vice President and CFO.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.appliedmaterials.com/us/en/newsroom/press-releases/031326-applied-materials-raises-quarterly-cash-dividend-15-percent.html",
+          "title": "Applied Materials Raises Quarterly Cash Dividend by 15 Percent",
+          "domain": "appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.appliedmaterials.com/us/en/newsroom/press-releases/031326-applied-materials-raises-quarterly-cash-dividend-15-percent.html",
+          "title": "Applied Materials Raises Quarterly Cash Dividend by 15 Percent",
+          "domain": "appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMAT-P1-2026-05-14",
+      "promiseId": "P1",
+      "date": "2026-05-14",
+      "call": "Q2 Fiscal 2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported a 15 percent increase from $0.46 to $0.53 per share, marking nine consecutive years of increases and more than doubling.",
+      "quote": "With the increase, Applied has more than doubled its dividend per share from four years ago.",
+      "verbatim": {
+        "text": "With the increase, Applied has more than doubled its dividend per share from four years ago.",
+        "segs": [
+          {
+            "t": "With the increase, Applied has more than doubled its dividend per share from four years ago.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/c02d8253-7dc3-44d3-a9a9-29d07fb26f17",
+          "title": "Exhibit 99.1 (Q2 2026) Earnings Release",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/c02d8253-7dc3-44d3-a9a9-29d07fb26f17",
+          "title": "Exhibit 99.1 (Q2 2026) Earnings Release",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMAT-P2-2023-05-18",
+      "promiseId": "P2",
+      "date": "2023-05-18",
+      "call": "Q2 Fiscal 2023 earnings call prepared remarks",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected packaging revenues to double again over the next few years through adoption of 3D multi-die packaging.",
+      "quote": "We believe we can double revenues again in the next few years with further adoption of 3D multi-die packaging.",
+      "verbatim": {
+        "text": "We believe we can double revenues again in the next few years with further adoption of 3D multi-die packaging.",
+        "segs": [
+          {
+            "t": "We believe we can double revenues again in the next few years with further adoption of 3D multi-die packaging.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/a495de7a-c54a-4a26-8aef-bd47edefbc2a",
+          "title": "Q2 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/a495de7a-c54a-4a26-8aef-bd47edefbc2a",
+          "title": "Q2 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P2-2023-08-17",
+      "promiseId": "P2",
+      "date": "2023-08-17",
+      "call": "Q3 Fiscal 2023 earnings call",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported the $1 billion packaging business on track to double over the next three to five years.",
+      "quote": "As I've talked about, it's $1 billion business, And, you know, we're on track to double that over the next three to five years.",
+      "verbatim": {
+        "text": "As I've talked about, it's $1 billion business, And, you know, we're on track to double that over the next three to five years.",
+        "segs": [
+          {
+            "t": "As I've talked about, it's ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " business, And, you know, we're on track to double that over the next three to five years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/08/17/applied-materials-amat-q3-2023-earnings-call-trans",
+          "title": "Applied Materials (AMAT) Q3 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/dfd7634b-5792-4110-b390-ec5307900881",
+          "title": "Q3 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/08/17/applied-materials-amat-q3-2023-earnings-call-trans",
+          "title": "Applied Materials (AMAT) Q3 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P2-2023-11-16",
+      "promiseId": "P2",
+      "date": "2023-11-16",
+      "call": "Q4 Fiscal 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the doubling target; described packaging as a $1 billion business.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/4b72dc3d-43e4-476a-9549-8bb4914f22a9",
+          "title": "Static Files",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/11/16/applied-materials-amat-q4-2023-earnings-call-trans?source=iedfolrf0000001",
+          "title": "Applied Materials (AMAT) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P2-2024-02-15",
+      "promiseId": "P2",
+      "date": "2024-02-15",
+      "call": "Q1 Fiscal 2024 earnings call prepared remarks",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed opportunities to double advanced-packaging revenue through heterogeneous integration and new products.",
+      "quote": "Looking further ahead, we see opportunities for this business to double again as heterogenous integration is more widely adopted and we introduce new products that expand our served market.",
+      "verbatim": {
+        "text": "Looking further ahead, we see opportunities for this business to double again as heterogenous integration is more widely adopted and we introduce new products that expand our served market.",
+        "segs": [
+          {
+            "t": "Looking further ahead, we see opportunities for this business to double again as heterogenous integration is more widely adopted and we introduce new products that expand our served market.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/b69d5cf1-b74a-4ad7-95f1-b22a879bef80",
+          "title": "Q1 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/b69d5cf1-b74a-4ad7-95f1-b22a879bef80",
+          "title": "Q1 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P2-2024-05-16",
+      "promiseId": "P2",
+      "date": "2024-05-16",
+      "call": "Q2 Fiscal 2024 earnings call prepared remarks",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed doubling opportunities as heterogeneous integration expands beyond the AI datacenter and new products broaden the served market.",
+      "quote": "Looking further ahead, we see opportunities for this business to double again, as heterogenous integration is more widely adopted—beyond the AI datacenter—and we introduce new products that expand our served market.",
+      "verbatim": {
+        "text": "Looking further ahead, we see opportunities for this business to double again, as heterogenous integration is more widely adopted—beyond the AI datacenter—and we introduce new products that expand our served market.",
+        "segs": [
+          {
+            "t": "Looking further ahead, we see opportunities for this business to double again, as heterogenous integration is more widely adopted—beyond the AI datacenter—and we introduce new products that expand our served market.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/5b104f5c-246e-4ebd-8f8b-af2e1e4709da",
+          "title": "Q2 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/5b104f5c-246e-4ebd-8f8b-af2e1e4709da",
+          "title": "Q2 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P2-2024-08-15",
+      "promiseId": "P2",
+      "date": "2024-08-15",
+      "call": "Q3 Fiscal 2024 earnings call prepared remarks",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that advanced packaging could double over the next several years.",
+      "quote": "We believe this business can double in size over the next several years, as heterogenous integration is more widely adopted and we introduce new solutions that grow our addressable market.",
+      "verbatim": {
+        "text": "We believe this business can double in size over the next several years, as heterogenous integration is more widely adopted and we introduce new solutions that grow our addressable market.",
+        "segs": [
+          {
+            "t": "We believe this business can double in size over the next several years, as heterogenous integration is more widely adopted and we introduce new solutions that grow our addressable market.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/70588f70-62ad-4431-adff-ab0644d95bec",
+          "title": "Q3 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/70588f70-62ad-4431-adff-ab0644d95bec",
+          "title": "Q3 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P2-2024-11-14",
+      "promiseId": "P2",
+      "date": "2024-11-14",
+      "call": "Q4 Fiscal 2024 earnings call prepared remarks",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that advanced packaging would double in coming years.",
+      "quote": "We believe this business will double in size in coming years, as heterogeneous integration is more widely adopted and we introduce new solutions that grow our addressable market.",
+      "verbatim": {
+        "text": "We believe this business will double in size in coming years, as heterogeneous integration is more widely adopted and we introduce new solutions that grow our addressable market.",
+        "segs": [
+          {
+            "t": "We believe this business will double in size in coming years, as heterogeneous integration is more widely adopted and we introduce new solutions that grow our addressable market.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/6b3eec28-ce0e-4053-a60d-dae2bd321158",
+          "title": "Q4 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/6b3eec28-ce0e-4053-a60d-dae2bd321158",
+          "title": "Q4 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P2-2025-02-13",
+      "promiseId": "P2",
+      "date": "2025-02-13",
+      "call": "Q1 Fiscal 2025 earnings call prepared remarks",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "After capturing more than half its served packaging market in 2024, remained on track to double revenues over the next several years.",
+      "quote": "In 2024, our packaging business captured more than half of the market we serve, and we remain on track to double our revenues over the next several years.",
+      "verbatim": {
+        "text": "In 2024, our packaging business Q1 Fiscal 2025 Earnings Call PREPARED REMARKS FEBRUARY 13, 2025 PAGE 3 APPLIED MATERIALS EXTERNAL captured more than half of the market we serve, and we remain on track to double our revenues over the next several years.",
+        "segs": [
+          {
+            "t": "In ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", our packaging business ",
+            "h": 0
+          },
+          {
+            "t": "Q1",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "Fiscal 2025",
+            "h": 1
+          },
+          {
+            "t": " Earnings Call PREPARED REMARKS FEBRUARY 13, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " PAGE 3 APPLIED MATERIALS EXTERNAL captured more than half of the market we serve, and we remain on track to double our revenues over the next several years.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.appliedmaterials.com/static-files/983655fe-97b7-479e-a4be-fd565ede7124",
+          "title": "Q1 2025 Earnings Call Published Script",
+          "domain": "investors.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.appliedmaterials.com/static-files/983655fe-97b7-479e-a4be-fd565ede7124",
+          "title": "Q1 2025 Earnings Call Published Script",
+          "domain": "investors.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P2-2025-05-15",
+      "promiseId": "P2",
+      "date": "2025-05-15",
+      "call": "Q2 Fiscal 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the advanced-packaging revenue-doubling target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/12e4e543-3e22-460e-90bc-055c95eb0797",
+          "title": "Q2 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://news.alphastreet.com/applied-materials-inc-amat-q2-2025-earnings-call-transcript",
+          "title": "Applied Materials, Inc (AMAT) Q2 2025 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P2-2025-08-14",
+      "promiseId": "P2",
+      "date": "2025-08-14",
+      "call": "Q3 Fiscal 2025 earnings call prepared remarks",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported packaging on track to more than double to greater than $3 billion over the next few years.",
+      "quote": "We are well-positioned for future architecture inflections, and our packaging business is on track to more than double to greater than $3 billion over the next few years.",
+      "verbatim": {
+        "text": "We are well-positioned for future architecture inflections, and our packaging business is on track to more than double to greater than $3 billion over the next few years.",
+        "segs": [
+          {
+            "t": "We are well-positioned for future architecture inflections, and our packaging business is on track to more than double to greater than ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " over the next few years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+          "title": "Q3 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+          "title": "Q3 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/AMAT/earnings/AMAT-Q4-2025-earnings_call-375371.html/",
+          "title": "Applied Materials, Inc. (AMAT) Q4 FY2025  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P2-2025-11-13",
+      "promiseId": "P2",
+      "date": "2025-11-13",
+      "call": "Q4 Fiscal 2025 earnings call",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reiterated being on track to double packaging to $3 billion or more over the next few years.",
+      "quote": "We are on track still to double this business to $3 billion or more over the next few years.",
+      "verbatim": {
+        "text": "We are on track still to double this business to $3 billion or more over the next few years.",
+        "segs": [
+          {
+            "t": "We are on track still to double this business to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " or more over the next few years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/AMAT/earnings/AMAT-Q4-2025-earnings_call-375371.html/",
+          "title": "Applied Materials, Inc. (AMAT) Q4 FY2025  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/4d5a62a2-1796-4d11-ae7c-848c1ed7ea27",
+          "title": "Q4 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/AMAT/earnings/AMAT-Q4-2025-earnings_call-375371.html/",
+          "title": "Applied Materials, Inc. (AMAT) Q4 FY2025  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P2-2026-02-12",
+      "promiseId": "P2",
+      "date": "2026-02-12",
+      "call": "Q1 Fiscal 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not restate the doubling target; discussed long-term packaging growth and technology leadership.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+          "title": "Q1 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/02/12/applied-materials-amat-q1-2026-earnings-transcript",
+          "title": "Applied Materials AMAT Q1 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P2-2026-05-14",
+      "promiseId": "P2",
+      "date": "2026-05-14",
+      "call": "Q2 Fiscal 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not restate doubling; forecast packaging revenue growth of more than 50% in calendar 2026.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/05/15/applied-materials-amat-q2-2026-earnings-transcript/",
+          "title": "Applied Materials AMAT Q2 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P2-2026-08-13",
+      "promiseId": "P2",
+      "date": "2026-08-13",
+      "call": "Q3 Fiscal 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not restate doubling; increased the separate calendar 2026 packaging growth forecast to more than 70%.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/e9985149-77c2-4cf3-aaad-a579178cbfe4",
+          "title": "Q3 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P3-2023-08-17",
+      "promiseId": "P3",
+      "date": "2023-08-17",
+      "call": "Q3 Fiscal 2023 earnings call — prepared remarks",
+      "speaker": "Brice Hill, Senior Vice President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "EPIC Center expected online in fiscal 2026; elevated capital expenditures would not change the commitment to shareholder returns.",
+      "quote": "The EPIC Center is expected to come online in fiscal 2026, and while we expect our capital expenditures to be higher over the next several years, there is no change to our strong commitment to shareholder returns.",
+      "verbatim": {
+        "text": "The EPIC Center is expected to come online in fiscal 2026, and while we expect our capital expenditures to be higher over the next several years, there is no change to our strong commitment to shareholder returns.",
+        "segs": [
+          {
+            "t": "The EPIC Center is expected to come online in ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": ", and while we expect our capital expenditures to be higher over the next several years, there is no change to our strong commitment to shareholder returns.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/dfd7634b-5792-4110-b390-ec5307900881",
+          "title": "Q3 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/dfd7634b-5792-4110-b390-ec5307900881",
+          "title": "Q3 2023 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2023-11-16",
+      "promiseId": "P3",
+      "date": "2023-11-16",
+      "call": "Q4 Fiscal 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed EPIC collaboration, but did not address the opening timetable.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investors.appliedmaterials.com/static-files/4b72dc3d-43e4-476a-9549-8bb4914f22a9",
+          "title": "Q4 2023 Earnings Call Published Script",
+          "domain": "investors.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/11/16/applied-materials-amat-q4-2023-earnings-call-trans/",
+          "title": "Applied Materials (AMAT) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P3-2024-02-15",
+      "promiseId": "P3",
+      "date": "2024-02-15",
+      "call": "Q1 Fiscal 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Mentioned building the Silicon Valley EPIC Center, but did not address the opening timetable.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/b69d5cf1-b74a-4ad7-95f1-b22a879bef80",
+          "title": "Q1 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/02/15/applied-materials-amat-q1-2024-earnings-call-trans",
+          "title": "Applied Materials (AMAT) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P3-2024-05-16",
+      "promiseId": "P3",
+      "date": "2024-05-16",
+      "call": "Q2 Fiscal 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed the global EPIC platform, but did not address the opening timetable.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/5b104f5c-246e-4ebd-8f8b-af2e1e4709da",
+          "title": "Q2 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/05/16/applied-materials-amat-q2-2024-earnings-call-trans/",
+          "title": "Applied Materials (AMAT) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P3-2024-08-15",
+      "promiseId": "P3",
+      "date": "2024-08-15",
+      "call": "Q3 Fiscal 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Confirmed continued EPIC investment despite unavailable grants, but did not address the opening timetable.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/70588f70-62ad-4431-adff-ab0644d95bec",
+          "title": "Q3 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/08/15/applied-materials-amat-q3-2024-earnings-call-trans?referring_guid=c1b162ee-5b50-4c08-904d-d19f2e6db7ff&source=financialcontent",
+          "title": "Applied Materials (AMAT) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P3-2024-11-14",
+      "promiseId": "P3",
+      "date": "2024-11-14",
+      "call": "Q4 Fiscal 2024 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Construction well underway and on-track to come online in 2026.",
+      "quote": "In the U.S., construction of the EPIC Center in Silicon Valley is well underway and on-track to come online in 2026, and we will share more details about our EPIC Advanced Packaging strategy at a technical summit we are hosting for R&D leaders next week in Singapore.",
+      "verbatim": {
+        "text": "In the U.S., construction of the EPIC Center in Silicon Valley is well underway and on-track to come online in 2026, and we will share more details about our EPIC Advanced Packaging strategy at a technical summit we are hosting for R&D leaders next week in Singapore.",
+        "segs": [
+          {
+            "t": "In the U.S., construction of the EPIC Center in Silicon Valley is well underway and on-track to come online in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", and we will share more details about our EPIC Advanced Packaging strategy at a technical summit we are hosting for R&D leaders next week in Singapore.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/6b3eec28-ce0e-4053-a60d-dae2bd321158",
+          "title": "Q4 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/6b3eec28-ce0e-4053-a60d-dae2bd321158",
+          "title": "Q4 2024 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2025-02-13",
+      "promiseId": "P3",
+      "date": "2025-02-13",
+      "call": "Q1 Fiscal 2025 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Significant construction progress; EPIC Center on track to come online in 2026.",
+      "quote": "We made significant progress with the construction of the EPIC Center in Silicon Valley, which is on track to come online in 2026 and will become the centerpiece of our global EPIC collaboration platform.",
+      "verbatim": {
+        "text": "We made significant progress with the construction of the EPIC Center in Silicon Valley, which is on track to come online in 2026 and will become the centerpiece of our global EPIC collaboration platform.",
+        "segs": [
+          {
+            "t": "We made significant progress with the construction of the EPIC Center in Silicon Valley, which is on track to come online in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and will become the centerpiece of our global EPIC collaboration platform.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/983655fe-97b7-479e-a4be-fd565ede7124",
+          "title": "Q1 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/983655fe-97b7-479e-a4be-fd565ede7124",
+          "title": "Q1 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2025-05-15",
+      "promiseId": "P3",
+      "date": "2025-05-15",
+      "call": "Q2 Fiscal 2025 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Construction progressing on schedule; operations expected in Spring 2026, specifying a season within the original deadline.",
+      "quote": "Construction of our new flagship R&D facility—the EPIC Center in Silicon Valley—is progressing on schedule, and we expect the center to start operations in Spring 2026.",
+      "verbatim": {
+        "text": "Construction of our new flagship R&D facility—the EPIC Center in Silicon Valley—is progressing on schedule, and we expect the center to start operations in Spring 2026.",
+        "segs": [
+          {
+            "t": "Construction of our new flagship R&D facility—the EPIC Center in Silicon Valley—is progressing on schedule, and we expect the center to start operations in Spring ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/12e4e543-3e22-460e-90bc-055c95eb0797",
+          "title": "Q2 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/12e4e543-3e22-460e-90bc-055c95eb0797",
+          "title": "Q2 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2025-08-14",
+      "promiseId": "P3",
+      "date": "2025-08-14",
+      "call": "Q3 Fiscal 2025 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "EPIC Center remains on track to begin operations in Spring 2026.",
+      "quote": "Our new flagship R&D facility—the EPIC Center in Silicon Valley—remains on track to begin operations in Spring 2026.",
+      "verbatim": {
+        "text": "Our new flagship R&D facility—the EPIC Center in Silicon Valley—remains on track to begin operations in Spring 2026.",
+        "segs": [
+          {
+            "t": "Our new flagship R&D facility—the EPIC Center in Silicon Valley—remains on track to begin operations in Spring ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+          "title": "Q3 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+          "title": "Q3 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2025-11-13",
+      "promiseId": "P3",
+      "date": "2025-11-13",
+      "call": "Q4 Fiscal 2025 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Construction on track; operations expected next year, without repeating Spring 2026.",
+      "quote": "Construction of the platform’s flagship facility—the EPIC Center in Silicon Valley—is on track and we are excited to begin operations next year.",
+      "verbatim": {
+        "text": "Construction of the platform’s flagship facility—the EPIC Center in Silicon Valley—is on track and we are excited to begin operations next year.",
+        "segs": [
+          {
+            "t": "Construction of the platform’s flagship facility—the EPIC Center in Silicon Valley—is on track and we are excited to begin operations next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/4d5a62a2-1796-4d11-ae7c-848c1ed7ea27",
+          "title": "Q4 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/4d5a62a2-1796-4d11-ae7c-848c1ed7ea27",
+          "title": "Q4 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2026-02-12",
+      "promiseId": "P3",
+      "date": "2026-02-12",
+      "call": "Q1 Fiscal 2026 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "EPIC expected online later this year; no explicit replacement of the previously specified Spring 2026 target.",
+      "quote": "EPIC will come online later this year, bringing together key innovators from our customers and Applied to significantly increase value creation velocity.",
+      "verbatim": {
+        "text": "EPIC will come online later this year, bringing together key innovators from our customers and Applied to significantly increase value creation velocity.",
+        "segs": [
+          {
+            "t": "EPIC will come online later this year, bringing together key innovators from our customers and Applied to significantly increase value creation velocity.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+          "title": "Q1 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+          "title": "Q1 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2026-05-14",
+      "promiseId": "P3",
+      "date": "2026-05-14",
+      "call": "Q2 Fiscal 2026 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Operations now expected in the Fall, replacing the previously specified Spring 2026 timing while remaining within the original fiscal 2026 deadline.",
+      "quote": "The centerpiece of the platform is the new EPIC Center in Silicon Valley which remains on track to begin operations in the Fall.",
+      "verbatim": {
+        "text": "The centerpiece of the platform is the new EPIC Center in Silicon Valley which remains on track to begin operations in the Fall.",
+        "segs": [
+          {
+            "t": "The centerpiece of the platform is the new EPIC Center in Silicon Valley which remains on track to begin operations in the Fall.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+          "title": "Q3 2025 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2026-08-13",
+      "promiseId": "P3",
+      "date": "2026-08-13",
+      "call": "Q3 Fiscal 2026 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "First R&D tool to enter the cleanroom next week; operations on track to start in the coming months.",
+      "quote": "We will move the first R&D tool into the cleanroom next week, and we are on track to start operations in the coming months.",
+      "verbatim": {
+        "text": "We will move the first R&D tool into the cleanroom next week, and we are on track to start operations in the coming months.",
+        "segs": [
+          {
+            "t": "We will move the first R&D tool into the cleanroom next week, and we are on track to start operations in the coming months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/e9985149-77c2-4cf3-aaad-a579178cbfe4",
+          "title": "Q3 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/e9985149-77c2-4cf3-aaad-a579178cbfe4",
+          "title": "Q3 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P3-2026-10-12",
+      "promiseId": "P3",
+      "date": "2026-10-12",
+      "call": "Applied Materials Unveils $5 Billion EPIC Center in Silicon Valley to Accelerate Semiconductor Innovation for the AI Era",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Applied announced the EPIC Center’s opening with founding partners.",
+      "quote": "The EPIC Center opens with a founding roster that spans the AI technology stack.",
+      "verbatim": {
+        "text": "The EPIC Center opens with a founding roster that spans the AI technology stack.",
+        "segs": [
+          {
+            "t": "The EPIC Center opens with a founding roster that spans the AI technology stack.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-unveils-5-billion-epic-center-silicon-valley",
+          "title": "Applied Materials Unveils $5 Billion EPIC Center in Silicon Valley to Accelerate Semiconductor Innovation for the AI Era | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-unveils-5-billion-epic-center-silicon-valley",
+          "title": "Applied Materials Unveils $5 Billion EPIC Center in Silicon Valley to Accelerate Semiconductor Innovation for the AI Era | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMAT-P4-2026-02-12",
+      "promiseId": "P4",
+      "date": "2026-02-12",
+      "call": "Q1 Fiscal 2026 earnings release",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected semiconductor equipment business growth over 20 percent in calendar 2026.",
+      "quote": "These are areas where Applied is the process equipment leader, and we expect to grow our semiconductor equipment business over 20 percent this calendar year.",
+      "verbatim": {
+        "text": "These are areas where Applied is the process equipment leader, and we expect to grow our semiconductor equipment business over 20 percent this calendar year.”",
+        "segs": [
+          {
+            "t": "These are areas where Applied is the process equipment leader, and we expect to grow our semiconductor equipment business over ",
+            "h": 0
+          },
+          {
+            "t": "20 percent",
+            "h": 1
+          },
+          {
+            "t": " this calendar year.”",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-first-quarter-2026-results",
+          "title": "Applied Materials Announces First Quarter 2026 Results | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-first-quarter-2026-results",
+          "title": "Applied Materials Announces First Quarter 2026 Results | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMAT-P4-2026-05-14",
+      "promiseId": "P4",
+      "date": "2026-05-14",
+      "call": "Q2 Fiscal 2026 earnings release",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised expected semiconductor equipment business growth to more than 30 percent in calendar 2026.",
+      "quote": "“Applied Materials delivered record quarterly performance, and we now expect our semiconductor equipment business to grow more than 30 percent in calendar 2026,” said Gary Dickerson , President and CEO.",
+      "verbatim": {
+        "text": "“Applied Materials delivered record quarterly performance, and we now expect our semiconductor equipment business to grow more than 30 percent in calendar 2026,” said Gary Dickerson , President and CEO.",
+        "segs": [
+          {
+            "t": "“Applied Materials delivered record quarterly performance, and we now expect our semiconductor equipment business to grow more than ",
+            "h": 0
+          },
+          {
+            "t": "30 percent",
+            "h": 1
+          },
+          {
+            "t": " in calendar ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ",” said Gary Dickerson , President and CEO.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-second-quarter-2026-results",
+          "title": "Applied Materials Announces Second Quarter 2026 Results | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-second-quarter-2026-results",
+          "title": "Applied Materials Announces Second Quarter 2026 Results | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMAT-P4-2026-08-13",
+      "promiseId": "P4",
+      "date": "2026-08-13",
+      "call": "Q3 Fiscal 2026 earnings release",
+      "speaker": "Gary Dickerson, President and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised calendar 2026 Semiconductor Systems revenue expectations again; expected to outgrow the market without specifying a new percentage.",
+      "quote": "As the rapid global adoption of AI drives unprecedented demand for our materials engineering solutions, we are further raising our Semiconductor Systems revenue expectations for calendar 2026 and are confident we will grow faster than the market this year.",
+      "verbatim": {
+        "text": "“As the rapid global adoption of AI drives unprecedented demand for our materials engineering solutions, we are further raising our Semiconductor Systems revenue expectations for calendar 2026 and are confident we will grow faster than the market this year.",
+        "segs": [
+          {
+            "t": "“As the rapid global adoption of AI drives unprecedented demand for our materials engineering solutions, we are further raising our Semiconductor Systems revenue expectations for calendar ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and are confident we will grow faster than the market this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-third-quarter-2026-results",
+          "title": "Applied Materials Announces Third Quarter 2026 Results | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-third-quarter-2026-results",
+          "title": "Applied Materials Announces Third Quarter 2026 Results | Applied Materials",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMAT-P5-2026-02-12",
+      "promiseId": "P5",
+      "date": "2026-02-12",
+      "call": "Q1 Fiscal 2026 earnings call — prepared remarks",
+      "speaker": "Gary Dickerson, President and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expects Cold Field Emission e-beam revenues to double in calendar 2026 to more than a billion dollars, supporting PDC growth.",
+      "quote": "One example of this is our unique Cold Field Emission e-beam technology where we expect revenues to double this calendar year to more than a billion dollars and support Process Diagnostics and Control being one of our fastest growing businesses in 2026.",
+      "verbatim": {
+        "text": "One example of this is our unique Cold Field Emission e-beam technology where we expect revenues to double this calendar year to more than a billion dollars and support Process Diagnostics and Control being one of our fastest growing businesses in 2026.",
+        "segs": [
+          {
+            "t": "One example of this is our unique Cold Field Emission e-beam technology where we expect revenues to double this calendar year to more than a billion dollars and support Process Diagnostics and Control being one of our fastest growing businesses in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+          "title": "Q1 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+          "title": "Q1 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMAT-P5-2026-05-14",
+      "promiseId": "P5",
+      "date": "2026-05-14",
+      "call": "Q2 Fiscal 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not revisit the calendar 2026 CFE revenue-doubling target; discussed CFE technical leadership and broader PDC growth.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+          "title": "Q2 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/amat/transcripts/543062-q2-2026",
+          "title": "Applied Materials (AMAT) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMAT-P5-2026-08-13",
+      "promiseId": "P5",
+      "date": "2026-08-13",
+      "call": "Q3 Fiscal 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not revisit the calendar 2026 CFE revenue-doubling target; discussed broader e-beam demand and PDC growth.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.appliedmaterials.com/static-files/e9985149-77c2-4cf3-aaad-a579178cbfe4",
+          "title": "Q3 2026 Earnings Call Published Script",
+          "domain": "ir.appliedmaterials.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/amat/transcripts/557838-q3-2026/",
+          "title": "Applied Materials (AMAT) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://ir.appliedmaterials.com/static-files/28ef7eff-8b4d-418e-999a-dbfa403ce6f3",
+      "title": "Q2 2026 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://ir.appliedmaterials.com/static-files/8beb86c0-2533-4d20-ba09-41fab41fc451",
+      "title": "Q1 2026 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://ir.appliedmaterials.com/static-files/69c55ad9-d83b-4dda-a131-1f6eabc06c06",
+      "title": "Q3 2025 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 4,
+      "url": "https://ir.appliedmaterials.com/static-files/e9985149-77c2-4cf3-aaad-a579178cbfe4",
+      "title": "Q3 2026 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P2 P3 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://ir.appliedmaterials.com/static-files/dfd7634b-5792-4110-b390-ec5307900881",
+      "title": "Q3 2023 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://ir.appliedmaterials.com/static-files/b69d5cf1-b74a-4ad7-95f1-b22a879bef80",
+      "title": "Q1 2024 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://ir.appliedmaterials.com/static-files/5b104f5c-246e-4ebd-8f8b-af2e1e4709da",
+      "title": "Q2 2024 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://ir.appliedmaterials.com/static-files/70588f70-62ad-4431-adff-ab0644d95bec",
+      "title": "Q3 2024 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 9,
+      "url": "https://ir.appliedmaterials.com/static-files/6b3eec28-ce0e-4053-a60d-dae2bd321158",
+      "title": "Q4 2024 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://ir.appliedmaterials.com/static-files/12e4e543-3e22-460e-90bc-055c95eb0797",
+      "title": "Q2 2025 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 11,
+      "url": "https://ir.appliedmaterials.com/static-files/4d5a62a2-1796-4d11-ae7c-848c1ed7ea27",
+      "title": "Q4 2025 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 12,
+      "url": "https://ir.appliedmaterials.com/static-files/a495de7a-c54a-4a26-8aef-bd47edefbc2a",
+      "title": "Q2 2023 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 13,
+      "url": "https://ir.appliedmaterials.com/static-files/4b72dc3d-43e4-476a-9549-8bb4914f22a9",
+      "title": "Static Files",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 14,
+      "url": "https://ir.appliedmaterials.com/static-files/983655fe-97b7-479e-a4be-fd565ede7124",
+      "title": "Q1 2025 Earnings Call Published Script",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 15,
+      "url": "https://stockanalysis.com/stocks/amat/transcripts/557838-q3-2026/",
+      "title": "Applied Materials (AMAT) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 16,
+      "url": "https://www.appliedmaterials.com/us/en/newsroom/press-releases/031326-applied-materials-raises-quarterly-cash-dividend-15-percent.html",
+      "title": "Applied Materials Raises Quarterly Cash Dividend by 15 Percent",
+      "domain": "appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-unveils-5-billion-epic-center-silicon-valley",
+      "title": "Applied Materials Unveils $5 Billion EPIC Center in Silicon Valley to Accelerate Semiconductor Innovation for the AI Era | Applied Materials",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "http://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-second-quarter-2026-results",
+      "title": "Applied Materials Announces Second Quarter 2026 Results | Applied Materials",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 19,
+      "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-third-quarter-2026-results",
+      "title": "Applied Materials Announces Third Quarter 2026 Results | Applied Materials",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 20,
+      "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-cash-dividend-231-percent-and",
+      "title": "Applied Materials Increases Cash Dividend by 23.1 Percent and Announces New $10 Billion Share Repurchase Authorization | Applied Materials",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-cash-dividend-25-percent",
+      "title": "Applied Materials Increases Cash Dividend by 25 Percent | Applied Materials",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 22,
+      "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-increases-quarterly-cash-dividend-15-percent",
+      "title": "Applied Materials Increases Quarterly Cash Dividend by 15 Percent and Announces New $10 Billion Share Repurchase Authorization | Applied Materials",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 23,
+      "url": "https://ir.appliedmaterials.com/static-files/c02d8253-7dc3-44d3-a9a9-29d07fb26f17",
+      "title": "Exhibit 99.1 (Q2 2026) Earnings Release",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 24,
+      "url": "https://investors.appliedmaterials.com/static-files/983655fe-97b7-479e-a4be-fd565ede7124",
+      "title": "Q1 2025 Earnings Call Published Script",
+      "domain": "investors.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 25,
+      "url": "https://investors.appliedmaterials.com/static-files/4b72dc3d-43e4-476a-9549-8bb4914f22a9",
+      "title": "Q4 2023 Earnings Call Published Script",
+      "domain": "investors.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 26,
+      "url": "https://ir.appliedmaterials.com/news-releases/news-release-details/applied-materials-announces-first-quarter-2026-results",
+      "title": "Applied Materials Announces First Quarter 2026 Results | Applied Materials",
+      "domain": "ir.appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 27,
+      "url": "https://www.sec.gov/Archives/edgar/data/6951/000162828026037227/amat-20260426.htm",
+      "title": "amat-20260426",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 28,
+      "url": "https://www.appliedmaterials.com/us/en/newsroom/press-releases/101326-applied-set-to-outperform-as-ai-drives-demand-for-wafer-fab-equipment.html",
+      "title": "Applied Materials Set to Outperform as AI Drives Sustained Demand for Wafer Fab Equipment",
+      "domain": "appliedmaterials.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 29,
+      "url": "https://finance.yahoo.com/quote/AMAT/earnings/AMAT-Q4-2025-earnings_call-375371.html/",
+      "title": "Applied Materials, Inc. (AMAT) Q4 FY2025  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 30,
+      "url": "https://stockanalysis.com/stocks/amat/transcripts/543062-q2-2026",
+      "title": "Applied Materials (AMAT) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 31,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/08/17/applied-materials-amat-q3-2023-earnings-call-trans",
+      "title": "Applied Materials (AMAT) Q3 2023 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 32,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/11/16/applied-materials-amat-q4-2023-earnings-call-trans?source=iedfolrf0000001",
+      "title": "Applied Materials (AMAT) Q4 2023 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 33,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/02/12/applied-materials-amat-q1-2026-earnings-transcript",
+      "title": "Applied Materials AMAT Q1 2026 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 34,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/05/15/applied-materials-amat-q2-2026-earnings-transcript/",
+      "title": "Applied Materials AMAT Q2 2026 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 35,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/11/16/applied-materials-amat-q4-2023-earnings-call-trans/",
+      "title": "Applied Materials (AMAT) Q4 2023 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 36,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/02/15/applied-materials-amat-q1-2024-earnings-call-trans",
+      "title": "Applied Materials (AMAT) Q1 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 37,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/05/16/applied-materials-amat-q2-2024-earnings-call-trans/",
+      "title": "Applied Materials (AMAT) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 38,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/08/15/applied-materials-amat-q3-2024-earnings-call-trans?referring_guid=c1b162ee-5b50-4c08-904d-d19f2e6db7ff&source=financialcontent",
+      "title": "Applied Materials (AMAT) Q3 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 39,
+      "url": "https://www.investing.com/news/transcripts/applied-materials-at-goldman-sachs-conference-ai-demand-lifts-outlook-93CH-4894689",
+      "title": "Applied Materials at Goldman Sachs conference: ai demand lifts outlook By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 40,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-applied-materials-beats-q3-2026-estimates-shares-fall-93CH-4859444",
+      "title": "Earnings call transcript: Applied Materials beats Q3 2026 estimates, shares fall By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 41,
+      "url": "https://news.alphastreet.com/applied-materials-inc-amat-q2-2025-earnings-call-transcript",
+      "title": "Applied Materials, Inc (AMAT) Q2 2025 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.804235Z",
+      "completedAt": "2026-11-05T06:28:49.304348Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.591987Z",
+      "completedAt": "2026-11-05T19:13:19.158912Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.598882Z",
+      "completedAt": "2026-11-05T19:17:39.357114Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.605793Z",
+      "completedAt": "2026-11-05T19:13:46.112653Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.612691Z",
+      "completedAt": "2026-11-05T19:12:58.607558Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.619821Z",
+      "completedAt": "2026-11-05T19:11:35.595014Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.344449Z",
+      "completedAt": "2026-11-05T19:45:37.559900Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.372935Z",
+      "completedAt": "2026-11-05T19:45:56.996042Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.380424Z",
+      "completedAt": "2026-11-05T19:46:46.908724Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.395006Z",
+      "completedAt": "2026-11-05T19:45:36.489236Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.402464Z",
+      "completedAt": "2026-11-05T19:45:41.635308Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "51 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "35 of 35 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "35 of 35 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 FY2026 on 2026-08-13; next 2026-11-12"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Applied_Materials_Inc._Logo.svg/3840px-Applied_Materials_Inc._Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Applied_Materials_Inc._Logo.svg",
+      "title": "File:Applied Materials Inc. Logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 969,
+      "rank": 3
+    },
+    "photo": {
+      "imageUrl": "https://www.appliedmaterials.com/content/dam/site/company/news/img/newsroom/2026/2026-05/epic-tsmc-1200x700.png",
+      "sourcePageUrl": "https://www.appliedmaterials.com/us/en/newsroom/press-releases/101226-applied-unveils-5b-epic-center-silicon-valley-accelerate-innovation-ai-era.html",
+      "title": "Applied Materials Unveils $5 Billion EPIC Center in Silicon Valley to  Accelerate Semiconductor Innovation for the AI Era",
+      "width": 1200,
+      "height": 700,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.561Z"
+}

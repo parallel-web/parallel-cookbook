@@ -1,0 +1,2146 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "INTC",
+  "name": "Intel Corporation",
+  "short": "Intel",
+  "website": "intel.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Last Saturday in December",
+  "irUrl": "https://www.intc.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-29",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Intel Arizona Fab 52",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch Nova Lake in 2026",
+      "commitment": "Introduce the next-generation Nova Lake client processor family in 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-01-30",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Nova Lake remained pending for the end of 2026; Intel reported it ahead of schedule, with design wins expected to be twice Panther Lake’s at launch.",
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-29",
+            "what_was_said": "Intel said it would share more about Nova Lake at CES in January. In Q&A, management also said, “As we go into next year, we'll have Nova Lake,” discussing its role in filling the high-end desktop portfolio gap. These comments provide additional commercialization context but do not explicitly replace the end-2026 launch deadline.",
+            "call": "Q3 2026 earnings call prepared remarks and Q&A"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Cut 2026 operating expenses",
+      "commitment": "Reduce 2026 operating expenses to $16 billion.",
+      "deadline": "2026",
+      "firstStated": "2025-04-24",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The original $16 billion target was revised; latest guidance was approximately $16.3 billion in non-GAAP operating expenses for 2026. Full-year delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1737/intel-reports-first-quarter-2025-financial-results",
+          "title": "Intel Reports First-Quarter 2025 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results",
+          "title": "Intel Reports Third-Quarter 2026 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://download.intel.com/newsroom/2025/corporate/67s2p/Intel-Q12025-Earnings-Call-Comments.pdf",
+          "title": "Comments from CEO Lip-Bu Tan and CFO",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-23",
+            "what_was_said": "Management explicitly qualified the original commitment: “For OpEx in 2026, we have been directionally targeting $16 billion but are likely to be higher due to inflationary pressures, variable compensation and targeted investments we are making to capture the opportunities ahead.”",
+            "call": "Q1 2026 earnings call prepared remarks"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Close Altera majority-stake sale",
+      "commitment": "Close the sale of a 51% Altera stake to Silver Lake in the second half of 2025.",
+      "deadline": "second half of 2025",
+      "firstStated": "2025-04-14",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Intel closed the 51% Altera stake sale to Silver Lake on September 12, 2025, retaining 49%, within the promised second half of 2025.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000153/intc-20250912.htm",
+          "title": "intc-20250912",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.altera.com/newsroom/news/press-release/altera-silver-lake",
+          "title": "Altera Closes Silver Lake Investment to Become World’s Largest Pure-play FPGA Solutions Provider | Altera",
+          "domain": "altera.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1736/intel-announces-strategic-investment-by-silver-lake-in",
+          "title": "Intel Announces Strategic Investment by Silver Lake in Altera :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://download.intel.com/newsroom/2025/corporate/67s2p/Intel-Q12025-Earnings-Call-Comments.pdf",
+          "title": "Comments from CEO Lip-Bu Tan and CFO",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-25-000153/0000050863-25-000153.pdf",
+          "title": "8-K - 09/15/2025 - Intel Corporation",
+          "domain": "intc.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a9c76828df1af0b055f7cffea57824a7/intel/db/887/9148/prepared_remarks/3Q2025+Earnings+Call+Prepared+Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2025 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-09-15",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-10-23",
+            "what_was_said": "Management reported receiving $4.3 billion from the Altera closure in Q3, explicitly confirming delivery on the earnings call.",
+            "call": "Q3 2025 earnings call prepared remarks"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Reduce 2026 capital spending",
+      "commitment": "Lower both gross and net capital expenditures in 2026 versus 2025.",
+      "deadline": "2026",
+      "firstStated": "2025-07-24",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Intel revised the reduction plan to 2026 gross CapEx of $20 billion. Full-year results and achievement of lower net spending remained unresolved.",
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2025/corporate/29r29Xn/Intel-2Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_85b3aa05d5446fafadc55d45cc60542f/intel/db/887/9254/prepared_remarks/1Q2026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its first-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Win Intel 14A external customers",
+      "commitment": "Have prospective Intel 14A customers begin firm supplier decisions in the second half of 2026, extending into the first half of 2027.",
+      "deadline": "second half of 2026 through first half of 2027",
+      "firstStated": "2026-01-22",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Intel reported progress with multiple potential 14A customers but had not publicly confirmed firm supplier decisions; the original decision window remained open.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-29",
+            "what_was_said": "Intel said 14A remained on track and reported releasing its PDK 0.9 to select customers in October. Tan also reiterated that Intel would not disclose customer details—an important qualification when assessing the absence of publicly announced supplier decisions.",
+            "call": "Q3 2026 earnings call prepared remarks"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "INTC-P1-2025-01-30",
+      "promiseId": "P1",
+      "date": "2025-01-30",
+      "call": "Q4 2024 earnings call prepared remarks",
+      "speaker": "Michelle Johnston Holthaus, Interim Co-CEO and CEO of Intel Products",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Plans to introduce Nova Lake in 2026, when Panther Lake reaches meaningful volumes.",
+      "quote": "2026 is even more exciting from a client perspective as Panther Lake achieves meaningful volumes and we introduce our next-generation client family code-named Nova Lake.",
+      "verbatim": {
+        "text": "2026 is even more exciting from a client perspective as Panther Lake achieves meaningful volumes and we introduce our next-generation client family code-named Nova Lake.",
+        "segs": [
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " is even more exciting from a client perspective as Panther Lake achieves meaningful volumes and we introduce our next-generation client family code-named Nova Lake.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2025/5m3dd8h6/Earnings-Call-Comment-4Q-FY-2024-013025.pdf",
+          "title": "Intel’s interim co-chief executive officers offer comments after the company released its fourth-quarter and full-year 2024 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2025/5m3dd8h6/Earnings-Call-Comment-4Q-FY-2024-013025.pdf",
+          "title": "Intel’s interim co-chief executive officers offer comments after the company released its fourth-quarter and full-year 2024 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.intc.com/news-events/ir-calendar/detail/20250130-q4-2024-intel-corporation-earnings-conference-call",
+          "title": "Q4 2024 Intel Corporation Earnings Conference Call :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P1-2025-04-24",
+      "promiseId": "P1",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Michelle Johnston Holthaus, CEO of Intel Products",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Nova Lake process-node choices optimized at SKU level; no launch-date change stated.",
+      "quote": "And so when you look at Nova Lake, really what we have done is we've optimized at the SKU level the process node that we're going to use.",
+      "verbatim": {
+        "text": "And so when you look at Nova Lake, really what we have done is we've optimized at the SKU level the process node that we're going to use.",
+        "segs": [
+          {
+            "t": "And so when you look at Nova Lake, really what we have done is we've optimized at the SKU level the process node that we're going to use.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/intc/transcripts/311075-q1-2025/",
+          "title": "Intel (INTC) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/intc/transcripts/311075-q1-2025/",
+          "title": "Intel (INTC) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "INTC-P1-2025-07-24",
+      "promiseId": "P1",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings call prepared remarks",
+      "speaker": "Lip-Bu Tan, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Nova Lake remains due at the end of 2026; development progress noted despite high-end desktop gaps.",
+      "quote": "We still have gaps to close in the high-end desktop market, but I’m encouraged by our unmatched go-to-market reach, our x86 ecosystem and the progress we are making on Nova Lake, due out at the end of 2026.",
+      "verbatim": {
+        "text": "We still have gaps to close in the high-end desktop market, but I’m encouraged by our unmatched go-to-market reach, our x86 ecosystem and the progress we are making on Nova Lake, due out at the end of 2026.",
+        "segs": [
+          {
+            "t": "We still have gaps to close in the high-end desktop market, but I’m encouraged by our unmatched go-to-market reach, our x86 ecosystem and the progress we are making on Nova Lake, due out at the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2025/corporate/29r29Xn/Intel-2Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2025/corporate/29r29Xn/Intel-2Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P1-2025-10-23",
+      "promiseId": "P1",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings call prepared remarks",
+      "speaker": "Lip-Bu Tan, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Nova Lake roadmap and planned architectural and software upgrades, especially for PC gaming; no new launch date.",
+      "quote": "Arrow Lake shipments have increased throughout the year, and our next-gen Nova Lake product will bring new architectural and software upgrades to further strengthen our offerings, particularly in the PC gaming halo space.",
+      "verbatim": {
+        "text": "Arrow Lake shipments have increased throughout the year, and our next-gen Nova Lake product will bring new architectural and software upgrades to further strengthen our offerings, particularly in the PC gaming halo space.",
+        "segs": [
+          {
+            "t": "Arrow Lake shipments have increased throughout the year, and our next-gen Nova Lake product will bring new architectural and software upgrades to further strengthen our offerings, particularly in the PC gaming halo space.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_7fd037f8a1293044bb2d879c9d69c4b4/intel/db/887/9148/prepared_remarks/3Q2025+Earnings+Call+Prepared+Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2025 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_7fd037f8a1293044bb2d879c9d69c4b4/intel/db/887/9148/prepared_remarks/3Q2025+Earnings+Call+Prepared+Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2025 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P1-2026-01-22",
+      "promiseId": "P1",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call prepared remarks",
+      "speaker": "Lip-Bu Tan, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Nova Lake for the end of 2026 within a performance- and cost-optimized client roadmap.",
+      "quote": "Along with our next generation Nova Lake, coming at the end of 2026, we now have a client roadmap that combines best-in-class performance with cost optimized solutions, giving me confidence that we are on a path to fortify market share and profitability, in both notebooks and desktops, over the next several years.",
+      "verbatim": {
+        "text": "Along with our next generation Nova Lake, coming at the end of 2026, we now have a client roadmap that combines best-in-class performance with cost optimized solutions, giving me confidence that we are on a path to fortify market share and profitability, in both notebooks and desktops, over the next several years.",
+        "segs": [
+          {
+            "t": "Along with our next generation Nova Lake, coming at the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we now have a client roadmap that combines best-in-class performance with cost optimized solutions, giving me confidence that we are on a path to fortify market share and profitability, in both notebooks and desktops, over the next several years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P1-2026-04-23",
+      "promiseId": "P1",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Nova Lake and its pending launch were not discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/1Q2026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its first-quarter 2026 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/intel-intc-q1-2026-earnings-transcript",
+          "title": "Intel (INTC) Q1 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "INTC-P1-2026-07-23",
+      "promiseId": "P1",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Nova Lake and its pending launch were not discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-Q22026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2026 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/INTC/transcripts/2026-year/2-quarter",
+          "title": "Intel Corporation (INTC) Q2 FY2026 Earnings Call Transcript - July 23, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "INTC-P1-2026-10-29",
+      "promiseId": "P1",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call prepared remarks",
+      "speaker": "Lip-Bu Tan, CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Nova Lake, Intel’s first Intel 18A-P client product, is ahead of schedule; launch design wins expected to be twice Panther Lake’s.",
+      "quote": "Nova Lake, our first Intel 18A-P client product, is tracking ahead of schedule, with design wins expected to be twice those of Panther Lake at launch.",
+      "verbatim": {
+        "text": "Nova Lake, our first Intel 18A-P client product, is tracking ahead of schedule, with design wins expected to be twice those of Panther Lake at launch.",
+        "segs": [
+          {
+            "t": "Nova Lake, our first Intel 18A-P client product, is tracking ahead of schedule, with design wins expected to be twice those of Panther Lake at launch.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P2-2025-04-24",
+      "promiseId": "P2",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced a $16 billion non-GAAP operating-expense target for 2026; cut the 2025 target to approximately $17 billion from $17.5 billion.",
+      "quote": "In line with these actions, Intel is reducing its non-GAAP operating expense target to approximately $17 billion in 2025, down from its previously stated goal of $17.5 billion, and is now targeting $16 billion in 2026.",
+      "verbatim": {
+        "text": "In line with these actions, Intel is reducing its non-GAAP operating expense target to approximately $17 billion in 2025, down from its previously stated goal of $17.5 billion, and is now targeting $16 billion in 2026.",
+        "segs": [
+          {
+            "t": "In line with these actions, Intel is reducing its non-GAAP operating expense target to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$17 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", down from its previously stated goal of ",
+            "h": 0
+          },
+          {
+            "t": "$17.5 billion",
+            "h": 1
+          },
+          {
+            "t": ", and is now targeting ",
+            "h": 0
+          },
+          {
+            "t": "$16 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.intc.com/news-events/press-releases/detail/1737/intel-reports-first-quarter-2025-financial-results",
+          "title": "Intel Reports First-Quarter 2025 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1737/intel-reports-first-quarter-2025-financial-results",
+          "title": "Intel Reports First-Quarter 2025 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "INTC-P2-2025-07-24",
+      "promiseId": "P2",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported being firmly on track for 2025 and 2026 OpEx targets of $17 billion and $16 billion, respectively.",
+      "quote": "While difficult, these decisions have us firmly on track to meet our calendar year 2025 and calendar year 2026 OpEx targets of $17 billion and $16 billion, respectively.",
+      "verbatim": {
+        "text": "While difficult, these decisions have us firmly on track to meet our calendar year 2025 and calendar year 2026 OpEx targets of $17 billion and $16 billion, respectively.",
+        "segs": [
+          {
+            "t": "While difficult, these decisions have us firmly on track to meet our calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " and calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " OpEx targets of ",
+            "h": 0
+          },
+          {
+            "t": "$17 billion",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "$16 billion",
+            "h": 1
+          },
+          {
+            "t": ", respectively.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_e0100835fd60d6c875dbe7e425d119b6/intel/db/887/9139/prepared_remarks/2Q2025-Earnings-Call+Prepared+Remarks.pdf",
+          "title": "Intel CEO/CFO Prepared Remarks — Second-Quarter 2025 Earnings Call, July 24, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_e0100835fd60d6c875dbe7e425d119b6/intel/db/887/9139/prepared_remarks/2Q2025-Earnings-Call+Prepared+Remarks.pdf",
+          "title": "Intel CEO/CFO Prepared Remarks — Second-Quarter 2025 Earnings Call, July 24, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P2-2025-10-23",
+      "promiseId": "P2",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings call",
+      "speaker": "David Zinsner, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $16 billion of OpEx investment for 2026 as the right amount.",
+      "quote": "You know, as you think about investment, we still think that $16 billion of OpEx investment for next year is the right amount.",
+      "verbatim": {
+        "text": "You know, as you think about investment, we still think that $16 billion of OpEx investment for next year is the right amount.",
+        "segs": [
+          {
+            "t": "You know, as you think about investment, we still think that ",
+            "h": 0
+          },
+          {
+            "t": "$16 billion",
+            "h": 1
+          },
+          {
+            "t": " of OpEx investment for next year is the right amount.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/24/intel-intc-q3-2025-earnings-call-transcript",
+          "title": "Intel (INTC) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/24/intel-intc-q3-2025-earnings-call-transcript",
+          "title": "Intel (INTC) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.intc.com/financial-info/financial-results",
+          "title": "Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "INTC-P2-2026-01-22",
+      "promiseId": "P2",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the 2026 operating-expense target of $16 billion.",
+      "quote": "For OpEx, we target 2026 operating expenses of $16 billion.",
+      "verbatim": {
+        "text": "For OpEx, we target 2026 operating expenses of $16 billion.",
+        "segs": [
+          {
+            "t": "For OpEx, we target ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " operating expenses of ",
+            "h": 0
+          },
+          {
+            "t": "$16 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P2-2026-04-23",
+      "promiseId": "P2",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised the full-year 2026 non-GAAP operating-expense outlook to approximately $16.5 billion; guidance appeared only in a table.",
+      "quote": null,
+      "verbatim": {
+        "text": "(In Billions; Unaudited) Full-Year 2026 Approximately GAAP operating expenses $ 22.7 Acquisition-related adjustments (0.1 ) Share-based compensation (2.0 ) Restructuring and other charges (4.1 ) Non-GAAP operating expenses $ 16.5",
+        "segs": [
+          {
+            "t": "(In Billions; Unaudited) Full-Year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " Approximately GAAP operating expenses ",
+            "h": 0
+          },
+          {
+            "t": "$ 22.7",
+            "h": 1
+          },
+          {
+            "t": " Acquisition-related adjustments (0.1 ) Share-based compensation (2.0 ) Restructuring and other charges (4.1 ) Non-GAAP operating expenses ",
+            "h": 0
+          },
+          {
+            "t": "$ 16.5",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://www.intc.com/news-events/press-releases/detail/1767/intel-reports-first-quarter-2026-financial-results/",
+          "title": "Intel Reports First-Quarter 2026 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Intel executives said on the Q1 2026 earnings release (2026-04-23) about Cut 2026 operating expenses: Raised the full-year 2026 non-GAAP operating-expense outlook to approximately $16.5 billion; guidance appeared only in a table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1767/intel-reports-first-quarter-2026-financial-results/",
+          "title": "Intel Reports First-Quarter 2026 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "INTC-P2-2026-07-23",
+      "promiseId": "P2",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Continued managing full-year 2026 non-GAAP operating expenses to roughly $16.5 billion.",
+      "quote": "We continue to tightly manage non-gaap operating expenses to roughly $16.5 billion for the year.",
+      "verbatim": {
+        "text": "We continue to tightly manage non-gaap operating expenses to roughly $16.5 billion for the year.",
+        "segs": [
+          {
+            "t": "We continue to tightly manage non-gaap operating expenses to roughly ",
+            "h": 0
+          },
+          {
+            "t": "$16.5 billion",
+            "h": 1
+          },
+          {
+            "t": " for the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-Q22026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2026 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-Q22026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2026 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1767/intel-reports-first-quarter-2026-financial-results/",
+          "title": "Intel Reports First-Quarter 2026 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P2-2026-10-29",
+      "promiseId": "P2",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Lowered full-year 2026 non-GAAP operating-expense guidance to approximately $16.3 billion; Q4 guidance was approximately $4.4 billion. Figures appeared only in a table.",
+      "quote": null,
+      "verbatim": {
+        "text": "(In Billions; Unaudited) Q4 2026 Outlook Full-Year 2026 Approximately Approximately GAAP operating expenses $ 4.9 $ 22.6 Acquisition-related adjustments — (0.1 ) Share-based compensation (0.5 ) (1.9 ) Restructuring and other charges — (4.3 ) Non-GAAP operating expenses $ 4.4 $ 16.3",
+        "segs": [
+          {
+            "t": "(In Billions; Unaudited) ",
+            "h": 0
+          },
+          {
+            "t": "Q4 2026",
+            "h": 1
+          },
+          {
+            "t": " Outlook Full-Year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " Approximately Approximately GAAP operating expenses ",
+            "h": 0
+          },
+          {
+            "t": "$ 4.9",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 22.6",
+            "h": 1
+          },
+          {
+            "t": " Acquisition-related adjustments — (0.1 ) Share-based compensation (0.5 ) (1.9 ) Restructuring and other charges — (4.3 ) Non-GAAP operating expenses ",
+            "h": 0
+          },
+          {
+            "t": "$ 4.4",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 16.3",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results",
+          "title": "Intel Reports Third-Quarter 2026 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Intel executives said on the Q3 2026 earnings release (2026-10-29) about Cut 2026 operating expenses: Lowered full-year 2026 non-GAAP operating-expense guidance to approximately $16.3 billion; Q4 guidance was approximately $4.4 billion. Figures appeared only in a table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results",
+          "title": "Intel Reports Third-Quarter 2026 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-Q22026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2026 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "INTC-P3-2025-04-14",
+      "promiseId": "P3",
+      "date": "2025-04-14",
+      "call": "Intel Announces Strategic Investment by Silver Lake in Altera",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced sale of 51% of Altera to Silver Lake, with closing expected in the second half of 2025.",
+      "quote": "The transaction is expected to close in the second half of 2025, subject to customary closing conditions.",
+      "verbatim": {
+        "text": "The transaction is expected to close in the second half of 2025, subject to customary closing conditions.",
+        "segs": [
+          {
+            "t": "The transaction is expected to close in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", subject to customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.intc.com/news-events/press-releases/detail/1736/intel-announces-strategic-investment-by-silver-lake-in",
+          "title": "Intel Announces Strategic Investment by Silver Lake in Altera :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1736/intel-announces-strategic-investment-by-silver-lake-in",
+          "title": "Intel Announces Strategic Investment by Silver Lake in Altera :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "INTC-P3-2025-04-24",
+      "promiseId": "P3",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed closing in the second half of 2025, followed by deconsolidation of Altera.",
+      "quote": "We expect this deal to close in the second half of 2025, at which point we expect to deconsolidate Altera from our financial results.",
+      "verbatim": {
+        "text": "We expect this deal to close in the second half of 2025, at which point we expect to deconsolidate Altera from our financial results.",
+        "segs": [
+          {
+            "t": "We expect this deal to close in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", at which point we expect to deconsolidate Altera from our financial results.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2025/corporate/67s2p/Intel-Q12025-Earnings-Call-Comments.pdf",
+          "title": "Comments from CEO Lip-Bu Tan and CFO",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2025/corporate/67s2p/Intel-Q12025-Earnings-Call-Comments.pdf",
+          "title": "Comments from CEO Lip-Bu Tan and CFO",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P3-2025-07-24",
+      "promiseId": "P3",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Altera stake sale remained on track for Q3; approximately $900 million raised through the Mobileye offering.",
+      "quote": "We raised approximately $900 million through the Mobileye offering, and we are on track to complete the stake sale of Altera in Q3.",
+      "verbatim": {
+        "text": "We raised approximately $900 million through the Mobileye offering, and we are on track to complete the stake sale of Altera in Q3.",
+        "segs": [
+          {
+            "t": "We raised approximately ",
+            "h": 0
+          },
+          {
+            "t": "$900 million",
+            "h": 1
+          },
+          {
+            "t": " through the Mobileye offering, and we are on track to complete the stake sale of Altera in ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2025/corporate/29r29Xn/Intel-2Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2025/corporate/29r29Xn/Intel-2Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P3-2025-09-15",
+      "promiseId": "P3",
+      "date": "2025-09-15",
+      "call": "Form 8-K reporting completion of the Altera sale",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported closing the 51% Altera sale on September 12, 2025, with Intel retaining 49%.",
+      "quote": "Intel will account for its minority investment in Altera under the equity method of accounting upon the closing of the Transaction on September 12, 2025.",
+      "verbatim": {
+        "text": "Intel will account for its minority investment in Altera under the equity method of accounting upon the closing of the Transaction on September 12, 2025.",
+        "segs": [
+          {
+            "t": "Intel will account for its minority investment in Altera under the equity method of accounting upon the closing of the Transaction on September 12, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000153/intc-20250912.htm",
+          "title": "intc-20250912",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000153/intc-20250912.htm",
+          "title": "intc-20250912",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "INTC-P3-2025-10-23",
+      "promiseId": "P3",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed sale of 51% of Altera and deconsolidation effective September 12, 2025.",
+      "quote": "Effective September 12, 2025, Altera, previously a wholly owned subsidiary, was deconsolidated from Intel’s consolidated financial statements following the closing of the sale of 51% of Altera's issued and outstanding common stock.",
+      "verbatim": {
+        "text": "Effective September 12, 2025, Altera, previously a wholly owned subsidiary, was deconsolidated from Intel’s consolidated financial statements following the closing of the sale of 51% of Altera's issued and outstanding common stock.",
+        "segs": [
+          {
+            "t": "Effective September 12, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", Altera, previously a wholly owned subsidiary, was deconsolidated from Intel’s consolidated financial statements following the closing of the sale of ",
+            "h": 0
+          },
+          {
+            "t": "51%",
+            "h": 1
+          },
+          {
+            "t": " of Altera's issued and outstanding common stock.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.intc.com/news-events/press-releases/detail/1753/intel-reports-third-quarter-2025-financial-results",
+          "title": "Intel Reports Third-Quarter 2025 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.intc.com/news-events/press-releases/detail/1753/intel-reports-third-quarter-2025-financial-results",
+          "title": "Intel Reports Third-Quarter 2025 Financial Results :: Intel Corporation (INTC)",
+          "domain": "intc.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "INTC-P4-2025-07-24",
+      "promiseId": "P4",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected 2026 gross and net CapEx below 2025, despite deploying more overall CapEx in 2025 than in 2024.",
+      "quote": "Better utilization of our construction-in- progress will allow us to deploy more overall CapEx in 2025 than in 2024, and we expect the improved utilization to continue in 2026, resulting in lower gross and net CapEx next year.",
+      "verbatim": {
+        "text": "Better utilization of our construction-in- progress will allow us to deploy more overall CapEx in 2025 than in 2024, and we expect the improved utilization to continue in 2026, resulting in lower gross and net CapEx next year.",
+        "segs": [
+          {
+            "t": "Better utilization of our construction-in- progress will allow us to deploy more overall CapEx in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " than in ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", and we expect the improved utilization to continue in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", resulting in lower gross and net CapEx next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2025/corporate/29r29Xn/Intel-2Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2025/corporate/29r29Xn/Intel-2Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P4-2025-10-23",
+      "promiseId": "P4",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed demand-dependent CapEx flexibility but did not address the commitment to lower gross and net spending in 2026.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/INTC/transcripts/2025-year/3-quarter",
+          "title": "Intel Corporation (INTC) Q3 FY2025 Earnings Call Transcript - October 23, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "INTC-P4-2026-01-22",
+      "promiseId": "P4",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Replaced the 2026 decline expectation with flat to down slightly; expenditures would be weighted toward the first half.",
+      "quote": "Previously, we said CapEx would be down but are now planning for a range of flat to down slightly, and for expenditures to be more weighted to the first half.",
+      "verbatim": {
+        "text": "Previously, we said CapEx would be down but are now planning for a range of flat to down slightly, and for expenditures to be more weighted to the first half.",
+        "segs": [
+          {
+            "t": "Previously, we said CapEx would be down but are now planning for a range of flat to down slightly, and for expenditures to be more weighted to the first half.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/intc/transcripts/396566-q4-2025",
+          "title": "Intel (INTC) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P4-2026-04-23",
+      "promiseId": "P4",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Changed 2026 CapEx guidance from flat to down to flat versus last year, reflecting capacity investment for committed demand and improved fab productivity.",
+      "quote": "We forecast capital expenditures in 2026 to be flat to last year vs our prior expectation of flat to down, reflecting increased capacity investments to support committed demand and a continued emphasis on improving fab productivity and output.",
+      "verbatim": {
+        "text": "We forecast capital expenditures in 2026 to be flat to last year vs our prior expectation of flat to down, reflecting increased capacity investments to support committed demand and a continued emphasis on improving fab productivity and output.",
+        "segs": [
+          {
+            "t": "We forecast capital expenditures in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " to be flat to last year vs our prior expectation of flat to down, reflecting increased capacity investments to support committed demand and a continued emphasis on improving fab productivity and output.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_85b3aa05d5446fafadc55d45cc60542f/intel/db/887/9254/prepared_remarks/1Q2026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its first-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_85b3aa05d5446fafadc55d45cc60542f/intel/db/887/9254/prepared_remarks/1Q2026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its first-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P4-2026-07-23",
+      "promiseId": "P4",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 CapEx outlook to more than $20 billion because of strong customer demand signals.",
+      "quote": "Due to strong customer demand signals, we are raising our outlook for 2026 and now expect our cap ex to be more than $20 billion, which is up significantly versus our expectations entering the year.",
+      "verbatim": {
+        "text": "Due to strong customer demand signals, we are raising our outlook for 2026 and now expect our cap ex to be more than $20 billion, which is up significantly versus our expectations entering the year.",
+        "segs": [
+          {
+            "t": "Due to strong customer demand signals, we are raising our outlook for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and now expect our cap ex to be more than ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": ", which is up significantly versus our expectations entering the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_bd8a0e7a53ac248169bfb79bb936571e/intel/db/887/9266/prepared_remarks/Q2%202026%20Prepared%20Remarks.pdf",
+          "title": "Intel Q2 2026 Prepared Remarks — July 23, 2026",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_bd8a0e7a53ac248169bfb79bb936571e/intel/db/887/9266/prepared_remarks/Q2%202026%20Prepared%20Remarks.pdf",
+          "title": "Intel Q2 2026 Prepared Remarks — July 23, 2026",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P4-2026-10-29",
+      "promiseId": "P4",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call prepared remarks",
+      "speaker": "Dave Zinsner, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Described 2026 gross CapEx as on track for $20 billion; expected 2027 gross capital spending to rise strongly.",
+      "quote": "Our 2026 gross capital expenditures remain on track to be $20 billion, and we expect 2027 gross capital spending to be up strongly.",
+      "verbatim": {
+        "text": "Our 2026 gross capital expenditures remain on track to be $20 billion, and we expect 2027 gross capital spending to be up strongly.",
+        "segs": [
+          {
+            "t": "Our ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " gross capital expenditures remain on track to be ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": ", and we expect ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " gross capital spending to be up strongly.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P5-2026-01-22",
+      "promiseId": "P5",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call prepared remarks",
+      "speaker": "Lip-Bu Tan, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Intel 14A firm supplier decisions expected from the second half of 2026 through the first half of 2027.",
+      "quote": "Engagements with potential external customers on Intel 14A are active, and we believe customers will begin to make firm supplier decisions starting in the second half of this year, and extending into the first half of 2027.",
+      "verbatim": {
+        "text": "Engagements with potential external customers on Intel 14A are active, and we believe customers will begin to make firm supplier decisions starting in the second half of this year, and extending into the first half of 2027.",
+        "segs": [
+          {
+            "t": "Engagements with potential external customers on Intel 14A are active, and we believe customers will begin to make firm supplier decisions starting in the second half of this year, and extending into the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P5-2026-04-23",
+      "promiseId": "P5",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call prepared remarks",
+      "speaker": "Lip-Bu Tan, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Early design commitments expected beginning in the second half of 2026 and expanding into the first half of 2027.",
+      "quote": "We expect to see early design commitments emerge beginning in the second half of 2026 and expanding into the first half of 2027.",
+      "verbatim": {
+        "text": "We expect to see early design commitments emerge beginning in the second half of 2026 and expanding into the first half of 2027.",
+        "segs": [
+          {
+            "t": "We expect to see early design commitments emerge beginning in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and expanding into the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://download.intel.com/newsroom/2026/earnings/1Q2026-Earnings-Call.pdf",
+          "title": "1Q2026 Earnings Call",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://download.intel.com/newsroom/2026/earnings/1Q2026-Earnings-Call.pdf",
+          "title": "1Q2026 Earnings Call",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P5-2026-07-23",
+      "promiseId": "P5",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call prepared remarks",
+      "speaker": "Lip-Bu Tan, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Increasing Intel 14A customer engagement momentum; management expressed greater confidence in performance, power, density, cost and schedule.",
+      "quote": "I am pleased to see the increasing momentum on customer engagements for Intel 14A and I am increasingly confident that 14A will be a highly competitive process offering across key vectors of performance, power, density, cost and schedule.",
+      "verbatim": {
+        "text": "I am pleased to see the increasing momentum on customer engagements for Intel 14A and I am increasingly confident that 14A will be a highly competitive process offering across key vectors of performance, power, density, cost and schedule.",
+        "segs": [
+          {
+            "t": "I am pleased to see the increasing momentum on customer engagements for Intel 14A and I am increasingly confident that 14A will be a highly competitive process offering across key vectors of performance, power, density, cost and schedule.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-Q22026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2026 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://download.intel.com/newsroom/2026/earnings/Intel-Q22026-Earnings-Call.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2026 earnings.",
+          "domain": "download.intel.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "INTC-P5-2026-10-29",
+      "promiseId": "P5",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call prepared remarks",
+      "speaker": "Lip-Bu Tan, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Management remained highly encouraged by progress with multiple potential Intel 14A customers; customer details would not be disclosed.",
+      "quote": "That being said, I remain highly encouraged by the progress we are making with multiple potential customers on 14A.",
+      "verbatim": {
+        "text": "That being said, I remain highly encouraged by the progress we are making with multiple potential customers on 14A.",
+        "segs": [
+          {
+            "t": "That being said, I remain highly encouraged by the progress we are making with multiple potential customers on 14A.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+          "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://download.intel.com/newsroom/2026/earnings/Intel-4Q2025-Earnings-Call.pdf",
+      "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its fourth-quarter 2025 earnings.",
+      "domain": "download.intel.com",
+      "tier": "primary",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_47986fe477a6ac84fe34efbcbf38dd13/intel/db/887/9273/prepared_remarks/Q3%2726_Prepared_Remarks.pdf",
+      "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2026 earnings.",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://download.intel.com/newsroom/2025/corporate/29r29Xn/Intel-2Q2025-Earnings-Call.pdf",
+      "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2025 earnings.",
+      "domain": "download.intel.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4"
+    },
+    {
+      "n": 4,
+      "url": "https://download.intel.com/newsroom/2026/earnings/Intel-Q22026-Earnings-Call.pdf",
+      "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its second-quarter 2026 earnings.",
+      "domain": "download.intel.com",
+      "tier": "primary",
+      "uses": "P1 P2 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://download.intel.com/newsroom/2025/corporate/67s2p/Intel-Q12025-Earnings-Call-Comments.pdf",
+      "title": "Comments from CEO Lip-Bu Tan and CFO",
+      "domain": "download.intel.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://www.intc.com/news-events/press-releases/detail/1737/intel-reports-first-quarter-2025-financial-results",
+      "title": "Intel Reports First-Quarter 2025 Financial Results :: Intel Corporation (INTC)",
+      "domain": "intc.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 7,
+      "url": "https://www.intc.com/news-events/press-releases/detail/1767/intel-reports-first-quarter-2026-financial-results/",
+      "title": "Intel Reports First-Quarter 2026 Financial Results :: Intel Corporation (INTC)",
+      "domain": "intc.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 8,
+      "url": "https://www.intc.com/news-events/press-releases/detail/1786/intel-reports-third-quarter-2026-financial-results",
+      "title": "Intel Reports Third-Quarter 2026 Financial Results :: Intel Corporation (INTC)",
+      "domain": "intc.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 9,
+      "url": "https://www.intc.com/news-events/press-releases/detail/1736/intel-announces-strategic-investment-by-silver-lake-in",
+      "title": "Intel Announces Strategic Investment by Silver Lake in Altera :: Intel Corporation (INTC)",
+      "domain": "intc.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 10,
+      "url": "https://www.sec.gov/Archives/edgar/data/50863/000005086325000153/intc-20250912.htm",
+      "title": "intc-20250912",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 11,
+      "url": "https://download.intel.com/newsroom/2025/5m3dd8h6/Earnings-Call-Comment-4Q-FY-2024-013025.pdf",
+      "title": "Intel’s interim co-chief executive officers offer comments after the company released its fourth-quarter and full-year 2024 earnings.",
+      "domain": "download.intel.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://www.intc.com/news-events/ir-calendar/detail/20250130-q4-2024-intel-corporation-earnings-conference-call",
+      "title": "Q4 2024 Intel Corporation Earnings Conference Call :: Intel Corporation (INTC)",
+      "domain": "intc.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://download.intel.com/newsroom/2026/earnings/1Q2026-Earnings-Call.pdf",
+      "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its first-quarter 2026 earnings.",
+      "domain": "download.intel.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://www.intc.com/financial-info/financial-results",
+      "title": "Financial Results :: Intel Corporation (INTC)",
+      "domain": "intc.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://www.intc.com/news-events/press-releases/detail/1753/intel-reports-third-quarter-2025-financial-results",
+      "title": "Intel Reports Third-Quarter 2025 Financial Results :: Intel Corporation (INTC)",
+      "domain": "intc.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 16,
+      "url": "http://download.intel.com/newsroom/2026/earnings/1Q2026-Earnings-Call.pdf",
+      "title": "1Q2026 Earnings Call",
+      "domain": "download.intel.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 17,
+      "url": "https://www.intc.com/filings-reports/all-sec-filings/content/0000050863-25-000153/0000050863-25-000153.pdf",
+      "title": "8-K - 09/15/2025 - Intel Corporation",
+      "domain": "intc.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://stockanalysis.com/stocks/intc/transcripts/311075-q1-2025/",
+      "title": "Intel (INTC) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/intel-intc-q1-2026-earnings-transcript",
+      "title": "Intel (INTC) Q1 2026 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://www.roic.ai/quote/INTC/transcripts/2026-year/2-quarter",
+      "title": "Intel Corporation (INTC) Q2 FY2026 Earnings Call Transcript - July 23, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/10/24/intel-intc-q3-2025-earnings-call-transcript",
+      "title": "Intel (INTC) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://www.roic.ai/quote/INTC/transcripts/2025-year/3-quarter",
+      "title": "Intel Corporation (INTC) Q3 FY2025 Earnings Call Transcript - October 23, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 23,
+      "url": "https://stockanalysis.com/stocks/intc/transcripts/396566-q4-2025",
+      "title": "Intel (INTC) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 24,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_85b3aa05d5446fafadc55d45cc60542f/intel/db/887/9254/prepared_remarks/1Q2026-Earnings-Call.pdf",
+      "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its first-quarter 2026 earnings.",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 25,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_7fd037f8a1293044bb2d879c9d69c4b4/intel/db/887/9148/prepared_remarks/3Q2025+Earnings+Call+Prepared+Remarks.pdf",
+      "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2025 earnings.",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_e0100835fd60d6c875dbe7e425d119b6/intel/db/887/9139/prepared_remarks/2Q2025-Earnings-Call+Prepared+Remarks.pdf",
+      "title": "Intel CEO/CFO Prepared Remarks — Second-Quarter 2025 Earnings Call, July 24, 2025",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 27,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_bd8a0e7a53ac248169bfb79bb936571e/intel/db/887/9266/prepared_remarks/Q2%202026%20Prepared%20Remarks.pdf",
+      "title": "Intel Q2 2026 Prepared Remarks — July 23, 2026",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 28,
+      "url": "https://www.altera.com/newsroom/news/press-release/altera-silver-lake",
+      "title": "Altera Closes Silver Lake Investment to Become World’s Largest Pure-play FPGA Solutions Provider | Altera",
+      "domain": "altera.com",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 29,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_a9c76828df1af0b055f7cffea57824a7/intel/db/887/9148/prepared_remarks/3Q2025+Earnings+Call+Prepared+Remarks.pdf",
+      "title": "Intel’s chief executive officer and chief financial officer offer comments after the company released its third-quarter 2025 earnings.",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T02:59:01.347793Z",
+      "completedAt": "2026-11-05T03:07:09.968981Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T18:46:08.042082Z",
+      "completedAt": "2026-11-05T18:50:40.228024Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.563087Z",
+      "completedAt": "2026-11-05T19:13:06.663965Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.569564Z",
+      "completedAt": "2026-11-05T19:13:25.197653Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.576042Z",
+      "completedAt": "2026-11-05T19:11:20.645368Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.582433Z",
+      "completedAt": "2026-11-05T19:12:14.373393Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.324090Z",
+      "completedAt": "2026-11-05T19:44:55.616857Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.302498Z",
+      "completedAt": "2026-11-05T19:46:21.933388Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.309747Z",
+      "completedAt": "2026-11-05T19:45:04.748151Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.316905Z",
+      "completedAt": "2026-11-05T19:44:53.458874Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.331271Z",
+      "completedAt": "2026-11-05T19:45:18.515623Z"
+    }
+  ],
+  "fills": {
+    "filled": 2
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "30 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "27 of 27 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "27 of 27 (100%); 2 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-29; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/Intel_logo_2023.svg/3840px-Intel_logo_2023.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Intel_logo_2023.svg",
+      "title": "File:Intel logo 2023.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 1490,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://intelcorp.scene7.com/is/image/intelcorp/fab-52-day-s?qlt=80&wid=768&ts=1791545588787&dpr=on,2.625",
+      "sourcePageUrl": "https://www.intel.com/content/www/us/en/newsroom/press-hub/press-kit/client-computing/press-kit-intel-technology-tour-2025.html",
+      "title": "Press Kit: Intel Technology Tour 2025",
+      "width": 2016,
+      "height": 1136,
+      "rank": 1
+    }
+  },
+  "version": 4,
+  "builtAt": "2026-11-06T00:56:26.264Z"
+}

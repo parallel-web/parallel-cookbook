@@ -1,0 +1,2827 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "MMM",
+  "name": "3M Company",
+  "short": "3M",
+  "website": "3m.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investors.3m.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-20",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "3M Cubitron abrasives automation",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch 1,000 new products",
+      "commitment": "Launch 215 new products in 2025 and 1,000 cumulatively over 2025–2027.",
+      "deadline": "end of 2027",
+      "firstStated": "2025-02-26",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "284 launches exceeded the 2025 goal of 215; 1,000 through 2027 remained pending, with management expecting to outperform.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/66740/000006674026000155/a20253mannualreport-final.pdf",
+          "title": "Excellence driving results",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_fe6a3cbd04396a4ac6e15f231b3bb025/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3235/30992/annual_report/2025+3M+Annual+Report+-+final.pdf",
+          "title": "Excellence driving results ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-20",
+            "what_was_said": "Management expected 350 new-product launches in 2026, establishing the next annual milestone toward the cumulative commitment.",
+            "call": "Q4 2025 earnings call"
+          },
+          {
+            "date": "2026-07-21",
+            "what_was_said": "3M launched 92 new products in Q2, bringing first-half launches to 176, and remained on track to deliver more than 350 launches in 2026.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-20",
+            "what_was_said": "3M launched 87 new products in Q3, up 24%, and remained on track to exceed its 350-launch target for 2026.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Scale cross-selling to $100 million",
+      "commitment": "Build $100 million of cross-selling opportunities through 2027.",
+      "deadline": "2027",
+      "firstStated": "2025-02-26",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Cross-selling wins reached $140 million, with another $120 million in the pipeline, well ahead of the original $100 million three-year goal.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_fe6a3cbd04396a4ac6e15f231b3bb025/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-07-21",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Reach 25% operating margin",
+      "commitment": "Achieve a 25% operating margin by 2027.",
+      "deadline": "2027",
+      "firstStated": "2025-02-26",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Rebased the 2027 adjusted operating-margin target to ~25.4% after excluding acquisition amortization; management expects to exceed it. Full-year achievement remains pending.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ae893827046283524febfa7532ea26c1/3m/db/3222/31021/presentation/3Q+2026+Earnings+Presentation+-+vFinal.pdf",
+          "title": "2026 Third Quarter Earnings",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_7cba71a3b1bc893024e57cdc6afc88e5/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-20",
+            "what_was_said": "Management expected 2027 margin rates to exceed the Investor Day target of 25.4% on the new reporting basis and said formal 2027 guidance would be provided in January. This was a forecast, not a declaration of achievement.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Generate $1 billion above macro",
+      "commitment": "Generate $1 billion cumulative sales above macro over three years: $100 million in 2025, $300 million in 2026 and $600 million in 2027.",
+      "deadline": "2027",
+      "firstStated": "2025-02-26",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Reported about $150 million above macro in 2025; subsequently forecast approximately $400 million for 2026. The cumulative $1 billion commitment remained pending, with management expecting outperformance.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_bb6bae70e020b3b0d1cad5d17e92e85c/3m/db/3195/31017/file/MMM-USQ_Transcript_2026-09-15.pdf",
+          "title": "3M Company at Morgan Stanley Laguna Conference on September 15, 2026 / 2:45PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_7cba71a3b1bc893024e57cdc6afc88e5/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_88d0dfcd23cbfb38eb6a48a3a5dcc48a/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-20",
+            "what_was_said": "Management reported approximately $150 million of growth above macro in 2025, compared with the approximately $100 million it had expected. This established that the first year's contribution exceeded plan, without completing the three-year commitment.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Return $10 billion to shareholders",
+      "commitment": "Return $10 billion to shareholders through dividends and buybacks as part of the multiyear capital-allocation strategy.",
+      "deadline": null,
+      "firstStated": "2025-02-26",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Returned $9.3 billion since the start of 2025; management expected to exceed the $10 billion target. The commitment remained pending.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_88d0dfcd23cbfb38eb6a48a3a5dcc48a/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "MMM-P1-2025-02-26",
+      "promiseId": "P1",
+      "date": "2025-02-26",
+      "call": "2025 Investor Day",
+      "speaker": "John Banovetz, Executive Vice President and Chief Technology Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set the original goal of 1,000 new product launches over the next three years.",
+      "quote": "But I got to tell you, the 1,000 products over the next three years, that's a big goal.",
+      "verbatim": {
+        "text": "But I got to tell you, the 1,000 products over the next three years, that's a big goal.",
+        "segs": [
+          {
+            "t": "But I got to tell you, the ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " products over the next three years, that's a big goal.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co 2025 Investor Day Transcript — February 26, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co 2025 Investor Day Transcript — February 26, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "MMM-P1-2025-04-22",
+      "promiseId": "P1",
+      "date": "2025-04-22",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Bill Brown, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "On track for 215 launches in 2025 and 1,000 over the next three years.",
+      "quote": "Our new product pipeline health continues to improve, and we're on track to launch 215 new products this year and 1,000 over the next three years.",
+      "verbatim": {
+        "text": "Our new product pipeline health continues to improve, and we're on track to launch 215 new products this year and 1,000 over the next three years.",
+        "segs": [
+          {
+            "t": "Our new product pipeline health continues to improve, and we're on track to launch 215 new products this year and ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " over the next three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_fe6a3cbd04396a4ac6e15f231b3bb025/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_fe6a3cbd04396a4ac6e15f231b3bb025/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P1-2025-07-18",
+      "promiseId": "P1",
+      "date": "2025-07-18",
+      "call": "Q2 2025 earnings call",
+      "speaker": "William Brown, Chairman and Chief Executive Officer",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Q2 launches reached 64, up about 70%; first-half launches totaled 126, on track to exceed the annual target of 215.",
+      "quote": "In Q2, we launched 64 new products, up about 70% versus last year. which puts us at 126 launches for the first half and on track to exceed our target of 215 for the year.",
+      "verbatim": {
+        "text": "In Q2, we launched 64 new products, up about 70% versus last year. which puts us at 126 launches for the first half and on track to exceed our target of 215 for the year.",
+        "segs": [
+          {
+            "t": "In ",
+            "h": 0
+          },
+          {
+            "t": "Q2",
+            "h": 1
+          },
+          {
+            "t": ", we launched 64 new products, up about ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": " versus last year. which puts us at 126 launches for the first half and on track to exceed our target of 215 for the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_332d84f0de28acbb34495534fd4eaac8/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+          "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_332d84f0de28acbb34495534fd4eaac8/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+          "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P1-2025-10-21",
+      "promiseId": "P1",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": "William Brown, Chairman and Chief Executive Officer",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Launched 70 quarterly, 196 year-to-date, both up about 70%; expects over 250 versus goal 215, ahead of 1,000 through 2027.",
+      "quote": "We launched 70 new products in the quarter and 196 year to date, both up about 70% versus last year, and we now expect to launch over 250 new products this year, exceeding our goal of 215 and pacing ahead of our Investor Day target of 1,000 new products through 2027.",
+      "verbatim": {
+        "text": "We launched 70 new products in the quarter and 196 year to date, both up about 70% versus last year, and we now expect to launch over 250 new products this year, exceeding our goal of 215 and pacing ahead of our Investor Day target of 1,000 new products through 2027.",
+        "segs": [
+          {
+            "t": "We launched 70 new products in the quarter and 196 year to date, both up about ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": " versus last year, and we now expect to launch over 250 new products this year, exceeding our goal of 215 and pacing ahead of our Investor Day target of ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " new products through ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P1-2026-01-20",
+      "promiseId": "P1",
+      "date": "2026-01-20",
+      "call": "Q4 2025 earnings call",
+      "speaker": "William Brown, Chairman and Chief Executive Officer",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Launched 284 products in 2025, up 68% versus 2024 and more than double 2023, exceeding the initial annual target.",
+      "quote": "Innovation is the lifeblood of the company, and we successfully launched 284 new products in 2025, up 68% versus 2024, exceeding our initial target and more than double the launches in 2023.",
+      "verbatim": {
+        "text": "Innovation is the lifeblood of the company, and we successfully launched 284 new products in 2025, up 68% versus 2024, exceeding our initial target and more than double the launches in 2023.",
+        "segs": [
+          {
+            "t": "Innovation is the lifeblood of the company, and we successfully launched 284 new products in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", up ",
+            "h": 0
+          },
+          {
+            "t": "68%",
+            "h": 1
+          },
+          {
+            "t": " versus ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", exceeding our initial target and more than double the launches in ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P1-2026-04-21",
+      "promiseId": "P1",
+      "date": "2026-04-21",
+      "call": "Q1 2026 earnings call",
+      "speaker": "William Brown, Chairman and Chief Executive Officer",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Launched 84 in Q1, up 35%; expects 350 in 2026, putting 1,000 through 2027 ahead of plan.",
+      "quote": "This will put us ahead of our Investor Day target to launch 1,000 new products through 2027.",
+      "verbatim": {
+        "text": "This will put us ahead of our Investor Day target to launch 1,000 new products through 2027.",
+        "segs": [
+          {
+            "t": "This will put us ahead of our Investor Day target to launch ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " new products through ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P1-2026-07-21",
+      "promiseId": "P1",
+      "date": "2026-07-21",
+      "call": "Q2 2026 earnings call",
+      "speaker": "William Brown, Chairman and Chief Executive Officer",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Expects nearly triple launches versus three years ago and more than 1,000 by 2027, while reducing development cycle time about 20%.",
+      "quote": "We're increasing the pace of innovation and are on track to nearly triple the number of new products introduced this year versus three years ago and launch more than 1,000 products by 2027, while reducing development cycle time by about 20%.",
+      "verbatim": {
+        "text": "We're increasing the pace of innovation and are on track to nearly triple the number of new products introduced this year versus three years ago and launch more than 1,000 products by 2027, while reducing development cycle time by about 20%.",
+        "segs": [
+          {
+            "t": "We're increasing the pace of innovation and are on track to nearly triple the number of new products introduced this year versus three years ago and launch more than ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " products by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", while reducing development cycle time by about ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a1def2934ef3d8f3cee139b483deaac1/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a1def2934ef3d8f3cee139b483deaac1/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P1-2026-10-20",
+      "promiseId": "P1",
+      "date": "2026-10-20",
+      "call": "Q3 2026 earnings call",
+      "speaker": "William Brown, Chairman and Chief Executive Officer",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Expected to exceed the Investor Day commitment of 1,000 products over three years.",
+      "quote": "Earlier last year, at the Investor Day, we said we would be 1,000 products over three years and we should be above that with what my expectation would be.",
+      "verbatim": {
+        "text": "Earlier last year, at the Investor Day, we said we would be 1,000 products over three years and we should be above that with what my expectation would be.",
+        "segs": [
+          {
+            "t": "Earlier last year, at the Investor Day, we said we would be ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " products over three years and we should be above that with what my expectation would be.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P2-2025-02-26",
+      "promiseId": "P2",
+      "date": "2025-02-26",
+      "call": "2025 Investor Day",
+      "speaker": "Chris Goralski, Group President, Safety & Industrial",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Described over $100 million of cross-selling growth over the next three years, supported by up to 50 affinity pairs.",
+      "quote": "And we believe this is over a $100 million growth opportunity for us as we go through the next three years.",
+      "verbatim": {
+        "text": "And we believe this is over a $100 million growth opportunity for us as we go through the next three years.",
+        "segs": [
+          {
+            "t": "And we believe this is over a ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " growth opportunity for us as we go through the next three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_17a60b0623cd5f0b8f186822bfb01216/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co To Host Investor Day on February 26, 2025 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_17a60b0623cd5f0b8f186822bfb01216/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co To Host Investor Day on February 26, 2025 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_39b9c4b55c1314921bb642cd27956a1b/3m/db/3194/30902/presentation/3M%2B2025%2BInvestor%2BDay%2BWebcast.pdf",
+          "title": "Investor Day",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "MMM-P2-2025-04-22",
+      "promiseId": "P2",
+      "date": "2025-04-22",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Bill Brown, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Pipeline exceeded $40 million across 23 product pairs, tracking against the $100 million and 50-pair goal through 2027.",
+      "quote": "We now have more than $40 million of opportunities in our pipeline across 23 product pairs, tracking well against the $100 million and 50 pair goal through 2027 that Chris described that Investor Day.",
+      "verbatim": {
+        "text": "We now have more than $40 million of opportunities in our pipeline across 23 product pairs, tracking well against the $100 million and 50 pair goal through 2027 that Chris described that Investor Day.",
+        "segs": [
+          {
+            "t": "We now have more than ",
+            "h": 0
+          },
+          {
+            "t": "$40 million",
+            "h": 1
+          },
+          {
+            "t": " of opportunities in our pipeline across 23 product pairs, tracking well against the ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " and 50 pair goal through ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " that Chris described that Investor Day.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_526d9bbc55e9f2bd00813ba9b5651def/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_526d9bbc55e9f2bd00813ba9b5651def/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P2-2025-07-18",
+      "promiseId": "P2",
+      "date": "2025-07-18",
+      "call": "Q2 2025 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Identified 48 pairs, about double since Q1; pipeline exceeded $60 million, with $10 million of orders booked.",
+      "quote": "We now have 48 cross-selling pairs identified, about double since Q1 with a pipeline value of over $60 million and $10 million of new orders booked to date.",
+      "verbatim": {
+        "text": "We now have 48 cross-selling pairs identified, about double since Q1 with a pipeline value of over $60 million and $10 million of new orders booked to date.",
+        "segs": [
+          {
+            "t": "We now have 48 cross-selling pairs identified, about double since ",
+            "h": 0
+          },
+          {
+            "t": "Q1",
+            "h": 1
+          },
+          {
+            "t": " with a pipeline value of over ",
+            "h": 0
+          },
+          {
+            "t": "$60 million",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "$10 million",
+            "h": 1
+          },
+          {
+            "t": " of new orders booked to date.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_332d84f0de28acbb34495534fd4eaac8/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+          "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_332d84f0de28acbb34495534fd4eaac8/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+          "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P2-2025-10-21",
+      "promiseId": "P2",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Pipeline nearly doubled since last quarter; nearly $30 million of new business closed, outperforming expectations.",
+      "quote": "Our cross-selling program continues to outperform our expectations, and we have nearly doubled the pipeline since last quarter and closed on nearly $30 million of new business.",
+      "verbatim": {
+        "text": "Our cross-selling program continues to outperform our expectations, and we have nearly doubled the pipeline since last quarter and closed on nearly $30 million of new business.",
+        "segs": [
+          {
+            "t": "Our cross-selling program continues to outperform our expectations, and we have nearly doubled the pipeline since last quarter and closed on nearly ",
+            "h": 0
+          },
+          {
+            "t": "$30 million",
+            "h": 1
+          },
+          {
+            "t": " of new business.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_0b09c3055d7da3494304af35c67adc69/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_0b09c3055d7da3494304af35c67adc69/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P2-2025-12-04",
+      "promiseId": "P2",
+      "date": "2025-12-04",
+      "call": "Goldman Sachs Industrials and Materials Conference 2025",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Reaffirmed $100 million revenue by year three; over $120 million opportunities and $30 million annualized wins within about nine months.",
+      "quote": "We set a three-year goal in SIBG of $100 million of cross-sell revenue by year three.",
+      "verbatim": {
+        "text": "We set a three-year goal in SIBG of $100 million of cross-sell revenue by year three.",
+        "segs": [
+          {
+            "t": "We set a three-year goal in SIBG of ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " of cross-sell revenue by year three.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_6764d34a843f2d923b313b6d5e1db120/3m/db/3195/30976/file/MMM-USQ_Transcript_2025-12-04.pdf",
+          "title": "3M Co at Goldman Sachs Industrials and Materials Conference on December 04, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_6764d34a843f2d923b313b6d5e1db120/3m/db/3195/30976/file/MMM-USQ_Transcript_2025-12-04.pdf",
+          "title": "3M Co at Goldman Sachs Industrials and Materials Conference on December 04, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "MMM-P2-2026-01-20",
+      "promiseId": "P2",
+      "date": "2026-01-20",
+      "call": "Q4 2025 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Developed over 600 joint business plans and closed nearly $50 million of annualized cross-selling wins, with a robust pipeline.",
+      "quote": "We've implemented greater rigor across our sales force and sales management, tightened pricing controls and developed over 600 joint business plans and closed on nearly $50 million of annualized cross-selling wins with a robust pipeline of opportunities.",
+      "verbatim": {
+        "text": "We've implemented greater rigor across our sales force and sales management, tightened pricing controls and developed over 600 joint business plans and closed on nearly $50 million of annualized cross-selling wins with a robust pipeline of opportunities.",
+        "segs": [
+          {
+            "t": "We've implemented greater rigor across our sales force and sales management, tightened pricing controls and developed over 600 joint business plans and closed on nearly ",
+            "h": 0
+          },
+          {
+            "t": "$50 million",
+            "h": 1
+          },
+          {
+            "t": " of annualized cross-selling wins with a robust pipeline of opportunities.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P2-2026-04-21",
+      "promiseId": "P2",
+      "date": "2026-04-21",
+      "call": "Q1 2026 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Closed approximately $80 million against the three-year, $100 million target; another $85 million of cross-selling opportunities remained in the pipeline.",
+      "quote": "To date, we've closed on approximately $80 million of new business against the three-year, $100 million target we laid out at Investor Day with a pipeline of $85 million of additional cross-sell opportunities.",
+      "verbatim": {
+        "text": "To date, we've closed on approximately $80 million of new business against the three-year, $100 million target we laid out at Investor Day with a pipeline of $85 million of additional cross-sell opportunities.",
+        "segs": [
+          {
+            "t": "To date, we've closed on approximately ",
+            "h": 0
+          },
+          {
+            "t": "$80 million",
+            "h": 1
+          },
+          {
+            "t": " of new business against the three-year, ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " target we laid out at Investor Day with a pipeline of ",
+            "h": 0
+          },
+          {
+            "t": "$85 million",
+            "h": 1
+          },
+          {
+            "t": " of additional cross-sell opportunities.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P2-2026-06-10",
+      "promiseId": "P2",
+      "date": "2026-06-10",
+      "call": "Wells Fargo 16th Annual Industrials & Materials Conference",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reiterated $100 million over three years; last year $50 million, Q1 $80 million booked, with another $85 million in the pipeline.",
+      "quote": "We said we would hit $100 million worth of cross-sell opportunities over three years.",
+      "verbatim": {
+        "text": "We said we would hit $100 million worth of cross-sell opportunities over three years.",
+        "segs": [
+          {
+            "t": "We said we would hit ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " worth of cross-sell opportunities over three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_711856ab2feb4c92d38e62322f147491/3m/db/3195/31003/file/MMM-USQ_Transcript_2026-06-10.pdf",
+          "title": "3M Co at Wells Fargo Industrials & Materials Conference on June 10, 2026 / 1:45PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_711856ab2feb4c92d38e62322f147491/3m/db/3195/31003/file/MMM-USQ_Transcript_2026-06-10.pdf",
+          "title": "3M Co at Wells Fargo Industrials & Materials Conference on June 10, 2026 / 1:45PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "MMM-P2-2026-07-21",
+      "promiseId": "P2",
+      "date": "2026-07-21",
+      "call": "Q2 2026 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Booked $110 million, with another $120 million in the pipeline, up over 40% quarter over quarter and ahead of the Investor Day goal.",
+      "quote": "Cross-selling continues to outperform expectations with $110 million of opportunities booked and another $120 million in the pipeline, up over 40% quarter over quarter and putting us ahead of the goal we set at our Investor Day.",
+      "verbatim": {
+        "text": "Cross-selling continues to outperform expectations with $110 million of opportunities booked and another $120 million in the pipeline, up over 40% quarter over quarter and putting us ahead of the goal we set at our Investor Day.",
+        "segs": [
+          {
+            "t": "Cross-selling continues to outperform expectations with ",
+            "h": 0
+          },
+          {
+            "t": "$110 million",
+            "h": 1
+          },
+          {
+            "t": " of opportunities booked and another ",
+            "h": 0
+          },
+          {
+            "t": "$120 million",
+            "h": 1
+          },
+          {
+            "t": " in the pipeline, up over ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " quarter over quarter and putting us ahead of the goal we set at our Investor Day.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_5eafa429852b8d6acff930e4b359f615/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.3m.com/news-events/events-presentations/detail/20260721-q2-2026-earnings-conference-call",
+          "title": "Q2 2026 Earnings Conference Call :: 3M Company (MMM)",
+          "domain": "investors.3m.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_5eafa429852b8d6acff930e4b359f615/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P2-2026-10-20",
+      "promiseId": "P2",
+      "date": "2026-10-20",
+      "call": "Q3 2026 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Booked $140 million in wins, with another $120 million in the pipeline, well ahead of the original $100 million three-year goal.",
+      "quote": "Cross-selling is also gaining traction, with $140 million in wins booked to date and another $120 million in the pipeline, well ahead of our original $100 million three-year goal.",
+      "verbatim": {
+        "text": "Cross-selling is also gaining traction, with $140 million in wins booked to date and another $120 million in the pipeline, well ahead of our original $100 million three-year goal.",
+        "segs": [
+          {
+            "t": "Cross-selling is also gaining traction, with ",
+            "h": 0
+          },
+          {
+            "t": "$140 million",
+            "h": 1
+          },
+          {
+            "t": " in wins booked to date and another ",
+            "h": 0
+          },
+          {
+            "t": "$120 million",
+            "h": 1
+          },
+          {
+            "t": " in the pipeline, well ahead of our original ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " three-year goal.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P3-2025-02-26",
+      "promiseId": "P3",
+      "date": "2025-02-26",
+      "call": "2025 Investor Day medium-term financial outlook press release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced an adjusted operating-margin target of ~25% by 2027 at Investor Day.",
+      "quote": "Operating margin of ~25% by 2027.",
+      "verbatim": {
+        "text": "Operating margin of ~25% by 2027.",
+        "segs": [
+          {
+            "t": "Operating margin of ~",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.3m.com/2025-02-26-3M-Provides-Medium-Term-Financial-Outlook-at-2025-Investor-Day-Presents-Strategic-Priorities-that-Will-Drive-Growth,-Operational-Excellence,-and-Return-Cash-to-Shareholders",
+          "title": "3M Provides Medium-Term Financial Outlook at 2025 Investor Day; Presents Strategic Priorities that Will Drive Growth, Operational Excellence, and Return Cash to Shareholders - Feb 26, 2025",
+          "domain": "news.3m.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.3m.com/2025-02-26-3M-Provides-Medium-Term-Financial-Outlook-at-2025-Investor-Day-Presents-Strategic-Priorities-that-Will-Drive-Growth,-Operational-Excellence,-and-Return-Cash-to-Shareholders",
+          "title": "3M Provides Medium-Term Financial Outlook at 2025 Investor Day; Presents Strategic Priorities that Will Drive Growth, Operational Excellence, and Return Cash to Shareholders - Feb 26, 2025",
+          "domain": "news.3m.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MMM-P3-2025-04-22",
+      "promiseId": "P3",
+      "date": "2025-04-22",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The medium-term margin commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_0b09c3055d7da3494304af35c67adc69/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P3-2025-07-18",
+      "promiseId": "P3",
+      "date": "2025-07-18",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The medium-term margin commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_d983c8b3522e7690ffb17996e9cbf57e/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+          "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P3-2025-10-21",
+      "promiseId": "P3",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Anurag Maheshwari, CFO and Executive Vice President",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 25% operating margin by 2027, explicitly recalling the earlier Investor Day target.",
+      "quote": "So what we laid out at Investor Day was that we'll get to 25% by 2027.",
+      "verbatim": {
+        "text": "So what we laid out at Investor Day was that we'll get to 25% by 2027.",
+        "segs": [
+          {
+            "t": "So what we laid out at Investor Day was that we'll get to ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_7cba71a3b1bc893024e57cdc6afc88e5/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_7cba71a3b1bc893024e57cdc6afc88e5/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P3-2026-01-20",
+      "promiseId": "P3",
+      "date": "2026-01-20",
+      "call": "Q4 2025 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Tracking ahead of $1 billion growth over macro and 25% operating margin by 2027 commitments.",
+      "quote": "And now we are progressing ahead of our medium-term commitments of $1 billion growth over macro and a 25% operating margin by 2027.",
+      "verbatim": {
+        "text": "And now we are progressing ahead of our medium-term commitments of $1 billion growth over macro and a 25% operating margin by 2027.",
+        "segs": [
+          {
+            "t": "And now we are progressing ahead of our medium-term commitments of ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " growth over macro and a ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": " operating margin by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.3m.com/news-events/events-presentations/detail/20260120-q4-2025-earnings-conference-call",
+          "title": "Q4 2025 Earnings Conference Call :: 3M Company (MMM)",
+          "domain": "investors.3m.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P3-2026-04-21",
+      "promiseId": "P3",
+      "date": "2026-04-21",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Anurag Maheshwari, CFO and Executive Vice President",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "2026 outlook puts growth, margin and cash ahead of medium-term Investor Day commitments.",
+      "quote": "Our 2026 financial outlook puts us on pace to exceed our medium-term financial commitments that we laid out during Investor Day around growth, margin, and cash.",
+      "verbatim": {
+        "text": "Our 2026 financial outlook puts us on pace to exceed our medium-term financial commitments that we laid out during Investor Day around growth, margin, and cash.",
+        "segs": [
+          {
+            "t": "Our ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " financial outlook puts us on pace to exceed our medium-term financial commitments that we laid out during Investor Day around growth, margin, and cash.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P3-2026-07-21",
+      "promiseId": "P3",
+      "date": "2026-07-21",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Anurag Maheshwari, CFO and Executive Vice President",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Tracking ahead of approximately 25% operating margin by 2027.",
+      "quote": "Along with growth, we are seeing good operating margin expansion and are tracking ahead of the approximately 25% margin rate by 2027.",
+      "verbatim": {
+        "text": "Along with growth, we are seeing good operating margin expansion and are tracking ahead of the approximately 25% margin rate by 2027.",
+        "segs": [
+          {
+            "t": "Along with growth, we are seeing good operating margin expansion and are tracking ahead of the approximately ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": " margin rate by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_88d0dfcd23cbfb38eb6a48a3a5dcc48a/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_88d0dfcd23cbfb38eb6a48a3a5dcc48a/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P3-2026-10-20",
+      "promiseId": "P3",
+      "date": "2026-10-20",
+      "call": "2026 Third Quarter Earnings presentation",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Rebased 2027 adjusted operating-margin commitment from ~25% to ~25.4%, reflecting +40 bps from changed amortization reporting.",
+      "quote": "2027 operating margin commitment updated to reflect a +40 bps benefit due to a change in amortization reporting.",
+      "verbatim": {
+        "text": "2027 operating margin commitment updated to reflect a +40 bps benefit due to a change in amortization reporting.",
+        "segs": [
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " operating margin commitment updated to reflect a +",
+            "h": 0
+          },
+          {
+            "t": "40 bps",
+            "h": 1
+          },
+          {
+            "t": " benefit due to a change in amortization reporting.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ae893827046283524febfa7532ea26c1/3m/db/3222/31021/presentation/3Q+2026+Earnings+Presentation+-+vFinal.pdf",
+          "title": "2026 Third Quarter Earnings",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ae893827046283524febfa7532ea26c1/3m/db/3222/31021/presentation/3Q+2026+Earnings+Presentation+-+vFinal.pdf",
+          "title": "2026 Third Quarter Earnings",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "MMM-P4-2025-02-26",
+      "promiseId": "P4",
+      "date": "2025-02-26",
+      "call": "2025 Investor Day",
+      "speaker": "Anurag Maheshwari, Executive Vice President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced $1 billion cumulative revenue above 2% macro over three years; illustrated $125 million, $325 million, $600 million annual phasing.",
+      "quote": "We do expect to accelerate our growth versus the macro and deliver $1 billion of cumulative revenue over the medium term, above the macro of 2% over the next three years.",
+      "verbatim": {
+        "text": "We do expect to accelerate our growth versus the macro and deliver $1 billion of cumulative revenue over the medium term, above the macro of 2% over the next three years.",
+        "segs": [
+          {
+            "t": "We do expect to accelerate our growth versus the macro and deliver ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " of cumulative revenue over the medium term, above the macro of ",
+            "h": 0
+          },
+          {
+            "t": "2%",
+            "h": 1
+          },
+          {
+            "t": " over the next three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co 2025 Investor Day Transcript — February 26, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co 2025 Investor Day Transcript — February 26, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "MMM-P4-2025-04-22",
+      "promiseId": "P4",
+      "date": "2025-04-22",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The cumulative $1 billion commitment was not addressed; discussion concerned the annual outlook.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_fe6a3cbd04396a4ac6e15f231b3bb025/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P4-2025-07-18",
+      "promiseId": "P4",
+      "date": "2025-07-18",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The cumulative $1 billion commitment and its annual phasing were not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_d983c8b3522e7690ffb17996e9cbf57e/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+          "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P4-2025-10-21",
+      "promiseId": "P4",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Anurag Maheshwari, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "$1 billion three-year commitment reaffirmed; annual phasing restated as $100 million, $300 million and $600 million; current-year delivery expected on plan.",
+      "quote": "What we laid out in Investor Day was $1 billion over three years, $100 million this year, $300 million next year, and $600 million a year after a cumulative $1 billion.",
+      "verbatim": {
+        "text": "What we laid out in Investor Day was $1 billion over three years, $100 million this year, $300 million next year, and $600 million a year after a cumulative $1 billion.",
+        "segs": [
+          {
+            "t": "What we laid out in Investor Day was ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " over three years, ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " this year, ",
+            "h": 0
+          },
+          {
+            "t": "$300 million",
+            "h": 1
+          },
+          {
+            "t": " next year, and ",
+            "h": 0
+          },
+          {
+            "t": "$600 million",
+            "h": 1
+          },
+          {
+            "t": " a year after a cumulative ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P4-2026-01-20",
+      "promiseId": "P4",
+      "date": "2026-01-20",
+      "call": "Q4 2025 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Ahead of $1 billion growth-over-macro and 25% margin commitments by 2027; achieved about $150 million versus expected $100 million above macro.",
+      "quote": "And now we are progressing ahead of our medium-term commitments of $1 billion growth over macro and a 25% operating margin by 2027.",
+      "verbatim": {
+        "text": "And now we are progressing ahead of our medium-term commitments of $1 billion growth over macro and a 25% operating margin by 2027.",
+        "segs": [
+          {
+            "t": "And now we are progressing ahead of our medium-term commitments of ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " growth over macro and a ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": " operating margin by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P4-2026-04-21",
+      "promiseId": "P4",
+      "date": "2026-04-21",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Anurag Maheshwari, Executive Vice President and CFO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "2026 outlook put growth, margin and cash commitments on pace to be exceeded.",
+      "quote": "Our 2026 financial outlook puts us on pace to exceed our medium-term financial commitments that we laid out during Investor Day around growth, margin, and cash.",
+      "verbatim": {
+        "text": "Our 2026 financial outlook puts us on pace to exceed our medium-term financial commitments that we laid out during Investor Day around growth, margin, and cash.",
+        "segs": [
+          {
+            "t": "Our ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " financial outlook puts us on pace to exceed our medium-term financial commitments that we laid out during Investor Day around growth, margin, and cash.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P4-2026-07-21",
+      "promiseId": "P4",
+      "date": "2026-07-21",
+      "call": "Q2 2026 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Expected around $450 million above macro this year versus $300 million originally; cumulative $1 billion commitment remained ahead of plan.",
+      "quote": "This year, we'll do more than $300, around $450.",
+      "verbatim": {
+        "text": "This year, we'll do more than $300, around $450.",
+        "segs": [
+          {
+            "t": "This year, we'll do more than ",
+            "h": 0
+          },
+          {
+            "t": "$300,",
+            "h": 1
+          },
+          {
+            "t": " around ",
+            "h": 0
+          },
+          {
+            "t": "$450",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a1def2934ef3d8f3cee139b483deaac1/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a1def2934ef3d8f3cee139b483deaac1/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P4-2026-09-15",
+      "promiseId": "P4",
+      "date": "2026-09-15",
+      "call": "Morgan Stanley 14th Annual Laguna Conference",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Forecast approximately $400 million above macro, half or more from innovation; continued tracking ahead of 2027 Investor Day targets.",
+      "quote": "This year, we'll do more or less $400 million above the macro, half of that or more than half is coming from innovation.",
+      "verbatim": {
+        "text": "This year, we'll do more or less $400 million above the macro, half of that or more than half is coming from innovation.",
+        "segs": [
+          {
+            "t": "This year, we'll do more or less ",
+            "h": 0
+          },
+          {
+            "t": "$400 million",
+            "h": 1
+          },
+          {
+            "t": " above the macro, half of that or more than half is coming from innovation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_bb6bae70e020b3b0d1cad5d17e92e85c/3m/db/3195/31017/file/MMM-USQ_Transcript_2026-09-15.pdf",
+          "title": "3M Company at Morgan Stanley Laguna Conference on September 15, 2026 / 2:45PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_bb6bae70e020b3b0d1cad5d17e92e85c/3m/db/3195/31017/file/MMM-USQ_Transcript_2026-09-15.pdf",
+          "title": "3M Company at Morgan Stanley Laguna Conference on September 15, 2026 / 2:45PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "MMM-P4-2026-10-20",
+      "promiseId": "P4",
+      "date": "2026-10-20",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Anurag Maheshwari, Executive Vice President and CFO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Expected to exceed all Investor Day targets; formal 2027 guidance to follow in January.",
+      "quote": "We will provide formal 2027 guidance in January, but our framework to drive profitable growth remains consistent and are confident that we will exceed all of our Investor Day targets.",
+      "verbatim": {
+        "text": "We will provide formal 2027 guidance in January, but our framework to drive profitable growth remains consistent and are confident that we will exceed all of our Investor Day targets.",
+        "segs": [
+          {
+            "t": "We will provide formal ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " guidance in January, but our framework to drive profitable growth remains consistent and are confident that we will exceed all of our Investor Day targets.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P5-2025-02-26",
+      "promiseId": "P5",
+      "date": "2025-02-26",
+      "call": "2025 Investor Day",
+      "speaker": "William Brown, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Promised about $10 billion over 2025–2027, half dividends and half repurchases; original materials also specified $10 billion-plus.",
+      "quote": "We'll return about $10 billion to shareholders, about half through dividends.",
+      "verbatim": {
+        "text": "We'll return about $10 billion to shareholders, about half through dividends.",
+        "segs": [
+          {
+            "t": "We'll return about ",
+            "h": 0
+          },
+          {
+            "t": "$10 billion",
+            "h": 1
+          },
+          {
+            "t": " to shareholders, about half through dividends.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co 2025 Investor Day Transcript — February 26, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co 2025 Investor Day Transcript — February 26, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_7db23c69ae467963308adff907ccfff4/3m/db/3195/30920/file/3M+2025+Investor+Day+Webcast.pdf",
+          "title": "Investor Day",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "MMM-P5-2025-04-22",
+      "promiseId": "P5",
+      "date": "2025-04-22",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The multiyear shareholder-return commitment was not mentioned; quarterly returns and repurchase guidance were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_526d9bbc55e9f2bd00813ba9b5651def/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+          "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P5-2025-07-18",
+      "promiseId": "P5",
+      "date": "2025-07-18",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The multiyear shareholder-return commitment was not mentioned; first-half shareholder returns were reported separately.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_024f54de4ac2d188e10b13f107ac9d4e/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+          "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P5-2025-10-21",
+      "promiseId": "P5",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The multiyear shareholder-return commitment was not mentioned; quarterly and year-to-date returns were disclosed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_0b09c3055d7da3494304af35c67adc69/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+          "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P5-2026-01-20",
+      "promiseId": "P5",
+      "date": "2026-01-20",
+      "call": "Q4 2025 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Returned $4.8 billion through dividends and buybacks during 2025, progressing well toward the existing $10 billion commitment.",
+      "quote": "Meanwhile, we continue to deploy capital effectively for our shareholders returning $4.8 billion through dividends and buybacks in the year, progressing well in our commitment to return $10 billion to shareholders as part of our multiyear capital allocation strategy.",
+      "verbatim": {
+        "text": "Meanwhile, we continue to deploy capital effectively for our shareholders returning $4.8 billion through dividends and buybacks in the year, progressing well in our commitment to return $10 billion to shareholders as part of our multiyear capital allocation strategy.",
+        "segs": [
+          {
+            "t": "Meanwhile, we continue to deploy capital effectively for our shareholders returning ",
+            "h": 0
+          },
+          {
+            "t": "$4.8 billion",
+            "h": 1
+          },
+          {
+            "t": " through dividends and buybacks in the year, progressing well in our commitment to return ",
+            "h": 0
+          },
+          {
+            "t": "$10 billion",
+            "h": 1
+          },
+          {
+            "t": " to shareholders as part of our multiyear capital allocation strategy.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+          "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P5-2026-04-21",
+      "promiseId": "P5",
+      "date": "2026-04-21",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Anurag Maheshwari, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Returned over $7 billion against the existing $10 billion shareholder-return commitment.",
+      "quote": "And on capital allocation, we have already returned over $7 billion of the $10 billion shareholder returns that we had committed to.",
+      "verbatim": {
+        "text": "And on capital allocation, we have already returned over $7 billion of the $10 billion shareholder returns that we had committed to.",
+        "segs": [
+          {
+            "t": "And on capital allocation, we have already returned over ",
+            "h": 0
+          },
+          {
+            "t": "$7 billion",
+            "h": 1
+          },
+          {
+            "t": " of the ",
+            "h": 0
+          },
+          {
+            "t": "$10 billion",
+            "h": 1
+          },
+          {
+            "t": " shareholder returns that we had committed to.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+          "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P5-2026-07-21",
+      "promiseId": "P5",
+      "date": "2026-07-21",
+      "call": "Q2 2026 earnings call",
+      "speaker": "William Brown, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Returned $8.6 billion since 2025 toward the original $10 billion-plus commitment through 2027.",
+      "quote": "Since 2025, we returned $8.6 billion to shareholders against our commitment to return $10 billion-plus through 2027.",
+      "verbatim": {
+        "text": "Since 2025, we returned $8.6 billion to shareholders against our commitment to return $10 billion-plus through 2027.",
+        "segs": [
+          {
+            "t": "Since ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", we returned ",
+            "h": 0
+          },
+          {
+            "t": "$8.6 billion",
+            "h": 1
+          },
+          {
+            "t": " to shareholders against our commitment to return ",
+            "h": 0
+          },
+          {
+            "t": "$10 billion",
+            "h": 1
+          },
+          {
+            "t": "-plus through ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a1def2934ef3d8f3cee139b483deaac1/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a1def2934ef3d8f3cee139b483deaac1/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+          "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+          "title": "3M Co 2025 Investor Day Transcript — February 26, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MMM-P5-2026-10-20",
+      "promiseId": "P5",
+      "date": "2026-10-20",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Anurag Maheshwari, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Returned $9.3 billion since the start of 2025 and expected to exceed the $10 billion target; no target change announced.",
+      "quote": "Having returned $9.3 billion since the start of 2025, we are well on our way to exceeding the $10 billion target.",
+      "verbatim": {
+        "text": "Having returned $9.3 billion since the start of 2025, we are well on our way to exceeding the $10 billion target.",
+        "segs": [
+          {
+            "t": "Having returned ",
+            "h": 0
+          },
+          {
+            "t": "$9.3 billion",
+            "h": 1
+          },
+          {
+            "t": " since the start of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", we are well on our way to exceeding the ",
+            "h": 0
+          },
+          {
+            "t": "$10 billion",
+            "h": 1
+          },
+          {
+            "t": " target.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+          "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/31021/webcast_transcript/MMM-USQ_Transcript_2026-10-20.pdf",
+      "title": "Q3 2026 3M Company Earnings Call on October 20, 2026 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+      "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+      "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_baaecc7ef75d4b461e49a47848df4bc9/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+      "title": "3M Co 2025 Investor Day Transcript — February 26, 2025",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_fe6a3cbd04396a4ac6e15f231b3bb025/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+      "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P2 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_a1def2934ef3d8f3cee139b483deaac1/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+      "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P4 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_88d0dfcd23cbfb38eb6a48a3a5dcc48a/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+      "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_7cba71a3b1bc893024e57cdc6afc88e5/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+      "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 9,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_332d84f0de28acbb34495534fd4eaac8/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+      "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 10,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+      "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P4"
+    },
+    {
+      "n": 11,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_526d9bbc55e9f2bd00813ba9b5651def/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+      "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 12,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_0b09c3055d7da3494304af35c67adc69/3m/db/3222/30969/webcast_transcript/MMM-USQ_Transcript_2025-10-21.pdf",
+      "title": "Q3 2025 3M Co Earnings Call on October 21, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 13,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_d983c8b3522e7690ffb17996e9cbf57e/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+      "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 14,
+      "url": "https://investors.3m.com/news-events/events-presentations/detail/20260721-q2-2026-earnings-conference-call",
+      "title": "Q2 2026 Earnings Conference Call :: 3M Company (MMM)",
+      "domain": "investors.3m.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://news.3m.com/2025-02-26-3M-Provides-Medium-Term-Financial-Outlook-at-2025-Investor-Day-Presents-Strategic-Priorities-that-Will-Drive-Growth,-Operational-Excellence,-and-Return-Cash-to-Shareholders",
+      "title": "3M Provides Medium-Term Financial Outlook at 2025 Investor Day; Presents Strategic Priorities that Will Drive Growth, Operational Excellence, and Return Cash to Shareholders - Feb 26, 2025",
+      "domain": "news.3m.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 16,
+      "url": "https://investors.3m.com/news-events/events-presentations/detail/20260120-q4-2025-earnings-conference-call",
+      "title": "Q4 2025 Earnings Conference Call :: 3M Company (MMM)",
+      "domain": "investors.3m.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://www.sec.gov/Archives/edgar/data/66740/000006674026000155/a20253mannualreport-final.pdf",
+      "title": "Excellence driving results",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_ae893827046283524febfa7532ea26c1/3m/db/3222/31021/presentation/3Q+2026+Earnings+Presentation+-+vFinal.pdf",
+      "title": "2026 Third Quarter Earnings",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 19,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_bb6bae70e020b3b0d1cad5d17e92e85c/3m/db/3195/31017/file/MMM-USQ_Transcript_2026-09-15.pdf",
+      "title": "3M Company at Morgan Stanley Laguna Conference on September 15, 2026 / 2:45PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 20,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_17a60b0623cd5f0b8f186822bfb01216/3m/db/3195/30924/file/MMM-USQ_Transcript_2025-02-26.pdf",
+      "title": "3M Co To Host Investor Day on February 26, 2025 / 2:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 21,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_39b9c4b55c1314921bb642cd27956a1b/3m/db/3194/30902/presentation/3M%2B2025%2BInvestor%2BDay%2BWebcast.pdf",
+      "title": "Investor Day",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_6764d34a843f2d923b313b6d5e1db120/3m/db/3195/30976/file/MMM-USQ_Transcript_2025-12-04.pdf",
+      "title": "3M Co at Goldman Sachs Industrials and Materials Conference on December 04, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 23,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30995/webcast_transcript/MMM-USQ_Transcript_2026-04-21.pdf",
+      "title": "Q1 2026 3M Co Earnings Call on April 21, 2026 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 24,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_711856ab2feb4c92d38e62322f147491/3m/db/3195/31003/file/MMM-USQ_Transcript_2026-06-10.pdf",
+      "title": "3M Co at Wells Fargo Industrials & Materials Conference on June 10, 2026 / 1:45PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 25,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_5eafa429852b8d6acff930e4b359f615/3m/db/3222/31004/webcast_transcript/MMM-USQ_Transcript_2026-07-21.pdf",
+      "title": "Q2 2026 3M Co Earnings Call on July 21, 2026 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 26,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_0b09c3055d7da3494304af35c67adc69/3m/db/3222/30942/webcast_transcript/MMM-USQ_Transcript_2025-04-22.pdf",
+      "title": "Q1 2025 3M Co Earnings Call on April 22, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 27,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_312de5044c2c9d93d35a976570d723aa/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+      "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 28,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_7db23c69ae467963308adff907ccfff4/3m/db/3195/30920/file/3M+2025+Investor+Day+Webcast.pdf",
+      "title": "Investor Day",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P5"
+    },
+    {
+      "n": 29,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_024f54de4ac2d188e10b13f107ac9d4e/3m/db/3222/30962/webcast_transcript/MMM-USQ_Transcript_2025-07-18.pdf",
+      "title": "Q2 2025 3M Co Earnings Call on July 18, 2025 / 1:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P5"
+    },
+    {
+      "n": 30,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_ede879fb82f00fbcb56169196d94cfe8/3m/db/3222/30980/webcast_transcript/MMM-USQ_Transcript_2026-01-20.pdf",
+      "title": "Q4 2025 3M Co Earnings Call on January 20, 2026 / 2:00PM",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P5"
+    },
+    {
+      "n": 31,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_22d241ac2e73175402abb633947f03d4/3m/db/3235/30992/annual_report/2025+3M+Annual+Report+-+final.pdf",
+      "title": "Excellence driving results ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.159604Z",
+      "completedAt": "2026-11-05T06:29:32.317958Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.225772Z",
+      "completedAt": "2026-11-05T19:13:25.822430Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.232755Z",
+      "completedAt": "2026-11-05T19:14:21.414107Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.239583Z",
+      "completedAt": "2026-11-05T19:12:19.792333Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.246342Z",
+      "completedAt": "2026-11-05T19:14:31.338201Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.253144Z",
+      "completedAt": "2026-11-05T19:13:46.578077Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.158294Z",
+      "completedAt": "2026-11-05T19:47:59.546485Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.165530Z",
+      "completedAt": "2026-11-05T19:46:53.524343Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.284302Z",
+      "completedAt": "2026-11-05T19:46:01.518665Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.296940Z",
+      "completedAt": "2026-11-05T19:46:34.433038Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.304217Z",
+      "completedAt": "2026-11-05T19:47:03.956448Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "43 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "36 of 36 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "36 of 36 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-20; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/15/3M_wordmark.svg/1280px-3M_wordmark.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/3M",
+      "title": "3M - Wikipedia",
+      "width": 1280,
+      "height": 673,
+      "rank": 1
+    },
+    "photo": null
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.308Z"
+}

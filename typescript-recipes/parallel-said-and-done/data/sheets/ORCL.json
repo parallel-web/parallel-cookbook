@@ -1,0 +1,2447 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "ORCL",
+  "name": "Oracle Corporation",
+  "short": "Oracle",
+  "website": "oracle.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "May 31",
+  "irUrl": "https://investor.oracle.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-09-10",
+    "quarter": "Q1 FY2027"
+  },
+  "nextCall": {
+    "date": "2026-12-14",
+    "time": null,
+    "quarter": "Q2 FY2027"
+  },
+  "photoSubject": "Oracle AI data center",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Meet raised FY2026 revenue floor",
+      "commitment": "Deliver over $67 billion FY2026 revenue, up 16% for the year, raising the previous revenue target by more than $1 billion.",
+      "deadline": "FY2026",
+      "firstStated": "2025-06-11",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "FY 2026 revenue was $67.4 billion, up 17% USD and 16% constant currency, meeting the raised revenue floor and growth commitment.",
+      "citations": [
+        {
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx",
+          "title": "\n\tOracle - Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications\n",
+          "domain": "investor.oracle.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/324320-q4-2025/",
+          "title": "Oracle (ORCL) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/440135859/files/doc_earnings/2026/q4/presentation/Presentation-Slides-Q4-26.pdf",
+          "title": "Earnings Slides v2",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-06-10",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-03-10",
+            "what_was_said": "Management said, “We are over-delivering on FY 2026 revenue and earnings, and we are constantly raising our FY 2027 forecast.” This reported stronger-than-planned FY2026 performance; the forecast increases referenced were for FY2027.",
+            "call": "Q3 FY2026 earnings call"
+          },
+          {
+            "date": "2026-06-10",
+            "what_was_said": "Management explicitly confirmed delivery on the call: “Turning to the full year, we surpassed revenues of $67 billion for the first time.”",
+            "call": "Q4 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Expand FY2026 capital investment",
+      "commitment": "Spend over $25 billion on FY2026 capital expenditures to meet backlog demand.",
+      "deadline": "FY2026",
+      "firstStated": "2025-06-11",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "FY2026 capital expenditures reached $55.7 billion, exceeding the raised $50 billion forecast; $48 billion was net cash outlay, not total CapEx.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "title": "10-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Fiscal-Year-2026-Third-Quarter-Financial-Results/default.aspx",
+          "title": "\n\tOracle - Oracle Announces Fiscal Year 2026 Third Quarter Financial Results\n",
+          "domain": "investor.oracle.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/592465-q4-2026",
+          "title": "Oracle (ORCL) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/324320-q4-2025/",
+          "title": "Oracle (ORCL) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://fiscal.ai",
+          "title": "Fiscal.ai /v1/company/financials/cash-flow-statement/standardized",
+          "domain": "fiscal.ai",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-06-10",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-06-10",
+            "what_was_said": "Management reported full-year net cash outlay for capital expenditures of $48 billion, taking into account approximately $8 billion of prepayments and timing impacts. It explained that this net measure helps investors understand funding needs, distinguishing it from total reported capital expenditures.",
+            "call": "Q4 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Scale OCI to $144 billion",
+      "commitment": "Grow OCI revenue to $18 billion in FY2026, $32 billion in FY2027, $73 billion in FY2028, $114 billion in FY2029, and $144 billion in FY2030.",
+      "deadline": "FY2030",
+      "firstStated": "2025-09-09",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Oracle raised its OCI roadmap to $166B in FY30. FY 2026 OCI revenue reached $18.1 billion; the later-year targets remain pending.",
+      "citations": [
+        {
+          "url": "https://www.oracle.com/a/ocom/docs/corporate/financial-analyst-meeting-2025-magouyrk.pdf",
+          "title": "Oracle Financial Analyst Meeting 2025 - Clay Magouyrk",
+          "domain": "oracle.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10/",
+          "title": "Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications",
+          "domain": "oracle.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026",
+          "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10",
+          "title": "Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications",
+          "domain": "oracle.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-09-10",
+            "what_was_said": "Management reported Q1 FY2027 cloud infrastructure revenue of $7.4 billion, up 121% year over year, reflecting record new megawatt capacity brought online.",
+            "call": "Q1 FY2027 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Reach 30%-40% AI margins",
+      "commitment": "Reach a 30%-40% gross-margin profile across AI data centers as the majority of capacity comes online.",
+      "deadline": null,
+      "firstStated": "2025-10-16",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Q3 AI capacity earned 32% gross margin; later models illustrated around 35% fully ramped margins. Fleet-wide achievement of 30%-40% remained unconfirmed.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/10/oracle-orcl-q3-2026-earnings-call-transcript",
+          "title": "Oracle (ORCL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/780561-investor-day-2026/",
+          "title": "Oracle (ORCL) Transcript: Investor Day 2026",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/440135859/files/doc_downloads/2026/10/Oracle-Investor-Day-Meeting/vFinal/2026-Investor-Day-CFO-presentation.pdf",
+          "title": "Oracle Financial  Analyst Meeting",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/529436-q3-2026",
+          "title": "Oracle (ORCL) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/592465-q4-2026",
+          "title": "Oracle (ORCL) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-12-10",
+            "what_was_said": "Management qualified the target by saying Oracle was in rapid buildout “without the majority of the capacity online,” so “the aggregate mix is going to be lower.” Bringing the majority of capacity online would move all AI data centers toward the 30%-40% profile. This distinguishes the eventual fleet-wide target from margins during buildout.",
+            "call": "Q2 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Bring 10 GW capacity online",
+      "commitment": "Bring more than 10 GW of partner-secured power and data-center capacity online over the next three years.",
+      "deadline": "Over the next three years",
+      "firstStated": "2026-03-10",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Still pending; Oracle reported 850 megawatts delivered since the end of Q4, containing more than 300,000 GPUs, without declaring the full commitment achieved.",
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/ORCL/transcripts/2027-year/1-quarter",
+          "title": "Oracle Corporation (ORCL) Q1 FY2027 Earnings Call Transcript - September 10, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/440135859/files/doc_downloads/2026/10/Oracle-Investor-Day-Meeting/vFinal/2026-Investor-Day-CFO-presentation.pdf",
+          "title": "Oracle Financial  Analyst Meeting",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/529436-q3-2026",
+          "title": "Oracle (ORCL) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/592465-q4-2026",
+          "title": "Oracle (ORCL) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/689425-q1-2027/",
+          "title": "Oracle (ORCL) Q1 2027 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-03-10",
+            "what_was_said": "Oracle delivered more than 400 MW to customers in Q3; management said 90% of the committed capacity was delivered on or ahead of schedule.",
+            "call": "Q3 FY2026 earnings call"
+          },
+          {
+            "date": "2026-06-10",
+            "what_was_said": "Management projected FY2027 Q1 delivery approaching 1 GW, nearly as much capacity as delivered in all of FY2026.",
+            "call": "Q4 FY2026 earnings call"
+          },
+          {
+            "date": "2026-09-10",
+            "what_was_said": "Management described New Mexico and Wisconsin data-center delivery as on track, but cautioned that it did not assume every project would finish exactly on time and said backup options were in place.",
+            "call": "Q1 FY2027 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "ORCL-P1-2025-06-11",
+      "promiseId": "P1",
+      "date": "2025-06-11",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Safra Catz, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Raised FY2026 revenue guidance to over $67 billion, up 16% in constant currency and more than a billion above prior guidance.",
+      "quote": "As a result of the strength in our cloud applications and infrastructure, including database services, we are raising our revenue guidance for fiscal year 2026 to over $67 billion, up 16% for the year.",
+      "verbatim": {
+        "text": "As a result of the strength in our cloud applications and infrastructure, including database services, we are raising our revenue guidance for fiscal year 2026 to over $67 billion, up 16% for the year.",
+        "segs": [
+          {
+            "t": "As a result of the strength in our cloud applications and infrastructure, including database services, we are raising our revenue guidance for fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " to over ",
+            "h": 0
+          },
+          {
+            "t": "$67 billion",
+            "h": 1
+          },
+          {
+            "t": ", up ",
+            "h": 0
+          },
+          {
+            "t": "16%",
+            "h": 1
+          },
+          {
+            "t": " for the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/324320-q4-2025/",
+          "title": "Oracle (ORCL) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/324320-q4-2025/",
+          "title": "Oracle (ORCL) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P1-2025-09-09",
+      "promiseId": "P1",
+      "date": "2025-09-09",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Safra Catz, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed FY2026 total revenue growth of 16% in constant currency.",
+      "quote": "For fiscal year 2026, we remain confident and committed to full-year total revenue growth of 16% in constant currency.",
+      "verbatim": {
+        "text": "For fiscal year 2026, we remain confident and committed to full-year total revenue growth of 16% in constant currency.",
+        "segs": [
+          {
+            "t": "For fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we remain confident and committed to full-year total revenue growth of ",
+            "h": 0
+          },
+          {
+            "t": "16%",
+            "h": 1
+          },
+          {
+            "t": " in constant currency.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026/",
+          "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026/",
+          "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P1-2025-10-16",
+      "promiseId": "P1",
+      "date": "2025-10-16",
+      "call": "Financial Analyst Meeting 2025 — Financial Outlook",
+      "speaker": "Doug Kehring, EVP and Principal Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Financial outlook retained the FY2026 total revenue estimate of $67 billion in a table; no complete sentence was provided.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.oracle.com/a/ocom/docs/corporate/financial-analyst-meeting-2025-kehring.pdf",
+          "title": "Oracle Financial Analyst Meeting 2025 - Doug Kehring",
+          "domain": "oracle.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "ORCL-P1-2025-12-10",
+      "promiseId": "P1",
+      "date": "2025-12-10",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Doug Kehring, Principal Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Kept FY2026 revenue guidance unchanged at $67 billion.",
+      "quote": "Our full-year FY 2026 revenue expectation of $67 billion remains unchanged.",
+      "verbatim": {
+        "text": "Our full-year FY 2026 revenue expectation of $67 billion remains unchanged.",
+        "segs": [
+          {
+            "t": "Our full-year FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " revenue expectation of ",
+            "h": 0
+          },
+          {
+            "t": "$67 billion",
+            "h": 1
+          },
+          {
+            "t": " remains unchanged.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P1-2026-03-10",
+      "promiseId": "P1",
+      "date": "2026-03-10",
+      "call": "Q3 FY2026 earnings release",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Kept FY2026 revenue at $67 billion and capital expenditures at $50 billion, unchanged from previous guidance.",
+      "quote": "For fiscal year 2026, we expect revenue of $67 billion and capital expenditures of $50 billion.",
+      "verbatim": {
+        "text": "Guidance for Fiscal Years 2026 and 2027 For fiscal year 2026, we expect revenue of $67 billion and capital expenditures of $50 billion.",
+        "segs": [
+          {
+            "t": "Guidance for Fiscal Years ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " For fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect revenue of ",
+            "h": 0
+          },
+          {
+            "t": "$67 billion",
+            "h": 1
+          },
+          {
+            "t": " and capital expenditures of ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Fiscal-Year-2026-Third-Quarter-Financial-Results/default.aspx",
+          "title": "\n\tOracle - Oracle Announces Fiscal Year 2026 Third Quarter Financial Results\n",
+          "domain": "investor.oracle.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Fiscal-Year-2026-Third-Quarter-Financial-Results/default.aspx",
+          "title": "\n\tOracle - Oracle Announces Fiscal Year 2026 Third Quarter Financial Results\n",
+          "domain": "investor.oracle.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "ORCL-P1-2026-06-10",
+      "promiseId": "P1",
+      "date": "2026-06-10",
+      "call": "Q4 and FY2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported FY2026 revenue of $67.4 billion, up 17% in USD and 16% in constant currency.",
+      "quote": "Fiscal year 2026 total revenues were up 17% to a record $67.4 billion.",
+      "verbatim": {
+        "text": "Financial Results for FY 2026 Fiscal year 2026 total revenues were up 17% to a record $67.4 billion.",
+        "segs": [
+          {
+            "t": "Financial Results for FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " Fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " total revenues were up ",
+            "h": 0
+          },
+          {
+            "t": "17%",
+            "h": 1
+          },
+          {
+            "t": " to a record ",
+            "h": 0
+          },
+          {
+            "t": "$67.4 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx",
+          "title": "\n\tOracle - Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications\n",
+          "domain": "investor.oracle.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx",
+          "title": "\n\tOracle - Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications\n",
+          "domain": "investor.oracle.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "ORCL-P2-2025-06-11",
+      "promiseId": "P2",
+      "date": "2025-06-11",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Safra Catz, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected FY2026 CapEx above $25 billion to meet backlog demand.",
+      "quote": "I expect that FY 2026 CapEx will be higher at over $25 billion as we work to meet demand from our backlog.",
+      "verbatim": {
+        "text": "I expect that FY 2026 CapEx will be higher at over $25 billion as we work to meet demand from our backlog.",
+        "segs": [
+          {
+            "t": "I expect that FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " CapEx will be higher at over ",
+            "h": 0
+          },
+          {
+            "t": "$25 billion",
+            "h": 1
+          },
+          {
+            "t": " as we work to meet demand from our backlog.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/324320-q4-2025",
+          "title": "Oracle (ORCL) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/324320-q4-2025",
+          "title": "Oracle (ORCL) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P2-2025-09-09",
+      "promiseId": "P2",
+      "date": "2025-09-09",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Safra Catz, CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised fiscal 2026 CapEx to around $35 billion because of RPO growth.",
+      "quote": "Given our RPO growth, I now expect fiscal year 2026 CapEx will be around $35 billion.",
+      "verbatim": {
+        "text": "Given our RPO growth, I now expect fiscal year 2026 CapEx will be around $35 billion.",
+        "segs": [
+          {
+            "t": "Given our RPO growth, I now expect fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " CapEx will be around ",
+            "h": 0
+          },
+          {
+            "t": "$35 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026",
+          "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026",
+          "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P2-2025-12-10",
+      "promiseId": "P2",
+      "date": "2025-12-10",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Doug Kehring, Principal Financial Officer",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised fiscal 2026 CapEx by about $15 billion versus the post-Q1 forecast to monetize additional RPO.",
+      "quote": "However, given the added RPO this quarter that can be monetized quickly starting next year, we now expect fiscal 2026 CapEx will be about $15 billion higher than we forecasted after Q1.",
+      "verbatim": {
+        "text": "However, given the added RPO this quarter that can be monetized quickly starting next year, we now expect fiscal 2026 CapEx will be about $15 billion higher than we forecasted after Q1.",
+        "segs": [
+          {
+            "t": "However, given the added RPO this quarter that can be monetized quickly starting next year, we now expect ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": " CapEx will be about ",
+            "h": 0
+          },
+          {
+            "t": "$15 billion",
+            "h": 1
+          },
+          {
+            "t": " higher than we forecasted after ",
+            "h": 0
+          },
+          {
+            "t": "Q1",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P2-2026-03-10",
+      "promiseId": "P2",
+      "date": "2026-03-10",
+      "call": "Q3 FY2026 earnings release",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed fiscal 2026 revenue of $67 billion and capital expenditures of $50 billion, unchanged from previous guidance.",
+      "quote": "For fiscal year 2026, we expect revenue of $67 billion and capital expenditures of $50 billion.",
+      "verbatim": {
+        "text": "Guidance for Fiscal Years 2026 and 2027 For fiscal year 2026, we expect revenue of $67 billion and capital expenditures of $50 billion.",
+        "segs": [
+          {
+            "t": "Guidance for Fiscal Years ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " For fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect revenue of ",
+            "h": 0
+          },
+          {
+            "t": "$67 billion",
+            "h": 1
+          },
+          {
+            "t": " and capital expenditures of ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Fiscal-Year-2026-Third-Quarter-Financial-Results/default.aspx",
+          "title": "\n\tOracle - Oracle Announces Fiscal Year 2026 Third Quarter Financial Results\n",
+          "domain": "investor.oracle.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Fiscal-Year-2026-Third-Quarter-Financial-Results/default.aspx",
+          "title": "\n\tOracle - Oracle Announces Fiscal Year 2026 Third Quarter Financial Results\n",
+          "domain": "investor.oracle.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "ORCL-P2-2026-06-10",
+      "promiseId": "P2",
+      "date": "2026-06-10",
+      "call": "Q4 FY2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported FY2026 capital expenditures of $55,663 million and net cash outlay for capital expenditures of $47,726 million.",
+      "quote": null,
+      "verbatim": {
+        "text": "Net Cash Outlay for Capital Expenditures $ (7,855 ) $ (10,745 ) $ (14,933 ) $ (19,793 ) $ (24,034 ) $ (32,857 ) $ (44,161 ) $ (47,726 )",
+        "segs": [
+          {
+            "t": "Net Cash Outlay for Capital Expenditures $ (",
+            "h": 0
+          },
+          {
+            "t": "7,855",
+            "h": 1
+          },
+          {
+            "t": " ) $ (",
+            "h": 0
+          },
+          {
+            "t": "10,745",
+            "h": 1
+          },
+          {
+            "t": " ) $ (",
+            "h": 0
+          },
+          {
+            "t": "14,933",
+            "h": 1
+          },
+          {
+            "t": " ) $ (",
+            "h": 0
+          },
+          {
+            "t": "19,793",
+            "h": 1
+          },
+          {
+            "t": " ) $ (",
+            "h": 0
+          },
+          {
+            "t": "24,034",
+            "h": 1
+          },
+          {
+            "t": " ) $ (",
+            "h": 0
+          },
+          {
+            "t": "32,857",
+            "h": 1
+          },
+          {
+            "t": " ) $ (",
+            "h": 0
+          },
+          {
+            "t": "44,161",
+            "h": 1
+          },
+          {
+            "t": " ) $ (",
+            "h": 0
+          },
+          {
+            "t": "47,726",
+            "h": 1
+          },
+          {
+            "t": " )",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "ORCL-P2-2026-06-22",
+      "promiseId": "P2",
+      "date": "2026-06-22",
+      "call": "FY2026 Form 10-K",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Cash used for capital expenditures rose from $21.2 billion in fiscal 2025 to $55.7 billion in fiscal 2026 for data-center expansion.",
+      "quote": "Cash used for capital expenditures increased from $21.2 billion in fiscal 2025 to $55.7 billion in fiscal 2026 primarily due to the expansion of our data centers.",
+      "verbatim": {
+        "text": "Capital Expenditures : Cash used for capital expenditures increased from $21.2 billion in fiscal 2025 to $55.7 billion in fiscal 2026 primarily due to the expansion of our data centers.",
+        "segs": [
+          {
+            "t": "Capital Expenditures : Cash used for capital expenditures increased from ",
+            "h": 0
+          },
+          {
+            "t": "$21.2 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2025",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$55.7 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": " primarily due to the expansion of our data centers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "title": "10-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://fiscal.ai",
+          "title": "Fiscal.ai /v2/company/filings",
+          "domain": "fiscal.ai",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+          "title": "10-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "ORCL-P3-2025-09-09",
+      "promiseId": "P3",
+      "date": "2025-09-09",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Safra Catz, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "OCI: FY2026 $18 billion, 77% growth; FY2027 $32 billion; FY2028 $73 billion; FY2029 $114 billion; FY2030 $144 billion.",
+      "quote": "We now expect Oracle Cloud Infrastructure will grow 77% to $18 billion this fiscal year and then increase to $32 billion, $73 billion, $114 billion, and $144 billion over the following four years.",
+      "verbatim": {
+        "text": "We now expect Oracle Cloud Infrastructure will grow 77% to $18 billion this fiscal year and then increase to $32 billion, $73 billion, $114 billion, and $144 billion over the following four years.",
+        "segs": [
+          {
+            "t": "We now expect Oracle Cloud Infrastructure will grow ",
+            "h": 0
+          },
+          {
+            "t": "77%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$18 billion",
+            "h": 1
+          },
+          {
+            "t": " this fiscal year and then increase to ",
+            "h": 0
+          },
+          {
+            "t": "$32 billion",
+            "h": 1
+          },
+          {
+            "t": ", ",
+            "h": 0
+          },
+          {
+            "t": "$73 billion",
+            "h": 1
+          },
+          {
+            "t": ", ",
+            "h": 0
+          },
+          {
+            "t": "$114 billion",
+            "h": 1
+          },
+          {
+            "t": ", and ",
+            "h": 0
+          },
+          {
+            "t": "$144 billion",
+            "h": 1
+          },
+          {
+            "t": " over the following four years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026",
+          "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026",
+          "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P3-2025-10-16",
+      "promiseId": "P3",
+      "date": "2025-10-16",
+      "call": "Financial Analyst Meeting 2025 — Clay Magouyrk presentation",
+      "speaker": "Clay Magouyrk, CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "FY2026 remains $18B; OCI targets rise to $34B FY2027, $77B FY2028, $129B FY2029, and $166B FY2030.",
+      "quote": null,
+      "verbatim": {
+        "text": "Fiscal Year Sept 2025 Estimate Oct 2025 Update --- --- --- FY2025 $10B $10B FY2026 $18B $18B FY2027 $32B $34B FY2028 $73B $77B FY2029 $114B $129B FY2030 $144B $166B 5-Year CAGR 71% 75% Source: Oracle Q1 FY2026 Earnings (Sept 2025) and Financial Analyst Meeting (Oct 2025)",
+        "segs": [
+          {
+            "t": "Fiscal Year Sept ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " Estimate Oct ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " Update --- --- --- ",
+            "h": 0
+          },
+          {
+            "t": "FY2025",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$10B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$10B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "FY2026",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$18B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$18B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "FY2027",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$32B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$34B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "FY2028",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$73B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$77B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "FY2029",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$114B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$129B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "FY2030",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$144B",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$166B",
+            "h": 1
+          },
+          {
+            "t": " 5-Year CAGR ",
+            "h": 0
+          },
+          {
+            "t": "71%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "75%",
+            "h": 1
+          },
+          {
+            "t": " Source: Oracle ",
+            "h": 0
+          },
+          {
+            "t": "Q1 FY2026",
+            "h": 1
+          },
+          {
+            "t": " Earnings (Sept ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ") and Financial Analyst Meeting (Oct ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ")",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "search",
+          "url": "https://www.investing.com/analysis/oracle-the-ai-backlog-is-real--the-cash-flow-isnt-yet-200678113",
+          "title": "Oracle: AI Backlog Is Real but Cash Flow Still Lags | Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript",
+          "search": {
+            "rank": 8,
+            "query": "Oracle Financial Analyst Meeting 2025 — Clay Magouyrk presentation transcript Scale OCI to $144 billion",
+            "objective": "Find Oracle Corporation's Financial Analyst Meeting 2025 — Clay Magouyrk presentation (2025-10-16) transcript passage about Scale OCI to $144 billion: FY2026 remains $18B; OCI targets rise to $34B FY2027, $77B FY2028, $129B FY2029, and $166B FY2030."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.oracle.com/a/ocom/docs/corporate/financial-analyst-meeting-2025-magouyrk.pdf",
+          "title": "Oracle Financial Analyst Meeting 2025 - Clay Magouyrk",
+          "domain": "oracle.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "ORCL-P3-2025-12-10",
+      "promiseId": "P3",
+      "date": "2025-12-10",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not revisit the OCI annual revenue roadmap.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P3-2026-03-10",
+      "promiseId": "P3",
+      "date": "2026-03-10",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not revisit the OCI annual revenue roadmap.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/529436-q3-2026",
+          "title": "Oracle (ORCL) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P3-2026-06-10",
+      "promiseId": "P3",
+      "date": "2026-06-10",
+      "call": "Q4 and FY2026 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "FY2026 OCI revenue reached $18.1 billion, up 77% USD and 75% constant currency, meeting the first annual milestone.",
+      "quote": "FY 2026 Cloud Infra (IaaS) Revenue $18.1 billion, up 77% USD, and up 75% constant currency",
+      "verbatim": {
+        "text": "FY 2026 Cloud Infra (IaaS) Revenue $18.1 billion, up 77% USD, and up 75% constant currency",
+        "segs": [
+          {
+            "t": "FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " Cloud Infra (IaaS) Revenue ",
+            "h": 0
+          },
+          {
+            "t": "$18.1 billion",
+            "h": 1
+          },
+          {
+            "t": ", up ",
+            "h": 0
+          },
+          {
+            "t": "77%",
+            "h": 1
+          },
+          {
+            "t": " USD, and up ",
+            "h": 0
+          },
+          {
+            "t": "75%",
+            "h": 1
+          },
+          {
+            "t": " constant currency",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10/",
+          "title": "Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications",
+          "domain": "oracle.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10/",
+          "title": "Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications",
+          "domain": "oracle.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026",
+          "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "ORCL-P3-2026-09-10",
+      "promiseId": "P3",
+      "date": "2026-09-10",
+      "call": "Q1 FY2027 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not revisit the OCI annual revenue roadmap.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/689425-q1-2027/",
+          "title": "Oracle (ORCL) Q1 2027 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P4-2025-10-16",
+      "promiseId": "P4",
+      "date": "2025-10-16",
+      "call": "Financial Analyst Meeting 2025",
+      "speaker": "Clay Magouyrk, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced 30%-40% AI gross margins; illustrated a $60 billion contract at 35%, including startup costs.",
+      "quote": "So in this example of this, this example deal of $60 billion, I've written down here, okay, a 35% margin deal right in the middle of that 30%-40% margin range.",
+      "verbatim": {
+        "text": "So in this example of this, this example deal of $60 billion, I've written down here, okay, a 35% margin deal right in the middle of that 30%-40% margin range.",
+        "segs": [
+          {
+            "t": "So in this example of this, this example deal of ",
+            "h": 0
+          },
+          {
+            "t": "$60 billion",
+            "h": 1
+          },
+          {
+            "t": ", I've written down here, okay, a ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": " margin deal right in the middle of that ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " margin range.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/399218-financial-analyst-meeting-2025",
+          "title": "Oracle (ORCL) Transcript: Financial Analyst Meeting 2025",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/399218-financial-analyst-meeting-2025",
+          "title": "Oracle (ORCL) Transcript: Financial Analyst Meeting 2025",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.oracle.com/a/ocom/docs/corporate/financial-analyst-meeting-2025-magouyrk.pdf",
+          "title": "Oracle Financial Analyst Meeting 2025 - Clay Magouyrk",
+          "domain": "oracle.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "ORCL-P4-2025-12-10",
+      "promiseId": "P4",
+      "date": "2025-12-10",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Clay Magouyrk, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 30%-40% gross margins across all AI data centers as the majority of capacity comes online.",
+      "quote": "That ends up very rapidly ensuring that we get to that 30%-40% gross margin profile for all of the AI data centers.",
+      "verbatim": {
+        "text": "That ends up very rapidly ensuring that we get to that 30%-40% gross margin profile for all of the AI data centers.",
+        "segs": [
+          {
+            "t": "That ends up very rapidly ensuring that we get to that ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " gross margin profile for all of the AI data centers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+          "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P4-2026-03-10",
+      "promiseId": "P4",
+      "date": "2026-03-10",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Clay Magouyrk, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Q3 AI capacity delivered generated 32% gross margin, above 30% guidance; the 30%-40% target remained unchanged.",
+      "quote": "Looking at the AI capacity we delivered in Q3, our gross margin for that remained above our 30% guidance at 32%.",
+      "verbatim": {
+        "text": "Looking at the AI capacity we delivered in Q3, our gross margin for that remained above our 30% guidance at 32%.",
+        "segs": [
+          {
+            "t": "Looking at the AI capacity we delivered in ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": ", our gross margin for that remained above our ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " guidance at ",
+            "h": 0
+          },
+          {
+            "t": "32%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/10/oracle-orcl-q3-2026-earnings-call-transcript",
+          "title": "Oracle (ORCL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/10/oracle-orcl-q3-2026-earnings-call-transcript",
+          "title": "Oracle (ORCL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P4-2026-06-10",
+      "promiseId": "P4",
+      "date": "2026-06-10",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Clay Magouyrk, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the 30%-40% margin profile; expected infrastructure margins to improve as data centers reach full contractual revenue.",
+      "quote": "Combined with our previously outlined 30%-40% margin profile, OCI should grow into an extremely large and extremely profitable business.",
+      "verbatim": {
+        "text": "Combined with our previously outlined 30%-40% margin profile, OCI should grow into an extremely large and extremely profitable business.",
+        "segs": [
+          {
+            "t": "Combined with our previously outlined ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " margin profile, OCI should grow into an extremely large and extremely profitable business.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/592465-q4-2026/",
+          "title": "Oracle (ORCL) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/592465-q4-2026/",
+          "title": "Oracle (ORCL) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P4-2026-09-10",
+      "promiseId": "P4",
+      "date": "2026-09-10",
+      "call": "Q1 FY2027 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed gross-margin pressure from data-center ramping and infrastructure mix, but did not address the 30%-40% AI target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/09/11/oracle-orcl-q1-2027-earnings-call-transcript",
+          "title": "Oracle (ORCL) Q1 2027 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P4-2026-10-28",
+      "promiseId": "P4",
+      "date": "2026-10-28",
+      "call": "Investor Day 2026",
+      "speaker": "Hilary Maxson, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Illustrated fully ramped project economics: around 35% gross margin and 34% operating margin; did not declare fleet-wide completion.",
+      "quote": "While our gross margin is at around 35%, operating margin at the project level is around 34% due to that OpEx-light business model I described earlier.",
+      "verbatim": {
+        "text": "While our gross margin is at around 35%, operating margin at the project level is around 34% due to that OpEx-light business model I described earlier.",
+        "segs": [
+          {
+            "t": "While our gross margin is at around ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": ", operating margin at the project level is around ",
+            "h": 0
+          },
+          {
+            "t": "34%",
+            "h": 1
+          },
+          {
+            "t": " due to that OpEx-light business model I described earlier.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/780561-investor-day-2026/",
+          "title": "Oracle (ORCL) Transcript: Investor Day 2026",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/orcl/transcripts/780561-investor-day-2026/",
+          "title": "Oracle (ORCL) Transcript: Investor Day 2026",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/440135859/files/doc_downloads/2026/10/Oracle-Investor-Day-Meeting/vFinal/2026-Investor-Day-CFO-presentation.pdf",
+          "title": "Oracle Financial  Analyst Meeting",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "ORCL-P5-2026-03-10",
+      "promiseId": "P5",
+      "date": "2026-03-10",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Clay Magouyrk, Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Secured more than 10 gigawatts of partner-backed power and data-center capacity coming online over the next three years.",
+      "quote": "Through our partners, we have secured more than 10 gigawatts of power and data capacity coming online over the next three years.",
+      "verbatim": {
+        "text": "Through our partners, we have secured more than 10 gigawatts of power and data capacity coming online over the next three years.",
+        "segs": [
+          {
+            "t": "Through our partners, we have secured more than 10 gigawatts of power and data capacity coming online over the next three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/ORAC.TO/transcripts/2026-year/3-quarter",
+          "title": "Oracle Corporation (ORAC.TO) Q3 FY2026 Earnings Call Transcript - March 10, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/ORAC.TO/transcripts/2026-year/3-quarter",
+          "title": "Oracle Corporation (ORAC.TO) Q3 FY2026 Earnings Call Transcript - March 10, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://blogs.oracle.com/ceo/from-the-q3-earnings-call",
+          "title": "From the Q3 Earnings Call: Scaling Multicloud Database and AI Infrastructure to Meet Surging Demand | The Office of the CEO",
+          "domain": "blogs.oracle.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P5-2026-06-10",
+      "promiseId": "P5",
+      "date": "2026-06-10",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Clay Magouyrk, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Q4 closed FY '26 with more than 1.2 GW delivered to customers; capacity delivery continued accelerating.",
+      "quote": "Q4 finalized an impressive FY '26, where we delivered more than 1.2 GW to customers.",
+      "verbatim": {
+        "text": "Q4 finalized an impressive FY '26, where we delivered more than 1.2 GW to customers.",
+        "segs": [
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": " finalized an impressive FY '26, where we delivered more than 1.2 GW to customers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/ORCL/transcripts/2026-year/4-quarter",
+          "title": "Oracle Corporation (ORCL) Q4 FY2026 Earnings Call Transcript - June 10, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/ORCL/transcripts/2026-year/4-quarter",
+          "title": "Oracle Corporation (ORCL) Q4 FY2026 Earnings Call Transcript - June 10, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/440135859/files/doc_financials/2026/q4/Q4-FY26-Oracle-Earnings-Slides.pdf",
+          "title": "Earnings Slides v2",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ORCL-P5-2026-09-10",
+      "promiseId": "P5",
+      "date": "2026-09-10",
+      "call": "Q1 FY2027 earnings call",
+      "speaker": "Clay Magouyrk, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Delivered 850 megawatts of AI capacity containing more than 300,000 GPUs since the end of Q4.",
+      "quote": "We delivered 850 megawatts of AI capacity, containing more than 300,000 GPUs to customers since the end of Q4.",
+      "verbatim": {
+        "text": "We delivered 850 megawatts of AI capacity, containing more than 300,000 GPUs to customers since the end of Q4.",
+        "segs": [
+          {
+            "t": "We delivered 850 megawatts of AI capacity, containing more than ",
+            "h": 0
+          },
+          {
+            "t": "300,000",
+            "h": 1
+          },
+          {
+            "t": " GPUs to customers since the end of ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/ORCL/transcripts/2027-year/1-quarter",
+          "title": "Oracle Corporation (ORCL) Q1 FY2027 Earnings Call Transcript - September 10, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/ORCL/transcripts/2027-year/1-quarter",
+          "title": "Oracle Corporation (ORCL) Q1 FY2027 Earnings Call Transcript - September 10, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/440135859/files/content_files/Q1-FY27-Oracle-Earnings-Slides.pdf",
+          "title": "Q1 FY27 Earnings Slides - FINAL",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "http://stockanalysis.com/stocks/orcl/transcripts/384766-q2-2026",
+      "title": "Oracle (ORCL) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "http://stockanalysis.com/stocks/orcl/transcripts/529436-q3-2026",
+      "title": "Oracle (ORCL) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://stockanalysis.com/stocks/orcl/transcripts/592465-q4-2026",
+      "title": "Oracle (ORCL) Q4 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Fiscal-Year-2026-Third-Quarter-Financial-Results/default.aspx",
+      "title": "\n\tOracle - Oracle Announces Fiscal Year 2026 Third Quarter Financial Results\n",
+      "domain": "investor.oracle.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 5,
+      "url": "https://www.oracle.com/a/ocom/docs/corporate/financial-analyst-meeting-2025-magouyrk.pdf",
+      "title": "Oracle Financial Analyst Meeting 2025 - Clay Magouyrk",
+      "domain": "oracle.com",
+      "tier": "primary",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://s23.q4cdn.com/440135859/files/doc_downloads/2026/10/Oracle-Investor-Day-Meeting/vFinal/2026-Investor-Day-CFO-presentation.pdf",
+      "title": "Oracle Financial  Analyst Meeting",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 7,
+      "url": "http://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026",
+      "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://stockanalysis.com/stocks/orcl/transcripts/324320-q4-2025/",
+      "title": "Oracle (ORCL) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 9,
+      "url": "https://stockanalysis.com/stocks/orcl/transcripts/689425-q1-2027/",
+      "title": "Oracle (ORCL) Q1 2027 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 10,
+      "url": "https://investor.oracle.com/investor-news/news-details/2026/Oracle-Announces-Record-Q4-and-FY-2026-Results-Driven-by-Cloud-Infrastructure--Cloud-Applications/default.aspx",
+      "title": "\n\tOracle - Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications\n",
+      "domain": "investor.oracle.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531.htm",
+      "title": "10-K",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 12,
+      "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10/",
+      "title": "Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications",
+      "domain": "oracle.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://www.oracle.com/a/ocom/docs/corporate/financial-analyst-meeting-2025-kehring.pdf",
+      "title": "Oracle Financial Analyst Meeting 2025 - Doug Kehring",
+      "domain": "oracle.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526265848/orcl-ex99_1.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://blogs.oracle.com/ceo/from-the-q3-earnings-call",
+      "title": "From the Q3 Earnings Call: Scaling Multicloud Database and AI Infrastructure to Meet Surging Demand | The Office of the CEO",
+      "domain": "blogs.oracle.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 16,
+      "url": "https://s23.q4cdn.com/440135859/files/doc_financials/2026/q4/Q4-FY26-Oracle-Earnings-Slides.pdf",
+      "title": "Earnings Slides v2",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 17,
+      "url": "https://s23.q4cdn.com/440135859/files/content_files/Q1-FY27-Oracle-Earnings-Slides.pdf",
+      "title": "Q1 FY27 Earnings Slides - FINAL",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 18,
+      "url": "https://s23.q4cdn.com/440135859/files/doc_earnings/2026/q4/presentation/Presentation-Slides-Q4-26.pdf",
+      "title": "Earnings Slides v2",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://www.oracle.com/news/announcement/q4fy26-earnings-release-2026-06-10",
+      "title": "Oracle Announces Record Q4 and FY 2026 Results Driven by Cloud Infrastructure & Cloud Applications",
+      "domain": "oracle.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 20,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/03/10/oracle-orcl-q3-2026-earnings-call-transcript",
+      "title": "Oracle (ORCL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 21,
+      "url": "https://stockanalysis.com/stocks/orcl/transcripts/780561-investor-day-2026/",
+      "title": "Oracle (ORCL) Transcript: Investor Day 2026",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 22,
+      "url": "https://www.roic.ai/quote/ORCL/transcripts/2027-year/1-quarter",
+      "title": "Oracle Corporation (ORCL) Q1 FY2027 Earnings Call Transcript - September 10, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://stockanalysis.com/stocks/orcl/transcripts/355250-q1-2026/",
+      "title": "Oracle (ORCL) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 24,
+      "url": "https://stockanalysis.com/stocks/orcl/transcripts/324320-q4-2025",
+      "title": "Oracle (ORCL) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 25,
+      "url": "https://www.investing.com/analysis/oracle-the-ai-backlog-is-real--the-cash-flow-isnt-yet-200678113",
+      "title": "Oracle: AI Backlog Is Real but Cash Flow Still Lags | Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 26,
+      "url": "http://stockanalysis.com/stocks/orcl/transcripts/399218-financial-analyst-meeting-2025",
+      "title": "Oracle (ORCL) Transcript: Financial Analyst Meeting 2025",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 27,
+      "url": "https://stockanalysis.com/stocks/orcl/transcripts/592465-q4-2026/",
+      "title": "Oracle (ORCL) Q4 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 28,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/09/11/oracle-orcl-q1-2027-earnings-call-transcript",
+      "title": "Oracle (ORCL) Q1 2027 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 29,
+      "url": "https://www.roic.ai/quote/ORAC.TO/transcripts/2026-year/3-quarter",
+      "title": "Oracle Corporation (ORAC.TO) Q3 FY2026 Earnings Call Transcript - March 10, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 30,
+      "url": "https://www.roic.ai/quote/ORCL/transcripts/2026-year/4-quarter",
+      "title": "Oracle Corporation (ORCL) Q4 FY2026 Earnings Call Transcript - June 10, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 31,
+      "url": "https://fiscal.ai",
+      "title": "Fiscal.ai /v2/company/filings",
+      "domain": "fiscal.ai",
+      "tier": "press",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.761795Z",
+      "completedAt": "2026-11-05T06:31:47.001118Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T18:46:08.021545Z",
+      "completedAt": "2026-11-05T18:51:59.091943Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:01.974860Z",
+      "completedAt": "2026-11-05T19:12:19.512700Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:01.984348Z",
+      "completedAt": "2026-11-05T19:14:51.704040Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:01.993059Z",
+      "completedAt": "2026-11-05T19:12:31.105364Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.000239Z",
+      "completedAt": "2026-11-05T19:12:54.025015Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.841434Z",
+      "completedAt": "2026-11-05T19:45:21.988256Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.833280Z",
+      "completedAt": "2026-11-05T19:44:21.234453Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.849095Z",
+      "completedAt": "2026-11-05T19:44:21.901221Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.856248Z",
+      "completedAt": "2026-11-05T19:45:20.939438Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.863492Z",
+      "completedAt": "2026-11-05T19:45:44.366379Z"
+    }
+  ],
+  "fills": {
+    "filled": 1
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "27 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "23 of 23 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "22 of 23 (96%); 1 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q1 FY2027 on 2026-09-10; next 2026-12-14"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Oracle_logo.svg/960px-Oracle_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Oracle_logo.svg",
+      "title": "File:Oracle logo.svg - Wikimedia Commons",
+      "width": 960,
+      "height": 125,
+      "rank": 1
+    },
+    "photo": null
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.494Z"
+}

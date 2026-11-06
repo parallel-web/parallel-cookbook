@@ -1,0 +1,2060 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "META",
+  "name": "Meta Platforms, Inc.",
+  "short": "Meta",
+  "website": "meta.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investor.atmeta.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-21",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Meta AI data center",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Limit 2023 headcount",
+      "commitment": "End 2023 with an organization roughly the same size as, or slightly smaller than, October 2022.",
+      "deadline": "end of 2023",
+      "firstStated": "2022-10-26",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Meta ended 2023 with 67,317 employees, versus 87,314 as of September 30, 2022, substantially exceeding its roughly-flat/slightly-smaller commitment.",
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2024/Meta-Reports-Fourth-Quarter-and-Full-Year-2023-Results-Initiates-Quarterly-Dividend/default.aspx",
+          "title": "\n\tMeta - Meta Reports Fourth Quarter and Full Year 2023 Results; Initiates Quarterly Dividend\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Reports-Third-Quarter-2022-Results/default.aspx",
+          "title": "\n\tMeta - Meta Reports Third Quarter 2022 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q4/META-Q4-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2024-02-01",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2023-07-26",
+            "what_was_said": "Zuckerberg said Meta had gotten through the major layoffs. However, reported Q2 headcount still included roughly half of the approximately 10,000 employees affected by the 2023 layoffs; most affected employees would cease to be included by Q3.",
+            "call": "Q2 2023 earnings call"
+          },
+          {
+            "date": "2023-10-25",
+            "what_was_said": "Management reported a significant underrun against 2023 budgeted headcount. Hiring had resumed, but much of the hiring originally planned and budgeted for 2023 was expected to occur in 2024, qualifying how to interpret the exceptionally low headcount.",
+            "call": "Q3 2023 earnings call"
+          },
+          {
+            "date": "2024-02-01",
+            "what_was_said": "Management reported over 67,300 employees at year-end, down 22% year-over-year but up 2% from Q3 as hiring resumed. This confirmed the final result while showing that headcount had begun increasing again.",
+            "call": "Q4 2023 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Make Reels revenue neutral",
+      "commitment": "Bring the Reels-driven overall revenue headwind to a roughly neutral position over the next 12-18 months.",
+      "deadline": "over the next 12-18 months",
+      "firstStated": "2022-10-26",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Reels reached overall company ad-revenue neutrality earlier than expected, then became a positive contributor to overall revenue.",
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_earnings/2023/q3/transcript/META-Q3-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q1/META-Q1-2024-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2024 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2023-10-25",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2023-04-26",
+            "what_was_said": "Management distinguished overall revenue neutrality from monetization parity: it did not foresee Reels matching Feed or Stories revenue per unit of time anytime soon, but still expected overall revenue neutrality by year-end or early 2024 and a positive contribution thereafter.",
+            "call": "Q1 2023 earnings call"
+          },
+          {
+            "date": "2023-07-26",
+            "what_was_said": "Management explicitly reported good progress in Q2 in reducing the Reels revenue headwind and said it expected to reach neutrality by the end of 2023.",
+            "call": "Q2 2023 earnings follow-up call"
+          },
+          {
+            "date": "2023-10-25",
+            "what_was_said": "Management clarified that Reels had been a revenue headwind for most of 2023 and had only just reached neutrality. It expected Reels to contribute to revenue in 2024 but did not expect to quantify that contribution.",
+            "call": "Q3 2023 earnings follow-up call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Reach one billion Meta AI users",
+      "commitment": "Make Meta AI the leading personalized AI assistant, reaching more than 1 billion people in 2025.",
+      "deadline": "2025",
+      "firstStated": "2025-01-29",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Meta AI exceeded a billion monthly actives in 2025, meeting the reach target; becoming the leading personal AI remained a stated ambition.",
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q2/META-Q2-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q3/META-Q3-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q4/META-Q4-2024-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2024 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-07-30",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-01-29",
+            "what_was_said": "Zuckerberg said Meta AI was already used by more people than any other assistant. This distinguishes leadership by user reach from the continuing ambition to build the leading personalized AI experience.",
+            "call": "Q4 2024 earnings call"
+          },
+          {
+            "date": "2025-10-29",
+            "what_was_said": "Zuckerberg said improving the models provided a runway to improve engagement and turn Meta AI into a product 'that's leading over time.' Broader product leadership remained forward-looking despite the achieved billion-user milestone.",
+            "call": "Q3 2025 earnings call"
+          },
+          {
+            "date": "2026-04-29",
+            "what_was_said": "Zuckerberg described Meta AI powered by Muse Spark as a 'world-class assistant' that led in several areas, including visual understanding, health and shopping. This reported further qualitative progress, but was not a declaration of overall personal-AI leadership.",
+            "call": "Q1 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Fund 2026 AI infrastructure expansion",
+      "commitment": "Invest $115-135 billion in 2026 capital expenditures, including finance-lease principal, supporting Meta Superintelligence Labs and the core business.",
+      "deadline": "2026",
+      "firstStated": "2026-01-28",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Meta narrowed 2026 capex guidance to $135-145 billion, including finance-lease principal; reported quarterly capex was $34.91 billion. Full-year completion remained pending.",
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+          "title": "\n\tMeta - Meta Reports Third Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q4/META-Q4-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2026 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Grow 2026 operating income",
+      "commitment": "Deliver 2026 operating income above 2025 operating income despite the significant increase in infrastructure investment.",
+      "deadline": "2026",
+      "firstStated": "2026-01-28",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The 2026 operating-income target remains pending and now excludes the Q3 legal charge when comparing with 2025.",
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2026 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q4/META-Q4-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "META-P1-2022-10-26",
+      "promiseId": "P1",
+      "date": "2022-10-26",
+      "call": "Q3 2022 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected to end 2023 with an organization roughly the same size or slightly smaller than at the announcement.",
+      "quote": "In aggregate, we expect to end 2023 as either roughly the same size, or even a slightly smaller organization than we are today.",
+      "verbatim": {
+        "text": "In aggregate, we expect to end 2023 as either roughly the same size, or even a slightly smaller organization than we are today.",
+        "segs": [
+          {
+            "t": "In aggregate, we expect to end ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": " as either roughly the same size, or even a slightly smaller organization than we are today.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P1-2022-11-09",
+      "promiseId": "P1",
+      "date": "2022-11-09",
+      "call": "Mark Zuckerberg’s Message to Meta Employees",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Announced about 13% workforce reduction, letting more than 11,000 employees go.",
+      "quote": "I’ve decided to reduce the size of our team by about 13% and let more than 11,000 of our talented employees go.",
+      "verbatim": {
+        "text": "I’ve decided to reduce the size of our team by about 13% and let more than 11,000 of our talented employees go.",
+        "segs": [
+          {
+            "t": "I’ve decided to reduce the size of our team by about ",
+            "h": 0
+          },
+          {
+            "t": "13%",
+            "h": 1
+          },
+          {
+            "t": " and let more than ",
+            "h": 0
+          },
+          {
+            "t": "11,000",
+            "h": 1
+          },
+          {
+            "t": " of our talented employees go.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.fb.com/news/2022/11/mark-zuckerberg-layoff-message-to-employees/",
+          "title": "Mark Zuckerberg’s Message to Meta Employees",
+          "domain": "about.fb.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.fb.com/news/2022/11/mark-zuckerberg-layoff-message-to-employees/",
+          "title": "Mark Zuckerberg’s Message to Meta Employees",
+          "domain": "about.fb.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "META-P1-2023-02-01",
+      "promiseId": "P1",
+      "date": "2023-02-01",
+      "call": "Q4 2022 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Over 86,400 employees included most of approximately 11,000 laid-off employees still on payroll as of December 31st.",
+      "quote": "We ended the fourth quarter with over 86,400 employees, which includes a substantial majority of the approximately 11,000 employees impacted by our previously announced layoff who remained on payroll as of December 31st due to applicable legal requirements.",
+      "verbatim": {
+        "text": "We ended the fourth quarter with over 86,400 employees, which includes a substantial majority of the approximately 11,000 employees impacted by our previously announced layoff who remained on payroll as of December 31st due to applicable legal requirements.",
+        "segs": [
+          {
+            "t": "We ended the fourth quarter with over ",
+            "h": 0
+          },
+          {
+            "t": "86,400",
+            "h": 1
+          },
+          {
+            "t": " employees, which includes a substantial majority of the approximately ",
+            "h": 0
+          },
+          {
+            "t": "11,000",
+            "h": 1
+          },
+          {
+            "t": " employees impacted by our previously announced layoff who remained on payroll as of December 31st due to applicable legal requirements.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q4/META-Q4-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q4/META-Q4-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P1-2023-03-14",
+      "promiseId": "P1",
+      "date": "2023-03-14",
+      "call": "Update on Meta’s Year of Efficiency",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Planned team reduction of around 10,000 people and closure of around 5,000 additional unfilled roles.",
+      "quote": "Overall, we expect to reduce our team size by around 10,000 people and to close around 5,000 additional open roles that we haven’t yet hired.",
+      "verbatim": {
+        "text": "Overall, we expect to reduce our team size by around 10,000 people and to close around 5,000 additional open roles that we haven’t yet hired.",
+        "segs": [
+          {
+            "t": "Overall, we expect to reduce our team size by around ",
+            "h": 0
+          },
+          {
+            "t": "10,000",
+            "h": 1
+          },
+          {
+            "t": " people and to close around ",
+            "h": 0
+          },
+          {
+            "t": "5,000",
+            "h": 1
+          },
+          {
+            "t": " additional open roles that we haven’t yet hired.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.fb.com/news/2023/03/mark-zuckerberg-meta-year-of-efficiency",
+          "title": "Update on Meta’s Year of Efficiency",
+          "domain": "about.fb.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.fb.com/news/2023/03/mark-zuckerberg-meta-year-of-efficiency",
+          "title": "Update on Meta’s Year of Efficiency",
+          "domain": "about.fb.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "META-P1-2023-04-26",
+      "promiseId": "P1",
+      "date": "2023-04-26",
+      "call": "Q1 2023 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Over 77,100 employees, down 11% from the fourth quarter; substantially all November layoff departures were now excluded.",
+      "quote": "We ended the first quarter with over 77,100 employees, down 11% from the fourth quarter as our reported headcount no longer includes substantially all of the employees impacted by the November layoff.",
+      "verbatim": {
+        "text": "We ended the first quarter with over 77,100 employees, down 11% from the fourth quarter as our reported headcount no longer includes substantially all of the employees impacted by the November layoff.",
+        "segs": [
+          {
+            "t": "We ended the first quarter with over ",
+            "h": 0
+          },
+          {
+            "t": "77,100",
+            "h": 1
+          },
+          {
+            "t": " employees, down ",
+            "h": 0
+          },
+          {
+            "t": "11%",
+            "h": 1
+          },
+          {
+            "t": " from the fourth quarter as our reported headcount no longer includes substantially all of the employees impacted by the November layoff.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q1/META-Q1-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q1/META-Q1-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P1-2023-07-26",
+      "promiseId": "P1",
+      "date": "2023-07-26",
+      "call": "Q2 2023 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Headcount fell to over 71,400 employees, down 7% from the first quarter.",
+      "quote": "We ended the second quarter with over 71,400 employees, down 7% from the first quarter.",
+      "verbatim": {
+        "text": "We ended the second quarter with over 71,400 employees, down 7% from the first quarter.",
+        "segs": [
+          {
+            "t": "We ended the second quarter with over ",
+            "h": 0
+          },
+          {
+            "t": "71,400",
+            "h": 1
+          },
+          {
+            "t": " employees, down ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": " from the first quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q2/META-Q2-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q2/META-Q2-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P1-2023-10-25",
+      "promiseId": "P1",
+      "date": "2023-10-25",
+      "call": "Q3 2023 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Headcount fell to over 66,100 employees, down 7% from the second quarter.",
+      "quote": "We ended the quarter with over 66,100 employees, down 7% from the second quarter.",
+      "verbatim": {
+        "text": "We ended the quarter with over 66,100 employees, down 7% from the second quarter.",
+        "segs": [
+          {
+            "t": "We ended the quarter with over ",
+            "h": 0
+          },
+          {
+            "t": "66,100",
+            "h": 1
+          },
+          {
+            "t": " employees, down ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": " from the second quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_earnings/2023/q3/transcript/META-Q3-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_earnings/2023/q3/transcript/META-Q3-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P1-2024-02-01",
+      "promiseId": "P1",
+      "date": "2024-02-01",
+      "call": "Meta Reports Fourth Quarter and Full Year 2023 Results; Initiates Quarterly Dividend",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported 67,317 employees as of December 31, 2023, down 22% year-over-year.",
+      "quote": "Headcount was 67,317 as of December 31, 2023, a decrease of 22% year-over-year.",
+      "verbatim": {
+        "text": "Headcount – Headcount was 67,317 as of December 31, 2023, a decrease of 22% year-over-year.",
+        "segs": [
+          {
+            "t": "Headcount – Headcount was ",
+            "h": 0
+          },
+          {
+            "t": "67,317",
+            "h": 1
+          },
+          {
+            "t": " as of December 31, ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ", a decrease of ",
+            "h": 0
+          },
+          {
+            "t": "22%",
+            "h": 1
+          },
+          {
+            "t": " year-over-year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2024/Meta-Reports-Fourth-Quarter-and-Full-Year-2023-Results-Initiates-Quarterly-Dividend/default.aspx",
+          "title": "\n\tMeta - Meta Reports Fourth Quarter and Full Year 2023 Results; Initiates Quarterly Dividend\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2024/Meta-Reports-Fourth-Quarter-and-Full-Year-2023-Results-Initiates-Quarterly-Dividend/default.aspx",
+          "title": "\n\tMeta - Meta Reports Fourth Quarter and Full Year 2023 Results; Initiates Quarterly Dividend\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "META-P2-2022-10-26",
+      "promiseId": "P2",
+      "date": "2022-10-26",
+      "call": "Q3 2022 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected the Reels-driven revenue headwind to become more neutral over the next 12-18 months.",
+      "quote": "But we expect to get to a more neutral place over the next 12-18 months.",
+      "verbatim": {
+        "text": "But we expect to get to a more neutral place over the next 12-18 months.",
+        "segs": [
+          {
+            "t": "But we expect to get to a more neutral place over the next 12-18 months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P2-2023-02-01",
+      "promiseId": "P2",
+      "date": "2023-02-01",
+      "call": "Q4 2022 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Still on track for roughly neutral revenue by the end of this year or maybe early next year.",
+      "quote": "In terms of the revenue headwind, we're still on track to be roughly neutral by the end of this year or maybe early next year, and after that we should be able to profitably grow Reels while keeping up with the demand that we see.",
+      "verbatim": {
+        "text": "In terms of the revenue headwind, we're still on track to be roughly neutral by the end of this year or maybe early next year, and after that we should be able to profitably grow Reels while keeping up with the demand that we see.",
+        "segs": [
+          {
+            "t": "In terms of the revenue headwind, we're still on track to be roughly neutral by the end of this year or maybe early next year, and after that we should be able to profitably grow Reels while keeping up with the demand that we see.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q4/META-Q4-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q4/META-Q4-2022-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2022 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P2-2023-04-26",
+      "promiseId": "P2",
+      "date": "2023-04-26",
+      "call": "Q1 2023 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed neutrality to overall ad revenue by the end of this year or early next year.",
+      "quote": "We continue to expect that Reels will become neutral to overall ad revenue by the end of this year or early next year.",
+      "verbatim": {
+        "text": "We continue to expect that Reels will become neutral to overall ad revenue by the end of this year or early next year.",
+        "segs": [
+          {
+            "t": "We continue to expect that Reels will become neutral to overall ad revenue by the end of this year or early next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q1/META-Q1-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q1/META-Q1-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P2-2023-07-26",
+      "promiseId": "P2",
+      "date": "2023-07-26",
+      "call": "Q2 2023 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported progress reducing the Reels revenue headwind; did not change the neutrality target or deadline.",
+      "quote": "We remain focused on further reducing the Reels revenue headwind and narrowing the monetization efficiency gap with our more mature surfaces.",
+      "verbatim": {
+        "text": "We remain focused on further reducing the Reels revenue headwind and narrowing the monetization efficiency gap with our more mature surfaces.",
+        "segs": [
+          {
+            "t": "We remain focused on further reducing the Reels revenue headwind and narrowing the monetization efficiency gap with our more mature surfaces.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q2/META-Q2-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q2/META-Q2-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q2/META-Q2-2023-Follow-Up-Call-Transcript.pdf",
+          "title": "META Q2 2023 Follow Up Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P2-2023-10-25",
+      "promiseId": "P2",
+      "date": "2023-10-25",
+      "call": "Q3 2023 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Declared Reels net neutral to overall company ad revenue, earlier than expected.",
+      "quote": "We also reached a monetization milestone earlier than expected, and we estimate that Reels is now net neutral to overall company ad revenue.",
+      "verbatim": {
+        "text": "We also reached a monetization milestone earlier than expected, and we estimate that Reels is now net neutral to overall company ad revenue.",
+        "segs": [
+          {
+            "t": "We also reached a monetization milestone earlier than expected, and we estimate that Reels is now net neutral to overall company ad revenue.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_earnings/2023/q3/transcript/META-Q3-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_earnings/2023/q3/transcript/META-Q3-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P2-2024-02-01",
+      "promiseId": "P2",
+      "date": "2024-02-01",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed Reels was contributing to net revenue across the apps.",
+      "quote": "Reels is now contributing to our net revenue across our apps.",
+      "verbatim": {
+        "text": "Reels is now contributing to our net revenue across our apps.",
+        "segs": [
+          {
+            "t": "Reels is now contributing to our net revenue across our apps.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q4/META-Q4-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q4/META-Q4-2023-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2023 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P2-2024-04-24",
+      "promiseId": "P2",
+      "date": "2024-04-24",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed Reels remained a positive contributor to overall revenue; its impact would no longer be quantified.",
+      "quote": "And we -- as we've mentioned before, we don't plan on quantifying the impact from Reels going forward, but it remains a positive contributor to overall revenue.",
+      "verbatim": {
+        "text": "And we -- as we've mentioned before, we don't plan on quantifying the impact from Reels going forward, but it remains a positive contributor to overall revenue.",
+        "segs": [
+          {
+            "t": "And we -- as we've mentioned before, we don't plan on quantifying the impact from Reels going forward, but it remains a positive contributor to overall revenue.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q1/META-Q1-2024-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2024 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q1/META-Q1-2024-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2024 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P3-2025-01-29",
+      "promiseId": "P3",
+      "date": "2025-01-29",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected Meta AI to become the leading personalized AI assistant and reach more than 1 billion people in 2025.",
+      "quote": "In AI, I expect this is going to be the year when a highly intelligent and personalized AI assistant reaches more than 1 billion people, and I expect Meta AI to be that leading AI assistant.",
+      "verbatim": {
+        "text": "In AI, I expect this is going to be the year when a highly intelligent and personalized AI assistant reaches more than 1 billion people, and I expect Meta AI to be that leading AI assistant.",
+        "segs": [
+          {
+            "t": "In AI, I expect this is going to be the year when a highly intelligent and personalized AI assistant reaches more than ",
+            "h": 0
+          },
+          {
+            "t": "1 billion",
+            "h": 1
+          },
+          {
+            "t": " people, and I expect Meta AI to be that leading AI assistant.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q4/META-Q4-2024-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2024 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q4/META-Q4-2024-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2024 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P3-2025-04-30",
+      "promiseId": "P3",
+      "date": "2025-04-30",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Meta AI had almost a billion monthly actives; personalized-assistant leadership remained the focus for the year.",
+      "quote": "Across our apps, there are now almost a billion monthly actives using Meta AI.",
+      "verbatim": {
+        "text": "Across our apps, there are now almost a billion monthly actives using Meta AI.",
+        "segs": [
+          {
+            "t": "Across our apps, there are now almost a billion monthly actives using Meta AI.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q1/Transcripts/META-Q1-2025-Earnings-Call-Transcript-1.pdf",
+          "title": "META Q1 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q1/Transcripts/META-Q1-2025-Earnings-Call-Transcript-1.pdf",
+          "title": "META Q1 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P3-2025-05-28",
+      "promiseId": "P3",
+      "date": "2025-05-28",
+      "call": "2025 Annual Shareholder Meeting",
+      "speaker": "Mark Zuckerberg, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported a billion monthly actives, but not explicitly more than a billion; becoming the leading personal AI remained the focus.",
+      "quote": "Across our apps, there are now a billion monthly actives using Meta AI.",
+      "verbatim": {
+        "text": "Across our apps, there are now a billion monthly actives using Meta AI.",
+        "segs": [
+          {
+            "t": "Across our apps, there are now a billion monthly actives using Meta AI.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/meta/transcripts/350784-agm-2025",
+          "title": "Meta Platforms (META) FY 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-events/",
+          "title": "\n\tMeta - Investor Events\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/meta/transcripts/350784-agm-2025",
+          "title": "Meta Platforms (META) FY 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "META-P3-2025-07-30",
+      "promiseId": "P3",
+      "date": "2025-07-30",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Meta AI exceeded a billion monthly actives; making it the leading personal AI remained a focus.",
+      "quote": "Its reach is already quite impressive with more than a billion monthly actives.",
+      "verbatim": {
+        "text": "Its reach is already quite impressive with more than a billion monthly actives.",
+        "segs": [
+          {
+            "t": "Its reach is already quite impressive with more than a billion monthly actives.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q2/META-Q2-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q2/META-Q2-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P3-2025-10-01",
+      "promiseId": "P3",
+      "date": "2025-10-01",
+      "call": "Improving Your Recommendations on Our Apps With AI at Meta",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Company confirmed more than 1 billion people used Meta AI every month.",
+      "quote": "More than 1 billion people use Meta AI every month.",
+      "verbatim": {
+        "text": "More than 1 billion people use Meta AI every month.",
+        "segs": [
+          {
+            "t": "More than ",
+            "h": 0
+          },
+          {
+            "t": "1 billion",
+            "h": 1
+          },
+          {
+            "t": " people use Meta AI every month.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.fb.com/news/2025/10/improving-your-recommendations-apps-ai-meta?trk=public_post_comment-text",
+          "title": "Improving Your Recommendations on Our Apps With AI at Meta",
+          "domain": "about.fb.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.fb.com/news/2025/10/improving-your-recommendations-apps-ai-meta?trk=public_post_comment-text",
+          "title": "Improving Your Recommendations on Our Apps With AI at Meta",
+          "domain": "about.fb.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "META-P3-2025-10-29",
+      "promiseId": "P3",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Mark Zuckerberg, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reconfirmed more than a billion monthly actives, with usage increasing as underlying models improved.",
+      "quote": "More than a billion monthly actives already use Meta AI, and we see usage increase as we improve our underlying models.",
+      "verbatim": {
+        "text": "More than a billion monthly actives already use Meta AI, and we see usage increase as we improve our underlying models.",
+        "segs": [
+          {
+            "t": "More than a billion monthly actives already use Meta AI, and we see usage increase as we improve our underlying models.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q3/META-Q3-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q3/META-Q3-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q3 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P4-2026-01-28",
+      "promiseId": "P4",
+      "date": "2026-01-28",
+      "call": "Q4 and Full Year 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Projected 2026 capex of $115-135 billion, including finance-lease principal, supporting Meta Superintelligence Labs and the core business.",
+      "quote": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $115-135 billion, with year-over-year growth driven by increased investment to support our Meta Superintelligence Labs efforts and core business.",
+      "verbatim": {
+        "text": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $115-135 billion, with year-over-year growth driven by increased investment to support our Meta Superintelligence Labs efforts and core business.",
+        "segs": [
+          {
+            "t": "We anticipate ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " capital expenditures, including principal payments on finance leases, to be in the range of ",
+            "h": 0
+          },
+          {
+            "t": "$115-135 billion",
+            "h": 1
+          },
+          {
+            "t": ", with year-over-year growth driven by increased investment to support our Meta Superintelligence Labs efforts and core business.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx",
+          "title": "\n\tMeta - Meta Reports Fourth Quarter and Full Year 2025 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx",
+          "title": "\n\tMeta - Meta Reports Fourth Quarter and Full Year 2025 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "META-P4-2026-04-29",
+      "promiseId": "P4",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 capex to $125-145 billion from $115-135 billion, including finance-lease principal.",
+      "quote": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.",
+      "verbatim": {
+        "text": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $125-145 billion, increased from our prior range of $115-135 billion.",
+        "segs": [
+          {
+            "t": "We anticipate ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " capital expenditures, including principal payments on finance leases, to be in the range of ",
+            "h": 0
+          },
+          {
+            "t": "$125-145 billion",
+            "h": 1
+          },
+          {
+            "t": ", increased from our prior range of ",
+            "h": 0
+          },
+          {
+            "t": "$115-135 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-First-Quarter-2026-Results/",
+          "title": "\n\tMeta - Meta Reports First Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-First-Quarter-2026-Results/",
+          "title": "\n\tMeta - Meta Reports First Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "META-P4-2026-07-29",
+      "promiseId": "P4",
+      "date": "2026-07-29",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Narrowed 2026 capex to $130-145 billion from $125-145 billion, including finance-lease principal.",
+      "quote": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.",
+      "verbatim": {
+        "text": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $130-145 billion, narrowed from our prior outlook of $125-145 billion.",
+        "segs": [
+          {
+            "t": "We anticipate ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " capital expenditures, including principal payments on finance leases, to be in the range of ",
+            "h": 0
+          },
+          {
+            "t": "$130-145 billion",
+            "h": 1
+          },
+          {
+            "t": ", narrowed from our prior outlook of ",
+            "h": 0
+          },
+          {
+            "t": "$125-145 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results",
+          "title": "\n\tMeta - Meta Reports Second Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results",
+          "title": "\n\tMeta - Meta Reports Second Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "META-P4-2026-10-21",
+      "promiseId": "P4",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Narrowed 2026 capex to $135-145 billion from $130-145 billion, including finance-lease principal.",
+      "quote": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $135-145 billion, narrowed from our prior outlook of $130-145 billion.",
+      "verbatim": {
+        "text": "We anticipate 2026 capital expenditures, including principal payments on finance leases, to be in the range of $135-145 billion, narrowed from our prior outlook of $130-145 billion.",
+        "segs": [
+          {
+            "t": "We anticipate ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " capital expenditures, including principal payments on finance leases, to be in the range of ",
+            "h": 0
+          },
+          {
+            "t": "$135-145 billion",
+            "h": 1
+          },
+          {
+            "t": ", narrowed from our prior outlook of ",
+            "h": 0
+          },
+          {
+            "t": "$130-145 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+          "title": "\n\tMeta - Meta Reports Third Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+          "title": "\n\tMeta - Meta Reports Third Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "META-P5-2026-01-28",
+      "promiseId": "P5",
+      "date": "2026-01-28",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected 2026 operating income above 2025 operating income despite the meaningful increase in infrastructure investment.",
+      "quote": "Despite the meaningful step up in infrastructure investment, in 2026 we expect to deliver operating income that is above 2025 operating income.",
+      "verbatim": {
+        "text": "Despite the meaningful step up in infrastructure investment, in 2026 we expect to deliver operating income that is above 2025 operating income.",
+        "segs": [
+          {
+            "t": "Despite the meaningful step up in infrastructure investment, in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " we expect to deliver operating income that is above ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " operating income.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q4/META-Q4-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q4/META-Q4-2025-Earnings-Call-Transcript.pdf",
+          "title": "META Q4 2025 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P5-2026-04-29",
+      "promiseId": "P5",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that operating income this year would exceed 2025 operating income.",
+      "quote": "We continue to expect to deliver operating income this year that is above 2025 operating income.",
+      "verbatim": {
+        "text": "We continue to expect to deliver operating income this year that is above 2025 operating income.",
+        "segs": [
+          {
+            "t": "We continue to expect to deliver operating income this year that is above ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " operating income.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q1/META-Q1-2026-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2026 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q1/META-Q1-2026-Earnings-Call-Transcript.pdf",
+          "title": "META Q1 2026 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P5-2026-07-29",
+      "promiseId": "P5",
+      "date": "2026-07-29",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Susan Li, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Again expected operating income this year above 2025 operating income.",
+      "quote": "We continue to expect to deliver operating income this year that is above 2025 operating income.",
+      "verbatim": {
+        "text": "We continue to expect to deliver operating income this year that is above 2025 operating income.",
+        "segs": [
+          {
+            "t": "We continue to expect to deliver operating income this year that is above ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " operating income.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/META-Q2-2026-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2026 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/META-Q2-2026-Earnings-Call-Transcript.pdf",
+          "title": "META Q2 2026 Earnings Call Transcript",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "META-P5-2026-10-21",
+      "promiseId": "P5",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Revised the comparison to exclude the third quarter legal charge while expecting 2026 operating income above 2025 operating income.",
+      "quote": "Excluding the third quarter legal charge, we continue to expect 2026 operating income to be above 2025 operating income.",
+      "verbatim": {
+        "text": "Excluding the third quarter legal charge, we continue to expect 2026 operating income to be above 2025 operating income.",
+        "segs": [
+          {
+            "t": "Excluding the third quarter legal charge, we continue to expect ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " operating income to be above ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " operating income.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+          "title": "\n\tMeta - Meta Reports Third Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+          "title": "\n\tMeta - Meta Reports Third Quarter 2026 Results\n",
+          "domain": "investor.atmeta.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q3/Meta-Q3-2022-Earnings-Call-Transcript.pdf",
+      "title": "META Q3 2022 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 2,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_earnings/2023/q3/transcript/META-Q3-2023-Earnings-Call-Transcript.pdf",
+      "title": "META Q3 2023 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 3,
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Third-Quarter-2026-Results/default.aspx",
+      "title": "\n\tMeta - Meta Reports Third Quarter 2026 Results\n",
+      "domain": "investor.atmeta.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q4/META-Q4-2025-Earnings-Call-Transcript.pdf",
+      "title": "META Q4 2025 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2022/q4/META-Q4-2022-Earnings-Call-Transcript.pdf",
+      "title": "META Q4 2022 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 6,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q1/META-Q1-2023-Earnings-Call-Transcript.pdf",
+      "title": "META Q1 2023 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 7,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q2/META-Q2-2023-Earnings-Call-Transcript.pdf",
+      "title": "META Q2 2023 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 8,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q4/META-Q4-2023-Earnings-Call-Transcript.pdf",
+      "title": "META Q4 2023 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 9,
+      "url": "https://s21.q4cdn.com/399680738/files/content_files/META-Q3-2026-Earnings-Call-Transcript.pdf",
+      "title": "META Q3 2026 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 10,
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2024/Meta-Reports-Fourth-Quarter-and-Full-Year-2023-Results-Initiates-Quarterly-Dividend/default.aspx",
+      "title": "\n\tMeta - Meta Reports Fourth Quarter and Full Year 2023 Results; Initiates Quarterly Dividend\n",
+      "domain": "investor.atmeta.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q1/META-Q1-2024-Earnings-Call-Transcript.pdf",
+      "title": "META Q1 2024 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 12,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2024/q4/META-Q4-2024-Earnings-Call-Transcript.pdf",
+      "title": "META Q4 2024 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q2/META-Q2-2025-Earnings-Call-Transcript.pdf",
+      "title": "META Q2 2025 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q3/META-Q3-2025-Earnings-Call-Transcript.pdf",
+      "title": "META Q3 2025 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 15,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2023/q2/META-Q2-2023-Follow-Up-Call-Transcript.pdf",
+      "title": "META Q2 2023 Follow Up Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 16,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2025/q1/Transcripts/META-Q1-2025-Earnings-Call-Transcript-1.pdf",
+      "title": "META Q1 2025 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://investor.atmeta.com/investor-events/",
+      "title": "\n\tMeta - Investor Events\n",
+      "domain": "investor.atmeta.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx",
+      "title": "\n\tMeta - Meta Reports Fourth Quarter and Full Year 2025 Results\n",
+      "domain": "investor.atmeta.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 19,
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-First-Quarter-2026-Results/",
+      "title": "\n\tMeta - Meta Reports First Quarter 2026 Results\n",
+      "domain": "investor.atmeta.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 20,
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Second-Quarter-2026-Results",
+      "title": "\n\tMeta - Meta Reports Second Quarter 2026 Results\n",
+      "domain": "investor.atmeta.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 21,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q1/META-Q1-2026-Earnings-Call-Transcript.pdf",
+      "title": "META Q1 2026 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 22,
+      "url": "https://s21.q4cdn.com/399680738/files/doc_financials/2026/q2/META-Q2-2026-Earnings-Call-Transcript.pdf",
+      "title": "META Q2 2026 Earnings Call Transcript",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Reports-Third-Quarter-2022-Results/default.aspx",
+      "title": "\n\tMeta - Meta Reports Third Quarter 2022 Results\n",
+      "domain": "investor.atmeta.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 24,
+      "url": "https://stockanalysis.com/stocks/meta/transcripts/350784-agm-2025",
+      "title": "Meta Platforms (META) FY 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 25,
+      "url": "https://about.fb.com/news/2022/11/mark-zuckerberg-layoff-message-to-employees/",
+      "title": "Mark Zuckerberg’s Message to Meta Employees",
+      "domain": "about.fb.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://about.fb.com/news/2023/03/mark-zuckerberg-meta-year-of-efficiency",
+      "title": "Update on Meta’s Year of Efficiency",
+      "domain": "about.fb.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://about.fb.com/news/2025/10/improving-your-recommendations-apps-ai-meta?trk=public_post_comment-text",
+      "title": "Improving Your Recommendations on Our Apps With AI at Meta",
+      "domain": "about.fb.com",
+      "tier": "press",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T02:59:01.317334Z",
+      "completedAt": "2026-11-05T03:04:15.180308Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.446475Z",
+      "completedAt": "2026-11-05T19:13:15.991105Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.453035Z",
+      "completedAt": "2026-11-05T19:13:40.103567Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.459565Z",
+      "completedAt": "2026-11-05T19:13:06.722187Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.466027Z",
+      "completedAt": "2026-11-05T19:11:21.377502Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.472331Z",
+      "completedAt": "2026-11-05T19:11:11.985444Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.145100Z",
+      "completedAt": "2026-11-05T19:45:39.685554Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.152489Z",
+      "completedAt": "2026-11-05T19:44:56.705159Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.167350Z",
+      "completedAt": "2026-11-05T19:44:56.896107Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.174901Z",
+      "completedAt": "2026-11-05T19:43:07.163783Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.182126Z",
+      "completedAt": "2026-11-05T19:43:40.708085Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "29 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "29 of 29 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "29 of 29 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-21; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/3840px-Meta_Platforms_Inc._logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Meta_Platforms_Inc._logo.svg",
+      "title": "File:Meta Platforms Inc. logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 774,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://datacenters.atmeta.com/wp-content/uploads/2025/04/Meta-Bowling-Green-Data-Center.jpg",
+      "sourcePageUrl": "https://datacenters.atmeta.com/2025/04/hello-bowling-green/",
+      "title": "Hello, Bowling Green! - Meta Data Centers",
+      "width": 3840,
+      "height": 2160,
+      "rank": 9
+    }
+  },
+  "version": 3,
+  "builtAt": "2026-11-06T00:56:26.218Z"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "said-and-done",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "predev": "node scripts/copy-fonts.mjs",
+    "prebuild": "node scripts/copy-fonts.mjs",
+    "dev": "next dev -p 3240",
+    "build": "next build",
+    "start": "next start -p 3240",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "sheet": "tsx scripts/sheet.ts",
+    "coverage": "tsx scripts/coverage.ts",
+    "images": "tsx scripts/images.ts",
+    "monitors": "tsx scripts/monitors.ts",
+    "callday": "tsx scripts/callday.ts",
+    "rebuild": "tsx scripts/rebuild.ts",
+    "profiles": "tsx scripts/profiles.ts",
+    "deepen": "tsx scripts/deepen.ts"
+  },
+  "dependencies": {
+    "geist": "^1.9.0",
+    "next": "16.1.6",
+    "parallel-web": "1.1.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3"
+  }
+}

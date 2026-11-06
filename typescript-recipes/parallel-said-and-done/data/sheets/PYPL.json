@@ -1,0 +1,1704 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "PYPL",
+  "name": "PayPal Holdings, Inc.",
+  "short": "PayPal",
+  "website": "paypal.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investor.pypl.com",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-27",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "PayPal Venmo debit card",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Accelerate branded checkout growth",
+      "commitment": "Accelerate branded-checkout growth to 8%–10% by 2027.",
+      "deadline": "2027",
+      "firstStated": "2025-02-25",
+      "status": "dropped",
+      "k": "drop",
+      "outcomeSummary": "PayPal withdrew its specific 2027 Investor Day outlook, including branded-checkout growth, and shifted to annual financial guidance.",
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/901458612/files/doc_downloads/transcript/PayPal-Investor-Day-2025_Full-Transcript.pdf",
+          "title": "PayPal Investor Day 2025",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q1/PYPL-Holdings_Q1-2025-Earnings-Call-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q3-2025-Earnings-Call-28-October-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-02-03",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "dropped",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-02-03",
+            "what_was_said": "Management said the prior branded-checkout outlook assumed a more stable e-commerce environment and a certain pace of product rollout and merchant adoption. Neither had materialized as anticipated, and management said it was hard to call the precise timing of a branded-checkout inflection.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Scale Venmo revenue",
+      "commitment": "Grow Venmo revenue to more than $2 billion by 2027.",
+      "deadline": "2027",
+      "firstStated": "2025-02-25",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Venmo generated $1.7 billion in 2025, excluding interest income; management expected to exceed $2 billion ahead of plan, but subsequent calls provided no completion update.",
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript/",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q3-2025-Earnings-Call-28-October-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 3,
+        "agree": 2
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Make consumers checkout-ready",
+      "commitment": "Bring close to half of consumers to checkout-ready status by end-2026, from 36%, using biometric authentication or device passkeys.",
+      "deadline": "end of 2026",
+      "firstStated": "2026-02-03",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "About 36% were checkout-ready at the initial disclosure. Subsequent calls did not update the goal of closer to half by the end of 2026; achievement remains unconfirmed.",
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Deliver structural cost savings",
+      "commitment": "Deliver at least $1.5 billion of gross run-rate savings over the next two to three years.",
+      "deadline": "over the next two to three years",
+      "firstStated": "2026-05-05",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "At least $1.5 billion over two to three years remains on track; more than $700 million is forecast exiting the fourth quarter.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/content_files/PYPL-3Q-26-Earnings-IR-Newsletter.pdf",
+          "title": "PayPal Releases 3Q 2026 Results",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Repurchase shares in 2026",
+      "commitment": "Repurchase approximately $6 billion of shares during 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-02-03",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "PayPal reported $1.5 billion of third-quarter repurchases and maintained approximately $6 billion for 2026; the annual commitment remained pending.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000086/pypl3q-26earningsrelease.htm",
+          "title": "Pypl3Q 26Earningsrelease",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "PYPL-P1-2025-02-25",
+      "promiseId": "P1",
+      "date": "2025-02-25",
+      "call": "PayPal Investor Day 2025",
+      "speaker": "Frank Keller, General Manager, Large Enterprise",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced branded-checkout TPV growth target of between 8% and 10% by 2027.",
+      "quote": "Our plan is to accelerate [branded] TPV growth to between 8% and 10% by 2027.",
+      "verbatim": {
+        "text": "Our plan is to accelerate [branded] TPV growth to between 8% and 10% by 2027.",
+        "segs": [
+          {
+            "t": "Our plan is to accelerate [branded] TPV growth to between ",
+            "h": 0
+          },
+          {
+            "t": "8%",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/901458612/files/doc_downloads/transcript/PayPal-Investor-Day-2025_Full-Transcript.pdf",
+          "title": "PayPal Investor Day 2025",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/901458612/files/doc_downloads/transcript/PayPal-Investor-Day-2025_Full-Transcript.pdf",
+          "title": "PayPal Investor Day 2025",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "PYPL-P1-2025-04-29",
+      "promiseId": "P1",
+      "date": "2025-04-29",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Alex Chriss, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 8% to 10% branded-checkout growth by 2027, supported by 3 growth levers; timing of acceleration remained uncertain.",
+      "quote": "So you add all 3 of those together, and as we continue to see us leaning into those three levers, I don't know the exact timing of when we'll start to see branded checkout, but we put pretty strong growth numbers of 8% to 10% by 2027.",
+      "verbatim": {
+        "text": "So you add all 3 of those together, and as we continue to see us leaning into those three levers, I don't know the exact timing of when we'll start to see branded checkout, but we put pretty strong growth numbers of 8% to 10% by 2027.",
+        "segs": [
+          {
+            "t": "So you add all 3 of those together, and as we continue to see us leaning into those three levers, I don't know the exact timing of when we'll start to see branded checkout, but we put pretty strong growth numbers of ",
+            "h": 0
+          },
+          {
+            "t": "8%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q1/PYPL-Holdings_Q1-2025-Earnings-Call-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q1/PYPL-Holdings_Q1-2025-Earnings-Call-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P1-2025-07-29",
+      "promiseId": "P1",
+      "date": "2025-07-29",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Alex Chriss, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Growth initiatives were ramping, supporting confidence that branded-checkout TPV remained on track for the growth outlook.",
+      "quote": "Many of these efforts that are contributing to growth this year will continue to ramp into next year and add to our confidence that we are on track to achieve our growth outlook for branded checkout TPV.",
+      "verbatim": {
+        "text": "Many of these efforts that are contributing to growth this year will continue to ramp into next year and add to our confidence that we are on track to achieve our growth outlook for branded checkout TPV.",
+        "segs": [
+          {
+            "t": "Many of these efforts that are contributing to growth this year will continue to ramp into next year and add to our confidence that we are on track to achieve our growth outlook for branded checkout TPV.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q2-2025-Earnings-Call-29-July-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q2-2025-Earnings-Call-29-July-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P1-2025-10-28",
+      "promiseId": "P1",
+      "date": "2025-10-28",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Jamie S. Miller, Chief Financial & Operating Officer",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Qualified the 2027 targets by their consistent-consumer-macro assumption as macro deceleration offset progress; no replacement target or date.",
+      "quote": "And we set those 2027 targets, assuming a strong – or assuming a consistent consumer macro environment.",
+      "verbatim": {
+        "text": "And we set those 2027 targets, assuming a strong – or assuming a consistent consumer macro environment.",
+        "segs": [
+          {
+            "t": "And we set those ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " targets, assuming a strong – or assuming a consistent consumer macro environment.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q3-2025-Earnings-Call-28-October-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q3-2025-Earnings-Call-28-October-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/901458612/files/doc_downloads/transcript/PayPal-Investor-Day-2025_Full-Transcript.pdf",
+          "title": "PayPal Investor Day 2025",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P1-2026-02-03",
+      "promiseId": "P1",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Jamie S. Miller, Interim CEO; Chief Financial & Operating Officer",
+      "stance": "dropped",
+      "k": "c",
+      "summary": "Withdrew the specific 2027 Investor Day outlook and switched to annual financial guidance.",
+      "quote": "But given everything I've outlined, we are no longer committing to the specific outlook for 2027 we laid out at Investor Day last year.",
+      "verbatim": {
+        "text": "But given everything I've outlined, we are no longer committing to the specific outlook for 2027 we laid out at Investor Day last year.",
+        "segs": [
+          {
+            "t": "But given everything I've outlined, we are no longer committing to the specific outlook for ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " we laid out at Investor Day last year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P2-2025-02-25",
+      "promiseId": "P2",
+      "date": "2025-02-25",
+      "call": "PayPal Investor Day 2025 — Drive Consumer Selection and Monetization",
+      "speaker": "Diego Scotti, General Manager, Consumer Group",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to grow Venmo revenue to more than $2 billion by 2027.",
+      "quote": "Ultimately, our plan will enable us to grow Venmo revenue to more than $2 billion by 2027.",
+      "verbatim": {
+        "text": "Ultimately, our plan will enable us to grow Venmo revenue to more than $2 billion by 2027.",
+        "segs": [
+          {
+            "t": "Ultimately, our plan will enable us to grow Venmo revenue to more than ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/901458612/files/doc_downloads/transcript/PayPal-Investor-Day-2025_Drive-Consumer-Selection-and-Monetization.pdf",
+          "title": "PayPal Investor Day 2025",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/901458612/files/doc_downloads/transcript/PayPal-Investor-Day-2025_Drive-Consumer-Selection-and-Monetization.pdf",
+          "title": "PayPal Investor Day 2025",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "PYPL-P2-2025-04-29",
+      "promiseId": "P2",
+      "date": "2025-04-29",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the more-than-$2-billion Venmo revenue target for 2027.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q1/PYPL-Holdings_Q1-2025-Earnings-Call-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P2-2025-07-29",
+      "promiseId": "P2",
+      "date": "2025-07-29",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the more-than-$2-billion Venmo revenue target for 2027.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q2-2025-Earnings-Call-29-July-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P2-2025-10-28",
+      "promiseId": "P2",
+      "date": "2025-10-28",
+      "call": "Q3 2025 earnings call",
+      "speaker": "James Alexander Chriss, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed more than $2 billion in Venmo revenue by 2027, with potential to deliver well beyond that over time.",
+      "quote": "At Investor Day, we discussed growing Venmo revenue to more than $2 billion by 2027 and it's clear that the team's execution will allow us to deliver well beyond this over time.",
+      "verbatim": {
+        "text": "At Investor Day, we discussed growing Venmo revenue to more than $2 billion by 2027 and it's clear that the team's execution will allow us to deliver well beyond this over time.",
+        "segs": [
+          {
+            "t": "At Investor Day, we discussed growing Venmo revenue to more than ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " and it's clear that the team's execution will allow us to deliver well beyond this over time.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q3-2025-Earnings-Call-28-October-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q3-2025-Earnings-Call-28-October-2025-8_00-AM-ET.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P2-2026-02-03",
+      "promiseId": "P2",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Jamie S. Miller, Interim CEO and Chief Financial & Operating Officer",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Expected Venmo revenue to exceed $2 billion ahead of plan.",
+      "quote": "Venmo is on track to exceed $2 billion in revenue ahead of plan.",
+      "verbatim": {
+        "text": "Venmo is on track to exceed $2 billion in revenue ahead of plan.",
+        "segs": [
+          {
+            "t": "Venmo is on track to exceed ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " in revenue ahead of plan.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P2-2026-05-05",
+      "promiseId": "P2",
+      "date": "2026-05-05",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the more-than-$2-billion Venmo revenue target for 2027.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P2-2026-07-28",
+      "promiseId": "P2",
+      "date": "2026-07-28",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the more-than-$2-billion Venmo revenue target for 2027.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P2-2026-10-27",
+      "promiseId": "P2",
+      "date": "2026-10-27",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the more-than-$2-billion Venmo revenue target for 2027.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript/",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.pypl.com/financials/quarterly-results/default.aspx",
+          "title": "PayPal Holdings, Inc. - Financials - Quarterly results",
+          "domain": "investor.pypl.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P3-2026-02-03",
+      "promiseId": "P3",
+      "date": "2026-02-03",
+      "call": "Q4 2025 Earnings Call",
+      "speaker": "Jamie S. Miller, Interim CEO; Chief Financial & Operating Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Targeted closer to half checkout-ready by the end of 2026, from about 36%, after a 15-percentage-point improvement, using biometrics or device passkeys.",
+      "quote": "This is a 15-percentage-point improvement relative to the prior year, and our goal is to bring closer to half of our consumers to checkout-ready status by the end of 2026.",
+      "verbatim": {
+        "text": "This is a 15-percentage-point improvement relative to the prior year, and our goal is to bring closer to half of our consumers to checkout-ready status by the end of 2026.",
+        "segs": [
+          {
+            "t": "This is a 15-percentage-point improvement relative to the prior year, and our goal is to bring closer to half of our consumers to checkout-ready status by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P3-2026-05-05",
+      "promiseId": "P3",
+      "date": "2026-05-05",
+      "call": "Q1 2026 Earnings Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the goal of closer to half of consumers checkout-ready by the end of 2026.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P3-2026-07-28",
+      "promiseId": "P3",
+      "date": "2026-07-28",
+      "call": "Q2 2026 Earnings Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the goal of closer to half of consumers checkout-ready by the end of 2026.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P3-2026-10-27",
+      "promiseId": "P3",
+      "date": "2026-10-27",
+      "call": "Q3 2026 Earnings Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the goal of closer to half of consumers checkout-ready by the end of 2026.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P4-2026-05-05",
+      "promiseId": "P4",
+      "date": "2026-05-05",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Enrique Lores, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to at least $1.5 billion of gross run-rate savings over the next two to three years.",
+      "quote": "We expect to see at least $1.5 billion of gross run-rate savings over the next two to three years.",
+      "verbatim": {
+        "text": "We expect to see at least $1.5 billion of gross run-rate savings over the next two to three years.",
+        "segs": [
+          {
+            "t": "We expect to see at least ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of gross run-rate savings over the next two to three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000065/pypl1q-26earningsrelease.htm",
+          "title": "Pypl1Q 26Earningsrelease",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P4-2026-05-20",
+      "promiseId": "P4",
+      "date": "2026-05-20",
+      "call": "2026 Annual Meeting of Stockholders — Stockholder Questions and Answers",
+      "speaker": "Enrique Lores, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed at least $1.5 billion of gross run-rate savings over the next two to three years.",
+      "quote": "These initiatives are expected to deliver at least $1.5 billion of gross run-rate savings over the next two to three years.",
+      "verbatim": {
+        "text": "These initiatives are expected to deliver at least $1.5 billion of gross run-rate savings over the next two to three years.",
+        "segs": [
+          {
+            "t": "These initiatives are expected to deliver at least ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of gross run-rate savings over the next two to three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/ar/2026-Annual-Meeting-Posted-Q-A-FINAL.pdf",
+          "title": "PayPal Holdings, Inc. Stockholder Questions and Answers from the 2026 Annual Meeting of Stockholders",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/ar/2026-Annual-Meeting-Posted-Q-A-FINAL.pdf",
+          "title": "PayPal Holdings, Inc. Stockholder Questions and Answers from the 2026 Annual Meeting of Stockholders",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "PYPL-P4-2026-07-28",
+      "promiseId": "P4",
+      "date": "2026-07-28",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Enrique Lores, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported good progress toward at least $1.5 billion of gross run-rate savings over the next two to three years.",
+      "quote": "We are making good progress on our plan to deliver at least $1.5 billion of gross run-rate savings over the next two to three years.",
+      "verbatim": {
+        "text": "We are making good progress on our plan to deliver at least $1.5 billion of gross run-rate savings over the next two to three years.",
+        "segs": [
+          {
+            "t": "We are making good progress on our plan to deliver at least ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of gross run-rate savings over the next two to three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P4-2026-09-15",
+      "promiseId": "P4",
+      "date": "2026-09-15",
+      "call": "September 2026 IR Newsletter",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected roughly $400M annualized run-rate exiting this year, with more savings in 2027.",
+      "quote": "We expect to exit this year at a roughly $400M annualized run-rate, with more to come in 2027.",
+      "verbatim": {
+        "text": "We expect to exit this year at a roughly $400M annualized run-rate, with more to come in 2027.",
+        "segs": [
+          {
+            "t": "We expect to exit this year at a roughly ",
+            "h": 0
+          },
+          {
+            "t": "$400M",
+            "h": 1
+          },
+          {
+            "t": " annualized run-rate, with more to come in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_downloads/2026/09/PYPL-September-26-IR-Newsletter.pdf",
+          "title": "September 2026 IR Newsletter",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_downloads/2026/09/PYPL-September-26-IR-Newsletter.pdf",
+          "title": "September 2026 IR Newsletter",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "PYPL-P4-2026-10-27",
+      "promiseId": "P4",
+      "date": "2026-10-27",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Enrique Lores, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "At least $1.5 billion over two to three years remained on track; more than $700 million forecast exiting the fourth quarter.",
+      "quote": "We are on track to achieve our target of at least $1.5 billion in gross run-rate cost savings over two to three years, including more than $700 million exiting the fourth quarter.",
+      "verbatim": {
+        "text": "We are on track to achieve our target of at least $1.5 billion in gross run-rate cost savings over two to three years, including more than $700 million exiting the fourth quarter.",
+        "segs": [
+          {
+            "t": "We are on track to achieve our target of at least ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " in gross run-rate cost savings over two to three years, including more than ",
+            "h": 0
+          },
+          {
+            "t": "$700 million",
+            "h": 1
+          },
+          {
+            "t": " exiting the fourth quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/content_files/PYPL-3Q-26-Earnings-IR-Newsletter.pdf",
+          "title": "PayPal Releases 3Q 2026 Results",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P5-2026-02-03",
+      "promiseId": "P5",
+      "date": "2026-02-03",
+      "call": "Q4 2025 Earnings Call",
+      "speaker": "Steven Winoker, Chief Investor Relations Officer and Senior Vice President",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced approximately $6 billion of 2026 share repurchases and at least $6 billion of adjusted free cash flow.",
+      "quote": "Our guidance assumes approximately $6 billion in share repurchases and at least $6 billion of adjusted free cash flow.",
+      "verbatim": {
+        "text": "Our guidance assumes approximately $6 billion in share repurchases and at least $6 billion of adjusted free cash flow.",
+        "segs": [
+          {
+            "t": "Our guidance assumes approximately ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases and at least ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " of adjusted free cash flow.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P5-2026-05-05",
+      "promiseId": "P5",
+      "date": "2026-05-05",
+      "call": "Q1 2026 Earnings Call",
+      "speaker": "Jamie S. Miller, Chief Financial and Operating Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed approximately $6 billion of 2026 share repurchases and at least $6 billion of adjusted free cash flow.",
+      "quote": "Our guidance continues to assume approximately $6 billion in share repurchase and at least $6 billion of adjusted free cash flow.",
+      "verbatim": {
+        "text": "Our guidance continues to assume approximately $6 billion in share repurchase and at least $6 billion of adjusted free cash flow.",
+        "segs": [
+          {
+            "t": "Our guidance continues to assume approximately ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchase and at least ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " of adjusted free cash flow.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P5-2026-07-28",
+      "promiseId": "P5",
+      "date": "2026-07-28",
+      "call": "Q2 2026 Earnings Call",
+      "speaker": "Jamie S. Miller, Chief Financial and Operating Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed approximately $6 billion of 2026 share repurchases and at least $6 billion of adjusted free cash flow.",
+      "quote": "Our guidance continues to assume at least $6 billion of adjusted free cash flow and approximately $6 billion in share repurchases.",
+      "verbatim": {
+        "text": "Our guidance continues to assume at least $6 billion of adjusted free cash flow and approximately $6 billion in share repurchases.",
+        "segs": [
+          {
+            "t": "Our guidance continues to assume at least ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " of adjusted free cash flow and approximately ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+          "title": "PayPal Holdings, Inc.",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PYPL-P5-2026-10-27",
+      "promiseId": "P5",
+      "date": "2026-10-27",
+      "call": "Q3 2026 Earnings Call",
+      "speaker": "Jamie Miller, Chief Financial and Operating Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained approximately $6 billion of 2026 share repurchases; adjusted free cash flow guidance rose to at least $6.5 billion.",
+      "quote": "Our guidance now includes at least $6.5 billion of adjusted free cash flow and continues to incorporate approximately $6 billion in share repurchases.",
+      "verbatim": {
+        "text": "Our guidance now includes at least $6.5 billion of adjusted free cash flow and continues to incorporate approximately $6 billion in share repurchases.",
+        "segs": [
+          {
+            "t": "Our guidance now includes at least ",
+            "h": 0
+          },
+          {
+            "t": "$6.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of adjusted free cash flow and continues to incorporate approximately ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+          "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q1/Paypal-1Q-26-Earnings-Transcript.pdf",
+      "title": "PayPal Holdings, Inc.",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q4/PayPal-4Q-25-Earnings-Transcript.pdf",
+      "title": "PayPal Holdings, Inc.",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+      "title": "PayPal Holdings, Inc.",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript",
+      "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q3-2025-Earnings-Call-28-October-2025-8_00-AM-ET.pdf",
+      "title": "PayPal Holdings, Inc.",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 6,
+      "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q1/PYPL-Holdings_Q1-2025-Earnings-Call-Transcript.pdf",
+      "title": "PayPal Holdings, Inc.",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 7,
+      "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-PayPal-Holdings-Inc-PYPL-US-Q2-2025-Earnings-Call-29-July-2025-8_00-AM-ET.pdf",
+      "title": "PayPal Holdings, Inc.",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 8,
+      "url": "https://s205.q4cdn.com/901458612/files/doc_downloads/transcript/PayPal-Investor-Day-2025_Full-Transcript.pdf",
+      "title": "PayPal Investor Day 2025",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://s205.q4cdn.com/875401827/files/content_files/PYPL-3Q-26-Earnings-IR-Newsletter.pdf",
+      "title": "PayPal Releases 3Q 2026 Results",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 10,
+      "url": "https://s205.q4cdn.com/901458612/files/doc_downloads/transcript/PayPal-Investor-Day-2025_Drive-Consumer-Selection-and-Monetization.pdf",
+      "title": "PayPal Investor Day 2025",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 11,
+      "url": "https://investor.pypl.com/financials/quarterly-results/default.aspx",
+      "title": "PayPal Holdings, Inc. - Financials - Quarterly results",
+      "domain": "investor.pypl.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 12,
+      "url": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000065/pypl1q-26earningsrelease.htm",
+      "title": "Pypl1Q 26Earningsrelease",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 13,
+      "url": "https://s205.q4cdn.com/875401827/files/doc_financials/2026/ar/2026-Annual-Meeting-Posted-Q-A-FINAL.pdf",
+      "title": "PayPal Holdings, Inc. Stockholder Questions and Answers from the 2026 Annual Meeting of Stockholders",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 14,
+      "url": "http://s205.q4cdn.com/875401827/files/doc_financials/2026/q2/PYPL-2Q-26-Earnings-Transcript.pdf",
+      "title": "PayPal Holdings, Inc.",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 15,
+      "url": "https://s205.q4cdn.com/875401827/files/doc_downloads/2026/09/PYPL-September-26-IR-Newsletter.pdf",
+      "title": "September 2026 IR Newsletter",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 16,
+      "url": "https://www.sec.gov/Archives/edgar/data/1633917/000163391726000086/pypl3q-26earningsrelease.htm",
+      "title": "Pypl3Q 26Earningsrelease",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 17,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/27/paypal-pypl-q3-2026-earnings-call-transcript/",
+      "title": "PayPal (PYPL) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.011843Z",
+      "completedAt": "2026-11-05T06:31:00.893052Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.486066Z",
+      "completedAt": "2026-11-05T19:13:10.102010Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.493186Z",
+      "completedAt": "2026-11-05T19:14:22.461252Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.500248Z",
+      "completedAt": "2026-11-05T19:12:21.154037Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.507422Z",
+      "completedAt": "2026-11-05T19:14:35.785744Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.514612Z",
+      "completedAt": "2026-11-05T19:11:54.211022Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.280263Z",
+      "completedAt": "2026-11-05T19:48:25.332191Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.287407Z",
+      "completedAt": "2026-11-05T19:49:16.289527Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:56:47.484085Z",
+      "completedAt": "2026-11-05T20:00:08.514075Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T20:01:49.603515Z",
+      "completedAt": "2026-11-05T20:04:15.473679Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.295735Z",
+      "completedAt": "2026-11-05T19:46:33.125054Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.303108Z",
+      "completedAt": "2026-11-05T19:47:00.780734Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.310239Z",
+      "completedAt": "2026-11-05T19:47:51.340082Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "26 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "18 of 18 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "18 of 18 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-27; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/31/PayPal_Logo2014.svg/1280px-PayPal_Logo2014.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:PayPal_Logo2014.svg",
+      "title": "File:PayPal Logo2014.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 1193,
+      "rank": 3
+    },
+    "photo": {
+      "imageUrl": "https://www.paypalobjects.com/marketing/web26/us/ppdc/mkt-us-page-debit-card-component-meta-size-all.jpg",
+      "sourcePageUrl": "https://www.paypal.com/us/digital-wallet/manage-money/paypal-debit-card",
+      "title": "PayPal Debit Card | Get Rewarded | Apply Now | PayPal US",
+      "width": 2400,
+      "height": 1260,
+      "rank": 3
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.035Z"
+}

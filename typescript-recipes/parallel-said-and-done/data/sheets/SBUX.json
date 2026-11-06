@@ -1,0 +1,2457 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "SBUX",
+  "name": "Starbucks Corporation",
+  "short": "Starbucks",
+  "website": "starbucks.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Sunday closest to September 30",
+  "irUrl": "https://investor.starbucks.com/ir-home/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-29",
+    "quarter": "Q4 FY2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Starbucks coffeehouse",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Cut menu complexity by 30%",
+      "commitment": "Reduce both beverage and food SKUs by roughly 30% by the end of FY2025.",
+      "deadline": "end of fiscal year 2025",
+      "firstStated": "2025-01-28",
+      "status": "partly_delivered",
+      "k": "part",
+      "outcomeSummary": "Starbucks reported a 25% SKU reduction in fiscal year 2025; roughly 30% reductions in both beverages and food were not substantiated.",
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q1/SBUX_Q1_2025_Corrected_Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-01-29",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "partly_delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Scale Green Apron Service",
+      "commitment": "Start scaling Green Apron Service to more than 2,000 US company-operated locations in May; reach more than one-third of US coffeehouses by FY2025 year-end.",
+      "deadline": "end of fiscal year 2025",
+      "firstStated": "2025-04-29",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "The May rollout reached more than 2,000 company-operated U.S. coffeehouses; full U.S. company-operated deployment followed in August, exceeding original coverage.",
+      "citations": [
+        {
+          "url": "https://about.starbucks.com/uploads/2025/09/Back-to-Starbucks-One-Year-Timeline.pdf",
+          "title": "Year One Milestones: Timeline",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q4/SBUX-4Q25-Corrected-Transcript.pdf",
+          "title": "Sbux 4Q25 Corrected Transcript",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q2/SBUX-2Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-10-29",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [
+          "The claim that the May rollout reached more than 2,000 U.S. company-operated coffeehouses is not established by the sources. The April 29 statement promised scaling beginning in May, not completion at more than 2,000 locations during May. On July 29, management described a 1,500-store test; it subsequently confirmed full U.S. company-operated deployment in August."
+        ],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-07-29",
+            "what_was_said": "Management said it had accelerated the rollout well ahead of schedule because of strong pilot results, describing the pilot as an eight-week, 1,500-store test. This distinguishes demonstrated pilot coverage from the earlier expansion target.",
+            "call": "Q3 FY2025 earnings call"
+          },
+          {
+            "date": "2025-10-29",
+            "what_was_said": "Management explicitly confirmed the delivery month: “August was a milestone as we went live with the new standard across our full US company-operated portfolio.”",
+            "call": "Q4 and Full Fiscal Year 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Complete 1,000 coffeehouse uplifts",
+      "commitment": "Complete at least 1,000 coffeehouse uplifts across North America by the end of calendar 2026.",
+      "deadline": "end of calendar year 2026",
+      "firstStated": "2025-07-29",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "By fiscal year-end, Starbucks completed more than 1,700 North America uplifts, exceeding both its original 1,000 commitment and raised 1,500 target.",
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q4/SBUX-4Q25-Corrected-Transcript.pdf",
+          "title": "Sbux 4Q25 Corrected Transcript",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-10-29",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-29",
+            "what_was_said": "Management said: “In Q3, we surpassed 1,000 total uplifts across North America, reaching our fiscal 2026 goal ahead of plan.” This completion announcement preceded the increase to the 1,500 target on the same call.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Close China joint venture",
+      "commitment": "Close the Boyu Capital China retail joint venture in spring 2026, retaining 40% ownership while Boyu acquires up to 60%.",
+      "deadline": "spring 2026",
+      "firstStated": "2025-11-03",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Spring target met: transaction closed March 30, 2026, announced April 2, 2026; Boyu acquired 60%, Starbucks retained 40%.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000080/sbux-20260329.htm",
+          "title": "sbux-20260329",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000064/sbux-20260402.htm",
+          "title": "sbux-20260402",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/Q2-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-04-02",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-28",
+            "what_was_said": "Management confirmed that the Boyu transaction closed shortly after fiscal quarter-end and that Starbucks China's retail operations would be deconsolidated beginning in Q3 and reported within its licensed portfolio.",
+            "call": "Q2 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Capture $2 billion cost savings",
+      "commitment": "Capture about $2 billion of cost savings unfolding over the next two years, building on work begun in 2025.",
+      "deadline": "over the next two years",
+      "firstStated": "2026-01-28",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Over 50% of the $2 billion gross savings program achieved; management remained on track, with savings continuing through fiscal 2028.",
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/Q2-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "SBUX-P1-2025-01-28",
+      "promiseId": "P1",
+      "date": "2025-01-28",
+      "call": "Q1 FY2025 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to roughly 30% reductions in both beverage and food SKUs by the end of fiscal year 2025.",
+      "quote": "In the coming months, you'll see us begin to optimize our menu offerings, resulting in a roughly 30% reduction in both beverages and food SKUs by the end of fiscal year 2025.",
+      "verbatim": {
+        "text": "In the coming months, you'll see us begin to optimize our menu offerings, resulting in a roughly 30% reduction in both beverages and food SKUs by the end of fiscal year 2025.",
+        "segs": [
+          {
+            "t": "In the coming months, you'll see us begin to optimize our menu offerings, resulting in a roughly ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " reduction in both beverages and food SKUs by the end of fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q1/SBUX_Q1_2025_Corrected_Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q1/SBUX_Q1_2025_Corrected_Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P1-2025-04-29",
+      "promiseId": "P1",
+      "date": "2025-04-29",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported continued menu rationalization to emphasize coffee and craft and make room for innovation; did not change the target.",
+      "quote": "Turning to our menu, we've continued to rationalize and update our product lineup to focus on coffee and craft, and to create room for relevant innovation that drives demand.",
+      "verbatim": {
+        "text": "Turning to our menu, we've continued to rationalize and update our product lineup to focus on coffee and craft, and to create room for relevant innovation that drives demand.",
+        "segs": [
+          {
+            "t": "Turning to our menu, we've continued to rationalize and update our product lineup to focus on coffee and craft, and to create room for relevant innovation that drives demand.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q2/SBUX-2Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q2/SBUX-2Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P1-2025-07-29",
+      "promiseId": "P1",
+      "date": "2025-07-29",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Explained that menu simplification cleared distractions and freed capacity for innovation; did not change the target.",
+      "quote": "So – and this is also probably the reason why we had to initially set out on menu simplification.",
+      "verbatim": {
+        "text": "So – and this is also probably the reason why we had to initially set out on menu simplification.",
+        "segs": [
+          {
+            "t": "So – and this is also probably the reason why we had to initially set out on menu simplification.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P1-2025-10-29",
+      "promiseId": "P1",
+      "date": "2025-10-29",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not report against the roughly 30% beverage-and-food SKU reduction commitment after fiscal year 2025 ended.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q4/SBUX-Q4-2025-Earnings-Call-Corrected-Updated.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P1-2026-01-28",
+      "promiseId": "P1",
+      "date": "2026-01-28",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Estimated menu reduction during his tenure at 25%, 30%; did not specify separate beverage and food results or deadline achievement.",
+      "quote": "But based on my time just here, it's probably been a reduction of like 25%, 30%.",
+      "verbatim": {
+        "text": "But based on my time just here, it's probably been a reduction of like 25%, 30%.",
+        "segs": [
+          {
+            "t": "But based on my time just here, it's probably been a reduction of like ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": ", ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P1-2026-01-29",
+      "promiseId": "P1",
+      "date": "2026-01-29",
+      "call": "2026 Investor Day",
+      "speaker": "Tressie Lieberman, Global Chief Brand Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported a completed 25% SKU reduction in fiscal year 2025, without separate beverage and food results.",
+      "quote": "In fiscal year 2025, we reduce SKUs by 25% and we continually keep a pulse on our menu performance with ongoing optimization while ensuring we maintain offerings that delight our customers.",
+      "verbatim": {
+        "text": "In fiscal year 2025, we reduce SKUs by 25% and we continually keep a pulse on our menu performance with ongoing optimization while ensuring we maintain offerings that delight our customers.",
+        "segs": [
+          {
+            "t": "In fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", we reduce SKUs by ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": " and we continually keep a pulse on our menu performance with ongoing optimization while ensuring we maintain offerings that delight our customers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "SBUX-P1-2026-04-28",
+      "promiseId": "P1",
+      "date": "2026-04-28",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not update the original roughly 30% beverage-and-food SKU reduction commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/Q2-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.starbucks.com/events-presentations/event-details/2026/Starbucks-Q2-Fiscal-Year-2026-Earnings-Conference-Call-2026-i5MwCsdAaW/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - Starbucks Q2 Fiscal Year 2026 Earnings Conference Call\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P1-2026-07-29",
+      "promiseId": "P1",
+      "date": "2026-07-29",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not update the original roughly 30% beverage-and-food SKU reduction commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P1-2026-10-29",
+      "promiseId": "P1",
+      "date": "2026-10-29",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not update the original roughly 30% beverage-and-food SKU reduction commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P2-2025-04-29",
+      "promiseId": "P2",
+      "date": "2025-04-29",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Brian R. Niccol, Chairman & Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Starting in May, scale to more than 2,000 U.S. company-operated locations and more than one-third of U.S. coffeehouses by FY2025 year-end.",
+      "quote": "Beginning in May, we'll scale a new Green Apron service model to more than 2,000 of our US company-operated locations and to more than a-third of our US coffee houses by the end of this fiscal year.",
+      "verbatim": {
+        "text": "Beginning in May, we'll scale a new Green Apron service model to more than 2,000 of our US company-operated locations and to more than a-third of our US coffee houses by the end of this fiscal year.",
+        "segs": [
+          {
+            "t": "Beginning in May, we'll scale a new Green Apron service model to more than ",
+            "h": 0
+          },
+          {
+            "t": "2,000",
+            "h": 1
+          },
+          {
+            "t": " of our US company-operated locations and to more than a-third of our US coffee houses by the end of this fiscal year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q2/SBUX-2Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q2/SBUX-2Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P2-2025-06-12",
+      "promiseId": "P2",
+      "date": "2025-06-12",
+      "call": "Reuters interview report: Starbucks CEO pushes 'Green Apron' service changes to all North American stores by summer",
+      "speaker": "Brian Niccol, Chairman & Chief Executive Officer",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Accelerated rollout to all North American company-owned stores by summer's end instead of a third of U.S. stores by fiscal year-end.",
+      "quote": null,
+      "verbatim": {
+        "text": "Starbucks SBUX.O CEO Brian Niccol told Reuters on Tuesday that he would accelerate the rollout of the coffeehouse chain's new staffing and service model, aiming for all North American stores by summer's end, rather than the initial plan for just a third of U.S. stores by fiscal year-end.",
+        "segs": [
+          {
+            "t": "Starbucks SBUX.O CEO Brian Niccol told Reuters on Tuesday that he would accelerate the rollout of the coffeehouse chain's new staffing and service model, aiming for all North American stores by summer's end, rather than the initial plan for just a third of U.S. stores by fiscal year-end.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.usatoday.com/story/money/business/2025/06/12/starbucks-ceo-green-apron-service-changes/84175699007",
+          "title": "Starbucks CEO accelerates 'Green Apron' service change overhaul",
+          "domain": "usatoday.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.usatoday.com/story/money/business/2025/06/12/starbucks-ceo-green-apron-service-changes/84175699007",
+          "title": "Starbucks CEO accelerates 'Green Apron' service change overhaul",
+          "domain": "usatoday.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "SBUX-P2-2025-07-29",
+      "promiseId": "P2",
+      "date": "2025-07-29",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Brian R. Niccol, Chairman & Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed full U.S. company-operated rollout, with scaling beginning in mid-August.",
+      "quote": "The most significant change will come as we begin fully scaling Green Apron Service across all US company- operated coffeehouses in mid-August.",
+      "verbatim": {
+        "text": "The most significant change will come as we begin fully scaling Green Apron Service across all US company- operated coffeehouses in mid-August.",
+        "segs": [
+          {
+            "t": "The most significant change will come as we begin fully scaling Green Apron Service across all US company- operated coffeehouses in mid-August.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P2-2025-09-08",
+      "promiseId": "P2",
+      "date": "2025-09-08",
+      "call": "Message from Brian: Green Apron Service, one month in",
+      "speaker": "Brian Niccol, Chairman & Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Nationwide rollout was one month underway, with momentum building in coffeehouses.",
+      "quote": "We’re one month into the nationwide rollout of Green Apron Service, and the momentum is building in our coffeehouses.",
+      "verbatim": {
+        "text": "We’re one month into the nationwide rollout of Green Apron Service, and the momentum is building in our coffeehouses.",
+        "segs": [
+          {
+            "t": "We’re one month into the nationwide rollout of Green Apron Service, and the momentum is building in our coffeehouses.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.starbucks.com/press/2025/message-from-brian-green-apron-service-one-month-in",
+          "title": "Message from Brian: Green Apron Service, one month in - About Starbucks",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.starbucks.com/press/2025/message-from-brian-green-apron-service-one-month-in",
+          "title": "Message from Brian: Green Apron Service, one month in - About Starbucks",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SBUX-P2-2025-10-29",
+      "promiseId": "P2",
+      "date": "2025-10-29",
+      "call": "Q4 and Full Fiscal Year 2025 earnings release — CEO video transcript",
+      "speaker": "Brian Niccol, Chairman & Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Declared Green Apron Service live across all U.S. company-operated coffeehouses.",
+      "quote": "First, Green Apron Service is now live across all U.S. company-operated coffeehouses, setting a new standard for the customer experience.",
+      "verbatim": {
+        "text": "First, Green Apron Service is now live across all U.S. company-operated coffeehouses, setting a new standard for the customer experience.",
+        "segs": [
+          {
+            "t": "First, Green Apron Service is now live across all U.S. company-operated coffeehouses, setting a new standard for the customer experience.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.starbucks.com/press/2025/starbucks-reports-q4-full-fiscal-year-2025-results",
+          "title": "Starbucks Reports Q4 Full Fiscal Year 2025 Results",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.starbucks.com/press/2025/starbucks-reports-q4-full-fiscal-year-2025-results",
+          "title": "Starbucks Reports Q4 Full Fiscal Year 2025 Results",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "SBUX-P3-2025-07-29",
+      "promiseId": "P3",
+      "date": "2025-07-29",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to at least 1,000 North America uplifts by the end of calendar year 2026.",
+      "quote": "And by the end of calendar year 2026, we will have completed at least 1,000 uplifts across North America.",
+      "verbatim": {
+        "text": "And by the end of calendar year 2026, we will have completed at least 1,000 uplifts across North America.",
+        "segs": [
+          {
+            "t": "And by the end of calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we will have completed at least ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " uplifts across North America.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P3-2025-09-25",
+      "promiseId": "P3",
+      "date": "2025-09-25",
+      "call": "An Important Update — Form 8-K, Exhibit 99.1",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Accelerated the plan to more than 1,000 uplifts over the next 12 months.",
+      "quote": "Over the next 12 months, we also plan to uplift more than 1,000 locations to introduce greater texture, warmth and layered design.",
+      "verbatim": {
+        "text": "Over the next 12 months, we also plan to uplift more than 1,000 locations to introduce greater texture, warmth and layered design.",
+        "segs": [
+          {
+            "t": "Over the next 12 months, we also plan to uplift more than ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " locations to introduce greater texture, warmth and layered design.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000067/exhibit991.htm",
+          "title": "STARBUCKS CORP 8-K exhibit 99.1, filed September 25, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000067/exhibit991.htm",
+          "title": "STARBUCKS CORP 8-K exhibit 99.1, filed September 25, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "SBUX-P3-2025-10-29",
+      "promiseId": "P3",
+      "date": "2025-10-29",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Nearly 70 uplifts completed; reaffirmed more than 1,000, specifying completion by the end of fiscal 2026.",
+      "quote": "We are working to complete more than 1,000 of these Uplifts by the end of fiscal 2026.",
+      "verbatim": {
+        "text": "We are working to complete more than 1,000 of these Uplifts by the end of fiscal 2026.",
+        "segs": [
+          {
+            "t": "We are working to complete more than ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " of these Uplifts by the end of ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q4/SBUX-Q4-2025-Earnings-Call-Corrected-Updated.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q4/SBUX-Q4-2025-Earnings-Call-Corrected-Updated.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P3-2026-01-28",
+      "promiseId": "P3",
+      "date": "2026-01-28",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Approximately 200 completed; on track for more than 1,000 by the end of fiscal 2026.",
+      "quote": "To-date, we've completed approximately 200 uplifts, primarily in Southern California and New York City, and we're on track to complete more than 1,000 by the end of fiscal 2026.",
+      "verbatim": {
+        "text": "To-date, we've completed approximately 200 uplifts, primarily in Southern California and New York City, and we're on track to complete more than 1,000 by the end of fiscal 2026.",
+        "segs": [
+          {
+            "t": "To-date, we've completed approximately 200 uplifts, primarily in Southern California and New York City, and we're on track to complete more than ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " by the end of ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P3-2026-01-29",
+      "promiseId": "P3",
+      "date": "2026-01-29",
+      "call": "2026 Investor Day",
+      "speaker": "Mike Grams, Chief Operating Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated surpassing 1,000 by fiscal 2026; broader program completion expected in 2028.",
+      "quote": "I expect to surpass 1,000 by fiscal 2026 and finish the program in 2028.",
+      "verbatim": {
+        "text": "I expect to surpass 1,000 by fiscal 2026 and finish the program in 2028.",
+        "segs": [
+          {
+            "t": "I expect to surpass ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": " and finish the program in ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://about.starbucks.com/press/2026/starbucks-is-back-turning-momentum-into-long-term-sustainable-growth",
+          "title": "Starbucks is Back, Turning Momentum into Long-Term, Sustainable Growth",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "SBUX-P3-2026-03-25",
+      "promiseId": "P3",
+      "date": "2026-03-25",
+      "call": "2026 Annual Meeting of Shareholders",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed more than 1000 uplifts by the end of fiscal 2026.",
+      "quote": "We're ramping the program now and expect to complete more than 1000 by the end of fiscal 2026.",
+      "verbatim": {
+        "text": "We're ramping the program now and expect to complete more than 1000 by the end of fiscal 2026.",
+        "segs": [
+          {
+            "t": "We're ramping the program now and expect to complete more than 1000 by the end of ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Mar/25/2026-SBUX-Annual-Meeting-Transcript.pdf",
+          "title": "Microsoft Word - 3.25.26 SBUX Annual Meeting Transcript.docx",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Mar/25/2026-SBUX-Annual-Meeting-Transcript.pdf",
+          "title": "Microsoft Word - 3.25.26 SBUX Annual Meeting Transcript.docx",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "SBUX-P3-2026-04-28",
+      "promiseId": "P3",
+      "date": "2026-04-28",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "More than 300 completed on budget without closures; more than 1,000 expected in the top 20 markets by fiscal year-end.",
+      "quote": "We're investing in that experience at scale with more than 300 uplifts now complete on budget and with zero closure days.",
+      "verbatim": {
+        "text": "We're investing in that experience at scale with more than 300 uplifts now complete on budget and with zero closure days.",
+        "segs": [
+          {
+            "t": "We're investing in that experience at scale with more than 300 uplifts now complete on budget and with zero closure days.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/Q2-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/Q2-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P3-2026-06-09",
+      "promiseId": "P3",
+      "date": "2026-06-09",
+      "call": "6th Annual Evercore Consumer and Retail Conference",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "About 700 completed; reiterated over 1,000 by year-end.",
+      "quote": "On your point about uplifts, or getting the stores back to being a great coffee house, we've done this in about 700 stores so far.",
+      "verbatim": {
+        "text": "On your point about uplifts, or getting the stores back to being a great coffee house, we've done this in about 700 stores so far.",
+        "segs": [
+          {
+            "t": "On your point about uplifts, or getting the stores back to being a great coffee house, we've done this in about 700 stores so far.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/sbux/transcripts/685617-the-6th-annual-evercore-consumer-retail-conference/",
+          "title": "Starbucks (SBUX) FY 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.starbucks.com/events-presentations/event-details/2026/6th-Annual-Evercore-Consumer-and-Retail-Conference-2026-QYzuWFgm0f/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - 6th Annual Evercore Consumer and Retail Conference\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/sbux/transcripts/685617-the-6th-annual-evercore-consumer-retail-conference/",
+          "title": "Starbucks (SBUX) FY 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "SBUX-P3-2026-07-29",
+      "promiseId": "P3",
+      "date": "2026-07-29",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Surpassed 1,000 in Q3; raised target to at least 1,500 by fiscal year-end 2026, accelerating further in fiscal 2027.",
+      "quote": "That's why we're accelerating our pace with the intention of completing at least 1,500 uplifts by fiscal year-end 2026 and accelerating further in fiscal 2027.",
+      "verbatim": {
+        "text": "That's why we're accelerating our pace with the intention of completing at least 1,500 uplifts by fiscal year-end 2026 and accelerating further in fiscal 2027.",
+        "segs": [
+          {
+            "t": "That's why we're accelerating our pace with the intention of completing at least ",
+            "h": 0
+          },
+          {
+            "t": "1,500",
+            "h": 1
+          },
+          {
+            "t": " uplifts by fiscal year-end ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and accelerating further in ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P3-2026-09-23",
+      "promiseId": "P3",
+      "date": "2026-09-23",
+      "call": "More than 1,000 Starbucks coffeehouses redesigned across the U.S. and Canada",
+      "speaker": "Dawn Clark, Senior Vice President, Global Design & Concepts",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Since late 2025, more than 1,000 completed; reiterated at least 1,500 by fiscal year-end 2026 and further acceleration in fiscal 2027.",
+      "quote": "We’re now accelerating our pace with the intention of completing at least 1,500 uplifts by fiscal year-end 2026 and accelerating further in fiscal 2027.",
+      "verbatim": {
+        "text": "We’re now accelerating our pace with the intention of completing at least 1,500 uplifts by fiscal year-end 2026 and accelerating further in fiscal 2027.",
+        "segs": [
+          {
+            "t": "We’re now accelerating our pace with the intention of completing at least ",
+            "h": 0
+          },
+          {
+            "t": "1,500",
+            "h": 1
+          },
+          {
+            "t": " uplifts by fiscal year-end ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and accelerating further in ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.starbucks.com/press/2026/more-than-1000-starbucks-coffeehouses-redesigned-across-the-us-and-canada",
+          "title": "More than 1,000 Starbucks coffeehouses redesigned across the U.S. and Canada",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.starbucks.com/press/2026/more-than-1000-starbucks-coffeehouses-redesigned-across-the-us-and-canada",
+          "title": "More than 1,000 Starbucks coffeehouses redesigned across the U.S. and Canada",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SBUX-P3-2026-09-24",
+      "promiseId": "P3",
+      "date": "2026-09-24",
+      "call": "Creating Coffeehouses Customers Love and Partners are Proud of",
+      "speaker": "Mike Grams, Chief Operating Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed acceleration toward completing 1,500 coffeehouse uplifts.",
+      "quote": "We’re accelerating our pace toward completing 1,500 coffeehouse uplifts, and Green Apron Service has become our defining standard.",
+      "verbatim": {
+        "text": "We’re accelerating our pace toward completing 1,500 coffeehouse uplifts, and Green Apron Service has become our defining standard.",
+        "segs": [
+          {
+            "t": "We’re accelerating our pace toward completing ",
+            "h": 0
+          },
+          {
+            "t": "1,500",
+            "h": 1
+          },
+          {
+            "t": " coffeehouse uplifts, and Green Apron Service has become our defining standard.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.starbucks.com/press/2026/creating-coffeehouses-customers-love-and-partners-are-proud-of",
+          "title": "Creating Coffeehouses Customers Love and Partners are Proud of",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.starbucks.com/press/2026/creating-coffeehouses-customers-love-and-partners-are-proud-of",
+          "title": "Creating Coffeehouses Customers Love and Partners are Proud of",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SBUX-P3-2026-10-28",
+      "promiseId": "P3",
+      "date": "2026-10-28",
+      "call": "While you were sleeping: How Starbucks coffeehouses get a new look overnight",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed at least 1,500 by the end of fiscal 2026, with further acceleration in fiscal 2027.",
+      "quote": "Starbucks accelerated its plan to complete at least 1,500 coffeehouse uplifts by the end of fiscal 2026, with plans to pick up the pace even further in fiscal 2027 – bringing more places to settle in, connect and enjoy coffee to communities across North America.",
+      "verbatim": {
+        "text": "Starbucks accelerated its plan to complete at least 1,500 coffeehouse uplifts by the end of fiscal 2026, with plans to pick up the pace even further in fiscal 2027 – bringing more places to settle in, connect and enjoy coffee to communities across North America.",
+        "segs": [
+          {
+            "t": "Starbucks accelerated its plan to complete at least ",
+            "h": 0
+          },
+          {
+            "t": "1,500",
+            "h": 1
+          },
+          {
+            "t": " coffeehouse uplifts by the end of ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": ", with plans to pick up the pace even further in ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2027",
+            "h": 1
+          },
+          {
+            "t": " – bringing more places to settle in, connect and enjoy coffee to communities across North America.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.starbucks.com/press/2026/while-you-were-sleeping-how-starbucks-coffeehouses-get-a-new-look-overnight/",
+          "title": "While you were sleeping: How Starbucks coffeehouses get a new look overnight",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.starbucks.com/press/2026/while-you-were-sleeping-how-starbucks-coffeehouses-get-a-new-look-overnight/",
+          "title": "While you were sleeping: How Starbucks coffeehouses get a new look overnight",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SBUX-P3-2026-10-29",
+      "promiseId": "P3",
+      "date": "2026-10-29",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Completed more than 1,700 North America uplifts by fiscal year-end, surpassing the goal.",
+      "quote": "As of fiscal year-end, we surpassed our goal by completing more than 1,700 total uplifts across North America, bringing back warmth, comfortable seating, and the third place to our cafes.",
+      "verbatim": {
+        "text": "As of fiscal year-end, we surpassed our goal by completing more than 1,700 total uplifts across North America, bringing back warmth, comfortable seating, and the third place to our cafes.",
+        "segs": [
+          {
+            "t": "As of fiscal year-end, we surpassed our goal by completing more than ",
+            "h": 0
+          },
+          {
+            "t": "1,700",
+            "h": 1
+          },
+          {
+            "t": " total uplifts across North America, bringing back warmth, comfortable seating, and the third place to our cafes.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P4-2025-11-03",
+      "promiseId": "P4",
+      "date": "2025-11-03",
+      "call": "Starbucks and Boyu Announce Joint Venture for the Next Chapter of Growth in China",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "JV expected to close in Q2 FY2026 after approvals; Boyu up to 60%, Starbucks 40%.",
+      "quote": "We expect to finalize the joint venture in Q2 FY2026, after completing required regulatory approvals.",
+      "verbatim": {
+        "text": "We expect to finalize the joint venture in Q2 FY2026, after completing required regulatory approvals.",
+        "segs": [
+          {
+            "t": "We expect to finalize the joint venture in ",
+            "h": 0
+          },
+          {
+            "t": "Q2 FY2026",
+            "h": 1
+          },
+          {
+            "t": ", after completing required regulatory approvals.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://about.starbucks.com/press/2025/starbucks-and-boyu-announce-joint-venture-for-the-next-chapter-of-growth-in-china",
+          "title": "Starbucks and Boyu Announce Joint Venture for the Next Chapter of Growth in China",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://about.starbucks.com/press/2025/starbucks-and-boyu-announce-joint-venture-for-the-next-chapter-of-growth-in-china",
+          "title": "Starbucks and Boyu Announce Joint Venture for the Next Chapter of Growth in China",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SBUX-P4-2026-01-28",
+      "promiseId": "P4",
+      "date": "2026-01-28",
+      "call": "Q1 FY2026 earnings release",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Closing expectation changed from Q2 FY2026 to Spring, subject to regulatory approvals; ownership terms unchanged.",
+      "quote": "The company expects the transaction with Boyu Capital to close in the Spring, subject to regulatory approvals.",
+      "verbatim": {
+        "text": "The company expects the transaction with Boyu Capital to close in the Spring, subject to regulatory approvals.",
+        "segs": [
+          {
+            "t": "The company expects the transaction with Boyu Capital to close in the Spring, subject to regulatory approvals.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q1-Fiscal-Year-2026-Results/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - Starbucks Reports Q1 Fiscal Year 2026 Results\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q1-Fiscal-Year-2026-Results/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - Starbucks Reports Q1 Fiscal Year 2026 Results\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://about.starbucks.com/press/2025/starbucks-and-boyu-announce-joint-venture-for-the-next-chapter-of-growth-in-china",
+          "title": "Starbucks and Boyu Announce Joint Venture for the Next Chapter of Growth in China",
+          "domain": "about.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "SBUX-P4-2026-01-29",
+      "promiseId": "P4",
+      "date": "2026-01-29",
+      "call": "2026 Investor Day",
+      "speaker": "Brady Brewer, CEO, Starbucks International",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed ownership transition in spring; associated margin benefits begin immediately.",
+      "quote": "It's immediate once our ownership structure shifts in the spring.",
+      "verbatim": {
+        "text": "It's immediate once our ownership structure shifts in the spring.",
+        "segs": [
+          {
+            "t": "It's immediate once our ownership structure shifts in the spring.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Starbucks executives said on the 2026 Investor Day (2026-01-29) about Close China joint venture: Reaffirmed ownership transition in spring; associated margin benefits begin immediately."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.starbucks.com/events-presentations/event-details/2026/Starbucks-2026-Investor-Day-2026-w0k0vvnJag/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - Starbucks 2026 Investor Day\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "SBUX-P4-2026-04-02",
+      "promiseId": "P4",
+      "date": "2026-04-02",
+      "call": "Starbucks and Boyu Capital Finalize Joint Venture to Accelerate Long Term Growth in China",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced official closing; Boyu held 60 percent and Starbucks retained 40 percent ownership.",
+      "quote": "SEATTLE--(BUSINESS WIRE)-- Starbucks Coffee Company (NASDAQ: SBUX) today announced the official closing of its previously announced joint venture with Boyu Capital, marking a significant milestone in the company’s long-term strategy to unlock sustainable, disciplined growth in China.",
+      "verbatim": {
+        "text": "SEATTLE--(BUSINESS WIRE)-- Starbucks Coffee Company (NASDAQ: SBUX) today announced the official closing of its previously announced joint venture with Boyu Capital, marking a significant milestone in the company’s long-term strategy to unlock sustainable, disciplined growth in China.",
+        "segs": [
+          {
+            "t": "SEATTLE--(BUSINESS WIRE)-- Starbucks Coffee Company (NASDAQ: SBUX) today announced the official closing of its previously announced joint venture with Boyu Capital, marking a significant milestone in the company’s long-term strategy to unlock sustainable, disciplined growth in China.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-and-Boyu-Capital-Finalize-Joint-Venture-to-Accelerate-Long-Term-Growth-in-China/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - Starbucks and Boyu Capital Finalize Joint Venture to Accelerate Long Term Growth in China\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-and-Boyu-Capital-Finalize-Joint-Venture-to-Accelerate-Long-Term-Growth-in-China/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - Starbucks and Boyu Capital Finalize Joint Venture to Accelerate Long Term Growth in China\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SBUX-P4-2026-04-28",
+      "promiseId": "P4",
+      "date": "2026-04-28",
+      "call": "Q2 FY2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reiterated April closing announcement; Boyu held 60%, Starbucks retained 40% ownership.",
+      "quote": "In April, the company announced the closing of its previously announced joint venture with Boyu Capital to operate Starbucks retail in China, marking a significant milestone in the company's long-term strategy to unlock sustainable, disciplined growth in China.",
+      "verbatim": {
+        "text": "In April, the company announced the closing of its previously announced joint venture with Boyu Capital to operate Starbucks retail in China, marking a significant milestone in the company's long-term strategy to unlock sustainable, disciplined growth in China.",
+        "segs": [
+          {
+            "t": "In April, the company announced the closing of its previously announced joint venture with Boyu Capital to operate Starbucks retail in China, marking a significant milestone in the company's long-term strategy to unlock sustainable, disciplined growth in China.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q2-Fiscal-Year-2026-Results/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - Starbucks Reports Q2 Fiscal Year 2026 Results\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q2-Fiscal-Year-2026-Results/default.aspx",
+          "title": "\n\tStarbucks Coffee Company - Starbucks Reports Q2 Fiscal Year 2026 Results\n",
+          "domain": "investor.starbucks.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "SBUX-P4-2026-07-29",
+      "promiseId": "P4",
+      "date": "2026-07-29",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Catherine R. Smith, CFO and Executive Vice President",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed China retail deconsolidation, licensed-business reporting and 40% joint venture economics in income from equity investees.",
+      "quote": "Beginning this quarter, Starbucks retail operations in China were deconsolidated from our financials and reported as a licensed business with our 40% joint venture economics reflected as part of income from equity investees.",
+      "verbatim": {
+        "text": "Beginning this quarter, Starbucks retail operations in China were deconsolidated from our financials and reported as a licensed business with our 40% joint venture economics reflected as part of income from equity investees.",
+        "segs": [
+          {
+            "t": "Beginning this quarter, Starbucks retail operations in China were deconsolidated from our financials and reported as a licensed business with our ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " joint venture economics reflected as part of income from equity investees.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P4-2026-10-29",
+      "promiseId": "P4",
+      "date": "2026-10-29",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Catherine R. Smith, CFO and Executive Vice President",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reiterated deconsolidated licensed-business reporting and 40% joint venture economics in income from equity investees.",
+      "quote": "As a reminder, Starbucks China's retail operations are now deconsolidated from our financials and reported as a licensed business with our 40% joint venture economics reported in income from equity investees.",
+      "verbatim": {
+        "text": "As a reminder, Starbucks China's retail operations are now deconsolidated from our financials and reported as a licensed business with our 40% joint venture economics reported in income from equity investees.",
+        "segs": [
+          {
+            "t": "As a reminder, Starbucks China's retail operations are now deconsolidated from our financials and reported as a licensed business with our ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " joint venture economics reported in income from equity investees.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P5-2026-01-28",
+      "promiseId": "P5",
+      "date": "2026-01-28",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Brian Niccol, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Targeted about $2 billion of cost savings over the next two years, building on work begun in 2025.",
+      "quote": "We've got a clear plan in place to basically track down about $2 billion of costs.",
+      "verbatim": {
+        "text": "We've got a clear plan in place to basically track down about $2 billion of costs.",
+        "segs": [
+          {
+            "t": "We've got a clear plan in place to basically track down about ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " of costs.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P5-2026-01-29",
+      "promiseId": "P5",
+      "date": "2026-01-29",
+      "call": "2026 Investor Day",
+      "speaker": "Cathy Smith, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $2 billion; clarified realization across 2026, 2027, and 2028, with some savings reinvested.",
+      "quote": "So it's 2026, 2027, and 2028. So think about it over the three years.",
+      "verbatim": {
+        "text": "So it's 2026, 2027, and 2028. So think about it over the three years.",
+        "segs": [
+          {
+            "t": "So it's ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", and ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ". So think about it over the three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+          "title": "Generic Company",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "SBUX-P5-2026-04-28",
+      "promiseId": "P5",
+      "date": "2026-04-28",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Cathy Smith, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Remained on track for $2 billion in gross savings through fiscal 2028, across product and distribution costs, OpEx, and G&A.",
+      "quote": "We remain on track with our $2 billion cost savings plan.",
+      "verbatim": {
+        "text": "We remain on track with our $2 billion cost savings plan.",
+        "segs": [
+          {
+            "t": "We remain on track with our ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " cost savings plan.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/Q2-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/Q2-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P5-2026-07-29",
+      "promiseId": "P5",
+      "date": "2026-07-29",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Cathy Smith, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Remained on track for $2 billion in gross savings through fiscal 2028; current benefits most visible in G&A and other operating expenses.",
+      "quote": "We remain on track with our $2 billion cost savings plan.",
+      "verbatim": {
+        "text": "We remain on track with our $2 billion cost savings plan.",
+        "segs": [
+          {
+            "t": "We remain on track with our ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " cost savings plan.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SBUX-P5-2026-10-29",
+      "promiseId": "P5",
+      "date": "2026-10-29",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Cathy Smith, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Over 50% of the $2 billion gross savings program achieved; remained on track, with savings continuing through fiscal 2028.",
+      "quote": "As we shared in the prepared remarks, we're over 50% of the $2 billion gross savings program achieved.",
+      "verbatim": {
+        "text": "As we shared in the prepared remarks, we're over 50% of the $2 billion gross savings program achieved.",
+        "segs": [
+          {
+            "t": "As we shared in the prepared remarks, we're over ",
+            "h": 0
+          },
+          {
+            "t": "50%",
+            "h": 1
+          },
+          {
+            "t": " of the ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " gross savings program achieved.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+          "title": "Starbucks Corp.",
+          "domain": "s203.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s203.q4cdn.com/326826266/files/content_files/Q4-FY26-SBUX-Transcript.pdf",
+      "title": "Starbucks Corp.",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q1/SBUX-1Q26-CORRECTED-TRANSCRIPT.pdf",
+      "title": "Starbucks Corp.",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q3/Q3-FY26-SBUX-Transcript.pdf",
+      "title": "Starbucks Corp.",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Jan/Starbucks-Investor-Day-2026-Corrected-Transcript.pdf",
+      "title": "Generic Company",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/Q2-FY26-SBUX-Transcript.pdf",
+      "title": "Starbucks Corp.",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q3/SBUX-3Q25-Corrected-Transcript.pdf",
+      "title": "Starbucks Corp.",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q2/SBUX-2Q25-Corrected-Transcript.pdf",
+      "title": "Starbucks Corp.",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 8,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q4/SBUX-Q4-2025-Earnings-Call-Corrected-Updated.pdf",
+      "title": "Starbucks Corp.",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 9,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q4/SBUX-4Q25-Corrected-Transcript.pdf",
+      "title": "Sbux 4Q25 Corrected Transcript",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_financials/2025/q1/SBUX_Q1_2025_Corrected_Transcript.pdf",
+      "title": "Starbucks Corp.",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://about.starbucks.com/press/2025/starbucks-and-boyu-announce-joint-venture-for-the-next-chapter-of-growth-in-china",
+      "title": "Starbucks and Boyu Announce Joint Venture for the Next Chapter of Growth in China",
+      "domain": "about.starbucks.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 12,
+      "url": "https://investor.starbucks.com/events-presentations/event-details/2026/Starbucks-Q2-Fiscal-Year-2026-Earnings-Conference-Call-2026-i5MwCsdAaW/default.aspx",
+      "title": "\n\tStarbucks Coffee Company - Starbucks Q2 Fiscal Year 2026 Earnings Conference Call\n",
+      "domain": "investor.starbucks.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://about.starbucks.com/press/2025/message-from-brian-green-apron-service-one-month-in",
+      "title": "Message from Brian: Green Apron Service, one month in - About Starbucks",
+      "domain": "about.starbucks.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 14,
+      "url": "https://about.starbucks.com/press/2025/starbucks-reports-q4-full-fiscal-year-2025-results",
+      "title": "Starbucks Reports Q4 Full Fiscal Year 2025 Results",
+      "domain": "about.starbucks.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922425000067/exhibit991.htm",
+      "title": "STARBUCKS CORP 8-K exhibit 99.1, filed September 25, 2025",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 16,
+      "url": "https://about.starbucks.com/press/2026/starbucks-is-back-turning-momentum-into-long-term-sustainable-growth",
+      "title": "Starbucks is Back, Turning Momentum into Long-Term, Sustainable Growth",
+      "domain": "about.starbucks.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://s203.q4cdn.com/326826266/files/doc_events/2026/Mar/25/2026-SBUX-Annual-Meeting-Transcript.pdf",
+      "title": "Microsoft Word - 3.25.26 SBUX Annual Meeting Transcript.docx",
+      "domain": "s203.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://investor.starbucks.com/events-presentations/event-details/2026/6th-Annual-Evercore-Consumer-and-Retail-Conference-2026-QYzuWFgm0f/default.aspx",
+      "title": "\n\tStarbucks Coffee Company - 6th Annual Evercore Consumer and Retail Conference\n",
+      "domain": "investor.starbucks.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 19,
+      "url": "https://about.starbucks.com/press/2026/more-than-1000-starbucks-coffeehouses-redesigned-across-the-us-and-canada",
+      "title": "More than 1,000 Starbucks coffeehouses redesigned across the U.S. and Canada",
+      "domain": "about.starbucks.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 20,
+      "url": "https://about.starbucks.com/press/2026/creating-coffeehouses-customers-love-and-partners-are-proud-of",
+      "title": "Creating Coffeehouses Customers Love and Partners are Proud of",
+      "domain": "about.starbucks.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 21,
+      "url": "https://about.starbucks.com/press/2026/while-you-were-sleeping-how-starbucks-coffeehouses-get-a-new-look-overnight/",
+      "title": "While you were sleeping: How Starbucks coffeehouses get a new look overnight",
+      "domain": "about.starbucks.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 22,
+      "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q1-Fiscal-Year-2026-Results/default.aspx",
+      "title": "\n\tStarbucks Coffee Company - Starbucks Reports Q1 Fiscal Year 2026 Results\n",
+      "domain": "investor.starbucks.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 23,
+      "url": "https://investor.starbucks.com/events-presentations/event-details/2026/Starbucks-2026-Investor-Day-2026-w0k0vvnJag/default.aspx",
+      "title": "\n\tStarbucks Coffee Company - Starbucks 2026 Investor Day\n",
+      "domain": "investor.starbucks.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 24,
+      "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-and-Boyu-Capital-Finalize-Joint-Venture-to-Accelerate-Long-Term-Growth-in-China/default.aspx",
+      "title": "\n\tStarbucks Coffee Company - Starbucks and Boyu Capital Finalize Joint Venture to Accelerate Long Term Growth in China\n",
+      "domain": "investor.starbucks.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 25,
+      "url": "https://investor.starbucks.com/news/financial-releases/news-details/2026/Starbucks-Reports-Q2-Fiscal-Year-2026-Results/default.aspx",
+      "title": "\n\tStarbucks Coffee Company - Starbucks Reports Q2 Fiscal Year 2026 Results\n",
+      "domain": "investor.starbucks.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 26,
+      "url": "https://about.starbucks.com/uploads/2025/09/Back-to-Starbucks-One-Year-Timeline.pdf",
+      "title": "Year One Milestones: Timeline",
+      "domain": "about.starbucks.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 27,
+      "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000080/sbux-20260329.htm",
+      "title": "sbux-20260329",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 28,
+      "url": "https://www.sec.gov/Archives/edgar/data/829224/000082922426000064/sbux-20260402.htm",
+      "title": "sbux-20260402",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 29,
+      "url": "https://stockanalysis.com/stocks/sbux/transcripts/685617-the-6th-annual-evercore-consumer-retail-conference/",
+      "title": "Starbucks (SBUX) FY 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 30,
+      "url": "https://www.usatoday.com/story/money/business/2025/06/12/starbucks-ceo-green-apron-service-changes/84175699007",
+      "title": "Starbucks CEO accelerates 'Green Apron' service change overhaul",
+      "domain": "usatoday.com",
+      "tier": "press",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P3",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T05:51:03.463699Z",
+      "completedAt": "2026-11-05T05:57:25.659048Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.899851Z",
+      "completedAt": "2026-11-05T19:13:21.558046Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.906517Z",
+      "completedAt": "2026-11-05T19:12:56.604689Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.913451Z",
+      "completedAt": "2026-11-05T19:13:33.591327Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.920328Z",
+      "completedAt": "2026-11-05T19:13:52.040989Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.927167Z",
+      "completedAt": "2026-11-05T19:12:01.517559Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.710043Z",
+      "completedAt": "2026-11-05T19:46:09.847966Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.717207Z",
+      "completedAt": "2026-11-05T19:45:17.907569Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.724482Z",
+      "completedAt": "2026-11-05T19:46:20.473633Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.731571Z",
+      "completedAt": "2026-11-05T19:44:07.977055Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.738706Z",
+      "completedAt": "2026-11-05T19:44:34.474008Z"
+    }
+  ],
+  "fills": {
+    "filled": 1
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "39 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "35 of 35 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "35 of 35 (100%); 1 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q4 FY2026 on 2026-10-29; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/1280px-Starbucks_Corporation_Logo_2011.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/Starbucks",
+      "title": "Starbucks - Wikipedia",
+      "width": 1280,
+      "height": 1296,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://about.starbucks.com/uploads/2025/09/Starbucks-Coffeehouse-NYC-Union-Square-East-5-1024x683.jpg",
+      "sourcePageUrl": "https://about.starbucks.com/stories/2025/starbucks-coffeehouse-designs-enter-a-new-era-take-a-look/",
+      "title": "Starbucks coffeehouse designs enter a new era - take a look",
+      "width": 1024,
+      "height": 683,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.410Z"
+}

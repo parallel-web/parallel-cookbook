@@ -1,0 +1,1711 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "AVGO",
+  "name": "Broadcom Inc.",
+  "short": "Broadcom",
+  "website": "broadcom.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Sunday closest to October 31",
+  "irUrl": "https://investors.broadcom.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-09-02",
+    "quarter": "Q3 FY2026"
+  },
+  "nextCall": {
+    "date": "2026-12-09",
+    "time": "2:00 PM PT",
+    "quarter": "Q4 FY2026"
+  },
+  "photoSubject": "Broadcom custom AI accelerator chips",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Reduce VMware spending",
+      "commitment": "Target VMware spending of $1.3 billion exiting Q4 FY2024, stabilizing near $1.2 billion after integration.",
+      "deadline": "Q4 FY2024; post-integration for $1.2 billion",
+      "firstStated": "2024-06-12",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "VMware spending reached $1.2 billion in Q4 versus the 1.3 billion exit target; management reported integration was largely complete.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/06/12/broadcom-avgo-q2-2024-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/12/12/broadcom-avgo-q4-2024-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/223948-q4-2024",
+          "title": "Broadcom (AVGO) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2024-12-12",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2024-09-05",
+            "what_was_said": "Management also reported that VMware spending had reached $1.3 billion in Q3. This means the $1.3 billion Q4 exit target had already been reached one quarter early, adding important context to the quoted general progress statement.",
+            "call": "Q3 FY2024 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Deliver OpenAI's 10 GW program",
+      "commitment": "Align with OpenAI to develop 10 GW of custom AI accelerators over 2027–2029.",
+      "deadline": "2027–2029",
+      "firstStated": "2025-10-13",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Jalapeño was shipping; 1.3 GW deployment in 2027 remained on track. The broader 10 GW program through 2029 remained pending.",
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AVGO/earnings/AVGO-Q3-2026-earnings_call-685349.html",
+          "title": "Broadcom Inc. (AVGO) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026/",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/382934-q4-2025/",
+          "title": "Broadcom (AVGO) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-06-03",
+            "what_was_said": "Management said: “For OpenAI, we have delivered silicon, and we are on track for production late 2026.” This distinguished silicon delivery from the subsequent production and deployment milestones.",
+            "call": "Q2 FY2026 earnings call"
+          },
+          {
+            "date": "2026-09-02",
+            "what_was_said": "Management reported shipping Jalapeño, OpenAI’s first-generation custom accelerator, in Q3 and said shipments would continue.",
+            "call": "Q3 FY2026 earnings call"
+          },
+          {
+            "date": "2026-09-02",
+            "what_was_said": "Management said the next-generation XPU beyond Jalapeño was approaching tape-out and that it had “line of sight” for OpenAI to deploy over 5 GW of Jalapeño and its successor in 2028. This was a forward-looking deployment milestone, not an achieved deployment.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Scale Anthropic TPU capacity",
+      "commitment": "Support Anthropic TPU compute demand exceeding 3 GW in 2027.",
+      "deadline": "2027",
+      "firstStated": "2026-03-04",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The target rose to 5 gigawatts in 2027 and remained pending; subsequent financing anticipated deliveries starting in calendar 2027.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/09/09/broadcom-avgo-q3-2026-earnings-call-transcript?referring_guid=07c15ca4-641a-4ad1-9d0a-36c4b7fc7515",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.broadcom.com/news-releases/news-release-details/bank-america-blackstone-citi-and-morgan-stanley-announce",
+          "title": "Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom | Broadcom Inc.",
+          "domain": "investors.broadcom.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-09-02",
+            "what_was_said": "After reiterating another 5 GW for Anthropic in 2027, management said it had clear line of sight to deliver an incremental 10 GW in 2028. This extended the longer-term ramp; it did not declare the 2027 commitment delivered.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Scale Meta MTIA deployment",
+      "commitment": "Scale Meta's next-generation MTIA XPUs to multiple gigawatts in 2027 and beyond.",
+      "deadline": "2027 and beyond",
+      "firstStated": "2026-03-04",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Still pending: Meta partnership remains on track for three MTIA generations by the end of 2027 and 3 GW through 2028.",
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Reach $100 billion AI revenue",
+      "commitment": "Achieve more than $100 billion in AI-chip revenue in 2027.",
+      "deadline": "2027",
+      "firstStated": "2026-03-04",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Management raised its 2027 AI-chip revenue outlook to approximately $115 billion. Achievement remains pending.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-09-02",
+            "what_was_said": "Management said demand exceeded the approximately $115 billion outlook and it would work to improve supply. It also cautioned that the AI revenue guidance illustrated the growth trajectory and was not intended to be updated quarterly.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "AVGO-P1-2024-06-12",
+      "promiseId": "P1",
+      "date": "2024-06-12",
+      "call": "Q2 FY2024 earnings call",
+      "speaker": "Hock Tan, President and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected $1.3 billion spending exiting Q4, improving the previous $1.4 billion plan, and likely stabilization at $1.2 billion post-integration.",
+      "quote": "We expect spending will continue to decline toward a 1.3 billion run rate exiting Q4, better than our previous $1.4 billion plan, and will likely stabilize at 1.2 billion post-integration.",
+      "verbatim": {
+        "text": "We expect spending will continue to decline toward a 1.3 billion run rate exiting Q4, better than our previous $1.4 billion plan, and will likely stabilize at 1.2 billion post-integration.",
+        "segs": [
+          {
+            "t": "We expect spending will continue to decline toward a ",
+            "h": 0
+          },
+          {
+            "t": "1.3 billion",
+            "h": 1
+          },
+          {
+            "t": " run rate exiting ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ", better than our previous ",
+            "h": 0
+          },
+          {
+            "t": "$1.4 billion",
+            "h": 1
+          },
+          {
+            "t": " plan, and will likely stabilize at ",
+            "h": 0
+          },
+          {
+            "t": "1.2 billion",
+            "h": 1
+          },
+          {
+            "t": " post-integration.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/06/12/broadcom-avgo-q2-2024-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/06/12/broadcom-avgo-q2-2024-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.broadcom.com/events/event-details/q2-2024-broadcom-earnings-conference-call",
+          "title": "Q2 2024 Broadcom Earnings Conference Call | Broadcom Inc.",
+          "domain": "investors.broadcom.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P1-2024-09-05",
+      "promiseId": "P1",
+      "date": "2024-09-05",
+      "call": "Q3 FY2024 earnings call",
+      "speaker": "Hock Tan, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Continued driving down VMware costs.",
+      "quote": "Meanwhile, we continue to drive down costs in VMware.",
+      "verbatim": {
+        "text": "Meanwhile, we continue to drive down costs in VMware.",
+        "segs": [
+          {
+            "t": "Meanwhile, we continue to drive down costs in VMware.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.nasdaq.com/articles/broadcom-avgo-q3-2024-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q3 2024 Earnings Call Transcript | Nasdaq",
+          "domain": "nasdaq.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.nasdaq.com/articles/broadcom-avgo-q3-2024-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q3 2024 Earnings Call Transcript | Nasdaq",
+          "domain": "nasdaq.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.roic.ai/quote/AVGO.TO/transcripts/2024-year/3-quarter",
+          "title": "Broadcom Inc. (AVGO.TO) Q3 FY2024 Earnings Call Transcript - September 5, 2024",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P1-2024-12-12",
+      "promiseId": "P1",
+      "date": "2024-12-12",
+      "call": "Q4 FY2024 earnings call",
+      "speaker": "Hock Tan, President and Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported $1.2 billion spending in Q4 versus $1.3 billion in Q3; VMware integration was largely complete.",
+      "quote": "We brought spending down to $1.2 billion in Q4, down from $1.3 billion in Q3.",
+      "verbatim": {
+        "text": "We brought spending down to $1.2 billion in Q4, down from $1.3 billion in Q3.",
+        "segs": [
+          {
+            "t": "We brought spending down to ",
+            "h": 0
+          },
+          {
+            "t": "$1.2 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ", down from ",
+            "h": 0
+          },
+          {
+            "t": "$1.3 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/12/12/broadcom-avgo-q4-2024-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/12/12/broadcom-avgo-q4-2024-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P2-2025-10-13",
+      "promiseId": "P2",
+      "date": "2025-10-13",
+      "call": "OpenAI and Broadcom announce strategic collaboration to deploy 10 gigawatts of OpenAI-designed AI accelerators",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced 10 gigawatts of custom AI accelerators; deployment targeted the second half of 2026 through end of 2029.",
+      "quote": "OpenAI and Broadcom Inc. (NASDAQ: AVGO) today announced a collaboration for 10 gigawatts of custom AI accelerators.",
+      "verbatim": {
+        "text": "13, 2025 (GLOBE NEWSWIRE) -- OpenAI and Broadcom Inc. (NASDAQ: AVGO) today announced a collaboration for 10 gigawatts of custom AI accelerators.",
+        "segs": [
+          {
+            "t": "13, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " (GLOBE NEWSWIRE) -- OpenAI and Broadcom Inc. (NASDAQ: AVGO) today announced a collaboration for 10 gigawatts of custom AI accelerators.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.broadcom.com/company/news/product-releases/63631",
+          "title": "OpenAI and Broadcom announce strategic collaboration to deploy 10 gigawatts of OpenAI-designed AI accelerators",
+          "domain": "broadcom.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.broadcom.com/company/news/product-releases/63631",
+          "title": "OpenAI and Broadcom announce strategic collaboration to deploy 10 gigawatts of OpenAI-designed AI accelerators",
+          "domain": "broadcom.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AVGO-P2-2025-12-11",
+      "promiseId": "P2",
+      "date": "2025-12-11",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed an agreement to align on developing 10 GW for OpenAI over 2027 to 2029.",
+      "quote": "And that 10 GW announcement is an agreement to be aligned on developing 10 GW for OpenAI over 2027 to 2029 timeframe.",
+      "verbatim": {
+        "text": "And that 10 GW announcement is an agreement to be aligned on developing 10 GW for OpenAI over 2027 to 2029 timeframe.",
+        "segs": [
+          {
+            "t": "And that 10 GW announcement is an agreement to be aligned on developing 10 GW for OpenAI over ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": " timeframe.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/382934-q4-2025/",
+          "title": "Broadcom (AVGO) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/382934-q4-2025/",
+          "title": "Broadcom (AVGO) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/12/12/broadcom-avgo-q4-2025-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.broadcom.com/company/news/product-releases/64506",
+          "title": "OpenAI and Broadcom Unveil LLM-Optimized Intelligence Processor",
+          "domain": "broadcom.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P2-2026-03-04",
+      "promiseId": "P2",
+      "date": "2026-03-04",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected OpenAI's first-generation XPU volume deployment in 2027 at over 1 gigawatt of compute capacity.",
+      "quote": "We expect OpenAI to be deploying in volume their first generation XPU in 2027 at over 1 gigawatt of compute capacity.",
+      "verbatim": {
+        "text": "We expect OpenAI to be deploying in volume their first generation XPU in 2027 at over 1 gigawatt of compute capacity.",
+        "segs": [
+          {
+            "t": "We expect OpenAI to be deploying in volume their first generation XPU in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " at over 1 gigawatt of compute capacity.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P2-2026-06-03",
+      "promiseId": "P2",
+      "date": "2026-06-03",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Delivered silicon; production on track for late 2026; contractual 1.3 GW deployment in 2027 within the 10 GW by 2029 agreement.",
+      "quote": "We have a contractual commitment to deploy 1.3 GW in 2027 as part of the larger 10 GW that by 2029 agreement we announced last year.",
+      "verbatim": {
+        "text": "We have a contractual commitment to deploy 1.3 GW in 2027 as part of the larger 10 GW that by 2029 agreement we announced last year.",
+        "segs": [
+          {
+            "t": "We have a contractual commitment to deploy 1.3 GW in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " as part of the larger 10 GW that by ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": " agreement we announced last year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026/",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026/",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript/",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P2-2026-06-24",
+      "promiseId": "P2",
+      "date": "2026-06-24",
+      "call": "OpenAI and Broadcom Unveil LLM-Optimized Intelligence Processor",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Unveiled Jalapeño engineering samples; initial deployment remained planned by the end of 2026, followed by expansion in subsequent years.",
+      "quote": "Jalapeño is the first step in a multi-generation compute platform designed for initial deployment by the end of 2026, and expanding in the years ahead.",
+      "verbatim": {
+        "text": "Jalapeño is the first step in a multi-generation compute platform designed for initial deployment by the end of 2026, and expanding in the years ahead, combining OpenAI-designed accelerators with Broadcom silicon implementation, networking, and connectivity technologies; and Celestica’s board, rack and system expertise.",
+        "segs": [
+          {
+            "t": "Jalapeño is the first step in a multi-generation compute platform designed for initial deployment by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", and expanding in the years ahead, combining OpenAI-designed accelerators with Broadcom silicon implementation, networking, and connectivity technologies; and Celestica’s board, rack and system expertise.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.broadcom.com/company/news/product-releases/64506",
+          "title": "OpenAI and Broadcom Unveil LLM-Optimized Intelligence Processor",
+          "domain": "broadcom.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.broadcom.com/company/news/product-releases/64506",
+          "title": "OpenAI and Broadcom Unveil LLM-Optimized Intelligence Processor",
+          "domain": "broadcom.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AVGO-P2-2026-09-02",
+      "promiseId": "P2",
+      "date": "2026-09-02",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Jalapeño was shipping; 1.3 GW in 2027 remained on track, with over 5 GW of deployment in sight for 2028.",
+      "quote": "For OpenAI, Jalapeño is on track for the planned deployment of 1.3 GW in 2027.",
+      "verbatim": {
+        "text": "For OpenAI, Jalapeño is on track for the planned deployment of 1.3 GW in 2027.",
+        "segs": [
+          {
+            "t": "For OpenAI, Jalapeño is on track for the planned deployment of 1.3 GW in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/AVGO/earnings/AVGO-Q3-2026-earnings_call-685349.html",
+          "title": "Broadcom Inc. (AVGO) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AVGO/earnings/AVGO-Q3-2026-earnings_call-685349.html",
+          "title": "Broadcom Inc. (AVGO) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P3-2026-03-04",
+      "promiseId": "P3",
+      "date": "2026-03-04",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Anthropic TPU compute demand expected to exceed 3 gigawatts in 2027.",
+      "quote": "And for 2027, this demand is expected to surge in excess of 3 gigawatts of compute.",
+      "verbatim": {
+        "text": "And for 2027, this demand is expected to surge in excess of 3 gigawatts of compute.",
+        "segs": [
+          {
+            "t": "And for ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", this demand is expected to surge in excess of 3 gigawatts of compute.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P3-2026-04-06",
+      "promiseId": "P3",
+      "date": "2026-04-06",
+      "call": "Form 8-K",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Anthropic to access approximately 3.5 gigawatts through Broadcom beginning in 2027, contingent on continued commercial success.",
+      "quote": "Separately, Broadcom, Google and Anthropic PBC (\"Anthropic\") have expanded their current strategic collaboration under which Anthropic, beginning in 2027, will access through Broadcom approximately 3.5 gigawatts as part of the multiple gigawatts of next generation TPU-based AI compute capacity committed by Anthropic.",
+      "verbatim": {
+        "text": "Separately, Broadcom, Google and Anthropic PBC (\"Anthropic\") have expanded their current strategic collaboration under which Anthropic, beginning in 2027, will access through Broadcom approximately 3.5 gigawatts as part of the multiple gigawatts of next generation TPU-based AI compute capacity committed by Anthropic.",
+        "segs": [
+          {
+            "t": "Separately, Broadcom, Google and Anthropic PBC (\"Anthropic\") have expanded their current strategic collaboration under which Anthropic, beginning in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", will access through Broadcom approximately 3.5 gigawatts as part of the multiple gigawatts of next generation TPU-based AI compute capacity committed by Anthropic.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.broadcom.com/static-files/c906d370-921b-4bc2-bb7b-57877dfcf1ae",
+          "title": "Form 8-K for Broadcom INC filed 04/06/2026",
+          "domain": "investors.broadcom.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "AVGO-P3-2026-06-03",
+      "promiseId": "P3",
+      "date": "2026-06-03",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "April agreement enables Anthropic to access another 5 gigawatts of next-generation TPU compute beginning in 2027.",
+      "quote": "In April, we entered into an agreement to enable Anthropic to access another 5 gigawatts of next-generation TPU-based compute beginning in 2027.",
+      "verbatim": {
+        "text": "In April, we entered into an agreement to enable Anthropic to access another 5 gigawatts of next-generation TPU-based compute beginning in 2027.",
+        "segs": [
+          {
+            "t": "In April, we entered into an agreement to enable Anthropic to access another 5 gigawatts of next-generation TPU-based compute beginning in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P3-2026-09-02",
+      "promiseId": "P3",
+      "date": "2026-09-02",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed another 5 gigawatts of TPU version 8i for Anthropic in 2027.",
+      "quote": "We expect Anthropic to deploy another 5 gigawatts of TPU version 8i in 2027.",
+      "verbatim": {
+        "text": "We expect Anthropic to deploy another 5 gigawatts of TPU version 8i in 2027.",
+        "segs": [
+          {
+            "t": "We expect Anthropic to deploy another 5 gigawatts of TPU version 8i in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/09/09/broadcom-avgo-q3-2026-earnings-call-transcript?referring_guid=07c15ca4-641a-4ad1-9d0a-36c4b7fc7515",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/09/09/broadcom-avgo-q3-2026-earnings-call-transcript?referring_guid=07c15ca4-641a-4ad1-9d0a-36c4b7fc7515",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P4-2026-03-04",
+      "promiseId": "P4",
+      "date": "2026-03-04",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Meta MTIA is shipping; next-generation XPUs will scale to multiple gigawatts in 2027 and beyond.",
+      "quote": "Now contrary to recent analyst reports, Meta's custom accelerator MTIA roadmap is alive and well. We are shipping now. And in fact, for the next generation XPUs, we will scale to multiple gigawatts in 2027 and beyond.",
+      "verbatim": {
+        "text": "We are shipping now. And in fact, for the next generation XPUs, we will scale to multiple gigawatts in 2027 and beyond.",
+        "segs": [
+          {
+            "t": "We are shipping now. And in fact, for the next generation XPUs, we will scale to multiple gigawatts in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " and beyond.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.broadcom.com/company-information/past-events",
+          "title": "Events & Presentations | Broadcom Inc.",
+          "domain": "investors.broadcom.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P4-2026-04-14",
+      "promiseId": "P4",
+      "date": "2026-04-14",
+      "call": "Broadcom Announces Extended Partnership with Meta to Deploy Technology to Support Multi-Gigawatts of Meta’s Custom Silicon, MTIA",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Formalized a multi-gigawatt MTIA partnership through 2029; the initial commitment exceeds 1GW.",
+      "quote": "The initial commitment exceeds 1GW and is the first phase of a sustained, multi-gigawatt rollout.",
+      "verbatim": {
+        "text": "The initial commitment exceeds 1GW and is the first phase of a sustained, multi-gigawatt rollout.",
+        "segs": [
+          {
+            "t": "The initial commitment exceeds 1GW and is the first phase of a sustained, multi-gigawatt rollout.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-extended-partnership-meta-deploy-technology",
+          "title": "Broadcom Announces Extended Partnership with Meta to Deploy Technology to Support Multi-Gigawatts of Meta’s Custom Silicon, MTIA | Broadcom Inc.",
+          "domain": "investors.broadcom.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-extended-partnership-meta-deploy-technology",
+          "title": "Broadcom Announces Extended Partnership with Meta to Deploy Technology to Support Multi-Gigawatts of Meta’s Custom Silicon, MTIA | Broadcom Inc.",
+          "domain": "investors.broadcom.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AVGO-P4-2026-06-03",
+      "promiseId": "P4",
+      "date": "2026-06-03",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Specified 3 GW through the end of 2028; initial 1 GW order received, with delivery starting in the second half of 2027.",
+      "quote": "Under this agreement, we expect to deploy 3 GW through the end of 2028. The initial order for 1 GW, which includes XPUs and our networking, has been received and will start delivery in the second half of 2027.",
+      "verbatim": {
+        "text": "Under this agreement, we expect to deploy 3 GW through the end of 2028. The initial order for 1 GW, which includes XPUs and our networking, has been received and will start delivery in the second half of 2027.",
+        "segs": [
+          {
+            "t": "Under this agreement, we expect to deploy 3 GW through the end of ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ". The initial order for 1 GW, which includes XPUs and our networking, has been received and will start delivery in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.broadcom.com/company-information/past-events",
+          "title": "Events & Presentations | Broadcom Inc.",
+          "domain": "investors.broadcom.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P4-2026-09-02",
+      "promiseId": "P4",
+      "date": "2026-09-02",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Hock Tan, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Partnership remains on track: three MTIA generations by the end of 2027, supporting 3 GW through 2028.",
+      "quote": "Our partnership with Meta to deliver multiple generations of MTIA XPUs remains on track. Between now and the end of 2027, we will be delivering three generations of MTIA accelerators to Meta. Across these three generations, we have line of sight to deploying 3 GW through 2028.",
+      "verbatim": {
+        "text": "Between now and the end of 2027, we will be delivering three generations of MTIA accelerators to Meta. Across these three generations, we have line of sight to deploying 3 GW through 2028.",
+        "segs": [
+          {
+            "t": "Between now and the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", we will be delivering three generations of MTIA accelerators to Meta. Across these three generations, we have line of sight to deploying 3 GW through ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.broadcom.com/company-information/past-events",
+          "title": "Events & Presentations | Broadcom Inc.",
+          "domain": "investors.broadcom.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P5-2026-03-04",
+      "promiseId": "P5",
+      "date": "2026-03-04",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Hock Tan, President and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Projected AI-chip revenue in excess of $100 billion in 2027.",
+      "quote": "Today, in fact, we have line of sight to achieve AI revenue from chips, just chips, in excess of $100 billion in 2027.",
+      "verbatim": {
+        "text": "Today, in fact, we have line of sight to achieve AI revenue from chips, just chips, in excess of $100 billion in 2027.",
+        "segs": [
+          {
+            "t": "Today, in fact, we have line of sight to achieve AI revenue from chips, just chips, in excess of ",
+            "h": 0
+          },
+          {
+            "t": "$100 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+          "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P5-2026-06-03",
+      "promiseId": "P5",
+      "date": "2026-06-03",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Hock Tan, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated fiscal 2027 AI semiconductor revenue guidance in excess of $100 billion.",
+      "quote": "We expect this momentum to continue into fiscal year 2027 and reiterate our AI semiconductor revenue guidance to be in excess of $100 billion.",
+      "verbatim": {
+        "text": "We expect this momentum to continue into fiscal year 2027 and reiterate our AI semiconductor revenue guidance to be in excess of $100 billion.",
+        "segs": [
+          {
+            "t": "We expect this momentum to continue into fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " and reiterate our AI semiconductor revenue guidance to be in excess of ",
+            "h": 0
+          },
+          {
+            "t": "$100 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AVGO-P5-2026-09-02",
+      "promiseId": "P5",
+      "date": "2026-09-02",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Hock Tan, President and Chief Executive Officer",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised the 2027 AI revenue outlook to approximately $115 billion, with supply secured.",
+      "quote": "In 2027, we have secured the supply to again double AI revenue to approximately $115 billion.",
+      "verbatim": {
+        "text": "In 2027, we have secured the supply to again double AI revenue to approximately $115 billion.",
+        "segs": [
+          {
+            "t": "In ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", we have secured the supply to again double AI revenue to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$115 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+          "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+          "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/03/04/broadcom-avgo-q1-2026-earnings-call-transcript",
+      "title": "Broadcom (AVGO) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026",
+      "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://stockanalysis.com/stocks/avgo/transcripts/685349-q3-2026",
+      "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://investors.broadcom.com/company-information/past-events",
+      "title": "Events & Presentations | Broadcom Inc.",
+      "domain": "investors.broadcom.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 5,
+      "url": "https://www.broadcom.com/company/news/product-releases/64506",
+      "title": "OpenAI and Broadcom Unveil LLM-Optimized Intelligence Processor",
+      "domain": "broadcom.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 6,
+      "url": "https://www.sec.gov/Archives/edgar/data/1730168/000119312526144028/d87999d8k.htm",
+      "title": "8-K",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 7,
+      "url": "https://investors.broadcom.com/events/event-details/q2-2024-broadcom-earnings-conference-call",
+      "title": "Q2 2024 Broadcom Earnings Conference Call | Broadcom Inc.",
+      "domain": "investors.broadcom.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 8,
+      "url": "https://www.broadcom.com/company/news/product-releases/63631",
+      "title": "OpenAI and Broadcom announce strategic collaboration to deploy 10 gigawatts of OpenAI-designed AI accelerators",
+      "domain": "broadcom.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 9,
+      "url": "https://investors.broadcom.com/static-files/c906d370-921b-4bc2-bb7b-57877dfcf1ae",
+      "title": "Form 8-K for Broadcom INC filed 04/06/2026",
+      "domain": "investors.broadcom.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 10,
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-extended-partnership-meta-deploy-technology",
+      "title": "Broadcom Announces Extended Partnership with Meta to Deploy Technology to Support Multi-Gigawatts of Meta’s Custom Silicon, MTIA | Broadcom Inc.",
+      "domain": "investors.broadcom.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 11,
+      "url": "https://investors.broadcom.com/news-releases/news-release-details/bank-america-blackstone-citi-and-morgan-stanley-announce",
+      "title": "Bank of America, Blackstone, Citi and Morgan Stanley Announce Landmark $63 Billion Financing Structure to Enable AI Compute Capacity in Partnership with Broadcom | Broadcom Inc.",
+      "domain": "investors.broadcom.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 12,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript",
+      "title": "Broadcom (AVGO) Q2 2026 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/06/12/broadcom-avgo-q2-2024-earnings-call-transcript",
+      "title": "Broadcom (AVGO) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/12/12/broadcom-avgo-q4-2024-earnings-call-transcript",
+      "title": "Broadcom (AVGO) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://stockanalysis.com/stocks/avgo/transcripts/382934-q4-2025/",
+      "title": "Broadcom (AVGO) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 16,
+      "url": "https://stockanalysis.com/stocks/avgo/transcripts/581106-q2-2026/",
+      "title": "Broadcom (AVGO) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 17,
+      "url": "https://finance.yahoo.com/quote/AVGO/earnings/AVGO-Q3-2026-earnings_call-685349.html",
+      "title": "Broadcom Inc. (AVGO) Q3 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 18,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/09/09/broadcom-avgo-q3-2026-earnings-call-transcript?referring_guid=07c15ca4-641a-4ad1-9d0a-36c4b7fc7515",
+      "title": "Broadcom (AVGO) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 19,
+      "url": "https://www.nasdaq.com/articles/broadcom-avgo-q3-2024-earnings-call-transcript",
+      "title": "Broadcom (AVGO) Q3 2024 Earnings Call Transcript | Nasdaq",
+      "domain": "nasdaq.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://www.roic.ai/quote/AVGO.TO/transcripts/2024-year/3-quarter",
+      "title": "Broadcom Inc. (AVGO.TO) Q3 FY2024 Earnings Call Transcript - September 5, 2024",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/12/12/broadcom-avgo-q4-2025-earnings-call-transcript",
+      "title": "Broadcom (AVGO) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/06/03/broadcom-avgo-q2-2026-earnings-transcript/",
+      "title": "Broadcom (AVGO) Q2 2026 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 23,
+      "url": "https://stockanalysis.com/stocks/avgo/transcripts/223948-q4-2024",
+      "title": "Broadcom (AVGO) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.791280Z",
+      "completedAt": "2026-11-05T06:33:30.934730Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.497272Z",
+      "completedAt": "2026-11-05T19:11:18.062116Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.504267Z",
+      "completedAt": "2026-11-05T19:13:05.745310Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.511073Z",
+      "completedAt": "2026-11-05T19:12:14.648402Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.518052Z",
+      "completedAt": "2026-11-05T19:10:22.894095Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.524953Z",
+      "completedAt": "2026-11-05T19:10:40.074381Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.118871Z",
+      "completedAt": "2026-11-05T19:45:56.346264Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.125770Z",
+      "completedAt": "2026-11-05T19:46:00.167986Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.132807Z",
+      "completedAt": "2026-11-05T19:45:33.619562Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.139893Z",
+      "completedAt": "2026-11-05T19:44:01.052980Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.146937Z",
+      "completedAt": "2026-11-05T19:45:54.216215Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "20 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "20 of 20 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "20 of 20 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 FY2026 on 2026-09-02; next 2026-12-09"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Broadcom_logo_%282016-present%29.svg/3840px-Broadcom_logo_%282016-present%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Broadcom_logo_(2016-present).svg",
+      "title": "File:Broadcom logo (2016-present).svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 528,
+      "rank": 1
+    },
+    "photo": null
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.545Z"
+}

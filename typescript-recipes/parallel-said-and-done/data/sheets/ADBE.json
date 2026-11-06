@@ -1,0 +1,1898 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "ADBE",
+  "name": "Adobe Inc.",
+  "short": "Adobe",
+  "website": "adobe.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Friday closest to November 30",
+  "irUrl": "https://www.adobe.com/investor-relations.html",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-09-10",
+    "quarter": "Q3 FY2026"
+  },
+  "nextCall": {
+    "date": "2026-12-09",
+    "time": "2:00 PM Pacific Time",
+    "quarter": "Q4 & FY2026"
+  },
+  "photoSubject": "Adobe Firefly creative software",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Complete the Figma acquisition",
+      "commitment": "Acquire Figma for approximately $20 billion and close in 2023, subject to regulatory approvals.",
+      "deadline": "2023",
+      "firstStated": "2022-09-15",
+      "status": "dropped",
+      "k": "drop",
+      "outcomeSummary": "Adobe and Figma terminated the deal over regulatory obstacles; Adobe paid Figma a $1 billion termination fee on December 20, 2023.",
+      "citations": [
+        {
+          "url": "https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement",
+          "title": "Adobe and Figma Mutually Agree to Terminate Merger Agreement",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634324000006/R11.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/content/dam/cc/en/investor-relations/pdfs/51902202/Q3-FY2022-earnings-transcript.pdf",
+          "title": "Q3 Fy2022 Earnings Transcript",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2023-12-18",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "dropped",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Double AI-first ARR",
+      "commitment": "Double the greater-than-$125 million AI-first book of business exiting Q1 by the end of fiscal 2025.",
+      "deadline": "End of FY2025",
+      "firstStated": "2025-03-12",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Adobe reported AI-first ARR already exceeding its $250 million year-end target, completing the promised doubling ahead of fiscal year-end.",
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/11905202/aiy4w5teshy5t.pdf",
+          "title": "ADBE Q3FY25 Earnings Release",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/11905202/cu564stre3e.pdf",
+          "title": "ADBE Q3FY25 Earnings Script and Slides",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-09-11",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Close the Semrush acquisition",
+      "commitment": "Close the approximately $1.9 billion all-cash Semrush acquisition in the first half of FY2026, subject to regulatory approvals and customary conditions.",
+      "deadline": "First half of FY2026",
+      "firstStated": "2025-11-19",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Adobe announced completion on April 28, 2026, within the promised first half of FY 2026.",
+      "citations": [
+        {
+          "url": "https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition",
+          "title": "Adobe Completes Semrush Acquisition, Strengthening CX Enterprise with Enhanced Brand Visibility Capabilities",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/11606202/a5543arefgt.pdf",
+          "title": "ADBE Q2FY26 Earnings Release",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-04-28",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Maintain FY2026 operating margin",
+      "commitment": "Achieve approximately 45.0% non-GAAP operating margin in FY2026.",
+      "deadline": "FY2026",
+      "firstStated": "2025-12-10",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Adobe continued to target approximately 45% non-GAAP operating margin for FY 2026; the full-year result remained pending.",
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/investor-relations/events-presentations.html",
+          "title": "Events and presentations | Adobe Investor Relations",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/01215202/cjy35yjtgawfe.pdf",
+          "title": "ADBE Q4FY25 Earnings Script and Slides",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Appoint a CEO successor",
+      "commitment": "Identify a CEO successor and ensure a smooth transition over the coming months.",
+      "deadline": "Over the coming months",
+      "firstStated": "2026-03-12",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Adobe named Anil Chakravarthy successor, effective December 1, 2026; Narayen would become executive chair. Successor selection was complete, but the handover remained prospective.",
+      "citations": [
+        {
+          "url": "https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo",
+          "title": "Adobe Announces Anil Chakravarthy to Become President and CEO and Shantanu Narayen to Become Executive Chair on December 1, 2026",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-09-03",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-03-12",
+            "what_was_said": "Narayen said he would work with Frank Calderoni and the Board over the coming months to identify his successor and ensure a smooth transition. Until then, he would continue as CEO and subsequently remain Board Chair to support his successor.",
+            "call": "Q1 FY2026 earnings call"
+          },
+          {
+            "date": "2026-06-11",
+            "what_was_said": "Beyond saying the search was progressing well, Narayen said the goal was to have Adobe's next CEO in place to put their stamp on planning for fiscal 2027 and beyond.",
+            "call": "Q2 FY2026 earnings call"
+          },
+          {
+            "date": "2026-09-10",
+            "what_was_said": "Chakravarthy said he had until December 1 to work closely with Narayen on the transition. Narayen also committed to supporting a smooth transition as Executive Chair, confirming that appointment was complete but the handover remained prospective.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "ADBE-P1-2022-09-15",
+      "promiseId": "P1",
+      "date": "2022-09-15",
+      "call": "Adobe to Acquire Figma",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced acquisition of Figma for approximately $20 billion in cash and stock, with closing expected in 2023, subject to approvals and closing conditions.",
+      "quote": "The transaction is expected to close in 2023, subject to the receipt of required regulatory clearances and approvals and the satisfaction of other closing conditions, including the approval of Figma’s stockholders.",
+      "verbatim": {
+        "text": "The transaction is expected to close in 2023, subject to the receipt of required regulatory clearances and approvals and the satisfaction of other closing conditions, including the approval of Figma’s stockholders.",
+        "segs": [
+          {
+            "t": "The transaction is expected to close in ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ", subject to the receipt of required regulatory clearances and approvals and the satisfaction of other closing conditions, including the approval of Figma’s stockholders.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.adobe.com/news/news-details/2022/adobe-to-acquire-figma",
+          "title": "Adobe to Acquire Figma",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.adobe.com/news/news-details/2022/adobe-to-acquire-figma",
+          "title": "Adobe to Acquire Figma",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ADBE-P1-2022-12-15",
+      "promiseId": "P1",
+      "date": "2022-12-15",
+      "call": "Q4 FY2022 earnings call",
+      "speaker": "David Wadhwani, President, Digital Media Business",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected regulatory approval to close in 2023; review was proceeding as expected.",
+      "quote": "We continue to feel positive about the facts underlying the transaction and expect to receive approval to close the transaction in 2023.",
+      "verbatim": {
+        "text": "We continue to feel positive about the facts underlying the transaction and expect to receive approval to close the transaction in 2023.",
+        "segs": [
+          {
+            "t": "We continue to feel positive about the facts underlying the transaction and expect to receive approval to close the transaction in ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/content/dam/cc/en/investor-relations/pdfs/51212202/Q4-FY2022-earnings-transcript.pdf",
+          "title": "Q4 2022 Adobe Inc Earnings Call on December 15, 2022 / 10:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/content/dam/cc/en/investor-relations/pdfs/51212202/Q4-FY2022-earnings-transcript.pdf",
+          "title": "Q4 2022 Adobe Inc Earnings Call on December 15, 2022 / 10:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P1-2023-03-15",
+      "promiseId": "P1",
+      "date": "2023-03-15",
+      "call": "Q1 FY2023 earnings call",
+      "speaker": "Shantanu Narayen, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported the transaction on track to close by the end of 2023, based on current regulatory process timing.",
+      "quote": "And based on current process timing, we believe the transaction continues to be on track for a close by the end of 2023.",
+      "verbatim": {
+        "text": "And based on current process timing, we believe the transaction continues to be on track for a close by the end of 2023.",
+        "segs": [
+          {
+            "t": "And based on current process timing, we believe the transaction continues to be on track for a close by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q1-fy2023-earnings-transcript.pdf",
+          "title": "Q1 2023 Adobe Inc Earnings Call on March 15, 2023 / 9:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q1-fy2023-earnings-transcript.pdf",
+          "title": "Q1 2023 Adobe Inc Earnings Call on March 15, 2023 / 9:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P1-2023-06-15",
+      "promiseId": "P1",
+      "date": "2023-06-15",
+      "call": "Q2 FY2023 earnings call",
+      "speaker": "David Wadhwani, President, Digital Media Business",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Continued to expect closing by the end of 2023 while engaging regulators.",
+      "quote": "And given the merits of the case, we believe the transaction should close by the end of 2023.",
+      "verbatim": {
+        "text": "And given the merits of the case, we believe the transaction should close by the end of 2023.",
+        "segs": [
+          {
+            "t": "And given the merits of the case, we believe the transaction should close by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q2-fy2023-earnings-transcript.pdf",
+          "title": "Q2 2023 Adobe Inc Earnings Call on June 15, 2023 / 9:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q2-fy2023-earnings-transcript.pdf",
+          "title": "Q2 2023 Adobe Inc Earnings Call on June 15, 2023 / 9:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P1-2023-09-14",
+      "promiseId": "P1",
+      "date": "2023-09-14",
+      "call": "Q3 FY2023 earnings call",
+      "speaker": "David Wadhwani, President, Digital Media Business",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained support for the pending acquisition and confidence in its merits; did not repeat the closing year.",
+      "quote": "We remain engaged with regulators and have confidence in the merits of the case.",
+      "verbatim": {
+        "text": "We remain engaged with regulators and have confidence in the merits of the case.",
+        "segs": [
+          {
+            "t": "We remain engaged with regulators and have confidence in the merits of the case.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q3-fy2023-earnings-transcript.pdf",
+          "title": "Q3 2023 Adobe Inc Earnings Call on September 14, 2023 / 9:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q3-fy2023-earnings-transcript.pdf",
+          "title": "Q3 2023 Adobe Inc Earnings Call on September 14, 2023 / 9:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P1-2023-12-13",
+      "promiseId": "P1",
+      "date": "2023-12-13",
+      "call": "Q4 FY2023 earnings call",
+      "speaker": "Shantanu Narayen, Chairman and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Cited EC decision deadline February 5 and CMA February 25, moving the regulatory timetable beyond 2023; no firm replacement closing date.",
+      "quote": "As per their current time lines, the EC's decision deadline is February 5 and the CMA's is February 25.",
+      "verbatim": {
+        "text": "As per their current time lines, the EC's decision deadline is February 5 and the CMA's is February 25.",
+        "segs": [
+          {
+            "t": "As per their current time lines, the EC's decision deadline is February 5 and the CMA's is February 25.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/content/dam/cc/en/investor-relations/pdfs/Q4-FY2023-earnings-transcript.pdf",
+          "title": "Q4 2023 Adobe Inc Earnings Call on December 13, 2023 / 10:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/content/dam/cc/en/investor-relations/pdfs/Q4-FY2023-earnings-transcript.pdf",
+          "title": "Q4 2023 Adobe Inc Earnings Call on December 13, 2023 / 10:00PM",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P1-2023-12-18",
+      "promiseId": "P1",
+      "date": "2023-12-18",
+      "call": "Adobe and Figma Mutually Agree to Terminate Merger Agreement",
+      "speaker": null,
+      "stance": "dropped",
+      "k": "c",
+      "summary": "Mutually terminated the acquisition because there was no clear path to necessary European Commission and UK Competition and Markets Authority approvals.",
+      "quote": "Although both companies continue to believe in the merits and procompetitive benefits of the combination, Adobe and Figma mutually agreed to terminate the transaction based on a joint assessment that there is no clear path to receive necessary regulatory approvals from the European Commission and the UK Competition and Markets Authority.",
+      "verbatim": {
+        "text": "Although both companies continue to believe in the merits and procompetitive benefits of the combination, Adobe and Figma mutually agreed to terminate the transaction based on a joint assessment that there is no clear path to receive necessary regulatory approvals from the European Commission and the UK Competition and Markets Authority.",
+        "segs": [
+          {
+            "t": "Although both companies continue to believe in the merits and procompetitive benefits of the combination, Adobe and Figma mutually agreed to terminate the transaction based on a joint assessment that there is no clear path to receive necessary regulatory approvals from the European Commission and the UK Competition and Markets Authority.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement",
+          "title": "Adobe and Figma Mutually Agree to Terminate Merger Agreement",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement",
+          "title": "Adobe and Figma Mutually Agree to Terminate Merger Agreement",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634323000254/adbe-20231217.htm",
+          "title": "adbe-20231217",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ADBE-P2-2025-03-12",
+      "promiseId": "P2",
+      "date": "2025-03-12",
+      "call": "Q1 FY2025 earnings call",
+      "speaker": "Shantanu Narayen, Chair and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to double the greater-than-$125 million AI-first book exiting Q1 fiscal 2025 by the end of fiscal 2025.",
+      "quote": "This strength is also reflected in our AI-first standalone and add-on products such as Acrobat AI Assistant, Firefly App and Services, and GenStudio for Performance Marketing, which have already contributed greater than $125 million book of business exiting Q1 fiscal 2025, and we expect this AI book of business to double by the end of fiscal 2025.",
+      "verbatim": {
+        "text": "This strength is also reflected in our AI-first standalone and add-on products such as Acrobat AI Assistant, Firefly App and Services, and GenStudio for Performance Marketing, which have already contributed greater than $125 million book of business exiting Q1 fiscal 2025, and we expect this AI book of business to double by the end of fiscal 2025.",
+        "segs": [
+          {
+            "t": "This strength is also reflected in our AI-first standalone and add-on products such as Acrobat AI Assistant, Firefly App and Services, and GenStudio for Performance Marketing, which have already contributed greater than ",
+            "h": 0
+          },
+          {
+            "t": "$125 million",
+            "h": 1
+          },
+          {
+            "t": " book of business exiting ",
+            "h": 0
+          },
+          {
+            "t": "Q1",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2025",
+            "h": 1
+          },
+          {
+            "t": ", and we expect this AI book of business to double by the end of ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P2-2025-03-18",
+      "promiseId": "P2",
+      "date": "2025-03-18",
+      "call": "Adobe Summit 2025 Investor Meeting",
+      "speaker": "David Wadhwani, President of Digital Media Business",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed doubling the greater-than-$125 million AI-first book exiting Q1 over the next three quarters.",
+      "quote": "They have contributed greater than $125 million book of business exiting Q1, and we expect to double that in the next three quarters.",
+      "verbatim": {
+        "text": "They have contributed greater than $125 million book of business exiting Q1, and we expect to double that in the next three quarters.",
+        "segs": [
+          {
+            "t": "They have contributed greater than ",
+            "h": 0
+          },
+          {
+            "t": "$125 million",
+            "h": 1
+          },
+          {
+            "t": " book of business exiting ",
+            "h": 0
+          },
+          {
+            "t": "Q1",
+            "h": 1
+          },
+          {
+            "t": ", and we expect to double that in the next three quarters.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/adbe/transcripts/327236-adobe-summit-2025",
+          "title": "Adobe (ADBE) Transcript: Adobe Summit 2025",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/adbe/transcripts/327236-adobe-summit-2025",
+          "title": "Adobe (ADBE) Transcript: Adobe Summit 2025",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "ADBE-P2-2025-06-12",
+      "promiseId": "P2",
+      "date": "2025-06-12",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Shantanu Narayen, Chair and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "AI-first ARR was tracking ahead of the $250 million target for the end of fiscal 2025.",
+      "quote": "While our AI-influenced ARR is already contributing billions of dollars, our AI book of business from AI-first products such as Acrobat AI Assistant, Firefly App and Services and GenStudio for Performance Marketing is tracking ahead of the $250 million ending ARR target by the end of fiscal 2025.",
+      "verbatim": {
+        "text": "While our AI-influenced ARR is already contributing billions of dollars, our AI book of business from AI-first products such as Acrobat AI Assistant, Firefly App and Services and GenStudio for Performance Marketing is tracking ahead of the $250 million ending ARR target by the end of fiscal 2025.",
+        "segs": [
+          {
+            "t": "While our AI-influenced ARR is already contributing billions of dollars, our AI book of business from AI-first products such as Acrobat AI Assistant, Firefly App and Services and GenStudio for Performance Marketing is tracking ahead of the ",
+            "h": 0
+          },
+          {
+            "t": "$250 million",
+            "h": 1
+          },
+          {
+            "t": " ending ARR target by the end of ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P2-2025-09-11",
+      "promiseId": "P2",
+      "date": "2025-09-11",
+      "call": "Q3 FY2025 earnings release",
+      "speaker": "Shantanu Narayen, Chair and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "AI-influenced ARR surpassed $5 billion; AI-first ARR already exceeded the $250 million year-end target.",
+      "quote": "“Adobe is the leader in the AI creative applications category with AI-influenced ARR surpassing $5 billion and AI-first ARR already exceeding our $250 million year-end target,” said Shantanu Narayen, chair and CEO, Adobe.",
+      "verbatim": {
+        "text": "“Adobe is the leader in the AI creative applications category with AI-influenced ARR surpassing $5 billion and AI-first ARR already exceeding our $250 million year-end target,” said Shantanu Narayen, chair and CEO, Adobe.",
+        "segs": [
+          {
+            "t": "“Adobe is the leader in the AI creative applications category with AI-influenced ARR surpassing ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " and AI-first ARR already exceeding our ",
+            "h": 0
+          },
+          {
+            "t": "$250 million",
+            "h": 1
+          },
+          {
+            "t": " year-end target,” said Shantanu Narayen, chair and CEO, Adobe.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/11905202/aiy4w5teshy5t.pdf",
+          "title": "ADBE Q3FY25 Earnings Release",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/11905202/aiy4w5teshy5t.pdf",
+          "title": "ADBE Q3FY25 Earnings Release",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "ADBE-P3-2025-11-19",
+      "promiseId": "P3",
+      "date": "2025-11-19",
+      "call": "Adobe to Acquire Semrush",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced the approximately $1.9 billion all-cash acquisition, expected to close in the first half of 2026, subject to approvals and customary conditions.",
+      "quote": "The transaction is expected to close in the first half of 2026, subject to the receipt of required regulatory approvals and the satisfaction of other customary closing conditions, including the approval of Semrush’s stockholders.",
+      "verbatim": {
+        "text": "The transaction is expected to close in the first half of 2026, subject to the receipt of required regulatory approvals and the satisfaction of other customary closing conditions, including the approval of Semrush’s stockholders.",
+        "segs": [
+          {
+            "t": "The transaction is expected to close in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", subject to the receipt of required regulatory approvals and the satisfaction of other customary closing conditions, including the approval of Semrush’s stockholders.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.adobe.com/news/2025/11/adobe-to-acquire-semrush?linkId=100000392894578&mv=social&mv2=owned-organic&sdid=9WGN3QDG",
+          "title": "Adobe to Acquire Semrush",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.adobe.com/news/2025/11/adobe-to-acquire-semrush?linkId=100000392894578&mv=social&mv2=owned-organic&sdid=9WGN3QDG",
+          "title": "Adobe to Acquire Semrush",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ADBE-P3-2025-12-10",
+      "promiseId": "P3",
+      "date": "2025-12-10",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Daniel J. Durn, CFO and Executive Vice President",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed closing in the first half of FY 2026, subject to regulatory approvals and other customary closing conditions.",
+      "quote": "We expect the transaction to close in the first half of FY 2026, subject to regulatory approvals and other customary closing conditions.",
+      "verbatim": {
+        "text": "We expect the transaction to close in the first half of FY 2026, subject to regulatory approvals and other customary closing conditions.",
+        "segs": [
+          {
+            "t": "We expect the transaction to close in the first half of FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", subject to regulatory approvals and other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P3-2026-03-12",
+      "promiseId": "P3",
+      "date": "2026-03-12",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Daniel J. Durn, CFO and Executive Vice President",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected closing in Q2, subject to regulatory approvals and closing conditions; financial targets excluded Semrush.",
+      "quote": "Let me now turn to our financial targets, which assume current macroeconomic conditions and do not include the contribution of Semrush, which we continue to expect to close in Q2, subject to regulatory approvals and closing conditions.",
+      "verbatim": {
+        "text": "Let me now turn to our financial targets, which assume current macroeconomic conditions and do not include the contribution of Semrush, which we continue to expect to close in Q2, subject to regulatory approvals and closing conditions.",
+        "segs": [
+          {
+            "t": "Let me now turn to our financial targets, which assume current macroeconomic conditions and do not include the contribution of Semrush, which we continue to expect to close in ",
+            "h": 0
+          },
+          {
+            "t": "Q2",
+            "h": 1
+          },
+          {
+            "t": ", subject to regulatory approvals and closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P3-2026-04-28",
+      "promiseId": "P3",
+      "date": "2026-04-28",
+      "call": "Adobe Completes Semrush Acquisition, Strengthening CX Enterprise with Enhanced Brand Visibility Capabilities",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced completion of the Semrush acquisition.",
+      "quote": "Adobe Completes Semrush Acquisition, Strengthening CX Enterprise with Enhanced Brand Visibility Capabilities",
+      "verbatim": {
+        "text": "Adobe Completes Semrush Acquisition, Strengthening CX Enterprise with Enhanced Brand Visibility Capabilities Tuesday, April 28, 2026 6:00 AM",
+        "segs": [
+          {
+            "t": "Adobe Completes Semrush Acquisition, Strengthening CX Enterprise with Enhanced Brand Visibility Capabilities Tuesday, April 28, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " 6:00 AM",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition",
+          "title": "Adobe Completes Semrush Acquisition, Strengthening CX Enterprise with Enhanced Brand Visibility Capabilities",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition",
+          "title": "Adobe Completes Semrush Acquisition, Strengthening CX Enterprise with Enhanced Brand Visibility Capabilities",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ADBE-P3-2026-06-11",
+      "promiseId": "P3",
+      "date": "2026-06-11",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Anil Chakravarthy, President, Customer Experience Orchestration Business",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed that the Semrush acquisition closed in April.",
+      "quote": "In April, we closed the acquisition of Semrush, a leading provider of search engine optimization and generative engine optimization solutions.",
+      "verbatim": {
+        "text": "In April, we closed the acquisition of Semrush, a leading provider of search engine optimization and generative engine optimization solutions.",
+        "segs": [
+          {
+            "t": "In April, we closed the acquisition of Semrush, a leading provider of search engine optimization and generative engine optimization solutions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P4-2025-12-10",
+      "promiseId": "P4",
+      "date": "2025-12-10",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Daniel J. Durn, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Targets FY 2026 non-GAAP operating margin of approximately 45.0%, GAAP tax of approximately 20.5%, and non-GAAP tax of approximately 18%.",
+      "quote": "Our FY 2026 targets anticipate non-GAAP operating margin of approximately 45.0%, a GAAP tax rate of approximately 20.5%, and a non-GAAP tax rate of approximately 18%.",
+      "verbatim": {
+        "text": "Our FY 2026 targets anticipate non-GAAP operating margin of approximately 45.0%, a GAAP tax rate of approximately 20.5%, and a non-GAAP tax rate of approximately 18%.",
+        "segs": [
+          {
+            "t": "Our FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " targets anticipate non-GAAP operating margin of approximately ",
+            "h": 0
+          },
+          {
+            "t": "45.0%",
+            "h": 1
+          },
+          {
+            "t": ", a GAAP tax rate of approximately ",
+            "h": 0
+          },
+          {
+            "t": "20.5%",
+            "h": 1
+          },
+          {
+            "t": ", and a non-GAAP tax rate of approximately ",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P4-2026-03-12",
+      "promiseId": "P4",
+      "date": "2026-03-12",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Daniel J. Durn, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirms FY 2026 targets, retaining the full-year non-GAAP operating-margin commitment.",
+      "quote": "In addition, we are reaffirming our FY 2026 targets.",
+      "verbatim": {
+        "text": "In addition, we are reaffirming our FY 2026 targets.",
+        "segs": [
+          {
+            "t": "In addition, we are reaffirming our FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " targets.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P4-2026-06-11",
+      "promiseId": "P4",
+      "date": "2026-06-11",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Steve Day, Senior Vice President, Corporate Finance and CFO, Customer Experience Orchestration Business Unit",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirms FY 2026 non-GAAP operating margin of approximately 45%; GAAP tax approximately 22.5% and non-GAAP tax approximately 18%.",
+      "quote": "Our FY 2026 targets assume non-GAAP operating margin of approximately 45%, a GAAP tax rate of approximately 22.5%, and a non-GAAP tax rate of approximately 18%.",
+      "verbatim": {
+        "text": "Our FY 2026 targets assume non-GAAP operating margin of approximately 45%, a GAAP tax rate of approximately 22.5%, and a non-GAAP tax rate of approximately 18%.",
+        "segs": [
+          {
+            "t": "Our FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " targets assume non-GAAP operating margin of approximately ",
+            "h": 0
+          },
+          {
+            "t": "45%",
+            "h": 1
+          },
+          {
+            "t": ", a GAAP tax rate of approximately ",
+            "h": 0
+          },
+          {
+            "t": "22.5%",
+            "h": 1
+          },
+          {
+            "t": ", and a non-GAAP tax rate of approximately ",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P4-2026-09-10",
+      "promiseId": "P4",
+      "date": "2026-09-10",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Steve Day, Interim CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirms FY 2026 non-GAAP operating margin of approximately 45%; GAAP tax approximately 22.5% and non-GAAP tax approximately 18%.",
+      "quote": "Our FY 2026 targets assume non-GAAP operating margin of approximately 45%, a GAAP tax rate of approximately 22.5% and a non-GAAP tax rate of approximately 18%.",
+      "verbatim": {
+        "text": "Our FY 2026 targets assume non-GAAP operating margin of approximately 45%, a GAAP tax rate of approximately 22.5% and a non-GAAP tax rate of approximately 18%.",
+        "segs": [
+          {
+            "t": "Our FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " targets assume non-GAAP operating margin of approximately ",
+            "h": 0
+          },
+          {
+            "t": "45%",
+            "h": 1
+          },
+          {
+            "t": ", a GAAP tax rate of approximately ",
+            "h": 0
+          },
+          {
+            "t": "22.5%",
+            "h": 1
+          },
+          {
+            "t": " and a non-GAAP tax rate of approximately ",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P5-2026-03-12",
+      "promiseId": "P5",
+      "date": "2026-03-12",
+      "call": "Shantanu Narayen Announces Decision to Transition as Adobe’s CEO Once Successor is Named",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Board established a special committee to consider internal and external CEO candidates; Narayen would remain board chair.",
+      "quote": "The Board of Directors has appointed Frank Calderoni, Lead Independent Director of Adobe, as Chair to the special committee to direct the process that will consider both internal and external candidates.",
+      "verbatim": {
+        "text": "The Board of Directors has appointed Frank Calderoni, Lead Independent Director of Adobe, as Chair to the special committee to direct the process that will consider both internal and external candidates.",
+        "segs": [
+          {
+            "t": "The Board of Directors has appointed Frank Calderoni, Lead Independent Director of Adobe, as Chair to the special committee to direct the process that will consider both internal and external candidates.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000048/adbeex992q126.htm",
+          "title": "ADOBE INC. 8-K exhibit 99.2, filed March 12, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000048/adbeex992q126.htm",
+          "title": "ADOBE INC. 8-K exhibit 99.2, filed March 12, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ADBE-P5-2026-06-11",
+      "promiseId": "P5",
+      "date": "2026-06-11",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Shantanu Narayen, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "CEO search progressing well; board sought the next CEO in place for fiscal 2027 planning.",
+      "quote": "Given my decision to transition to board Chair, I wanted to provide an update on the CEO search, which is progressing well.",
+      "verbatim": {
+        "text": "Given my decision to transition to board Chair, I wanted to provide an update on the CEO search, which is progressing well.",
+        "segs": [
+          {
+            "t": "Given my decision to transition to board Chair, I wanted to provide an update on the CEO search, which is progressing well.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ADBE-P5-2026-09-03",
+      "promiseId": "P5",
+      "date": "2026-09-03",
+      "call": "Adobe Announces Anil Chakravarthy to Become President and CEO and Shantanu Narayen to Become Executive Chair on December 1, 2026",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Adobe named Anil Chakravarthy next president and CEO effective December 1, 2026; Narayen would become executive chair and support the transition.",
+      "quote": "SAN JOSE, Calif. —September 3, 2026 — Adobe (Nasdaq: ADBE) — Adobe's Board of Directors today announced that Anil Chakravarthy, president of Adobe’s Customer Experience Orchestration business and worldwide field operations, will become Adobe’s next president and chief executive officer and join the Board of Directors effective December 1, 2026.",
+      "verbatim": {
+        "text": "SAN JOSE, Calif. —September 3, 2026 — Adobe (Nasdaq: ADBE) — Adobe's Board of Directors today announced that Anil Chakravarthy, president of Adobe’s Customer Experience Orchestration business and worldwide field operations, will become Adobe’s next president and chief executive officer and join the Board of Directors effective December 1, 2026.",
+        "segs": [
+          {
+            "t": "SAN JOSE, Calif. —September 3, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " — Adobe (Nasdaq: ADBE) — Adobe's Board of Directors today announced that Anil Chakravarthy, president of Adobe’s Customer Experience Orchestration business and worldwide field operations, will become Adobe’s next president and chief executive officer and join the Board of Directors effective December 1, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo",
+          "title": "Adobe Announces Anil Chakravarthy to Become President and CEO and Shantanu Narayen to Become Executive Chair on December 1, 2026",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo",
+          "title": "Adobe Announces Anil Chakravarthy to Become President and CEO and Shantanu Narayen to Become Executive Chair on December 1, 2026",
+          "domain": "news.adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ADBE-P5-2026-09-08",
+      "promiseId": "P5",
+      "date": "2026-09-08",
+      "call": "Form 8-K dated September 8, 2026",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Board appointed Chakravarthy on September 2, 2026, effective December 1, 2026; Narayen would become executive chair.",
+      "quote": "On September 2, 2026, the Board of Directors (the “Board”) of Adobe Inc. (the “Company”) appointed Anil Chakravarthy, the Company’s current President, Customer Experience Orchestration Business, as the Company’s President and Chief Executive Officer and a member of the Board, effective December 1, 2026 (the “Effective Date”).",
+      "verbatim": {
+        "text": "On September 2, 2026, the Board of Directors (the “Board”) of Adobe Inc. (the “Company”) appointed Anil Chakravarthy, the Company’s current President, Customer Experience Orchestration Business, as the Company’s President and Chief Executive Officer and a member of the Board, effective December 1, 2026 (the “Effective Date”).",
+        "segs": [
+          {
+            "t": "On September 2, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", the Board of Directors (the “Board”) of Adobe Inc. (the “Company”) appointed Anil Chakravarthy, the Company’s current President, Customer Experience Orchestration Business, as the Company’s President and Chief Executive Officer and a member of the Board, effective December 1, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " (the “Effective Date”).",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000144/adbe-20260902.htm",
+          "title": "adbe-20260902",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000144/adbe-20260902.htm",
+          "title": "adbe-20260902",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "ADBE-P5-2026-09-10",
+      "promiseId": "P5",
+      "date": "2026-09-10",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Shantanu Narayen, Chair and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Narayen confirmed Chakravarthy as next president and CEO effective December 1 and committed to supporting a smooth transition.",
+      "quote": "I'm delighted that Anil Chakravarthy will become Adobe's next President and Chief Executive Officer and join the Board of Directors effective December 1.",
+      "verbatim": {
+        "text": "I'm delighted that Anil Chakravarthy will become Adobe's next President and Chief Executive Officer and join the Board of Directors effective December 1.",
+        "segs": [
+          {
+            "t": "I'm delighted that Anil Chakravarthy will become Adobe's next President and Chief Executive Officer and join the Board of Directors effective December 1.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy26-transcript.pdf",
+          "title": "Adobe Inc.",
+          "domain": "adobe.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy26-transcript.pdf",
+      "title": "Adobe Inc.",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy26-transcript.pdf",
+      "title": "Adobe Inc.",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy26-transcript.pdf",
+      "title": "Adobe Inc.",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+      "title": "Adobe Inc.",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://news.adobe.com/news/news-details/2023/adobe-and-figma-mutually-agree-to-terminate-merger-agreement",
+      "title": "Adobe and Figma Mutually Agree to Terminate Merger Agreement",
+      "domain": "news.adobe.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 6,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q1fy25-transcript.pdf",
+      "title": "Adobe Inc.",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 7,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/11905202/aiy4w5teshy5t.pdf",
+      "title": "ADBE Q3FY25 Earnings Release",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 8,
+      "url": "http://adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q4fy25-transcript.pdf",
+      "title": "Adobe Inc.",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 9,
+      "url": "https://news.adobe.com/news/2026/04/adobe-completes-semrush-acquisition",
+      "title": "Adobe Completes Semrush Acquisition, Strengthening CX Enterprise with Enhanced Brand Visibility Capabilities",
+      "domain": "news.adobe.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 10,
+      "url": "https://news.adobe.com/news/2026/09/adobe-announces-anil-chakravarthy-to-become-president-and-ceo",
+      "title": "Adobe Announces Anil Chakravarthy to Become President and CEO and Shantanu Narayen to Become Executive Chair on December 1, 2026",
+      "domain": "news.adobe.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 11,
+      "url": "https://news.adobe.com/news/news-details/2022/adobe-to-acquire-figma",
+      "title": "Adobe to Acquire Figma",
+      "domain": "news.adobe.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://www.adobe.com/content/dam/cc/en/investor-relations/pdfs/51212202/Q4-FY2022-earnings-transcript.pdf",
+      "title": "Q4 2022 Adobe Inc Earnings Call on December 15, 2022 / 10:00PM",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q1-fy2023-earnings-transcript.pdf",
+      "title": "Q1 2023 Adobe Inc Earnings Call on March 15, 2023 / 9:00PM",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q2-fy2023-earnings-transcript.pdf",
+      "title": "Q2 2023 Adobe Inc Earnings Call on June 15, 2023 / 9:00PM",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/q3-fy2023-earnings-transcript.pdf",
+      "title": "Q3 2023 Adobe Inc Earnings Call on September 14, 2023 / 9:00PM",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://www.adobe.com/content/dam/cc/en/investor-relations/pdfs/Q4-FY2023-earnings-transcript.pdf",
+      "title": "Q4 2023 Adobe Inc Earnings Call on December 13, 2023 / 10:00PM",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634323000254/adbe-20231217.htm",
+      "title": "adbe-20231217",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q2fy25-transcript.pdf",
+      "title": "Adobe Inc.",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 19,
+      "url": "https://news.adobe.com/news/2025/11/adobe-to-acquire-semrush?linkId=100000392894578&mv=social&mv2=owned-organic&sdid=9WGN3QDG",
+      "title": "Adobe to Acquire Semrush",
+      "domain": "news.adobe.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 20,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000048/adbeex992q126.htm",
+      "title": "ADOBE INC. 8-K exhibit 99.2, filed March 12, 2026",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 21,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634326000144/adbe-20260902.htm",
+      "title": "adbe-20260902",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 22,
+      "url": "https://www.sec.gov/Archives/edgar/data/796343/000079634324000006/R11.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 23,
+      "url": "https://www.adobe.com/content/dam/cc/en/investor-relations/pdfs/51902202/Q3-FY2022-earnings-transcript.pdf",
+      "title": "Q3 Fy2022 Earnings Transcript",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 24,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/adbe-q3fy25-transcript.pdf",
+      "title": "Adobe Inc.",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 25,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/11905202/cu564stre3e.pdf",
+      "title": "ADBE Q3FY25 Earnings Script and Slides",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 26,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/11606202/a5543arefgt.pdf",
+      "title": "ADBE Q2FY26 Earnings Release",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 27,
+      "url": "https://www.adobe.com/investor-relations/events-presentations.html",
+      "title": "Events and presentations | Adobe Investor Relations",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 28,
+      "url": "https://www.adobe.com/cc-shared/assets/investor-relations/pdfs/01215202/cjy35yjtgawfe.pdf",
+      "title": "ADBE Q4FY25 Earnings Script and Slides",
+      "domain": "adobe.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 29,
+      "url": "https://stockanalysis.com/stocks/adbe/transcripts/327236-adobe-summit-2025",
+      "title": "Adobe (ADBE) Transcript: Adobe Summit 2025",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.767573Z",
+      "completedAt": "2026-11-05T06:29:19.810376Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.007136Z",
+      "completedAt": "2026-11-05T19:11:52.612391Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.015174Z",
+      "completedAt": "2026-11-05T19:11:49.285196Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.022305Z",
+      "completedAt": "2026-11-05T19:11:08.099550Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.029283Z",
+      "completedAt": "2026-11-05T19:11:02.009228Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.036505Z",
+      "completedAt": "2026-11-05T19:12:21.803026Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.870835Z",
+      "completedAt": "2026-11-05T19:45:10.037796Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.878096Z",
+      "completedAt": "2026-11-05T19:43:55.990954Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.885320Z",
+      "completedAt": "2026-11-05T19:44:07.842802Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.892726Z",
+      "completedAt": "2026-11-05T19:45:23.781133Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.899884Z",
+      "completedAt": "2026-11-05T19:46:14.221245Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "25 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "25 of 25 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "25 of 25 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 FY2026 on 2026-09-10; next 2026-12-09"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Adobe_Corporate_logo.svg/3840px-Adobe_Corporate_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Adobe_Corporate_logo.svg",
+      "title": "File:Adobe Corporate logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 1012,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://www.adobe.com/products/media_1912d2dfb102c668252eb9dda176f925d677fc5e2.png?width=1200&format=pjpg&optimize=medium",
+      "sourcePageUrl": "https://www.adobe.com/products/firefly.html",
+      "title": "Adobe Firefly - Free Generative AI for Creatives",
+      "width": 1200,
+      "height": 630,
+      "rank": 5
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.510Z"
+}

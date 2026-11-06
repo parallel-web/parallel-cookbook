@@ -1,0 +1,2222 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "BAC",
+  "name": "Bank of America Corporation",
+  "short": "Bank of America",
+  "website": "bankofamerica.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investor.bankofamerica.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-14",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": "2027-01-15",
+    "time": "8:30 AM ET",
+    "quarter": "Q4 2026"
+  },
+  "photoSubject": "Bank of America financial center",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "2025 NII growth",
+      "commitment": "Increase full-year NII by 6%–7% in 2025 compared with 2024.",
+      "deadline": "2025",
+      "firstStated": "2025-01-16",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Full-year NII grew 7% year over year, meeting the 6% to 7% target; management confirmed delivery.",
+      "citations": [
+        {
+          "url": "https://investor.bankofamerica.com/regulatory-and-other-filings/select-sec-filings/content/0000070858-26-000020/attachments/The%20Presentation%20Materials_4Q25_ADA.pdf",
+          "title": "The Presentation Materials_4Q25_ADA",
+          "domain": "investor.bankofamerica.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://d1io3yog0oux5.cloudfront.net/_a62598792d4c70332347d2dbf5169587/bankofamerica/db/775/10138/webcast_transcript/2025-01-16+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "Bank of America Fourth Quarter 2024 Earnings Announcement — January 16, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://investor.bankofamerica.com/regulatory-and-other-filings/select-sec-filings/content/0000070858-26-000020/bac12312025ex991.htm",
+          "title": "January 14, 2026 - THE PRESS RELEASE - 8-K: Current report | Bank of America Corporation (BAC)",
+          "domain": "investor.bankofamerica.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-01-14",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-14",
+            "what_was_said": "Management explicitly confirmed delivery: “For net interest income, we have delivered each quarter what we laid out across the year and finished a bit stronger than we expected.”",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 3,
+        "agree": 2
+      }
+    },
+    {
+      "id": "P2",
+      "label": "2026 NII growth",
+      "commitment": "Grow full-year NII 5%–7% in 2026 compared with 2025.",
+      "deadline": "2026",
+      "firstStated": "2025-10-15",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Management raised 2026 NII growth guidance to approximately 8%, after initially targeting 5% to 7%; full-year results remained pending.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a68b535ebbb1932651749ccb4b272682/bankofamerica/db/775/10407/webcast_transcript/2025-10-15+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2025-10-15 BAC 3Q Earning Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_459f05f8c999a95f0372ecef5d246e2d/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Medium-term ROTCE target",
+      "commitment": "Reach 16% ROTCE around eight quarters from Q1 2026 and the upper end of 16%–18% during the third year.",
+      "deadline": "Through the third year following Q1 2026",
+      "firstStated": "2025-11-05",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Reached 16% and 17% early; latest reported ROTCE was 12.6% (14.9% adjusted). The upper-end medium-term target remained pending.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_2cceed924bb30ecfff99d97807e2ad6e/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_707f74608c1aee441fab116ed0ec98db/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_11a8ca3d53ae4ca8dfd94368348ee325/bankofamerica/db/806/10611/earnings_release/The+Press+Release_3Q26_ADA.pdf",
+          "title": "The Press Release_3Q26_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_d4a16e4e4a3cad61bda39dcc3aa62b94/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_459f05f8c999a95f0372ecef5d246e2d/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-15",
+            "what_was_said": "The CFO reiterated that the ROTCE guidance was a medium-term range, cautioned that every quarter would be different, and said management still needed to keep making progress toward its goal. He also said there were no one-time items to consider in the 16% result.",
+            "call": "Q1 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Reduce headcount during 2026",
+      "commitment": "Reduce headcount during 2026 through attrition and selective hiring.",
+      "deadline": "During 2026",
+      "firstStated": "2026-01-14",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Management reported 3,000 fewer employees than at the start of the year, following reductions through attrition and careful hiring.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_05320a1bd57c63436b5482994ab899ef/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_459f05f8c999a95f0372ecef5d246e2d/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-10-14",
+      "resolved": {
+        "from": "open",
+        "reason": "Bank of America’s October 14, 2026 Q3 earnings call reported headcount 3,000 below the year’s start, fulfilling its promise to reduce staffing during 2026."
+      },
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Medium-term operating leverage",
+      "commitment": "Deliver 200–300 basis points of operating leverage over a 3–5-year period.",
+      "deadline": "Over 3–5 years",
+      "firstStated": "2025-11-05",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The medium-term 200 to 300 basis points target remains open despite first-half operating leverage of 450 basis points; management reaffirmed it.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-14",
+            "what_was_said": "Management raised its 2026 full-year operating-leverage guidance from more than 200 basis points to 300–400 basis points following first-half outperformance. This changed the annual outlook, not the separate 200–300-basis-point medium-term commitment.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-14",
+            "what_was_said": "Management said \"Q3 was slower\" and expected to return to operating leverage in Q4, while explicitly keeping the medium-term 200–300-basis-point target unchanged.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "BAC-P1-2025-01-16",
+      "promiseId": "P1",
+      "date": "2025-01-16",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Alastair Borthwick, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected full-year NII growth of 6% to 7% in 2025 versus 2024.",
+      "quote": "Then we expect that growth to increase through the year to the point where it could be 6% to 7% higher in 2025 than 2024.",
+      "verbatim": {
+        "text": "Then we expect that growth to increase through the year to the point where it could be 6% to 7% higher in 2025 than 2024.",
+        "segs": [
+          {
+            "t": "Then we expect that growth to increase through the year to the point where it could be ",
+            "h": 0
+          },
+          {
+            "t": "6%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": " higher in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " than ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://d1io3yog0oux5.cloudfront.net/_a62598792d4c70332347d2dbf5169587/bankofamerica/db/775/10138/webcast_transcript/2025-01-16+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "Bank of America Fourth Quarter 2024 Earnings Announcement — January 16, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://d1io3yog0oux5.cloudfront.net/_a62598792d4c70332347d2dbf5169587/bankofamerica/db/775/10138/webcast_transcript/2025-01-16+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "Bank of America Fourth Quarter 2024 Earnings Announcement — January 16, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P1-2025-04-15",
+      "promiseId": "P1",
+      "date": "2025-04-15",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Alastair Borthwick, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed full-year NII growth of 6% to 7% and the $15.5 billion to $15.7 billion fourth-quarter exit range.",
+      "quote": "And that means we're still expecting strong full year NII improvement this year of 6% to 7%.",
+      "verbatim": {
+        "text": "And that means we're still expecting strong full year NII improvement this year of 6% to 7%.",
+        "segs": [
+          {
+            "t": "And that means we're still expecting strong full year NII improvement this year of ",
+            "h": 0
+          },
+          {
+            "t": "6%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_059324d6cd32c86ffdaad561cf7e6cfe/bankofamerica/db/775/10172/webcast_transcript/2025-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2025-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_059324d6cd32c86ffdaad561cf7e6cfe/bankofamerica/db/775/10172/webcast_transcript/2025-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2025-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P1-2025-07-16",
+      "promiseId": "P1",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Alastair Borthwick, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained fourth-quarter NII of $15.5 billion to $15.7 billion and full-year growth of 6% to 7%.",
+      "quote": "Bottom line is our range of NII expectations for the fourth quarter of this year remains unchanged at $15.5 billion to $15.7 billion, and that would result in record NII and a full year NII improvement of 6% to 7%.",
+      "verbatim": {
+        "text": "Bottom line is our range of NII expectations for the fourth quarter of this year remains unchanged at $15.5 billion to $15.7 billion, and that would result in record NII and a full year NII improvement of 6% to 7%.",
+        "segs": [
+          {
+            "t": "Bottom line is our range of NII expectations for the fourth quarter of this year remains unchanged at ",
+            "h": 0
+          },
+          {
+            "t": "$15.5 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$15.7 billion",
+            "h": 1
+          },
+          {
+            "t": ", and that would result in record NII and a full year NII improvement of ",
+            "h": 0
+          },
+          {
+            "t": "6%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_5c346bdfa90699124a4826354335d9c1/bankofamerica/db/775/10335/webcast_transcript/2025-07-16+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2025-07-16 BAC 2Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_5c346bdfa90699124a4826354335d9c1/bankofamerica/db/775/10335/webcast_transcript/2025-07-16+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2025-07-16 BAC 2Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P1-2025-09-08",
+      "promiseId": "P1",
+      "date": "2025-09-08",
+      "call": "Barclays 23rd Annual Global Financial Services Conference",
+      "speaker": "Alastair Borthwick, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Confirmed the 6% to 7% annual NII growth outlook remained unchanged and on track.",
+      "quote": "And as of right now, I'd say, yes, we're on track for that.",
+      "verbatim": {
+        "text": "And as of right now, I'd say, yes, we're on track for that.",
+        "segs": [
+          {
+            "t": "And as of right now, I'd say, yes, we're on track for that.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a68b535ebbb1932651749ccb4b272682/bankofamerica/db/775/10364/webcast_transcript/2025-09-08+Barlcays_Conference_BAC_ADA.pdf",
+          "title": "Bank of America Alastair Borthwick Q&A at Barclays Annual Global Financial Services Conference — September 8, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a68b535ebbb1932651749ccb4b272682/bankofamerica/db/775/10364/webcast_transcript/2025-09-08+Barlcays_Conference_BAC_ADA.pdf",
+          "title": "Bank of America Alastair Borthwick Q&A at Barclays Annual Global Financial Services Conference — September 8, 2025",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "BAC-P1-2025-10-15",
+      "promiseId": "P1",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected fourth-quarter NII of $15.6 billion plus FTE, toward the upper end of prior guidance; the annual target was not revised.",
+      "quote": "So think of that as being $15.6 billion plus on a fully taxable equivalent basis.",
+      "verbatim": {
+        "text": "So think of that as being $15.6 billion plus on a fully taxable equivalent basis.",
+        "segs": [
+          {
+            "t": "So think of that as being ",
+            "h": 0
+          },
+          {
+            "t": "$15.6 billion",
+            "h": 1
+          },
+          {
+            "t": " plus on a fully taxable equivalent basis.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_9f01ef2e3bd02361eabe6c01466588ae/bankofamerica/db/775/10407/webcast_transcript/2025-10-15+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2025-10-15 BAC 3Q Earning Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_9f01ef2e3bd02361eabe6c01466588ae/bankofamerica/db/775/10407/webcast_transcript/2025-10-15+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2025-10-15 BAC 3Q Earning Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P1-2026-01-14",
+      "promiseId": "P1",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Tabulated full-year 2025 NII of $60,096 million GAAP and $60,705 million FTE; no standalone annual-result sentence was located.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.bankofamerica.com/regulatory-and-other-filings/select-sec-filings/content/0000070858-26-000020/attachments/The%20Press%20Release_4Q25_ADA.pdf",
+          "title": "The Press Release_4Q25_ADA",
+          "domain": "investor.bankofamerica.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.bankofamerica.com/regulatory-and-other-filings/select-sec-filings/content/0000070858-26-000020/attachments/The%20Presentation%20Materials_4Q25_ADA.pdf",
+          "title": "The Presentation Materials_4Q25_ADA",
+          "domain": "investor.bankofamerica.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "BAC-P2-2025-10-15",
+      "promiseId": "P2",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected full-year 2026 NII growth of 5% to 7% compared with 2025.",
+      "quote": "So think of that as something like 5% to 7% growth.",
+      "verbatim": {
+        "text": "So think of that as something like 5% to 7% growth.",
+        "segs": [
+          {
+            "t": "So think of that as something like ",
+            "h": 0
+          },
+          {
+            "t": "5%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": " growth.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a68b535ebbb1932651749ccb4b272682/bankofamerica/db/775/10407/webcast_transcript/2025-10-15+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2025-10-15 BAC 3Q Earning Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a68b535ebbb1932651749ccb4b272682/bankofamerica/db/775/10407/webcast_transcript/2025-10-15+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2025-10-15 BAC 3Q Earning Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P2-2026-01-14",
+      "promiseId": "P2",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 5% to 7% NII growth in 2026 versus 2025, assuming 2 rate cuts in 2026.",
+      "quote": "At Investor Day in November, we indicated our expectation that we would see 5% to 7% growth in net interest income in 2026 compared to 2025, and that's still our belief today based on the latest interest rate curve, which includes 2 rate cuts in 2026.",
+      "verbatim": {
+        "text": "At Investor Day in November, we indicated our expectation that we would see 5% to 7% growth in net interest income in 2026 compared to 2025, and that's still our belief today based on the latest interest rate curve, which includes 2 rate cuts in 2026.",
+        "segs": [
+          {
+            "t": "At Investor Day in November, we indicated our expectation that we would see ",
+            "h": 0
+          },
+          {
+            "t": "5%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": " growth in net interest income in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " compared to ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", and that's still our belief today based on the latest interest rate curve, which includes 2 rate cuts in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_459f05f8c999a95f0372ecef5d246e2d/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_459f05f8c999a95f0372ecef5d246e2d/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P2-2026-04-15",
+      "promiseId": "P2",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 NII growth versus 2025 to 6% to 8%; the exact guidance sentence exceeds the quotation length limit.",
+      "quote": null,
+      "verbatim": {
+        "text": "Given our outperformance against expectations of NII in Q1 and based on the most recent interest rate curve, which has now shifted from 2 rate cuts expected to having none currently, we're raising our full year NII growth guidance range for 2026 versus 2025 to be up 6% to 8%,",
+        "segs": [
+          {
+            "t": "Given our outperformance against expectations of NII in ",
+            "h": 0
+          },
+          {
+            "t": "Q1",
+            "h": 1
+          },
+          {
+            "t": " and based on the most recent interest rate curve, which has now shifted from 2 rate cuts expected to having none currently, we're raising our full year NII growth guidance range for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " versus ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " to be up ",
+            "h": 0
+          },
+          {
+            "t": "6%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "8%",
+            "h": 1
+          },
+          {
+            "t": ",",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P2-2026-07-14",
+      "promiseId": "P2",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised expected full-year 2026 NII growth to the upper end of 6% to 8%.",
+      "quote": "We now expect full year 2026 NII growth to be at the upper end of that 6% to 8% range, supported by anticipated loan and deposit growth, fixed rate asset repricing and balance sheet optimization.",
+      "verbatim": {
+        "text": "We now expect full year 2026 NII growth to be at the upper end of that 6% to 8% range, supported by anticipated loan and deposit growth, fixed rate asset repricing and balance sheet optimization.",
+        "segs": [
+          {
+            "t": "We now expect full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " NII growth to be at the upper end of that ",
+            "h": 0
+          },
+          {
+            "t": "6%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "8%",
+            "h": 1
+          },
+          {
+            "t": " range, supported by anticipated loan and deposit growth, fixed rate asset repricing and balance sheet optimization.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_e2af0bf2d550d8cc85d1ac7d83bc75d9/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_e2af0bf2d550d8cc85d1ac7d83bc75d9/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P2-2026-10-14",
+      "promiseId": "P2",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed revised full-year 2026 NII growth guidance of approximately 8%.",
+      "quote": "We still expect to hit that full-year revised NII growth guidance of approximately 8%.",
+      "verbatim": {
+        "text": "We still expect to hit that full-year revised NII growth guidance of approximately 8%.",
+        "segs": [
+          {
+            "t": "We still expect to hit that full-year revised NII growth guidance of approximately ",
+            "h": 0
+          },
+          {
+            "t": "8%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P3-2025-11-05",
+      "promiseId": "P3",
+      "date": "2025-11-05",
+      "call": "2025 Investor Day – Financial Overview",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set a 16%-18% medium-term ROTCE target; defined medium-term as approximately 3-5 years.",
+      "quote": null,
+      "verbatim": {
+        "text": "Bank of America Investor Day November 5, 2025 19 ... Delivering Improved Returns Medium-Term ROTCE Target 1 16%-18% 13% 14% 15% 2024 YTD 2025 3Q25 Medium- Term For additional information and footnotes, refer to Notes beginning on slide 24.",
+        "segs": [
+          {
+            "t": "Bank of America Investor Day November 5, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " 19 ... Delivering Improved Returns Medium-Term ROTCE Target 1 ",
+            "h": 0
+          },
+          {
+            "t": "16%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "13%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "14%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "15%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " YTD ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " 3Q25 Medium- Term For additional information and footnotes, refer to Notes beginning on slide 24.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a5bd346d3fd6faca9e6adef3d3edd2ae/bankofamerica/db/968/10420/file_upload/BofAInvestorDay_FinancialOverview_ADA.pdf",
+          "title": "Investor Day 2025 - Financial Overview_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press",
+          "extract": {
+            "objective": "What Bank of America executives said on the 2025 Investor Day – Financial Overview (2025-11-05) about Medium-term ROTCE target: Set a 16%-18% medium-term ROTCE target; defined medium-term as approximately 3-5 years."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a5bd346d3fd6faca9e6adef3d3edd2ae/bankofamerica/db/968/10420/file_upload/BofAInvestorDay_FinancialOverview_ADA.pdf",
+          "title": "Investor Day 2025 - Financial Overview_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "BAC-P3-2026-01-14",
+      "promiseId": "P3",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Brian Moynihan, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 16%-18%; specified 16% around 8 quarters from first quarter '26, then the upper end through the third year.",
+      "quote": "So that's basically 8 quarters from -- including this quarter, obviously, first quarter '26 and then we move into the 16% level, and then we move to the upper end of the range as we move through the third year.",
+      "verbatim": {
+        "text": "So that's basically 8 quarters from -- including this quarter, obviously, first quarter '26 and then we move into the 16% level, and then we move to the upper end of the range as we move through the third year.",
+        "segs": [
+          {
+            "t": "So that's basically 8 quarters from -- including this quarter, obviously, first quarter '26 and then we move into the ",
+            "h": 0
+          },
+          {
+            "t": "16%",
+            "h": 1
+          },
+          {
+            "t": " level, and then we move to the upper end of the range as we move through the third year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_d4a16e4e4a3cad61bda39dcc3aa62b94/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_d4a16e4e4a3cad61bda39dcc3aa62b94/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P3-2026-04-15",
+      "promiseId": "P3",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Reached 16% ROTCE early; management remained focused on further progress toward its medium-term target.",
+      "quote": "We're obviously gratified with 16% based on the strong operating leverage performance.",
+      "verbatim": {
+        "text": "We're obviously gratified with 16% based on the strong operating leverage performance.",
+        "segs": [
+          {
+            "t": "We're obviously gratified with ",
+            "h": 0
+          },
+          {
+            "t": "16%",
+            "h": 1
+          },
+          {
+            "t": " based on the strong operating leverage performance.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_2cceed924bb30ecfff99d97807e2ad6e/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_2cceed924bb30ecfff99d97807e2ad6e/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_d4a16e4e4a3cad61bda39dcc3aa62b94/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P3-2026-07-14",
+      "promiseId": "P3",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Brian Moynihan, Chair and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Reported 17% ROTCE and said reaching that level had taken less time than expected.",
+      "quote": "We thought it would take us longer to get there.",
+      "verbatim": {
+        "text": "We thought it would take us longer to get there.",
+        "segs": [
+          {
+            "t": "We thought it would take us longer to get there.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_707f74608c1aee441fab116ed0ec98db/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_707f74608c1aee441fab116ed0ec98db/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P3-2026-10-14",
+      "promiseId": "P3",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Brian Moynihan, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Linked balance-sheet efficiency and a 6% TCE ratio to 16% returns; did not change the medium-term target.",
+      "quote": "That's a really important dynamic because if you go back to the 6% TCE ratio, that gives you a chance to really push the returns on a relative size that gets you the 16%, et cetera.",
+      "verbatim": {
+        "text": "That's a really important dynamic because if you go back to the 6% TCE ratio, that gives you a chance to really push the returns on a relative size that gets you the 16%, et cetera.",
+        "segs": [
+          {
+            "t": "That's a really important dynamic because if you go back to the ",
+            "h": 0
+          },
+          {
+            "t": "6%",
+            "h": 1
+          },
+          {
+            "t": " TCE ratio, that gives you a chance to really push the returns on a relative size that gets you the ",
+            "h": 0
+          },
+          {
+            "t": "16%",
+            "h": 1
+          },
+          {
+            "t": ", et cetera.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P4-2026-01-14",
+      "promiseId": "P4",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Brian Moynihan, Chair and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected headcount to decline during 2026 through attrition and decisions not to replace departures.",
+      "quote": "So, it's going to be about bringing up the numbers of people down over time, and we expect the headcount to come down during this year.",
+      "verbatim": {
+        "text": "So, it's going to be about bringing up the numbers of people down over time, and we expect the headcount to come down during this year.",
+        "segs": [
+          {
+            "t": "So, it's going to be about bringing up the numbers of people down over time, and we expect the headcount to come down during this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P4-2026-02-10",
+      "promiseId": "P4",
+      "date": "2026-02-10",
+      "call": "BofA Securities Financial Services Conference",
+      "speaker": "Brian Moynihan, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "January headcount was 213,000, down more than 300 from year-end; replacement hiring remained tightly controlled.",
+      "quote": "And so, you've seen the headcount at the end of January is 213,000, down, above 300 from end of year.",
+      "verbatim": {
+        "text": "And so, you've seen the headcount at the end of January is 213,000, down, above 300 from end of year.",
+        "segs": [
+          {
+            "t": "And so, you've seen the headcount at the end of January is ",
+            "h": 0
+          },
+          {
+            "t": "213,000",
+            "h": 1
+          },
+          {
+            "t": ", down, above 300 from end of year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_0e4487f488d56069606a35dad83877ff/bankofamerica/db/775/10481/webcast_transcript/2026-02-10+BofA+Securities+Conference_BAC_ADA.pdf",
+          "title": "2026-02-10 BofA Securities Conference_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_0e4487f488d56069606a35dad83877ff/bankofamerica/db/775/10481/webcast_transcript/2026-02-10+BofA+Securities+Conference_BAC_ADA.pdf",
+          "title": "2026-02-10 BofA Securities Conference_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "BAC-P4-2026-04-15",
+      "promiseId": "P4",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Brian Moynihan, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Headcount fell about 1,070 from year-end 2025 through attrition; reductions would continue.",
+      "quote": "If you think about that in terms of headcount, we are down about 1,070 people from year-end 2025 through attrition, and we'll continue to drive that.",
+      "verbatim": {
+        "text": "If you think about that in terms of headcount, we are down about 1,070 people from year-end 2025 through attrition, and we'll continue to drive that.",
+        "segs": [
+          {
+            "t": "If you think about that in terms of headcount, we are down about ",
+            "h": 0
+          },
+          {
+            "t": "1,070",
+            "h": 1
+          },
+          {
+            "t": " people from year-end ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " through attrition, and we'll continue to drive that.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c95d73d08f8ec852ba65153a885891a2/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c95d73d08f8ec852ba65153a885891a2/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P4-2026-05-27",
+      "promiseId": "P4",
+      "date": "2026-05-27",
+      "call": "Bernstein Strategic Decisions Conference",
+      "speaker": "Brian Moynihan, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported about 210,000 employees, described as 210 to 211, alongside continued reinvestment, retraining and redeployment.",
+      "quote": "We're running about 210,000 people today, 210 to 211.",
+      "verbatim": {
+        "text": "We're running about 210,000 people today, 210 to 211.",
+        "segs": [
+          {
+            "t": "We're running about ",
+            "h": 0
+          },
+          {
+            "t": "210,000",
+            "h": 1
+          },
+          {
+            "t": " people today, 210 to 211.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_8b396578afcb2106b6d547bd0a4d7835/bankofamerica/db/775/10555/webcast_transcript/2026-05-27+Bernstein+Strategic+Decisions+Conference_BAC_ADA.pdf",
+          "title": "2026-05-27 Bernstein Strategic Decisions Conference_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_8b396578afcb2106b6d547bd0a4d7835/bankofamerica/db/775/10555/webcast_transcript/2026-05-27+Bernstein+Strategic+Decisions+Conference_BAC_ADA.pdf",
+          "title": "2026-05-27 Bernstein Strategic Decisions Conference_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "BAC-P4-2026-07-14",
+      "promiseId": "P4",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Headcount was flat to slightly down over the last 6 quarters; discipline continued without changing the target.",
+      "quote": "Our head count discipline over the last 6 quarters has been excellent. It's flat to slightly down.",
+      "verbatim": {
+        "text": "Our head count discipline over the last 6 quarters has been excellent. It's flat to slightly down.",
+        "segs": [
+          {
+            "t": "Our head count discipline over the last 6 quarters has been excellent. It's flat to slightly down.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_b18637fb47e7ecb85417585d58775f6a/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_b18637fb47e7ecb85417585d58775f6a/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P4-2026-09-14",
+      "promiseId": "P4",
+      "date": "2026-09-14",
+      "call": "Barclays Annual Global Financial Services Conference",
+      "speaker": "Brian Moynihan, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Headcount continued declining through attrition and careful hiring, without layoffs.",
+      "quote": "All we do is just manage the hiring carefully, and we can manage into this.",
+      "verbatim": {
+        "text": "All we do is just manage the hiring carefully, and we can manage into this.",
+        "segs": [
+          {
+            "t": "All we do is just manage the hiring carefully, and we can manage into this.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a5bd346d3fd6faca9e6adef3d3edd2ae/bankofamerica/db/775/10600/webcast_transcript/2026-09-14+Barclays+Financial+Services+Conference_BAC_ADA.pdf",
+          "title": "2026-09-14 Barclays Financial Services Conference_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a5bd346d3fd6faca9e6adef3d3edd2ae/bankofamerica/db/775/10600/webcast_transcript/2026-09-14+Barclays+Financial+Services+Conference_BAC_ADA.pdf",
+          "title": "2026-09-14 Barclays Financial Services Conference_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "BAC-P4-2026-10-14",
+      "promiseId": "P4",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Headcount was 3,000 below the start of the year despite increased staffing for consent-order work.",
+      "quote": "And just remember, Erika, we started the year with 3,000 more heads than we have currently, just to give some idea.",
+      "verbatim": {
+        "text": "And just remember, Erika, we started the year with 3,000 more heads than we have currently, just to give some idea.",
+        "segs": [
+          {
+            "t": "And just remember, Erika, we started the year with ",
+            "h": 0
+          },
+          {
+            "t": "3,000",
+            "h": 1
+          },
+          {
+            "t": " more heads than we have currently, just to give some idea.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_05320a1bd57c63436b5482994ab899ef/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_05320a1bd57c63436b5482994ab899ef/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P5-2025-11-05",
+      "promiseId": "P5",
+      "date": "2025-11-05",
+      "call": "2025 Investor Day — Financial Overview",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced operating leverage of 200bps-300bps+; medium-term refers to approximately 3-5 years.",
+      "quote": "Operating leverage: 200bps-300bps+",
+      "verbatim": {
+        "text": "Bank of America Investor Day November 5, 2025 21 ... • Operating leverage: 200bps-300bps+ • Efficiency ratio: 55%-59% • Manage risk well • EPS growth: 12%+ ...",
+        "segs": [
+          {
+            "t": "Bank of America Investor Day November 5, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " 21 ... • Operating leverage: ",
+            "h": 0
+          },
+          {
+            "t": "200bps",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "300bps",
+            "h": 1
+          },
+          {
+            "t": "+ • Efficiency ratio: ",
+            "h": 0
+          },
+          {
+            "t": "55%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "59%",
+            "h": 1
+          },
+          {
+            "t": " • Manage risk well • EPS growth: ",
+            "h": 0
+          },
+          {
+            "t": "12%",
+            "h": 1
+          },
+          {
+            "t": "+ ...",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c74d0c32a8a2cbf8ebaefd222b6a427f/bankofamerica/db/968/10420/file_upload/BofAInvestorDay_FinancialOverview_ADA.pdf",
+          "title": "Investor Day 2025 - Financial Overview_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press",
+          "extract": {
+            "objective": "What Bank of America executives said on the 2025 Investor Day — Financial Overview (2025-11-05) about Medium-term operating leverage: Introduced operating leverage of 200bps-300bps+; medium-term refers to approximately 3-5 years."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c74d0c32a8a2cbf8ebaefd222b6a427f/bankofamerica/db/968/10420/file_upload/BofAInvestorDay_FinancialOverview_ADA.pdf",
+          "title": "Investor Day 2025 - Financial Overview_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "BAC-P5-2026-01-14",
+      "promiseId": "P5",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "With 7% revenue growth, generated more than 300 basis points of operating leverage, aligning with the medium-term Investor Day range.",
+      "quote": "When combined with our 7% revenue growth, this good expense management allowed us to generate more than 300 basis points of operating leverage, and that aligns to our target for the medium-term operating leverage range that we gave at Investor Day.",
+      "verbatim": {
+        "text": "When combined with our 7% revenue growth, this good expense management allowed us to generate more than 300 basis points of operating leverage, and that aligns to our target for the medium-term operating leverage range that we gave at Investor Day.",
+        "segs": [
+          {
+            "t": "When combined with our ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": " revenue growth, this good expense management allowed us to generate more than ",
+            "h": 0
+          },
+          {
+            "t": "300 basis points",
+            "h": 1
+          },
+          {
+            "t": " of operating leverage, and that aligns to our target for the medium-term operating leverage range that we gave at Investor Day.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_459f05f8c999a95f0372ecef5d246e2d/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_459f05f8c999a95f0372ecef5d246e2d/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+          "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P5-2026-04-15",
+      "promiseId": "P5",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the 200 to 300 basis points target over a 3- to 5-year period.",
+      "quote": "So, we provided a guidance on operating leverage looking forward over a 3- to 5-year period and said we're aiming for 200 to 300 basis points.",
+      "verbatim": {
+        "text": "So, we provided a guidance on operating leverage looking forward over a 3- to 5-year period and said we're aiming for 200 to 300 basis points.",
+        "segs": [
+          {
+            "t": "So, we provided a guidance on operating leverage looking forward over a 3- to 5-year period and said we're aiming for ",
+            "h": 0
+          },
+          {
+            "t": "200 to 300 basis points",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+          "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P5-2026-07-14",
+      "promiseId": "P5",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "First-half operating leverage reached 450 basis points, outperforming the unchanged medium-term 200 to 300 basis points target.",
+      "quote": "We've had a terrific first half of 450 basis points.",
+      "verbatim": {
+        "text": "We've had a terrific first half of 450 basis points.",
+        "segs": [
+          {
+            "t": "We've had a terrific first half of ",
+            "h": 0
+          },
+          {
+            "t": "450 basis points",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+          "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BAC-P5-2026-10-14",
+      "promiseId": "P5",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Alastair Borthwick, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed unchanged medium-term operating leverage of 200 to 300 basis points.",
+      "quote": "The operating leverage we've said we intend to deliver 200 to 300 basis points through the medium term.",
+      "verbatim": {
+        "text": "The operating leverage we've said we intend to deliver 200 to 300 basis points through the medium term.",
+        "segs": [
+          {
+            "t": "The operating leverage we've said we intend to deliver ",
+            "h": 0
+          },
+          {
+            "t": "200 to 300 basis points",
+            "h": 1
+          },
+          {
+            "t": " through the medium term.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+          "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_c0810ab51362fc616a8c4a64f00b527c/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+      "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_459f05f8c999a95f0372ecef5d246e2d/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+      "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+      "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+      "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2 P3 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_dfa50fe6bb24b75c59024a9060504951/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+      "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://investor.bankofamerica.com/regulatory-and-other-filings/select-sec-filings/content/0000070858-26-000020/attachments/The%20Presentation%20Materials_4Q25_ADA.pdf",
+      "title": "The Presentation Materials_4Q25_ADA",
+      "domain": "investor.bankofamerica.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 7,
+      "url": "https://investor.bankofamerica.com/regulatory-and-other-filings/select-sec-filings/content/0000070858-26-000020/attachments/The%20Press%20Release_4Q25_ADA.pdf",
+      "title": "The Press Release_4Q25_ADA",
+      "domain": "investor.bankofamerica.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 8,
+      "url": "https://investor.bankofamerica.com/regulatory-and-other-filings/select-sec-filings/content/0000070858-26-000020/bac12312025ex991.htm",
+      "title": "January 14, 2026 - THE PRESS RELEASE - 8-K: Current report | Bank of America Corporation (BAC)",
+      "domain": "investor.bankofamerica.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_d4a16e4e4a3cad61bda39dcc3aa62b94/bankofamerica/db/775/10471/webcast_transcript/2026-01-15+BAC+4Q+Earnings+Call_ADA.pdf",
+      "title": "2026-01-15 BAC 4Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 10,
+      "url": "http://d1io3yog0oux5.cloudfront.net/_a62598792d4c70332347d2dbf5169587/bankofamerica/db/775/10138/webcast_transcript/2025-01-16+BAC+4Q+Earnings+Call_ADA.pdf",
+      "title": "Bank of America Fourth Quarter 2024 Earnings Announcement — January 16, 2025",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_a68b535ebbb1932651749ccb4b272682/bankofamerica/db/775/10407/webcast_transcript/2025-10-15+BAC+3Q+Earnings+Call_ADA.pdf",
+      "title": "2025-10-15 BAC 3Q Earning Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 12,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_2cceed924bb30ecfff99d97807e2ad6e/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+      "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_707f74608c1aee441fab116ed0ec98db/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+      "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_05320a1bd57c63436b5482994ab899ef/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+      "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 15,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_059324d6cd32c86ffdaad561cf7e6cfe/bankofamerica/db/775/10172/webcast_transcript/2025-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+      "title": "2025-04-15 BAC 1Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_5c346bdfa90699124a4826354335d9c1/bankofamerica/db/775/10335/webcast_transcript/2025-07-16+BAC+2Q+Earnings+Call_ADA.pdf",
+      "title": "2025-07-16 BAC 2Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_a68b535ebbb1932651749ccb4b272682/bankofamerica/db/775/10364/webcast_transcript/2025-09-08+Barlcays_Conference_BAC_ADA.pdf",
+      "title": "Bank of America Alastair Borthwick Q&A at Barclays Annual Global Financial Services Conference — September 8, 2025",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_9f01ef2e3bd02361eabe6c01466588ae/bankofamerica/db/775/10407/webcast_transcript/2025-10-15+BAC+3Q+Earnings+Call_ADA.pdf",
+      "title": "2025-10-15 BAC 3Q Earning Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_e2af0bf2d550d8cc85d1ac7d83bc75d9/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+      "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 20,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_a5bd346d3fd6faca9e6adef3d3edd2ae/bankofamerica/db/968/10420/file_upload/BofAInvestorDay_FinancialOverview_ADA.pdf",
+      "title": "Investor Day 2025 - Financial Overview_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 21,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_0e4487f488d56069606a35dad83877ff/bankofamerica/db/775/10481/webcast_transcript/2026-02-10+BofA+Securities+Conference_BAC_ADA.pdf",
+      "title": "2026-02-10 BofA Securities Conference_BAC_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 22,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_c95d73d08f8ec852ba65153a885891a2/bankofamerica/db/775/10537/webcast_transcript/2026-04-15+BAC+1Q+Earnings+Call_ADA.pdf",
+      "title": "2026-04-15 BAC 1Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 23,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_8b396578afcb2106b6d547bd0a4d7835/bankofamerica/db/775/10555/webcast_transcript/2026-05-27+Bernstein+Strategic+Decisions+Conference_BAC_ADA.pdf",
+      "title": "2026-05-27 Bernstein Strategic Decisions Conference_BAC_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 24,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_b18637fb47e7ecb85417585d58775f6a/bankofamerica/db/775/10578/webcast_transcript/2026-07-14+BAC+2Q+Earnings+Call_ADA.pdf",
+      "title": "2026-07-14 BAC 2Q Earnings Call_BAC_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 25,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_a5bd346d3fd6faca9e6adef3d3edd2ae/bankofamerica/db/775/10600/webcast_transcript/2026-09-14+Barclays+Financial+Services+Conference_BAC_ADA.pdf",
+      "title": "2026-09-14 Barclays Financial Services Conference_BAC_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 26,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_c74d0c32a8a2cbf8ebaefd222b6a427f/bankofamerica/db/968/10420/file_upload/BofAInvestorDay_FinancialOverview_ADA.pdf",
+      "title": "Investor Day 2025 - Financial Overview_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P5"
+    },
+    {
+      "n": 27,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_11a8ca3d53ae4ca8dfd94368348ee325/bankofamerica/db/806/10611/earnings_release/The+Press+Release_3Q26_ADA.pdf",
+      "title": "The Press Release_3Q26_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 28,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_70906d29aa4da33dea0e8a47c1da9efa/bankofamerica/db/775/10610/webcast_transcript/2026-10-14+BAC+3Q+Earnings+Call_ADA.pdf",
+      "title": "2026-10-14 BAC 3Q Earnings Call_ADA",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    }
+  ],
+  "focus": "P4",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.958826Z",
+      "completedAt": "2026-11-05T06:29:32.861822Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.334546Z",
+      "completedAt": "2026-11-05T19:12:45.292982Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.341285Z",
+      "completedAt": "2026-11-05T19:12:58.930888Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.347912Z",
+      "completedAt": "2026-11-05T19:14:05.632132Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.354486Z",
+      "completedAt": "2026-11-05T19:13:24.592235Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.361040Z",
+      "completedAt": "2026-11-05T19:11:37.290700Z"
+    },
+    {
+      "kind": "check",
+      "spec": "resolve@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T20:13:35.278854Z",
+      "completedAt": "2026-11-05T20:15:52.930842Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.220175Z",
+      "completedAt": "2026-11-05T19:46:50.639873Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:56:47.469755Z",
+      "completedAt": "2026-11-05T19:58:51.653917Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T20:01:49.594802Z",
+      "completedAt": "2026-11-05T20:04:06.090387Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.228337Z",
+      "completedAt": "2026-11-05T19:44:29.912816Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.236165Z",
+      "completedAt": "2026-11-05T19:46:23.324594Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.250301Z",
+      "completedAt": "2026-11-05T19:46:24.158339Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T20:17:38.848250Z",
+      "completedAt": "2026-11-05T20:20:29.175762Z"
+    }
+  ],
+  "fills": {
+    "filled": 2
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "28 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "28 of 28 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "27 of 28 (96%); 2 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-14; next 2027-01-15"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/archive/2/20/20190225194038%21Bank_of_America_logo.svg/120px-Bank_of_America_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Bank_of_America_logo.svg",
+      "title": "120px Bank of America logo svg",
+      "rank": 2
+    },
+    "photo": {
+      "imageUrl": "https://listings-manager-images.s3.amazonaws.com/locators.bankofamerica.com/locations/16889_The_Commons_Entrance.jpg",
+      "sourcePageUrl": "https://locators.bankofamerica.com/wa/redmond/financial-centers-redmond-16889.html",
+      "title": "Bank of America Financial Center in Redmond, WA | The Commons",
+      "width": 1980,
+      "height": 980,
+      "rank": 5
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.916Z"
+}

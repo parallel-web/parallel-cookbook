@@ -1,0 +1,2404 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "COST",
+  "name": "Costco Wholesale Corporation",
+  "short": "Costco",
+  "website": "costco.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Sunday nearest the end of August",
+  "irUrl": "https://investor.costco.com/overview/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-09-24",
+    "quarter": "Q4 FY2026"
+  },
+  "nextCall": {
+    "date": "2026-12-10",
+    "time": "2:00 PM PT",
+    "quarter": "Q1 FY2027"
+  },
+  "photoSubject": "Costco warehouse",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch warehouse inventory search",
+      "commitment": "Enable members to search warehouse inventory through the Costco app soon; no calendar deadline was given.",
+      "deadline": null,
+      "firstStated": "2023-09-26",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "U.S. warehouse inventory search became available in the Costco app; the tool later recorded over 43 million visits.",
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/287523651/files/doc_financials/2024/ar/COST-2024-Annual-Report.pdf",
+          "title": "2024",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/03/06/costco-wholesale-cost-q2-2025-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/09/26/costco-wholesale-cost-q4-2023-earnings-call-transc/",
+          "title": "Costco Wholesale (COST) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/09/26/costco-wholesale-cost-q4-2024-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2024-09-26",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2024-03-07",
+            "what_was_said": "Immediately after saying warehouse inventory would be online 'shortly,' Richard Galanti qualified the timing: 'it may be a few months or a few -- more than a few months, but it will be soon.' This caveat left the timing open rather than establishing a firm launch deadline.",
+            "call": "Q2 FY2024 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Deliver scheduled employee wage increases",
+      "commitment": "Raise top-of-scale pay $1/hour immediately, then another $1 in March 2026 and $1 in March 2027 in the U.S. and Canada.",
+      "deadline": "March 2027",
+      "firstStated": "2025-03-06",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The March 2025 and March 2026 top-of-scale increases were implemented. The additional $1 increase in March 2027 remained pending under the original schedule.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+          "title": "cost-20250831",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/COST/transcripts/2025-year/2-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q2 FY2025 Earnings Call Transcript - March 6, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/03/06/costco-wholesale-cost-q2-2025-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/09/29/costco-cost-q4-2026-earnings-call-transcript/",
+          "title": "Costco (COST) Q4 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Open 30 net FY2026 warehouses",
+      "commitment": "Open 35 warehouses in FY2026, including five relocations, adding 30 net new warehouses.",
+      "deadline": "FY2026",
+      "firstStated": "2025-09-25",
+      "status": "missed",
+      "k": "miss",
+      "outcomeSummary": "Fiscal 2026 ended with 28 warehouse openings, including three relocations, for 25 net new buildings, below the original opening plan.",
+      "citations": [
+        {
+          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/2e58dc45-a55d-4c50-9771-1689e2a3239a.pdf",
+          "title": "Costco Wholesale Corporation — FORM 10-K, fiscal year ended August 30, 2026",
+          "domain": "d18rn0p25nwr6d.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025/",
+          "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2025-earnings-call-transcript",
+          "title": "Costco Wholesale Corporation (COST) Q4 2025 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/09/29/costco-cost-q4-2026-earnings-call-transcript/",
+          "title": "Costco (COST) Q4 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-09-24",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "missed",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-05-28",
+            "what_was_said": "Management reported two relocations completed, with one more planned in Q4, implying three FY2026 relocations rather than the five originally planned. This distinguishes the reduced relocation component from the reduction in net-new openings.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Roll out enhanced checkout technology",
+      "commitment": "Roll out enhanced employee-assisted checkout technology across all U.S. warehouses; no completion date was given.",
+      "deadline": null,
+      "firstStated": "2025-09-25",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Early adopters reported checkout speed improvements of up to 20%, and international rollout followed; completion across all U.S. warehouses remained unconfirmed.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/COST/earnings/COST-Q3-2026-earnings_call-583851.html",
+          "title": "Costco Wholesale Corporation (COST) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
+          "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2025-earnings-call-transcript",
+          "title": "Costco Wholesale Corporation (COST) Q4 2025 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/583851-q3-2026",
+          "title": "Costco (COST) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-03-05",
+            "what_was_said": "Management was piloting automated pay stations for pre-scanned orders, with an average transaction time of around eight seconds. Early results showed improved traffic flow and positive member feedback.",
+            "call": "Q2 FY2026 earnings call"
+          },
+          {
+            "date": "2026-05-28",
+            "what_was_said": "The pay-station pilot had been successful, and Costco was incorporating the technology into new warehouse openings and high-volume buildings.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Invest approximately $6.5 billion",
+      "commitment": "Invest approximately $6.5 billion in capital expenditure during FY2026.",
+      "deadline": "FY2026",
+      "firstStated": "2025-12-11",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Costco reported $6.4 billion of FY2026 capital expenditure, consistent with the approximately $6.5 billion estimate; its annual filing records $6,435 million.",
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/cost/transcripts/390255-q1-2026",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026",
+          "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/09/29/costco-cost-q4-2026-earnings-call-transcript/",
+          "title": "Costco (COST) Q4 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-09-24",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-09-24",
+            "what_was_said": "Management reported: “Capital expenditure was $2.21 billion in Q4 and $6.4 billion for the full year.” It separately forecast approximately $7.5 billion for FY2027, not a revision to the FY2026 target.",
+            "call": "Q4 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "COST-P1-2023-09-26",
+      "promiseId": "P1",
+      "date": "2023-09-26",
+      "call": "Q4 FY2023 earnings call",
+      "speaker": "Richard Galanti, Executive Vice President and Chief Financial Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Promised warehouse inventory search through the app soon; no calendar deadline was given.",
+      "quote": "And soon, you'll be able to search warehouse inventory and scan barcodes from the app.",
+      "verbatim": {
+        "text": "And soon, you'll be able to search warehouse inventory and scan barcodes from the app.",
+        "segs": [
+          {
+            "t": "And soon, you'll be able to search warehouse inventory and scan barcodes from the app.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/09/26/costco-wholesale-cost-q4-2023-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/09/26/costco-wholesale-cost-q4-2023-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P1-2023-12-14",
+      "promiseId": "P1",
+      "date": "2023-12-14",
+      "call": "Q1 FY2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending launch of warehouse inventory search through the app was not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/12/15/costco-wholesale-cost-q1-2024-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P1-2024-03-07",
+      "promiseId": "P1",
+      "date": "2024-03-07",
+      "call": "Q2 FY2024 earnings call",
+      "speaker": "Richard Galanti, Executive Vice President and Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that warehouse inventory would be available online shortly; no calendar deadline was given.",
+      "quote": "One of the things we're -- we should be doing shortly is having warehouse inventory online.",
+      "verbatim": {
+        "text": "One of the things we're -- we should be doing shortly is having warehouse inventory online.",
+        "segs": [
+          {
+            "t": "One of the things we're -- we should be doing shortly is having warehouse inventory online.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/03/07/costco-wholesale-cost-q2-2024-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/03/07/costco-wholesale-cost-q2-2024-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P1-2024-05-30",
+      "promiseId": "P1",
+      "date": "2024-05-30",
+      "call": "Q3 FY2024 earnings call",
+      "speaker": "Ron Vachris, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported work toward warehouse inventory access through the app; no new target or deadline.",
+      "quote": "You know, we're working toward warehouse inventory online so members could use that on the app, but app functionality is one of our greatest opportunities.",
+      "verbatim": {
+        "text": "You know, we're working toward warehouse inventory online so members could use that on the app, but app functionality is one of our greatest opportunities.",
+        "segs": [
+          {
+            "t": "You know, we're working toward warehouse inventory online so members could use that on the app, but app functionality is one of our greatest opportunities.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/05/30/costco-wholesale-cost-q3-2024-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/05/30/costco-wholesale-cost-q3-2024-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P1-2024-09-26",
+      "promiseId": "P1",
+      "date": "2024-09-26",
+      "call": "Q4 FY2024 earnings call",
+      "speaker": "Ron Vachris, President and Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed members could check warehouse inventory through the Costco app.",
+      "quote": "Members are very excited about being able to check warehouse inventory via the Costco app.",
+      "verbatim": {
+        "text": "Members are very excited about being able to check warehouse inventory via the Costco app.",
+        "segs": [
+          {
+            "t": "Members are very excited about being able to check warehouse inventory via the Costco app.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/09/26/costco-wholesale-cost-q4-2024-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/09/26/costco-wholesale-cost-q4-2024-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P1-2024-12-11",
+      "promiseId": "P1",
+      "date": "2024-12-11",
+      "call": "FY2024 annual report shareholder letter",
+      "speaker": "Ron Vachris, President and Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed U.S. warehouse inventory search was among features added to the Costco app.",
+      "quote": "We continue to make significant improvements to the Costco App—increasing response speed and reliability and adding key features such as the ability to search U.S. warehouse inventory, access online receipts, and maintain a digital membership card and wallet.",
+      "verbatim": {
+        "text": "We continue to make significant improvements to the Costco App—increasing response speed and reliability and adding key features such as the ability to search U.S. warehouse inventory, access online receipts, and maintain a digital membership card and wallet.",
+        "segs": [
+          {
+            "t": "We continue to make significant improvements to the Costco App—increasing response speed and reliability and adding key features such as the ability to search U.S. warehouse inventory, access online receipts, and maintain a digital membership card and wallet.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/287523651/files/doc_financials/2024/ar/COST-2024-Annual-Report.pdf",
+          "title": "2024",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/287523651/files/doc_financials/2024/ar/COST-2024-Annual-Report.pdf",
+          "title": "2024",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "COST-P1-2024-12-12",
+      "promiseId": "P1",
+      "date": "2024-12-12",
+      "call": "Q1 FY2025 earnings call",
+      "speaker": "Gary Millerchip, Executive Vice President and Chief Financial Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed warehouse inventory checking through the app was available and resonating with members.",
+      "quote": "We continue to make progress with our technology road map and enhancements made to the member experience like the ability to check warehouse inventory via the Costco app are resonating well.",
+      "verbatim": {
+        "text": "We continue to make progress with our technology road map and enhancements made to the member experience like the ability to check warehouse inventory via the Costco app are resonating well.",
+        "segs": [
+          {
+            "t": "We continue to make progress with our technology road map and enhancements made to the member experience like the ability to check warehouse inventory via the Costco app are resonating well.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/12/12/costco-wholesale-cost-q1-2025-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q1 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/12/12/costco-wholesale-cost-q1-2025-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q1 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P1-2025-01-23",
+      "promiseId": "P1",
+      "date": "2025-01-23",
+      "call": "2025 Annual Shareholders' Meeting presentation",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Listed warehouse inventory as a Costco mobile-app feature.",
+      "quote": null,
+      "verbatim": {
+        "text": "Mobile App ● Avg Rating 4.8, +100% ● Digital Membership Card ● Warehouse Inventory",
+        "segs": [
+          {
+            "t": "Mobile App ● Avg Rating 4.8, +",
+            "h": 0
+          },
+          {
+            "t": "100%",
+            "h": 1
+          },
+          {
+            "t": " ● Digital Membership Card ● Warehouse Inventory",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/287523651/files/doc_events/2025/Jan/23/2025-Annual-Shareholders-Meeting-Presentation.pdf",
+          "title": "PowerPoint Presentation",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/287523651/files/doc_events/2025/Jan/23/2025-Annual-Shareholders-Meeting-Presentation.pdf",
+          "title": "PowerPoint Presentation",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "COST-P1-2025-03-06",
+      "promiseId": "P1",
+      "date": "2025-03-06",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Gary Millerchip, Executive Vice President and Chief Financial Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported over 43 million visits to the app tool showing local warehouse item availability and prices.",
+      "quote": "The new warehouse tool in our app, which allows members to view local warehouse item availability and prices had over 43 million visits.",
+      "verbatim": {
+        "text": "The new warehouse tool in our app, which allows members to view local warehouse item availability and prices had over 43 million visits.",
+        "segs": [
+          {
+            "t": "The new warehouse tool in our app, which allows members to view local warehouse item availability and prices had over ",
+            "h": 0
+          },
+          {
+            "t": "43 million",
+            "h": 1
+          },
+          {
+            "t": " visits.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/03/06/costco-wholesale-cost-q2-2025-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/03/06/costco-wholesale-cost-q2-2025-earnings-call-transc",
+          "title": "Costco Wholesale (COST) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P1-2025-05-29",
+      "promiseId": "P1",
+      "date": "2025-05-29",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Gary Millerchip, Chief Financial Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Cited inventory available through the app as an existing enhancement supporting further digital engagement.",
+      "quote": "As we continue to improve the member experience with enhancements every quarter, Greg, around whether it's the inventory available on the app or improving the search functionality, improving the way in which we communicate with members, as I talked about earlier on the call, we believe all of those things are going to drive more digital engagement.",
+      "verbatim": {
+        "text": "As we continue to improve the member experience with enhancements every quarter, Greg, around whether it's the inventory available on the app or improving the search functionality, improving the way in which we communicate with members, as I talked about earlier on the call, we believe all of those things are going to drive more digital engagement.",
+        "segs": [
+          {
+            "t": "As we continue to improve the member experience with enhancements every quarter, Greg, around whether it's the inventory available on the app or improving the search functionality, improving the way in which we communicate with members, as I talked about earlier on the call, we believe all of those things are going to drive more digital engagement.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/325305-q3-2025",
+          "title": "Costco (COST) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/325305-q3-2025",
+          "title": "Costco (COST) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P1-2026-01-06",
+      "promiseId": "P1",
+      "date": "2026-01-06",
+      "call": "How do I check warehouse inventory and prices?",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Company support instructions confirmed warehouse inventory checking remained available through the Costco app.",
+      "quote": "You can use the Costco App to check warehouse inventory.",
+      "verbatim": {
+        "text": "You can use the Costco App to check warehouse inventory.",
+        "segs": [
+          {
+            "t": "You can use the Costco App to check warehouse inventory.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://customerservice.costco.com/app/answers/answer_view/a_id/1015066/~/how-do-i-check-warehouse-inventory-and-prices%3F",
+          "title": "How do I check warehouse inventory and prices?",
+          "domain": "customerservice.costco.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://customerservice.costco.com/app/answers/answer_view/a_id/1015066/~/how-do-i-check-warehouse-inventory-and-prices%3F",
+          "title": "How do I check warehouse inventory and prices?",
+          "domain": "customerservice.costco.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "COST-P2-2025-03-06",
+      "promiseId": "P2",
+      "date": "2025-03-06",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to $1/hour immediately, another $1 in March 2026 and $1 in March 2027 under the U.S./Canada agreement.",
+      "quote": "Highlights from the new agreement include an immediate $1 per hour top-of-scale increase followed by an additional $1 top-of-scale increase in March 2026 and again in March 2027.",
+      "verbatim": {
+        "text": "Highlights from the new agreement include an immediate $1 per hour top-of-scale increase followed by an additional $1 top-of-scale increase in March 2026 and again in March 2027.",
+        "segs": [
+          {
+            "t": "Highlights from the new agreement include an immediate ",
+            "h": 0
+          },
+          {
+            "t": "$1",
+            "h": 1
+          },
+          {
+            "t": " per hour top-of-scale increase followed by an additional ",
+            "h": 0
+          },
+          {
+            "t": "$1",
+            "h": 1
+          },
+          {
+            "t": " top-of-scale increase in March ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and again in March ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/COST/transcripts/2025-year/2-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q2 FY2025 Earnings Call Transcript - March 6, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/COST/transcripts/2025-year/2-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q2 FY2025 Earnings Call Transcript - March 6, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.costco.com/events-and-presentations/events/event-details/2025/Q2-2025-Earnings-Call/default.aspx",
+          "title": "\n\tCostco Wholesale Corporation - Q2 2025 Earnings Call\n",
+          "domain": "investor.costco.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-costco-q4-2025-beats-estimates-stock-rises-93CH-4256803",
+          "title": "Earnings call transcript: Costco Q4 2025 beats estimates, stock rises By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P2-2025-05-29",
+      "promiseId": "P2",
+      "date": "2025-05-29",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Gary Millerchip, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "March agreement created mid single digit basis points of incremental costs, alongside low double digit basis points from July 2024 raises.",
+      "quote": "The incremental year over year impact from this year’s March employee agreement was mid single digit basis points on top of the low double digit basis point impact from our July 2024 wage increase.",
+      "verbatim": {
+        "text": "The incremental year over year impact from this year’s March employee agreement was mid single digit basis points on top of the low double digit basis point impact from our July 2024 wage increase.",
+        "segs": [
+          {
+            "t": "The incremental year over year impact from this year’s March employee agreement was mid single digit basis points on top of the low double digit basis point impact from our July ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " wage increase.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-costco-q3-2025-sees-profit-rise-stock-dips-93CH-4071635",
+          "title": "Earnings call transcript: Costco Q3 2025 sees profit rise, stock dips By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-costco-q3-2025-sees-profit-rise-stock-dips-93CH-4071635",
+          "title": "Earnings call transcript: Costco Q3 2025 sees profit rise, stock dips By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco Wholesale Corporation (COST) Q1 2026 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P2-2025-09-25",
+      "promiseId": "P2",
+      "date": "2025-09-25",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Gary Millerchip, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "March agreement cost mid-single-digit basis points; July 2024 raise cost mid-to-high single-digit basis points during Q4’s first 10 weeks.",
+      "quote": "As noted last quarter, the incremental year-over-year impact from this year’s March employee agreement was mid-single-digit basis points, and the off-cycle wage increase in July 2024, which affected the year-over-year rate comparison for the first 10 weeks of Q4, was mid-to-high single-digit basis points.",
+      "verbatim": {
+        "text": "As noted last quarter, the incremental year-over-year impact from this year’s March employee agreement was mid-single-digit basis points, and the off-cycle wage increase in July 2024, which affected the year-over-year rate comparison for the first 10 weeks of Q4, was mid-to-high single-digit basis points.",
+        "segs": [
+          {
+            "t": "As noted last quarter, the incremental year-over-year impact from this year’s March employee agreement was mid-single-digit basis points, and the off-cycle wage increase in July ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", which affected the year-over-year rate comparison for the first 10 weeks of ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ", was mid-to-high single-digit basis points.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-costco-q4-2025-beats-estimates-stock-rises-93CH-4256803",
+          "title": "Earnings call transcript: Costco Q4 2025 beats estimates, stock rises By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-costco-q4-2025-beats-estimates-stock-rises-93CH-4256803",
+          "title": "Earnings call transcript: Costco Q4 2025 beats estimates, stock rises By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.costco.com/events-and-presentations/events/event-details/2025/Q4-2025-Earnings-Call/default.aspx",
+          "title": "\n\tCostco Wholesale Corporation - Q4 2025 Earnings Call\n",
+          "domain": "investor.costco.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P2-2025-10-08",
+      "promiseId": "P2",
+      "date": "2025-10-08",
+      "call": "FY2025 Form 10-K",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Confirmed $1.00/hour top-of-scale increase; average U.S. hourly pay reached approximately $32.00 at the end of 2025.",
+      "quote": "We also increased the top of wage scales by $1.00 per hour, bringing our average hourly rate at the end of 2025 for hourly employees in the U.S. to approximately $32.00 per hour.",
+      "verbatim": {
+        "text": "We also increased the top of wage scales by $1.00 per hour, bringing our average hourly rate at the end of 2025 for hourly employees in the U.S. to approximately $32.00 per hour.",
+        "segs": [
+          {
+            "t": "We also increased the top of wage scales by ",
+            "h": 0
+          },
+          {
+            "t": "$1.00",
+            "h": 1
+          },
+          {
+            "t": " per hour, bringing our average hourly rate at the end of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " for hourly employees in the U.S. to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$32.00",
+            "h": 1
+          },
+          {
+            "t": " per hour.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+          "title": "cost-20250831",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+          "title": "cost-20250831",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/0000909832-25-000101-index.htm",
+          "title": "EDGAR Filing Documents for 0000909832-25-000101",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "COST-P2-2025-12-11",
+      "promiseId": "P2",
+      "date": "2025-12-11",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Gary Millerchip, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Productivity offset wage investments and extended hours; management also discussed continuing costs from the March ’25 agreement.",
+      "quote": "These productivity improvements fully offset wage investments and the impact of extended operating hours and would have created positive leverage in the quarter had we not experienced higher healthcare costs.",
+      "verbatim": {
+        "text": "These productivity improvements fully offset wage investments and the impact of extended operating hours and would have created positive leverage in the quarter had we not experienced higher healthcare costs.",
+        "segs": [
+          {
+            "t": "These productivity improvements fully offset wage investments and the impact of extended operating hours and would have created positive leverage in the quarter had we not experienced higher healthcare costs.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco Wholesale Corporation (COST) Q1 2026 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco Wholesale Corporation (COST) Q1 2026 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P2-2026-03-05",
+      "promiseId": "P2",
+      "date": "2026-03-05",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed offsetting last year’s wage investments, but did not address the scheduled top-of-scale increases.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/2-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q2 FY2026 Earnings Call Transcript - March 5, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P2-2026-05-28",
+      "promiseId": "P2",
+      "date": "2026-05-28",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Employee-agreement commentary concerned vacation-accrual comparisons, not the scheduled top-of-scale wage increases.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/3-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q3 FY2026 Earnings Call Transcript - May 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P2-2026-09-24",
+      "promiseId": "P2",
+      "date": "2026-09-24",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Gary Millerchip, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Three-year employee agreement entered year two; year one was most expensive. No change to the scheduled raises was announced.",
+      "quote": "So we’re into year two now with that.",
+      "verbatim": {
+        "text": "So we’re into year two now with that.",
+        "segs": [
+          {
+            "t": "So we’re into year two now with that.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2026-earnings-call-transcript",
+          "title": "Costco Wholesale Corporation (COST) Q4 2026 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2026-earnings-call-transcript",
+          "title": "Costco Wholesale Corporation (COST) Q4 2026 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P2-2026-10-07",
+      "promiseId": "P2",
+      "date": "2026-10-07",
+      "call": "FY2026 Form 10-K",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Confirmed March 2026 $1.00/hour top-of-scale increase in U.S. and Canada; average U.S. hourly pay approximately $33.00 at the end of 2026.",
+      "quote": "In March 2026, we increased the top of wage scales by $1.00 per hour in the U.S. and Canada, bringing our average rate at the end of 2026 for hourly employees in the U.S. to approximately $33.00.",
+      "verbatim": {
+        "text": "In March 2026, we increased the top of wage scales by $1.00 per hour in the U.S. and Canada, bringing our average rate at the end of 2026 for hourly employees in the U.S. to approximately $33.00.",
+        "segs": [
+          {
+            "t": "In March ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we increased the top of wage scales by ",
+            "h": 0
+          },
+          {
+            "t": "$1.00",
+            "h": 1
+          },
+          {
+            "t": " per hour in the U.S. and Canada, bringing our average rate at the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " for hourly employees in the U.S. to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$33.00",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/0000909832-26-000093-index.htm",
+          "title": "EDGAR Filing Documents for 0000909832-26-000093",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "COST-P3-2025-09-25",
+      "promiseId": "P3",
+      "date": "2025-09-25",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Planned 35 warehouse openings in fiscal 2026, including five relocations.",
+      "quote": "We plan to open another 35 warehouses in fiscal year 2026, of which five are relocations.",
+      "verbatim": {
+        "text": "We plan to open another 35 warehouses in fiscal year 2026, of which five are relocations.",
+        "segs": [
+          {
+            "t": "We plan to open another 35 warehouses in fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", of which five are relocations.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025/",
+          "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025/",
+          "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P3-2025-12-11",
+      "promiseId": "P3",
+      "date": "2025-12-11",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Spain delays reduced fiscal 2026 guidance to 28 net openings; future annual goal remained 30 plus.",
+      "quote": "While delays with a couple of our buildings in Spain resulted in us revising our planned net new openings for fiscal year 2026 down to 28, we continue to plan for 30 plus net openings per year in future years.",
+      "verbatim": {
+        "text": "While delays with a couple of our buildings in Spain resulted in us revising our planned net new openings for fiscal year 2026 down to 28, we continue to plan for 30 plus net openings per year in future years.",
+        "segs": [
+          {
+            "t": "While delays with a couple of our buildings in Spain resulted in us revising our planned net new openings for fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " down to 28, we continue to plan for 30 plus net openings per year in future years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/COST:US/transcripts/2026-year/1-quarter",
+          "title": "Costco Wholesale Corporation (COST US) Q1 FY2026 Earnings Call Transcript - December 11, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/COST:US/transcripts/2026-year/1-quarter",
+          "title": "Costco Wholesale Corporation (COST US) Q1 FY2026 Earnings Call Transcript - December 11, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P3-2026-03-05",
+      "promiseId": "P3",
+      "date": "2026-03-05",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 28 net openings for fiscal '26; continued targeting 30-plus annually thereafter.",
+      "quote": "We currently expect to have 28 net new openings in fiscal year '26 and are targeting 30-plus new openings per year in the coming years.",
+      "verbatim": {
+        "text": "We currently expect to have 28 net new openings in fiscal year '26 and are targeting 30-plus new openings per year in the coming years.",
+        "segs": [
+          {
+            "t": "We currently expect to have 28 net new openings in fiscal year '26 and are targeting 30-plus new openings per year in the coming years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/2-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q2 FY2026 Earnings Call Transcript - March 5, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/2-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q2 FY2026 Earnings Call Transcript - March 5, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P3-2026-05-28",
+      "promiseId": "P3",
+      "date": "2026-05-28",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Reduced fiscal 2026 guidance to 26 net openings, down 2 buildings; those 2 shifted to fiscal 2027.",
+      "quote": "Currently, expect to have 26 net new openings in fiscal year 2026, down 2 buildings from the prior call, with those 2 buildings now set to open in fiscal year 2027.",
+      "verbatim": {
+        "text": "Currently, expect to have 26 net new openings in fiscal year 2026, down 2 buildings from the prior call, with those 2 buildings now set to open in fiscal year 2027.",
+        "segs": [
+          {
+            "t": "Currently, expect to have 26 net new openings in fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", down 2 buildings from the prior call, with those 2 buildings now set to open in fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/3-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q3 FY2026 Earnings Call Transcript - May 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/3-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q3 FY2026 Earnings Call Transcript - May 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/05/28/costco-cost-q3-2026-earnings-transcript",
+          "title": "Costco (COST) Q3 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P3-2026-09-24",
+      "promiseId": "P3",
+      "date": "2026-09-24",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported 28 warehouse openings, including three relocations, totaling 25 net new buildings for the fiscal year.",
+      "quote": "For the fiscal year, we opened 28 new warehouses, including three relocations for a total of 25 net new buildings.",
+      "verbatim": {
+        "text": "For the fiscal year, we opened 28 new warehouses, including three relocations for a total of 25 net new buildings.",
+        "segs": [
+          {
+            "t": "For the fiscal year, we opened 28 new warehouses, including three relocations for a total of 25 net new buildings.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026/",
+          "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026/",
+          "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P3-2026-10-06",
+      "promiseId": "P3",
+      "date": "2026-10-06",
+      "call": "FY2026 Form 10-K",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed 28 openings, including three relocations, in 2026; planned up to 33 openings, including five relocations, in 2027.",
+      "quote": "We opened 28 new warehouses, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027.",
+      "verbatim": {
+        "text": "We opened 28 new warehouses, including three relocations, in 2026, and plan to open up to 33 new warehouses, including five relocations, in 2027.",
+        "segs": [
+          {
+            "t": "We opened 28 new warehouses, including three relocations, in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", and plan to open up to 33 new warehouses, including five relocations, in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/2e58dc45-a55d-4c50-9771-1689e2a3239a.pdf",
+          "title": "Costco Wholesale Corporation — FORM 10-K, fiscal year ended August 30, 2026",
+          "domain": "d18rn0p25nwr6d.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/2e58dc45-a55d-4c50-9771-1689e2a3239a.pdf",
+          "title": "Costco Wholesale Corporation — FORM 10-K, fiscal year ended August 30, 2026",
+          "domain": "d18rn0p25nwr6d.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "COST-P4-2025-09-25",
+      "promiseId": "P4",
+      "date": "2025-09-25",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced enhanced employee-assisted checkout technology rollout in all U.S. warehouses; no completion date specified.",
+      "quote": "Another way we are improving the member experience is through the rollout of enhanced checkout technology in all U.S. warehouses.",
+      "verbatim": {
+        "text": "Another way we are improving the member experience is through the rollout of enhanced checkout technology in all U.S. warehouses.",
+        "segs": [
+          {
+            "t": "Another way we are improving the member experience is through the rollout of enhanced checkout technology in all U.S. warehouses.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
+          "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
+          "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P4-2025-12-11",
+      "promiseId": "P4",
+      "date": "2025-12-11",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Early adopters reported checkout speed improvements of up to 20%; nationwide completion was not confirmed.",
+      "quote": "The warehouses that have first adopted this prescan technology have shown checkout speed improvements of up to 20%.",
+      "verbatim": {
+        "text": "The warehouses that have first adopted this prescan technology have shown checkout speed improvements of up to 20%.",
+        "segs": [
+          {
+            "t": "The warehouses that have first adopted this prescan technology have shown checkout speed improvements of up to ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P4-2026-03-05",
+      "promiseId": "P4",
+      "date": "2026-03-05",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Employee pre-scan rollout, mobile wallet enhancements and pharmacy pay ahead improved checkout speed and employee productivity.",
+      "quote": "In the warehouses, we are achieving meaningful improvements in the speed of checkout and employee productivity, both as a result of our mobile wallet enhancements, pharmacy pay ahead, and the rollout of employee pre-scan technology.",
+      "verbatim": {
+        "text": "In the warehouses, we are achieving meaningful improvements in the speed of checkout and employee productivity, both as a result of our mobile wallet enhancements, pharmacy pay ahead, and the rollout of employee pre-scan technology.",
+        "segs": [
+          {
+            "t": "In the warehouses, we are achieving meaningful improvements in the speed of checkout and employee productivity, both as a result of our mobile wallet enhancements, pharmacy pay ahead, and the rollout of employee pre-scan technology.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript/",
+          "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript/",
+          "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P4-2026-05-28",
+      "promiseId": "P4",
+      "date": "2026-05-28",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Ron Vachris, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported international rollout of the shopping cart pre-scan tool; did not confirm completion across all U.S. warehouses.",
+      "quote": "The enhancements we have made include improvements to the mobile wallet, the introduction of digital membership card quick access on the Costco app, and the rollout of our shopping cart pre-scan tool internationally.",
+      "verbatim": {
+        "text": "The enhancements we have made include improvements to the mobile wallet, the introduction of digital membership card quick access on the Costco app, and the rollout of our shopping cart pre-scan tool internationally.",
+        "segs": [
+          {
+            "t": "The enhancements we have made include improvements to the mobile wallet, the introduction of digital membership card quick access on the Costco app, and the rollout of our shopping cart pre-scan tool internationally.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/COST/earnings/COST-Q3-2026-earnings_call-583851.html",
+          "title": "Costco Wholesale Corporation (COST) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/COST/earnings/COST-Q3-2026-earnings_call-583851.html",
+          "title": "Costco Wholesale Corporation (COST) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P4-2026-09-24",
+      "promiseId": "P4",
+      "date": "2026-09-24",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address employee pre-scan rollout or confirm completion across all U.S. warehouses.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/COST/earnings/COST-Q4-2026-earnings_call-682005.html?fr=sycsrp_catchall",
+          "title": "Costco Wholesale Corporation (COST) Q4 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P5-2025-12-11",
+      "promiseId": "P5",
+      "date": "2025-12-11",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Gary Millerchip, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Estimated approximately $6.5 billion of capital expenditure for FY2026.",
+      "quote": "We estimate capital expenditure for the full year will be approximately $6.5 billion.",
+      "verbatim": {
+        "text": "We estimate capital expenditure for the full year will be approximately $6.5 billion.",
+        "segs": [
+          {
+            "t": "We estimate capital expenditure for the full year will be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$6.5 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/cost/transcripts/390255-q1-2026",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/cost/transcripts/390255-q1-2026",
+          "title": "Costco (COST) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P5-2026-03-05",
+      "promiseId": "P5",
+      "date": "2026-03-05",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Gary Millerchip, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed approximately $6,500,000,000 of FY2026 CapEx for warehouses, remodels, depots, and the digital member experience.",
+      "quote": "We estimate CapEx for the full year will be approximately $6,500,000,000 as we continue to invest in building a larger pipeline of new warehouses, remodeling our existing warehouses to drive continued growth in high-volume buildings, expanding our depot network to support operations, and enhancing the member digital experience.",
+      "verbatim": {
+        "text": "We estimate CapEx for the full year will be approximately $6,500,000,000 as we continue to invest in building a larger pipeline of new warehouses, remodeling our existing warehouses to drive continued growth in high-volume buildings, expanding our depot network to support operations, and enhancing the member digital experience.",
+        "segs": [
+          {
+            "t": "We estimate CapEx for the full year will be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$6,500,000,000",
+            "h": 1
+          },
+          {
+            "t": " as we continue to invest in building a larger pipeline of new warehouses, remodeling our existing warehouses to drive continued growth in high-volume buildings, expanding our depot network to support operations, and enhancing the member digital experience.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript",
+          "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P5-2026-05-28",
+      "promiseId": "P5",
+      "date": "2026-05-28",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Gary Millerchip, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed approximately $6.5 billion of FY2026 CapEx for warehouses, remodels, depot efficiency, and the digital member experience.",
+      "quote": "We estimate CapEx for the full year will be approximately $6.5 billion as we continue to invest in building a larger pipeline of new warehouses, remodeling our existing warehouses to drive continued growth in high-volume buildings, expanding our depot network to support operational efficiency, and enhancing the member digital experience.",
+      "verbatim": {
+        "text": "We estimate CapEx for the full year will be approximately $6.5 billion as we continue to invest in building a larger pipeline of new warehouses, remodeling our existing warehouses to drive continued growth in high-volume buildings, expanding our depot network to support operational efficiency, and enhancing the member digital experience.",
+        "segs": [
+          {
+            "t": "We estimate CapEx for the full year will be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$6.5 billion",
+            "h": 1
+          },
+          {
+            "t": " as we continue to invest in building a larger pipeline of new warehouses, remodeling our existing warehouses to drive continued growth in high-volume buildings, expanding our depot network to support operational efficiency, and enhancing the member digital experience.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/3-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q3 FY2026 Earnings Call Transcript - May 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/3-quarter",
+          "title": "Costco Wholesale Corporation (COST) Q3 FY2026 Earnings Call Transcript - May 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "COST-P5-2026-09-24",
+      "promiseId": "P5",
+      "date": "2026-09-24",
+      "call": "Q4 FY2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported $6,435 million of additions to property and equipment for FY2026.",
+      "quote": null,
+      "verbatim": {
+        "text": "Additions to property and equipment (6,435) (5,498)",
+        "segs": [
+          {
+            "t": "Additions to property and equipment (",
+            "h": 0
+          },
+          {
+            "t": "6,435",
+            "h": 1
+          },
+          {
+            "t": ") (",
+            "h": 0
+          },
+          {
+            "t": "5,498",
+            "h": 1
+          },
+          {
+            "t": ")",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "COST-P5-2026-10-06",
+      "promiseId": "P5",
+      "date": "2026-10-06",
+      "call": "FY2026 Form 10-K",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed 2026 capital expenditures of $6,435 million; separately planned approximately $7,500 million for fiscal 2027.",
+      "quote": "In 2026, we spent $6,435 on capital expenditures, and it is our current intention to spend approximately $7,500 du ring fiscal 2027 .",
+      "verbatim": {
+        "text": "In 2026, we spent $6,435 on capital expenditures, and it is our current intention to spend approximately $7,500 du ring fiscal 2027 .",
+        "segs": [
+          {
+            "t": "In ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we spent ",
+            "h": 0
+          },
+          {
+            "t": "$6,435",
+            "h": 1
+          },
+          {
+            "t": " on capital expenditures, and it is our current intention to spend approximately ",
+            "h": 0
+          },
+          {
+            "t": "$7,500",
+            "h": 1
+          },
+          {
+            "t": " du ring ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2027",
+            "h": 1
+          },
+          {
+            "t": " .",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+          "title": "cost-20260830",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/3-quarter",
+      "title": "Costco Wholesale Corporation (COST) Q3 FY2026 Earnings Call Transcript - May 28, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2 P3 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/09/29/costco-cost-q4-2026-earnings-call-transcript/",
+      "title": "Costco (COST) Q4 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/cost-20260830.htm",
+      "title": "cost-20260830",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/03/06/costco-wholesale-cost-q2-2025-earnings-call-transc",
+      "title": "Costco Wholesale (COST) Q2 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 5,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/12/11/costco-cost-q1-2026-earnings-call-transcript",
+      "title": "Costco (COST) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://www.roic.ai/quote/COST/transcripts/2026-year/2-quarter",
+      "title": "Costco Wholesale Corporation (COST) Q2 FY2026 Earnings Call Transcript - March 5, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2025-earnings-call-transcript",
+      "title": "Costco Wholesale Corporation (COST) Q4 2025 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 8,
+      "url": "https://s201.q4cdn.com/287523651/files/doc_financials/2024/ar/COST-2024-Annual-Report.pdf",
+      "title": "2024",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/cost-20250831.htm",
+      "title": "cost-20250831",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 10,
+      "url": "https://s201.q4cdn.com/287523651/files/doc_events/2025/Jan/23/2025-Annual-Shareholders-Meeting-Presentation.pdf",
+      "title": "PowerPoint Presentation",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://customerservice.costco.com/app/answers/answer_view/a_id/1015066/~/how-do-i-check-warehouse-inventory-and-prices%3F",
+      "title": "How do I check warehouse inventory and prices?",
+      "domain": "customerservice.costco.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://investor.costco.com/events-and-presentations/events/event-details/2025/Q2-2025-Earnings-Call/default.aspx",
+      "title": "\n\tCostco Wholesale Corporation - Q2 2025 Earnings Call\n",
+      "domain": "investor.costco.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 13,
+      "url": "https://investor.costco.com/events-and-presentations/events/event-details/2025/Q4-2025-Earnings-Call/default.aspx",
+      "title": "\n\tCostco Wholesale Corporation - Q4 2025 Earnings Call\n",
+      "domain": "investor.costco.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 14,
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983225000101/0000909832-25-000101-index.htm",
+      "title": "EDGAR Filing Documents for 0000909832-25-000101",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000093/0000909832-26-000093-index.htm",
+      "title": "EDGAR Filing Documents for 0000909832-26-000093",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 16,
+      "url": "https://www.sec.gov/Archives/edgar/data/909832/000090983226000084/costex9918-k92426.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 17,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/09/26/costco-wholesale-cost-q4-2024-earnings-call-transc",
+      "title": "Costco Wholesale (COST) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://www.roic.ai/quote/COST/transcripts/2025-year/2-quarter",
+      "title": "Costco Wholesale Corporation (COST) Q2 FY2025 Earnings Call Transcript - March 6, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 19,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-costco-q4-2025-beats-estimates-stock-rises-93CH-4256803",
+      "title": "Earnings call transcript: Costco Q4 2025 beats estimates, stock rises By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 20,
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025/",
+      "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 21,
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/351767-q4-2025",
+      "title": "Costco (COST) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 22,
+      "url": "https://finance.yahoo.com/quote/COST/earnings/COST-Q3-2026-earnings_call-583851.html",
+      "title": "Costco Wholesale Corporation (COST) Q3 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 23,
+      "url": "http://stockanalysis.com/stocks/cost/transcripts/390255-q1-2026",
+      "title": "Costco (COST) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 24,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/09/26/costco-wholesale-cost-q4-2023-earnings-call-transc",
+      "title": "Costco Wholesale (COST) Q4 2023 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 25,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/12/15/costco-wholesale-cost-q1-2024-earnings-call-transc",
+      "title": "Costco Wholesale (COST) Q1 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/03/07/costco-wholesale-cost-q2-2024-earnings-call-transc",
+      "title": "Costco Wholesale (COST) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/05/30/costco-wholesale-cost-q3-2024-earnings-call-transc",
+      "title": "Costco Wholesale (COST) Q3 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 28,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/12/12/costco-wholesale-cost-q1-2025-earnings-call-transc",
+      "title": "Costco Wholesale (COST) Q1 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 29,
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/325305-q3-2025",
+      "title": "Costco (COST) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 30,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-costco-q3-2025-sees-profit-rise-stock-dips-93CH-4071635",
+      "title": "Earnings call transcript: Costco Q3 2025 sees profit rise, stock dips By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 31,
+      "url": "https://www.roic.ai/quote/COST:US/transcripts/2026-year/1-quarter",
+      "title": "Costco Wholesale Corporation (COST US) Q1 FY2026 Earnings Call Transcript - December 11, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 32,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/05/28/costco-cost-q3-2026-earnings-transcript",
+      "title": "Costco (COST) Q3 2026 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 33,
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026/",
+      "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 34,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript/",
+      "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 35,
+      "url": "https://finance.yahoo.com/quote/COST/earnings/COST-Q4-2026-earnings_call-682005.html?fr=sycsrp_catchall",
+      "title": "Costco Wholesale Corporation (COST) Q4 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 36,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/03/05/costco-cost-q2-2026-earnings-call-transcript",
+      "title": "Costco (COST) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 37,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/09/26/costco-wholesale-cost-q4-2023-earnings-call-transc/",
+      "title": "Costco Wholesale (COST) Q4 2023 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 38,
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/583851-q3-2026",
+      "title": "Costco (COST) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 39,
+      "url": "https://stockanalysis.com/stocks/cost/transcripts/682005-q4-2026",
+      "title": "Costco (COST) Q4 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 40,
+      "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q1-2026-earnings-call-transcript",
+      "title": "Costco Wholesale Corporation (COST) Q1 2026 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 41,
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000909832/2e58dc45-a55d-4c50-9771-1689e2a3239a.pdf",
+      "title": "Costco Wholesale Corporation — FORM 10-K, fiscal year ended August 30, 2026",
+      "domain": "d18rn0p25nwr6d.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 42,
+      "url": "https://news.alphastreet.com/costco-wholesale-corporation-cost-q4-2026-earnings-call-transcript",
+      "title": "Costco Wholesale Corporation (COST) Q4 2026 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.934171Z",
+      "completedAt": "2026-11-05T06:30:24.774622Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T18:46:08.000949Z",
+      "completedAt": "2026-11-05T18:50:29.300960Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.209915Z",
+      "completedAt": "2026-11-05T19:13:12.530156Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.216693Z",
+      "completedAt": "2026-11-05T19:14:13.079297Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.224002Z",
+      "completedAt": "2026-11-05T19:13:02.701379Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.231770Z",
+      "completedAt": "2026-11-05T19:11:10.076636Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.987646Z",
+      "completedAt": "2026-11-05T19:47:03.436472Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.958540Z",
+      "completedAt": "2026-11-05T19:46:52.774415Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.965788Z",
+      "completedAt": "2026-11-05T19:46:11.064569Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.973084Z",
+      "completedAt": "2026-11-05T19:47:50.897966Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.980231Z",
+      "completedAt": "2026-11-05T19:45:20.763381Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "36 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "32 of 32 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "32 of 32 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q4 FY2026 on 2026-09-24; next 2026-12-10"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Costco_Wholesale_logo_2010-10-26.svg/1280px-Costco_Wholesale_logo_2010-10-26.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Costco_Wholesale_logo_2010-10-26.svg",
+      "title": "File:Costco Wholesale logo 2010-10-26.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 459,
+      "rank": 1
+    },
+    "photo": null
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.872Z"
+}

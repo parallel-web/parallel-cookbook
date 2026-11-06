@@ -1,0 +1,2612 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "MU",
+  "name": "Micron Technology, Inc.",
+  "short": "Micron",
+  "website": "micron.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Thursday closest to August 31",
+  "irUrl": "https://investors.micron.com/overview/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-09-30",
+    "quarter": "Q4 FY2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Micron Singapore HBM packaging facility",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Singapore HBM packaging capacity",
+      "commitment": "Expand total advanced packaging capacity through a new Singapore HBM facility beginning in calendar 2027.",
+      "deadline": "calendar 2027",
+      "firstStated": "2024-12-18",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Singapore HBM cleanroom preparation was ahead of plan, with initial output expected in early calendar 2027.",
+      "citations": [
+        {
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+          "title": "mu-20260903",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf?download=1",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "resolved": {
+        "from": "open",
+        "reason": "Micron’s Q4 FY2026 prepared remarks still forecast initial output in early calendar 2027, consistent with the original calendar 2027 capacity-expansion target rather than a revised deadline."
+      },
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "HBM4 high-volume ramp",
+      "commitment": "Bring HBM4 to high volume in calendar 2026, consistent with the industry ramp timetable.",
+      "deadline": "calendar 2026",
+      "firstStated": "2024-12-18",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "HBM4 reached high-volume production with calendar Q1 shipments, a quarter earlier than December guidance; subsequent disclosures reported over $1 billion in HBM4 revenue.",
+      "citations": [
+        {
+          "url": "https://stocknow.ai/en/calls/d9rrzey96885ad0oqjh8dg4n/mu_wolfe-research-auto-auto-tech-and-semiconductor-conference",
+          "title": "Micron Technology (MU) Wolfe Research Auto, Auto Tech and Semiconductor Conference | StockNow",
+          "domain": "stocknow.ai",
+          "tier": "press"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-02-11",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-06-24",
+            "what_was_said": "“HBM4 12-high volume ramp is tracking twice as fast as HBM3E 12-high, and we have already shipped over $1 billion in HBM4 revenue.”",
+            "call": "Q3 FY2026 earnings call prepared remarks"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Second Idaho fab production",
+      "commitment": "Build the second Idaho fab, ID2, to begin production before the first New York fab.",
+      "deadline": "before the first New York fab begins production",
+      "firstStated": "2025-06-12",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Still pending: ID2 wafer output is targeted for late calendar 2028, before the first New York fab’s expected initial output in calendar 2030.",
+      "citations": [
+        {
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf?download=1",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Tongluo meaningful product shipments",
+      "commitment": "Enable meaningful product shipments from the acquired Tongluo fab beginning in fiscal 2028.",
+      "deadline": "fiscal 2028",
+      "firstStated": "2026-03-15",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Meaningful Tongluo product shipments remained pending; Micron advanced the target from fiscal 2028 to mid-calendar 2027 and reported it on track.",
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-completes-acquisition-psmcs-tongluo-p5-site-taiwan",
+          "title": "Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan | Micron Technology",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf?download=1",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Singapore NAND fab output",
+      "commitment": "Begin initial wafer output from the new Singapore NAND fab in the second half of calendar 2028.",
+      "deadline": "second half of calendar 2028",
+      "firstStated": "2026-01-26",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Construction remained on track for the new Singapore NAND facility to begin output in the second half of calendar 2028; initial output was still pending.",
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf?download=1",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000723125/5dafce68-38e8-4cad-a8f3-ab56d04d73fd.pdf",
+          "title": "Micron Technology, Inc. — FORM 10-K, fiscal year ended September 3, 2026",
+          "domain": "d18rn0p25nwr6d.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "MU-P1-2024-12-18",
+      "promiseId": "P1",
+      "date": "2024-12-18",
+      "call": "Q1 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "New Singapore HBM facility will meaningfully expand total advanced packaging capacity beginning in calendar 2027.",
+      "quote": "This investment allows us to meaningfully expand our total advanced packaging capacity beginning in calendar 2027 to support AI-driven demand and will be synergistic with our existing operations in Singapore.",
+      "verbatim": {
+        "text": "This investment allows us to meaningfully expand our total advanced packaging capacity beginning in calendar 2027 to support AI-driven demand and will be synergistic with our existing operations in Singapore.",
+        "segs": [
+          {
+            "t": "This investment allows us to meaningfully expand our total advanced packaging capacity beginning in calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " to support AI-driven demand and will be synergistic with our existing operations in Singapore.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2024/Micron-Technology-Inc--Reports-Results-for-the-First-Quarter-of-Fiscal-2025-12-18-2024/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the First Quarter of Fiscal 2025\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P1-2025-01-08",
+      "promiseId": "P1",
+      "date": "2025-01-08",
+      "call": "Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Groundbreaking announced; operations scheduled for 2026, with meaningful advanced packaging capacity expansion beginning in calendar 2027.",
+      "quote": "Operations for the new facility are scheduled to begin in 2026, with meaningful expansion of Micron’s total advanced packaging capacity beginning in calendar 2027 to meet the demands of AI growth.",
+      "verbatim": {
+        "text": "Operations for the new facility are scheduled to begin in 2026, with meaningful expansion of Micron’s total advanced packaging capacity beginning in calendar 2027 to meet the demands of AI growth.",
+        "segs": [
+          {
+            "t": "Operations for the new facility are scheduled to begin in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", with meaningful expansion of Micron’s total advanced packaging capacity beginning in calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " to meet the demands of AI growth.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-Breaks-Ground-on-New-HBM-Advanced-Packaging-Facility-in-Singapore-01-08-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-Breaks-Ground-on-New-HBM-Advanced-Packaging-Facility-in-Singapore-01-08-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MU-P1-2025-03-20",
+      "promiseId": "P1",
+      "date": "2025-03-20",
+      "call": "Q2 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Broke ground in January; meaningful total advanced packaging capacity expansion remains planned beginning in calendar 2027.",
+      "quote": "In January, we broke ground on an HBM advanced packaging facility in Singapore.",
+      "verbatim": {
+        "text": "In January, we broke ground on an HBM advanced packaging facility in Singapore.",
+        "segs": [
+          {
+            "t": "In January, we broke ground on an HBM advanced packaging facility in Singapore.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/03/Q2-2025-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/03/Q2-2025-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-Technology-Inc--Reports-Results-for-the-Second-Quarter-of-Fiscal-2025-03-20-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Second Quarter of Fiscal 2025\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P1-2025-06-25",
+      "promiseId": "P1",
+      "date": "2025-06-25",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated Singapore assembly and packaging production targeted for the 2027 timeframe.",
+      "quote": "You know, we have talked about investments in Singapore, bringing assembly and packaging capacity there in line, starting production and targeting that for the 2027 timeframe.",
+      "verbatim": {
+        "text": "You know, we have talked about investments in Singapore, bringing assembly and packaging capacity there in line, starting production and targeting that for the 2027 timeframe.",
+        "segs": [
+          {
+            "t": "You know, we have talked about investments in Singapore, bringing assembly and packaging capacity there in line, starting production and targeting that for the ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " timeframe.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/06/25/micron-mu-q3-2025-earnings-call-transcript",
+          "title": "Micron (MU) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/06/25/micron-mu-q3-2025-earnings-call-transcript",
+          "title": "Micron (MU) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-Technology-Inc--Reports-Results-for-the-Third-Quarter-of-Fiscal-2025-06-25-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Third Quarter of Fiscal 2025\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/quarterly-results",
+          "title": "\n\tMicron Technology, Inc. - Financials - Quarterly results\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MU-P1-2025-09-23",
+      "promiseId": "P1",
+      "date": "2025-09-23",
+      "call": "Q4 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Singapore HBM assembly and test facility construction progressing; supply contribution on track beginning in calendar 2027.",
+      "quote": "We are making good progress on our Singapore HBM assembly and test facility construction, which is on track to contribute to our HBM supply capability beginning in calendar 2027.",
+      "verbatim": {
+        "text": "We are making good progress on our Singapore HBM assembly and test facility construction, which is on track to contribute to our HBM supply capability beginning in calendar 2027.",
+        "segs": [
+          {
+            "t": "We are making good progress on our Singapore HBM assembly and test facility construction, which is on track to contribute to our HBM supply capability beginning in calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/09/Q4-2025-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/09/Q4-2025-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-Technology-Inc--Reports-Results-for-the-Fourth-Quarter-and-Full-Year-of-Fiscal-2025-09-23-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Fourth Quarter and Full Year of Fiscal 2025\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P1-2025-12-17",
+      "promiseId": "P1",
+      "date": "2025-12-17",
+      "call": "Q1 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Singapore HBM advanced packaging facility on track for meaningful HBM supply contribution in calendar 2027.",
+      "quote": "In Singapore, our HBM advanced packaging facility is on track to contribute meaningfully to our HBM supply in calendar 2027.",
+      "verbatim": {
+        "text": "In Singapore, our HBM advanced packaging facility is on track to contribute meaningfully to our HBM supply in calendar 2027.",
+        "segs": [
+          {
+            "t": "In Singapore, our HBM advanced packaging facility is on track to contribute meaningfully to our HBM supply in calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/12/Q1-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/12/Q1-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/quarterly-results",
+          "title": "\n\tMicron Technology, Inc. - Financials - Quarterly results\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P1-2026-01-26",
+      "promiseId": "P1",
+      "date": "2026-01-26",
+      "call": "Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Singapore HBM advanced packaging facility remains on track to contribute meaningfully to supply in calendar year 2027.",
+      "quote": "Micron’s previously announced high-bandwidth memory (HBM) advanced packaging facility, also located in the same Singapore manufacturing complex, is on track to contribute meaningfully to Micron’s HBM supply in calendar year 2027.",
+      "verbatim": {
+        "text": "Micron’s previously announced high-bandwidth memory (HBM) advanced packaging facility, also located in the same Singapore manufacturing complex, is on track to contribute meaningfully to Micron’s HBM supply in calendar year 2027.",
+        "segs": [
+          {
+            "t": "Micron’s previously announced high-bandwidth memory (HBM) advanced packaging facility, also located in the same Singapore manufacturing complex, is on track to contribute meaningfully to Micron’s HBM supply in calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore-01-26-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore-01-26-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MU-P1-2026-03-18",
+      "promiseId": "P1",
+      "date": "2026-03-18",
+      "call": "Q2 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Singapore HBM packaging facility on track for meaningful supply contribution in calendar year 2027.",
+      "quote": "Our Singapore advanced packaging facility for HBM is on track to contribute meaningfully to Micron’s HBM supply in calendar year 2027.",
+      "verbatim": {
+        "text": "Our Singapore advanced packaging facility for HBM is on track to contribute meaningfully to Micron’s HBM supply in calendar year 2027.",
+        "segs": [
+          {
+            "t": "Our Singapore advanced packaging facility for HBM is on track to contribute meaningfully to Micron’s HBM supply in calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/quarterly-results",
+          "title": "\n\tMicron Technology, Inc. - Financials - Quarterly results\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P1-2026-06-24",
+      "promiseId": "P1",
+      "date": "2026-06-24",
+      "call": "Q3 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expects meaningful Singapore HBM packaging capacity contribution beginning in the first half of calendar year 2027.",
+      "quote": "We expect this facility will contribute meaningfully to Micron’s HBM packaging capacity beginning in the first half of calendar year 2027.",
+      "verbatim": {
+        "text": "We expect this facility will contribute meaningfully to Micron’s HBM packaging capacity beginning in the first half of calendar year 2027.",
+        "segs": [
+          {
+            "t": "We expect this facility will contribute meaningfully to Micron’s HBM packaging capacity beginning in the first half of calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/quarterly-results",
+          "title": "\n\tMicron Technology, Inc. - Financials - Quarterly results\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P1-2026-09-30",
+      "promiseId": "P1",
+      "date": "2026-09-30",
+      "call": "Q4 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Cleanroom preparation ahead of plan; initial output expected in early calendar 2027.",
+      "quote": "In Singapore, cleanroom preparation is ahead of plan at our HBM advanced packaging facility, with initial output expected in early calendar 2027.",
+      "verbatim": {
+        "text": "In Singapore, cleanroom preparation is ahead of plan at our HBM advanced packaging facility, with initial output expected in early calendar 2027.",
+        "segs": [
+          {
+            "t": "In Singapore, cleanroom preparation is ahead of plan at our HBM advanced packaging facility, with initial output expected in early calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/quarterly-results",
+          "title": "\n\tMicron Technology, Inc. - Financials - Quarterly results\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P2-2024-12-18",
+      "promiseId": "P2",
+      "date": "2024-12-18",
+      "call": "Q1 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected industry HBM4 high-volume ramp in calendar 2026.",
+      "quote": "We expect HBM4 to ramp in high volume for the industry in calendar 2026.",
+      "verbatim": {
+        "text": "We expect HBM4 to ramp in high volume for the industry in calendar 2026.",
+        "segs": [
+          {
+            "t": "We expect HBM4 to ramp in high volume for the industry in calendar ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2024/Micron-Technology-Inc--Reports-Results-for-the-First-Quarter-of-Fiscal-2025-12-18-2024/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the First Quarter of Fiscal 2025\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P2-2025-03-20",
+      "promiseId": "P2",
+      "date": "2025-03-20",
+      "call": "Q2 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Micron’s HBM4 volume ramp in calendar 2026.",
+      "quote": "Looking ahead, we are enthusiastic about Micron’s HBM4, which will ramp in volume in calendar 2026.",
+      "verbatim": {
+        "text": "Looking ahead, we are enthusiastic about Micron’s HBM4, which will ramp in volume in calendar 2026.",
+        "segs": [
+          {
+            "t": "Looking ahead, we are enthusiastic about Micron’s HBM4, which will ramp in volume in calendar ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-Technology-Inc--Reports-Results-for-the-Second-Quarter-of-Fiscal-2025-03-20-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Second Quarter of Fiscal 2025\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P2-2025-06-10",
+      "promiseId": "P2",
+      "date": "2025-06-10",
+      "call": "Micron Ships HBM4 to Key Customers to Power Next-Gen AI Platforms",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "HBM4 36GB 12-high samples shipped to multiple key customers; ramp remained planned for calendar year 2026.",
+      "quote": "Micron plans to ramp HBM4 in calendar year 2026, aligned to the ramp of customers’ next-generation AI platforms.",
+      "verbatim": {
+        "text": "Micron plans to ramp HBM4 in calendar year 2026, aligned to the ramp of customers’ next-generation AI platforms.",
+        "segs": [
+          {
+            "t": "Micron plans to ramp HBM4 in calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", aligned to the ramp of customers’ next-generation AI platforms.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-ships-hbm4-key-customers-power-next-gen-ai-platforms",
+          "title": "\n\tMicron Technology, Inc. - Micron Ships HBM4 to Key Customers to Power Next-Gen AI Platforms\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-ships-hbm4-key-customers-power-next-gen-ai-platforms",
+          "title": "\n\tMicron Technology, Inc. - Micron Ships HBM4 to Key Customers to Power Next-Gen AI Platforms\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MU-P2-2025-06-25",
+      "promiseId": "P2",
+      "date": "2025-06-25",
+      "call": "Q3 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "HBM4 samples delivered to multiple customers; volume production expected in calendar 2026, aligned with customer plans.",
+      "quote": "Micron has delivered samples of HBM4 to multiple customers and expects to ramp volume production in calendar 2026, aligned with our customers’ plans.",
+      "verbatim": {
+        "text": "Micron has delivered samples of HBM4 to multiple customers and expects to ramp volume production in calendar 2026, aligned with our customers’ plans.",
+        "segs": [
+          {
+            "t": "Micron has delivered samples of HBM4 to multiple customers and expects to ramp volume production in calendar ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", aligned with our customers’ plans.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-results-third-quarter-fiscal-2025",
+          "title": "Micron Technology, Inc. Reports Results for the Third Quarter of Fiscal 2025 | Micron Technology",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P2-2025-09-23",
+      "promiseId": "P2",
+      "date": "2025-09-23",
+      "call": "Q4 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "HBM4 12H (12-high) remained on track for customer platform ramps despite increased bandwidth and pin-speed requirements.",
+      "quote": "Micron’s HBM4 12H (12-high) remains on track to support customer platform ramps even as the performance requirements for HBM4 bandwidth and pin speeds have increased.",
+      "verbatim": {
+        "text": "Micron’s HBM4 12H (12-high) remains on track to support customer platform ramps even as the performance requirements for HBM4 bandwidth and pin speeds have increased.",
+        "segs": [
+          {
+            "t": "Micron’s HBM4 12H (12-high) remains on track to support customer platform ramps even as the performance requirements for HBM4 bandwidth and pin speeds have increased.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/09/Q4-2025-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/09/Q4-2025-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-Technology-Inc--Reports-Results-for-the-Fourth-Quarter-and-Full-Year-of-Fiscal-2025-09-23-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Fourth Quarter and Full Year of Fiscal 2025\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P2-2025-12-17",
+      "promiseId": "P2",
+      "date": "2025-12-17",
+      "call": "Q1 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "HBM4, over 11 Gbps, remained on track for high-yield ramp in the second calendar quarter of 2026, aligned with customers.",
+      "quote": "Micron’s HBM4, with industry leading speed over 11 Gbps, is on track to ramp with high yields in the second calendar quarter of 2026, consistent with our customers’ product ramp plans.",
+      "verbatim": {
+        "text": "Micron’s HBM4, with industry leading speed over 11 Gbps, is on track to ramp with high yields in the second calendar quarter of 2026, consistent with our customers’ product ramp plans.",
+        "segs": [
+          {
+            "t": "Micron’s HBM4, with industry leading speed over 11 Gbps, is on track to ramp with high yields in the second calendar quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", consistent with our customers’ product ramp plans.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/quarterly-results",
+          "title": "\n\tMicron Technology, Inc. - Financials - Quarterly results\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P2-2026-02-11",
+      "promiseId": "P2",
+      "date": "2026-02-11",
+      "call": "Wolfe Research Auto, Auto Tech and Semiconductor Conference",
+      "speaker": "Mark Murphy, Executive Vice President and CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "HBM4 high-volume production and customer shipments had begun; calendar Q1 ramp was a quarter earlier than December guidance.",
+      "quote": "We have been in high-volume production on HBM4.",
+      "verbatim": {
+        "text": "We have been in high-volume production on HBM4.",
+        "segs": [
+          {
+            "t": "We have been in high-volume production on HBM4.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stocknow.ai/en/calls/d9rrzey96885ad0oqjh8dg4n/mu_wolfe-research-auto-auto-tech-and-semiconductor-conference",
+          "title": "Micron Technology (MU) Wolfe Research Auto, Auto Tech and Semiconductor Conference | StockNow",
+          "domain": "stocknow.ai",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Wolfe-Research-Auto-Auto-Tech-and-Semiconductor-Conference-02-11-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Wolfe Research Auto, Auto Tech and Semiconductor Conference\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stocknow.ai/en/calls/d9rrzey96885ad0oqjh8dg4n/mu_wolfe-research-auto-auto-tech-and-semiconductor-conference",
+          "title": "Micron Technology (MU) Wolfe Research Auto, Auto Tech and Semiconductor Conference | StockNow",
+          "domain": "stocknow.ai",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "MU-P2-2026-03-16",
+      "promiseId": "P2",
+      "date": "2026-03-16",
+      "call": "Micron in High-Volume Production of HBM4 Designed for NVIDIA Vera Rubin, PCIe Gen6 SSD and SOCAMM2",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed HBM4 36GB 12H volume shipments in the first quarter of calendar year 2026 for NVIDIA Vera Rubin.",
+      "quote": "Micron Technology, Inc. (Nasdaq: MU), has begun volume shipment of its HBM4 36GB 12H in the first quarter of calendar year 2026 and is designed for NVIDIA Vera Rubin.",
+      "verbatim": {
+        "text": "Micron Technology, Inc. (Nasdaq: MU), has begun volume shipment of its HBM4 36GB 12H in the first quarter of calendar year 2026 and is designed for NVIDIA Vera Rubin.",
+        "segs": [
+          {
+            "t": "Micron Technology, Inc. (Nasdaq: MU), has begun volume shipment of its HBM4 36GB 12H in the first quarter of calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and is designed for NVIDIA Vera Rubin.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-in-High-Volume-Production-of-HBM4-Designed-for-NVIDIA-Vera-Rubin-PCIe-Gen6-SSD-and-SOCAMM2-03-16-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron in High-Volume Production of HBM4 Designed for NVIDIA Vera Rubin, PCIe Gen6 SSD and SOCAMM2\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-in-High-Volume-Production-of-HBM4-Designed-for-NVIDIA-Vera-Rubin-PCIe-Gen6-SSD-and-SOCAMM2-03-16-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron in High-Volume Production of HBM4 Designed for NVIDIA Vera Rubin, PCIe Gen6 SSD and SOCAMM2\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MU-P2-2026-03-18",
+      "promiseId": "P2",
+      "date": "2026-03-18",
+      "call": "Q2 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed HBM4 36GB 12H volume shipments in the first quarter of calendar year 2026 for NVIDIA Vera Rubin.",
+      "quote": "At NVIDIA’s GTC (GPU Technology Conference), we announced that Micron has begun volume shipments of its HBM4 36GB 12H in the first quarter of calendar year 2026 and is designed for the NVIDIA Vera Rubin.",
+      "verbatim": {
+        "text": "At NVIDIA’s GTC (GPU Technology Conference), we announced that Micron has begun volume shipments of its HBM4 36GB 12H in the first quarter of calendar year 2026 and is designed for the NVIDIA Vera Rubin.",
+        "segs": [
+          {
+            "t": "At NVIDIA’s GTC (GPU Technology Conference), we announced that Micron has begun volume shipments of its HBM4 36GB 12H in the first quarter of calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and is designed for the NVIDIA Vera Rubin.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Results-for-the-Second-Quarter-of-Fiscal-2026-03-18-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Second Quarter of Fiscal 2026\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P2-2026-06-24",
+      "promiseId": "P2",
+      "date": "2026-06-24",
+      "call": "Q3 FY2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "HBM4 on 1-beta DRAM was in high-volume shipments for the lead customer’s platform; qualification samples reached multiple end-customers.",
+      "quote": "HBM4, built on 1-beta DRAM technology, is in high-volume shipments for our lead customer's platform, and qualification samples have been shipped to multiple end-customers.",
+      "verbatim": {
+        "text": "Product highlights HBM4, built on 1-beta DRAM technology, is in high-volume shipments for our lead customer's platform, and qualification samples have been shipped to multiple end-customers.",
+        "segs": [
+          {
+            "t": "Product highlights HBM4, built on 1-beta DRAM technology, is in high-volume shipments for our lead customer's platform, and qualification samples have been shipped to multiple end-customers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Record Results for the Third Quarter of Fiscal 2026\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Record Results for the Third Quarter of Fiscal 2026\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MU-P2-2026-09-30",
+      "promiseId": "P2",
+      "date": "2026-09-30",
+      "call": "Q4 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Continued successful execution of the HBM4 ramp.",
+      "quote": "We continue to execute well on our ramp of HBM4.",
+      "verbatim": {
+        "text": "We continue to execute well on our ramp of HBM4.",
+        "segs": [
+          {
+            "t": "We continue to execute well on our ramp of HBM4.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/events-and-presentations/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Events and presentations\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P3-2025-06-12",
+      "promiseId": "P3",
+      "date": "2025-06-12",
+      "call": "Micron and Trump Administration Announce Expanded U.S. Investments in Leading-Edge DRAM Manufacturing and R&D",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected the second Idaho fab to come online before the first New York fab.",
+      "quote": "Micron expects its second Idaho fab to come online before the first New York fab.",
+      "verbatim": {
+        "text": "Micron expects its second Idaho fab to come online before the first New York fab.",
+        "segs": [
+          {
+            "t": "Micron expects its second Idaho fab to come online before the first New York fab.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-and-Trump-Administration-Announce-Expanded-U-S--Investments-in-Leading-Edge-DRAM-Manufacturing-and-RD-06-12-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron and Trump Administration Announce Expanded U.S. Investments in Leading-Edge DRAM Manufacturing and R&D\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news/press-release/2025/Micron-and-Trump-Administration-Announce-Expanded-U-S--Investments-in-Leading-Edge-DRAM-Manufacturing-and-RD-06-12-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron and Trump Administration Announce Expanded U.S. Investments in Leading-Edge DRAM Manufacturing and R&D\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MU-P3-2025-06-25",
+      "promiseId": "P3",
+      "date": "2025-06-25",
+      "call": "Q3 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that ID2 production would begin before the first New York fab.",
+      "quote": "To meet anticipated demand, ID2 will begin production before the first New York fab.",
+      "verbatim": {
+        "text": "To meet anticipated demand, ID2 will begin production before the first New York fab.",
+        "segs": [
+          {
+            "t": "To meet anticipated demand, ID2 will begin production before the first New York fab.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-results-third-quarter-fiscal-2025",
+          "title": "Micron Technology, Inc. Reports Results for the Third Quarter of Fiscal 2025 | Micron Technology",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P3-2025-09-23",
+      "promiseId": "P3",
+      "date": "2025-09-23",
+      "call": "Q4 FY2025 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Began ID2 design work; expected additional capacity beyond 2028.",
+      "quote": "We began design work for our second Idaho manufacturing fab (ID2), which will provide additional capacity beyond 2028.",
+      "verbatim": {
+        "text": "We began design work for our second Idaho manufacturing fab (ID2), which will provide additional capacity beyond 2028.",
+        "segs": [
+          {
+            "t": "We began design work for our second Idaho manufacturing fab (ID2), which will provide additional capacity beyond ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/09/Q4-2025-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/09/Q4-2025-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+          "title": "A2025Q4Ex991 Pressrelease",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P3-2025-12-17",
+      "promiseId": "P3",
+      "date": "2025-12-17",
+      "call": "Q1 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Second Idaho fab construction to begin in 2026, with operation by the end of 2028.",
+      "quote": "Earlier this year, we announced our plans for a second Idaho fab, which will begin construction in 2026 and be operational by the end of 2028.",
+      "verbatim": {
+        "text": "Earlier this year, we announced our plans for a second Idaho fab, which will begin construction in 2026 and be operational by the end of 2028.",
+        "segs": [
+          {
+            "t": "Earlier this year, we announced our plans for a second Idaho fab, which will begin construction in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and be operational by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/12/Q1-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/12/Q1-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/events-and-presentations/event-details/2025/Microns-First-Quarter-2026-Financial-Call-12-17-2025/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron's First Quarter 2026 Financial Call\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P3-2026-03-18",
+      "promiseId": "P3",
+      "date": "2026-03-18",
+      "call": "Q2 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "First Idaho wafer output remained mid-calendar 2027; ground preparation had begun for the second Idaho fab.",
+      "quote": "We continue to expect initial wafer output at our first Idaho fab in mid-calendar 2027, and ground preparation has begun for our second Idaho fab.",
+      "verbatim": {
+        "text": "We continue to expect initial wafer output at our first Idaho fab in mid-calendar 2027, and ground preparation has begun for our second Idaho fab.",
+        "segs": [
+          {
+            "t": "We continue to expect initial wafer output at our first Idaho fab in mid-calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", and ground preparation has begun for our second Idaho fab.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Second-Quarter-2026-Financial-Call-03-18-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron's Second Quarter 2026 Financial Call\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P3-2026-06-24",
+      "promiseId": "P3",
+      "date": "2026-06-24",
+      "call": "Q3 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "ID1 first wafer output on track for mid-calendar 2027; ID2 for late calendar 2028.",
+      "quote": "ID1 is on track for first wafer output in mid-calendar 2027 and ID2 in late calendar 2028.",
+      "verbatim": {
+        "text": "ID1 is on track for first wafer output in mid-calendar 2027 and ID2 in late calendar 2028.",
+        "segs": [
+          {
+            "t": "ID1 is on track for first wafer output in mid-calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " and ID2 in late calendar ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Record Results for the Third Quarter of Fiscal 2026\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P3-2026-09-30",
+      "promiseId": "P3",
+      "date": "2026-09-30",
+      "call": "Q4 FY2026 earnings call prepared remarks",
+      "speaker": "Sanjay Mehrotra, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "ID1 wafer output remained on track for mid-calendar 2027; ID2 remained on track for late calendar 2028.",
+      "quote": "Our ID1 fab is on track to commence wafer output in mid-calendar 2027, and ID2 is on track to commence wafer output in late calendar 2028.",
+      "verbatim": {
+        "text": "Our ID1 fab is on track to commence wafer output in mid-calendar 2027, and ID2 is on track to commence wafer output in late calendar 2028.",
+        "segs": [
+          {
+            "t": "Our ID1 fab is on track to commence wafer output in mid-calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", and ID2 is on track to commence wafer output in late calendar ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron's Fourth Quarter 2026 Financial Call\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P4-2026-03-15",
+      "promiseId": "P4",
+      "date": "2026-03-15",
+      "call": "Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected meaningful product shipments from the existing Tongluo fab beginning in fiscal 2028.",
+      "quote": "The new Tongluo site is expected to support meaningful product shipments from the existing fab beginning in fiscal 2028.",
+      "verbatim": {
+        "text": "The new Tongluo site is expected to support meaningful product shipments from the existing fab beginning in fiscal 2028.",
+        "segs": [
+          {
+            "t": "The new Tongluo site is expected to support meaningful product shipments from the existing fab beginning in ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-completes-acquisition-psmcs-tongluo-p5-site-taiwan",
+          "title": "Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan | Micron Technology",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-completes-acquisition-psmcs-tongluo-p5-site-taiwan",
+          "title": "Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan | Micron Technology",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MU-P4-2026-03-18",
+      "promiseId": "P4",
+      "date": "2026-03-18",
+      "call": "Fiscal Q2 2026 Earnings Call Prepared Remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed meaningful product shipments from the existing Tongluo fab beginning in fiscal 2028.",
+      "quote": "We expect this site to support meaningful product shipments from the existing fab beginning in fiscal 2028.",
+      "verbatim": {
+        "text": "We expect this site to support meaningful product shipments from the existing fab beginning in fiscal 2028.",
+        "segs": [
+          {
+            "t": "We expect this site to support meaningful product shipments from the existing fab beginning in ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+          "title": "A2026Q2Ex991 Pressrelease",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-completes-acquisition-psmcs-tongluo-p5-site-taiwan",
+          "title": "Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan | Micron Technology",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P4-2026-06-24",
+      "promiseId": "P4",
+      "date": "2026-06-24",
+      "call": "Fiscal Q3 2026 Earnings Call Prepared Remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and Chief Executive Officer",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Moved meaningful shipments from the existing 300,000-square-feet fab to mid-calendar 2027, about a quarter earlier.",
+      "quote": "In our newly acquired Tongluo site in Taiwan, we expect to support meaningful product shipments from the existing 300,000-square-feet fab in mid-calendar 2027, about a quarter earlier than our prior expectations.",
+      "verbatim": {
+        "text": "In our newly acquired Tongluo site in Taiwan, we expect to support meaningful product shipments from the existing 300,000-square-feet fab in mid-calendar 2027, about a quarter earlier than our prior expectations.",
+        "segs": [
+          {
+            "t": "In our newly acquired Tongluo site in Taiwan, we expect to support meaningful product shipments from the existing ",
+            "h": 0
+          },
+          {
+            "t": "300,000",
+            "h": 1
+          },
+          {
+            "t": "-square-feet fab in mid-calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", about a quarter earlier than our prior expectations.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/events/event-details/microns-third-quarter-2026-financial-call",
+          "title": "\n\tMicron Technology, Inc. - Events and presentations\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P4-2026-09-30",
+      "promiseId": "P4",
+      "date": "2026-09-30",
+      "call": "Fiscal Q4 2026 Earnings Call Prepared Remarks",
+      "speaker": "Sanjay Mehrotra, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported meaningful Tongluo product shipments on track for mid-calendar 2027.",
+      "quote": "In Taiwan, we are on track for meaningful product shipments from our Tongluo facility in mid-calendar 2027.",
+      "verbatim": {
+        "text": "In Taiwan, we are on track for meaningful product shipments from our Tongluo facility in mid-calendar 2027.",
+        "segs": [
+          {
+            "t": "In Taiwan, we are on track for meaningful product shipments from our Tongluo facility in mid-calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Record Fiscal Fourth-Quarter and Full-Year 2026 Results\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P5-2026-01-26",
+      "promiseId": "P5",
+      "date": "2026-01-26",
+      "call": "Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced the new Singapore NAND fab, with wafer output scheduled for the second half of calendar 2028.",
+      "quote": "Wafer output is scheduled to begin in the second half of calendar 2028, helping Micron address growing market demand for NAND technology driven by the rapid expansion of AI and data-centric applications.",
+      "verbatim": {
+        "text": "Wafer output is scheduled to begin in the second half of calendar 2028, helping Micron address growing market demand for NAND technology driven by the rapid expansion of AI and data-centric applications.",
+        "segs": [
+          {
+            "t": "Wafer output is scheduled to begin in the second half of calendar ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ", helping Micron address growing market demand for NAND technology driven by the rapid expansion of AI and data-centric applications.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_news/2026/01/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore.pdf",
+          "title": "Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.micron.com/news/press-release/2026/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore-01-26-2026/default.aspx",
+          "title": "\n\tMicron Technology, Inc. - Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore\n",
+          "domain": "investors.micron.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_news/2026/01/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore.pdf",
+          "title": "Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MU-P5-2026-03-18",
+      "promiseId": "P5",
+      "date": "2026-03-18",
+      "call": "Fiscal Q2 2026 Earnings Call Prepared Remarks",
+      "speaker": "Sanjay Mehrotra, Chairman, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed initial wafer output from the new Singapore NAND fab in the second half of calendar 2028.",
+      "quote": "We expect initial wafer output from this fab in the second half of calendar 2028.",
+      "verbatim": {
+        "text": "We expect initial wafer output from this fab in the second half of calendar 2028.",
+        "segs": [
+          {
+            "t": "We expect initial wafer output from this fab in the second half of calendar ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+          "title": "S K , C V P , I R T S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/mu/transcripts/532241-q2-2026",
+          "title": "Micron Technology (MU) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "MU-P5-2026-06-24",
+      "promiseId": "P5",
+      "date": "2026-06-24",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific Singapore NAND fab output update; only collective Japan and Singapore construction progress was reported.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/mu/transcripts/609470-q3-2026",
+          "title": "Micron Technology (MU) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+          "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MU-P5-2026-09-30",
+      "promiseId": "P5",
+      "date": "2026-09-30",
+      "call": "Fiscal Q4 2026 Earnings Call Prepared Remarks",
+      "speaker": "Sanjay Mehrotra, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Construction remained on track for Singapore NAND output in the second half of calendar 2028.",
+      "quote": "Also, construction is on track for our new NAND facility in Singapore to begin output in the second half of calendar 2028.",
+      "verbatim": {
+        "text": "Also, construction is on track for our new NAND facility in Singapore to begin output in the second half of calendar 2028.",
+        "segs": [
+          {
+            "t": "Also, construction is on track for our new NAND facility in Singapore to begin output in the second half of calendar ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf?download=1",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf?download=1",
+          "title": "S K , C V P , I R T S M , C C E O",
+          "domain": "s25.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/mu/transcripts/699706-q4-2026/",
+          "title": "Micron Technology (MU) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q2/Q2-2026-Prepared-Remarks.pdf",
+      "title": "S K , C V P , I R T S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://investors.micron.com/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+      "title": "S K , C V P , I R T S M , C C E O",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 3,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+      "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf?download=1",
+      "title": "S K , C V P , I R T S M , C C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/09/Q4-2025-Prepared-Remarks.pdf",
+      "title": "S K , C V P , I R T S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://investors.micron.com/quarterly-results",
+      "title": "\n\tMicron Technology, Inc. - Financials - Quarterly results\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 7,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q1/FY25-Q1-Prepared-Remarks.pdf",
+      "title": "S K , C V P , I R T S M , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 8,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q3/Micron_FY25_Q3_Prepared_Remarks.pdf",
+      "title": "S K , C V P , I R T S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 9,
+      "url": "https://investors.micron.com/news/press-release/2024/Micron-Technology-Inc--Reports-Results-for-the-First-Quarter-of-Fiscal-2025-12-18-2024/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the First Quarter of Fiscal 2025\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 10,
+      "url": "https://investors.micron.com/news/press-release/2025/Micron-Technology-Inc--Reports-Results-for-the-Second-Quarter-of-Fiscal-2025-03-20-2025/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Second Quarter of Fiscal 2025\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 11,
+      "url": "https://investors.micron.com/news/press-release/2025/Micron-Technology-Inc--Reports-Results-for-the-Fourth-Quarter-and-Full-Year-of-Fiscal-2025-09-23-2025/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Fourth Quarter and Full Year of Fiscal 2025\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 12,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/12/Q1-2026-Prepared-Remarks.pdf",
+      "title": "S K , C V P , I R T S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 13,
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore-01-26-2026/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P1 P5"
+    },
+    {
+      "n": 14,
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-technology-inc-reports-results-third-quarter-fiscal-2025",
+      "title": "Micron Technology, Inc. Reports Results for the Third Quarter of Fiscal 2025 | Micron Technology",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 15,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q1/Micron_Q1-2026-Prepared-Remarks.pdf",
+      "title": "S K , C V P , I R T S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 16,
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-completes-acquisition-psmcs-tongluo-p5-site-taiwan",
+      "title": "Micron Completes Acquisition of PSMC’s Tongluo P5 Site in Taiwan | Micron Technology",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 17,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2026/q4/Q4-FY26-Prepared-Remarks.pdf",
+      "title": "S K , C V P , I R T S M , C C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://investors.micron.com/news/press-release/2025/Micron-Breaks-Ground-on-New-HBM-Advanced-Packaging-Facility-in-Singapore-01-08-2025/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Breaks Ground on New HBM Advanced Packaging Facility in Singapore\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_events/2025/03/Q2-2025-Prepared-Remarks.pdf",
+      "title": "S K , C V P , I R T S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://investors.micron.com/news/press-release/2025/Micron-Technology-Inc--Reports-Results-for-the-Third-Quarter-of-Fiscal-2025-06-25-2025/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Third Quarter of Fiscal 2025\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q2/Micron_FY25_Q2_Prepared_Remarks_2-1.pdf",
+      "title": "S K , C V P , I R T S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-ships-hbm4-key-customers-power-next-gen-ai-platforms",
+      "title": "\n\tMicron Technology, Inc. - Micron Ships HBM4 to Key Customers to Power Next-Gen AI Platforms\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 23,
+      "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Wolfe-Research-Auto-Auto-Tech-and-Semiconductor-Conference-02-11-2026/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Wolfe Research Auto, Auto Tech and Semiconductor Conference\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 24,
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-in-High-Volume-Production-of-HBM4-Designed-for-NVIDIA-Vera-Rubin-PCIe-Gen6-SSD-and-SOCAMM2-03-16-2026/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron in High-Volume Production of HBM4 Designed for NVIDIA Vera Rubin, PCIe Gen6 SSD and SOCAMM2\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 25,
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Results-for-the-Second-Quarter-of-Fiscal-2026-03-18-2026/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Results for the Second Quarter of Fiscal 2026\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 26,
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Record Results for the Third Quarter of Fiscal 2026\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 27,
+      "url": "https://investors.micron.com/events-and-presentations/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Events and presentations\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 28,
+      "url": "https://investors.micron.com/news/press-release/2025/Micron-and-Trump-Administration-Announce-Expanded-U-S--Investments-in-Leading-Edge-DRAM-Manufacturing-and-RD-06-12-2025/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron and Trump Administration Announce Expanded U.S. Investments in Leading-Edge DRAM Manufacturing and R&D\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 29,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312525000024/a2025q4ex991-pressrelease.htm",
+      "title": "A2025Q4Ex991 Pressrelease",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 30,
+      "url": "https://investors.micron.com/events-and-presentations/event-details/2025/Microns-First-Quarter-2026-Financial-Call-12-17-2025/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron's First Quarter 2026 Financial Call\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 31,
+      "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Second-Quarter-2026-Financial-Call-03-18-2026/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron's Second Quarter 2026 Financial Call\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 32,
+      "url": "http://s25.q4cdn.com/621799436/files/doc_financials/2026/q3/Q3-FY26-Prepared-Remarks.pdf",
+      "title": "SATYA KUMAR, CORPORATE VICE PRESIDENT, INVESTOR RELATIONS AND TREASURY S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 33,
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Results-for-the-Third-Quarter-of-Fiscal-2026/",
+      "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Record Results for the Third Quarter of Fiscal 2026\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 34,
+      "url": "https://investors.micron.com/events-and-presentations/event-details/2026/Microns-Fourth-Quarter-2026-Financial-Call/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron's Fourth Quarter 2026 Financial Call\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 35,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000004/a2026q2ex991-pressrelease.htm",
+      "title": "A2026Q2Ex991 Pressrelease",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 36,
+      "url": "https://investors.micron.com/events/event-details/microns-third-quarter-2026-financial-call",
+      "title": "\n\tMicron Technology, Inc. - Events and presentations\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 37,
+      "url": "https://investors.micron.com/news/press-release/2026/Micron-Technology-Inc--Reports-Record-Fiscal-Fourth-Quarter-and-Full-Year-2026-Results/default.aspx",
+      "title": "\n\tMicron Technology, Inc. - Micron Technology, Inc. Reports Record Fiscal Fourth-Quarter and Full-Year 2026 Results\n",
+      "domain": "investors.micron.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 38,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_news/2026/01/Micron-Breaks-Ground-on-Advanced-Wafer-Fabrication-Facility-in-Singapore.pdf",
+      "title": "Micron Breaks Ground on Advanced Wafer Fabrication Facility in Singapore",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 39,
+      "url": "https://www.sec.gov/Archives/edgar/data/723125/000072312526000023/mu-20260903.htm",
+      "title": "mu-20260903",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 40,
+      "url": "https://s25.q4cdn.com/621799436/files/doc_financials/2025/q4/Q4-2025-Prepared-Remarks-1.pdf",
+      "title": "S K , C V P , I R T S M , C , P C E O",
+      "domain": "s25.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 41,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/06/25/micron-mu-q3-2025-earnings-call-transcript",
+      "title": "Micron (MU) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 42,
+      "url": "https://stockanalysis.com/stocks/mu/transcripts/532241-q2-2026",
+      "title": "Micron Technology (MU) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 43,
+      "url": "https://stockanalysis.com/stocks/mu/transcripts/609470-q3-2026",
+      "title": "Micron Technology (MU) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 44,
+      "url": "https://stockanalysis.com/stocks/mu/transcripts/699706-q4-2026/",
+      "title": "Micron Technology (MU) Q4 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 45,
+      "url": "https://stocknow.ai/en/calls/d9rrzey96885ad0oqjh8dg4n/mu_wolfe-research-auto-auto-tech-and-semiconductor-conference",
+      "title": "Micron Technology (MU) Wolfe Research Auto, Auto Tech and Semiconductor Conference | StockNow",
+      "domain": "stocknow.ai",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 46,
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000723125/5dafce68-38e8-4cad-a8f3-ab56d04d73fd.pdf",
+      "title": "Micron Technology, Inc. — FORM 10-K, fiscal year ended September 3, 2026",
+      "domain": "d18rn0p25nwr6d.cloudfront.net",
+      "tier": "press",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.798053Z",
+      "completedAt": "2026-11-05T06:28:04.100091Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.531753Z",
+      "completedAt": "2026-11-05T19:14:50.981815Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.538520Z",
+      "completedAt": "2026-11-05T19:14:56.231133Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.569794Z",
+      "completedAt": "2026-11-05T19:12:46.713375Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.578144Z",
+      "completedAt": "2026-11-05T19:11:39.042423Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.585108Z",
+      "completedAt": "2026-11-05T19:11:41.211681Z"
+    },
+    {
+      "kind": "check",
+      "spec": "resolve@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T20:13:35.274546Z",
+      "completedAt": "2026-11-05T20:14:40.393652Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.160874Z",
+      "completedAt": "2026-11-05T19:46:30.508183Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.168752Z",
+      "completedAt": "2026-11-05T19:46:47.264998Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.175794Z",
+      "completedAt": "2026-11-05T19:44:00.699400Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.330195Z",
+      "completedAt": "2026-11-05T19:43:56.604690Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T20:17:38.841017Z",
+      "completedAt": "2026-11-05T20:20:19.373322Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "36 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "35 of 35 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "35 of 35 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q4 FY2026 on 2026-09-30; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Micron_Technology_logo.svg/1280px-Micron_Technology_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Micron_Technology_logo.svg",
+      "title": "File:Micron Technology logo.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 353,
+      "rank": 1
+    },
+    "photo": null
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.552Z"
+}

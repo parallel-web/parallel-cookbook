@@ -1,0 +1,2030 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "CRM",
+  "name": "Salesforce, Inc.",
+  "short": "Salesforce",
+  "website": "salesforce.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "January 31",
+  "irUrl": "https://www.salesforce.com/investor",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-08-26",
+    "quarter": "Q2 FY27"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Salesforce Agentforce",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Close Informatica acquisition",
+      "commitment": "Close the $8 billion Informatica acquisition by early FY27, identified as February 2026.",
+      "deadline": "early FY27 (February 2026)",
+      "firstStated": "2025-05-27",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Salesforce completed the acquisition on November 18, 2025, ahead of the original February '26 timetable; management said it closed three months ahead of schedule.",
+      "citations": [
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2025/11/18/salesforce-completes-acquisition-of-informatica",
+          "title": "Salesforce Completes Acquisition of Informatica - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q1/Salesforce-Inc-Q1-2026-Earnings-Call-May-28-2025-1.pdf",
+          "title": "Salesforce, Inc. NYSE:CRM FQ1 2026 Earnings Call Transcripts",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-11-18",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-12-03",
+            "what_was_said": "Immediately after announcing completion of the Informatica acquisition, management said: “It's three months ahead of schedule, as we like it here at Salesforce.”",
+            "call": "Q3 FY26 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Reach FY30 revenue target",
+      "commitment": "Reach $60 billion-plus revenue by FY30, originally excluding Informatica.",
+      "deadline": "FY30",
+      "firstStated": "2025-10-15",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The FY30 target was raised from $60B+ excluding Informatica to $63 billion including Informatica, then reaffirmed as $63B+. It remains pending.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000168/ex991-investordaypressrele.htm",
+          "title": "Ex991 Investordaypressrele",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "http://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Fourth-Quarter-Fiscal-2026-Results/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/investorday2026.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Announces-New-FY30-Revenue-Target-of-60B-10-Organic-FY26-FY30-CAGR/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Announces New FY30 Revenue Target of $60B+, 10% Organic FY26-FY30 CAGR\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+          "title": "Page 1 of 20",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-02-25",
+            "what_was_said": "Miguel Milano said the FY30 target had increased from $60 billion to $63 billion and emphasized that the increase was “not all because Informatica,” also reflecting management’s greater confidence in hitting the numbers.",
+            "call": "Q4 FY26 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Reaccelerate organic revenue",
+      "commitment": "Reaccelerate revenue within 12 to 18 months.",
+      "deadline": "12 to 18 months",
+      "firstStated": "2025-10-15",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Organic revenue reacceleration remained projected for the second half of FY27; management reported supporting net new AOV momentum, not completed delivery.",
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+          "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_presentations/2026/Dreamforce-Investor-Day-2026-Presentation_Final.pdf",
+          "title": "Dreamforce Investor Day 2026 Presentation",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+          "title": "Page 1 of 20",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+          "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-02-25",
+            "what_was_said": "In Q&A, management said organic subscription-and-support revenue reacceleration would happen in H2 and that it was \"very committed to that.\" This strengthened the assurance without declaring delivery.",
+            "call": "Q4 FY26 earnings call"
+          },
+          {
+            "date": "2026-08-26",
+            "what_was_said": "Management reaffirmed its H2 reacceleration commitment, saying \"Q3 is math\" and \"Q4 is nearly math.\" This added confidence and quarterly specificity, but remained forward-looking.",
+            "call": "Q2 FY27 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Achieve Rule of 50",
+      "commitment": "Achieve Rule of 50 by FY30: subscription-and-support constant-currency growth rate plus non-GAAP operating margin totaling 50.",
+      "deadline": "FY30",
+      "firstStated": "2025-10-15",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The FY30 Rule of 50 target remains pending. Salesforce reported being on track and subsequently retained the framework at Investor Day.",
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/content_files/Dreamforce-Investor-Day-2026-Presentation_Final.pdf",
+          "title": "Dreamforce Investor Day 2026 Presentation",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/crm/transcripts/740446-dreamforce-2026-investor-analyst-session",
+          "title": "Salesforce (CRM) Transcript: Dreamforce 2026 Investor & Analyst Session",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+          "title": "Page 1 of 20",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Announces-New-FY30-Revenue-Target-of-60B-10-Organic-FY26-FY30-CAGR/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Announces New FY30 Revenue Target of $60B+, 10% Organic FY26-FY30 CAGR\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Execute expanded share-repurchase program",
+      "commitment": "Expand the share-repurchase authorization to $50 billion; no deadline or obligation to spend the full amount was stated.",
+      "deadline": null,
+      "firstStated": "2026-02-25",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "The $50 billion authorization was established and the $25 billion ASR launched. Full use remained discretionary, with no fixed expiration or required share count.",
+      "citations": [
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2026/02/25/fy26-q4-earnings",
+          "title": "Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2026/03/16/25-billion-share-repurchase-2026",
+          "title": "Salesforce Commences Largest-Ever $25 Billion Accelerated Share Repurchase - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm",
+          "title": "crm-20260731",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+          "title": "Page 1 of 20",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+          "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-02-25",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-05-27",
+            "what_was_said": "The ASR alone decreased Q1 share count by 103 million shares, representing 11% of shares outstanding. Together with other buybacks, Q1 diluted share count fell 10% year over year.",
+            "call": "Q1 FY27 Earnings Conference Call"
+          },
+          {
+            "date": "2026-08-26",
+            "what_was_said": "Execution of the $25 billion ASR continued. Management expected to repurchase at least 14% of shares outstanding through the program, at an average price thus far of $176 per share.",
+            "call": "Q2 FY27 Earnings Conference Call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "CRM-P1-2025-05-27",
+      "promiseId": "P1",
+      "date": "2025-05-27",
+      "call": "Salesforce Signs Definitive Agreement to Acquire Informatica",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected closing early in Salesforce’s fiscal year 2027, subject to regulatory clearances and customary closing conditions.",
+      "quote": "The transaction has been approved by the boards of directors of both Salesforce and Informatica and is expected to close early in Salesforce’s fiscal year 2027, subject to the receipt of required regulatory clearances and satisfaction of other customary closing conditions.",
+      "verbatim": {
+        "text": "The transaction has been approved by the boards of directors of both Salesforce and Informatica and is expected to close early in Salesforce’s fiscal year 2027, subject to the receipt of required regulatory clearances and satisfaction of other customary closing conditions.",
+        "segs": [
+          {
+            "t": "The transaction has been approved by the boards of directors of both Salesforce and Informatica and is expected to close early in Salesforce’s fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", subject to the receipt of required regulatory clearances and satisfaction of other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Signs-Definitive-Agreement-to-Acquire-Informatica/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Signs Definitive Agreement to Acquire Informatica\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Signs-Definitive-Agreement-to-Acquire-Informatica/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Signs Definitive Agreement to Acquire Informatica\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CRM-P1-2025-05-28",
+      "promiseId": "P1",
+      "date": "2025-05-28",
+      "call": "Q1 FY26 earnings call",
+      "speaker": "Robin Washington, President and Chief Operating and Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed closing by early fiscal year '27; explicitly identified February '26, subject to regulatory approval.",
+      "quote": "And Kash, to your other question, timing of close of Informatica as well as time to accretion, subject to regulatory approval, we expect that it's going to close beginning of our fiscal year '27, which is February of next year, so February '26.",
+      "verbatim": {
+        "text": "And Kash, to your other question, timing of close of Informatica as well as time to accretion, subject to regulatory approval, we expect that it's going to close beginning of our fiscal year '27, which is February of next year, so February '26.",
+        "segs": [
+          {
+            "t": "And Kash, to your other question, timing of close of Informatica as well as time to accretion, subject to regulatory approval, we expect that it's going to close beginning of our fiscal year '27, which is February of next year, so February '26.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q1/Salesforce-Inc-Q1-2026-Earnings-Call-May-28-2025-1.pdf",
+          "title": "Salesforce, Inc. NYSE:CRM FQ1 2026 Earnings Call Transcripts",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q1/Salesforce-Inc-Q1-2026-Earnings-Call-May-28-2025-1.pdf",
+          "title": "Salesforce, Inc. NYSE:CRM FQ1 2026 Earnings Call Transcripts",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P1-2025-09-03",
+      "promiseId": "P1",
+      "date": "2025-09-03",
+      "call": "Q2 FY26 earnings call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Changed expected closing to the fourth quarter of FY '26 or early in FY '27.",
+      "quote": "We now expect Informatica to close in the fourth quarter of FY '26 or early in FY '27.",
+      "verbatim": {
+        "text": "We now expect Informatica to close in the fourth quarter of FY '26 or early in FY '27.",
+        "segs": [
+          {
+            "t": "We now expect Informatica to close in the fourth quarter of FY '26 or early in FY '27.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q2/Salesforce-Inc-Q2-FY26-Earnings-Conference-Call-9-3-25.pdf",
+          "title": "Salesforce-Inc.-Q2-FY26-Earnings-Conference-Call-9.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q2/Salesforce-Inc-Q2-FY26-Earnings-Conference-Call-9-3-25.pdf",
+          "title": "Salesforce-Inc.-Q2-FY26-Earnings-Conference-Call-9.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2025/09/03/fy26-q2-earnings",
+          "title": "Salesforce Reports Record Second Quarter Fiscal 2026 Results - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P1-2025-11-18",
+      "promiseId": "P1",
+      "date": "2025-11-18",
+      "call": "Salesforce Completes Acquisition of Informatica",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced completion of the Informatica acquisition.",
+      "quote": "Salesforce (NYSE: CRM), the world’s #1 AI CRM, today announced it has completed its acquisition of Informatica, a leader in enterprise AI-powered cloud data management.",
+      "verbatim": {
+        "text": "SAN FRANCISCO, CA — November 18, 2025 — Salesforce (NYSE: CRM), the world’s #1 AI CRM, today announced it has completed its acquisition of Informatica, a leader in enterprise AI-powered cloud data management.",
+        "segs": [
+          {
+            "t": "SAN FRANCISCO, CA — November 18, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " — Salesforce (NYSE: CRM), the world’s #1 AI CRM, today announced it has completed its acquisition of Informatica, a leader in enterprise AI-powered cloud data management.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.salesforce.com/news/press-releases/2025/11/18/salesforce-completes-acquisition-of-informatica",
+          "title": "Salesforce Completes Acquisition of Informatica - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2025/11/18/salesforce-completes-acquisition-of-informatica",
+          "title": "Salesforce Completes Acquisition of Informatica - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CRM-P1-2025-12-03",
+      "promiseId": "P1",
+      "date": "2025-12-03",
+      "call": "Q3 FY26 earnings call",
+      "speaker": "Marc Benioff, Chair and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed completion and said the acquisition closed three months ahead of schedule.",
+      "quote": "And I couldn't be more excited about completing our acquisition of Informatica.",
+      "verbatim": {
+        "text": "And I couldn't be more excited about completing our acquisition of Informatica.",
+        "segs": [
+          {
+            "t": "And I couldn't be more excited about completing our acquisition of Informatica.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P2-2025-10-15",
+      "promiseId": "P2",
+      "date": "2025-10-15",
+      "call": "Salesforce Announces New FY30 Revenue Target of $60B+, 10% organic FY26-FY30 CAGR",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set $60B+ FY30 revenue target, excluding Informatica; 10%+ organic FY26 to FY30 CAGR.",
+      "quote": "SAN FRANCISCO—October 15, 2025 —Salesforce (NYSE: CRM), the world’s #1 AI CRM, today announced a new long-term revenue target of $60B+ by fiscal year (FY) 2030, excluding Informatica.",
+      "verbatim": {
+        "text": "SAN FRANCISCO—October 15, 2025 —Salesforce (NYSE: CRM), the world’s #1 AI CRM, today announced a new long-term revenue target of $60B+ by fiscal year (FY) 2030, excluding Informatica.",
+        "segs": [
+          {
+            "t": "SAN FRANCISCO—October 15, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " —Salesforce (NYSE: CRM), the world’s #1 AI CRM, today announced a new long-term revenue target of ",
+            "h": 0
+          },
+          {
+            "t": "$60B",
+            "h": 1
+          },
+          {
+            "t": "+ by fiscal year (FY) ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ", excluding Informatica.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000168/ex991-investordaypressrele.htm",
+          "title": "Ex991 Investordaypressrele",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000168/ex991-investordaypressrele.htm",
+          "title": "Ex991 Investordaypressrele",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CRM-P2-2025-12-03",
+      "promiseId": "P2",
+      "date": "2025-12-03",
+      "call": "Q3 FY26 earnings call",
+      "speaker": "Marc Benioff, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed execution toward the $60 billion revenue target outlined at Investor Day.",
+      "quote": "We're continuing to execute on the path to our $60 billion dream that we outlined in detail with all of you at investor day.",
+      "verbatim": {
+        "text": "We're continuing to execute on the path to our $60 billion dream that we outlined in detail with all of you at investor day.",
+        "segs": [
+          {
+            "t": "We're continuing to execute on the path to our ",
+            "h": 0
+          },
+          {
+            "t": "$60 billion",
+            "h": 1
+          },
+          {
+            "t": " dream that we outlined in detail with all of you at investor day.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P2-2026-02-25",
+      "promiseId": "P2",
+      "date": "2026-02-25",
+      "call": "Q4 FY26 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised FY30 revenue target to $63 billion, now including Informatica rather than excluding it.",
+      "quote": "Raises full year FY30 revenue target to $63 billion including Informatica",
+      "verbatim": {
+        "text": "Raises full year FY30 revenue target to $63 billion including Informatica",
+        "segs": [
+          {
+            "t": "Raises full year ",
+            "h": 0
+          },
+          {
+            "t": "FY30",
+            "h": 1
+          },
+          {
+            "t": " revenue target to ",
+            "h": 0
+          },
+          {
+            "t": "$63 billion",
+            "h": 1
+          },
+          {
+            "t": " including Informatica",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Fourth-Quarter-Fiscal-2026-Results/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Fourth-Quarter-Fiscal-2026-Results/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000168/ex991-investordaypressrele.htm",
+          "title": "Ex991 Investordaypressrele",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "CRM-P2-2026-05-27",
+      "promiseId": "P2",
+      "date": "2026-05-27",
+      "call": "Q1 FY27 earnings call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed FY30 revenue of 63 billion plus with Informatica, alongside margin and operating-profitability improvement.",
+      "quote": "As Miguel said, grow the top line, 63 billion plus with Informatica, but also improve margins and operating profitability.",
+      "verbatim": {
+        "text": "As Miguel said, grow the top line, 63 billion plus with Informatica, but also improve margins and operating profitability.",
+        "segs": [
+          {
+            "t": "As Miguel said, grow the top line, ",
+            "h": 0
+          },
+          {
+            "t": "63 billion",
+            "h": 1
+          },
+          {
+            "t": " plus with Informatica, but also improve margins and operating profitability.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P2-2026-08-26",
+      "promiseId": "P2",
+      "date": "2026-08-26",
+      "call": "Q2 FY27 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending FY30 revenue target was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+          "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P2-2026-09-16",
+      "promiseId": "P2",
+      "date": "2026-09-16",
+      "call": "Investor Day at Dreamforce 2026",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $63B+ FY30 revenue, including Informatica, and 11%+ FY26 to FY30 CAGR, citing the target as of May 2026.",
+      "quote": "Full year FY30 revenue target as of May 2026, implying a 11%+ FY26 to FY30 compounded annual growth rate (CAGR) including Informatica.",
+      "verbatim": {
+        "text": "Full year FY30 revenue target as of May 2026, implying a 11%+ FY26 to FY30 compounded annual growth rate (CAGR) including Informatica.",
+        "segs": [
+          {
+            "t": "Full year ",
+            "h": 0
+          },
+          {
+            "t": "FY30",
+            "h": 1
+          },
+          {
+            "t": " revenue target as of May ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", implying a ",
+            "h": 0
+          },
+          {
+            "t": "11%",
+            "h": 1
+          },
+          {
+            "t": "+ ",
+            "h": 0
+          },
+          {
+            "t": "FY26",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "FY30",
+            "h": 1
+          },
+          {
+            "t": " compounded annual growth rate (CAGR) including Informatica.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/investorday2026.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/crm-20260916.htm",
+          "title": "crm-20260916",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/investorday2026.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "CRM-P3-2025-10-15",
+      "promiseId": "P3",
+      "date": "2025-10-15",
+      "call": "Investor Day 2025",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected gradual revenue inflection in 12-18 months, preceding the first earnings-call reiteration.",
+      "quote": "Expect a gradual revenue inflection in 12-18 months, committed to profitable growth",
+      "verbatim": {
+        "text": "Expect a gradual revenue inflection in 12-18 months, committed to profitable growth",
+        "segs": [
+          {
+            "t": "Expect a gradual revenue inflection in 12-18 months, committed to profitable growth",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_presentations/2025/10/Salesforce-Investor-Day-2025-10-15.pdf",
+          "title": "Salesforce Investor Day 2025 10 15",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_presentations/2025/10/Salesforce-Investor-Day-2025-10-15.pdf",
+          "title": "Salesforce Investor Day 2025 10 15",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000168/ex991-investordaypressrele.htm",
+          "title": "Ex991 Investordaypressrele",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "CRM-P3-2025-12-03",
+      "promiseId": "P3",
+      "date": "2025-12-03",
+      "call": "Q3 FY26 earnings call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Remained on track to reaccelerate revenue in 12 to 18 months, consistent with Investor Day.",
+      "quote": "Consistent with our investor day outlook, we remain on track to reaccelerate revenue in 12 to 18 months.",
+      "verbatim": {
+        "text": "Consistent with our investor day outlook, we remain on track to reaccelerate revenue in 12 to 18 months.",
+        "segs": [
+          {
+            "t": "Consistent with our investor day outlook, we remain on track to reaccelerate revenue in 12 to 18 months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P3-2026-02-25",
+      "promiseId": "P3",
+      "date": "2026-02-25",
+      "call": "Q4 FY26 earnings call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "FY 26 net new AOV strengthened confidence in organic revenue reacceleration in second half FY 27, consistent with Investor Day.",
+      "quote": "Based on our FY 26 net new AOV performance, we are more confident in our path to re-accelerate organic revenue in second half FY 27 as outlined at Investor Day.",
+      "verbatim": {
+        "text": "Based on our FY 26 net new AOV performance, we are more confident in our path to re-accelerate organic revenue in second half FY 27 as outlined at Investor Day.",
+        "segs": [
+          {
+            "t": "Based on our FY 26 net new AOV performance, we are more confident in our path to re-accelerate organic revenue in second half FY 27 as outlined at Investor Day.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+          "title": "Page 1 of 20",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+          "title": "Page 1 of 20",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2026/02/25/fy26-q4-earnings",
+          "title": "Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P3-2026-05-27",
+      "promiseId": "P3",
+      "date": "2026-05-27",
+      "call": "Q1 FY27 earnings call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected first-half net new AOV growth to outpace AOV growth and drive organic revenue reacceleration in the second half of FY27.",
+      "quote": "Building on the momentum from the second half of last year, we expect first half net new AOV growth to outpace AOV growth and drive organic revenue re-acceleration in the second half of FY27.",
+      "verbatim": {
+        "text": "Building on the momentum from the second half of last year, we expect first half net new AOV growth to outpace AOV growth and drive organic revenue re-acceleration in the second half of FY27.",
+        "segs": [
+          {
+            "t": "Building on the momentum from the second half of last year, we expect first half net new AOV growth to outpace AOV growth and drive organic revenue re-acceleration in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "FY27",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P3-2026-08-26",
+      "promiseId": "P3",
+      "date": "2026-08-26",
+      "call": "Q2 FY27 earnings call",
+      "speaker": "Robin Washington, Chief Operating and Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "First-half net new AOV growth significantly outpaced AOV growth, keeping second-half organic revenue reacceleration on track.",
+      "quote": "Half one net new AOV growth significantly outpaced AOV growth, keeping us on track for second half organic revenue re-acceleration.",
+      "verbatim": {
+        "text": "Half one net new AOV growth significantly outpaced AOV growth, keeping us on track for second half organic revenue re-acceleration.",
+        "segs": [
+          {
+            "t": "Half one net new AOV growth significantly outpaced AOV growth, keeping us on track for second half organic revenue re-acceleration.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+          "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+          "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P4-2025-10-15",
+      "promiseId": "P4",
+      "date": "2025-10-15",
+      "call": "Salesforce Announces New FY30 Revenue Target of $60B+, 10% Organic FY26-FY30 CAGR",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced 50 by FY30: subscription and support constant-currency growth plus non-GAAP operating margin totaling 50 by the end of FY30.",
+      "quote": "Additionally, Salesforce announced a new long-term Profitable Growth Framework, 50 by FY30, through which the company aims to have the sum of subscription and support constant currency growth rate and non-GAAP operating margin total 50 by the end of FY30.",
+      "verbatim": {
+        "text": "Additionally, Salesforce announced a new long-term Profitable Growth Framework, 50 by FY30, through which the company aims to have the sum of subscription and support constant currency growth rate and non-GAAP operating margin total 50 by the end of FY30.",
+        "segs": [
+          {
+            "t": "Additionally, Salesforce announced a new long-term Profitable Growth Framework, 50 by ",
+            "h": 0
+          },
+          {
+            "t": "FY30",
+            "h": 1
+          },
+          {
+            "t": ", through which the company aims to have the sum of subscription and support constant currency growth rate and non-GAAP operating margin total 50 by the end of ",
+            "h": 0
+          },
+          {
+            "t": "FY30",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Announces-New-FY30-Revenue-Target-of-60B-10-Organic-FY26-FY30-CAGR/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Announces New FY30 Revenue Target of $60B+, 10% Organic FY26-FY30 CAGR\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Announces-New-FY30-Revenue-Target-of-60B-10-Organic-FY26-FY30-CAGR/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Salesforce Announces New FY30 Revenue Target of $60B+, 10% Organic FY26-FY30 CAGR\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CRM-P4-2025-12-03",
+      "promiseId": "P4",
+      "date": "2025-12-03",
+      "call": "Q3 FY26 Earnings Conference Call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported execution against the FY30 framework and disciplined investment, without explicitly restating the Rule of 50.",
+      "quote": "We are executing against our FY30 framework and investing with discipline, positioning us incredibly well for the future.",
+      "verbatim": {
+        "text": "We are executing against our FY30 framework and investing with discipline, positioning us incredibly well for the future.",
+        "segs": [
+          {
+            "t": "We are executing against our ",
+            "h": 0
+          },
+          {
+            "t": "FY30",
+            "h": 1
+          },
+          {
+            "t": " framework and investing with discipline, positioning us incredibly well for the future.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+          "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P4-2026-02-25",
+      "promiseId": "P4",
+      "date": "2026-02-25",
+      "call": "Q4 FY26 Earnings Conference Call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "On track for Rule of 50 by FY 30, following 60 basis points of expansion in FY 26.",
+      "quote": "We remain on track to rule of 50 by FY 30, and we are pleased that with our continued focus on operational excellence, we delivered 60 basis points of expansion in FY 26.",
+      "verbatim": {
+        "text": "We remain on track to rule of 50 by FY 30, and we are pleased that with our continued focus on operational excellence, we delivered 60 basis points of expansion in FY 26.",
+        "segs": [
+          {
+            "t": "We remain on track to rule of 50 by FY 30, and we are pleased that with our continued focus on operational excellence, we delivered ",
+            "h": 0
+          },
+          {
+            "t": "60 basis points",
+            "h": 1
+          },
+          {
+            "t": " of expansion in FY 26.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+          "title": "Page 1 of 20",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+          "title": "Page 1 of 20",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P4-2026-05-27",
+      "promiseId": "P4",
+      "date": "2026-05-27",
+      "call": "Q1 FY27 Earnings Conference Call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Operational excellence and the lean agentic enterprise kept the FY30 Rule of 50 framework on track.",
+      "quote": "It's how we're building a lean agentic enterprise and driving profitable growth, and it is keeping us on track for our FY30 Rule of 50 framework.",
+      "verbatim": {
+        "text": "It's how we're building a lean agentic enterprise and driving profitable growth, and it is keeping us on track for our FY30 Rule of 50 framework.",
+        "segs": [
+          {
+            "t": "It's how we're building a lean agentic enterprise and driving profitable growth, and it is keeping us on track for our ",
+            "h": 0
+          },
+          {
+            "t": "FY30",
+            "h": 1
+          },
+          {
+            "t": " Rule of 50 framework.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P4-2026-08-26",
+      "promiseId": "P4",
+      "date": "2026-08-26",
+      "call": "Q2 FY27 Earnings Conference Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending FY30 Rule of 50 target was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+          "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P4-2026-09-16",
+      "promiseId": "P4",
+      "date": "2026-09-16",
+      "call": "Dreamforce 2026: Investor & Analyst Session",
+      "speaker": "Robin Washington, President and Chief Operating and Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the unchanged framework; the accompanying presentation retained the FY30 profitable growth framework of 50.",
+      "quote": "To conclude, the framework that we talked about last year remains intact.",
+      "verbatim": {
+        "text": "To conclude, the framework that we talked about last year remains intact.",
+        "segs": [
+          {
+            "t": "To conclude, the framework that we talked about last year remains intact.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/crm/transcripts/740446-dreamforce-2026-investor-analyst-session",
+          "title": "Salesforce (CRM) Transcript: Dreamforce 2026 Investor & Analyst Session",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.salesforce.com/events-and-presentations/events/event-details/2026/Dreamforce-2026-Investor--Analyst-Session-2026-jz1nxEcqq4/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Dreamforce 2026: Investor & Analyst Session\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/content_files/Dreamforce-Investor-Day-2026-Presentation_Final.pdf",
+          "title": "Dreamforce Investor Day 2026 Presentation",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/crm/transcripts/740446-dreamforce-2026-investor-analyst-session",
+          "title": "Salesforce (CRM) Transcript: Dreamforce 2026 Investor & Analyst Session",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "CRM-P5-2026-02-25",
+      "promiseId": "P5",
+      "date": "2026-02-25",
+      "call": "Q4 FY26 earnings release",
+      "speaker": "Robin Washington, President and Chief Financial and Operating Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced $50 billion share-repurchase authorization, replacing all previously unused authorizations.",
+      "quote": "Reflecting our strong trajectory, we’ve increased our authorization to $50 billion for share repurchases and increased our quarterly dividend, reinforcing our commitment to delivering significant shareholder value.",
+      "verbatim": {
+        "text": "Reflecting our strong trajectory, we’ve increased our authorization to $50 billion for share repurchases and increased our quarterly dividend, reinforcing our commitment to delivering significant shareholder value.",
+        "segs": [
+          {
+            "t": "Reflecting our strong trajectory, we’ve increased our authorization to ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": " for share repurchases and increased our quarterly dividend, reinforcing our commitment to delivering significant shareholder value.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.salesforce.com/news/press-releases/2026/02/25/fy26-q4-earnings",
+          "title": "Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2026/02/25/fy26-q4-earnings",
+          "title": "Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "CRM-P5-2026-03-12",
+      "promiseId": "P5",
+      "date": "2026-03-12",
+      "call": "Form 8-K reporting March 11, 2026 ASR agreements",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $25 billion ASR agreements, with final settlement scheduled for the fourth quarter of 2026.",
+      "quote": "The final settlement of each transaction under the ASR Agreements is scheduled to occur in the fourth quarter of 2026.",
+      "verbatim": {
+        "text": "The final settlement of each transaction under the ASR Agreements is scheduled to occur in the fourth quarter of 2026.",
+        "segs": [
+          {
+            "t": "The final settlement of each transaction under the ASR Agreements is scheduled to occur in the fourth quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000119312526104282/d887348d8k.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1108524/000119312526104282/d887348d8k.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "CRM-P5-2026-03-16",
+      "promiseId": "P5",
+      "date": "2026-03-16",
+      "call": "Salesforce Commences Largest-Ever $25 Billion Accelerated Share Repurchase",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Commenced $25 billion ASR agreed March 11, 2026; approximately 103 million shares initially delivered.",
+      "quote": "Salesforce (NYSE: CRM), the world’s #1 AI CRM, today commenced the prepayment and initial delivery of approximately 103 million shares under its previously announced $25 billion accelerated share repurchase (“ASR”) agreements that it entered into on March 11, 2026 with certain financial institutions.",
+      "verbatim": {
+        "text": "SAN FRANCISCO—March 16, 2026 —Salesforce (NYSE: CRM), the world’s #1 AI CRM, today commenced the prepayment and initial delivery of approximately 103 million shares under its previously announced $25 billion accelerated share repurchase (“ASR”) agreements that it entered into on March 11, 2026 with certain financial institutions.",
+        "segs": [
+          {
+            "t": "SAN FRANCISCO—March 16, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " —Salesforce (NYSE: CRM), the world’s #1 AI CRM, today commenced the prepayment and initial delivery of approximately ",
+            "h": 0
+          },
+          {
+            "t": "103 million",
+            "h": 1
+          },
+          {
+            "t": " shares under its previously announced ",
+            "h": 0
+          },
+          {
+            "t": "$25 billion",
+            "h": 1
+          },
+          {
+            "t": " accelerated share repurchase (“ASR”) agreements that it entered into on March 11, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " with certain financial institutions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.salesforce.com/news/press-releases/2026/03/16/25-billion-share-repurchase-2026",
+          "title": "Salesforce Commences Largest-Ever $25 Billion Accelerated Share Repurchase - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2026/03/16/25-billion-share-repurchase-2026",
+          "title": "Salesforce Commences Largest-Ever $25 Billion Accelerated Share Repurchase - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CRM-P5-2026-05-27",
+      "promiseId": "P5",
+      "date": "2026-05-27",
+      "call": "Q1 FY27 Earnings Conference Call",
+      "speaker": "Robin Washington, Chief Operating and Finance Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported commencing a 25 billion ASR, representing half of the 50 billion authorization.",
+      "quote": "Underscoring our confidence in the future, we commence the largest ever 25 billion accelerated share repurchase or ASR, representing half of our 50 billion share repurchase authorization.",
+      "verbatim": {
+        "text": "Underscoring our confidence in the future, we commence the largest ever 25 billion accelerated share repurchase or ASR, representing half of our 50 billion share repurchase authorization.",
+        "segs": [
+          {
+            "t": "Underscoring our confidence in the future, we commence the largest ever ",
+            "h": 0
+          },
+          {
+            "t": "25 billion",
+            "h": 1
+          },
+          {
+            "t": " accelerated share repurchase or ASR, representing half of our ",
+            "h": 0
+          },
+          {
+            "t": "50 billion",
+            "h": 1
+          },
+          {
+            "t": " share repurchase authorization.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+          "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CRM-P5-2026-08-26",
+      "promiseId": "P5",
+      "date": "2026-08-26",
+      "call": "Q2 FY27 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected final settlement of the $25 billion ASR in October 2026.",
+      "quote": "Final settlement of the company’s $25 billion ASR is expected in October 2026.",
+      "verbatim": {
+        "text": "Final settlement of the company’s $25 billion ASR is expected in October 2026.",
+        "segs": [
+          {
+            "t": "Final settlement of the company’s ",
+            "h": 0
+          },
+          {
+            "t": "$25 billion",
+            "h": 1
+          },
+          {
+            "t": " ASR is expected in October ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.salesforce.com/news/press-releases/2026/08/26/fy27-q2-earnings",
+          "title": "Salesforce Delivers Record Second Quarter Fiscal 2027 Results - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.salesforce.com/news/press-releases/2026/08/26/fy27-q2-earnings",
+          "title": "Salesforce Delivers Record Second Quarter Fiscal 2027 Results - Salesforce",
+          "domain": "salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "CRM-P5-2026-09-16",
+      "promiseId": "P5",
+      "date": "2026-09-16",
+      "call": "Dreamforce 2026: Investor & Analyst Session",
+      "speaker": "Robin Washington, President and Chief Operating and Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected ASR completion in October; cited $60 billion cumulative share purchases.",
+      "quote": "We have been buying shares for a long term, $60 billion cumulative, but we launched earlier this year and we will complete in October the largest accelerated share repurchase ever.",
+      "verbatim": {
+        "text": "We have been buying shares for a long term, $60 billion cumulative, but we launched earlier this year and we will complete in October the largest accelerated share repurchase ever.",
+        "segs": [
+          {
+            "t": "We have been buying shares for a long term, ",
+            "h": 0
+          },
+          {
+            "t": "$60 billion",
+            "h": 1
+          },
+          {
+            "t": " cumulative, but we launched earlier this year and we will complete in October the largest accelerated share repurchase ever.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/crm/transcripts/740446-dreamforce-2026-investor-analyst-session",
+          "title": "Salesforce (CRM) Transcript: Dreamforce 2026 Investor & Analyst Session",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/crm/transcripts/740446-dreamforce-2026-investor-analyst-session",
+          "title": "Salesforce (CRM) Transcript: Dreamforce 2026 Investor & Analyst Session",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.salesforce.com/events-and-presentations/events/event-details/2026/Dreamforce-2026-Investor--Analyst-Session-2026-jz1nxEcqq4/default.aspx",
+          "title": "\n\tSalesforce.com, Inc. - Dreamforce 2026: Investor & Analyst Session\n",
+          "domain": "investor.salesforce.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q3/Transcript-Salesforce-Inc-Q3-FY26-Earnings-Conference-Call-12-3-25.pdf",
+      "title": "Transcript - Salesforce, Inc. Q3 FY26 Earnings Conference Call 12.3.25",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q1/Salesforce-Q1-FY27-Earnings-Transcript.pdf",
+      "title": "Salesforce-Q1-FY27-Earnings-Transcript",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q4/Transcript-Salesforce-Inc-Q4-FY26-Earnings-Conference-Call-2-25-26.pdf",
+      "title": "Page 1 of 20",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "http://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+      "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852425000168/ex991-investordaypressrele.htm",
+      "title": "Ex991 Investordaypressrele",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://www.salesforce.com/news/press-releases/2026/02/25/fy26-q4-earnings",
+      "title": "Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results - Salesforce",
+      "domain": "salesforce.com",
+      "tier": "primary",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Announces-New-FY30-Revenue-Target-of-60B-10-Organic-FY26-FY30-CAGR/default.aspx",
+      "title": "\n\tSalesforce.com, Inc. - Salesforce Announces New FY30 Revenue Target of $60B+, 10% Organic FY26-FY30 CAGR\n",
+      "domain": "investor.salesforce.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 8,
+      "url": "https://investor.salesforce.com/events-and-presentations/events/event-details/2026/Dreamforce-2026-Investor--Analyst-Session-2026-jz1nxEcqq4/default.aspx",
+      "title": "\n\tSalesforce.com, Inc. - Dreamforce 2026: Investor & Analyst Session\n",
+      "domain": "investor.salesforce.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 9,
+      "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2027/q2/Salesforce-Q2-FY27-Earnings-Transcript.pdf",
+      "title": "Transcript - Salesforce, Inc. Q2 FY27 Earnings Conference Call 8.26.26",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 10,
+      "url": "https://stockanalysis.com/stocks/crm/transcripts/740446-dreamforce-2026-investor-analyst-session",
+      "title": "Salesforce (CRM) Transcript: Dreamforce 2026 Investor & Analyst Session",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 11,
+      "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q1/Salesforce-Inc-Q1-2026-Earnings-Call-May-28-2025-1.pdf",
+      "title": "Salesforce, Inc. NYSE:CRM FQ1 2026 Earnings Call Transcripts",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://www.salesforce.com/news/press-releases/2025/11/18/salesforce-completes-acquisition-of-informatica",
+      "title": "Salesforce Completes Acquisition of Informatica - Salesforce",
+      "domain": "salesforce.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "http://investor.salesforce.com/news/news-details/2026/Salesforce-Delivers-Record-Fourth-Quarter-Fiscal-2026-Results/default.aspx",
+      "title": "\n\tSalesforce.com, Inc. - Salesforce Delivers Record Fourth Quarter Fiscal 2026 Results\n",
+      "domain": "investor.salesforce.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 14,
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/investorday2026.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://s205.q4cdn.com/626266368/files/content_files/Dreamforce-Investor-Day-2026-Presentation_Final.pdf",
+      "title": "Dreamforce Investor Day 2026 Presentation",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 16,
+      "url": "https://www.salesforce.com/news/press-releases/2026/03/16/25-billion-share-repurchase-2026",
+      "title": "Salesforce Commences Largest-Ever $25 Billion Accelerated Share Repurchase - Salesforce",
+      "domain": "salesforce.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 17,
+      "url": "https://investor.salesforce.com/news/news-details/2025/Salesforce-Signs-Definitive-Agreement-to-Acquire-Informatica/default.aspx",
+      "title": "\n\tSalesforce.com, Inc. - Salesforce Signs Definitive Agreement to Acquire Informatica\n",
+      "domain": "investor.salesforce.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://s205.q4cdn.com/626266368/files/doc_financials/2026/q2/Salesforce-Inc-Q2-FY26-Earnings-Conference-Call-9-3-25.pdf",
+      "title": "Salesforce-Inc.-Q2-FY26-Earnings-Conference-Call-9.3.25",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://www.salesforce.com/news/press-releases/2025/09/03/fy26-q2-earnings",
+      "title": "Salesforce Reports Record Second Quarter Fiscal 2026 Results - Salesforce",
+      "domain": "salesforce.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000210/crm-20260916.htm",
+      "title": "crm-20260916",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 21,
+      "url": "https://s205.q4cdn.com/626266368/files/doc_presentations/2025/10/Salesforce-Investor-Day-2025-10-15.pdf",
+      "title": "Salesforce Investor Day 2025 10 15",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 22,
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000119312526104282/d887348d8k.htm",
+      "title": "8-K",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://www.salesforce.com/news/press-releases/2026/08/26/fy27-q2-earnings",
+      "title": "Salesforce Delivers Record Second Quarter Fiscal 2027 Results - Salesforce",
+      "domain": "salesforce.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 24,
+      "url": "https://s205.q4cdn.com/626266368/files/doc_presentations/2026/Dreamforce-Investor-Day-2026-Presentation_Final.pdf",
+      "title": "Dreamforce Investor Day 2026 Presentation",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 25,
+      "url": "https://www.sec.gov/Archives/edgar/data/1108524/000110852426000190/crm-20260731.htm",
+      "title": "crm-20260731",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P5",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T05:51:03.473077Z",
+      "completedAt": "2026-11-05T05:56:20.865166Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.934013Z",
+      "completedAt": "2026-11-05T19:12:02.465014Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.940744Z",
+      "completedAt": "2026-11-05T19:11:35.547550Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.947523Z",
+      "completedAt": "2026-11-05T19:12:16.061010Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.954837Z",
+      "completedAt": "2026-11-05T19:12:06.645212Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.962873Z",
+      "completedAt": "2026-11-05T19:13:54.645393Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.745810Z",
+      "completedAt": "2026-11-05T19:44:03.803832Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.753045Z",
+      "completedAt": "2026-11-05T19:45:14.343827Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.760366Z",
+      "completedAt": "2026-11-05T19:44:47.853975Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.767736Z",
+      "completedAt": "2026-11-05T19:44:16.888269Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.774974Z",
+      "completedAt": "2026-11-05T19:43:58.108169Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "28 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "26 of 26 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "26 of 26 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q2 FY27 on 2026-08-26; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/1280px-Salesforce.com_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Salesforce.com_logo.svg",
+      "title": "File:Salesforce.com logo.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 896,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://www.salesforce.com/news/wp-content/uploads/sites/3/2024/10/Salesforces-Agentforce-is-Here_-Trusted-Autonomous-AI-Agents-to-Scale-Your-Workforce.png",
+      "sourcePageUrl": "https://www.salesforce.com/news/press-releases/2024/10/29/agentforce-general-availability-announcement/",
+      "title": "Salesforce's Agentforce Is Here: Trusted, Autonomous AI Agents to Scale  Your Workforce - Salesforce",
+      "width": 1200,
+      "height": 675,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.442Z"
+}

@@ -1,0 +1,1680 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "MAR",
+  "name": "Marriott International, Inc.",
+  "short": "Marriott",
+  "website": "marriott.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://marriott.gcs-web.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-11-02",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Marriott Bonvoy mobile app",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Enterprise G&A cost savings",
+      "commitment": "Deliver $80 million to $90 million of annual pre-tax G&A cost reductions beginning in 2025.",
+      "deadline": "beginning in 2025",
+      "firstStated": "2024-11-04",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "In 2025, Marriott benefited from over $90 million of above-property cost savings from its enterprise-wide productivity initiative.",
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/49def798-d2f9-4513-983f-5f4b1526eaff",
+          "title": "Static Files",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-02-10",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Core technology rollout",
+      "commitment": "Roll out new property-management, reservations, and loyalty systems to a meaningful number of hotels worldwide during 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-02-10",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "More than 3,000 hotels transitioned; full waves would continue throughout 2027. The qualitative worldwide commitment was not explicitly declared complete.",
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-11-02",
+            "what_was_said": "Management said deployment had reached scale and full deployment waves would continue throughout 2027. Deployment was largely finished in many U.S. select-service hotels, while some full-service hotels had begun cutting over.",
+            "call": "Third Quarter 2026 Earnings Conference Call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "2026 net rooms growth",
+      "commitment": "Achieve 4.5% to 5% net rooms growth in 2026, including 1% to 1.5% room deletions.",
+      "deadline": "2026",
+      "firstStated": "2026-02-10",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Full-year outcome pending. Trailing-twelve-month net rooms growth was 4.6 percent; management maintained low-end 4.5 to 5 percent guidance, including 1 to 1.5 percent room deletions.",
+      "citations": [
+        {
+          "url": "https://news.marriott.com/news/2026/11/02/marriott-international-reports-third-quarter-2026-results",
+          "title": "Marriott International Reports Third Quarter 2026 Results",
+          "domain": "news.marriott.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Natural-language search launch",
+      "commitment": "Begin deploying natural-language search on Marriott.com and the Bonvoy mobile app in the first half of 2026.",
+      "deadline": "first half of 2026",
+      "firstStated": "2026-02-10",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Ask Bonvoy launched in beta for a subset of users on Marriott.com and the iOS and Android Marriott Bonvoy apps, meeting the initial-deployment commitment.",
+      "citations": [
+        {
+          "url": "https://news.marriott.com/news/2026/06/16/marriott-international-introduces-ask-bonvoy-a-new-ai-powered-search-experience-transforming-travel-exploration",
+          "title": "Marriott International Introduces Ask Bonvoy™ a New AI-Powered Search Experience Transforming Travel Exploration",
+          "domain": "news.marriott.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/c97cd870-d52a-49f5-9e58-1590d88f0423",
+          "title": "Marriott International, Inc. Second Quarter 2026 Earnings Conference Call Transcript August 3, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-06-16",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "2026 shareholder capital returns",
+      "commitment": "Return over $4.3 billion to shareholders in 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-02-10",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The 2026 target rose to at least $4.8 billion; approximately $4.0 billion had been returned through October 28. Full-year delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-third-quarter-2026-results",
+          "title": "Marriott International Reports Third Quarter 2026 Results | Marriott International",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "MAR-P1-2024-11-04",
+      "promiseId": "P1",
+      "date": "2024-11-04",
+      "call": "Q3 2024 earnings release",
+      "speaker": "Anthony Capuano, President and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected $80 million to $90 million of annual G&A cost reductions beginning in 2025.",
+      "quote": "At this point in the process, we expect this initiative to yield $80 million to $90 million of annual general and administrative cost reductions beginning in 2025.",
+      "verbatim": {
+        "text": "At this point in the process, we expect this initiative to yield $80 million to $90 million of annual general and administrative cost reductions beginning in 2025.",
+        "segs": [
+          {
+            "t": "At this point in the process, we expect this initiative to yield ",
+            "h": 0
+          },
+          {
+            "t": "$80 million",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$90 million",
+            "h": 1
+          },
+          {
+            "t": " of annual general and administrative cost reductions beginning in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-third-quarter-2024-results",
+          "title": "Marriott International Reports Third Quarter 2024 Results | Marriott International",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-third-quarter-2024-results",
+          "title": "Marriott International Reports Third Quarter 2024 Results | Marriott International",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MAR-P1-2025-02-11",
+      "promiseId": "P1",
+      "date": "2025-02-11",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Leeny Oberg, Chief Financial Officer and Executive Vice President, Development",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed expected $80 to $90 million of above-property savings from the enterprise-wide initiative.",
+      "quote": "This decline is the result of the expected $80 to $90 million of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company.",
+      "verbatim": {
+        "text": "This decline is the result of the expected $80 to $90 million of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company.",
+        "segs": [
+          {
+            "t": "This decline is the result of the expected ",
+            "h": 0
+          },
+          {
+            "t": "$80 to $90 million",
+            "h": 1
+          },
+          {
+            "t": " of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/f2d26d1f-8bc5-4a1b-8dcf-58222b449687",
+          "title": "Marriott International, Inc. Fourth Quarter 2024 Earnings Conference Call Transcript February 11, 2025 : Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/f2d26d1f-8bc5-4a1b-8dcf-58222b449687",
+          "title": "Marriott International, Inc. Fourth Quarter 2024 Earnings Conference Call Transcript February 11, 2025 : Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P1-2025-05-06",
+      "promiseId": "P1",
+      "date": "2025-05-06",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Leeny Oberg, Chief Financial Officer and Executive Vice President, Development",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed expected $80 to $90 million of above-property savings; also expected savings for owners and franchisees.",
+      "quote": "This decline is the result of the expected $80 to $90 million of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners and franchisees.",
+      "verbatim": {
+        "text": "This decline is the result of the expected $80 to $90 million of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners and franchisees.",
+        "segs": [
+          {
+            "t": "This decline is the result of the expected ",
+            "h": 0
+          },
+          {
+            "t": "$80 to $90 million",
+            "h": 1
+          },
+          {
+            "t": " of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners and franchisees.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/fd98e8ec-baca-4e57-8502-ff57cc117c07",
+          "title": "Microsoft Word - MAR Q1 2025 Earnings Call TRANSCRIPT 5-6-25 FINAL",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/fd98e8ec-baca-4e57-8502-ff57cc117c07",
+          "title": "Microsoft Word - MAR Q1 2025 Earnings Call TRANSCRIPT 5-6-25 FINAL",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P1-2025-08-05",
+      "promiseId": "P1",
+      "date": "2025-08-05",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Leeny Oberg, Chief Financial Officer and Executive Vice President, Development",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported continuing efficiency benefits while retaining expected $80 to $90 million of above-property savings.",
+      "quote": "This decline reflects the expected $80 to $90 million of above-property savings from our enterprise- wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners.",
+      "verbatim": {
+        "text": "This decline reflects the expected $80 to $90 million of above-property savings from our enterprise- wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners.",
+        "segs": [
+          {
+            "t": "This decline reflects the expected ",
+            "h": 0
+          },
+          {
+            "t": "$80 to $90 million",
+            "h": 1
+          },
+          {
+            "t": " of above-property savings from our enterprise- wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/dfb23062-fc2a-474f-8755-cc731d4c1349",
+          "title": "Marriott International, Inc. Second Quarter 2025 Earnings Conference Call Transcript August 5, 2025 : Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/dfb23062-fc2a-474f-8755-cc731d4c1349",
+          "title": "Marriott International, Inc. Second Quarter 2025 Earnings Conference Call Transcript August 5, 2025 : Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P1-2025-11-04",
+      "promiseId": "P1",
+      "date": "2025-11-04",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Leeny Oberg, Chief Financial Officer and Executive Vice President, Development",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Projected roughly $90 million of above-property savings for 2025 while reporting continued efficiency benefits.",
+      "quote": "This decline reflects roughly $90 million of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners.",
+      "verbatim": {
+        "text": "This decline reflects roughly $90 million of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners.",
+        "segs": [
+          {
+            "t": "This decline reflects roughly ",
+            "h": 0
+          },
+          {
+            "t": "$90 million",
+            "h": 1
+          },
+          {
+            "t": " of above-property savings from our enterprise-wide initiative to enhance our effectiveness and efficiency across the company that is also expected to yield cost savings to our owners.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/4e1ace92-99f3-45cb-bb3b-6ed27d5d8890",
+          "title": "Microsoft Word - MAR Q3 Earnings TRANSCRIPT 11-4-25 FINAL",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/4e1ace92-99f3-45cb-bb3b-6ed27d5d8890",
+          "title": "Microsoft Word - MAR Q3 Earnings TRANSCRIPT 11-4-25 FINAL",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P1-2026-02-10",
+      "promiseId": "P1",
+      "date": "2026-02-10",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Leeny Oberg, Chief Financial Officer and Executive Vice President, Development",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported over $90 million of above-property cost savings in 2025 from the enterprise-wide initiative.",
+      "quote": "In 2025, the company benefited from over $90 million of above-property cost savings related to our enterprise-wide initiative to enhance productivity across the company that is also yielding cost savings to our owners.",
+      "verbatim": {
+        "text": "In 2025, the company benefited from over $90 million of above-property cost savings related to our enterprise-wide initiative to enhance productivity across the company that is also yielding cost savings to our owners.",
+        "segs": [
+          {
+            "t": "In ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", the company benefited from over ",
+            "h": 0
+          },
+          {
+            "t": "$90 million",
+            "h": 1
+          },
+          {
+            "t": " of above-property cost savings related to our enterprise-wide initiative to enhance productivity across the company that is also yielding cost savings to our owners.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P2-2026-02-10",
+      "promiseId": "P2",
+      "date": "2026-02-10",
+      "call": "Fourth Quarter 2025 Earnings Conference Call",
+      "speaker": "Tony Capuano, President and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Roll out 3 core systems—property management, reservations and loyalty—to a meaningful number of hotels worldwide in 2026.",
+      "quote": "The multi-year transformation of Marriott’s 3 major tech systems – property management, reservations, and loyalty – is well underway, and we are rolling out the new systems to a meaningful number of our hotels around the world in 2026.",
+      "verbatim": {
+        "text": "The multi-year transformation of Marriott’s 3 major tech systems – property management, reservations, and loyalty – is well underway, and we are rolling out the new systems to a meaningful number of our hotels around the world in 2026.",
+        "segs": [
+          {
+            "t": "The multi-year transformation of Marriott’s 3 major tech systems – property management, reservations, and loyalty – is well underway, and we are rolling out the new systems to a meaningful number of our hotels around the world in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P2-2026-05-06",
+      "promiseId": "P2",
+      "date": "2026-05-06",
+      "call": "First Quarter 2026 Earnings Conference Call",
+      "speaker": "Tony Capuano, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "The 1000 th hotel transitioned to the new technology ecosystem; the multiyear transformation remained underway.",
+      "quote": "Just yesterday we transitioned our 1000 th hotel over to our new tech ecosystem.",
+      "verbatim": {
+        "text": "Just yesterday we transitioned our 1000 th hotel over to our new tech ecosystem.",
+        "segs": [
+          {
+            "t": "Just yesterday we transitioned our 1000 th hotel over to our new tech ecosystem.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/1d55fd2a-b0b8-411d-a7a6-7b5873ca091c",
+          "title": "Marriott International, Inc. First Quarter 2026 Earnings Conference Call Transcript May 6, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/1d55fd2a-b0b8-411d-a7a6-7b5873ca091c",
+          "title": "Marriott International, Inc. First Quarter 2026 Earnings Conference Call Transcript May 6, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P2-2026-08-03",
+      "promiseId": "P2",
+      "date": "2026-08-03",
+      "call": "Second Quarter 2026 Earnings Conference Call",
+      "speaker": "Jen Mason, Executive Vice President and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Over 2,000 U.S. and Canada select-service hotels transitioned; deployment remained in its early phases.",
+      "quote": "We have over 2,000 select service in U.S. Canada hotels that have transitioned.",
+      "verbatim": {
+        "text": "We have over 2,000 select service in U.S. Canada hotels that have transitioned.",
+        "segs": [
+          {
+            "t": "We have over ",
+            "h": 0
+          },
+          {
+            "t": "2,000",
+            "h": 1
+          },
+          {
+            "t": " select service in U.S. Canada hotels that have transitioned.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/c97cd870-d52a-49f5-9e58-1590d88f0423",
+          "title": "Marriott International, Inc. Second Quarter 2026 Earnings Conference Call Transcript August 3, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/c97cd870-d52a-49f5-9e58-1590d88f0423",
+          "title": "Marriott International, Inc. Second Quarter 2026 Earnings Conference Call Transcript August 3, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P2-2026-11-02",
+      "promiseId": "P2",
+      "date": "2026-11-02",
+      "call": "Third Quarter 2026 Earnings Conference Call",
+      "speaker": "Tony Capuano, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "More than 3,000 hotels transitioned; deployment waves reached scale and would continue throughout 2027.",
+      "quote": "As of yesterday, we had successfully moved more than 3,000 of our hotels to the new technology ecosystem.",
+      "verbatim": {
+        "text": "As of yesterday, we had successfully moved more than 3,000 of our hotels to the new technology ecosystem.",
+        "segs": [
+          {
+            "t": "As of yesterday, we had successfully moved more than ",
+            "h": 0
+          },
+          {
+            "t": "3,000",
+            "h": 1
+          },
+          {
+            "t": " of our hotels to the new technology ecosystem.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P3-2026-02-10",
+      "promiseId": "P3",
+      "date": "2026-02-10",
+      "call": "Q4 and full-year 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "2026 outlook: RevPAR 1.5 to 2.5 percent; net rooms 4.5 to 5 percent; adjusted EBITDA 8 to 10 percent; capital returns above $4.3 billion.",
+      "quote": "For full year 2026, we expect worldwide RevPAR to rise 1.5 to 2.5 percent, net rooms growth of 4.5 to 5 percent, adjusted EBITDA 2 growth of 8 to 10 percent and more than $4.3 billion of capital returns to shareholders",
+      "verbatim": {
+        "text": "• For full year 2026, we expect worldwide RevPAR to rise 1.5 to 2.5 percent, net rooms growth of 4.5 to 5 percent, adjusted EBITDA 2 growth of 8 to 10 percent and more than $4.3 billion of capital returns to shareholders",
+        "segs": [
+          {
+            "t": "• For full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect worldwide RevPAR to rise ",
+            "h": 0
+          },
+          {
+            "t": "1.5 to 2.5 percent",
+            "h": 1
+          },
+          {
+            "t": ", net rooms growth of ",
+            "h": 0
+          },
+          {
+            "t": "4.5 to 5 percent",
+            "h": 1
+          },
+          {
+            "t": ", adjusted EBITDA 2 growth of ",
+            "h": 0
+          },
+          {
+            "t": "8 to 10 percent",
+            "h": 1
+          },
+          {
+            "t": " and more than ",
+            "h": 0
+          },
+          {
+            "t": "$4.3 billion",
+            "h": 1
+          },
+          {
+            "t": " of capital returns to shareholders",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001048286/000104828626000005/mar-2025q4xex99earningsrel.htm",
+          "title": "Mar 2025Q4Xex99Earningsrel",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001048286/000104828626000005/mar-2025q4xex99earningsrel.htm",
+          "title": "Mar 2025Q4Xex99Earningsrel",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MAR-P3-2026-05-06",
+      "promiseId": "P3",
+      "date": "2026-05-06",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Tony Capuano, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 net rooms growth of 4.5 to 5 percent, including 1 to 1.5 percent room deletions.",
+      "quote": "With our growing pipeline and strong momentum in conversions, we still expect net rooms growth between 4.5 and 5 percent, including our typical assumption of between 1 and 1.5 percent room deletions.",
+      "verbatim": {
+        "text": "With our growing pipeline and strong momentum in conversions, we still expect net rooms growth between 4.5 and 5 percent, including our typical assumption of between 1 and 1.5 percent room deletions.",
+        "segs": [
+          {
+            "t": "With our growing pipeline and strong momentum in conversions, we still expect net rooms growth between 4.5 and ",
+            "h": 0
+          },
+          {
+            "t": "5 percent",
+            "h": 1
+          },
+          {
+            "t": ", including our typical assumption of between 1 and ",
+            "h": 0
+          },
+          {
+            "t": "1.5 percent",
+            "h": 1
+          },
+          {
+            "t": " room deletions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://marriott.gcs-web.com/static-files/1d55fd2a-b0b8-411d-a7a6-7b5873ca091c",
+          "title": "Static Files",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://marriott.gcs-web.com/static-files/1d55fd2a-b0b8-411d-a7a6-7b5873ca091c",
+          "title": "Static Files",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P3-2026-08-03",
+      "promiseId": "P3",
+      "date": "2026-08-03",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "softened",
+      "k": "c",
+      "summary": "Shifted 2026 net rooms growth guidance towards the low end of 4.5% to 5%.",
+      "quote": null,
+      "verbatim": {
+        "text": "Year-End 2026 vs. Year-End 2025 Net rooms growth Low end of 4.5% to 5%",
+        "segs": [
+          {
+            "t": "Year-End ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " vs. Year-End ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " Net rooms growth Low end of ",
+            "h": 0
+          },
+          {
+            "t": "4.5%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "5%",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-second-quarter-2026-results",
+          "title": "Marriott International Reports Second Quarter 2026 Results | Marriott International",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-second-quarter-2026-results",
+          "title": "Marriott International Reports Second Quarter 2026 Results | Marriott International",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MAR-P3-2026-11-02",
+      "promiseId": "P3",
+      "date": "2026-11-02",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Tony Capuano, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained low-end 2026 net rooms growth within 4.5 to 5 percent, including 1 to 1.5 percent room deletions.",
+      "quote": "For the full year 2026, we still expect net rooms growth towards the low end of our prior 4.5 to 5 percent range, including our typical assumption of between 1 and 1.5 percent room deletions.",
+      "verbatim": {
+        "text": "For the full year 2026, we still expect net rooms growth towards the low end of our prior 4.5 to 5 percent range, including our typical assumption of between 1 and 1.5 percent room deletions.",
+        "segs": [
+          {
+            "t": "For the full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we still expect net rooms growth towards the low end of our prior ",
+            "h": 0
+          },
+          {
+            "t": "4.5 to 5 percent",
+            "h": 1
+          },
+          {
+            "t": " range, including our typical assumption of between 1 and ",
+            "h": 0
+          },
+          {
+            "t": "1.5 percent",
+            "h": 1
+          },
+          {
+            "t": " room deletions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P4-2026-02-10",
+      "promiseId": "P4",
+      "date": "2026-02-10",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Tony Capuano, President and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Planned to begin deploying natural-language search on Marriott.com and the Bonvoy mobile app in the first half of this year.",
+      "quote": "In the first half of this year, we plan to start deploying natural language search on Marriott.com and on the Bonvoy mobile app.",
+      "verbatim": {
+        "text": "In the first half of this year, we plan to start deploying natural language search on Marriott.com and on the Bonvoy mobile app.",
+        "segs": [
+          {
+            "t": "In the first half of this year, we plan to start deploying natural language search on Marriott.com and on the Bonvoy mobile app.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Marriott executives said on the Q4 2025 earnings call (2026-02-10) about Natural-language search launch: Planned to begin deploying natural-language search on Marriott.com and the Bonvoy mobile app in the first half of this year."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P4-2026-05-06",
+      "promiseId": "P4",
+      "date": "2026-05-06",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Tony Capuano, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed phased natural-language search rollout on marriott.com and the app by the end of the second quarter.",
+      "quote": "We are also very excited about beginning a phased rollout of a robust natural language search experience on marriott.com and our app planned by the end of the second quarter.",
+      "verbatim": {
+        "text": "We are also very excited about beginning a phased rollout of a robust natural language search experience on marriott.com and our app planned by the end of the second quarter.",
+        "segs": [
+          {
+            "t": "We are also very excited about beginning a phased rollout of a robust natural language search experience on marriott.com and our app planned by the end of the second quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/1d55fd2a-b0b8-411d-a7a6-7b5873ca091c",
+          "title": "Marriott International, Inc. First Quarter 2026 Earnings Conference Call Transcript May 6, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/1d55fd2a-b0b8-411d-a7a6-7b5873ca091c",
+          "title": "Marriott International, Inc. First Quarter 2026 Earnings Conference Call Transcript May 6, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P4-2026-06-16",
+      "promiseId": "P4",
+      "date": "2026-06-16",
+      "call": "Marriott International Introduces Ask Bonvoy™ a New AI-Powered Search Experience Transforming Travel Exploration",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced Ask Bonvoy beta launch in U.S. English on Marriott.com and iOS and Android Bonvoy apps for a subset of members.",
+      "quote": "Ask Bonvoy is launching in beta and will initially be available in U.S. English on Marriott.com and in the iOS and Android Marriott Bonvoy mobile apps to a subset of Marriott Bonvoy members and users who sign up for Marriott Bonvoy.",
+      "verbatim": {
+        "text": "Ask Bonvoy is launching in beta and will initially be available in U.S. English on Marriott.com and in the iOS and Android Marriott Bonvoy mobile apps to a subset of Marriott Bonvoy members and users who sign up for Marriott Bonvoy.",
+        "segs": [
+          {
+            "t": "Ask Bonvoy is launching in beta and will initially be available in U.S. English on Marriott.com and in the iOS and Android Marriott Bonvoy mobile apps to a subset of Marriott Bonvoy members and users who sign up for Marriott Bonvoy.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.marriott.com/news/2026/06/16/marriott-international-introduces-ask-bonvoy-a-new-ai-powered-search-experience-transforming-travel-exploration",
+          "title": "Marriott International Introduces Ask Bonvoy™ a New AI-Powered Search Experience Transforming Travel Exploration",
+          "domain": "news.marriott.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.marriott.com/news/2026/06/16/marriott-international-introduces-ask-bonvoy-a-new-ai-powered-search-experience-transforming-travel-exploration",
+          "title": "Marriott International Introduces Ask Bonvoy™ a New AI-Powered Search Experience Transforming Travel Exploration",
+          "domain": "news.marriott.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "MAR-P4-2026-08-03",
+      "promiseId": "P4",
+      "date": "2026-08-03",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Tony Capuano, President and Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed phased rollout of Ask Bonvoy conversational search began in June on Marriott.com and the Marriott Bonvoy app.",
+      "quote": "In June, we began our phased rollout of Ask Bonvoy, our AI-powered conversational search experience on Marriott.com and the Marriott Bonvoy app, reflecting our commitment to using technology to enhance the customer experience, strengthen engagement with our members, and drive greater operational efficiency.",
+      "verbatim": {
+        "text": "In June, we began our phased rollout of Ask Bonvoy, our AI-powered conversational search experience on Marriott.com and the Marriott Bonvoy app, reflecting our commitment to using technology to enhance the customer experience, strengthen engagement with our members, and drive greater operational efficiency.",
+        "segs": [
+          {
+            "t": "In June, we began our phased rollout of Ask Bonvoy, our AI-powered conversational search experience on Marriott.com and the Marriott Bonvoy app, reflecting our commitment to using technology to enhance the customer experience, strengthen engagement with our members, and drive greater operational efficiency.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/c97cd870-d52a-49f5-9e58-1590d88f0423",
+          "title": "Marriott International, Inc. Second Quarter 2026 Earnings Conference Call Transcript August 3, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/c97cd870-d52a-49f5-9e58-1590d88f0423",
+          "title": "Marriott International, Inc. Second Quarter 2026 Earnings Conference Call Transcript August 3, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P5-2026-02-10",
+      "promiseId": "P5",
+      "date": "2026-02-10",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Leeny Oberg, Chief Financial Officer and Executive Vice President, Development",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expects over $4.3 billion in capital returns in 2026.",
+      "quote": "In 2026, we expect another year of strong capital returns of over $4.3 billion.",
+      "verbatim": {
+        "text": "In 2026, we expect another year of strong capital returns of over $4.3 billion.",
+        "segs": [
+          {
+            "t": "In ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect another year of strong capital returns of over ",
+            "h": 0
+          },
+          {
+            "t": "$4.3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+          "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MAR-P5-2026-05-06",
+      "promiseId": "P5",
+      "date": "2026-05-06",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raises full-year 2026 shareholder capital-return guidance to over $4.4 billion in the outlook table.",
+      "quote": null,
+      "verbatim": {
+        "text": "Outlook for U.S., Canada, and China was raised, while Middle East conflict and airlift disruptions weigh on EMEA and APAC. Over $4.4B will be returned to shareholders in 2026.",
+        "segs": [
+          {
+            "t": "Outlook for U.S., Canada, and China was raised, while Middle East conflict and airlift disruptions weigh on EMEA and APAC. Over ",
+            "h": 0
+          },
+          {
+            "t": "$4.4B",
+            "h": 1
+          },
+          {
+            "t": " will be returned to shareholders in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "search",
+          "url": "https://stockanalysis.com/stocks/mar/transcripts/554331-q1-2026/",
+          "title": "Marriott International (MAR) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript",
+          "search": {
+            "rank": 5,
+            "query": "Marriott Q1 2026 earnings release transcript 2026 shareholder capital returns",
+            "objective": "Find Marriott International, Inc.'s Q1 2026 earnings release (2026-05-06) transcript passage about 2026 shareholder capital returns: Raises full-year 2026 shareholder capital-return guidance to over $4.4 billion in the outlook table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-first-quarter-2026-results",
+          "title": "Marriott International Reports First Quarter 2026 Results | Marriott International",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MAR-P5-2026-08-03",
+      "promiseId": "P5",
+      "date": "2026-08-03",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raises full-year 2026 shareholder capital-return guidance to over $4.5 billion in the outlook table.",
+      "quote": null,
+      "verbatim": {
+        "text": "We are raising our full-year global RevPAR guidance to 3%-3.5% growth, reflecting our second quarter global outperformance, as well as stronger outlook for the second half of the year for all regions. ... We now expect to return over $4.5 billion to shareholders in 2026.",
+        "segs": [
+          {
+            "t": "We are raising our full-year global RevPAR guidance to ",
+            "h": 0
+          },
+          {
+            "t": "3%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "3.5%",
+            "h": 1
+          },
+          {
+            "t": " growth, reflecting our second quarter global outperformance, as well as stronger outlook for the second half of the year for all regions. ... We now expect to return over ",
+            "h": 0
+          },
+          {
+            "t": "$4.5 billion",
+            "h": 1
+          },
+          {
+            "t": " to shareholders in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "search",
+          "url": "https://finance.yahoo.com/quote/MAR/earnings/MAR-Q2-2026-earnings_call-661378.html",
+          "title": "Marriott International (MAR) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript",
+          "search": {
+            "rank": 5,
+            "query": "Marriott Q2 2026 earnings release transcript 2026 shareholder capital returns",
+            "objective": "Find Marriott International, Inc.'s Q2 2026 earnings release (2026-08-03) transcript passage about 2026 shareholder capital returns: Raises full-year 2026 shareholder capital-return guidance to over $4.5 billion in the outlook table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-second-quarter-2026-results",
+          "title": "Marriott International Reports Second Quarter 2026 Results | Marriott International",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MAR-P5-2026-11-02",
+      "promiseId": "P5",
+      "date": "2026-11-02",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raises full-year 2026 shareholder capital-return guidance to at least $4.8 billion in the outlook table.",
+      "quote": null,
+      "verbatim": {
+        "text": "Considering our strong year-to-date cash flow performance and our higher Adjusted EBITDA outlook, our full year 2026 capital returns to shareholders are now expected to be at least $4.8 billion. Full guidance details for the fourth quarter and the full year are in our press release.",
+        "segs": [
+          {
+            "t": "Considering our strong year-to-date cash flow performance and our higher Adjusted EBITDA outlook, our full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " capital returns to shareholders are now expected to be at least ",
+            "h": 0
+          },
+          {
+            "t": "$4.8 billion",
+            "h": 1
+          },
+          {
+            "t": ". Full guidance details for the fourth quarter and the full year are in our press release.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "search",
+          "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+          "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary",
+          "search": {
+            "rank": 1,
+            "query": "Marriott Q3 2026 earnings release transcript 2026 shareholder capital returns",
+            "objective": "Find Marriott International, Inc.'s Q3 2026 earnings release (2026-11-02) transcript passage about 2026 shareholder capital returns: Raises full-year 2026 shareholder capital-return guidance to at least $4.8 billion in the outlook table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-third-quarter-2026-results",
+          "title": "Marriott International Reports Third Quarter 2026 Results | Marriott International",
+          "domain": "marriott.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://marriott.gcs-web.com/static-files/30de714f-753d-4ee1-8ea8-d55cf9d7424a",
+      "title": "Marriott International, Inc. Fourth Quarter 2025 Earnings Conference Call Transcript February 10, 2026 Operator: Good day, everyone, and welcome to",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://marriott.gcs-web.com/static-files/6cf87b29-97f1-40d5-accd-0d043262ef0b",
+      "title": "Marriott International, Inc. Third Quarter 2026 Earnings Conference Call Transcript November 2, 2026 Operator: Good day, everyone, and welcome to",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P2 P3 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://marriott.gcs-web.com/static-files/c97cd870-d52a-49f5-9e58-1590d88f0423",
+      "title": "Marriott International, Inc. Second Quarter 2026 Earnings Conference Call Transcript August 3, 2026 Operator: Good day, everyone, and welcome to",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 4,
+      "url": "https://marriott.gcs-web.com/static-files/1d55fd2a-b0b8-411d-a7a6-7b5873ca091c",
+      "title": "Marriott International, Inc. First Quarter 2026 Earnings Conference Call Transcript May 6, 2026 Operator: Good day, everyone, and welcome to",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-second-quarter-2026-results",
+      "title": "Marriott International Reports Second Quarter 2026 Results | Marriott International",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://news.marriott.com/news/2026/06/16/marriott-international-introduces-ask-bonvoy-a-new-ai-powered-search-experience-transforming-travel-exploration",
+      "title": "Marriott International Introduces Ask Bonvoy™ a New AI-Powered Search Experience Transforming Travel Exploration",
+      "domain": "news.marriott.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 7,
+      "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-third-quarter-2026-results",
+      "title": "Marriott International Reports Third Quarter 2026 Results | Marriott International",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 8,
+      "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-third-quarter-2024-results",
+      "title": "Marriott International Reports Third Quarter 2024 Results | Marriott International",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://marriott.gcs-web.com/static-files/f2d26d1f-8bc5-4a1b-8dcf-58222b449687",
+      "title": "Marriott International, Inc. Fourth Quarter 2024 Earnings Conference Call Transcript February 11, 2025 : Good day, everyone, and welcome to",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://marriott.gcs-web.com/static-files/fd98e8ec-baca-4e57-8502-ff57cc117c07",
+      "title": "Microsoft Word - MAR Q1 2025 Earnings Call TRANSCRIPT 5-6-25 FINAL",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://marriott.gcs-web.com/static-files/dfb23062-fc2a-474f-8755-cc731d4c1349",
+      "title": "Marriott International, Inc. Second Quarter 2025 Earnings Conference Call Transcript August 5, 2025 : Good day, everyone, and welcome to",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://marriott.gcs-web.com/static-files/4e1ace92-99f3-45cb-bb3b-6ed27d5d8890",
+      "title": "Microsoft Word - MAR Q3 Earnings TRANSCRIPT 11-4-25 FINAL",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://www.sec.gov/Archives/edgar/data/0001048286/000104828626000005/mar-2025q4xex99earningsrel.htm",
+      "title": "Mar 2025Q4Xex99Earningsrel",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "http://marriott.gcs-web.com/static-files/1d55fd2a-b0b8-411d-a7a6-7b5873ca091c",
+      "title": "Static Files",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 15,
+      "url": "https://marriott.gcs-web.com/news-releases/news-release-details/marriott-international-reports-first-quarter-2026-results",
+      "title": "Marriott International Reports First Quarter 2026 Results | Marriott International",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 16,
+      "url": "https://marriott.gcs-web.com/static-files/49def798-d2f9-4513-983f-5f4b1526eaff",
+      "title": "Static Files",
+      "domain": "marriott.gcs-web.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://news.marriott.com/news/2026/11/02/marriott-international-reports-third-quarter-2026-results",
+      "title": "Marriott International Reports Third Quarter 2026 Results",
+      "domain": "news.marriott.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://stockanalysis.com/stocks/mar/transcripts/554331-q1-2026/",
+      "title": "Marriott International (MAR) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 19,
+      "url": "https://finance.yahoo.com/quote/MAR/earnings/MAR-Q2-2026-earnings_call-661378.html",
+      "title": "Marriott International (MAR) Q2 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.900955Z",
+      "completedAt": "2026-11-05T06:27:17.046911Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.491309Z",
+      "completedAt": "2026-11-05T19:12:58.818314Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.498415Z",
+      "completedAt": "2026-11-05T19:16:02.791307Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.505267Z",
+      "completedAt": "2026-11-05T19:12:47.026514Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.512300Z",
+      "completedAt": "2026-11-05T19:11:30.355103Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.519182Z",
+      "completedAt": "2026-11-05T19:11:42.481307Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.758409Z",
+      "completedAt": "2026-11-05T19:46:02.612473Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.765706Z",
+      "completedAt": "2026-11-05T19:44:20.023431Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.772856Z",
+      "completedAt": "2026-11-05T19:45:14.057489Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.780901Z",
+      "completedAt": "2026-11-05T19:45:09.372738Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.788374Z",
+      "completedAt": "2026-11-05T19:44:39.611722Z"
+    }
+  ],
+  "fills": {
+    "filled": 4
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "22 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "22 of 22 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "22 of 22 (100%); 4 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-11-02; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Marriott_hotels_logo14.svg/3840px-Marriott_hotels_logo14.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Marriott_hotels_logo14.svg",
+      "title": "File:Marriott hotels logo14.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 3016,
+      "rank": 1
+    },
+    "photo": null
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.751Z"
+}

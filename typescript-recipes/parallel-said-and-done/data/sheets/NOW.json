@@ -1,0 +1,2263 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "NOW",
+  "name": "ServiceNow, Inc.",
+  "short": "ServiceNow",
+  "website": "servicenow.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investor.servicenow.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-28",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "ServiceNow Now Assist AI platform",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Acquire Moveworks",
+      "commitment": "Acquire Moveworks; no closing deadline was stated when the intent was announced.",
+      "deadline": null,
+      "firstStated": "2025-03-10",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "ServiceNow completed the Moveworks acquisition on December 15, 2025, within the originally announced second-half closing window.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm",
+          "title": "now-20251231",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.servicenow.com/in/company/media/press-room/servicenow-to-acquire-moveworks.html",
+          "title": "Servicenow To Acquire Moveworks",
+          "domain": "servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/310657-q1-2025",
+          "title": "ServiceNow (NOW) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2025/ServiceNow-completes-acquisition-of-Moveworks/default.aspx?campid=84654&cmcid=25604243",
+          "title": "\n\tServiceNow completes acquisition of Moveworks - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-12-15",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Reach $1 billion Now Assist ACV",
+      "commitment": "Reach $1 billion in Now Assist ACV by 2026, alongside a $15 billion-plus subscription revenue target.",
+      "deadline": "2026",
+      "firstStated": "2025-05-05",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "ServiceNow AI, including integrated Moveworks, crossed $1 billion ACV in Q2 2026; management later raised the year-end target to $1.7 billion plus.",
+      "citations": [
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Reports Second Quarter 2026 Financial Results - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s205.q4cdn.com/916135447/files/doc_presentation/2026/ServiceNow-FAD-2026.pdf",
+          "title": "Servicenow Fad 2026",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/servicenow-now-q3-2026-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/338372-q2-2025",
+          "title": "ServiceNow (NOW) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/NOW/earnings/NOW-Q3-2026-earnings_call-712904.html",
+          "title": "ServiceNow, Inc. (NOW) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-07-22",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [
+          "The qualifier “including integrated Moveworks” is not explicitly established as part of the ACV measurement. The disclosures confirm that ServiceNow AI crossed $1 billion ACV and separately describe Now Assist/Moveworks product integration, but do not provide an acquisition-related ACV breakdown."
+        ],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-28",
+            "what_was_said": "Management said ServiceNow was fully capable of achieving its previously stated subscription-revenue and Now Assist ACV targets without M&A.",
+            "call": "Q4 2025 earnings call"
+          },
+          {
+            "date": "2026-04-22",
+            "what_was_said": "Management clarified that, under the new AI-native packages, the Now Assist ACV target would continue to capture only the incremental contribution from AI capabilities.",
+            "call": "Q1 2026 earnings call"
+          },
+          {
+            "date": "2026-07-22",
+            "what_was_said": "Management confirmed that ServiceNow AI ACV had surpassed $1 billion and said it remained on track to beat the increased $1.5 billion year-end target.",
+            "call": "Q2 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "2026 subscription revenue target",
+      "commitment": "Generate $15.53–$15.57 billion in subscription revenue in 2026, representing 19.5%–20% constant-currency growth.",
+      "deadline": "2026",
+      "firstStated": "2026-01-28",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Full-year 2026 guidance rose to $15,780 - $15,790 million with 21% constant-currency growth; the annual target remained pending.",
+      "citations": [
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+          "title": "\n\tServiceNow Reports Fourth Quarter and Full-Year 2025 Financial Results; Board of Directors Authorizes Additional $5B for Share Repurchase Program - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Third Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/396493-q4-2025/",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/NOW/earnings/NOW-Q3-2026-earnings_call-712904.html",
+          "title": "ServiceNow, Inc. (NOW) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-22",
+            "what_was_said": "Management said the higher full-year guidance included a 125-basis-point contribution from Armis and explicitly clarified that revenue guidance excluding Armis had not increased.",
+            "call": "Q1 2026 earnings call"
+          },
+          {
+            "date": "2026-10-28",
+            "what_was_said": "Management explained that delivery expertise included with selected large deals was allocated to professional-services revenue rather than subscription revenue, with that value returning to subscription revenue upon renewal. This adds accounting context to the subscription-revenue outlook, rather than constituting another target change.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "2026 operating margin target",
+      "commitment": "Achieve a 32% non-GAAP operating margin in 2026, up 100 basis points year-over-year.",
+      "deadline": "2026",
+      "firstStated": "2026-01-28",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "ServiceNow reduced its 2026 non-GAAP operating-margin target from 32% to 31.5% following Armis and reaffirmed it; full-year results were still pending.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/servicenow-now-q4-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/547931-q1-2026/",
+          "title": "ServiceNow (NOW) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/servicenow-now-q3-2026-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/396493-q4-2025/",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/NOW/earnings/NOW-Q3-2026-earnings_call-712904.html",
+          "title": "ServiceNow, Inc. (NOW) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-22",
+            "what_was_said": "Management explicitly set the full-year operating-margin target at 31.5%, including a 75-basis-point headwind from Armis. This supplies the revised target itself, beyond the acquisition-headwind figures quoted in S2.",
+            "call": "Q1 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "2026 free cash flow margin target",
+      "commitment": "Achieve a 36% non-GAAP free cash flow margin in 2026, up 100 basis points year-over-year.",
+      "deadline": "2026",
+      "firstStated": "2026-01-28",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Full-year 2026 non-GAAP free cash flow margin guidance returned to 36% from 35%, driven by lower CapEx; the annual target remained pending.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/servicenow-now-q3-2026-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Third Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/servicenow-now-q4-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/396493-q4-2025/",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/NOW/earnings/NOW-Q3-2026-earnings_call-712904.html",
+          "title": "ServiceNow, Inc. (NOW) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-22",
+            "what_was_said": "Management explicitly guided FY2026 free cash flow margin to 35%, including a 200-basis-point headwind from Armis. This quantifies the reduction that S2's quotation does not specify.",
+            "call": "Q1 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "NOW-P1-2025-03-10",
+      "promiseId": "P1",
+      "date": "2025-03-10",
+      "call": "ServiceNow to acquire Moveworks",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Agreed to acquire Moveworks for $2.85 billion in cash and stock; expected closing in the second half of 2025.",
+      "quote": "Under the terms of the agreement, ServiceNow will acquire Moveworks for $2.85 billion, subject to customary purchase price adjustments, payable in a combination of cash and stock.",
+      "verbatim": {
+        "text": "Under the terms of the agreement, ServiceNow will acquire Moveworks for $2.85 billion, subject to customary purchase price adjustments, payable in a combination of cash and stock.",
+        "segs": [
+          {
+            "t": "Under the terms of the agreement, ServiceNow will acquire Moveworks for ",
+            "h": 0
+          },
+          {
+            "t": "$2.85 billion",
+            "h": 1
+          },
+          {
+            "t": ", subject to customary purchase price adjustments, payable in a combination of cash and stock.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.servicenow.com/in/company/media/press-room/servicenow-to-acquire-moveworks.html",
+          "title": "Servicenow To Acquire Moveworks",
+          "domain": "servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.servicenow.com/in/company/media/press-room/servicenow-to-acquire-moveworks.html",
+          "title": "Servicenow To Acquire Moveworks",
+          "domain": "servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "NOW-P1-2025-04-23",
+      "promiseId": "P1",
+      "date": "2025-04-23",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Bill McDermott, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the intent to acquire Moveworks without specifying a closing date.",
+      "quote": "From this position of unrivaled strength, we announced the intent to acquire Moveworks.",
+      "verbatim": {
+        "text": "From this position of unrivaled strength, we announced the intent to acquire Moveworks.",
+        "segs": [
+          {
+            "t": "From this position of unrivaled strength, we announced the intent to acquire Moveworks.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/now/transcripts/310657-q1-2025",
+          "title": "ServiceNow (NOW) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/events-and-presentations/events/event-details/2025/Q1-2025-ServiceNow-Earnings-Conferance-Call/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — Q1 2025 ServiceNow Earnings Conference Call\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/310657-q1-2025",
+          "title": "ServiceNow (NOW) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.servicenow.com/in/company/media/press-room/servicenow-to-acquire-moveworks.html",
+          "title": "ServiceNow to acquire Moveworks - ServiceNow Press",
+          "domain": "servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P1-2025-07-23",
+      "promiseId": "P1",
+      "date": "2025-07-23",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Expected closing late in the second half of 2025 or early 2026; excluded Moveworks from 2025 and Q3 guidance.",
+      "quote": "I would also note that my commentary for both 2025 and Q3 does not include any contribution from Moveworks, which we expect to close late in the second half of 2025 or early 2026.",
+      "verbatim": {
+        "text": "I would also note that my commentary for both 2025 and Q3 does not include any contribution from Moveworks, which we expect to close late in the second half of 2025 or early 2026.",
+        "segs": [
+          {
+            "t": "I would also note that my commentary for both ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": " does not include any contribution from Moveworks, which we expect to close late in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " or early ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/now/transcripts/338372-q2-2025",
+          "title": "ServiceNow (NOW) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/events-and-presentations/events/event-details/2025/Q2-2025-Earnings-call-replay/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — Q2 2025 Earnings call replay\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/338372-q2-2025",
+          "title": "ServiceNow (NOW) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.servicenow.com/in/company/media/press-room/servicenow-to-acquire-moveworks.html",
+          "title": "Servicenow To Acquire Moveworks",
+          "domain": "servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P1-2025-10-29",
+      "promiseId": "P1",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Expected closing towards the end of Q4, narrowing the previous closing window.",
+      "quote": "So with respect to Moveworks, we're expecting at this point that we'll be closing, hopefully, closing that deal towards the end of Q4.",
+      "verbatim": {
+        "text": "So with respect to Moveworks, we're expecting at this point that we'll be closing, hopefully, closing that deal towards the end of Q4.",
+        "segs": [
+          {
+            "t": "So with respect to Moveworks, we're expecting at this point that we'll be closing, hopefully, closing that deal towards the end of ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/30/servicenow-now-q3-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/events-and-presentations/events/event-details/2025/Q3-2025-Earnings-Conference-Call-Replay/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — Q3 2025 Earnings Conference Call Replay\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/30/servicenow-now-q3-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/338372-q2-2025",
+          "title": "ServiceNow (NOW) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P1-2025-12-15",
+      "promiseId": "P1",
+      "date": "2025-12-15",
+      "call": "ServiceNow completes acquisition of Moveworks",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced completion of the Moveworks acquisition.",
+      "quote": "ServiceNow (NYSE: NOW), the AI control tower for business reinvention, today announced it has completed its acquisition of Moveworks.",
+      "verbatim": {
+        "text": "and enterprise search deliver the world's most advanced AI platform for work and create an AI-native front door for employee engagement SANTA CLARA, Calif.--(BUSINESS WIRE)-- ServiceNow (NYSE: NOW), the AI control tower for business reinvention, today announced it has completed its acquisition of",
+        "segs": [
+          {
+            "t": "and enterprise search deliver the world's most advanced AI platform for work and create an AI-native front door for employee engagement SANTA CLARA, Calif.--(BUSINESS WIRE)-- ServiceNow (NYSE: NOW), the AI control tower for business reinvention, today announced it has completed its acquisition of",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "http://newsroom.servicenow.com/press-releases/details/2025/ServiceNow-completes-acquisition-of-Moveworks/default.aspx",
+          "title": null,
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://newsroom.servicenow.com/press-releases/details/2025/ServiceNow-completes-acquisition-of-Moveworks/default.aspx",
+          "title": null,
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm",
+          "title": "now-20251231",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "NOW-P1-2026-01-28",
+      "promiseId": "P1",
+      "date": "2026-01-28",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Bill McDermott, Chairman and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed that the Moveworks acquisition had closed.",
+      "quote": "We no sooner closed Moveworks, which we love Moveworks.",
+      "verbatim": {
+        "text": "We no sooner closed Moveworks, which we love Moveworks.",
+        "segs": [
+          {
+            "t": "We no sooner closed Moveworks, which we love Moveworks.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.alphaspread.com/security/nyse/now/investor-relations/earnings-call/q4-2025",
+          "title": "NOW Q4-2025 Earnings Call - Alpha Spread",
+          "domain": "alphaspread.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/events-and-presentations/events/event-details/2026/Q4-2025-Earnings-Conference-Call-Replay/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — Q4 2025 Earnings Conference Call\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.alphaspread.com/security/nyse/now/investor-relations/earnings-call/q4-2025",
+          "title": "NOW Q4-2025 Earnings Call - Alpha Spread",
+          "domain": "alphaspread.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P2-2025-05-05",
+      "promiseId": "P2",
+      "date": "2025-05-05",
+      "call": "Financial Analyst Day 2025",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced a $1 billion Now Assist ACV target by the end of 2026.",
+      "quote": "By the end of 2026, we expect our Now Assist contribution to reach $1 billion, a clear testament to the increasing traction of our AI products.",
+      "verbatim": {
+        "text": "By the end of 2026, we expect our Now Assist contribution to reach $1 billion, a clear testament to the increasing traction of our AI products.",
+        "segs": [
+          {
+            "t": "By the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect our Now Assist contribution to reach ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": ", a clear testament to the increasing traction of our AI products.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/now/transcripts/338348-investor-day-2025",
+          "title": "ServiceNow (NOW) Transcript: Investor Day 2025",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/338348-investor-day-2025",
+          "title": "ServiceNow (NOW) Transcript: Investor Day 2025",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s205.q4cdn.com/916135447/files/doc_downloads/financial-analyst-day/servicenow-financial-analyst-day-2025.pdf",
+          "title": "Servicenow Financial Analyst Day 2025",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "NOW-P2-2025-07-23",
+      "promiseId": "P2",
+      "date": "2025-07-23",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported progress toward $15 billion-plus subscription revenue and $1 billion Now Assist ACV in 2026; reiterated an existing commitment.",
+      "quote": "This solid pipeline and the momentum we have exiting the first half of the year put us well on our way to reaching our $15 billion-plus subscription revenue target for 2026, and with it, $1 billion in Now Assist ACV.",
+      "verbatim": {
+        "text": "This solid pipeline and the momentum we have exiting the first half of the year put us well on our way to reaching our $15 billion-plus subscription revenue target for 2026, and with it, $1 billion in Now Assist ACV.",
+        "segs": [
+          {
+            "t": "This solid pipeline and the momentum we have exiting the first half of the year put us well on our way to reaching our ",
+            "h": 0
+          },
+          {
+            "t": "$15 billion",
+            "h": 1
+          },
+          {
+            "t": "-plus subscription revenue target for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", and with it, ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " in Now Assist ACV.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/now/transcripts/338372-q2-2025",
+          "title": "ServiceNow (NOW) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/338372-q2-2025",
+          "title": "ServiceNow (NOW) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P2-2025-10-29",
+      "promiseId": "P2",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Bill McDermott, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Reported progress toward beating the $1 billion target next year, without increasing the target.",
+      "quote": "Excellent progress toward beating our $1 billion target next year, and we're totally focused on surpassing it.",
+      "verbatim": {
+        "text": "Excellent progress toward beating our $1 billion target next year, and we're totally focused on surpassing it.",
+        "segs": [
+          {
+            "t": "Excellent progress toward beating our ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " target next year, and we're totally focused on surpassing it.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/now/transcripts/366291-q3-2025",
+          "title": "ServiceNow (NOW) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/366291-q3-2025",
+          "title": "ServiceNow (NOW) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P2-2026-01-28",
+      "promiseId": "P2",
+      "date": "2026-01-28",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Now Assist surpassed $600 million ACV and remained on track toward the billion-dollar-plus target for 2026.",
+      "quote": "Moving to our success in driving broader AI adoption, Now Assist continues to outperform all expectations, surpassing $600 million in ACV and tracking well towards our billion-dollar-plus target for 2026.",
+      "verbatim": {
+        "text": "Moving to our success in driving broader AI adoption, Now Assist continues to outperform all expectations, surpassing $600 million in ACV and tracking well towards our billion-dollar-plus target for 2026.",
+        "segs": [
+          {
+            "t": "Moving to our success in driving broader AI adoption, Now Assist continues to outperform all expectations, surpassing ",
+            "h": 0
+          },
+          {
+            "t": "$600 million",
+            "h": 1
+          },
+          {
+            "t": " in ACV and tracking well towards our billion-dollar-plus target for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/NOW/transcripts/2025-year/4-quarter",
+          "title": "ServiceNow, Inc. (NOW) Q4 FY2025 Earnings Call Transcript - January 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/NOW/transcripts/2025-year/4-quarter",
+          "title": "ServiceNow, Inc. (NOW) Q4 FY2025 Earnings Call Transcript - January 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P2-2026-04-22",
+      "promiseId": "P2",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Bill McDermott, Chairman and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised the 2026 AI ACV ambition from $1 billion to $1.5 billion; management confirmed unchanged incremental-AI measurement.",
+      "quote": "We're already talking about a billion and a half now, and it's on a run.",
+      "verbatim": {
+        "text": "We had a goal to be a billion on our AI commit this year, as and I think we might have understated that a little bit.We're already talking about a billion and a half now, and it's on a run.",
+        "segs": [
+          {
+            "t": "We had a goal to be a billion on our AI commit this year, as and I think we might have understated that a little bit.We're already talking about a billion and a half now, and it's on a run.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/NOW/transcripts/2026-year/1-quarter",
+          "title": "ServiceNow, Inc. (NOW) Q1 FY2026 Earnings Call Transcript - April 22, 2026 | Roic AI",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/NOW/transcripts/2026-year/1-quarter",
+          "title": "ServiceNow, Inc. (NOW) Q1 FY2026 Earnings Call Transcript - April 22, 2026 | Roic AI",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P2-2026-05-04",
+      "promiseId": "P2",
+      "date": "2026-05-04",
+      "call": "Financial Analyst Day 2026",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Formalized the 2026 AI ACV increase from $1 billion to $1.5 billion; metric includes integrated Moveworks and incremental AI subscription value.",
+      "quote": "As Bill teased at earnings, we're raising our 2026 AI ACV target from $1 billion to $1.5 billion.",
+      "verbatim": {
+        "text": "As Bill teased at earnings, we're raising our 2026 AI ACV target from $1 billion to $1.5 billion.",
+        "segs": [
+          {
+            "t": "As Bill teased at earnings, we're raising our ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " AI ACV target from ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/now/transcripts/655052-investor-day-2026",
+          "title": "ServiceNow (NOW) Transcript: Investor Day 2026",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/655052-investor-day-2026",
+          "title": "ServiceNow (NOW) Transcript: Investor Day 2026",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s205.q4cdn.com/916135447/files/doc_presentation/2026/ServiceNow-FAD-2026.pdf",
+          "title": "Servicenow Fad 2026",
+          "domain": "s205.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "NOW-P2-2026-07-22",
+      "promiseId": "P2",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported ServiceNow AI crossing $1 billion ACV in Q2 2026, achieving the original threshold before year-end.",
+      "quote": "ServiceNow AI crossed $1 billion in annual contract value in Q2 2026",
+      "verbatim": {
+        "text": "ServiceNow AI crossed $1 billion in annual contract value in Q2 2026",
+        "segs": [
+          {
+            "t": "ServiceNow AI crossed ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " in annual contract value in ",
+            "h": 0
+          },
+          {
+            "t": "Q2 2026",
+            "h": 1
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Reports Second Quarter 2026 Financial Results - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Reports Second Quarter 2026 Financial Results - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NOW-P2-2026-10-28",
+      "promiseId": "P2",
+      "date": "2026-10-28",
+      "call": "Q3 2026 earnings release",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised the year-end target to $1.7 billion, versus $1 billion at the start of the year and the intervening $1.5 billion target.",
+      "quote": "Our AI momentum continues to build, with AI net new ACV exceeding expectations and enabling us to raise our year-end target for the second time this year, from $1 billion at the start of the year to $1.7 billion now.",
+      "verbatim": {
+        "text": "“Our AI momentum continues to build, with AI net new ACV exceeding expectations and enabling us to raise our year-end target for the second time this year, from $1 billion at the start of the year to $1.7 billion now.",
+        "segs": [
+          {
+            "t": "“Our AI momentum continues to build, with AI net new ACV exceeding expectations and enabling us to raise our year-end target for the second time this year, from ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " at the start of the year to ",
+            "h": 0
+          },
+          {
+            "t": "$1.7 billion",
+            "h": 1
+          },
+          {
+            "t": " now.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Reports Third Quarter 2026 Financial Results - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Reports Third Quarter 2026 Financial Results - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/now/transcripts/655052-investor-day-2026",
+          "title": "ServiceNow (NOW) Transcript: Investor Day 2026",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NOW-P3-2026-01-28",
+      "promiseId": "P3",
+      "date": "2026-01-28",
+      "call": "Q4 and full-year 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "2026 subscription revenue guidance: $15,530 - $15,570 million; 19.5% - 20% constant-currency growth.",
+      "quote": "The following table summarizes our guidance for the full-year 2026:",
+      "verbatim": {
+        "text": "The following table summarizes our guidance for the full-year 2026:",
+        "segs": [
+          {
+            "t": "The following table summarizes our guidance for the full-year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ":",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+          "title": "\n\tServiceNow Reports Fourth Quarter and Full-Year 2025 Financial Results; Board of Directors Authorizes Additional $5B for Share Repurchase Program - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+          "title": "\n\tServiceNow Reports Fourth Quarter and Full-Year 2025 Financial Results; Board of Directors Authorizes Additional $5B for Share Repurchase Program - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NOW-P3-2026-04-22",
+      "promiseId": "P3",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 subscription revenue guidance to $15,735 - $15,775 million; 20.5% - 21% constant-currency growth.",
+      "quote": "The following table summarizes our guidance for the full-year 2026:",
+      "verbatim": {
+        "text": "The following table summarizes our guidance for the full-year 2026:",
+        "segs": [
+          {
+            "t": "The following table summarizes our guidance for the full-year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ":",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+          "title": "\n\tServiceNow Reports Fourth Quarter and Full-Year 2025 Financial Results; Board of Directors Authorizes Additional $5B for Share Repurchase Program - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NOW-P3-2026-07-22",
+      "promiseId": "P3",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 subscription revenue guidance to $15,760 - $15,780 million; 21% constant-currency growth.",
+      "quote": "We are raising our FY 2026 subscription revenues guidance to reflect the net new ACV strength.",
+      "verbatim": {
+        "text": "We are raising our FY 2026 subscription revenues guidance to reflect the net new ACV strength.",
+        "segs": [
+          {
+            "t": "We are raising our FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " subscription revenues guidance to reflect the net new ACV strength.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Second Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Second Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NOW-P3-2026-10-28",
+      "promiseId": "P3",
+      "date": "2026-10-28",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 subscription revenue guidance to $15,780 - $15,790 million; 21% constant-currency growth.",
+      "quote": "The following table summarizes our guidance for the full-year 2026:",
+      "verbatim": {
+        "text": "The following table summarizes our guidance for the full-year 2026:",
+        "segs": [
+          {
+            "t": "The following table summarizes our guidance for the full-year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ":",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Third Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Third Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Second Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NOW-P4-2026-01-28",
+      "promiseId": "P4",
+      "date": "2026-01-28",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Gina Mastantuono, President and Chief Financial Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set 2026 non-GAAP operating-margin target at 32%, up 100 basis points year-over-year, driven by AI-enabled operating-expense savings.",
+      "quote": "We expect an operating margin of 32%, up 100 basis points year over year, driven by OpEx savings enabled by AI efficiencies.",
+      "verbatim": {
+        "text": "We expect an operating margin of 32%, up 100 basis points year over year, driven by OpEx savings enabled by AI efficiencies.",
+        "segs": [
+          {
+            "t": "We expect an operating margin of ",
+            "h": 0
+          },
+          {
+            "t": "32%",
+            "h": 1
+          },
+          {
+            "t": ", up ",
+            "h": 0
+          },
+          {
+            "t": "100 basis points",
+            "h": 1
+          },
+          {
+            "t": " year over year, driven by OpEx savings enabled by AI efficiencies.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/servicenow-now-q4-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/servicenow-now-q4-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+          "title": "\n\tServiceNow Reports Fourth Quarter and Full-Year 2025 Financial Results; Board of Directors Authorizes Additional $5B for Share Repurchase Program - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P4-2026-04-22",
+      "promiseId": "P4",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "lowered",
+      "k": "c",
+      "summary": "2026 non-GAAP operating-margin target lowered to 31.5%; approximate Armis headwinds: subscription gross 25, operating 75, FCF 200; Q2 2026 operating 125 basis points.",
+      "quote": "The acquisition is also expected to create headwinds of approximately 25 basis points to FY 2026 subscription gross margin, approximately 75 basis points to FY 2026 operating margin, approximately 200 basis points to FY 2026 free cash flow margin, and approximately 125 basis points to Q2 2026 operating margin.",
+      "verbatim": {
+        "text": "The acquisition is also expected to create headwinds of approximately 25 basis points to FY 2026 subscription gross margin, approximately 75 basis points to FY 2026 operating margin, approximately 200 basis points to FY 2026 free cash flow margin, and approximately 125 basis points to Q2 2026 operating margin.",
+        "segs": [
+          {
+            "t": "The acquisition is also expected to create headwinds of approximately ",
+            "h": 0
+          },
+          {
+            "t": "25 basis points",
+            "h": 1
+          },
+          {
+            "t": " to FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " subscription gross margin, approximately ",
+            "h": 0
+          },
+          {
+            "t": "75 basis points",
+            "h": 1
+          },
+          {
+            "t": " to FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " operating margin, approximately ",
+            "h": 0
+          },
+          {
+            "t": "200 basis points",
+            "h": 1
+          },
+          {
+            "t": " to FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " free cash flow margin, and approximately ",
+            "h": 0
+          },
+          {
+            "t": "125 basis points",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "Q2 2026",
+            "h": 1
+          },
+          {
+            "t": " operating margin.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/servicenow-now-q4-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NOW-P4-2026-07-22",
+      "promiseId": "P4",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Gina Mastantuono, President and Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "For 2026, reaffirmed operating margin of 31.5%, free cash flow margin of 35%, and GAAP diluted weighted-average shares of 1.04 billion.",
+      "quote": "We expect operating margin of 31.5% and free cash flow margin of 35% and GAAP diluted weighted average outstanding shares of 1.04 billion.",
+      "verbatim": {
+        "text": "We expect operating margin of 31.5% and free cash flow margin of 35% and GAAP diluted weighted average outstanding shares of 1.04 billion.",
+        "segs": [
+          {
+            "t": "We expect operating margin of ",
+            "h": 0
+          },
+          {
+            "t": "31.5%",
+            "h": 1
+          },
+          {
+            "t": " and free cash flow margin of ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": " and GAAP diluted weighted average outstanding shares of ",
+            "h": 0
+          },
+          {
+            "t": "1.04 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/NOW:US/transcripts/2026-year/2-quarter",
+          "title": "ServiceNow, Inc. (NOW US) Q2 FY2026 Earnings Call Transcript - July 22, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/NOW:US/transcripts/2026-year/2-quarter",
+          "title": "ServiceNow, Inc. (NOW US) Q2 FY2026 Earnings Call Transcript - July 22, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P4-2026-10-28",
+      "promiseId": "P4",
+      "date": "2026-10-28",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Gina Mastantuono, President and Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 operating margin of 31.5%, up 50 basis points year-over-year, alongside subscription gross margin of 81%.",
+      "quote": "We continue to expect subscription gross margin of 81% and operating margin of 31.5%, up 50 basis points year-over-year.",
+      "verbatim": {
+        "text": "We continue to expect subscription gross margin of 81% and operating margin of 31.5%, up 50 basis points year-over-year.",
+        "segs": [
+          {
+            "t": "We continue to expect subscription gross margin of ",
+            "h": 0
+          },
+          {
+            "t": "81%",
+            "h": 1
+          },
+          {
+            "t": " and operating margin of ",
+            "h": 0
+          },
+          {
+            "t": "31.5%",
+            "h": 1
+          },
+          {
+            "t": ", up ",
+            "h": 0
+          },
+          {
+            "t": "50 basis points",
+            "h": 1
+          },
+          {
+            "t": " year-over-year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/servicenow-now-q3-2026-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/servicenow-now-q3-2026-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Third Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P5-2026-01-28",
+      "promiseId": "P5",
+      "date": "2026-01-28",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "2026 margin targeted at 36%, up 100 basis points year over year and 350 basis points ahead of May Financial Analyst Day target.",
+      "quote": "We expect a free cash flow margin of 36%, up 100 basis points year over year, and 350 basis points ahead of our target that we gave at Financial Analyst Day in May.",
+      "verbatim": {
+        "text": "We expect a free cash flow margin of 36%, up 100 basis points year over year, and 350 basis points ahead of our target that we gave at Financial Analyst Day in May.",
+        "segs": [
+          {
+            "t": "We expect a free cash flow margin of ",
+            "h": 0
+          },
+          {
+            "t": "36%",
+            "h": 1
+          },
+          {
+            "t": ", up ",
+            "h": 0
+          },
+          {
+            "t": "100 basis points",
+            "h": 1
+          },
+          {
+            "t": " year over year, and ",
+            "h": 0
+          },
+          {
+            "t": "350 basis points",
+            "h": 1
+          },
+          {
+            "t": " ahead of our target that we gave at Financial Analyst Day in May.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/servicenow-now-q4-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/servicenow-now-q4-2025-earnings-call-transcript",
+          "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P5-2026-04-22",
+      "promiseId": "P5",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Full-year 2026 margin guidance fell to 35%; Armis integration creates near-term headwinds, with expansion expected to normalize in FY 2027.",
+      "quote": "While we will see some near-term headwinds to margins as we integrate the business in FY 2026, strong AI efficiencies internally from Now on Now and our underlying platform leverage are expected to normalize our operating and free cash flow margin expansion trajectories in FY 2027.",
+      "verbatim": {
+        "text": "While we will see some near-term headwinds to margins as we integrate the business in FY 2026, strong AI efficiencies internally from Now on Now and our underlying platform leverage are expected to normalize our operating and free cash flow margin expansion trajectories in FY 2027.",
+        "segs": [
+          {
+            "t": "While we will see some near-term headwinds to margins as we integrate the business in FY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", strong AI efficiencies internally from Now on Now and our underlying platform leverage are expected to normalize our operating and free cash flow margin expansion trajectories in FY ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Fourth Quarter and Full-Year 2025 Financial Results; Board of Directors Authorizes Additional $5B for Share Repurchase Program\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NOW-P5-2026-07-22",
+      "promiseId": "P5",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 free cash flow margin of 35%, 31.5% operating margin, and 1.04 billion GAAP diluted weighted average outstanding shares.",
+      "quote": "We expect operating margin of 31.5% and free cash flow margin of 35% and GAAP diluted weighted average outstanding shares of 1.04 billion.",
+      "verbatim": {
+        "text": "We expect operating margin of 31.5% and free cash flow margin of 35% and GAAP diluted weighted average outstanding shares of 1.04 billion.",
+        "segs": [
+          {
+            "t": "We expect operating margin of ",
+            "h": 0
+          },
+          {
+            "t": "31.5%",
+            "h": 1
+          },
+          {
+            "t": " and free cash flow margin of ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": " and GAAP diluted weighted average outstanding shares of ",
+            "h": 0
+          },
+          {
+            "t": "1.04 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.earningscall.ai/stock/transcript/NOW-2026-Q2",
+          "title": "SERVICENOW, INC. Q2 2026 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.earningscall.ai/stock/transcript/NOW-2026-Q2",
+          "title": "SERVICENOW, INC. Q2 2026 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        },
+        {
+          "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Reports Second Quarter 2026 Financial Results - ServiceNow Newsroom\n",
+          "domain": "newsroom.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NOW-P5-2026-10-28",
+      "promiseId": "P5",
+      "date": "2026-10-28",
+      "call": "Q3 2026 earnings release",
+      "speaker": "Gina Mastantuono, President and CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 free cash flow margin target by 100 basis points to 36 percent, reflecting reduced capex.",
+      "quote": "Importantly, we are capturing this significant opportunity with a capital-efficient model, reducing capex and raising our full-year free cash flow margin target by 100 basis points to 36 percent.",
+      "verbatim": {
+        "text": "Importantly, we are capturing this significant opportunity with a capital-efficient model, reducing capex and raising our full-year free cash flow margin target by 100 basis points to 36 percent.",
+        "segs": [
+          {
+            "t": "Importantly, we are capturing this significant opportunity with a capital-efficient model, reducing capex and raising our full-year free cash flow margin target by ",
+            "h": 0
+          },
+          {
+            "t": "100 basis points",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "36 percent",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Third Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+          "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Third Quarter 2026 Financial Results\n",
+          "domain": "investor.servicenow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://finance.yahoo.com/quote/NOW/earnings/NOW-Q3-2026-earnings_call-712904.html",
+      "title": "ServiceNow, Inc. (NOW) Q3 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+      "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Third Quarter 2026 Financial Results\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/29/servicenow-now-q3-2026-earnings-call-transcript",
+      "title": "ServiceNow (NOW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://stockanalysis.com/stocks/now/transcripts/396493-q4-2025/",
+      "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+      "title": "\n\tServiceNow Reports Fourth Quarter and Full-Year 2025 Financial Results; Board of Directors Authorizes Additional $5B for Share Repurchase Program - ServiceNow Newsroom\n",
+      "domain": "newsroom.servicenow.com",
+      "tier": "primary",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/default.aspx",
+      "title": "\n\tServiceNow Reports Second Quarter 2026 Financial Results - ServiceNow Newsroom\n",
+      "domain": "newsroom.servicenow.com",
+      "tier": "primary",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results/default.aspx",
+      "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/servicenow-now-q4-2025-earnings-call-transcript",
+      "title": "ServiceNow (NOW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 9,
+      "url": "https://stockanalysis.com/stocks/now/transcripts/338372-q2-2025",
+      "title": "ServiceNow (NOW) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 10,
+      "url": "https://www.servicenow.com/in/company/media/press-room/servicenow-to-acquire-moveworks.html",
+      "title": "Servicenow To Acquire Moveworks",
+      "domain": "servicenow.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://www.sec.gov/Archives/edgar/data/1373715/000137371526000007/now-20251231.htm",
+      "title": "now-20251231",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://s205.q4cdn.com/916135447/files/doc_presentation/2026/ServiceNow-FAD-2026.pdf",
+      "title": "Servicenow Fad 2026",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 13,
+      "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-First-Quarter-2026-Financial-Results",
+      "title": "\n\tServiceNow Investor Relations — ServiceNow Reports First Quarter 2026 Financial Results\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Second-Quarter-2026-Financial-Results/",
+      "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Second Quarter 2026 Financial Results\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 15,
+      "url": "https://investor.servicenow.com/events-and-presentations/events/event-details/2025/Q1-2025-ServiceNow-Earnings-Conferance-Call/default.aspx",
+      "title": "\n\tServiceNow Investor Relations — Q1 2025 ServiceNow Earnings Conference Call\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://investor.servicenow.com/events-and-presentations/events/event-details/2025/Q2-2025-Earnings-call-replay/default.aspx",
+      "title": "\n\tServiceNow Investor Relations — Q2 2025 Earnings call replay\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://investor.servicenow.com/events-and-presentations/events/event-details/2025/Q3-2025-Earnings-Conference-Call-Replay/default.aspx",
+      "title": "\n\tServiceNow Investor Relations — Q3 2025 Earnings Conference Call Replay\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "http://newsroom.servicenow.com/press-releases/details/2025/ServiceNow-completes-acquisition-of-Moveworks/default.aspx",
+      "title": "newsroom.servicenow.com",
+      "domain": "newsroom.servicenow.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://investor.servicenow.com/events-and-presentations/events/event-details/2026/Q4-2025-Earnings-Conference-Call-Replay/default.aspx",
+      "title": "\n\tServiceNow Investor Relations — Q4 2025 Earnings Conference Call\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://s205.q4cdn.com/916135447/files/doc_downloads/financial-analyst-day/servicenow-financial-analyst-day-2025.pdf",
+      "title": "Servicenow Financial Analyst Day 2025",
+      "domain": "s205.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 21,
+      "url": "https://newsroom.servicenow.com/press-releases/details/2026/ServiceNow-Reports-Third-Quarter-2026-Financial-Results/default.aspx",
+      "title": "\n\tServiceNow Reports Third Quarter 2026 Financial Results - ServiceNow Newsroom\n",
+      "domain": "newsroom.servicenow.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://investor.servicenow.com/news/news-details/2026/ServiceNow-Reports-Fourth-Quarter-and-Full-Year-2025-Financial-Results-Board-of-Directors-Authorizes-Additional-5B-for-Share-Repurchase-Program/default.aspx",
+      "title": "\n\tServiceNow Investor Relations — ServiceNow Reports Fourth Quarter and Full-Year 2025 Financial Results; Board of Directors Authorizes Additional $5B for Share Repurchase Program\n",
+      "domain": "investor.servicenow.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://newsroom.servicenow.com/press-releases/details/2025/ServiceNow-completes-acquisition-of-Moveworks/default.aspx?campid=84654&cmcid=25604243",
+      "title": "\n\tServiceNow completes acquisition of Moveworks - ServiceNow Newsroom\n",
+      "domain": "newsroom.servicenow.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 24,
+      "url": "https://stockanalysis.com/stocks/now/transcripts/310657-q1-2025",
+      "title": "ServiceNow (NOW) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 25,
+      "url": "https://stockanalysis.com/stocks/now/transcripts/655052-investor-day-2026",
+      "title": "ServiceNow (NOW) Transcript: Investor Day 2026",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 26,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/10/30/servicenow-now-q3-2025-earnings-call-transcript",
+      "title": "ServiceNow (NOW) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.alphaspread.com/security/nyse/now/investor-relations/earnings-call/q4-2025",
+      "title": "NOW Q4-2025 Earnings Call - Alpha Spread",
+      "domain": "alphaspread.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 28,
+      "url": "https://stockanalysis.com/stocks/now/transcripts/338348-investor-day-2025",
+      "title": "ServiceNow (NOW) Transcript: Investor Day 2025",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 29,
+      "url": "https://stockanalysis.com/stocks/now/transcripts/366291-q3-2025",
+      "title": "ServiceNow (NOW) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 30,
+      "url": "https://www.roic.ai/quote/NOW/transcripts/2025-year/4-quarter",
+      "title": "ServiceNow, Inc. (NOW) Q4 FY2025 Earnings Call Transcript - January 28, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 31,
+      "url": "https://www.roic.ai/quote/NOW/transcripts/2026-year/1-quarter",
+      "title": "ServiceNow, Inc. (NOW) Q1 FY2026 Earnings Call Transcript - April 22, 2026 | Roic AI",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 32,
+      "url": "https://www.roic.ai/quote/NOW:US/transcripts/2026-year/2-quarter",
+      "title": "ServiceNow, Inc. (NOW US) Q2 FY2026 Earnings Call Transcript - July 22, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 33,
+      "url": "https://stockanalysis.com/stocks/now/transcripts/547931-q1-2026/",
+      "title": "ServiceNow (NOW) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 34,
+      "url": "https://www.earningscall.ai/stock/transcript/NOW-2026-Q2",
+      "title": "SERVICENOW, INC. Q2 2026 Earnings Call Transcript | Full Text",
+      "domain": "earningscall.ai",
+      "tier": "press",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.809955Z",
+      "completedAt": "2026-11-05T06:28:17.750340Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.626845Z",
+      "completedAt": "2026-11-05T19:12:27.238487Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.633785Z",
+      "completedAt": "2026-11-05T19:19:07.472820Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.640685Z",
+      "completedAt": "2026-11-05T19:12:15.082887Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.647455Z",
+      "completedAt": "2026-11-05T19:11:27.652677Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.654169Z",
+      "completedAt": "2026-11-05T19:14:37.452063Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.416918Z",
+      "completedAt": "2026-11-05T19:44:53.868856Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.424329Z",
+      "completedAt": "2026-11-05T19:47:35.869064Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.433933Z",
+      "completedAt": "2026-11-05T19:46:21.472157Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.441129Z",
+      "completedAt": "2026-11-05T19:45:52.662736Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.448537Z",
+      "completedAt": "2026-11-05T19:45:56.703327Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "26 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "26 of 26 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "26 of 26 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-28; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/ServiceNow_logo.svg/1280px-ServiceNow_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:ServiceNow_logo.svg",
+      "title": "File:ServiceNow logo.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 190,
+      "rank": 7
+    },
+    "photo": {
+      "imageUrl": "https://www.servicenow.com/content/dam/servicenow-assets/public/en-us/images/ds-what-is-pages/benefits-of-the-servicenow-ai-platform-sm.png",
+      "sourcePageUrl": "https://www.servicenow.com/platform/what-is-servicenow-ai-platform.html",
+      "title": "What is the ServiceNow AI Platform? - ServiceNow",
+      "width": 960,
+      "height": 540,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.571Z"
+}

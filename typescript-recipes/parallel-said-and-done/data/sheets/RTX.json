@@ -1,0 +1,2253 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "RTX",
+  "name": "RTX Corporation",
+  "short": "RTX",
+  "website": "rtx.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investors.rtx.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-20",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "RTX Pratt & Whitney GTF engine",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Grow GTF MRO output above 30%",
+      "commitment": "Grow PW1100 GTF maintenance, repair and overhaul output by more than 30% in 2025.",
+      "deadline": "2025",
+      "firstStated": "2025-01-28",
+      "status": "missed",
+      "k": "miss",
+      "outcomeSummary": "PW1100 MRO output increased 26% in 2025, missing the above 30% target. Fourth-quarter output grew 39%, while heavier shop visits increased 40%.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/28/rtx-rtx-q4-2024-earnings-call-transcript",
+          "title": "RTX (RTX) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.rtx.com/static-files/10494d39-c1d0-4ff0-b945-1db5288a923b",
+          "title": "RTX Investor Webcast Q4 2025",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.rtx.com/static-files/70003d43-015d-4396-baa0-409f1abf1323",
+          "title": "Q4 2025 RTX Corp Earnings Call on January 27, 2026 / 1:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-01-27",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "missed",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-27",
+            "what_was_said": "Management reported: “MRO output was up 39% in the fourth quarter and up 26% for the full year, even as heavier shop visits increased 40% in 2025.” This establishes the final result below the original above-30% target.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Expand Redstone missile integration capacity",
+      "commitment": "Expand the Redstone missile integration facility in Huntsville to increase site capacity by 50%; no completion deadline was specified.",
+      "deadline": null,
+      "firstStated": "2024-04-23",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "RTX completed the $115 million Redstone expansion, saying it will increase integration and delivery capacity by over 50%; management subsequently confirmed completion.",
+      "citations": [
+        {
+          "url": "https://www.rtx.com/news/news-center/2026/03/13/rtxs-raytheon-completes-115-million-expansion-of-alabama-missile-integration-fa",
+          "title": "News | RTX's Raytheon completes $115 million expansion of Alabama missile integration facility | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/26/rtx-rtx-q3-2025-earnings-call-transcript",
+          "title": "RTX (RTX) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.nasdaq.com/articles/rtx-rtx-q1-2024-earnings-call-transcript",
+          "title": "RTX (RTX) Q1 2024 Earnings Call Transcript | Nasdaq",
+          "domain": "nasdaq.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-03-13",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-27",
+            "what_was_said": "Management reported that 2025 capital investment included significant capacity expansion in Huntsville, Alabama, to increase Standard Missile family output. This provided an intervening execution update, without declaring completion or changing the capacity target.",
+            "call": "Q4 2025 RTX Earnings Conference Call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Manage 2026 GTF compensation cash",
+      "commitment": "Execute the GTF fleet-management plan with $700 million of cash outflow in 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-01-27",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The 2026 compensation cash-outflow estimate remained $700 million. Management reported the plan on track and approximately $165 million of quarterly compensation; full-year completion remained pending.",
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/70003d43-015d-4396-baa0-409f1abf1323",
+          "title": "Q4 2025 RTX Corp Earnings Call on January 27, 2026 / 1:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000031/rtx-20260930.htm",
+          "title": "rtx-20260930",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript",
+          "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript/",
+          "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Deliver 2026 free cash flow",
+      "commitment": "Generate $8.25–$8.75 billion of free cash flow in 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-01-27",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Full-year 2026 free cash flow guidance was raised to $9.0 - $9.2 billion; delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/46b42314-8297-41ea-91cd-4e4ddd2e9518",
+          "title": "2026-10-20 8-K ER Exhibit 99",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.rtx.com/static-files/70003d43-015d-4396-baa0-409f1abf1323",
+          "title": "Q4 2025 RTX Corp Earnings Call on January 27, 2026 / 1:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript/",
+          "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.rtx.com/news/news-center/2026/10/20/rtx-reports-q3-2026-results",
+          "title": "News | RTX Reports Q3 2026 Results | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-23",
+            "what_was_said": "Management specified that full-year free cash flow guidance increased to $8.50–$8.75 billion: only the lower bound rose, by $250 million. Higher segment operating profit drove the increase, partly offset by working-capital headwinds.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-20",
+            "what_was_said": "Management specified the new $9.0–$9.2 billion full-year free cash flow outlook, versus $8.50–$8.75 billion previously. It also said RTX was about 70% of the way to its 2026 goal, with work still remaining in the fourth quarter.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Ramp multiyear missile production",
+      "commitment": "Ramp critical-munitions production well above existing rates over the next decade, conditional on finalizing the framework agreements.",
+      "deadline": "over the next decade",
+      "firstStated": "2026-02-04",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "RTX converted four frameworks into undefinitized contracts; the production ramp remained ongoing, with full rate production expected in 2030.",
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/713115-q3-2026/",
+          "title": "RTX Corporation (RTX) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript/",
+          "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-20",
+            "what_was_said": "Management said Raytheon would focus over the next several years on ramping its supply chain, operations and capacity, with full-rate production for the suite of munitions expected in 2030. This supplies the production timetable omitted from S11.",
+            "call": "Q3 2026 RTX Earnings Conference Call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "RTX-P1-2025-01-28",
+      "promiseId": "P1",
+      "date": "2025-01-28",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Christopher T. Calio, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Following 30% MRO output growth, management targeted above 30% growth in 2025.",
+      "quote": "Last year, MRO output was up 30% with a significant increase in forging production, and this year we expect MRO output to grow above 30%.",
+      "verbatim": {
+        "text": "Last year, MRO output was up 30% with a significant increase in forging production, and this year we expect MRO output to grow above 30%.",
+        "segs": [
+          {
+            "t": "Last year, MRO output was up ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " with a significant increase in forging production, and this year we expect MRO output to grow above ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/28/rtx-rtx-q4-2024-earnings-call-transcript",
+          "title": "RTX (RTX) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/28/rtx-rtx-q4-2024-earnings-call-transcript",
+          "title": "RTX (RTX) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.rtx.com/events/event-details/q4-2024-rtx-earnings-conference-call",
+          "title": "Q4 2024 RTX Earnings Conference Call | RTX",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P1-2025-04-22",
+      "promiseId": "P1",
+      "date": "2025-04-22",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Chris Calio, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "PW1100 MRO output rose 35% year-over-year and 14% sequentially; full-year growth remained on track for over 30%.",
+      "quote": "Starting with the GTF program, PW1100 MRO output was up 35% year-over-year and 14% sequentially, and we remain on track for over a 30% improvement for the full year.",
+      "verbatim": {
+        "text": "Starting with the GTF program, PW1100 MRO output was up 35% year-over-year and 14% sequentially, and we remain on track for over a 30% improvement for the full year.",
+        "segs": [
+          {
+            "t": "Starting with the GTF program, PW1100 MRO output was up ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": " year-over-year and ",
+            "h": 0
+          },
+          {
+            "t": "14%",
+            "h": 1
+          },
+          {
+            "t": " sequentially, and we remain on track for over a ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " improvement for the full year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/1-quarter",
+          "title": "RTX Corporation (RTX.TO) Q1 FY2025 Earnings Call Transcript - April 22, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/1-quarter",
+          "title": "RTX Corporation (RTX.TO) Q1 FY2025 Earnings Call Transcript - April 22, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.rtx.com/events/event-details/q1-2025-rtx-earnings-conference-call",
+          "title": "Q1 2025 RTX Earnings Conference Call | RTX",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P1-2025-07-22",
+      "promiseId": "P1",
+      "date": "2025-07-22",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Christopher Calio, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Full-year MRO output growth remained on track for over 30%, supporting lower AOGs in the second half.",
+      "quote": "And we remain on track for over 30% MRO output improvement for the full year, which is a key enabler to reducing AOGs in the second half.",
+      "verbatim": {
+        "text": "And we remain on track for over 30% MRO output improvement for the full year, which is a key enabler to reducing AOGs in the second half.",
+        "segs": [
+          {
+            "t": "And we remain on track for over ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " MRO output improvement for the full year, which is a key enabler to reducing AOGs in the second half.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/2-quarter",
+          "title": "RTX Corporation (RTX.TO) Q2 FY2025 Earnings Call Transcript - July 22, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/2-quarter",
+          "title": "RTX Corporation (RTX.TO) Q2 FY2025 Earnings Call Transcript - July 22, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.rtx.com/events/event-details/q2-2025-rtx-earnings-conference-call",
+          "title": "Q2 2025 RTX Earnings Conference Call | RTX",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.rtx.com/static-files/4431ddf8-4a87-4a15-b16c-2cbfafe7e843",
+          "title": "RTX Investor Webcast Q2 2025",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P1-2025-10-21",
+      "promiseId": "P1",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Christopher Calio, Chairman and CEO",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Record PW1100 Gate 3 starts supported about 30% full-year MRO output growth, softening the previous over 30% target.",
+      "quote": "Exiting the third quarter, this material flow has supported a record high number of PW1100 Gate 3 starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about 30% MRO output growth for the year.",
+      "verbatim": {
+        "text": "Exiting the third quarter, this material flow has supported a record high number of PW1100 Gate 3 starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about 30% MRO output growth for the year.",
+        "segs": [
+          {
+            "t": "Exiting the third quarter, this material flow has supported a record high number of PW1100 Gate 3 starts, which is where we reassemble engines during a shop visit, putting Pratt in a position to deliver about ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " MRO output growth for the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
+          "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
+          "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.rtx.com/events/event-details/q3-2025-rtx-earnings-conference-call",
+          "title": "Q3 2025 RTX Earnings Conference Call | RTX",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.rtx.com/news/news-center/2025/11/03/rtxs-pratt-whitney-announces-inaugural-gtf-mro-network-awards",
+          "title": "News | RTX’s Pratt & Whitney announces inaugural GTF MRO Network awards | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2024-04-23",
+      "promiseId": "P2",
+      "date": "2024-04-23",
+      "call": "Q1 2024 RTX Earnings Conference Call",
+      "speaker": "Chris Calio, Chief Operating Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced $115 million Redstone expansion, targeting more than 50% additional integration and delivery capacity; no call deadline specified.",
+      "quote": "When complete, the factory's capacity for integrating and delivering several of our critical munitions programs will increase by more than 50%.",
+      "verbatim": {
+        "text": "When complete, the factory's capacity for integrating and delivering several of our critical munitions programs will increase by more than 50%.",
+        "segs": [
+          {
+            "t": "When complete, the factory's capacity for integrating and delivering several of our critical munitions programs will increase by more than ",
+            "h": 0
+          },
+          {
+            "t": "50%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/23/rtx-rtx-q1-2024-earnings-call-transcript?source=financialcontent",
+          "title": "RTX (RTX) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/23/rtx-rtx-q1-2024-earnings-call-transcript?source=financialcontent",
+          "title": "RTX (RTX) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2024-07-25",
+      "promiseId": "P2",
+      "date": "2024-07-25",
+      "call": "Q2 2024 RTX Earnings Conference Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific Redstone expansion update; other capacity investments were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/25/rtx-rtx-q2-2024-earnings-call-transcript",
+          "title": "RTX (RTX) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2024-10-22",
+      "promiseId": "P2",
+      "date": "2024-10-22",
+      "call": "Q3 2024 RTX Earnings Conference Call",
+      "speaker": "Christopher T. Calio, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated Redstone expansion efforts while describing capacity being put into place; no revised target or completion date.",
+      "quote": "We've talked before about expansion efforts in Texas and Arkansas, at Redstone as well and in Tucson.",
+      "verbatim": {
+        "text": "We've talked before about expansion efforts in Texas and Arkansas, at Redstone as well and in Tucson.",
+        "segs": [
+          {
+            "t": "We've talked before about expansion efforts in Texas and Arkansas, at Redstone as well and in Tucson.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/rtx-rtx-q3-2024-earnings-call-transcript",
+          "title": "RTX (RTX) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/rtx-rtx-q3-2024-earnings-call-transcript",
+          "title": "RTX (RTX) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2025-01-28",
+      "promiseId": "P2",
+      "date": "2025-01-28",
+      "call": "Q4 2024 RTX Earnings Conference Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific Redstone expansion update; other manufacturing expansion and output goals were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/28/rtx-rtx-q4-2024-earnings-call-transcript",
+          "title": "RTX (RTX) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2025-04-22",
+      "promiseId": "P2",
+      "date": "2025-04-22",
+      "call": "Q1 2025 RTX Earnings Conference Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific Redstone capacity update; broader capacity investments, including Huntsville, were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/events-and-presentations",
+          "title": "Events & Presentations | RTX",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.earningscall.ai/stock/transcript/RTX-2025-Q1",
+          "title": "RTX Corporation Q1 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2025-07-22",
+      "promiseId": "P2",
+      "date": "2025-07-22",
+      "call": "Q2 2025 RTX Earnings Conference Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific Redstone expansion update; other defense manufacturing investments were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/events-and-presentations",
+          "title": "Events & Presentations | RTX",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/337848-q2-2025/",
+          "title": "RTX Corporation (RTX) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2025-10-21",
+      "promiseId": "P2",
+      "date": "2025-10-21",
+      "call": "Q3 2025 RTX Earnings Conference Call",
+      "speaker": "Christopher Calio, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed a 50% site-capacity increase supporting naval programs, including Standard Missile; no completion deadline specified.",
+      "quote": "This includes the Redstone missile integration facility in Huntsville, Alabama, which will increase site capacity by 50% and support the growing demand for our naval programs, including the standard missile franchise.",
+      "verbatim": {
+        "text": "This includes the Redstone missile integration facility in Huntsville, Alabama, which will increase site capacity by 50% and support the growing demand for our naval programs, including the standard missile franchise.",
+        "segs": [
+          {
+            "t": "This includes the Redstone missile integration facility in Huntsville, Alabama, which will increase site capacity by ",
+            "h": 0
+          },
+          {
+            "t": "50%",
+            "h": 1
+          },
+          {
+            "t": " and support the growing demand for our naval programs, including the standard missile franchise.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
+          "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
+          "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2026-01-27",
+      "promiseId": "P2",
+      "date": "2026-01-27",
+      "call": "Q4 2025 RTX Earnings Conference Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific Redstone or 50% target update; broader Huntsville expansion for Standard Missile output was discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/70003d43-015d-4396-baa0-409f1abf1323",
+          "title": "Q4 2025 RTX Corp Earnings Call on January 27, 2026 / 1:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P2-2026-03-13",
+      "promiseId": "P2",
+      "date": "2026-03-13",
+      "call": "RTX's Raytheon completes $115 million expansion of Alabama missile integration facility",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Completed $115 million, 26,000-square-foot expansion; expected over 50% additional integration/delivery capacity and more than 2,200 Alabama employees.",
+      "quote": "Raytheon, an RTX (NYSE: RTX) business, has completed a 26,000 square-foot expansion of its Redstone Raytheon Missile Integration Facility, backed by a $115 million capital investment that will increase the facility's integration and delivery capacity by over 50% and grow the company's footprint in the state to more than 2,200 employees.",
+      "verbatim": {
+        "text": "HUNTSVILLE, Ala. , March 13, 2026 /PRNewswire/ -- Raytheon, an RTX (NYSE: RTX) business, has completed a 26,000 square-foot expansion of its Redstone Raytheon Missile Integration Facility, backed by a $115 million capital investment that will increase the facility's integration and delivery capacity by over 50% and grow the company's footprint in the state to more than 2,200 employees.",
+        "segs": [
+          {
+            "t": "HUNTSVILLE, Ala. , March 13, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " /PRNewswire/ -- Raytheon, an RTX (NYSE: RTX) business, has completed a ",
+            "h": 0
+          },
+          {
+            "t": "26,000",
+            "h": 1
+          },
+          {
+            "t": " square-foot expansion of its Redstone Raytheon Missile Integration Facility, backed by a ",
+            "h": 0
+          },
+          {
+            "t": "$115 million",
+            "h": 1
+          },
+          {
+            "t": " capital investment that will increase the facility's integration and delivery capacity by over ",
+            "h": 0
+          },
+          {
+            "t": "50%",
+            "h": 1
+          },
+          {
+            "t": " and grow the company's footprint in the state to more than ",
+            "h": 0
+          },
+          {
+            "t": "2,200",
+            "h": 1
+          },
+          {
+            "t": " employees.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.rtx.com/news/news-center/2026/03/13/rtxs-raytheon-completes-115-million-expansion-of-alabama-missile-integration-fa",
+          "title": "News | RTX's Raytheon completes $115 million expansion of Alabama missile integration facility | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.rtx.com/news/news-center/2026/03/13/rtxs-raytheon-completes-115-million-expansion-of-alabama-missile-integration-fa",
+          "title": "News | RTX's Raytheon completes $115 million expansion of Alabama missile integration facility | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "RTX-P2-2026-04-21",
+      "promiseId": "P2",
+      "date": "2026-04-21",
+      "call": "Q1 2026 RTX Earnings Conference Call",
+      "speaker": "Christopher Calio, Chairman and Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed completion of the $115 million Redstone expansion, expected to increase munitions capacity by over 50%.",
+      "quote": "Raytheon completed a $115 million expansion of our Redstone Missile Integration Facility in Huntsville.",
+      "verbatim": {
+        "text": "Raytheon completed a $115 million expansion of our Redstone Missile Integration Facility in Huntsville.",
+        "segs": [
+          {
+            "t": "Raytheon completed a ",
+            "h": 0
+          },
+          {
+            "t": "$115 million",
+            "h": 1
+          },
+          {
+            "t": " expansion of our Redstone Missile Integration Facility in Huntsville.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P3-2026-01-27",
+      "promiseId": "P3",
+      "date": "2026-01-27",
+      "call": "Q4 2025 RTX earnings call",
+      "speaker": "Neil Mitchill, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Included $700 million of powder-metal compensation cash outflow in the 2026 outlook.",
+      "quote": "So in our outlook for 2026, we have $700 million place held as the cash outflow.",
+      "verbatim": {
+        "text": "So in our outlook for 2026, we have $700 million place held as the cash outflow.",
+        "segs": [
+          {
+            "t": "So in our outlook for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we have ",
+            "h": 0
+          },
+          {
+            "t": "$700 million",
+            "h": 1
+          },
+          {
+            "t": " place held as the cash outflow.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/70003d43-015d-4396-baa0-409f1abf1323",
+          "title": "Q4 2025 RTX Corp Earnings Call on January 27, 2026 / 1:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/70003d43-015d-4396-baa0-409f1abf1323",
+          "title": "Q4 2025 RTX Corp Earnings Call on January 27, 2026 / 1:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P3-2026-04-21",
+      "promiseId": "P3",
+      "date": "2026-04-21",
+      "call": "Q1 2026 RTX earnings call",
+      "speaker": "Christopher Calio, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Financial and technical outlook remained on track; the CFO reported approximately $170 million of quarterly powder-metal compensation.",
+      "quote": "And maybe just to address kind of your final point there, the financial and technical outlook for the powdered metal situation remains on track.",
+      "verbatim": {
+        "text": "And maybe just to address kind of your final point there, the financial and technical outlook for the powdered metal situation remains on track.",
+        "segs": [
+          {
+            "t": "And maybe just to address kind of your final point there, the financial and technical outlook for the powdered metal situation remains on track.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P3-2026-07-23",
+      "promiseId": "P3",
+      "date": "2026-07-23",
+      "call": "Q2 2026 RTX earnings call",
+      "speaker": "Christopher Calio, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Financial and technical outlook remained on track; the CFO reported approximately $150 million of quarterly powder-metal compensation.",
+      "quote": "On the GTF fleet management plan, our financial and technical outlook remains on track.",
+      "verbatim": {
+        "text": "On the GTF fleet management plan, our financial and technical outlook remains on track.",
+        "segs": [
+          {
+            "t": "On the GTF fleet management plan, our financial and technical outlook remains on track.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/8c03729d-33a9-4225-8114-de6abfbf2881",
+          "title": "Q2 2026 RTX Corp Earnings Call on July 23, 2026 / 11:30AM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/8c03729d-33a9-4225-8114-de6abfbf2881",
+          "title": "Q2 2026 RTX Corp Earnings Call on July 23, 2026 / 11:30AM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P3-2026-10-20",
+      "promiseId": "P3",
+      "date": "2026-10-20",
+      "call": "Q3 2026 RTX earnings call",
+      "speaker": "Christopher T. Calio, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Financial and technical outlook remained on track; the CFO reported approximately $165 million of quarterly powder-metal compensation.",
+      "quote": "On the GTFF fleet management plan, financial and technical outlook remains on track.",
+      "verbatim": {
+        "text": "On the GTFF fleet management plan, financial and technical outlook remains on track.",
+        "segs": [
+          {
+            "t": "On the GTFF fleet management plan, financial and technical outlook remains on track.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript",
+          "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/events/event-details/q3-2026-rtx-earnings-conference-call",
+          "title": "Q3 2026 RTX Earnings Conference Call | RTX",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript",
+          "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P4-2026-01-27",
+      "promiseId": "P4",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings release",
+      "speaker": "Chris Calio, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced full-year 2026 free cash flow guidance of $8.25 - $8.75 billion.",
+      "quote": "We enter 2026 with great momentum and are well positioned to deliver our 2026 financial outlook.",
+      "verbatim": {
+        "text": "“We enter 2026 with great momentum and are well positioned to deliver our 2026 financial outlook.",
+        "segs": [
+          {
+            "t": "“We enter ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " with great momentum and are well positioned to deliver our ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " financial outlook.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/6d2e2fd9-aa0e-40e2-aa9f-a4051a058306",
+          "title": "2026-01-27 8-K ER Exhibit 99",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/6d2e2fd9-aa0e-40e2-aa9f-a4051a058306",
+          "title": "2026-01-27 8-K ER Exhibit 99",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "RTX-P4-2026-04-21",
+      "promiseId": "P4",
+      "date": "2026-04-21",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Neil Mitchill, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Remained on track for full-year 2026 free cash flow of $8.25 billion to $8.75 billion.",
+      "quote": "On free cash flow, we remain on track to our outlook of between $8.25 billion and $8.75 billion for the full year.",
+      "verbatim": {
+        "text": "On free cash flow, we remain on track to our outlook of between $8.25 billion and $8.75 billion for the full year.",
+        "segs": [
+          {
+            "t": "On free cash flow, we remain on track to our outlook of between ",
+            "h": 0
+          },
+          {
+            "t": "$8.25 billion",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "$8.75 billion",
+            "h": 1
+          },
+          {
+            "t": " for the full year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P4-2026-07-23",
+      "promiseId": "P4",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings release",
+      "speaker": "Chris Calio, Chairman and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 free cash flow guidance to $8.50 - $8.75 billion, from $8.25 - $8.75 billion.",
+      "quote": "Given our first half performance and current backlog, we are raising our full year outlook for adjusted sales,* adjusted EPS,* and free cash flow.*",
+      "verbatim": {
+        "text": "“Given our first half performance and current backlog, we are raising our full year outlook for adjusted sales,\\ adjusted EPS,\\ and free cash flow.\\ RTX is exceptionally well positioned to drive continued growth as we execute on our backlog, increase productivity, expand capacity, and introduce new technologies to our customers.”",
+        "segs": [
+          {
+            "t": "“Given our first half performance and current backlog, we are raising our full year outlook for adjusted sales,\\ adjusted EPS,\\ and free cash flow.\\ RTX is exceptionally well positioned to drive continued growth as we execute on our backlog, increase productivity, expand capacity, and introduce new technologies to our customers.”",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/369fdead-8ef6-4c51-a3c8-0fc05a553897",
+          "title": "2026-07-23 8-K ER Exhibit 99",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/369fdead-8ef6-4c51-a3c8-0fc05a553897",
+          "title": "2026-07-23 8-K ER Exhibit 99",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "RTX-P4-2026-10-20",
+      "promiseId": "P4",
+      "date": "2026-10-20",
+      "call": "Q3 2026 earnings release",
+      "speaker": "Chris Calio, Chairman and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 free cash flow guidance to $9.0 - $9.2 billion, from $8.50 - $8.75 billion.",
+      "quote": "Given our performance year to date, we are again raising our full year outlook for adjusted sales,* adjusted EPS,* and free cash flow.*",
+      "verbatim": {
+        "text": "“Given our performance year to date, we are again raising our full year outlook for adjusted sales,\\ adjusted EPS,\\ and free cash flow.\\ We remain focused on increasing output, optimizing our cost structure, and investing in new technologies to support our customers and drive continued growth.”",
+        "segs": [
+          {
+            "t": "“Given our performance year to date, we are again raising our full year outlook for adjusted sales,\\ adjusted EPS,\\ and free cash flow.\\ We remain focused on increasing output, optimizing our cost structure, and investing in new technologies to support our customers and drive continued growth.”",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/46b42314-8297-41ea-91cd-4e4ddd2e9518",
+          "title": "2026-10-20 8-K ER Exhibit 99",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/46b42314-8297-41ea-91cd-4e4ddd2e9518",
+          "title": "2026-10-20 8-K ER Exhibit 99",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "RTX-P5-2026-02-04",
+      "promiseId": "P5",
+      "date": "2026-02-04",
+      "call": "RTX's Raytheon partners with Department of War on five landmark agreements to expand critical munition production",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Frameworks target annual Tomahawk production above 1,000, AMRAAM at least 1,900, and SM-6 above 500; many munitions increase 2 to 4 times.",
+      "quote": "Under the frameworks announced today, RTX will increase annual production of Tomahawks to more than 1,000, AMRAAMs to at least 1,900, and SM-6 to more than 500.",
+      "verbatim": {
+        "text": "Under the frameworks announced today, RTX will increase annual production of Tomahawks to more than 1,000, AMRAAMs to at least 1,900, and SM-6 to more than 500.",
+        "segs": [
+          {
+            "t": "Under the frameworks announced today, RTX will increase annual production of Tomahawks to more than ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": ", AMRAAMs to at least ",
+            "h": 0
+          },
+          {
+            "t": "1,900",
+            "h": 1
+          },
+          {
+            "t": ", and SM-6 to more than 500.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.rtx.com/news/news-center/2026/02/04/rtxs-raytheon-partners-with-department-of-war-on-five-landmark-agreements-to-exp",
+          "title": "News | RTX's Raytheon partners with Department of War on five landmark agreements to expand critical munition production | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.rtx.com/news/news-center/2026/02/04/rtxs-raytheon-partners-with-department-of-war-on-five-landmark-agreements-to-exp",
+          "title": "News | RTX's Raytheon partners with Department of War on five landmark agreements to expand critical munition production | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "RTX-P5-2026-02-18",
+      "promiseId": "P5",
+      "date": "2026-02-18",
+      "call": "RTX at Citi Global Industrial Tech and Mobility Conference",
+      "speaker": "Christopher Calio, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the next-decade ramp at 2x to 4x current production; definitive agreements remained pending.",
+      "quote": "The five frameworks we're talking about, it's all about ramping production over the next decade.",
+      "verbatim": {
+        "text": "The five frameworks we're talking about, it's all about ramping production over the next decade.",
+        "segs": [
+          {
+            "t": "The five frameworks we're talking about, it's all about ramping production over the next decade.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/17f82efd-d9c0-46a4-bc59-984e9b81f27b",
+          "title": "RTX Corp at Citi Global Industrial Tech and Mobility Conference on February 18, 2026 / 1:50PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/17f82efd-d9c0-46a4-bc59-984e9b81f27b",
+          "title": "RTX Corp at Citi Global Industrial Tech and Mobility Conference on February 18, 2026 / 1:50PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "RTX-P5-2026-04-20",
+      "promiseId": "P5",
+      "date": "2026-04-20",
+      "call": "Scaling up to deliver with speed",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Completed $115 million, 26,000 square-foot Redstone expansion supports Standard Missile production capacity.",
+      "quote": "The business invested $115 million in a recently completed 26,000 square-foot expansion of its Redstone Raytheon Missile Integration Facility in Huntsville, Alabama.",
+      "verbatim": {
+        "text": "The business invested $115 million in a recently completed 26,000 square-foot expansion of its Redstone Raytheon Missile Integration Facility in Huntsville, Alabama.",
+        "segs": [
+          {
+            "t": "The business invested ",
+            "h": 0
+          },
+          {
+            "t": "$115 million",
+            "h": 1
+          },
+          {
+            "t": " in a recently completed ",
+            "h": 0
+          },
+          {
+            "t": "26,000",
+            "h": 1
+          },
+          {
+            "t": " square-foot expansion of its Redstone Raytheon Missile Integration Facility in Huntsville, Alabama.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.rtx.com/news/2026/04/20/scaling-up-to-deliver-with-speed",
+          "title": "News | Scaling up to deliver with speed | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.rtx.com/news/2026/04/20/scaling-up-to-deliver-with-speed",
+          "title": "News | Scaling up to deliver with speed | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "RTX-P5-2026-04-21",
+      "promiseId": "P5",
+      "date": "2026-04-21",
+      "call": "Q1 2026 RTX Earnings Conference Call",
+      "speaker": "Christopher Calio, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the conditional ramp well above existing production rates over the next decade, subject to finalizing framework agreements.",
+      "quote": "Once finalized, these agreements would provide firm demand signals for RTX and our suppliers to invest and ramp production well above existing rates over the next decade.",
+      "verbatim": {
+        "text": "Once finalized, these agreements would provide firm demand signals for RTX and our suppliers to invest and ramp production well above existing rates over the next decade.",
+        "segs": [
+          {
+            "t": "Once finalized, these agreements would provide firm demand signals for RTX and our suppliers to invest and ramp production well above existing rates over the next decade.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+          "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P5-2026-07-23",
+      "promiseId": "P5",
+      "date": "2026-07-23",
+      "call": "Q2 2026 RTX Earnings Conference Call",
+      "speaker": "Christopher Calio, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Continued negotiations to convert frameworks into contracts supporting higher critical-munitions output; supply-chain engagement and investment continued.",
+      "quote": "And of course, we continue to work closely with the Department of War to advance the framework agreements we signed earlier this year into contracts to increase critical munitions output for our customers.",
+      "verbatim": {
+        "text": "And of course, we continue to work closely with the Department of War to advance the framework agreements we signed earlier this year into contracts to increase critical munitions output for our customers.",
+        "segs": [
+          {
+            "t": "And of course, we continue to work closely with the Department of War to advance the framework agreements we signed earlier this year into contracts to increase critical munitions output for our customers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/8c03729d-33a9-4225-8114-de6abfbf2881",
+          "title": "Q2 2026 RTX Corp Earnings Call on July 23, 2026 / 11:30AM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/8c03729d-33a9-4225-8114-de6abfbf2881",
+          "title": "Q2 2026 RTX Corp Earnings Call on July 23, 2026 / 11:30AM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "RTX-P5-2026-08-17",
+      "promiseId": "P5",
+      "date": "2026-08-17",
+      "call": "RTX's Raytheon awarded seven-year contract for Tomahawk cruise missiles",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Awarded a seven-year, $22.9 billion Tomahawk contract supporting annual production above 1,000 missiles.",
+      "quote": "This contract follows the landmark agreements between Raytheon and the Department of War and supports the annual production ramp to more than 1,000 Tomahawk missiles and associated support, ensuring a stable, predictable supply for the Navy and allies.",
+      "verbatim": {
+        "text": "This contract follows the landmark agreements between Raytheon and the Department of War and supports the annual production ramp to more than 1,000 Tomahawk missiles and associated support, ensuring a stable, predictable supply for the Navy and allies.",
+        "segs": [
+          {
+            "t": "This contract follows the landmark agreements between Raytheon and the Department of War and supports the annual production ramp to more than ",
+            "h": 0
+          },
+          {
+            "t": "1,000",
+            "h": 1
+          },
+          {
+            "t": " Tomahawk missiles and associated support, ensuring a stable, predictable supply for the Navy and allies.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.rtx.com/news/news-center/2026/08/17/rtxs-raytheon-awarded-seven-year-contract-for-tomahawk-cruise-missiles",
+          "title": "News | RTX's Raytheon awarded seven-year contract for Tomahawk cruise missiles | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.rtx.com/news/news-center/2026/08/17/rtxs-raytheon-awarded-seven-year-contract-for-tomahawk-cruise-missiles",
+          "title": "News | RTX's Raytheon awarded seven-year contract for Tomahawk cruise missiles | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "RTX-P5-2026-09-15",
+      "promiseId": "P5",
+      "date": "2026-09-15",
+      "call": "RTX at Morgan Stanley Laguna Conference",
+      "speaker": "Christopher Calio, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Tomahawk entered a UCA and execution began; other frameworks remained under negotiation, with production volumes still targeted at 2 times to 4 times.",
+      "quote": "We've got one that's moved into UCA.",
+      "verbatim": {
+        "text": "We've got one that's moved into UCA.",
+        "segs": [
+          {
+            "t": "We've got one that's moved into UCA.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.rtx.com/static-files/b82026f9-070f-48f4-9f9f-251dc51776e9",
+          "title": "RTX Corporation at Morgan Stanley Laguna Conference on September 15, 2026 / 3:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/static-files/b82026f9-070f-48f4-9f9f-251dc51776e9",
+          "title": "RTX Corporation at Morgan Stanley Laguna Conference on September 15, 2026 / 3:30PM",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "RTX-P5-2026-09-28",
+      "promiseId": "P5",
+      "date": "2026-09-28",
+      "call": "RTX's Raytheon awarded $20.7 billion multi-year contract for AMRAAM under landmark production agreement",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Awarded an AMRAAM contract up to $20.7 billion: five years plus two option years, supporting annual production of at least 1,900 missiles.",
+      "quote": "Raytheon, an RTX (NYSE: RTX) business, will accelerate production of AMRAAM® missiles to record-setting levels under the terms of a five-year multi-year contract with two option years valued up to $20.7 billion awarded as part of the Department of War's Arsenal of Freedom.",
+      "verbatim": {
+        "text": "28, 2026 /PRNewswire/ -- Raytheon, an RTX (NYSE: RTX) business, will accelerate production of AMRAAM® missiles to record-setting levels under the terms of a five-year multi-year contract with two option years valued up to $20.7 billion awarded as part of the Department of War's Arsenal of Freedom.",
+        "segs": [
+          {
+            "t": "28, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " /PRNewswire/ -- Raytheon, an RTX (NYSE: RTX) business, will accelerate production of AMRAAM® missiles to record-setting levels under the terms of a five-year multi-year contract with two option years valued up to ",
+            "h": 0
+          },
+          {
+            "t": "$20.7 billion",
+            "h": 1
+          },
+          {
+            "t": " awarded as part of the Department of War's Arsenal of Freedom.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.rtx.com/news/news-center/2026/09/28/rtxs-raytheon-awarded-20-7-billion-multi-year-contract-for-amraam-under-landmar",
+          "title": "News | RTX's Raytheon awarded $20.7 billion multi-year contract for AMRAAM under landmark production agreement | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.rtx.com/news/news-center/2026/09/28/rtxs-raytheon-awarded-20-7-billion-multi-year-contract-for-amraam-under-landmar",
+          "title": "News | RTX's Raytheon awarded $20.7 billion multi-year contract for AMRAAM under landmark production agreement | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "RTX-P5-2026-10-01",
+      "promiseId": "P5",
+      "date": "2026-10-01",
+      "call": "RTX's Raytheon awarded $24.4 billion multi-year contract for SM-6 interceptors",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Secured an SM-6 contract up to $24.4 billion: five years plus two option years, supporting significantly higher production.",
+      "quote": "Raytheon, an RTX (NYSE: RTX) business, has secured a five-year contract, with two additional option years, valued up to $24.4 billion for Standard Missile-6 (SM-6) interceptors, significantly increasing the availability of a critical munition able to conduct both offensive strikes and missile defense missions.",
+      "verbatim": {
+        "text": "1, 2026 /PRNewswire/ -- Raytheon, an RTX (NYSE: RTX) business, has secured a five-year contract, with two additional option years, valued up to $24.4 billion for Standard Missile-6 (SM-6) interceptors, significantly increasing the availability of a critical munition able to conduct both offensive strikes and missile defense missions.",
+        "segs": [
+          {
+            "t": "1, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " /PRNewswire/ -- Raytheon, an RTX (NYSE: RTX) business, has secured a five-year contract, with two additional option years, valued up to ",
+            "h": 0
+          },
+          {
+            "t": "$24.4 billion",
+            "h": 1
+          },
+          {
+            "t": " for Standard Missile-6 (SM-6) interceptors, significantly increasing the availability of a critical munition able to conduct both offensive strikes and missile defense missions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.rtx.com/news/news-center/2026/10/01/rtxs-raytheon-awarded-24-4-billion-multi-year-contract-for-sm-6-interceptors",
+          "title": "News | RTX's Raytheon awarded $24.4 billion multi-year contract for SM-6 interceptors | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.rtx.com/news/news-center/2026/10/01/rtxs-raytheon-awarded-24-4-billion-multi-year-contract-for-sm-6-interceptors",
+          "title": "News | RTX's Raytheon awarded $24.4 billion multi-year contract for SM-6 interceptors | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "RTX-P5-2026-10-08",
+      "promiseId": "P5",
+      "date": "2026-10-08",
+      "call": "RTX's Raytheon awarded $6.3 billion multi-year contract for SM-3 IB interceptors",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Secured an SM-3 IB contract up to $6.3 billion: five years plus two option years, advancing the framework-backed ramp.",
+      "quote": "Raytheon, an RTX (NYSE: RTX) business, has secured a five-year contract, with two additional option years, valued up to $6.3 billion for the production and sustainment of Standard Missile-3 Block IB (SM‑3 IB) interceptors.",
+      "verbatim": {
+        "text": "8, 2026 /PRNewswire/ -- Raytheon, an RTX (NYSE: RTX) business, has secured a five-year contract, with two additional option years, valued up to $6.3 billion for the production and sustainment of Standard Missile-3 Block IB (SM‑3 IB) interceptors.",
+        "segs": [
+          {
+            "t": "8, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " /PRNewswire/ -- Raytheon, an RTX (NYSE: RTX) business, has secured a five-year contract, with two additional option years, valued up to ",
+            "h": 0
+          },
+          {
+            "t": "$6.3 billion",
+            "h": 1
+          },
+          {
+            "t": " for the production and sustainment of Standard Missile-3 Block IB (SM‑3 IB) interceptors.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.rtx.com/news/news-center/2026/10/08/rtxs-raytheon-awarded-6-3-billion-multi-year-contract-for-sm-3-ib-interceptors",
+          "title": "News | RTX's Raytheon awarded $6.3 billion multi-year contract for SM-3 IB interceptors | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.rtx.com/news/news-center/2026/10/08/rtxs-raytheon-awarded-6-3-billion-multi-year-contract-for-sm-3-ib-interceptors",
+          "title": "News | RTX's Raytheon awarded $6.3 billion multi-year contract for SM-3 IB interceptors | RTX",
+          "domain": "rtx.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "RTX-P5-2026-10-20",
+      "promiseId": "P5",
+      "date": "2026-10-20",
+      "call": "Q3 2026 RTX Earnings Conference Call",
+      "speaker": "Neil Mitchill, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Converted four frameworks into undefinitized contracts; investments over the next two to three years support a production ramp toward full rate production in 2030.",
+      "quote": "As Chris mentioned, we converted four munition framework agreements into undefinitized contracts.",
+      "verbatim": {
+        "text": "As Chris mentioned, we converted four munition framework agreements into undefinitized contracts.",
+        "segs": [
+          {
+            "t": "As Chris mentioned, we converted four munition framework agreements into undefinitized contracts.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/713115-q3-2026/",
+          "title": "RTX Corporation (RTX) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.rtx.com/events/event-details/q3-2026-rtx-earnings-conference-call",
+          "title": "Q3 2026 RTX Earnings Conference Call | RTX",
+          "domain": "investors.rtx.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/rtx/transcripts/713115-q3-2026/",
+          "title": "RTX Corporation (RTX) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://investors.rtx.com/static-files/68431072-f008-489d-be7b-d69349615f0c",
+      "title": "Q1 2026 RTX Corp Earnings Call on April 21, 2026 / 12:30PM",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://investors.rtx.com/static-files/70003d43-015d-4396-baa0-409f1abf1323",
+      "title": "Q4 2025 RTX Corp Earnings Call on January 27, 2026 / 1:30PM",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 3,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript/",
+      "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://investors.rtx.com/static-files/8c03729d-33a9-4225-8114-de6abfbf2881",
+      "title": "Q2 2026 RTX Corp Earnings Call on July 23, 2026 / 11:30AM",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://investors.rtx.com/events/event-details/q3-2026-rtx-earnings-conference-call",
+      "title": "Q3 2026 RTX Earnings Conference Call | RTX",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/28/rtx-rtx-q4-2024-earnings-call-transcript",
+      "title": "RTX (RTX) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 7,
+      "url": "https://www.roic.ai/quote/RTX/transcripts/2025-year/3-quarter",
+      "title": "RTX Corporation (RTX) Q3 FY2025 Earnings Call Transcript - October 21, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 8,
+      "url": "https://investors.rtx.com/events-and-presentations",
+      "title": "Events & Presentations | RTX",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 9,
+      "url": "https://www.rtx.com/news/news-center/2026/03/13/rtxs-raytheon-completes-115-million-expansion-of-alabama-missile-integration-fa",
+      "title": "News | RTX's Raytheon completes $115 million expansion of Alabama missile integration facility | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 10,
+      "url": "https://investors.rtx.com/static-files/46b42314-8297-41ea-91cd-4e4ddd2e9518",
+      "title": "2026-10-20 8-K ER Exhibit 99",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 11,
+      "url": "https://investors.rtx.com/events/event-details/q4-2024-rtx-earnings-conference-call",
+      "title": "Q4 2024 RTX Earnings Conference Call | RTX",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://investors.rtx.com/events/event-details/q1-2025-rtx-earnings-conference-call",
+      "title": "Q1 2025 RTX Earnings Conference Call | RTX",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://investors.rtx.com/events/event-details/q2-2025-rtx-earnings-conference-call",
+      "title": "Q2 2025 RTX Earnings Conference Call | RTX",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://investors.rtx.com/static-files/4431ddf8-4a87-4a15-b16c-2cbfafe7e843",
+      "title": "RTX Investor Webcast Q2 2025",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://investors.rtx.com/events/event-details/q3-2025-rtx-earnings-conference-call",
+      "title": "Q3 2025 RTX Earnings Conference Call | RTX",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://www.rtx.com/news/news-center/2025/11/03/rtxs-pratt-whitney-announces-inaugural-gtf-mro-network-awards",
+      "title": "News | RTX’s Pratt & Whitney announces inaugural GTF MRO Network awards | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://investors.rtx.com/static-files/6d2e2fd9-aa0e-40e2-aa9f-a4051a058306",
+      "title": "2026-01-27 8-K ER Exhibit 99",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 18,
+      "url": "https://investors.rtx.com/static-files/369fdead-8ef6-4c51-a3c8-0fc05a553897",
+      "title": "2026-07-23 8-K ER Exhibit 99",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 19,
+      "url": "https://www.rtx.com/news/news-center/2026/02/04/rtxs-raytheon-partners-with-department-of-war-on-five-landmark-agreements-to-exp",
+      "title": "News | RTX's Raytheon partners with Department of War on five landmark agreements to expand critical munition production | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 20,
+      "url": "https://investors.rtx.com/static-files/17f82efd-d9c0-46a4-bc59-984e9b81f27b",
+      "title": "RTX Corp at Citi Global Industrial Tech and Mobility Conference on February 18, 2026 / 1:50PM",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 21,
+      "url": "https://www.rtx.com/news/2026/04/20/scaling-up-to-deliver-with-speed",
+      "title": "News | Scaling up to deliver with speed | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 22,
+      "url": "https://www.rtx.com/news/news-center/2026/08/17/rtxs-raytheon-awarded-seven-year-contract-for-tomahawk-cruise-missiles",
+      "title": "News | RTX's Raytheon awarded seven-year contract for Tomahawk cruise missiles | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://investors.rtx.com/static-files/b82026f9-070f-48f4-9f9f-251dc51776e9",
+      "title": "RTX Corporation at Morgan Stanley Laguna Conference on September 15, 2026 / 3:30PM",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 24,
+      "url": "https://www.rtx.com/news/news-center/2026/09/28/rtxs-raytheon-awarded-20-7-billion-multi-year-contract-for-amraam-under-landmar",
+      "title": "News | RTX's Raytheon awarded $20.7 billion multi-year contract for AMRAAM under landmark production agreement | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 25,
+      "url": "https://www.rtx.com/news/news-center/2026/10/01/rtxs-raytheon-awarded-24-4-billion-multi-year-contract-for-sm-6-interceptors",
+      "title": "News | RTX's Raytheon awarded $24.4 billion multi-year contract for SM-6 interceptors | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 26,
+      "url": "https://www.rtx.com/news/news-center/2026/10/08/rtxs-raytheon-awarded-6-3-billion-multi-year-contract-for-sm-3-ib-interceptors",
+      "title": "News | RTX's Raytheon awarded $6.3 billion multi-year contract for SM-3 IB interceptors | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 27,
+      "url": "https://investors.rtx.com/static-files/10494d39-c1d0-4ff0-b945-1db5288a923b",
+      "title": "RTX Investor Webcast Q4 2025",
+      "domain": "investors.rtx.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 28,
+      "url": "https://www.sec.gov/Archives/edgar/data/101829/000010182926000031/rtx-20260930.htm",
+      "title": "rtx-20260930",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 29,
+      "url": "https://www.rtx.com/news/news-center/2026/10/20/rtx-reports-q3-2026-results",
+      "title": "News | RTX Reports Q3 2026 Results | RTX",
+      "domain": "rtx.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 30,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/20/rtx-rtx-q3-2026-earnings-call-transcript",
+      "title": "RTX (RTX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 31,
+      "url": "https://stockanalysis.com/stocks/rtx/transcripts/713115-q3-2026/",
+      "title": "RTX Corporation (RTX) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 32,
+      "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/1-quarter",
+      "title": "RTX Corporation (RTX.TO) Q1 FY2025 Earnings Call Transcript - April 22, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 33,
+      "url": "https://www.roic.ai/quote/RTX.TO/transcripts/2025-year/2-quarter",
+      "title": "RTX Corporation (RTX.TO) Q2 FY2025 Earnings Call Transcript - July 22, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 34,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/04/23/rtx-rtx-q1-2024-earnings-call-transcript?source=financialcontent",
+      "title": "RTX (RTX) Q1 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 35,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/07/25/rtx-rtx-q2-2024-earnings-call-transcript",
+      "title": "RTX (RTX) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 36,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/10/22/rtx-rtx-q3-2024-earnings-call-transcript",
+      "title": "RTX (RTX) Q3 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 37,
+      "url": "https://stockanalysis.com/stocks/rtx/transcripts/337848-q2-2025/",
+      "title": "RTX Corporation (RTX) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 38,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/26/rtx-rtx-q3-2025-earnings-call-transcript",
+      "title": "RTX (RTX) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 39,
+      "url": "https://www.nasdaq.com/articles/rtx-rtx-q1-2024-earnings-call-transcript",
+      "title": "RTX (RTX) Q1 2024 Earnings Call Transcript | Nasdaq",
+      "domain": "nasdaq.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 40,
+      "url": "https://www.earningscall.ai/stock/transcript/RTX-2025-Q1",
+      "title": "RTX Corporation Q1 2025 Earnings Call Transcript | Full Text",
+      "domain": "earningscall.ai",
+      "tier": "press",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P5",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.142559Z",
+      "completedAt": "2026-11-05T06:31:24.742913Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.114450Z",
+      "completedAt": "2026-11-05T19:13:52.655812Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.121394Z",
+      "completedAt": "2026-11-05T19:15:50.578170Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.129145Z",
+      "completedAt": "2026-11-05T19:12:32.768410Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.137093Z",
+      "completedAt": "2026-11-05T19:12:41.871591Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.145707Z",
+      "completedAt": "2026-11-05T19:14:57.974512Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.049068Z",
+      "completedAt": "2026-11-05T19:48:14.824354Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.056150Z",
+      "completedAt": "2026-11-05T19:51:40.661311Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.063126Z",
+      "completedAt": "2026-11-05T19:47:44.295441Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.070206Z",
+      "completedAt": "2026-11-05T19:46:58.529180Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.077323Z",
+      "completedAt": "2026-11-05T19:53:45.185540Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "33 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "28 of 28 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "28 of 28 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-20; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/30/RTX_Raytheon_Technologies_logo.svg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/RTX_Corporation",
+      "title": "RTX Corporation - Wikipedia",
+      "width": 800,
+      "height": 308,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://prd-sc102-cdn.rtx.com/-/media/project/raytheon-technologies/shared/f/farnborough/switch-hybrid-electric-gtf.jpg?rev=cd75a4020925433dab15e44b1e12232e&rid=b07712ad28b94b93a524d8bd29ca9d8d",
+      "sourcePageUrl": "https://www.rtx.com/news/news-center/2024/07/22/rtx-completes-preliminary-design-review-of-hybrid-electric-pratt-whitney-gtf-e",
+      "title": "News | RTX completes preliminary design review of hybrid-electric Pratt &  Whitney GTF™ engine demonstrator for Clean Aviation SWITCH project | RTX",
+      "width": 3840,
+      "height": 2160,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.272Z"
+}

@@ -1,0 +1,5462 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "MS",
+  "name": "Morgan Stanley",
+  "short": "Morgan Stanley",
+  "website": "morganstanley.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.morganstanley.com/about-us-ir",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-14",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": "2027-01-14",
+    "time": "9:30 AM ET",
+    "quarter": "Q4 and full-year 2026"
+  },
+  "photoSubject": "Morgan Stanley headquarters 1585 Broadway",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Wealth margin above 30%",
+      "commitment": "Long-term aspiration for Wealth Management to generate a pre-tax margin above 30%; interim expectation was 26%–30% by 2022.",
+      "deadline": "Long term; interim range by 2022",
+      "firstStated": "2021-01-20",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Wealth Management reported quarterly pre-tax margins of 30.3% in Q3 2025, 31.4% in Q4 2025, 30.4% in Q1 2026, 30.5% in Q2 2026, and 30.4% in Q3 2026; FY2025 annual margin was 29.3%.",
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2025.pdf",
+          "title": "3Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2025.pdf",
+          "title": "4Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.morganstanley.com/about-us-ir/shareholder/1q2026.pdf",
+          "title": "1Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.morganstanley.com/about-us-ir/shareholder/3q2026.pdf",
+          "title": "3Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/morgan-stanley-ms-q2-2026-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.roic.ai/quote/MS-PO/transcripts/2020-year/4-quarter",
+          "title": "Morgan Stanley (MS/PO) Q4 FY2020 Earnings Call Transcript - January 20, 2021",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-10-15",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2023-01-17",
+            "what_was_said": "James Gorman said, “We will hit the 30% margin,” adding that he had “zero anxiety” about whether it happened “this year or next year.” This conveyed a nearer-term expectation, although not a fixed deadline.",
+            "call": "Q4 2022 earnings call"
+          },
+          {
+            "date": "2023-10-18",
+            "what_was_said": "Management clarified that there was no “shot clock” on the targets: the objective was a business model capable of delivering them on a “more sustained basis,” rather than merely reaching 30% once.",
+            "call": "Q3 2023 earnings call"
+          },
+          {
+            "date": "2026-07-15",
+            "what_was_said": "Management explicitly kept the strategic target unchanged, saying that 30% was a benchmark already hit several times. A possible higher hurdle would be considered later; no increase or weakening was announced.",
+            "call": "Q2 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Efficiency ratio below 70%",
+      "commitment": "Keep the long-term firm efficiency ratio below 70%; the call also gave a 69%–72% range over the next two years.",
+      "deadline": "Long term; interim range over next two years",
+      "firstStated": "2021-01-20",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Morgan Stanley reported 68.4% for full-year 2025 on January 15, 2026; its October 14, 2026 release reported 66% year to date.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/morgan-stanley-ms-q4-2025-earnings-transcript",
+          "title": "Morgan Stanley (MS) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.morganstanley.com/about-us-ir/shareholder/3q2026.pdf",
+          "title": "3Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/MS-PO/transcripts/2020-year/4-quarter",
+          "title": "Morgan Stanley (MS/PO) Q4 FY2020 Earnings Call Transcript - January 20, 2021",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-01-15",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2022-01-19",
+            "what_was_said": "Management reported a 67.1% full-year 2021 efficiency ratio and explicitly said the 69%–72% range had been beaten: “We obviously beat that.” This establishes earlier attainment, not just reaffirmation.",
+            "call": "Q4 2021 earnings call"
+          },
+          {
+            "date": "2023-01-17",
+            "what_was_said": "Management reported a 73.2% full-year 2022 efficiency ratio, or 72.4% excluding integration-related expenses. It also said averaging 2021 and 2022 put the ratio “right at 70%.” These results qualify the picture of continuous progress.",
+            "call": "Q4 2022 earnings call"
+          },
+          {
+            "date": "2024-01-16",
+            "what_was_said": "Management reported a 77.2% full-year 2023 efficiency ratio. In discussing the presentation of its long-term goals without the previous less-than sign, management described the 70% goal as a reaffirmation, while cautioning that achievement would take time and favorable economic conditions.",
+            "call": "Q4 2023 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "ROTCE above 20%",
+      "commitment": "Raise the ROTCE goal to above 20%; no specific deadline was given.",
+      "deadline": null,
+      "firstStated": "2022-01-19",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "The formal goal became 20%; full-year 2025 ROTCE was 21.6%, exceeding the original above-20% threshold.",
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2023-strategic-update.pdf",
+          "title": "PowerPoint Presentation",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2025.pdf",
+          "title": "4Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/12992-q4-2021",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/morgan-stanley-ms-q4-2025-earnings-transcript",
+          "title": "Morgan Stanley (MS) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-01-15",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2024-01-16",
+            "what_was_said": "Pick explained that removing the plus signs was intended to reaffirm that the goals would be hit. He said Morgan Stanley could achieve 20% ROTCE in a normalized environment, while cautioning that it would take time and favorable economic conditions.",
+            "call": "Q4 2023 earnings call"
+          },
+          {
+            "date": "2025-01-16",
+            "what_was_said": "Full-year 2024 ROTCE was 18.8%, versus 20.2% in Q4. Management described significant progress toward its long-term goals, distinguishing the above-20% quarter from full-year attainment.",
+            "call": "Q4 2024 earnings call"
+          },
+          {
+            "date": "2026-01-15",
+            "what_was_said": "Management reported full-year 2025 ROTCE of 21.6% and said quarterly or annual results broadly met or exceeded firmwide goals. It expected to execute at or above those goals in welcoming environments and pursue higher lows in more challenging conditions.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Reach $10 trillion client assets",
+      "commitment": "Achieve $10 trillion in client assets across Wealth and Investment Management over the longer term.",
+      "deadline": "Long term",
+      "firstStated": "2022-01-19",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "The company reported reaching the $10 trillion milestone on July 15, 2026; combined Wealth and Investment Management client assets were $10.5 trillion on October 14, 2026.",
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/2q2026.pdf",
+          "title": "2Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2026.pdf",
+          "title": "3Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/12992-q4-2021",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/morgan-stanley-ms-q2-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-07-15",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "$1 trillion NNA every three years",
+      "commitment": "Generate $1 trillion of new client money approximately every three years; timing was later softened to allow X to X plus two years.",
+      "deadline": "Approximately every three years",
+      "firstStated": "2022-10-14",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "On October 14, 2026, Pick reported $1 trillion in the three years after E*TRADE’s acquisition and another $1 trillion in the last three years.",
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/MS/earnings/MS-Q3-2026-earnings_call-651461.html",
+          "title": "Morgan Stanley (MS) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022",
+          "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-10-14",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2023-04-19",
+            "what_was_said": "Gorman already reported bringing in $1 trillion over the preceding three years, alongside $110 billion in the quarter. This was an earlier declaration of rolling-period delivery than S8.",
+            "call": "Q1 2023 earnings call"
+          },
+          {
+            "date": "2025-01-16",
+            "what_was_said": "Beyond the sentence quoted in S9, Pick explicitly downplayed whether three-year inflows were $700–800 billion versus approximately $1 trillion, emphasizing asset composition and conversion into fee-based flows. His separate 'X years or X plus one years or X plus two years' remark concerned reaching $10 trillion in total client assets, not an explicit extension of the three-year NNA deadline.",
+            "call": "Q4 2024 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "MS-P1-2021-01-20",
+      "promiseId": "P1",
+      "date": "2021-01-20",
+      "call": "Q4 2020 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set a long-term aspiration for Wealth Management margins over 30%; expected 26%–30% by 2022 while working through the E-Trade integration.",
+      "quote": "Our long-term aspiration, and frankly, our belief, is that wealth management will generate a margin over 30%.",
+      "verbatim": {
+        "text": "Our long-term aspiration, and frankly, ourbelief, is that wealth management will generate a margin over 30%.",
+        "segs": [
+          {
+            "t": "Our long-term aspiration, and frankly, ourbelief, is that wealth management will generate a margin over ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://earningscall.biz/e/nyse/s/ms/y/2020/q/q4",
+          "title": "EarningsCall · MS Q4 2020",
+          "domain": "earningscall.biz",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://earningscall.biz/e/nyse/s/ms/y/2020/q/q4",
+          "title": "EarningsCall · MS Q4 2020",
+          "domain": "earningscall.biz",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2021-04-16",
+      "promiseId": "P1",
+      "date": "2021-04-16",
+      "call": "Q1 2021 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected Wealth Management margin to exceed 30% as rates tick up.",
+      "quote": "This margin should only improve in future years, and we expect will exceed 30% as rates tick up.",
+      "verbatim": {
+        "text": "This margin should only improve in future years, and we expect will exceed 30% as rates tick up.",
+        "segs": [
+          {
+            "t": "This margin should only improve in future years, and we expect will exceed ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " as rates tick up.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/7285-q1-2021",
+          "title": "Morgan Stanley (MS) Q1 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/7285-q1-2021",
+          "title": "Morgan Stanley (MS) Q1 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2021-07-15",
+      "promiseId": "P1",
+      "date": "2021-07-15",
+      "call": "Q2 2021 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not address the margin target; it reported a quarterly margin of 27.8% excluding integration-related costs.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/2167-q2-2021",
+          "title": "Morgan Stanley (MS) Q2 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2021-10-14",
+      "promiseId": "P1",
+      "date": "2021-10-14",
+      "call": "Q3 2021 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not address the target; the call reported a quarterly margin of 27.7% excluding integration-related expenses.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/476-q3-2021",
+          "title": "Morgan Stanley (MS) Q3 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2022-01-19",
+      "promiseId": "P1",
+      "date": "2022-01-19",
+      "call": "Q4 2021 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated the 30%+ long-term goal after correcting the 26%–30% range as the prior goal.",
+      "quote": "Wealth management, you know, our long-term goals there were 69-72. I'm sorry, 26-30. We've now said 30%+.",
+      "verbatim": {
+        "text": "Wealth management, you know, our long-term goals there were 69-72. I'm sorry, 26-30.",
+        "segs": [
+          {
+            "t": "Wealth management, you know, our long-term goals there were 69-72. I'm sorry, 26-30.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/12992-q4-2021",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/12992-q4-2021",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2022-04-14",
+      "promiseId": "P1",
+      "date": "2022-04-14",
+      "call": "Q1 2022 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Said the deposit base supported a path to margins in excess of 30%.",
+      "quote": "With our strong and growing deposit base, this will have a near immediate economic impact to our business, and it supports our path to delivering the margins that we projected in excess of 30%.",
+      "verbatim": {
+        "text": "With our strong and growing deposit base, this will have a near immediate economic impact to our business, and it supports our path to delivering the margins that we projected in excess of 30%.",
+        "segs": [
+          {
+            "t": "With our strong and growing deposit base, this will have a near immediate economic impact to our business, and it supports our path to delivering the margins that we projected in excess of ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/18676-q1-2022",
+          "title": "Morgan Stanley (MS) Q1 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/18676-q1-2022",
+          "title": "Morgan Stanley (MS) Q1 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2022-07-14",
+      "promiseId": "P1",
+      "date": "2022-07-14",
+      "call": "Q2 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not address the target; it reported a quarterly margin of 27% including integration and 28% without it.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://equibles.com/stocks/ms/calls/2022-q2",
+          "title": "Morgan Stanley (MS) Q2 2022 Earnings Call Transcript - Equibles",
+          "domain": "equibles.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2022-10-14",
+      "promiseId": "P1",
+      "date": "2022-10-14",
+      "call": "Q3 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not address the target; it reported quarterly margin of 28.4% excluding integration-related expenses.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022",
+          "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2023-01-17",
+      "promiseId": "P1",
+      "date": "2023-01-17",
+      "call": "Q4 2022 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Full-year 2022 reported margin was 27.0%, or 28.4% excluding integration-related expenses, within the interim 26%–30% range.",
+      "quote": "Pre-tax income of $6.6 billion in the current year resulted in a reported pre-tax margin of 27.0% or 28.4% excluding the impact of integration-related expenses.",
+      "verbatim": {
+        "text": "Pre-tax income of $6.6 billion ⁸ in the current year resulted in a reported pre-tax margin of 27.0% or 28.4% excluding the impact of integration-related expenses.",
+        "segs": [
+          {
+            "t": "Pre-tax income of ",
+            "h": 0
+          },
+          {
+            "t": "$6.6 billion",
+            "h": 1
+          },
+          {
+            "t": " ⁸ in the current year resulted in a reported pre-tax margin of ",
+            "h": 0
+          },
+          {
+            "t": "27.0%",
+            "h": 1
+          },
+          {
+            "t": " or ",
+            "h": 0
+          },
+          {
+            "t": "28.4%",
+            "h": 1
+          },
+          {
+            "t": " excluding the impact of integration-related expenses.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2022.pdf",
+          "title": "Morgan Stanley Fourth Quarter and Full Year 2022 Earnings Results Financial Summary",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2022.pdf",
+          "title": "Morgan Stanley Fourth Quarter and Full Year 2022 Earnings Results Financial Summary",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MS-P1-2023-04-19",
+      "promiseId": "P1",
+      "date": "2023-04-19",
+      "call": "Q1 2023 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reiterated the 30% goal and continued progress toward it.",
+      "quote": "All of that being said, our eyes are still on the 30% goal that we have set forth and we will continue to achieve progress toward those goals.",
+      "verbatim": {
+        "text": "All of that being said, our eyes are still on the 30% goal that we have set forth and we will continue to achieve progress toward those goals.",
+        "segs": [
+          {
+            "t": "All of that being said, our eyes are still on the ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " goal that we have set forth and we will continue to achieve progress toward those goals.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://equibles.com/stocks/ms/calls/2023-q1",
+          "title": "Morgan Stanley (MS) Q1 2023 Earnings Call Transcript - Equibles",
+          "domain": "equibles.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://equibles.com/stocks/ms/calls/2023-q1",
+          "title": "Morgan Stanley (MS) Q1 2023 Earnings Call Transcript - Equibles",
+          "domain": "equibles.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2023-07-18",
+      "promiseId": "P1",
+      "date": "2023-07-18",
+      "call": "Q2 2023 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Clarified that the margin goals discussed were for Wealth Management; no new target or timing was given.",
+      "quote": "Steve, the margin goals that we've given have been really around Wealth Management.",
+      "verbatim": {
+        "text": "Sharon Yeshaya CFO, Morgan Stanley Steve, the margin goals that we've given have been really around Wealth Management.",
+        "segs": [
+          {
+            "t": "Sharon Yeshaya CFO, Morgan Stanley Steve, the margin goals that we've given have been really around Wealth Management.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/64111-q2-2023",
+          "title": "Morgan Stanley (MS) Q2 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/64111-q2-2023",
+          "title": "Morgan Stanley (MS) Q2 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2023-10-18",
+      "promiseId": "P1",
+      "date": "2023-10-18",
+      "call": "Q3 2023 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported the business was at 28% excluding integration costs and discussed the long-term 30% target.",
+      "quote": "We're already at 28%, ex the integration costs.",
+      "verbatim": {
+        "text": "We're already at 28%, ex the integration costs.",
+        "segs": [
+          {
+            "t": "We're already at ",
+            "h": 0
+          },
+          {
+            "t": "28%",
+            "h": 1
+          },
+          {
+            "t": ", ex the integration costs.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023",
+          "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023",
+          "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2024-01-16",
+      "promiseId": "P1",
+      "date": "2024-01-16",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Ted Pick, Co-President and Head of Institutional Securities Group",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the 30% Wealth Management margin goal, saying it would take time.",
+      "quote": "We will hit 30% pre-tax margins in wealth, 70% efficiency ratio for the firm, and 20% ROTCE. It will take time.",
+      "verbatim": {
+        "text": "We will hit 30% pre-tax margins in wealth, 70% efficiency ratio for the firm, and 20% ROTCE.",
+        "segs": [
+          {
+            "t": "We will hit ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " pre-tax margins in wealth, ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": " efficiency ratio for the firm, and ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " ROTCE.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+          "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+          "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2024-04-16",
+      "promiseId": "P1",
+      "date": "2024-04-16",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Described sustainable 30% pre-tax profits over time as a goal supported by the scaled platform.",
+      "quote": "We remain focused on supporting clients on their path to advice, deepening existing client relationships, and using our scaled platform to achieve sustainable 30% pre-tax profits over time.",
+      "verbatim": {
+        "text": "We remain focused on supporting clients on their path to advice, deepening existing client relationships, and using our scaled platform to achieve sustainable 30% pre-tax profits over time.",
+        "segs": [
+          {
+            "t": "We remain focused on supporting clients on their path to advice, deepening existing client relationships, and using our scaled platform to achieve sustainable ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " pre-tax profits over time.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2024-07-16",
+      "promiseId": "P1",
+      "date": "2024-07-16",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Said the business continued working toward 30% margins over time.",
+      "quote": "Taken together, we delivered a strong margin, and we continue to work towards 30% margins over time.",
+      "verbatim": {
+        "text": "Taken together, we delivered a strong margin, and we continue to work towards 30% margins over time.",
+        "segs": [
+          {
+            "t": "Taken together, we delivered a strong margin, and we continue to work towards ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " margins over time.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024",
+          "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024",
+          "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2024-10-16",
+      "promiseId": "P1",
+      "date": "2024-10-16",
+      "call": "Q3 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not address the margin target; it reported a quarterly margin of 28.3%.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/200830-q3-2024",
+          "title": "Morgan Stanley (MS) Q3 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2025-01-16",
+      "promiseId": "P1",
+      "date": "2025-01-16",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Said the firm could get to 30% but wanted to achieve it durably while continuing to invest; no target or deadline changed.",
+      "quote": "We've always said over the course of the last 5 years, we can get to 30%. But we don't want to starve the business. We want to do it in a durable manner.",
+      "verbatim": {
+        "text": "We've always said over the course of the last 5 years, we can get to 30%. But we don't want to starve the business.",
+        "segs": [
+          {
+            "t": "We've always said over the course of the last 5 years, we can get to ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": ". But we don't want to starve the business.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.alphaspread.com/security/nyse/ms/investor-relations/earnings-call/q4-2024",
+          "title": "MS Q4 2024 Earnings Call Transcript - Alpha Spread",
+          "domain": "alphaspread.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.alphaspread.com/security/nyse/ms/investor-relations/earnings-call/q4-2024",
+          "title": "MS Q4 2024 Earnings Call Transcript - Alpha Spread",
+          "domain": "alphaspread.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2025-04-11",
+      "promiseId": "P1",
+      "date": "2025-04-11",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not address the target; it reported a quarterly PBT margin of 26.6%.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025",
+          "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2025-07-16",
+      "promiseId": "P1",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported progress toward the long-term 30% goal; quarterly pre-tax margin was 28.3%.",
+      "quote": "The underlying business progressed towards our long-term goal of 30%.",
+      "verbatim": {
+        "text": "The underlying business progressed towards our long-term goal of 30%.",
+        "segs": [
+          {
+            "t": "The underlying business progressed towards our long-term goal of ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025",
+          "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025",
+          "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2025-10-15",
+      "promiseId": "P1",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Wealth Management reported a 30.3% pre-tax margin for the quarter, its first reported result above 30%.",
+      "quote": "Pre-tax income of $2.5 billion resulted in a pre-tax margin of 30.3%.",
+      "verbatim": {
+        "text": "Pre-tax income of $2.5 billion resulted in a pre-tax margin of 30.3%.",
+        "segs": [
+          {
+            "t": "Pre-tax income of ",
+            "h": 0
+          },
+          {
+            "t": "$2.5 billion",
+            "h": 1
+          },
+          {
+            "t": " resulted in a pre-tax margin of ",
+            "h": 0
+          },
+          {
+            "t": "30.3%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2025.pdf",
+          "title": "3Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2025.pdf",
+          "title": "3Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MS-P1-2026-01-15",
+      "promiseId": "P1",
+      "date": "2026-01-15",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Wealth Management quarterly margin was 31.4%; full-year 2025 reported margin was 29.3%.",
+      "quote": "Pre-tax income of $2.6 billion resulted in a pre-tax margin of 31.4%.",
+      "verbatim": {
+        "text": "Pre-tax income of $2.6 billion resulted in a pre-tax margin of 31.4%.",
+        "segs": [
+          {
+            "t": "Pre-tax income of ",
+            "h": 0
+          },
+          {
+            "t": "$2.6 billion",
+            "h": 1
+          },
+          {
+            "t": " resulted in a pre-tax margin of ",
+            "h": 0
+          },
+          {
+            "t": "31.4%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2025.pdf",
+          "title": "4Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2025.pdf",
+          "title": "4Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MS-P1-2026-04-15",
+      "promiseId": "P1",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Sharon Yeshaya, EVP and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the 30% target and reported a quarterly PBT margin of 30.4%.",
+      "quote": "We reaffirmed our targets at 30% in the strategy deck, and we did that for good reason, mainly because we want to be in a position that we can invest.",
+      "verbatim": {
+        "text": "We reaffirmed our targets at 30% in the strategy deck, and we did that for good reason, mainly because we want to be in a position that we can invest.",
+        "segs": [
+          {
+            "t": "We reaffirmed our targets at ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " in the strategy deck, and we did that for good reason, mainly because we want to be in a position that we can invest.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/400529-q1-2026",
+          "title": "Morgan Stanley (MS) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/400529-q1-2026",
+          "title": "Morgan Stanley (MS) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2026-07-15",
+      "promiseId": "P1",
+      "date": "2026-07-15",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Sharon Yeshaya, Chief Financial Officer",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Reported a 30.5% quarterly margin; Ted Pick called 30% a benchmark hit several times, not a number they were solving for.",
+      "quote": "The pre-tax margin was 30.5%, a reflection of the scale of our business and the intentional strategic investments for our future.",
+      "verbatim": {
+        "text": "The pre-tax margin was 30.5%, a reflection of the scale of our business and the intentional strategic investments for our future.",
+        "segs": [
+          {
+            "t": "The pre-tax margin was ",
+            "h": 0
+          },
+          {
+            "t": "30.5%",
+            "h": 1
+          },
+          {
+            "t": ", a reflection of the scale of our business and the intentional strategic investments for our future.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/morgan-stanley-ms-q2-2026-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/morgan-stanley-ms-q2-2026-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P1-2026-10-14",
+      "promiseId": "P1",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Sharon Yeshaya, Head of Finance",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported a quarterly pretax margin of 30.4% while investing for future growth.",
+      "quote": "The pretax margin of 30.4% shows consistent strength, as we invest in technology, marketing, and our banking capabilities to support future growth.",
+      "verbatim": {
+        "text": "The pretax margin of 30.4% shows consistent strength, as we invest in technology, marketing, and our banking capabilities to support future growth.",
+        "segs": [
+          {
+            "t": "The pretax margin of ",
+            "h": 0
+          },
+          {
+            "t": "30.4%",
+            "h": 1
+          },
+          {
+            "t": " shows consistent strength, as we invest in technology, marketing, and our banking capabilities to support future growth.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2021-01-20",
+      "promiseId": "P2",
+      "date": "2021-01-20",
+      "call": "Q4 2020 earnings call",
+      "speaker": "James P. Gorman, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set a below-70% long-term goal and a 69%–72% range over the next two years.",
+      "quote": "In so doing, we are keeping our long-term efficiency ratio below 70%, and within the range 69% to 72% over the next two years.",
+      "verbatim": {
+        "text": "In so doing, we are keeping our long-term efficiency ratio below 70%, and within the range 69% to 72% over the next two years.",
+        "segs": [
+          {
+            "t": "In so doing, we are keeping our long-term efficiency ratio below ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": ", and within the range ",
+            "h": 0
+          },
+          {
+            "t": "69%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "72%",
+            "h": 1
+          },
+          {
+            "t": " over the next two years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2020-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q4 2020 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2020-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q4 2020 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2021-04-16",
+      "promiseId": "P2",
+      "date": "2021-04-16",
+      "call": "Q1 2021 earnings call",
+      "speaker": "James Gorman, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Q1 efficiency ratio was 66%, below the long-term 70% threshold.",
+      "quote": "The higher revenues reveal the operating leverage in our business and the quarter's efficiency ratio was 66%.",
+      "verbatim": {
+        "text": "The higher revenues reveal the operating leverage in our business and the quarter's efficiency ratio was 66%.",
+        "segs": [
+          {
+            "t": "The higher revenues reveal the operating leverage in our business and the quarter's efficiency ratio was ",
+            "h": 0
+          },
+          {
+            "t": "66%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/7285-q1-2021/",
+          "title": "Morgan Stanley (MS) Q1 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/7285-q1-2021/",
+          "title": "Morgan Stanley (MS) Q1 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2021-07-15",
+      "promiseId": "P2",
+      "date": "2021-07-15",
+      "call": "Q2 2021 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Year-to-date ratio was 67%, excluding integration-related expenses.",
+      "quote": "Year-to-date, our firm efficiency ratio declined to 67%, excluding integration-related expenses, underscoring the operating leverage of our business.",
+      "verbatim": {
+        "text": "Year-to-date, our firm efficiency ratio declined to 67%, excluding integration-related expenses, underscoring the operating leverage of our business.",
+        "segs": [
+          {
+            "t": "Year-to-date, our firm efficiency ratio declined to ",
+            "h": 0
+          },
+          {
+            "t": "67%",
+            "h": 1
+          },
+          {
+            "t": ", excluding integration-related expenses, underscoring the operating leverage of our business.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/2167-q2-2021/",
+          "title": "Morgan Stanley (MS) Q2 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/2167-q2-2021/",
+          "title": "Morgan Stanley (MS) Q2 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2021-10-14",
+      "promiseId": "P2",
+      "date": "2021-10-14",
+      "call": "Q3 2021 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Year-to-date ratio improved to 67% while investing for growth.",
+      "quote": "While investing for growth, our business model demonstrated operating leverage. The firm's year-to-date efficiency ratio improved to 67%.",
+      "verbatim": {
+        "text": "While investing for growth, our business model demonstrated operating leverage. The firm's year-to-date efficiency ratio improved to 67%.",
+        "segs": [
+          {
+            "t": "While investing for growth, our business model demonstrated operating leverage. The firm's year-to-date efficiency ratio improved to ",
+            "h": 0
+          },
+          {
+            "t": "67%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/476-q3-2021/",
+          "title": "Morgan Stanley (MS) Q3 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/476-q3-2021/",
+          "title": "Morgan Stanley (MS) Q3 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2022-01-19",
+      "promiseId": "P2",
+      "date": "2022-01-19",
+      "call": "Q4 2021 earnings call",
+      "speaker": "James P. Gorman, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the under-70% view and said the 2021–2022 range was 69%–72%; full-year ratio was 67.1%.",
+      "quote": "But we’re consistently of the view that, notwithstanding all the talk about expense pressure, our efficiency ratio will stay under 70%.",
+      "verbatim": {
+        "text": "But we’re consistently of the view that, notwithstanding all the talk about expense pressure, our efficiency ratio will stay under 70%.",
+        "segs": [
+          {
+            "t": "But we’re consistently of the view that, notwithstanding all the talk about expense pressure, our efficiency ratio will stay under ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2021-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2021-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2022-04-14",
+      "promiseId": "P2",
+      "date": "2022-04-14",
+      "call": "Q1 2022 earnings call",
+      "speaker": "Sharon Yeshaya, EVP and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Q1 ratio was 67.9%, excluding integration-related expenses.",
+      "quote": "The firm's first quarter efficiency ratio, excluding integration-related expenses, was 67.9% and reflects our expense discipline while continuing to invest in the businesses.",
+      "verbatim": {
+        "text": "The firm's first quarter efficiency ratio, excluding integration-related expenses, was 67.9% and reflects our expense discipline while continuing to invest in the businesses.",
+        "segs": [
+          {
+            "t": "The firm's first quarter efficiency ratio, excluding integration-related expenses, was ",
+            "h": 0
+          },
+          {
+            "t": "67.9%",
+            "h": 1
+          },
+          {
+            "t": " and reflects our expense discipline while continuing to invest in the businesses.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/18676-q1-2022/",
+          "title": "Morgan Stanley (MS) Q1 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/18676-q1-2022/",
+          "title": "Morgan Stanley (MS) Q1 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2022-07-14",
+      "promiseId": "P2",
+      "date": "2022-07-14",
+      "call": "Q2 2022 earnings call",
+      "speaker": "Sharon Yeshaya, EVP and CFO",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Year-to-date ratio was 70%, excluding integration-related expenses; no future target was stated.",
+      "quote": "The firm's year-to-date efficiency ratio, excluding integration related expenses, was 70%.",
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/25535-q2-2022/",
+          "title": "Morgan Stanley (MS) Q2 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2022-10-14",
+      "promiseId": "P2",
+      "date": "2022-10-14",
+      "call": "Q3 2022 earnings call",
+      "speaker": "Sharon Yeshaya, EVP and CFO",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Year-to-date ratio was 72%, or 71% excluding integration-related expenses; no future target was stated.",
+      "quote": "The firm's year-to-date efficiency ratio was 72%. Excluding integration related expenses, our year-to-date efficiency ratio was 71%.",
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022/",
+          "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2023-01-17",
+      "promiseId": "P2",
+      "date": "2023-01-17",
+      "call": "Q4 2022 earnings call",
+      "speaker": "James Gorman, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Said management would manage around 70%; the same-day strategic update retained a longer-term goal below 70%.",
+      "quote": "We're going to manage through that number of around 70% as best as we can.",
+      "verbatim": {
+        "text": "We're going to manage through that number of around 70% as best as we can.",
+        "segs": [
+          {
+            "t": "We're going to manage through that number of around ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": " as best as we can.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/38504-q4-2022",
+          "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/38504-q4-2022",
+          "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2022-strategic-update.pdf",
+          "title": "Strategic Update: Driving Growth Through The Next Decade",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2023-04-19",
+      "promiseId": "P2",
+      "date": "2023-04-19",
+      "call": "Q1 2023 earnings call",
+      "speaker": "Sharon Yeshaya, Chief Financial Officer",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Q1 ratio was 72%; management did not revisit the target.",
+      "quote": "The firm's first quarter efficiency ratio was 72%.",
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/49131-q1-2023/",
+          "title": "Morgan Stanley (MS) Q1 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2023-07-18",
+      "promiseId": "P2",
+      "date": "2023-07-18",
+      "call": "Q2 2023 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Year-to-date ratio was 75%; management did not revisit the target.",
+      "quote": "The firm's year-to-date efficiency ratio was at 75%.",
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/64111-q2-2023/",
+          "title": "Morgan Stanley (MS) Q2 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2023-10-18",
+      "promiseId": "P2",
+      "date": "2023-10-18",
+      "call": "Q3 2023 earnings call",
+      "speaker": "Sharon Yeshaya, EVP and CFO",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Year-to-date ratio was 75%; management did not revisit the target.",
+      "quote": "The firm's year-to-date efficiency ratio was 75%.",
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023/",
+          "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2024-01-16",
+      "promiseId": "P2",
+      "date": "2024-01-16",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Ted Pick, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed a 70% firm efficiency-ratio goal; the 2023 full-year ratio was 77.2%.",
+      "quote": "We will hit 30% pre-tax margins in wealth, 70% efficiency ratio for the firm, and 20% ROTCE.",
+      "verbatim": {
+        "text": "We will hit 30% pre-tax margins in wealth, 70% efficiency ratio for the firm, and 20% ROTCE.",
+        "segs": [
+          {
+            "t": "We will hit ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " pre-tax margins in wealth, ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": " efficiency ratio for the firm, and ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " ROTCE.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+          "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+          "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2024-04-16",
+      "promiseId": "P2",
+      "date": "2024-04-16",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Ted Pick, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Referred to the 70% goal reiterated in January; Q1 ratio was 71%.",
+      "quote": "And that is why reiterating the efficiency ratio of 70% in January was so important and that we put up 71% this quarter where it was a generally constructive environment.",
+      "verbatim": {
+        "text": "And that is why reiterating the efficiency ratio of 70% in January was so important and that we put up 71% this quarter where it was a generally constructive environment.",
+        "segs": [
+          {
+            "t": "And that is why reiterating the efficiency ratio of ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": " in January was so important and that we put up ",
+            "h": 0
+          },
+          {
+            "t": "71%",
+            "h": 1
+          },
+          {
+            "t": " this quarter where it was a generally constructive environment.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024/",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024/",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2024-07-16",
+      "promiseId": "P2",
+      "date": "2024-07-16",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Said the firm could run at or below 70% over time through a durable cycle.",
+      "quote": "We think that the firm can run at or below the 70%, over time through a durable cycle.",
+      "verbatim": {
+        "text": "We think that the firm can run at or below the 70%, over time through a durable cycle.",
+        "segs": [
+          {
+            "t": "We think that the firm can run at or below the ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": ", over time through a durable cycle.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024/",
+          "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024/",
+          "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2024-10-16",
+      "promiseId": "P2",
+      "date": "2024-10-16",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Year-to-date ratio was 72%; management did not state a future firm-wide target.",
+      "quote": "The firm's year-to-date efficiency ratio was 72%.",
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/200830-q3-2024/",
+          "title": "Morgan Stanley (MS) Q3 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2025-01-16",
+      "promiseId": "P2",
+      "date": "2025-01-16",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Sharon Yeshaya, Executive VP and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the long-term 70% efficiency-ratio goal; full-year 2024 ratio was 71.1%.",
+      "quote": "And what I would pay attention to is on the last page of the targets, the 70% efficiency ratio goal that we have stated over the long term.",
+      "verbatim": {
+        "text": "And what I would pay attention to is on the last page of the targets, the 70% efficiency ratio goal that we have stated over the long term.",
+        "segs": [
+          {
+            "t": "And what I would pay attention to is on the last page of the targets, the ",
+            "h": 0
+          },
+          {
+            "t": "70%",
+            "h": 1
+          },
+          {
+            "t": " efficiency ratio goal that we have stated over the long term.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+          "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+          "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2025-04-11",
+      "promiseId": "P2",
+      "date": "2025-04-11",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Q1 ratio was 68%, below the 70% threshold.",
+      "quote": "The first quarter efficiency ratio was 68%.",
+      "verbatim": {
+        "text": "The first quarter efficiency ratio was 68%.",
+        "segs": [
+          {
+            "t": "The first quarter efficiency ratio was ",
+            "h": 0
+          },
+          {
+            "t": "68%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025/",
+          "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025/",
+          "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2025-07-16",
+      "promiseId": "P2",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Year-to-date ratio was 70%; management did not state a future target.",
+      "quote": "The firm's year-to-date efficiency ratio was 70%.",
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025/",
+          "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2025-10-15",
+      "promiseId": "P2",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Year-to-date ratio was 69%, below the 70% threshold.",
+      "quote": "The year-to-date efficiency ratio is 69%.",
+      "verbatim": {
+        "text": "The year-to-date efficiency ratio is 69%.",
+        "segs": [
+          {
+            "t": "The year-to-date efficiency ratio is ",
+            "h": 0
+          },
+          {
+            "t": "69%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/337397-q3-2025/",
+          "title": "Morgan Stanley (MS) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/337397-q3-2025/",
+          "title": "Morgan Stanley (MS) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2026-01-15",
+      "promiseId": "P2",
+      "date": "2026-01-15",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported a 68.4% full-year ratio for 2025, below 70%.",
+      "quote": "Our full year efficiency ratio improved to 68.4%.",
+      "verbatim": {
+        "text": "Our full year efficiency ratio improved to 68.4%.",
+        "segs": [
+          {
+            "t": "Our full year efficiency ratio improved to ",
+            "h": 0
+          },
+          {
+            "t": "68.4%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/morgan-stanley-ms-q4-2025-earnings-transcript",
+          "title": "Morgan Stanley (MS) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/morgan-stanley-ms-q4-2025-earnings-transcript",
+          "title": "Morgan Stanley (MS) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2026-04-15",
+      "promiseId": "P2",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Sharon Yeshaya, EVP and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Q1 ratio was 65%, with strong operating leverage and continued strategic investment.",
+      "quote": "For the quarter, our efficiency ratio was 65%, reflecting strong operating leverage and disciplined execution as we continue to invest strategically across the firm.",
+      "verbatim": {
+        "text": "For the quarter, our efficiency ratio was 65%, reflecting strong operating leverage and disciplined execution as we continue to invest strategically across the firm.",
+        "segs": [
+          {
+            "t": "For the quarter, our efficiency ratio was ",
+            "h": 0
+          },
+          {
+            "t": "65%",
+            "h": 1
+          },
+          {
+            "t": ", reflecting strong operating leverage and disciplined execution as we continue to invest strategically across the firm.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/400529-q1-2026/",
+          "title": "Morgan Stanley (MS) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/400529-q1-2026/",
+          "title": "Morgan Stanley (MS) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2026-07-15",
+      "promiseId": "P2",
+      "date": "2026-07-15",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Sharon Yeshaya, Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Year-to-date ratio was 65%.",
+      "quote": "The firm's year-to-date efficiency ratio was 65%.",
+      "verbatim": {
+        "text": "The firm's year-to-date efficiency ratio was 65%.",
+        "segs": [
+          {
+            "t": "The firm's year-to-date efficiency ratio was ",
+            "h": 0
+          },
+          {
+            "t": "65%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/morgan-stanley-ms-q2-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/morgan-stanley-ms-q2-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P2-2026-10-14",
+      "promiseId": "P2",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Sharon Yeshaya, EVP and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Year-to-date ratio was 66%.",
+      "quote": "Year- to- date, the firm's efficiency ratio was 66%.",
+      "verbatim": {
+        "text": "Year- to- date, the firm's efficiency ratio was 66%.",
+        "segs": [
+          {
+            "t": "Year- to- date, the firm's efficiency ratio was ",
+            "h": 0
+          },
+          {
+            "t": "66%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/651461-q3-2026/",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/651461-q3-2026/",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2022-01-19",
+      "promiseId": "P3",
+      "date": "2022-01-19",
+      "call": "Q4 2021 earnings call",
+      "speaker": "James Gorman, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Raised the ROTCE goal above 20%; no specific deadline was given.",
+      "quote": "We are laser-focused on delivering value to our clients, our shareholders, and our employees, and we believe an ROTCE in excess of 20% is achievable.",
+      "verbatim": {
+        "text": "We are laser-focused on delivering value to our clients, our shareholders, and our employees, and we believe an ROTCE in excess of 20% is achievable.",
+        "segs": [
+          {
+            "t": "We are laser-focused on delivering value to our clients, our shareholders, and our employees, and we believe an ROTCE in excess of ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " is achievable.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/12992-q4-2021",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/12992-q4-2021",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2022-04-14",
+      "promiseId": "P3",
+      "date": "2022-04-14",
+      "call": "Q1 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The future goal was unaddressed; quarterly ROTCE was 20%, or 20.3% excluding integration-related expenses.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/18676-q1-2022",
+          "title": "Morgan Stanley (MS) Q1 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2022-07-14",
+      "promiseId": "P3",
+      "date": "2022-07-14",
+      "call": "Q2 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The future goal was unaddressed; quarterly ROTCE was 13.8%, or 14.3% excluding integration-related expenses.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/25535-q2-2022/",
+          "title": "Morgan Stanley (MS) Q2 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2022-10-14",
+      "promiseId": "P3",
+      "date": "2022-10-14",
+      "call": "Q3 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The future goal was unaddressed; quarterly ROTCE was 14.6%, or 15.2% excluding integration-related expenses.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022",
+          "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2023-01-17",
+      "promiseId": "P3",
+      "date": "2023-01-17",
+      "call": "Q4 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not explicitly address above-20% ROTCE; full-year ROTCE was 15.3%, or 15.7% excluding integration costs.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/38504-q4-2022/",
+          "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2023-04-19",
+      "promiseId": "P3",
+      "date": "2023-04-19",
+      "call": "Q1 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The future goal was unaddressed; quarterly ROTCE was 16.9%.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://equibles.com/stocks/ms/calls/2023-q1",
+          "title": "Morgan Stanley (MS) Q1 2023 Earnings Call Transcript - Equibles",
+          "domain": "equibles.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2023-07-18",
+      "promiseId": "P3",
+      "date": "2023-07-18",
+      "call": "Q2 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The future goal was unaddressed; quarterly ROTCE was 12.1%.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/64111-q2-2023",
+          "title": "Morgan Stanley (MS) Q2 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2023-10-18",
+      "promiseId": "P3",
+      "date": "2023-10-18",
+      "call": "Q3 2023 earnings call",
+      "speaker": "James Gorman, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Discussed the bridge to 20% ROTCE without announcing a formal target change.",
+      "quote": "You pretty easily get to the 20%.",
+      "verbatim": {
+        "text": "You pretty easily get to the 20%.",
+        "segs": [
+          {
+            "t": "You pretty easily get to the ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023",
+          "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023",
+          "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2024-01-16",
+      "promiseId": "P3",
+      "date": "2024-01-16",
+      "call": "Q4 2023 strategic update — Morgan Stanley: Driving the Integrated Firm",
+      "speaker": "Ted Pick, CEO",
+      "stance": "lowered",
+      "k": "c",
+      "summary": "The firmwide ROTCE goal changed from 20%+ to 20%; attainment assumed normal market conditions.",
+      "quote": "The attainment of these objectives assumes a normal market environment and may be impacted by external factors that cannot be predicted at this time, including geopolitical, macroeconomic and market conditions and future legislation and regulations and any changes thereto.",
+      "verbatim": {
+        "text": "The attainment of these objectives assumes a normal market environment and may be impacted by external factors that cannot be predicted at this time, including geopolitical, macroeconomic and market conditions and future legislation and regulations and any changes thereto.",
+        "segs": [
+          {
+            "t": "The attainment of these objectives assumes a normal market environment and may be impacted by external factors that cannot be predicted at this time, including geopolitical, macroeconomic and market conditions and future legislation and regulations and any changes thereto.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2023-strategic-update.pdf",
+          "title": "PowerPoint Presentation",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2023-strategic-update.pdf",
+          "title": "PowerPoint Presentation",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "MS-P3-2024-04-16",
+      "promiseId": "P3",
+      "date": "2024-04-16",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Ted Pick, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Said results aligned with January goals: $15 billion revenue, 71% efficiency, $2 earnings, $7 trillion client assets and 20% ROTCE.",
+      "quote": "To conclude, the first quarter of 2024 aligns with the goals outlined in the January strategy deck: $15 billion of revenue, a 71% efficiency ratio, $2 of earnings, $7 trillion of client assets, and a 20% return on tangible.",
+      "verbatim": {
+        "text": "To conclude, the first quarter of 2024 aligns with the goals outlined in the January strategy deck: $15 billion of revenue, a 71% efficiency ratio, $2 of earnings, $7 trillion of client assets, and a 20% return on tangible.",
+        "segs": [
+          {
+            "t": "To conclude, the first quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " aligns with the goals outlined in the January strategy deck: ",
+            "h": 0
+          },
+          {
+            "t": "$15 billion",
+            "h": 1
+          },
+          {
+            "t": " of revenue, a ",
+            "h": 0
+          },
+          {
+            "t": "71%",
+            "h": 1
+          },
+          {
+            "t": " efficiency ratio, ",
+            "h": 0
+          },
+          {
+            "t": "$2",
+            "h": 1
+          },
+          {
+            "t": " of earnings, ",
+            "h": 0
+          },
+          {
+            "t": "$7 trillion",
+            "h": 1
+          },
+          {
+            "t": " of client assets, and a ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " return on tangible.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2024-07-16",
+      "promiseId": "P3",
+      "date": "2024-07-16",
+      "call": "Q2 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The ROTCE goal was unaddressed; quarterly ROTCE was 17.5%.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024",
+          "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2024-10-16",
+      "promiseId": "P3",
+      "date": "2024-10-16",
+      "call": "Q3 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The ROTCE goal was unaddressed; quarterly ROTCE was 17.5%.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/200830-q3-2024",
+          "title": "Morgan Stanley (MS) Q3 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2025-01-16",
+      "promiseId": "P3",
+      "date": "2025-01-16",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Ted Pick, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 20% returns through the cycle as foundational to durable earnings growth.",
+      "quote": "Against the four pillars of strategy, culture, financial strength, and growth, delivering the Integrated Firm is foundational to durable earnings growth and 20% returns through the cycle.",
+      "verbatim": {
+        "text": "Against the four pillars of strategy, culture, financial strength, and growth, delivering the Integrated Firm is foundational to durable earnings growth and 20% returns through the cycle.",
+        "segs": [
+          {
+            "t": "Against the four pillars of strategy, culture, financial strength, and growth, delivering the Integrated Firm is foundational to durable earnings growth and ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " returns through the cycle.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+          "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+          "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2025-04-11",
+      "promiseId": "P3",
+      "date": "2025-04-11",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Ted Pick, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Said average 20% returns over the last five quarters affirmed financial goals.",
+      "quote": "Delivering an average of 20% returns on tangible over the last five quarters is continued affirmation of our financial goals.",
+      "verbatim": {
+        "text": "Delivering an average of 20% returns on tangible over the last five quarters is continued affirmation of our financial goals.",
+        "segs": [
+          {
+            "t": "Delivering an average of ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " returns on tangible over the last five quarters is continued affirmation of our financial goals.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025",
+          "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025",
+          "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2025-07-16",
+      "promiseId": "P3",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Ted Pick, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the objective of 20% returns on tangible on an ongoing basis.",
+      "quote": "It's all part of sort of the broader mosaic of getting to 20% returns on tangible on an ongoing basis.",
+      "verbatim": {
+        "text": "It's all part of sort of the broader mosaic of getting to 20% returns on tangible on an ongoing basis.",
+        "segs": [
+          {
+            "t": "It's all part of sort of the broader mosaic of getting to ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " returns on tangible on an ongoing basis.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025",
+          "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025",
+          "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2025-10-15",
+      "promiseId": "P3",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The ROTCE goal was not explicitly addressed; quarterly ROTCE was 23.5%.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/337397-q3-2025",
+          "title": "Morgan Stanley (MS) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2026-01-15",
+      "promiseId": "P3",
+      "date": "2026-01-15",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported full-year ROTCE of 21.6%, revenues of $70.6 billion and EPS of $10.21, exceeding the original threshold.",
+      "quote": "The Firm produced full-year revenues of $70.6 billion, EPS of $10.21 and a ROTCE of 21.6%.",
+      "verbatim": {
+        "text": "The Firm produced full-year revenues of $70.6 billion, EPS of $10.21 and a ROTCE of 21.6%.",
+        "segs": [
+          {
+            "t": "The Firm produced full-year revenues of ",
+            "h": 0
+          },
+          {
+            "t": "$70.6 billion",
+            "h": 1
+          },
+          {
+            "t": ", EPS of ",
+            "h": 0
+          },
+          {
+            "t": "$10.21",
+            "h": 1
+          },
+          {
+            "t": " and a ROTCE of ",
+            "h": 0
+          },
+          {
+            "t": "21.6%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2025.pdf",
+          "title": "4Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2025.pdf",
+          "title": "4Q25 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MS-P3-2026-03-25",
+      "promiseId": "P3",
+      "date": "2026-03-25",
+      "call": "2026 shareholder letter",
+      "speaker": "Ted Pick, Chairman and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Said business performance and financial results broadly met or exceeded firmwide goals.",
+      "quote": "Our business performance and financial results show that we broadly met or exceeded Firmwide goals.",
+      "verbatim": {
+        "text": "Our business performance and financial results show that we broadly met or exceeded Firmwide goals.",
+        "segs": [
+          {
+            "t": "Our business performance and financial results show that we broadly met or exceeded Firmwide goals.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-2026ams/2026_Shareholder_Letter.pdf",
+          "title": "2026 Shareholder Letter",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-2026ams/2026_Shareholder_Letter.pdf",
+          "title": "2026 Shareholder Letter",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "MS-P3-2026-04-15",
+      "promiseId": "P3",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Sharon Yeshaya, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported ROTCE of 27.1%, remaining above the original threshold.",
+      "quote": "Our ROTCE was very strong at 27.1%.",
+      "verbatim": {
+        "text": "Our ROTCE was very strong at 27.1%.",
+        "segs": [
+          {
+            "t": "Our ROTCE was very strong at ",
+            "h": 0
+          },
+          {
+            "t": "27.1%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://earnings.video/earnings/morgan-stanley/q1-2026/transcript",
+          "title": "MS Q1 2026 Earnings Call Transcript | MORGAN STANLEY",
+          "domain": "earnings.video",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://earnings.video/earnings/morgan-stanley/q1-2026/transcript",
+          "title": "MS Q1 2026 Earnings Call Transcript | MORGAN STANLEY",
+          "domain": "earnings.video",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2026-07-15",
+      "promiseId": "P3",
+      "date": "2026-07-15",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Sharon Yeshaya, EVP and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported ROTCE of 26.6%.",
+      "quote": "Our ROTCE was 26.6%.",
+      "verbatim": {
+        "text": "In the second quarter, the firm produced record revenues of $21.3 billion and record EPS ex-CVA of $3.46. Our ROTCE was 26.6%.",
+        "segs": [
+          {
+            "t": "In the second quarter, the firm produced record revenues of ",
+            "h": 0
+          },
+          {
+            "t": "$21.3 billion",
+            "h": 1
+          },
+          {
+            "t": " and record EPS ex-CVA of ",
+            "h": 0
+          },
+          {
+            "t": "$3.46",
+            "h": 1
+          },
+          {
+            "t": ". Our ROTCE was ",
+            "h": 0
+          },
+          {
+            "t": "26.6%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/649665-q2-2026",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript",
+          "extract": {
+            "objective": "What Morgan Stanley executives said on the Q2 2026 earnings call (2026-07-15) about ROTCE above 20%: Reported ROTCE of 26.6%."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/649665-q2-2026",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P3-2026-10-14",
+      "promiseId": "P3",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Ted Pick, Chairman and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported 22.6% ROTCE and a fifth consecutive quarter above 20%.",
+      "quote": "With a return on tangible equity of 22.6%, this quarter marks our fifth consecutive quarter above 20% speaking to the consistent strength of our global franchise.",
+      "verbatim": {
+        "text": "With a return on tangible equity of 22.6%, this quarter marks our fifth consecutive quarter above 20% speaking to the consistent strength of our global franchise.",
+        "segs": [
+          {
+            "t": "With a return on tangible equity of ",
+            "h": 0
+          },
+          {
+            "t": "22.6%",
+            "h": 1
+          },
+          {
+            "t": ", this quarter marks our fifth consecutive quarter above ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " speaking to the consistent strength of our global franchise.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2022-01-19",
+      "promiseId": "P4",
+      "date": "2022-01-19",
+      "call": "Q4 2021 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set a new long-term goal to achieve $10 trillion in client assets across Wealth and Investment Management.",
+      "quote": "As we look to the longer term, with the support of our track record behind us, we're adding a new goal, a long-term goal to achieve $10 trillion in client assets across Wealth and Investment Management.",
+      "verbatim": {
+        "text": "As we look to the longer term, with the support of our track record behind us, we're adding a new goal, a long-term goal to achieve $10 trillion in client assets across Wealth and Investment Management.",
+        "segs": [
+          {
+            "t": "As we look to the longer term, with the support of our track record behind us, we're adding a new goal, a long-term goal to achieve ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " in client assets across Wealth and Investment Management.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/MS-PK/transcripts/2021-year/4-quarter",
+          "title": "Morgan Stanley (MS/PK) Q4 FY2021 Earnings Call Transcript - January 19, 2022",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/MS-PK/transcripts/2021-year/4-quarter",
+          "title": "Morgan Stanley (MS/PK) Q4 FY2021 Earnings Call Transcript - January 19, 2022",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2021-earnings-call-transcript",
+          "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2022-04-14",
+      "promiseId": "P4",
+      "date": "2022-04-14",
+      "call": "Q1 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The $10 trillion long-term goal was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/18676-q1-2022",
+          "title": "Morgan Stanley (MS) Q1 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2022-07-14",
+      "promiseId": "P4",
+      "date": "2022-07-14",
+      "call": "Q2 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The $10 trillion long-term goal was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://equibles.com/stocks/ms/calls/2022-q2",
+          "title": "Morgan Stanley (MS) Q2 2022 Earnings Call Transcript - Equibles",
+          "domain": "equibles.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2022-10-14",
+      "promiseId": "P4",
+      "date": "2022-10-14",
+      "call": "Q3 2022 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the $10 trillion long-term goal, describing a $50 billion business at 50 basis points.",
+      "quote": "My long-term goal here is $10 trillion in clients' money at 50 basis points is a $50 billion business.",
+      "verbatim": {
+        "text": "My long-term goal here is $10 trillion in clients' money at 50 basis points is a $50 billion business.",
+        "segs": [
+          {
+            "t": "My long-term goal here is ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " in clients' money at ",
+            "h": 0
+          },
+          {
+            "t": "50 basis points",
+            "h": 1
+          },
+          {
+            "t": " is a ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": " business.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022",
+          "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022",
+          "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2023-01-17",
+      "promiseId": "P4",
+      "date": "2023-01-17",
+      "call": "Q4 2022 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the expected path to $10 trillion across Wealth and Investment Management.",
+      "quote": "Starting with the expected path to $10 trillion in client assets across Wealth and Investment Management.",
+      "verbatim": {
+        "text": "Starting with the expected path to $10 trillion in client assets across Wealth and Investment Management.",
+        "segs": [
+          {
+            "t": "Starting with the expected path to ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " in client assets across Wealth and Investment Management.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2022-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2022-earnings-call-transcript/",
+          "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2023-04-19",
+      "promiseId": "P4",
+      "date": "2023-04-19",
+      "call": "Q1 2023 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that the $10 trillion target was real.",
+      "quote": "This $10 trillion target is for real.",
+      "verbatim": {
+        "text": "We see a real window here.This $10 trillion target is for real.",
+        "segs": [
+          {
+            "t": "We see a real window here.This ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " target is for real.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/MS/transcripts/2023-year/1-quarter",
+          "title": "Morgan Stanley (MS) Q1 FY2023 Earnings Call Transcript - April 19, 2023 | Roic AI",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/MS/transcripts/2023-year/1-quarter",
+          "title": "Morgan Stanley (MS) Q1 FY2023 Earnings Call Transcript - April 19, 2023 | Roic AI",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2023-07-18",
+      "promiseId": "P4",
+      "date": "2023-07-18",
+      "call": "Q2 2023 earnings call",
+      "speaker": "James Gorman, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $10 trillion; illustrated a bit over five years with 5% annual portfolio growth and $1 trillion every three years.",
+      "quote": "And at a 5% increase in the value annually on the portfolio with a $1 trillion every three years, it happens in a bit over five years.",
+      "verbatim": {
+        "text": "And at a 5% increase in the value annually on the portfolio with a $1 trillion every three years, it happens in a bit over five years.",
+        "segs": [
+          {
+            "t": "And at a ",
+            "h": 0
+          },
+          {
+            "t": "5%",
+            "h": 1
+          },
+          {
+            "t": " increase in the value annually on the portfolio with a ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": " every three years, it happens in a bit over five years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/MS/transcripts/2023-year/2-quarter",
+          "title": "Morgan Stanley (MS) Q2 FY2023 Earnings Call Transcript - July 18, 2023",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/MS/transcripts/2023-year/2-quarter",
+          "title": "Morgan Stanley (MS) Q2 FY2023 Earnings Call Transcript - July 18, 2023",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2023-10-18",
+      "promiseId": "P4",
+      "date": "2023-10-18",
+      "call": "Q3 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The $10 trillion long-term goal was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023",
+          "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2024-01-16",
+      "promiseId": "P4",
+      "date": "2024-01-16",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Ted Pick, Co-President and Head of Institutional Securities Group",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the goal of reaching $10 trillion in total client assets.",
+      "quote": "We see continued opportunities to drive growth and are steadfast in our goal of reaching $10 trillion in total client assets.",
+      "verbatim": {
+        "text": "We see continued opportunities to drive growth and are steadfast in our goal of reaching $10 trillion in total client assets.",
+        "segs": [
+          {
+            "t": "We see continued opportunities to drive growth and are steadfast in our goal of reaching ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " in total client assets.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+          "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+          "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2024-04-16",
+      "promiseId": "P4",
+      "date": "2024-04-16",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Ted Pick, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Combined client assets reached $7 trillion, advancing toward the $10 trillion goal.",
+      "quote": "Across both wealth and investment management, total client assets grew to $7 trillion, advancing toward our $10 trillion goal.",
+      "verbatim": {
+        "text": "Across both wealth and investment management, total client assets grew to $7 trillion, advancing toward our $10 trillion goal.",
+        "segs": [
+          {
+            "t": "Across both wealth and investment management, total client assets grew to ",
+            "h": 0
+          },
+          {
+            "t": "$7 trillion",
+            "h": 1
+          },
+          {
+            "t": ", advancing toward our ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " goal.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2024-07-16",
+      "promiseId": "P4",
+      "date": "2024-07-16",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Ted Pick, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Combined client assets reached $7.2 trillion on the road to $10 trillion+.",
+      "quote": "Across Wealth and Investment Management, we've now grown total client assets to $7.2 trillion on our road to $10 trillion+.",
+      "verbatim": {
+        "text": "In wealth, we posted margins of 27%, and across Wealth and Investment Management, we've now grown total client assets to $7.2 trillion on our road to $10 trillion+.",
+        "segs": [
+          {
+            "t": "In wealth, we posted margins of ",
+            "h": 0
+          },
+          {
+            "t": "27%",
+            "h": 1
+          },
+          {
+            "t": ", and across Wealth and Investment Management, we've now grown total client assets to ",
+            "h": 0
+          },
+          {
+            "t": "$7.2 trillion",
+            "h": 1
+          },
+          {
+            "t": " on our road to ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": "+.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024",
+          "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024",
+          "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2024-10-16",
+      "promiseId": "P4",
+      "date": "2024-10-16",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Ted Pick, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Combined client assets reached $7.6 trillion on the road to $10 trillion.",
+      "quote": "Total client assets across Wealth and Investment Management have now reached $7.6 trillion on the road to $10 trillion.",
+      "verbatim": {
+        "text": "Total client assets across Wealth and Investment Management have now reached $7.6 trillion on the road to $10 trillion.",
+        "segs": [
+          {
+            "t": "Total client assets across Wealth and Investment Management have now reached ",
+            "h": 0
+          },
+          {
+            "t": "$7.6 trillion",
+            "h": 1
+          },
+          {
+            "t": " on the road to ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/200830-q3-2024",
+          "title": "Morgan Stanley (MS) Q3 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/200830-q3-2024",
+          "title": "Morgan Stanley (MS) Q3 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2025-01-16",
+      "promiseId": "P4",
+      "date": "2025-01-16",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Ted Pick, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported over 19 million relationships and over $250 billion in net new assets in each of the past two years, on track to $10 trillion-plus.",
+      "quote": "Today, with our expanded offering, we reach over 19 million relationships and have added net new assets of over $250 billion in each of the past two years on track to delivering $10 trillion plus of total client assets.",
+      "verbatim": {
+        "text": "Today, with our expanded offering, we reach over 19 million relationships and have added net new assets of over $250 billion in each of the past two years on track to delivering $10 trillion plus of total client assets.",
+        "segs": [
+          {
+            "t": "Today, with our expanded offering, we reach over ",
+            "h": 0
+          },
+          {
+            "t": "19 million",
+            "h": 1
+          },
+          {
+            "t": " relationships and have added net new assets of over ",
+            "h": 0
+          },
+          {
+            "t": "$250 billion",
+            "h": 1
+          },
+          {
+            "t": " in each of the past two years on track to delivering ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " plus of total client assets.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+          "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+          "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2025-04-11",
+      "promiseId": "P4",
+      "date": "2025-04-11",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The $10 trillion long-term goal was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025",
+          "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2025-07-16",
+      "promiseId": "P4",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Ted Pick, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Combined client assets exceeded $8.2 trillion, progressing toward the target to exceed $10 trillion.",
+      "quote": "Total client assets across wealth and investment management climbed to over $8.2 trillion, reflecting our scale and gaining ground toward our target to exceed $10 trillion.",
+      "verbatim": {
+        "text": "Total client assets across wealth and investment management climbed to over $8.2 trillion, reflecting our scale and gaining ground toward our target to exceed $10 trillion.",
+        "segs": [
+          {
+            "t": "Total client assets across wealth and investment management climbed to over ",
+            "h": 0
+          },
+          {
+            "t": "$8.2 trillion",
+            "h": 1
+          },
+          {
+            "t": ", reflecting our scale and gaining ground toward our target to exceed ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025",
+          "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025",
+          "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2025-10-15",
+      "promiseId": "P4",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Ted Pick, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Combined client assets reached $8.9 trillion, up $1.3 trillion over the last year.",
+      "quote": "Total client assets across wealth and investment management are up $1.3 trillion over the last year and have reached $8.9 trillion.",
+      "verbatim": {
+        "text": "Total client assets across wealth and investment management are up $1.3 trillion over the last year and have reached $8.9 trillion.",
+        "segs": [
+          {
+            "t": "Total client assets across wealth and investment management are up ",
+            "h": 0
+          },
+          {
+            "t": "$1.3 trillion",
+            "h": 1
+          },
+          {
+            "t": " over the last year and have reached ",
+            "h": 0
+          },
+          {
+            "t": "$8.9 trillion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/337397-q3-2025",
+          "title": "Morgan Stanley (MS) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/337397-q3-2025",
+          "title": "Morgan Stanley (MS) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2026-01-15",
+      "promiseId": "P4",
+      "date": "2026-01-15",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Ted Pick, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported compounding Wealth and Investment Management assets toward $10 trillion-plus.",
+      "quote": "We've compounded wealth and investment management client assets towards $10 trillion plus.",
+      "verbatim": {
+        "text": "We've compounded wealth and investment management client assets towards $10 trillion plus.",
+        "segs": [
+          {
+            "t": "We've compounded wealth and investment management client assets towards ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " plus.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/morgan-stanley-ms-q4-2025-earnings-transcript/",
+          "title": "Morgan Stanley (MS) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/morgan-stanley-ms-q4-2025-earnings-transcript/",
+          "title": "Morgan Stanley (MS) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2026-04-15",
+      "promiseId": "P4",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Ted Pick, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Combined client assets exceeded $9 trillion, on the road to $10 trillion-plus.",
+      "quote": "Across Wealth and Investment Management, total client assets exceed $9 trillion, on the road to $10 trillion-plus.",
+      "verbatim": {
+        "text": "Across Wealth and Investment Management, total client assets exceed $9 trillion, on the road to $10 trillion-plus.",
+        "segs": [
+          {
+            "t": "Across Wealth and Investment Management, total client assets exceed ",
+            "h": 0
+          },
+          {
+            "t": "$9 trillion",
+            "h": 1
+          },
+          {
+            "t": ", on the road to ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": "-plus.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/MS/transcripts/2026-year/1-quarter",
+          "title": "Morgan Stanley (MS) Q1 FY2026 Earnings Call Transcript - April 15, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/MS/transcripts/2026-year/1-quarter",
+          "title": "Morgan Stanley (MS) Q1 FY2026 Earnings Call Transcript - April 15, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P4-2026-07-15",
+      "promiseId": "P4",
+      "date": "2026-07-15",
+      "call": "Q2 2026 earnings release",
+      "speaker": "Ted Pick, Chairman and Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "The release reported record $148 billion in Wealth Management net new assets and combined client assets reaching the $10 trillion milestone.",
+      "quote": "Wealth Management added a record $148 billion in net new assets, with total client assets across Wealth and Investment Management reaching the $10 trillion milestone.",
+      "verbatim": {
+        "text": "Wealth Management added a record $148 billion in net new assets, with total client assets across Wealth and Investment Management reaching the $10 trillion milestone.",
+        "segs": [
+          {
+            "t": "Wealth Management added a record ",
+            "h": 0
+          },
+          {
+            "t": "$148 billion",
+            "h": 1
+          },
+          {
+            "t": " in net new assets, with total client assets across Wealth and Investment Management reaching the ",
+            "h": 0
+          },
+          {
+            "t": "$10 trillion",
+            "h": 1
+          },
+          {
+            "t": " milestone.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/2q2026.pdf",
+          "title": "2Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/2q2026.pdf",
+          "title": "2Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MS-P4-2026-10-14",
+      "promiseId": "P4",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings release",
+      "speaker": "Ted Pick, Chairman and Chief Executive Officer",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Reported combined client assets of $10.5 trillion, above the $10 trillion milestone.",
+      "quote": "Across Wealth and Investment Management, total client assets grew to $10.5 trillion, demonstrating the scale of our platform and the strength of our franchise.",
+      "verbatim": {
+        "text": "Across Wealth and Investment Management, total client assets grew to $10.5 trillion, demonstrating the scale of our platform and the strength of our franchise.",
+        "segs": [
+          {
+            "t": "Across Wealth and Investment Management, total client assets grew to ",
+            "h": 0
+          },
+          {
+            "t": "$10.5 trillion",
+            "h": 1
+          },
+          {
+            "t": ", demonstrating the scale of our platform and the strength of our franchise.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2026.pdf",
+          "title": "3Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2026.pdf",
+          "title": "3Q26 MS Earnings Release",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MS-P5-2022-10-14",
+      "promiseId": "P5",
+      "date": "2022-10-14",
+      "call": "Q3 2022 earnings call",
+      "speaker": "James Gorman, Chairman and CEO, Morgan Stanley",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Gorman stated the plan to generate $1 trillion of new client money every three years.",
+      "quote": "I just repeat something that Andy Saperstein said at one of the recent conferences, that our plan is to generate $1 trillion of new money, new client money every three years.",
+      "verbatim": {
+        "text": "I just repeat something that Andy Saperstein said at one of the recent conferences, that our plan is to generate $1 trillion of new money, new client money every three years.",
+        "segs": [
+          {
+            "t": "I just repeat something that Andy Saperstein said at one of the recent conferences, that our plan is to generate ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": " of new money, new client money every three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022",
+          "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022",
+          "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2023-01-17",
+      "promiseId": "P5",
+      "date": "2023-01-17",
+      "call": "Q4 2022 earnings call",
+      "speaker": "James Gorman, Chairman and CEO, Morgan Stanley",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Gorman reiterated the goal of $1 trillion in net new assets approximately every three years.",
+      "quote": "Of note, we've added a new goal that I spoke to earlier, that we've talked about in the last six months, to generate $1 trillion in net new assets approximately every three years.",
+      "verbatim": {
+        "text": "Of note, we've added a new goal that I spoke to earlier, that we've talked about in the last six months, to generate $1 trillion in net new assets approximately every three years.",
+        "segs": [
+          {
+            "t": "Of note, we've added a new goal that I spoke to earlier, that we've talked about in the last six months, to generate ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": " in net new assets approximately every three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/38504-q4-2022",
+          "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/38504-q4-2022",
+          "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2023-04-06",
+      "promiseId": "P5",
+      "date": "2023-04-06",
+      "call": "2023 shareholder letter",
+      "speaker": "James P. Gorman, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Gorman reaffirmed the $1 trillion every-three-years expectation, assuming normal market appreciation consistent with historical performance.",
+      "quote": "Given the scale and reach of our business, we expect to deliver $1 trillion in net new assets every three years going forward, assuming normal market appreciation consistent with historical performance.",
+      "verbatim": {
+        "text": "Given the scale and reach of our business, we expect to deliver $1 trillion in net new assets every three years going forward, assuming normal market appreciation consistent with historical performance.",
+        "segs": [
+          {
+            "t": "Given the scale and reach of our business, we expect to deliver ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": " in net new assets every three years going forward, assuming normal market appreciation consistent with historical performance.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-2022ams/2023_Shareholder_Letter.pdf",
+          "title": "2023 Shareholder Letter",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-2022ams/2023_Shareholder_Letter.pdf",
+          "title": "2023 Shareholder Letter",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "MS-P5-2023-04-19",
+      "promiseId": "P5",
+      "date": "2023-04-19",
+      "call": "Q1 2023 earnings call",
+      "speaker": "James Gorman, Chairman and CEO, Morgan Stanley",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Gorman called $110 billion of Wealth Management positive flows a good start toward the $1 trillion-every-3-years target.",
+      "quote": "This obviously gives us a good start to our 1 trillion every 3 years target.",
+      "verbatim": {
+        "text": "This obviously gives us a good start to our 1 trillion every 3 years target.",
+        "segs": [
+          {
+            "t": "This obviously gives us a good start to our ",
+            "h": 0
+          },
+          {
+            "t": "1 trillion",
+            "h": 1
+          },
+          {
+            "t": " every 3 years target.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/news/morgan-stanley-nyse-ms-q1-050646877.html",
+          "title": "Morgan Stanley (NYSE:MS) Q1 2023 Earnings Call Transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/news/morgan-stanley-nyse-ms-q1-050646877.html",
+          "title": "Morgan Stanley (NYSE:MS) Q1 2023 Earnings Call Transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://capedge.com/company/895421/transcripts/2023/q1",
+          "title": "capedge.com",
+          "domain": "capedge.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2023-05-31",
+      "promiseId": "P5",
+      "date": "2023-05-31",
+      "call": "Bernstein Conference presentation",
+      "speaker": "Andy Saperstein, Co-President of Morgan Stanley and Head of Wealth Management",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "The presentation showed >$1Tn rolling last three years against a $1Tn target.",
+      "quote": "Delivering $1Tn of Net New Assets Every Three Years",
+      "verbatim": {
+        "text": "Rolling Three-Year Net New Assets (1) Delivering $1Tn of Net New Assets Every Three Years",
+        "segs": [
+          {
+            "t": "Rolling Three-Year Net New Assets (1) Delivering ",
+            "h": 0
+          },
+          {
+            "t": "$1",
+            "h": 1
+          },
+          {
+            "t": "Tn of Net New Assets Every Three Years",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/presentations/2023.05.31_Bernstein_Conference.pdf",
+          "title": "PowerPoint Presentation",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/presentations/2023.05.31_Bernstein_Conference.pdf",
+          "title": "PowerPoint Presentation",
+          "domain": "morganstanley.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "MS-P5-2023-07-18",
+      "promiseId": "P5",
+      "date": "2023-07-18",
+      "call": "Q2 2023 earnings call",
+      "speaker": "James Gorman, Chairman and CEO, Morgan Stanley",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Gorman discussed the $1 trillion every-three-years pace while describing a scenario involving a 5% annual increase in portfolio value.",
+      "quote": "At a 5% increase in the value annually on the portfolio, which with a $1 trillion every three years, it happens in a bit over five years.",
+      "verbatim": {
+        "text": "At a 5% increase in the value annually on the portfolio, which with a $1 trillion every three years, it happens in a bit over five years.",
+        "segs": [
+          {
+            "t": "At a ",
+            "h": 0
+          },
+          {
+            "t": "5%",
+            "h": 1
+          },
+          {
+            "t": " increase in the value annually on the portfolio, which with a ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": " every three years, it happens in a bit over five years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/64111-q2-2023",
+          "title": "Morgan Stanley (MS) Q2 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/64111-q2-2023",
+          "title": "Morgan Stanley (MS) Q2 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2023-10-18",
+      "promiseId": "P5",
+      "date": "2023-10-18",
+      "call": "Q3 2023 earnings call",
+      "speaker": "James Gorman, Chairman and CEO, Morgan Stanley",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Gorman said the current pace was spot on with the three-year $1 trillion net-new-money target.",
+      "quote": "In fact, it's spot on with our three-year target of $1 trillion for net new money.",
+      "verbatim": {
+        "text": "In fact, it's spot on with our three-year target of $1 trillion for net new money.",
+        "segs": [
+          {
+            "t": "In fact, it's spot on with our three-year target of ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": " for net new money.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023",
+          "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023",
+          "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2024-01-16",
+      "promiseId": "P5",
+      "date": "2024-01-16",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Ted Pick, Co-President and Head of Institutional Securities Group, Morgan Stanley",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Pick reported $1 trillion of net new assets over the past 3 years.",
+      "quote": "The business generated $1 trillion of net new assets over the past 3 years, and we are relentlessly focused on sustainable growth.",
+      "verbatim": {
+        "text": "The business generated $1 trillion of net new assets over the past 3 years, and we are relentlessly focused on sustainable growth.",
+        "segs": [
+          {
+            "t": "The business generated ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": " of net new assets over the past 3 years, and we are relentlessly focused on sustainable growth.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+          "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+          "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2024-04-16",
+      "promiseId": "P5",
+      "date": "2024-04-16",
+      "call": "Q1 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024",
+          "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2024-07-16",
+      "promiseId": "P5",
+      "date": "2024-07-16",
+      "call": "Q2 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024",
+          "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2024-10-16",
+      "promiseId": "P5",
+      "date": "2024-10-16",
+      "call": "Q3 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/200830-q3-2024",
+          "title": "Morgan Stanley (MS) Q3 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2025-01-16",
+      "promiseId": "P5",
+      "date": "2025-01-16",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Ted Pick, CEO, Morgan Stanley",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Pick deemphasized whether flows reached $1 trillion in a given three-year period, focusing instead on asset growth and funnel composition.",
+      "quote": "Clearly, at 250 per annum, that is a material number.",
+      "verbatim": {
+        "text": "Clearly, at 250 per annum, that is a material number.",
+        "segs": [
+          {
+            "t": "Clearly, at 250 per annum, that is a material number.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+          "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+          "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2025-04-11",
+      "promiseId": "P5",
+      "date": "2025-04-11",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025",
+          "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2025-07-16",
+      "promiseId": "P5",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025",
+          "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2025-10-15",
+      "promiseId": "P5",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/337397-q3-2025",
+          "title": "Morgan Stanley (MS) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2026-01-15",
+      "promiseId": "P5",
+      "date": "2026-01-15",
+      "call": "Q4 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/386292-q4-2025",
+          "title": "Morgan Stanley (MS) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2026-04-15",
+      "promiseId": "P5",
+      "date": "2026-04-15",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/400529-q1-2026/",
+          "title": "Morgan Stanley (MS) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2026-07-15",
+      "promiseId": "P5",
+      "date": "2026-07-15",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the approximately $1 trillion-every-three-years goal.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/ms/transcripts/649665-q2-2026",
+          "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MS-P5-2026-10-14",
+      "promiseId": "P5",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Ted Pick, Chairman and CEO, Morgan Stanley",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Pick reported another $1 trillion in the last three years, after $1 trillion in the three years following the E*TRADE acquisition.",
+      "quote": "Then the last three years, we drew in another $1 trillion.",
+      "verbatim": {
+        "text": "Then the last three years, we drew in another $1 trillion.",
+        "segs": [
+          {
+            "t": "Then the last three years, we drew in another ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/MS/earnings/MS-Q3-2026-earnings_call-651461.html",
+          "title": "Morgan Stanley (MS) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/MS/earnings/MS-Q3-2026-earnings_call-651461.html",
+          "title": "Morgan Stanley (MS) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/morgan-stanley-ms-q3-2026-earnings-call-transcript",
+      "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022",
+      "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023",
+      "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/124030-q4-2023",
+      "title": "Morgan Stanley (MS) Q4 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024",
+      "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024",
+      "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/200830-q3-2024",
+      "title": "Morgan Stanley (MS) Q3 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025",
+      "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 9,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025",
+      "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 10,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/214619-q4-2024",
+      "title": "Morgan Stanley (MS) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 11,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/12992-q4-2021",
+      "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4"
+    },
+    {
+      "n": 12,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/18676-q1-2022",
+      "title": "Morgan Stanley (MS) Q1 2022 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P4"
+    },
+    {
+      "n": 13,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/64111-q2-2023",
+      "title": "Morgan Stanley (MS) Q2 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P5"
+    },
+    {
+      "n": 14,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/337397-q3-2025",
+      "title": "Morgan Stanley (MS) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 15,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2025.pdf",
+      "title": "4Q25 MS Earnings Release",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 16,
+      "url": "https://www.morganstanley.com/about-us-ir/shareholder/3q2026.pdf",
+      "title": "3Q26 MS Earnings Release",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 17,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/morgan-stanley-ms-q4-2025-earnings-transcript",
+      "title": "Morgan Stanley (MS) Q4 2025 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 18,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/25535-q2-2022/",
+      "title": "Morgan Stanley (MS) Q2 2022 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 19,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/38504-q4-2022",
+      "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 20,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/400529-q1-2026/",
+      "title": "Morgan Stanley (MS) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 21,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/morgan-stanley-ms-q2-2026-earnings-call-transcript",
+      "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 22,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/649665-q2-2026",
+      "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 23,
+      "url": "https://www.roic.ai/quote/MS-PO/transcripts/2020-year/4-quarter",
+      "title": "Morgan Stanley (MS/PO) Q4 FY2020 Earnings Call Transcript - January 20, 2021",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 24,
+      "url": "https://equibles.com/stocks/ms/calls/2022-q2",
+      "title": "Morgan Stanley (MS) Q2 2022 Earnings Call Transcript - Equibles",
+      "domain": "equibles.com",
+      "tier": "press",
+      "uses": "P1 P4"
+    },
+    {
+      "n": 25,
+      "url": "https://equibles.com/stocks/ms/calls/2023-q1",
+      "title": "Morgan Stanley (MS) Q1 2023 Earnings Call Transcript - Equibles",
+      "domain": "equibles.com",
+      "tier": "press",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 26,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2025.pdf",
+      "title": "3Q25 MS Earnings Release",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2023-strategic-update.pdf",
+      "title": "PowerPoint Presentation",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 28,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/2q2026.pdf",
+      "title": "2Q26 MS Earnings Release",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 29,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/3q2026.pdf",
+      "title": "3Q26 MS Earnings Release",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 30,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2022.pdf",
+      "title": "Morgan Stanley Fourth Quarter and Full Year 2022 Earnings Results Financial Summary",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 31,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/shareholder/4q2022-strategic-update.pdf",
+      "title": "Strategic Update: Driving Growth Through The Next Decade",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 32,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-2026ams/2026_Shareholder_Letter.pdf",
+      "title": "2026 Shareholder Letter",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 33,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-2022ams/2023_Shareholder_Letter.pdf",
+      "title": "2023 Shareholder Letter",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 34,
+      "url": "https://www.morganstanley.com/content/dam/msdotcom/en/about-us-ir/presentations/2023.05.31_Bernstein_Conference.pdf",
+      "title": "PowerPoint Presentation",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 35,
+      "url": "https://www.morganstanley.com/about-us-ir/shareholder/1q2026.pdf",
+      "title": "1Q26 MS Earnings Release",
+      "domain": "morganstanley.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 36,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/07/15/morgan-stanley-ms-q2-2026-earnings-call-transcript/",
+      "title": "Morgan Stanley (MS) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 37,
+      "url": "https://finance.yahoo.com/quote/MS/earnings/MS-Q3-2026-earnings_call-651461.html",
+      "title": "Morgan Stanley (MS) Q3 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 38,
+      "url": "https://earningscall.biz/e/nyse/s/ms/y/2020/q/q4",
+      "title": "EarningsCall · MS Q4 2020",
+      "domain": "earningscall.biz",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 39,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/7285-q1-2021",
+      "title": "Morgan Stanley (MS) Q1 2021 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 40,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/2167-q2-2021",
+      "title": "Morgan Stanley (MS) Q2 2021 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 41,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/476-q3-2021",
+      "title": "Morgan Stanley (MS) Q3 2021 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 42,
+      "url": "https://www.alphaspread.com/security/nyse/ms/investor-relations/earnings-call/q4-2024",
+      "title": "MS Q4 2024 Earnings Call Transcript - Alpha Spread",
+      "domain": "alphaspread.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 43,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/400529-q1-2026",
+      "title": "Morgan Stanley (MS) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 44,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/7285-q1-2021/",
+      "title": "Morgan Stanley (MS) Q1 2021 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 45,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/2167-q2-2021/",
+      "title": "Morgan Stanley (MS) Q2 2021 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 46,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/476-q3-2021/",
+      "title": "Morgan Stanley (MS) Q3 2021 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 47,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/18676-q1-2022/",
+      "title": "Morgan Stanley (MS) Q1 2022 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 48,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/27561-q3-2022/",
+      "title": "Morgan Stanley (MS) Q3 2022 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 49,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/49131-q1-2023/",
+      "title": "Morgan Stanley (MS) Q1 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 50,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/64111-q2-2023/",
+      "title": "Morgan Stanley (MS) Q2 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 51,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/83712-q3-2023/",
+      "title": "Morgan Stanley (MS) Q3 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 52,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/158515-q1-2024/",
+      "title": "Morgan Stanley (MS) Q1 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 53,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/185453-q2-2024/",
+      "title": "Morgan Stanley (MS) Q2 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 54,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/200830-q3-2024/",
+      "title": "Morgan Stanley (MS) Q3 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 55,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/248241-q1-2025/",
+      "title": "Morgan Stanley (MS) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 56,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/307556-q2-2025/",
+      "title": "Morgan Stanley (MS) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 57,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/337397-q3-2025/",
+      "title": "Morgan Stanley (MS) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 58,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/651461-q3-2026/",
+      "title": "Morgan Stanley (MS) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 59,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/38504-q4-2022/",
+      "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 60,
+      "url": "https://www.roic.ai/quote/MS-PK/transcripts/2021-year/4-quarter",
+      "title": "Morgan Stanley (MS/PK) Q4 FY2021 Earnings Call Transcript - January 19, 2022",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 61,
+      "url": "https://www.roic.ai/quote/MS/transcripts/2023-year/1-quarter",
+      "title": "Morgan Stanley (MS) Q1 FY2023 Earnings Call Transcript - April 19, 2023 | Roic AI",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 62,
+      "url": "https://www.roic.ai/quote/MS/transcripts/2023-year/2-quarter",
+      "title": "Morgan Stanley (MS) Q2 FY2023 Earnings Call Transcript - July 18, 2023",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 63,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/morgan-stanley-ms-q4-2025-earnings-transcript/",
+      "title": "Morgan Stanley (MS) Q4 2025 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 64,
+      "url": "https://www.roic.ai/quote/MS/transcripts/2026-year/1-quarter",
+      "title": "Morgan Stanley (MS) Q1 FY2026 Earnings Call Transcript - April 15, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 65,
+      "url": "https://finance.yahoo.com/news/morgan-stanley-nyse-ms-q1-050646877.html",
+      "title": "Morgan Stanley (NYSE:MS) Q1 2023 Earnings Call Transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 66,
+      "url": "https://capedge.com/company/895421/transcripts/2023/q1",
+      "title": "capedge.com",
+      "domain": "capedge.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 67,
+      "url": "https://stockanalysis.com/stocks/ms/transcripts/386292-q4-2025",
+      "title": "Morgan Stanley (MS) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 68,
+      "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2020-earnings-call-transcript/",
+      "title": "Morgan Stanley (MS) Q4 2020 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 69,
+      "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2021-earnings-call-transcript/",
+      "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 70,
+      "url": "https://earnings.video/earnings/morgan-stanley/q1-2026/transcript",
+      "title": "MS Q1 2026 Earnings Call Transcript | MORGAN STANLEY",
+      "domain": "earnings.video",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 71,
+      "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2021-earnings-call-transcript",
+      "title": "Morgan Stanley (MS) Q4 2021 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 72,
+      "url": "https://news.alphastreet.com/morgan-stanley-ms-q4-2022-earnings-call-transcript/",
+      "title": "Morgan Stanley (MS) Q4 2022 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P4"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.971696Z",
+      "completedAt": "2026-11-05T06:31:22.414244Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.448540Z",
+      "completedAt": "2026-11-05T19:16:19.763403Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.455720Z",
+      "completedAt": "2026-11-05T19:15:38.861994Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.462962Z",
+      "completedAt": "2026-11-05T19:17:02.944503Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.470152Z",
+      "completedAt": "2026-11-05T19:15:17.861378Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.477309Z",
+      "completedAt": "2026-11-05T19:14:44.112795Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.293658Z",
+      "completedAt": "2026-11-05T19:51:49.059718Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.300977Z",
+      "completedAt": "2026-11-05T19:47:26.184457Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.308717Z",
+      "completedAt": "2026-11-05T19:49:54.629970Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.319794Z",
+      "completedAt": "2026-11-05T19:47:00.273796Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.327962Z",
+      "completedAt": "2026-11-05T19:47:06.868043Z"
+    }
+  ],
+  "fills": {
+    "filled": 1
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "108 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "73 of 73 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "73 of 73 (100%); 1 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-14; next 2027-01-14"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Morgan_Stanley_Logo_1.svg/3840px-Morgan_Stanley_Logo_1.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Morgan_Stanley_Logo_1.svg",
+      "title": "File:Morgan Stanley Logo 1.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 960,
+      "rank": 1
+    },
+    "photo": null
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.965Z"
+}

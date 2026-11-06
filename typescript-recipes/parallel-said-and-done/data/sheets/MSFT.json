@@ -1,0 +1,1505 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "MSFT",
+  "name": "Microsoft Corporation",
+  "short": "Microsoft",
+  "website": "microsoft.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "June 30",
+  "irUrl": "https://www.microsoft.com/en-us/investor",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-28",
+    "quarter": "Q1 FY2027"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": "Q2 FY2027"
+  },
+  "photoSubject": "Microsoft Azure datacenter",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Accelerate Azure growth in FY2025",
+      "commitment": "Accelerate Azure growth in H2 FY2025 as capital investments expand available AI capacity.",
+      "deadline": "H2 FY2025",
+      "firstStated": "2024-07-30",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Azure growth accelerated to 39%; additional datacenter capacity came online, although demand remained higher than supply.",
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q4",
+          "title": "Microsoft Fiscal Year 2025 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q4",
+          "title": "Microsoft Fiscal Year 2024 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q3",
+          "title": "Microsoft Fiscal Year 2025 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-07-30",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-01-29",
+            "what_was_said": "Management expected non-AI execution challenges to affect H2. It also expected AI capacity constraints in Q3, but supply to be roughly in line with near-term demand by FY2025-end.",
+            "call": "Q2 FY2025 earnings call"
+          },
+          {
+            "date": "2025-04-30",
+            "what_was_said": "Azure grew 35% in constant currency, including 16 percentage points from AI services, and AI capacity came online faster than expected. Nevertheless, faster-growing demand meant AI capacity constraints were now expected beyond June.",
+            "call": "Q3 FY2025 earnings call"
+          },
+          {
+            "date": "2025-07-30",
+            "what_was_said": "Management said Azure's 39% growth significantly exceeded expectations, driven by accelerated core infrastructure growth primarily from its largest customers. Additional datacenter capacity came online, but demand remained higher than supply.",
+            "call": "Q4 FY2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Protect FY2026 operating margins",
+      "commitment": "Keep FY2026 operating margins relatively unchanged year-over-year while investing in cloud and AI.",
+      "deadline": "FY2026",
+      "firstStated": "2025-07-30",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "FY26 operating margins expanded, exceeding the original target of relatively unchanged margins year-over-year.",
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q4",
+          "title": "Microsoft Fiscal Year 2025 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2",
+          "title": "Microsoft Fiscal Year 2026 Second Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+          "title": "FY26 Q4 - Press Releases - Investor Relations - Microsoft",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-07-29",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-10-29",
+            "what_was_said": "Management reported that Q1 operating margins increased year-over-year to 49% and were ahead of expectations because of stronger-than-anticipated results in high-margin businesses. This was an early favorable quarterly result, not a revision to the full-year margin target.",
+            "call": "Q1 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Double the datacenter footprint",
+      "commitment": "Roughly double the total datacenter footprint over the next two years.",
+      "deadline": "over the next two years",
+      "firstStated": "2025-10-29",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Microsoft added 24 new data centers across five continents in the latest quarter; the roughly doubling commitment remained pending, with no declared completion or target revision.",
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1?ref=beyondtomorrow.world",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q1",
+          "title": "Microsoft Fiscal Year 2026 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-29",
+            "what_was_said": "Microsoft added 31 new datacenters across five continents during the quarter, bringing additions to 88 for the fiscal year. This provides direct footprint-expansion progress beyond S4's gigawatt figure, without declaring the doubling commitment completed.",
+            "call": "Q4 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Fund the CY2026 infrastructure buildout",
+      "commitment": "Invest roughly $190 billion in CY2026 capital expenditures, including approximately $25 billion from higher component pricing.",
+      "deadline": "calendar year 2026",
+      "firstStated": "2026-04-29",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Calendar year 2026 capex guidance stands at approximately $170 billion after lease reclassification and 3P capacity delays; fulfillment remains pending.",
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/Investor/events/FY-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-29",
+            "what_was_said": "Management said, “Outside of this useful life impact, our calendar year 2026 CapEx investment expectations remain unchanged.” It also clarified that finance leases are included in capital expenditures while operating leases are not, distinguishing the accounting-driven revision from a cut to underlying investment plans.",
+            "call": "Q4 FY2026 earnings call"
+          },
+          {
+            "date": "2026-10-28",
+            "what_was_said": "Management expected capex to accelerate in the second half of FY2027, driven by CPUs, higher memory and storage costs, GPUs, and third-party capacity deliveries that had shifted into that period. This qualified the lower CY2026 guidance as partly a timing shift.",
+            "call": "Q1 FY2027 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Deliver double-digit FY2027 growth",
+      "commitment": "Deliver another year of double-digit revenue and operating income growth in FY2027.",
+      "deadline": "FY2027",
+      "firstStated": "2026-04-29",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The FY27 double-digit revenue and operating income growth target remains pending and unchanged; the latest earnings call did not address it.",
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/Investor/events/FY-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "MSFT-P1-2024-07-30",
+      "promiseId": "P1",
+      "date": "2024-07-30",
+      "call": "Q4 FY2024 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected Azure growth to accelerate in H2 FY2025 as capital investments expanded available AI capacity.",
+      "quote": "And in H2, we expect Azure growth to accelerate as our capital investments create an increase in available AI capacity to serve more of the growing demand.",
+      "verbatim": {
+        "text": "And in H2, we expect Azure growth to accelerate as our capital investments create an increase in available AI capacity to serve more of the growing demand.",
+        "segs": [
+          {
+            "t": "And in ",
+            "h": 0
+          },
+          {
+            "t": "H2",
+            "h": 1
+          },
+          {
+            "t": ", we expect Azure growth to accelerate as our capital investments create an increase in available AI capacity to serve more of the growing demand.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q4",
+          "title": "Microsoft Fiscal Year 2024 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q4",
+          "title": "Microsoft Fiscal Year 2024 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P1-2024-10-30",
+      "promiseId": "P1",
+      "date": "2024-10-30",
+      "call": "Q1 FY2025 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that H2 Azure growth would accelerate from H1 as capital investments expanded AI capacity.",
+      "quote": "And in H2, we still expect Azure growth to accelerate from H1 as our capital investments create an increase in available AI capacity to serve more of the growing demand.",
+      "verbatim": {
+        "text": "And in H2, we still expect Azure growth to accelerate from H1 as our capital investments create an increase in available AI capacity to serve more of the growing demand.",
+        "segs": [
+          {
+            "t": "And in ",
+            "h": 0
+          },
+          {
+            "t": "H2",
+            "h": 1
+          },
+          {
+            "t": ", we still expect Azure growth to accelerate from ",
+            "h": 0
+          },
+          {
+            "t": "H1",
+            "h": 1
+          },
+          {
+            "t": " as our capital investments create an increase in available AI capacity to serve more of the growing demand.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q1",
+          "title": "Microsoft Fiscal Year 2025 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q1",
+          "title": "Microsoft Fiscal Year 2025 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P1-2025-01-29",
+      "promiseId": "P1",
+      "date": "2025-01-29",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Increased AI capacity would grow AI services as outlined in October; non-AI execution issues could affect H2.",
+      "quote": "As we shared in October, the contribution from our AI services will grow from increased AI capacity coming online.",
+      "verbatim": {
+        "text": "As we shared in October, the contribution from our AI services will grow from increased AI capacity coming online.",
+        "segs": [
+          {
+            "t": "As we shared in October, the contribution from our AI services will grow from increased AI capacity coming online.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q2",
+          "title": "Microsoft Fiscal Year 2025 Second Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q2",
+          "title": "Microsoft Fiscal Year 2025 Second Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P1-2025-04-30",
+      "promiseId": "P1",
+      "date": "2025-04-30",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected Q4 Azure growth between 34% and 35% in constant currency; AI capacity came online faster than expected.",
+      "quote": "In Azure, we expect Q4 revenue growth to be between 34% and 35% in constant currency driven by strong demand for our portfolio of services.",
+      "verbatim": {
+        "text": "In Azure, we expect Q4 revenue growth to be between 34% and 35% in constant currency driven by strong demand for our portfolio of services.",
+        "segs": [
+          {
+            "t": "In Azure, we expect ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": " revenue growth to be between ",
+            "h": 0
+          },
+          {
+            "t": "34%",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": " in constant currency driven by strong demand for our portfolio of services.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q3",
+          "title": "Microsoft Fiscal Year 2025 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q3",
+          "title": "Microsoft Fiscal Year 2025 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P1-2025-07-30",
+      "promiseId": "P1",
+      "date": "2025-07-30",
+      "call": "Q4 FY2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported server products and cloud services growth of 27%, driven by Azure and other cloud services growth of 39%.",
+      "quote": "· Server products and cloud services revenue increased 27% driven by Azure and other cloud services revenue growth of 39%",
+      "verbatim": {
+        "text": "· Server products and cloud services revenue increased 27% driven by Azure and other cloud services revenue growth of 39%",
+        "segs": [
+          {
+            "t": "· Server products and cloud services revenue increased ",
+            "h": 0
+          },
+          {
+            "t": "27%",
+            "h": 1
+          },
+          {
+            "t": " driven by Azure and other cloud services revenue growth of ",
+            "h": 0
+          },
+          {
+            "t": "39%",
+            "h": 1
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2025-q4/press-release-webcast",
+          "title": "FY25 Q4 - Press Releases - Investor Relations - Microsoft",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2025-q4/press-release-webcast",
+          "title": "FY25 Q4 - Press Releases - Investor Relations - Microsoft",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "MSFT-P2-2025-07-30",
+      "promiseId": "P2",
+      "date": "2025-07-30",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected FY26 operating margins to be relatively unchanged year-over-year.",
+      "quote": "We remain focused on delivering revenue growth and increasing our operational agility, and as a result, expect operating margins to be relatively unchanged year-over-year.",
+      "verbatim": {
+        "text": "We remain focused on delivering revenue growth and increasing our operational agility, and as a result, expect operating margins to be relatively unchanged year-over-year.",
+        "segs": [
+          {
+            "t": "We remain focused on delivering revenue growth and increasing our operational agility, and as a result, expect operating margins to be relatively unchanged year-over-year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q4",
+          "title": "Microsoft Fiscal Year 2025 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q4",
+          "title": "Microsoft Fiscal Year 2025 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P2-2025-10-29",
+      "promiseId": "P2",
+      "date": "2025-10-29",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the full-year FY26 operating-margin target; margin guidance concerned Q2 only.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q1",
+          "title": "Microsoft Fiscal Year 2026 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P2-2026-01-28",
+      "promiseId": "P2",
+      "date": "2026-01-28",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised FY26 operating-margin guidance to up slightly, citing H1 investment prioritization and Windows OEM and Commercial on-prem revenue mix.",
+      "quote": "With the strong work delivered in H1 to prioritize investment in key growth areas and the favorable impact from a higher mix of revenue in our Windows OEM and Commercial on-prem businesses, we now expect FY26 operating margins to be up slightly.",
+      "verbatim": {
+        "text": "With the strong work delivered in H1 to prioritize investment in key growth areas and the favorable impact from a higher mix of revenue in our Windows OEM and Commercial on-prem businesses, we now expect FY26 operating margins to be up slightly.",
+        "segs": [
+          {
+            "t": "With the strong work delivered in ",
+            "h": 0
+          },
+          {
+            "t": "H1",
+            "h": 1
+          },
+          {
+            "t": " to prioritize investment in key growth areas and the favorable impact from a higher mix of revenue in our Windows OEM and Commercial on-prem businesses, we now expect ",
+            "h": 0
+          },
+          {
+            "t": "FY26",
+            "h": 1
+          },
+          {
+            "t": " operating margins to be up slightly.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2",
+          "title": "Microsoft Fiscal Year 2026 Second Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2",
+          "title": "Microsoft Fiscal Year 2026 Second Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q4",
+          "title": "Microsoft Fiscal Year 2025 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P2-2026-04-29",
+      "promiseId": "P2",
+      "date": "2026-04-29",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year FY26 operating-margin guidance to up about one point year-over-year, including one-time costs and continued capacity investment.",
+      "quote": "Even as we invested through the year in additional capacity to serve the growing AI platform, apps, and services demand, and inclusive of these one-time costs, we expect full-year FY26 operating margins to be up about one point year-over-year.",
+      "verbatim": {
+        "text": "Even as we invested through the year in additional capacity to serve the growing AI platform, apps, and services demand, and inclusive of these one-time costs, we expect full-year FY26 operating margins to be up about one point year-over-year.",
+        "segs": [
+          {
+            "t": "Even as we invested through the year in additional capacity to serve the growing AI platform, apps, and services demand, and inclusive of these one-time costs, we expect full-year ",
+            "h": 0
+          },
+          {
+            "t": "FY26",
+            "h": 1
+          },
+          {
+            "t": " operating margins to be up about one point year-over-year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/Investor/events/FY-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/Investor/events/FY-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2",
+          "title": "Microsoft Fiscal Year 2026 Second Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P2-2026-07-29",
+      "promiseId": "P2",
+      "date": "2026-07-29",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported FY26 operating-margin expansion, exceeding the original relatively unchanged year-over-year target.",
+      "quote": "In closing, in FY26 we delivered accelerating revenue and operating income growth while expanding operating margins.",
+      "verbatim": {
+        "text": "In closing, in FY26 we delivered accelerating revenue and operating income growth while expanding operating margins.",
+        "segs": [
+          {
+            "t": "In closing, in ",
+            "h": 0
+          },
+          {
+            "t": "FY26",
+            "h": 1
+          },
+          {
+            "t": " we delivered accelerating revenue and operating income growth while expanding operating margins.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q4",
+          "title": "Microsoft Fiscal Year 2025 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P3-2025-10-29",
+      "promiseId": "P3",
+      "date": "2025-10-29",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Satya Nadella, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Planned over 80% AI-capacity growth this year and roughly double total datacenter footprint over the next two years.",
+      "quote": "We will increase our total AI capacity by over 80% this year, and roughly double our total datacenter footprint over the next two years, reflecting the demand signals we see.",
+      "verbatim": {
+        "text": "We will increase our total AI capacity by over 80% this year, and roughly double our total datacenter footprint over the next two years, reflecting the demand signals we see.",
+        "segs": [
+          {
+            "t": "We will increase our total AI capacity by over ",
+            "h": 0
+          },
+          {
+            "t": "80%",
+            "h": 1
+          },
+          {
+            "t": " this year, and roughly double our total datacenter footprint over the next two years, reflecting the demand signals we see.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/FY-2026/earnings-fy-2026-q1",
+          "title": "Microsoft Fiscal Year 2026 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/FY-2026/earnings-fy-2026-q1",
+          "title": "Microsoft Fiscal Year 2026 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P3-2026-01-28",
+      "promiseId": "P3",
+      "date": "2026-01-28",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Satya Nadella, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Added nearly one gigawatt of total capacity during the quarter; did not explicitly repeat the doubling target.",
+      "quote": "All up, we added nearly one gigawatt of total capacity this quarter alone.",
+      "verbatim": {
+        "text": "All up, we added nearly one gigawatt of total capacity this quarter alone.",
+        "segs": [
+          {
+            "t": "All up, we added nearly one gigawatt of total capacity this quarter alone.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2",
+          "title": "Microsoft Fiscal Year 2026 Second Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2",
+          "title": "Microsoft Fiscal Year 2026 Second Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P3-2026-04-29",
+      "promiseId": "P3",
+      "date": "2026-04-29",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Satya Nadella, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Added another gigawatt of capacity; remained on track to double the overall footprint in two years.",
+      "quote": "All up, we added another gigawatt of capacity this quarter, and remain on track to double our overall footprint in just two years.",
+      "verbatim": {
+        "text": "All up, we added another gigawatt of capacity this quarter, and remain on track to double our overall footprint in just two years.",
+        "segs": [
+          {
+            "t": "All up, we added another gigawatt of capacity this quarter, and remain on track to double our overall footprint in just two years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P3-2026-07-29",
+      "promiseId": "P3",
+      "date": "2026-07-29",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Satya Nadella, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Added another gigawatt of capacity; remained on track to roughly double overall capacity in two years.",
+      "quote": "All up, we added another gigawatt of capacity this quarter and remain on track to roughly double our overall capacity in just two years.",
+      "verbatim": {
+        "text": "All up, we added another gigawatt of capacity this quarter and remain on track to roughly double our overall capacity in just two years.",
+        "segs": [
+          {
+            "t": "All up, we added another gigawatt of capacity this quarter and remain on track to roughly double our overall capacity in just two years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P3-2026-10-28",
+      "promiseId": "P3",
+      "date": "2026-10-28",
+      "call": "Q1 FY2027 earnings call",
+      "speaker": "Satya Nadella, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Added 24 new data centers across five continents; reported expansion progress without explicitly repeating the doubling target.",
+      "quote": "Accelerating demand led to us adding 24 new data centers across five continents this quarter.",
+      "verbatim": {
+        "text": "Accelerating demand led to us adding 24 new data centers across five continents this quarter.",
+        "segs": [
+          {
+            "t": "Accelerating demand led to us adding 24 new data centers across five continents this quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1?ref=beyondtomorrow.world",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1?ref=beyondtomorrow.world",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P4-2026-04-29",
+      "promiseId": "P4",
+      "date": "2026-04-29",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected roughly $190 billion in calendar year 2026 capital expenditures, including approximately $25 billion from higher component pricing.",
+      "quote": "For calendar year 2026, we expect to invest roughly $190 billion in capital expenditures which includes approximately $25 billion from the impact of higher component pricing.",
+      "verbatim": {
+        "text": "For calendar year 2026, we expect to invest roughly $190 billion in capital expenditures which includes approximately $25 billion from the impact of higher component pricing.",
+        "segs": [
+          {
+            "t": "For calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect to invest roughly ",
+            "h": 0
+          },
+          {
+            "t": "$190 billion",
+            "h": 1
+          },
+          {
+            "t": " in capital expenditures which includes approximately ",
+            "h": 0
+          },
+          {
+            "t": "$25 billion",
+            "h": 1
+          },
+          {
+            "t": " from the impact of higher component pricing.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P4-2026-07-29",
+      "promiseId": "P4",
+      "date": "2026-07-29",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Adjusted calendar year 2026 CapEx to approximately $175 billion through finance-to-operating lease reclassification; underlying investment expectations remained unchanged.",
+      "quote": "However, the shift from finance to operating leases adjusts our expectation to approximately $175 billion.",
+      "verbatim": {
+        "text": "However, the shift from finance to operating leases adjusts our expectation to approximately $175 billion.",
+        "segs": [
+          {
+            "t": "However, the shift from finance to operating leases adjusts our expectation to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$175 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P4-2026-10-28",
+      "promiseId": "P4",
+      "date": "2026-10-28",
+      "call": "Q1 FY2027 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Lowered calendar year 2026 spending to approximately $170 billion because of 3P capacity delays.",
+      "quote": "Therefore, for the calendar year, spend should be approximately $170 billion due to the 3P capacity delays noted earlier.",
+      "verbatim": {
+        "text": "Therefore, for the calendar year, spend should be approximately $170 billion due to the 3P capacity delays noted earlier.",
+        "segs": [
+          {
+            "t": "Therefore, for the calendar year, spend should be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$170 billion",
+            "h": 1
+          },
+          {
+            "t": " due to the 3P capacity delays noted earlier.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P5-2026-04-29",
+      "promiseId": "P5",
+      "date": "2026-04-29",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expects another year of double-digit revenue and operating income growth in FY27.",
+      "quote": "And finally, we remain focused on delivering a platform that enables customers to build and run AI solutions, and on driving innovation in our first-party AI applications and services and therefore, we expect another year of double-digit revenue and operating income growth in FY27.",
+      "verbatim": {
+        "text": "And finally, we remain focused on delivering a platform that enables customers to build and run AI solutions, and on driving innovation in our first-party AI applications and services and therefore, we expect another year of double-digit revenue and operating income growth in FY27.",
+        "segs": [
+          {
+            "t": "And finally, we remain focused on delivering a platform that enables customers to build and run AI solutions, and on driving innovation in our first-party AI applications and services and therefore, we expect another year of double-digit revenue and operating income growth in ",
+            "h": 0
+          },
+          {
+            "t": "FY27",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/Investor/events/FY-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/Investor/events/FY-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3",
+          "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P5-2026-07-29",
+      "promiseId": "P5",
+      "date": "2026-07-29",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Amy Hood, EVP & CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirms double-digit revenue and operating income growth for FY27.",
+      "quote": "At the company level, with strong commercial momentum, we continue to expect another fiscal year of double-digit revenue and operating income growth.",
+      "verbatim": {
+        "text": "At the company level, with strong commercial momentum, we continue to expect another fiscal year of double-digit revenue and operating income growth.",
+        "segs": [
+          {
+            "t": "At the company level, with strong commercial momentum, we continue to expect another fiscal year of double-digit revenue and operating income growth.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+          "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "MSFT-P5-2026-10-28",
+      "promiseId": "P5",
+      "date": "2026-10-28",
+      "call": "Q1 FY2027 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The full-year FY27 double-digit revenue and operating income growth target was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+          "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+          "domain": "microsoft.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q4",
+      "title": "Microsoft Fiscal Year 2026 Fourth Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2027/earnings-fy-2027-q1",
+      "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.microsoft.com/en-us/Investor/events/FY-2026/earnings-fy-2026-q3",
+      "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q3",
+      "title": "Microsoft Fiscal Year 2026 Third Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q4",
+      "title": "Microsoft Fiscal Year 2025 Fourth Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 6,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q2",
+      "title": "Microsoft Fiscal Year 2026 Second Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2026/earnings-fy-2026-q1",
+      "title": "Microsoft Fiscal Year 2026 First Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q4",
+      "title": "Microsoft Fiscal Year 2024 Fourth Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q3",
+      "title": "Microsoft Fiscal Year 2025 Third Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://www.microsoft.com/en-us/Investor/events/fy-2027/earnings-fy-2027-q1?ref=beyondtomorrow.world",
+      "title": "Microsoft Fiscal Year 2027 First Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 11,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q1",
+      "title": "Microsoft Fiscal Year 2025 First Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://www.microsoft.com/en-us/investor/events/fy-2025/earnings-fy-2025-q2",
+      "title": "Microsoft Fiscal Year 2025 Second Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2025-q4/press-release-webcast",
+      "title": "FY25 Q4 - Press Releases - Investor Relations - Microsoft",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://www.microsoft.com/en-us/investor/events/FY-2026/earnings-fy-2026-q1",
+      "title": "Microsoft Fiscal Year 2026 First Quarter Earnings Conference Call",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 15,
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "title": "FY26 Q4 - Press Releases - Investor Relations - Microsoft",
+      "domain": "microsoft.com",
+      "tier": "primary",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T02:59:01.332573Z",
+      "completedAt": "2026-11-05T03:05:34.239528Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T18:46:07.945306Z",
+      "completedAt": "2026-11-05T18:49:14.233626Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.504531Z",
+      "completedAt": "2026-11-05T19:11:57.376029Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.510948Z",
+      "completedAt": "2026-11-05T19:11:15.238047Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.517377Z",
+      "completedAt": "2026-11-05T19:11:54.736931Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.523986Z",
+      "completedAt": "2026-11-05T19:10:01.462998Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.233959Z",
+      "completedAt": "2026-11-05T19:45:04.222435Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.226724Z",
+      "completedAt": "2026-11-05T19:44:59.133095Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.241245Z",
+      "completedAt": "2026-11-05T19:45:54.984558Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.248628Z",
+      "completedAt": "2026-11-05T19:45:36.765627Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.255969Z",
+      "completedAt": "2026-11-05T19:43:32.685200Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "21 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "19 of 19 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "19 of 19 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q1 FY2027 on 2026-10-28; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/3840px-Microsoft_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Microsoft_logo.svg",
+      "title": "File:Microsoft logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 3840,
+      "rank": 3
+    },
+    "photo": {
+      "imageUrl": "https://datacenters.microsoft.com/wp-content/uploads/2023/03/Microsoft-virtual-data-center.jpg",
+      "sourcePageUrl": "https://datacenters.microsoft.com/home/",
+      "title": "Home - Microsoft Datacenters",
+      "width": 1980,
+      "height": 1114,
+      "rank": 1
+    }
+  },
+  "version": 4,
+  "builtAt": "2026-11-06T00:56:26.238Z"
+}

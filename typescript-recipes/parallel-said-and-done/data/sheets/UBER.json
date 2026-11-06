@@ -1,0 +1,2189 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "UBER",
+  "name": "Uber Technologies, Inc.",
+  "short": "Uber",
+  "website": "uber.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investor.uber.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-11-04",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Uber Waymo robotaxi",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch Waymo in Austin and Atlanta",
+      "commitment": "Bring Waymo ride-hailing to Austin and Atlanta in early 2025, exclusively through the Uber app.",
+      "deadline": "early 2025",
+      "firstStated": "2024-09-13",
+      "status": "partly_delivered",
+      "k": "part",
+      "outcomeSummary": "Austin launched March 04, 2025; Atlanta launched June 24, 2025, after moving to summer from early 2025. Both launched exclusively on Uber.",
+      "citations": [
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2024/Uber-and-Waymo-Expand-Partnership-to-Bring-Autonomous-Ride-Hailing-to-Austin-and-Atlanta/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Uber and Waymo Expand Partnership to Bring Autonomous Ride-Hailing to Austin and Atlanta\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2024/q4/transcript/Uber-Q4-24-Prepared-Remarks.pdf",
+          "title": "Q4 2024 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Ride-Into-the-Future-With-Waymo-on-Uber-in-Austin/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Ride Into the Future With Waymo on Uber in Austin\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Atlanta-The-Future-is-Here-with-Waymo-and-Uber-2025-y1tuDCCSgu/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Atlanta: The Future is Here with Waymo and Uber\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_financials/2024/q3/Uber-Q3-24-Prepared-Remarks.pdf",
+          "title": "Q3 2024 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/May/07/Uber-Q1-25-Prepared-Remarks.pdf",
+          "title": "Q1 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Aug/06/uber-q2-25-earnings-call-transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-06-24",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "partly_delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Additional $20 billion share repurchases",
+      "commitment": "Authorize an additional $20 billion in share repurchases; described as a multiyear plan with activity each quarter, without a fixed end date.",
+      "deadline": "Multiyear; no fixed end date",
+      "firstStated": "2025-08-06",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The authorization remained open; Q3 repurchases were $750 million, diluted share count declined ~3% YoY, and roughly $15 billion remained.",
+      "citations": [
+        {
+          "url": "https://investor.uber.com/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Aug/06/uber-q2-25-earnings-call-transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-08-06",
+            "what_was_said": "Management described the authorization as a multiyear plan, said it would be active every quarter, and committed at least half of cash-flow generation over the coming years to share repurchases.",
+            "call": "Q2 2025 earnings call"
+          },
+          {
+            "date": "2026-05-06",
+            "what_was_said": "Uber repurchased a record $3 billion in Q1, contributing to a 2% YoY reduction in diluted share count. It retired approximately 40 million shares, versus roughly 80 million during all of 2025.",
+            "call": "Q1 2026 prepared remarks"
+          },
+          {
+            "date": "2026-08-05",
+            "what_was_said": "Q2 repurchases were $510 million while approximately $4 billion was invested in Delivery Hero. Management explained that it had tactically pivoted toward M&A and expected to rebuild repurchase levels in 'months, not quarters.' This changed execution pace, not the $20 billion authorization.",
+            "call": "Q2 2026 prepared remarks and earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Launch Lucid/Nuro robotaxis in the Bay Area",
+      "commitment": "Bring tens of thousands of Lucid vehicles with Nuro Driver exclusively to Uber, starting in a major U.S. city later in 2026.",
+      "deadline": "Later in 2026; revised to Q1 2027",
+      "firstStated": "2025-07-17",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Public launch remained pending; Bay Area commercial service moved to Q1 2027, fully driverless from day one. Planned deployment expanded to at least 35,000 vehicles.",
+      "citations": [
+        {
+          "url": "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-receive-new-investments-pif-and-uber-uber-and-lucid-expand",
+          "title": "Lucid to Receive New Investments from the PIF and Uber; Uber and Lucid Expand Robotaxi Partnership to at least 35,000 Vehicles | Lucid Group, Inc.",
+          "domain": "ir.lucidmotors.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q2/transcript/Uber-Q2-25-Prepared-Remarks.pdf",
+          "title": "Q2 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Reach 15 AV cities by end-2026",
+      "commitment": "Have autonomous vehicle deployments live on Uber in at least 10 cities by the end of 2026.",
+      "deadline": "End of 2026",
+      "firstStated": "2025-11-04",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Target increased to as many as 15 cities by the end of 2026; 7 were last reported live. Subsequently unaddressed; achievement remains unconfirmed.",
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q3/transcript/Uber-Q3-25-Prepared-Remarks.pdf",
+          "title": "Q3 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q4/transcript/Uber-Q4-25-Prepared-Remarks.pdf",
+          "title": "Q4 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+          "title": "Q2 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/11/04/uber-uber-q3-2026-earnings-call-transcript",
+          "title": "Uber (UBER) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Insurance savings and lower fares in 2026",
+      "commitment": "Realize hundreds of millions of dollars in insurance savings in 2026 and pass savings to U.S. customers through lower fares.",
+      "deadline": "2026",
+      "firstStated": "2025-11-04",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Insurance savings were being reinvested and benefiting U.S. riders; tailwinds continued, but management had not confirmed the full-year savings target as achieved.",
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Aug/05/Uber-Q2-26-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/uber/transcripts/725012-q3-2026/",
+          "title": "Uber Technologies (UBER) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Nov/04/Uber-Q3-25-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/May/06/Uber-Q1-26-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-02-04",
+            "what_was_said": "Management described insurance reform and product-driven “hundreds of millions of dollars of cost savings that we are seeing” as providing leverage to hold prices “flat or better in certain markets.” This was stronger evidence of progress than the prepared-remarks outlook alone.",
+            "call": "Q4 2025 earnings call"
+          },
+          {
+            "date": "2026-05-06",
+            "what_was_said": "Management explicitly reiterated that it expected hundreds of millions of dollars of insurance savings “this year.” It also reported that price reductions had already translated into accelerating trip growth, distinguishing realized customer benefits from the still-projected annual savings amount.",
+            "call": "Q1 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "UBER-P1-2024-09-13",
+      "promiseId": "P1",
+      "date": "2024-09-13",
+      "call": "Uber and Waymo Expand Partnership to Bring Autonomous Ride-Hailing to Austin and Atlanta",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Promised exclusive Uber launches in Austin and Atlanta beginning in early 2025.",
+      "quote": "Beginning in early 2025, Waymo and Uber will bring autonomous ride-hailing to Austin and Atlanta, only on the Uber app.",
+      "verbatim": {
+        "text": "Beginning in early 2025, Waymo and Uber will bring autonomous ride-hailing to Austin and Atlanta, only on the Uber app.",
+        "segs": [
+          {
+            "t": "Beginning in early ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", Waymo and Uber will bring autonomous ride-hailing to Austin and Atlanta, only on the Uber app.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2024/Uber-and-Waymo-Expand-Partnership-to-Bring-Autonomous-Ride-Hailing-to-Austin-and-Atlanta/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Uber and Waymo Expand Partnership to Bring Autonomous Ride-Hailing to Austin and Atlanta\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2024/Uber-and-Waymo-Expand-Partnership-to-Bring-Autonomous-Ride-Hailing-to-Austin-and-Atlanta/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Uber and Waymo Expand Partnership to Bring Autonomous Ride-Hailing to Austin and Atlanta\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UBER-P1-2024-10-31",
+      "promiseId": "P1",
+      "date": "2024-10-31",
+      "call": "Q3 2024 Prepared Remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Austin and Atlanta launches in early 2025, only through Uber.",
+      "quote": "We expanded our partnership with Waymo to bring autonomous ride-hailing to Austin and Atlanta in early 2025, available only through the Uber app.",
+      "verbatim": {
+        "text": "We expanded our partnership with Waymo to bring autonomous ride-hailing to Austin and Atlanta in early 2025, available only through the Uber app.",
+        "segs": [
+          {
+            "t": "We expanded our partnership with Waymo to bring autonomous ride-hailing to Austin and Atlanta in early ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", available only through the Uber app.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_financials/2024/q3/Uber-Q3-24-Prepared-Remarks.pdf",
+          "title": "Q3 2024 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_financials/2024/q3/Uber-Q3-24-Prepared-Remarks.pdf",
+          "title": "Q3 2024 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P1-2025-02-05",
+      "promiseId": "P1",
+      "date": "2025-02-05",
+      "call": "Q4 2024 Prepared Remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Austin launch next month; Atlanta timing changed to this summer.",
+      "quote": "We will have much more to share through the year, starting with our public launch with Waymo in Austin next month and Atlanta this summer.",
+      "verbatim": {
+        "text": "We will have much more to share through the year, starting with our public launch with Waymo in Austin next month and Atlanta this summer.",
+        "segs": [
+          {
+            "t": "We will have much more to share through the year, starting with our public launch with Waymo in Austin next month and Atlanta this summer.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2024/q4/transcript/Uber-Q4-24-Prepared-Remarks.pdf",
+          "title": "Q4 2024 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2024/q4/transcript/Uber-Q4-24-Prepared-Remarks.pdf",
+          "title": "Q4 2024 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_financials/2024/q3/Uber-Q3-24-Prepared-Remarks.pdf",
+          "title": "Q3 2024 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P1-2025-03-04",
+      "promiseId": "P1",
+      "date": "2025-03-04",
+      "call": "Ride Into the Future With Waymo on Uber in Austin",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Austin service launched exclusively on Uber; Atlanta remained next.",
+      "quote": "Starting today, Austin riders can be matched with a Waymo autonomous vehicle (AV) on the Uber app, making your next trip even more special.",
+      "verbatim": {
+        "text": "AUSTIN, Texas--(BUSINESS WIRE)-- Starting today, Austin riders can be matched with a Waymo autonomous vehicle (AV) on the Uber app, making your next trip even more special.",
+        "segs": [
+          {
+            "t": "AUSTIN, Texas--(BUSINESS WIRE)-- Starting today, Austin riders can be matched with a Waymo autonomous vehicle (AV) on the Uber app, making your next trip even more special.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Ride-Into-the-Future-With-Waymo-on-Uber-in-Austin/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Ride Into the Future With Waymo on Uber in Austin\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Ride-Into-the-Future-With-Waymo-on-Uber-in-Austin/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Ride Into the Future With Waymo on Uber in Austin\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UBER-P1-2025-05-07",
+      "promiseId": "P1",
+      "date": "2025-05-07",
+      "call": "Q1 2025 Prepared Remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Austin scaling to hundreds of vehicles over coming months; Atlanta launch planned for early summer.",
+      "quote": "We plan to scale to hundreds of vehicles in Austin over the coming months, while also gearing up for launch in Atlanta in early summer.",
+      "verbatim": {
+        "text": "We plan to scale to hundreds of vehicles in Austin over the coming months, while also gearing up for launch in Atlanta in early summer.",
+        "segs": [
+          {
+            "t": "We plan to scale to hundreds of vehicles in Austin over the coming months, while also gearing up for launch in Atlanta in early summer.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/May/07/Uber-Q1-25-Prepared-Remarks.pdf",
+          "title": "Q1 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/May/07/Uber-Q1-25-Prepared-Remarks.pdf",
+          "title": "Q1 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2024/q4/transcript/Uber-Q4-24-Prepared-Remarks.pdf",
+          "title": "Q4 2024 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P1-2025-06-24",
+      "promiseId": "P1",
+      "date": "2025-06-24",
+      "call": "Atlanta: The Future is Here with Waymo and Uber",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Atlanta launched exclusively on Uber, completing the Austin and Atlanta rollout.",
+      "quote": "Starting today, Atlantans can get matched with a Waymo autonomous vehicle (AV) exclusively on the Uber app — bringing together Waymo’s cutting-edge technology and Uber’s proven platform for a ride that’s electric, autonomous, and all-around unforgettable.",
+      "verbatim": {
+        "text": "Starting today, Atlantans can get matched with a Waymo autonomous vehicle (AV) exclusively on the Uber app — bringing together Waymo’s cutting-edge technology and Uber’s proven platform for a ride that’s electric, autonomous, and all-around unforgettable.",
+        "segs": [
+          {
+            "t": "Starting today, Atlantans can get matched with a Waymo autonomous vehicle (AV) exclusively on the Uber app — bringing together Waymo’s cutting-edge technology and Uber’s proven platform for a ride that’s electric, autonomous, and all-around unforgettable.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Atlanta-The-Future-is-Here-with-Waymo-and-Uber-2025-y1tuDCCSgu/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Atlanta: The Future is Here with Waymo and Uber\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Atlanta-The-Future-is-Here-with-Waymo-and-Uber-2025-y1tuDCCSgu/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Atlanta: The Future is Here with Waymo and Uber\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Ride-Into-the-Future-With-Waymo-on-Uber-in-Austin/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Ride Into the Future With Waymo on Uber in Austin\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UBER-P1-2025-08-06",
+      "promiseId": "P1",
+      "date": "2025-08-06",
+      "call": "Q2 2025 Earnings Call",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed exclusive Atlanta launch and expanded Waymo operating zone in Austin.",
+      "quote": "We expanded our operating zones in Austin with Waymo and Abu Dhabi with WeRide, and we also launched exclusively with Waymo in Atlanta.",
+      "verbatim": {
+        "text": "We expanded our operating zones in Austin with Waymo and Abu Dhabi with WeRide, and we also launched exclusively with Waymo in Atlanta.",
+        "segs": [
+          {
+            "t": "We expanded our operating zones in Austin with Waymo and Abu Dhabi with WeRide, and we also launched exclusively with Waymo in Atlanta.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Aug/06/uber-q2-25-earnings-call-transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Aug/06/uber-q2-25-earnings-call-transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://s23.q4cdn.com/407969754/files/doc_earnings/2025/q2/transcript/Uber-Q2-25-Prepared-Remarks.pdf",
+          "title": "Q2 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UBER-P2-2025-08-06",
+      "promiseId": "P2",
+      "date": "2025-08-06",
+      "call": "Q2 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Authorized repurchases of up to an additional $20 billion of common stock.",
+      "quote": "New share repurchase program authorized up to an additional $20 billion of common stock.",
+      "verbatim": {
+        "text": "New share repurchase program authorized up to an additional $20 billion of common stock.",
+        "segs": [
+          {
+            "t": "New share repurchase program authorized up to an additional ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": " of common stock.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000020/uberq225earningspressrelea.htm",
+          "title": "Uber Technologies, Inc 8-K exhibit 99.1, filed August 6, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000020/uberq225earningspressrelea.htm",
+          "title": "Uber Technologies, Inc 8-K exhibit 99.1, filed August 6, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "UBER-P2-2025-11-04",
+      "promiseId": "P2",
+      "date": "2025-11-04",
+      "call": "Q3 2025 prepared remarks",
+      "speaker": "Prashanth Mahendra-Rajah, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $1.5 billion Q3 buybacks and 1% YoY share-count reduction; reiterated additional $20 billion authorization.",
+      "quote": "We repurchased $1.5 billion of common stock in Q3, helping to drive a 1% YoY reduction in diluted share count.",
+      "verbatim": {
+        "text": "We repurchased $1.5 billion of common stock in Q3, helping to drive a 1% YoY reduction in diluted share count.",
+        "segs": [
+          {
+            "t": "We repurchased ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of common stock in ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": ", helping to drive a ",
+            "h": 0
+          },
+          {
+            "t": "1%",
+            "h": 1
+          },
+          {
+            "t": " YoY reduction in diluted share count.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q3/transcript/Uber-Q3-25-Prepared-Remarks.pdf",
+          "title": "Q3 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q3/transcript/Uber-Q3-25-Prepared-Remarks.pdf",
+          "title": "Q3 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P2-2026-02-04",
+      "promiseId": "P2",
+      "date": "2026-02-04",
+      "call": "Q4 2025 prepared remarks",
+      "speaker": "Prashanth Mahendra-Rajah, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed additional $20 billion program announced in August 2025; prior $7 billion authorization exhausted.",
+      "quote": "We expect to continue to be active and opportunistic buyers of our stock under our additional $20 billion share repurchase program announced in August 2025, demonstrating our commitment to consistently return cash to shareholders.",
+      "verbatim": {
+        "text": "We expect to continue to be active and opportunistic buyers of our stock under our additional $20 billion share repurchase program announced in August 2025, demonstrating our commitment to consistently return cash to shareholders.",
+        "segs": [
+          {
+            "t": "We expect to continue to be active and opportunistic buyers of our stock under our additional ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": " share repurchase program announced in August ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", demonstrating our commitment to consistently return cash to shareholders.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q4/transcript/Uber-Q4-25-Prepared-Remarks.pdf",
+          "title": "Q4 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q4/transcript/Uber-Q4-25-Prepared-Remarks.pdf",
+          "title": "Q4 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P2-2026-05-06",
+      "promiseId": "P2",
+      "date": "2026-05-06",
+      "call": "Q1 2026 prepared remarks",
+      "speaker": "Balaji Krishnamurthy, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "$20 billion authorization remained active, with $16 billion remaining.",
+      "quote": "We remain active under our $20 billion share repurchase authorization, which has $16 billion remaining.",
+      "verbatim": {
+        "text": "We remain active under our $20 billion share repurchase authorization, which has $16 billion remaining.",
+        "segs": [
+          {
+            "t": "We remain active under our ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": " share repurchase authorization, which has ",
+            "h": 0
+          },
+          {
+            "t": "$16 billion",
+            "h": 1
+          },
+          {
+            "t": " remaining.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Uber Q1 26 Prepared Remarks",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Uber Q1 26 Prepared Remarks",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P2-2026-08-05",
+      "promiseId": "P2",
+      "date": "2026-08-05",
+      "call": "Q2 2026 prepared remarks",
+      "speaker": "Balaji Krishnamurthy, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "$510 million repurchased; diluted shares fell approximately 4% YoY; roughly $16 billion remained; quarterly activity expected to normalize.",
+      "quote": "We expect to remain active in share repurchases each quarter, and expect to steadily return to a more normalized level of activity as we execute against our capital allocation priorities.",
+      "verbatim": {
+        "text": "We expect to remain active in share repurchases each quarter, and expect to steadily return to a more normalized level of activity as we execute against our capital allocation priorities.",
+        "segs": [
+          {
+            "t": "We expect to remain active in share repurchases each quarter, and expect to steadily return to a more normalized level of activity as we execute against our capital allocation priorities.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+          "title": "Q2 2026 Prepared Remarks",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+          "title": "Q2 2026 Prepared Remarks",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P2-2026-11-04",
+      "promiseId": "P2",
+      "date": "2026-11-04",
+      "call": "Q3 2026 prepared remarks",
+      "speaker": "Balaji Krishnamurthy, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Repurchased $750 million; diluted share count declined ~3% YoY; roughly $15 billion remained authorized.",
+      "quote": "We repurchased $750 million of common stock, contributing to a ~3% YoY reduction in diluted share count, with roughly $15 billion remaining under our authorization.",
+      "verbatim": {
+        "text": "We repurchased $750 million of common stock, contributing to a ~3% YoY reduction in diluted share count, with roughly $15 billion remaining under our authorization.",
+        "segs": [
+          {
+            "t": "We repurchased ",
+            "h": 0
+          },
+          {
+            "t": "$750 million",
+            "h": 1
+          },
+          {
+            "t": " of common stock, contributing to a ~",
+            "h": 0
+          },
+          {
+            "t": "3%",
+            "h": 1
+          },
+          {
+            "t": " YoY reduction in diluted share count, with roughly ",
+            "h": 0
+          },
+          {
+            "t": "$15 billion",
+            "h": 1
+          },
+          {
+            "t": " remaining under our authorization.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P3-2025-07-17",
+      "promiseId": "P3",
+      "date": "2025-07-17",
+      "call": "Lucid, Nuro, and Uber Partner on Next-Generation Autonomous Robotaxi Program",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Planned 20,000 or more vehicles over six years, exclusively on Uber; first major-US-city launch expected later next year.",
+      "quote": "Uber aims to deploy 20,000 or more Lucid vehicles equipped with the Nuro Driver over six years.",
+      "verbatim": {
+        "text": "Uber aims to deploy 20,000 or more Lucid vehicles equipped with the Nuro Driver over six years.",
+        "segs": [
+          {
+            "t": "Uber aims to deploy ",
+            "h": 0
+          },
+          {
+            "t": "20,000",
+            "h": 1
+          },
+          {
+            "t": " or more Lucid vehicles equipped with the Nuro Driver over six years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Lucid-Nuro-and-Uber-Partner-on-Next-Generation-Autonomous-Robotaxi-Program/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Lucid, Nuro, and Uber Partner on Next-Generation Autonomous Robotaxi Program\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Lucid-Nuro-and-Uber-Partner-on-Next-Generation-Autonomous-Robotaxi-Program/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Lucid, Nuro, and Uber Partner on Next-Generation Autonomous Robotaxi Program\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UBER-P3-2025-08-06",
+      "promiseId": "P3",
+      "date": "2025-08-06",
+      "call": "Q2 2025 Prepared Remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Repeated exclusive, multiyear deployment of tens of thousands of Lucid/Nuro vehicles, starting in a major U.S. city later next year.",
+      "quote": "Tens of thousands of Lucid vehicles, equipped with the Nuro Driver and designed specifically for ride-hailing use, will exclusively join the Uber network over the next several years, starting in a major U.S. city later next year.",
+      "verbatim": {
+        "text": "Tens of thousands of Lucid vehicles, equipped with the Nuro Driver and designed specifically for ride-hailing use, will exclusively join the Uber network over the next several years, starting in a major U.S. city later next year.",
+        "segs": [
+          {
+            "t": "Tens of thousands of Lucid vehicles, equipped with the Nuro Driver and designed specifically for ride-hailing use, will exclusively join the Uber network over the next several years, starting in a major U.S. city later next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q2/transcript/Uber-Q2-25-Prepared-Remarks.pdf",
+          "title": "Q2 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q2/transcript/Uber-Q2-25-Prepared-Remarks.pdf",
+          "title": "Q2 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P3-2025-11-04",
+      "promiseId": "P3",
+      "date": "2025-11-04",
+      "call": "Q3 2025 Earnings Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Lucid/Nuro commercial-launch timetable was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Nov/04/Uber-Q3-25-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UBER-P3-2026-01-06",
+      "promiseId": "P3",
+      "date": "2026-01-06",
+      "call": "Lucid, Nuro, and Uber Unveil Global Robotaxi at CES, Announce Autonomous On-Road Testing",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Autonomous on-road testing had begun; San Francisco Bay Area launch remained expected later this year.",
+      "quote": "The companies also announced that autonomous on-road testing began last month, an important milestone in the development and validation of the robotaxi service ahead of its expected launch in the San Francisco Bay Area later this year.",
+      "verbatim": {
+        "text": "The companies also announced that autonomous on-road testing began last month, an important milestone in the development and validation of the robotaxi service ahead of its expected launch in the San Francisco Bay Area later this year.",
+        "segs": [
+          {
+            "t": "The companies also announced that autonomous on-road testing began last month, an important milestone in the development and validation of the robotaxi service ahead of its expected launch in the San Francisco Bay Area later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Lucid-Nuro-and-Uber-Unveil-Global-Robotaxi-at-CES-Announce-Autonomous-On-Road-Testing-2026-3kWDFYe--b/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Lucid, Nuro, and Uber Unveil Global Robotaxi at CES, Announce Autonomous On-Road Testing\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Lucid-Nuro-and-Uber-Unveil-Global-Robotaxi-at-CES-Announce-Autonomous-On-Road-Testing-2026-3kWDFYe--b/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Lucid, Nuro, and Uber Unveil Global Robotaxi at CES, Announce Autonomous On-Road Testing\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UBER-P3-2026-02-04",
+      "promiseId": "P3",
+      "date": "2026-02-04",
+      "call": "Q4 2025 Earnings Call",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Repeated the commitment to Lucid/Nuro, without restating a launch date.",
+      "quote": "And we will continue making these kinds of commitments Nuro, Lucid for example, and others to come.",
+      "verbatim": {
+        "text": "And we will continue making these kinds of commitments Nuro, Lucid for example, and others to come.",
+        "segs": [
+          {
+            "t": "And we will continue making these kinds of commitments Nuro, Lucid for example, and others to come.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Feb/04/Uber-Q4-25-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Feb/04/Uber-Q4-25-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UBER-P3-2026-04-14",
+      "promiseId": "P3",
+      "date": "2026-04-14",
+      "call": "Lucid to Receive New Investments from the PIF and Uber; Uber and Lucid Expand Robotaxi Partnership to at least 35,000 Vehicles",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Increased planned deployment to at least 35,000 vehicles and added Lucid’s Midsize platform; Bay Area launch remained planned later this year.",
+      "quote": "That strong execution keeps us on track to deepen our investment and increase the number of vehicles we plan to deploy, while Lucid's future Midsize platform creates an even clearer path to stronger unit economics.",
+      "verbatim": {
+        "text": "\"That strong execution keeps us on track to deepen our investment and increase the number of vehicles we plan to deploy, while Lucid's future Midsize platform creates an even clearer path to stronger unit economics.",
+        "segs": [
+          {
+            "t": "\"That strong execution keeps us on track to deepen our investment and increase the number of vehicles we plan to deploy, while Lucid's future Midsize platform creates an even clearer path to stronger unit economics.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-receive-new-investments-pif-and-uber-uber-and-lucid-expand",
+          "title": "Lucid to Receive New Investments from the PIF and Uber; Uber and Lucid Expand Robotaxi Partnership to at least 35,000 Vehicles | Lucid Group, Inc.",
+          "domain": "ir.lucidmotors.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-receive-new-investments-pif-and-uber-uber-and-lucid-expand",
+          "title": "Lucid to Receive New Investments from the PIF and Uber; Uber and Lucid Expand Robotaxi Partnership to at least 35,000 Vehicles | Lucid Group, Inc.",
+          "domain": "ir.lucidmotors.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UBER-P3-2026-05-06",
+      "promiseId": "P3",
+      "date": "2026-05-06",
+      "call": "Q1 2026 Prepared Remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Employee trips began in the Bay Area; public launch remained on track later this year, with Lucid’s mid-size platform added.",
+      "quote": "Began employee trips in the Bay Area and remain on track for a public launch later this year; expanded our partnership with Lucid to include its mid-size vehicle platform, supporting the path to lower-cost robotaxi hardware.",
+      "verbatim": {
+        "text": "● Lucid / Nuro: Began employee trips in the Bay Area and remain on track for a public launch later this year; expanded our partnership with Lucid to include its mid-size vehicle platform, supporting the path to lower-cost robotaxi hardware.",
+        "segs": [
+          {
+            "t": "● Lucid / Nuro: Began employee trips in the Bay Area and remain on track for a public launch later this year; expanded our partnership with Lucid to include its mid-size vehicle platform, supporting the path to lower-cost robotaxi hardware.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P3-2026-06-17",
+      "promiseId": "P3",
+      "date": "2026-06-17",
+      "call": "Uber, Nuro, and Lucid to Bring Robotaxi Service to Houston in 2027",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Bay Area launch later this year and minimum 35,000 vehicles; Houston became the second planned market, launching in mid-2027.",
+      "quote": "The program will initially launch in the San Francisco Bay Area later this year and calls for a minimum of 35,000 vehicles globally across dozens of markets over the coming years.",
+      "verbatim": {
+        "text": "The program will initially launch in the San Francisco Bay Area later this year and calls for a minimum of 35,000 vehicles globally across dozens of markets over the coming years.",
+        "segs": [
+          {
+            "t": "The program will initially launch in the San Francisco Bay Area later this year and calls for a minimum of ",
+            "h": 0
+          },
+          {
+            "t": "35,000",
+            "h": 1
+          },
+          {
+            "t": " vehicles globally across dozens of markets over the coming years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Nuro-and-Lucid-to-Bring-Robotaxi-Service-to-Houston-in-2027",
+          "title": "\n\tUber Technologies, Inc.  - Uber, Nuro, and Lucid to Bring Robotaxi Service to Houston in 2027\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Nuro-and-Lucid-to-Bring-Robotaxi-Service-to-Houston-in-2027",
+          "title": "\n\tUber Technologies, Inc.  - Uber, Nuro, and Lucid to Bring Robotaxi Service to Houston in 2027\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UBER-P3-2026-08-05",
+      "promiseId": "P3",
+      "date": "2026-08-05",
+      "call": "Q2 2026 Earnings Call",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the upcoming Lucid/Nuro launch in the Bay Area, without restating a specific date.",
+      "quote": "We've got a Nuro, Lucid launch coming in the Bay, we've got Zoox coming in Vegas, and we've got Wayve in London and Tokyo, Baidu also in London, and then Pony and Verne in Zagreb and potentially more.",
+      "verbatim": {
+        "text": "We've got a Nuro, Lucid launch coming in the Bay, we've got Zoox coming in Vegas, and we've got Wayve in London and Tokyo, Baidu also in London, and then Pony and Verne in Zagreb and potentially more.",
+        "segs": [
+          {
+            "t": "We've got a Nuro, Lucid launch coming in the Bay, we've got Zoox coming in Vegas, and we've got Wayve in London and Tokyo, Baidu also in London, and then Pony and Verne in Zagreb and potentially more.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Aug/05/Uber-Q2-26-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Aug/05/Uber-Q2-26-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UBER-P3-2026-11-04",
+      "promiseId": "P3",
+      "date": "2026-11-04",
+      "call": "Q3 2026 Prepared Remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Moved Bay Area commercial launch to Q1 2027, fully driverless from day one; fully driverless testing expected this quarter.",
+      "quote": "We expect to begin fully driverless testing with Nuro and Lucid this quarter, ahead of a commercial launch in the Bay Area in Q1 2027 that will operate fully driverless from day one.",
+      "verbatim": {
+        "text": "We expect to begin fully driverless testing with Nuro and Lucid this quarter, ahead of a commercial launch in the Bay Area in Q1 2027 that will operate fully driverless from day one.",
+        "segs": [
+          {
+            "t": "We expect to begin fully driverless testing with Nuro and Lucid this quarter, ahead of a commercial launch in the Bay Area in ",
+            "h": 0
+          },
+          {
+            "t": "Q1 2027",
+            "h": 1
+          },
+          {
+            "t": " that will operate fully driverless from day one.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P4-2025-11-04",
+      "promiseId": "P4",
+      "date": "2025-11-04",
+      "call": "Q3 2025 prepared remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected autonomous vehicle deployments on Uber in at least 10 cities by the end of 2026.",
+      "quote": "Looking ahead, we expect to be live with autonomous vehicle deployments on the Uber network in at least 10 cities by the end of 2026.",
+      "verbatim": {
+        "text": "Looking ahead, we expect to be live with autonomous vehicle deployments on the Uber network in at least 10 cities by the end of 2026.",
+        "segs": [
+          {
+            "t": "Looking ahead, we expect to be live with autonomous vehicle deployments on the Uber network in at least 10 cities by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q3/transcript/Uber-Q3-25-Prepared-Remarks.pdf",
+          "title": "Q3 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q3/transcript/Uber-Q3-25-Prepared-Remarks.pdf",
+          "title": "Q3 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P4-2026-02-04",
+      "promiseId": "P4",
+      "date": "2026-02-04",
+      "call": "Q4 2025 prepared remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised target to as many as 15 cities globally by the end of 2026, roughly evenly split between U.S. and international cities.",
+      "quote": "By the end of 2026, we expect to be facilitating AV trips in as many as 15 cities globally, with a roughly even split of U.S. and international cities.",
+      "verbatim": {
+        "text": "By the end of 2026, we expect to be facilitating AV trips in as many as 15 cities globally, with a roughly even split of U.S. and international cities.",
+        "segs": [
+          {
+            "t": "By the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect to be facilitating AV trips in as many as 15 cities globally, with a roughly even split of U.S. and international cities.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q4/transcript/Uber-Q4-25-Prepared-Remarks.pdf",
+          "title": "Q4 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q4/transcript/Uber-Q4-25-Prepared-Remarks.pdf",
+          "title": "Q4 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q3/transcript/Uber-Q3-25-Prepared-Remarks.pdf",
+          "title": "Q3 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P4-2026-05-04",
+      "promiseId": "P4",
+      "date": "2026-05-04",
+      "call": "2026 Annual Meeting of Stockholders Q&A",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed as many as 15 cities globally by the end of 2026; also reiterated global AV-trip leadership by 2029.",
+      "quote": "By the end of 2026, we expect to be facilitating AV trips in as many as 15 cities globally and by 2029, we intend to be the largest facilitator of AV trips in the world.",
+      "verbatim": {
+        "text": "By the end of 2026, we expect to be facilitating AV trips in as many as 15 cities globally and by 2029, we intend to be the largest facilitator of AV trips in the world.",
+        "segs": [
+          {
+            "t": "By the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect to be facilitating AV trips in as many as 15 cities globally and by ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ", we intend to be the largest facilitator of AV trips in the world.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Jul/14/2026-AGM-Q-A-Representative-Questions.pdf",
+          "title": "2026 AGM - Q&A - Representative Questions",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Jul/14/2026-AGM-Q-A-Representative-Questions.pdf",
+          "title": "2026 AGM - Q&A - Representative Questions",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "UBER-P4-2026-05-06",
+      "promiseId": "P4",
+      "date": "2026-05-06",
+      "call": "Q1 2026 prepared remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "AV Mobility trips increased more than 10x year over year; live in 8 cities, planning up to 15 by year-end.",
+      "quote": "AV Mobility trips on Uber increased more than 10x year over year, and we are now live in 8 cities, with plans to expand to up to 15 by year-end.",
+      "verbatim": {
+        "text": "AV Mobility trips on Uber increased more than 10x year over year, and we are now live in 8 cities, with plans to expand to up to 15 by year-end.",
+        "segs": [
+          {
+            "t": "AV Mobility trips on Uber increased more than ",
+            "h": 0
+          },
+          {
+            "t": "10x",
+            "h": 1
+          },
+          {
+            "t": " year over year, and we are now live in 8 cities, with plans to expand to up to 15 by year-end.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P4-2026-08-05",
+      "promiseId": "P4",
+      "date": "2026-08-05",
+      "call": "Q2 2026 prepared remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Live in 7 cities; on track for as many as 15 by year-end.",
+      "quote": "AVs are live on Uber in 7 cities, on track for as many as 15 by year-end.",
+      "verbatim": {
+        "text": "AVs are live on Uber in 7 cities, on track for as many as 15 by year-end.",
+        "segs": [
+          {
+            "t": "AVs are live on Uber in 7 cities, on track for as many as 15 by year-end.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+          "title": "Q2 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+          "title": "Q2 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P4-2026-11-04",
+      "promiseId": "P4",
+      "date": "2026-11-04",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The city target was not discussed; management instead outlined driverless fleet counts and individual launches.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.uber.com/news-events/events-and-presentations/event-details/2026/Uber-Q3-2026-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tUber Technologies, Inc.  - Uber Q3 2026 Earnings Conference Call\n",
+          "domain": "investor.uber.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/11/04/uber-uber-q3-2026-earnings-call-transcript",
+          "title": "Uber (UBER) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UBER-P5-2025-11-04",
+      "promiseId": "P5",
+      "date": "2025-11-04",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Prashanth Mahendra-Rajah, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected hundreds of millions of dollars in savings and lower fares across the U.S. in 2026.",
+      "quote": "So the result of all these efforts is that we expect that we're going to see hundreds of millions of dollars of savings. And we look to pass those savings on to customers through lower fares really across the US for next year.",
+      "verbatim": {
+        "text": "So the result of all these efforts is that we expect that we're going to see hundreds of millions of dollars of savings.",
+        "segs": [
+          {
+            "t": "So the result of all these efforts is that we expect that we're going to see hundreds of millions of dollars of savings.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Nov/04/Uber-Q3-25-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Nov/04/Uber-Q3-25-Earnings-Call-Transcript.pdf",
+          "title": "Uber Technologies, Inc.",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UBER-P5-2026-02-04",
+      "promiseId": "P5",
+      "date": "2026-02-04",
+      "call": "Q4 2025 prepared remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected lower insurance costs to support healthier U.S. pricing and faster trip and Gross Bookings growth in 2026.",
+      "quote": "We expect U.S. trip and Gross Bookings growth to accelerate further in 2026, on the back of a healthier pricing environment supported by lower insurance costs, strong supply dynamics, and accelerating product innovation.",
+      "verbatim": {
+        "text": "We expect U.S. trip and Gross Bookings growth to accelerate further in 2026, on the back of a healthier pricing environment supported by lower insurance costs, strong supply dynamics, and accelerating product innovation.",
+        "segs": [
+          {
+            "t": "We expect U.S. trip and Gross Bookings growth to accelerate further in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", on the back of a healthier pricing environment supported by lower insurance costs, strong supply dynamics, and accelerating product innovation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q4/transcript/Uber-Q4-25-Prepared-Remarks.pdf",
+          "title": "Q4 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q4/transcript/Uber-Q4-25-Prepared-Remarks.pdf",
+          "title": "Q4 2025 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P5-2026-05-06",
+      "promiseId": "P5",
+      "date": "2026-05-06",
+      "call": "Q1 2026 prepared remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported early insurance savings reaching consumers, with stronger trip growth in San Francisco and Los Angeles.",
+      "quote": "We are beginning to see early benefits from insurance cost savings being passed through to consumers, with YoY trip growth in markets like San Francisco and Los Angeles improving meaningfully (recall that California faces the most significant insurance driven headwinds).",
+      "verbatim": {
+        "text": "We are beginning to see early benefits from insurance cost savings being passed through to consumers, with YoY trip growth in markets like San Francisco and Los Angeles improving meaningfully (recall that California faces the most significant insurance driven headwinds).",
+        "segs": [
+          {
+            "t": "We are beginning to see early benefits from insurance cost savings being passed through to consumers, with YoY trip growth in markets like San Francisco and Los Angeles improving meaningfully (recall that California faces the most significant insurance driven headwinds).",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+          "title": "Q1 2026 Prepared Remarks - Google Docs",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P5-2026-08-05",
+      "promiseId": "P5",
+      "date": "2026-08-05",
+      "call": "Q2 2026 prepared remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported reinvesting insurance savings to improve affordability, supporting faster U.S. trip and Gross Bookings growth.",
+      "quote": "Consistent with our expectations entering the year, both trips and Gross Bookings accelerated in the U.S., driven by continued consumer adoption across our portfolio of premium and lower-cost products, expansion into sparser areas, and reinvesting insurance savings to improve affordability.",
+      "verbatim": {
+        "text": "Consistent with our expectations entering the year, both trips and Gross Bookings accelerated in the U.S., driven by continued consumer adoption across our portfolio of premium and lower-cost products, expansion into sparser areas, and reinvesting insurance savings to improve affordability.",
+        "segs": [
+          {
+            "t": "Consistent with our expectations entering the year, both trips and Gross Bookings accelerated in the U.S., driven by continued consumer adoption across our portfolio of premium and lower-cost products, expansion into sparser areas, and reinvesting insurance savings to improve affordability.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+          "title": "Q2 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+          "title": "Q2 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "UBER-P5-2026-11-04",
+      "promiseId": "P5",
+      "date": "2026-11-04",
+      "call": "Q3 2026 prepared remarks",
+      "speaker": "Dara Khosrowshahi, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported continuing insurance-reform benefits, with California trip growth accelerating and outperforming the rest of the country.",
+      "quote": "In contrast, U.S. growth moderated much more modestly, supported by continued benefits from insurance reform, with California trip growth accelerating meaningfully and outperforming the rest of the country.",
+      "verbatim": {
+        "text": "In contrast, U.S. growth moderated much more modestly, supported by continued benefits from insurance reform, with California trip growth accelerating meaningfully and outperforming the rest of the country.",
+        "segs": [
+          {
+            "t": "In contrast, U.S. growth moderated much more modestly, supported by continued benefits from insurance reform, with California trip growth accelerating meaningfully and outperforming the rest of the country.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+          "title": "Q3 2026 Prepared Remarks",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+      "title": "Q3 2026 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+      "title": "Q1 2026 Prepared Remarks - Google Docs",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q4/transcript/Uber-Q4-25-Prepared-Remarks.pdf",
+      "title": "Q4 2025 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q3/transcript/Uber-Q3-25-Prepared-Remarks.pdf",
+      "title": "Q3 2025 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Aug/06/uber-q2-25-earnings-call-transcript.pdf",
+      "title": "Uber Technologies, Inc.",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 6,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/Nov/04/Uber-Q3-25-Earnings-Call-Transcript.pdf",
+      "title": "Uber Technologies, Inc.",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+      "title": "Q2 2026 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Aug/05/Uber-Q2-26-Earnings-Call-Transcript.pdf",
+      "title": "Uber Technologies, Inc.",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 9,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_financials/2024/q3/Uber-Q3-24-Prepared-Remarks.pdf",
+      "title": "Q3 2024 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2024/q4/transcript/Uber-Q4-24-Prepared-Remarks.pdf",
+      "title": "Q4 2024 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Ride-Into-the-Future-With-Waymo-on-Uber-in-Austin/default.aspx",
+      "title": "\n\tUber Technologies, Inc.  - Ride Into the Future With Waymo on Uber in Austin\n",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2024/Uber-and-Waymo-Expand-Partnership-to-Bring-Autonomous-Ride-Hailing-to-Austin-and-Atlanta/default.aspx",
+      "title": "\n\tUber Technologies, Inc.  - Uber and Waymo Expand Partnership to Bring Autonomous Ride-Hailing to Austin and Atlanta\n",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_events/2025/May/07/Uber-Q1-25-Prepared-Remarks.pdf",
+      "title": "Q1 2025 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Atlanta-The-Future-is-Here-with-Waymo-and-Uber-2025-y1tuDCCSgu/default.aspx",
+      "title": "\n\tUber Technologies, Inc.  - Atlanta: The Future is Here with Waymo and Uber\n",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://investor.uber.com/files/doc_earnings/2026/q3/transcript/Uber-Q3-26-Prepared-Remarks.pdf",
+      "title": "Q3 2026 Prepared Remarks",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 16,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_earnings/2025/q2/transcript/Uber-Q2-25-Prepared-Remarks.pdf",
+      "title": "Q2 2025 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "http://s23.q4cdn.com/407969754/files/doc_earnings/2025/q2/transcript/Uber-Q2-25-Prepared-Remarks.pdf",
+      "title": "Q2 2025 Prepared Remarks",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://www.sec.gov/Archives/edgar/data/1543151/000154315125000020/uberq225earningspressrelea.htm",
+      "title": "Uber Technologies, Inc 8-K exhibit 99.1, filed August 6, 2025",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 19,
+      "url": "https://investor.uber.com/files/doc_earnings/2026/q1/transcript/Uber-Q1-26-Prepared-Remarks.pdf",
+      "title": "Uber Q1 26 Prepared Remarks",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 20,
+      "url": "https://investor.uber.com/files/doc_earnings/2026/q2/transcript/Uber-Q2-26-Prepared-Remarks.pdf",
+      "title": "Q2 2026 Prepared Remarks",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 21,
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2025/Lucid-Nuro-and-Uber-Partner-on-Next-Generation-Autonomous-Robotaxi-Program/default.aspx",
+      "title": "\n\tUber Technologies, Inc.  - Lucid, Nuro, and Uber Partner on Next-Generation Autonomous Robotaxi Program\n",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 22,
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Lucid-Nuro-and-Uber-Unveil-Global-Robotaxi-at-CES-Announce-Autonomous-On-Road-Testing-2026-3kWDFYe--b/default.aspx",
+      "title": "\n\tUber Technologies, Inc.  - Lucid, Nuro, and Uber Unveil Global Robotaxi at CES, Announce Autonomous On-Road Testing\n",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 23,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Feb/04/Uber-Q4-25-Earnings-Call-Transcript.pdf",
+      "title": "Uber Technologies, Inc.",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 24,
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Nuro-and-Lucid-to-Bring-Robotaxi-Service-to-Houston-in-2027",
+      "title": "\n\tUber Technologies, Inc.  - Uber, Nuro, and Lucid to Bring Robotaxi Service to Houston in 2027\n",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 25,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/Jul/14/2026-AGM-Q-A-Representative-Questions.pdf",
+      "title": "2026 AGM - Q&A - Representative Questions",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 26,
+      "url": "https://investor.uber.com/news-events/events-and-presentations/event-details/2026/Uber-Q3-2026-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tUber Technologies, Inc.  - Uber Q3 2026 Earnings Conference Call\n",
+      "domain": "investor.uber.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 27,
+      "url": "https://s23.q4cdn.com/407969754/files/doc_events/2026/May/06/Uber-Q1-26-Earnings-Call-Transcript.pdf",
+      "title": "Uber Technologies, Inc.",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 28,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/04/uber-uber-q3-2026-earnings-call-transcript",
+      "title": "Uber (UBER) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 29,
+      "url": "https://stockanalysis.com/stocks/uber/transcripts/725012-q3-2026/",
+      "title": "Uber Technologies (UBER) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 30,
+      "url": "https://ir.lucidmotors.com/news-releases/news-release-details/lucid-receive-new-investments-pif-and-uber-uber-and-lucid-expand",
+      "title": "Lucid to Receive New Investments from the PIF and Uber; Uber and Lucid Expand Robotaxi Partnership to at least 35,000 Vehicles | Lucid Group, Inc.",
+      "domain": "ir.lucidmotors.com",
+      "tier": "press",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P3",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.838399Z",
+      "completedAt": "2026-11-05T06:29:04.963878Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T18:46:07.909687Z",
+      "completedAt": "2026-11-05T18:52:19.867811Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.790230Z",
+      "completedAt": "2026-11-05T19:13:39.105685Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.797370Z",
+      "completedAt": "2026-11-05T19:14:15.941028Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.804224Z",
+      "completedAt": "2026-11-05T19:13:12.353433Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.811201Z",
+      "completedAt": "2026-11-05T19:13:04.790413Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.622262Z",
+      "completedAt": "2026-11-05T19:46:28.620707Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.607155Z",
+      "completedAt": "2026-11-05T19:44:58.678441Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.614446Z",
+      "completedAt": "2026-11-05T19:46:06.208224Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.629805Z",
+      "completedAt": "2026-11-05T19:46:22.447249Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.637337Z",
+      "completedAt": "2026-11-05T19:48:46.839661Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "34 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "32 of 32 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "32 of 32 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-11-04; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Uber_logo_2018.svg/1280px-Uber_logo_2018.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Uber_logo_2018.svg",
+      "title": "File:Uber logo 2018.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 445,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://tb-static.uber.com/prod/udam-assets/f68f1a2c-e5ec-5ac8-9331-0233223dd8ae.jpg",
+      "sourcePageUrl": "https://www.uber.com/us/en/newsroom/waymo-on-uber-austin/",
+      "title": "Ride into the future with Waymo on Uber in Austin 🤠",
+      "width": 2560,
+      "height": 1442,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.615Z"
+}

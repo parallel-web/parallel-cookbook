@@ -1,0 +1,99 @@
+/*
+ * The tear sheet: one US Letter page, 816 × 1056 px, laid out on a fixed grid
+ * so every company's sheet prints identically. Row height in the promise table
+ * shrinks when an update run has added promises beyond the first five.
+ */
+.ts {
+  position: relative;
+  width: 816px;
+  height: 1056px;
+  overflow: hidden;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-feature-settings: "tnum" 1;
+  text-align: left;
+}
+.ts .m { font-family: var(--f-mono); }
+.ts-cut { position: absolute; left: 0; right: 0; top: 12px; height: 0; border-top: 1px dashed var(--dash); }
+.ts-run {
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--f-mono);
+  font-size: 7.5px;
+  line-height: 10px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.ts-head { position: absolute; left: 48px; top: 48px; width: 720px; height: 104px; border-bottom: 0.75px solid var(--ink); }
+.ts-head .chip { position: absolute; left: 0; top: 0; width: 44px; height: 44px; font-size: 10px; }
+.ts-name { position: absolute; left: 60px; top: -2px; width: 440px; font-family: var(--f-display); font-weight: 500; font-size: 32px; line-height: 36px; letter-spacing: -1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-sub { position: absolute; left: 60px; top: 36px; width: 440px; font-family: var(--f-mono); font-size: 8px; line-height: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-2); }
+.ts-head .plate { position: absolute; right: 0; top: 0; width: 168px; height: 76px; border-radius: 2px; background-image: radial-gradient(circle, rgba(29, 27, 22, 0.5) 0.9px, transparent 1.2px); background-size: 3px 3px; }
+.ts-head .plate-cap { left: 5px; bottom: 5px; padding: 1px 4px; font-size: 6.5px; line-height: 9px; letter-spacing: 0.05em; }
+.ts-facts { position: absolute; left: 0; top: 66px; display: flex; gap: 36px; }
+.ts-fact { display: flex; flex-direction: column; gap: 2px; }
+.ts-fact span:first-child { font-family: var(--f-mono); font-size: 7px; line-height: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-3); }
+.ts-fact span:last-child { font-family: var(--f-mono); font-size: 10px; line-height: 14px; white-space: nowrap; }
+
+.ts-sec-title { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; }
+.ts-sec-title > span:first-child { font-size: 14px; line-height: 18px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-sec-title > span:last-child { font-family: var(--f-mono); font-size: 8px; line-height: 12px; letter-spacing: 0.04em; color: var(--ink-2); white-space: nowrap; }
+
+.ts-promises { position: absolute; left: 48px; top: 180px; width: 720px; }
+.ts-grid { display: grid; grid-template-columns: 24px 216px 96px 96px minmax(0, 1fr) 76px; gap: 12px; align-items: center; }
+.ts-thead { align-items: end; margin-top: 12px; padding-bottom: 6px; border-bottom: 0.75px solid var(--ink); font-family: var(--f-mono); font-size: 7px; line-height: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-3); }
+.ts-thead .axis { display: flex; justify-content: space-between; }
+.ts-row { height: var(--row, 40px); border-bottom: 0.75px solid var(--rule-2); }
+.ts-row.on { background: var(--card); }
+.ts-row.pickable { cursor: pointer; }
+.ts-row.pickable:hover { background: var(--card); }
+.ts-row > :nth-child(1) { font-family: var(--f-mono); font-size: 8px; line-height: 12px; color: var(--ink-2); padding-left: 2px; }
+.ts-row > :nth-child(2) { font-size: 11px; line-height: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-row > :nth-child(3), .ts-row > :nth-child(4) { font-family: var(--f-mono); font-size: 8.5px; line-height: 12px; white-space: nowrap; }
+.ts-row > :nth-child(6) { font-family: var(--f-mono); font-size: 8px; line-height: 12px; letter-spacing: 0.05em; }
+.ts-track { position: relative; height: 12px; }
+.ts-track .base { position: absolute; left: 0; right: 0; top: 5.5px; height: 1px; background: var(--rule-2); }
+.ts-track .span { position: absolute; top: 5.5px; height: 1px; background: var(--ink-3); }
+.ts-dot { position: absolute; top: 2.5px; width: 7px; height: 7px; margin-left: -3.5px; border-radius: 50%; background: var(--ink); }
+.ts-dot.c { background: var(--signal); }
+.ts-dot.x { background: var(--ground); border: 1.2px solid var(--muted); }
+.ts-key { display: flex; justify-content: flex-end; gap: 16px; margin-top: 8px; font-family: var(--f-mono); font-size: 7px; line-height: 10px; letter-spacing: 0.04em; color: var(--ink-2); }
+.ts-key span { display: inline-flex; align-items: center; gap: 5px; }
+.ts-key .ts-dot { position: static; margin: 0; }
+
+.ts-trail { position: absolute; left: 48px; top: 478px; width: 720px; }
+.ts-quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 12px; }
+.ts-quote { display: flex; flex-direction: column; height: 158px; padding: 14px 16px; background: var(--white); border: 0.75px solid var(--rule); border-radius: 2px; }
+.ts-quote .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ts-quote .date { font-family: var(--f-mono); font-size: 9px; line-height: 12px; white-space: nowrap; }
+.ts-quote .stance { font-family: var(--f-mono); font-size: 8px; line-height: 12px; letter-spacing: 0.06em; white-space: nowrap; color: var(--ink-2); }
+.ts-quote .stance.c { color: var(--signal); }
+.ts-quote .call { margin-top: 1px; font-family: var(--f-mono); font-size: 7px; line-height: 10px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-quote .text { margin-top: 10px; max-height: 75px; overflow: hidden; font-size: 10.5px; line-height: 15px; }
+.ts-quote .foot { margin-top: auto; font-family: var(--f-mono); font-size: 7px; line-height: 10px; letter-spacing: 0.04em; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.ts-bottom { position: absolute; left: 48px; top: 870px; width: 720px; display: grid; grid-template-columns: minmax(0, 1fr) 260px; gap: 40px; }
+.ts-bottom .title { display: flex; justify-content: space-between; align-items: baseline; font-size: 11px; line-height: 14px; font-weight: 500; }
+.ts-bottom .title .m { font-size: 7.5px; line-height: 10px; color: var(--ink-2); font-weight: 400; }
+.ts-list { display: flex; flex-direction: column; margin-top: 6px; }
+.ts-src { display: grid; grid-template-columns: minmax(0, 1fr) 64px; gap: 8px; height: 15px; font-family: var(--f-mono); font-size: 7.5px; line-height: 15px; }
+.ts-src > :first-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ts-src > :last-child { color: var(--ink-3); text-align: right; white-space: nowrap; }
+.ts-src .d { color: var(--ink-3); }
+.ts-made { display: grid; grid-template-columns: 78px minmax(0, 1fr); gap: 8px; height: 15px; font-family: var(--f-mono); font-size: 7.5px; line-height: 15px; }
+.ts-made > :first-child { color: var(--ink-3); }
+.ts-made > :last-child { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.ts-rule { position: absolute; left: 48px; top: 1004px; width: 720px; height: 0.75px; background: var(--rule); }
+.ts-disclaimer { position: absolute; left: 48px; top: 1014px; width: 500px; font-family: var(--f-mono); font-size: 7.5px; line-height: 12px; color: var(--ink-3); }
+.ts-powered { position: absolute; right: 48px; top: 1012px; display: flex; align-items: center; gap: 6px; font-family: var(--f-mono); font-size: 7.5px; line-height: 12px; color: var(--ink-3); }
+.ts-powered .pill-o { display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 16px; border-radius: 8px; background: var(--signal); }
+.ts-powered .pill-o img { width: 60px; height: auto; display: block; }
+.ts a:hover { text-decoration: underline; }

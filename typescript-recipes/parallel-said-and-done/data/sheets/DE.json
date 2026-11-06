@@ -1,0 +1,3156 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "DE",
+  "name": "Deere & Company",
+  "short": "John Deere",
+  "website": "deere.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "Last Sunday in October",
+  "irUrl": "https://investor.deere.com/home/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-08-20",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": "2026-11-25",
+    "time": "9:00 AM CST",
+    "quarter": "Q4 2026"
+  },
+  "photoSubject": "John Deere autonomous tractor",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Reach 20% through-cycle margins",
+      "commitment": "Reach 20% through-cycle equipment-operations margins by 2030.",
+      "deadline": "2030",
+      "firstStated": "2022-02-18",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "At the December 8, 2025 Investor Day, Deere reaffirmed its 20% through-cycle OROS goal by 2030 and said post-tariff work remained; achievement was not reported by November 5, 2026.",
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+          "title": "JOHN DEERE NYSE INVESTOR DAY",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q3/DE-3Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/02/DE-1Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2024-Earnings-Call-21-November-2024-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2023-02-17",
+            "what_was_said": "Management explicitly cautioned that Deere was “not quite there yet”: annual guidance implying 20% margins did not mean the structural through-cycle goal had been achieved. The goal also included reducing margin variability.",
+            "call": "Q1 2023 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Reach 10% recurring revenue",
+      "commitment": "Generate 10% of revenue from recurring sources by 2030.",
+      "deadline": "2030",
+      "firstStated": "2022-02-18",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Deere retained the 10% recurring-revenue ambition but moved its timing beyond 2030; it remained a long-term goal, with no completion reported by 2026-11-05.",
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+          "title": "JOHN DEERE NYSE INVESTOR DAY",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/02/DE-1Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2022-11-23",
+            "what_was_said": "Management reported running autonomous paid acres that fall and said 2023 would bring another limited commercial rollout of autonomy—concrete early commercialization progress.",
+            "call": "Q4 2022 earnings call"
+          },
+          {
+            "date": "2026-05-21",
+            "what_was_said": "Deere reported selling more than 12,500 JDLink Boost kits since the second half of 2024, expanding its connectivity and SaaS offerings. Management said these developments supported recurring high-value revenues across the agricultural cycle, but did not announce attainment of the 10% target.",
+            "call": "Q2 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Total autonomy for U.S. corn and soy",
+      "commitment": "Develop a total autonomy and automation solution for U.S. corn and soy; the initiating statement gave no deadline.",
+      "deadline": null,
+      "firstStated": "2022-05-26",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The full-system promise remains pending. Deere progressed to autonomous-tillage orders; the 2030 target was stated earlier, though the initiating earnings-call sentence gave no deadline.",
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/07/leaps-unlocked-analyst-day-transcript.pdf",
+          "title": "Leaps Unlocked Analyst Day Transcript",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/12/DE-4Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/de/transcripts/27425-q4-2022/",
+          "title": "Deere & Company (DE) Q4 2022 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-05-15",
+            "what_was_said": "In discussing future SaaS offerings, management explicitly reiterated the goal of a fully autonomous corn production system by the end of 2030.",
+            "call": "Q2 2025 earnings call"
+          },
+          {
+            "date": "2025-11-26",
+            "what_was_said": "Management said Deere had covered over 200,000 acres autonomously since the start of its autonomous-tillage journey, adding evidence of operational progress beyond the order-taking announcement.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Invest $20 billion in U.S. manufacturing",
+      "commitment": "Invest $20 billion in the United States over the next decade in product development, technology and advanced manufacturing.",
+      "deadline": "Over the next decade",
+      "firstStated": "2025-05-15",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The $20 billion pledge remains open; Deere reaffirmed the next 10 years target and reported starting Kernersville excavator production following a $70 million expansion.",
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2025-Earnings-Call-15-May-2025-10_00-AM-ET-1.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-05-21",
+            "what_was_said": "Management reported recently starting production of Deere-designed excavators in Kernersville, North Carolina, following a $70 million expansion investment. This demonstrates implementation progress, not completion of the full $20 billion commitment.",
+            "call": "Q2 2026 Earnings Call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Resume normal capital allocation",
+      "commitment": "Resume normal capital-allocation activities in 2026 after pausing Q4 2025 buybacks.",
+      "deadline": "2026",
+      "firstStated": "2025-11-26",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Buybacks resumed in fiscal 2026; first-quarter dividends and repurchases totaled nearly $750 million. Second-quarter shareholder returns were $635 million.",
+      "citations": [
+        {
+          "url": "http://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-02-19",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-02-19",
+            "what_was_said": "Management reported returning nearly $750 million in cash to shareholders during the quarter through dividends and share repurchases, providing earnings-call confirmation that buybacks had resumed.",
+            "call": "Q1 2026 Earnings Call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "DE-P1-2022-02-18",
+      "promiseId": "P1",
+      "date": "2022-02-18",
+      "call": "Q1 2022 earnings call",
+      "speaker": "John C. May, Chairman & Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "May set a path to 20% equipment-operations margins by 2030; the CFO described it as a through-cycle target.",
+      "quote": "By 2030, we see a path to 20% margins at the equipment operations level.",
+      "verbatim": {
+        "text": "By 2030, we see a path to 20% margins at the equipment operations level.",
+        "segs": [
+          {
+            "t": "By ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ", we see a path to ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " margins at the equipment operations level.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/02/DE-1Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/02/DE-1Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2022-05-20",
+      "promiseId": "P1",
+      "date": "2022-05-20",
+      "call": "Q2 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending 20% through-cycle margin target was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/DE-2Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2022-08-19",
+      "promiseId": "P1",
+      "date": "2022-08-19",
+      "call": "Q3 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending 20% through-cycle margin target was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/08/DE-3Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2022-11-23",
+      "promiseId": "P1",
+      "date": "2022-11-23",
+      "call": "Q4 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending 20% through-cycle margin target was not addressed; quarterly equipment-operations margin was not evidence of through-cycle achievement.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/12/DE-4Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2023-02-17",
+      "promiseId": "P1",
+      "date": "2023-02-17",
+      "call": "Q1 2023 earnings call",
+      "speaker": "Brent Norwood, Head of Investor Relations",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Norwood reaffirmed the 20% through-cycle goal by 2030, said Deere was not there yet, and distinguished demand-driven performance from structural progress.",
+      "quote": "With respect to our stated goal of 20% margins – through-cycle margins by 2030, maybe a couple of things to unpack there. First goal is to get to a structural through-cycle margin achievement at that point. And we would say we're not quite there yet.",
+      "verbatim": {
+        "text": "With respect to our stated goal of 20% margins – through-cycle margins by 2030, maybe a couple of things to unpack there. First goal is to get to a structural through-cycle margin achievement at that point.",
+        "segs": [
+          {
+            "t": "With respect to our stated goal of ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " margins – through-cycle margins by ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ", maybe a couple of things to unpack there. First goal is to get to a structural through-cycle margin achievement at that point.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2023/02/de-1q23-earnings-call-transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2023/02/de-1q23-earnings-call-transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2023-05-19",
+      "promiseId": "P1",
+      "date": "2023-05-19",
+      "call": "Q2 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 20% through-cycle target was not addressed in the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2023-Earnings-Call-19-May-2023-10_00-AM-ET.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2023-08-18",
+      "promiseId": "P1",
+      "date": "2023-08-18",
+      "call": "Q3 2023 earnings call",
+      "speaker": "Joshua Jepsen, Senior Vice President & Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Jepsen described a meaningful structural profitability shift that Deere would continue pursuing.",
+      "quote": "So, we think this is a meaningful structural shift in profitability and one that we're going to keep working on.",
+      "verbatim": {
+        "text": "So, we think this is a meaningful structural shift in profitability and one that we're going to keep working on.",
+        "segs": [
+          {
+            "t": "So, we think this is a meaningful structural shift in profitability and one that we're going to keep working on.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q3/corrected-transcript_-deere-co-de-us-q3-2023-earnings-call-18-august-2023-10_00-am-et.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q3/corrected-transcript_-deere-co-de-us-q3-2023-earnings-call-18-august-2023-10_00-am-et.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2023-11-22",
+      "promiseId": "P1",
+      "date": "2023-11-22",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Joshua Jepsen, Senior Vice President & Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Jepsen projected nearly 2 times the margin and 2.5 times the net income versus the 2018-2019 near-mid-cycle period.",
+      "quote": "As a result of our structural improvements combined with our execution, we will deliver nearly 2 times the margin and 2.5 times the net income than the last time our businesses were near mid-cycle in the 2018-2019 timeframe.",
+      "verbatim": {
+        "text": "As a result of our structural improvements combined with our execution, we will deliver nearly 2 times the margin and 2.5 times the net income than the last time our businesses were near mid-cycle in the 2018-2019 timeframe.",
+        "segs": [
+          {
+            "t": "As a result of our structural improvements combined with our execution, we will deliver nearly 2 times the margin and 2.5 times the net income than the last time our businesses were near mid-cycle in the ",
+            "h": 0
+          },
+          {
+            "t": "2018",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "2019",
+            "h": 1
+          },
+          {
+            "t": " timeframe.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2023-Earnings-Call-22-November-2023-10_00-AM-ET.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2023-Earnings-Call-22-November-2023-10_00-AM-ET.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2024-02-15",
+      "promiseId": "P1",
+      "date": "2024-02-15",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Joshua Jepsen, Senior Vice President & Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Jepsen forecast nearly 19% equipment-operations margin just below mid-cycle and expected better performance across all cycle points.",
+      "quote": "As John noted, we expect to perform better across all points of the cycle as evidenced by our nearly 19% equipe ops operating margin forecast just below mid cycle levels, while remaining focused on managing production and inventories proactively.",
+      "verbatim": {
+        "text": "As John noted, we expect to perform better across all points of the cycle as evidenced by our nearly 19% equipe ops operating margin forecast just below mid cycle levels, while remaining focused on managing production and inventories proactively.",
+        "segs": [
+          {
+            "t": "As John noted, we expect to perform better across all points of the cycle as evidenced by our nearly ",
+            "h": 0
+          },
+          {
+            "t": "19%",
+            "h": 1
+          },
+          {
+            "t": " equipe ops operating margin forecast just below mid cycle levels, while remaining focused on managing production and inventories proactively.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q1/de-q1-2024-earnings-call_corrected.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q1/de-q1-2024-earnings-call_corrected.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2024-05-16",
+      "promiseId": "P1",
+      "date": "2024-05-16",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Joshua Jepsen, Senior Vice President & Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Jepsen said operating margins were structurally better at that cycle point than ever before.",
+      "quote": "We're delivering value for our customers and driving operating margins that are structurally better at this point in the cycle than ever before.",
+      "verbatim": {
+        "text": "We're delivering value for our customers and driving operating margins that are structurally better at this point in the cycle than ever before.",
+        "segs": [
+          {
+            "t": "We're delivering value for our customers and driving operating margins that are structurally better at this point in the cycle than ever before.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/05/corrected-transcript_-deere-co-de-us-q2-2024-earnings-call-16-may-2024-10_00-am-et.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/05/corrected-transcript_-deere-co-de-us-q2-2024-earnings-call-16-may-2024-10_00-am-et.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2024-08-15",
+      "promiseId": "P1",
+      "date": "2024-08-15",
+      "call": "Q3 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 20% through-cycle margin target was not addressed in the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q3/de-corrected-transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2024-11-21",
+      "promiseId": "P1",
+      "date": "2024-11-21",
+      "call": "Q4 2024 earnings call",
+      "speaker": "John C. May, Chairman & Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "May reported 2024 margins above 18%, nearly 700 bps above 2020 at the same cycle point.",
+      "quote": "Notably, our margins in 2024 exceeded 18%, reflecting nearly 700 bps of improvement from 2020, which was the last time we were at this point in the cycle.",
+      "verbatim": {
+        "text": "Notably, our margins in 2024 exceeded 18%, reflecting nearly 700 bps of improvement from 2020, which was the last time we were at this point in the cycle.",
+        "segs": [
+          {
+            "t": "Notably, our margins in ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " exceeded ",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": ", reflecting nearly ",
+            "h": 0
+          },
+          {
+            "t": "700 bps",
+            "h": 1
+          },
+          {
+            "t": " of improvement from ",
+            "h": 0
+          },
+          {
+            "t": "2020",
+            "h": 1
+          },
+          {
+            "t": ", which was the last time we were at this point in the cycle.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2024-Earnings-Call-21-November-2024-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2024-Earnings-Call-21-November-2024-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2025-02-13",
+      "promiseId": "P1",
+      "date": "2025-02-13",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Joshua Jepsen, Senior Vice President & Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Jepsen said 14.5% equipment-operations margin put Deere on progress toward its longer-term 20% mid-cycle goal.",
+      "quote": "And stepping back, as it relates to our longer-term goal of 20% of mid-cycle, this level of performance, this guide, if you look at the equipment operations where we're at, call it, just below 15%, 14.5% operating margin, we feel good about where that puts us in terms of progressing towards that goal.",
+      "verbatim": {
+        "text": "And stepping back, as it relates to our longer-term goal of 20% of mid-cycle, this level of performance, this guide, if you look at the equipment operations where we're at, call it, just below 15%, 14.5% operating margin, we feel good about where that puts us in terms of progressing towards that goal.",
+        "segs": [
+          {
+            "t": "And stepping back, as it relates to our longer-term goal of ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " of mid-cycle, this level of performance, this guide, if you look at the equipment operations where we're at, call it, just below ",
+            "h": 0
+          },
+          {
+            "t": "15%",
+            "h": 1
+          },
+          {
+            "t": ", ",
+            "h": 0
+          },
+          {
+            "t": "14.5%",
+            "h": 1
+          },
+          {
+            "t": " operating margin, we feel good about where that puts us in terms of progressing towards that goal.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q1/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q1-2025-Earnings-Call-13-February-2025-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q1/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q1-2025-Earnings-Call-13-February-2025-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2025-05-15",
+      "promiseId": "P1",
+      "date": "2025-05-15",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 20% through-cycle equipment-operations margin goal was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2025-Earnings-Call-15-May-2025-10_00-AM-ET-1.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2025-08-14",
+      "promiseId": "P1",
+      "date": "2025-08-14",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 20% through-cycle equipment-operations margin goal was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q3-2025-Earnings-Call-14-August-2025-10_00-AM-ET_UPDATE.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2025-11-26",
+      "promiseId": "P1",
+      "date": "2025-11-26",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Joshua A. Jepsen, Chief Financial Officer & Senior Vice President",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Jepsen reported margins over 450 basis points better than 2016 at the same cycle point; excluding tariff headwinds, improvement exceeded 600 basis points.",
+      "quote": "Even with the North American Large Ag industry declining this year by around 30%, we delivered margins over 450 basis points better than 2016, the last time we were at this point in the cycle.",
+      "verbatim": {
+        "text": "Even with the North American Large Ag industry declining this year by around 30%, we delivered margins over 450 basis points better than 2016, the last time we were at this point in the cycle.",
+        "segs": [
+          {
+            "t": "Even with the North American Large Ag industry declining this year by around ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": ", we delivered margins over ",
+            "h": 0
+          },
+          {
+            "t": "450 basis points",
+            "h": 1
+          },
+          {
+            "t": " better than ",
+            "h": 0
+          },
+          {
+            "t": "2016",
+            "h": 1
+          },
+          {
+            "t": ", the last time we were at this point in the cycle.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2025-12-08",
+      "promiseId": "P1",
+      "date": "2025-12-08",
+      "call": "John Deere NYSE Investor Day",
+      "speaker": "Joshua A. Jepsen, Chief Financial Officer & Senior Vice President",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Jepsen reaffirmed the 20% through-cycle OROS goal by 2030; he reported average margins of about 17% since Smart Industrial launched in 2020 and said post-tariff work remained.",
+      "quote": "In fact, if you look at our sales during this period, the last six years, compared to the previous six years, we're up nearly 50% and we remain committed to our goal of delivering 20% through cycle OROS, by 2030.",
+      "verbatim": {
+        "text": "In fact, if you look at our sales during this period, the last six years, compared to the previous six years, we're up nearly 50% and we remain committed to our goal of delivering 20% through cycle OROS, by 2030.",
+        "segs": [
+          {
+            "t": "In fact, if you look at our sales during this period, the last six years, compared to the previous six years, we're up nearly ",
+            "h": 0
+          },
+          {
+            "t": "50%",
+            "h": 1
+          },
+          {
+            "t": " and we remain committed to our goal of delivering ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " through cycle OROS, by ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+          "title": "JOHN DEERE NYSE INVESTOR DAY",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+          "title": "JOHN DEERE NYSE INVESTOR DAY",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "DE-P1-2026-02-19",
+      "promiseId": "P1",
+      "date": "2026-02-19",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 20% through-cycle equipment-operations margin goal was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2026-05-21",
+      "promiseId": "P1",
+      "date": "2026-05-21",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Brent Norwood, Senior Vice President & Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Norwood reported structurally higher profitability than at the comparable cycle point despite tariffs; quarterly equipment-operations margin was nearly 17%.",
+      "quote": "We are delivering structurally higher levels of profitability compared to the last time we were at a similar point in the cycle despite the headwind that comes from tariffs.",
+      "verbatim": {
+        "text": "We are delivering structurally higher levels of profitability compared to the last time we were at a similar point in the cycle despite the headwind that comes from tariffs.",
+        "segs": [
+          {
+            "t": "We are delivering structurally higher levels of profitability compared to the last time we were at a similar point in the cycle despite the headwind that comes from tariffs.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P1-2026-08-20",
+      "promiseId": "P1",
+      "date": "2026-08-20",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 20% through-cycle equipment-operations margin goal was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q3/DE-3Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "low",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2022-02-18",
+      "promiseId": "P2",
+      "date": "2022-02-18",
+      "call": "Q1 2022 earnings call",
+      "speaker": "Ryan D. Campbell, Chief Financial Officer & Senior Vice President",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Deere stated its goal of 10% recurring revenue by 2030 and said autonomy would play a significant role.",
+      "quote": "As we work to achieve our goal of 10% recurring revenue, autonomy will play a significant role.",
+      "verbatim": {
+        "text": "As we work to achieve our goal of 10% recurring revenue, autonomy will play a significant role.",
+        "segs": [
+          {
+            "t": "As we work to achieve our goal of ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": " recurring revenue, autonomy will play a significant role.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/02/DE-1Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/02/DE-1Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2022-05-20",
+      "promiseId": "P2",
+      "date": "2022-05-20",
+      "call": "Q2 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 10% recurring-revenue goal remained pending and was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/DE-2Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2022-08-19",
+      "promiseId": "P2",
+      "date": "2022-08-19",
+      "call": "Q3 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 10% recurring-revenue goal remained pending and was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/08/DE-3Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2022-11-23",
+      "promiseId": "P2",
+      "date": "2022-11-23",
+      "call": "Q4 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed recurring-revenue opportunities, but did not address the 10% goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/12/DE-4Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2023-02-17",
+      "promiseId": "P2",
+      "date": "2023-02-17",
+      "call": "Q1 2023 earnings call",
+      "speaker": "Brent Norwood, Head-Investor Relations",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Deere said it was beginning to make progress on its recurring-revenue goal; the call did not repeat the 10% or 2030 target.",
+      "quote": "And we're just now beginning to make progress on our recurring revenue goal by getting the right tech stack out in the market.",
+      "verbatim": {
+        "text": "And we're just now beginning to make progress on our recurring revenue goal by getting the right tech stack out in the market.",
+        "segs": [
+          {
+            "t": "And we're just now beginning to make progress on our recurring revenue goal by getting the right tech stack out in the market.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2023/02/de-1q23-earnings-call-transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2023/02/de-1q23-earnings-call-transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2023-05-19",
+      "promiseId": "P2",
+      "date": "2023-05-19",
+      "call": "Q2 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 10% recurring-revenue goal remained pending and was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2023-Earnings-Call-19-May-2023-10_00-AM-ET.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2023-08-18",
+      "promiseId": "P2",
+      "date": "2023-08-18",
+      "call": "Q3 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed recurring revenue and solutions as a service generally, but did not address the 10% goal or 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q3/corrected-transcript_-deere-co-de-us-q3-2023-earnings-call-18-august-2023-10_00-am-et.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2023-11-22",
+      "promiseId": "P2",
+      "date": "2023-11-22",
+      "call": "Q4 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed recurring-revenue opportunities and solutions as a service, but not the 10% goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2023-Earnings-Call-22-November-2023-10_00-AM-ET.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2024-02-15",
+      "promiseId": "P2",
+      "date": "2024-02-15",
+      "call": "Q1 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed SaaS and solutions as a service, but did not address the 10% recurring-revenue goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q1/de-1q24-earnings-transcript-corrected.pdf",
+          "title": "De 1Q24 Earnings Transcript Corrected",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2024-05-16",
+      "promiseId": "P2",
+      "date": "2024-05-16",
+      "call": "Q2 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed solutions as a service, but did not address the 10% recurring-revenue goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/05/corrected-transcript_-deere-co-de-us-q2-2024-earnings-call-16-may-2024-10_00-am-et.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2024-08-15",
+      "promiseId": "P2",
+      "date": "2024-08-15",
+      "call": "Q3 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 10% recurring-revenue goal remained pending and was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q3/de-corrected-transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2024-11-21",
+      "promiseId": "P2",
+      "date": "2024-11-21",
+      "call": "Q4 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed recurring licenses for a product, but did not address the 10% goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2024-Earnings-Call-21-November-2024-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2025-02-13",
+      "promiseId": "P2",
+      "date": "2025-02-13",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed subscriptions, but did not address the 10% recurring-revenue goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q1/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q1-2025-Earnings-Call-13-February-2025-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2025-05-15",
+      "promiseId": "P2",
+      "date": "2025-05-15",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed SaaS offerings and subscription models, but did not address the 10% recurring-revenue goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2025-Earnings-Call-15-May-2025-10_00-AM-ET-1.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2025-08-14",
+      "promiseId": "P2",
+      "date": "2025-08-14",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed technology adoption, but did not address the 10% recurring-revenue goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q3-2025-Earnings-Call-14-August-2025-10_00-AM-ET_UPDATE.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2025-11-26",
+      "promiseId": "P2",
+      "date": "2025-11-26",
+      "call": "Q4 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call discussed technology offerings and adoption, but did not address the 10% recurring-revenue goal or its 2030 deadline.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2025-12-08",
+      "promiseId": "P2",
+      "date": "2025-12-08",
+      "call": "2025 Investor Day",
+      "speaker": "Joshua A. Jepsen, Chief Financial Officer & Senior Vice President",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Deere moved the 10% recurring-revenue target beyond 2030, while retaining it as a long-term ambition.",
+      "quote": "While the timeline to achieve the target will extend beyond 2030, our work in progress over the last five years has solidified our belief that this level that is attainable in the long term.",
+      "verbatim": {
+        "text": "While the timeline to achieve the target will extend beyond 2030, our work in progress over the last five years has solidified our belief that this level that is attainable in the long term.",
+        "segs": [
+          {
+            "t": "While the timeline to achieve the target will extend beyond ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ", our work in progress over the last five years has solidified our belief that this level that is attainable in the long term.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+          "title": "JOHN DEERE NYSE INVESTOR DAY",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+          "title": "JOHN DEERE NYSE INVESTOR DAY",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "DE-P2-2026-02-19",
+      "promiseId": "P2",
+      "date": "2026-02-19",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 10% recurring-revenue goal remained pending and was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2026-05-21",
+      "promiseId": "P2",
+      "date": "2026-05-21",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call referred to recurring high-value revenues generally, but did not address the 10% goal or its revised timing.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P2-2026-08-20",
+      "promiseId": "P2",
+      "date": "2026-08-20",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 10% recurring-revenue goal remained pending and was not mentioned on the call.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q3/DE-3Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2022-05-26",
+      "promiseId": "P3",
+      "date": "2022-05-26",
+      "call": "2022 Analyst/Investor Day",
+      "speaker": "Igino Cafiero, Co-founder and CEO, Bear Flag Robotics",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set a goal for a fully autonomous corn and soy production system by 2030.",
+      "quote": "So to that end, we plan to have a fully autonomous corn and soy production system by the year 2030.",
+      "verbatim": {
+        "text": "So to that end, we plan to have a fully autonomous corn and soy production system by the year 2030.",
+        "segs": [
+          {
+            "t": "So to that end, we plan to have a fully autonomous corn and soy production system by the year ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/07/leaps-unlocked-analyst-day-transcript.pdf",
+          "title": "Leaps Unlocked Analyst Day Transcript",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/07/leaps-unlocked-analyst-day-transcript.pdf",
+          "title": "Leaps Unlocked Analyst Day Transcript",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.prnewswire.com/news-releases/john-deere-acquires-bear-flag-robotics-to-accelerate-autonomous-technology-on-the-farm-301349496.html",
+          "title": "John Deere Acquires Bear Flag Robotics to Accelerate Autonomous Technology on the Farm",
+          "domain": "prnewswire.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "DE-P3-2022-08-19",
+      "promiseId": "P3",
+      "date": "2022-08-19",
+      "call": "Q3 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific update on the complete corn-and-soy autonomy commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/08/DE-3Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2022-11-23",
+      "promiseId": "P3",
+      "date": "2022-11-23",
+      "call": "Q4 2022 earnings call",
+      "speaker": "John C. May, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Committed to total autonomy and automation for U.S. corn and soy; this sentence gave no deadline.",
+      "quote": "And if you remember, as part of our LEAP ambitions, we're committing to have a total autonomy and automation solution for corn and soy in the US.",
+      "verbatim": {
+        "text": "And if you remember, as part of our LEAP ambitions, we're committing to have a total autonomy and automation solution for corn and soy in the US.",
+        "segs": [
+          {
+            "t": "And if you remember, as part of our LEAP ambitions, we're committing to have a total autonomy and automation solution for corn and soy in the US.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/12/DE-4Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/12/DE-4Q22-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2023-02-17",
+      "promiseId": "P3",
+      "date": "2023-02-17",
+      "call": "Q1 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed autonomy generally, without a specific update on the complete U.S. corn-and-soy solution.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2023/02/de-1q23-earnings-call-transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2023-05-19",
+      "promiseId": "P3",
+      "date": "2023-05-19",
+      "call": "Q2 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific update on the complete U.S. corn-and-soy autonomy commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2023-Earnings-Call-19-May-2023-10_00-AM-ET.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2023-08-18",
+      "promiseId": "P3",
+      "date": "2023-08-18",
+      "call": "Q3 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific update on U.S. corn-and-soy autonomy; other production systems were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q3/corrected-transcript_-deere-co-de-us-q3-2023-earnings-call-18-august-2023-10_00-am-et.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2023-11-22",
+      "promiseId": "P3",
+      "date": "2023-11-22",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Brent Norwood, Head of Investor Relations",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported autonomy progress and planned acreage expansion through paid pilots in 2024.",
+      "quote": "Meanwhile, our autonomy journey is progressing nicely with plans for acreage expansion through our paid pilots in 2024.",
+      "verbatim": {
+        "text": "Meanwhile, our autonomy journey is progressing nicely with plans for acreage expansion through our paid pilots in 2024.",
+        "segs": [
+          {
+            "t": "Meanwhile, our autonomy journey is progressing nicely with plans for acreage expansion through our paid pilots in ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2023-Earnings-Call-22-November-2023-10_00-AM-ET.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2023-Earnings-Call-22-November-2023-10_00-AM-ET.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2024-02-15",
+      "promiseId": "P3",
+      "date": "2024-02-15",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Aaron Wetzel, Vice President, Production and Precision Ag Production Systems",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "A satellite-connectivity agreement provided a foundation for future automation and autonomy; no full-system delivery claim.",
+      "quote": "This is why we recently entered into an agreement with SpaceX to provide satellite connectivity for our customers, connectivity that will enable real-time data access which will drive cost savings and efficiency improvements in customer operations while also providing the foundation for future advancements in automation and autonomy.",
+      "verbatim": {
+        "text": "This is why we recently entered into an agreement with SpaceX to provide satellite connectivity for our customers, connectivity that will enable real-time data access which will drive cost savings and efficiency improvements in customer operations while also providing the foundation for future advancements in automation and autonomy.",
+        "segs": [
+          {
+            "t": "This is why we recently entered into an agreement with SpaceX to provide satellite connectivity for our customers, connectivity that will enable real-time data access which will drive cost savings and efficiency improvements in customer operations while also providing the foundation for future advancements in automation and autonomy.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q1/de-q1-2024-earnings-call_corrected.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q1/de-q1-2024-earnings-call_corrected.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2024-05-16",
+      "promiseId": "P3",
+      "date": "2024-05-16",
+      "call": "Q2 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed precision technology and automation, but gave no specific update on the complete corn-and-soy autonomy commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/05/corrected-transcript_-deere-co-de-us-q2-2024-earnings-call-16-may-2024-10_00-am-et.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2024-08-15",
+      "promiseId": "P3",
+      "date": "2024-08-15",
+      "call": "Q3 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific update on the complete corn-and-soy autonomy commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q3/de-corrected-transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2024-11-21",
+      "promiseId": "P3",
+      "date": "2024-11-21",
+      "call": "Q4 2024 earnings call",
+      "speaker": "John C. May, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Leap Ambitions progress, including autonomous acres; did not declare the complete solution delivered.",
+      "quote": "This year also brought about a range of new and exciting solutions as we furthered our progress on many of our Leap Ambitions, including connected machines, engaged acres and autonomous acres.",
+      "verbatim": {
+        "text": "This year also brought about a range of new and exciting solutions as we furthered our progress on many of our Leap Ambitions, including connected machines, engaged acres and autonomous acres.",
+        "segs": [
+          {
+            "t": "This year also brought about a range of new and exciting solutions as we furthered our progress on many of our Leap Ambitions, including connected machines, engaged acres and autonomous acres.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2024-Earnings-Call-21-November-2024-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2024-Earnings-Call-21-November-2024-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2025-02-13",
+      "promiseId": "P3",
+      "date": "2025-02-13",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Joshua Jepsen, Senior Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Cited autonomous-solution announcements at CES last month as evidence of investment results; no full-system delivery claim.",
+      "quote": "We maintained our investment in the business, which continued to yield results, as evidenced by our recent successes in Brazil, our autonomous solution announcements at CES last month, and our upcoming product launches at Bauma in April.",
+      "verbatim": {
+        "text": "We maintained our investment in the business, which continued to yield results, as evidenced by our recent successes in Brazil, our autonomous solution announcements at CES last month, and our upcoming product launches at Bauma in April.",
+        "segs": [
+          {
+            "t": "We maintained our investment in the business, which continued to yield results, as evidenced by our recent successes in Brazil, our autonomous solution announcements at CES last month, and our upcoming product launches at Bauma in April.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q1/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q1-2025-Earnings-Call-13-February-2025-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q1/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q1-2025-Earnings-Call-13-February-2025-10_00-AM-ET-final.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2025-02-27",
+      "promiseId": "P3",
+      "date": "2025-02-27",
+      "call": "Next Generation Perception System Brings Autonomy to Tillage",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Released an autonomy upgrade kit for selected tractors, delivering a tillage component rather than the complete production system.",
+      "quote": "John Deere (NYSE: DE) announced today the release of the next generation perception system, an autonomy precision upgrade kit for select tractor models that brings autonomy to tillage work.",
+      "verbatim": {
+        "text": "NEWS RELEASE February 27, 2025 John Deere's Next Generation Perception System Brings Autonomy to Tillage Precision Upgrades Available for Select Tractors and Tillage Tools OLATHE, Kansas (February 27, 2025) — John Deere (NYSE: DE) announced today the release of the next generation perception system, an autonomy precision upgrade kit for select tractor models that brings autonomy to tillage work.",
+        "segs": [
+          {
+            "t": "NEWS RELEASE February 27, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " John Deere's Next Generation Perception System Brings Autonomy to Tillage Precision Upgrades Available for Select Tractors and Tillage Tools OLATHE, Kansas (February 27, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ") — John Deere (NYSE: DE) announced today the release of the next generation perception system, an autonomy precision upgrade kit for select tractor models that brings autonomy to tillage work.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.deere.com/en/news/all-news/next-generation-perception-system",
+          "title": "Next Gen Perception System Brings Tillage Autonomy",
+          "domain": "deere.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.deere.com/en/news/all-news/next-generation-perception-system",
+          "title": "Next Gen Perception System Brings Tillage Autonomy",
+          "domain": "deere.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "DE-P3-2025-05-15",
+      "promiseId": "P3",
+      "date": "2025-05-15",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Joshua Rohleder, Manager, Investor Communications",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Announced autonomous-tillage commercialization for model year 2026 as a major technology milestone.",
+      "quote": "2025 represents a major milestone in our tech journey, as we not only announced the commercialization of autonomous tillage in model year 2026, but we're also lapping the first-year cohort of tech offerings like See & Spray and Precision Essentials.",
+      "verbatim": {
+        "text": "Continuing with large ag, 2025 represents a major milestone in our tech journey, as we not only announced the commercialization of autonomous tillage in model year 2026, but we're also lapping the first-year cohort of tech offerings like See & Spray and Precision Essentials.",
+        "segs": [
+          {
+            "t": "Continuing with large ag, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " represents a major milestone in our tech journey, as we not only announced the commercialization of autonomous tillage in model year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", but we're also lapping the first-year cohort of tech offerings like See & Spray and Precision Essentials.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2025-Earnings-Call-15-May-2025-10_00-AM-ET-1.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2025-Earnings-Call-15-May-2025-10_00-AM-ET-1.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2025-08-14",
+      "promiseId": "P3",
+      "date": "2025-08-14",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed precision technology and harvest automation, but gave no specific update on the complete corn-and-soy autonomy commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q3-2025-Earnings-Call-14-August-2025-10_00-AM-ET_UPDATE.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2025-11-26",
+      "promiseId": "P3",
+      "date": "2025-11-26",
+      "call": "Q4 2025 earnings call",
+      "speaker": "John C. May, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Started taking orders for spring delivery of autonomous row-crop tillage; the complete production system was not declared delivered.",
+      "quote": "As we close out the fiscal year, we started taking orders for spring delivery of our autonomous row crop tillage solution, which should help our customers get the job done at the right time, unconstrained by the challenge of labor scarcity.",
+      "verbatim": {
+        "text": "As we close out the fiscal year, we started taking orders for spring delivery of our autonomous row crop tillage solution, which should help our customers get the job done at the right time, unconstrained by the challenge of labor scarcity.",
+        "segs": [
+          {
+            "t": "As we close out the fiscal year, we started taking orders for spring delivery of our autonomous row crop tillage solution, which should help our customers get the job done at the right time, unconstrained by the challenge of labor scarcity.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2025-12-08",
+      "promiseId": "P3",
+      "date": "2025-12-08",
+      "call": "John Deere NYSE Investor Day",
+      "speaker": "Deanna M. Kovar, President, Worldwide Agriculture and Turf Division",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Autonomy retrofit kits available for spring 2026 tillage on current and prior model year 8R and 9R tractors.",
+      "quote": "These retrofit kits are available for delivery and use during the spring 2026 tillage season on current and prior model year, 8R and 9R tractors.",
+      "verbatim": {
+        "text": "These retrofit kits are available for delivery and use during the spring 2026 tillage season on current and prior model year, 8R and 9R tractors.",
+        "segs": [
+          {
+            "t": "These retrofit kits are available for delivery and use during the spring ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " tillage season on current and prior model year, 8R and 9R tractors.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+          "title": "JOHN DEERE NYSE INVESTOR DAY",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+          "title": "JOHN DEERE NYSE INVESTOR DAY",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "DE-P3-2026-02-19",
+      "promiseId": "P3",
+      "date": "2026-02-19",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific update on the complete U.S. corn-and-soy autonomy commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2026-05-21",
+      "promiseId": "P3",
+      "date": "2026-05-21",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Josh Beal, Director, Investor Relations",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Highlighted autonomy-ready tractors; no full-system completion or changed target was reported.",
+      "quote": "These tractors are autonomy-ready and fully integrated with advanced precision technologies and connectivity solutions, and are designed to help farmers cover more acres efficiently throughout the crop cycle.",
+      "verbatim": {
+        "text": "These tractors are autonomy-ready and fully integrated with advanced precision technologies and connectivity solutions, and are designed to help farmers cover more acres efficiently throughout the crop cycle.",
+        "segs": [
+          {
+            "t": "These tractors are autonomy-ready and fully integrated with advanced precision technologies and connectivity solutions, and are designed to help farmers cover more acres efficiently throughout the crop cycle.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P3-2026-08-20",
+      "promiseId": "P3",
+      "date": "2026-08-20",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific update on the complete U.S. corn-and-soy autonomy commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q3/DE-3Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P4-2025-05-15",
+      "promiseId": "P4",
+      "date": "2025-05-15",
+      "call": "Q2 2025 Earnings Call",
+      "speaker": "John C. May, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Prepared to invest $20 billion in the US over the next decade in product development, cutting-edge technologies and advanced manufacturing.",
+      "quote": "I'm proud that this innovative work will build on our American roots and we are prepared to invest $20 billion in the US over the next decade as we spearhead new product development, cutting-edge technologies and more advanced manufacturing.",
+      "verbatim": {
+        "text": "I'm proud that this innovative work will build on our American roots and we are prepared to invest $20 billion in the US over the next decade as we spearhead new product development, cutting-edge technologies and more advanced manufacturing.",
+        "segs": [
+          {
+            "t": "I'm proud that this innovative work will build on our American roots and we are prepared to invest ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": " in the US over the next decade as we spearhead new product development, cutting-edge technologies and more advanced manufacturing.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2025-Earnings-Call-15-May-2025-10_00-AM-ET-1.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2025-Earnings-Call-15-May-2025-10_00-AM-ET-1.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P4-2025-05-19",
+      "promiseId": "P4",
+      "date": "2025-05-19",
+      "call": "John Deere Announces $20 Billion Commitment to U.S. Investment Over Next Decade",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Company-authored article reiterated the 2Q 2025 pledge: $20 billion in the United States over the next 10 years.",
+      "quote": "During the 2Q 2025 earning’s call, John Deere chairman and CEO John May announced a bold commitment to invest $20 billion in the United States over the next 10 years, underscoring the continued dedication of John Deere to American workers, communities, and manufacturing.",
+      "verbatim": {
+        "text": "During the 2Q 2025 earning’s call, John Deere chairman and CEO John May announced a bold commitment to invest $20 billion in the United States over the next 10 years, underscoring the continued dedication of John Deere to American workers, communities, and manufacturing.",
+        "segs": [
+          {
+            "t": "During the 2Q ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " earning’s call, John Deere chairman and CEO John May announced a bold commitment to invest ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": " in the United States over the next 10 years, underscoring the continued dedication of John Deere to American workers, communities, and manufacturing.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.croplife.com/iron/john-deere-announces-20-billion-commitment-to-u-s-investment-over-next-decade/",
+          "title": "John Deere Announces $20 Billion Commitment to U.S. Investment Over Next Decade - CropLife",
+          "domain": "croplife.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.croplife.com/iron/john-deere-announces-20-billion-commitment-to-u-s-investment-over-next-decade/",
+          "title": "John Deere Announces $20 Billion Commitment to U.S. Investment Over Next Decade - CropLife",
+          "domain": "croplife.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "DE-P4-2025-06-05",
+      "promiseId": "P4",
+      "date": "2025-06-05",
+      "call": "John Deere US Manufacturing",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $20 billion in U.S. manufacturing over the next 10 years.",
+      "quote": "We’re making a bold move by investing $20 billion into U.S. manufacturing over the next 10 years.",
+      "verbatim": {
+        "text": "We’re making a bold move by investing $20 billion into U.S. manufacturing over the next 10 years.",
+        "segs": [
+          {
+            "t": "We’re making a bold move by investing ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": " into U.S. manufacturing over the next 10 years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.deere.com/en-us/john-deere-news/john-deere-us-manufacturing",
+          "title": "John Deere US Manufacturing | John Deere US",
+          "domain": "deere.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.deere.com/en-us/john-deere-news/john-deere-us-manufacturing",
+          "title": "John Deere US Manufacturing | John Deere US",
+          "domain": "deere.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "DE-P4-2025-08-14",
+      "promiseId": "P4",
+      "date": "2025-08-14",
+      "call": "Q3 2025 Earnings Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending $20 billion U.S. investment commitment was not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q3-2025-Earnings-Call-14-August-2025-10_00-AM-ET_UPDATE.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P4-2025-11-26",
+      "promiseId": "P4",
+      "date": "2025-11-26",
+      "call": "Q4 2025 Earnings Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending $20 billion U.S. investment commitment was not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P4-2026-01-27",
+      "promiseId": "P4",
+      "date": "2026-01-27",
+      "call": "John Deere Announces Major Expansion with Two New U.S. Facilities Coming",
+      "speaker": "John May, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $20B over the next 10 years alongside Indiana distribution-center plans and a $70M North Carolina factory.",
+      "quote": "\"These investments further demonstrate our commitment to invest $20B in U.S. manufacturing over the next 10 years,\" May said.",
+      "verbatim": {
+        "text": "\"These investments further demonstrate our commitment to invest $20B in U.S. manufacturing over the next 10 years,\" May said.",
+        "segs": [
+          {
+            "t": "\"These investments further demonstrate our commitment to invest ",
+            "h": 0
+          },
+          {
+            "t": "$20B",
+            "h": 1
+          },
+          {
+            "t": " in U.S. manufacturing over the next 10 years,\" May said.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.prnewswire.com/news-releases/john-deere-announces-major-expansion-with-two-new-us-facilities-coming-302671843.html",
+          "title": "John Deere Announces Major Expansion with Two New U.S. Facilities Coming",
+          "domain": "prnewswire.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.prnewswire.com/news-releases/john-deere-announces-major-expansion-with-two-new-us-facilities-coming-302671843.html",
+          "title": "John Deere Announces Major Expansion with Two New U.S. Facilities Coming",
+          "domain": "prnewswire.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "DE-P4-2026-02-19",
+      "promiseId": "P4",
+      "date": "2026-02-19",
+      "call": "Q1 2026 Earnings Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending $20 billion U.S. investment commitment was not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P4-2026-05-21",
+      "promiseId": "P4",
+      "date": "2026-05-21",
+      "call": "Q2 2026 Earnings Call",
+      "speaker": "Brent Norwood, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $20 billion over the next 10 years; reported Kernersville excavator production starting after a $70 million expansion.",
+      "quote": "And we continue to stand behind our commitment towards $20 billion of investments in US manufacturing over the next 10 years.",
+      "verbatim": {
+        "text": "And we continue to stand behind our commitment towards $20 billion of investments in US manufacturing over the next 10 years.",
+        "segs": [
+          {
+            "t": "And we continue to stand behind our commitment towards ",
+            "h": 0
+          },
+          {
+            "t": "$20 billion",
+            "h": 1
+          },
+          {
+            "t": " of investments in US manufacturing over the next 10 years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P4-2026-08-20",
+      "promiseId": "P4",
+      "date": "2026-08-20",
+      "call": "Q3 2026 Earnings Call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending $20 billion U.S. investment commitment was not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q3/DE-3Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P5-2025-11-26",
+      "promiseId": "P5",
+      "date": "2025-11-26",
+      "call": "Q4 2025 Earnings Call",
+      "speaker": "Joshua A. Jepsen, Chief Financial Officer & Senior Vice President",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Buybacks paused in the fourth quarter; normal capital-allocation activities expected to resume in 2026.",
+      "quote": "We paused buybacks in the fourth quarter due to heightened market uncertainty, but we expect to resume our normal capital allocation activities in 2026.",
+      "verbatim": {
+        "text": "We paused buybacks in the fourth quarter due to heightened market uncertainty, but we expect to resume our normal capital allocation activities in 2026.",
+        "segs": [
+          {
+            "t": "We paused buybacks in the fourth quarter due to heightened market uncertainty, but we expect to resume our normal capital allocation activities in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DE-P5-2026-02-19",
+      "promiseId": "P5",
+      "date": "2026-02-19",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported $302 million in common-stock repurchases for the first quarter of 2026, documenting resumed buybacks.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-News-Release.pdf",
+          "title": "Microsoft Word - Q1 2026 PR Narrative_Financials FINAL Hartmann_17Feb.docx",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "DE-P5-2026-02-26",
+      "promiseId": "P5",
+      "date": "2026-02-26",
+      "call": "Q1 2026 Form 10-Q",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported $743 million returned to shareholders in the first three months of 2026, corroborating resumed repurchases.",
+      "quote": "Cash returned to shareholders was $743 in the first three months of 2026.",
+      "verbatim": {
+        "text": "Cash returned to shareholders was $743 in the first three months of 2026.",
+        "segs": [
+          {
+            "t": "Cash returned to shareholders was ",
+            "h": 0
+          },
+          {
+            "t": "$743",
+            "h": 1
+          },
+          {
+            "t": " in the first three months of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926020158/de-20260201x10q.htm",
+          "title": "DEERE & CO_February 1, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://fiscal.ai",
+          "title": "Fiscal.ai /v2/company/filings",
+          "domain": "fiscal.ai",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926020158/de-20260201x10q.htm",
+          "title": "DEERE & CO_February 1, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "DE-P5-2026-05-21",
+      "promiseId": "P5",
+      "date": "2026-05-21",
+      "call": "Q2 2026 Earnings Call",
+      "speaker": "Brent Norwood, Senior Vice President & Chief Financial Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported $635 million returned through share repurchases and dividends, confirming continued delivery rather than first completion.",
+      "quote": "During the quarter, we returned $635 million to shareholders through a combination of share repurchases and dividends, reflecting both the strength of our financial performance and our confidence in the business.",
+      "verbatim": {
+        "text": "During the quarter, we returned $635 million to shareholders through a combination of share repurchases and dividends, reflecting both the strength of our financial performance and our confidence in the business.",
+        "segs": [
+          {
+            "t": "During the quarter, we returned ",
+            "h": 0
+          },
+          {
+            "t": "$635 million",
+            "h": 1
+          },
+          {
+            "t": " to shareholders through a combination of share repurchases and dividends, reflecting both the strength of our financial performance and our confidence in the business.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+          "title": "Deere & Co.",
+          "domain": "s22.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q2/DE-2Q26-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q4/DE-4Q-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2025-Earnings-Call-15-May-2025-10_00-AM-ET-1.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 4,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q3/DE-3Q26-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q3/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q3-2025-Earnings-Call-14-August-2025-10_00-AM-ET_UPDATE.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2025/12/09/John-Deere-NYSE-Investor-Day-Transcript.pdf",
+      "title": "JOHN DEERE NYSE INVESTOR DAY",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/12/DE-4Q22-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2024-Earnings-Call-21-November-2024-10_00-AM-ET-final.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 9,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/08/DE-3Q22-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2023/02/de-1q23-earnings-call-transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 11,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q2/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q2-2023-Earnings-Call-19-May-2023-10_00-AM-ET.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 12,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q3/corrected-transcript_-deere-co-de-us-q3-2023-earnings-call-18-august-2023-10_00-am-et.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 13,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2023/q4/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q4-2023-Earnings-Call-22-November-2023-10_00-AM-ET.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 14,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/05/corrected-transcript_-deere-co-de-us-q2-2024-earnings-call-16-may-2024-10_00-am-et.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 15,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q3/de-corrected-transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 16,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2025/q1/CORRECTED-TRANSCRIPT_-Deere-Co-DE-US-Q1-2025-Earnings-Call-13-February-2025-10_00-AM-ET-final.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 17,
+      "url": "http://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P5"
+    },
+    {
+      "n": 18,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 19,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/02/DE-1Q22-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 20,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2022/DE-2Q22-Earnings-Call-Transcript.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 21,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q1/de-q1-2024-earnings-call_corrected.pdf",
+      "title": "Deere & Co.",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 22,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_downloads/2024/07/leaps-unlocked-analyst-day-transcript.pdf",
+      "title": "Leaps Unlocked Analyst Day Transcript",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 23,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2024/q1/de-1q24-earnings-transcript-corrected.pdf",
+      "title": "De 1Q24 Earnings Transcript Corrected",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 24,
+      "url": "https://www.prnewswire.com/news-releases/john-deere-acquires-bear-flag-robotics-to-accelerate-autonomous-technology-on-the-farm-301349496.html",
+      "title": "John Deere Acquires Bear Flag Robotics to Accelerate Autonomous Technology on the Farm",
+      "domain": "prnewswire.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 25,
+      "url": "https://www.deere.com/en/news/all-news/next-generation-perception-system",
+      "title": "Next Gen Perception System Brings Tillage Autonomy",
+      "domain": "deere.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 26,
+      "url": "https://www.deere.com/en-us/john-deere-news/john-deere-us-manufacturing",
+      "title": "John Deere US Manufacturing | John Deere US",
+      "domain": "deere.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 27,
+      "url": "https://www.prnewswire.com/news-releases/john-deere-announces-major-expansion-with-two-new-us-facilities-coming-302671843.html",
+      "title": "John Deere Announces Major Expansion with Two New U.S. Facilities Coming",
+      "domain": "prnewswire.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 28,
+      "url": "https://s22.q4cdn.com/253594569/files/doc_financials/2026/q1/DE-1Q26-News-Release.pdf",
+      "title": "Microsoft Word - Q1 2026 PR Narrative_Financials FINAL Hartmann_17Feb.docx",
+      "domain": "s22.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 29,
+      "url": "https://www.sec.gov/Archives/edgar/data/315189/000110465926020158/de-20260201x10q.htm",
+      "title": "DEERE & CO_February 1, 2026",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 30,
+      "url": "https://stockanalysis.com/stocks/de/transcripts/27425-q4-2022/",
+      "title": "Deere & Company (DE) Q4 2022 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 31,
+      "url": "https://www.croplife.com/iron/john-deere-announces-20-billion-commitment-to-u-s-investment-over-next-decade/",
+      "title": "John Deere Announces $20 Billion Commitment to U.S. Investment Over Next Decade - CropLife",
+      "domain": "croplife.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 32,
+      "url": "https://fiscal.ai",
+      "title": "Fiscal.ai /v2/company/filings",
+      "domain": "fiscal.ai",
+      "tier": "press",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.148218Z",
+      "completedAt": "2026-11-05T06:30:51.842971Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.154155Z",
+      "completedAt": "2026-11-05T19:14:27.422102Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.161177Z",
+      "completedAt": "2026-11-05T19:13:45.771708Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.168758Z",
+      "completedAt": "2026-11-05T19:15:54.069607Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.175658Z",
+      "completedAt": "2026-11-05T19:12:29.909576Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.182643Z",
+      "completedAt": "2026-11-05T19:12:11.784024Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.084495Z",
+      "completedAt": "2026-11-05T19:48:47.928478Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.092119Z",
+      "completedAt": "2026-11-05T19:46:25.046595Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.099319Z",
+      "completedAt": "2026-11-05T19:47:56.801250Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.107136Z",
+      "completedAt": "2026-11-05T19:48:49.053803Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.114301Z",
+      "completedAt": "2026-11-05T19:46:41.583571Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "73 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "34 of 34 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "33 of 34 (97%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-08-20; next 2026-11-25"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/en/thumb/0/02/John_Deere_Logo_%E2%80%93_Flat_2_Color.svg/1280px-John_Deere_Logo_%E2%80%93_Flat_2_Color.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/John_Deere",
+      "title": "John Deere - Wikipedia",
+      "width": 1280,
+      "height": 990,
+      "rank": 5
+    },
+    "photo": {
+      "imageUrl": "https://img.youtube.com/vi/ZyETYja1Yw4/maxresdefault.jpg",
+      "sourcePageUrl": "https://www.deere.com/en-us/products-solutions/tractors/autonomous-tractor",
+      "title": "Autonomous Tractor | John Deere US",
+      "width": 1280,
+      "height": 720,
+      "rank": 7
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.280Z"
+}
