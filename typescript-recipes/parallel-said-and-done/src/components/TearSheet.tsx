@@ -227,7 +227,7 @@ export function TearSheet({
         <span>Powered by</span>
         <span className="pill-o">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/parallel-wordmark-light.svg" alt="Parallel" />
+          <img src="/parallel-lockup-light.svg" alt="Parallel" />
         </span>
       </div>
     </article>

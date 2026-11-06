@@ -101,4 +101,5 @@
 .ts-powered { position: absolute; right: 48px; top: 1012px; display: flex; align-items: center; gap: 6px; font-family: var(--f-mono); font-size: 7.5px; line-height: 12px; color: var(--ink-3); }
 .ts-powered .pill-o { display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 16px; border-radius: 8px; background: var(--signal); }
 .ts-powered .pill-o img { width: 60px; height: auto; display: block; }
+.ts-powered { font-weight: 400; }
 .ts a:hover { text-decoration: underline; }

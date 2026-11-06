@@ -37,7 +37,7 @@ export function SiteFooter({ asOf }: { asOf?: string | null }) {
           <span>Powered by</span>
           <span className="powered-pill">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/parallel-wordmark-light.svg" alt="Parallel" />
+            <img src="/parallel-lockup-light.svg" alt="Parallel" />
           </span>
         </span>
         </div>

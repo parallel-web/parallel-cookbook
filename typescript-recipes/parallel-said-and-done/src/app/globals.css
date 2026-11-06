@@ -75,9 +75,10 @@ h1, h2, h3, p { margin: 0; }
 .site-footer { margin-top: 64px; }
 .site-footer .foot > span:first-child { flex: 1 1 420px; }
 .site-footer .foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; padding: 16px 0 32px; border-top: 0.75px solid var(--rule); font-family: var(--f-mono); font-size: 11px; line-height: 17px; color: var(--ink-2); }
-.powered { display: inline-flex; align-items: center; gap: 10px; }
-.powered-pill { display: inline-flex; align-items: center; justify-content: center; width: 120px; height: 24px; border-radius: 12px; background: var(--signal); }
-.powered-pill img { width: 88px; height: auto; display: block; }
+/* Design-system "Powered by" capsule: the lockup in off-white at about 60% of the pill's height. */
+.powered { display: inline-flex; align-items: center; gap: 8px; font-weight: 400; }
+.powered-pill { display: inline-flex; align-items: center; justify-content: center; width: 100px; height: 20px; border-radius: 10px; background: var(--signal); }
+.powered-pill img { width: 74px; height: auto; display: block; }
 
 /* Logo slot: Image Search logo on a light square, or the black ticker chip. */
 .chip {
