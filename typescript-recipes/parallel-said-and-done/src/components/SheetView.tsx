@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { fmtDate } from "../lib/dates";
 import type { SheetData } from "../lib/types";
 import { outcomeWord, sourceLine, statementsOf } from "../lib/view";
-import { Stance, StatementText } from "./Marks";
+import { Cites, Stance, StatementText } from "./Marks";
 import { TearSheet } from "./TearSheet";
 
 /** Who checked the outcome, in plain words: a separate AI research run, not a person. */
@@ -77,7 +77,7 @@ export function SheetView({ sheet, today, initialFocus }: { sheet: SheetData; to
       <section className="trail no-print" aria-live="polite">
         <div className="trail-head">
           <span className="lbl">
-            Paper trail · {promise.id} · {outcomeWord(promise)}
+            Paper trail · {promise.id} · <span className={`outcome outcome-${promise.k}`}>{outcomeWord(promise)}</span>
           </span>
           <h2>{promise.label}</h2>
           <span style={{ color: "var(--ink-2)" }}>{promise.commitment}</span>
@@ -111,6 +111,10 @@ export function SheetView({ sheet, today, initialFocus }: { sheet: SheetData; to
                   <a href={s.verbatim.backing.url} target="_blank" rel="noreferrer">
                     {sourceLine(s)}
                   </a>
+                ) : s.stance !== "not_mentioned" && s.citations.length ? (
+                  <>
+                    Task summary, not verbatim · cited <Cites citations={s.citations} />
+                  </>
                 ) : (
                   sourceLine(s)
                 )}
@@ -120,8 +124,14 @@ export function SheetView({ sheet, today, initialFocus }: { sheet: SheetData; to
         ))}
         <p className="src" style={{ marginTop: 14, fontFamily: "var(--f-mono)", fontSize: 11, color: "var(--ink-3)" }}>
           {promise.factCheck?.summaryErrors.length
-            ? `Outcome summary withheld. The independent check flagged this evidence: ${promise.factCheck.summaryErrors.join(" ")}`
+            ? `Outcome summary withheld. The separate AI fact-check flagged this evidence: ${promise.factCheck.summaryErrors.join(" ")}`
             : `Outcome: ${promise.outcomeSummary}`}
+          {promise.citations.length ? (
+            <>
+              {" · sources "}
+              <Cites citations={promise.citations} max={4} />
+            </>
+          ) : null}
         </p>
       </section>
     </>

@@ -22,6 +22,14 @@
   --dash: #b9b5ac;
   --code: #3a3833;
   --signal: #fb631b;
+  --signal-wash: #fcddcf;
+  /* Design-system semantic colours, as washes with ink text so labels stay legible. */
+  --ok: #69be78;
+  --ok-wash: #e2f1e4;
+  --bad: #e14942;
+  --bad-wash: #fbe2e0;
+  --info: #8fb6cc;
+  --info-wash: #e5eef3;
   --white: #ffffff;
 
   --f-body: "Gerstner Programm", var(--font-geist-sans), Arial, Helvetica, sans-serif;
@@ -97,6 +105,17 @@ h1, h2, h3, p { margin: 0; }
   background-size: 4px 4px;
 }
 .plate img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); mix-blend-mode: multiply; opacity: 0.9; }
+a.plate { cursor: pointer; }
+/* No photo, or it failed to load: the company's logo stands in, without the photo's caption. */
+.plate-logo { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+.plate .plate-logo .chip { position: static; box-shadow: 0 0 0 4px var(--plate); }
+.plate .plate-logo .chip-logo img { position: static; inset: auto; filter: none; mix-blend-mode: normal; opacity: 1; object-fit: contain; }
+.plate-logo ~ .plate-cap { display: none; }
+
+/* Source links after a claim: "a.com · b.com +2". */
+.cites a { color: inherit; text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 2px; }
+.cites a:hover { text-decoration-color: currentColor; }
+.cites a + a::before { content: " · "; display: inline-block; white-space: pre; text-decoration: none; }
 .plate-cap {
   position: absolute;
   left: 10px;
@@ -115,7 +134,7 @@ h1, h2, h3, p { margin: 0; }
   text-overflow: ellipsis;
 }
 
-/* Stance tag: orange only when the statement changed the target. */
+/* Stance tag, colour-coded so a trail can be skimmed. Orange still marks only a changed target. */
 .stamp {
   display: inline-block;
   height: 18px;
@@ -129,7 +148,20 @@ h1, h2, h3, p { margin: 0; }
   letter-spacing: 0.08em;
   white-space: nowrap;
 }
-.stamp-c { border-color: var(--signal); color: var(--signal); }
+.stamp-s { border-color: var(--info); background: var(--info-wash); color: var(--ink); }
+.stamp-h { border-color: var(--ok); background: var(--ok-wash); color: var(--ink); }
+.stamp-d { border-color: var(--ok); background: var(--ok); color: var(--ink); }
+.stamp-c { border-color: var(--signal); background: var(--signal-wash); color: var(--ink); }
+.stamp-x { border-style: dashed; border-color: var(--dash); color: var(--ink-3); }
+
+/* Outcome label: green delivered, red missed, grey open or dropped, orange tint when the target was revised. */
+.outcome { display: inline-block; padding: 0 6px; border-radius: 2px; color: var(--ink); white-space: nowrap; }
+.outcome-done { background: var(--ok-wash); box-shadow: inset 0 0 0 1px var(--ok); }
+.outcome-part { background: var(--ok-wash); box-shadow: inset 0 0 0 1px var(--rule); }
+.outcome-rev { background: var(--signal-wash); }
+.outcome-open { background: var(--card); box-shadow: inset 0 0 0 1px var(--rule); }
+.outcome-miss { background: var(--bad-wash); box-shadow: inset 0 0 0 1px var(--bad); }
+.outcome-drop { background: var(--card); color: var(--ink-3); }
 .status { display: inline-flex; align-items: center; height: 18px; padding: 0 7px; border-radius: 9px; font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.06em; white-space: nowrap; }
 .status-done { background: var(--rule-2); }
 .status-today { background: var(--ink); color: var(--ground); }

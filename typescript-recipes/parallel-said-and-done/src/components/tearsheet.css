@@ -73,8 +73,13 @@
 .ts-quote { display: flex; flex-direction: column; height: 158px; padding: 14px 16px; background: var(--white); border: 0.75px solid var(--rule); border-radius: 2px; }
 .ts-quote .top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .ts-quote .date { font-family: var(--f-mono); font-size: 9px; line-height: 12px; white-space: nowrap; }
-.ts-quote .stance { font-family: var(--f-mono); font-size: 8px; line-height: 12px; letter-spacing: 0.06em; white-space: nowrap; color: var(--ink-2); }
-.ts-quote .stance.c { color: var(--signal); }
+.ts-quote .stance { font-family: var(--f-mono); font-size: 8px; line-height: 12px; letter-spacing: 0.06em; white-space: nowrap; color: var(--ink); padding: 0 4px; border-radius: 2px; }
+.ts-quote .stance.s { background: var(--info-wash); }
+.ts-quote .stance.h { background: var(--ok-wash); }
+.ts-quote .stance.d { background: var(--ok); }
+.ts-quote .stance.c { background: var(--signal-wash); color: var(--signal); }
+.ts-quote .stance.x { color: var(--ink-3); }
+.ts-row .outcome { font-size: inherit; line-height: 14px; padding: 0 4px; }
 .ts-quote .call { margin-top: 1px; font-family: var(--f-mono); font-size: 7px; line-height: 10px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .ts-quote .text { margin-top: 10px; max-height: 75px; overflow: hidden; font-size: 10.5px; line-height: 15px; }
 .ts-quote .foot { margin-top: auto; font-family: var(--f-mono); font-size: 7px; line-height: 10px; letter-spacing: 0.04em; color: var(--ink-3); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

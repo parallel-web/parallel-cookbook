@@ -86,7 +86,10 @@ const VIA: Record<string, string> = { search: "found via Search API", extract: "
 
 /** Source line under a quote: domain, which API filled it, and any flags. */
 export function sourceLine(s: Statement): string {
-  if (!s.verbatim) return s.stance === "not_mentioned" ? "Task output · not mentioned on this call" : "Task summary · no verbatim text found for this date";
+  if (!s.verbatim) {
+    if (s.stance === "not_mentioned") return "Task output · not mentioned on this call";
+    return s.citations[0] ? `Task summary, not verbatim · cited ${s.citations[0].domain}` : "Task summary · no verbatim text found for this date";
+  }
   const b = s.verbatim.backing;
   const via = VIA[b.via] ? ` · ${VIA[b.via]}` : "";
   const flag = b.tier === "press" ? " · secondary source" : b.tier === "transcript" ? " · transcript site" : "";

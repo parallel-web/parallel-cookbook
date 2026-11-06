@@ -78,7 +78,7 @@ export function TearSheet({
         <div className="ts-sub">
           {sheet.exchange} · {sheet.ticker} · Fiscal year ends {sheet.fiscalYearEnd}
         </div>
-        <Plate sheet={sheet} />
+        <Plate sheet={sheet} link={links} />
         <div className="ts-facts">
           {facts.map((f) => (
             <div key={f.k} className="ts-fact">
@@ -139,7 +139,9 @@ export function TearSheet({
                   <span key={i} className={`ts-dot ${d.k}`} style={{ left: `${d.l}%` }} />
                 ))}
               </span>
-              <span>{outcomeWord(p)}</span>
+              <span>
+                <span className={`outcome outcome-${p.k}`}>{outcomeWord(p)}</span>
+              </span>
             </div>
           );
         })}
@@ -171,14 +173,14 @@ export function TearSheet({
             <div key={s.id} className="ts-quote">
               <div className="top">
                 <span className="date">{fmtDate(s.date)}</span>
-                <span className={`stance${s.k === "c" ? " c" : ""}`}>{stanceText(s)}</span>
+                <span className={`stance ${s.k}`}>{stanceText(s)}</span>
               </div>
               <span className="call">{s.call}</span>
               <div className="text">
                 <StatementText s={s} />
               </div>
               <span className="foot">
-                {s.verbatim ? <A href={s.verbatim.backing.url}>{sourceLine(s)}</A> : sourceLine(s)}
+                {s.verbatim ? <A href={s.verbatim.backing.url}>{sourceLine(s)}</A> : s.citations[0] ? <A href={s.citations[0].url}>{sourceLine(s)}</A> : sourceLine(s)}
               </span>
             </div>
           ))}

@@ -10,9 +10,13 @@ import { companyDomains } from "./evidence";
 import { imageSearch, type ImageSearchResponse } from "../parallel/client";
 import { domainOf } from "../lib/text";
 
+type ImageCall = { request: Record<string, unknown>; response: ImageSearchResponse };
+
 export interface ImagesRecord {
-  logo: { request: Record<string, unknown>; response: ImageSearchResponse } | null;
-  photo: { request: Record<string, unknown>; response: ImageSearchResponse } | null;
+  logo: ImageCall | null;
+  photo: ImageCall | null;
+  /** Second photo search, run only when the first found nothing the pick rule accepts. */
+  photoFallback?: ImageCall | null;
 }
 
 const LOGO_HOSTS = ["wikipedia.org", "wikimedia.org"];
@@ -88,17 +92,26 @@ export function pickPhoto(response: ImageSearchResponse, company: Company, irUrl
   return ranked ? toPick(ranked.r, response, ranked.rank) : null;
 }
 
-export async function searchImages(client: Parallel, company: Company, photoSubject: string, sessionId: string): Promise<ImagesRecord> {
+export async function searchImages(client: Parallel, company: Company, photoSubject: string, sessionId: string, irUrl: string | null = null): Promise<ImagesRecord> {
   const logoRequest = { ...logoImageRequest(company), session_id: sessionId };
   const photoRequest = { ...photoImageRequest(company, photoSubject), session_id: sessionId };
   const [logo, photo] = await Promise.all([imageSearch(client, logoRequest), imageSearch(client, photoRequest)]);
-  return { logo: { request: logoRequest, response: logo }, photo: { request: photoRequest, response: photo } };
+  const record: ImagesRecord = { logo: { request: logoRequest, response: logo }, photo: { request: photoRequest, response: photo } };
+  if (pickPhoto(photo, company, irUrl)) return record;
+  return { ...record, photoFallback: await searchFallbackPhoto(client, company, sessionId) };
+}
+
+/** The second photo search: the company's headquarters or a facility, from Wikimedia Commons or its own newsroom. */
+export async function searchFallbackPhoto(client: Parallel, company: Company, sessionId: string): Promise<ImageCall> {
+  const request = { ...photoFallbackRequest(company), session_id: sessionId };
+  return { request, response: await imageSearch(client, request) };
 }
 
 export function picksFrom(record: ImagesRecord | null, company: Company, irUrl: string | null) {
+  const photo = record?.photo ? pickPhoto(record.photo.response, company, irUrl) : null;
   return {
     logo: record?.logo ? pickLogo(record.logo.response, company, irUrl) : null,
-    photo: record?.photo ? pickPhoto(record.photo.response, company, irUrl) : null,
+    photo: photo ?? (record?.photoFallback ? pickPhoto(record.photoFallback.response, company, irUrl) : null),
   };
 }
 
@@ -107,6 +120,18 @@ export function logoImageRequest(company: Company) {
     objective: `The official corporate logo of ${company.name} (${company.website}), the current mark or wordmark on a plain background.`,
     // The third query reaches Wikimedia Commons, where the pick rule looks first.
     search_queries: [`${company.short} logo`, `${company.name} logo svg`, `${company.name} logo Wikimedia Commons`],
+    mode: "advanced" as const,
+    advanced_settings: { max_results: 15 },
+  };
+}
+
+/** Stock and news photos are left out by the pick rule, so the fallback asks for sources it accepts. */
+export function photoFallbackRequest(company: Company) {
+  return {
+    objective:
+      `A landscape photograph of ${company.name}'s headquarters, a major facility or a flagship product, ` +
+      `from Wikimedia Commons or ${company.website}'s own newsroom or media gallery.`,
+    search_queries: [`${company.name} headquarters Wikimedia Commons`, `${company.short} headquarters building`, `${company.short} newsroom photo`],
     mode: "advanced" as const,
     advanced_settings: { max_results: 15 },
   };

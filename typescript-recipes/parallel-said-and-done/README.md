@@ -186,8 +186,10 @@ Extract, Search and Image Search add a few cents per sheet.
   them ([`sheet/public.ts`](src/sheet/public.ts)). A fresh clone has no
   `output/`, so the recorded sheets are read-only there; `pnpm sheet` makes a
   new one that can then be deepened and kept current.
-- **Design.** Signal orange marks one thing only: a statement that changed the
-  target. Outcomes are written as words, and figures are bold.
+- **Design.** Stances and outcomes are colour-coded with the design system's
+  semantic colours so a sheet can be skimmed: blue for a first statement, green
+  for on track and delivered, red for missed, grey for open or not mentioned.
+  Signal orange still marks only a changed target. Figures are bold.
 - **Authored by hand.** Besides `config/companies.json`, these are written by hand:
   - the specs and request builders (`sheet/*.ts`, `updates/spec.ts`);
   - the source host lists (`sheet/evidence.ts`);

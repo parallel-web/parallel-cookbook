@@ -71,7 +71,7 @@ export async function completeSheet(
 
   // 4. Image Search: logo and header photo.
   if (options.images !== false) {
-    const images = await searchImages(client, company, sheet.photoSubject, sessionId(ticker, runId));
+    const images = await searchImages(client, company, sheet.photoSubject, sessionId(ticker, runId), sheet.irUrl);
     await writeRaw(ticker, "images", runId, images);
     manifest.images = true;
   }
