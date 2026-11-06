@@ -1,0 +1,2426 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "TXN",
+  "name": "Texas Instruments Incorporated",
+  "short": "Texas Instruments",
+  "website": "ti.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investor.ti.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-21",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Texas Instruments Sherman semiconductor fab",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "2026 capital spending range",
+      "commitment": "Spend $2B–$5B on CapEx in 2026, depending on further expectations.",
+      "deadline": "2026",
+      "firstStated": "2024-08-20",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Management narrowed expected 2026 CapEx to $2 billion to $3 billion; latest guidance favors the higher end, subject to tool deliveries. Full-year delivery remains pending.",
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/dfdbd6f9-a7e0-4c76-ad3d-17917ec441af",
+          "title": "Texas Instruments Inc at UBS Global Technology and AI Conference on December 02, 2025 / 6:35PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+          "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/1890477c-9df1-4e66-b43a-80521e40e4e1",
+          "title": "Texas Instruments Inc Capital Management Review on February 04, 2025 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Sherman 1 qualification line",
+      "commitment": "Complete the Sherman 1 qualification line; no deadline was specified.",
+      "deadline": null,
+      "firstStated": "2025-01-23",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "TI reported the SM1 cleanroom and pilot line complete; production was underway, with further ramping dependent on customer demand.",
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/8c327c57-cd94-439d-a276-ef7cffcdc438",
+          "title": "Capital Management Call Presentation 2026",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+          "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-02-24",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-27",
+            "what_was_said": "Management said Sherman had “ramped ahead of schedule, high yields,” and that the factory was more capable than originally hoped.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Lehi 2 shell",
+      "commitment": "Build a shell in Lehi (LFAB2); the original call gave no completion date.",
+      "deadline": null,
+      "firstStated": "2025-01-23",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "LFAB2 shell remained in the last stages of completion, not declared finished; timing had been revised, most recently to the end of this year.",
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Silicon Labs acquisition closing",
+      "commitment": "Close the Silicon Labs transaction in the first half of 2027, subject to necessary approvals.",
+      "deadline": "first half of 2027",
+      "firstStated": "2026-02-04",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The acquisition remained pending, with closing expected in the first half of 2027, subject to regulatory approvals and customary closing conditions.",
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/401d8947-6368-40f5-8cc1-cdcede9992f7",
+          "title": "Form 424B5 for Texas Instruments INC filed 10/26/2026",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "2026 free-cash-flow-per-share target",
+      "commitment": "Easily beat $8 free cash flow per share in 2026, assuming there was no further false start.",
+      "deadline": "2026",
+      "firstStated": "2026-04-22",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The conditional target to easily beat $8 per share in 2026 remained pending; later reporting provided trailing-12-month cash flow, not a completed annual per-share result.",
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/news-releases/news-release-details/ti-reports-third-quarter-2026-financial-results-and-shareholder",
+          "title": "Investor relations - TI reports third quarter 2026 financial results and shareholder returns - Texas Instruments",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "TXN-P1-2024-08-20",
+      "promiseId": "P1",
+      "date": "2024-08-20",
+      "call": "Off-cycle capital management update",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced 2026 CapEx of $2 billion to $5 billion, depending on revenue.",
+      "quote": "For 2026, CapEx is expected to be between $2 billion to $5 billion, depending on revenue, as I'll show in the next slide.",
+      "verbatim": {
+        "text": "For 2026, CapEx is expected to be between $2 billion to $5 billion, depending on revenue, as I'll show in the next slide.",
+        "segs": [
+          {
+            "t": "For ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", CapEx is expected to be between ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": ", depending on revenue, as I'll show in the next slide.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/txn/transcripts/222377-capital-management-update",
+          "title": "Texas Instruments (TXN) Transcript: Capital Management Update",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/txn/transcripts/222377-capital-management-update",
+          "title": "Texas Instruments (TXN) Transcript: Capital Management Update",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/f59b4b01-40b1-4f6d-b910-607582883013",
+          "title": "Static Files",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P1-2024-10-22",
+      "promiseId": "P1",
+      "date": "2024-10-22",
+      "call": "Q3 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the specific 2026 CapEx range.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/2fe9328f-074f-44f2-a6d9-0bfeb17c7001",
+          "title": "Static Files",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P1-2025-01-23",
+      "promiseId": "P1",
+      "date": "2025-01-23",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Rafael Lizardi, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 CapEx of $2 billion to $5 billion, depending on further expectations.",
+      "quote": "And in 2026, as we said at the last call, between $2 billion to $5 billion, depending on further expectations.",
+      "verbatim": {
+        "text": "And in 2026, as we said at the last call, between $2 billion to $5 billion, depending on further expectations.",
+        "segs": [
+          {
+            "t": "And in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", as we said at the last call, between ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": ", depending on further expectations.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P1-2025-02-04",
+      "promiseId": "P1",
+      "date": "2025-02-04",
+      "call": "2025 Capital Management Review",
+      "speaker": "Rafael Lizardi, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 CapEx between $2 billion to $5 billion.",
+      "quote": "For 2026, CapEx is expected to be between $2 billion to $5 billion.",
+      "verbatim": {
+        "text": "For 2026, CapEx is expected to be between $2 billion to $5 billion.",
+        "segs": [
+          {
+            "t": "For ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", CapEx is expected to be between ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/1890477c-9df1-4e66-b43a-80521e40e4e1",
+          "title": "Texas Instruments Inc Capital Management Review on February 04, 2025 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/1890477c-9df1-4e66-b43a-80521e40e4e1",
+          "title": "Texas Instruments Inc Capital Management Review on February 04, 2025 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P1-2025-04-23",
+      "promiseId": "P1",
+      "date": "2025-04-23",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the specific 2026 CapEx range.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/07e5ba99-636a-4421-8dad-e8e7ccb96934",
+          "title": "Q1 2025 Texas Instruments Inc Earnings Call on April 23, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P1-2025-07-22",
+      "promiseId": "P1",
+      "date": "2025-07-22",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Rafael Lizardi, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained 2026 CapEx between $2 billion and $5 billion, depending on revenue and growth expectations.",
+      "quote": "And for 2026, it's going to be between $2 billion and $5 billion, depending on revenue and growth expectations at that time.",
+      "verbatim": {
+        "text": "And for 2026, it's going to be between $2 billion and $5 billion, depending on revenue and growth expectations at that time.",
+        "segs": [
+          {
+            "t": "And for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", it's going to be between ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": ", depending on revenue and growth expectations at that time.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/351779f2-bd83-4e2c-8359-758b4392a10d",
+          "title": "Q2 2025 Texas Instruments Inc Earnings Call on July 22, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/351779f2-bd83-4e2c-8359-758b4392a10d",
+          "title": "Q2 2025 Texas Instruments Inc Earnings Call on July 22, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P1-2025-10-21",
+      "promiseId": "P1",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "A moderate recovery would favor the lower end of the existing CapEx framework; no new range.",
+      "quote": "But if it wants to continue in that moderate recovery, of course, we will be at the lower end of the CapEx, and free cash flow will grow as indicated in our framework we provided in capital management.",
+      "verbatim": {
+        "text": "But if it wants to continue in that moderate recovery, of course, we will be at the lower end of the CapEx, and free cash flow will grow as indicated in our framework we provided in capital management.",
+        "segs": [
+          {
+            "t": "But if it wants to continue in that moderate recovery, of course, we will be at the lower end of the CapEx, and free cash flow will grow as indicated in our framework we provided in capital management.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/c11b1e9c-bf55-403d-8e59-e0a026ca8ff4",
+          "title": "Q3 2025 Texas Instruments Inc Earnings Call on October 21, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/c11b1e9c-bf55-403d-8e59-e0a026ca8ff4",
+          "title": "Q3 2025 Texas Instruments Inc Earnings Call on October 21, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P1-2025-12-02",
+      "promiseId": "P1",
+      "date": "2025-12-02",
+      "call": "UBS Global Technology and AI Conference",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Narrowed expected 2026 CapEx to around $2 billion to $3 billion.",
+      "quote": "This is what drives our CapEx somewhere around $2 billion to $3 billion.",
+      "verbatim": {
+        "text": "This is what drives our CapEx somewhere around $2 billion to $3 billion.",
+        "segs": [
+          {
+            "t": "This is what drives our CapEx somewhere around ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/dfdbd6f9-a7e0-4c76-ad3d-17917ec441af",
+          "title": "Texas Instruments Inc at UBS Global Technology and AI Conference on December 02, 2025 / 6:35PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/dfdbd6f9-a7e0-4c76-ad3d-17917ec441af",
+          "title": "Texas Instruments Inc at UBS Global Technology and AI Conference on December 02, 2025 / 6:35PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P1-2026-01-27",
+      "promiseId": "P1",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Rafael Lizardi, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 CapEx between $2 billion and $3 billion.",
+      "quote": "We continue to expect CapEx for 2026 between $2 billion and $3 billion.",
+      "verbatim": {
+        "text": "We continue to expect CapEx for 2026 between $2 billion and $3 billion.",
+        "segs": [
+          {
+            "t": "We continue to expect CapEx for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " between ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+          "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+          "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P1-2026-02-24",
+      "promiseId": "P1",
+      "date": "2026-02-24",
+      "call": "2026 Capital Management Call",
+      "speaker": "Rafael Lizardi, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 CapEx in the range of $2 billion to $3 billion.",
+      "quote": "We expect CapEx in 2026 to be in the range of $2 billion to $3 billion.",
+      "verbatim": {
+        "text": "We expect CapEx in 2026 to be in the range of $2 billion to $3 billion.",
+        "segs": [
+          {
+            "t": "We expect CapEx in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " to be in the range of ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P1-2026-04-22",
+      "promiseId": "P1",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Rafael Lizardi, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $2 billion to $3 billion of CapEx for the year.",
+      "quote": "We're looking at $2 billion to $3 billion of CapEx for this year.",
+      "verbatim": {
+        "text": "We're looking at $2 billion to $3 billion of CapEx for this year.",
+        "segs": [
+          {
+            "t": "We're looking at ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " of CapEx for this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P1-2026-07-22",
+      "promiseId": "P1",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Rafael Lizardi, Senior Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained 2026 CapEx of $2 billion to $3 billion; management would not bias expectations toward the lower end.",
+      "quote": "First, on the CapEx expectation for 2026, it continues to be $2 billion to $3 billion.",
+      "verbatim": {
+        "text": "First, on the CapEx expectation for 2026, it continues to be $2 billion to $3 billion.",
+        "segs": [
+          {
+            "t": "First, on the CapEx expectation for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", it continues to be ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P1-2026-10-21",
+      "promiseId": "P1",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Haviv Ilan, Chairman, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $2 to $3 billion for the year, potentially toward the higher end if equipment deliveries proceed as planned.",
+      "quote": "And again, now when you talk about CapEx, it's when tools are coming in, delivered by our suppliers, and that's what influences more or less the result, but you should expect somewhere between $2 to $3 billion this year, and maybe on the higher end if we get that execution as planned.",
+      "verbatim": {
+        "text": "And again, now when you talk about CapEx, it's when tools are coming in, delivered by our suppliers, and that's what influences more or less the result, but you should expect somewhere between $2 to $3 billion this year, and maybe on the higher end if we get that execution as planned.",
+        "segs": [
+          {
+            "t": "And again, now when you talk about CapEx, it's when tools are coming in, delivered by our suppliers, and that's what influences more or less the result, but you should expect somewhere between ",
+            "h": 0
+          },
+          {
+            "t": "$2 to $3 billion",
+            "h": 1
+          },
+          {
+            "t": " this year, and maybe on the higher end if we get that execution as planned.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P2-2025-01-23",
+      "promiseId": "P2",
+      "date": "2025-01-23",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to complete the Sherman 1 qualification line; no deadline specified.",
+      "quote": "So we are going to complete the qualification line in Sherman 1.",
+      "verbatim": {
+        "text": "So we are going to complete the qualification line in Sherman 1.",
+        "segs": [
+          {
+            "t": "So we are going to complete the qualification line in Sherman 1.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P2-2025-02-04",
+      "promiseId": "P2",
+      "date": "2025-02-04",
+      "call": "2025 Capital Management Review",
+      "speaker": "Rafael Lizardi, Senior Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "SM1 tool installation continued and technology qualification began.",
+      "quote": "In Sherman, we continue installing tools on the floor in SM1, and we are beginning technology qualification.",
+      "verbatim": {
+        "text": "In Sherman, we continue installing tools on the floor in SM1, and we are beginning technology qualification.",
+        "segs": [
+          {
+            "t": "In Sherman, we continue installing tools on the floor in SM1, and we are beginning technology qualification.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/1890477c-9df1-4e66-b43a-80521e40e4e1",
+          "title": "Texas Instruments Inc Capital Management Review on February 04, 2025 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/1890477c-9df1-4e66-b43a-80521e40e4e1",
+          "title": "Texas Instruments Inc Capital Management Review on February 04, 2025 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P2-2025-04-23",
+      "promiseId": "P2",
+      "date": "2025-04-23",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Sherman 1 qualification-line commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/07e5ba99-636a-4421-8dad-e8e7ccb96934",
+          "title": "Q1 2025 Texas Instruments Inc Earnings Call on April 23, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P2-2025-05-30",
+      "promiseId": "P2",
+      "date": "2025-05-30",
+      "call": "Bernstein Strategic Decisions Conference",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Sherman 1 qualification and pilot-line completion; first products expected to qualify this year.",
+      "quote": "It's also the qualification of Sherman 1 and the pilot line.",
+      "verbatim": {
+        "text": "It's also the qualification of Sherman 1 and the pilot line.",
+        "segs": [
+          {
+            "t": "It's also the qualification of Sherman 1 and the pilot line.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/ca383e83-f3df-40f2-9495-00a30da54c5b",
+          "title": "Texas Instruments Inc at Bernstein Strategic Decisions Conference on May 30, 2025 / 3:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/ca383e83-f3df-40f2-9495-00a30da54c5b",
+          "title": "Texas Instruments Inc at Bernstein Strategic Decisions Conference on May 30, 2025 / 3:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P2-2025-07-22",
+      "promiseId": "P2",
+      "date": "2025-07-22",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Sherman 1 qualification-line commitment was not addressed; only technology ramping and samples were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/351779f2-bd83-4e2c-8359-758b4392a10d",
+          "title": "Q2 2025 Texas Instruments Inc Earnings Call on July 22, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P2-2025-10-21",
+      "promiseId": "P2",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported excellent progress ramping and qualifying the new Sherman site.",
+      "quote": "We have made excellent progress on ramping and qualifying our Sherman new site.",
+      "verbatim": {
+        "text": "We have made excellent progress on ramping and qualifying our Sherman new site.",
+        "segs": [
+          {
+            "t": "We have made excellent progress on ramping and qualifying our Sherman new site.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/c11b1e9c-bf55-403d-8e59-e0a026ca8ff4",
+          "title": "Q3 2025 Texas Instruments Inc Earnings Call on October 21, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/c11b1e9c-bf55-403d-8e59-e0a026ca8ff4",
+          "title": "Q3 2025 Texas Instruments Inc Earnings Call on October 21, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P2-2025-12-17",
+      "promiseId": "P2",
+      "date": "2025-12-17",
+      "call": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility in Sherman, Texas",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "SM1 production began three and a half years after groundbreaking; qualification-line completion was not explicitly declared.",
+      "quote": "Texas Instruments (TI) today announced the start of production at its newest semiconductor fab in Sherman, TX, just three and a half years after breaking ground.",
+      "verbatim": {
+        "text": "Texas Instruments (TI) today announced the start of production at its newest semiconductor fab in Sherman, TX, just three and a half years after breaking ground.",
+        "segs": [
+          {
+            "t": "Texas Instruments (TI) today announced the start of production at its newest semiconductor fab in Sherman, TX, just three and a half years after breaking ground.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas.html",
+          "title": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility in Sherman, Texas | TI.com",
+          "domain": "ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas.html",
+          "title": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility in Sherman, Texas | TI.com",
+          "domain": "ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "TXN-P2-2026-01-27",
+      "promiseId": "P2",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Haviv Ilan, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported a Sherman 1 cleanroom with production lines already running.",
+      "quote": "We have a cleanroom in Sherman 1 that is -- already have some production lines running.",
+      "verbatim": {
+        "text": "We have a cleanroom in Sherman 1 that is -- already have some production lines running.",
+        "segs": [
+          {
+            "t": "We have a cleanroom in Sherman 1 that is -- already have some production lines running.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+          "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+          "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P2-2026-02-24",
+      "promiseId": "P2",
+      "date": "2026-02-24",
+      "call": "2026 Capital Management Presentation",
+      "speaker": "Haviv Ilan, Chairman, President and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported SM1 cleanroom and pilot line complete; production underway, with ramp tied to customer demand.",
+      "quote": "Lastly, the SM1 cleanroom is complete with production underway.",
+      "verbatim": {
+        "text": "Lastly, the SM1 cleanroom is complete with production underway.",
+        "segs": [
+          {
+            "t": "Lastly, the SM1 cleanroom is complete with production underway.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/8c327c57-cd94-439d-a276-ef7cffcdc438",
+          "title": "Capital Management Call Presentation 2026",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P3-2025-01-23",
+      "promiseId": "P3",
+      "date": "2025-01-23",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Build shells in Sherman 2 and Lehi to provide flexible capacity; no completion date specified.",
+      "quote": "We are going to set the shell or build a shell in Sherman 2, and also build a shell in Lehi, so it can give us this flexible capacity phase that we are so excited about, and so are the customers.",
+      "verbatim": {
+        "text": "We are going to set the shell or build a shell in Sherman 2, and also build a shell in Lehi, so it can give us this flexible capacity phase that we are so excited about, and so are the customers.",
+        "segs": [
+          {
+            "t": "We are going to set the shell or build a shell in Sherman 2, and also build a shell in Lehi, so it can give us this flexible capacity phase that we are so excited about, and so are the customers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+          "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P3-2025-02-04",
+      "promiseId": "P3",
+      "date": "2025-02-04",
+      "call": "2025 Capital Management Review",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Complete the LFAB2 shell, qualify it and prepare it for ramp.",
+      "quote": "On the Lehi side, it's really to complete the shell of LFAB2 and get that also qualified and ready for ramp.",
+      "verbatim": {
+        "text": "On the Lehi side, it's really to complete the shell of LFAB2 and get that also qualified and ready for ramp.",
+        "segs": [
+          {
+            "t": "On the Lehi side, it's really to complete the shell of LFAB2 and get that also qualified and ready for ramp.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/1890477c-9df1-4e66-b43a-80521e40e4e1",
+          "title": "Texas Instruments Inc Capital Management Review on February 04, 2025 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/1890477c-9df1-4e66-b43a-80521e40e4e1",
+          "title": "Texas Instruments Inc Capital Management Review on February 04, 2025 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P3-2025-04-23",
+      "promiseId": "P3",
+      "date": "2025-04-23",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address LFAB2 shell construction or completion.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/07e5ba99-636a-4421-8dad-e8e7ccb96934",
+          "title": "Q1 2025 Texas Instruments Inc Earnings Call on April 23, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P3-2025-05-30",
+      "promiseId": "P3",
+      "date": "2025-05-30",
+      "call": "Bernstein Strategic Decisions Conference",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Lehi 2 shell completion targeted by 2026, adding a timetable to the previously undated commitment.",
+      "quote": "And we want to complete it by 2026 to have that flexibility.",
+      "verbatim": {
+        "text": "And we want to complete it by 2026 to have that flexibility.",
+        "segs": [
+          {
+            "t": "And we want to complete it by ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " to have that flexibility.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/ca383e83-f3df-40f2-9495-00a30da54c5b",
+          "title": "Texas Instruments Inc at Bernstein Strategic Decisions Conference on May 30, 2025 / 3:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/ca383e83-f3df-40f2-9495-00a30da54c5b",
+          "title": "Texas Instruments Inc at Bernstein Strategic Decisions Conference on May 30, 2025 / 3:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P3-2025-06-18",
+      "promiseId": "P3",
+      "date": "2025-06-18",
+      "call": "Texas Instruments plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the U.S.",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "LFAB2 construction well underway; the new fab will connect to LFAB1.",
+      "quote": "Construction is also well underway on LFAB2, TI’s second Lehi fab that will connect to LFAB1.",
+      "verbatim": {
+        "text": "Construction is also well underway on LFAB2, TI’s second Lehi fab that will connect to LFAB1.",
+        "segs": [
+          {
+            "t": "Construction is also well underway on LFAB2, TI’s second Lehi fab that will connect to LFAB1.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+          "title": "Texas Instruments plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the U.S. | TI.com",
+          "domain": "ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+          "title": "Texas Instruments plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the U.S. | TI.com",
+          "domain": "ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "TXN-P3-2025-07-22",
+      "promiseId": "P3",
+      "date": "2025-07-22",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address LFAB2 shell construction or completion.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/351779f2-bd83-4e2c-8359-758b4392a10d",
+          "title": "Q2 2025 Texas Instruments Inc Earnings Call on July 22, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P3-2025-10-21",
+      "promiseId": "P3",
+      "date": "2025-10-21",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Lehi 2 investments continued as planned.",
+      "quote": "Our investments in Utah, in Lehi 2, are continuing as planned.",
+      "verbatim": {
+        "text": "Our investments in Utah, in Lehi 2, are continuing as planned.",
+        "segs": [
+          {
+            "t": "Our investments in Utah, in Lehi 2, are continuing as planned.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/c11b1e9c-bf55-403d-8e59-e0a026ca8ff4",
+          "title": "Q3 2025 Texas Instruments Inc Earnings Call on October 21, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/c11b1e9c-bf55-403d-8e59-e0a026ca8ff4",
+          "title": "Q3 2025 Texas Instruments Inc Earnings Call on October 21, 2025 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P3-2025-12-02",
+      "promiseId": "P3",
+      "date": "2025-12-02",
+      "call": "UBS Global Technology and AI Conference",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "LFAB2 shell and cleanroom construction underway; completion expected somewhere in 2026.",
+      "quote": "I think that we will finish it somewhere in 2026.",
+      "verbatim": {
+        "text": "I think that we will finish it somewhere in 2026.",
+        "segs": [
+          {
+            "t": "I think that we will finish it somewhere in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/dfdbd6f9-a7e0-4c76-ad3d-17917ec441af",
+          "title": "Texas Instruments Inc at UBS Global Technology and AI Conference on December 02, 2025 / 6:35PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/dfdbd6f9-a7e0-4c76-ad3d-17917ec441af",
+          "title": "Texas Instruments Inc at UBS Global Technology and AI Conference on December 02, 2025 / 6:35PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P3-2026-01-27",
+      "promiseId": "P3",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Haviv Ilan, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Lehi reported on schedule in response to a fab build-out question; no shell-specific completion declaration.",
+      "quote": "On the Lehi side, also on schedule.",
+      "verbatim": {
+        "text": "On the Lehi side, also on schedule.",
+        "segs": [
+          {
+            "t": "On the Lehi side, also on schedule.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+          "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+          "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P3-2026-02-24",
+      "promiseId": "P3",
+      "date": "2026-02-24",
+      "call": "2026 Capital Management Presentation",
+      "speaker": "Haviv Ilan, Chairman, President and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "LFAB2 shell readiness shifted to the end of this year, beginning of next.",
+      "quote": "And just when we do that, and it depends, of course, on demand, LFAB2 shell is going to be ready towards the end of this year, beginning of next.",
+      "verbatim": {
+        "text": "And just when we do that, and it depends, of course, on demand, LFAB2 shell is going to be ready towards the end of this year, beginning of next.",
+        "segs": [
+          {
+            "t": "And just when we do that, and it depends, of course, on demand, LFAB2 shell is going to be ready towards the end of this year, beginning of next.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/dfdbd6f9-a7e0-4c76-ad3d-17917ec441af",
+          "title": "Texas Instruments Inc at UBS Global Technology and AI Conference on December 02, 2025 / 6:35PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P3-2026-04-22",
+      "promiseId": "P3",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address LFAB2 shell construction or completion.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P3-2026-07-22",
+      "promiseId": "P3",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Lehi 2 shell now expected at the end of this year, narrowing the previously disclosed window.",
+      "quote": "So Lehi 2 will come in just in time at the end of this year, we'll have the shell, and we can again grow into it seamlessly, as it's not a new site, and we don't need new customer qualifications.",
+      "verbatim": {
+        "text": "So Lehi 2 will come in just in time at the end of this year, we'll have the shell, and we can again grow into it seamlessly, as it's not a new site, and we don't need new customer qualifications.",
+        "segs": [
+          {
+            "t": "So Lehi 2 will come in just in time at the end of this year, we'll have the shell, and we can again grow into it seamlessly, as it's not a new site, and we don't need new customer qualifications.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P3-2026-10-21",
+      "promiseId": "P3",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Haviv Ilan, Chairman, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "LFAB2 shell in the last stages of completion; not declared complete.",
+      "quote": "We have the shell in LFAB2 that is in the last stages of completion.",
+      "verbatim": {
+        "text": "We have the shell in LFAB2 that is in the last stages of completion.",
+        "segs": [
+          {
+            "t": "We have the shell in LFAB2 that is in the last stages of completion.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P4-2026-02-04",
+      "promiseId": "P4",
+      "date": "2026-02-04",
+      "call": "Texas Instruments to acquire Silicon Labs",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected closing in the first half of 2027, subject to regulatory approvals, customary conditions and Silicon Labs stockholder approval.",
+      "quote": "The transaction is expected to close in the first half of 2027, subject to receipt of regulatory approvals and other customary closing conditions, including approval by Silicon Labs stockholders.",
+      "verbatim": {
+        "text": "The transaction is expected to close in the first half of 2027, subject to receipt of regulatory approvals and other customary closing conditions, including approval by Silicon Labs stockholders.",
+        "segs": [
+          {
+            "t": "The transaction is expected to close in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", subject to receipt of regulatory approvals and other customary closing conditions, including approval by Silicon Labs stockholders.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/news-releases/news-release-details/texas-instruments-acquire-silicon-labs",
+          "title": "Investor relations - Texas Instruments to acquire Silicon Labs - Texas Instruments",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/news-releases/news-release-details/texas-instruments-acquire-silicon-labs",
+          "title": "Investor relations - Texas Instruments to acquire Silicon Labs - Texas Instruments",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "TXN-P4-2026-02-24",
+      "promiseId": "P4",
+      "date": "2026-02-24",
+      "call": "2026 Capital Management Presentation",
+      "speaker": "Rafael Lizardi, CFO and Senior Vice President",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed expected closing in the first half of 2027.",
+      "quote": "Silicon Labs will enhance our leadership in embedded wireless connectivity solutions, and we expect it to close in the first half of 2027.",
+      "verbatim": {
+        "text": "Silicon Labs will enhance our leadership in embedded wireless connectivity solutions, and we expect it to close in the first half of 2027.",
+        "segs": [
+          {
+            "t": "Silicon Labs will enhance our leadership in embedded wireless connectivity solutions, and we expect it to close in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+          "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.ti.com/static-files/8c327c57-cd94-439d-a276-ef7cffcdc438",
+          "title": "Capital Management Call Presentation 2026",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TXN-P4-2026-04-22",
+      "promiseId": "P4",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Haviv Ilan, Chairman, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed closing in the first half of 2027, subject to necessary approvals.",
+      "quote": "We expect the transaction to close in the first half of 2027, subject to necessary approvals.",
+      "verbatim": {
+        "text": "We expect the transaction to close in the first half of 2027, subject to necessary approvals.",
+        "segs": [
+          {
+            "t": "We expect the transaction to close in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", subject to necessary approvals.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P4-2026-07-22",
+      "promiseId": "P4",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Julie Knecht, Incoming CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Regulatory approvals were moving as planned; closing remained expected in the first half of 2027.",
+      "quote": "We still expect to close in the first half of next year.",
+      "verbatim": {
+        "text": "We still expect to close in the first half of next year.",
+        "segs": [
+          {
+            "t": "We still expect to close in the first half of next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P4-2026-10-21",
+      "promiseId": "P4",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No update to the Silicon Labs closing timetable; discussion concerned post-acquisition manufacturing plans.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P4-2026-10-26",
+      "promiseId": "P4",
+      "date": "2026-10-26",
+      "call": "Form 424B5 preliminary prospectus supplement",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Closing remained expected in the first half of 2027, subject to approvals and customary conditions; consideration remained $231.00 per share.",
+      "quote": "Under the terms of the agreement, Silicon Labs stockholders will receive $231.00 in cash for each share of Silicon Labs common stock they hold at the time of closing, which is expected in the first half of 2027, subject to receipt of regulatory approvals and other customary closing conditions.",
+      "verbatim": {
+        "text": "Under the terms of the agreement, Silicon Labs stockholders will receive $231.00 in cash for each share of Silicon Labs common stock they hold at the time of closing, which is expected in the first half of 2027, subject to receipt of regulatory approvals and other customary closing conditions.",
+        "segs": [
+          {
+            "t": "Under the terms of the agreement, Silicon Labs stockholders will receive ",
+            "h": 0
+          },
+          {
+            "t": "$231.00",
+            "h": 1
+          },
+          {
+            "t": " in cash for each share of Silicon Labs common stock they hold at the time of closing, which is expected in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", subject to receipt of regulatory approvals and other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/401d8947-6368-40f5-8cc1-cdcede9992f7",
+          "title": "Form 424B5 for Texas Instruments INC filed 10/26/2026",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/401d8947-6368-40f5-8cc1-cdcede9992f7",
+          "title": "Form 424B5 for Texas Instruments INC filed 10/26/2026",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "TXN-P5-2026-04-22",
+      "promiseId": "P5",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Haviv Ilan, Chairman, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected to easily beat $8 free cash flow per share in 2026, assuming no further false start.",
+      "quote": "But right now, assuming we don't have another false start, I think there is a very high -- very likely, we will beat that -- will easily beat that $8 free cash per share for 2026.",
+      "verbatim": {
+        "text": "But right now, assuming we don't have another false start, I think there is a very high -- very likely, we will beat that -- will easily beat that $8 free cash per share for 2026.",
+        "segs": [
+          {
+            "t": "But right now, assuming we don't have another false start, I think there is a very high -- very likely, we will beat that -- will easily beat that ",
+            "h": 0
+          },
+          {
+            "t": "$8",
+            "h": 1
+          },
+          {
+            "t": " free cash per share for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+          "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P5-2026-07-22",
+      "promiseId": "P5",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Haviv Ilan, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the existing revenue/free-cash-flow framework, without explicitly repeating the conditional per-share commitment.",
+      "quote": "So that framework is still valid, Jim.",
+      "verbatim": {
+        "text": "So that framework is still valid, Jim.",
+        "segs": [
+          {
+            "t": "So that framework is still valid, Jim.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+          "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TXN-P5-2026-10-21",
+      "promiseId": "P5",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported trailing-12-month free cash flow but did not address the pending 2026 per-share target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+          "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+          "domain": "investor.ti.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://investor.ti.com/static-files/4e8d323e-83e6-4b70-88fd-b3e2b65969bd",
+      "title": "Texas Instruments Inc Capital Management Presentation on February 24, 2026 / 4:00PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "https://investor.ti.com/static-files/b012c095-ee25-4280-970f-728ceed4af7b",
+      "title": "Q3 2026 Texas Instruments Inc Earnings Call on October 21, 2026 / 8:30PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://investor.ti.com/static-files/9d0b308f-8b7e-4e0c-9377-5fa5877243fe",
+      "title": "Q1 2026 Texas Instruments Inc Earnings Call on April 22, 2026 / 8:30PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://investor.ti.com/static-files/1eb79e47-24c2-40f1-84b8-743512b801fa",
+      "title": "Q2 2026 Texas Instruments Inc Earnings Call on July 22, 2026 / 8:30PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://investor.ti.com/static-files/8858f18c-2a43-4a5e-8727-229f66c86aed",
+      "title": "Q4 2024 Texas Instruments Inc Earnings Call on January 23, 2025 / 9:30PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://investor.ti.com/static-files/7901445c-3338-4108-81d2-872ae768cf9d",
+      "title": "Q4 2025 Texas Instruments Inc Earnings Call on January 27, 2026 / 9:30PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://investor.ti.com/static-files/1890477c-9df1-4e66-b43a-80521e40e4e1",
+      "title": "Texas Instruments Inc Capital Management Review on February 04, 2025 / 4:00PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://investor.ti.com/static-files/07e5ba99-636a-4421-8dad-e8e7ccb96934",
+      "title": "Q1 2025 Texas Instruments Inc Earnings Call on April 23, 2025 / 8:30PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 9,
+      "url": "https://investor.ti.com/static-files/351779f2-bd83-4e2c-8359-758b4392a10d",
+      "title": "Q2 2025 Texas Instruments Inc Earnings Call on July 22, 2025 / 8:30PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://investor.ti.com/static-files/c11b1e9c-bf55-403d-8e59-e0a026ca8ff4",
+      "title": "Q3 2025 Texas Instruments Inc Earnings Call on October 21, 2025 / 8:30PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 11,
+      "url": "https://investor.ti.com/static-files/dfdbd6f9-a7e0-4c76-ad3d-17917ec441af",
+      "title": "Texas Instruments Inc at UBS Global Technology and AI Conference on December 02, 2025 / 6:35PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 12,
+      "url": "https://investor.ti.com/static-files/8c327c57-cd94-439d-a276-ef7cffcdc438",
+      "title": "Capital Management Call Presentation 2026",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 13,
+      "url": "https://investor.ti.com/static-files/ca383e83-f3df-40f2-9495-00a30da54c5b",
+      "title": "Texas Instruments Inc at Bernstein Strategic Decisions Conference on May 30, 2025 / 3:00PM",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 14,
+      "url": "https://investor.ti.com/static-files/401d8947-6368-40f5-8cc1-cdcede9992f7",
+      "title": "Form 424B5 for Texas Instruments INC filed 10/26/2026",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 15,
+      "url": "https://investor.ti.com/static-files/f59b4b01-40b1-4f6d-b910-607582883013",
+      "title": "Static Files",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://investor.ti.com/static-files/2fe9328f-074f-44f2-a6d9-0bfeb17c7001",
+      "title": "Static Files",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-begins-production-at-its-newest-300mm-semiconductor-manufacturing-facility-in-sherman-texas.html",
+      "title": "Texas Instruments begins production at its newest 300mm semiconductor manufacturing facility in Sherman, Texas | TI.com",
+      "domain": "ti.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 18,
+      "url": "https://www.ti.com/about-ti/newsroom/news-releases/2025/texas-instruments-plans-to-invest-more-than--60-billion-to-manufacture-billions-of-foundational-semiconductors-in-the-us.html",
+      "title": "Texas Instruments plans to invest more than $60 billion to manufacture billions of foundational semiconductors in the U.S. | TI.com",
+      "domain": "ti.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 19,
+      "url": "https://investor.ti.com/news-releases/news-release-details/texas-instruments-acquire-silicon-labs",
+      "title": "Investor relations - Texas Instruments to acquire Silicon Labs - Texas Instruments",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 20,
+      "url": "https://investor.ti.com/news-releases/news-release-details/ti-reports-third-quarter-2026-financial-results-and-shareholder",
+      "title": "Investor relations - TI reports third quarter 2026 financial results and shareholder returns - Texas Instruments",
+      "domain": "investor.ti.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 21,
+      "url": "https://stockanalysis.com/stocks/txn/transcripts/222377-capital-management-update",
+      "title": "Texas Instruments (TXN) Transcript: Capital Management Update",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.785283Z",
+      "completedAt": "2026-11-05T06:30:26.899006Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.119397Z",
+      "completedAt": "2026-11-05T19:14:50.889987Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.203091Z",
+      "completedAt": "2026-11-05T19:13:16.884190Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.210458Z",
+      "completedAt": "2026-11-05T19:13:31.885876Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.217297Z",
+      "completedAt": "2026-11-05T19:12:10.421053Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.224003Z",
+      "completedAt": "2026-11-05T19:11:07.027540Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.082632Z",
+      "completedAt": "2026-11-05T19:49:16.724401Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.090013Z",
+      "completedAt": "2026-11-05T19:45:37.858112Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.097200Z",
+      "completedAt": "2026-11-05T19:48:27.054386Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.104448Z",
+      "completedAt": "2026-11-05T19:44:54.238025Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.111647Z",
+      "completedAt": "2026-11-05T19:45:41.535267Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "44 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "35 of 35 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "35 of 35 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-21; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/ba/TexasInstruments-Logo.svg/3840px-TexasInstruments-Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:TexasInstruments-Logo.svg",
+      "title": "File:TexasInstruments-Logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 1421,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://www.ti.com/content/dam/ticom/images/themes/facilities/sherman-fab-design-concept.jpg",
+      "sourcePageUrl": "https://www.ti.com/about-ti/newsroom/media-resources/press-kits/sherman-texas-press-kit.html",
+      "title": "TI's Sherman, Texas 300mm wafer fabs | TI.com",
+      "width": 1280,
+      "height": 720,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.537Z"
+}

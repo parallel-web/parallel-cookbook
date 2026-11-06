@@ -1,0 +1,10 @@
+.env.local
+.next/
+.next-*/
+node_modules/
+tsconfig.tsbuildinfo
+next-env.d.ts
+# Raw API responses, drafts, monitor IDs and logs from live pipeline runs.
+output/
+# Licensed brand fonts: copied in from BRAND_FONTS_DIR by scripts/copy-fonts.mjs, never committed.
+public/fonts/

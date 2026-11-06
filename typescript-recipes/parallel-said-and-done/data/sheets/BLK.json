@@ -1,0 +1,2283 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "BLK",
+  "name": "BlackRock, Inc.",
+  "short": "BlackRock",
+  "website": "blackrock.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://ir.blackrock.com/home/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-14",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "BlackRock GIP infrastructure assets",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Complete GIP acquisition",
+      "commitment": "Acquire 100% of GIP for $3 billion cash and approximately 12 million BlackRock shares; no closing deadline stated on the initial call.",
+      "deadline": null,
+      "firstStated": "2024-01-12",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Acquired 100% of GIP on October 1, 2024 for $3 billion cash and approximately 12 million shares, partly deferred; closing missed the original third-quarter expectation.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312524229654/d856279d8k.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-agrees-to-acquire-global-infrastructure-partners",
+          "title": "BlackRock Agrees to Acquire GIP | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/01/12/blackrock-blk-q4-2023-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-completes-acquisition-of-global-infrastructure-partners",
+          "title": "BlackRock Completes Acquisition of GIP | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2024-10-01",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2024-01-12",
+            "what_was_said": "Management specified that seven million shares would be paid at closing and five million shares approximately five years later, subject to certain performance measures. The deferred shares were therefore conditional, not merely an unconditional payment postponed until later.",
+            "call": "Q4 2023 BlackRock, Inc. Earnings Conference Call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Close Preqin by year-end",
+      "commitment": "Close the Preqin acquisition before the end of 2024.",
+      "deadline": "end of 2024",
+      "firstStated": "2024-06-30",
+      "status": "delivered_late",
+      "k": "done",
+      "outcomeSummary": "BlackRock completed the Preqin acquisition on March 3, 2025, after the original year-end 2024 target.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312524172680/d797846dex991.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525044184/d919939d8k.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-completes-preqin-acquisition",
+          "title": "BlackRock Completes Preqin Acquisition | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-03-03",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered_late",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Close HPS acquisition",
+      "commitment": "Close the HPS acquisition in mid-2025, subject to regulatory approvals and customary closing conditions.",
+      "deadline": "mid-2025",
+      "firstStated": "2024-12-03",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "BlackRock completed the HPS acquisition on July 1, 2025, meeting its mid-2025 closing target.",
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2024/BlackRock-to-Acquire-HPS-Investment-Partners-to-Deliver-Integrated-Solutions-Across-Public-and-Private-Markets/default.aspx",
+          "title": "\n\tBlackRock, Inc. - BlackRock to Acquire HPS Investment Partners to Deliver Integrated Solutions Across Public and Private Markets\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525153573/d78785d8k.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s24.q4cdn.com/856567660/files/doc_financials/2026/ar/BLK_AR25.pdf",
+          "title": "Diversified growth. Unified platform.",
+          "domain": "s24.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-07-01",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-01-15",
+            "what_was_said": "CEO Larry Fink said, “we expect to close sometime in the second quarter,” adding, “That would be our objective.” This was a narrower timing expectation than the prepared remarks’ mid-2025 target.",
+            "call": "Q4 2024 BlackRock, Inc. Earnings Conference Call"
+          },
+          {
+            "date": "2025-04-11",
+            "what_was_said": "In discussing HPS assets and their effect on fees, CFO Martin Small said, “We expect to add HPS in the latter half of the year.” The same call explicitly retained the mid-2025 closing target; this was not an announced revision.",
+            "call": "Q1 2025 BlackRock, Inc. Earnings Conference Call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Diversify revenue mix by 2030",
+      "commitment": "Reach 30% revenue contribution from private markets and technology by 2030.",
+      "deadline": "2030",
+      "firstStated": "2025-06-12",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The 2030 target remains pending; management reaffirmed over 30% of revenue from private markets and technology, without declaring achievement.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/blackrock-blk-q3-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Raise $400 billion privately",
+      "commitment": "Raise $400 billion in gross private-markets capital from 2025 through 2030.",
+      "deadline": "2030",
+      "firstStated": "2025-06-12",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "BlackRock reported $68 billion raised in private markets over the last twelve months; its $400 billion target through 2030 remains open.",
+      "citations": [
+        {
+          "url": "https://s24.q4cdn.com/856567660/files/doc_financials/2026/Q3/BLK-3Q26-Earnings-Release.pdf",
+          "title": "FINANCIAL RESULTS",
+          "domain": "s24.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/22/blackrock-blk-q2-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/blk/transcripts/398072-q4-2025",
+          "title": "BlackRock (BLK) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/blackrock-blk-q3-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-14",
+            "what_was_said": "Management reported $68 billion raised in private markets over the preceding twelve months. This was a further fundraising progress update, not a declaration that the $400 billion cumulative target had been achieved.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "BLK-P1-2024-01-12",
+      "promiseId": "P1",
+      "date": "2024-01-12",
+      "call": "BlackRock Agrees to Acquire Global Infrastructure Partners (“GIP”), Creating a World Leading Infrastructure Private Markets Investment Platform",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Acquire 100% for $3 billion cash and approximately 12 million shares; closing expected in the third quarter of 2024.",
+      "quote": "Under the terms of the transaction, BlackRock will acquire 100% of the business and assets of GIP for total consideration of $3 billion in cash and approximately 12 million shares of BlackRock common stock.",
+      "verbatim": {
+        "text": "Terms of the Transaction Under the terms of the transaction, BlackRock will acquire 100% of the business and assets of GIP for total consideration of $3 billion in cash and approximately 12 million shares of BlackRock common stock.",
+        "segs": [
+          {
+            "t": "Terms of the Transaction Under the terms of the transaction, BlackRock will acquire ",
+            "h": 0
+          },
+          {
+            "t": "100%",
+            "h": 1
+          },
+          {
+            "t": " of the business and assets of GIP for total consideration of ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " in cash and approximately ",
+            "h": 0
+          },
+          {
+            "t": "12 million",
+            "h": 1
+          },
+          {
+            "t": " shares of BlackRock common stock.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-agrees-to-acquire-global-infrastructure-partners",
+          "title": "BlackRock Agrees to Acquire GIP | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-agrees-to-acquire-global-infrastructure-partners",
+          "title": "BlackRock Agrees to Acquire GIP | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BLK-P1-2024-04-12",
+      "promiseId": "P1",
+      "date": "2024-04-12",
+      "call": "Q1 2024 BlackRock, Inc. Earnings Conference Call",
+      "speaker": "Martin Small, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed third quarter of 2024 closing, subject to regulatory approvals and other customary closing conditions.",
+      "quote": "We continue to target the third quarter of 2024 for the closing of the GIP transaction, which remains subject to regulatory approvals and other customary closing conditions.",
+      "verbatim": {
+        "text": "We continue to target the third quarter of 2024 for the closing of the GIP transaction, which remains subject to regulatory approvals and other customary closing conditions.",
+        "segs": [
+          {
+            "t": "We continue to target the third quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " for the closing of the GIP transaction, which remains subject to regulatory approvals and other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/12/blackrock-blk-q1-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/12/blackrock-blk-q1-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P1-2024-07-15",
+      "promiseId": "P1",
+      "date": "2024-07-15",
+      "call": "Q2 2024 BlackRock, Inc. Earnings Conference Call",
+      "speaker": "Martin Small, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Again expected third quarter of 2024 closing, subject to regulatory approvals and other customary closing conditions.",
+      "quote": "At present, we expect our planned acquisition of GIP to close in the third quarter of 2024, subject to regulatory approvals and other customary closing conditions.",
+      "verbatim": {
+        "text": "At present, we expect our planned acquisition of GIP to close in the third quarter of 2024, subject to regulatory approvals and other customary closing conditions.",
+        "segs": [
+          {
+            "t": "At present, we expect our planned acquisition of GIP to close in the third quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", subject to regulatory approvals and other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P1-2024-09-13",
+      "promiseId": "P1",
+      "date": "2024-09-13",
+      "call": "BlackRock Announces Expected Closing Date for Acquisition of Global Infrastructure Partners",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Changed expected closing from third quarter of 2024 to October 1, 2024, subject to regulatory approvals and customary conditions.",
+      "quote": "BlackRock, Inc. (NYSE: BLK) (“BlackRock”) today announced that it expects to close its previously announced acquisition of Global Infrastructure Partners (“GIP”) on October 1, 2024, subject to regulatory approvals and other customary closing conditions (the “GIP Transaction”).",
+      "verbatim": {
+        "text": "NEW YORK--(BUSINESS WIRE)-- BlackRock, Inc. (NYSE: BLK) (“BlackRock”) today announced that it expects to close its previously announced acquisition of Global Infrastructure Partners (“GIP”) on October 1, 2024, subject to regulatory approvals and other customary closing conditions (the “GIP Transaction”).",
+        "segs": [
+          {
+            "t": "NEW YORK--(BUSINESS WIRE)-- BlackRock, Inc. (NYSE: BLK) (“BlackRock”) today announced that it expects to close its previously announced acquisition of Global Infrastructure Partners (“GIP”) on October 1, ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", subject to regulatory approvals and other customary closing conditions (the “GIP Transaction”).",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2024/BlackRock-Announces-Expected-Closing-Date-for-Acquisition-of-Global-Infrastructure-Partners/default.aspx",
+          "title": "\n\tBlackRock, Inc. - BlackRock Announces Expected Closing Date for Acquisition of Global Infrastructure Partners\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2024/BlackRock-Announces-Expected-Closing-Date-for-Acquisition-of-Global-Infrastructure-Partners/default.aspx",
+          "title": "\n\tBlackRock, Inc. - BlackRock Announces Expected Closing Date for Acquisition of Global Infrastructure Partners\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BLK-P1-2024-10-01",
+      "promiseId": "P1",
+      "date": "2024-10-01",
+      "call": "BlackRock Completes Acquisition of Global Infrastructure Partners",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced successful completion of the GIP acquisition.",
+      "quote": "BlackRock, Inc. (NYSE: BLK) and Global Infrastructure Partners (“GIP”) announce the successful completion of BlackRock’s acquisition of GIP.",
+      "verbatim": {
+        "text": "NEW YORK – October 1, 2024 – BlackRock, Inc. (NYSE: BLK) and Global Infrastructure Partners (“GIP”) announce the successful completion of BlackRock’s acquisition of GIP.",
+        "segs": [
+          {
+            "t": "NEW YORK – October 1, ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " – BlackRock, Inc. (NYSE: BLK) and Global Infrastructure Partners (“GIP”) announce the successful completion of BlackRock’s acquisition of GIP.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-completes-acquisition-of-global-infrastructure-partners",
+          "title": "BlackRock Completes Acquisition of GIP | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-completes-acquisition-of-global-infrastructure-partners",
+          "title": "BlackRock Completes Acquisition of GIP | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BLK-P1-2024-10-11",
+      "promiseId": "P1",
+      "date": "2024-10-11",
+      "call": "Q3 2024 BlackRock, Inc. Earnings Conference Call",
+      "speaker": "Martin Small, Chief Financial Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed October 1 completion; approximately 6.9 million shares delivered at closing; 5 million shares deferred for approximately five years, subject to performance milestones.",
+      "quote": "On October 1, we closed on our acquisition of Global Infrastructure Partners.",
+      "verbatim": {
+        "text": "On October 1, we closed on our acquisition of Global Infrastructure Partners.",
+        "segs": [
+          {
+            "t": "On October 1, we closed on our acquisition of Global Infrastructure Partners.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript/",
+          "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript/",
+          "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P2-2024-06-30",
+      "promiseId": "P2",
+      "date": "2024-06-30",
+      "call": "BlackRock to Acquire Preqin, Leading Private Markets Data Solutions Provider",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected Preqin to close before year-end 2024, subject to regulatory approvals and customary closing conditions.",
+      "quote": "The transaction is expected to close before year-end 2024, subject to regulatory approvals and other customary closing conditions.",
+      "verbatim": {
+        "text": "The transaction is expected to close before year-end 2024, subject to regulatory approvals and other customary closing conditions.",
+        "segs": [
+          {
+            "t": "The transaction is expected to close before year-end ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", subject to regulatory approvals and other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312524172680/d797846dex991.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312524172680/d797846dex991.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BLK-P2-2024-07-15",
+      "promiseId": "P2",
+      "date": "2024-07-15",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Martin Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed closing Preqin before the end of the year.",
+      "quote": "And so, we think there's a lot of great opportunities here to continue to grow, and we're looking forward to closing the Preqin transaction before the end of the year.",
+      "verbatim": {
+        "text": "And so, we think there's a lot of great opportunities here to continue to grow, and we're looking forward to closing the Preqin transaction before the end of the year.",
+        "segs": [
+          {
+            "t": "And so, we think there's a lot of great opportunities here to continue to grow, and we're looking forward to closing the Preqin transaction before the end of the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P2-2024-10-11",
+      "promiseId": "P2",
+      "date": "2024-10-11",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Martin Small, CFO",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Expected Preqin to close around year-end 2024, subject to regulatory approvals and customary closing conditions.",
+      "quote": "At present, we expect our planned acquisition of Preqin to close around year-end 2024, subject to regulatory approvals and other customary closing conditions.",
+      "verbatim": {
+        "text": "At present, we expect our planned acquisition of Preqin to close around year-end 2024, subject to regulatory approvals and other customary closing conditions.",
+        "segs": [
+          {
+            "t": "At present, we expect our planned acquisition of Preqin to close around year-end ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", subject to regulatory approvals and other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P2-2024-11-06",
+      "promiseId": "P2",
+      "date": "2024-11-06",
+      "call": "Q3 2024 Form 10-Q",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Moved anticipated Preqin closing to the first quarter of 2025, subject to regulatory approvals and customary closing conditions.",
+      "quote": "The Preqin Transaction is anticipated to close in the first quarter of 2025, subject to regulatory approvals and other customary closing conditions.",
+      "verbatim": {
+        "text": "The Preqin Transaction is anticipated to close in the first quarter of 2025, subject to regulatory approvals and other customary closing conditions.",
+        "segs": [
+          {
+            "t": "The Preqin Transaction is anticipated to close in the first quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", subject to regulatory approvals and other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/blk-20240930.htm",
+          "title": "10-Q",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/blk-20240930.htm",
+          "title": "10-Q",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "BLK-P2-2025-01-15",
+      "promiseId": "P2",
+      "date": "2025-01-15",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Martin Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Preqin closing in the first quarter of 2025; HPS in mid-2025, subject to regulatory approvals and customary closing conditions.",
+      "quote": "At present, subject to regulatory approvals and other customary closing conditions, we expect our planned acquisitions of Preqin and HPS to close in the first quarter of 2025 and in mid-2025, respectively.",
+      "verbatim": {
+        "text": "At present, subject to regulatory approvals and other customary closing conditions, we expect our planned acquisitions of Preqin and HPS to close in the first quarter of 2025 and in mid-2025, respectively.",
+        "segs": [
+          {
+            "t": "At present, subject to regulatory approvals and other customary closing conditions, we expect our planned acquisitions of Preqin and HPS to close in the first quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " and in mid-",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", respectively.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P2-2025-03-03",
+      "promiseId": "P2",
+      "date": "2025-03-03",
+      "call": "BlackRock Establishes Preeminent Private Markets, Technology, and Data Provider with Close of Preqin Acquisition",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced successful completion of the Preqin acquisition.",
+      "quote": "BlackRock Inc. (NYSE:BLK) today announced the successful completion of its acquisition of Preqin, a premier independent provider of private markets data.",
+      "verbatim": {
+        "text": "NEW YORK & LONDON--(BUSINESS WIRE)-- BlackRock Inc. (NYSE:BLK) today announced the successful completion of its acquisition of Preqin, a premier independent provider of private markets data.",
+        "segs": [
+          {
+            "t": "NEW YORK & LONDON--(BUSINESS WIRE)-- BlackRock Inc. (NYSE:BLK) today announced the successful completion of its acquisition of Preqin, a premier independent provider of private markets data.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2025/BlackRock-Establishes-Preeminent-Private-Markets-Technology-and-Data-Provider-with-Close-of-Preqin-Acquisition/default.aspx",
+          "title": "\n\tBlackRock, Inc. - BlackRock Establishes Preeminent Private Markets, Technology, and Data Provider with Close of Preqin Acquisition\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2025/BlackRock-Establishes-Preeminent-Private-Markets-Technology-and-Data-Provider-with-Close-of-Preqin-Acquisition/default.aspx",
+          "title": "\n\tBlackRock, Inc. - BlackRock Establishes Preeminent Private Markets, Technology, and Data Provider with Close of Preqin Acquisition\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BLK-P2-2025-04-11",
+      "promiseId": "P2",
+      "date": "2025-04-11",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Martin Small, CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed that the Preqin transaction closed on March 3rd.",
+      "quote": "Growth reflects sustained demand for our full range of Aladdin technology offerings and the closing of the Preqin transaction on March 3rd.",
+      "verbatim": {
+        "text": "Growth reflects sustained demand for our full range of Aladdin technology offerings and the closing of the Preqin transaction on March 3rd.",
+        "segs": [
+          {
+            "t": "Growth reflects sustained demand for our full range of Aladdin technology offerings and the closing of the Preqin transaction on March 3rd.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/blk/transcripts/306132-q1-2025",
+          "title": "BlackRock (BLK) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/blk/transcripts/306132-q1-2025",
+          "title": "BlackRock (BLK) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P3-2024-12-03",
+      "promiseId": "P3",
+      "date": "2024-12-03",
+      "call": "BlackRock to Acquire HPS Investment Partners to Deliver Integrated Solutions Across Public and Private Markets",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected HPS acquisition to close in mid-2025, subject to regulatory approvals and customary closing conditions.",
+      "quote": "The transaction is expected to close in mid-2025 subject to regulatory approvals and customary closing conditions.",
+      "verbatim": {
+        "text": "The transaction is expected to close in mid-2025 subject to regulatory approvals and customary closing conditions.",
+        "segs": [
+          {
+            "t": "The transaction is expected to close in mid-",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " subject to regulatory approvals and customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2024/BlackRock-to-Acquire-HPS-Investment-Partners-to-Deliver-Integrated-Solutions-Across-Public-and-Private-Markets/default.aspx",
+          "title": "\n\tBlackRock, Inc. - BlackRock to Acquire HPS Investment Partners to Deliver Integrated Solutions Across Public and Private Markets\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2024/BlackRock-to-Acquire-HPS-Investment-Partners-to-Deliver-Integrated-Solutions-Across-Public-and-Private-Markets/default.aspx",
+          "title": "\n\tBlackRock, Inc. - BlackRock to Acquire HPS Investment Partners to Deliver Integrated Solutions Across Public and Private Markets\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BLK-P3-2025-01-15",
+      "promiseId": "P3",
+      "date": "2025-01-15",
+      "call": "Q4 2024 BlackRock, Inc. Earnings Conference Call",
+      "speaker": "Martin Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Preqin closing in the first quarter of 2025 and HPS in mid-2025, subject to regulatory approvals and customary closing conditions.",
+      "quote": "At present, subject to regulatory approvals and other customary closing conditions, we expect our planned acquisitions of Preqin and HPS to close in the first quarter of 2025 and in mid-2025, respectively.",
+      "verbatim": {
+        "text": "At present, subject to regulatory approvals and other customary closing conditions, we expect our planned acquisitions of Preqin and HPS to close in the first quarter of 2025 and in mid-2025, respectively.",
+        "segs": [
+          {
+            "t": "At present, subject to regulatory approvals and other customary closing conditions, we expect our planned acquisitions of Preqin and HPS to close in the first quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " and in mid-",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", respectively.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q4-2024-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q4 2024 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P3-2025-04-11",
+      "promiseId": "P3",
+      "date": "2025-04-11",
+      "call": "Q1 2025 BlackRock, Inc. Earnings Conference Call",
+      "speaker": "Martin Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Continued targeting mid-2025 for HPS closing, subject to regulatory approvals and customary closing conditions.",
+      "quote": "We continue to target mid-2025 to the closing of the HPS transaction, which remains subject to regulatory approvals and other customary closing conditions.",
+      "verbatim": {
+        "text": "We continue to target mid-2025 to the closing of the HPS transaction, which remains subject to regulatory approvals and other customary closing conditions.",
+        "segs": [
+          {
+            "t": "We continue to target mid-",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " to the closing of the HPS transaction, which remains subject to regulatory approvals and other customary closing conditions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/blk/transcripts/306132-q1-2025",
+          "title": "BlackRock (BLK) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/blk/transcripts/306132-q1-2025",
+          "title": "BlackRock (BLK) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q1-2024-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q1 2025 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P3-2025-07-01",
+      "promiseId": "P3",
+      "date": "2025-07-01",
+      "call": "BlackRock Completes Acquisition of HPS Investment Partners",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced successful completion of the HPS acquisition on July 1, 2025.",
+      "quote": "NEW YORK – July 1, 2025 – BlackRock, Inc. (NYSE: BLK) and HPS Investment Partners (HPS) today announced the successful completion of BlackRock's acquisition of HPS.",
+      "verbatim": {
+        "text": "Press Releases BlackRock Completes Acquisition of HPS Investment Partners BlackRock Jul 01, 2025 NEW YORK – July 1, 2025 – BlackRock, Inc. (NYSE: BLK) and HPS Investment Partners (HPS) today announced the successful completion of BlackRock's acquisition of HPS.",
+        "segs": [
+          {
+            "t": "Press Releases BlackRock Completes Acquisition of HPS Investment Partners BlackRock Jul 01, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " NEW YORK – July 1, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " – BlackRock, Inc. (NYSE: BLK) and HPS Investment Partners (HPS) today announced the successful completion of BlackRock's acquisition of HPS.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.blackrock.com/corporate/newsroom/press-releases/article/corporate-one/press-releases/blackrock-acquires-hps-investment-partners",
+          "title": "BlackRock Completes Acquisition of HPS Investment Partners",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.blackrock.com/corporate/newsroom/press-releases/article/corporate-one/press-releases/blackrock-acquires-hps-investment-partners",
+          "title": "BlackRock Completes Acquisition of HPS Investment Partners",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BLK-P3-2025-07-15",
+      "promiseId": "P3",
+      "date": "2025-07-15",
+      "call": "Q2 2025 BlackRock, Inc. Earnings Conference Call",
+      "speaker": "Martin Small, CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed July 1 closing added $165 billion of client AUM and $118 billion of fee-paying AUM.",
+      "quote": "The closing of HPS added $165 billion of client AUM and $118 billion of fee-paying AUM on July 1.",
+      "verbatim": {
+        "text": "The closing of HPS added $165 billion of client AUM and $118 billion of fee-paying AUM on July 1.",
+        "segs": [
+          {
+            "t": "The closing of HPS added ",
+            "h": 0
+          },
+          {
+            "t": "$165 billion",
+            "h": 1
+          },
+          {
+            "t": " of client AUM and ",
+            "h": 0
+          },
+          {
+            "t": "$118 billion",
+            "h": 1
+          },
+          {
+            "t": " of fee-paying AUM on July 1.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q2-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q2 2025 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P4-2025-06-12",
+      "promiseId": "P4",
+      "date": "2025-06-12",
+      "call": "2025 Investor Day",
+      "speaker": "Martin Small, CFO and Global Head of Corporate Strategy",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set a 2030 ambition for private markets and technology to contribute 30% or more of revenue.",
+      "quote": "We see our evolving mix taking us to 30% or more of BlackRock's revenue from private markets and technology businesses.",
+      "verbatim": {
+        "text": "We see our evolving mix taking us to 30% or more of BlackRock's revenue from private markets and technology businesses.",
+        "segs": [
+          {
+            "t": "We see our evolving mix taking us to ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " or more of BlackRock's revenue from private markets and technology businesses.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.blackrock.com/corporate/newsroom/press-releases/announcement/blackrock-host-investor-day",
+          "title": "BlackRock Host Investor Day 2025 | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.blackrock.com/corporate/newsroom/press-releases/announcement/blackrock-host-investor-day",
+          "title": "BlackRock Host Investor Day 2025 | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "BLK-P4-2025-07-15",
+      "promiseId": "P4",
+      "date": "2025-07-15",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Martin Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 30% revenue contribution from private markets and technology by 2030, describing the HPS acquisition closing as a milestone.",
+      "quote": "And earlier this month, we closed our acquisition of HPS Investment Partners, a major milestone as we evolve towards our ambitions of 30% revenue contribution from private markets and technology by 2030.",
+      "verbatim": {
+        "text": "And earlier this month, we closed our acquisition of HPS Investment Partners, a major milestone as we evolve towards our ambitions of 30% revenue contribution from private markets and technology by 2030.",
+        "segs": [
+          {
+            "t": "And earlier this month, we closed our acquisition of HPS Investment Partners, a major milestone as we evolve towards our ambitions of ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " revenue contribution from private markets and technology by ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P4-2025-10-14",
+      "promiseId": "P4",
+      "date": "2025-10-14",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the private markets and technology revenue-mix target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/blk/transcripts/363595-q3-2025/",
+          "title": "BlackRock (BLK) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P4-2026-01-15",
+      "promiseId": "P4",
+      "date": "2026-01-15",
+      "call": "Q4 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the private markets and technology revenue-mix target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/21/blackrock-blk-q4-2025-earnings-transcript",
+          "title": "BlackRock (BLK) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P4-2026-04-14",
+      "promiseId": "P4",
+      "date": "2026-04-14",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not address the private markets and technology revenue-mix target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/14/blackrock-blk-q1-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P4-2026-07-15",
+      "promiseId": "P4",
+      "date": "2026-07-15",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Martin Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the 2030 strategy and its goal of over 30% revenue from private markets and technology.",
+      "quote": "We see the totality of our 2030 strategy as structurally engineering higher growth and margin through both faster revenue growth, higher fee rates on flows, efficient use of technology automation to create more scale and operating leverage.",
+      "verbatim": {
+        "text": "We see the totality of our 2030 strategy as structurally engineering higher growth and margin through both faster revenue growth, higher fee rates on flows, efficient use of technology automation to create more scale and operating leverage.",
+        "segs": [
+          {
+            "t": "We see the totality of our ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": " strategy as structurally engineering higher growth and margin through both faster revenue growth, higher fee rates on flows, efficient use of technology automation to create more scale and operating leverage.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/BLK/transcripts/2026-year/2-quarter",
+          "title": "BlackRock, Inc. (BLK) Q2 FY2026 Earnings Call Transcript - July 15, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q2-2026-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q2 2026 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/BLK/transcripts/2026-year/2-quarter",
+          "title": "BlackRock, Inc. (BLK) Q2 FY2026 Earnings Call Transcript - July 15, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P4-2026-10-14",
+      "promiseId": "P4",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Martin Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed over 30% revenue from private markets and technology by 2030 to support steadier earnings growth and margin expansion.",
+      "quote": "But our 2030 goal of reaching over 30% of revenue from private markets and technology, that is aimed to dampen that effect and power more steady double-digit EPS growth and margin expansion, and also provide more resiliency in client portfolios.",
+      "verbatim": {
+        "text": "But our 2030 goal of reaching over 30% of revenue from private markets and technology, that is aimed to dampen that effect and power more steady double-digit EPS growth and margin expansion, and also provide more resiliency in client portfolios.",
+        "segs": [
+          {
+            "t": "But our ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": " goal of reaching over ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " of revenue from private markets and technology, that is aimed to dampen that effect and power more steady double-digit EPS growth and margin expansion, and also provide more resiliency in client portfolios.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/blackrock-blk-q3-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/blackrock-blk-q3-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P5-2025-06-12",
+      "promiseId": "P5",
+      "date": "2025-06-12",
+      "call": "2025 Investor Day",
+      "speaker": "Martin S. Small, CFO and Global Head of Corporate Strategy",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Targeted $400B gross private-markets fundraising from 2025 through 2030.",
+      "quote": "We're aiming to raise $400B in private markets through 2030.",
+      "verbatim": {
+        "text": "We're aiming to raise $400B in private markets through 2030.",
+        "segs": [
+          {
+            "t": "We're aiming to raise ",
+            "h": 0
+          },
+          {
+            "t": "$400B",
+            "h": 1
+          },
+          {
+            "t": " in private markets through ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.blackrock.com/corporate/newsroom/announcement/blackrock-host-investor-day",
+          "title": "BlackRock hosts 2025 Investor Day | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/BlackRock-Inc-2025-Investor-Day-2025-hCsOS3im8C/default.aspx",
+          "title": "\n\tBlackRock, Inc. - BlackRock, Inc. 2025 Investor Day\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.blackrock.com/corporate/newsroom/announcement/blackrock-host-investor-day",
+          "title": "BlackRock hosts 2025 Investor Day | BlackRock",
+          "domain": "blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://s24.q4cdn.com/856567660/files/doc_presentations/2025/BLK-Investor-Day-2025-WEB.pdf",
+          "title": "BLK Investor Day 2025 - WEB",
+          "domain": "s24.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "BLK-P5-2025-07-15",
+      "promiseId": "P5",
+      "date": "2025-07-15",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Martin S. Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $400 billion gross private-markets fundraising from 2025 to 2030.",
+      "quote": "At Investor Day, we talked about targeting $400 billion in gross private markets fundraising through -- from 2025 to 2030.",
+      "verbatim": {
+        "text": "At Investor Day, we talked about targeting $400 billion in gross private markets fundraising through -- from 2025 to 2030.",
+        "segs": [
+          {
+            "t": "At Investor Day, we talked about targeting ",
+            "h": 0
+          },
+          {
+            "t": "$400 billion",
+            "h": 1
+          },
+          {
+            "t": " in gross private markets fundraising through -- from ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q2-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q2 2025 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P5-2025-10-14",
+      "promiseId": "P5",
+      "date": "2025-10-14",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not explicitly address the $400 billion commitment; discussed other private-markets fundraising activity.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q3-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q3 2025 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.benzinga.com/markets/earnings/25/10/48203932/blackrock-q3-fy2025-earnings-call-transcript",
+          "title": "BlackRock Q3 FY2025 Earnings Call Transcript - BlackRock (NYSE:BLK) - Benzinga",
+          "domain": "benzinga.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P5-2026-01-15",
+      "promiseId": "P5",
+      "date": "2026-01-15",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Martin S. Small, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $400 billion gross private-markets fundraising through 2030.",
+      "quote": "We're targeting $400 billion in gross private markets fundraising through 2030, powered by origination, strong investment performance, and the depth of our client relationships.",
+      "verbatim": {
+        "text": "We're targeting $400 billion in gross private markets fundraising through 2030, powered by origination, strong investment performance, and the depth of our client relationships.",
+        "segs": [
+          {
+            "t": "We're targeting ",
+            "h": 0
+          },
+          {
+            "t": "$400 billion",
+            "h": 1
+          },
+          {
+            "t": " in gross private markets fundraising through ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ", powered by origination, strong investment performance, and the depth of our client relationships.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/BLK/transcripts/2025-year/4-quarter",
+          "title": "BlackRock, Inc. (BLK) Q4 FY2025 Earnings Call Transcript - January 15, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q4-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q4 2025 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/BLK/transcripts/2025-year/4-quarter",
+          "title": "BlackRock, Inc. (BLK) Q4 FY2025 Earnings Call Transcript - January 15, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P5-2026-04-14",
+      "promiseId": "P5",
+      "date": "2026-04-14",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not explicitly address the $400 billion commitment; discussed general private-markets fundraising conditions.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.benzinga.com/markets/earnings/26/04/51810318/blackrock-q1-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q1 2026 Earnings Call Transcript - BlackRock (NYSE:BLK)",
+          "domain": "benzinga.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526153768/blk-ex99_2.htm",
+          "title": "BlackRock, Inc. 8-K exhibit 99.2, filed April 14, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P5-2026-07-15",
+      "promiseId": "P5",
+      "date": "2026-07-15",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Martin S. Small, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reaffirmed $400 billion gross fundraising from 2025 through 2030 and reported good progress.",
+      "quote": "I'd remind you that at our Investor Day in 2025, we talked about how our investment performance, differentiated deal flow, client relationships, would support a target of $400 billion in gross fundraising from 2025 through 2030.",
+      "verbatim": {
+        "text": "I'd remind you that at our Investor Day in 2025, we talked about how our investment performance, differentiated deal flow, client relationships, would support a target of $400 billion in gross fundraising from 2025 through 2030.",
+        "segs": [
+          {
+            "t": "I'd remind you that at our Investor Day in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", we talked about how our investment performance, differentiated deal flow, client relationships, would support a target of ",
+            "h": 0
+          },
+          {
+            "t": "$400 billion",
+            "h": 1
+          },
+          {
+            "t": " in gross fundraising from ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " through ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/22/blackrock-blk-q2-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q2-2026-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q2 2026 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/22/blackrock-blk-q2-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BLK-P5-2026-10-14",
+      "promiseId": "P5",
+      "date": "2026-10-14",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The $400 billion commitment was not explicitly addressed; private-markets fundraising and annual goals were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q3-2026-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tBlackRock, Inc. - Q3 2026 BlackRock, Inc. Earnings Conference Call\n",
+          "domain": "ir.blackrock.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/blackrock-blk-q3-2026-earnings-call-transcript",
+          "title": "BlackRock (BLK) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/blackrock-blk-q2-2025-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q2 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q2-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tBlackRock, Inc. - Q2 2025 BlackRock, Inc. Earnings Conference Call\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q2-2026-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tBlackRock, Inc. - Q2 2026 BlackRock, Inc. Earnings Conference Call\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/07/15/blackrock-blk-q2-2024-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 5,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/blackrock-blk-q3-2026-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/15/blackrock-blk-q4-2024-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://stockanalysis.com/stocks/blk/transcripts/306132-q1-2025",
+      "title": "BlackRock (BLK) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-agrees-to-acquire-global-infrastructure-partners",
+      "title": "BlackRock Agrees to Acquire GIP | BlackRock",
+      "domain": "blackrock.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-completes-acquisition-of-global-infrastructure-partners",
+      "title": "BlackRock Completes Acquisition of GIP | BlackRock",
+      "domain": "blackrock.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312524172680/d797846dex991.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 11,
+      "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2024/BlackRock-to-Acquire-HPS-Investment-Partners-to-Deliver-Integrated-Solutions-Across-Public-and-Private-Markets/default.aspx",
+      "title": "\n\tBlackRock, Inc. - BlackRock to Acquire HPS Investment Partners to Deliver Integrated Solutions Across Public and Private Markets\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 12,
+      "url": "http://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2024/BlackRock-Announces-Expected-Closing-Date-for-Acquisition-of-Global-Infrastructure-Partners/default.aspx",
+      "title": "\n\tBlackRock, Inc. - BlackRock Announces Expected Closing Date for Acquisition of Global Infrastructure Partners\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000095017024122256/blk-20240930.htm",
+      "title": "10-Q",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 14,
+      "url": "https://ir.blackrock.com/news-and-events/press-releases/press-releases-details/2025/BlackRock-Establishes-Preeminent-Private-Markets-Technology-and-Data-Provider-with-Close-of-Preqin-Acquisition/default.aspx",
+      "title": "\n\tBlackRock, Inc. - BlackRock Establishes Preeminent Private Markets, Technology, and Data Provider with Close of Preqin Acquisition\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q4-2024-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tBlackRock, Inc. - Q4 2024 BlackRock, Inc. Earnings Conference Call\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 16,
+      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q1-2024-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tBlackRock, Inc. - Q1 2025 BlackRock, Inc. Earnings Conference Call\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://www.blackrock.com/corporate/newsroom/press-releases/article/corporate-one/press-releases/blackrock-acquires-hps-investment-partners",
+      "title": "BlackRock Completes Acquisition of HPS Investment Partners",
+      "domain": "blackrock.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://www.blackrock.com/corporate/newsroom/press-releases/announcement/blackrock-host-investor-day",
+      "title": "BlackRock Host Investor Day 2025 | BlackRock",
+      "domain": "blackrock.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 19,
+      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/BlackRock-Inc-2025-Investor-Day-2025-hCsOS3im8C/default.aspx",
+      "title": "\n\tBlackRock, Inc. - BlackRock, Inc. 2025 Investor Day\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 20,
+      "url": "https://www.blackrock.com/corporate/newsroom/announcement/blackrock-host-investor-day",
+      "title": "BlackRock hosts 2025 Investor Day | BlackRock",
+      "domain": "blackrock.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 21,
+      "url": "http://s24.q4cdn.com/856567660/files/doc_presentations/2025/BLK-Investor-Day-2025-WEB.pdf",
+      "title": "BLK Investor Day 2025 - WEB",
+      "domain": "s24.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 22,
+      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2025/Q3-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tBlackRock, Inc. - Q3 2025 BlackRock, Inc. Earnings Conference Call\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q4-2025-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tBlackRock, Inc. - Q4 2025 BlackRock, Inc. Earnings Conference Call\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 24,
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312526153768/blk-ex99_2.htm",
+      "title": "BlackRock, Inc. 8-K exhibit 99.2, filed April 14, 2026",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 25,
+      "url": "https://ir.blackrock.com/news-and-events/events-and-presentations/event-details/2026/Q3-2026-BlackRock-Inc-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tBlackRock, Inc. - Q3 2026 BlackRock, Inc. Earnings Conference Call\n",
+      "domain": "ir.blackrock.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 26,
+      "url": "https://www.sec.gov/Archives/edgar/data/1364742/000119312524229654/d856279d8k.htm",
+      "title": "8-K",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525044184/d919939d8k.htm",
+      "title": "8-K",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 28,
+      "url": "https://www.blackrock.com/corporate/newsroom/media/press-releases/blackrock-completes-preqin-acquisition",
+      "title": "BlackRock Completes Preqin Acquisition | BlackRock",
+      "domain": "blackrock.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 29,
+      "url": "https://www.sec.gov/Archives/edgar/data/2012383/000119312525153573/d78785d8k.htm",
+      "title": "8-K",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 30,
+      "url": "https://s24.q4cdn.com/856567660/files/doc_financials/2026/ar/BLK_AR25.pdf",
+      "title": "Diversified growth. Unified platform.",
+      "domain": "s24.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 31,
+      "url": "https://s24.q4cdn.com/856567660/files/doc_financials/2026/Q3/BLK-3Q26-Earnings-Release.pdf",
+      "title": "FINANCIAL RESULTS",
+      "domain": "s24.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 32,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/07/22/blackrock-blk-q2-2026-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 33,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/04/12/blackrock-blk-q1-2024-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q1 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 34,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript/",
+      "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 35,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/10/11/blackrock-blk-q3-2024-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q3 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 36,
+      "url": "https://stockanalysis.com/stocks/blk/transcripts/363595-q3-2025/",
+      "title": "BlackRock (BLK) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 37,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/21/blackrock-blk-q4-2025-earnings-transcript",
+      "title": "BlackRock (BLK) Q4 2025 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 38,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/14/blackrock-blk-q1-2026-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 39,
+      "url": "https://www.roic.ai/quote/BLK/transcripts/2026-year/2-quarter",
+      "title": "BlackRock, Inc. (BLK) Q2 FY2026 Earnings Call Transcript - July 15, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 40,
+      "url": "https://www.roic.ai/quote/BLK/transcripts/2025-year/4-quarter",
+      "title": "BlackRock, Inc. (BLK) Q4 FY2025 Earnings Call Transcript - January 15, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 41,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/01/12/blackrock-blk-q4-2023-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q4 2023 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 42,
+      "url": "https://stockanalysis.com/stocks/blk/transcripts/398072-q4-2025",
+      "title": "BlackRock (BLK) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 43,
+      "url": "https://www.benzinga.com/markets/earnings/25/10/48203932/blackrock-q3-fy2025-earnings-call-transcript",
+      "title": "BlackRock Q3 FY2025 Earnings Call Transcript - BlackRock (NYSE:BLK) - Benzinga",
+      "domain": "benzinga.com",
+      "tier": "press",
+      "uses": "P5"
+    },
+    {
+      "n": 44,
+      "url": "https://www.benzinga.com/markets/earnings/26/04/51810318/blackrock-q1-2026-earnings-call-transcript",
+      "title": "BlackRock (BLK) Q1 2026 Earnings Call Transcript - BlackRock (NYSE:BLK)",
+      "domain": "benzinga.com",
+      "tier": "press",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.000401Z",
+      "completedAt": "2026-11-05T06:29:25.349139Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.707247Z",
+      "completedAt": "2026-11-05T19:14:12.380551Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.931459Z",
+      "completedAt": "2026-11-05T19:12:26.236824Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.938350Z",
+      "completedAt": "2026-11-05T19:12:31.322876Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.011106Z",
+      "completedAt": "2026-11-05T19:14:11.887268Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@2",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-06T04:55:54.148953Z",
+      "completedAt": "2026-11-06T04:59:16.611500Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.208675Z",
+      "completedAt": "2026-11-05T19:47:29.649923Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.223175Z",
+      "completedAt": "2026-11-05T19:46:38.115043Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.230349Z",
+      "completedAt": "2026-11-05T19:48:04.068181Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.237331Z",
+      "completedAt": "2026-11-05T19:45:58.324394Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@3",
+      "processor": "ultra",
+      "createdAt": "2026-11-06T04:59:18.576708Z",
+      "completedAt": "2026-11-06T05:06:58.473748Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "32 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "26 of 26 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "26 of 26 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-14; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/85/BlackRock_wordmark.svg/3840px-BlackRock_wordmark.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:BlackRock_wordmark.svg",
+      "title": "File:BlackRock wordmark.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 556,
+      "rank": 3
+    },
+    "photo": {
+      "imageUrl": "https://www.blackrock.com/walrus-api/aem-assets/content/dam/blackrock-institutions/en/images/teamsite/brand-images/infrastructure-new-cta.1760438082765.jpg.lg.jpg",
+      "sourcePageUrl": "https://www.blackrock.com/institutions/en-global/investment-capabilities/strategies/infrastructure",
+      "title": "The power of infrastructure | BlackRock",
+      "width": 1024,
+      "height": 577,
+      "rank": 10
+    }
+  },
+  "version": 3,
+  "builtAt": "2026-11-06T05:06:59.843Z"
+}

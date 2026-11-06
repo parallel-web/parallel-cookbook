@@ -1,0 +1,1956 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "ABT",
+  "name": "Abbott Laboratories",
+  "short": "Abbott",
+  "website": "abbott.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.abbottinvestor.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-21",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Abbott Volt PFA catheter",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch Volt in United States",
+      "commitment": "Launch the Volt PFA catheter in the United States during 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-07-17",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Volt’s U.S. launch contributed to growth; Volt 2.0 launched in May, followed by full U.S. market release in mid-August.",
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html/",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-beats-q2-2026-estimates-and-lifts-outlook-93CH-4796220",
+          "title": "Earnings call transcript: Abbott beats Q2 2026 estimates and lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q2-2026-earnings_call-650270.html",
+          "title": "Abbott Laboratories (ABT) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-04-16",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-22",
+            "what_was_said": "Ford said Abbott had begun its limited U.S. market release of Volt over the preceding couple of weeks, establishing that the launch was already underway before the April call.",
+            "call": "Q4 2025 earnings call"
+          },
+          {
+            "date": "2026-04-16",
+            "what_was_said": "Ford said both catheter launches were in a limited-market-release phase, clarifying that the U.S. launch reported in S5 was not yet a full market release.",
+            "call": "Q1 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Launch TactiFlex Duo internationally",
+      "commitment": "Launch the TactiFlex Duo ablation catheter internationally during 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-07-17",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Abbott reported successful European Union commercial cases, delivering the international launch; later earnings calls confirmed European launch contributions and expanding rollout.",
+      "citations": [
+        {
+          "url": "https://abbott.mediaroom.com/2026-01-20-Abbott-receives-CE-Mark-for-the-TactiFlex-TM-Duo-Ablation-Catheter-to-treat-patients-with-abnormal-heart-rhythms",
+          "title": "Abbott receives CE Mark for the TactiFlex™ Duo Ablation Catheter to treat patients with abnormal heart rhythms - Jan 20, 2026",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html?fr=sycsrp_catchall",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026 earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q2-2026-earnings_call-650270.html",
+          "title": "Abbott Laboratories (ABT) Q2 FY2026 earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-01-20",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Launch dual glucose-ketone sensor",
+      "commitment": "Launch the dual-analyte glucose-ketone sensor during 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-07-17",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Libre Duo received CE Mark and FDA authorization; launch remained pending, with the U.S. launch expected in December.",
+      "citations": [
+        {
+          "url": "https://abbott.mediaroom.com/2026-08-25-Abbott-receives-FDA-authorization-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes?asPDF=1",
+          "title": "Abbott receives FDA authorization for world's first dual glucose-ketone sensing technology for people with diabetes - Aug 25, 2026",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.abbottinvestor.com/static-files/8d37b8ee-5e8b-472e-bb85-c4266e9d082b",
+          "title": "Abbott Reports Third-Quarter 2026 Results and Reaffirms Full-Year EPS Guidance",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.abbott.com/en-us/corpnewsroom/strategy-and-strength/abbott-q3-2026-earnings-call-strong-execution-fuels-balanced-growth-across-the-portfolio",
+          "title": "Abbott Q3 2026 earnings call: Strong execution fuels balanced growth across the portfolio | Abbott Newsroom",
+          "domain": "abbott.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-q3-2026-results-show-growth-but-shares-fall-93CH-4963517",
+          "title": "Earnings call transcript: Abbott Q3 2026 results show growth, but shares fall By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-07-17",
+            "what_was_said": "Asked about approval and launch timing, Ford declined to provide a specific timeline: “So I'm not gonna give a timeline to when the product's out.” This qualifies the broader next-year launch commentary; it did not establish a particular launch quarter.",
+            "call": "Q2 2025 earnings call"
+          },
+          {
+            "date": "2026-10-21",
+            "what_was_said": "Ford explicitly said Libre Duo had not launched yet: “We really haven't launched that product yet, and I think that's going to be a nice growth driver for us next year.” This distinguishes regulatory authorization from commercial delivery.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Restore nutrition growth",
+      "commitment": "Return nutrition to positive sales growth in the second half of 2026 after a challenging first half.",
+      "deadline": "second half of 2026",
+      "firstStated": "2026-01-22",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Nutrition returned to positive growth in the third quarter, with worldwide sales increasing 5.1 percent reported and 4.9 percent comparable.",
+      "citations": [
+        {
+          "url": "https://www.abbottinvestor.com/news-releases/news-release-details/abbott-reports-third-quarter-2026-results-and-reaffirms-full",
+          "title": "Abbott Reports Third-Quarter 2026 Results and Reaffirms Full-Year EPS Guidance | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.abbott.com/en-us/corpnewsroom/strategy-and-strength/abbott-q3-2026-earnings-call-strong-execution-fuels-balanced-growth-across-the-portfolio",
+          "title": "Abbott Q3 2026 earnings call: Strong execution fuels balanced growth across the portfolio | Abbott Newsroom",
+          "domain": "abbott.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-10-21",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Accelerate electrophysiology growth",
+      "commitment": "Grow electrophysiology at least in line with the market in 2026, with market growth expected in the mid-to-high teens.",
+      "deadline": "2026",
+      "firstStated": "2026-01-22",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Target raised to market outperformance by year-end remains pending; third-quarter growth reached 15.5%, while management still expected to gain share.",
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html?fr=sycsrp_catchall",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026 earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.abbott.com/en-us/corpnewsroom/strategy-and-strength/abbott-q3-2026-earnings-call-strong-execution-fuels-balanced-growth-across-the-portfolio",
+          "title": "Abbott Q3 2026 earnings call: Strong execution fuels balanced growth across the portfolio | Abbott Newsroom",
+          "domain": "abbott.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-21",
+            "what_was_said": "Ford reduced expected fourth-quarter electrophysiology growth from around 25% to around 20%, a five-percentage-point reduction, while still expecting to take market share.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "ABT-P1-2025-07-17",
+      "promiseId": "P1",
+      "date": "2025-07-17",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Included Volt’s U.S. launch among next year’s planned product launches.",
+      "quote": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+      "verbatim": {
+        "text": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+        "segs": [
+          {
+            "t": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P1-2025-10-15",
+      "promiseId": "P1",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reported positive European physician feedback and reaffirmed bringing Volt to the U.S. market next year.",
+      "quote": "Feedback from European physicians who have used Volt continues to be very positive and we look forward to bringing Volt to The U. S. Market next year.",
+      "verbatim": {
+        "text": "The launch of our new Volt PFA catheter in Europe continues to go very well and help deliver double digit growth in ablation catheters in international markets this quarter. Feedback from European physicians who have used Volt continues to be very positive and we look forward to bringing Volt to The U.",
+        "segs": [
+          {
+            "t": "The launch of our new Volt PFA catheter in Europe continues to go very well and help deliver double digit growth in ablation catheters in international markets this quarter. Feedback from European physicians who have used Volt continues to be very positive and we look forward to bringing Volt to The U.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-labs-q3-2025-sees-stable-eps-stock-dips-93CH-4290269",
+          "title": "Earnings Call Transcript Abbott Labs Q3 2025 Sees Stable Eps Stock Dips 93Ch 4290269",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.abbottinvestor.com/news-and-events",
+          "title": "News & Events | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-labs-q3-2025-sees-stable-eps-stock-dips-93CH-4290269",
+          "title": "Earnings Call Transcript Abbott Labs Q3 2025 Sees Stable Eps Stock Dips 93Ch 4290269",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P1-2025-12-22",
+      "promiseId": "P1",
+      "date": "2025-12-22",
+      "call": "Abbott's Volt™ Pulsed Field Ablation System Receives FDA Approval to Treat Patients with Atrial Fibrillation",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Announced FDA approval; commercial U.S. PFA cases would begin soon, alongside continued European Union expansion.",
+      "quote": "Abbott will soon begin commercial PFA cases in the United States and will continue its expansion of sites in the European Union following Volt CE Mark approval earlier this year.",
+      "verbatim": {
+        "text": "Abbott will soon begin commercial PFA cases in the United States and will continue its expansion of sites in the European Union following Volt CE Mark approval earlier this year.",
+        "segs": [
+          {
+            "t": "Abbott will soon begin commercial PFA cases in the United States and will continue its expansion of sites in the European Union following Volt CE Mark approval earlier this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://abbott.mediaroom.com/2025-12-22-Abbotts-Volt-TM-Pulsed-Field-Ablation-System-Receives-FDA-Approval-to-Treat-Patients-with-Atrial-Fibrillation",
+          "title": "Abbott's Volt™ Pulsed Field Ablation System Receives FDA Approval to Treat Patients with Atrial Fibrillation - Dec 22, 2025",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://abbott.mediaroom.com/2025-12-22-Abbotts-Volt-TM-Pulsed-Field-Ablation-System-Receives-FDA-Approval-to-Treat-Patients-with-Atrial-Fibrillation",
+          "title": "Abbott's Volt™ Pulsed Field Ablation System Receives FDA Approval to Treat Patients with Atrial Fibrillation - Dec 22, 2025",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ABT-P1-2026-01-22",
+      "promiseId": "P1",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed Volt’s U.S. launch this year, alongside Tactiflex Duo internationally.",
+      "quote": "This year, we'll have the launch of Volt here in The US and Tactiflex Duo internationally.",
+      "verbatim": {
+        "text": "This year, we'll have the launch of Volt here in The US and Tactiflex Duo internationally.",
+        "segs": [
+          {
+            "t": "This year, we'll have the launch of Volt here in The US and Tactiflex Duo internationally.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P1-2026-04-16",
+      "promiseId": "P1",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Volt’s U.S. launch contributed to 14% growth; TactiFlex Duo’s European launch helped drive mid-teens growth.",
+      "quote": "The launch of our Volt PFA catheter contributed to a growth of 14% in the U.S., and the launch of our TactiFlex Duo Catheter helped drive mid-teens growth in Europe.",
+      "verbatim": {
+        "text": "The launch of our Volt PFA catheter contributed to a growth of 14% in the U.S., and the launch of our TactiFlex Duo Catheter helped drive mid-teens growth in Europe.",
+        "segs": [
+          {
+            "t": "The launch of our Volt PFA catheter contributed to a growth of ",
+            "h": 0
+          },
+          {
+            "t": "14%",
+            "h": 1
+          },
+          {
+            "t": " in the U.S., and the launch of our TactiFlex Duo Catheter helped drive mid-teens growth in Europe.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html/",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html/",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P1-2026-07-16",
+      "promiseId": "P1",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Volt 2.0 launched in the U.S. in May; full market release expected in the third quarter.",
+      "quote": "We launched our next-generation Volt PFA catheter, commonly referred to as Volt 2.0, in the U.S. in May, and we expect to transition from limited market to full market release in the third quarter.",
+      "verbatim": {
+        "text": "We launched our next-generation Volt PFA catheter, commonly referred to as Volt 2.0, in the U.S. in May, and we expect to transition from limited market to full market release in the third quarter.",
+        "segs": [
+          {
+            "t": "We launched our next-generation Volt PFA catheter, commonly referred to as Volt 2.0, in the U.S. in May, and we expect to transition from limited market to full market release in the third quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-beats-q2-2026-estimates-and-lifts-outlook-93CH-4796220",
+          "title": "Earnings call transcript: Abbott beats Q2 2026 estimates and lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.abbottinvestor.com/news-and-events",
+          "title": "News & Events | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-beats-q2-2026-estimates-and-lifts-outlook-93CH-4796220",
+          "title": "Earnings call transcript: Abbott beats Q2 2026 estimates and lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P1-2026-10-21",
+      "promiseId": "P1",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed full U.S. market release in mid-August, with increasing adoption and momentum accelerating in September.",
+      "quote": "This performance was driven by increasing adoption of our new Volt PFA catheter, with momentum accelerating in September following the transition to a full U.S. market release in mid-August.",
+      "verbatim": {
+        "text": "This performance was driven by increasing adoption of our new Volt PFA catheter, with momentum accelerating in September following the transition to a full U.S. market release in mid-August.",
+        "segs": [
+          {
+            "t": "This performance was driven by increasing adoption of our new Volt PFA catheter, with momentum accelerating in September following the transition to a full U.S. market release in mid-August.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.abbott.com/en-us/corpnewsroom/strategy-and-strength/abbott-q3-2026-earnings-call-strong-execution-fuels-balanced-growth-across-the-portfolio",
+          "title": "Abbott Q3 2026 earnings call: Strong execution fuels balanced growth across the portfolio | Abbott Newsroom",
+          "domain": "abbott.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P2-2025-07-17",
+      "promiseId": "P2",
+      "date": "2025-07-17",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Included TactiFlex Duo internationally among launches planned for 2026.",
+      "quote": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+      "verbatim": {
+        "text": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+        "segs": [
+          {
+            "t": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P2-2025-10-15",
+      "promiseId": "P2",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Repeated the planned 2026 launch cadence, including TactiFlex Duo, transcribed as PactaFlex Duo.",
+      "quote": "We've got a lot of new product launch cadence into next year, whether it's Volt in the U.S., PactaFlex Duo, our dual analyte sensor, the new Alinity N diagnostic system, biosimilars.",
+      "verbatim": {
+        "text": "We've got a lot of new product launch cadence into next year, whether it's Volt in the U.S., PactaFlex Duo, our dual analyte sensor, the new Alinity N diagnostic system, biosimilars.",
+        "segs": [
+          {
+            "t": "We've got a lot of new product launch cadence into next year, whether it's Volt in the U.S., PactaFlex Duo, our dual analyte sensor, the new Alinity N diagnostic system, biosimilars.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/ABT.SW/earnings/ABT.SW-Q3-2025-earnings_call-364178.html",
+          "title": "ABBOTT LABOR (ABT.SW) Q3 FY2025  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT.SW/earnings/ABT.SW-Q3-2025-earnings_call-364178.html",
+          "title": "ABBOTT LABOR (ABT.SW) Q3 FY2025  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P2-2026-01-20",
+      "promiseId": "P2",
+      "date": "2026-01-20",
+      "call": "Abbott receives CE Mark for the TactiFlex™ Duo Ablation Catheter to treat patients with abnormal heart rhythms",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported completion of the first successful TactiFlex Duo commercial cases in the European Union.",
+      "quote": "Following the new approval, the first successful commercial cases using TactiFlex Duo in the European Union were completed this week.",
+      "verbatim": {
+        "text": "Following the new approval, the first successful commercial cases using TactiFlex Duo in the European Union were completed this week.",
+        "segs": [
+          {
+            "t": "Following the new approval, the first successful commercial cases using TactiFlex Duo in the European Union were completed this week.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://abbott.mediaroom.com/2026-01-20-Abbott-receives-CE-Mark-for-the-TactiFlex-TM-Duo-Ablation-Catheter-to-treat-patients-with-abnormal-heart-rhythms",
+          "title": "Abbott receives CE Mark for the TactiFlex™ Duo Ablation Catheter to treat patients with abnormal heart rhythms - Jan 20, 2026",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://abbott.mediaroom.com/2026-01-20-Abbott-receives-CE-Mark-for-the-TactiFlex-TM-Duo-Ablation-Catheter-to-treat-patients-with-abnormal-heart-rhythms",
+          "title": "Abbott receives CE Mark for the TactiFlex™ Duo Ablation Catheter to treat patients with abnormal heart rhythms - Jan 20, 2026",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ABT-P2-2026-01-22",
+      "promiseId": "P2",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the international TactiFlex Duo launch for 2026.",
+      "quote": "This year, we'll have the launch of Volt here in The US and Tactiflex Duo internationally.",
+      "verbatim": {
+        "text": "This year, we'll have the launch of Volt here in The US and Tactiflex Duo internationally.",
+        "segs": [
+          {
+            "t": "This year, we'll have the launch of Volt here in The US and Tactiflex Duo internationally.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P2-2026-04-16",
+      "promiseId": "P2",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported TactiFlex Duo launch contributions to mid-teens European growth; Volt launch contributed to 14% U.S. growth.",
+      "quote": "The launch of our Volt PFA catheter contributed to a growth of 14% in the U.S., and the launch of our TactiFlex Duo Catheter helped drive mid-teens growth in Europe.",
+      "verbatim": {
+        "text": "The launch of our Volt PFA catheter contributed to a growth of 14% in the U.S., and the launch of our TactiFlex Duo Catheter helped drive mid-teens growth in Europe.",
+        "segs": [
+          {
+            "t": "The launch of our Volt PFA catheter contributed to a growth of ",
+            "h": 0
+          },
+          {
+            "t": "14%",
+            "h": 1
+          },
+          {
+            "t": " in the U.S., and the launch of our TactiFlex Duo Catheter helped drive mid-teens growth in Europe.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html?fr=sycsrp_catchall",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026 earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html?fr=sycsrp_catchall",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026 earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.abbottinvestor.com/news-and-events/events?field_nir_event_start_date_value_1=-8%20hours&items_per_page=10&items_per_page_toggle=0&mobile=1&order=field_nir_event_start_date&page=0&sort=asc&sort_order=DESC",
+          "title": "Events | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P2-2026-07-16",
+      "promiseId": "P2",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expanding Volt and TactiFlex Duo rollout drove growth of more than 20% in Europe.",
+      "quote": "Internationally, the expanding rollout of Volt and TactiFlex Duo is gaining strong traction, driving growth of more than 20% in Europe.",
+      "verbatim": {
+        "text": "Internationally, the expanding rollout of Volt and TactiFlex Duo is gaining strong traction, driving growth of more than 20% in Europe.",
+        "segs": [
+          {
+            "t": "Internationally, the expanding rollout of Volt and TactiFlex Duo is gaining strong traction, driving growth of more than ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " in Europe.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q2-2026-earnings_call-650270.html",
+          "title": "Abbott Laboratories (ABT) Q2 FY2026 earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q2-2026-earnings_call-650270.html",
+          "title": "Abbott Laboratories (ABT) Q2 FY2026 earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P2-2026-10-21",
+      "promiseId": "P2",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Europe growth of 25%, with Volt and TactiFlex Duo both available.",
+      "quote": "Europe growth was up 25%, and you have both platforms there, Volt and TactiFlex Duo.",
+      "verbatim": {
+        "text": "Europe growth was up 25%, and you have both platforms there, Volt and TactiFlex Duo.",
+        "segs": [
+          {
+            "t": "Europe growth was up ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": ", and you have both platforms there, Volt and TactiFlex Duo.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.abbottinvestor.com/news-and-events",
+          "title": "News & Events | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P3-2025-07-17",
+      "promiseId": "P3",
+      "date": "2025-07-17",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Included the dual-analyte sensor among launches planned for 2026; declined to specify exact U.S. launch timing.",
+      "quote": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+      "verbatim": {
+        "text": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+        "segs": [
+          {
+            "t": "And then as you look to next year, you got all this great launch activity across all the businesses, whether it's Volt in the U.S., Tactiflex Duo internationally, the dual analyte sensor, the launch of the new Alinity system, the biosimilar kind of rollout.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P3-2025-10-15",
+      "promiseId": "P3",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the dual-analyte sensor among launches planned for 2026.",
+      "quote": "We've got a lot of new product launch cadence into next year, whether it's Volt in the U.S., PactaFlex Duo, our dual analyte sensor, the new Alinity N diagnostic system, biosimilars.",
+      "verbatim": {
+        "text": "We've got a lot of new product launch cadence into next year, whether it's Volt in the U.S., PactaFlex Duo, our dual analyte sensor, the new Alinity N diagnostic system, biosimilars.",
+        "segs": [
+          {
+            "t": "We've got a lot of new product launch cadence into next year, whether it's Volt in the U.S., PactaFlex Duo, our dual analyte sensor, the new Alinity N diagnostic system, biosimilars.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/abt/transcripts/364178-q3-2025",
+          "title": "Abbott Laboratories (ABT) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/abt/transcripts/364178-q3-2025",
+          "title": "Abbott Laboratories (ABT) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P3-2026-01-22",
+      "promiseId": "P3",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Launch remained contingent on FDA approval; management declined to specify an exact quarter.",
+      "quote": "When we get approval, we'll issue the press release, and we'll be out.",
+      "verbatim": {
+        "text": "When we get approval, we'll issue the press release, and we'll be out.",
+        "segs": [
+          {
+            "t": "When we get approval, we'll issue the press release, and we'll be out.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P3-2026-04-16",
+      "promiseId": "P3",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed expected dual-analyte system approval in the second half of 2026.",
+      "quote": "Also for us too, we've got still committed to an expected approval of our dual analyte system in the second half of this year.",
+      "verbatim": {
+        "text": "Also for us too, we've got still committed to an expected approval of our dual analyte system in the second half of this year.",
+        "segs": [
+          {
+            "t": "Also for us too, we've got still committed to an expected approval of our dual analyte system in the second half of this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.benzinga.com/insights/news/26/04/51860130/transcript-abbott-laboratories-q1-2026-earnings-conference-call",
+          "title": "Transcript: Abbott Laboratories Q1 2026 Earnings Conference Call - Abbott Laboratories (NYSE:ABT)",
+          "domain": "benzinga.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.benzinga.com/insights/news/26/04/51860130/transcript-abbott-laboratories-q1-2026-earnings-conference-call",
+          "title": "Transcript: Abbott Laboratories Q1 2026 Earnings Conference Call - Abbott Laboratories (NYSE:ABT)",
+          "domain": "benzinga.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P3-2026-05-27",
+      "promiseId": "P3",
+      "date": "2026-05-27",
+      "call": "Abbott secures CE Mark for world's first dual glucose-ketone sensing technology for people with diabetes",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Received CE Mark; planned Libre Duo launches in select European countries later that year.",
+      "quote": "Abbott plans to begin launching Libre Duo systems in select European countries later this year.",
+      "verbatim": {
+        "text": "Abbott plans to begin launching Libre Duo systems in select European countries later this year.",
+        "segs": [
+          {
+            "t": "Abbott plans to begin launching Libre Duo systems in select European countries later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://abbott.mediaroom.com/2026-05-27-Abbott-secures-CE-Mark-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes?asPDF=1",
+          "title": "Abbott secures CE Mark for world's first dual glucose-ketone sensing technology for people with diabetes - May 27, 2026",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://abbott.mediaroom.com/2026-05-27-Abbott-secures-CE-Mark-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes?asPDF=1",
+          "title": "Abbott secures CE Mark for world's first dual glucose-ketone sensing technology for people with diabetes - May 27, 2026",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ABT-P3-2026-07-16",
+      "promiseId": "P3",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "International Libre Duo rollout planned for the fall; U.S. launch to follow FDA approval.",
+      "quote": "We will begin the international rollout of Libre Duo in the fall, and we look forward to bringing this innovative new technology to the United States market after we obtain FDA approval.",
+      "verbatim": {
+        "text": "We will begin the international rollout of Libre Duo in the fall, and we look forward to bringing this innovative new technology to the United States market after we obtain FDA approval.",
+        "segs": [
+          {
+            "t": "We will begin the international rollout of Libre Duo in the fall, and we look forward to bringing this innovative new technology to the United States market after we obtain FDA approval.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/abt/transcripts/650270-q2-2026",
+          "title": "Abbott Laboratories (ABT) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/abt/transcripts/650270-q2-2026",
+          "title": "Abbott Laboratories (ABT) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P3-2026-08-25",
+      "promiseId": "P3",
+      "date": "2026-08-25",
+      "call": "Abbott receives FDA authorization for world's first dual glucose-ketone sensing technology for people with diabetes",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "FDA authorized Libre Duo 10 Day; U.S. launch remained planned later that year.",
+      "quote": "Abbott plans to launch Libre Duo 10 Day in the United States later this year.",
+      "verbatim": {
+        "text": "Abbott plans to launch Libre Duo 10 Day in the United States later this year.",
+        "segs": [
+          {
+            "t": "Abbott plans to launch Libre Duo 10 Day in the United States later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://abbott.mediaroom.com/2026-08-25-Abbott-receives-FDA-authorization-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes?asPDF=1",
+          "title": "Abbott receives FDA authorization for world's first dual glucose-ketone sensing technology for people with diabetes - Aug 25, 2026",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://abbott.mediaroom.com/2026-08-25-Abbott-receives-FDA-authorization-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes?asPDF=1",
+          "title": "Abbott receives FDA authorization for world's first dual glucose-ketone sensing technology for people with diabetes - Aug 25, 2026",
+          "domain": "abbott.mediaroom.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "ABT-P3-2026-10-21",
+      "promiseId": "P3",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "After FDA approval in August, U.S. Libre Duo launch was expected in December; management said the product had not yet launched.",
+      "quote": "This marks the first time that people with diabetes will be able to monitor ketones without the need for traditional blood or urine tests, and we expect to launch this new sensor in the U.S. in December.",
+      "verbatim": {
+        "text": "This marks the first time that people with diabetes will be able to monitor ketones without the need for traditional blood or urine tests, and we expect to launch this new sensor in the U.S. in December.",
+        "segs": [
+          {
+            "t": "This marks the first time that people with diabetes will be able to monitor ketones without the need for traditional blood or urine tests, and we expect to launch this new sensor in the U.S. in December.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-q3-2026-results-show-growth-but-shares-fall-93CH-4963517",
+          "title": "Earnings call transcript: Abbott Q3 2026 results show growth, but shares fall By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-q3-2026-results-show-growth-but-shares-fall-93CH-4963517",
+          "title": "Earnings call transcript: Abbott Q3 2026 results show growth, but shares fall By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.abbott.com/en-us/corpnewsroom/strategy-and-strength/abbott-q3-2026-earnings-call-strong-execution-fuels-balanced-growth-across-the-portfolio",
+          "title": "Abbott Q3 2026 earnings call: Strong execution fuels balanced growth across the portfolio | Abbott Newsroom",
+          "domain": "abbott.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P4-2026-01-22",
+      "promiseId": "P4",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected nutrition to remain challenged in the first half, then return to positive growth in the second half of 2026.",
+      "quote": "We expect performance in nutrition to remain challenged in the first half of the year with a return to growth in the second half.",
+      "verbatim": {
+        "text": "We expect performance in nutrition to remain challenged in the first half of the year with a return to growth in the second half.",
+        "segs": [
+          {
+            "t": "We expect performance in nutrition to remain challenged in the first half of the year with a return to growth in the second half.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.abbottinvestor.com/events/event-details/q4-2025-abbott-earnings-conference-call",
+          "title": "Q4 2025 ABBOTT EARNINGS CONFERENCE CALL | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P4-2026-04-16",
+      "promiseId": "P4",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Nutrition recovery remained on track, with encouraging early signs but further work required.",
+      "quote": "Right now, I'd say on track, encouraging early signs, but still work to do.",
+      "verbatim": {
+        "text": "Right now, I'd say on track, encouraging early signs, but still work to do.",
+        "segs": [
+          {
+            "t": "Right now, I'd say on track, encouraging early signs, but still work to do.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.abbottinvestor.com/events/event-details/q1-2026-abbott-earnings-conference-call",
+          "title": "Q1 2026 ABBOTT EARNINGS CONFERENCE CALL | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/abbott-abt-q1-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P4-2026-07-16",
+      "promiseId": "P4",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Nutrition was slightly ahead of plan; second-half growth guidance remained unchanged based on 2 quarters.",
+      "quote": "I think right now, the trajectory and the plan that we had, we’re a little bit ahead of that. I’m not going to change that guidance right now based on 2 quarters.",
+      "verbatim": {
+        "text": "I think right now, the trajectory and the plan that we had, we’re a little bit ahead of that. I’m not going to change that guidance right now based on 2 quarters.",
+        "segs": [
+          {
+            "t": "I think right now, the trajectory and the plan that we had, we’re a little bit ahead of that. I’m not going to change that guidance right now based on 2 quarters.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-beats-q2-2026-estimates-and-lifts-outlook-93CH-4796220",
+          "title": "Earnings call transcript: Abbott beats Q2 2026 estimates and lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-beats-q2-2026-estimates-and-lifts-outlook-93CH-4796220",
+          "title": "Earnings call transcript: Abbott beats Q2 2026 estimates and lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.abbottinvestor.com/events/event-details/q2-2026-abbott-earnings-conference-call",
+          "title": "Q2 2026 ABBOTT EARNINGS CONFERENCE CALL | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P4-2026-10-21",
+      "promiseId": "P4",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Worldwide Nutrition returned to growth: sales increased 5.1 percent reported and 4.9 percent comparable in the third quarter.",
+      "quote": "Worldwide Nutrition sales increased 5.1 percent on a reported basis and 4.9 percent on a comparable basis in the third quarter.",
+      "verbatim": {
+        "text": "Worldwide Nutrition sales increased 5.1 percent on a reported basis and 4.9 percent on a comparable basis in the third quarter.",
+        "segs": [
+          {
+            "t": "Worldwide Nutrition sales increased ",
+            "h": 0
+          },
+          {
+            "t": "5.1 percent",
+            "h": 1
+          },
+          {
+            "t": " on a reported basis and ",
+            "h": 0
+          },
+          {
+            "t": "4.9 percent",
+            "h": 1
+          },
+          {
+            "t": " on a comparable basis in the third quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.abbottinvestor.com/news-releases/news-release-details/abbott-reports-third-quarter-2026-results-and-reaffirms-full",
+          "title": "Abbott Reports Third-Quarter 2026 Results and Reaffirms Full-Year EPS Guidance | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.abbottinvestor.com/news-releases/news-release-details/abbott-reports-third-quarter-2026-results-and-reaffirms-full",
+          "title": "Abbott Reports Third-Quarter 2026 Results and Reaffirms Full-Year EPS Guidance | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "ABT-P5-2026-01-22",
+      "promiseId": "P5",
+      "date": "2026-01-22",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected 2026 electrophysiology growth at least in line with the market, forecast in the mid to high teens.",
+      "quote": "I expect that we should grow at least in line with the market, David, which I expect I think it seems like the forecast here is mid to high teens.",
+      "verbatim": {
+        "text": "I expect that we should grow at least in line with the market, David, which I expect I think it seems like the forecast here is mid to high teens.",
+        "segs": [
+          {
+            "t": "I expect that we should grow at least in line with the market, David, which I expect I think it seems like the forecast here is mid to high teens.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P5-2026-04-16",
+      "promiseId": "P5",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised the goal from market-matching growth to growing faster than the market by year-end.",
+      "quote": "I think that includes growing faster than the market, by the exit of this year.",
+      "verbatim": {
+        "text": "I think that includes growing faster than the market, by the exit of this year.",
+        "segs": [
+          {
+            "t": "I think that includes growing faster than the market, by the exit of this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html?fr=sycsrp_catchall",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html?fr=sycsrp_catchall",
+          "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+          "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P5-2026-07-16",
+      "promiseId": "P5",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported growth acceleration beginning and maintained second-half expectations to outperform the market and recapture share.",
+      "quote": "We remain confident in our outlook for the second half of the year, including our expectation to begin outperforming the market and recapturing share.",
+      "verbatim": {
+        "text": "We remain confident in our outlook for the second half of the year, including our expectation to begin outperforming the market and recapturing share.",
+        "segs": [
+          {
+            "t": "We remain confident in our outlook for the second half of the year, including our expectation to begin outperforming the market and recapturing share.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q2-2026-earnings_call-650270.html",
+          "title": "Abbott Laboratories (ABT) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q2-2026-earnings_call-650270.html",
+          "title": "Abbott Laboratories (ABT) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "ABT-P5-2026-10-21",
+      "promiseId": "P5",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Robert Ford, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Retained market-share-gain expectation despite reducing Q4 growth forecast from around 25% to around 20%, citing LAA headwinds.",
+      "quote": "But I still believe even with that number, we're going to be taking market share.",
+      "verbatim": {
+        "text": "But I still believe even with that number, we're going to be taking market share.",
+        "segs": [
+          {
+            "t": "But I still believe even with that number, we're going to be taking market share.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.abbottinvestor.com/events/event-details/q3-2026-abbott-earnings-conference-call",
+          "title": "Q3 2026 ABBOTT EARNINGS CONFERENCE CALL | Abbott Laboratories",
+          "domain": "abbottinvestor.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.abbott.com/en-us/corpnewsroom/strategy-and-strength/abbott-q3-2026-earnings-call-strong-execution-fuels-balanced-growth-across-the-portfolio",
+          "title": "Abbott Q3 2026 earnings call: Strong execution fuels balanced growth across the portfolio | Abbott Newsroom",
+          "domain": "abbott.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+          "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/22/abbott-abt-q4-2025-earnings-call-transcript",
+      "title": "Abbott (ABT) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/21/abbott-abt-q3-2026-earnings-call-transcript",
+      "title": "Abbott (ABT) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.abbott.com/en-us/corpnewsroom/strategy-and-strength/abbott-q3-2026-earnings-call-strong-execution-fuels-balanced-growth-across-the-portfolio",
+      "title": "Abbott Q3 2026 earnings call: Strong execution fuels balanced growth across the portfolio | Abbott Newsroom",
+      "domain": "abbott.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/07/17/abbott-abt-q2-2025-earnings-call-transcript",
+      "title": "Abbott (ABT) Q2 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 5,
+      "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q2-2026-earnings_call-650270.html",
+      "title": "Abbott Laboratories (ABT) Q2 FY2026 earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://www.abbottinvestor.com/news-and-events",
+      "title": "News & Events | Abbott Laboratories",
+      "domain": "abbottinvestor.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 7,
+      "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html?fr=sycsrp_catchall",
+      "title": "Abbott Laboratories (ABT) Q1 FY2026 earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-beats-q2-2026-estimates-and-lifts-outlook-93CH-4796220",
+      "title": "Earnings call transcript: Abbott beats Q2 2026 estimates and lifts outlook By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P1 P4"
+    },
+    {
+      "n": 9,
+      "url": "https://www.abbottinvestor.com/news-releases/news-release-details/abbott-reports-third-quarter-2026-results-and-reaffirms-full",
+      "title": "Abbott Reports Third-Quarter 2026 Results and Reaffirms Full-Year EPS Guidance | Abbott Laboratories",
+      "domain": "abbottinvestor.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 10,
+      "url": "https://www.abbottinvestor.com/news-and-events/events?field_nir_event_start_date_value_1=-8%20hours&items_per_page=10&items_per_page_toggle=0&mobile=1&order=field_nir_event_start_date&page=0&sort=asc&sort_order=DESC",
+      "title": "Events | Abbott Laboratories",
+      "domain": "abbottinvestor.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 11,
+      "url": "https://www.abbottinvestor.com/events/event-details/q4-2025-abbott-earnings-conference-call",
+      "title": "Q4 2025 ABBOTT EARNINGS CONFERENCE CALL | Abbott Laboratories",
+      "domain": "abbottinvestor.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 12,
+      "url": "https://www.abbottinvestor.com/events/event-details/q1-2026-abbott-earnings-conference-call",
+      "title": "Q1 2026 ABBOTT EARNINGS CONFERENCE CALL | Abbott Laboratories",
+      "domain": "abbottinvestor.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 13,
+      "url": "https://www.abbottinvestor.com/events/event-details/q2-2026-abbott-earnings-conference-call",
+      "title": "Q2 2026 ABBOTT EARNINGS CONFERENCE CALL | Abbott Laboratories",
+      "domain": "abbottinvestor.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 14,
+      "url": "https://www.abbottinvestor.com/events/event-details/q3-2026-abbott-earnings-conference-call",
+      "title": "Q3 2026 ABBOTT EARNINGS CONFERENCE CALL | Abbott Laboratories",
+      "domain": "abbottinvestor.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 15,
+      "url": "https://www.abbottinvestor.com/static-files/8d37b8ee-5e8b-472e-bb85-c4266e9d082b",
+      "title": "Abbott Reports Third-Quarter 2026 Results and Reaffirms Full-Year EPS Guidance",
+      "domain": "abbottinvestor.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 16,
+      "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html/",
+      "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-q3-2026-results-show-growth-but-shares-fall-93CH-4963517",
+      "title": "Earnings call transcript: Abbott Q3 2026 results show growth, but shares fall By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-abbott-labs-q3-2025-sees-stable-eps-stock-dips-93CH-4290269",
+      "title": "Earnings Call Transcript Abbott Labs Q3 2025 Sees Stable Eps Stock Dips 93Ch 4290269",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://finance.yahoo.com/quote/ABT.SW/earnings/ABT.SW-Q3-2025-earnings_call-364178.html",
+      "title": "ABBOTT LABOR (ABT.SW) Q3 FY2025  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 20,
+      "url": "https://stockanalysis.com/stocks/abt/transcripts/364178-q3-2025",
+      "title": "Abbott Laboratories (ABT) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 21,
+      "url": "https://stockanalysis.com/stocks/abt/transcripts/650270-q2-2026",
+      "title": "Abbott Laboratories (ABT) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 22,
+      "url": "https://finance.yahoo.com/quote/ABT/earnings/ABT-Q1-2026-earnings_call-544825.html",
+      "title": "Abbott Laboratories (ABT) Q1 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 23,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/abbott-abt-q1-2026-earnings-call-transcript",
+      "title": "Abbott (ABT) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 24,
+      "url": "https://abbott.mediaroom.com/2026-01-20-Abbott-receives-CE-Mark-for-the-TactiFlex-TM-Duo-Ablation-Catheter-to-treat-patients-with-abnormal-heart-rhythms",
+      "title": "Abbott receives CE Mark for the TactiFlex™ Duo Ablation Catheter to treat patients with abnormal heart rhythms - Jan 20, 2026",
+      "domain": "abbott.mediaroom.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 25,
+      "url": "https://abbott.mediaroom.com/2026-08-25-Abbott-receives-FDA-authorization-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes?asPDF=1",
+      "title": "Abbott receives FDA authorization for world's first dual glucose-ketone sensing technology for people with diabetes - Aug 25, 2026",
+      "domain": "abbott.mediaroom.com",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 26,
+      "url": "https://abbott.mediaroom.com/2025-12-22-Abbotts-Volt-TM-Pulsed-Field-Ablation-System-Receives-FDA-Approval-to-Treat-Patients-with-Atrial-Fibrillation",
+      "title": "Abbott's Volt™ Pulsed Field Ablation System Receives FDA Approval to Treat Patients with Atrial Fibrillation - Dec 22, 2025",
+      "domain": "abbott.mediaroom.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.benzinga.com/insights/news/26/04/51860130/transcript-abbott-laboratories-q1-2026-earnings-conference-call",
+      "title": "Transcript: Abbott Laboratories Q1 2026 Earnings Conference Call - Abbott Laboratories (NYSE:ABT)",
+      "domain": "benzinga.com",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 28,
+      "url": "https://abbott.mediaroom.com/2026-05-27-Abbott-secures-CE-Mark-for-worlds-first-dual-glucose-ketone-sensing-technology-for-people-with-diabetes?asPDF=1",
+      "title": "Abbott secures CE Mark for world's first dual glucose-ketone sensing technology for people with diabetes - May 27, 2026",
+      "domain": "abbott.mediaroom.com",
+      "tier": "press",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P3",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.056902Z",
+      "completedAt": "2026-11-05T06:30:29.493610Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.796352Z",
+      "completedAt": "2026-11-05T19:14:30.553973Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.803368Z",
+      "completedAt": "2026-11-05T19:12:55.250853Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.810391Z",
+      "completedAt": "2026-11-05T19:11:54.991147Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.817380Z",
+      "completedAt": "2026-11-05T19:11:49.782209Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.824321Z",
+      "completedAt": "2026-11-05T19:12:42.505336Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.567985Z",
+      "completedAt": "2026-11-05T19:47:44.102951Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.575132Z",
+      "completedAt": "2026-11-05T19:51:38.258511Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.583386Z",
+      "completedAt": "2026-11-05T19:48:42.189282Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.590813Z",
+      "completedAt": "2026-11-05T19:49:14.755578Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.598444Z",
+      "completedAt": "2026-11-05T19:46:49.482085Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "30 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "30 of 30 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "30 of 30 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-21; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Abbott_Laboratories_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Abbott_Laboratories_logo.svg",
+      "title": "File:Abbott Laboratories logo.svg - Wikimedia Commons",
+      "width": 1013,
+      "height": 259,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/AbbottOffice.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:AbbottOffice.jpg",
+      "title": "File:AbbottOffice.jpg - Wikimedia Commons",
+      "width": 4928,
+      "height": 3264,
+      "rank": 3
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T20:07:37.583Z"
+}

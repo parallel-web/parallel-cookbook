@@ -1,0 +1,8 @@
+# Neither native build is needed here: `sharp` backs next/image optimization,
+# which this demo does not use, and `unrs-resolver` ships prebuilt binaries that
+# eslint resolves without a postinstall step. Declaring them explicitly stops
+# pnpm from failing `pnpm dev` on ERR_PNPM_IGNORED_BUILDS.
+allowBuilds:
+  esbuild: true
+  sharp: false
+  unrs-resolver: false

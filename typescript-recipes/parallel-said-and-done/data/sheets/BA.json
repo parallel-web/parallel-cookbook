@@ -1,0 +1,2059 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "BA",
+  "name": "The Boeing Company",
+  "short": "Boeing",
+  "website": "boeing.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investors.boeing.com/investors/overview/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-27",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Boeing 737 MAX Renton factory",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Rebuild 737 production to 52",
+      "commitment": "Raise 737 production from 42 to 47, then 52 per month, with increases no earlier than roughly six months apart.",
+      "deadline": null,
+      "firstStated": "2025-04-23",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Boeing was still stabilizing 737 production at 47 airplanes per month; its financial plan targeted rate 52 in the back half of 2027.",
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q1/Transcript-Q1-2025-Earnings-Call.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "resolved": {
+        "from": "revised",
+        "reason": "Boeing’s Q1 2025 earnings-call transcript made the increases conditional on stability without a deadline, so Q3 2026 timing guidance left the original commitment open rather than revised."
+      },
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-04-23",
+            "what_was_said": "Management explicitly conditioned further increases on stability: after moving from 42 to 47, Boeing would stay at that rate until stable. Roughly six months was the fastest contemplated interval, not a guaranteed cadence.",
+            "call": "Q1 2025 earnings call"
+          },
+          {
+            "date": "2026-10-27",
+            "what_was_said": "Management said demonstrating performance at 47 was taking longer than expected and that full stabilization would take into 2027.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Certify 737 MAX derivatives",
+      "commitment": "Under the revised engine anti-ice schedule, obtain certification of both the 737-7 and 737-10 in 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-07-29",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Both the 737-7 and 737-10 obtained FAA certification within 2026; Boeing announced the final certification on Oct. 20, 2026.",
+      "citations": [
+        {
+          "url": "https://boeing.mediaroom.com/2026-10-20-U-S-FAA-certifies-Boeing-737-10,-largest-member-of-737-MAX-family",
+          "title": "U.S. FAA certifies Boeing 737-10, largest member of 737 MAX family - Oct 20, 2026",
+          "domain": "boeing.mediaroom.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-10-20",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Reset 777-9 first-delivery timetable",
+      "commitment": "Under the October 2025 schedule reset, deliver the first 777-9 in 2027 rather than 2026.",
+      "deadline": "2027",
+      "firstStated": "2025-10-29",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Boeing retained its 2027 first-delivery target for the 777-9; the commitment remained pending, with certification still underway.",
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q3/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-27",
+            "what_was_said": "Boeing's financial-planning targets assumed 777X certification by mid-2027. Management clarified that it was still pursuing earlier certification and had financially provisioned for potential schedule pressure within the EAC. Approval for remaining flight testing, including ETOPS, was still pending. These disclosures qualified, but did not change, the 2027 first-delivery commitment.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Reset 787 rate-10 timetable",
+      "commitment": "Under the post-restart ramp plan, increase 787 production to 10 airplanes per month during 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-10-29",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "787 production remained at 8 per month; transition to 10 per month was still expected this year, with engine deliveries pacing the increase.",
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q3/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-28",
+            "what_was_said": "Boeing temporarily slowed the 787 production system for several days in April to allow parts of the supply chain to recover, and said production would advance only when the system and supply chain were ready.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-27",
+            "what_was_said": "Management maintained its forecast of 90–100 787 deliveries in 2026, but expected deliveries closer to the lower end because of delays in reaching rate 10.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Restore positive annual free cash flow",
+      "commitment": "Generate positive full-year 2026 free cash flow of $1 billion to $3 billion.",
+      "deadline": "2026",
+      "firstStated": "2026-01-27",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Boeing narrowed its 2026 free cash flow outlook to approximately $2 billion; full-year delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "BA-P1-2025-04-23",
+      "promiseId": "P1",
+      "date": "2025-04-23",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Planned 42 to 47 to 52 per month in 5-aircraft steps, no earlier than roughly six months apart, subject to stability.",
+      "quote": "And then we'll do 5 per month increments after that, so 42 to 47, 47 to 52.",
+      "verbatim": {
+        "text": "And then we'll do 5 per month increments after that, so 42 to 47, 47 to 52.",
+        "segs": [
+          {
+            "t": "And then we'll do 5 per month increments after that, so 42 to 47, 47 to 52.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q1/Transcript-Q1-2025-Earnings-Call.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q1/Transcript-Q1-2025-Earnings-Call.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P1-2025-07-29",
+      "promiseId": "P1",
+      "date": "2025-07-29",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed five-aircraft steps, no earlier than six months apart; Boeing would wait longer if production was unstable.",
+      "quote": "We said rate increases beyond that will go in increments of five, no earlier than six months.",
+      "verbatim": {
+        "text": "We said rate increases beyond that will go in increments of five, no earlier than six months.",
+        "segs": [
+          {
+            "t": "We said rate increases beyond that will go in increments of five, no earlier than six months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P1-2025-10-29",
+      "promiseId": "P1",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "737 production stabilized at 38 per month; Boeing and FAA agreed in October to increase to 42 per month.",
+      "quote": "The 737 program stabilized production at 38 per month in the quarter and jointly agreed with the Federal Aviation Administration in October to increase to 42 per month.",
+      "verbatim": {
+        "text": "The 737 program stabilized production at 38 per month in the quarter and jointly agreed with the Federal Aviation Administration in October to increase to 42 per month.",
+        "segs": [
+          {
+            "t": "The 737 program stabilized production at 38 per month in the quarter and jointly agreed with the Federal Aviation Administration in October to increase to 42 per month.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.boeing.com/investors/news/press-release-details/2025/Boeing-Reports-Third-Quarter-Results/default.aspx?pubDate=20251029",
+          "title": "\n\tBoeing Company - Boeing Reports Third Quarter Results\n",
+          "domain": "investors.boeing.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.boeing.com/investors/news/press-release-details/2025/Boeing-Reports-Third-Quarter-Results/default.aspx?pubDate=20251029",
+          "title": "\n\tBoeing Company - Boeing Reports Third Quarter Results\n",
+          "domain": "investors.boeing.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "BA-P1-2026-01-27",
+      "promiseId": "P1",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Jesus Malave, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Factory increased to 42 per month; management expected 47 later this year.",
+      "quote": "The factory increased the production rate to 42 per month in the quarter, and the program is on course to increase production to 47 later this year.",
+      "verbatim": {
+        "text": "The factory increased the production rate to 42 per month in the quarter, and the program is on course to increase production to 47 later this year.",
+        "segs": [
+          {
+            "t": "The factory increased the production rate to 42 per month in the quarter, and the program is on course to increase production to 47 later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P1-2026-04-22",
+      "promiseId": "P1",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Wiring issue would not affect plans to increase production to 47 per month this summer.",
+      "quote": "To be clear, the wiring issue will not affect our full year delivery goals or plans to increase production to 47 per month this summer.",
+      "verbatim": {
+        "text": "To be clear, the wiring issue will not affect our full year delivery goals or plans to increase production to 47 per month this summer.",
+        "segs": [
+          {
+            "t": "To be clear, the wiring issue will not affect our full year delivery goals or plans to increase production to 47 per month this summer.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P1-2026-05-27",
+      "promiseId": "P1",
+      "date": "2026-05-27",
+      "call": "Bernstein Strategic Decisions Conference",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Passed FAA capstone for 47; stabilization was pending, and reaching 52 could take longer than six months.",
+      "quote": "We've passed the capstone review for rate 47.",
+      "verbatim": {
+        "text": "We've passed the capstone review for rate 47.",
+        "segs": [
+          {
+            "t": "We've passed the capstone review for rate 47.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/May/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/May/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "BA-P1-2026-07-28",
+      "promiseId": "P1",
+      "date": "2026-07-28",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Ramping to 47 after May capstone; factory rollouts expected to reach 47 per month this summer.",
+      "quote": "On 737, we're now ramping to 47 airplanes per month after a successful capstone review in May and expect factory rollouts to reach 47 per month this summer.",
+      "verbatim": {
+        "text": "On 737, we're now ramping to 47 airplanes per month after a successful capstone review in May and expect factory rollouts to reach 47 per month this summer.",
+        "segs": [
+          {
+            "t": "On 737, we're now ramping to 47 airplanes per month after a successful capstone review in May and expect factory rollouts to reach 47 per month this summer.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P1-2026-09-16",
+      "promiseId": "P1",
+      "date": "2026-09-16",
+      "call": "Morgan Stanley Laguna Industrials Conference",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "47 remained unstable; management placed the next increase to 52 in next year, dependent on wing-shop stability and North Line readiness.",
+      "quote": "I think we're in pretty good shape from a supply chain to actually move to the next rate once we get some of these flow enablers behind us, and that'll happen next year.",
+      "verbatim": {
+        "text": "I think we're in pretty good shape from a supply chain to actually move to the next rate once we get some of these flow enablers behind us, and that'll happen next year.",
+        "segs": [
+          {
+            "t": "I think we're in pretty good shape from a supply chain to actually move to the next rate once we get some of these flow enablers behind us, and that'll happen next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.boeing.com/features/2026/09/ceo-737-10-certification-very-soon-more-to-do-to-stabilize-production",
+          "title": "CEO: 737-10 certification ‘very soon,’ more to do to stabilize production",
+          "domain": "boeing.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "BA-P1-2026-10-27",
+      "promiseId": "P1",
+      "date": "2026-10-27",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Stabilizing at 47 would take into next year; financial plan targeted 52 in the back half of 2027.",
+      "quote": "Taken together and integrating our learning from this year, our financial plan will target rate 52 in the back half of 2027.",
+      "verbatim": {
+        "text": "Taken together and integrating our learning from this year, our financial plan will target rate 52 in the back half of 2027.",
+        "segs": [
+          {
+            "t": "Taken together and integrating our learning from this year, our financial plan will target rate 52 in the back half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P2-2025-07-29",
+      "promiseId": "P2",
+      "date": "2025-07-29",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Kelly Ortberg, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Engine anti-ice work took longer than expected; certification of both 737-7 and 737-10 was now expected in 2026.",
+      "quote": "On 737-7 and 737-10, we continue to mature the technical solutions for engine anti-ice and certification path for the 737 MAX family derivatives. Work on the solution is taking longer than expected, and we now are expecting certification in 2026.",
+      "verbatim": {
+        "text": "On 737-7 and 737-10, we continue to mature the technical solutions for engine anti-ice and certification path for the 737 MAX family derivatives. Work on the solution is taking longer than expected, and we now are expecting certification in 2026.",
+        "segs": [
+          {
+            "t": "On 737-7 and 737-10, we continue to mature the technical solutions for engine anti-ice and certification path for the 737 MAX family derivatives. Work on the solution is taking longer than expected, and we now are expecting certification in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P2-2025-10-29",
+      "promiseId": "P2",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed certification of both 737-7 and 737-10 in 2026.",
+      "quote": "As we previously shared, we anticipate certification for the 737-7 and the 737-10 to happen in 2026.",
+      "verbatim": {
+        "text": "As we previously shared, we anticipate certification for the 737-7 and the 737-10 to happen in 2026.",
+        "segs": [
+          {
+            "t": "As we previously shared, we anticipate certification for the 737-7 and the 737-10 to happen in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q3/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q3/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P2-2026-01-27",
+      "promiseId": "P2",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Continued to anticipate certification of both 737-7 and 737-10 in 2026.",
+      "quote": "We still anticipate certification for both the 737-7 and 737-10 in 2026.",
+      "verbatim": {
+        "text": "We still anticipate certification for both the 737-7 and 737-10 in 2026.",
+        "segs": [
+          {
+            "t": "We still anticipate certification for both the 737-7 and 737-10 in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P2-2026-04-22",
+      "promiseId": "P2",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Kelly Ortberg, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Certification remained on plan for later this year, with deliveries expected to start in 2027.",
+      "quote": "We're pleased with the progress so far and remain on plan for the newest members of the 737 MAX family to be certified later this year, with deliveries expected to start in 2027.",
+      "verbatim": {
+        "text": "We're pleased with the progress so far and remain on plan for the newest members of the 737 MAX family to be certified later this year, with deliveries expected to start in 2027.",
+        "segs": [
+          {
+            "t": "We're pleased with the progress so far and remain on plan for the newest members of the 737 MAX family to be certified later this year, with deliveries expected to start in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P2-2026-07-28",
+      "promiseId": "P2",
+      "date": "2026-07-28",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Kelly Ortberg, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "737-10 final test flight completed; certification expected after the 737-7.",
+      "quote": "On 737-10, we recently completed our final test flight and expect certification following the 737-7.",
+      "verbatim": {
+        "text": "On 737-10, we recently completed our final test flight and expect certification following the 737-7.",
+        "segs": [
+          {
+            "t": "On 737-10, we recently completed our final test flight and expect certification following the 737-7.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P2-2026-08-03",
+      "promiseId": "P2",
+      "date": "2026-08-03",
+      "call": "U.S. FAA certifies new Boeing 737-7 airplane",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported 737-7 certification; 737-10 certification remained targeted for this year.",
+      "quote": "The U.S. Federal Aviation Administration has granted Boeing [NYSE: BA] an amended type certificate for the new 737-7 airplane, clearing it for commercial service.",
+      "verbatim": {
+        "text": "3, 2026 / PRNewswire / -- The U.S. Federal Aviation Administration has granted Boeing [NYSE: BA] an amended type certificate for the new 737-7 airplane, clearing it for commercial service.",
+        "segs": [
+          {
+            "t": "3, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " / PRNewswire / -- The U.S. Federal Aviation Administration has granted Boeing [NYSE: BA] an amended type certificate for the new 737-7 airplane, clearing it for commercial service.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://boeing.mediaroom.com/2026-08-03-U-S-FAA-certifies-new-Boeing-737-7-airplane",
+          "title": "U.S. FAA certifies new Boeing 737-7 airplane - Aug 3, 2026",
+          "domain": "boeing.mediaroom.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://boeing.mediaroom.com/2026-08-03-U-S-FAA-certifies-new-Boeing-737-7-airplane",
+          "title": "U.S. FAA certifies new Boeing 737-7 airplane - Aug 3, 2026",
+          "domain": "boeing.mediaroom.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BA-P2-2026-10-20",
+      "promiseId": "P2",
+      "date": "2026-10-20",
+      "call": "U.S. FAA certifies Boeing 737-10, largest member of 737 MAX family",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced 737-10 FAA certification, completing the commitment after earlier 737-7 certification.",
+      "quote": "The U.S. Federal Aviation Administration (FAA) today certified the newest and largest Boeing 737 MAX airplane, the 737-10, clearing the way for Boeing [NYSE: BA] to begin delivering the airplane in the coming months.",
+      "verbatim": {
+        "text": "20, 2026 / PRNewswire / -- The U.S. Federal Aviation Administration (FAA) today certified the newest and largest Boeing 737 MAX airplane, the 737-10, clearing the way for Boeing [NYSE: BA] to begin delivering the airplane in the coming months.",
+        "segs": [
+          {
+            "t": "20, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " / PRNewswire / -- The U.S. Federal Aviation Administration (FAA) today certified the newest and largest Boeing 737 MAX airplane, the 737-10, clearing the way for Boeing [NYSE: BA] to begin delivering the airplane in the coming months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://boeing.mediaroom.com/2026-10-20-U-S-FAA-certifies-Boeing-737-10,-largest-member-of-737-MAX-family",
+          "title": "U.S. FAA certifies Boeing 737-10, largest member of 737 MAX family - Oct 20, 2026",
+          "domain": "boeing.mediaroom.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://boeing.mediaroom.com/2026-10-20-U-S-FAA-certifies-Boeing-737-10,-largest-member-of-737-MAX-family",
+          "title": "U.S. FAA certifies Boeing 737-10, largest member of 737 MAX family - Oct 20, 2026",
+          "domain": "boeing.mediaroom.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "BA-P2-2026-10-27",
+      "promiseId": "P2",
+      "date": "2026-10-27",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported 737-7 certification during the quarter and 737-10 certification in October.",
+      "quote": "During the quarter, the 737-7 received amended type certification from the Federal Aviation Administration, and the 737-10 received certification in October.",
+      "verbatim": {
+        "text": "During the quarter, the 737-7 received amended type certification from the Federal Aviation Administration, and the 737-10 received certification in October.",
+        "segs": [
+          {
+            "t": "During the quarter, the 737-7 received amended type certification from the Federal Aviation Administration, and the 737-10 received certification in October.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://boeing.mediaroom.com/2026-10-27-Boeing-Reports-Third-Quarter-Results",
+          "title": "Boeing Reports Third Quarter Results - Oct 27, 2026",
+          "domain": "boeing.mediaroom.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://boeing.mediaroom.com/2026-10-27-Boeing-Reports-Third-Quarter-Results",
+          "title": "Boeing Reports Third Quarter Results - Oct 27, 2026",
+          "domain": "boeing.mediaroom.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://investors.boeing.com/investors/news/press-release-details/2026/Boeing-Reports-Third-Quarter-Results/default.aspx",
+          "title": "\n\tBoeing Company - Boeing Reports Third Quarter Results\n",
+          "domain": "investors.boeing.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "BA-P3-2025-10-29",
+      "promiseId": "P3",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Reset first 777-9 delivery to 2027 and recorded a $4.9 billion pre-tax earnings charge.",
+      "quote": "During the quarter, the company updated its assessment of the 777-9 certification timeline and now anticipates first delivery in 2027, resulting in a pre-tax earnings charge of $4.9 billion.",
+      "verbatim": {
+        "text": "During the quarter, the company updated its assessment of the 777-9 certification timeline and now anticipates first delivery in 2027, resulting in a pre-tax earnings charge of $4.9 billion.",
+        "segs": [
+          {
+            "t": "During the quarter, the company updated its assessment of the 777-9 certification timeline and now anticipates first delivery in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", resulting in a pre-tax earnings charge of ",
+            "h": 0
+          },
+          {
+            "t": "$4.9 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/0000012927/000162828025046915/a202509sep308kprex991.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0000012927/000162828025046915/a202509sep308kprex991.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "BA-P3-2026-01-27",
+      "promiseId": "P3",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Continued certification flight testing; expected the issue not to affect delivery in 2027.",
+      "quote": "Importantly, as we work through this issue, we continue our certification flight testing, and we don't expect this to impact our delivery in 2027.",
+      "verbatim": {
+        "text": "Importantly, as we work through this issue, we continue our certification flight testing, and we don't expect this to impact our delivery in 2027.",
+        "segs": [
+          {
+            "t": "Importantly, as we work through this issue, we continue our certification flight testing, and we don't expect this to impact our delivery in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P3-2026-04-22",
+      "promiseId": "P3",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jesus Malave, Executive Vice President & Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "First delivery remained on track for 2027, alongside production-system preparations for increased rates.",
+      "quote": "We remain on track for first delivery in 2027 and continue to focus on managing the production system for increased rates.",
+      "verbatim": {
+        "text": "We remain on track for first delivery in 2027 and continue to focus on managing the production system for increased rates.",
+        "segs": [
+          {
+            "t": "We remain on track for first delivery in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " and continue to focus on managing the production system for increased rates.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P3-2026-07-28",
+      "promiseId": "P3",
+      "date": "2026-07-28",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "First 777-9 delivery remained on plan for 2027.",
+      "quote": "On the 777-9, we remain on plan for first delivery in 2027.",
+      "verbatim": {
+        "text": "On the 777-9, we remain on plan for first delivery in 2027.",
+        "segs": [
+          {
+            "t": "On the 777-9, we remain on plan for first delivery in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P3-2026-09-16",
+      "promiseId": "P3",
+      "date": "2026-09-16",
+      "call": "Morgan Stanley Laguna Industrials Conference",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Retained 2027 deliveries despite possible testing spillover; potential delivery reshuffling remained within the program estimate at completion.",
+      "quote": "We're still planning on 2027 deliveries, and we still think that, even if we have them shuffle some of our deliveries, that's within our EAC, our estimate at complete for the program.",
+      "verbatim": {
+        "text": "We're still planning on 2027 deliveries, and we still think that, even if we have them shuffle some of our deliveries, that's within our EAC, our estimate at complete for the program.",
+        "segs": [
+          {
+            "t": "We're still planning on ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " deliveries, and we still think that, even if we have them shuffle some of our deliveries, that's within our EAC, our estimate at complete for the program.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "BA-P3-2026-10-27",
+      "promiseId": "P3",
+      "date": "2026-10-27",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained first delivery in 2027; latest assumptions remained within the program estimate reset last year.",
+      "quote": "We continue to expect first delivery in 2027, and all of our latest assumptions continue to be within the EAC we reset last year.",
+      "verbatim": {
+        "text": "We continue to expect first delivery in 2027, and all of our latest assumptions continue to be within the EAC we reset last year.",
+        "segs": [
+          {
+            "t": "We continue to expect first delivery in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", and all of our latest assumptions continue to be within the EAC we reset last year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P4-2025-10-29",
+      "promiseId": "P4",
+      "date": "2025-10-29",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected rate 8 by year-end 2025, then rate 10 in 2026.",
+      "quote": "So, our next rate increase will be from this 8, which we should be at 8 by the end of the year, and then we'll move to 10 next year.",
+      "verbatim": {
+        "text": "So, our next rate increase will be from this 8, which we should be at 8 by the end of the year, and then we'll move to 10 next year.",
+        "segs": [
+          {
+            "t": "So, our next rate increase will be from this 8, which we should be at 8 by the end of the year, and then we'll move to 10 next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q3/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q3/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P4-2026-01-27",
+      "promiseId": "P4",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Next increase to 10 airplanes per month targeted for later in 2026, with readiness assessed through KPIs.",
+      "quote": "And going forward, as with the 737, we use the same disciplined processes, including monitoring our KPIs to assess readiness for the next planned rate increase to 10 airplanes per month, which is targeted for later this year.",
+      "verbatim": {
+        "text": "And going forward, as with the 737, we use the same disciplined processes, including monitoring our KPIs to assess readiness for the next planned rate increase to 10 airplanes per month, which is targeted for later this year.",
+        "segs": [
+          {
+            "t": "And going forward, as with the 737, we use the same disciplined processes, including monitoring our KPIs to assess readiness for the next planned rate increase to 10 airplanes per month, which is targeted for later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P4-2026-04-22",
+      "promiseId": "P4",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jesus Malave, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Factory progressing toward stability at eight per month; still expected 10 per month later in 2026.",
+      "quote": "We continue to expect an increase to 10 per month later this year.",
+      "verbatim": {
+        "text": "We continue to expect an increase to 10 per month later this year.",
+        "segs": [
+          {
+            "t": "We continue to expect an increase to 10 per month later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P4-2026-07-28",
+      "promiseId": "P4",
+      "date": "2026-07-28",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Stabilized at eight per month; engine-delivery recovery remained important for rate 10 timing.",
+      "quote": "And we'll continue to work with GE on the engine delivery recovery this summer, which will be important for our rate 10 timing.",
+      "verbatim": {
+        "text": "And we'll continue to work with GE on the engine delivery recovery this summer, which will be important for our rate 10 timing.",
+        "segs": [
+          {
+            "t": "And we'll continue to work with GE on the engine delivery recovery this summer, which will be important for our rate 10 timing.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P4-2026-09-16",
+      "promiseId": "P4",
+      "date": "2026-09-16",
+      "call": "Morgan Stanley Laguna Industrials Conference",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Rate 10 moving toward year-end 2026, later than hoped, because engine-delivery performance remained insufficient.",
+      "quote": "We have not yet achieved the engine delivery performance that allow us to go to rate 10.",
+      "verbatim": {
+        "text": "We have not yet achieved the engine delivery performance that allow us to go to rate 10.",
+        "segs": [
+          {
+            "t": "We have not yet achieved the engine delivery performance that allow us to go to rate 10.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "BA-P4-2026-10-27",
+      "promiseId": "P4",
+      "date": "2026-10-27",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Robert Kelly Ortberg, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Stable at 8 per month; still expected to start transitioning to 10 per month during 2026, paced by engine deliveries.",
+      "quote": "We still expect to start the transition to 10 per month yet this year, and we're making good progress on our Charleston expansion to support even higher production rates.",
+      "verbatim": {
+        "text": "We still expect to start the transition to 10 per month yet this year, and we're making good progress on our Charleston expansion to support even higher production rates.",
+        "segs": [
+          {
+            "t": "We still expect to start the transition to 10 per month yet this year, and we're making good progress on our Charleston expansion to support even higher production rates.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P5-2026-01-27",
+      "promiseId": "P5",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Jesus Malave, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected positive 2026 free cash flow of $1 billion to $3 billion.",
+      "quote": "As we continue turning the corner in 2026, we expect positive free cash flow of $1 billion to $3 billion, aligned with the expectations I shared last month.",
+      "verbatim": {
+        "text": "As we continue turning the corner in 2026, we expect positive free cash flow of $1 billion to $3 billion, aligned with the expectations I shared last month.",
+        "segs": [
+          {
+            "t": "As we continue turning the corner in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect positive free cash flow of ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": ", aligned with the expectations I shared last month.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P5-2026-04-22",
+      "promiseId": "P5",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jesus Malave, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed positive 2026 free cash flow of $1 billion to $3 billion.",
+      "quote": "Regarding our cash flow outlook, we continue to expect positive free cash flow of $1 billion to $3 billion this year, aligned with the expectations I shared last quarter.",
+      "verbatim": {
+        "text": "Regarding our cash flow outlook, we continue to expect positive free cash flow of $1 billion to $3 billion this year, aligned with the expectations I shared last quarter.",
+        "segs": [
+          {
+            "t": "Regarding our cash flow outlook, we continue to expect positive free cash flow of ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " this year, aligned with the expectations I shared last quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P5-2026-07-28",
+      "promiseId": "P5",
+      "date": "2026-07-28",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Jesus Malave, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Remained on track for 2026 free cash flow of $1 billion to $3 billion.",
+      "quote": "Regarding free cash flow, we remain on track to achieve our outlook of $1 billion to $3 billion.",
+      "verbatim": {
+        "text": "Regarding free cash flow, we remain on track to achieve our outlook of $1 billion to $3 billion.",
+        "segs": [
+          {
+            "t": "Regarding free cash flow, we remain on track to achieve our outlook of ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "BA-P5-2026-09-16",
+      "promiseId": "P5",
+      "date": "2026-09-16",
+      "call": "Morgan Stanley Laguna Industrials Conference",
+      "speaker": "Jesus Malave, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained $1 billion to $3 billion, emphasizing the $2 billion midpoint.",
+      "quote": "And so, again, $2 billion, I think is really the framework within that $1 billion to $3 billion.",
+      "verbatim": {
+        "text": "And so, again, $2 billion, I think is really the framework within that $1 billion to $3 billion.",
+        "segs": [
+          {
+            "t": "And so, again, ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": ", I think is really the framework within that ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "BA-P5-2026-10-27",
+      "promiseId": "P5",
+      "date": "2026-10-27",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Jesus Malave, CFO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Narrowed 2026 free cash flow guidance from $1 billion to $3 billion to approximately $2 billion.",
+      "quote": "First, as Kelly noted, we have narrowed our prior range and expect to deliver approximately $2 billion of free cash flow in 2026.",
+      "verbatim": {
+        "text": "First, as Kelly noted, we have narrowed our prior range and expect to deliver approximately $2 billion of free cash flow in 2026.",
+        "segs": [
+          {
+            "t": "First, as Kelly noted, we have narrowed our prior range and expect to deliver approximately ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " of free cash flow in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+          "title": "The Boeing Co.",
+          "domain": "s2.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Oct/27/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q4/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q2/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/Sep/16/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q3/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 7,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q2/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 8,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_financials/2025/q1/Transcript-Q1-2025-Earnings-Call.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://investors.boeing.com/investors/news/press-release-details/2025/Boeing-Reports-Third-Quarter-Results/default.aspx?pubDate=20251029",
+      "title": "\n\tBoeing Company - Boeing Reports Third Quarter Results\n",
+      "domain": "investors.boeing.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://s2.q4cdn.com/661678649/files/doc_events/2026/May/27/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://www.boeing.com/features/2026/09/ceo-737-10-certification-very-soon-more-to-do-to-stabilize-production",
+      "title": "CEO: 737-10 certification ‘very soon,’ more to do to stabilize production",
+      "domain": "boeing.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://investors.boeing.com/investors/news/press-release-details/2026/Boeing-Reports-Third-Quarter-Results/default.aspx",
+      "title": "\n\tBoeing Company - Boeing Reports Third Quarter Results\n",
+      "domain": "investors.boeing.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 13,
+      "url": "https://www.sec.gov/Archives/edgar/data/0000012927/000162828025046915/a202509sep308kprex991.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "http://s2.q4cdn.com/661678649/files/doc_financials/2026/q1/Transcript.pdf",
+      "title": "The Boeing Co.",
+      "domain": "s2.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 15,
+      "url": "https://boeing.mediaroom.com/2026-10-20-U-S-FAA-certifies-Boeing-737-10,-largest-member-of-737-MAX-family",
+      "title": "U.S. FAA certifies Boeing 737-10, largest member of 737 MAX family - Oct 20, 2026",
+      "domain": "boeing.mediaroom.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 16,
+      "url": "https://boeing.mediaroom.com/2026-08-03-U-S-FAA-certifies-new-Boeing-737-7-airplane",
+      "title": "U.S. FAA certifies new Boeing 737-7 airplane - Aug 3, 2026",
+      "domain": "boeing.mediaroom.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 17,
+      "url": "https://boeing.mediaroom.com/2026-10-27-Boeing-Reports-Third-Quarter-Results",
+      "title": "Boeing Reports Third Quarter Results - Oct 27, 2026",
+      "domain": "boeing.mediaroom.com",
+      "tier": "press",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T02:59:01.325068Z",
+      "completedAt": "2026-11-05T03:05:17.805154Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T18:46:08.028379Z",
+      "completedAt": "2026-11-05T18:50:35.067004Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.478616Z",
+      "completedAt": "2026-11-05T19:12:41.254084Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.485084Z",
+      "completedAt": "2026-11-05T19:12:11.852411Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.491493Z",
+      "completedAt": "2026-11-05T19:13:12.290504Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.498053Z",
+      "completedAt": "2026-11-05T19:11:37.921606Z"
+    },
+    {
+      "kind": "check",
+      "spec": "resolve@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T20:13:35.261347Z",
+      "completedAt": "2026-11-05T20:14:48.616592Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.204740Z",
+      "completedAt": "2026-11-05T19:45:13.309160Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.197369Z",
+      "completedAt": "2026-11-05T19:43:56.514770Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.212239Z",
+      "completedAt": "2026-11-05T19:46:25.990053Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.219514Z",
+      "completedAt": "2026-11-05T19:44:07.890093Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T20:17:38.818912Z",
+      "completedAt": "2026-11-05T20:22:46.889937Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "34 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "34 of 34 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "34 of 34 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-27; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/Boeing_full_logo.svg/3840px-Boeing_full_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/File:Boeing_full_logo.svg",
+      "title": "File:Boeing full logo.svg - Wikipedia",
+      "width": 3840,
+      "height": 894,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Aerial_Boeing_Renton_Factory_November_2011.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/Boeing_Renton_Factory",
+      "title": "Boeing Renton Factory - Wikipedia",
+      "width": 3456,
+      "height": 2303,
+      "rank": 1
+    }
+  },
+  "version": 4,
+  "builtAt": "2026-11-06T00:56:26.228Z"
+}

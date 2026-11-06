@@ -1,0 +1,3495 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "FDX",
+  "name": "FedEx Corporation",
+  "short": "FedEx",
+  "website": "fedex.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investors.fedex.com",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-28",
+    "quarter": "Q3 CY2026"
+  },
+  "nextCall": {
+    "date": "2027-02-02",
+    "time": "4:00 PM CT",
+    "quarter": "Q4 2026"
+  },
+  "photoSubject": "FedEx Network 2.0 sorting facility",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Deliver DRIVE structural savings",
+      "commitment": "Remove an additional $4 billion of costs through DRIVE by FY2025.",
+      "deadline": "FY2025",
+      "firstStated": "2022-09-22",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "FedEx delivered $4.0 billion in total DRIVE structural cost reductions relative to fiscal year 2023, achieving its target by fiscal 2025.",
+      "citations": [
+        {
+          "url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx",
+          "title": "\n\tFedEx Reports Fourth Quarter Diluted EPS of $6.88 and Adjusted Diluted EPS of $6.07 | FedEx\n",
+          "domain": "investors.fedex.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FDX-Q4-FY25-Earnings-Call-Transcript_Final.pdf",
+          "title": "FDX-Q4-FY25-Earnings-Call-Transcript_Final",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q1/Earnings-Transcript-Q1FY23.pdf",
+          "title": "FedEx Q1 FY23 Earnings Call Transcript – September 22, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-06-24",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2024-06-25",
+            "what_was_said": "Management said FedEx had achieved its $1.8 billion FY2024 structural cost-out target, confirming delivery of the interim DRIVE milestone.",
+            "call": "Q4 FY24 earnings call"
+          },
+          {
+            "date": "2025-06-24",
+            "what_was_said": "Management said FedEx delivered its $2.2 billion FY2025 DRIVE commitment and achieved the two-year $4 billion target compared with the FY2023 baseline.",
+            "call": "Q4 FY25 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Capture Network 2.0 savings",
+      "commitment": "Generate an additional $2 billion benefit from Network 2.0 over the long term; no initial deadline.",
+      "deadline": null,
+      "firstStated": "2022-09-22",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Still pending: Network 2.0 and associated One FedEx savings target remains $2 billion, with timing shifted from FY 2027 to calendar year 2027.",
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2023/04/DRIVE-Transcript-2023.pdf",
+          "title": "FedEx DRIVE Program Update Transcript – April 5, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/Earnings-Transcript-Investor-Day-2026.pdf",
+          "title": "FedEx Investor Day Transcript – February 12, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/fedex-fdx-q3-2026-earnings-call-transcript",
+          "title": "FedEx (FDX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q1/Earnings-Transcript-Q1FY23.pdf",
+          "title": "FedEx Q1 FY23 Earnings Call Transcript – September 22, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2024-09-19",
+            "what_was_said": "Management expected Canada's Network 2.0 rollout to finish in early calendar 2025, later than the October 2024 completion previously indicated. This was a delay in a component rollout, not a change to the overall $2 billion savings target.",
+            "call": "Q1 FY2025 earnings call"
+          },
+          {
+            "date": "2025-06-24",
+            "what_was_said": "Management said, \"In April, we completed the full optimization of Canada, our largest market yet.\" This completed an important Network 2.0 component, but did not declare the overall $2 billion savings commitment achieved.",
+            "call": "Q4 FY2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Unify FedEx operating companies",
+      "commitment": "Consolidate Express, Ground and Services into Federal Express Corporation by June 2024.",
+      "deadline": "June 2024",
+      "firstStated": "2023-04-05",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "FedEx completed the consolidation of Express, Ground and Services into Federal Express Corporation on June 1, 2024, meeting its June 2024 deadline.",
+      "citations": [
+        {
+          "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-announces-planned-consolidation-of-operating-companies",
+          "title": "FedEx announces planned consolidation of operating companies",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q4/FedEx-FY24-Q4-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q4 FY24 Earnings Call Transcript – June 25, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1048911/000095017024102826/fdx-20240903.htm",
+          "title": "8-K",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+          "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2024-06-25",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Spin off FedEx Freight",
+      "commitment": "Separate FedEx Freight into a second publicly traded company within approximately 18 months.",
+      "deadline": "approximately 18 months",
+      "firstStated": "2024-12-19",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "FedEx completed the separation on June 1, 2026, creating an independent publicly traded FedEx Freight; FedEx retained 19.9% ownership.",
+      "citations": [
+        {
+          "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+          "title": "FedEx Completes Spin-Off of FedEx Freight",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/Earnings-Transcript-Q2FY25.pdf",
+          "title": "FedEx Q2 FY25 Earnings Call Transcript – December 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000128/fdx-earningsreleasety2026q3.htm",
+          "title": "Fdx Earningsreleasety2026Q3",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-06-01",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-12-18",
+            "what_was_said": "FedEx intended to retain up to 19.9% of FedEx Freight's outstanding shares upon the spin-off and expected to monetize those shares within a timeframe permitted by the IRS. This clarified that the public-company separation would initially leave FedEx with a minority stake.",
+            "call": "Q2 FY2026 earnings call"
+          },
+          {
+            "date": "2026-06-23",
+            "what_was_said": "Management said it planned to monetize the retained Freight stake in a tax-efficient manner within 24 months of the spin-off, as required by the IRS. This was a subsequent stake-disposal timetable, not a delay to the completed separation.",
+            "call": "Q4 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Generate $6 billion free cash",
+      "commitment": "Achieve $6 billion adjusted free cash flow in 2029 for FedEx Corp., excluding Freight.",
+      "deadline": "CY2029",
+      "firstStated": "2026-02-12",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The $6 billion adjusted free cash flow target for CY 2029, excluding Freight, remained pending and unchanged.",
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/Earnings-Transcript-Investor-Day-2026.pdf",
+          "title": "FedEx Investor Day Transcript – February 12, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+          "title": "FedEx Q4 FY26 Earnings Call Transcript – June 23, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/fedex-fdx-q3-2026-earnings-call-transcript",
+          "title": "FedEx (FDX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+          "title": "FedEx Q3 FY26 Earnings Call Transcript – March 19, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "FDX-P1-2022-09-22",
+      "promiseId": "P1",
+      "date": "2022-09-22",
+      "call": "Q1 FY23 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to removing an additional $4 billion in DRIVE costs by fiscal year 2025.",
+      "quote": "In total, we expect to take out an additional $4 billion in costs related to DRIVE by fiscal year 2025.",
+      "verbatim": {
+        "text": "In total, we expect to take out an additional $4 billion in costs related to DRIVE by fiscal year 2025.",
+        "segs": [
+          {
+            "t": "In total, we expect to take out an additional ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " in costs related to DRIVE by fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q1/Earnings-Transcript-Q1FY23.pdf?_sp=d20654fa-2844-4c5e-8d2d-31252554b7a7",
+          "title": "FedEx Q1 FY23 Earnings Call Transcript – September 22, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q1/Earnings-Transcript-Q1FY23.pdf?_sp=d20654fa-2844-4c5e-8d2d-31252554b7a7",
+          "title": "FedEx Q1 FY23 Earnings Call Transcript – September 22, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2022-12-20",
+      "promiseId": "P1",
+      "date": "2022-12-20",
+      "call": "Q2 FY23 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed more than $4 billion in annualized DRIVE structural cost reductions by fiscal year 2025.",
+      "quote": "DRIVE is how we are executing that strategy, achieving more than $4 billion in annualized structural cost reductions by fiscal year 2025.",
+      "verbatim": {
+        "text": "DRIVE is how we are executing that strategy, achieving more than $4 billion in annualized structural cost reductions by fiscal year 2025.",
+        "segs": [
+          {
+            "t": "DRIVE is how we are executing that strategy, achieving more than ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " in annualized structural cost reductions by fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q2/Earnings-Transcript-Q2FY23.pdf?_sp=630837b0-53c5-4d47-bb1a-f8cb26f96830",
+          "title": "FedEx Q2 FY23 Earnings Call Transcript – December 20, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q2/Earnings-Transcript-Q2FY23.pdf?_sp=630837b0-53c5-4d47-bb1a-f8cb26f96830",
+          "title": "FedEx Q2 FY23 Earnings Call Transcript – December 20, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2023-03-16",
+      "promiseId": "P1",
+      "date": "2023-03-16",
+      "call": "Q3 FY23 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $4 billion in permanent cost reduction on track by the end of fiscal 2025.",
+      "quote": "We are on track to deliver $4 billion of permanent cost reduction by the end of fiscal 2025.",
+      "verbatim": {
+        "text": "We are on track to deliver $4 billion of permanent cost reduction by the end of fiscal 2025.",
+        "segs": [
+          {
+            "t": "We are on track to deliver ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " of permanent cost reduction by the end of ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q3/Transcript-updated-April-4-2023.pdf",
+          "title": "FedEx Q3 FY23 Earnings Call Transcript – March 16, 2023 (updated April 4, 2023)",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q3/Transcript-updated-April-4-2023.pdf",
+          "title": "FedEx Q3 FY23 Earnings Call Transcript – March 16, 2023 (updated April 4, 2023)",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2023-04-05",
+      "promiseId": "P1",
+      "date": "2023-04-05",
+      "call": "DRIVE Program Update",
+      "speaker": "Michael C. Lenz, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $4 billion in FY 2025; less than half in FY 2024; established the FY 2023 measurement baseline.",
+      "quote": "And moving forward with FY 2023 drawing to a close, we'll measure our progress versus an FY 2023 baseline.",
+      "verbatim": {
+        "text": "And moving forward with FY 2023 drawing to a close, we'll measure our progress versus an FY 2023 baseline.",
+        "segs": [
+          {
+            "t": "And moving forward with FY ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": " drawing to a close, we'll measure our progress versus an FY ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": " baseline.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2023/04/DRIVE-Transcript-2023.pdf",
+          "title": "FedEx DRIVE Program Update Transcript – April 5, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What FedEx executives said on the DRIVE Program Update (2023-04-05) about Deliver DRIVE structural savings: Reaffirmed $4 billion in FY 2025; less than half in FY 2024; established the FY 2023 measurement baseline."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2023/04/DRIVE-Transcript-2023.pdf",
+          "title": "FedEx DRIVE Program Update Transcript – April 5, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "FDX-P1-2023-06-20",
+      "promiseId": "P1",
+      "date": "2023-06-20",
+      "call": "Q4 FY23 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed about $1.8 billion in DRIVE benefits this fiscal year and $4 billion in permanent reductions in fiscal year 2025.",
+      "quote": "Given our progress, we are confident that we can deliver on our previous goal for about $1.8 billion in cost reduction benefits from DRIVE this fiscal year and $4 billion of permanent cost reductions in fiscal year 2025.",
+      "verbatim": {
+        "text": "Given our progress, we are confident that we can deliver on our previous goal for about $1.8 billion in cost reduction benefits from DRIVE this fiscal year and $4 billion of permanent cost reductions in fiscal year 2025.",
+        "segs": [
+          {
+            "t": "Given our progress, we are confident that we can deliver on our previous goal for about ",
+            "h": 0
+          },
+          {
+            "t": "$1.8 billion",
+            "h": 1
+          },
+          {
+            "t": " in cost reduction benefits from DRIVE this fiscal year and ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " of permanent cost reductions in fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+          "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+          "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2023-09-20",
+      "promiseId": "P1",
+      "date": "2023-09-20",
+      "call": "Q1 FY24 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported the $1.8 billion interim DRIVE target on track this fiscal year; did not explicitly repeat the $4 billion commitment.",
+      "quote": "DRIVE is taking cost out of our network, and we are on track to deliver our targeted $1.8 billion in structural benefits from DRIVE this fiscal year.",
+      "verbatim": {
+        "text": "DRIVE is taking cost out of our network, and we are on track to deliver our targeted $1.8 billion in structural benefits from DRIVE this fiscal year.",
+        "segs": [
+          {
+            "t": "DRIVE is taking cost out of our network, and we are on track to deliver our targeted ",
+            "h": 0
+          },
+          {
+            "t": "$1.8 billion",
+            "h": 1
+          },
+          {
+            "t": " in structural benefits from DRIVE this fiscal year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q1/FDX-Earnings-Transcript-Q1FY24.pdf",
+          "title": "FedEx Q1 FY24 Earnings Call Transcript – September 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q1/FDX-Earnings-Transcript-Q1FY24.pdf",
+          "title": "FedEx Q1 FY24 Earnings Call Transcript – September 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+          "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2023-12-19",
+      "promiseId": "P1",
+      "date": "2023-12-19",
+      "call": "Q2 FY24 earnings call",
+      "speaker": "Raj Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $4 billion of total DRIVE savings in fiscal year 2025, supported by the Express air-network redesign.",
+      "quote": "The air network redesign is a critical piece of our DRIVE execution at Express and will support the realization of our targeted $4 billion of total DRIVE savings in fiscal year 2025.",
+      "verbatim": {
+        "text": "The air network redesign is a critical piece of our DRIVE execution at Express and will support the realization of our targeted $4 billion of total DRIVE savings in fiscal year 2025.",
+        "segs": [
+          {
+            "t": "The air network redesign is a critical piece of our DRIVE execution at Express and will support the realization of our targeted ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " of total DRIVE savings in fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/12/19/fedex-fdx-q2-2024-earnings-call-transcript",
+          "title": "FedEx (FDX) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/12/19/fedex-fdx-q2-2024-earnings-call-transcript",
+          "title": "FedEx (FDX) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.fedex.com/financial-information/quarterly-results/default.aspx",
+          "title": "\n\tQuarterly results | FedEx\n",
+          "domain": "investors.fedex.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2024-03-21",
+      "promiseId": "P1",
+      "date": "2024-03-21",
+      "call": "Q3 FY24 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $4 billion by FY 2025 on track, with less than 50% in FY 2024.",
+      "quote": "And so, in terms of the DRIVE commitments, we had originally talked about $4 billion by FY 2025 and less than 50% in FY 2024. We will hit those numbers for FY 2024 and on track for FY 2025.",
+      "verbatim": {
+        "text": "And so, in terms of the DRIVE commitments, we had originally talked about $4 billion by FY 2025 and less than 50% in FY 2024. We will hit those numbers for FY 2024 and on track for FY 2025.",
+        "segs": [
+          {
+            "t": "And so, in terms of the DRIVE commitments, we had originally talked about ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " by FY ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " and less than ",
+            "h": 0
+          },
+          {
+            "t": "50%",
+            "h": 1
+          },
+          {
+            "t": " in FY ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ". We will hit those numbers for FY ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " and on track for FY ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q3/FDX-Q3FY24-Earnings-Transcript.pdf",
+          "title": "FedEx Q3 FY24 Earnings Call Transcript – March 21, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q3/FDX-Q3FY24-Earnings-Transcript.pdf",
+          "title": "FedEx Q3 FY24 Earnings Call Transcript – March 21, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2024-06-25",
+      "promiseId": "P1",
+      "date": "2024-06-25",
+      "call": "Q4 FY24 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $4 billion of FY 2025 savings firmly on track against the FY 2023 baseline.",
+      "quote": "Looking ahead, we are firmly on track to achieve our target of $4 billion of savings in FY 2025 compared to the FY 2023 baseline.",
+      "verbatim": {
+        "text": "Looking ahead, we are firmly on track to achieve our target of $4 billion of savings in FY 2025 compared to the FY 2023 baseline.",
+        "segs": [
+          {
+            "t": "Looking ahead, we are firmly on track to achieve our target of ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " of savings in FY ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " compared to the FY ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": " baseline.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q4/FedEx-FY24-Q4-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q4 FY24 Earnings Call Transcript – June 25, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q4/FedEx-FY24-Q4-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q4 FY24 Earnings Call Transcript – June 25, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2024-09-19",
+      "promiseId": "P1",
+      "date": "2024-09-19",
+      "call": "Q1 FY25 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $4 billion of DRIVE savings in FY 2025 on track against the FY 2023 baseline.",
+      "quote": "We are on track to deliver the $4 billion of savings through DRIVE in FY 2025 compared to the FY 2023 baseline.",
+      "verbatim": {
+        "text": "We are on track to deliver the $4 billion of savings through DRIVE in FY 2025 compared to the FY 2023 baseline.",
+        "segs": [
+          {
+            "t": "We are on track to deliver the ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " of savings through DRIVE in FY ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " compared to the FY ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": " baseline.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/FDX-Q1-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q1 FY25 Earnings Call Transcript – September 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/FDX-Q1-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q1 FY25 Earnings Call Transcript – September 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2024-12-19",
+      "promiseId": "P1",
+      "date": "2024-12-19",
+      "call": "Q2 FY25 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $4 billion of savings on track by the end of FY 2025 against the FY 2023 baseline.",
+      "quote": "We are on track to deliver $4 billion in savings by the end of FY 2025 versus the FY 2023 baseline.",
+      "verbatim": {
+        "text": "We are on track to deliver $4 billion in savings by the end of FY 2025 versus the FY 2023 baseline.",
+        "segs": [
+          {
+            "t": "We are on track to deliver ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " in savings by the end of FY ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " versus the FY ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": " baseline.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/Earnings-Transcript-Q2FY25.pdf",
+          "title": "FedEx Q2 FY25 Earnings Call Transcript – December 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/Earnings-Transcript-Q2FY25.pdf",
+          "title": "FedEx Q2 FY25 Earnings Call Transcript – December 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2025-03-20",
+      "promiseId": "P1",
+      "date": "2025-03-20",
+      "call": "Q3 FY25 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported more than $4 billion of structural cost reduction on target by end of FY 2025 versus 2023.",
+      "quote": "I couldn't be prouder of Team FedEx as we are on target to reduce more than $4 billion in structural cost by end of FY 2025 versus 2023.",
+      "verbatim": {
+        "text": "I couldn't be prouder of Team FedEx as we are on target to reduce more than $4 billion in structural cost by end of FY 2025 versus 2023.",
+        "segs": [
+          {
+            "t": "I couldn't be prouder of Team FedEx as we are on target to reduce more than ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " in structural cost by end of FY ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " versus ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/FDX-Q3-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q3 FY25 Earnings Call Transcript – March 20, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/FDX-Q3-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q3 FY25 Earnings Call Transcript – March 20, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P1-2025-06-24",
+      "promiseId": "P1",
+      "date": "2025-06-24",
+      "call": "Q4 FY25 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Delivered $4.0 billion in total DRIVE structural reductions relative to fiscal year 2023, including the $2.2 billion fiscal 2025 target.",
+      "quote": "Results include lower structural costs as the company achieved its $2.2 billion fiscal 2025 DRIVE target and delivered $4.0 billion in total DRIVE structural cost reductions relative to fiscal year 2023.",
+      "verbatim": {
+        "text": "Results include lower structural costs as the company achieved its $2.2 billion fiscal 2025 DRIVE target and delivered $4.0 billion in total DRIVE structural cost reductions relative to fiscal year 2023.",
+        "segs": [
+          {
+            "t": "Results include lower structural costs as the company achieved its ",
+            "h": 0
+          },
+          {
+            "t": "$2.2 billion",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2025",
+            "h": 1
+          },
+          {
+            "t": " DRIVE target and delivered ",
+            "h": 0
+          },
+          {
+            "t": "$4.0 billion",
+            "h": 1
+          },
+          {
+            "t": " in total DRIVE structural cost reductions relative to fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2023",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx",
+          "title": "\n\tFedEx Reports Fourth Quarter Diluted EPS of $6.88 and Adjusted Diluted EPS of $6.07 | FedEx\n",
+          "domain": "investors.fedex.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx",
+          "title": "\n\tFedEx Reports Fourth Quarter Diluted EPS of $6.88 and Adjusted Diluted EPS of $6.07 | FedEx\n",
+          "domain": "investors.fedex.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "FDX-P1-2025-08-18",
+      "promiseId": "P1",
+      "date": "2025-08-18",
+      "call": "2025 Annual Report to Shareholders (Form ARS, filed)",
+      "speaker": "Raj Subramaniam, President and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed the $4 billion overall objective: $1.8 billion achieved in FY24 and $2.2 billion in FY25.",
+      "quote": "In the last two years we achieved our targets of $1.8 billion in FY24 and $2.2 billion in FY25 — reaching our overall objective.",
+      "verbatim": {
+        "text": "In the last two years we achieved our targets of $1.8 billion in FY24 and $2.2 billion in FY25 — reaching our overall objective.",
+        "segs": [
+          {
+            "t": "In the last two years we achieved our targets of ",
+            "h": 0
+          },
+          {
+            "t": "$1.8 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "FY24",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "$2.2 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "FY25",
+            "h": 1
+          },
+          {
+            "t": " — reaching our overall objective.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/ar/Annual-Report.pdf",
+          "title": "FedEx Corp",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/ar/Annual-Report.pdf",
+          "title": "FedEx Corp",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1048911/000110465925079806/0001104659-25-079806-index.htm",
+          "title": "EDGAR Filing Documents for 0001104659-25-079806",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "FDX-P2-2022-09-22",
+      "promiseId": "P2",
+      "date": "2022-09-22",
+      "call": "Q1 FY2023 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Promised an additional $2 billion long-term benefit from Network 2.0, without a deadline.",
+      "quote": "These transformational changes will lay the foundation for Network 2.0, which will create an additional $2 billion benefit over the long term.",
+      "verbatim": {
+        "text": "These transformational changes will lay the foundation for Network 2.0, which will create an additional $2 billion benefit over the long term.",
+        "segs": [
+          {
+            "t": "These transformational changes will lay the foundation for Network 2.0, which will create an additional ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " benefit over the long term.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q1/Earnings-Transcript-Q1FY23.pdf",
+          "title": "FedEx Q1 FY23 Earnings Call Transcript – September 22, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q1/Earnings-Transcript-Q1FY23.pdf",
+          "title": "FedEx Q1 FY23 Earnings Call Transcript – September 22, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2022-12-20",
+      "promiseId": "P2",
+      "date": "2022-12-20",
+      "call": "Q2 FY2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Network 2.0 and its pending $2 billion benefit were not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q2/Earnings-Transcript-Q2FY23.pdf?_sp=630837b0-53c5-4d47-bb1a-f8cb26f96830",
+          "title": "FedEx Q2 FY23 Earnings Call Transcript – December 20, 2022",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2023-03-16",
+      "promiseId": "P2",
+      "date": "2023-03-16",
+      "call": "Q3 FY2023 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported progress identifying cost-reduction and flexibility actions for Network 2.0; no new savings amount or deadline.",
+      "quote": "I'm very pleased with the progress the team has made in identifying actions that will not only reduce costs but will make our network more agile and flexible as we execute Network 2.0.",
+      "verbatim": {
+        "text": "I'm very pleased with the progress the team has made in identifying actions that will not only reduce costs but will make our network more agile and flexible as we execute Network 2.0.",
+        "segs": [
+          {
+            "t": "I'm very pleased with the progress the team has made in identifying actions that will not only reduce costs but will make our network more agile and flexible as we execute Network 2.0.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q3/Transcript-updated-April-4-2023.pdf",
+          "title": "FedEx Q3 FY23 Earnings Call Transcript – March 16, 2023 (updated April 4, 2023)",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q3/Transcript-updated-April-4-2023.pdf",
+          "title": "FedEx Q3 FY23 Earnings Call Transcript – March 16, 2023 (updated April 4, 2023)",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2023-04-05",
+      "promiseId": "P2",
+      "date": "2023-04-05",
+      "call": "DRIVE Program Update",
+      "speaker": "John A. Smith, President and CEO, FedEx Ground",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Established an additional $2 billion in recurring Network 2.0 savings in FY 2027.",
+      "quote": "An interoperable network eliminates redundancies in facilities, linehaul, and P&D which will generate an additional $2 billion in recurring savings in FY 2027.",
+      "verbatim": {
+        "text": "An interoperable network eliminates redundancies in facilities, linehaul, and P&D which will generate an additional $2 billion in recurring savings in FY 2027.",
+        "segs": [
+          {
+            "t": "An interoperable network eliminates redundancies in facilities, linehaul, and P&D which will generate an additional ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " in recurring savings in FY ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2023/04/DRIVE-Transcript-2023.pdf",
+          "title": "FedEx DRIVE Program Update Transcript – April 5, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2023/04/DRIVE-Transcript-2023.pdf",
+          "title": "FedEx DRIVE Program Update Transcript – April 5, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "FDX-P2-2023-06-20",
+      "promiseId": "P2",
+      "date": "2023-06-20",
+      "call": "Q4 FY2023 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected Canada’s Network 2.0 transformation to generate over $100 million annualized benefit upon completion in FY 2025.",
+      "quote": "We expect this change in Canada to generate an annualized benefit of over $100 million upon completion in FY 2025.",
+      "verbatim": {
+        "text": "We expect this change in Canada to generate an annualized benefit of over $100 million upon completion in FY 2025.",
+        "segs": [
+          {
+            "t": "We expect this change in Canada to generate an annualized benefit of over ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " upon completion in FY ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+          "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+          "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2023-09-20",
+      "promiseId": "P2",
+      "date": "2023-09-20",
+      "call": "Q1 FY2024 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Network 2.0 completion on track for fiscal year 2027.",
+      "quote": "Things are going quite well as we feel we are on track to complete our Network 2.0 by our commitment of fiscal year 2027.",
+      "verbatim": {
+        "text": "Things are going quite well as we feel we are on track to complete our Network 2.0 by our commitment of fiscal year 2027.",
+        "segs": [
+          {
+            "t": "Things are going quite well as we feel we are on track to complete our Network 2.0 by our commitment of fiscal year ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q1/FDX-Earnings-Transcript-Q1FY24.pdf",
+          "title": "FedEx Q1 FY24 Earnings Call Transcript – September 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q1/FDX-Earnings-Transcript-Q1FY24.pdf",
+          "title": "FedEx Q1 FY24 Earnings Call Transcript – September 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2023-12-19",
+      "promiseId": "P2",
+      "date": "2023-12-19",
+      "call": "Q2 FY2024 earnings call",
+      "speaker": "Raj Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Network 2.0 implementation on track for fiscal year '27.",
+      "quote": "You know, as we have -- we are on track to -- on Network 2.0 for -- in implementation, as we've told you, by fiscal year '27.",
+      "verbatim": {
+        "text": "You know, as we have -- we are on track to -- on Network 2.0 for -- in implementation, as we've told you, by fiscal year '27.",
+        "segs": [
+          {
+            "t": "You know, as we have -- we are on track to -- on Network 2.0 for -- in implementation, as we've told you, by fiscal year '27.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/12/19/fedex-fdx-q2-2024-earnings-call-transcript",
+          "title": "FedEx (FDX) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/12/19/fedex-fdx-q2-2024-earnings-call-transcript",
+          "title": "FedEx (FDX) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2024-03-21",
+      "promiseId": "P2",
+      "date": "2024-03-21",
+      "call": "Q3 FY2024 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Said the $2 billion Network 2.0 target by FY 2027 was underway.",
+      "quote": "And again, the other part of it of course is Network 2.0 which we said $2 billion by FY 2027 and that's underway.",
+      "verbatim": {
+        "text": "And again, the other part of it of course is Network 2.0 which we said $2 billion by FY 2027 and that's underway.",
+        "segs": [
+          {
+            "t": "And again, the other part of it of course is Network 2.0 which we said ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " by FY ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " and that's underway.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q3/Earnings-Transcript-Q3FY24.html",
+          "title": "Earnings Transcript Q3Fy24",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q3/Earnings-Transcript-Q3FY24.html",
+          "title": "Earnings Transcript Q3Fy24",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2024-06-25",
+      "promiseId": "P2",
+      "date": "2024-06-25",
+      "call": "Q4 FY2024 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed another $2 billion from Network 2.0.",
+      "quote": "We expect another $2 billion to follow from Network 2.0.",
+      "verbatim": {
+        "text": "We expect another $2 billion to follow from Network 2.0.",
+        "segs": [
+          {
+            "t": "We expect another ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to follow from Network 2.0.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q4/FedEx-FY24-Q4-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q4 FY24 Earnings Call Transcript – June 25, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q4/FedEx-FY24-Q4-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q4 FY24 Earnings Call Transcript – June 25, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2024-09-19",
+      "promiseId": "P2",
+      "date": "2024-09-19",
+      "call": "Q1 FY2025 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Continued introducing Network 2.0 in select markets.",
+      "quote": "In the first quarter, we continued to introduce Network 2.0 in select markets.",
+      "verbatim": {
+        "text": "In the first quarter, we continued to introduce Network 2.0 in select markets.",
+        "segs": [
+          {
+            "t": "In the first quarter, we continued to introduce Network 2.0 in select markets.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/FDX-Q1-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q1 FY25 Earnings Call Transcript – September 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/FDX-Q1-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q1 FY25 Earnings Call Transcript – September 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2024-12-19",
+      "promiseId": "P2",
+      "date": "2024-12-19",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $2 billion Network 2.0 savings by the end of FY 2027.",
+      "quote": "Network 2.0, which will deliver on the promise of a more efficient network, including one truck, one neighborhood, along with consolidated facilities where we are targeting $2 billion in savings by the end of FY 2027.",
+      "verbatim": {
+        "text": "Network 2.0, which will deliver on the promise of a more efficient network, 3 including one truck, one neighborhood, along with consolidated facilities where we are targeting $2 billion in savings by the end of FY 2027.",
+        "segs": [
+          {
+            "t": "Network 2.0, which will deliver on the promise of a more efficient network, 3 including one truck, one neighborhood, along with consolidated facilities where we are targeting ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " in savings by the end of FY ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/Earnings-Transcript-Q2FY25.pdf",
+          "title": "FedEx Q2 FY25 Earnings Call Transcript – December 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/Earnings-Transcript-Q2FY25.pdf",
+          "title": "FedEx Q2 FY25 Earnings Call Transcript – December 19, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2025-03-20",
+      "promiseId": "P2",
+      "date": "2025-03-20",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Resumed Network 2.0 conversions following peak, as planned.",
+      "quote": "As planned, we resumed Network 2.0 conversions following peak.",
+      "verbatim": {
+        "text": "As planned, we resumed Network 2.0 conversions following peak.",
+        "segs": [
+          {
+            "t": "As planned, we resumed Network 2.0 conversions following peak.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/FDX-Q3-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q3 FY25 Earnings Call Transcript – March 20, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/FDX-Q3-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q3 FY25 Earnings Call Transcript – March 20, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2025-06-24",
+      "promiseId": "P2",
+      "date": "2025-06-24",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $2 billion by the end of fiscal 2027, describing physical integration and associated One FedEx savings.",
+      "quote": "This will include a detailed update on our strategic initiatives such as Network 2.0, which represents a $2 billion savings opportunity from our physical network integration and associated one FedEx savings by the end of fiscal 2027.",
+      "verbatim": {
+        "text": "This will include a detailed update on our strategic initiatives such as Network 2.0, which represents a $2 billion savings opportunity from our physical network integration and associated one FedEx savings by the end of fiscal 2027.",
+        "segs": [
+          {
+            "t": "This will include a detailed update on our strategic initiatives such as Network 2.0, which represents a ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " savings opportunity from our physical network integration and associated one FedEx savings by the end of ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FDX-Q4-FY25-Earnings-Call-Transcript_Final.pdf",
+          "title": "FDX-Q4-FY25-Earnings-Call-Transcript_Final",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FDX-Q4-FY25-Earnings-Call-Transcript_Final.pdf",
+          "title": "FDX-Q4-FY25-Earnings-Call-Transcript_Final",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2025-09-18",
+      "promiseId": "P2",
+      "date": "2025-09-18",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Network 2.0 rollout progressing well and positive customer feedback.",
+      "quote": "The Network 2.0 rollout is progressing well, and customer feedback, especially when it comes to the consolidated pickup experience, remains very positive.",
+      "verbatim": {
+        "text": "The Network 2.0 rollout is progressing well, and customer feedback, especially when it comes to the consolidated pickup experience, remains very positive.",
+        "segs": [
+          {
+            "t": "The Network 2.0 rollout is progressing well, and customer feedback, especially when it comes to the consolidated pickup experience, remains very positive.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q1 FY26 Earnings Call Transcript – September 18, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q1 FY26 Earnings Call Transcript – September 18, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2025-12-18",
+      "promiseId": "P2",
+      "date": "2025-12-18",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected the majority of $2 billion Network 2.0 and One FedEx savings in FY 2027.",
+      "quote": "And we see the majority of those savings skewed towards our FY 2027.",
+      "verbatim": {
+        "text": "And we see the majority of those savings skewed towards our FY 2027.",
+        "segs": [
+          {
+            "t": "And we see the majority of those savings skewed towards our FY ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/Earnings-Transcript-Q2FY26.pdf",
+          "title": "FedEx Q2 FY26 Earnings Call Transcript – December 18, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/Earnings-Transcript-Q2FY26.pdf",
+          "title": "FedEx Q2 FY26 Earnings Call Transcript – December 18, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2026-02-12",
+      "promiseId": "P2",
+      "date": "2026-02-12",
+      "call": "2026 Investor Day",
+      "speaker": "Scott Ray, COO-elect, U.S. and Canada Surface Operations",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Changed timing to calendar year 2027; nearly $1 billion expected by calendar year 2026, with associated One FedEx savings included.",
+      "quote": "Our progress on these savings is underway and by the end of the calendar year 2026, we expect to achieve nearly $1 billion in savings. We expect to achieve the full $2 billion benefit by the end of calendar year 2027.",
+      "verbatim": {
+        "text": "Our progress on these savings is underway and by the end of the calendar year 2026, we expect to achieve nearly $1 billion in savings. We expect to achieve the full $2 billion benefit by the end of calendar year 2027. ...",
+        "segs": [
+          {
+            "t": "Our progress on these savings is underway and by the end of the calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect to achieve nearly ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " in savings. We expect to achieve the full ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " benefit by the end of calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ". ...",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/Earnings-Transcript-Investor-Day-2026.pdf",
+          "title": "FedEx Investor Day Transcript – February 12, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What FedEx executives said on the 2026 Investor Day (2026-02-12) about Capture Network 2.0 savings: Changed timing to calendar year 2027; nearly $1 billion expected by calendar year 2026, with associated One FedEx savings included."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/Earnings-Transcript-Investor-Day-2026.pdf",
+          "title": "FedEx Investor Day Transcript – February 12, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2023/04/DRIVE-Transcript-2023.pdf",
+          "title": "FedEx DRIVE Program Update Transcript – April 5, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "FDX-P2-2026-03-19",
+      "promiseId": "P2",
+      "date": "2026-03-19",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reaffirmed $2 billion cumulative savings by end of 2027; about 65% of eligible volume through Network 2.0 facilities by next peak.",
+      "quote": "We remain on track for about 65% of our eligible volume to be flowing through Network 2.0 facilities by next peak and we continue to expect $2 billion in cumulative savings from Network 2.0 and associated One FedEx initiatives by end of 2027.",
+      "verbatim": {
+        "text": "We remain on track for about 65% of our eligible volume to be flowing through Network 2.0 facilities by next peak and we continue to expect $2 billion in cumulative savings from Network 2.0 and associated One FedEx initiatives by end of 2027.",
+        "segs": [
+          {
+            "t": "We remain on track for about ",
+            "h": 0
+          },
+          {
+            "t": "65%",
+            "h": 1
+          },
+          {
+            "t": " of our eligible volume to be flowing through Network 2.0 facilities by next peak and we continue to expect ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " in cumulative savings from Network 2.0 and associated One FedEx initiatives by end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+          "title": "FedEx Q3 FY26 Earnings Call Transcript – March 19, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+          "title": "FedEx Q3 FY26 Earnings Call Transcript – March 19, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2026-06-23",
+      "promiseId": "P2",
+      "date": "2026-06-23",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "On track for nearly $1 billion by calendar year-end and full $2 billion by end of CY 2027, including associated One FedEx savings.",
+      "quote": "We remain on track to achieve nearly $1 billion of Network 2.0 and associated one FedEx savings by the end of this calendar year, and the full $2 billion by the end of CY 2027.",
+      "verbatim": {
+        "text": "We remain on track to achieve nearly $1 billion of Network 2.0 and associated one FedEx savings by the end of this calendar year, and the full $2 billion by the end of CY 2027.",
+        "segs": [
+          {
+            "t": "We remain on track to achieve nearly ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " of Network 2.0 and associated one FedEx savings by the end of this calendar year, and the full ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " by the end of CY ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+          "title": "FedEx Q4 FY26 Earnings Call Transcript – June 23, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+          "title": "FedEx Q4 FY26 Earnings Call Transcript – June 23, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P2-2026-10-28",
+      "promiseId": "P2",
+      "date": "2026-10-28",
+      "call": "Q3 CY2026 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected nearly $1 billion by calendar year-end and cumulative $2 billion by end of 2027, including associated One FedEx savings.",
+      "quote": "We continue to expect Network 2.0 progress to translate to nearly $1 billion of Network 2.0 and associated One FedEx savings by the end of this calendar year and a cumulative $2 billion by the end of 2027.",
+      "verbatim": {
+        "text": "We continue to expect Network 2.0 progress to translate to nearly $1 billion of Network 2.0 and associated One FedEx savings by the end of this calendar year and a cumulative $2 billion by the end of 2027.",
+        "segs": [
+          {
+            "t": "We continue to expect Network 2.0 progress to translate to nearly ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " of Network 2.0 and associated One FedEx savings by the end of this calendar year and a cumulative ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/fedex-fdx-q3-2026-earnings-call-transcript",
+          "title": "FedEx (FDX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/fedex-fdx-q3-2026-earnings-call-transcript",
+          "title": "FedEx (FDX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P3-2023-04-05",
+      "promiseId": "P3",
+      "date": "2023-04-05",
+      "call": "FedEx Announces Planned Consolidation of Operating Companies",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced consolidation of Express, Ground, Services and other operating companies into Federal Express Corporation, with full implementation expected in June 2024.",
+      "quote": "This phased transition, with full implementation expected in June 2024, will ultimately bring FedEx Express, FedEx Ground, FedEx Services, and other FedEx operating companies into Federal Express Corporation, becoming a single company operating a unified, fully integrated air-ground network under the respected FedEx brand.",
+      "verbatim": {
+        "text": "This phased transition, with full implementation expected in June 2024, will ultimately bring FedEx Express, FedEx Ground, FedEx Services, and other FedEx operating companies into Federal Express Corporation , becoming a single company operating a unified, fully integrated air-ground network under the respected FedEx brand.",
+        "segs": [
+          {
+            "t": "This phased transition, with full implementation expected in June ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", will ultimately bring FedEx Express, FedEx Ground, FedEx Services, and other FedEx operating companies into Federal Express Corporation , becoming a single company operating a unified, fully integrated air-ground network under the respected FedEx brand.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-announces-planned-consolidation-of-operating-companies",
+          "title": "FedEx announces planned consolidation of operating companies",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-announces-planned-consolidation-of-operating-companies",
+          "title": "FedEx announces planned consolidation of operating companies",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "FDX-P3-2023-06-20",
+      "promiseId": "P3",
+      "date": "2023-06-20",
+      "call": "Q4 FY2023 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the April announcement: consolidate operating companies into one unified organization by June of 2024.",
+      "quote": "As we introduced in April, between now and June of 2024, we will be consolidating our operating companies into one unified organization.",
+      "verbatim": {
+        "text": "As we introduced in April, between now and June of 2024, we will be consolidating our operating companies into one unified organization.",
+        "segs": [
+          {
+            "t": "As we introduced in April, between now and June of ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", we will be consolidating our operating companies into one unified organization.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+          "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+          "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P3-2023-09-20",
+      "promiseId": "P3",
+      "date": "2023-09-20",
+      "call": "Q1 FY2024 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed consolidation of Express, Ground and Services into Federal Express Corporation in June 2024.",
+      "quote": "In June 2024, FedEx Express, FedEx Ground and FedEx Services will consolidate into one company, Federal Express Corporation.",
+      "verbatim": {
+        "text": "In June 2024, FedEx Express, FedEx Ground and FedEx Services will consolidate into one company, Federal Express Corporation.",
+        "segs": [
+          {
+            "t": "In June ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", FedEx Express, FedEx Ground and FedEx Services will consolidate into one company, Federal Express Corporation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q1/FDX-Earnings-Transcript-Q1FY24.pdf",
+          "title": "FedEx Q1 FY24 Earnings Call Transcript – September 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q1/FDX-Earnings-Transcript-Q1FY24.pdf",
+          "title": "FedEx Q1 FY24 Earnings Call Transcript – September 20, 2023",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P3-2023-12-19",
+      "promiseId": "P3",
+      "date": "2023-12-19",
+      "call": "Q2 FY2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The June 2024 legal consolidation was not addressed; discussion concerned Network 2.0 implementation instead.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/12/19/fedex-fdx-q2-2024-earnings-call-transcript",
+          "title": "FedEx (FDX) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investors.fedex.com/financial-information/quarterly-results/default.aspx",
+          "title": "\n\tQuarterly results | FedEx\n",
+          "domain": "investors.fedex.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P3-2024-03-21",
+      "promiseId": "P3",
+      "date": "2024-03-21",
+      "call": "Q3 FY2024 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported being on track to consolidate Express, Ground and Services into Federal Express Corporation in June 2024.",
+      "quote": "In June 2024, FedEx Express, FedEx Ground, and FedEx Services will consolidate into Federal Express Corporation.",
+      "verbatim": {
+        "text": "In June 2024, FedEx Express, FedEx Ground, and FedEx Services will consolidate into Federal Express Corporation.",
+        "segs": [
+          {
+            "t": "In June ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", FedEx Express, FedEx Ground, and FedEx Services will consolidate into Federal Express Corporation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q3/FDX-Q3FY24-Earnings-Transcript.pdf",
+          "title": "FedEx Q3 FY24 Earnings Call Transcript – March 21, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q3/FDX-Q3FY24-Earnings-Transcript.pdf",
+          "title": "FedEx Q3 FY24 Earnings Call Transcript – March 21, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P3-2024-06-25",
+      "promiseId": "P3",
+      "date": "2024-06-25",
+      "call": "Q4 FY2024 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported completion on June 1 of the consolidation of Express, Ground and Services into Federal Express Corporation.",
+      "quote": "On June 1, we reached an important milestone in our transformation, what we call one FedEx.",
+      "verbatim": {
+        "text": "On June 1, we reached an important milestone in our transformation, what we call one FedEx.",
+        "segs": [
+          {
+            "t": "On June 1, we reached an important milestone in our transformation, what we call one FedEx.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q4/FedEx-FY24-Q4-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q4 FY24 Earnings Call Transcript – June 25, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q4/FedEx-FY24-Q4-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q4 FY24 Earnings Call Transcript – June 25, 2024",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P4-2024-12-19",
+      "promiseId": "P4",
+      "date": "2024-12-19",
+      "call": "FedEx Announces Intent to Separate FedEx Freight, Creating Two Industry-Leading Public Companies",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced a new publicly traded FedEx Freight company, with tax-efficient separation within the next 18 months.",
+      "quote": "The separation is expected to be achieved in a tax-efficient manner for FedEx stockholders and executed within the next 18 months.",
+      "verbatim": {
+        "text": "The separation is expected to be achieved in a tax-efficient manner for FedEx stockholders and executed within the next 18 months.",
+        "segs": [
+          {
+            "t": "The separation is expected to be achieved in a tax-efficient manner for FedEx stockholders and executed within the next 18 months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://newsroom.fedex.com/newsroom/global-english/fedex-announces-intent-to-separate-fedex-freight-creating-two-industry-leading-public-companies",
+          "title": "FedEx Announces Intent to Separate FedEx Freight, Creating Two Industry-Leading Public Companies",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://newsroom.fedex.com/newsroom/global-english/fedex-announces-intent-to-separate-fedex-freight-creating-two-industry-leading-public-companies",
+          "title": "FedEx Announces Intent to Separate FedEx Freight, Creating Two Industry-Leading Public Companies",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "FDX-P4-2025-03-20",
+      "promiseId": "P4",
+      "date": "2025-03-20",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "John W. Dietrich, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Project plans were in place; separation remained on the originally announced timetable.",
+      "quote": "We have project plans in place, and we're on track to meet the timelines that we discussed when we announced the separation.",
+      "verbatim": {
+        "text": "We have project plans in place, and we're on track to meet the timelines that we discussed when we announced the separation.",
+        "segs": [
+          {
+            "t": "We have project plans in place, and we're on track to meet the timelines that we discussed when we announced the separation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/FDX-Q3-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q3 FY25 Earnings Call Transcript – March 20, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/FDX-Q3-FY25-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q3 FY25 Earnings Call Transcript – March 20, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P4-2025-05-19",
+      "promiseId": "P4",
+      "date": "2025-05-19",
+      "call": "FedEx Announces Leadership for Independent FedEx Freight Company Upon Separation",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Separation remained on track, with completion expected by June 2026.",
+      "quote": "Plans for the spin-off, which is expected to occur by June 2026, remain on track.",
+      "verbatim": {
+        "text": "Plans for the spin-off, which is expected to occur by June 2026, remain on track.",
+        "segs": [
+          {
+            "t": "Plans for the spin-off, which is expected to occur by June ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", remain on track.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-announces-leadership-for-independent-fedex-freight-company-upon-separation",
+          "title": "FedEx Announces Leadership for Independent FedEx Freight Company Upon Separation",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-announces-leadership-for-independent-fedex-freight-company-upon-separation",
+          "title": "FedEx Announces Leadership for Independent FedEx Freight Company Upon Separation",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "FDX-P4-2025-06-24",
+      "promiseId": "P4",
+      "date": "2025-06-24",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "John W. Dietrich, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Continued separation preparations; expected the Freight spin-off in June of 2026.",
+      "quote": "Additionally, we'll continue to progress our Freight separation plans and expect to spin-off Freight in June of 2026.",
+      "verbatim": {
+        "text": "Additionally, we'll continue to progress our Freight separation plans and expect to spin-off Freight in June of 2026.",
+        "segs": [
+          {
+            "t": "Additionally, we'll continue to progress our Freight separation plans and expect to spin-off Freight in June of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FDX-Q4-FY25-Earnings-Call-Transcript_Final.pdf",
+          "title": "FDX-Q4-FY25-Earnings-Call-Transcript_Final",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FDX-Q4-FY25-Earnings-Call-Transcript_Final.pdf",
+          "title": "FDX-Q4-FY25-Earnings-Call-Transcript_Final",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P4-2025-09-18",
+      "promiseId": "P4",
+      "date": "2025-09-18",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "John W. Dietrich, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Freight separation was progressing well and remained on track for June 2026.",
+      "quote": "Before turning to Q&A, I want to provide an update on our spin-off of FedEx Freight, which is progressing well and on track for the June 2026 separation.",
+      "verbatim": {
+        "text": "Before turning to Q&A, I want to provide an update on our spin-off of FedEx Freight, which is progressing well and on track for the June 2026 separation.",
+        "segs": [
+          {
+            "t": "Before turning to Q&A, I want to provide an update on our spin-off of FedEx Freight, which is progressing well and on track for the June ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " separation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q1 FY26 Earnings Call Transcript – September 18, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf",
+          "title": "FedEx Q1 FY26 Earnings Call Transcript – September 18, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P4-2025-12-18",
+      "promiseId": "P4",
+      "date": "2025-12-18",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Spin-off into a separately listed public company remained on track for June 1, 2026.",
+      "quote": "We remain on track to spin off FedEx Freight on June 1, 2026, as a separately listed public company with the best value proposition in the industry.",
+      "verbatim": {
+        "text": "We remain on track to spin off FedEx Freight on June 1, 2026, as a separately listed public company with the best value proposition in the industry.",
+        "segs": [
+          {
+            "t": "We remain on track to spin off FedEx Freight on June 1, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", as a separately listed public company with the best value proposition in the industry.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/Earnings-Transcript-Q2FY26.pdf",
+          "title": "FedEx Q2 FY26 Earnings Call Transcript – December 18, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/Earnings-Transcript-Q2FY26.pdf",
+          "title": "FedEx Q2 FY26 Earnings Call Transcript – December 18, 2025",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P4-2026-03-19",
+      "promiseId": "P4",
+      "date": "2026-03-19",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "John W. Dietrich, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reconfirmed the planned June 1, 2026 spin-off remained on track.",
+      "quote": "Raj mentioned our planned June 1, 2026, spin off of FedEx Freight remains on track.",
+      "verbatim": {
+        "text": "Raj mentioned our planned June 1, 2026, spin off of FedEx Freight remains on track.",
+        "segs": [
+          {
+            "t": "Raj mentioned our planned June 1, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", spin off of FedEx Freight remains on track.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+          "title": "FedEx Q3 FY26 Earnings Call Transcript – March 19, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+          "title": "FedEx Q3 FY26 Earnings Call Transcript – March 19, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P4-2026-05-13",
+      "promiseId": "P4",
+      "date": "2026-05-13",
+      "call": "FedEx Board of Directors Approves Spin-off of FedEx Freight",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Board approved separation; FedEx Freight would trade as FDXF on June 1, 2026; FedEx would retain 19.9%.",
+      "quote": "Following the separation, FedEx Freight common stock will begin trading on the New York Stock Exchange (the “NYSE”) on June 1, 2026 under the symbol “FDXF.”",
+      "verbatim": {
+        "text": "Following the separation, FedEx Freight common stock will begin trading on the New York Stock Exchange (the “NYSE”) on June 1, 2026 under the symbol “FDXF.”",
+        "segs": [
+          {
+            "t": "Following the separation, FedEx Freight common stock will begin trading on the New York Stock Exchange (the “NYSE”) on June 1, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " under the symbol “FDXF.”",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Board-of-Directors-Approves-Spin-off-of-FedEx-Freight/default.aspx",
+          "title": "\n\tFedEx Board of Directors Approves Spin-off of FedEx Freight | FedEx\n",
+          "domain": "investors.fedex.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Board-of-Directors-Approves-Spin-off-of-FedEx-Freight/default.aspx",
+          "title": "\n\tFedEx Board of Directors Approves Spin-off of FedEx Freight | FedEx\n",
+          "domain": "investors.fedex.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "FDX-P4-2026-06-01",
+      "promiseId": "P4",
+      "date": "2026-06-01",
+      "call": "FedEx Completes Spin-Off of FedEx Freight",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Completed the spin-off, establishing an independent publicly traded FedEx Freight; FedEx retained 19.9%.",
+      "quote": "FedEx Corp. (NYSE: FDX, “FedEx”) today announced the completion of its spin-off of FedEx Freight Holding Company, Inc. (NYSE: FDXF, “FedEx Freight”), establishing FedEx Freight as an independent, publicly traded company and focused leader in the North American less-than-truckload (LTL) industry.",
+      "verbatim": {
+        "text": "MEMPHIS, Tenn. – June 1, 2026 – FedEx Corp. (NYSE: FDX, “FedEx”) today announced the completion of its spin-off of FedEx Freight Holding Company, Inc. (NYSE: FDXF, “FedEx Freight”), establishing FedEx Freight as an independent, publicly traded company and focused leader in the North American less-than-truckload (LTL) industry.",
+        "segs": [
+          {
+            "t": "MEMPHIS, Tenn. – June 1, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " – FedEx Corp. (NYSE: FDX, “FedEx”) today announced the completion of its spin-off of FedEx Freight Holding Company, Inc. (NYSE: FDXF, “FedEx Freight”), establishing FedEx Freight as an independent, publicly traded company and focused leader in the North American less-than-truckload (LTL) industry.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+          "title": "FedEx Completes Spin-Off of FedEx Freight",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+          "title": "FedEx Completes Spin-Off of FedEx Freight",
+          "domain": "newsroom.fedex.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "FDX-P4-2026-06-23",
+      "promiseId": "P4",
+      "date": "2026-06-23",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed the FedEx Freight spin-off was completed on June 1.",
+      "quote": "Additionally, we completed the spinoff of FedEx Freight on June 1, positioning both companies for success as separate, focused industry leaders.",
+      "verbatim": {
+        "text": "Additionally, we completed the spinoff of FedEx Freight on June 1, positioning both companies for success as separate, focused industry leaders.",
+        "segs": [
+          {
+            "t": "Additionally, we completed the spinoff of FedEx Freight on June 1, positioning both companies for success as separate, focused industry leaders.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+          "title": "FedEx Q4 FY26 Earnings Call Transcript – June 23, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+          "title": "FedEx Q4 FY26 Earnings Call Transcript – June 23, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P4-2026-10-28",
+      "promiseId": "P4",
+      "date": "2026-10-28",
+      "call": "Q3 CY2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reconfirmed completion on June 1, 2026 and retained 19.9% ownership.",
+      "quote": "FedEx completed the spin-off of FedEx Freight on June 1, 2026, retaining a 19.9% ownership interest in FedEx Freight.",
+      "verbatim": {
+        "text": "FedEx completed the spin-off of FedEx Freight on June 1, 2026, retaining a 19.9% ownership interest in FedEx Freight.",
+        "segs": [
+          {
+            "t": "FedEx completed the spin-off of FedEx Freight on June 1, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", retaining a ",
+            "h": 0
+          },
+          {
+            "t": "19.9%",
+            "h": 1
+          },
+          {
+            "t": " ownership interest in FedEx Freight.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000128/fdx-earningsreleasety2026q3.htm",
+          "title": "Fdx Earningsreleasety2026Q3",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000128/fdx-earningsreleasety2026q3.htm",
+          "title": "Fdx Earningsreleasety2026Q3",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/fedex-fdx-q3-2026-earnings-call-transcript",
+          "title": "FedEx (FDX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "FDX-P5-2026-02-12",
+      "promiseId": "P5",
+      "date": "2026-02-12",
+      "call": "2026 Investor Day",
+      "speaker": "Rajesh Subramaniam, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced $6 billion adjusted free cash flow in 2029 for FedEx Corporation, excluding Freight; the target uses the calendar year.",
+      "quote": "This higher profitability, as well as our continued focus on optimizing capital investments, is expected to generate $6 billion in adjusted free cash flow in 2029.",
+      "verbatim": {
+        "text": "This higher profitability, as well as our continued focus on optimizing capital investments, is expected to generate $6 billion in adjusted free cash flow in 2029.",
+        "segs": [
+          {
+            "t": "This higher profitability, as well as our continued focus on optimizing capital investments, is expected to generate ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " in adjusted free cash flow in ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/Earnings-Transcript-Investor-Day-2026.pdf",
+          "title": "FedEx Investor Day Transcript – February 12, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/Earnings-Transcript-Investor-Day-2026.pdf",
+          "title": "FedEx Investor Day Transcript – February 12, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "FDX-P5-2026-03-19",
+      "promiseId": "P5",
+      "date": "2026-03-19",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "John W. Dietrich, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported being well on the way toward $6 billion adjusted free cash flow in 2029 for FedEx Corp, excluding Freight.",
+      "quote": "The adjusted free cash flow potential of our business holds significant value, and we're well on our way and committed to achieving our $6 billion adjusted free cash flow target in 2029 for FedEx Corp, excluding Freight.",
+      "verbatim": {
+        "text": "The adjusted free cash flow potential of our business holds significant value, and we're well on our way and committed to achieving our $6 billion adjusted free cash flow target in 2029 for FedEx Corp, excluding Freight.",
+        "segs": [
+          {
+            "t": "The adjusted free cash flow potential of our business holds significant value, and we're well on our way and committed to achieving our ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " adjusted free cash flow target in ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": " for FedEx Corp, excluding Freight.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+          "title": "FedEx Q3 FY26 Earnings Call Transcript – March 19, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+          "title": "FedEx Q3 FY26 Earnings Call Transcript – March 19, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P5-2026-06-23",
+      "promiseId": "P5",
+      "date": "2026-06-23",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Claude F. Russ, Enterprise Vice President and Interim CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected robust CY 2026 free cash flow and reaffirmed $6 billion adjusted free cash flow in CY 2029.",
+      "quote": "We expect robust levels of free cash flow for CY 2026 and are fully committed to realizing our targeted $6 billion in adjusted free cash flow in CY 2029.",
+      "verbatim": {
+        "text": "We expect robust levels of free cash flow for CY 2026 and are fully committed to realizing our targeted $6 billion in adjusted free cash flow in CY 2029.",
+        "segs": [
+          {
+            "t": "We expect robust levels of free cash flow for CY ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and are fully committed to realizing our targeted ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " in adjusted free cash flow in CY ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+          "title": "FedEx Q4 FY26 Earnings Call Transcript – June 23, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+          "title": "FedEx Q4 FY26 Earnings Call Transcript – June 23, 2026",
+          "domain": "s21.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "FDX-P5-2026-10-28",
+      "promiseId": "P5",
+      "date": "2026-10-28",
+      "call": "Q3 CY2026 earnings call",
+      "speaker": "Claude Russ, Enterprise Vice President and Interim CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $6 billion adjusted free cash flow by the end of 2029, alongside prudent capital allocation.",
+      "quote": "With a $6 billion adjusted free cash flow target by the end of 2029, we will allocate capital prudently in support of value creation for our stockholders.",
+      "verbatim": {
+        "text": "With a $6 billion adjusted free cash flow target by the end of 2029, we will allocate capital prudently in support of value creation for our stockholders.",
+        "segs": [
+          {
+            "t": "With a ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " adjusted free cash flow target by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ", we will allocate capital prudently in support of value creation for our stockholders.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/fedex-fdx-q3-2026-earnings-call-transcript",
+          "title": "FedEx (FDX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.fedex.com/news-and-events/upcoming-events/upcoming-events-details/2026/FedEx-Earnings-Call/default.aspx",
+          "title": "\n\tFedEx Q3 CY26 Earnings Call | FedEx\n",
+          "domain": "investors.fedex.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/fedex-fdx-q3-2026-earnings-call-transcript",
+          "title": "FedEx (FDX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q4/Earnings-Transcript-Q4FY23.pdf",
+      "title": "FedEx Q4 FY23 Earnings Call Transcript – June 20, 2023",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 2,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q4/FedEx-FY24-Q4-Earnings-Call-Transcript.pdf",
+      "title": "FedEx Q4 FY24 Earnings Call Transcript – June 25, 2024",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 3,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q3/Earnings-Transcript-Q3FY26.pdf",
+      "title": "FedEx Q3 FY26 Earnings Call Transcript – March 19, 2026",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q4/Earnings-Transcript-Q4FY26.pdf",
+      "title": "FedEx Q4 FY26 Earnings Call Transcript – June 23, 2026",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q1/FDX-Earnings-Transcript-Q1FY24.pdf",
+      "title": "FedEx Q1 FY24 Earnings Call Transcript – September 20, 2023",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q2/Earnings-Transcript-Q2FY25.pdf",
+      "title": "FedEx Q2 FY25 Earnings Call Transcript – December 19, 2024",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P4"
+    },
+    {
+      "n": 7,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q4/FDX-Q4-FY25-Earnings-Call-Transcript_Final.pdf",
+      "title": "FDX-Q4-FY25-Earnings-Call-Transcript_Final",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P4"
+    },
+    {
+      "n": 8,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/28/fedex-fdx-q3-2026-earnings-call-transcript",
+      "title": "FedEx (FDX) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 9,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/12/19/fedex-fdx-q2-2024-earnings-call-transcript",
+      "title": "FedEx (FDX) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2023/04/DRIVE-Transcript-2023.pdf",
+      "title": "FedEx DRIVE Program Update Transcript – April 5, 2023",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 11,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_downloads/2026/03/Earnings-Transcript-Investor-Day-2026.pdf",
+      "title": "FedEx Investor Day Transcript – February 12, 2026",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 12,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q1/Earnings-Transcript-Q1FY23.pdf",
+      "title": "FedEx Q1 FY23 Earnings Call Transcript – September 22, 2022",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 13,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q2/Earnings-Transcript-Q2FY23.pdf?_sp=630837b0-53c5-4d47-bb1a-f8cb26f96830",
+      "title": "FedEx Q2 FY23 Earnings Call Transcript – December 20, 2022",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 14,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q3/Transcript-updated-April-4-2023.pdf",
+      "title": "FedEx Q3 FY23 Earnings Call Transcript – March 16, 2023 (updated April 4, 2023)",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 15,
+      "url": "https://investors.fedex.com/financial-information/quarterly-results/default.aspx",
+      "title": "\n\tQuarterly results | FedEx\n",
+      "domain": "investors.fedex.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 16,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q3/FDX-Q3FY24-Earnings-Transcript.pdf",
+      "title": "FedEx Q3 FY24 Earnings Call Transcript – March 21, 2024",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 17,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q1/FDX-Q1-FY25-Earnings-Call-Transcript.pdf",
+      "title": "FedEx Q1 FY25 Earnings Call Transcript – September 19, 2024",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 18,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/FDX-Q3-FY25-Earnings-Call-Transcript.pdf",
+      "title": "FedEx Q3 FY25 Earnings Call Transcript – March 20, 2025",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 19,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q1/FDX-Q1-FY26-Earnings-Call-Transcript.pdf",
+      "title": "FedEx Q1 FY26 Earnings Call Transcript – September 18, 2025",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 20,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2026/q2/Earnings-Transcript-Q2FY26.pdf",
+      "title": "FedEx Q2 FY26 Earnings Call Transcript – December 18, 2025",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 21,
+      "url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2025/FedEx-Reports-Fourth-Quarter-Diluted-EPS-of-6-88-and-Adjusted-Diluted-EPS-of-6-07/default.aspx",
+      "title": "\n\tFedEx Reports Fourth Quarter Diluted EPS of $6.88 and Adjusted Diluted EPS of $6.07 | FedEx\n",
+      "domain": "investors.fedex.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 22,
+      "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-announces-planned-consolidation-of-operating-companies",
+      "title": "FedEx announces planned consolidation of operating companies",
+      "domain": "newsroom.fedex.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 23,
+      "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-completes-spin-off-of-fedex-freight",
+      "title": "FedEx Completes Spin-Off of FedEx Freight",
+      "domain": "newsroom.fedex.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 24,
+      "url": "https://www.sec.gov/Archives/edgar/data/1048911/000104891126000128/fdx-earningsreleasety2026q3.htm",
+      "title": "Fdx Earningsreleasety2026Q3",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 25,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2023/q1/Earnings-Transcript-Q1FY23.pdf?_sp=d20654fa-2844-4c5e-8d2d-31252554b7a7",
+      "title": "FedEx Q1 FY23 Earnings Call Transcript – September 22, 2022",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2025/ar/Annual-Report.pdf",
+      "title": "FedEx Corp",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.sec.gov/Archives/edgar/data/1048911/000110465925079806/0001104659-25-079806-index.htm",
+      "title": "EDGAR Filing Documents for 0001104659-25-079806",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 28,
+      "url": "https://s21.q4cdn.com/665674268/files/doc_financials/2024/q3/Earnings-Transcript-Q3FY24.html",
+      "title": "Earnings Transcript Q3Fy24",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 29,
+      "url": "http://newsroom.fedex.com/newsroom/global-english/fedex-announces-intent-to-separate-fedex-freight-creating-two-industry-leading-public-companies",
+      "title": "FedEx Announces Intent to Separate FedEx Freight, Creating Two Industry-Leading Public Companies",
+      "domain": "newsroom.fedex.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 30,
+      "url": "http://s21.q4cdn.com/665674268/files/doc_financials/2025/q3/FDX-Q3-FY25-Earnings-Call-Transcript.pdf",
+      "title": "FedEx Q3 FY25 Earnings Call Transcript – March 20, 2025",
+      "domain": "s21.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 31,
+      "url": "https://newsroom.fedex.com/newsroom/global-english/fedex-announces-leadership-for-independent-fedex-freight-company-upon-separation",
+      "title": "FedEx Announces Leadership for Independent FedEx Freight Company Upon Separation",
+      "domain": "newsroom.fedex.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 32,
+      "url": "https://investors.fedex.com/news-and-events/investor-news/investor-news-details/2026/FedEx-Board-of-Directors-Approves-Spin-off-of-FedEx-Freight/default.aspx",
+      "title": "\n\tFedEx Board of Directors Approves Spin-off of FedEx Freight | FedEx\n",
+      "domain": "investors.fedex.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 33,
+      "url": "https://investors.fedex.com/news-and-events/upcoming-events/upcoming-events-details/2026/FedEx-Earnings-Call/default.aspx",
+      "title": "\n\tFedEx Q3 CY26 Earnings Call | FedEx\n",
+      "domain": "investors.fedex.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 34,
+      "url": "https://www.sec.gov/Archives/edgar/data/1048911/000095017024102826/fdx-20240903.htm",
+      "title": "8-K",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.125727Z",
+      "completedAt": "2026-11-05T06:29:31.730468Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:06.577562Z",
+      "completedAt": "2026-11-05T19:16:12.706341Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.014536Z",
+      "completedAt": "2026-11-05T19:17:19.478933Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.021479Z",
+      "completedAt": "2026-11-05T19:11:49.674701Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.028318Z",
+      "completedAt": "2026-11-05T19:14:37.130940Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.035079Z",
+      "completedAt": "2026-11-05T19:12:18.552014Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:19.831125Z",
+      "completedAt": "2026-11-05T19:48:27.522204Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:19.838244Z",
+      "completedAt": "2026-11-05T19:52:30.574985Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:19.845470Z",
+      "completedAt": "2026-11-05T19:45:48.331766Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:19.852720Z",
+      "completedAt": "2026-11-05T19:46:18.847946Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:19.859838Z",
+      "completedAt": "2026-11-05T19:47:52.288206Z"
+    }
+  ],
+  "fills": {
+    "filled": 2
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "54 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "52 of 52 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "52 of 52 (100%); 2 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 CY2026 on 2026-10-28; next 2027-02-02"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b9/FedEx_Corporation_-_2016_Logo.svg/3840px-FedEx_Corporation_-_2016_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:FedEx_Corporation_-_2016_Logo.svg",
+      "title": "File:FedEx Corporation - 2016 Logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 1408,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://fedex-dims.brightspotgocdn.com/dims4/default/e6255a0/2147483647/strip/true/crop/3837x2160+2+0/resize/1000x563!/quality/90/?url=https%3A%2F%2Ffedex-static.brightspotgocdn.com%2Fb6%2Ff1%2F0a975f9d48b2ae01b03ecc1e6b9c%2Fstill-3.jpg",
+      "sourcePageUrl": "https://newsroom.fedex.com/newsroom/global-english/fedex-unveils-new-automated-sorting-facility-at-memphis-world-hub",
+      "title": "FedEx Unveils New Automated Sorting Facility at Memphis World Hub",
+      "width": 1000,
+      "height": 563,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.241Z"
+}

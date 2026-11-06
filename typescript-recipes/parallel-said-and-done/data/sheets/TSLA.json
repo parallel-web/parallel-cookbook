@@ -1,0 +1,2261 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "TSLA",
+  "name": "Tesla, Inc.",
+  "short": "Tesla",
+  "website": "tesla.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://ir.tesla.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-21",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Tesla Cybercab Gigafactory Texas",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch more affordable models",
+      "commitment": "Accelerate new vehicles, including more affordable models, to early 2025, potentially late 2024, using existing production lines.",
+      "deadline": "early 2025, if not late 2024",
+      "firstStated": "2024-04-23",
+      "status": "delivered_late",
+      "k": "done",
+      "outcomeSummary": "Initial builds began in June; Model 3 and Model Y Standard launched in October, later than the original early 2025 target.",
+      "citations": [
+        {
+          "url": "https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf",
+          "title": "2025 Q2 Quarterly Update Deck",
+          "domain": "tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2025-Update.pdf",
+          "title": "2025 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/23/tesla-tsla-q1-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/161624-q1-2024/",
+          "title": "Tesla (TSLA) Q1 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-10-07",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered_late",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-04-22",
+            "what_was_said": "Lars Moravy cautioned that the ramp might be slower than initially hoped, while saying nothing blocked starting production within the announced timeline.",
+            "call": "Q1 2025 earnings call"
+          },
+          {
+            "date": "2025-07-23",
+            "what_was_said": "Management said lower-cost-model production had started as planned in the first half of 2025, but the following-quarter ramp would be slower than initially expected because of prioritizing deliveries before the EV tax credit expired and the complexity of ramping a new product.",
+            "call": "Q2 2025 earnings call"
+          },
+          {
+            "date": "2025-07-23",
+            "what_was_said": "Management said the more affordable models would be available for everyone in Q4, distinguishing June production start from broad customer availability.",
+            "call": "Q2 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Launch unsupervised Austin robotaxis",
+      "commitment": "Launch Unsupervised Full Self-Driving as a paid service in Austin in June 2025.",
+      "deadline": "June 2025",
+      "firstStated": "2025-01-29",
+      "status": "delivered_late",
+      "k": "done",
+      "outcomeSummary": "Paid Austin rides launched in June with a safety rider; customer rides without an onboard monitor began in January on a limited basis, after the promised deadline.",
+      "citations": [
+        {
+          "url": "https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf",
+          "title": "2025 Q2 Quarterly Update Deck",
+          "domain": "tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
+          "title": "2025 Q4 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/237608-q4-2024?from=muskwiki.com",
+          "title": "Tesla (TSLA) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-01-22",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered_late",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-01-29",
+            "what_was_said": "Musk explicitly described the June Austin launch as “unsupervised, no one in the car,” clarifying that an empty driver's seat alone would not satisfy the original commitment.",
+            "call": "Q4 2024 earnings call"
+          },
+          {
+            "date": "2025-07-23",
+            "what_was_said": "Musk reported the first Austin rides with paying customers and “no one in the driver's seat.” This described the paid-service milestone, not the removal of the passenger-seat safety rider.",
+            "call": "Q2 2025 earnings call"
+          },
+          {
+            "date": "2026-01-28",
+            "what_was_said": "Musk confirmed that the first Austin rides without an onboard safety monitor were paid rides, randomly selected from customer rides. Elluswamy separately said unsupervised service to public customers had started in the preceding couple of weeks.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Start million-unit Optimus production line",
+      "commitment": "Build a million-unit-per-year Optimus production line, hopefully starting production toward end-2026; reaching its annualized capacity would take longer.",
+      "deadline": "production start toward the end of 2026",
+      "firstStated": "2025-10-22",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Tesla reported early production on Fremont’s high-volume Optimus line; the planned million-unit annualized rate remained pending, with ramp-up expected to take at least a year.",
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+          "title": "2026 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/TSLA/earnings/TSLA-Q3-2026-earnings_call-712902.html?fr=sycsrp_catchall",
+          "title": "Tesla, Inc. (TSLA) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/366307-q3-2025/",
+          "title": "Tesla (TSLA) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/712902-q3-2026/",
+          "title": "Tesla (TSLA) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-10-21",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-22",
+            "what_was_said": "Management assumed Fremont Optimus production would start around late July or August, but said the 2026 production rate was impossible to predict.",
+            "call": "Q1 2026 earnings call"
+          },
+          {
+            "date": "2026-07-22",
+            "what_was_said": "Management expected Optimus production to start soon, but called it Tesla’s hardest manufacturing scale-up and warned that the initial production ramp would be quite flat and long because the robot’s parts were new.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-21",
+            "what_was_said": "Musk confirmed early production on Fremont’s high-volume line and said the vast majority of the million-unit production line had arrived. Reaching the million-unit annualized rate would probably take at least a year, possibly longer.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Start Cybercab production in April",
+      "commitment": "Start Cybercab production in April 2026, initially slowly before ramping.",
+      "deadline": "April 2026",
+      "firstStated": "2026-01-28",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Tesla reported Cybercab production had just started on April 22, 2026, meeting the April target; subsequent updates confirmed production at Gigafactory Texas.",
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2026-year/1-quarter",
+          "title": "Tesla, Inc. (TSLA) Q1 FY2026 Earnings Call Transcript - April 22, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.roic.ai/quote/TSLA.TO/transcripts/2025-year/4-quarter",
+          "title": "Tesla, Inc. (TSLA.TO) Q4 FY2025 Earnings Call Transcript - January 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+          "title": "Q2 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/393464-q4-2025/",
+          "title": "Tesla (TSLA) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/547944-q1-2026/",
+          "title": "Tesla (TSLA) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+          "title": "2026 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-04-22",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Build Austin research chip fab",
+      "commitment": "Build an Austin research chip fab, starting construction in 2026, estimated around $3 billion and capable of a few thousand wafers monthly.",
+      "deadline": "construction starts in 2026",
+      "firstStated": "2026-04-22",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Tesla broke ground in April, meeting the construction-start deadline; construction continued, with commissioning planned in 2027. Final cost and wafer capacity remained unverified.",
+      "citations": [
+        {
+          "url": "https://x.com/Tesla/status/2085365278276284803",
+          "title": "Tesla on X: \"Terafab will be built in Grimes County, Texas\n\nIn April, we broke ground on our research fab on the North Campus of Giga Texas – the precursor to Terafab.\n\nBoth Tesla &amp; SpaceX will need far more chips than current &amp; future global production can supply.\n\nThis is why we're buildi… / X",
+          "domain": "x.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+          "title": "2026 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2026-year/1-quarter",
+          "title": "Tesla, Inc. (TSLA) Q1 FY2026 Earnings Call Transcript - April 22, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/547944-q1-2026/",
+          "title": "Tesla (TSLA) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/712902-q3-2026/",
+          "title": "Tesla (TSLA) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-07-22",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-22",
+            "what_was_said": "Musk described the research fab as a roughly $3 billion initiative capable of maybe a few thousand wafers per month. These were estimates, not confirmed final cost or demonstrated production capacity.",
+            "call": "Q1 2026 earnings call"
+          },
+          {
+            "date": "2026-10-21",
+            "what_was_said": "Musk said the Austin research fab was progressing quickly, with machinery commissioning planned for the first half of 2027 and, if things went well, a first test chip around May or June 2027.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "TSLA-P1-2024-04-23",
+      "promiseId": "P1",
+      "date": "2024-04-23",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Accelerated new, more affordable models to early 2025, potentially late 2024, using existing production lines.",
+      "quote": "So, we expect it to be more like the early 2025, if not late this year.",
+      "verbatim": {
+        "text": "So, we expect it to be more like the early 2025, if not late this year.",
+        "segs": [
+          {
+            "t": "So, we expect it to be more like the early ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", if not late this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/23/tesla-tsla-q1-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/23/tesla-tsla-q1-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P1-2024-07-23",
+      "promiseId": "P1",
+      "date": "2024-07-23",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported a more affordable model on track for delivery in the first half of 2025.",
+      "quote": "But we are on track to deliver a more affordable model in the first half of next year.",
+      "verbatim": {
+        "text": "But we are on track to deliver a more affordable model in the first half of next year.",
+        "segs": [
+          {
+            "t": "But we are on track to deliver a more affordable model in the first half of next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/24/tesla-tsla-q2-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/24/tesla-tsla-q2-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.tesla.com",
+          "title": "Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P1-2024-10-23",
+      "promiseId": "P1",
+      "date": "2024-10-23",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Affordable models remained on track for delivery starting in the first half of 2025.",
+      "quote": "So, regarding the vehicle business, we are still on track to deliver our affordable models starting in the first half of 2025.",
+      "verbatim": {
+        "text": "So, regarding the vehicle business, we are still on track to deliver our affordable models starting in the first half of 2025.",
+        "segs": [
+          {
+            "t": "So, regarding the vehicle business, we are still on track to deliver our affordable models starting in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/23/tesla-tsla-q3-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/23/tesla-tsla-q3-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.tesla.com",
+          "title": "Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P1-2025-01-29",
+      "promiseId": "P1",
+      "date": "2025-01-29",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Vaibhav Taneja, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed a more affordable model launch in the first half of 2025, followed by further lineup expansion.",
+      "quote": "We are still on track to launch a more affordable model in the first half of 2025 and will continue to expand our lineup from there.",
+      "verbatim": {
+        "text": "We are still on track to launch a more affordable model in the first half of 2025 and will continue to expand our lineup from there.",
+        "segs": [
+          {
+            "t": "We are still on track to launch a more affordable model in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " and will continue to expand our lineup from there.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/29/tesla-tsla-q4-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/29/tesla-tsla-q4-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.tesla.com",
+          "title": "Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P1-2025-04-22",
+      "promiseId": "P1",
+      "date": "2025-04-22",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Vaibhav Taneja, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Production remained planned for June; management separately warned that the ramp could be slower than initially hoped.",
+      "quote": "The start of production is still planned for June.",
+      "verbatim": {
+        "text": "The start of production is still planned for June.",
+        "segs": [
+          {
+            "t": "The start of production is still planned for June.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.earningscall.ai/stock/transcript/TSLA-2025-Q1",
+          "title": "Tesla, Inc. Common Stock Q1 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.earningscall.ai/stock/transcript/TSLA-2025-Q1",
+          "title": "Tesla, Inc. Common Stock Q1 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.tesla.com",
+          "title": "Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P1-2025-07-23",
+      "promiseId": "P1",
+      "date": "2025-07-23",
+      "call": "Q2 2025 Update",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported first builds in June, with volume production planned for the second half of 2025.",
+      "quote": "We continue to expand our vehicle offering, including first builds of a more affordable model in June, with volume production planned for the second half of 2025.",
+      "verbatim": {
+        "text": "We continue to expand our vehicle offering, including first builds of a more affordable model in June, with volume production planned for the second half of 2025.",
+        "segs": [
+          {
+            "t": "We continue to expand our vehicle offering, including first builds of a more affordable model in June, with volume production planned for the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf",
+          "title": "2025 Q2 Quarterly Update Deck",
+          "domain": "tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf",
+          "title": "2025 Q2 Quarterly Update Deck",
+          "domain": "tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P1-2025-10-07",
+      "promiseId": "P1",
+      "date": "2025-10-07",
+      "call": "Tesla announcement on X: Model Y Standard and Model 3 Standard",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Tesla opened ordering for Model Y Standard and Model 3 Standard.",
+      "quote": "Design yours",
+      "verbatim": {
+        "text": "Design yours Model Y Standard → tesla.com/modely/design#… Model 3 Standard → tesla.com/model3/design#… 6:32 PM · Oct 7, 2025 · 310\\.2K Views",
+        "segs": [
+          {
+            "t": "Design yours Model Y Standard → tesla.com/modely/design#… Model 3 Standard → tesla.com/model3/design#… 6:32 PM · Oct 7, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " · 310\\.2K Views",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://x.com/Tesla/status/1975630396831506912",
+          "title": "Tesla on X: \"Design yours\n\nModel Y Standard → https://t.co/P3zFmSQN5u\n\nModel 3 Standard → https://t.co/zQNaXhNTAP\" / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://x.com/Tesla/status/1975630396831506912",
+          "title": "Tesla on X: \"Design yours\n\nModel Y Standard → https://t.co/P3zFmSQN5u\n\nModel 3 Standard → https://t.co/zQNaXhNTAP\" / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TSLA-P1-2025-10-22",
+      "promiseId": "P1",
+      "date": "2025-10-22",
+      "call": "Q3 2025 Update",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Launched Model 3 and Model Y Standard in October; over 300 miles of range; starting at $36,990 and $39,990, respectively.",
+      "quote": "In October, we launched the Model 3 and Model Y Standard, each with over 300 miles of range and starting at $36,990 and $39,990, respectively, making our products more accessible to customers in the wake of the expiration of the EV tax credit in the U.S.",
+      "verbatim": {
+        "text": "In October, we launched the Model 3 and Model Y Standard, each with over 300 miles of range and starting at $36,990 and $39,990, respectively, making our products more accessible to customers in the wake of the expiration of the EV tax credit in the U.S.",
+        "segs": [
+          {
+            "t": "In October, we launched the Model 3 and Model Y Standard, each with over 300 miles of range and starting at ",
+            "h": 0
+          },
+          {
+            "t": "$36,990",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "$39,990,",
+            "h": 1
+          },
+          {
+            "t": " respectively, making our products more accessible to customers in the wake of the expiration of the EV tax credit in the U.S.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2025-Update.pdf",
+          "title": "2025 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2025-Update.pdf",
+          "title": "2025 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P2-2025-01-29",
+      "promiseId": "P2",
+      "date": "2025-01-29",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Promised paid unsupervised Austin service in June, explicitly with no one in the car.",
+      "quote": "So, we're going to be launching unsupervised full self-driving as a paid service in Austin in June.",
+      "verbatim": {
+        "text": "So, we're going to be launching unsupervised full self-driving as a paid service in Austin in June.",
+        "segs": [
+          {
+            "t": "So, we're going to be launching unsupervised full self-driving as a paid service in Austin in June.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/29/tesla-tsla-q4-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/29/tesla-tsla-q4-2024-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.tesla.com/press-release/tesla-releases-fourth-quarter-and-full-year-2024-financial-results",
+          "title": "Tesla Releases Fourth Quarter and Full Year 2024 Financial Results | Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P2-2025-04-22",
+      "promiseId": "P2",
+      "date": "2025-04-22",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reaffirmed the June Austin launch and said paid fully autonomous rides remained on track.",
+      "quote": "The team and I are laser focused on bringing robotaxi to Austin in June.",
+      "verbatim": {
+        "text": "The team and I are laser focused on bringing robotaxi to Austin in June.",
+        "segs": [
+          {
+            "t": "The team and I are laser focused on bringing robotaxi to Austin in June.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.earningscall.ai/stock/transcript/TSLA-2025-Q1",
+          "title": "Tesla, Inc. Common Stock Q1 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.earningscall.ai/stock/transcript/TSLA-2025-Q1",
+          "title": "Tesla, Inc. Common Stock Q1 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.tesla.com/press-release/tesla-releases-first-quarter-2025-financial-results",
+          "title": "Tesla Releases First Quarter 2025 Financial Results | Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P2-2025-06-22",
+      "promiseId": "P2",
+      "date": "2025-06-22",
+      "call": "X post announcing the Austin Robotaxi paid-service launch",
+      "speaker": "Elon Musk, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced Austin paid-service launch at $4.20; did not establish removal of the onboard safety rider.",
+      "quote": "The @Tesla_AI robotaxi launch begins in Austin this afternoon with customers paying a $4.20 flat fee!",
+      "verbatim": {
+        "text": "The @Tesla\\AI robotaxi launch begins in Austin this afternoon with customers paying a $4.20 flat fee!",
+        "segs": [
+          {
+            "t": "The @Tesla\\AI robotaxi launch begins in Austin this afternoon with customers paying a ",
+            "h": 0
+          },
+          {
+            "t": "$4.20",
+            "h": 1
+          },
+          {
+            "t": " flat fee!",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://x.com/elonmusk/status/1936834688188129503",
+          "title": "Elon Musk on X: \"The @Tesla_AI robotaxi launch begins in Austin this afternoon with customers paying a $4.20 flat fee!\" / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://x.com/elonmusk/status/1936834688188129503",
+          "title": "Elon Musk on X: \"The @Tesla_AI robotaxi launch begins in Austin this afternoon with customers paying a $4.20 flat fee!\" / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TSLA-P2-2025-07-23",
+      "promiseId": "P2",
+      "date": "2025-07-23",
+      "call": "Q2 2025 Update",
+      "speaker": null,
+      "stance": "softened",
+      "k": "c",
+      "summary": "Disclosed that June launch used a safety rider; rider-free service was deferred to an unspecified “eventually.”",
+      "quote": "We will further improve and expand the service (more vehicles covering a larger area, eventually without a safety rider) while testing in other U.S. cities in anticipation of additional launches.",
+      "verbatim": {
+        "text": "We will further improve and expand the service (more vehicles covering a larger area, eventually without a safety rider) while testing in other U.S. cities in anticipation of additional launches.",
+        "segs": [
+          {
+            "t": "We will further improve and expand the service (more vehicles covering a larger area, eventually without a safety rider) while testing in other U.S. cities in anticipation of additional launches.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf",
+          "title": "2025 Q2 Quarterly Update Deck",
+          "domain": "tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf",
+          "title": "2025 Q2 Quarterly Update Deck",
+          "domain": "tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P2-2025-10-22",
+      "promiseId": "P2",
+      "date": "2025-10-22",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Targeted removal of safety drivers from at least large parts of Austin by year-end.",
+      "quote": "We are expecting to have no safety drivers in at least large parts of Austin by the end of this year.",
+      "verbatim": {
+        "text": "We are expecting to have no safety drivers in at least large parts of Austin by the end of this year.",
+        "segs": [
+          {
+            "t": "We are expecting to have no safety drivers in at least large parts of Austin by the end of this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2025-year/3-quarter",
+          "title": "Tesla, Inc. (TSLA) Q3 FY2025 Earnings Call Transcript - October 22, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2025-year/3-quarter",
+          "title": "Tesla, Inc. (TSLA) Q3 FY2025 Earnings Call Transcript - October 22, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P2-2025-12-09",
+      "promiseId": "P2",
+      "date": "2025-12-09",
+      "call": "xAI hackathon videoconference remarks reported December 9, 2025",
+      "speaker": "Elon Musk, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Forecast empty Austin robotaxis in about three weeks; the report did not specify the event date.",
+      "quote": "There will be Tesla Robotaxis operating in Austin with no one in them, not even anyone in the passenger seat, in about three weeks.",
+      "verbatim": {
+        "text": "There will be Tesla Robotaxis operating in Austin with no one in them, not even anyone in the passenger seat, in about three weeks.",
+        "segs": [
+          {
+            "t": "There will be Tesla Robotaxis operating in Austin with no one in them, not even anyone in the passenger seat, in about three weeks.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://electrek.co/2025/12/09/tesla-ceo-elon-musk-claims-driverless-robotaxis-coming-to-austin-in-3-weeks",
+          "title": "Tesla CEO Elon Musk claims driverless Robotaxis coming to Austin in 3 weeks",
+          "domain": "electrek.co",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://electrek.co/2025/12/09/tesla-ceo-elon-musk-claims-driverless-robotaxis-coming-to-austin-in-3-weeks",
+          "title": "Tesla CEO Elon Musk claims driverless Robotaxis coming to Austin in 3 weeks",
+          "domain": "electrek.co",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TSLA-P2-2025-12-14",
+      "promiseId": "P2",
+      "date": "2025-12-14",
+      "call": "X post confirming unoccupied Robotaxi testing",
+      "speaker": "Elon Musk, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported testing with no occupants, not a paid customer-service launch.",
+      "quote": "Testing is underway with no occupants in the car",
+      "verbatim": {
+        "text": "Testing is underway with no occupants in the car",
+        "segs": [
+          {
+            "t": "Testing is underway with no occupants in the car",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://x.com/elonmusk/status/2000302654837371181",
+          "title": "Elon Musk on X: \"@cb_doge Testing is underway with no occupants in the car\" / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://x.com/elonmusk/status/2000302654837371181",
+          "title": "Elon Musk on X: \"@cb_doge Testing is underway with no occupants in the car\" / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TSLA-P2-2026-01-22",
+      "promiseId": "P2",
+      "date": "2026-01-22",
+      "call": "X post announcing Austin Robotaxi drives without a safety monitor",
+      "speaker": "Elon Musk, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced Austin Robotaxi drives without an onboard safety monitor.",
+      "quote": "Just started Tesla Robotaxi drives in Austin with no safety monitor in the car.",
+      "verbatim": {
+        "text": "Just started Tesla Robotaxi drives in Austin with no safety monitor in the car.",
+        "segs": [
+          {
+            "t": "Just started Tesla Robotaxi drives in Austin with no safety monitor in the car.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://x.com/elonmusk/status/2014397578352226423",
+          "title": "Elon Musk on X: \"Just started Tesla Robotaxi drives in Austin with no safety monitor in the car.\n\nCongrats to the @Tesla_AI team!\n\nIf you’re interested in solving real-world AI, which is likely to lead to AGI imo, join Tesla AI. Solving real-world AI for Optimus will be 100X harder than cars.\" / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://x.com/elonmusk/status/2014397578352226423",
+          "title": "Elon Musk on X: \"Just started Tesla Robotaxi drives in Austin with no safety monitor in the car.\n\nCongrats to the @Tesla_AI team!\n\nIf you’re interested in solving real-world AI, which is likely to lead to AGI imo, join Tesla AI. Solving real-world AI for Optimus will be 100X harder than cars.\" / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TSLA-P2-2026-01-28",
+      "promiseId": "P2",
+      "date": "2026-01-28",
+      "call": "Q4 and FY 2025 Update",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported December driverless testing and January removal of safety monitors from customer rides on a limited basis.",
+      "quote": "We began testing driverless Robotaxis in Austin in December and began removing the safety monitor from customer rides in January on a limited basis, which will unlock further expansion of our Robotaxi fleet and coverage area in the Austin-metro.",
+      "verbatim": {
+        "text": "We began testing driverless Robotaxis in Austin in December and began removing the safety monitor from customer rides in January on a limited basis, which will unlock further expansion of our Robotaxi fleet and coverage area in the Austin-metro.",
+        "segs": [
+          {
+            "t": "We began testing driverless Robotaxis in Austin in December and began removing the safety monitor from customer rides in January on a limited basis, which will unlock further expansion of our Robotaxi fleet and coverage area in the Austin-metro.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
+          "title": "2025 Q4 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
+          "title": "2025 Q4 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P2-2026-07-22",
+      "promiseId": "P2",
+      "date": "2026-07-22",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Ashok Elluswamy, VP of AI",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Recalled first fully unsupervised Austin robotaxis around the end of last year, contrasting them with the initial passenger-seat safety monitors.",
+      "quote": "Around the end of last year, we had the first fully unsupervised Robotaxis in Austin.",
+      "verbatim": {
+        "text": "Around the end of last year, we had the first fully unsupervised Robotaxis in Austin.",
+        "segs": [
+          {
+            "t": "Around the end of last year, we had the first fully unsupervised Robotaxis in Austin.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/653184-q2-2026",
+          "title": "Tesla (TSLA) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/tsla/transcripts/653184-q2-2026",
+          "title": "Tesla (TSLA) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
+          "title": "2025 Q4 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P3-2025-10-22",
+      "promiseId": "P3",
+      "date": "2025-10-22",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Planned a million-unit Optimus line, hoping to start toward end-2026; reaching annualized capacity would take longer.",
+      "quote": "We're going to be building a million units Optimus production line, hopefully with the production start towards the end of next year.",
+      "verbatim": {
+        "text": "We're going to be building a million units Optimus production line, hopefully with the production start towards the end of next year.",
+        "segs": [
+          {
+            "t": "We're going to be building a million units Optimus production line, hopefully with the production start towards the end of next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2025-year/3-quarter",
+          "title": "Tesla, Inc. (TSLA) Q3 FY2025 Earnings Call Transcript - October 22, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2025-year/3-quarter",
+          "title": "Tesla, Inc. (TSLA) Q3 FY2025 Earnings Call Transcript - October 22, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/22/tesla-tsla-q3-2025-earnings-call-transcript?referring_guid=87af9b9c-a236-4641-81a4-4cff05511410",
+          "title": "Tesla (TSLA) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P3-2025-11-06",
+      "promiseId": "P3",
+      "date": "2025-11-06",
+      "call": "2025 Annual Shareholder Meeting",
+      "speaker": "Elon Musk, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Specified Fremont for the million-unit Optimus production line.",
+      "quote": "Um, and starting with building a million unit production line uh in in Fremont.",
+      "verbatim": {
+        "text": "Um, and starting with building a million unit production line uh in in Fremont.",
+        "segs": [
+          {
+            "t": "Um, and starting with building a million unit production line uh in in Fremont.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://youtubetotranscript.com/transcript?current_language_code=en&v=VGPlvmMjPtE",
+          "title": "Transcript of 2025 Annual Shareholder Meeting | Tesla - YouTubeToTranscript.com",
+          "domain": "youtubetotranscript.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://youtubetotranscript.com/transcript?current_language_code=en&v=VGPlvmMjPtE",
+          "title": "Transcript of 2025 Annual Shareholder Meeting | Tesla - YouTubeToTranscript.com",
+          "domain": "youtubetotranscript.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.tesla.com/2025shareholdermeeting",
+          "title": "2025 Shareholder Meeting | Tesla",
+          "domain": "tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TSLA-P3-2026-01-28",
+      "promiseId": "P3",
+      "date": "2026-01-28",
+      "call": "Q4 2025 Update",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Planned production before end of 2026, with eventual capacity of 1 million robots per year; preparations and supply-chain readiness underway.",
+      "quote": "Preparations are underway for the first production line, including supply chain readiness, with start of production planned before the end of 2026 and eventual planned capacity of 1 million robots per year.",
+      "verbatim": {
+        "text": "Preparations are underway for the first production line, including supply chain readiness, with start of production planned before the end of 2026 and eventual planned capacity of 1 million robots per year.",
+        "segs": [
+          {
+            "t": "Preparations are underway for the first production line, including supply chain readiness, with start of production planned before the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and eventual planned capacity of ",
+            "h": 0
+          },
+          {
+            "t": "1 million",
+            "h": 1
+          },
+          {
+            "t": " robots per year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
+          "title": "2025 Q4 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
+          "title": "2025 Q4 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.tesla.com",
+          "title": "Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P3-2026-04-22",
+      "promiseId": "P3",
+      "date": "2026-04-22",
+      "call": "Q1 2026 Update",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Preparations would begin in Q2; Fremont’s first-generation line remained designed for 1 million robots a year.",
+      "quote": "Preparations for our first large-scale Optimus factory will begin shortly in Q2.",
+      "verbatim": {
+        "text": "Preparations for our first large-scale Optimus factory will begin shortly in Q2.",
+        "segs": [
+          {
+            "t": "Preparations for our first large-scale Optimus factory will begin shortly in ",
+            "h": 0
+          },
+          {
+            "t": "Q2",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q1-2026-Update.pdf",
+          "title": "Q1 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q1-2026-Update.pdf",
+          "title": "Q1 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.tesla.com",
+          "title": "Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P3-2026-07-22",
+      "promiseId": "P3",
+      "date": "2026-07-22",
+      "call": "Q2 2026 Update",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Model S & X lines decommissioned; installing Optimus lines at Fremont, with production expected soon.",
+      "quote": "We have decommissioned the manufacturing lines for Models S & X at our Fremont Factory and are installing the first-generation lines for Optimus, where we expect to start production soon.",
+      "verbatim": {
+        "text": "We have decommissioned the manufacturing lines for Models S & X at our Fremont Factory and are installing the first-generation lines for Optimus, where we expect to start production soon.",
+        "segs": [
+          {
+            "t": "We have decommissioned the manufacturing lines for Models S & X at our Fremont Factory and are installing the first-generation lines for Optimus, where we expect to start production soon.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+          "title": "Q2 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+          "title": "Q2 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.tesla.com",
+          "title": "Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P3-2026-10-21",
+      "promiseId": "P3",
+      "date": "2026-10-21",
+      "call": "Q3 2026 Update",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported production began on Fremont’s high-volume lines; bots were the first production-quality units.",
+      "quote": "Optimus production began in Fremont on our high-volume lines.",
+      "verbatim": {
+        "text": "Optimus production began in Fremont on our high-volume lines.",
+        "segs": [
+          {
+            "t": "Optimus production began in Fremont on our high-volume lines.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+          "title": "2026 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+          "title": "2026 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.tesla.com/_flysystem/s3/sec/000162828026066738/tsla-20261021-gen.pdf",
+          "title": "Tesla, Inc. — FORM 8-K",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P4-2026-01-28",
+      "promiseId": "P4",
+      "date": "2026-01-28",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Cybercab production expected to start in April, initially slowly before ramping.",
+      "quote": "We expect to start production in April. As always, it's just an S curve of the production rate is an S curve, so it starts off very slowly and then grows exponentially, then you hit the linear, and then ultimately it asymptotes at whatever your target volume is.",
+      "verbatim": {
+        "text": "We expect to start production in April. As always, it's just an S curve of the production rate is an S curve, so it starts off very slowly and then grows exponentially, then you hit the linear, and then ultimately it asymptotes at whatever your target volume is.",
+        "segs": [
+          {
+            "t": "We expect to start production in April. As always, it's just an S curve of the production rate is an S curve, so it starts off very slowly and then grows exponentially, then you hit the linear, and then ultimately it asymptotes at whatever your target volume is.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/TSLA.TO/transcripts/2025-year/4-quarter",
+          "title": "Tesla, Inc. (TSLA.TO) Q4 FY2025 Earnings Call Transcript - January 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/TSLA.TO/transcripts/2025-year/4-quarter",
+          "title": "Tesla, Inc. (TSLA.TO) Q4 FY2025 Earnings Call Transcript - January 28, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P4-2026-04-22",
+      "promiseId": "P4",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Cybercab production had just started, with a very slow initial ramp expected.",
+      "quote": "We have just started production of Cybercab and will begin production of our Semi truck soon.",
+      "verbatim": {
+        "text": "We have just started production of Cybercab and will begin production of our Semi truck soon.",
+        "segs": [
+          {
+            "t": "We have just started production of Cybercab and will begin production of our Semi truck soon.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2026-year/1-quarter",
+          "title": "Tesla, Inc. (TSLA) Q1 FY2026 Earnings Call Transcript - April 22, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2026-year/1-quarter",
+          "title": "Tesla, Inc. (TSLA) Q1 FY2026 Earnings Call Transcript - April 22, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P4-2026-04-23",
+      "promiseId": "P4",
+      "date": "2026-04-23",
+      "call": "Cybercab production announcement on X (last edited April 23, 2026)",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Tesla announced Cybercab was in production at Giga Texas.",
+      "quote": "Cybercab in production now at Giga Texas",
+      "verbatim": {
+        "text": "Purpose-built for autonomy Cybercab in production now at Giga Texas",
+        "segs": [
+          {
+            "t": "Purpose-built for autonomy Cybercab in production now at Giga Texas",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://twitter.com/Tesla/status/2047382786986975610",
+          "title": "Tesla on X: \"Purpose-built for autonomy\n\nCybercab in production now at Giga Texas\" / X",
+          "domain": "twitter.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://twitter.com/Tesla/status/2047382786986975610",
+          "title": "Tesla on X: \"Purpose-built for autonomy\n\nCybercab in production now at Giga Texas\" / X",
+          "domain": "twitter.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "TSLA-P4-2026-07-22",
+      "promiseId": "P4",
+      "date": "2026-07-22",
+      "call": "Q2 2026 Update",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed Cybercab production had started at Gigafactory Texas.",
+      "quote": "We started production of Cybercab, our purpose-built autonomous EV designed to be the workhorse of our Robotaxi fleet.",
+      "verbatim": {
+        "text": "Robotaxi We started production of Cybercab, our purpose-built autonomous EV designed to be the workhorse of our Robotaxi fleet.",
+        "segs": [
+          {
+            "t": "Robotaxi We started production of Cybercab, our purpose-built autonomous EV designed to be the workhorse of our Robotaxi fleet.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+          "title": "Q2 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+          "title": "Q2 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.tesla.com",
+          "title": "Tesla Investor Relations",
+          "domain": "ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P4-2026-10-21",
+      "promiseId": "P4",
+      "date": "2026-10-21",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Lars Moravy, Vice President of Vehicle Engineering",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed Cybercab production in Texas, with output going to Tesla's internal Robotaxi fleet.",
+      "quote": "Obviously, we're producing them in our line in Texas, but all of those are currently going to our own internal Robotaxi fleet.",
+      "verbatim": {
+        "text": "Obviously, we're producing them in our line in Texas, but all of those are currently going to our own internal Robotaxi fleet.",
+        "segs": [
+          {
+            "t": "Obviously, we're producing them in our line in Texas, but all of those are currently going to our own internal Robotaxi fleet.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript",
+          "title": "Tesla (TSLA) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.commerce.senate.gov/wp-content/uploads/media/doc/2026.02.02%20Lars%20Moravy%20Written%20Testimony.pdf",
+          "title": "Hearing Before the U.S. Senate Committee on Commerce, Science, and Transportation Testimony of Lars Moravy Vice President of Vehicle Engineering,",
+          "domain": "commerce.senate.gov",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P5-2026-04-22",
+      "promiseId": "P5",
+      "date": "2026-04-22",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Elon Musk, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Construction starts in 2026; estimated $3 billion-ish, with maybe a few thousand wafers per month.",
+      "quote": "We've also finalized plans for the research chip fab on the Giga Texas campus, and we will start construction of that this year.",
+      "verbatim": {
+        "text": "We've also finalized plans for the research chip fab on the Giga Texas campus, and we will start construction of that this year.",
+        "segs": [
+          {
+            "t": "We've also finalized plans for the research chip fab on the Giga Texas campus, and we will start construction of that this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2026-year/1-quarter",
+          "title": "Tesla, Inc. (TSLA) Q1 FY2026 Earnings Call Transcript - April 22, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/TSLA/transcripts/2026-year/1-quarter",
+          "title": "Tesla, Inc. (TSLA) Q1 FY2026 Earnings Call Transcript - April 22, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TSLA-P5-2026-07-22",
+      "promiseId": "P5",
+      "date": "2026-07-22",
+      "call": "Q2 2026 Update",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Construction and equipment procurement were progressing, confirming the construction-start milestone, not completion of the fab.",
+      "quote": "We continue to make progress on construction and equipment procurement for our semiconductor fab in Austin.",
+      "verbatim": {
+        "text": "We continue to make progress on construction and equipment procurement for our semiconductor fab in Austin.",
+        "segs": [
+          {
+            "t": "We continue to make progress on construction and equipment procurement for our semiconductor fab in Austin.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+          "title": "Q2 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+          "title": "Q2 2026 Update",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "TSLA-P5-2026-08-06",
+      "promiseId": "P5",
+      "date": "2026-08-06",
+      "call": "Tesla official X post announcing Terafab location",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Tesla confirmed groundbreaking in April for the Giga Texas research fab, distinct from the larger Terafab.",
+      "quote": "In April, we broke ground on our research fab on the North Campus of Giga Texas – the precursor to Terafab.",
+      "verbatim": {
+        "text": "In April, we broke ground on our research fab on the North Campus of Giga Texas – the precursor to Terafab.",
+        "segs": [
+          {
+            "t": "In April, we broke ground on our research fab on the North Campus of Giga Texas – the precursor to Terafab.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://x.com/Tesla/status/2085365278276284803",
+          "title": "Tesla on X: \"Terafab will be built in Grimes County, Texas\n\nIn April, we broke ground on our research fab on the North Campus of Giga Texas – the precursor to Terafab.\n\nBoth Tesla &amp; SpaceX will need far more chips than current &amp; future global production can supply.\n\nThis is why we're buildi… / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://x.com/Tesla/status/2085365278276284803",
+          "title": "Tesla on X: \"Terafab will be built in Grimes County, Texas\n\nIn April, we broke ground on our research fab on the North Campus of Giga Texas – the precursor to Terafab.\n\nBoth Tesla &amp; SpaceX will need far more chips than current &amp; future global production can supply.\n\nThis is why we're buildi… / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TSLA-P5-2026-10-21",
+      "promiseId": "P5",
+      "date": "2026-10-21",
+      "call": "Q3 2026 Update",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Austin Fab construction continued; equipment commissioning was planned to start in 2027.",
+      "quote": "Additionally, we continued construction for the Austin Fab, where we plan to start commissioning equipment in 2027.",
+      "verbatim": {
+        "text": "Additionally, we continued construction for the Austin Fab, where we plan to start commissioning equipment in 2027.",
+        "segs": [
+          {
+            "t": "Additionally, we continued construction for the Austin Fab, where we plan to start commissioning equipment in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+          "title": "2026 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+          "title": "2026 Q3 Quarterly Update Deck",
+          "domain": "assets-ir.tesla.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://ir.tesla.com",
+      "title": "Tesla Investor Relations",
+      "domain": "ir.tesla.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2026-Update.pdf",
+      "title": "2026 Q3 Quarterly Update Deck",
+      "domain": "assets-ir.tesla.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q2-2026-Update.pdf",
+      "title": "Q2 2026 Update",
+      "domain": "assets-ir.tesla.com",
+      "tier": "primary",
+      "uses": "P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/28/tesla-tsla-q4-2025-earnings-call-transcript",
+      "title": "Tesla (TSLA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://www.tesla.com/sites/default/files/downloads/TSLA-Q2-2025-Update.pdf",
+      "title": "2025 Q2 Quarterly Update Deck",
+      "domain": "tesla.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 6,
+      "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q4-2025-Update.pdf",
+      "title": "2025 Q4 Quarterly Update Deck",
+      "domain": "assets-ir.tesla.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://www.roic.ai/quote/TSLA/transcripts/2026-year/1-quarter",
+      "title": "Tesla, Inc. (TSLA) Q1 FY2026 Earnings Call Transcript - April 22, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/29/tesla-tsla-q4-2024-earnings-call-transcript",
+      "title": "Tesla (TSLA) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 9,
+      "url": "https://www.roic.ai/quote/TSLA/transcripts/2025-year/3-quarter",
+      "title": "Tesla, Inc. (TSLA) Q3 FY2025 Earnings Call Transcript - October 22, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://stockanalysis.com/stocks/tsla/transcripts/712902-q3-2026/",
+      "title": "Tesla (TSLA) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 11,
+      "url": "https://stockanalysis.com/stocks/tsla/transcripts/547944-q1-2026/",
+      "title": "Tesla (TSLA) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 12,
+      "url": "https://www.earningscall.ai/stock/transcript/TSLA-2025-Q1",
+      "title": "Tesla, Inc. Common Stock Q1 2025 Earnings Call Transcript | Full Text",
+      "domain": "earningscall.ai",
+      "tier": "press",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 13,
+      "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q3-2025-Update.pdf",
+      "title": "2025 Q3 Quarterly Update Deck",
+      "domain": "assets-ir.tesla.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://ir.tesla.com/press-release/tesla-releases-fourth-quarter-and-full-year-2024-financial-results",
+      "title": "Tesla Releases Fourth Quarter and Full Year 2024 Financial Results | Tesla Investor Relations",
+      "domain": "ir.tesla.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://ir.tesla.com/press-release/tesla-releases-first-quarter-2025-financial-results",
+      "title": "Tesla Releases First Quarter 2025 Financial Results | Tesla Investor Relations",
+      "domain": "ir.tesla.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 16,
+      "url": "https://www.tesla.com/2025shareholdermeeting",
+      "title": "2025 Shareholder Meeting | Tesla",
+      "domain": "tesla.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://assets-ir.tesla.com/tesla-contents/IR/TSLA-Q1-2026-Update.pdf",
+      "title": "Q1 2026 Update",
+      "domain": "assets-ir.tesla.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://ir.tesla.com/_flysystem/s3/sec/000162828026066738/tsla-20261021-gen.pdf",
+      "title": "Tesla, Inc. — FORM 8-K",
+      "domain": "ir.tesla.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 19,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/04/23/tesla-tsla-q1-2024-earnings-call-transcript",
+      "title": "Tesla (TSLA) Q1 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://www.roic.ai/quote/TSLA.TO/transcripts/2025-year/4-quarter",
+      "title": "Tesla, Inc. (TSLA.TO) Q4 FY2025 Earnings Call Transcript - January 28, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 21,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/07/24/tesla-tsla-q2-2024-earnings-call-transcript",
+      "title": "Tesla (TSLA) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 22,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/10/23/tesla-tsla-q3-2024-earnings-call-transcript",
+      "title": "Tesla (TSLA) Q3 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 23,
+      "url": "https://stockanalysis.com/stocks/tsla/transcripts/653184-q2-2026",
+      "title": "Tesla (TSLA) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 24,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/10/22/tesla-tsla-q3-2025-earnings-call-transcript?referring_guid=87af9b9c-a236-4641-81a4-4cff05511410",
+      "title": "Tesla (TSLA) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 25,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/tesla-tsla-q3-2026-earnings-call-transcript",
+      "title": "Tesla (TSLA) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 26,
+      "url": "https://stockanalysis.com/stocks/tsla/transcripts/161624-q1-2024/",
+      "title": "Tesla (TSLA) Q1 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://stockanalysis.com/stocks/tsla/transcripts/237608-q4-2024?from=muskwiki.com",
+      "title": "Tesla (TSLA) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 28,
+      "url": "https://finance.yahoo.com/quote/TSLA/earnings/TSLA-Q3-2026-earnings_call-712902.html?fr=sycsrp_catchall",
+      "title": "Tesla, Inc. (TSLA) Q3 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 29,
+      "url": "https://stockanalysis.com/stocks/tsla/transcripts/366307-q3-2025/",
+      "title": "Tesla (TSLA) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 30,
+      "url": "https://stockanalysis.com/stocks/tsla/transcripts/393464-q4-2025/",
+      "title": "Tesla (TSLA) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 31,
+      "url": "https://x.com/Tesla/status/2085365278276284803",
+      "title": "Tesla on X: \"Terafab will be built in Grimes County, Texas\n\nIn April, we broke ground on our research fab on the North Campus of Giga Texas – the precursor to Terafab.\n\nBoth Tesla &amp; SpaceX will need far more chips than current &amp; future global production can supply.\n\nThis is why we're buildi… / X",
+      "domain": "x.com",
+      "tier": "press",
+      "uses": "P5"
+    },
+    {
+      "n": 32,
+      "url": "https://x.com/Tesla/status/1975630396831506912",
+      "title": "Tesla on X: \"Design yours\n\nModel Y Standard → https://t.co/P3zFmSQN5u\n\nModel 3 Standard → https://t.co/zQNaXhNTAP\" / X",
+      "domain": "x.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 33,
+      "url": "https://x.com/elonmusk/status/1936834688188129503",
+      "title": "Elon Musk on X: \"The @Tesla_AI robotaxi launch begins in Austin this afternoon with customers paying a $4.20 flat fee!\" / X",
+      "domain": "x.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 34,
+      "url": "https://electrek.co/2025/12/09/tesla-ceo-elon-musk-claims-driverless-robotaxis-coming-to-austin-in-3-weeks",
+      "title": "Tesla CEO Elon Musk claims driverless Robotaxis coming to Austin in 3 weeks",
+      "domain": "electrek.co",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 35,
+      "url": "https://x.com/elonmusk/status/2000302654837371181",
+      "title": "Elon Musk on X: \"@cb_doge Testing is underway with no occupants in the car\" / X",
+      "domain": "x.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 36,
+      "url": "https://x.com/elonmusk/status/2014397578352226423",
+      "title": "Elon Musk on X: \"Just started Tesla Robotaxi drives in Austin with no safety monitor in the car.\n\nCongrats to the @Tesla_AI team!\n\nIf you’re interested in solving real-world AI, which is likely to lead to AGI imo, join Tesla AI. Solving real-world AI for Optimus will be 100X harder than cars.\" / X",
+      "domain": "x.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 37,
+      "url": "https://youtubetotranscript.com/transcript?current_language_code=en&v=VGPlvmMjPtE",
+      "title": "Transcript of 2025 Annual Shareholder Meeting | Tesla - YouTubeToTranscript.com",
+      "domain": "youtubetotranscript.com",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 38,
+      "url": "https://twitter.com/Tesla/status/2047382786986975610",
+      "title": "Tesla on X: \"Purpose-built for autonomy\n\nCybercab in production now at Giga Texas\" / X",
+      "domain": "twitter.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 39,
+      "url": "https://www.commerce.senate.gov/wp-content/uploads/media/doc/2026.02.02%20Lars%20Moravy%20Written%20Testimony.pdf",
+      "title": "Hearing Before the U.S. Senate Committee on Commerce, Science, and Transportation Testimony of Lars Moravy Vice President of Vehicle Engineering,",
+      "domain": "commerce.senate.gov",
+      "tier": "press",
+      "uses": "P4"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T05:51:03.415290Z",
+      "completedAt": "2026-11-05T05:59:51.944396Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.749082Z",
+      "completedAt": "2026-11-05T19:15:33.941507Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.755852Z",
+      "completedAt": "2026-11-05T19:13:11.284212Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.762751Z",
+      "completedAt": "2026-11-05T19:12:19.348306Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@2",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-06T04:55:46.525578Z",
+      "completedAt": "2026-11-06T05:01:48.741684Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@2",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-06T04:55:46.852655Z",
+      "completedAt": "2026-11-06T05:03:35.016845Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.540729Z",
+      "completedAt": "2026-11-05T19:45:05.711197Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.547960Z",
+      "completedAt": "2026-11-05T19:44:25.787027Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.556513Z",
+      "completedAt": "2026-11-05T19:44:06.468015Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@3",
+      "processor": "ultra",
+      "createdAt": "2026-11-06T05:03:36.101156Z",
+      "completedAt": "2026-11-06T05:08:29.054033Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@3",
+      "processor": "ultra",
+      "createdAt": "2026-11-06T05:03:36.408226Z",
+      "completedAt": "2026-11-06T05:09:19.767562Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "33 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "33 of 33 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "33 of 33 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-21; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Tesla_logo.png",
+      "title": "File:Tesla logo.png - Wikimedia Commons",
+      "width": 2500,
+      "height": 2500,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Gigafactory_Texas_Building_1_June_2022.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/Gigafactory_Texas",
+      "title": "Gigafactory Texas - Wikipedia",
+      "width": 2673,
+      "height": 1503,
+      "rank": 1
+    }
+  },
+  "version": 3,
+  "builtAt": "2026-11-06T05:09:21.245Z"
+}

@@ -1,0 +1,2503 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "AMD",
+  "name": "Advanced Micro Devices, Inc.",
+  "short": "AMD",
+  "website": "amd.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Last Saturday in December",
+  "irUrl": "https://ir.amd.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-11-03",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "AMD Helios rack-scale AI system",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch Venice EPYC processors",
+      "commitment": "Launch next-generation Venice EPYC processors in 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-04-14",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "AMD launched 6th Gen EPYC CPUs at Advancing AI 2026; Venice revenue shipments began in the third quarter, while first OEM availability remained forthcoming.",
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+          "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_f54fb729fac473f1298badcbe60a65e0/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD First Quarter 2026 Earnings Conference Call Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_7b2f18b007009eb1081213779b888cdd/amd/db/841/9160/webcast_transcript/AMD+Q1+2025+Earnings+Call.pdf",
+          "title": "AMD Q1 2025 Earnings Call ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-07-23",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-02-03",
+            "what_was_said": "Lisa Su explicitly placed the Venice launch in the second half of 2026. This supplied a more precise launch window than S4's performance-focused quotation, without delaying the original 2026 commitment.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Launch Helios rack-scale AI systems",
+      "commitment": "Launch the MI400-based Helios rack-scale AI platform in 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-08-05",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Helios launched at Advancing AI 2026; AMD subsequently confirmed volume MI455X shipments and lead customers’ first Helios racks online.",
+      "citations": [
+        {
+          "url": "https://newsroom.amd.com/news/aai-2026-helios-update/",
+          "title": "AAI 2026: AMD Launches AMD Helios Rackscale Solution for Frontier AI - AMD Newsroom",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_efd391a7bede9f845b55e73306ea4011/amd/db/841/9167/webcast_transcript/amd2q2025.pdf",
+          "title": "AMD Fiscal Second Quarter 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-07-23",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Deploy six gigawatts with OpenAI",
+      "commitment": "Deploy 6 gigawatts of Instinct GPUs with OpenAI; start bringing the first gigawatt of MI450 accelerators online in the second half of 2026.",
+      "deadline": "First gigawatt starts coming online in second half of 2026; full deployment is multiyear",
+      "firstStated": "2025-10-06",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "OpenAI was running workloads on its first Helios systems powered by MI450 Series GPUs; the multiyear 6-gigawatt rollout remained pending.",
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results",
+          "title": "AMD Reports Third Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+          "title": "AMD and OpenAI Announce Strategic Partnership to Deploy 6 Gigawatts of AMD GPUs :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://newsroom.amd.com/news/aai-2026-openai-update",
+          "title": "AMD and OpenAI: Collaborating Across Every Layer of the Stack - AMD Newsroom",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/11/04/amd-amd-q3-2026-earnings-call-transcript",
+          "title": "AMD (AMD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+          "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-08-04",
+            "what_was_said": "Discussing the multigeneration gigawatt-scale deployments with OpenAI and Meta, management said Helios was now in production, with initial shipments on track to begin later in Q3 and ramp through Q4 and into 2027. This clarified the production and shipment milestones behind the rollout.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-11-03",
+            "what_was_said": "AMD said it started shipping MI455X in volume during Q3 and that lead customers, explicitly including OpenAI, brought their first Helios racks online. Management expected Helios deployments to increase substantially in Q4 as production and partner shipments ramped. This confirmed initial deployment, not completion of OpenAI's full six-gigawatt commitment.",
+            "call": "Q3 2026 earnings call — prepared remarks"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Launch MI500 in 2027",
+      "commitment": "Launch the next-generation MI500 Instinct GPU series in 2027.",
+      "deadline": "2027",
+      "firstStated": "2025-11-11",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "MI500 remains planned for 2027. AMD’s latest update reported customer-engagement progress and optimization work with frontier labs; no completed launch was reported.",
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+          "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_3ec85d8ec6db18d4cf4c06efc11ab71a/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Achieve long-term financial model",
+      "commitment": "Grow revenue at >35% CAGR over three to five years and generate annual EPS >$20 within the strategic timeframe.",
+      "deadline": "Next three to five years; EPS within the strategic timeframe",
+      "firstStated": "2025-11-11",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Targets remain pending after stronger revenue and EPS expectations; more than 80% revenue growth in 2027 is an outlook, not delivery.",
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_3ec85d8ec6db18d4cf4c06efc11ab71a/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-02-03",
+            "what_was_said": "Management explicitly reaffirmed the targets: greater than 35% revenue CAGR over the next three to five years and annual EPS above $20 within the strategic timeframe. This directly addresses the tracked promise, unlike the cited OpEx comment.",
+            "call": "Q4 and Full Year 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "AMD-P1-2025-04-14",
+      "promiseId": "P1",
+      "date": "2025-04-14",
+      "call": "AMD Achieves First TSMC N2 Product Silicon Milestone",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Venice was on track to launch next year.",
+      "quote": "It also marks a major step forward in the execution of the AMD data center CPU roadmap, with “Venice” on track to launch next year.",
+      "verbatim": {
+        "text": "It also marks a major step forward in the execution of the AMD data center CPU roadmap, with “Venice” on track to launch next year.",
+        "segs": [
+          {
+            "t": "It also marks a major step forward in the execution of the AMD data center CPU roadmap, with “Venice” on track to launch next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1245/amd-achieves-first-tsmc-n2-product-silicon-milestone",
+          "title": "AMD Achieves First TSMC N2 Product Silicon Milestone :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1245/amd-achieves-first-tsmc-n2-product-silicon-milestone",
+          "title": "AMD Achieves First TSMC N2 Product Silicon Milestone :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P1-2025-05-06",
+      "promiseId": "P1",
+      "date": "2025-05-06",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Silicon bring-up and validation progressed to plan for a 2026 launch.",
+      "quote": "Venice silicon is in our labs and performing well with bring up and validation progressing to plan to support a 2026 launch.",
+      "verbatim": {
+        "text": "Venice silicon is in our labs and performing well with bring up and validation progressing to plan to support a 2026 launch.",
+        "segs": [
+          {
+            "t": "Venice silicon is in our labs and performing well with bring up and validation progressing to plan to support a ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " launch.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9160/webcast_transcript/AMD+Q1+2025+Earnings+Call.pdf",
+          "title": "AMD Q1 2025 Earnings Call ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9160/webcast_transcript/AMD+Q1+2025+Earnings+Call.pdf",
+          "title": "AMD Q1 2025 Earnings Call ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1247/amd-reports-first-quarter-2025-financial-results",
+          "title": "AMD Reports First Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P1-2025-08-05",
+      "promiseId": "P1",
+      "date": "2025-08-05",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending Venice launch commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_e6edf641c7ffa7b7fdffcfa3fac0e4e6/amd/db/841/9167/webcast_transcript/amd2q2025.pdf",
+          "title": "AMD Fiscal Second Quarter 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1257/amd-reports-second-quarter-2025-financial-results",
+          "title": "AMD Reports Second Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P1-2025-11-04",
+      "promiseId": "P1",
+      "date": "2025-11-04",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Next-generation 2 nanometer Venice processors remained on track to launch in 2026.",
+      "quote": "Looking ahead, we remain on track to launch our next generation 2 nanometer Venice processors in 2026.",
+      "verbatim": {
+        "text": "Looking ahead, we remain on track to launch our next generation 2 nanometer Venice processors in 2026.",
+        "segs": [
+          {
+            "t": "Looking ahead, we remain on track to launch our next generation 2 nanometer Venice processors in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+          "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+          "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1265/amd-reports-third-quarter-2025-financial-results",
+          "title": "AMD Reports Third Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P1-2026-02-03",
+      "promiseId": "P1",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Venice launch reaffirmed for the second half of 2026.",
+      "quote": "Our next generation Venice CPU extends our leadership across each of these metrics.",
+      "verbatim": {
+        "text": "Our next generation Venice CPU extends our leadership across each of these metrics.",
+        "segs": [
+          {
+            "t": "Our next generation Venice CPU extends our leadership across each of these metrics.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results",
+          "title": "AMD Reports Fourth Quarter and Full Year 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P1-2026-05-05",
+      "promiseId": "P1",
+      "date": "2026-05-05",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Strong customer validation supported an on-track Venice launch later this year.",
+      "quote": "Customer demand is very strong, with more customers validating and ramping platforms at this stage than with any prior EPYC generation, and we remain on track to launch Venice later this year.",
+      "verbatim": {
+        "text": "Customer demand is very strong, with more customers validating and ramping platforms at this stage than with any prior EPYC generation, and we remain on track to launch Venice later this year.",
+        "segs": [
+          {
+            "t": "Customer demand is very strong, with more customers validating and ramping platforms at this stage than with any prior EPYC generation, and we remain on track to launch Venice later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_f54fb729fac473f1298badcbe60a65e0/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD First Quarter 2026 Earnings Conference Call Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_f54fb729fac473f1298badcbe60a65e0/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD First Quarter 2026 Earnings Conference Call Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results",
+          "title": "AMD Reports First Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P1-2026-05-21",
+      "promiseId": "P1",
+      "date": "2026-05-21",
+      "call": "AMD Announces Production Ramp of Next-Generation AMD EPYC Processor “Venice” on TSMC 2nm Process Technology",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Production ramp began for 6th Gen EPYC Venice CPUs on 2nm technology.",
+      "quote": "AMD has begun production ramp of its 6th Gen AMD EPYC™ CPUs, codenamed “Venice,” marking a major milestone for the AMD and TSMC collaboration on 2nm technology",
+      "verbatim": {
+        "text": "AMD has begun production ramp of its 6th Gen AMD EPYC™ CPUs, codenamed “Venice,” marking a major milestone for the AMD and TSMC collaboration on 2nm technology",
+        "segs": [
+          {
+            "t": "AMD has begun production ramp of its 6th Gen AMD EPYC™ CPUs, codenamed “Venice,” marking a major milestone for the AMD and TSMC collaboration on 2nm technology",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1287/amd-announces-production-ramp-of-next-generation-amd-epyc-processor-venice-on-tsmc-2nm-process-technology",
+          "title": "AMD Announces Production Ramp of Next-Generation AMD EPYC Processor “Venice” on TSMC 2nm Process Technology :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1287/amd-announces-production-ramp-of-next-generation-amd-epyc-processor-venice-on-tsmc-2nm-process-technology",
+          "title": "AMD Announces Production Ramp of Next-Generation AMD EPYC Processor “Venice” on TSMC 2nm Process Technology :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P1-2026-07-23",
+      "promiseId": "P1",
+      "date": "2026-07-23",
+      "call": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "AMD launched 6th Gen EPYC CPUs at Advancing AI 2026.",
+      "quote": "At Advancing AI 2026, AMD launches 6th Gen AMD EPYC™ CPUs, AMD Instinct™ MI400 Series GPUs, AMD Helios™ AI rackscale solutions, AMD Ryzen™ AI Embedded X100 processors and the AMD Kria™ AI SOM and Robotics Developer Platform.",
+      "verbatim": {
+        "text": "At Advancing AI 2026, AMD launches 6th Gen AMD EPYC™ CPUs, AMD Instinct™ MI400 Series GPUs, AMD Helios™ AI rackscale solutions, AMD Ryzen™ AI Embedded X100 processors and the AMD Kria™ AI SOM and Robotics Developer Platform.",
+        "segs": [
+          {
+            "t": "At Advancing AI ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", AMD launches 6th Gen AMD EPYC™ CPUs, AMD Instinct™ MI400 Series GPUs, AMD Helios™ AI rackscale solutions, AMD Ryzen™ AI Embedded X100 processors and the AMD Kria™ AI SOM and Robotics Developer Platform.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+          "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+          "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_f54fb729fac473f1298badcbe60a65e0/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD First Quarter 2026 Earnings Conference Call Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P1-2026-08-04",
+      "promiseId": "P1",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Venice was in production; OEM platforms remained on track, with provider deployments beginning later this year.",
+      "quote": "Venice is in production now, with every major OEM on track to launch platforms and the leading providers planning deployments beginning later this year.",
+      "verbatim": {
+        "text": "Venice is in production now, with every major OEM on track to launch platforms and the leading providers planning deployments beginning later this year.",
+        "segs": [
+          {
+            "t": "Venice is in production now, with every major OEM on track to launch platforms and the leading providers planning deployments beginning later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+          "title": "AMD Reports Second Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P1-2026-11-03",
+      "promiseId": "P1",
+      "date": "2026-11-03",
+      "call": "Q3 2026 earnings prepared remarks",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Venice revenue shipments began in the third quarter; first OEM systems were on track for availability this quarter.",
+      "quote": "We began revenue shipments of EPYC “Venice” processors in the third quarter, and the first OEM systems are on track for availability this quarter.",
+      "verbatim": {
+        "text": "We began revenue shipments of EPYC “Venice” processors in the third quarter, and the first OEM systems are on track for availability this quarter.",
+        "segs": [
+          {
+            "t": "We began revenue shipments of EPYC “Venice” processors in the third quarter, and the first OEM systems are on track for availability this quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMD-P2-2025-08-05",
+      "promiseId": "P2",
+      "date": "2025-08-05",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "MI400 development progressing toward planned 2026 launch of the Helios rack-scale platform.",
+      "quote": "MI400 series development is progressing well towards our planned launch in 2026, with significant interest in large-scale deployments from multiple high-profile customers.",
+      "verbatim": {
+        "text": "MI400 series development is progressing well towards our planned launch in 2026, with significant interest in large-scale deployments from multiple high-profile customers.",
+        "segs": [
+          {
+            "t": "MI400 series development is progressing well towards our planned launch in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", with significant interest in large-scale deployments from multiple high-profile customers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_efd391a7bede9f845b55e73306ea4011/amd/db/841/9167/webcast_transcript/amd2q2025.pdf",
+          "title": "AMD Fiscal Second Quarter 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_efd391a7bede9f845b55e73306ea4011/amd/db/841/9167/webcast_transcript/amd2q2025.pdf",
+          "title": "AMD Fiscal Second Quarter 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1257/amd-reports-second-quarter-2025-financial-results?utm_source=chatgpt.com",
+          "title": "AMD Reports Second Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P2-2025-11-04",
+      "promiseId": "P2",
+      "date": "2025-11-04",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "MI450 scheduled online in the second half of 2026, with a sharper data center AI ramp.",
+      "quote": "And then as we mentioned, MI450 series comes online in the second half of 2026, and we would expect a sharper ramp as we go into the second half of 2026 of our data center AI business.",
+      "verbatim": {
+        "text": "And then as we mentioned, MI450 series comes online in the second half of 2026, and we would expect a sharper ramp as we go into the second half of 2026 of our data center AI business.",
+        "segs": [
+          {
+            "t": "And then as we mentioned, MI450 series comes online in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", and we would expect a sharper ramp as we go into the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " of our data center AI business.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_82da185eb8870b28402c23771517b33c/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+          "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_82da185eb8870b28402c23771517b33c/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+          "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P2-2025-11-11",
+      "promiseId": "P2",
+      "date": "2025-11-11",
+      "call": "2025 Financial Analyst Day strategy press release",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Helios with MI450 expected beginning third quarter of 2026; MI500 planned for 2027.",
+      "quote": "The upcoming “Helios” systems with AMD Instinct MI450 Series GPUs are expected to deliver rack-scale performance leadership with industry leading memory capacity and scale-out bandwidth ¹ beginning in the third quarter of 2026, followed by the MI500 Series, further extending AMD’s AI performance roadmap with a planned launch in 2027.",
+      "verbatim": {
+        "text": "The upcoming “Helios” systems with AMD Instinct MI450 Series GPUs are expected to deliver rack-scale performance leadership with industry leading memory capacity and scale-out bandwidth ¹ beginning in the third quarter of 2026, followed by the MI500 Series, further extending AMD’s AI performance roadmap with a planned launch in 2027.",
+        "segs": [
+          {
+            "t": "The upcoming “Helios” systems with AMD Instinct MI450 Series GPUs are expected to deliver rack-scale performance leadership with industry leading memory capacity and scale-out bandwidth ¹ beginning in the third quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", followed by the MI500 Series, further extending AMD’s AI performance roadmap with a planned launch in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+          "title": "AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+          "title": "AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P2-2026-02-03",
+      "promiseId": "P2",
+      "date": "2026-02-03",
+      "call": "Q4 and Full Year 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Second-half launch and beginning of production remained on track.",
+      "quote": "We're right on track for a second half launch and beginning of production.",
+      "verbatim": {
+        "text": "We're right on track for a second half launch and beginning of production.",
+        "segs": [
+          {
+            "t": "We're right on track for a second half launch and beginning of production.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_20cb783ee999b1d31638bc4bf89a3869/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_20cb783ee999b1d31638bc4bf89a3869/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/ir-calendar/detail/20260203-amd-fiscal-fourth-quarter-and-full-year-2025-financial-results",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P2-2026-05-05",
+      "promiseId": "P2",
+      "date": "2026-05-05",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "MI450 sampling began; Helios production shipments remained on track for the second half of the year.",
+      "quote": "We have begun sampling MI450 series GPUs to lead customers and remain on track to ramp Helios production shipments in the second half of the year.",
+      "verbatim": {
+        "text": "We have begun sampling MI450 series GPUs to lead customers and remain on track to ramp Helios production shipments in the second half of the year.",
+        "segs": [
+          {
+            "t": "We have begun sampling MI450 series GPUs to lead customers and remain on track to ramp Helios production shipments in the second half of the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c024df4695849280f5693b9c23e3503e/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD 1Q 2026 Earnings ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_c024df4695849280f5693b9c23e3503e/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD 1Q 2026 Earnings ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/ir-calendar/detail/20260505-amd-fiscal-first-quarter-2026-financial-results",
+          "title": "AMD Fiscal First Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P2-2026-07-23",
+      "promiseId": "P2",
+      "date": "2026-07-23",
+      "call": "AAI 2026: AMD Launches AMD Helios Rackscale Solution for Frontier AI",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced the formal Helios launch at Advancing AI 2026.",
+      "quote": "AMD Helios was launched at Advancing AI 2026.",
+      "verbatim": {
+        "text": "AMD Helios was launched at Advancing AI 2026.",
+        "segs": [
+          {
+            "t": "AMD Helios was launched at Advancing AI ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.amd.com/news/aai-2026-helios-update/",
+          "title": "AAI 2026: AMD Launches AMD Helios Rackscale Solution for Frontier AI - AMD Newsroom",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.amd.com/news/aai-2026-helios-update/",
+          "title": "AAI 2026: AMD Launches AMD Helios Rackscale Solution for Frontier AI - AMD Newsroom",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P2-2026-08-04",
+      "promiseId": "P2",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Helios in production; initial shipments expected later that quarter, ramping through the fourth quarter and into 2027.",
+      "quote": "Helios is now in production, with initial shipments on track to begin later this quarter and ramp through the fourth quarter and into 2027 to meet very strong customer demand.",
+      "verbatim": {
+        "text": "Helios is now in production, with initial shipments on track to begin later this quarter and ramp through the fourth quarter and into 2027 to meet very strong customer demand.",
+        "segs": [
+          {
+            "t": "Helios is now in production, with initial shipments on track to begin later this quarter and ramp through the fourth quarter and into ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " to meet very strong customer demand.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+          "title": "AMD Reports Second Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P2-2026-11-03",
+      "promiseId": "P2",
+      "date": "2026-11-03",
+      "call": "Q3 2026 earnings call prepared remarks",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Volume MI455X shipments began; Anthropic, Meta, Microsoft, OpenAI and Oracle brought first Helios racks online.",
+      "quote": "We started shipping MI455X in volume in the quarter, and lead customers including Anthropic, Meta, Microsoft, OpenAI and Oracle brought their first Helios racks online quickly.",
+      "verbatim": {
+        "text": "We started shipping MI455X in volume in the quarter, and lead customers including Anthropic, Meta, Microsoft, OpenAI and Oracle brought their first Helios racks online quickly.",
+        "segs": [
+          {
+            "t": "We started shipping MI455X in volume in the quarter, and lead customers including Anthropic, Meta, Microsoft, OpenAI and Oracle brought their first Helios racks online quickly.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMD-P3-2025-10-06",
+      "promiseId": "P3",
+      "date": "2025-10-06",
+      "call": "AMD and OpenAI Announce Strategic Partnership to Deploy 6 Gigawatts of AMD GPUs",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced 6 gigawatts across multiple generations; first 1 gigawatt of MI450 deployment would begin in the second half of 2026.",
+      "quote": "AMD (NASDAQ: AMD) and OpenAI today announced a 6 gigawatt agreement to power OpenAI’s next-generation AI infrastructure across multiple generations of AMD Instinct GPUs.",
+      "verbatim": {
+        "text": "and OpenAI today announced a 6 gigawatt agreement to power OpenAI’s next-generation AI infrastructure across multiple generations of AMD Instinct GPUs.",
+        "segs": [
+          {
+            "t": "and OpenAI today announced a 6 gigawatt agreement to power OpenAI’s next-generation AI infrastructure across multiple generations of AMD Instinct GPUs.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+          "title": "AMD and OpenAI Announce Strategic Partnership to Deploy 6 Gigawatts of AMD GPUs :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+          "title": "AMD and OpenAI Announce Strategic Partnership to Deploy 6 Gigawatts of AMD GPUs :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P3-2025-11-04",
+      "promiseId": "P3",
+      "date": "2025-11-04",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 6 gigawatts with OpenAI; the first MI450 gigawatt would start coming online in the second half of 2026.",
+      "quote": "On the customer front, we announced a comprehensive multiyear agreement with OpenAI to deploy 6 gigawatts of Instinct GPUs with the first gigawatt of MI450 series accelerators scheduled to start coming online in the second half of 2026.",
+      "verbatim": {
+        "text": "On the customer front, we announced a comprehensive multiyear agreement with OpenAI to deploy 6 gigawatts of Instinct GPUs with the first gigawatt of MI450 series accelerators scheduled to start coming online in the second half of 2026.",
+        "segs": [
+          {
+            "t": "On the customer front, we announced a comprehensive multiyear agreement with OpenAI to deploy 6 gigawatts of Instinct GPUs with the first gigawatt of MI450 series accelerators scheduled to start coming online in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+          "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+          "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1265/amd-reports-third-quarter-2025-financial-results",
+          "title": "AMD Reports Third Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P3-2026-02-03",
+      "promiseId": "P3",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "OpenAI ramp remained on track to start in the second half of the year and continue into 2027.",
+      "quote": "We have obviously a very strong relationship with OpenAI, and we're planning that ramp starting in the second half of the year, going into 2027 that is on track.",
+      "verbatim": {
+        "text": "We have obviously a very strong relationship with OpenAI, and we're planning that ramp starting in the second half of the year, going into 2027 that is on track.",
+        "segs": [
+          {
+            "t": "We have obviously a very strong relationship with OpenAI, and we're planning that ramp starting in the second half of the year, going into ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " that is on track.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results",
+          "title": "AMD Reports Fourth Quarter and Full Year 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P3-2026-05-05",
+      "promiseId": "P3",
+      "date": "2026-05-05",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the OpenAI partnership and multiyear visibility into large-scale deployments.",
+      "quote": "Together with our previously announced OpenAI partnership, these engagements position AMD as a core partner to the world's largest AI infrastructure builders, with deep co-engineering relationships and multiyear visibility into large scale deployments.",
+      "verbatim": {
+        "text": "Together with our previously announced OpenAI partnership, these engagements position AMD as a core partner to the world's largest AI infrastructure builders, with deep co-engineering relationships and multiyear visibility into large scale deployments.",
+        "segs": [
+          {
+            "t": "Together with our previously announced OpenAI partnership, these engagements position AMD as a core partner to the world's largest AI infrastructure builders, with deep co-engineering relationships and multiyear visibility into large scale deployments.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD 1Q 2026 Earnings ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD 1Q 2026 Earnings ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results",
+          "title": "AMD Reports First Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P3-2026-07-23",
+      "promiseId": "P3",
+      "date": "2026-07-23",
+      "call": "AMD and OpenAI: Collaborating Across Every Layer of the Stack",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "OpenAI had Helios access; expected online deployments in the second half of 2026, accelerating throughout 2027.",
+      "quote": "OpenAI expects to begin bringing Helios online through multiple deployment partners in the second half of 2026, with deployments accelerating throughout 2027.",
+      "verbatim": {
+        "text": "OpenAI expects to begin bringing Helios online through multiple deployment partners in the second half of 2026, with deployments accelerating throughout 2027.",
+        "segs": [
+          {
+            "t": "OpenAI expects to begin bringing Helios online through multiple deployment partners in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", with deployments accelerating throughout ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.amd.com/news/aai-2026-openai-update",
+          "title": "AMD and OpenAI: Collaborating Across Every Layer of the Stack - AMD Newsroom",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.amd.com/news/aai-2026-openai-update",
+          "title": "AMD and OpenAI: Collaborating Across Every Layer of the Stack - AMD Newsroom",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "AMD-P3-2026-08-04",
+      "promiseId": "P3",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Helios being deployed by leading AI customers, including OpenAI.",
+      "quote": "AMD Helios delivers leadership inference tokens per dollar and is being deployed by leading AI labs and cloud providers including Anthropic, Cirrascale, HUMAIN, Meta, Microsoft, OpenAI, Oracle, Tensorwave, Vultr and others.",
+      "verbatim": {
+        "text": "AMD Helios delivers leadership inference tokens per dollar and is being deployed by leading AI labs and cloud providers including Anthropic, Cirrascale, HUMAIN, Meta, Microsoft, OpenAI, Oracle, Tensorwave, Vultr and others.",
+        "segs": [
+          {
+            "t": "AMD Helios delivers leadership inference tokens per dollar and is being deployed by leading AI labs and cloud providers including Anthropic, Cirrascale, HUMAIN, Meta, Microsoft, OpenAI, Oracle, Tensorwave, Vultr and others.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+          "title": "AMD Reports Second Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+          "title": "AMD Reports Second Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMD-P3-2026-11-03",
+      "promiseId": "P3",
+      "date": "2026-11-03",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported OpenAI running workloads on first Helios systems powered by MI450 Series GPUs.",
+      "quote": "Anthropic, Meta, Microsoft, OpenAI and Oracle Cloud Infrastructure are running models and workloads on the first AMD Helios™ rackscale solutions, powered by AMD Instinct MI450 Series GPUs and 6th Gen AMD EPYC CPUs.",
+      "verbatim": {
+        "text": "Anthropic, Meta, Microsoft, OpenAI and Oracle Cloud Infrastructure are running models and workloads on the first AMD Helios ™ rackscale solutions, powered by AMD Instinct MI450 Series GPUs and 6 th Gen AMD EPYC CPUs.",
+        "segs": [
+          {
+            "t": "Anthropic, Meta, Microsoft, OpenAI and Oracle Cloud Infrastructure are running models and workloads on the first AMD Helios ™ rackscale solutions, powered by AMD Instinct MI450 Series GPUs and 6 th Gen AMD EPYC CPUs.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results",
+          "title": "AMD Reports Third Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results",
+          "title": "AMD Reports Third Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMD-P4-2025-11-11",
+      "promiseId": "P4",
+      "date": "2025-11-11",
+      "call": "Financial Analyst Day 2025 press release — AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "MI450-based Helios begins in the third quarter of 2026; MI500 Series follows with a planned launch in 2027.",
+      "quote": "The upcoming “Helios” systems with AMD Instinct MI450 Series GPUs are expected to deliver rack-scale performance leadership with industry leading memory capacity and scale-out bandwidth ¹ beginning in the third quarter of 2026, followed by the MI500 Series, further extending AMD’s AI performance roadmap with a planned launch in 2027.",
+      "verbatim": {
+        "text": "The upcoming “Helios” systems with AMD Instinct MI450 Series GPUs are expected to deliver rack-scale performance leadership with industry leading memory capacity and scale-out bandwidth ¹ beginning in the third quarter of 2026, followed by the MI500 Series, further extending AMD’s AI performance roadmap with a planned launch in 2027.",
+        "segs": [
+          {
+            "t": "The upcoming “Helios” systems with AMD Instinct MI450 Series GPUs are expected to deliver rack-scale performance leadership with industry leading memory capacity and scale-out bandwidth ¹ beginning in the third quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", followed by the MI500 Series, further extending AMD’s AI performance roadmap with a planned launch in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+          "title": "AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+          "title": "AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P4-2026-01-05",
+      "promiseId": "P4",
+      "date": "2026-01-05",
+      "call": "AMD and its Partners Share their Vision for “AI Everywhere, for Everyone” at CES 2026",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "AMD previewed next-generation Instinct MI500 GPUs and retained the planned 2027 launch.",
+      "quote": "AMD shared additional details at CES on the next-generation AMD Instinct MI500 GPUs, planned to launch in 2027.",
+      "verbatim": {
+        "text": "AMD shared additional details at CES on the next-generation AMD Instinct MI500 GPUs , planned to launch in 2027.",
+        "segs": [
+          {
+            "t": "AMD shared additional details at CES on the next-generation AMD Instinct MI500 GPUs , planned to launch in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1272/amd-and-its-partners-share-their-vision-for-ai-everywhere-for-everyone-at-ces-2026",
+          "title": "AMD and its Partners Share their Vision for “AI Everywhere, for Everyone” at CES 2026 :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1272/amd-and-its-partners-share-their-vision-for-ai-everywhere-for-everyone-at-ces-2026",
+          "title": "AMD and its Partners Share their Vision for “AI Everywhere, for Everyone” at CES 2026 :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P4-2026-02-03",
+      "promiseId": "P4",
+      "date": "2026-02-03",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "MI500 remained on track to launch in 2027, with another major AI-performance improvement expected.",
+      "quote": "We are on track to launch MI500 in 2027, and expect MI500 to deliver another major leap in AI performance to power the next wave of large scale multimodal models.",
+      "verbatim": {
+        "text": "We are on track to launch MI500 in 2027, and expect MI500 to deliver another major leap in AI performance to power the next wave of large scale multimodal models.",
+        "segs": [
+          {
+            "t": "We are on track to launch MI500 in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", and expect MI500 to deliver another major leap in AI performance to power the next wave of large scale multimodal models.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_5c6e5256418b233383c6aaff9fe5b7ad/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_5c6e5256418b233383c6aaff9fe5b7ad/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results",
+          "title": "AMD Reports Fourth Quarter and Full Year 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P4-2026-05-05",
+      "promiseId": "P4",
+      "date": "2026-05-05",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported strong customer engagement on MI500; did not explicitly restate the launch date.",
+      "quote": "And then many customers are also very engaged with us on the MI500 series and all of the opportunities there.",
+      "verbatim": {
+        "text": "And then many customers are also very engaged with us on the MI500 series and all of the opportunities there.",
+        "segs": [
+          {
+            "t": "And then many customers are also very engaged with us on the MI500 series and all of the opportunities there.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_648c46270830f3cdda50c797644ab1ae/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD 1Q 2026 Earnings ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_648c46270830f3cdda50c797644ab1ae/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD 1Q 2026 Earnings ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results",
+          "title": "AMD Reports First Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P4-2026-07-23",
+      "promiseId": "P4",
+      "date": "2026-07-23",
+      "call": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed MI500 Series GPUs coming in 2027, incorporating next-generation compute, memory and interconnect technologies.",
+      "quote": "Next-generation AMD Instinct MI500 Series GPUs are coming in 2027, with next-generation compute, memory and interconnect technologies for leadership performance.",
+      "verbatim": {
+        "text": "Next-generation AMD Instinct MI500 Series GPUs are coming in 2027, with next-generation compute, memory and interconnect technologies for leadership performance.",
+        "segs": [
+          {
+            "t": "Next-generation AMD Instinct MI500 Series GPUs are coming in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", with next-generation compute, memory and interconnect technologies for leadership performance.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+          "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+          "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P4-2026-08-04",
+      "promiseId": "P4",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed a 2027 platform combining MI500 GPUs, Verano CPUs and Pensando networking, including copper and optical-based interconnects.",
+      "quote": "In 2027, our next generation platform combines MI500 series GPUs, Verano CPUs, and Pensando networking with expanded scale up domains and both copper and optical-based interconnects.",
+      "verbatim": {
+        "text": "In 2027, our next generation platform combines MI500 series GPUs, Verano CPUs, and Pensando networking with expanded scale up domains and both copper and optical-based interconnects.",
+        "segs": [
+          {
+            "t": "In ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", our next generation platform combines MI500 series GPUs, Verano CPUs, and Pensando networking with expanded scale up domains and both copper and optical-based interconnects.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_016ed771a65723c055e13ad960a941fb/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_016ed771a65723c055e13ad960a941fb/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+          "title": "AMD Reports Second Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P4-2026-11-03",
+      "promiseId": "P4",
+      "date": "2026-11-03",
+      "call": "AMD Third Quarter 2026 Financial Results Prepared Remarks",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "MI500 customer engagements continued progressing well; no launch-date change or completed launch was announced.",
+      "quote": "Looking further out, customer engagements for MI500 continue to progress very well.",
+      "verbatim": {
+        "text": "Looking further out, customer engagements for MI500 continue to progress very well.",
+        "segs": [
+          {
+            "t": "Looking further out, customer engagements for MI500 continue to progress very well.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "AMD-P5-2025-11-11",
+      "promiseId": "P5",
+      "date": "2025-11-11",
+      "call": "AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced three-to-five-year model: revenue CAGR >35%, non-GAAP operating margin >35%, and non-GAAP EPS >$20.",
+      "quote": "At the company level, AMD expects to drive a greater than 35% revenue compound annual growth rate (CAGR), a non-GAAP operating margin greater than 35%, and non-GAAP earnings per share exceeding $20.",
+      "verbatim": {
+        "text": "At the company level, AMD expects to drive a greater than 35% revenue compound annual growth rate (CAGR), a non-GAAP operating margin greater than 35%, and non-GAAP earnings per share exceeding $20.",
+        "segs": [
+          {
+            "t": "At the company level, AMD expects to drive a greater than ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": " revenue compound annual growth rate (CAGR), a non-GAAP operating margin greater than ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": ", and non-GAAP earnings per share exceeding ",
+            "h": 0
+          },
+          {
+            "t": "$20",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+          "title": "AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+          "title": "AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMD-P5-2026-02-03",
+      "promiseId": "P5",
+      "date": "2026-02-03",
+      "call": "Q4 and Full Year 2025 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed >35% revenue CAGR over three to five years and annual EPS >$20 within strategic timeframe; OpEx should grow slower than revenue.",
+      "quote": "And the way to think about it is, we've always said in our long-term model that OpEx should grow slower than revenue.",
+      "verbatim": {
+        "text": "And the way to think about it is, we've always said in our long-term model that OpEx should grow slower than revenue.",
+        "segs": [
+          {
+            "t": "And the way to think about it is, we've always said in our long-term model that OpEx should grow slower than revenue.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_3ec85d8ec6db18d4cf4c06efc11ab71a/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_3ec85d8ec6db18d4cf4c06efc11ab71a/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+          "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1273/amd-to-report-fiscal-fourth-quarter-and-full-year-2025-financial-results",
+          "title": "AMD to Report Fiscal Fourth Quarter and Full Year 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P5-2026-05-05",
+      "promiseId": "P5",
+      "date": "2026-05-05",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Expected to exceed long-term targets, including more than $20 EPS within the strategic time frame; no replacement numerical target.",
+      "quote": "With the momentum we are seeing across the business and the expanding market opportunity, we see a clear path to exceed our long-term financial targets, including delivering more than $20 in EPS over the strategic time frame.",
+      "verbatim": {
+        "text": "With the momentum we are seeing across the business and the expanding market opportunity, we see a clear path to exceed our long-term financial targets, including delivering more than $20 in EPS over the strategic time frame.",
+        "segs": [
+          {
+            "t": "With the momentum we are seeing across the business and the expanding market opportunity, we see a clear path to exceed our long-term financial targets, including delivering more than ",
+            "h": 0
+          },
+          {
+            "t": "$20",
+            "h": 1
+          },
+          {
+            "t": " in EPS over the strategic time frame.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_815d1898a74c4254fe7b0965c62769b2/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD 1Q 2026 Earnings ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_815d1898a74c4254fe7b0965c62769b2/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+          "title": "AMD 1Q 2026 Earnings ",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results",
+          "title": "AMD Reports First Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P5-2026-08-04",
+      "promiseId": "P5",
+      "date": "2026-08-04",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised expected revenue growth substantially above greater than 35% and annual EPS significantly above $20 within the strategic time frame.",
+      "quote": "We now expect revenue to grow substantially above our prior target of greater than 35%, and we expect to significantly exceed our $20 annual EPS target within our strategic time frame.",
+      "verbatim": {
+        "text": "We now expect revenue to grow substantially above our prior target of greater than 35%, and we expect to significantly exceed our $20 annual EPS target within our strategic time frame.",
+        "segs": [
+          {
+            "t": "We now expect revenue to grow substantially above our prior target of greater than ",
+            "h": 0
+          },
+          {
+            "t": "35%",
+            "h": 1
+          },
+          {
+            "t": ", and we expect to significantly exceed our ",
+            "h": 0
+          },
+          {
+            "t": "$20",
+            "h": 1
+          },
+          {
+            "t": " annual EPS target within our strategic time frame.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+          "title": "Webcast Transcript",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1289/amd-to-report-fiscal-second-quarter-2026-financial-results",
+          "title": "AMD to Report Fiscal Second Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+          "domain": "ir.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMD-P5-2026-11-03",
+      "promiseId": "P5",
+      "date": "2026-11-03",
+      "call": "AMD Third Quarter 2026 Financial Results — Prepared Remarks",
+      "speaker": "Lisa Su, Chair and CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Expected revenue growth more than 80% in 2027, exceeding the original model; did not replace the multi-year CAGR or EPS targets.",
+      "quote": "Based on our current visibility, we now expect revenue to grow more than 80% in 2027, which is more than twice the long-term financial model we outlined at our financial analyst day last November.",
+      "verbatim": {
+        "text": "Based on our current visibility, we now expect revenue to grow more than 80% in 2027, which is more than twice the long-term financial model we outlined at our financial analyst day last November.",
+        "segs": [
+          {
+            "t": "Based on our current visibility, we now expect revenue to grow more than ",
+            "h": 0
+          },
+          {
+            "t": "80%",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", which is more than twice the long-term financial model we outlined at our financial analyst day last November.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+          "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+          "domain": "newsroom.amd.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf?download=1",
+      "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+      "domain": "newsroom.amd.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1284/amd-reports-first-quarter-2026-financial-results",
+      "title": "AMD Reports First Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1295/amd-reports-second-quarter-2026-financial-results",
+      "title": "AMD Reports Second Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 4,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1276/amd-reports-fourth-quarter-and-full-year-2025-financial-results",
+      "title": "AMD Reports Fourth Quarter and Full Year 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1266/amd-unveils-strategy-to-lead-the-1-trillion-compute-market-and-accelerate-next-phase-of-growth",
+      "title": "AMD Unveils Strategy to Lead the $1 Trillion Compute Market and Accelerate Next Phase of Growth :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+      "title": "Webcast Transcript",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P2 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era",
+      "title": "AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1 P4"
+    },
+    {
+      "n": 8,
+      "url": "https://newsroom.amd.com/documents/2026/11/84f4476b-f064-4f0f-957c-fe484853e178.pdf",
+      "title": "Nov. 3, 2026 AMD Third Quarter 2026 Financial Results Prepared Remarks",
+      "domain": "newsroom.amd.com",
+      "tier": "primary",
+      "uses": "P1 P4"
+    },
+    {
+      "n": 9,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1265/amd-reports-third-quarter-2025-financial-results",
+      "title": "AMD Reports Third Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+      "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 11,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_3ec85d8ec6db18d4cf4c06efc11ab71a/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+      "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 12,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+      "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 13,
+      "url": "https://newsroom.amd.com/news/aai-2026-helios-update/",
+      "title": "AAI 2026: AMD Launches AMD Helios Rackscale Solution for Frontier AI - AMD Newsroom",
+      "domain": "newsroom.amd.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 14,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1260/amd-and-openai-announce-strategic-partnership-to-deploy-6-gigawatts-of-amd-gpus",
+      "title": "AMD and OpenAI Announce Strategic Partnership to Deploy 6 Gigawatts of AMD GPUs :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 15,
+      "url": "https://newsroom.amd.com/news/aai-2026-openai-update",
+      "title": "AMD and OpenAI: Collaborating Across Every Layer of the Stack - AMD Newsroom",
+      "domain": "newsroom.amd.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 16,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1303/amd-reports-third-quarter-2026-financial-results",
+      "title": "AMD Reports Third Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1245/amd-achieves-first-tsmc-n2-product-silicon-milestone",
+      "title": "AMD Achieves First TSMC N2 Product Silicon Milestone :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1247/amd-reports-first-quarter-2025-financial-results",
+      "title": "AMD Reports First Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1257/amd-reports-second-quarter-2025-financial-results",
+      "title": "AMD Reports Second Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1287/amd-announces-production-ramp-of-next-generation-amd-epyc-processor-venice-on-tsmc-2nm-process-technology",
+      "title": "AMD Announces Production Ramp of Next-Generation AMD EPYC Processor “Venice” on TSMC 2nm Process Technology :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1257/amd-reports-second-quarter-2025-financial-results?utm_source=chatgpt.com",
+      "title": "AMD Reports Second Quarter 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://ir.amd.com/news-events/ir-calendar/detail/20260203-amd-fiscal-fourth-quarter-and-full-year-2025-financial-results",
+      "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 23,
+      "url": "https://ir.amd.com/news-events/ir-calendar/detail/20260505-amd-fiscal-first-quarter-2026-financial-results",
+      "title": "AMD Fiscal First Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 24,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1272/amd-and-its-partners-share-their-vision-for-ai-everywhere-for-everyone-at-ces-2026",
+      "title": "AMD and its Partners Share their Vision for “AI Everywhere, for Everyone” at CES 2026 :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 25,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1273/amd-to-report-fiscal-fourth-quarter-and-full-year-2025-financial-results",
+      "title": "AMD to Report Fiscal Fourth Quarter and Full Year 2025 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 26,
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1289/amd-to-report-fiscal-second-quarter-2026-financial-results",
+      "title": "AMD to Report Fiscal Second Quarter 2026 Financial Results :: Advanced Micro Devices, Inc. (AMD)",
+      "domain": "ir.amd.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 27,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/04/amd-amd-q3-2026-earnings-call-transcript",
+      "title": "AMD (AMD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 28,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_f54fb729fac473f1298badcbe60a65e0/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+      "title": "AMD First Quarter 2026 Earnings Conference Call Transcript",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 29,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_efd391a7bede9f845b55e73306ea4011/amd/db/841/9167/webcast_transcript/amd2q2025.pdf",
+      "title": "AMD Fiscal Second Quarter 2025 Financial Results",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 30,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9160/webcast_transcript/AMD+Q1+2025+Earnings+Call.pdf",
+      "title": "AMD Q1 2025 Earnings Call ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 31,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_e6edf641c7ffa7b7fdffcfa3fac0e4e6/amd/db/841/9167/webcast_transcript/amd2q2025.pdf",
+      "title": "AMD Fiscal Second Quarter 2025 Financial Results",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 32,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_82da185eb8870b28402c23771517b33c/amd/db/841/9182/webcast_transcript/amd3q2025call.pdf",
+      "title": "AMD Fiscal Third Quarter 2025 Financial Results ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 33,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_20cb783ee999b1d31638bc4bf89a3869/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+      "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 34,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_c024df4695849280f5693b9c23e3503e/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+      "title": "AMD 1Q 2026 Earnings ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 35,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_1dcf6819c1566fb2bab40c24e6158009/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+      "title": "AMD 1Q 2026 Earnings ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 36,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_5c6e5256418b233383c6aaff9fe5b7ad/amd/db/841/9223/webcast_transcript/AMD+Fiscal+Fourth+Quarter+and+Full+Year+2025+Financial+Results.pdf",
+      "title": "AMD Fiscal Fourth Quarter and Full Year 2025 Financial Results",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 37,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_648c46270830f3cdda50c797644ab1ae/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+      "title": "AMD 1Q 2026 Earnings ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 38,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_016ed771a65723c055e13ad960a941fb/amd/db/841/9237/webcast_transcript/AMD2Q26EarningsCallTranscript.pdf",
+      "title": "Webcast Transcript",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 39,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_815d1898a74c4254fe7b0965c62769b2/amd/db/841/9232/webcast_transcript/AMD_1Q_2026_Earnings.pdf",
+      "title": "AMD 1Q 2026 Earnings ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P5"
+    },
+    {
+      "n": 40,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_7b2f18b007009eb1081213779b888cdd/amd/db/841/9160/webcast_transcript/AMD+Q1+2025+Earnings+Call.pdf",
+      "title": "AMD Q1 2025 Earnings Call ",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P1"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.755773Z",
+      "completedAt": "2026-11-05T06:28:45.664528Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:01.060904Z",
+      "completedAt": "2026-11-05T19:14:48.760969Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:01.067580Z",
+      "completedAt": "2026-11-05T19:13:08.578079Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:01.076758Z",
+      "completedAt": "2026-11-05T19:14:08.935291Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:01.443190Z",
+      "completedAt": "2026-11-05T19:12:52.921191Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:01.965155Z",
+      "completedAt": "2026-11-05T19:13:13.124933Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.796762Z",
+      "completedAt": "2026-11-05T19:44:56.752681Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.804034Z",
+      "completedAt": "2026-11-05T19:44:27.791383Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.811191Z",
+      "completedAt": "2026-11-05T19:45:13.671558Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.818306Z",
+      "completedAt": "2026-11-05T19:44:50.781098Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:14.825496Z",
+      "completedAt": "2026-11-05T19:45:12.169635Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "37 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "36 of 36 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "36 of 36 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-11-03; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/3840px-AMD_Logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:AMD_Logo.svg",
+      "title": "File:AMD Logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 916,
+      "rank": 3
+    },
+    "photo": {
+      "imageUrl": "https://www.amd.com/content/dam/amd/en/images/illustrations/blog/custom-thumbnails/helios/3888300-helios-og.jpg",
+      "sourcePageUrl": "https://www.amd.com/en/blogs/2025/amd-helios-ai-rack-built-on-metas-2025-ocp-design.html",
+      "title": "AMD Helios - AI Rack Built on Meta's 2025 OCP Design",
+      "width": 1200,
+      "height": 675,
+      "rank": 9
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.485Z"
+}

@@ -1,0 +1,2098 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "AMZN",
+  "name": "Amazon.com, Inc.",
+  "short": "Amazon",
+  "website": "amazon.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://ir.aboutamazon.com/overview/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-29",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Amazon AWS datacenter",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Preview Trainium3",
+      "commitment": "Preview Trainium3 late in 2025.",
+      "deadline": "late 2025",
+      "firstStated": "2025-02-06",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "AWS announced Trainium3 UltraServers’ general availability on December 02, 2025, meeting the promised late-year preview timetable; subsequent earnings disclosures confirmed production workloads.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/amazoncom-amzn-q4-2024-earnings-call-transcript",
+          "title": "Amazon.com (AMZN) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://press.aboutamazon.com/2025/12/trainium3-ultraservers-now-available-enabling-customers-to-train-and-deploy-ai-models-faster-at-lower-cost",
+          "title": "Trainium3-UltraServers-Now-Available-Enabling-Customers-to-Train-and-Deploy-AI-Models-Faster-at-Lower-Cost - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Fourth Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-12-02",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Launch Kuiper customer service",
+      "commitment": "Begin offering Project Kuiper service to customers later in 2025.",
+      "deadline": "later in 2025",
+      "firstStated": "2025-04-02",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Enterprise preview began, but broader commercial service remained pending after the Q3 target; initial service was still expected later this year.",
+      "citations": [
+        {
+          "url": "https://www.aboutamazon.com/news/amazon-leo/amazon-leo-satellite-internet-ultra-pro",
+          "title": "Amazon Leo introduces Ultra antenna with 1 Gbps speeds, begins enterprise preview",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/552741-q1-2026/",
+          "title": "Amazon (AMZN) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-q1-2025-earnings-beat-expectations-stock-dips-93CH-4018559",
+          "title": " Earnings call transcript: Amazon Q1 2025 earnings beat expectations, stock dips By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-q3-2026-misses-eps-as-shares-fall-after-hours-93CH-4985489",
+          "title": "Earnings call transcript: Amazon Q3 2026 misses EPS as shares fall after hours By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Expand fast rural delivery",
+      "commitment": "Expand same-day and next-day delivery to more than 4,000 smaller cities, towns and rural communities by end-2025.",
+      "deadline": "end of 2025",
+      "firstStated": "2025-06-24",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Amazon reported expanding same-day and next-day delivery to over 4,000 smaller cities, towns and rural areas across 44 states in 2025, meeting the geographic target.",
+      "citations": [
+        {
+          "url": "https://press.aboutamazon.com/2026/2/amazon-sets-new-prime-delivery-speed-record-in-2025-with-over-13-billion-items-arriving-the-same-or-next-day-around-the-world",
+          "title": "Amazon-Sets-New-Prime-Delivery-Speed-Record-in-2025-With-Over-13-Billion-Items-Arriving-the-Same-or-Next-Day-Around-the-World - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://press.aboutamazon.com/2025/6/amazon-brings-prime-delivery-speeds-as-fast-as-the-same-day-to-thousands-of-smaller-cities-towns-and-rural-communities-across-the-u-s-for-the-first-time",
+          "title": "Amazon-Brings-Prime-Delivery-Speeds-as-Fast-as-the-Same-Day-to-Thousands-of-Smaller-Cities-Towns-and-Rural-Communities-Across-the-U-S--for-the-First-Time - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-q2-2025-earnings-beat-expectations-93CH-4164802",
+          "title": "Earnings Call Transcript Amazon Q2 2025 Earnings Beat Expectations 93Ch 4164802",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://press.aboutamazon.com/2026/2/amazon-sets-new-prime-delivery-speed-record-in-2025-with-over-13-billion-items-arriving-the-same-or-next-day-around-the-world?utm_source=chatgpt.com",
+          "title": "Amazon-Sets-New-Prime-Delivery-Speed-Record-in-2025-With-Over-13-Billion-Items-Arriving-the-Same-or-Next-Day-Around-the-World - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-02-03",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-10-30",
+            "what_was_said": "Management said the number of rural communities with same-day and next-day delivery had increased by 60%, reaching roughly half of the total communities it planned to expand to by year-end. This adds interim completion context to the release's growth figure.",
+            "call": "Q3 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Double AWS power capacity",
+      "commitment": "Double AWS power capacity again from its 2025 level by 2027.",
+      "deadline": "by 2027",
+      "firstStated": "2025-10-30",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "AWS’s target to double power capacity from 2025 levels by the end of 2027 remained pending; management last explicitly reported it on track.",
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AMZN/earnings/AMZN-Q2-2026-earnings_call-657334.html",
+          "title": "Amazon.com, Inc. (AMZN) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/AMZN/earnings/AMZN-Q3-2026-earnings_call-720308.html",
+          "title": "Amazon.com, Inc. (AMZN) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.benzinga.com/markets/earnings/25/10/48547705/amazon-q3-fy2025-earnings-call-transcript",
+          "title": "Amazon Q3 FY2025 Earnings Call Transcript - Amazon.com (NASDAQ:AMZN)",
+          "domain": "benzinga.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-tops-q2-2026-estimates-as-aws-growth-accelerates-93CH-4826442",
+          "title": "Earnings call transcript: Amazon tops Q2 2026 estimates as AWS growth accelerates By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Invest $200 billion during 2026",
+      "commitment": "Invest about $200 billion in capital expenditures during 2026, predominantly in AWS.",
+      "deadline": "2026",
+      "firstStated": "2026-02-05",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Amazon raised planned 2026 cash CapEx from about $200 billion to approximately $220 billion and reaffirmed it; full-year spending remained pending.",
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/",
+          "title": "Amazon (AMZN) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazons-q4-2025-revenue-beats-forecast-stock-dips-93CH-4489218",
+          "title": "Earnings Call Transcript Amazons Q4 2025 Revenue Beats Forecast Stock Dips 93Ch 4489218",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-tops-q2-2026-estimates-as-aws-growth-accelerates-93CH-4826442",
+          "title": "Earnings call transcript: Amazon tops Q2 2026 estimates as AWS growth accelerates By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-q3-2026-misses-eps-as-shares-fall-after-hours-93CH-4985489",
+          "title": "Earnings call transcript: Amazon Q3 2026 misses EPS as shares fall after hours By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "AMZN-P1-2025-02-06",
+      "promiseId": "P1",
+      "date": "2025-02-06",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Andrew R. Jassy, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected Trainium3 preview late in '25, with Trainium4 definition thereafter.",
+      "quote": "We're already hard at work on Trainium3, which we expect to preview late in '25, and defining Trainium4 thereafter.",
+      "verbatim": {
+        "text": "We're already hard at work on Trainium3, which we expect to preview late in '25, and defining Trainium4 thereafter.",
+        "segs": [
+          {
+            "t": "We're already hard at work on Trainium3, which we expect to preview late in '25, and defining Trainium4 thereafter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/amazoncom-amzn-q4-2024-earnings-call-transcript",
+          "title": "Amazon.com (AMZN) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/amazoncom-amzn-q4-2024-earnings-call-transcript",
+          "title": "Amazon.com (AMZN) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.aboutamazon.com/events/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Events\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P1-2025-05-01",
+      "promiseId": "P1",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Trainium3 preview commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/events/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Events\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://tickertrends.io/transcripts/amzn/Q1-earnings-transcript-2025",
+          "title": "amzn Q1 2025 Earnings Call Transcript | TickerTrends",
+          "domain": "tickertrends.io",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P1-2025-07-31",
+      "promiseId": "P1",
+      "date": "2025-07-31",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Ongoing work on the third Trainium version was mentioned, but the preview timetable was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/events/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Events\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/AMZN/transcripts/2025-year/2-quarter",
+          "title": "Amazon.com, Inc. (AMZN) Q2 FY2025 Earnings Call Transcript - July 31, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P1-2025-10-30",
+      "promiseId": "P1",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Andrew Jassy, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed year-end Trainium3 preview, with much fuller volumes coming in the beginning of '26.",
+      "quote": "Trainium3 should preview at the end of this year with much fuller volumes coming in the beginning of '26, we have a lot of customers, both very large, and I'll call it, medium-sized who're quite interested in Trainium3.",
+      "verbatim": {
+        "text": "Trainium3 should preview at the end of this year with much fuller volumes coming in the beginning of '26, we have a lot of customers, both very large, and I'll call it, medium-sized who're quite interested in Trainium3.",
+        "segs": [
+          {
+            "t": "Trainium3 should preview at the end of this year with much fuller volumes coming in the beginning of '26, we have a lot of customers, both very large, and I'll call it, medium-sized who're quite interested in Trainium3.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/31/amazon-amzn-q3-2025-earnings-call-transcript/",
+          "title": "Amazon (AMZN) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/31/amazon-amzn-q3-2025-earnings-call-transcript/",
+          "title": "Amazon (AMZN) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.aboutamazon.com/events/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Events\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P1-2025-12-02",
+      "promiseId": "P1",
+      "date": "2025-12-02",
+      "call": "Trainium3 UltraServers Now Available: Enabling Customers to Train and Deploy AI Models Faster at Lower Cost",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Announced general availability of Trainium3 UltraServers, fulfilling the preview commitment.",
+      "quote": "LAS VEGAS--(BUSINESS WIRE)-- At AWS re:Invent, Amazon Web Services, Inc. (AWS), an Amazon.com, Inc. company (NASDAQ: AMZN), today announced the general availability of Trainium3 UltraServers powered by the new Trainium3 chip.",
+      "verbatim": {
+        "text": "LAS VEGAS--(BUSINESS WIRE)-- At AWS re:Invent, Amazon Web Services, Inc. (AWS), an Amazon.com, Inc. company (NASDAQ: AMZN), today announced the general availability of Trainium3 UltraServers powered by the new Trainium3 chip.",
+        "segs": [
+          {
+            "t": "LAS VEGAS--(BUSINESS WIRE)-- At AWS re:Invent, Amazon Web Services, Inc. (AWS), an Amazon.com, Inc. company (NASDAQ: AMZN), today announced the general availability of Trainium3 UltraServers powered by the new Trainium3 chip.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://press.aboutamazon.com/2025/12/trainium3-ultraservers-now-available-enabling-customers-to-train-and-deploy-ai-models-faster-at-lower-cost",
+          "title": "Trainium3-UltraServers-Now-Available-Enabling-Customers-to-Train-and-Deploy-AI-Models-Faster-at-Lower-Cost - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://press.aboutamazon.com/2025/12/trainium3-ultraservers-now-available-enabling-customers-to-train-and-deploy-ai-models-faster-at-lower-cost",
+          "title": "Trainium3-UltraServers-Now-Available-Enabling-Customers-to-Train-and-Deploy-AI-Models-Faster-at-Lower-Cost - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMZN-P1-2026-02-05",
+      "promiseId": "P1",
+      "date": "2026-02-05",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Trainium3 delivering production workloads; nearly all chip supply expected to be committed by mid-2026.",
+      "quote": "Trainium3 is now delivering production workloads and seeing strong demand, with nearly all Trainium3 supply of chips expected to be committed by mid-2026.",
+      "verbatim": {
+        "text": "Trainium3 is now delivering production workloads and seeing strong demand, with nearly all Trainium3 supply of chips expected to be committed by mid-2026.",
+        "segs": [
+          {
+            "t": "Trainium3 is now delivering production workloads and seeing strong demand, with nearly all Trainium3 supply of chips expected to be committed by mid-",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Fourth Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Fourth Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMZN-P2-2025-04-02",
+      "promiseId": "P2",
+      "date": "2025-04-02",
+      "call": "Here’s what to expect from Project Kuiper’s first full-scale satellite launch",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Customer service expected later this year.",
+      "quote": "Project Kuiper will deliver high-speed, low-latency internet to virtually any location on the planet, and we expect to begin delivering service to customers later this year.",
+      "verbatim": {
+        "text": "Project Kuiper will deliver high-speed, low-latency internet to virtually any location on the planet, and we expect to begin delivering service to customers later this year.",
+        "segs": [
+          {
+            "t": "Project Kuiper will deliver high-speed, low-latency internet to virtually any location on the planet, and we expect to begin delivering service to customers later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-internet-first-launch",
+          "title": "Amazon’s Project Kuiper set for first full-scale satellite launch",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-internet-first-launch",
+          "title": "Amazon’s Project Kuiper set for first full-scale satellite launch",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "AMZN-P2-2025-05-01",
+      "promiseId": "P2",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed customer service later this year.",
+      "quote": "Additionally, just a couple of days ago, Project Kuiper reached a significant milestone by launching our first satellites into orbit, with more being launched soon, and we expect to begin offering service to customers later this year.",
+      "verbatim": {
+        "text": "Additionally, just a couple of days ago, Project Kuiper reached a significant milestone by launching our first satellites into orbit, with more being launched soon, and we expect to begin offering service to customers later this year.",
+        "segs": [
+          {
+            "t": "Additionally, just a couple of days ago, Project Kuiper reached a significant milestone by launching our first satellites into orbit, with more being launched soon, and we expect to begin offering service to customers later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/313773-q1-2025/",
+          "title": "Amazon (AMZN) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/313773-q1-2025/",
+          "title": "Amazon (AMZN) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P2-2025-07-31",
+      "promiseId": "P2",
+      "date": "2025-07-31",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Commercial beta hoped for later this year or early next year.",
+      "quote": "We're very hopeful to get the service into commercial beta later this year, early next year.",
+      "verbatim": {
+        "text": "We're very hopeful to get the service into commercial beta later this year, early next year.",
+        "segs": [
+          {
+            "t": "We're very hopeful to get the service into commercial beta later this year, early next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://fintool.com/app/research/companies/AMZN/documents/transcripts/q2-2025",
+          "title": "AMAZON COM (AMZN) Q2 2025 Earnings Call Transcript | Fintool",
+          "domain": "fintool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://fintool.com/app/research/companies/AMZN/documents/transcripts/q2-2025",
+          "title": "AMAZON COM (AMZN) Q2 2025 Earnings Call Transcript | Fintool",
+          "domain": "fintool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P2-2025-10-30",
+      "promiseId": "P2",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported satellite and terminal progress but did not update the customer-service launch timetable.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://uk.investing.com/news/transcripts/earnings-call-transcript-amazon-q3-2025-beats-expectations-stock-dips-93CH-4337270",
+          "title": "Earnings call transcript: Amazon Q3 2025 beats expectations, stock dips By Investing.com",
+          "domain": "uk.investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P2-2025-11-24",
+      "promiseId": "P2",
+      "date": "2025-11-24",
+      "call": "Amazon Leo introduces Ultra antenna with 1 Gbps speeds, begins enterprise preview",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "With more than 150 satellites, enterprise preview begins; wider commercial rollout planned for next year.",
+      "quote": "With more than 150 satellites in orbit and initial network testing underway, Amazon Leo (formerly Project Kuiper) is sharing new details on its enterprise-focused hardware, services, and capabilities, and launching a new preview program for select enterprise customers to begin testing Amazon Leo services ahead of a wider commercial rollout next year.",
+      "verbatim": {
+        "text": "With more than 150 satellites in orbit and initial network testing underway, Amazon Leo (formerly Project Kuiper) is sharing new details on its enterprise-focused hardware, services, and capabilities, and launching a new preview program for select enterprise customers to begin testing Amazon Leo services ahead of a wider commercial rollout next year.",
+        "segs": [
+          {
+            "t": "With more than 150 satellites in orbit and initial network testing underway, Amazon Leo (formerly Project Kuiper) is sharing new details on its enterprise-focused hardware, services, and capabilities, and launching a new preview program for select enterprise customers to begin testing Amazon Leo services ahead of a wider commercial rollout next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.aboutamazon.com/news/amazon-leo/amazon-leo-satellite-internet-ultra-pro",
+          "title": "Amazon Leo introduces Ultra antenna with 1 Gbps speeds, begins enterprise preview",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.aboutamazon.com/news/amazon-leo/amazon-leo-satellite-internet-ultra-pro",
+          "title": "Amazon Leo introduces Ultra antenna with 1 Gbps speeds, begins enterprise preview",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "AMZN-P2-2026-02-05",
+      "promiseId": "P2",
+      "date": "2026-02-05",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reported 180 satellites; more than 20 launches planned in 2026, more than 30 in 2027; commercial launch expected in 2026.",
+      "quote": "We've launched 180 satellites, have more than 20 launches planned in 2026, more than 30 in 2027, and expect to launch commercially in 2026.",
+      "verbatim": {
+        "text": "We've launched 180 satellites, have more than 20 launches planned in 2026, more than 30 in 2027, and expect to launch commercially in 2026.",
+        "segs": [
+          {
+            "t": "We've launched 180 satellites, have more than 20 launches planned in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", more than 30 in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", and expect to launch commercially in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/406163-q4-2025/",
+          "title": "Amazon (AMZN) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/406163-q4-2025/",
+          "title": "Amazon (AMZN) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P2-2026-04-09",
+      "promiseId": "P2",
+      "date": "2026-04-09",
+      "call": "2025 Letter to Shareholders",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Launch officially scheduled for mid-2026.",
+      "quote": "While Amazon Leo is officially scheduled to launch in mid-2026, we already have meaningful revenue commitments from enterprises and governments.",
+      "verbatim": {
+        "text": "While Amazon Leo is officially scheduled to launch in mid-2026, we already have meaningful revenue commitments from enterprises and governments.",
+        "segs": [
+          {
+            "t": "While Amazon Leo is officially scheduled to launch in mid-",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we already have meaningful revenue commitments from enterprises and governments.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders",
+          "title": "Amazon CEO Andy Jassy’s 2025 Letter to Shareholders",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders",
+          "title": "Amazon CEO Andy Jassy’s 2025 Letter to Shareholders",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "AMZN-P2-2026-04-29",
+      "promiseId": "P2",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Brian Olsavsky, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Commercial launch on track for Q3; production and launch cost capitalization expected in Q4.",
+      "quote": "Amazon Leo's commercial service is on track to launch in Q3, and we expect to begin capitalizing certain costs in Q4, including production and launch costs.",
+      "verbatim": {
+        "text": "Amazon Leo's commercial service is on track to launch in Q3, and we expect to begin capitalizing certain costs in Q4, including production and launch costs.",
+        "segs": [
+          {
+            "t": "Amazon Leo's commercial service is on track to launch in ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": ", and we expect to begin capitalizing certain costs in ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ", including production and launch costs.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/552741-q1-2026/",
+          "title": "Amazon (AMZN) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/552741-q1-2026/",
+          "title": "Amazon (AMZN) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P2-2026-07-30",
+      "promiseId": "P2",
+      "date": "2026-07-30",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Close to 400 satellites; enough for initial satellite internet service this year.",
+      "quote": "Finally, Amazon Leo is close to 400 satellites in orbit, enough to begin initial satellite internet service this year.",
+      "verbatim": {
+        "text": "Finally, Amazon Leo is close to 400 satellites in orbit, enough to begin initial satellite internet service this year.",
+        "segs": [
+          {
+            "t": "Finally, Amazon Leo is close to 400 satellites in orbit, enough to begin initial satellite internet service this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/",
+          "title": "Amazon (AMZN) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/",
+          "title": "Amazon (AMZN) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P2-2026-10-29",
+      "promiseId": "P2",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Initial service still expected later this year.",
+      "quote": "Remains on track to begin initial service of its Amazon Leo low Earth orbit satellite service later this year, and signed a strategic agreement with AT&T, which will be the first major U.S. telecom provider to offer Leo connectivity to enterprise and public-sector customers.",
+      "verbatim": {
+        "text": "Remains on track to begin initial service of its Amazon Leo low Earth orbit satellite service later this year, and signed a strategic agreement with AT&T, which will be the first major U.S. telecom provider to offer Leo connectivity to enterprise and public-sector customers.",
+        "segs": [
+          {
+            "t": "Remains on track to begin initial service of its Amazon Leo low Earth orbit satellite service later this year, and signed a strategic agreement with AT&T, which will be the first major U.S. telecom provider to offer Leo connectivity to enterprise and public-sector customers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMZN-P3-2025-06-24",
+      "promiseId": "P3",
+      "date": "2025-06-24",
+      "call": "Amazon Brings Prime Delivery Speeds as Fast as the Same Day to Thousands of Smaller Cities, Towns, and Rural Communities Across the U.S. for the First Time",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Promised same-/next-day delivery to tens of millions of U.S. customers across more than 4,000 smaller cities, towns and rural communities by year-end.",
+      "quote": "SEATTLE--(BUSINESS WIRE)-- Amazon (NASDAQ: AMZN) today announced plans to expand the convenience and reliability of Same-Day and Next-Day Delivery to tens of millions of U.S. customers in more than 4,000 smaller cities, towns, and rural communities by the end of the year.",
+      "verbatim": {
+        "text": "SEATTLE--(BUSINESS WIRE)-- Amazon (NASDAQ: AMZN) today announced plans to expand the convenience and reliability of Same-Day and Next-Day Delivery to tens of millions of U.S. customers in more than 4,000 smaller cities, towns, and rural communities by the end of the year.",
+        "segs": [
+          {
+            "t": "SEATTLE--(BUSINESS WIRE)-- Amazon (NASDAQ: AMZN) today announced plans to expand the convenience and reliability of Same-Day and Next-Day Delivery to tens of millions of U.S. customers in more than ",
+            "h": 0
+          },
+          {
+            "t": "4,000",
+            "h": 1
+          },
+          {
+            "t": " smaller cities, towns, and rural communities by the end of the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://press.aboutamazon.com/2025/6/amazon-brings-prime-delivery-speeds-as-fast-as-the-same-day-to-thousands-of-smaller-cities-towns-and-rural-communities-across-the-u-s-for-the-first-time",
+          "title": "Amazon-Brings-Prime-Delivery-Speeds-as-Fast-as-the-Same-Day-to-Thousands-of-Smaller-Cities-Towns-and-Rural-Communities-Across-the-U-S--for-the-First-Time - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://press.aboutamazon.com/2025/6/amazon-brings-prime-delivery-speeds-as-fast-as-the-same-day-to-thousands-of-smaller-cities-towns-and-rural-communities-across-the-u-s-for-the-first-time",
+          "title": "Amazon-Brings-Prime-Delivery-Speeds-as-Fast-as-the-Same-Day-to-Thousands-of-Smaller-Cities-Towns-and-Rural-Communities-Across-the-U-S--for-the-First-Time - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMZN-P3-2025-07-31",
+      "promiseId": "P3",
+      "date": "2025-07-31",
+      "call": "Q2 2025 earnings release",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed same-/next-day delivery to tens of millions of U.S. customers in 4,000+ smaller cities, towns and rural communities by end-2025.",
+      "quote": "Announced expansion of Same-Day and Next-Day Delivery to tens of millions of U.S. customers in 4,000+ smaller cities, towns, and rural communities by end of 2025.",
+      "verbatim": {
+        "text": "Announced expansion of Same-Day and Next-Day Delivery to tens of millions of U.S. customers in 4,000+ smaller cities, towns, and rural communities by end of 2025.",
+        "segs": [
+          {
+            "t": "Announced expansion of Same-Day and Next-Day Delivery to tens of millions of U.S. customers in ",
+            "h": 0
+          },
+          {
+            "t": "4,000",
+            "h": 1
+          },
+          {
+            "t": "+ smaller cities, towns, and rural communities by end of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Second Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Second Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMZN-P3-2025-10-30",
+      "promiseId": "P3",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Rural same-/next-day delivery coverage increased 60% in the past four months.",
+      "quote": "Increased number of rural communities with access to Amazon’s Same-Day and Next-Day Delivery by 60% in past four months.",
+      "verbatim": {
+        "text": "Increased number of rural communities with access to Amazon’s Same-Day and Next-Day Delivery by 60% in past four months.",
+        "segs": [
+          {
+            "t": "Increased number of rural communities with access to Amazon’s Same-Day and Next-Day Delivery by ",
+            "h": 0
+          },
+          {
+            "t": "60%",
+            "h": 1
+          },
+          {
+            "t": " in past four months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMZN-P3-2026-02-03",
+      "promiseId": "P3",
+      "date": "2026-02-03",
+      "call": "Amazon Sets New Prime Delivery Speed Record in 2025 With Over 13 Billion Items Arriving the Same or Next Day Around the World",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported same-/next-day delivery expansion to over 4,000 smaller cities, towns and rural areas across 44 states during 2025.",
+      "quote": "Significantly expanded geographic reach of Same-Day and Next-Day Delivery at no additional cost to Prime members in over 4,000 smaller cities, towns, and rural areas across 44 states by transforming existing rural delivery stations into hybrid hubs that serve multiple functions.",
+      "verbatim": {
+        "text": "Significantly expanded geographic reach of Same-Day and Next-Day Delivery at no additional cost to Prime members in over 4,000 smaller cities, towns, and rural areas across 44 states by transforming existing rural delivery stations into hybrid hubs that serve multiple functions.",
+        "segs": [
+          {
+            "t": "Significantly expanded geographic reach of Same-Day and Next-Day Delivery at no additional cost to Prime members in over ",
+            "h": 0
+          },
+          {
+            "t": "4,000",
+            "h": 1
+          },
+          {
+            "t": " smaller cities, towns, and rural areas across 44 states by transforming existing rural delivery stations into hybrid hubs that serve multiple functions.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://press.aboutamazon.com/2026/2/amazon-sets-new-prime-delivery-speed-record-in-2025-with-over-13-billion-items-arriving-the-same-or-next-day-around-the-world",
+          "title": "Amazon-Sets-New-Prime-Delivery-Speed-Record-in-2025-With-Over-13-Billion-Items-Arriving-the-Same-or-Next-Day-Around-the-World - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://press.aboutamazon.com/2026/2/amazon-sets-new-prime-delivery-speed-record-in-2025-with-over-13-billion-items-arriving-the-same-or-next-day-around-the-world",
+          "title": "Amazon-Sets-New-Prime-Delivery-Speed-Record-in-2025-With-Over-13-Billion-Items-Arriving-the-Same-or-Next-Day-Around-the-World - US Press Center",
+          "domain": "press.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AMZN-P4-2025-10-30",
+      "promiseId": "P4",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "AWS power capacity had doubled from 2022; management planned to double it again by 2027.",
+      "quote": "To put that into perspective, we're now double the power capacity that AWS was in 2022, and we're on track to double again by 2027.",
+      "verbatim": {
+        "text": "To put that into perspective, we're now double the power capacity that AWS was in 2022, and we're on track to double again by 2027.",
+        "segs": [
+          {
+            "t": "To put that into perspective, we're now double the power capacity that AWS was in ",
+            "h": 0
+          },
+          {
+            "t": "2022",
+            "h": 1
+          },
+          {
+            "t": ", and we're on track to double again by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/AMZN%3AIM/transcripts/2025-year/3-quarter",
+          "title": "Amazon.com, Inc. (AMZN IM) Q3 FY2025 Earnings Call Transcript - October 30, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/AMZN%3AIM/transcripts/2025-year/3-quarter",
+          "title": "Amazon.com, Inc. (AMZN IM) Q3 FY2025 Earnings Call Transcript - October 30, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P4-2026-02-05",
+      "promiseId": "P4",
+      "date": "2026-02-05",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed plans to double AWS power capacity again by the end of 2027.",
+      "quote": "We expect to double it again by the end of 2027.",
+      "verbatim": {
+        "text": "We expect to double it again by the end of 2027.",
+        "segs": [
+          {
+            "t": "We expect to double it again by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/AMZN/transcripts/2025-year/4-quarter",
+          "title": "Amazon.com, Inc. (AMZN) Q4 FY2025 Earnings Call Transcript - February 5, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/AMZN/transcripts/2025-year/4-quarter",
+          "title": "Amazon.com, Inc. (AMZN) Q4 FY2025 Earnings Call Transcript - February 5, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.roic.ai/quote/AMZN%3AIM/transcripts/2025-year/3-quarter",
+          "title": "Amazon.com, Inc. (AMZN IM) Q3 FY2025 Earnings Call Transcript - October 30, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P4-2026-04-09",
+      "promiseId": "P4",
+      "date": "2026-04-09",
+      "call": "CEO Andy Jassy’s 2025 Letter to Shareholders",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Added 3.9 gigawatts in 2025; expected total power capacity to double by the end of 2027.",
+      "quote": "AWS added 3.9 gigawatts (“GW”) of new power capacity in 2025, expects to double total power capacity by the end of 2027, and is monetizing that capacity as fast as it’s installed.",
+      "verbatim": {
+        "text": "AWS added 3.9 gigawatts (“GW”) of new power capacity in 2025, expects to double total power capacity by the end of 2027, and is monetizing that capacity as fast as it’s installed.",
+        "segs": [
+          {
+            "t": "AWS added 3.9 gigawatts (“GW”) of new power capacity in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", expects to double total power capacity by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", and is monetizing that capacity as fast as it’s installed.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders",
+          "title": "Amazon CEO Andy Jassy’s 2025 Letter to Shareholders",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders",
+          "title": "Amazon CEO Andy Jassy’s 2025 Letter to Shareholders",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.aboutamazon.sg/news/company-news/ceo-andy-jassys-2025-letter-to-shareholders",
+          "title": "CEO Andy Jassy’s 2025 Letter to Shareholders - About Amazon Singapore",
+          "domain": "aboutamazon.sg",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "AMZN-P4-2026-04-29",
+      "promiseId": "P4",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 2027 AWS power-capacity doubling target was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/29/amazon-amzn-q1-2026-earnings-call-transcript",
+          "title": "Amazon (AMZN) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P4-2026-07-30",
+      "promiseId": "P4",
+      "date": "2026-07-30",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "The plan to double AWS power capacity from 2025 levels by the end of 2027 remained on track.",
+      "quote": "We're on pace with the capacity build that we talked about a few quarters ago, where we said we expect to have double the power capacity by the end of 2027 that we had in 2025, and we continue to be on that track.",
+      "verbatim": {
+        "text": "We're on pace with the capacity build that we talked about a few quarters ago, where we said we expect to have double the power capacity by the end of 2027 that we had in 2025, and we continue to be on that track.",
+        "segs": [
+          {
+            "t": "We're on pace with the capacity build that we talked about a few quarters ago, where we said we expect to have double the power capacity by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " that we had in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", and we continue to be on that track.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/AMZN/earnings/AMZN-Q2-2026-earnings_call-657334.html",
+          "title": "Amazon.com, Inc. (AMZN) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AMZN/earnings/AMZN-Q2-2026-earnings_call-657334.html",
+          "title": "Amazon.com, Inc. (AMZN) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P4-2026-10-29",
+      "promiseId": "P4",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The 2027 AWS power-capacity doubling target was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AMZN/earnings/AMZN-Q3-2026-earnings_call-720308.html",
+          "title": "Amazon.com, Inc. (AMZN) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P5-2026-02-05",
+      "promiseId": "P5",
+      "date": "2026-02-05",
+      "call": "Q4 2025 earnings release",
+      "speaker": "Andy Jassy, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Sets about $200 billion in 2026 capital expenditures across Amazon.",
+      "quote": "With such strong demand for our existing offerings and seminal opportunities like AI, chips, robotics, and low earth orbit satellites, we expect to invest about $200 billion in capital expenditures across Amazon in 2026, and anticipate strong long-term return on invested capital.",
+      "verbatim": {
+        "text": "“With such strong demand for our existing offerings and seminal opportunities like AI, chips, robotics, and low earth orbit satellites, we expect to invest about $200 billion in capital expenditures across Amazon in 2026, and anticipate strong long-term return on invested capital.”",
+        "segs": [
+          {
+            "t": "“With such strong demand for our existing offerings and seminal opportunities like AI, chips, robotics, and low earth orbit satellites, we expect to invest about ",
+            "h": 0
+          },
+          {
+            "t": "$200 billion",
+            "h": 1
+          },
+          {
+            "t": " in capital expenditures across Amazon in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", and anticipate strong long-term return on invested capital.”",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.aboutamazon.com/files/doc_earnings/2025/q4/earnings-result/AMZN-Q4-2025-Earnings-Release.pdf",
+          "title": "AMZN-2025.12.31-EX99.1",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/files/doc_earnings/2025/q4/earnings-result/AMZN-Q4-2025-Earnings-Release.pdf",
+          "title": "AMZN-2025.12.31-EX99.1",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AMZN-P5-2026-04-09",
+      "promiseId": "P5",
+      "date": "2026-04-09",
+      "call": "2025 Letter to Shareholders",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirms approximately $200 billion in 2026 capex; says the investment is not based on a hunch.",
+      "quote": "We’re not investing approximately $200 billion in capex in 2026 on a hunch.",
+      "verbatim": {
+        "text": "We’re not investing approximately $200 billion in capex in 2026 on a hunch.",
+        "segs": [
+          {
+            "t": "We’re not investing approximately ",
+            "h": 0
+          },
+          {
+            "t": "$200 billion",
+            "h": 1
+          },
+          {
+            "t": " in capex in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " on a hunch.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders?campaign_id=4&emc=edit_dk_20260409&instance_id=173811&nl=dealbook&regi_id=8799642&segment_id=217967&user_id=deb62b3abb62fb6c116d56ca3ab071d1",
+          "title": "Amazon CEO Andy Jassy’s 2025 Letter to Shareholders",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders?campaign_id=4&emc=edit_dk_20260409&instance_id=173811&nl=dealbook&regi_id=8799642&segment_id=217967&user_id=deb62b3abb62fb6c116d56ca3ab071d1",
+          "title": "Amazon CEO Andy Jassy’s 2025 Letter to Shareholders",
+          "domain": "aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "AMZN-P5-2026-04-29",
+      "promiseId": "P5",
+      "date": "2026-04-29",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reports no capital-plan update and says the existing plan remains largely unchanged.",
+      "quote": "So I do not have a new update on capital.",
+      "verbatim": {
+        "text": "So I do not have a new update on capital.",
+        "segs": [
+          {
+            "t": "So I do not have a new update on capital.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/29/amazon-amzn-q1-2026-earnings-call-transcript",
+          "title": "Amazon (AMZN) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/events/event-details/2026/Q1-2026-Amazoncom-Inc-Earnings-Conference-Call-/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Q1 2026 Amazon.com, Inc. Earnings Conference Call\t\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/29/amazon-amzn-q1-2026-earnings-call-transcript",
+          "title": "Amazon (AMZN) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P5-2026-07-30",
+      "promiseId": "P5",
+      "date": "2026-07-30",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Andy Jassy, CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raises 2026 cash CapEx from about $200 billion to approximately $220 billion, citing higher memory costs.",
+      "quote": "We now believe we will spend approximately $220 billion in cash CapEx in 2026.",
+      "verbatim": {
+        "text": "We now believe we will spend approximately $220 billion in cash CapEx in 2026.",
+        "segs": [
+          {
+            "t": "We now believe we will spend approximately ",
+            "h": 0
+          },
+          {
+            "t": "$220 billion",
+            "h": 1
+          },
+          {
+            "t": " in cash CapEx in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/",
+          "title": "Amazon (AMZN) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/events/event-details/2026/Q2-2026-Amazoncom-Inc-Earnings-Conference-Call/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Q2 2026 Amazon.com, Inc. Earnings Conference Call\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/",
+          "title": "Amazon (AMZN) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AMZN-P5-2026-10-29",
+      "promiseId": "P5",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirms approximately $220 billion of 2026 cash capital expenditures.",
+      "quote": "We continue to expect 2026 cash capital expenditures to be approximately $220 billion.",
+      "verbatim": {
+        "text": "We continue to expect 2026 cash capital expenditures to be approximately $220 billion.",
+        "segs": [
+          {
+            "t": "We continue to expect ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " cash capital expenditures to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$220 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+          "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+          "domain": "ir.aboutamazon.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Third-Quarter-Results/default.aspx",
+      "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+      "domain": "ir.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders",
+      "title": "Amazon CEO Andy Jassy’s 2025 Letter to Shareholders",
+      "domain": "aboutamazon.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 3,
+      "url": "https://stockanalysis.com/stocks/amzn/transcripts/657334-q2-2026/",
+      "title": "Amazon (AMZN) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/29/amazon-amzn-q1-2026-earnings-call-transcript",
+      "title": "Amazon (AMZN) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-q3-2026-misses-eps-as-shares-fall-after-hours-93CH-4985489",
+      "title": "Earnings call transcript: Amazon Q3 2026 misses EPS as shares fall after hours By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-tops-q2-2026-estimates-as-aws-growth-accelerates-93CH-4826442",
+      "title": "Earnings call transcript: Amazon tops Q2 2026 estimates as AWS growth accelerates By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://ir.aboutamazon.com/events/default.aspx",
+      "title": "\n\tAmazon.com, Inc. - Events\n",
+      "domain": "ir.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 8,
+      "url": "https://press.aboutamazon.com/2025/12/trainium3-ultraservers-now-available-enabling-customers-to-train-and-deploy-ai-models-faster-at-lower-cost",
+      "title": "Trainium3-UltraServers-Now-Available-Enabling-Customers-to-Train-and-Deploy-AI-Models-Faster-at-Lower-Cost - US Press Center",
+      "domain": "press.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/default.aspx",
+      "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Fourth Quarter Results\n",
+      "domain": "ir.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://www.aboutamazon.com/news/amazon-leo/amazon-leo-satellite-internet-ultra-pro",
+      "title": "Amazon Leo introduces Ultra antenna with 1 Gbps speeds, begins enterprise preview",
+      "domain": "aboutamazon.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 11,
+      "url": "https://press.aboutamazon.com/2025/6/amazon-brings-prime-delivery-speeds-as-fast-as-the-same-day-to-thousands-of-smaller-cities-towns-and-rural-communities-across-the-u-s-for-the-first-time",
+      "title": "Amazon-Brings-Prime-Delivery-Speeds-as-Fast-as-the-Same-Day-to-Thousands-of-Smaller-Cities-Towns-and-Rural-Communities-Across-the-U-S--for-the-First-Time - US Press Center",
+      "domain": "press.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 12,
+      "url": "https://press.aboutamazon.com/2026/2/amazon-sets-new-prime-delivery-speed-record-in-2025-with-over-13-billion-items-arriving-the-same-or-next-day-around-the-world",
+      "title": "Amazon-Sets-New-Prime-Delivery-Speed-Record-in-2025-With-Over-13-Billion-Items-Arriving-the-Same-or-Next-Day-Around-the-World - US Press Center",
+      "domain": "press.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-internet-first-launch",
+      "title": "Amazon’s Project Kuiper set for first full-scale satellite launch",
+      "domain": "aboutamazon.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 14,
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
+      "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Second Quarter Results\n",
+      "domain": "ir.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 15,
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results",
+      "title": "\n\tAmazon.com, Inc. - Amazon.com Announces Third Quarter Results\n",
+      "domain": "ir.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 16,
+      "url": "https://ir.aboutamazon.com/files/doc_earnings/2025/q4/earnings-result/AMZN-Q4-2025-Earnings-Release.pdf",
+      "title": "AMZN-2025.12.31-EX99.1",
+      "domain": "ir.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 17,
+      "url": "https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2025-letter-to-shareholders?campaign_id=4&emc=edit_dk_20260409&instance_id=173811&nl=dealbook&regi_id=8799642&segment_id=217967&user_id=deb62b3abb62fb6c116d56ca3ab071d1",
+      "title": "Amazon CEO Andy Jassy’s 2025 Letter to Shareholders",
+      "domain": "aboutamazon.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 18,
+      "url": "https://ir.aboutamazon.com/events/event-details/2026/Q1-2026-Amazoncom-Inc-Earnings-Conference-Call-/default.aspx",
+      "title": "\n\tAmazon.com, Inc. - Q1 2026 Amazon.com, Inc. Earnings Conference Call\t\n",
+      "domain": "ir.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 19,
+      "url": "https://ir.aboutamazon.com/events/event-details/2026/Q2-2026-Amazoncom-Inc-Earnings-Conference-Call/default.aspx",
+      "title": "\n\tAmazon.com, Inc. - Q2 2026 Amazon.com, Inc. Earnings Conference Call\n",
+      "domain": "ir.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 20,
+      "url": "https://press.aboutamazon.com/2026/2/amazon-sets-new-prime-delivery-speed-record-in-2025-with-over-13-billion-items-arriving-the-same-or-next-day-around-the-world?utm_source=chatgpt.com",
+      "title": "Amazon-Sets-New-Prime-Delivery-Speed-Record-in-2025-With-Over-13-Billion-Items-Arriving-the-Same-or-Next-Day-Around-the-World - US Press Center",
+      "domain": "press.aboutamazon.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 21,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/amazoncom-amzn-q4-2024-earnings-call-transcript",
+      "title": "Amazon.com (AMZN) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 22,
+      "url": "https://stockanalysis.com/stocks/amzn/transcripts/552741-q1-2026/",
+      "title": "Amazon (AMZN) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 23,
+      "url": "https://www.roic.ai/quote/AMZN%3AIM/transcripts/2025-year/3-quarter",
+      "title": "Amazon.com, Inc. (AMZN IM) Q3 FY2025 Earnings Call Transcript - October 30, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 24,
+      "url": "https://finance.yahoo.com/quote/AMZN/earnings/AMZN-Q2-2026-earnings_call-657334.html",
+      "title": "Amazon.com, Inc. (AMZN) Q2 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 25,
+      "url": "https://finance.yahoo.com/quote/AMZN/earnings/AMZN-Q3-2026-earnings_call-720308.html",
+      "title": "Amazon.com, Inc. (AMZN) Q3 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 26,
+      "url": "https://www.roic.ai/quote/AMZN/transcripts/2025-year/2-quarter",
+      "title": "Amazon.com, Inc. (AMZN) Q2 FY2025 Earnings Call Transcript - July 31, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/10/31/amazon-amzn-q3-2025-earnings-call-transcript/",
+      "title": "Amazon (AMZN) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 28,
+      "url": "https://stockanalysis.com/stocks/amzn/transcripts/313773-q1-2025/",
+      "title": "Amazon (AMZN) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 29,
+      "url": "https://fintool.com/app/research/companies/AMZN/documents/transcripts/q2-2025",
+      "title": "AMAZON COM (AMZN) Q2 2025 Earnings Call Transcript | Fintool",
+      "domain": "fintool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 30,
+      "url": "https://uk.investing.com/news/transcripts/earnings-call-transcript-amazon-q3-2025-beats-expectations-stock-dips-93CH-4337270",
+      "title": "Earnings call transcript: Amazon Q3 2025 beats expectations, stock dips By Investing.com",
+      "domain": "uk.investing.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 31,
+      "url": "https://stockanalysis.com/stocks/amzn/transcripts/406163-q4-2025/",
+      "title": "Amazon (AMZN) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 32,
+      "url": "https://www.roic.ai/quote/AMZN/transcripts/2025-year/4-quarter",
+      "title": "Amazon.com, Inc. (AMZN) Q4 FY2025 Earnings Call Transcript - February 5, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 33,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-q1-2025-earnings-beat-expectations-stock-dips-93CH-4018559",
+      "title": " Earnings call transcript: Amazon Q1 2025 earnings beat expectations, stock dips By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 34,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazon-q2-2025-earnings-beat-expectations-93CH-4164802",
+      "title": "Earnings Call Transcript Amazon Q2 2025 Earnings Beat Expectations 93Ch 4164802",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 35,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-amazons-q4-2025-revenue-beats-forecast-stock-dips-93CH-4489218",
+      "title": "Earnings Call Transcript Amazons Q4 2025 Revenue Beats Forecast Stock Dips 93Ch 4489218",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 36,
+      "url": "https://tickertrends.io/transcripts/amzn/Q1-earnings-transcript-2025",
+      "title": "amzn Q1 2025 Earnings Call Transcript | TickerTrends",
+      "domain": "tickertrends.io",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 37,
+      "url": "https://www.aboutamazon.sg/news/company-news/ceo-andy-jassys-2025-letter-to-shareholders",
+      "title": "CEO Andy Jassy’s 2025 Letter to Shareholders - About Amazon Singapore",
+      "domain": "aboutamazon.sg",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 38,
+      "url": "https://www.benzinga.com/markets/earnings/25/10/48547705/amazon-q3-fy2025-earnings-call-transcript",
+      "title": "Amazon Q3 FY2025 Earnings Call Transcript - Amazon.com (NASDAQ:AMZN)",
+      "domain": "benzinga.com",
+      "tier": "press",
+      "uses": "P4"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T05:51:03.385840Z",
+      "completedAt": "2026-11-05T05:59:43.136523Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.634790Z",
+      "completedAt": "2026-11-05T19:12:44.789539Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.641362Z",
+      "completedAt": "2026-11-05T19:15:20.309532Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.647887Z",
+      "completedAt": "2026-11-05T19:11:43.776658Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.654369Z",
+      "completedAt": "2026-11-05T19:12:20.331226Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.660901Z",
+      "completedAt": "2026-11-05T19:12:57.871664Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.411246Z",
+      "completedAt": "2026-11-05T19:45:16.157128Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.418903Z",
+      "completedAt": "2026-11-05T19:47:53.843032Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.428820Z",
+      "completedAt": "2026-11-05T19:42:52.302121Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.436200Z",
+      "completedAt": "2026-11-05T19:44:33.135444Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.443439Z",
+      "completedAt": "2026-11-05T19:43:27.722790Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "31 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "26 of 26 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "26 of 26 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-29; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Amazon_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Amazon_icon.svg",
+      "title": "File:Amazon icon.svg - Wikimedia Commons",
+      "width": 2500,
+      "height": 2500,
+      "rank": 2
+    },
+    "photo": {
+      "imageUrl": "https://assets.aboutamazon.com/a3/f6/0abb1c1a4734ba2e727893e6eae2/aws-data-center-exterior-1.jpg",
+      "sourcePageUrl": "https://www.aboutamazon.com/news/tag/amazon-data-centers",
+      "title": "Amazon Data Centers",
+      "width": 5272,
+      "height": 2962,
+      "rank": 6
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.303Z"
+}

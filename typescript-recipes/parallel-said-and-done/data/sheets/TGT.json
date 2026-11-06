@@ -1,0 +1,1740 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "TGT",
+  "name": "Target Corporation",
+  "short": "Target",
+  "website": "target.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "Saturday nearest January 31",
+  "irUrl": "https://corporate.target.com/investors",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-08-19",
+    "quarter": "Q2 2026"
+  },
+  "nextCall": {
+    "date": "2026-11-18",
+    "time": "8:00 a.m. ET",
+    "quarter": "Q3 2026"
+  },
+  "photoSubject": "Target Corporation stores and remodels",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "More than $15 billion revenue growth",
+      "commitment": "Drive more than $15 billion in revenue growth over the next five years.",
+      "deadline": "next five years",
+      "firstStated": "2025-03-04",
+      "status": "dropped",
+      "k": "drop",
+      "outcomeSummary": "Management stopped reaffirming the more than $15 billion five-year target. Classified as dropped through sustained omission; no formal withdrawal or achievement was reported.",
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/investors/annual/2024-annual-report",
+          "title": "2024 Annual Report | Target Corporate",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/9c383747-166d-4310-b91f-cd77b7d06433/2025-May-21-TGT-Transcript.pdf",
+          "title": "Q1 2025 Target Corp Earnings Call on May 21, 2025 / 12:00PM UTC",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-08-19",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "dropped",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-08-20",
+            "what_was_said": "An analyst explicitly asked about achieving the $15 billion five-year sales-growth target. Michael Fiddelke responded that growth was the only path forward, outlined strategic priorities and said to take progress a quarter at a time, but did not explicitly reaffirm the amount or deadline.",
+            "call": "Q2 2025 earnings call"
+          },
+          {
+            "date": "2026-03-03",
+            "what_was_said": "Management presented a longer-term growth-rate framework: low-single-digit top-line growth in 2026, accelerating to low- to mid-single-digit growth over time. It did not restate or explicitly withdraw the $15 billion five-year target.",
+            "call": "Q4 2025 earnings call and Financial Community Meeting"
+          },
+          {
+            "date": "2026-08-19",
+            "what_was_said": "Management said, “Our goal is sustained profitable top line growth over time,” and described being only two quarters into year one of its plan. The $15 billion five-year target was again absent; management did not declare it achieved or formally withdraw it.",
+            "call": "Q2 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Target Plus $5 billion GMV",
+      "commitment": "Reach $5 billion in Target Plus GMV over the next five years.",
+      "deadline": "next five years",
+      "firstStated": "2025-03-04",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Target Plus GMV grew more than 40% in Q2 2026. The $5 billion by 2030 goal remains pending; no revision or completion was announced.",
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/9c383747-166d-4310-b91f-cd77b7d06433/2025-May-21-TGT-Transcript.pdf",
+          "title": "Q1 2025 Target Corp Earnings Call on May 21, 2025 / 12:00PM UTC",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Double Roundel’s size",
+      "commitment": "Double Roundel’s nearly $2 billion of value over the next five years.",
+      "deadline": "next five years",
+      "firstStated": "2025-03-04",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Target reported more than $2 billion of Roundel value and said doubling remained on track for 2030; subsequent gross billings grew nearly 20%.",
+      "citations": [
+        {
+          "url": "https://corporate.target.com/press/fact-sheet/2023/10/roundel",
+          "title": "Roundel: Target's Retail Media Business",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-08-19",
+            "what_was_said": "Management reported that Roundel gross billings grew nearly 20% year over year in Q2 2026, providing a subsequent progress update.",
+            "call": "Q2 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Approximately $5 billion 2026 CapEx",
+      "commitment": "Increase 2026 CapEx by approximately 25%, or $1 billion, versus 2025, to approximately $5 billion.",
+      "deadline": "2026",
+      "firstStated": "2025-11-19",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Target reaffirmed approximately $5 billion in full-year CapEx after deploying approximately $2.4 billion year-to-date; full-year completion remained pending.",
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/1b701222-ff3c-4f65-b4b7-d0de5511f9a4/TGT-Transcript-2025-11-19.pdf",
+          "title": "Q3 2025 Target Corp Earnings Call on November 19, 2025 / 1:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Reinvest $1 billion in 2026 P&L",
+      "commitment": "Reinvest $1 billion into the P&L in 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-03-03",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The $1 billion P&L commitment remained pending; Q2 SG&A expense grew 7% versus last year, in line with March guidance.",
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "TGT-P1-2025-03-04",
+      "promiseId": "P1",
+      "date": "2025-03-04",
+      "call": "Q4 2024 earnings call and Financial Community Meeting",
+      "speaker": "Brian Cornell, Chair and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected more than $15 billion in revenue growth over the next five years.",
+      "quote": "Our expectation is to drive more than $15 billion in revenue growth over the next five years.",
+      "verbatim": {
+        "text": "Our expectation is to drive more than $15 billion in revenue growth over the next five years.",
+        "segs": [
+          {
+            "t": "Our expectation is to drive more than ",
+            "h": 0
+          },
+          {
+            "t": "$15 billion",
+            "h": 1
+          },
+          {
+            "t": " in revenue growth over the next five years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P1-2025-04-11",
+      "promiseId": "P1",
+      "date": "2025-04-11",
+      "call": "2024 Annual Report — Letter to Shareholders",
+      "speaker": "Brian Cornell, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed more than $15 billion of business growth within five years.",
+      "quote": "And with our scale, cross-category momentum and significant growth potential in areas like same-day delivery, we believe we can grow our business by more than $15 billion within five years.",
+      "verbatim": {
+        "text": "And with our scale, cross-category momentum and significant growth potential in areas like same-day delivery, we believe we can grow our business by more than $15 billion within five years.",
+        "segs": [
+          {
+            "t": "And with our scale, cross-category momentum and significant growth potential in areas like same-day delivery, we believe we can grow our business by more than ",
+            "h": 0
+          },
+          {
+            "t": "$15 billion",
+            "h": 1
+          },
+          {
+            "t": " within five years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/investors/annual/2024-annual-report",
+          "title": "2024 Annual Report | Target Corporate",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/investors/annual/2024-annual-report",
+          "title": "2024 Annual Report | Target Corporate",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://ebs.publicnow.com/view/9FFE840E99AE1177627AE5951E65AA2C42307135",
+          "title": "Target Corporation (via Public) / 2024 digital annual report",
+          "domain": "ebs.publicnow.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "TGT-P1-2025-05-21",
+      "promiseId": "P1",
+      "date": "2025-05-21",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not mention the more than $15 billion, five-year revenue-growth target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://corporate.target.com/getmedia/9c383747-166d-4310-b91f-cd77b7d06433/2025-May-21-TGT-Transcript.pdf",
+          "title": "2025 May 21 Tgt Transcript",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P1-2025-08-20",
+      "promiseId": "P1",
+      "date": "2025-08-20",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "An analyst raised the $15 billion, five-year target; management responded qualitatively without repeating, changing, or withdrawing the numerical commitment.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/c5751599-850d-4bb0-b599-d8ac55a91156/2025-august-20-tgt-transcript.pdf",
+          "title": "Q2 2025 Target Corp Earnings Call on August 20, 2025 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P1-2025-11-19",
+      "promiseId": "P1",
+      "date": "2025-11-19",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not mention the more than $15 billion, five-year revenue-growth target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/1b701222-ff3c-4f65-b4b7-d0de5511f9a4/TGT-Transcript-2025-11-19.pdf",
+          "title": "Q3 2025 Target Corp Earnings Call on November 19, 2025 / 1:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P1-2026-03-03",
+      "promiseId": "P1",
+      "date": "2026-03-03",
+      "call": "Q4 2025 earnings call and Financial Community Meeting",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management omitted the more than $15 billion, five-year target without explicitly withdrawing or revising it.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P1-2026-05-20",
+      "promiseId": "P1",
+      "date": "2026-05-20",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management discussed long-term growth but did not mention the more than $15 billion, five-year target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+          "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P1-2026-08-19",
+      "promiseId": "P1",
+      "date": "2026-08-19",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The more than $15 billion, five-year target again went unmentioned; no achievement or withdrawal was announced.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P2-2025-03-04",
+      "promiseId": "P2",
+      "date": "2025-03-04",
+      "call": "Q4 2024 earnings call and Financial Community Meeting",
+      "speaker": "Cara Sylvester, Executive Vice President and Chief Guest Experience Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected Target Plus to deliver upwards of $5 billion in annual GMV within the next five years.",
+      "quote": "In fact, we expect Target Plus to deliver upwards of $5 billion in annual GMV within the next five years.",
+      "verbatim": {
+        "text": "In fact, we expect Target Plus to deliver upwards of $5 billion in annual GMV within the next five years.",
+        "segs": [
+          {
+            "t": "In fact, we expect Target Plus to deliver upwards of ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " in annual GMV within the next five years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Target executives said on the Q4 2024 earnings call and Financial Community Meeting (2025-03-04) about Target Plus $5 billion GMV: Expected Target Plus to deliver upwards of $5 billion in annual GMV within the next five years."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P2-2025-05-21",
+      "promiseId": "P2",
+      "date": "2025-05-21",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Rick Gomez, Executive Vice President and Chief Commercial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the goal to grow Target Plus GMV to $5 billion by 2030.",
+      "quote": "Another way we deliver newness and value is through our Target Plus marketplace where we have set ambitious goals to grow GMV to $5 billion by 2030 by offering even more brands and products guests want and expect from Target.",
+      "verbatim": {
+        "text": "Another way we deliver newness and value is through our Target Plus marketplace where we have set ambitious goals to grow GMV to $5 billion by 2030 by offering even more brands and products guests want and expect from Target.",
+        "segs": [
+          {
+            "t": "Another way we deliver newness and value is through our Target Plus marketplace where we have set ambitious goals to grow GMV to ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": " by offering even more brands and products guests want and expect from Target.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/9c383747-166d-4310-b91f-cd77b7d06433/2025-May-21-TGT-Transcript.pdf",
+          "title": "Q1 2025 Target Corp Earnings Call on May 21, 2025 / 12:00PM UTC",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/9c383747-166d-4310-b91f-cd77b7d06433/2025-May-21-TGT-Transcript.pdf",
+          "title": "Q1 2025 Target Corp Earnings Call on May 21, 2025 / 12:00PM UTC",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P2-2025-08-20",
+      "promiseId": "P2",
+      "date": "2025-08-20",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Jim Lee, Executive Vice President and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Roundel, Target Plus and membership delivered double-digit growth compared with last year.",
+      "quote": "And within our non-merchandise sales, Roundel, Target Plus and membership all delivered double-digit growth compared with last year.",
+      "verbatim": {
+        "text": "And within our non-merchandise sales, Roundel, Target Plus and membership all delivered double-digit growth compared with last year.",
+        "segs": [
+          {
+            "t": "And within our non-merchandise sales, Roundel, Target Plus and membership all delivered double-digit growth compared with last year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/c5751599-850d-4bb0-b599-d8ac55a91156/2025-august-20-tgt-transcript.pdf",
+          "title": "Q2 2025 Target Corp Earnings Call on August 20, 2025 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/c5751599-850d-4bb0-b599-d8ac55a91156/2025-august-20-tgt-transcript.pdf",
+          "title": "Q2 2025 Target Corp Earnings Call on August 20, 2025 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P2-2025-11-19",
+      "promiseId": "P2",
+      "date": "2025-11-19",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Jim Lee, Executive Vice President and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Target Plus marketplace GMV grew nearly 50%; Roundel ad sales grew mid-teens.",
+      "quote": "Beyond our first-party digital platform, we saw a significant step-up to nearly 50% growth in GMV of our Target Plus marketplace and mid-teens growth in Roundel ad sales, demonstrating the breadth and growing relevance of our digital ecosystem.",
+      "verbatim": {
+        "text": "Beyond our first-party digital platform, we saw a significant step-up to nearly 50% growth in GMV of our Target Plus marketplace and mid-teens growth in Roundel ad sales, demonstrating the breadth and growing relevance of our digital ecosystem.",
+        "segs": [
+          {
+            "t": "Beyond our first-party digital platform, we saw a significant step-up to nearly ",
+            "h": 0
+          },
+          {
+            "t": "50%",
+            "h": 1
+          },
+          {
+            "t": " growth in GMV of our Target Plus marketplace and mid-teens growth in Roundel ad sales, demonstrating the breadth and growing relevance of our digital ecosystem.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/1b701222-ff3c-4f65-b4b7-d0de5511f9a4/TGT-Transcript-2025-11-19.pdf",
+          "title": "Q3 2025 Target Corp Earnings Call on November 19, 2025 / 1:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/1b701222-ff3c-4f65-b4b7-d0de5511f9a4/TGT-Transcript-2025-11-19.pdf",
+          "title": "Q3 2025 Target Corp Earnings Call on November 19, 2025 / 1:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P2-2026-03-03",
+      "promiseId": "P2",
+      "date": "2026-03-03",
+      "call": "Q4 2025 earnings call and Financial Community Meeting",
+      "speaker": "Jim Lee, Executive Vice President and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Marketplace grew more than 30% last year; management expected growth to accelerate.",
+      "quote": "You saw from this morning’s earnings release, you know, we posted more than 30% growth in Marketplace last year, and we see that accelerating.",
+      "verbatim": {
+        "text": "Jim Lee \\- Target Corp - Executive Vice President and Chief Financial Officer You saw from this morning’s earnings release, you know, we posted more than 30% growth in Marketplace last year, and we see that accelerating.",
+        "segs": [
+          {
+            "t": "Jim Lee \\- Target Corp - Executive Vice President and Chief Financial Officer You saw from this morning’s earnings release, you know, we posted more than ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " growth in Marketplace last year, and we see that accelerating.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P2-2026-05-20",
+      "promiseId": "P2",
+      "date": "2026-05-20",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jim Lee, Executive Vice President and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Target Plus GMV grew nearly 60% in the first quarter.",
+      "quote": "On Target Plus, our third-party digital sales platform, we saw nearly 60% growth in first quarter GMV.",
+      "verbatim": {
+        "text": "On Target Plus, our third-party digital sales platform, we saw nearly 60% growth in first quarter GMV.",
+        "segs": [
+          {
+            "t": "On Target Plus, our third-party digital sales platform, we saw nearly ",
+            "h": 0
+          },
+          {
+            "t": "60%",
+            "h": 1
+          },
+          {
+            "t": " growth in first quarter GMV.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+          "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+          "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P2-2026-08-19",
+      "promiseId": "P2",
+      "date": "2026-08-19",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Jim Lee, Executive Vice President and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Roundel gross billings grew nearly 20%, Target Plus GMV more than 40%, and Target Circle 360 membership revenue over 40% year-over-year.",
+      "quote": "Specifically, gross billings from Roundel grew nearly 20%, Target Plus marketplace GMV grew more than 40%, and Target Circle 360 membership revenue increased by over 40% as compared to last year.",
+      "verbatim": {
+        "text": "Specifically, gross billings from Roundel grew nearly 20%, Target Plus marketplace GMV grew more than 40%, and Target Circle 360 membership revenue increased by over 40% as compared to last year.",
+        "segs": [
+          {
+            "t": "Specifically, gross billings from Roundel grew nearly ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": ", Target Plus marketplace GMV grew more than ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": ", and Target Circle 360 membership revenue increased by over ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " as compared to last year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Target executives said on the Q2 2026 earnings call (2026-08-19) about Target Plus $5 billion GMV: Roundel gross billings grew nearly 20%, Target Plus GMV more than 40%, and Target Circle 360 membership revenue over 40% year-over-year."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P3-2025-03-04",
+      "promiseId": "P3",
+      "date": "2025-03-04",
+      "call": "Q4 2024 earnings call and Financial Community Meeting",
+      "speaker": "Cara Sylvester, Executive Vice President and Chief Guest Experience Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Roundel generated nearly $2 billion in value; management saw potential to double its size over the next five years.",
+      "quote": "At nearly $2 billion in value for Target, we see the potential for Roundel to double its size over the next five years.",
+      "verbatim": {
+        "text": "At nearly $2 billion in value for Target, we see the potential for Roundel to double its size over the next five years.",
+        "segs": [
+          {
+            "t": "At nearly ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " in value for Target, we see the potential for Roundel to double its size over the next five years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+          "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P3-2025-05-21",
+      "promiseId": "P3",
+      "date": "2025-05-21",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported double-digit Roundel and Target Plus growth in Q1; did not address the five-year doubling target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/9c383747-166d-4310-b91f-cd77b7d06433/2025-May-21-TGT-Transcript.pdf",
+          "title": "Q1 2025 Target Corp Earnings Call on May 21, 2025 / 12:00PM UTC",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P3-2025-08-20",
+      "promiseId": "P3",
+      "date": "2025-08-20",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported double-digit growth in Roundel, Target Plus and membership; did not address the five-year doubling target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/c5751599-850d-4bb0-b599-d8ac55a91156/2025-august-20-tgt-transcript.pdf",
+          "title": "Q2 2025 Target Corp Earnings Call on August 20, 2025 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P3-2025-11-19",
+      "promiseId": "P3",
+      "date": "2025-11-19",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported mid-teens Roundel ad-sales growth and nearly 50% Target Plus GMV growth; did not address the five-year doubling target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/1b701222-ff3c-4f65-b4b7-d0de5511f9a4/TGT-Transcript-2025-11-19.pdf",
+          "title": "Q3 2025 Target Corp Earnings Call on November 19, 2025 / 1:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P3-2026-03-03",
+      "promiseId": "P3",
+      "date": "2026-03-03",
+      "call": "Q4 2025 earnings call and Financial Community Meeting",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed scaling Roundel and expected rapid growth, but did not address the five-year doubling target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P3-2026-05-20",
+      "promiseId": "P3",
+      "date": "2026-05-20",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Cited Roundel among growing high-margin revenue streams; did not address the five-year doubling target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+          "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P3-2026-06-18",
+      "promiseId": "P3",
+      "date": "2026-06-18",
+      "call": "Learn More About Roundel, Target’s Retail Media Business — updated fact sheet",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "More than $2 billion of value; company said it remained well on track to double Roundel’s value from 2025 to 2030.",
+      "quote": "Roundel now generates more than $2 billion of value for Target, while creating connections with consumers and brands that we believe will keep us well on track to achieve our stated goal of doubling Roundel’s value from 2025 to 2030.",
+      "verbatim": {
+        "text": "Roundel now generates more than $2 billion of value for Target, while creating connections with consumers and brands that we believe will keep us well on track to achieve our stated goal of doubling Roundel’s value from 2025 to 2030.",
+        "segs": [
+          {
+            "t": "Roundel now generates more than ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " of value for Target, while creating connections with consumers and brands that we believe will keep us well on track to achieve our stated goal of doubling Roundel’s value from ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "2030",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/press/fact-sheet/2023/10/roundel",
+          "title": "Roundel: Target's Retail Media Business",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/press/fact-sheet/2023/10/roundel",
+          "title": "Roundel: Target's Retail Media Business",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "TGT-P3-2026-08-19",
+      "promiseId": "P3",
+      "date": "2026-08-19",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Roundel billings grew nearly 20%, Target Plus GMV more than 40%, and Target Circle 360 membership revenue over 40%; doubling target not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P4-2025-11-19",
+      "promiseId": "P4",
+      "date": "2025-11-19",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Jim Lee, Executive Vice President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Planned 2026 CapEx approximately 25%, or $1 billion, above 2025—about $5 billion overall.",
+      "quote": "Our current plan envisions 2026 CapEx dollars increasing by approximately 25% or $1 billion versus 2025.",
+      "verbatim": {
+        "text": "Our current plan envisions 2026 CapEx dollars increasing by approximately 25% or $1 billion versus 2025.",
+        "segs": [
+          {
+            "t": "Our current plan envisions ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " CapEx dollars increasing by approximately ",
+            "h": 0
+          },
+          {
+            "t": "25%",
+            "h": 1
+          },
+          {
+            "t": " or ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " versus ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/1b701222-ff3c-4f65-b4b7-d0de5511f9a4/TGT-Transcript-2025-11-19.pdf",
+          "title": "Q3 2025 Target Corp Earnings Call on November 19, 2025 / 1:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/1b701222-ff3c-4f65-b4b7-d0de5511f9a4/TGT-Transcript-2025-11-19.pdf",
+          "title": "Q3 2025 Target Corp Earnings Call on November 19, 2025 / 1:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P4-2026-03-03",
+      "promiseId": "P4",
+      "date": "2026-03-03",
+      "call": "2026 Financial Community Meeting, including Fourth Quarter and Full-Year 2025 Earnings",
+      "speaker": "Jim Lee, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed approximately $5 billion of 2026 capital expenditures, up more than $1 billion from last year.",
+      "quote": "Regarding our first priority, we continue to expect that full-year capital expenditures will be approximately $5 billion in 2026, up more than $1 billion from last year.",
+      "verbatim": {
+        "text": "Regarding our first priority, we continue to expect that full-year capital expenditures will be approximately $5 billion in 2026, up more than $1 billion from last year.",
+        "segs": [
+          {
+            "t": "Regarding our first priority, we continue to expect that full-year capital expenditures will be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", up more than ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " from last year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/investors/events-presentations",
+          "title": "Events & Presentations | Target Investor Relations",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P4-2026-05-20",
+      "promiseId": "P4",
+      "date": "2026-05-20",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jim Lee, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Deployed about $1 billion in the first quarter; reaffirmed about $5 billion full-year CapEx for growth priorities outlined in March.",
+      "quote": "Regarding the first priority, we deployed about $1 billion for capital expenditures in the first quarter and continue to expect about $5 billion of CapEx for the full year as we invest behind the growth priorities we outlined at our financial meeting in March.",
+      "verbatim": {
+        "text": "Regarding the first priority, we deployed about $1 billion for capital expenditures in the first quarter and continue to expect about $5 billion of CapEx for the full year as we invest behind the growth priorities we outlined at our financial meeting in March.",
+        "segs": [
+          {
+            "t": "Regarding the first priority, we deployed about ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " for capital expenditures in the first quarter and continue to expect about ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " of CapEx for the full year as we invest behind the growth priorities we outlined at our financial meeting in March.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+          "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+          "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P4-2026-08-19",
+      "promiseId": "P4",
+      "date": "2026-08-19",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Jim Lee, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed approximately $5 billion full-year CapEx for growth priorities outlined in March; approximately $2.4 billion spent year-to-date, up nearly 30%.",
+      "quote": "We continue to expect approximately $5 billion of CapEx for the full year as we invest behind the strategic growth priorities we outlined in March.",
+      "verbatim": {
+        "text": "We continue to expect approximately $5 billion of CapEx for the full year as we invest behind the strategic growth priorities we outlined in March.",
+        "segs": [
+          {
+            "t": "We continue to expect approximately ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " of CapEx for the full year as we invest behind the strategic growth priorities we outlined in March.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P5-2026-03-03",
+      "promiseId": "P5",
+      "date": "2026-03-03",
+      "call": "2026 Financial Community Meeting, including Fourth Quarter and Full-Year 2025 Earnings",
+      "speaker": "Jim Lee, Executive Vice President and Chief Financial Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Plans to reinvest $1 billion into the P&L in 2026 to support strategic decisions and restore sustainable growth.",
+      "quote": "In support of the strategic decisions that Michael and Cara outlined earlier, and our goal to move our business back to sustainable growth, we’re planning to reinvest $1 billion into our P&L this year.",
+      "verbatim": {
+        "text": "In support of the strategic decisions that Michael and Cara outlined earlier, and our goal to move our business back to sustainable growth, we’re planning to reinvest $1 billion into our P&L this year.",
+        "segs": [
+          {
+            "t": "In support of the strategic decisions that Michael and Cara outlined earlier, and our goal to move our business back to sustainable growth, we’re planning to reinvest ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " into our P&L this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+          "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/investors/events-presentations",
+          "title": "Events & Presentations | Target Investor Relations",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P5-2026-05-20",
+      "promiseId": "P5",
+      "date": "2026-05-20",
+      "call": "Q1 2026 Target Corporation Earnings Conference Call",
+      "speaker": "Jim Lee, Executive Vice President and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Adjusted SG&A expense grew around 7%, reflecting additional field-team hours and training, incentives, capital-project spending, marketing and general liability expense.",
+      "quote": "This year's adjusted SG&A expense growth of around 7% reflected the impact of investments in additional hours and training for our field teams along with higher incentives, planned spending related to capital projects, higher marketing spend, and growth in general liability expense.",
+      "verbatim": {
+        "text": "This year's adjusted SG&A expense growth of around 7% reflected the impact of investments in additional hours and training for our field teams along with higher incentives, planned spending related to capital projects, higher marketing spend, and growth in general liability expense.",
+        "segs": [
+          {
+            "t": "This year's adjusted SG&A expense growth of around ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": " reflected the impact of investments in additional hours and training for our field teams along with higher incentives, planned spending related to capital projects, higher marketing spend, and growth in general liability expense.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+          "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+          "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/investors/events-presentations",
+          "title": "Events & Presentations | Target Investor Relations",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "TGT-P5-2026-08-19",
+      "promiseId": "P5",
+      "date": "2026-08-19",
+      "call": "Q2 2026 Target Corporation Earnings Conference Call",
+      "speaker": "Jim Lee, Executive Vice President and Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "SG&A expense grew 7% versus last year, in line with Q1 trends and March guidance.",
+      "quote": "Moving back to the P&L, SG&A expense grew 7% versus last year, in line with our Q1 trends and with the guidance I provided during our financial community meeting in March.",
+      "verbatim": {
+        "text": "Moving back to the P&L, SG&A expense grew 7% versus last year, in line with our Q1 trends and with the guidance I provided during our financial community meeting in March.",
+        "segs": [
+          {
+            "t": "Moving back to the P&L, SG&A expense grew ",
+            "h": 0
+          },
+          {
+            "t": "7%",
+            "h": 1
+          },
+          {
+            "t": " versus last year, in line with our ",
+            "h": 0
+          },
+          {
+            "t": "Q1",
+            "h": 1
+          },
+          {
+            "t": " trends and with the guidance I provided during our financial community meeting in March.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+          "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://corporate.target.com/investors/events-presentations",
+          "title": "Events & Presentations | Target Investor Relations",
+          "domain": "corporate.target.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+      "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://corporate.target.com/getmedia/5cee0409-4109-4619-a932-6f445031426b/Target-Corporation-2026-Financial-Community-Meeting.pdf",
+      "title": "Q4 2025 Target Corp Earnings Call on March 03, 2026 / 4:30PM",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://corporate.target.com/getmedia/12a546bd-99a7-48cc-95c7-43d365d3b1f5/TGT-USQ_Transcript_2026-05-20.pdf",
+      "title": "Q1 2026 Target Corp Earnings Call on May 20, 2026 / 12:00PM",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://corporate.target.com/getmedia/1b701222-ff3c-4f65-b4b7-d0de5511f9a4/TGT-Transcript-2025-11-19.pdf",
+      "title": "Q3 2025 Target Corp Earnings Call on November 19, 2025 / 1:00PM",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://corporate.target.com/getmedia/d29ff305-a470-477a-bf4b-585069cf8fc0/TGT-Transcript-2025-03-04.pdf",
+      "title": "Q4 2024 Target Corp Earnings Call And Financial Community Meeting on March 04, 2025 / 2:00PM",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://corporate.target.com/getmedia/9c383747-166d-4310-b91f-cd77b7d06433/2025-May-21-TGT-Transcript.pdf",
+      "title": "Q1 2025 Target Corp Earnings Call on May 21, 2025 / 12:00PM UTC",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://corporate.target.com/getmedia/c5751599-850d-4bb0-b599-d8ac55a91156/2025-august-20-tgt-transcript.pdf",
+      "title": "Q2 2025 Target Corp Earnings Call on August 20, 2025 / 12:00PM",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://corporate.target.com/investors/events-presentations",
+      "title": "Events & Presentations | Target Investor Relations",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 9,
+      "url": "https://corporate.target.com/investors/annual/2024-annual-report",
+      "title": "2024 Annual Report | Target Corporate",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://corporate.target.com/press/fact-sheet/2023/10/roundel",
+      "title": "Roundel: Target's Retail Media Business",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 11,
+      "url": "http://corporate.target.com/getmedia/d01cb805-63cb-4150-bae4-8d717f0d9ed3/Q2-2026-Target-Corp-Earnings-Call.pdf",
+      "title": "Q2 2026 Target Corp Earnings Call on August 19, 2026 / 12:00PM",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 12,
+      "url": "http://corporate.target.com/getmedia/9c383747-166d-4310-b91f-cd77b7d06433/2025-May-21-TGT-Transcript.pdf",
+      "title": "2025 May 21 Tgt Transcript",
+      "domain": "corporate.target.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://ebs.publicnow.com/view/9FFE840E99AE1177627AE5951E65AA2C42307135",
+      "title": "Target Corporation (via Public) / 2024 digital annual report",
+      "domain": "ebs.publicnow.com",
+      "tier": "press",
+      "uses": "P1"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.889371Z",
+      "completedAt": "2026-11-05T06:27:30.963629Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.418872Z",
+      "completedAt": "2026-11-05T19:13:33.353969Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.425846Z",
+      "completedAt": "2026-11-05T19:12:21.208186Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.433124Z",
+      "completedAt": "2026-11-05T19:12:57.484669Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.440738Z",
+      "completedAt": "2026-11-05T19:11:35.492514Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:03.448012Z",
+      "completedAt": "2026-11-05T19:12:02.720460Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.581022Z",
+      "completedAt": "2026-11-05T19:45:43.949815Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.588430Z",
+      "completedAt": "2026-11-05T19:45:21.283048Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.595495Z",
+      "completedAt": "2026-11-05T19:45:07.011171Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.707600Z",
+      "completedAt": "2026-11-05T19:44:50.753725Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:16.714961Z",
+      "completedAt": "2026-11-05T19:45:26.560439Z"
+    }
+  ],
+  "fills": {
+    "filled": 2
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "30 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "18 of 18 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "18 of 18 (100%); 2 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q2 2026 on 2026-08-19; next 2026-11-18"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/Target_logo.svg/1920px-Target_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Target_logo.svg",
+      "title": "File:Target logo.svg - Wikimedia Commons",
+      "width": 1920,
+      "height": 2552,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://corporate.target.com/getmedia/e007a776-88d5-443b-85e6-4e524b5c45e5/Remodels_hero.jpg",
+      "sourcePageUrl": "https://corporate.target.com/news-features/article/2018/07/store-remodels",
+      "title": "My Local Target is Getting a Remodel. What Can I Expect?",
+      "width": 940,
+      "height": 470,
+      "rank": 5
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.708Z"
+}

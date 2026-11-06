@@ -1,0 +1,2218 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "JPM",
+  "name": "JPMorgan Chase & Co.",
+  "short": "JPMorgan Chase",
+  "website": "jpmorganchase.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.jpmorganchase.com/ir",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-13",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": "2027-01-14",
+    "time": "8:30 AM Eastern",
+    "quarter": "Q4 2026"
+  },
+  "photoSubject": "JPMorgan Chase bank branch",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "2025 net interest income",
+      "commitment": "Generate 2025 NII excluding Markets slightly below $87 billion under then-current assumptions.",
+      "deadline": "2025",
+      "firstStated": "2024-10-11",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "FY2025 NII excluding Markets was $92.6B, exceeding the initial below-$87 billion outlook and the subsequently raised approximately $92 billion guidance.",
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/jpm-3q24-earnings-call-transcript-final.pdf",
+          "title": "3Q24 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/2nd-quarter/jpm-2q25-earnings-call-transcript.pdf",
+          "title": "2Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/3f2030e7-c144-4ad8-92b8-57b36851ffb6.pdf",
+          "title": "4Q25 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/4th-quarter/4q24-earnings-transcript.pdf",
+          "title": "4Q24 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-01-13",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "2026 net interest income",
+      "commitment": "Generate approximately $95 billion of NII excluding Markets in 2026, subject to assumptions and completion of the annual budget.",
+      "deadline": "2026",
+      "firstStated": "2025-10-14",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Guidance rose from about $95 billion to implied FY26 NII excluding Markets of ~$97.2B; full-year delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+          "title": "3Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/2b5b9a7e-a968-4985-94ad-5fa949a08d1c.pdf",
+          "title": "3Q26 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf",
+          "title": "3Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Security and resiliency investment",
+      "commitment": "Aspire to add another $0.5 trillion of lending and deploy $10 billion of incremental direct equity investments through the Security and Resiliency Initiative.",
+      "deadline": null,
+      "firstStated": "2025-10-13",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Original targets remain pending; JPMorgan reported more than $230 billion financed and facilitated and $5 billion committed from the initial $10 billion equity allocation.",
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/newsroom/press-releases/2026/one-year-security-resiliency-initiative-helping-strengthen-industries",
+          "title": "One year in, JPMorganChase's Security and Resiliency Initiative is helping to strengthen industries critical to long-term economic growth",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+          "title": "3Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-10-14",
+            "what_was_said": "The call also described the $10 billion in direct equity investments as incremental and said they would not happen instantaneously.",
+            "call": "3Q25 earnings call"
+          },
+          {
+            "date": "2026-10-13",
+            "what_was_said": "Dimon said the $1.5 trillion, 10-year SRI had probably generated more than $200 billion in its first year, while noting the number had not yet been disclosed.",
+            "call": "3Q26 earnings call"
+          },
+          {
+            "date": "2026-01-13",
+            "what_was_said": "After saying the SRI might be bigger than expected, Dimon said JPMorgan would not provide details on every item every quarter and that investors would have to trust him.",
+            "call": "4Q25 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "2026 adjusted expense budget",
+      "commitment": "Hold 2026 adjusted expense to approximately $105 billion, subject to market conditions.",
+      "deadline": "2026",
+      "firstStated": "2025-12-09",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The $105 billion outlook—not a spending promise—was revised upward to FY26 implied ~$108.6B, market dependent. Full-year results remained pending.",
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+          "title": "1Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/2b5b9a7e-a968-4985-94ad-5fa949a08d1c.pdf",
+          "title": "3Q26 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf",
+          "title": "3Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-14",
+            "what_was_said": "In Q&A, Jamie Dimon explicitly said, “$105 billion is not a promise. It's an outcome of business results.” He also said that if volumes remained strong and every quarter were as good as the first quarter, JPMorgan would spend more than $105 billion “for very good reason.” This materially qualifies the unchanged forecast quoted in S4.",
+            "call": "1Q26 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Apple Card integration",
+      "commitment": "Integrate Apple Card into JPMorganChase systems over two years.",
+      "deadline": "Two years",
+      "firstStated": "2026-01-07",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Apple Card integration remained pending. The latest filing continued to describe an expected closing date approximately 24 months after the purchase commitment.",
+      "citations": [
+        {
+          "url": "https://jpmorganchaseco.gcs-web.com/static-files/4e2abe87-70ad-43c9-a40a-fa4d8f2465cf",
+          "title": "Form 10-Q for Jpmorgan Chase  CO filed 11/03/2026",
+          "domain": "jpmorganchaseco.gcs-web.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/newsroom/press-releases/2026/chase-to-become-new-issuer-of-apple-card",
+          "title": "Chase to become new issuer of Apple Card",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "JPM-P1-2024-10-11",
+      "promiseId": "P1",
+      "date": "2024-10-11",
+      "call": "3Q24 earnings call",
+      "speaker": "Jamie Dimon, Chairman and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected 2025 NII excluding Markets below $87 billion, probably not by much, under the current yield curve.",
+      "quote": "And so it's going to be less than $87 billion next year.",
+      "verbatim": {
+        "text": "And so it's going to be less than $87 billion next year.",
+        "segs": [
+          {
+            "t": "And so it's going to be less than ",
+            "h": 0
+          },
+          {
+            "t": "$87 billion",
+            "h": 1
+          },
+          {
+            "t": " next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/jpm-3q24-earnings-call-transcript-final.pdf",
+          "title": "3Q24 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/jpm-3q24-earnings-call-transcript-final.pdf",
+          "title": "3Q24 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P1-2024-12-10",
+      "promiseId": "P1",
+      "date": "2024-12-10",
+      "call": "2024 Goldman Sachs U.S. Financial Services Conference",
+      "speaker": "Marianne Lake, CEO of Consumer & Community Banking",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2025 NII excluding Markets outlook to about $2 billion above consensus just below $87 billion as rate expectations increased.",
+      "quote": "So, as we sit here today with plenty of caveats about the fact that these things can change pretty quickly, our 2025 NII (sic) [NII ex. Markets], we're expecting it to be about $2 billion higher.",
+      "verbatim": {
+        "text": "So, as we sit here today with plenty of caveats about the fact that these things can change pretty quickly, our 2025 NII (sic) [NII ex. Markets], we're expecting it to be about $2 billion higher.",
+        "segs": [
+          {
+            "t": "So, as we sit here today with plenty of caveats about the fact that these things can change pretty quickly, our ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " NII (sic) [NII ex. Markets], we're expecting it to be about ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " higher.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2024/jpmorganchase-to-present-at-the-goldman-sachs-u-s-financial-services-conference/jpm-goldman-sachs-us-financial-services-conference-transcript.pdf",
+          "title": "JPM Goldman Sachs U.S. Financial Services Conference",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2024/jpmorganchase-to-present-at-the-goldman-sachs-u-s-financial-services-conference/jpm-goldman-sachs-us-financial-services-conference-transcript.pdf",
+          "title": "JPM Goldman Sachs U.S. Financial Services Conference",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "JPM-P1-2025-01-15",
+      "promiseId": "P1",
+      "date": "2025-01-15",
+      "call": "4Q24 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Set 2025 NII excluding Markets guidance at approximately $90 billion.",
+      "quote": "We expect 2025 NII ex. Markets to be approximately $90 billion.",
+      "verbatim": {
+        "text": "We expect 2025 NII ex. Markets to be approximately $90 billion.",
+        "segs": [
+          {
+            "t": "We expect ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " NII ex. Markets to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$90 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/4th-quarter/4q24-earnings-transcript.pdf",
+          "title": "4Q24 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/4th-quarter/4q24-earnings-transcript.pdf",
+          "title": "4Q24 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P1-2025-04-11",
+      "promiseId": "P1",
+      "date": "2025-04-11",
+      "call": "1Q25 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained 2025 NII excluding Markets guidance at approximately $90 billion.",
+      "quote": "We continue to expect NII ex. Markets to be approximately $90 billion.",
+      "verbatim": {
+        "text": "We continue to expect NII ex. Markets to be approximately $90 billion.",
+        "segs": [
+          {
+            "t": "We continue to expect NII ex. Markets to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$90 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/1st-quarter/1q25-earnings-transcript.pdf",
+          "title": "1Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/1st-quarter/1q25-earnings-transcript.pdf",
+          "title": "1Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P1-2025-05-19",
+      "promiseId": "P1",
+      "date": "2025-05-19",
+      "call": "2025 Investor Day — Firm Overview",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Kept approximately $90 billion guidance; said full year 2025 might be better by $1 billion.",
+      "quote": "In terms of NII ex. Markets, we've assessed the various drivers over the last few days and have decided not to change our guidance from approximately $90 billion.",
+      "verbatim": {
+        "text": "In terms of NII ex. Markets, we've assessed the various drivers over the last few days and have decided not to change our guidance from approximately $90 billion.",
+        "segs": [
+          {
+            "t": "In terms of NII ex. Markets, we've assessed the various drivers over the last few days and have decided not to change our guidance from approximately ",
+            "h": 0
+          },
+          {
+            "t": "$90 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2025/jpmc-2025-investor-day/firm-overview-transcript.pdf",
+          "title": "2025 Investor Day Transcript - Firm Overview",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2025/jpmc-2025-investor-day/firm-overview-transcript.pdf",
+          "title": "2025 Investor Day Transcript - Firm Overview",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/1st-quarter/1q25-earnings-transcript.pdf",
+          "title": "1Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "JPM-P1-2025-07-15",
+      "promiseId": "P1",
+      "date": "2025-07-15",
+      "call": "2Q25 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2025 NII excluding Markets guidance to approximately $92 billion, reflecting the forward curve, deposit growth and Card growth.",
+      "quote": "First, we now expect NII ex. Markets to be approximately $92 billion, with the increase driven by changes in the forward curve and strong deposit growth in Payments, Securities Services as well as balanced growth in Card.",
+      "verbatim": {
+        "text": "First, we now expect NII ex. Markets to be approximately $92 billion, with the increase driven by changes in the forward curve and strong deposit growth in Payments, Securities Services as well as balanced growth in Card.",
+        "segs": [
+          {
+            "t": "First, we now expect NII ex. Markets to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$92 billion",
+            "h": 1
+          },
+          {
+            "t": ", with the increase driven by changes in the forward curve and strong deposit growth in Payments, Securities Services as well as balanced growth in Card.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/2nd-quarter/jpm-2q25-earnings-call-transcript.pdf",
+          "title": "2Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/2nd-quarter/jpm-2q25-earnings-call-transcript.pdf",
+          "title": "2Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P1-2025-10-14",
+      "promiseId": "P1",
+      "date": "2025-10-14",
+      "call": "3Q25 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected fourth-quarter NII excluding Markets of approximately $23.5 billion and total NII of about $25 billion.",
+      "quote": "We expect fourth quarter NII ex. Markets to be approximately $23.5 billion and fourth quarter total NII to be about $25 billion.",
+      "verbatim": {
+        "text": "We expect fourth quarter NII ex. Markets to be approximately $23.5 billion and fourth quarter total NII to be about $25 billion.",
+        "segs": [
+          {
+            "t": "We expect fourth quarter NII ex. Markets to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$23.5 billion",
+            "h": 1
+          },
+          {
+            "t": " and fourth quarter total NII to be about ",
+            "h": 0
+          },
+          {
+            "t": "$25 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+          "title": "3Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+          "title": "3Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P1-2026-01-13",
+      "promiseId": "P1",
+      "date": "2026-01-13",
+      "call": "4Q25 earnings presentation",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported FY2025 NII excluding Markets of $92.6B, above approximately $92 billion guidance.",
+      "quote": null,
+      "verbatim": {
+        "text": "NII excluding Markets 6 $92.6 $92.4 $0.2",
+        "segs": [
+          {
+            "t": "NII excluding Markets 6 ",
+            "h": 0
+          },
+          {
+            "t": "$92.6",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$92.4",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$0.2",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/3f2030e7-c144-4ad8-92b8-57b36851ffb6.pdf",
+          "title": "4Q25 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/3f2030e7-c144-4ad8-92b8-57b36851ffb6.pdf",
+          "title": "4Q25 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/2nd-quarter/jpm-2q25-earnings-call-transcript.pdf",
+          "title": "2Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "JPM-P2-2025-10-14",
+      "promiseId": "P2",
+      "date": "2025-10-14",
+      "call": "3Q25 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Preliminary 2026 NII excluding Markets central case of about $95 billion, subject to assumptions and completion of the annual budget.",
+      "quote": "In keeping with our focus on the fourth quarter and recognizing that you'll likely annualize the fourth quarter NII and ask us questions about 2026, we're providing the central case for NII ex. Markets in 2026, which is about $95 billion.",
+      "verbatim": {
+        "text": "In keeping with our focus on the fourth quarter and recognizing that you'll likely annualize the fourth quarter NII and ask us questions about 2026, we're providing the central case for NII ex. Markets in 2026, which is about $95 billion.",
+        "segs": [
+          {
+            "t": "In keeping with our focus on the fourth quarter and recognizing that you'll likely annualize the fourth quarter NII and ask us questions about ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we're providing the central case for NII ex. Markets in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", which is about ",
+            "h": 0
+          },
+          {
+            "t": "$95 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+          "title": "3Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+          "title": "3Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P2-2026-01-13",
+      "promiseId": "P2",
+      "date": "2026-01-13",
+      "call": "4Q25 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 NII excluding Markets of about $95 billion.",
+      "quote": "Now, turning to the outlook for 2026, we continue to expect NII ex. Markets to be about $95 billion.",
+      "verbatim": {
+        "text": "Now, turning to the outlook for 2026, we continue to expect NII ex. Markets to be about $95 billion.",
+        "segs": [
+          {
+            "t": "Now, turning to the outlook for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we continue to expect NII ex. Markets to be about ",
+            "h": 0
+          },
+          {
+            "t": "$95 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P2-2026-02-23",
+      "promiseId": "P2",
+      "date": "2026-02-23",
+      "call": "2026 Company Update",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Company Update reaffirmed unchanged 2026 NII excluding Markets guidance of about $95 billion.",
+      "quote": "Our outlook for 2026 NII ex. Markets is unchanged from what we shared at earnings last month. We continue to expect about $95 billion.",
+      "verbatim": {
+        "text": "Our outlook for 2026 NII ex. Markets is unchanged from what we shared at earnings last month.",
+        "segs": [
+          {
+            "t": "Our outlook for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " NII ex. Markets is unchanged from what we shared at earnings last month.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2026/jpmc-company-update-2026/company-update-full-event-transcript.pdf",
+          "title": "2026 Company Update Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2026/jpmc-company-update-2026/company-update-full-event-transcript.pdf",
+          "title": "2026 Company Update Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "JPM-P2-2026-04-14",
+      "promiseId": "P2",
+      "date": "2026-04-14",
+      "call": "1Q26 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed full-year 2026 NII excluding Markets of about $95 billion.",
+      "quote": "In terms of the full year 2026 outlook, we continue to expect NII ex. Markets to be about $95 billion.",
+      "verbatim": {
+        "text": "In terms of the full year 2026 outlook, we continue to expect NII ex. Markets to be about $95 billion.",
+        "segs": [
+          {
+            "t": "In terms of the full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " outlook, we continue to expect NII ex. Markets to be about ",
+            "h": 0
+          },
+          {
+            "t": "$95 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+          "title": "1Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+          "title": "1Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P2-2026-07-14",
+      "promiseId": "P2",
+      "date": "2026-07-14",
+      "call": "2Q26 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 NII excluding Markets to about $96.5 billion; total NII approximately $105.5 billion, including about $9 billion Markets NII.",
+      "quote": "In terms of the full year 2026 outlook, we now expect NII ex. Markets to be about $96.5 billion and total NII to be approximately $105.5 billion as a function of Markets NII increasing to about $9 billion.",
+      "verbatim": {
+        "text": "In terms of the full year 2026 outlook, we now expect NII ex. Markets to be about $96.5 billion and total NII to be approximately $105.5 billion as a function of Markets NII increasing to about $9 billion.",
+        "segs": [
+          {
+            "t": "In terms of the full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " outlook, we now expect NII ex. Markets to be about ",
+            "h": 0
+          },
+          {
+            "t": "$96.5 billion",
+            "h": 1
+          },
+          {
+            "t": " and total NII to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$105.5 billion",
+            "h": 1
+          },
+          {
+            "t": " as a function of Markets NII increasing to about ",
+            "h": 0
+          },
+          {
+            "t": "$9 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P2-2026-10-13",
+      "promiseId": "P2",
+      "date": "2026-10-13",
+      "call": "3Q26 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Implied FY26 NII excluding Markets ~$97.2B; total ~$106.2B. Fourth-quarter NII excluding Markets approximately $25.5 billion; total about $28 billion.",
+      "quote": "The implied full year numbers are on the page. We expect fourth quarter NII ex. Markets to be approximately $25.5 billion and fourth quarter total NII to be about $28 billion.",
+      "verbatim": {
+        "text": "Outlook ¹ 1 See notes 1, 2 and 4 on slide 9 2 Adjusted expense excludes Firmwide legal expense 3Q26YTD 4Q outlook (market dependent) FY26 implied Net interest income excluding Markets $71.7B ~$25.5B ~$97.2B",
+        "segs": [
+          {
+            "t": "Outlook ¹ 1 See notes 1, 2 and 4 on slide 9 2 Adjusted expense excludes Firmwide legal expense 3Q26YTD 4Q outlook (market dependent) ",
+            "h": 0
+          },
+          {
+            "t": "FY26",
+            "h": 1
+          },
+          {
+            "t": " implied Net interest income excluding Markets ",
+            "h": 0
+          },
+          {
+            "t": "$71.7B",
+            "h": 1
+          },
+          {
+            "t": " ~",
+            "h": 0
+          },
+          {
+            "t": "$25.5B",
+            "h": 1
+          },
+          {
+            "t": " ~",
+            "h": 0
+          },
+          {
+            "t": "$97.2B",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/2b5b9a7e-a968-4985-94ad-5fa949a08d1c.pdf",
+          "title": "3Q26 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf",
+          "title": "3Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/2b5b9a7e-a968-4985-94ad-5fa949a08d1c.pdf",
+          "title": "3Q26 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P3-2025-10-13",
+      "promiseId": "P3",
+      "date": "2025-10-13",
+      "call": "JPMorganChase launches $1.5 trillion Security and Resiliency Initiative to boost critical industries",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "$1.5 trillion, 10-year plan: approximately $1 trillion baseline financing, up to $500 billion (50%) additional financing, and up to $10 billion equity.",
+      "quote": "As part of this new initiative, JPMorganChase will make direct equity and venture capital investments of up to $10 billion to help select companies primarily in the United States enhance their growth, spur innovation, and accelerate strategic manufacturing.",
+      "verbatim": {
+        "text": "As part of this new initiative, JPMorganChase will make direct equity and venture capital investments of up to $10 billion to help select companies primarily in the United States enhance their growth, spur innovation, and accelerate strategic manufacturing.",
+        "segs": [
+          {
+            "t": "As part of this new initiative, JPMorganChase will make direct equity and venture capital investments of up to ",
+            "h": 0
+          },
+          {
+            "t": "$10 billion",
+            "h": 1
+          },
+          {
+            "t": " to help select companies primarily in the United States enhance their growth, spur innovation, and accelerate strategic manufacturing.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/newsroom/press-releases/2025/jpmc-security-resiliency-initiative",
+          "title": "JPMorganChase launches $1.5 trillion Security and Resiliency Initiative to boost critical industries",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/newsroom/press-releases/2025/jpmc-security-resiliency-initiative",
+          "title": "JPMorganChase launches $1.5 trillion Security and Resiliency Initiative to boost critical industries",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "JPM-P3-2025-10-14",
+      "promiseId": "P3",
+      "date": "2025-10-14",
+      "call": "3Q25 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Aspires to add $0.5 trillion lending and deploy $10 billion incremental direct equity; deployment will not be instantaneous.",
+      "quote": "So, both in terms of what we were already going to do in the normal course, plus an aspiration to add another $0.5 trillion of this type of lending at the margin, that's the type of RWA growth that consumes excess.",
+      "verbatim": {
+        "text": "So, both in terms of what we were already going to do in the normal course, plus an aspiration to add another $0.5 trillion of this type of lending at the margin, that's the type of RWA growth that consumes excess.",
+        "segs": [
+          {
+            "t": "So, both in terms of what we were already going to do in the normal course, plus an aspiration to add another ",
+            "h": 0
+          },
+          {
+            "t": "$0.5 trillion",
+            "h": 1
+          },
+          {
+            "t": " of this type of lending at the margin, that's the type of RWA growth that consumes excess.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+          "title": "3Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+          "title": "3Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P3-2026-01-13",
+      "promiseId": "P3",
+      "date": "2026-01-13",
+      "call": "4Q25 earnings call",
+      "speaker": "Jamie Dimon, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "SRI may be far bigger than expected; no replacement lending or equity target announced.",
+      "quote": "I think that SRI initiative may be far bigger than we thought, and that's in there.",
+      "verbatim": {
+        "text": "I think that SRI initiative may be far bigger than we thought, and that's in there.",
+        "segs": [
+          {
+            "t": "I think that SRI initiative may be far bigger than we thought, and that's in there.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P3-2026-04-06",
+      "promiseId": "P3",
+      "date": "2026-04-06",
+      "call": "2025 Annual Report — Letter to Shareholders from Tim Berry",
+      "speaker": "Tim Berry, Global Head of Corporate Responsibility and Chairman of the Mid-Atlantic Region",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the $1.5 trillion, 10-year initiative and reported expansion to the United Kingdom.",
+      "quote": "That’s why we launched the Security and Resiliency Initiative (SRI), a $1.5 trillion, 10‑year plan to facilitate, finance and invest in industries that are critical to our national and economic security.",
+      "verbatim": {
+        "text": "That’s why we launched the Security and Resiliency Initiative (SRI), a $1.5 trillion, 10‑year plan to facilitate, finance and invest in industries that are critical to our national and economic security.",
+        "segs": [
+          {
+            "t": "That’s why we launched the Security and Resiliency Initiative (SRI), a ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 trillion",
+            "h": 1
+          },
+          {
+            "t": ", 10‑year plan to facilitate, finance and invest in industries that are critical to our national and economic security.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/ir/annual-report/2025/ar-ceo-letter-tim-berry",
+          "title": "Letter to Shareholders from Tim Berry, Annual Report 2025 | JPMorganChase",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/ir/annual-report/2025/ar-ceo-letter-tim-berry",
+          "title": "Letter to Shareholders from Tim Berry, Annual Report 2025 | JPMorganChase",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "JPM-P3-2026-04-14",
+      "promiseId": "P3",
+      "date": "2026-04-14",
+      "call": "1Q26 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Security and Resiliency Initiative lending and incremental equity targets were not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+          "title": "1Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P3-2026-07-14",
+      "promiseId": "P3",
+      "date": "2026-07-14",
+      "call": "2Q26 earnings call",
+      "speaker": "Jamie Dimon, Chairman and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Discussed European SRI activity and large financing needs; no new lending or equity target specified.",
+      "quote": "I just got back from a tour of Europe, our Security and Resiliency Initiative, the hyperscalers, the needs are just big.",
+      "verbatim": {
+        "text": "I just got back from a tour of Europe, our Security and Resiliency Initiative, the hyperscalers, the needs are just big.",
+        "segs": [
+          {
+            "t": "I just got back from a tour of Europe, our Security and Resiliency Initiative, the hyperscalers, the needs are just big.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P3-2026-10-13",
+      "promiseId": "P3",
+      "date": "2026-10-13",
+      "call": "3Q26 earnings call",
+      "speaker": "Jamie Dimon, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reiterated $1.5 trillion over 10 years; estimated first-year deployment probably over $200 billion, with formal disclosure forthcoming.",
+      "quote": "But my guess is it'll be considerably more than that.",
+      "verbatim": {
+        "text": "But my guess is it'll be considerably more than that.",
+        "segs": [
+          {
+            "t": "But my guess is it'll be considerably more than that.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf",
+          "title": "3Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf",
+          "title": "3Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P3-2026-10-19",
+      "promiseId": "P3",
+      "date": "2026-10-19",
+      "call": "One year in, JPMorganChase's Security and Resiliency Initiative is helping to strengthen industries critical to long-term economic growth",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported more than $230 billion financed/facilitated and $5 billion committed from the initial $10 billion equity allocation; full targets remain pending.",
+      "quote": "In its first year, the group committed $5 billion of the initial $10 billion SRI equity allocation.",
+      "verbatim": {
+        "text": "In its first year, the group committed $5 billion of the initial $10 billion SRI equity allocation.",
+        "segs": [
+          {
+            "t": "In its first year, the group committed ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " of the initial ",
+            "h": 0
+          },
+          {
+            "t": "$10 billion",
+            "h": 1
+          },
+          {
+            "t": " SRI equity allocation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/newsroom/press-releases/2026/one-year-security-resiliency-initiative-helping-strengthen-industries",
+          "title": "One year in, JPMorganChase's Security and Resiliency Initiative is helping to strengthen industries critical to long-term economic growth",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/newsroom/press-releases/2026/one-year-security-resiliency-initiative-helping-strengthen-industries",
+          "title": "One year in, JPMorganChase's Security and Resiliency Initiative is helping to strengthen industries critical to long-term economic growth",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "JPM-P4-2025-12-09",
+      "promiseId": "P4",
+      "date": "2025-12-09",
+      "call": "2025 Goldman Sachs U.S. Financial Services Conference",
+      "speaker": "Marianne Lake, CEO of Consumer & Community Banking",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced $105 billion firmwide expense outlook for 2026, dependent on scenarios and subject to change.",
+      "quote": "But we're expecting our expenses for the full Firm next year to be $105 billion.",
+      "verbatim": {
+        "text": "But we're expecting our expenses for the full Firm next year to be $105 billion.",
+        "segs": [
+          {
+            "t": "But we're expecting our expenses for the full Firm next year to be ",
+            "h": 0
+          },
+          {
+            "t": "$105 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2025/jpmorganchase-to-present-at-the-goldman-sachs-us-financial-services-conference/jpm-at-gs-financial-services-conference-12-9-2025.pdf",
+          "title": " JPM at 2025 Goldman Sachs U.S. Financial Services Conference",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2025/jpmorganchase-to-present-at-the-goldman-sachs-us-financial-services-conference/jpm-at-gs-financial-services-conference-12-9-2025.pdf",
+          "title": " JPM at 2025 Goldman Sachs U.S. Financial Services Conference",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "JPM-P4-2026-01-13",
+      "promiseId": "P4",
+      "date": "2026-01-13",
+      "call": "4Q25 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 adjusted expense of about $105 billion, previously announced in December.",
+      "quote": "On expense, as we told you at an industry conference in December, we expect 2026 adjusted expense to be about $105 billion.",
+      "verbatim": {
+        "text": "On expense, as we told you at an industry conference in December, we expect 2026 adjusted expense to be about $105 billion.",
+        "segs": [
+          {
+            "t": "On expense, as we told you at an industry conference in December, we expect ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " adjusted expense to be about ",
+            "h": 0
+          },
+          {
+            "t": "$105 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P4-2026-02-23",
+      "promiseId": "P4",
+      "date": "2026-02-23",
+      "call": "2026 Company Update – Firm Overview",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 adjusted expense of about $105 billion, up about $9 billion year-on-year.",
+      "quote": "Consistent with what we shared at earnings, we expect 2026 adjusted expense to be about $105 billion, which is up about $9 billion year-on-year.",
+      "verbatim": {
+        "text": "Consistent with what we shared at earnings, we expect 2026 adjusted expense to be about $105 billion, which is up about $9 billion year-on-year.",
+        "segs": [
+          {
+            "t": "Consistent with what we shared at earnings, we expect ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " adjusted expense to be about ",
+            "h": 0
+          },
+          {
+            "t": "$105 billion",
+            "h": 1
+          },
+          {
+            "t": ", which is up about ",
+            "h": 0
+          },
+          {
+            "t": "$9 billion",
+            "h": 1
+          },
+          {
+            "t": " year-on-year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/2026-company-updates/company-update-firm-overview-transcript.pdf",
+          "title": "2026 Company Update Transcript - Firm Overview",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/2026-company-updates/company-update-firm-overview-transcript.pdf",
+          "title": "2026 Company Update Transcript - Firm Overview",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "JPM-P4-2026-04-14",
+      "promiseId": "P4",
+      "date": "2026-04-14",
+      "call": "1Q26 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained about $105 billion and approximately 3.4% Card charge-offs; management clarified expense guidance was not a promise and could rise with volumes.",
+      "quote": "The adjusted expense outlook continues to be about $105 billion, and the Card net charge-off rate continues to be approximately 3.4%.",
+      "verbatim": {
+        "text": "The adjusted expense outlook continues to be about $105 billion, and the Card net charge-off rate continues to be approximately 3.4%.",
+        "segs": [
+          {
+            "t": "The adjusted expense outlook continues to be about ",
+            "h": 0
+          },
+          {
+            "t": "$105 billion",
+            "h": 1
+          },
+          {
+            "t": ", and the Card net charge-off rate continues to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "3.4%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+          "title": "1Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+          "title": "1Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P4-2026-05-27",
+      "promiseId": "P4",
+      "date": "2026-05-27",
+      "call": "2026 Bernstein Strategic Decisions Conference",
+      "speaker": "Jamie Dimon, Chairman and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised the expense outlook from $105 billion to closer to $106 billion, mostly driven by better performance.",
+      "quote": "We think it'll be closer to $106 billion, mostly driven by better performance.",
+      "verbatim": {
+        "text": "We think it'll be closer to $106 billion, mostly driven by better performance.",
+        "segs": [
+          {
+            "t": "We think it'll be closer to ",
+            "h": 0
+          },
+          {
+            "t": "$106 billion",
+            "h": 1
+          },
+          {
+            "t": ", mostly driven by better performance.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2026/JPMorganChase-to-Present-at-the-Bernstein-Strategic-Decisions-Conference/jpm-at-the-2026-bernstein-strategic-decisions-conference.pdf",
+          "title": "JPM at the Bernstein 2026 Strategic Decisions Conference",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2026/JPMorganChase-to-Present-at-the-Bernstein-Strategic-Decisions-Conference/jpm-at-the-2026-bernstein-strategic-decisions-conference.pdf",
+          "title": "JPM at the Bernstein 2026 Strategic Decisions Conference",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "JPM-P4-2026-07-14",
+      "promiseId": "P4",
+      "date": "2026-07-14",
+      "call": "2Q26 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised adjusted expense outlook to about $107.5 billion, primarily because of higher volume- and revenue-related expenses.",
+      "quote": "And the new adjusted expense outlook is about $107.5 billion, with the increase primarily due to higher volume- and revenue-related expenses, driven by the activity levels and associated revenue outperformance.",
+      "verbatim": {
+        "text": "And the new adjusted expense outlook is about $107.5 billion, with the increase 2 Jeremy Barnum Chief Financial Officer, JPMorganChase primarily due to higher volume- and revenue-related expenses, driven by the activity levels and associated revenue outperformance.",
+        "segs": [
+          {
+            "t": "And the new adjusted expense outlook is about ",
+            "h": 0
+          },
+          {
+            "t": "$107.5 billion",
+            "h": 1
+          },
+          {
+            "t": ", with the increase 2 Jeremy Barnum Chief Financial Officer, JPMorganChase primarily due to higher volume- and revenue-related expenses, driven by the activity levels and associated revenue outperformance.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/9e8f3cef-bd2a-4140-b50f-83c4fba3f23c.pdf",
+          "title": "2Q26 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P4-2026-10-13",
+      "promiseId": "P4",
+      "date": "2026-10-13",
+      "call": "3Q26 earnings call",
+      "speaker": "Jeremy Barnum, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised implied FY26 adjusted expense to ~$108.6B; fourth-quarter outlook about $27.5 billion, reflecting higher volume- and revenue-related costs.",
+      "quote": "On expense, we expect the fourth quarter to be about $27.5 billion, with the implied full year increase reflecting higher volume and revenue- related expense, driven by continued elevated activity levels.",
+      "verbatim": {
+        "text": "On expense, we expect the fourth quarter to be about $27.5 billion, with the implied full year increase reflecting higher volume and revenue- related expense, driven by continued elevated activity levels.",
+        "segs": [
+          {
+            "t": "On expense, we expect the fourth quarter to be about ",
+            "h": 0
+          },
+          {
+            "t": "$27.5 billion",
+            "h": 1
+          },
+          {
+            "t": ", with the implied full year increase reflecting higher volume and revenue- related expense, driven by continued elevated activity levels.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf",
+          "title": "3Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf",
+          "title": "3Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/2b5b9a7e-a968-4985-94ad-5fa949a08d1c.pdf",
+          "title": "3Q26 Earnings Presentation",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P5-2026-01-07",
+      "promiseId": "P5",
+      "date": "2026-01-07",
+      "call": "Chase to become new issuer of Apple Card",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced the Apple Card issuer transition, expected in approximately 24 months.",
+      "quote": "Today, Apple and Chase announced that Chase will become the new issuer of Apple Card, with an expected transition in approximately 24 months.",
+      "verbatim": {
+        "text": "Today, Apple and Chase announced that Chase will become the new issuer of Apple Card, with an expected transition in approximately 24 months.",
+        "segs": [
+          {
+            "t": "Today, Apple and Chase announced that Chase will become the new issuer of Apple Card, with an expected transition in approximately 24 months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/newsroom/press-releases/2026/chase-to-become-new-issuer-of-apple-card",
+          "title": "Chase to become new issuer of Apple Card",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/newsroom/press-releases/2026/chase-to-become-new-issuer-of-apple-card",
+          "title": "Chase to become new issuer of Apple Card",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "JPM-P5-2026-01-13",
+      "promiseId": "P5",
+      "date": "2026-01-13",
+      "call": "4Q25 earnings call",
+      "speaker": "Jeremy Barnum, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that Apple Card integration would take two years.",
+      "quote": "The integration is going to take two years for a reason.",
+      "verbatim": {
+        "text": "The integration is going to take two years for a reason.",
+        "segs": [
+          {
+            "t": "The integration is going to take two years for a reason.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+          "title": "4Q25 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P5-2026-04-14",
+      "promiseId": "P5",
+      "date": "2026-04-14",
+      "call": "1Q26 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Apple Card integration commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P5-2026-07-14",
+      "promiseId": "P5",
+      "date": "2026-07-14",
+      "call": "2Q26 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Mentioned future Apple business, but did not address integration or its timetable.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+          "title": "2Q26 Earnings Transcript",
+          "domain": "jpmorganchase.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "JPM-P5-2026-10-13",
+      "promiseId": "P5",
+      "date": "2026-10-13",
+      "call": "3Q26 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Apple Card integration commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/jpm-4q25-earnings-call-transcript.pdf",
+      "title": "4Q25 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/2Q26-earnings-transcript.pdf",
+      "title": "2Q26 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/3rd-quarter/jpm-3q25-earnings-call-transcript.pdf",
+      "title": "3Q25 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 4,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/3q26-earnings-transcript.pdf",
+      "title": "3Q26 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/3rd-quarter/2b5b9a7e-a968-4985-94ad-5fa949a08d1c.pdf",
+      "title": "3Q26 Earnings Presentation",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+      "title": "1Q26 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 7,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/2nd-quarter/jpm-2q25-earnings-call-transcript.pdf",
+      "title": "2Q25 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 8,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/3rd-quarter/jpm-3q24-earnings-call-transcript-final.pdf",
+      "title": "3Q24 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2024/4th-quarter/4q24-earnings-transcript.pdf",
+      "title": "4Q24 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/1st-quarter/1q25-earnings-transcript.pdf",
+      "title": "1Q25 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2025/4th-quarter/3f2030e7-c144-4ad8-92b8-57b36851ffb6.pdf",
+      "title": "4Q25 Earnings Presentation",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://www.jpmorganchase.com/newsroom/press-releases/2026/one-year-security-resiliency-initiative-helping-strengthen-industries",
+      "title": "One year in, JPMorganChase's Security and Resiliency Initiative is helping to strengthen industries critical to long-term economic growth",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://www.jpmorganchase.com/newsroom/press-releases/2026/chase-to-become-new-issuer-of-apple-card",
+      "title": "Chase to become new issuer of Apple Card",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 14,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2024/jpmorganchase-to-present-at-the-goldman-sachs-u-s-financial-services-conference/jpm-goldman-sachs-us-financial-services-conference-transcript.pdf",
+      "title": "JPM Goldman Sachs U.S. Financial Services Conference",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2025/jpmc-2025-investor-day/firm-overview-transcript.pdf",
+      "title": "2025 Investor Day Transcript - Firm Overview",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2026/jpmc-company-update-2026/company-update-full-event-transcript.pdf",
+      "title": "2026 Company Update Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 17,
+      "url": "https://www.jpmorganchase.com/newsroom/press-releases/2025/jpmc-security-resiliency-initiative",
+      "title": "JPMorganChase launches $1.5 trillion Security and Resiliency Initiative to boost critical industries",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 18,
+      "url": "https://www.jpmorganchase.com/ir/annual-report/2025/ar-ceo-letter-tim-berry",
+      "title": "Letter to Shareholders from Tim Berry, Annual Report 2025 | JPMorganChase",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 19,
+      "url": "http://jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/1st-quarter/1q26-earnings-transcript.pdf",
+      "title": "1Q26 Earnings Transcript",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 20,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2025/jpmorganchase-to-present-at-the-goldman-sachs-us-financial-services-conference/jpm-at-gs-financial-services-conference-12-9-2025.pdf",
+      "title": " JPM at 2025 Goldman Sachs U.S. Financial Services Conference",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 21,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/2026-company-updates/company-update-firm-overview-transcript.pdf",
+      "title": "2026 Company Update Transcript - Firm Overview",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 22,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/events/2026/JPMorganChase-to-Present-at-the-Bernstein-Strategic-Decisions-Conference/jpm-at-the-2026-bernstein-strategic-decisions-conference.pdf",
+      "title": "JPM at the Bernstein 2026 Strategic Decisions Conference",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 23,
+      "url": "https://www.jpmorganchase.com/content/dam/jpmc/jpmorgan-chase-and-co/investor-relations/documents/quarterly-earnings/2026/2nd-quarter/9e8f3cef-bd2a-4140-b50f-83c4fba3f23c.pdf",
+      "title": "2Q26 Earnings Presentation",
+      "domain": "jpmorganchase.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 24,
+      "url": "https://jpmorganchaseco.gcs-web.com/static-files/4e2abe87-70ad-43c9-a40a-fa4d8f2465cf",
+      "title": "Form 10-Q for Jpmorgan Chase  CO filed 11/03/2026",
+      "domain": "jpmorganchaseco.gcs-web.com",
+      "tier": "primary",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T05:51:03.425021Z",
+      "completedAt": "2026-11-05T05:59:02.054333Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.769498Z",
+      "completedAt": "2026-11-05T19:12:29.567608Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.776175Z",
+      "completedAt": "2026-11-05T19:12:04.340284Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.782771Z",
+      "completedAt": "2026-11-05T19:13:57.755557Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.789765Z",
+      "completedAt": "2026-11-05T19:13:17.060540Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.796695Z",
+      "completedAt": "2026-11-05T19:11:43.727683Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.563818Z",
+      "completedAt": "2026-11-05T19:44:36.300380Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.571255Z",
+      "completedAt": "2026-11-05T19:44:42.026274Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.579016Z",
+      "completedAt": "2026-11-05T19:52:05.214341Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.586481Z",
+      "completedAt": "2026-11-05T19:45:44.346937Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.593596Z",
+      "completedAt": "2026-11-05T19:43:00.219140Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "34 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "30 of 30 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "30 of 30 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-13; next 2027-01-14"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Logo_of_JPMorganChase_2024.svg/960px-Logo_of_JPMorganChase_2024.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20240620071924",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Logo_of_JPMorganChase_2024.svg",
+      "title": "File:Logo of JPMorganChase 2024.svg - Wikimedia Commons",
+      "width": 960,
+      "height": 137,
+      "rank": 10
+    },
+    "photo": {
+      "imageUrl": "https://www.jpmorganchase.com/content/dam/jpmorganchase/images/newsroom/stories/grand-opening-park-270/270park-hero-1440x810.jpg",
+      "sourcePageUrl": "https://www.jpmorganchase.com/newsroom/stories/jpmc-celebrates-new-global-hq-at-270-park-ave",
+      "title": "JPMorganChase Celebrates Grand Opening of New Global Headquarters at 270  Park Avenue",
+      "width": 1440,
+      "height": 810,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T20:04:43.487Z"
+}

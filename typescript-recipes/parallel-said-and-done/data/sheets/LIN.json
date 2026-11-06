@@ -1,0 +1,2112 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "LIN",
+  "name": "Linde plc",
+  "short": "Linde",
+  "website": "linde.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.linde.com/investors",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-29",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Linde Beaumont blue hydrogen plant",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Commission Beaumont clean-hydrogen supply",
+      "commitment": "Invest $1.8 billion to supply nitrogen and blue hydrogen to OCI; bring the project into commercial production in 2025.",
+      "deadline": "2025",
+      "firstStated": "2023-02-06",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Original 2025 startup slipped; nitrogen supply began, but on-site clean hydrogen remained pending. Low-carbon ammonia operations expected in 2027; full utilization expected in 2028.",
+      "citations": [
+        {
+          "url": "https://www.linde.com/news-and-media/2023/linde-to-invest-1-8-billion-to-supply-clean-hydrogen-to-oci-s-world-scale-blue-ammonia-project-in-the-u-s-gulf-coas",
+          "title": "Linde to Invest $1.8 Billion to Supply Clean Hydrogen to OCI’s World-Scale Blue Ammonia Project in the U.S. Gulf Coast | Linde",
+          "domain": "linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/sustainable-development/2025-sustainable-development-report.pdf",
+          "title": "2025 Sustainable Development Report",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q22.pdf",
+          "title": "Investor Call Transcript 4Q22",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-29",
+            "what_was_said": "The air-separation unit and nitrogen supply had started in Q3, while hydrogen was temporarily being supplied from Linde's pipeline network. Management expected the two onsite ATR trains to start in stages, with startup completed in the first half of 2027; the ExxonMobil carbon-capture and sequestration element would still need completion.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Launch Dow Alberta Phase 1",
+      "commitment": "Invest over $2 billion in Phase 1 gas supply for Dow’s Alberta project, with startup in late 2028.",
+      "deadline": "late 2028",
+      "firstStated": "2024-08-27",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Still pending; Linde discussed delay protections and alternatives with Dow, without announcing a replacement for the late 2028 startup target.",
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q24.pdf",
+          "title": "Linde 3Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q25.pdf",
+          "title": "Linde 1Q25 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://majorprojects.alberta.ca/details/Dow-Fort-Saskatchewan-Path2Zero-Expansion/5535",
+          "title": "Dow Fort Saskatchewan Path2Zero Expansion - Alberta Major Projects",
+          "domain": "majorprojects.alberta.ca",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-05-01",
+            "what_was_said": "Sanjiv Lamba explained that customer-driven delays are covered by contractual protections: after a typical grace period, invoicing starts and the customer pays. He said the Dow contract was no different. This protected Linde's economics but did not establish a revised startup date.",
+            "call": "Linde plc Q1 2025 earnings call"
+          },
+          {
+            "date": "2026-01-29",
+            "what_was_said": "Dow announced that, following collaboration with its project partners, it would complete Path2Zero with a two-year delay, moving Dow's Phase 1 startup to late 2029. This is material counterparty context, but it is not an explicitly announced replacement date for Linde's gas facility.",
+            "call": "Dow Inc. Q4 2025 earnings call — counterparty update"
+          },
+          {
+            "date": "2026-10-22",
+            "what_was_said": "Dow reaffirmed that its first phase was scheduled for the end of 2029 and its second phase for 2030, while reporting that construction was progressing. Again, these were Dow's project milestones, not a separately confirmed revised Linde facility startup date.",
+            "call": "Dow Inc. Q3 2026 earnings call — counterparty update"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Realize 2025 restructuring benefits",
+      "commitment": "Execute Q4 2025 restructuring, realizing bulk benefits in H2 2026, with approximately two-year cash payback consistent with prior programs.",
+      "deadline": "Bulk benefits in H2 2026; approximately two-year cash payback",
+      "firstStated": "2026-02-05",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Still pending: no program-specific benefits or cash-payback completion was reported. The $425 million restructuring charge relates to a separate 2026 program.",
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/press-releases/2026/linde-3q26-earnings-release-tables.pdf",
+          "title": "Linde Reports 3rd Quarter 2026 Results",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026068079/lin-20260930.htm",
+          "title": "lin-20260930",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-02-05",
+            "what_was_said": "In Q&A, Sanjiv Lamba said restructuring paybacks on a cash basis average about two years. This distinguishes the expected H2 2026 benefits from completion of cash payback.",
+            "call": "4Q25 Earnings Teleconference and Webcast"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Convert 2026 project backlog",
+      "commitment": "Start $2.5 billion–$3 billion of backlog projects during 2026, beginning revenue and earnings contributions.",
+      "deadline": "2026",
+      "firstStated": "2026-02-05",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Completion remained unconfirmed; around $1 billion of further quarterly start-ups was expected, while Woodside's remaining phases extended into next year.",
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-05-01",
+            "what_was_said": "Woodside's hydrogen/ATR and transport-and-sequestration phases had slipped from late 2026 into approximately Q1 2027. Only a small atmospheric-gases portion was expected to contribute to 2026 startups.",
+            "call": "Linde plc 1Q26 Earnings Teleconference and Webcast"
+          },
+          {
+            "date": "2026-10-29",
+            "what_was_said": "Woodside nitrogen supply was underway in Q3. Startup of the two hydrogen ATR trains was expected to finish in first-half 2027, with the related impact beginning in second-half 2027 and full capacity utilization expected sometime in 2028.",
+            "call": "Linde plc 3Q26 Earnings Teleconference and Webcast"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Build billion-dollar commercial-space sales",
+      "commitment": "Grow commercial-space supply into a $1 billion business within the next few years.",
+      "deadline": "the next few years; subsequently specified as 2030",
+      "firstStated": "2026-02-05",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Management reported the $1 billion space opportunity on track, identifying 2030 as its timeframe; the latest quarterly call did not update the target.",
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-05-01",
+            "what_was_said": "Matt White said aerospace would be disclosed separately when it consistently exceeded 5% of global sales. He also clarified that the commercial-space figures excluded aviation and jet-engine activities, and that growth would depend on space-launch activity.",
+            "call": "1Q26 Earnings Teleconference and Webcast"
+          },
+          {
+            "date": "2026-07-31",
+            "what_was_said": "Immediately after the quoted on-track statement, Sanjiv Lamba identified 2030 as the timeline for the 'billion-plus' space expectation and said separate end-market disclosure would follow once the business reached sufficient size.",
+            "call": "2Q26 Earnings Teleconference and Webcast"
+          },
+          {
+            "date": "2026-10-29",
+            "what_was_said": "Management reported increased space-propellant activity, but said rare-gas sales for satellite propulsion had softened because customer payloads were awaiting launch. The call did not update the $1 billion target or its 2030 timing.",
+            "call": "3Q26 Earnings Teleconference and Webcast"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "LIN-P1-2023-02-06",
+      "promiseId": "P1",
+      "date": "2023-02-06",
+      "call": "Linde to Invest $1.8 Billion to Supply Clean Hydrogen to OCI’s World-Scale Blue Ammonia Project in the U.S. Gulf Coast",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced approximately $1.8 billion investment to supply OCI clean hydrogen and nitrogen, with startup expected in 2025.",
+      "quote": "Linde's total investment will be approximately $1.8 billion and the project is expected to start up in 2025.",
+      "verbatim": {
+        "text": "Linde's total investment will be approximately $1.8 billion and the project is expected to start up in 2025.",
+        "segs": [
+          {
+            "t": "Linde's total investment will be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$1.8 billion",
+            "h": 1
+          },
+          {
+            "t": " and the project is expected to start up in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.linde.com/news-and-media/2023/linde-to-invest-1-8-billion-to-supply-clean-hydrogen-to-oci-s-world-scale-blue-ammonia-project-in-the-u-s-gulf-coas",
+          "title": "Linde to Invest $1.8 Billion to Supply Clean Hydrogen to OCI’s World-Scale Blue Ammonia Project in the U.S. Gulf Coast | Linde",
+          "domain": "linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.linde.com/news-and-media/2023/linde-to-invest-1-8-billion-to-supply-clean-hydrogen-to-oci-s-world-scale-blue-ammonia-project-in-the-u-s-gulf-coas",
+          "title": "Linde to Invest $1.8 Billion to Supply Clean Hydrogen to OCI’s World-Scale Blue Ammonia Project in the U.S. Gulf Coast | Linde",
+          "domain": "linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LIN-P1-2023-02-07",
+      "promiseId": "P1",
+      "date": "2023-02-07",
+      "call": "Q4 2022 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Committed $1.8 billion to nitrogen and blue hydrogen supply for OCI; commercial production expected in 2025.",
+      "quote": "We will invest $1.8 billion as a long-term supplier of nitrogen and blue hydrogen into OCIs ammonia facility with terms and conditions and a return profile consistent with our traditional on-site contracts.",
+      "verbatim": {
+        "text": "We will invest $1.8 billion as a long-term supplier of nitrogen and blue hydrogen into OCIs ammonia facility with terms and conditions and a return profile consistent with our traditional on-site contracts.",
+        "segs": [
+          {
+            "t": "We will invest ",
+            "h": 0
+          },
+          {
+            "t": "$1.8 billion",
+            "h": 1
+          },
+          {
+            "t": " as a long-term supplier of nitrogen and blue hydrogen into OCIs ammonia facility with terms and conditions and a return profile consistent with our traditional on-site contracts.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q22.pdf",
+          "title": "Investor Call Transcript 4Q22",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q22.pdf",
+          "title": "Investor Call Transcript 4Q22",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2023-04-04",
+      "promiseId": "P1",
+      "date": "2023-04-04",
+      "call": "Linde Signs Agreement with ExxonMobil for Carbon Dioxide Off-take",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2025 facility startup and announced ExxonMobil carbon dioxide off-take agreement.",
+      "quote": "Linde’s new facility is expected to start up in 2025 and will be integrated into Linde’s extensive U.S. Gulf Coast industrial gas infrastructure.",
+      "verbatim": {
+        "text": "Linde’s new facility is expected to start up in 2025 and will be integrated into Linde’s extensive U.S. Gulf Coast industrial gas infrastructure.",
+        "segs": [
+          {
+            "t": "Linde’s new facility is expected to start up in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " and will be integrated into Linde’s extensive U.S. Gulf Coast industrial gas infrastructure.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.linde.com/news-and-media/2023/linde-signs-agreement-with-exxonmobil-for-carbon-dioxide-off-take",
+          "title": "Linde Signs Agreement with ExxonMobil for Carbon Dioxide Off-take | Linde",
+          "domain": "linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.linde.com/news-and-media/2023/linde-signs-agreement-with-exxonmobil-for-carbon-dioxide-off-take",
+          "title": "Linde Signs Agreement with ExxonMobil for Carbon Dioxide Off-take | Linde",
+          "domain": "linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LIN-P1-2023-04-27",
+      "promiseId": "P1",
+      "date": "2023-04-27",
+      "call": "Q1 2023 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Confirmed ExxonMobil sequestration arrangements for OCI blue hydrogen; no revised startup date.",
+      "quote": "That’s where the OCI, the CO2 coming out of the OCI assets and the production of blue hydrogen would be passed on or off taken by ExxonMobil and sequestered by them and managed long-term.",
+      "verbatim": {
+        "text": "That’s where the OCI, the CO2 coming out of the OCI assets and the production of blue hydrogen would be passed on or off taken by ExxonMobil and sequestered by them and managed long-term.",
+        "segs": [
+          {
+            "t": "That’s where the OCI, the CO2 coming out of the OCI assets and the production of blue hydrogen would be passed on or off taken by ExxonMobil and sequestered by them and managed long-term.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q23.pdf",
+          "title": "Investor Call Transcript 1Q23",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q23.pdf",
+          "title": "Investor Call Transcript 1Q23",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2023-07-27",
+      "promiseId": "P1",
+      "date": "2023-07-27",
+      "call": "Q2 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the OCI/Beaumont project.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q23.pdf",
+          "title": "Investor Call Transcript 2Q23",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2023-10-26",
+      "promiseId": "P1",
+      "date": "2023-10-26",
+      "call": "Q3 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the OCI/Beaumont project.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q23.pdf",
+          "title": "Investor Call Transcript 3Q23",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2024-02-06",
+      "promiseId": "P1",
+      "date": "2024-02-06",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Described approximately $2 billion CapEx and 300 million cubic feet per day of blue hydrogen; equipment ordering underway.",
+      "quote": "The OCI project with CapEx of approximately $2 billion will produce 300 million cubic feet per day of blue hydrogen, which will be sold under standard industrial gas supply contracts, while partnering with ExxonMobil for CO2 sequestration.",
+      "verbatim": {
+        "text": "The OCI project with CapEx of approximately $2 billion will produce 300 million cubic feet per day of blue hydrogen, which will be sold under standard industrial gas supply contracts, while partnering with ExxonMobil for CO2 sequestration.",
+        "segs": [
+          {
+            "t": "The OCI project with CapEx of approximately ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " will produce ",
+            "h": 0
+          },
+          {
+            "t": "300 million",
+            "h": 1
+          },
+          {
+            "t": " cubic feet per day of blue hydrogen, which will be sold under standard industrial gas supply contracts, while partnering with ExxonMobil for CO2 sequestration.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/events-and-presentations/investor-call-transcript-02-06-2024.pdf",
+          "title": "Investor Call Transcript 02 06 2024",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/events-and-presentations/investor-call-transcript-02-06-2024.pdf",
+          "title": "Investor Call Transcript 02 06 2024",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2024-05-02",
+      "promiseId": "P1",
+      "date": "2024-05-02",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed contracted ExxonMobil sequestration partnership for OCI; no revised startup date.",
+      "quote": "As far as OCI and the CO2 sequestration partnership is concerned, we have already contracted with ExxonMobil who are our partner for sequestration.",
+      "verbatim": {
+        "text": "As far as OCI and the CO2 sequestration partnership is concerned, we have already contracted with ExxonMobil who are our partner for sequestration.",
+        "segs": [
+          {
+            "t": "As far as OCI and the CO2 sequestration partnership is concerned, we have already contracted with ExxonMobil who are our partner for sequestration.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q24.pdf",
+          "title": "5-2-24 Linde 1Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q24.pdf",
+          "title": "5-2-24 Linde 1Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2024-08-02",
+      "promiseId": "P1",
+      "date": "2024-08-02",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed OCI project’s use of Gulf Coast infrastructure developed over three decades; no commissioning-date update.",
+      "quote": "So, for us, in many ways, our competitive advantage lies in the infrastructure that we've invested in and developed over three decades, and we want to fully leverage that infrastructure, as we did with the OCI project, to make sure that we continue to win and actually grow that business significantly.",
+      "verbatim": {
+        "text": "So, for us, in many ways, our competitive advantage lies in the infrastructure that we've invested in and developed over three decades, and we want to fully leverage that infrastructure, as we did with the OCI project, to make sure that we continue to win and actually grow that business significantly.",
+        "segs": [
+          {
+            "t": "So, for us, in many ways, our competitive advantage lies in the infrastructure that we've invested in and developed over three decades, and we want to fully leverage that infrastructure, as we did with the OCI project, to make sure that we continue to win and actually grow that business significantly.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q24.pdf",
+          "title": "Microsoft Word - 8-2-24 LIN Q2 2024 Transcript - Final.docx",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q24.pdf",
+          "title": "Microsoft Word - 8-2-24 LIN Q2 2024 Transcript - Final.docx",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2024-10-31",
+      "promiseId": "P1",
+      "date": "2024-10-31",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported OCI ATR construction underway; no changed commissioning date.",
+      "quote": "So, feel very good about the technology, having designed it before and we are currently building it also at OCI.",
+      "verbatim": {
+        "text": "So, feel very good about the technology, having designed it before and we are currently building it also at OCI.",
+        "segs": [
+          {
+            "t": "So, feel very good about the technology, having designed it before and we are currently building it also at OCI.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q24.pdf",
+          "title": "Linde 3Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q24.pdf",
+          "title": "Linde 3Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2025-02-06",
+      "promiseId": "P1",
+      "date": "2025-02-06",
+      "call": "Q4 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the OCI/Woodside Beaumont project.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q24.pdf",
+          "title": "Linde 4Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2025-05-01",
+      "promiseId": "P1",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the OCI/Woodside Beaumont project.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q25.pdf",
+          "title": "Linde 1Q25 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2025-08-01",
+      "promiseId": "P1",
+      "date": "2025-08-01",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the OCI/Woodside Beaumont project.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q25.pdf",
+          "title": "Investor Call Transcript 2Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2025-10-31",
+      "promiseId": "P1",
+      "date": "2025-10-31",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the OCI/Woodside Beaumont project.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q25.pdf",
+          "title": "Investor Call Transcript 3Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2026-02-05",
+      "promiseId": "P1",
+      "date": "2026-02-05",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Revised OCI/Woodside startup to phased commissioning during 2026.",
+      "quote": "You all know that OCI, Woodside startup is going to be paced through the course of the year.",
+      "verbatim": {
+        "text": "You all know that OCI, Woodside startup is going to be paced through the course of the year.",
+        "segs": [
+          {
+            "t": "You all know that OCI, Woodside startup is going to be paced through the course of the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2026-05-01",
+      "promiseId": "P1",
+      "date": "2026-05-01",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Matt White, CFO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Nitrogen still expected midyear; ATR and transport/sequestration startup slipped a few months to Q1 of next year.",
+      "quote": "But on the ATR and the T&S, that has slipped a few months into essentially Q1 of next year.",
+      "verbatim": {
+        "text": "But on the ATR and the T&S, that has slipped a few months into essentially Q1 of next year.",
+        "segs": [
+          {
+            "t": "But on the ATR and the T&S, that has slipped a few months into essentially ",
+            "h": 0
+          },
+          {
+            "t": "Q1",
+            "h": 1
+          },
+          {
+            "t": " of next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2026-06-01",
+      "promiseId": "P1",
+      "date": "2026-06-01",
+      "call": "2025 Sustainable Development Report",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected low-carbon ammonia commercial operations in 2027, following integration with ExxonMobil’s CCS infrastructure.",
+      "quote": "Commercial operations of low-carbon ammonia are expected to start up in 2027, following integration with ExxonMobil’s CCS infrastructure.",
+      "verbatim": {
+        "text": "Commercial operations of low-carbon ammonia are expected to start up in 2027, following integration with ExxonMobil’s CCS infrastructure. • Niagara Falls, NY: Linde brought a 35 MW installation online in Niagara Falls, NY—among the largest operational electrolyzers in the United States—primarily powered by renewable hydropower.",
+        "segs": [
+          {
+            "t": "Commercial operations of low-carbon ammonia are expected to start up in ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", following integration with ExxonMobil’s CCS infrastructure. • Niagara Falls, NY: Linde brought a 35 MW installation online in Niagara Falls, NY—among the largest operational electrolyzers in the United States—primarily powered by renewable hydropower.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/sustainable-development/2025-sustainable-development-report.pdf",
+          "title": "2025 Sustainable Development Report",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.linde.com/news-and-media/2026/linde-publishes-2025-sustainable-development-report",
+          "title": "Linde Publishes 2025 Sustainable Development Report | Linde",
+          "domain": "linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/sustainable-development/2025-sustainable-development-report.pdf",
+          "title": "2025 Sustainable Development Report",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "LIN-P1-2026-07-31",
+      "promiseId": "P1",
+      "date": "2026-07-31",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address Woodside hydrogen commissioning timing.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P1-2026-10-29",
+      "promiseId": "P1",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Nitrogen supply underway; temporary pipeline hydrogen supplied. ATR completion expected first half next year; 100% utilization probably sometime in 2028.",
+      "quote": "So once we start up, then we would start going into that ramp process, which would mean there'd be a staggered capacity utilization of our plants till -- till we get to that 100%, which I expect probably to be sometime in 2028.",
+      "verbatim": {
+        "text": "So once we start up, then we would start going into that ramp process, which would mean there'd be a staggered capacity utilization of our plants till -- till we get to that 100%, which I expect probably to be sometime in 2028.",
+        "segs": [
+          {
+            "t": "So once we start up, then we would start going into that ramp process, which would mean there'd be a staggered capacity utilization of our plants till -- till we get to that ",
+            "h": 0
+          },
+          {
+            "t": "100%",
+            "h": 1
+          },
+          {
+            "t": ", which I expect probably to be sometime in ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2024-08-27",
+      "promiseId": "P2",
+      "date": "2024-08-27",
+      "call": "Linde Signs Long-Term Agreement to Supply Clean Hydrogen to Dow’s Path2Zero Project in Canada",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced more than $2 billion for Alberta clean hydrogen and atmospheric gases, with completion in 2028.",
+      "quote": "The company will invest more than $2 billion to build, own and operate a world-scale integrated clean hydrogen and atmospheric gases facility in Alberta, Canada.",
+      "verbatim": {
+        "text": "The company will invest more than $2 billion to build, own and operate a world-scale integrated clean hydrogen and atmospheric gases facility in Alberta, Canada.",
+        "segs": [
+          {
+            "t": "The company will invest more than ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " to build, own and operate a world-scale integrated clean hydrogen and atmospheric gases facility in Alberta, Canada.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.linde.com/news-and-media/2024/linde-signs-long-term-agreement-to-supply-clean-hydrogen-to-dow%E2%80%99s-path2zero-project-in-canada",
+          "title": "Linde Signs Long-Term Agreement to Supply Clean Hydrogen to Dows Path2Zero Project in Canada | Linde",
+          "domain": "linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.linde.com/news-and-media/2024/linde-signs-long-term-agreement-to-supply-clean-hydrogen-to-dow%E2%80%99s-path2zero-project-in-canada",
+          "title": "Linde Signs Long-Term Agreement to Supply Clean Hydrogen to Dows Path2Zero Project in Canada | Linde",
+          "domain": "linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LIN-P2-2024-10-31",
+      "promiseId": "P2",
+      "date": "2024-10-31",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Specified Phase 1 investment over $2 billion and startup in late 2028.",
+      "quote": "We expect this project to start up in late 2028.",
+      "verbatim": {
+        "text": "We expect this project to start up in late 2028.",
+        "segs": [
+          {
+            "t": "We expect this project to start up in late ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q24.pdf",
+          "title": "Linde 3Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q24.pdf",
+          "title": "Linde 3Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2025-02-06",
+      "promiseId": "P2",
+      "date": "2025-02-06",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the $2 billion plus Dow Canada project in backlog and its fixed-payment structure; gave no timing update.",
+      "quote": "Included in this is a $2 billion plus Dow win in Canada, which is a great example of a high quality project in a core geography.",
+      "verbatim": {
+        "text": "Included in this is a $2 billion plus Dow win in Canada, which is a great example of a high quality project in a core geography.",
+        "segs": [
+          {
+            "t": "Included in this is a ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " plus Dow win in Canada, which is a great example of a high quality project in a core geography.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q24.pdf",
+          "title": "Linde 4Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q24.pdf",
+          "title": "Linde 4Q24 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2025-05-01",
+      "promiseId": "P2",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Sanjiv Lamba, CEO",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Discussed customer-delay protections and alternatives with Dow, without reaffirming late 2028 or announcing a replacement startup date.",
+      "quote": "Obviously, having said that, we'll be working with Dow to look at alternatives and opportunities to see how we can help them meet their goals while maintaining Linde's interest in the project.",
+      "verbatim": {
+        "text": "Obviously, having said that, we'll be working with Dow to look at alternatives and opportunities to see how we can help them meet their goals while maintaining Linde's interest in the project.",
+        "segs": [
+          {
+            "t": "Obviously, having said that, we'll be working with Dow to look at alternatives and opportunities to see how we can help them meet their goals while maintaining Linde's interest in the project.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q25.pdf",
+          "title": "Linde 1Q25 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q25.pdf",
+          "title": "Linde 1Q25 Earnings Transcript",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2025-08-01",
+      "promiseId": "P2",
+      "date": "2025-08-01",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Dow Alberta project and its startup timing were not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q25.pdf",
+          "title": "Investor Call Transcript 2Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2025-10-31",
+      "promiseId": "P2",
+      "date": "2025-10-31",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Dow Alberta project and its startup timing were not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q25.pdf",
+          "title": "Investor Call Transcript 3Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2026-02-05",
+      "promiseId": "P2",
+      "date": "2026-02-05",
+      "call": "Q4 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Dow Alberta project and its startup timing were not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2026-05-01",
+      "promiseId": "P2",
+      "date": "2026-05-01",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Dow Alberta project and its startup timing were not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2026-07-31",
+      "promiseId": "P2",
+      "date": "2026-07-31",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Dow Alberta project and its startup timing were not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P2-2026-10-29",
+      "promiseId": "P2",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The Dow Alberta project and its startup timing were not mentioned.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P3-2026-02-05",
+      "promiseId": "P3",
+      "date": "2026-02-05",
+      "call": "4Q25 Earnings Teleconference and Webcast",
+      "speaker": "Sanjiv Lamba, Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Q4 2025 restructuring benefits expected mainly in H2 2026; cash payback approximately two years, consistent with prior programs.",
+      "quote": "So I expect the bulk of the benefits to be in the second half of the year.",
+      "verbatim": {
+        "text": "So I expect the bulk of the benefits to be in the second half of the year.",
+        "segs": [
+          {
+            "t": "So I expect the bulk of the benefits to be in the second half of the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P3-2026-05-01",
+      "promiseId": "P3",
+      "date": "2026-05-01",
+      "call": "1Q26 Earnings Teleconference and Webcast",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No separate update on the Q4 2025 restructuring benefits timetable or cash payback.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P3-2026-07-31",
+      "promiseId": "P3",
+      "date": "2026-07-31",
+      "call": "2Q26 Earnings Teleconference and Webcast",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No separate update on the original program; additional cost actions discussed did not revise its benefits timetable or cash payback.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P3-2026-10-29",
+      "promiseId": "P3",
+      "date": "2026-10-29",
+      "call": "3Q26 Earnings Teleconference and Webcast",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No separate completion report for the original program; the $425 million Q3 2026 restructuring charge concerned a distinct program.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026068079/lin-20260930.htm",
+          "title": "lin-20260930",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P4-2026-02-05",
+      "promiseId": "P4",
+      "date": "2026-02-05",
+      "call": "Linde plc 4Q25 Earnings Teleconference and Webcast",
+      "speaker": "Sanjiv Lamba, Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected $2.5 billion to $3 billion of backlog projects to start during 2026 and begin contributing revenue and earnings.",
+      "quote": "So I would expect fully that the backlog will see projects between $2.5 billion to $3 billion come off and get started up and start contributing to revenue and earnings.",
+      "verbatim": {
+        "text": "So I would expect fully that the backlog will see projects between $2.5 billion to $3 billion come off and get started up and start contributing to revenue and earnings.",
+        "segs": [
+          {
+            "t": "So I would expect fully that the backlog will see projects between ",
+            "h": 0
+          },
+          {
+            "t": "$2.5 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " come off and get started up and start contributing to revenue and earnings.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P4-2026-05-01",
+      "promiseId": "P4",
+      "date": "2026-05-01",
+      "call": "Linde plc 1Q26 Earnings Teleconference and Webcast",
+      "speaker": "Juan Pelaez, Head of Investor Relations",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Started 10 sale-of-gas backlog projects, mainly in Americas and APAC, representing approximately $300 million in investments.",
+      "quote": "In this quarter, we started up 10 projects from the sale of gas backlog, mostly in Americas and APAC, with investments of approximately $300 million.",
+      "verbatim": {
+        "text": "In this quarter, we started up 10 projects from the sale of gas backlog, mostly in Americas and APAC, with investments of approximately $300 million.",
+        "segs": [
+          {
+            "t": "In this quarter, we started up 10 projects from the sale of gas backlog, mostly in Americas and APAC, with investments of approximately ",
+            "h": 0
+          },
+          {
+            "t": "$300 million",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P4-2026-07-31",
+      "promiseId": "P4",
+      "date": "2026-07-31",
+      "call": "Linde plc 2Q26 Earnings Teleconference and Webcast",
+      "speaker": "Sanjiv Lamba, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected more than 20 projects, approximately $1.3 billion in investments, to start during the remainder of the year.",
+      "quote": "For the remainder of the year, we are expecting to start-up more than 20 projects that add-up to approximately $1.3 billion in investments.",
+      "verbatim": {
+        "text": "For the remainder of the year, we are expecting to start-up more than 20 projects that add-up to approximately $1.3 billion in investments.",
+        "segs": [
+          {
+            "t": "For the remainder of the year, we are expecting to start-up more than 20 projects that add-up to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$1.3 billion",
+            "h": 1
+          },
+          {
+            "t": " in investments.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P4-2026-10-29",
+      "promiseId": "P4",
+      "date": "2026-10-29",
+      "call": "Linde plc 3Q26 Earnings Teleconference and Webcast",
+      "speaker": "Sanjiv Lamba, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected around $1 billion of start-ups during the rest of the quarter; Woodside's remaining phases extended into next year.",
+      "quote": "My expectation remains, we will continue to start up for the rest of this quarter, you know, a number of projects that might lead up to around $1 billion as we previously mentioned.",
+      "verbatim": {
+        "text": "My expectation remains, we will continue to start up for the rest of this quarter, you know, a number of projects that might lead up to around $1 billion as we previously mentioned.",
+        "segs": [
+          {
+            "t": "My expectation remains, we will continue to start up for the rest of this quarter, you know, a number of projects that might lead up to around ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " as we previously mentioned.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+          "title": "Investor Call Transcript 3Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P5-2026-02-05",
+      "promiseId": "P5",
+      "date": "2026-02-05",
+      "call": "4Q25 Earnings Teleconference and Webcast",
+      "speaker": "Sanjiv Lamba, Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected commercial space to become a $1 billion business within the next few years.",
+      "quote": "It's a secular trend for sure, but remember, and I'm looking forward to having $1 billion business here that I can split it up in the end markets and show it to you guys separately.",
+      "verbatim": {
+        "text": "It's a secular trend for sure, but remember, and I'm looking forward to having $1 billion business here that I can split it up in the end markets and show it to you guys separately.",
+        "segs": [
+          {
+            "t": "It's a secular trend for sure, but remember, and I'm looking forward to having ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " business here that I can split it up in the end markets and show it to you guys separately.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+          "title": "Investor Call Transcript 4Q25",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P5-2026-05-01",
+      "promiseId": "P5",
+      "date": "2026-05-01",
+      "call": "1Q26 Earnings Teleconference and Webcast",
+      "speaker": "Matt White, Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported strong double-digit growth supporting space vehicle production, testing, and launch; the commercial-space target was unchanged.",
+      "quote": "Half of the increase came from aerospace activity in the United States, primarily supporting space vehicle production, testing, and launch, as this end-use continues to see strong double-digit percent growth.",
+      "verbatim": {
+        "text": "Half of the increase came from aerospace activity in the United States, primarily supporting space vehicle production, testing, and launch, as this end-use continues to see strong double-digit percent growth.",
+        "segs": [
+          {
+            "t": "Half of the increase came from aerospace activity in the United States, primarily supporting space vehicle production, testing, and launch, as this end-use continues to see strong double-digit percent growth.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+          "title": "Investor Call Transcript 1Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P5-2026-07-31",
+      "promiseId": "P5",
+      "date": "2026-07-31",
+      "call": "2Q26 Earnings Teleconference and Webcast",
+      "speaker": "Sanjiv Lamba, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Commercial space remained on track for $1 billion over the next few years; management recalled 2030 and a billion-plus expectation.",
+      "quote": "We consider that the -- and we talked briefly about some of the options around space earlier on in the call, but we are on track for that $1 billion opportunity that we laid out over the next few years.",
+      "verbatim": {
+        "text": "We consider that the -- and we talked briefly about some of the options around space earlier on in the call, but we are on track for that $1 billion opportunity that we laid out over the next few years.",
+        "segs": [
+          {
+            "t": "We consider that the -- and we talked briefly about some of the options around space earlier on in the call, but we are on track for that ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " opportunity that we laid out over the next few years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+          "title": "Investor Call Transcript 2Q26",
+          "domain": "assets.linde.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LIN-P5-2026-10-29",
+      "promiseId": "P5",
+      "date": "2026-10-29",
+      "call": "3Q26 Earnings Teleconference and Webcast",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not explicitly update the $1 billion commercial-space sales target or its timeframe.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q26.pdf",
+      "title": "Investor Call Transcript 3Q26",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q25.pdf",
+      "title": "Investor Call Transcript 4Q25",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q26.pdf",
+      "title": "Investor Call Transcript 2Q26",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q26.pdf",
+      "title": "Investor Call Transcript 1Q26",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q24.pdf",
+      "title": "Linde 3Q24 Earnings Transcript",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 6,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q25.pdf",
+      "title": "Linde 1Q25 Earnings Transcript",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 7,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q24.pdf",
+      "title": "Linde 4Q24 Earnings Transcript",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 8,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q25.pdf",
+      "title": "Investor Call Transcript 2Q25",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 9,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q25.pdf",
+      "title": "Investor Call Transcript 3Q25",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 10,
+      "url": "https://www.linde.com/news-and-media/2023/linde-to-invest-1-8-billion-to-supply-clean-hydrogen-to-oci-s-world-scale-blue-ammonia-project-in-the-u-s-gulf-coas",
+      "title": "Linde to Invest $1.8 Billion to Supply Clean Hydrogen to OCI’s World-Scale Blue Ammonia Project in the U.S. Gulf Coast | Linde",
+      "domain": "linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-4q22.pdf",
+      "title": "Investor Call Transcript 4Q22",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/sustainable-development/2025-sustainable-development-report.pdf",
+      "title": "2025 Sustainable Development Report",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 13,
+      "url": "https://www.sec.gov/Archives/edgar/data/1707925/000162828026068079/lin-20260930.htm",
+      "title": "lin-20260930",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://www.linde.com/news-and-media/2023/linde-signs-agreement-with-exxonmobil-for-carbon-dioxide-off-take",
+      "title": "Linde Signs Agreement with ExxonMobil for Carbon Dioxide Off-take | Linde",
+      "domain": "linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q23.pdf",
+      "title": "Investor Call Transcript 1Q23",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q23.pdf",
+      "title": "Investor Call Transcript 2Q23",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-3q23.pdf",
+      "title": "Investor Call Transcript 3Q23",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/events-and-presentations/investor-call-transcript-02-06-2024.pdf",
+      "title": "Investor Call Transcript 02 06 2024",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-1q24.pdf",
+      "title": "5-2-24 Linde 1Q24 Earnings Transcript",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/investors/quarterly-earnings/investor-call-transcript-2q24.pdf",
+      "title": "Microsoft Word - 8-2-24 LIN Q2 2024 Transcript - Final.docx",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://www.linde.com/news-and-media/2026/linde-publishes-2025-sustainable-development-report",
+      "title": "Linde Publishes 2025 Sustainable Development Report | Linde",
+      "domain": "linde.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 22,
+      "url": "https://www.linde.com/news-and-media/2024/linde-signs-long-term-agreement-to-supply-clean-hydrogen-to-dow%E2%80%99s-path2zero-project-in-canada",
+      "title": "Linde Signs Long-Term Agreement to Supply Clean Hydrogen to Dows Path2Zero Project in Canada | Linde",
+      "domain": "linde.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 23,
+      "url": "https://assets.linde.com/-/media/global/corporate/corporate/documents/press-releases/2026/linde-3q26-earnings-release-tables.pdf",
+      "title": "Linde Reports 3rd Quarter 2026 Results",
+      "domain": "assets.linde.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 24,
+      "url": "https://majorprojects.alberta.ca/details/Dow-Fort-Saskatchewan-Path2Zero-Expansion/5535",
+      "title": "Dow Fort Saskatchewan Path2Zero Expansion - Alberta Major Projects",
+      "domain": "majorprojects.alberta.ca",
+      "tier": "press",
+      "uses": "P2"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.188473Z",
+      "completedAt": "2026-11-05T06:31:24.897883Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.498392Z",
+      "completedAt": "2026-11-05T19:15:12.143370Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.505300Z",
+      "completedAt": "2026-11-05T19:11:38.165362Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.512242Z",
+      "completedAt": "2026-11-05T19:16:47.848302Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.519136Z",
+      "completedAt": "2026-11-05T19:12:47.681008Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.601520Z",
+      "completedAt": "2026-11-05T19:13:45.728291Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.422562Z",
+      "completedAt": "2026-11-05T19:52:28.639178Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.429825Z",
+      "completedAt": "2026-11-05T19:50:17.927993Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.437122Z",
+      "completedAt": "2026-11-05T19:46:44.787398Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.444271Z",
+      "completedAt": "2026-11-05T19:46:44.513024Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.451662Z",
+      "completedAt": "2026-11-05T19:49:14.456358Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "41 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "24 of 24 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "24 of 24 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-29; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Linde_plc_logo.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Linde_plc_logo.png",
+      "title": "File:Linde plc logo.png - Wikimedia Commons",
+      "width": 2560,
+      "height": 1280,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://assets.linde.com/-/media/celum-connect/2024/01/15/13/26/img_2295-hdr_185528.png?impolicy=focal-point&cw=1200&ch=630&fx=1500&fy=1000&r=f9bd574216",
+      "sourcePageUrl": "https://www.linde.com/news-and-media/2023/linde-to-invest-1-8-billion-to-supply-clean-hydrogen-to-oci-s-world-scale-blue-ammonia-project-in-the-u-s-gulf-coas",
+      "title": "Linde to Invest $1.8 Billion to Supply Clean Hydrogen to OCI's World-Scale  Blue Ammonia Project in the U.S. Gulf Coast | Linde",
+      "width": 1200,
+      "height": 630,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.354Z"
+}

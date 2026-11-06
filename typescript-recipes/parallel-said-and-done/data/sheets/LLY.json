@@ -1,0 +1,3051 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "LLY",
+  "name": "Eli Lilly and Company",
+  "short": "Eli Lilly",
+  "website": "lilly.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investor.lilly.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-29",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": "Q4 2026"
+  },
+  "photoSubject": "Eli Lilly Houston manufacturing facility",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "$15 billion share repurchases",
+      "commitment": "Return capital through a $15 billion share repurchase program; no completion deadline was specified.",
+      "deadline": null,
+      "firstStated": "2024-12-09",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Lilly reported $6.6 billion remaining under the December 2024 $15.0 billion authorization as of September 30, 2026; the program remained open.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm",
+          "title": "lly-20260930",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/eli-lilly-lly-q4-2024-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.lilly.com/static-files/4413f2f3-6625-42b5-851e-ae9201e3bb95",
+          "title": "Form 10-Q for ELI Lilly  Co filed 10/29/2026",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Increase first-half incretin dose production",
+      "commitment": "Produce 1.6 times as many salable incretin doses in H1 2025 as in H1 2024.",
+      "deadline": "first half of 2025",
+      "firstStated": "2025-01-14",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Lilly reported producing more than 1.6 x the salable incretin doses during the first half of 2025 versus the first half of 2024, exceeding its target.",
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/314375-q2-2025",
+          "title": "Eli Lilly (LLY) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/eli-lilly-lly-q4-2024-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-08-07",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-08-07",
+            "what_was_said": "Management said it had exceeded first-half incretin sellable-dose production and expected to bring more capacity online in the second half of 2025.",
+            "call": "Q2 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Full-scale orforglipron commercial launch",
+      "commitment": "Prepare a full-scale orforglipron launch, including sampling, co-pay support and formulary access, hopefully beginning in early 2026.",
+      "deadline": "early 2026",
+      "firstStated": "2025-02-06",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Launch timing shifted to the second quarter of 2026; April availability, co-pay support, extensive sampling and access across all three major PBMs were confirmed.",
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/400087-q4-2025",
+          "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/foundayotm-orforglipron-lillys-new-oral-glp-1-pill-weight-loss",
+          "title": "Foundayo™ (orforglipron), Lilly's new oral GLP-1 pill for weight loss, now available in the U.S. | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill",
+          "title": "FDA approves Lilly's Foundayo™ (orforglipron), the only GLP-1 pill for weight loss that can be taken any time of day without food or water restrictions | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/lly/transcripts/553767-q2-2026",
+          "title": "Eli Lilly (LLY) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/eli-lilly-lly-q4-2024-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://news.alphastreet.com/eli-lilly-and-company-lly-q1-2026-earnings-call-transcript",
+          "title": "Eli Lilly and Company (LLY) Q1 2026 Earnings Call Transcript - Alphastreet",
+          "domain": "news.alphastreet.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://investor.lilly.com/static-files/4413f2f3-6625-42b5-851e-ae9201e3bb95",
+          "title": "Form 10-Q for ELI Lilly  Co filed 10/29/2026",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-08-05",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-30",
+            "what_was_said": "Management said Foundayo was broadly available in pharmacies on April 9, but commercial access at two major PBMs would be effective in mid-May and full-scale consumer promotion, including television advertising, would begin in Q3. April availability therefore marked the start of a phased commercial rollout.",
+            "call": "Q1 2026 earnings call"
+          },
+          {
+            "date": "2026-08-05",
+            "what_was_said": "Management said commercial access across all three major PBMs had been secured in June and broad direct-to-consumer marketing had begun. This supplies the formulary-access and promotional milestones missing from S9's sampling-only quotation.",
+            "call": "Q2 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Submit orforglipron worldwide for obesity",
+      "commitment": "Begin worldwide orforglipron obesity regulatory submissions by the end of 2025.",
+      "deadline": "end of 2025",
+      "firstStated": "2025-04-17",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Lilly began submissions before year-end and later confirmed orforglipron filings in more than 40 countries in 2025.",
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-orforglipron-helped-people-maintain-weight-loss-after",
+          "title": "Lilly's orforglipron helped people maintain weight loss after switching from injectable incretins to oral GLP-1 therapy in first-of-its-kind Phase 3 trial | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://sustainability.lilly.com/impactareas/access-approve",
+          "title": "Accelerating Global Regulatory Approvals | Lilly Sustainability | Eli Lilly and Company",
+          "domain": "sustainability.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.earningscall.ai/stock/transcript/LLY-2025-Q1",
+          "title": "Eli Lilly & Co. Q1 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/02/04/eli-lilly-lly-q4-2025-earnings-call-transcript/",
+          "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-01-13",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-02-06",
+            "what_was_said": "Management said the ATTAIN trials would form the basis of the first orforglipron regulatory submissions, for obesity, expected late in 2025. This established the filing timetable before the first listed release, although it did not explicitly specify worldwide filings.",
+            "call": "Q4 2024 earnings call"
+          },
+          {
+            "date": "2025-10-30",
+            "what_was_said": "Management said global obesity submissions were \"beginning imminently\" and that the submission package would go in during the quarter, adding a more concrete progress update than the earnings release's year-end plan.",
+            "call": "Q3 2025 earnings call"
+          },
+          {
+            "date": "2026-02-04",
+            "what_was_said": "Management confirmed: \"We submitted Orforglipron for obesity in the U.S. and in more than 40 countries globally.\" This explicitly confirmed the breadth of delivery on an earnings call.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Build four new U.S. factories",
+      "commitment": "Build four new U.S. manufacturing facilities, including three active-pharmaceutical-ingredient facilities; no completion deadline was specified on the call.",
+      "deadline": null,
+      "firstStated": "2025-02-26",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Locations for all four sites were announced; Houston and Richmond broke ground. Alabama completion is expected in 2032 and Pennsylvania operation in 2031.",
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-selects-pennsylvania-home-its-newest-injectable-medicine",
+          "title": "Lilly selects Pennsylvania as home for its newest injectable medicine and device manufacturing facility | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-eli-lilly-beats-q3-2026-estimates-and-lifts-outlook-93CH-4984606",
+          "title": "Earnings call transcript: Eli Lilly beats Q3 2026 estimates and lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-build-6-billion-facility-manufacture-active-pharmaceutical?_sp=5ef9c25e-ff41-4bff-a68a-949694bf80b0",
+          "title": "Lilly to build $6 billion facility to manufacture active pharmaceutical ingredients in Alabama | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.earningscall.ai/stock/transcript/LLY-2025-Q1",
+          "title": "Eli Lilly & Co. Q1 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/lly/transcripts/660130-q3-2026/",
+          "title": "Eli Lilly (LLY) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "LLY-P1-2024-12-09",
+      "promiseId": "P1",
+      "date": "2024-12-09",
+      "call": "Lilly announces new $15 billion share repurchase program and seventh consecutive 15% dividend increase",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Board approved a new $15 billion share repurchase program.",
+      "quote": "Today, the board of directors of Eli Lilly and Company (NYSE: LLY) approved a new $15 billion share repurchase program.",
+      "verbatim": {
+        "text": "9, 2024 /PRNewswire/ -- Today, the board of directors of Eli Lilly and Company (NYSE: LLY) approved a new $15 billion share repurchase program.",
+        "segs": [
+          {
+            "t": "9, ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " /PRNewswire/ -- Today, the board of directors of Eli Lilly and Company (NYSE: LLY) approved a new ",
+            "h": 0
+          },
+          {
+            "t": "$15 billion",
+            "h": 1
+          },
+          {
+            "t": " share repurchase program.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-announces-new-15-billion-share-repurchase-program-and",
+          "title": "Lilly announces new $15 billion share repurchase program and seventh consecutive 15% dividend increase | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-announces-new-15-billion-share-repurchase-program-and",
+          "title": "Lilly announces new $15 billion share repurchase program and seventh consecutive 15% dividend increase | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P1-2025-02-06",
+      "promiseId": "P1",
+      "date": "2025-02-06",
+      "call": "Q4 2024 earnings call",
+      "speaker": "David A. Ricks, Chair and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated the $15 billion repurchase program and seventh consecutive 15% quarterly dividend increase.",
+      "quote": "In addition to that, we announced at the end of the year a $15 billion share repurchase program and the seventh consecutive 15% increase in our quarterly dividend.",
+      "verbatim": {
+        "text": "In addition to that, we announced at the end of the year a $15 billion share repurchase program and the seventh consecutive 15% increase in our quarterly dividend.",
+        "segs": [
+          {
+            "t": "In addition to that, we announced at the end of the year a ",
+            "h": 0
+          },
+          {
+            "t": "$15 billion",
+            "h": 1
+          },
+          {
+            "t": " share repurchase program and the seventh consecutive ",
+            "h": 0
+          },
+          {
+            "t": "15%",
+            "h": 1
+          },
+          {
+            "t": " increase in our quarterly dividend.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/eli-lilly-lly-q4-2024-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/eli-lilly-lly-q4-2024-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P1-2025-05-01",
+      "promiseId": "P1",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Dave Ricks, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported first-quarter dividends of $1.3 billion and a $1.2 billion share repurchase.",
+      "quote": "We also distributed $1.3 billion in dividends in the first quarter and executed a $1.2 billion share repurchase.",
+      "verbatim": {
+        "text": "Lastly, we distributed $1.3 billion in dividends in the first quarter and executed a $1.2 billion share repurchase.",
+        "segs": [
+          {
+            "t": "Lastly, we distributed ",
+            "h": 0
+          },
+          {
+            "t": "$1.3 billion",
+            "h": 1
+          },
+          {
+            "t": " in dividends in the first quarter and executed a ",
+            "h": 0
+          },
+          {
+            "t": "$1.2 billion",
+            "h": 1
+          },
+          {
+            "t": " share repurchase.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/266673-q1-2025",
+          "title": "Eli Lilly (LLY) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/266673-q1-2025",
+          "title": "Eli Lilly (LLY) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P1-2025-08-07",
+      "promiseId": "P1",
+      "date": "2025-08-07",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported quarterly dividends of $1.3 billion and approximately $700 million in share repurchases.",
+      "quote": "During the quarter, we distributed $1.3 billion in dividends and executed approximately $700 million in share repurchases.",
+      "verbatim": {
+        "text": "During the quarter, we distributed $1.3 billion in dividends and executed approximately $700 million in share repurchases.",
+        "segs": [
+          {
+            "t": "During the quarter, we distributed ",
+            "h": 0
+          },
+          {
+            "t": "$1.3 billion",
+            "h": 1
+          },
+          {
+            "t": " in dividends and executed approximately ",
+            "h": 0
+          },
+          {
+            "t": "$700 million",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/314375-q2-2025",
+          "title": "Eli Lilly (LLY) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/314375-q2-2025",
+          "title": "Eli Lilly (LLY) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P1-2025-10-30",
+      "promiseId": "P1",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "David A. Ricks, Chairman and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported quarterly dividends of $1.3 billion and approximately $700 million in share repurchases.",
+      "quote": "During the quarter, we distributed $1.3 billion in dividends and executed approximately $700 million in share repurchases.",
+      "verbatim": {
+        "text": "During the quarter, we distributed $1.3 billion in dividends and executed approximately $700 million in share repurchases.",
+        "segs": [
+          {
+            "t": "During the quarter, we distributed ",
+            "h": 0
+          },
+          {
+            "t": "$1.3 billion",
+            "h": 1
+          },
+          {
+            "t": " in dividends and executed approximately ",
+            "h": 0
+          },
+          {
+            "t": "$700 million",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/30/eli-lilly-lly-q3-2025-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/30/eli-lilly-lly-q3-2025-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P1-2026-02-04",
+      "promiseId": "P1",
+      "date": "2026-02-04",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $1.3 billion in dividends and $1.5 billion in share repurchases.",
+      "quote": "Lastly, we distributed $1.3 billion in dividends and $1.5 billion in share repurchases.",
+      "verbatim": {
+        "text": "Lastly, we distributed $1.3 billion in dividends and $1.5 billion in share repurchases.",
+        "segs": [
+          {
+            "t": "Lastly, we distributed ",
+            "h": 0
+          },
+          {
+            "t": "$1.3 billion",
+            "h": 1
+          },
+          {
+            "t": " in dividends and ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/LLY/transcripts/2025-year/4-quarter",
+          "title": "Eli Lilly and Company (LLY) Q4 FY2025 Earnings Call Transcript - February 4, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/LLY/transcripts/2025-year/4-quarter",
+          "title": "Eli Lilly and Company (LLY) Q4 FY2025 Earnings Call Transcript - February 4, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/02/04/eli-lilly-lly-q4-2025-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P1-2026-04-30",
+      "promiseId": "P1",
+      "date": "2026-04-30",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported first-quarter dividends of $1.5 billion and $2.4 billion in share repurchases.",
+      "quote": "We also distributed $1.5 billion in dividends in the first quarter and executed $2.4 billion in share repurchases.",
+      "verbatim": {
+        "text": "We also distributed $1.5 billion in dividends in the first quarter and executed $2.4 billion in share repurchases.",
+        "segs": [
+          {
+            "t": "We also distributed ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " in dividends in the first quarter and executed ",
+            "h": 0
+          },
+          {
+            "t": "$2.4 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/551891-q1-2026",
+          "title": "Eli Lilly (LLY) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/551891-q1-2026",
+          "title": "Eli Lilly (LLY) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P1-2026-08-05",
+      "promiseId": "P1",
+      "date": "2026-08-05",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported second-quarter dividends of $1.5 billion and $1.6 billion in share repurchases.",
+      "quote": "We distributed $1.5 billion in dividends in the second quarter, and executed $1.6 billion in share repurchases.",
+      "verbatim": {
+        "text": "We distributed $1.5 billion in dividends in the second quarter, and executed $1.6 billion in share repurchases.",
+        "segs": [
+          {
+            "t": "We distributed ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " in dividends in the second quarter, and executed ",
+            "h": 0
+          },
+          {
+            "t": "$1.6 billion",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/LLY/transcripts/2026-year/2-quarter",
+          "title": "Eli Lilly and Company (LLY) Q2 FY2026 Earnings Call Transcript - August 5, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/LLY/transcripts/2026-year/2-quarter",
+          "title": "Eli Lilly and Company (LLY) Q2 FY2026 Earnings Call Transcript - August 5, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P1-2026-10-29",
+      "promiseId": "P1",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported third-quarter dividends of $1.5 billion and $400 million in share repurchases.",
+      "quote": "We distributed $1.5 billion in dividends in the third quarter and executed $400 million in share repurchases.",
+      "verbatim": {
+        "text": "We distributed $1.5 billion in dividends in the third quarter and executed $400 million in share repurchases.",
+        "segs": [
+          {
+            "t": "We distributed ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " in dividends in the third quarter and executed ",
+            "h": 0
+          },
+          {
+            "t": "$400 million",
+            "h": 1
+          },
+          {
+            "t": " in share repurchases.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/lly/transcripts/660130-q3-2026/",
+          "title": "Eli Lilly (LLY) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/lly/transcripts/660130-q3-2026/",
+          "title": "Eli Lilly (LLY) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P2-2025-01-14",
+      "promiseId": "P2",
+      "date": "2025-01-14",
+      "call": "Lilly provides update on 2024 revenue guidance, announces 2025 revenue guidance",
+      "speaker": "David A. Ricks, Chair and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected at least 60% more salable incretin doses in the first half of 2025 versus the first half of 2024.",
+      "quote": "We’ll also bring additional manufacturing capacity online and expect to produce at least 60% more salable doses of incretins in the first half of the year compared to the first half of 2024.",
+      "verbatim": {
+        "text": "We’ll also bring additional manufacturing capacity online and expect to produce at least 60% more salable doses of incretins in the first half of the year compared to the first half of 2024.",
+        "segs": [
+          {
+            "t": "We’ll also bring additional manufacturing capacity online and expect to produce at least ",
+            "h": 0
+          },
+          {
+            "t": "60%",
+            "h": 1
+          },
+          {
+            "t": " more salable doses of incretins in the first half of the year compared to the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000005/jpm_2025guidancexpressrele.htm",
+          "title": "ELI LILLY & Co 8-K exhibit 99.1, filed January 14, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000005/jpm_2025guidancexpressrele.htm",
+          "title": "ELI LILLY & Co 8-K exhibit 99.1, filed January 14, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P2-2025-02-06",
+      "promiseId": "P2",
+      "date": "2025-02-06",
+      "call": "Q4 2024 earnings release",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Estimated at least 1.6 times as many salable incretin doses in the first half of 2025 versus the first half of 2024.",
+      "quote": "The company continues to invest heavily in increasing manufacturing capacity and estimates producing at least 1.6 times the amount of salable incretin doses in the first half of 2025, compared to the first half of 2024.",
+      "verbatim": {
+        "text": "The company continues to invest heavily in increasing manufacturing capacity and estimates producing at least 1.6 times the amount of salable incretin doses in the first half of 2025, compared to the first half of 2024.",
+        "segs": [
+          {
+            "t": "The company continues to invest heavily in increasing manufacturing capacity and estimates producing at least 1.6 times the amount of salable incretin doses in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", compared to the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-full-q4-2024-financial-results-and-provides-2025",
+          "title": "Lilly reports full Q4 2024 financial results and provides 2025 guidance | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-full-q4-2024-financial-results-and-provides-2025",
+          "title": "Lilly reports full Q4 2024 financial results and provides 2025 guidance | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "LLY-P2-2025-05-01",
+      "promiseId": "P2",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The first-half 2025 1.6-times incretin-dose target was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/events/event-details/q1-2025-earnings-call",
+          "title": "Q1 2025 Earnings Call | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.earningscall.ai/stock/transcript/LLY-2025-Q1",
+          "title": "Eli Lilly & Co. Q1 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P2-2025-08-07",
+      "promiseId": "P2",
+      "date": "2025-08-07",
+      "call": "Q2 2025 earnings presentation",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported 1.6x more saleable incretin doses in 1H 2025 compared to 1H 2024.",
+      "quote": "Produced 1.6x more saleable incretin doses in 1H 2025 compared to 1H 2024",
+      "verbatim": {
+        "text": "Produced 1.6x more saleable incretin doses in 1H 2025 compared to 1H 2024",
+        "segs": [
+          {
+            "t": "Produced ",
+            "h": 0
+          },
+          {
+            "t": "1.6x",
+            "h": 1
+          },
+          {
+            "t": " more saleable incretin doses in ",
+            "h": 0
+          },
+          {
+            "t": "1H 2025",
+            "h": 1
+          },
+          {
+            "t": " compared to ",
+            "h": 0
+          },
+          {
+            "t": "1H 2024",
+            "h": 1
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/static-files/b7c7e82b-e667-42ba-827c-1faecba3e4c8",
+          "title": "Q2 2025 EARNINGS CALL",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/static-files/b7c7e82b-e667-42ba-827c-1faecba3e4c8",
+          "title": "Q2 2025 EARNINGS CALL",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.lilly.com/events/event-details/q2-2025-earnings-call",
+          "title": "Q2 2025 Earnings Call | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "LLY-P3-2025-02-06",
+      "promiseId": "P3",
+      "date": "2025-02-06",
+      "call": "Q4 2024 earnings call",
+      "speaker": "David A. Ricks, Chair and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Prepare a full-scale launch with sampling, co-pay support and formulary access, hopefully beginning early '26.",
+      "quote": "And hopefully, that will begin in early '26.",
+      "verbatim": {
+        "text": "And hopefully, that will begin in early '26.",
+        "segs": [
+          {
+            "t": "And hopefully, that will begin in early '26.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/eli-lilly-lly-q4-2024-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/events/event-details/q4-2024-earnings-call",
+          "title": "Q4 2024 Earnings Call | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/eli-lilly-lly-q4-2024-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P3-2025-05-01",
+      "promiseId": "P3",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Early-2026 commercial-launch timetable was unaddressed; discussion concerned clinical readouts and regulatory submissions.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/events/event-details/q1-2025-earnings-call",
+          "title": "Q1 2025 Earnings Call | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/266673-q1-2025",
+          "title": "Eli Lilly (LLY) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P3-2025-08-07",
+      "promiseId": "P3",
+      "date": "2025-08-07",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Ken Custer, President of Lilly Cardiometabolic Health",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Submission preparations remained full speed ahead for year-end, with potential approval next year.",
+      "quote": "The team's full speed ahead, preparing for submission by year-end and a potential approval next year.",
+      "verbatim": {
+        "text": "The team's full speed ahead, preparing for submission by year-end and a potential approval next year.",
+        "segs": [
+          {
+            "t": "The team's full speed ahead, preparing for submission by year-end and a potential approval next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/314375-q2-2025",
+          "title": "Eli Lilly (LLY) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/events/event-details/q2-2025-earnings-call",
+          "title": "Q2 2025 Earnings Call | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/314375-q2-2025",
+          "title": "Eli Lilly (LLY) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P3-2025-10-30",
+      "promiseId": "P3",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Daniel Skovronsky, Chief Scientific Officer and President of Lilly Immunology",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Anticipated U.S. obesity launch next year as submissions began imminently.",
+      "quote": "These submissions are beginning imminently, and we anticipate launching orforglipron in the U.S. for treatment of obesity next year.",
+      "verbatim": {
+        "text": "These submissions are beginning imminently, and we anticipate launching orforglipron in the U.S. for treatment of obesity next year.",
+        "segs": [
+          {
+            "t": "These submissions are beginning imminently, and we anticipate launching orforglipron in the U.S. for treatment of obesity next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://backpack.exchange/stocks/LLY/earnings/transcripts/fy2025-q3",
+          "title": "LLY Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+          "domain": "backpack.exchange",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/events/event-details/q3-2025-earnings-call",
+          "title": "Q3 2025 Earnings Call | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://backpack.exchange/stocks/LLY/earnings/transcripts/fy2025-q3",
+          "title": "LLY Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+          "domain": "backpack.exchange",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P3-2026-02-04",
+      "promiseId": "P3",
+      "date": "2026-02-04",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Lucas Montarce, CFO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "U.S. chronic-weight-management launch specified for the second quarter of 2026; most international markets during 2027.",
+      "quote": "We expect our Orforglipron to launch for chronic weight management in the U.S. during the second quarter of 2026, and to launch in most international markets during 2027.",
+      "verbatim": {
+        "text": "We expect our Orforglipron to launch for chronic weight management in the U.S. during the second quarter of 2026, and to launch in most international markets during 2027.",
+        "segs": [
+          {
+            "t": "We expect our Orforglipron to launch for chronic weight management in the U.S. during the second quarter of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", and to launch in most international markets during ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/400087-q4-2025",
+          "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/events/event-details/q4-2025-earnings-call",
+          "title": "Q4 2025 Earnings Call | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/400087-q4-2025",
+          "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.lilly.com/static-files/45a92498-43d0-4e2d-a4e6-a9131841cfd6",
+          "title": "Q4 2025 Lilly Presentation",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P3-2026-04-01",
+      "promiseId": "P3",
+      "date": "2026-04-01",
+      "call": "FDA approves Lilly's Foundayo™ (orforglipron), the only GLP-1 pill for weight loss that can be taken any time of day without food or water restrictions",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Shipping planned for April 6; eligible commercially insured people could pay as little as $25 per month.",
+      "quote": "Eligible people with commercial insurance may pay as little as $25 per month with the Foundayo savings card.",
+      "verbatim": {
+        "text": "Eligible people with commercial insurance may pay as little as $25 per month with the Foundayo savings card.",
+        "segs": [
+          {
+            "t": "Eligible people with commercial insurance may pay as little as ",
+            "h": 0
+          },
+          {
+            "t": "$25",
+            "h": 1
+          },
+          {
+            "t": " per month with the Foundayo savings card.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill",
+          "title": "FDA approves Lilly's Foundayo™ (orforglipron), the only GLP-1 pill for weight loss that can be taken any time of day without food or water restrictions | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill",
+          "title": "FDA approves Lilly's Foundayo™ (orforglipron), the only GLP-1 pill for weight loss that can be taken any time of day without food or water restrictions | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P3-2026-04-09",
+      "promiseId": "P3",
+      "date": "2026-04-09",
+      "call": "Foundayo™ (orforglipron), Lilly's new oral GLP-1 pill for weight loss, now available in the U.S.",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Foundayo became commercially available through LillyDirect and telehealth, with retail availability expanding.",
+      "quote": "People can now access Foundayo via LillyDirect ® and telehealth providers, with availability expanding to U.S. retail pharmacies beginning today.",
+      "verbatim": {
+        "text": "People can now access Foundayo via LillyDirect ® and telehealth providers, with availability expanding to U.S. retail pharmacies beginning today.",
+        "segs": [
+          {
+            "t": "People can now access Foundayo via LillyDirect ® and telehealth providers, with availability expanding to U.S. retail pharmacies beginning today.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/foundayotm-orforglipron-lillys-new-oral-glp-1-pill-weight-loss",
+          "title": "Foundayo™ (orforglipron), Lilly's new oral GLP-1 pill for weight loss, now available in the U.S. | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/foundayotm-orforglipron-lillys-new-oral-glp-1-pill-weight-loss",
+          "title": "Foundayo™ (orforglipron), Lilly's new oral GLP-1 pill for weight loss, now available in the U.S. | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P3-2026-04-30",
+      "promiseId": "P3",
+      "date": "2026-04-30",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Launch had begun against 2026 priorities; sampling and broader formulary access were still rolling out.",
+      "quote": "While the Foundayo launch has just begun, we're encouraged by momentum against our 2026 launch priorities.",
+      "verbatim": {
+        "text": "While the Foundayo launch has just begun, we're encouraged by momentum against our 2026 launch priorities.",
+        "segs": [
+          {
+            "t": "While the Foundayo launch has just begun, we're encouraged by momentum against our ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " launch priorities.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/551891-q1-2026",
+          "title": "Eli Lilly (LLY) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/events/event-details/q1-2026-earnings-call",
+          "title": "Q1 2026 Earnings Call | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/551891-q1-2026",
+          "title": "Eli Lilly (LLY) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.lilly.com/static-files/587c9bd3-6551-45c3-989d-ab60c49036bb",
+          "title": "Q1 2026 Lilly Earnings Call",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P3-2026-05-28",
+      "promiseId": "P3",
+      "date": "2026-05-28",
+      "call": "Foundayo and Zepbound now covered for millions of Americans",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "CVS Caremark commercial coverage to begin June 1; eligible covered patients could pay as little as $25 a month.",
+      "quote": "With today's news, coverage from CVS Caremark Commercial Template begins June 1 for Foundayo.",
+      "verbatim": {
+        "text": "With today's news, coverage from CVS Caremark Commercial Template begins June 1 for Foundayo.",
+        "segs": [
+          {
+            "t": "With today's news, coverage from CVS Caremark Commercial Template begins June 1 for Foundayo.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/foundayo-and-zepbound-now-covered-millions-americans",
+          "title": "Foundayo and Zepbound now covered for millions of Americans | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/foundayo-and-zepbound-now-covered-millions-americans",
+          "title": "Foundayo and Zepbound now covered for millions of Americans | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P3-2026-08-05",
+      "promiseId": "P3",
+      "date": "2026-08-05",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Ilya Yuffa, President of Lilly USA and Global Customer Capabilities",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Extensive sampling and full supply confirmed; commercial access across all three major PBMs secured in June.",
+      "quote": "We have extensive sampling across the prescriber base, and we continue to have full supply to enable to do that, to get that first experience and understand the benefits and safety of Foundayo.",
+      "verbatim": {
+        "text": "We have extensive sampling across the prescriber base, and we continue to have full supply to enable to do that, to get that first experience and understand the benefits and safety of Foundayo.",
+        "segs": [
+          {
+            "t": "We have extensive sampling across the prescriber base, and we continue to have full supply to enable to do that, to get that first experience and understand the benefits and safety of Foundayo.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/lly/transcripts/553767-q2-2026",
+          "title": "Eli Lilly (LLY) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/lly/transcripts/553767-q2-2026",
+          "title": "Eli Lilly (LLY) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "http://investor.lilly.com/static-files/ab69001c-650b-44f6-b629-309ee33f2335",
+          "title": "Q2 2026 Lilly Earnings Slides",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P4-2025-04-17",
+      "promiseId": "P4",
+      "date": "2025-04-17",
+      "call": "Orforglipron Phase 3 ACHIEVE-1 results press release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected global weight-management submissions by year-end; type 2 diabetes submission anticipated in 2026.",
+      "quote": "Lilly expects to submit orforglipron for weight management to global regulatory agencies by the end of this year, with the submission for the treatment of type 2 diabetes anticipated in 2026.",
+      "verbatim": {
+        "text": "Lilly expects to submit orforglipron for weight management to global regulatory agencies by the end of this year, with the submission for the treatment of type 2 diabetes anticipated in 2026.",
+        "segs": [
+          {
+            "t": "Lilly expects to submit orforglipron for weight management to global regulatory agencies by the end of this year, with the submission for the treatment of type 2 diabetes anticipated in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-demonstrated-statistically",
+          "title": "Lilly's oral GLP-1, orforglipron, demonstrated statistically significant efficacy results and a safety profile consistent with injectable GLP-1 medicines in successful Phase 3 trial | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-demonstrated-statistically",
+          "title": "Lilly's oral GLP-1, orforglipron, demonstrated statistically significant efficacy results and a safety profile consistent with injectable GLP-1 medicines in successful Phase 3 trial | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P4-2025-05-01",
+      "promiseId": "P4",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected worldwide obesity submissions to begin by the end of 2025.",
+      "quote": "We also expect potential regulatory submissions for obesity to begin worldwide by the end of 2025.",
+      "verbatim": {
+        "text": "We also expect potential regulatory submissions for obesity to begin worldwide by the end of 2025.",
+        "segs": [
+          {
+            "t": "We also expect potential regulatory submissions for obesity to begin worldwide by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://backpack.exchange/stocks/LLY/earnings/transcripts/fy2025-q1",
+          "title": "LLY Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+          "domain": "backpack.exchange",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://backpack.exchange/stocks/LLY/earnings/transcripts/fy2025-q1",
+          "title": "LLY Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+          "domain": "backpack.exchange",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P4-2025-08-07",
+      "promiseId": "P4",
+      "date": "2025-08-07",
+      "call": "Orforglipron Phase 3 ATTAIN-1 results press release",
+      "speaker": "Kenneth Custer, Executive Vice President and President of Lilly Cardiometabolic Health",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Maintained year-end submission plans after positive obesity data and said Lilly was prepared for a global launch.",
+      "quote": "With these positive data in hand, we are now planning to submit orforglipron for regulatory review by year-end and are prepared for a global launch to address this urgent public health need.",
+      "verbatim": {
+        "text": "With these positive data in hand, we are now planning to submit orforglipron for regulatory review by year-end and are prepared for a global launch to address this urgent public health need.",
+        "segs": [
+          {
+            "t": "With these positive data in hand, we are now planning to submit orforglipron for regulatory review by year-end and are prepared for a global launch to address this urgent public health need.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-delivers-weight-loss-average-273?_sp",
+          "title": "Lilly's oral GLP-1, orforglipron, delivers weight loss of up to an average of 27.3 lbs in first of two pivotal Phase 3 trials in adults with obesity | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-delivers-weight-loss-average-273?_sp",
+          "title": "Lilly's oral GLP-1, orforglipron, delivers weight loss of up to an average of 27.3 lbs in first of two pivotal Phase 3 trials in adults with obesity | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P4-2025-08-26",
+      "promiseId": "P4",
+      "date": "2025-08-26",
+      "call": "Orforglipron Phase 3 ATTAIN-2 results press release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Completion of ATTAIN-2 supplied the full clinical data package required to initiate global regulatory submissions.",
+      "quote": "With the completion of ATTAIN-2, Lilly now has the full clinical data package required to initiate global regulatory submissions for orforglipron.",
+      "verbatim": {
+        "text": "With the completion of ATTAIN-2, Lilly now has the full clinical data package required to initiate global regulatory submissions for orforglipron.",
+        "segs": [
+          {
+            "t": "With the completion of ATTAIN-2, Lilly now has the full clinical data package required to initiate global regulatory submissions for orforglipron.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-successful-third-phase-3-trial",
+          "title": "Lilly's oral GLP-1, orforglipron, is successful in third Phase 3 trial, triggering global regulatory submissions this year for the treatment of obesity | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-successful-third-phase-3-trial",
+          "title": "Lilly's oral GLP-1, orforglipron, is successful in third Phase 3 trial, triggering global regulatory submissions this year for the treatment of obesity | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P4-2025-10-30",
+      "promiseId": "P4",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings release",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Positive results from four Phase 3 trials across type 2 diabetes and obesity supported global obesity submissions by year-end.",
+      "quote": "Pipeline progress included positive results in four Phase 3 trials of orforglipron, across type 2 diabetes and obesity, with plans to submit to global regulatory authorities by the end of the year for the treatment of obesity.",
+      "verbatim": {
+        "text": "Pipeline progress included positive results in four Phase 3 trials of orforglipron, across type 2 diabetes and obesity, with plans to submit to global regulatory authorities by the end of the year for the treatment of obesity.",
+        "segs": [
+          {
+            "t": "Pipeline progress included positive results in four Phase 3 trials of orforglipron, across type 2 diabetes and obesity, with plans to submit to global regulatory authorities by the end of the year for the treatment of obesity.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-third-quarter-2025-financial-results-highlights-rd",
+          "title": "Lilly reports third-quarter 2025 financial results, highlights R&D pipeline momentum and raises 2025 guidance | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-third-quarter-2025-financial-results-highlights-rd",
+          "title": "Lilly reports third-quarter 2025 financial results, highlights R&D pipeline momentum and raises 2025 guidance | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "LLY-P4-2025-12-18",
+      "promiseId": "P4",
+      "date": "2025-12-18",
+      "call": "Orforglipron Phase 3 ATTAIN-MAINTAIN results press release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Confirmed FDA submission for adults with obesity or overweight; this release did not specify international filings.",
+      "quote": "Lilly has submitted a new drug application to the U.S. Food and Drug Administration (FDA) for orforglipron for the treatment of adults with obesity or overweight.",
+      "verbatim": {
+        "text": "Lilly has submitted a new drug application to the U.S. Food and Drug Administration (FDA) for orforglipron for the treatment of adults with obesity or overweight.",
+        "segs": [
+          {
+            "t": "Lilly has submitted a new drug application to the U.S. Food and Drug Administration (FDA) for orforglipron for the treatment of adults with obesity or overweight.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-orforglipron-helped-people-maintain-weight-loss-after",
+          "title": "Lilly's orforglipron helped people maintain weight loss after switching from injectable incretins to oral GLP-1 therapy in first-of-its-kind Phase 3 trial | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-orforglipron-helped-people-maintain-weight-loss-after",
+          "title": "Lilly's orforglipron helped people maintain weight loss after switching from injectable incretins to oral GLP-1 therapy in first-of-its-kind Phase 3 trial | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P4-2026-01-13",
+      "promiseId": "P4",
+      "date": "2026-01-13",
+      "call": "44th Annual J.P. Morgan Healthcare Conference fireside chat",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported submissions in nearly all named international markets, with GLP-1 rollout expected late 2026, early 2027.",
+      "quote": "And pleased to say we've submitted this medicine in nearly all those markets already, s o we expect a rapid rollout late 2026, early 2027 as a single-acting GLP-1 choice where maybe there's no other choice because of those refrigeration constraints, the handling constraints, distribution constraints, et cetera.",
+      "verbatim": {
+        "text": "And pleased to say we've submitted this medicine in nearly all those markets already, s o we expect a rapid rollout late 2026, early 2027 as a single-acting GLP-1 choice where maybe there's no other choice because of those refrigeration constraints, the handling constraints, distribution constraints, et cetera.",
+        "segs": [
+          {
+            "t": "And pleased to say we've submitted this medicine in nearly all those markets already, s o we expect a rapid rollout late ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", early ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": " as a single-acting GLP-1 choice where maybe there's no other choice because of those refrigeration constraints, the handling constraints, distribution constraints, et cetera.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/532543-44th-annual-j-p-morgan-healthcare-conference",
+          "title": "Eli Lilly (LLY) FY 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/532543-44th-annual-j-p-morgan-healthcare-conference",
+          "title": "Eli Lilly (LLY) FY 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "LLY-P4-2026-02-04",
+      "promiseId": "P4",
+      "date": "2026-02-04",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed obesity submissions in the U.S. and Japan, and obesity and type 2 diabetes submissions in the EU.",
+      "quote": "Regulatory progress included FDA approval of Kwikpen for tirzepatide and an expanded indication for Jaypirca, and submissions for orforglipron for obesity to regulatory authorities in the U.S. and Japan and for obesity and type 2 diabetes in the EU.",
+      "verbatim": {
+        "text": "Regulatory progress included FDA approval of Kwikpen for tirzepatide and an expanded indication for Jaypirca, and submissions for orforglipron for obesity to regulatory authorities in the U.S. and Japan and for obesity and type 2 diabetes in the EU.",
+        "segs": [
+          {
+            "t": "Regulatory progress included FDA approval of Kwikpen for tirzepatide and an expanded indication for Jaypirca, and submissions for orforglipron for obesity to regulatory authorities in the U.S. and Japan and for obesity and type 2 diabetes in the EU.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+          "title": "Lilly reports fourth-quarter 2025 financial results and provides 2026 guidance | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+          "title": "Lilly reports fourth-quarter 2025 financial results and provides 2026 guidance | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "LLY-P4-2026-07-01",
+      "promiseId": "P4",
+      "date": "2026-07-01",
+      "call": "Accelerating Global Regulatory Approvals — sustainability update",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed 2025 weight-management filings in more than 40 countries within three months of first submission.",
+      "quote": "For example, in 2025, we submitted orforglipron (now approved in the U.S. as Foundayo), an oral GLP-1 medicine for weight management, for regulatory approval in more than 40 countries within three months of first submission.",
+      "verbatim": {
+        "text": "For example, in 2025, we submitted orforglipron (now approved in the U.S. as Foundayo), an oral GLP-1 medicine for weight management, for regulatory approval in more than 40 countries within three months of first submission.",
+        "segs": [
+          {
+            "t": "For example, in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", we submitted orforglipron (now approved in the U.S. as Foundayo), an oral GLP-1 medicine for weight management, for regulatory approval in more than 40 countries within three months of first submission.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://sustainability.lilly.com/impactareas/access-approve",
+          "title": "Accelerating Global Regulatory Approvals | Lilly Sustainability | Eli Lilly and Company",
+          "domain": "sustainability.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://sustainability.lilly.com/impactareas/access-approve",
+          "title": "Accelerating Global Regulatory Approvals | Lilly Sustainability | Eli Lilly and Company",
+          "domain": "sustainability.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "LLY-P5-2025-02-26",
+      "promiseId": "P5",
+      "date": "2025-02-26",
+      "call": "Lilly plans to more than double U.S. manufacturing investment since 2020 exceeding $50 billion",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced four new U.S. manufacturing sites, including three API facilities; anticipated medicine production within five years.",
+      "quote": "Three of the future U.S. sites announced today will focus on manufacturing active pharmaceutical ingredients (API), reshoring critical capabilities of small molecule chemical synthesis and further strengthening Lilly's supply chain.",
+      "verbatim": {
+        "text": "Three of the future U.S. sites announced today will focus on manufacturing active pharmaceutical ingredients (API), reshoring critical capabilities of small molecule chemical synthesis and further strengthening Lilly's supply chain.",
+        "segs": [
+          {
+            "t": "Three of the future U.S. sites announced today will focus on manufacturing active pharmaceutical ingredients (API), reshoring critical capabilities of small molecule chemical synthesis and further strengthening Lilly's supply chain.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-plans-more-double-us-manufacturing-investment-2020",
+          "title": "Lilly plans to more than double U.S. manufacturing investment since 2020 exceeding $50 billion | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-plans-more-double-us-manufacturing-investment-2020",
+          "title": "Lilly plans to more than double U.S. manufacturing investment since 2020 exceeding $50 billion | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P5-2025-05-01",
+      "promiseId": "P5",
+      "date": "2025-05-01",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed four new U.S. facilities, including three API plants, within over $50 billion of manufacturing investment announced since 2020.",
+      "quote": "In total, we've announced over $50 billion of new U.S. manufacturing investment since 2020, including our most recent announcement to build four new facilities, of which three will be API or Active Pharmaceutical Ingredient facilities.",
+      "verbatim": {
+        "text": "In total, we've announced over $50 billion of new U.S. manufacturing investment since 2020, including our most recent announcement to build four new facilities, of which three will be API or Active Pharmaceutical Ingredient facilities.",
+        "segs": [
+          {
+            "t": "In total, we've announced over ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": " of new U.S. manufacturing investment since ",
+            "h": 0
+          },
+          {
+            "t": "2020",
+            "h": 1
+          },
+          {
+            "t": ", including our most recent announcement to build four new facilities, of which three will be API or Active Pharmaceutical Ingredient facilities.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/266673-q1-2025",
+          "title": "Eli Lilly (LLY) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/266673-q1-2025",
+          "title": "Eli Lilly (LLY) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "http://investor.lilly.com/static-files/761fadb8-b911-46d5-85b3-8bac4e054d73",
+          "title": "Q1 2025 EARNINGS CALL",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P5-2025-08-07",
+      "promiseId": "P5",
+      "date": "2025-08-07",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Planned to announce locations for two new U.S. manufacturing facilities later this quarter.",
+      "quote": "We also plan to announce the location of two of our new U.S. manufacturing facilities later this quarter.",
+      "verbatim": {
+        "text": "We also plan to announce the location of two of our new U.S. manufacturing facilities later this quarter.",
+        "segs": [
+          {
+            "t": "We also plan to announce the location of two of our new U.S. manufacturing facilities later this quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/314375-q2-2025",
+          "title": "Eli Lilly (LLY) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/webcasts-and-presentations",
+          "title": "Webcasts & Presentations | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.lilly.com/static-files/b7c7e82b-e667-42ba-827c-1faecba3e4c8?_sp",
+          "title": "Q2 2025 EARNINGS CALL",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/314375-q2-2025",
+          "title": "Eli Lilly (LLY) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P5-2025-09-16",
+      "promiseId": "P5",
+      "date": "2025-09-16",
+      "call": "Lilly announces plans to build $5 billion manufacturing facility in Virginia",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Announced $5 billion Virginia API/drug-product facility; completion expected within the next five years.",
+      "quote": "The new site will be the company's first dedicated, fully integrated active pharmaceutical ingredient (API) and drug product facility for Lilly's emerging bioconjugate platform and monoclonal antibody portfolio.",
+      "verbatim": {
+        "text": "The new site will be the company's first dedicated, fully integrated active pharmaceutical ingredient (API) and drug product facility for Lilly's emerging bioconjugate platform and monoclonal antibody portfolio.",
+        "segs": [
+          {
+            "t": "The new site will be the company's first dedicated, fully integrated active pharmaceutical ingredient (API) and drug product facility for Lilly's emerging bioconjugate platform and monoclonal antibody portfolio.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-announces-plans-build-5-billion-manufacturing-facility",
+          "title": "Lilly announces plans to build $5 billion manufacturing facility in Virginia | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-announces-plans-build-5-billion-manufacturing-facility",
+          "title": "Lilly announces plans to build $5 billion manufacturing facility in Virginia | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P5-2025-09-23",
+      "promiseId": "P5",
+      "date": "2025-09-23",
+      "call": "Lilly plans to build a new $6.5 billion facility to manufacture active pharmaceutical ingredients in Texas",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Announced $6.5 billion Houston API facility, second of four new U.S. sites; expected operational within five years.",
+      "quote": "This planned next-generation synthetic medicine active pharmaceutical product (API) facility, the second of four new U.S. sites Lilly will announce this year, will focus on manufacturing the company's pipeline of small molecule medicines across therapeutic areas, including cardiometabolic health, oncology, immunology and neuroscience.",
+      "verbatim": {
+        "text": "This planned next-generation synthetic medicine active pharmaceutical product (API) facility, the second of four new U.S. sites Lilly will announce this year, will focus on manufacturing the company's pipeline of small molecule medicines across therapeutic areas, including cardiometabolic health, oncology, immunology and neuroscience.",
+        "segs": [
+          {
+            "t": "This planned next-generation synthetic medicine active pharmaceutical product (API) facility, the second of four new U.S. sites Lilly will announce this year, will focus on manufacturing the company's pipeline of small molecule medicines across therapeutic areas, including cardiometabolic health, oncology, immunology and neuroscience.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-plans-build-new-65-billion-facility-manufacture-active",
+          "title": "Lilly plans to build a new $6.5 billion facility to manufacture active pharmaceutical ingredients in Texas | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-plans-build-new-65-billion-facility-manufacture-active",
+          "title": "Lilly plans to build a new $6.5 billion facility to manufacture active pharmaceutical ingredients in Texas | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P5-2025-10-30",
+      "promiseId": "P5",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported two new U.S. API facilities in Virginia and Texas, plus a separate Puerto Rico expansion; remaining two site updates expected.",
+      "quote": "We also made good progress executing our manufacturing expansion agenda, announcing plans to build two new U.S. facilities that will make active pharmaceutical ingredients and the expansion of an existing facility in Puerto Rico.",
+      "verbatim": {
+        "text": "We also made good progress executing our manufacturing expansion agenda, announcing plans to build two new U.S. facilities that will make active pharmaceutical ingredients and the expansion of an existing facility in Puerto Rico.",
+        "segs": [
+          {
+            "t": "We also made good progress executing our manufacturing expansion agenda, announcing plans to build two new U.S. facilities that will make active pharmaceutical ingredients and the expansion of an existing facility in Puerto Rico.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/30/eli-lilly-lly-q3-2025-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/webcasts-and-presentations",
+          "title": "Webcasts & Presentations | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.lilly.com/static-files/81645112-510f-4ce8-a860-c74596c1caa2",
+          "title": "Q3 2025 EARNINGS CALL",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/30/eli-lilly-lly-q3-2025-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P5-2025-12-09",
+      "promiseId": "P5",
+      "date": "2025-12-09",
+      "call": "Lilly to build $6 billion facility to manufacture active pharmaceutical ingredients in Alabama",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Announced $6 billion Alabama API facility, third of four; construction expected in 2026 and completion in 2032.",
+      "quote": "This next-generation synthetic medicine active pharmaceutical ingredient (API) facility, the third of four new U.S. sites Lilly plans to announce, will produce small molecule synthetic and peptide medicines.",
+      "verbatim": {
+        "text": "This next-generation synthetic medicine active pharmaceutical ingredient (API) facility, the third of four new U.S. sites Lilly plans to announce , will produce small molecule synthetic and peptide medicines.",
+        "segs": [
+          {
+            "t": "This next-generation synthetic medicine active pharmaceutical ingredient (API) facility, the third of four new U.S. sites Lilly plans to announce , will produce small molecule synthetic and peptide medicines.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-build-6-billion-facility-manufacture-active-pharmaceutical?_sp=5ef9c25e-ff41-4bff-a68a-949694bf80b0",
+          "title": "Lilly to build $6 billion facility to manufacture active pharmaceutical ingredients in Alabama | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-build-6-billion-facility-manufacture-active-pharmaceutical?_sp=5ef9c25e-ff41-4bff-a68a-949694bf80b0",
+          "title": "Lilly to build $6 billion facility to manufacture active pharmaceutical ingredients in Alabama | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P5-2026-01-30",
+      "promiseId": "P5",
+      "date": "2026-01-30",
+      "call": "Lilly selects Pennsylvania as home for its newest injectable medicine and device manufacturing facility",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Pennsylvania site, fourth since February 2025, involves more than $3.5 billion; construction expected in 2026, operational in 2031.",
+      "quote": "This is the fourth new U.S. manufacturing site Lilly has announced since February 2025 , as part of its commitment to bolster domestic medicine production.",
+      "verbatim": {
+        "text": "This is the fourth new U.S. manufacturing site Lilly has announced since February 2025 , as part of its commitment to bolster domestic medicine production.",
+        "segs": [
+          {
+            "t": "This is the fourth new U.S. manufacturing site Lilly has announced since February ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " , as part of its commitment to bolster domestic medicine production.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-selects-pennsylvania-home-its-newest-injectable-medicine",
+          "title": "Lilly selects Pennsylvania as home for its newest injectable medicine and device manufacturing facility | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-selects-pennsylvania-home-its-newest-injectable-medicine",
+          "title": "Lilly selects Pennsylvania as home for its newest injectable medicine and device manufacturing facility | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P5-2026-02-04",
+      "promiseId": "P5",
+      "date": "2026-02-04",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported manufacturing-expansion progress and plans for multiple new U.S. and European sites.",
+      "quote": "We progressed our manufacturing expansion efforts and announced plans to build multiple new manufacturing sites in the US and Europe.",
+      "verbatim": {
+        "text": "We progressed our manufacturing expansion efforts and announced plans to build multiple new manufacturing sites in the US and Europe.",
+        "segs": [
+          {
+            "t": "We progressed our manufacturing expansion efforts and announced plans to build multiple new manufacturing sites in the US and Europe.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/02/04/eli-lilly-lly-q4-2025-earnings-call-transcript/",
+          "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/webcasts-and-presentations",
+          "title": "Webcasts & Presentations | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/02/04/eli-lilly-lly-q4-2025-earnings-call-transcript/",
+          "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P5-2026-04-30",
+      "promiseId": "P5",
+      "date": "2026-04-30",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific update on the four-facility U.S. manufacturing program.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/lly/transcripts/551891-q1-2026",
+          "title": "Eli Lilly (LLY) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P5-2026-08-05",
+      "promiseId": "P5",
+      "date": "2026-08-05",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No specific update on the four-facility U.S. manufacturing program.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/webcasts-and-presentations",
+          "title": "Webcasts & Presentations | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/08/12/eli-lilly-lly-q2-2026-earnings-call-transcript",
+          "title": "Eli Lilly (LLY) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "LLY-P5-2026-09-21",
+      "promiseId": "P5",
+      "date": "2026-09-21",
+      "call": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Broke ground on $6.5 billion Houston facility, among ten U.S. sites announced since 2020 and the fifth domestic API location.",
+      "quote": "Eli Lilly and Company (NYSE: LLY) broke ground today in Houston, Texas , one of ten U.S . manufacturing sites — and fifth location to produce domestic active pharmaceutical ingredients (API) — announced since 2020.",
+      "verbatim": {
+        "text": "21, 2026 /PRNewswire/ -- Eli Lilly and Company (NYSE: LLY) broke ground today in Houston, Texas , one of ten U.S . manufacturing sites — and fifth location to produce domestic active pharmaceutical ingredients (API) — announced since 2020.",
+        "segs": [
+          {
+            "t": "21, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " /PRNewswire/ -- Eli Lilly and Company (NYSE: LLY) broke ground today in Houston, Texas , one of ten U.S . manufacturing sites — and fifth location to produce domestic active pharmaceutical ingredients (API) — announced since ",
+            "h": 0
+          },
+          {
+            "t": "2020",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-breaks-ground-houston-one-ten-us-manufacturing-sites",
+          "title": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020 | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-breaks-ground-houston-one-ten-us-manufacturing-sites",
+          "title": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020 | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P5-2026-10-22",
+      "promiseId": "P5",
+      "date": "2026-10-22",
+      "call": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Broke ground on $5 billion Richmond facility, among 10 new U.S. sites since 2020 and five API-producing locations.",
+      "quote": "Eli Lilly and Company (NYSE: LLY) broke ground today on a new $5 billion manufacturing facility just west of Richmond, Virginia , in Goochland County , one of 10 new U.S . manufacturing sites announced since 2020 and one of five among them that will produce active pharmaceutical ingredients (API).",
+      "verbatim": {
+        "text": "22, 2026 /PRNewswire/ -- Eli Lilly and Company (NYSE: LLY) broke ground today on a new $5 billion manufacturing facility just west of Richmond, Virginia , in Goochland County , one of 10 new U.S . manufacturing sites announced since 2020 and one of five among them that will produce active pharmaceutical ingredients (API).",
+        "segs": [
+          {
+            "t": "22, ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " /PRNewswire/ -- Eli Lilly and Company (NYSE: LLY) broke ground today on a new ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " manufacturing facility just west of Richmond, Virginia , in Goochland County , one of 10 new U.S . manufacturing sites announced since ",
+            "h": 0
+          },
+          {
+            "t": "2020",
+            "h": 1
+          },
+          {
+            "t": " and one of five among them that will produce active pharmaceutical ingredients (API).",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-breaks-ground-richmond-expand-american-manufacturing-next",
+          "title": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020 | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-breaks-ground-richmond-expand-american-manufacturing-next",
+          "title": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020 | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "LLY-P5-2026-10-29",
+      "promiseId": "P5",
+      "date": "2026-10-29",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Dave Ricks, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported groundbreakings for 2 new facilities: $6.5 billion in Houston, Texas, and $5 billion in Richmond, Virginia.",
+      "quote": "We broke ground on 2 new manufacturing facilities, a $6.5 billion facility in Houston, Texas, and a $5 billion facility in Richmond, Virginia.",
+      "verbatim": {
+        "text": "We broke ground on 2 new manufacturing facilities, a $6.5 billion facility in Houston, Texas, and a $5 billion facility in Richmond, Virginia.",
+        "segs": [
+          {
+            "t": "We broke ground on 2 new manufacturing facilities, a ",
+            "h": 0
+          },
+          {
+            "t": "$6.5 billion",
+            "h": 1
+          },
+          {
+            "t": " facility in Houston, Texas, and a ",
+            "h": 0
+          },
+          {
+            "t": "$5 billion",
+            "h": 1
+          },
+          {
+            "t": " facility in Richmond, Virginia.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-eli-lilly-beats-q3-2026-estimates-and-lifts-outlook-93CH-4984606",
+          "title": "Earnings call transcript: Eli Lilly beats Q3 2026 estimates and lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.lilly.com/webcasts-and-presentations",
+          "title": "Webcasts & Presentations | Eli Lilly and Company",
+          "domain": "investor.lilly.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-eli-lilly-beats-q3-2026-estimates-and-lifts-outlook-93CH-4984606",
+          "title": "Earnings call transcript: Eli Lilly beats Q3 2026 estimates and lifts outlook By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "http://stockanalysis.com/stocks/lly/transcripts/314375-q2-2025",
+      "title": "Eli Lilly (LLY) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/02/06/eli-lilly-lly-q4-2024-earnings-call-transcript",
+      "title": "Eli Lilly (LLY) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 3,
+      "url": "http://stockanalysis.com/stocks/lly/transcripts/266673-q1-2025",
+      "title": "Eli Lilly (LLY) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P5"
+    },
+    {
+      "n": 4,
+      "url": "http://stockanalysis.com/stocks/lly/transcripts/551891-q1-2026",
+      "title": "Eli Lilly (LLY) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://www.earningscall.ai/stock/transcript/LLY-2025-Q1",
+      "title": "Eli Lilly & Co. Q1 2025 Earnings Call Transcript | Full Text",
+      "domain": "earningscall.ai",
+      "tier": "press",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://investor.lilly.com/events/event-details/q1-2025-earnings-call",
+      "title": "Q1 2025 Earnings Call | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://investor.lilly.com/events/event-details/q2-2025-earnings-call",
+      "title": "Q2 2025 Earnings Call | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://investor.lilly.com/static-files/4413f2f3-6625-42b5-851e-ae9201e3bb95",
+      "title": "Form 10-Q for ELI Lilly  Co filed 10/29/2026",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 9,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/10/30/eli-lilly-lly-q3-2025-earnings-call-transcript",
+      "title": "Eli Lilly (LLY) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P5"
+    },
+    {
+      "n": 10,
+      "url": "https://stockanalysis.com/stocks/lly/transcripts/660130-q3-2026/",
+      "title": "Eli Lilly (LLY) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P5"
+    },
+    {
+      "n": 11,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/02/04/eli-lilly-lly-q4-2025-earnings-call-transcript/",
+      "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 12,
+      "url": "https://investor.lilly.com/webcasts-and-presentations",
+      "title": "Webcasts & Presentations | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 13,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/fda-approves-lillys-foundayotm-orforglipron-only-glp-1-pill",
+      "title": "FDA approves Lilly's Foundayo™ (orforglipron), the only GLP-1 pill for weight loss that can be taken any time of day without food or water restrictions | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/foundayotm-orforglipron-lillys-new-oral-glp-1-pill-weight-loss",
+      "title": "Foundayo™ (orforglipron), Lilly's new oral GLP-1 pill for weight loss, now available in the U.S. | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 15,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-orforglipron-helped-people-maintain-weight-loss-after",
+      "title": "Lilly's orforglipron helped people maintain weight loss after switching from injectable incretins to oral GLP-1 therapy in first-of-its-kind Phase 3 trial | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 16,
+      "url": "https://sustainability.lilly.com/impactareas/access-approve",
+      "title": "Accelerating Global Regulatory Approvals | Lilly Sustainability | Eli Lilly and Company",
+      "domain": "sustainability.lilly.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 17,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-build-6-billion-facility-manufacture-active-pharmaceutical?_sp=5ef9c25e-ff41-4bff-a68a-949694bf80b0",
+      "title": "Lilly to build $6 billion facility to manufacture active pharmaceutical ingredients in Alabama | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 18,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-selects-pennsylvania-home-its-newest-injectable-medicine",
+      "title": "Lilly selects Pennsylvania as home for its newest injectable medicine and device manufacturing facility | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 19,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-announces-new-15-billion-share-repurchase-program-and",
+      "title": "Lilly announces new $15 billion share repurchase program and seventh consecutive 15% dividend increase | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947825000005/jpm_2025guidancexpressrele.htm",
+      "title": "ELI LILLY & Co 8-K exhibit 99.1, filed January 14, 2025",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 21,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-full-q4-2024-financial-results-and-provides-2025",
+      "title": "Lilly reports full Q4 2024 financial results and provides 2025 guidance | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://investor.lilly.com/static-files/b7c7e82b-e667-42ba-827c-1faecba3e4c8",
+      "title": "Q2 2025 EARNINGS CALL",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 23,
+      "url": "https://investor.lilly.com/events/event-details/q4-2024-earnings-call",
+      "title": "Q4 2024 Earnings Call | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 24,
+      "url": "https://investor.lilly.com/events/event-details/q3-2025-earnings-call",
+      "title": "Q3 2025 Earnings Call | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 25,
+      "url": "https://investor.lilly.com/events/event-details/q4-2025-earnings-call",
+      "title": "Q4 2025 Earnings Call | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 26,
+      "url": "https://investor.lilly.com/static-files/45a92498-43d0-4e2d-a4e6-a9131841cfd6",
+      "title": "Q4 2025 Lilly Presentation",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 27,
+      "url": "https://investor.lilly.com/events/event-details/q1-2026-earnings-call",
+      "title": "Q1 2026 Earnings Call | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 28,
+      "url": "https://investor.lilly.com/static-files/587c9bd3-6551-45c3-989d-ab60c49036bb",
+      "title": "Q1 2026 Lilly Earnings Call",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 29,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/foundayo-and-zepbound-now-covered-millions-americans",
+      "title": "Foundayo and Zepbound now covered for millions of Americans | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 30,
+      "url": "http://investor.lilly.com/static-files/ab69001c-650b-44f6-b629-309ee33f2335",
+      "title": "Q2 2026 Lilly Earnings Slides",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 31,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-demonstrated-statistically",
+      "title": "Lilly's oral GLP-1, orforglipron, demonstrated statistically significant efficacy results and a safety profile consistent with injectable GLP-1 medicines in successful Phase 3 trial | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 32,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-delivers-weight-loss-average-273?_sp",
+      "title": "Lilly's oral GLP-1, orforglipron, delivers weight loss of up to an average of 27.3 lbs in first of two pivotal Phase 3 trials in adults with obesity | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 33,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-oral-glp-1-orforglipron-successful-third-phase-3-trial",
+      "title": "Lilly's oral GLP-1, orforglipron, is successful in third Phase 3 trial, triggering global regulatory submissions this year for the treatment of obesity | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 34,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-reports-third-quarter-2025-financial-results-highlights-rd",
+      "title": "Lilly reports third-quarter 2025 financial results, highlights R&D pipeline momentum and raises 2025 guidance | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 35,
+      "url": "http://investor.lilly.com/news-releases/news-release-details/lilly-reports-fourth-quarter-2025-financial-results-and-provides",
+      "title": "Lilly reports fourth-quarter 2025 financial results and provides 2026 guidance | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 36,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-plans-more-double-us-manufacturing-investment-2020",
+      "title": "Lilly plans to more than double U.S. manufacturing investment since 2020 exceeding $50 billion | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 37,
+      "url": "http://investor.lilly.com/static-files/761fadb8-b911-46d5-85b3-8bac4e054d73",
+      "title": "Q1 2025 EARNINGS CALL",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 38,
+      "url": "https://investor.lilly.com/static-files/b7c7e82b-e667-42ba-827c-1faecba3e4c8?_sp",
+      "title": "Q2 2025 EARNINGS CALL",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 39,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-announces-plans-build-5-billion-manufacturing-facility",
+      "title": "Lilly announces plans to build $5 billion manufacturing facility in Virginia | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 40,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-plans-build-new-65-billion-facility-manufacture-active",
+      "title": "Lilly plans to build a new $6.5 billion facility to manufacture active pharmaceutical ingredients in Texas | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 41,
+      "url": "https://investor.lilly.com/static-files/81645112-510f-4ce8-a860-c74596c1caa2",
+      "title": "Q3 2025 EARNINGS CALL",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 42,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-breaks-ground-houston-one-ten-us-manufacturing-sites",
+      "title": "Lilly breaks ground in Houston, one of ten U.S. manufacturing sites announced since 2020 | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 43,
+      "url": "https://investor.lilly.com/news-releases/news-release-details/lilly-breaks-ground-richmond-expand-american-manufacturing-next",
+      "title": "Lilly breaks ground in Richmond to expand American manufacturing of next-generation cancer medicines, advancing its build-out of 10 new U.S. sites since 2020 | Eli Lilly and Company",
+      "domain": "investor.lilly.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 44,
+      "url": "https://www.sec.gov/Archives/edgar/data/59478/000005947826000108/lly-20260930.htm",
+      "title": "lly-20260930",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 45,
+      "url": "http://stockanalysis.com/stocks/lly/transcripts/400087-q4-2025",
+      "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 46,
+      "url": "https://stockanalysis.com/stocks/lly/transcripts/553767-q2-2026",
+      "title": "Eli Lilly (LLY) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 47,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-eli-lilly-beats-q3-2026-estimates-and-lifts-outlook-93CH-4984606",
+      "title": "Earnings call transcript: Eli Lilly beats Q3 2026 estimates and lifts outlook By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 48,
+      "url": "https://www.roic.ai/quote/LLY/transcripts/2025-year/4-quarter",
+      "title": "Eli Lilly and Company (LLY) Q4 FY2025 Earnings Call Transcript - February 4, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 49,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/02/04/eli-lilly-lly-q4-2025-earnings-call-transcript",
+      "title": "Eli Lilly (LLY) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 50,
+      "url": "https://www.roic.ai/quote/LLY/transcripts/2026-year/2-quarter",
+      "title": "Eli Lilly and Company (LLY) Q2 FY2026 Earnings Call Transcript - August 5, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 51,
+      "url": "http://stockanalysis.com/stocks/lly/transcripts/532543-44th-annual-j-p-morgan-healthcare-conference",
+      "title": "Eli Lilly (LLY) FY 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 52,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/08/12/eli-lilly-lly-q2-2026-earnings-call-transcript",
+      "title": "Eli Lilly (LLY) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 53,
+      "url": "https://backpack.exchange/stocks/LLY/earnings/transcripts/fy2025-q3",
+      "title": "LLY Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+      "domain": "backpack.exchange",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 54,
+      "url": "https://backpack.exchange/stocks/LLY/earnings/transcripts/fy2025-q1",
+      "title": "LLY Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+      "domain": "backpack.exchange",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 55,
+      "url": "https://news.alphastreet.com/eli-lilly-and-company-lly-q1-2026-earnings-call-transcript",
+      "title": "Eli Lilly and Company (LLY) Q1 2026 Earnings Call Transcript - Alphastreet",
+      "domain": "news.alphastreet.com",
+      "tier": "press",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P5",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.028711Z",
+      "completedAt": "2026-11-05T06:28:57.446744Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.600279Z",
+      "completedAt": "2026-11-05T19:12:28.689128Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.607353Z",
+      "completedAt": "2026-11-05T19:13:18.294170Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.616207Z",
+      "completedAt": "2026-11-05T19:15:46.182897Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.623952Z",
+      "completedAt": "2026-11-05T19:15:11.651485Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.630987Z",
+      "completedAt": "2026-11-05T19:13:21.978467Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.387962Z",
+      "completedAt": "2026-11-05T19:48:28.383105Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.395128Z",
+      "completedAt": "2026-11-05T19:49:49.005019Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.402363Z",
+      "completedAt": "2026-11-05T19:49:27.904492Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.409789Z",
+      "completedAt": "2026-11-05T19:48:48.884998Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.416993Z",
+      "completedAt": "2026-11-05T19:48:25.978039Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "46 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "42 of 42 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "42 of 42 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-29; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Eli_Lilly_and_Company.svg/1280px-Eli_Lilly_and_Company.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Eli_Lilly_and_Company.svg",
+      "title": "File:Eli Lilly and Company.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 698,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/05/Eli_Lilly_Corporate_Center%2C_Indianapolis%2C_Indiana%2C_USA.jpg/3840px-Eli_Lilly_Corporate_Center%2C_Indianapolis%2C_Indiana%2C_USA.jpg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Eli_Lilly_Corporate_Center,_Indianapolis,_Indiana,_USA.jpg",
+      "title": "File:Eli Lilly Corporate Center, Indianapolis, Indiana, USA.jpg - Wikimedia  Commons",
+      "width": 3840,
+      "height": 2880,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T20:07:19.286Z"
+}

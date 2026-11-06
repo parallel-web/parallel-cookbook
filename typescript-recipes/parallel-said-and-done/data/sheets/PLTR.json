@@ -1,0 +1,1600 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "PLTR",
+  "name": "Palantir Technologies Inc.",
+  "short": "Palantir",
+  "website": "palantir.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investors.palantir.com",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-11-02",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Palantir Artificial Intelligence Platform AIP",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "FY2026 revenue",
+      "commitment": "Deliver FY2026 revenue of $7.182–$7.198 billion.",
+      "deadline": "FY2026",
+      "firstStated": "2026-02-02",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Full-year 2026 remains pending. Revenue guidance was raised to between $8.530 billion and $8.534 billion; this is a forecast, not delivered revenue.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/11/02/palantir-pltr-q3-2026-earnings-call-transcript",
+          "title": "Palantir (PLTR) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "U.S. commercial revenue",
+      "commitment": "Deliver FY2026 U.S. commercial revenue above $3.144 billion, representing at least 115% growth.",
+      "deadline": "FY2026",
+      "firstStated": "2026-02-02",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "FY2026 remains pending; Palantir raised U.S. commercial revenue guidance to in excess of $3.559 billion, representing growth of at least 143%.",
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026-U-S--Comm-Revenue-Growth-of-148-YY-and-Revenue-Growth-of-96-YY-Raises-FY-2026-Revenue-Guidance-to-91-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-143-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Adjusted operating income",
+      "commitment": "Deliver FY2026 adjusted income from operations of $4.126–$4.142 billion.",
+      "deadline": "FY2026",
+      "firstStated": "2026-02-02",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Full-year 2026 adjusted income from operations guidance rose to $5.245 - $5.249 billion; delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Adjusted free cash flow",
+      "commitment": "Deliver FY2026 adjusted free cash flow of $3.925–$4.125 billion.",
+      "deadline": "FY2026",
+      "firstStated": "2026-02-02",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The full-year result remained pending; adjusted free cash flow guidance was raised to between $4.8 - $5.0 billion.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "Palantir Technologies Inc. 8-K exhibit 99.1, filed November 2, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Quarterly GAAP profitability",
+      "commitment": "Achieve GAAP operating income and net income in each quarter of 2026.",
+      "deadline": "Each quarter of 2026",
+      "firstStated": "2026-02-02",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "GAAP operating income and net income were positive through Q3 2026; the full-year promise remains open pending the final quarter.",
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-05-04",
+            "what_was_said": "Management reported GAAP net income of $871 million, representing a 53% margin, and reaffirmed its expectation of GAAP operating income and net income in every quarter of 2026.",
+            "call": "Q1 2026 earnings call"
+          },
+          {
+            "date": "2026-08-03",
+            "what_was_said": "Management reported GAAP net income of $1.062 billion, representing a 55% margin, and reaffirmed its expectation of GAAP operating income and net income in every quarter of 2026.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-11-02",
+            "what_was_said": "Management reported GAAP net income of $1.128 billion, representing a 49% margin, and reaffirmed its expectation of GAAP operating income and net income in every quarter of 2026.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "PLTR-P1-2026-02-02",
+      "promiseId": "P1",
+      "date": "2026-02-02",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Initial full-year 2026 revenue guidance: $7.182 billion to $7.198 billion.",
+      "quote": "Revenue of between $7.182 - $7.198 billion.",
+      "verbatim": {
+        "text": "For full year 2026, we expect: Revenue of between $7.182 - $7.198 billion.",
+        "segs": [
+          {
+            "t": "For full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we expect: Revenue of between ",
+            "h": 0
+          },
+          {
+            "t": "$7.182 - $7.198 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY-Issues-FY-2026-Revenue-Guidance-of-61-YY-and-U-S--Comm-Revenue-Guidance-of-115-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY-Issues-FY-2026-Revenue-Guidance-of-61-YY-and-U-S--Comm-Revenue-Guidance-of-115-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P1-2026-05-04",
+      "promiseId": "P1",
+      "date": "2026-05-04",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 revenue guidance to $7.650 billion to $7.662 billion.",
+      "quote": "We are raising our revenue guidance to between $7.650 - $7.662 billion.",
+      "verbatim": {
+        "text": "For full year 2026: We are raising our revenue guidance to between $7.650 - $7.662 billion.",
+        "segs": [
+          {
+            "t": "For full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ": We are raising our revenue guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$7.650 - $7.662 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P1-2026-08-03",
+      "promiseId": "P1",
+      "date": "2026-08-03",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 revenue guidance to $8.150 billion to $8.158 billion.",
+      "quote": "We are raising our revenue guidance to between $8.150 – $8.158 billion.",
+      "verbatim": {
+        "text": "For full year 2026: • We are raising our revenue guidance to between $8.150 – $8.158 billion.",
+        "segs": [
+          {
+            "t": "For full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ": • We are raising our revenue guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$8.150 – $8.158 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P1-2026-11-02",
+      "promiseId": "P1",
+      "date": "2026-11-02",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 revenue guidance to $8.530 billion to $8.534 billion.",
+      "quote": "We are raising our revenue guidance to between $8.530 - $8.534 billion.",
+      "verbatim": {
+        "text": "• We are raising our revenue guidance to between $8.530 - $8.534 billion.",
+        "segs": [
+          {
+            "t": "• We are raising our revenue guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$8.530 - $8.534 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P2-2026-02-02",
+      "promiseId": "P2",
+      "date": "2026-02-02",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set FY2026 U.S. commercial revenue guidance above $3.144 billion, representing at least 115% growth.",
+      "quote": "U.S. commercial revenue in excess of $3.144 billion, representing a growth rate of at least 115%.",
+      "verbatim": {
+        "text": "U.S. commercial revenue in excess of $3.144 billion, representing a growth rate of at least 115%.",
+        "segs": [
+          {
+            "t": "U.S. commercial revenue in excess of ",
+            "h": 0
+          },
+          {
+            "t": "$3.144 billion",
+            "h": 1
+          },
+          {
+            "t": ", representing a growth rate of at least ",
+            "h": 0
+          },
+          {
+            "t": "115%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P2-2026-05-04",
+      "promiseId": "P2",
+      "date": "2026-05-04",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised FY2026 U.S. commercial revenue guidance above $3.224 billion, representing at least 120% growth.",
+      "quote": "We are raising our U.S. commercial revenue guidance to in excess of $3.224 billion, representing a growth rate of at least 120%.",
+      "verbatim": {
+        "text": "We are raising our U.S. commercial revenue guidance to in excess of $3.224 billion, representing a growth rate of at least 120%.",
+        "segs": [
+          {
+            "t": "We are raising our U.S. commercial revenue guidance to in excess of ",
+            "h": 0
+          },
+          {
+            "t": "$3.224 billion",
+            "h": 1
+          },
+          {
+            "t": ", representing a growth rate of at least ",
+            "h": 0
+          },
+          {
+            "t": "120%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P2-2026-08-03",
+      "promiseId": "P2",
+      "date": "2026-08-03",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised FY2026 U.S. commercial revenue guidance above $3.424 billion, representing at least 134% growth.",
+      "quote": "We are raising our U.S. commercial revenue guidance to in excess of $3.424 billion, representing a growth rate of at least 134%.",
+      "verbatim": {
+        "text": "We are raising our U.S. commercial revenue guidance to in excess of $3.424 billion, representing a growth rate of at least 134%.",
+        "segs": [
+          {
+            "t": "We are raising our U.S. commercial revenue guidance to in excess of ",
+            "h": 0
+          },
+          {
+            "t": "$3.424 billion",
+            "h": 1
+          },
+          {
+            "t": ", representing a growth rate of at least ",
+            "h": 0
+          },
+          {
+            "t": "134%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P2-2026-11-02",
+      "promiseId": "P2",
+      "date": "2026-11-02",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised FY2026 U.S. commercial revenue guidance above $3.559 billion, representing at least 143% growth.",
+      "quote": "We are raising our U.S. commercial revenue guidance to in excess of $3.559 billion, representing a growth rate of at least 143%.",
+      "verbatim": {
+        "text": "We are raising our U.S. commercial revenue guidance to in excess of $3.559 billion, representing a growth rate of at least 143%.",
+        "segs": [
+          {
+            "t": "We are raising our U.S. commercial revenue guidance to in excess of ",
+            "h": 0
+          },
+          {
+            "t": "$3.559 billion",
+            "h": 1
+          },
+          {
+            "t": ", representing a growth rate of at least ",
+            "h": 0
+          },
+          {
+            "t": "143%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026-U-S--Comm-Revenue-Growth-of-148-YY-and-Revenue-Growth-of-96-YY-Raises-FY-2026-Revenue-Guidance-to-91-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-143-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026-U-S--Comm-Revenue-Growth-of-148-YY-and-Revenue-Growth-of-96-YY-Raises-FY-2026-Revenue-Guidance-to-91-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-143-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P3-2026-02-02",
+      "promiseId": "P3",
+      "date": "2026-02-02",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Initially forecast full-year 2026 adjusted income from operations of $4.126–$4.142 billion.",
+      "quote": "Adjusted income from operations of between $4.126 - $4.142 billion.",
+      "verbatim": {
+        "text": "Adjusted income from operations of between $4.126 - $4.142 billion.",
+        "segs": [
+          {
+            "t": "Adjusted income from operations of between ",
+            "h": 0
+          },
+          {
+            "t": "$4.126 - $4.142 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY-Issues-FY-2026-Revenue-Guidance-of-61-YY-and-U-S--Comm-Revenue-Guidance-of-115-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY-Issues-FY-2026-Revenue-Guidance-of-61-YY-and-U-S--Comm-Revenue-Guidance-of-115-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P3-2026-05-04",
+      "promiseId": "P3",
+      "date": "2026-05-04",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 adjusted income from operations guidance to $4.440–$4.452 billion.",
+      "quote": "We are raising our adjusted income from operations guidance to between $4.440 – $4.452 billion.",
+      "verbatim": {
+        "text": "We are raising our adjusted income from operations guidance to between $4.440 – $4.452 billion.",
+        "segs": [
+          {
+            "t": "We are raising our adjusted income from operations guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$4.440 – $4.452 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P3-2026-08-03",
+      "promiseId": "P3",
+      "date": "2026-08-03",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 adjusted income from operations guidance to $4.889–$4.897 billion.",
+      "quote": "We are raising our adjusted income from operations guidance to between $4.889 – $4.897 billion.",
+      "verbatim": {
+        "text": "We are raising our adjusted income from operations guidance to between $4.889 – $4.897 billion.",
+        "segs": [
+          {
+            "t": "We are raising our adjusted income from operations guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$4.889 – $4.897 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P3-2026-11-02",
+      "promiseId": "P3",
+      "date": "2026-11-02",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year 2026 adjusted income from operations guidance to $5.245–$5.249 billion.",
+      "quote": "We are raising our adjusted income from operations guidance to between $5.245 - $5.249 billion.",
+      "verbatim": {
+        "text": "For full year 2026: • We are raising our revenue guidance to between $8.530 - $8.534 billion. • We are raising our U.S. commercial revenue guidance to in excess of $3.559 billion, representing a growth rate of at least 143%. • We are raising our adjusted income from operations guidance to between $5.245 - $5.249 billion.",
+        "segs": [
+          {
+            "t": "For full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ": • We are raising our revenue guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$8.530 - $8.534 billion",
+            "h": 1
+          },
+          {
+            "t": ". • We are raising our U.S. commercial revenue guidance to in excess of ",
+            "h": 0
+          },
+          {
+            "t": "$3.559 billion",
+            "h": 1
+          },
+          {
+            "t": ", representing a growth rate of at least ",
+            "h": 0
+          },
+          {
+            "t": "143%",
+            "h": 1
+          },
+          {
+            "t": ". • We are raising our adjusted income from operations guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$5.245 - $5.249 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P4-2026-02-02",
+      "promiseId": "P4",
+      "date": "2026-02-02",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced FY2026 adjusted free cash flow guidance of $3.925–$4.125 billion.",
+      "quote": "Adjusted free cash flow of between $3.925 - $4.125 billion.",
+      "verbatim": {
+        "text": "Adjusted free cash flow of between $3.925 - $4.125 billion.",
+        "segs": [
+          {
+            "t": "Adjusted free cash flow of between ",
+            "h": 0
+          },
+          {
+            "t": "$3.925 - $4.125 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY-Issues-FY-2026-Revenue-Guidance-of-61-YY-and-U-S--Comm-Revenue-Guidance-of-115-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY-Issues-FY-2026-Revenue-Guidance-of-61-YY-and-U-S--Comm-Revenue-Guidance-of-115-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P4-2026-05-04",
+      "promiseId": "P4",
+      "date": "2026-05-04",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised FY2026 adjusted free cash flow guidance to $4.2–$4.4 billion.",
+      "quote": "We are raising our adjusted free cash flow guidance to between $4.2 - $4.4 billion.",
+      "verbatim": {
+        "text": "We are raising our adjusted free cash flow guidance to between $4.2 - $4.4 billion.",
+        "segs": [
+          {
+            "t": "We are raising our adjusted free cash flow guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$4.2 - $4.4 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P4-2026-08-03",
+      "promiseId": "P4",
+      "date": "2026-08-03",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised FY2026 adjusted free cash flow guidance to $4.5–$4.7 billion.",
+      "quote": "We are raising our adjusted free cash flow guidance to between $4.5 – $4.7 billion.",
+      "verbatim": {
+        "text": "We are raising our adjusted free cash flow guidance to between $4.5 – $4.7 billion.",
+        "segs": [
+          {
+            "t": "We are raising our adjusted free cash flow guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$4.5 – $4.7 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P4-2026-11-02",
+      "promiseId": "P4",
+      "date": "2026-11-02",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised FY2026 adjusted free cash flow guidance to $4.8–$5.0 billion.",
+      "quote": "We are raising our adjusted free cash flow guidance to between $4.8 - $5.0 billion.",
+      "verbatim": {
+        "text": "We are raising our adjusted free cash flow guidance to between $4.8 - $5.0 billion.",
+        "segs": [
+          {
+            "t": "We are raising our adjusted free cash flow guidance to between ",
+            "h": 0
+          },
+          {
+            "t": "$4.8 - $5.0 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "Palantir Technologies Inc. 8-K exhibit 99.1, filed November 2, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm",
+          "title": "Palantir Technologies Inc. 8-K exhibit 99.1, filed November 2, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P5-2026-02-02",
+      "promiseId": "P5",
+      "date": "2026-02-02",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Dave Glazer, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected GAAP operating income and net income in each quarter of 2026.",
+      "quote": "And GAAP operating income and net income in each quarter of this year.",
+      "verbatim": {
+        "text": "And GAAP operating income and net income in each quarter of this year.",
+        "segs": [
+          {
+            "t": "And GAAP operating income and net income in each quarter of this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://transcripts.platformaeronaut.com/transcripts/PLTR-4Q25-transcript",
+          "title": "PLTR Q4 2025 Earnings Call Transcript | Platform Aeronaut Transcripts",
+          "domain": "transcripts.platformaeronaut.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://transcripts.platformaeronaut.com/transcripts/PLTR-4Q25-transcript",
+          "title": "PLTR Q4 2025 Earnings Call Transcript | Platform Aeronaut Transcripts",
+          "domain": "transcripts.platformaeronaut.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/PLTR/earnings/PLTR-Q4-2025-earnings_call-398294.html",
+          "title": "Palantir Technologies Inc. (PLTR) Q4 FY2025 earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLTR-P5-2026-05-04",
+      "promiseId": "P5",
+      "date": "2026-05-04",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported GAAP operating income of $754 million (46% margin) and GAAP net income of $871 million (53% margin) for Q1 2026.",
+      "quote": "GAAP income from operations of $754 million, representing a 46% margin",
+      "verbatim": {
+        "text": "GAAP income from operations of $754 million, representing a 46% margin",
+        "segs": [
+          {
+            "t": "GAAP income from operations of ",
+            "h": 0
+          },
+          {
+            "t": "$754 million",
+            "h": 1
+          },
+          {
+            "t": ", representing a ",
+            "h": 0
+          },
+          {
+            "t": "46%",
+            "h": 1
+          },
+          {
+            "t": " margin",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P5-2026-08-03",
+      "promiseId": "P5",
+      "date": "2026-08-03",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported GAAP operating income of $912 million (47% margin) and GAAP net income of $1.062 billion (55% margin) for Q2 2026.",
+      "quote": "GAAP income from operations of $912 million, representing a 47% margin",
+      "verbatim": {
+        "text": "GAAP income from operations of $912 million, representing a 47% margin",
+        "segs": [
+          {
+            "t": "GAAP income from operations of ",
+            "h": 0
+          },
+          {
+            "t": "$912 million",
+            "h": 1
+          },
+          {
+            "t": ", representing a ",
+            "h": 0
+          },
+          {
+            "t": "47%",
+            "h": 1
+          },
+          {
+            "t": " margin",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations/",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLTR-P5-2026-11-02",
+      "promiseId": "P5",
+      "date": "2026-11-02",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported GAAP operating income of $1.085 billion (47% margin) and GAAP net income of $1.128 billion (49% margin) for Q3 2026.",
+      "quote": "GAAP income from operations of $1.085 billion, representing a 47% margin",
+      "verbatim": {
+        "text": "GAAP income from operations of $1.085 billion, representing a 47% margin",
+        "segs": [
+          {
+            "t": "GAAP income from operations of ",
+            "h": 0
+          },
+          {
+            "t": "$1.085 billion",
+            "h": 1
+          },
+          {
+            "t": ", representing a ",
+            "h": 0
+          },
+          {
+            "t": "47%",
+            "h": 1
+          },
+          {
+            "t": " margin",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026",
+          "title": "Palantir IR - News",
+          "domain": "investors.palantir.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000004/a2025q4ex991earningsrelease.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026/",
+      "title": "Palantir IR - News",
+      "domain": "investors.palantir.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q1-2026-U-S--Revenue-Growth-of-104-YY-and-Revenue-Growth-of-85-YY-Raises-FY-2026-Revenue-Guidance-to-71-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-120-YY-Crushing-Consensus-Expectations/",
+      "title": "Palantir IR - News",
+      "domain": "investors.palantir.com",
+      "tier": "primary",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY-Issues-FY-2026-Revenue-Guidance-of-61-YY-and-U-S--Comm-Revenue-Guidance-of-115-YY-Crushing-Consensus-Expectations",
+      "title": "Palantir IR - News",
+      "domain": "investors.palantir.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://www.sec.gov/Archives/edgar/data/0001321655/000132165526000045/a2026q3ex991pressrelease.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations",
+      "title": "Palantir IR - News",
+      "domain": "investors.palantir.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 7,
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000039/a2026q2ex991pressrelease.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q4-2025-U-S--Comm-Revenue-Growth-of-137-YY-and-Revenue-Growth-of-70-YY/",
+      "title": "Palantir IR - News",
+      "domain": "investors.palantir.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 9,
+      "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026-U-S--Comm-Revenue-Growth-of-148-YY-and-Revenue-Growth-of-96-YY-Raises-FY-2026-Revenue-Guidance-to-91-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-143-YY-Crushing-Consensus-Expectations/",
+      "title": "Palantir IR - News",
+      "domain": "investors.palantir.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 10,
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000045/a2026q3ex991pressrelease.htm",
+      "title": "Palantir Technologies Inc. 8-K exhibit 99.1, filed November 2, 2026",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 11,
+      "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations/",
+      "title": "Palantir IR - News",
+      "domain": "investors.palantir.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 12,
+      "url": "https://investors.palantir.com/news-details/2026/Palantir-Reports-Q3-2026",
+      "title": "Palantir IR - News",
+      "domain": "investors.palantir.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 13,
+      "url": "https://www.sec.gov/Archives/edgar/data/1321655/000132165526000026/a2026q1ex991pressrelease.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://finance.yahoo.com/quote/PLTR/earnings/PLTR-Q4-2025-earnings_call-398294.html",
+      "title": "Palantir Technologies Inc. (PLTR) Q4 FY2025 earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 15,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/11/02/palantir-pltr-q3-2026-earnings-call-transcript",
+      "title": "Palantir (PLTR) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://transcripts.platformaeronaut.com/transcripts/PLTR-4Q25-transcript",
+      "title": "PLTR Q4 2025 Earnings Call Transcript | Platform Aeronaut Transcripts",
+      "domain": "transcripts.platformaeronaut.com",
+      "tier": "press",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.827000Z",
+      "completedAt": "2026-11-05T06:27:18.384709Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T18:46:08.035141Z",
+      "completedAt": "2026-11-05T18:51:34.458294Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.724812Z",
+      "completedAt": "2026-11-05T19:11:15.325187Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.731800Z",
+      "completedAt": "2026-11-05T19:12:44.402371Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.739537Z",
+      "completedAt": "2026-11-05T19:13:14.073899Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.746517Z",
+      "completedAt": "2026-11-05T19:11:03.008884Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.546670Z",
+      "completedAt": "2026-11-05T19:44:03.583916Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.532061Z",
+      "completedAt": "2026-11-05T19:44:04.425319Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.539436Z",
+      "completedAt": "2026-11-05T19:44:37.676459Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.553870Z",
+      "completedAt": "2026-11-05T19:44:11.819136Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.561461Z",
+      "completedAt": "2026-11-05T19:45:37.941831Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "20 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "20 of 20 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "20 of 20 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-11-02; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Palantir_company_logo.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Palantir_company_logo.png",
+      "title": "File:Palantir company logo.png - Wikimedia Commons",
+      "width": 640,
+      "height": 154,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://images.ctfassets.net/xrfr7uokpv1b/1RHyzyVrN98VdmuanstRZx/ddc767780858af09a4a1a90304eea586/Asset_67_3x.png",
+      "sourcePageUrl": "https://www.palantir.com/platforms/aip/",
+      "title": "Palantir Artificial Intelligence Platform",
+      "width": 3961,
+      "height": 2241,
+      "rank": 3
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.599Z"
+}

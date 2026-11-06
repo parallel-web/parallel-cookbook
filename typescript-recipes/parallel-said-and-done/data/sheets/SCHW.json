@@ -1,0 +1,2336 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "SCHW",
+  "name": "The Charles Schwab Corporation",
+  "short": "Charles Schwab",
+  "website": "aboutschwab.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.aboutschwab.com/investor-relations",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-15",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Charles Schwab spot crypto trading",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch spot cryptocurrency trading",
+      "commitment": "Launch spot crypto sometime in 2025, contingent on regulatory change and readiness.",
+      "deadline": "sometime in 2025",
+      "firstStated": "2025-01-21",
+      "status": "delivered_late",
+      "k": "done",
+      "outcomeSummary": "Spot Bitcoin and Ethereum trading began May 12, 2026, after the original 2025 target; by October 15, 2026, all clients could access Schwab Crypto.",
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/299004-q4-2024/",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://x.com/CharlesSchwab/status/2054234006489588119?s=20",
+          "title": "Charles Schwab Corp on X: \"Schwab Crypto™ accounts are now being rolled out to retail clients.\n\nStarting today, the first group of clients can trade Bitcoin and Ethereum at Schwab, right alongside their other investments.\n\nSign up for updates and a chance to get early access: https://t.co/ELe1HWHS8… / X",
+          "domain": "x.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/15/schwab-schw-q3-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-05-12",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered_late",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-16",
+            "what_was_said": "Management said the Schwab Crypto employee pilot was underway and that a phased client rollout was expected to begin in the coming weeks. This distinguishes the April announcement and employee testing from the subsequent client launch.",
+            "call": "Q1 2026 earnings call (2026 Spring Business Update)"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Close and integrate Forge acquisition",
+      "commitment": "Close the Forge acquisition in the coming months to provide retail and RIA clients alternatives and private-company investment access.",
+      "deadline": "the coming months",
+      "firstStated": "2025-11-06",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Acquisition closed as promised; integration and broader retail/RIA rollout remained in progress, with full completion not confirmed.",
+      "citations": [
+        {
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Completes-Acquisition-of-Forge-Global/default.aspx",
+          "title": "\n\tCharles Schwab Completes Acquisition of Forge Global | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://forgeglobal.com/insights/forge-schwab-building-whats-next/",
+          "title": "Insights: Forge + Schwab: Building What’s Next - Forge",
+          "domain": "forgeglobal.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/schwabs-strategy-chief-shares-playbook-182448277.html",
+          "title": "Schwab's strategy chief shares playbook for private market",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/532550-q4-2025",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/610581-q1-2026/",
+          "title": "The Charles Schwab Corporation (SCHW) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-16",
+            "what_was_said": "“We'll roll these capabilities out to clients over time and look forward to sharing more details in the months ahead.” This distinguishes completing the acquisition from completing the client rollout.",
+            "call": "2026 Spring Business Update (Q1 2026 results)"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Expand 2026 net interest margin",
+      "commitment": "Expand full-year 2026 NIM to 2.85%-2.95%, with average Q4 2026 NIM above 2.9%.",
+      "deadline": "FY2026",
+      "firstStated": "2026-01-21",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Still pending. Guidance increased to 3%-3.10% full-year and 3.25%-3.30% for Q4; October emphasized the full-year range’s lower end. Reported quarterly NIM reached 3.04%.",
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/650311-q2-2026/",
+          "title": "The Charles Schwab Corporation (SCHW) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_q3_2026_earnings_release.pdf",
+          "title": "SCHWAB DELIVERS RECORD NET NEW ASSETS & EARNINGS",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/532550-q4-2025",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/15/schwab-schw-q3-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-15",
+            "what_was_said": "Asked about the prior 3.25%-3.30% Q4 NIM guide, CFO Michael Verdeschi instead expected roughly 25-30 basis points of year-over-year NIM expansion from Q4 2025 to Q4 2026. Against reported Q4 2025 NIM of 2.90%, this implies approximately 3.15%-3.20%, below July's Q4 range.",
+            "call": "2026 Fall Business Update (Q3 2026 earnings call)"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Manage 2026 expense growth",
+      "commitment": "Limit adjusted expense growth to 5.5%-6.5% versus 2025.",
+      "deadline": "FY2026",
+      "firstStated": "2026-01-21",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The adjusted-expense growth forecast increased to 9.5% to 10.5% vs. 2025; management subsequently expected the low end. Full-year delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_summer_business_update_072126b.pdf",
+          "title": "2026 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_winter_business_update_012126.pdf",
+          "title": "2025 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-21",
+            "what_was_said": "Management clarified that underlying expenses remained in line with the January 5.5%-6.5% range. The higher overall expense-growth outlook reflected volume-related costs and the inclusion of Forge, which contributed approximately 100 basis points to year-over-year growth.",
+            "call": "2026 Summer Business Update (Q2 2026 results)"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Launch a client AI assistant",
+      "commitment": "Launch the first iteration of the Investor AI Assistant in June 2026.",
+      "deadline": "June 2026",
+      "firstStated": "2026-04-16",
+      "status": "delivered_late",
+      "k": "done",
+      "outcomeSummary": "Charley was introduced after the June deadline, with phased rollout beginning in October; administrative capabilities were operating, while broader client availability remained forthcoming.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/schwab-schw-q1-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Meet-Charley-Schwabs-New-AI-Powered-Assistant-Designed-to-Help-Clients-Get-Answers-and-Take-Action/default.aspx",
+          "title": "\n\tMeet Charley, Schwab’s New AI-Powered Assistant Designed to Help Clients Get Answers and Take Action | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/610581-q1-2026/",
+          "title": "The Charles Schwab Corporation (SCHW) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/650311-q2-2026/",
+          "title": "The Charles Schwab Corporation (SCHW) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-10-15",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered_late",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-15",
+            "what_was_said": "Management said Charley was already providing information and synthesis and could perform administrative tasks such as changing an address or naming a trusted contact. It separately said availability to all clients would come in the coming months, distinguishing an operating first iteration from broader distribution.",
+            "call": "2026 Fall Business Update (Q3 2026)"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "SCHW-P1-2025-01-21",
+      "promiseId": "P1",
+      "date": "2025-01-21",
+      "call": "Q4 2024 earnings call (2025 Winter Business Update)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected a 2025 spot-crypto launch, contingent on regulatory change and operational readiness.",
+      "quote": "But our expectation would be it would be sometime in 2025.",
+      "verbatim": {
+        "text": "But our expectation would be it would be sometime in 2025.",
+        "segs": [
+          {
+            "t": "But our expectation would be it would be sometime in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/299004-q4-2024/",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/299004-q4-2024/",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_winter_business_update_012125.pdf",
+          "title": "2025 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P1-2025-04-17",
+      "promiseId": "P1",
+      "date": "2025-04-17",
+      "call": "Q1 2025 earnings call (2025 Spring Business Update)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Set a launch goal for the next 12 months.",
+      "quote": "Our goal is to do that in the next 12 months.",
+      "verbatim": {
+        "text": "Our goal is to do that in the next 12 months.",
+        "segs": [
+          {
+            "t": "Our goal is to do that in the next 12 months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/333985-q1-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/333985-q1-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_spring2025_business_update_041725.pdf",
+          "title": "2025 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/299004-q4-2024/",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P1-2025-07-18",
+      "promiseId": "P1",
+      "date": "2025-07-18",
+      "call": "Q2 2025 earnings call (2025 Summer Business Update)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Continued working toward launching Bitcoin and Ethereum.",
+      "quote": "Second, at the same time, we are working on launching Bitcoin and Ethereum.",
+      "verbatim": {
+        "text": "Second, at the same time, we are working on launching Bitcoin and Ethereum.",
+        "segs": [
+          {
+            "t": "Second, at the same time, we are working on launching Bitcoin and Ethereum.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/361349-q2-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/361349-q2-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P1-2025-10-16",
+      "promiseId": "P1",
+      "date": "2025-10-16",
+      "call": "Q3 2025 earnings call (2025 Fall Business Update)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Set launch timing for the first half of 2026, starting with Bitcoin and Ethereum.",
+      "quote": "We remain on track to launch spot crypto in the first half of 2026, starting with Bitcoin and Ethereum.",
+      "verbatim": {
+        "text": "We remain on track to launch spot crypto in the first half of 2026, starting with Bitcoin and Ethereum.",
+        "segs": [
+          {
+            "t": "We remain on track to launch spot crypto in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", starting with Bitcoin and Ethereum.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/388289-q3-2025",
+          "title": "The Charles Schwab Corporation (SCHW) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/388289-q3-2025",
+          "title": "The Charles Schwab Corporation (SCHW) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/333985-q1-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schw_fall_business_update_10162025.pdf",
+          "title": "2025 Fall Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P1-2026-01-21",
+      "promiseId": "P1",
+      "date": "2026-01-21",
+      "call": "Q4 2025 earnings call (2026 Winter Business Update)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Clients held about 20% of spot-crypto exchange-traded products; launch remained on track for the first half of 2026.",
+      "quote": "Schwab clients hold about a 20% share of spot crypto exchange-traded products, and we remain on track to launch spot trading on Bitcoin and Ethereum in the first half of this year.",
+      "verbatim": {
+        "text": "Schwab clients hold about a 20% share of spot crypto exchange-traded products, and we remain on track to launch spot trading on Bitcoin and Ethereum in the first half of this year.",
+        "segs": [
+          {
+            "t": "Schwab clients hold about a ",
+            "h": 0
+          },
+          {
+            "t": "20%",
+            "h": 1
+          },
+          {
+            "t": " share of spot crypto exchange-traded products, and we remain on track to launch spot trading on Bitcoin and Ethereum in the first half of this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/532550-q4-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/532550-q4-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P1-2026-04-16",
+      "promiseId": "P1",
+      "date": "2026-04-16",
+      "call": "Charles Schwab Announces Details of Spot Crypto Trading Launch",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Announced Schwab Crypto, with phased retail rollout expected in the coming weeks.",
+      "quote": "Charles Schwab today announced Schwab Crypto™, a spot crypto trading offer that will begin a phased rollout to retail clients in the coming weeks.",
+      "verbatim": {
+        "text": "WESTLAKE, Texas--(BUSINESS WIRE)-- Charles Schwab today announced Schwab Crypto™, a spot crypto trading offer that will begin a phased rollout to retail clients in the coming weeks.",
+        "segs": [
+          {
+            "t": "WESTLAKE, Texas--(BUSINESS WIRE)-- Charles Schwab today announced Schwab Crypto™, a spot crypto trading offer that will begin a phased rollout to retail clients in the coming weeks.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Announces-Details-of-Spot-Crypto-Trading-Launch/default.aspx",
+          "title": "\n\tCharles Schwab Announces Details of Spot Crypto Trading Launch | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Announces-Details-of-Spot-Crypto-Trading-Launch/default.aspx",
+          "title": "\n\tCharles Schwab Announces Details of Spot Crypto Trading Launch | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SCHW-P1-2026-05-12",
+      "promiseId": "P1",
+      "date": "2026-05-12",
+      "call": "Schwab Crypto rollout announcement on X",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Launched Bitcoin and Ethereum trading for the first group of retail clients.",
+      "quote": "Starting today, the first group of clients can trade Bitcoin and Ethereum at Schwab, right alongside their other investments.",
+      "verbatim": {
+        "text": "Starting today, the first group of clients can trade Bitcoin and Ethereum at Schwab, right alongside their other investments.",
+        "segs": [
+          {
+            "t": "Starting today, the first group of clients can trade Bitcoin and Ethereum at Schwab, right alongside their other investments.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://x.com/CharlesSchwab/status/2054234006489588119?s=20",
+          "title": "Charles Schwab Corp on X: \"Schwab Crypto™ accounts are now being rolled out to retail clients.\n\nStarting today, the first group of clients can trade Bitcoin and Ethereum at Schwab, right alongside their other investments.\n\nSign up for updates and a chance to get early access: https://t.co/ELe1HWHS8… / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://x.com/CharlesSchwab/status/2054234006489588119?s=20",
+          "title": "Charles Schwab Corp on X: \"Schwab Crypto™ accounts are now being rolled out to retail clients.\n\nStarting today, the first group of clients can trade Bitcoin and Ethereum at Schwab, right alongside their other investments.\n\nSign up for updates and a chance to get early access: https://t.co/ELe1HWHS8… / X",
+          "domain": "x.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "SCHW-P1-2026-05-14",
+      "promiseId": "P1",
+      "date": "2026-05-14",
+      "call": "2026 Institutional Investor Day",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed the crypto launch reached clients for the first time that week.",
+      "quote": "Whether it's our teen investor account or our crypto launch, which happened this week to clients for the very first time, we are meeting the needs of our clients through our products and solutions, expanding and evolving what we're doing for clients and delighting them along the way.",
+      "verbatim": {
+        "text": "Whether it's our teen investor account or our crypto launch, which happened this week to clients for the very first time, we are meeting the needs of our clients through our products and solutions, expanding and evolving what we're doing for clients and delighting them along the way.",
+        "segs": [
+          {
+            "t": "Whether it's our teen investor account or our crypto launch, which happened this week to clients for the very first time, we are meeting the needs of our clients through our products and solutions, expanding and evolving what we're doing for clients and delighting them along the way.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/schw/transcripts/585418-institutional-investor-day-2026",
+          "title": "The Charles Schwab Corporation (SCHW) Transcript: Institutional Investor Day 2026",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/schw/transcripts/585418-institutional-investor-day-2026",
+          "title": "The Charles Schwab Corporation (SCHW) Transcript: Institutional Investor Day 2026",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/2026_Institutional_Investor_Day.pdf",
+          "title": "Institutional Investor Day 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "SCHW-P1-2026-07-21",
+      "promiseId": "P1",
+      "date": "2026-07-21",
+      "call": "Q2 2026 earnings call (2026 Summer Business Update)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Crypto rollout was proceeding as planned; transfer-capability piloting expected by month-end.",
+      "quote": "Our Schwab Crypto rollout is going as planned, and we are on track to start piloting our crypto transfers capability by the end of this month.",
+      "verbatim": {
+        "text": "Our Schwab Crypto rollout is going as planned, and we are on track to start piloting our crypto transfers capability by the end of this month.",
+        "segs": [
+          {
+            "t": "Our Schwab Crypto rollout is going as planned, and we are on track to start piloting our crypto transfers capability by the end of this month.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/650311-q2-2026/",
+          "title": "The Charles Schwab Corporation (SCHW) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/650311-q2-2026/",
+          "title": "The Charles Schwab Corporation (SCHW) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P1-2026-08-27",
+      "promiseId": "P1",
+      "date": "2026-08-27",
+      "call": "Charles Schwab Announces Plans to Expand Digital Assets Available in Schwab Crypto™ Accounts",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed May 2026 rollout and existing direct bitcoin and ethereum trading.",
+      "quote": "Schwab Crypto, which began rolling out to clients in May 2026, already provides direct access to bitcoin and ethereum trading.",
+      "verbatim": {
+        "text": "Schwab Crypto, which began rolling out to clients in May 2026, already provides direct access to bitcoin and ethereum trading.",
+        "segs": [
+          {
+            "t": "Schwab Crypto, which began rolling out to clients in May ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", already provides direct access to bitcoin and ethereum trading.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Announces-Plans-to-Expand-Digital-Assets-Available-in-Schwab-Crypto-Accounts/default.aspx",
+          "title": "\n\tCharles Schwab Announces Plans to Expand Digital Assets Available in Schwab Crypto™ Accounts | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Announces-Plans-to-Expand-Digital-Assets-Available-in-Schwab-Crypto-Accounts/default.aspx",
+          "title": "\n\tCharles Schwab Announces Plans to Expand Digital Assets Available in Schwab Crypto™ Accounts | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SCHW-P1-2026-10-15",
+      "promiseId": "P1",
+      "date": "2026-10-15",
+      "call": "Q3 2026 earnings call (2026 Fall Business Update)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed all clients could access Schwab Crypto.",
+      "quote": "All clients can now access Schwab Crypto.",
+      "verbatim": {
+        "text": "All clients can now access Schwab Crypto.",
+        "segs": [
+          {
+            "t": "All clients can now access Schwab Crypto.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P2-2025-11-06",
+      "promiseId": "P2",
+      "date": "2025-11-06",
+      "call": "Charles Schwab to Acquire Forge Global, Creating Premier Destination to Democratize Access to Private Markets",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected acquisition closing in the first half of 2026, subject to stockholder and regulatory approvals.",
+      "quote": "The transaction is expected to close in the first half of 2026, subject to customary closing conditions, including approval by Forge’s stockholders and regulatory approvals.",
+      "verbatim": {
+        "text": "The transaction is expected to close in the first half of 2026, subject to customary closing conditions, including approval by Forge’s stockholders and regulatory approvals.",
+        "segs": [
+          {
+            "t": "The transaction is expected to close in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", subject to customary closing conditions, including approval by Forge’s stockholders and regulatory approvals.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2025/Charles-Schwab-to-Acquire-Forge-Global-Creating-Premier-Destination-to-Democratize-Access-to-Private-Markets/default.aspx",
+          "title": "\n\tCharles Schwab to Acquire Forge Global, Creating Premier Destination to Democratize Access to Private Markets | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2025/Charles-Schwab-to-Acquire-Forge-Global-Creating-Premier-Destination-to-Democratize-Access-to-Private-Markets/default.aspx",
+          "title": "\n\tCharles Schwab to Acquire Forge Global, Creating Premier Destination to Democratize Access to Private Markets | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SCHW-P2-2026-01-21",
+      "promiseId": "P2",
+      "date": "2026-01-21",
+      "call": "2026 Winter Business Update (Q4 2025 results)",
+      "speaker": "Rick Wurster, President and Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected closing in the coming months, enabling retail and RIA access to alternatives, funds and direct private-company investments.",
+      "quote": "With our acquisition of Forge, which we expect will close in the coming months, we'll be able to provide retail and RIA clients with alternatives from leading managers, passive exposure to alternatives via funds and direct investing in private companies.",
+      "verbatim": {
+        "text": "With our acquisition of Forge, which we expect will close in the coming months, we'll be able to provide retail and RIA clients with alternatives from leading managers, passive exposure to alternatives via funds and direct investing in private companies.",
+        "segs": [
+          {
+            "t": "With our acquisition of Forge, which we expect will close in the coming months, we'll be able to provide retail and RIA clients with alternatives from leading managers, passive exposure to alternatives via funds and direct investing in private companies.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://earningscalls.dev/transcripts/the-charles-schwab-corporation_schw_earnings_call_transcript_2026-01-21",
+          "title": "The Charles Schwab Corporation (SCHW) Earnings Call Transcript & Summary",
+          "domain": "earningscalls.dev",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://earningscalls.dev/transcripts/the-charles-schwab-corporation_schw_earnings_call_transcript_2026-01-21",
+          "title": "The Charles Schwab Corporation (SCHW) Earnings Call Transcript & Summary",
+          "domain": "earningscalls.dev",
+          "tier": "press"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_winter_business_update_012126.pdf",
+          "title": "2025 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P2-2026-03-02",
+      "promiseId": "P2",
+      "date": "2026-03-02",
+      "call": "Charles Schwab Completes Acquisition of Forge Global",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Acquisition completed; integration underway, with broader individual-investor and RIA rollout to follow over time.",
+      "quote": "The Charles Schwab Corporation (Schwab) today announced that it has completed its acquisition of Forge Global Holdings, Inc. (Forge).",
+      "verbatim": {
+        "text": "WESTLAKE, Texas--(BUSINESS WIRE)-- The Charles Schwab Corporation (Schwab) today announced that it has completed its acquisition of Forge Global Holdings, Inc. (Forge).",
+        "segs": [
+          {
+            "t": "WESTLAKE, Texas--(BUSINESS WIRE)-- The Charles Schwab Corporation (Schwab) today announced that it has completed its acquisition of Forge Global Holdings, Inc. (Forge).",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Completes-Acquisition-of-Forge-Global/default.aspx",
+          "title": "\n\tCharles Schwab Completes Acquisition of Forge Global | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Completes-Acquisition-of-Forge-Global/default.aspx",
+          "title": "\n\tCharles Schwab Completes Acquisition of Forge Global | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SCHW-P2-2026-04-16",
+      "promiseId": "P2",
+      "date": "2026-04-16",
+      "call": "2026 Spring Business Update (Q1 2026 results)",
+      "speaker": "Rick Wurster, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Confirmed acquisition completion but said capabilities would roll out over time; full integration and broader client access were not declared complete.",
+      "quote": "We completed the acquisition of Forge, which will allow us to provide clients with direct and indirect access to shares of pre-IPO companies through direct private share purchases, single company funds, and multi-company funds.",
+      "verbatim": {
+        "text": "We completed the acquisition of Forge, which will allow us to provide clients with direct and indirect access to shares of pre-IPO companies through direct private share purchases, single company funds, and multi-company funds.",
+        "segs": [
+          {
+            "t": "We completed the acquisition of Forge, which will allow us to provide clients with direct and indirect access to shares of pre-IPO companies through direct private share purchases, single company funds, and multi-company funds.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/SCHW/transcripts/2026-year/1-quarter",
+          "title": "Charles Schwab Corporation (The) (SCHW) Q1 FY2026 Earnings Call Transcript - April 16, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/SCHW/transcripts/2026-year/1-quarter",
+          "title": "Charles Schwab Corporation (The) (SCHW) Q1 FY2026 Earnings Call Transcript - April 16, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P2-2026-05-14",
+      "promiseId": "P2",
+      "date": "2026-05-14",
+      "call": "2026 Institutional Investor Day presentation",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Presented a phased private-market offering rather than declaring the integrated client experience complete.",
+      "quote": "We are building our private market offer in phases.",
+      "verbatim": {
+        "text": "We are building our private market offer in phases. via",
+        "segs": [
+          {
+            "t": "We are building our private market offer in phases. via",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/2026_Institutional_Investor_Day.pdf",
+          "title": "Institutional Investor Day 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/2026_Institutional_Investor_Day.pdf",
+          "title": "Institutional Investor Day 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "SCHW-P2-2026-07-21",
+      "promiseId": "P2",
+      "date": "2026-07-21",
+      "call": "2026 Summer Business Update (Q2 2026 results)",
+      "speaker": "Rick Wurster, President and Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Acquisition closed; bringing Forge’s private-market capabilities to clients was progressing, not complete.",
+      "quote": "We closed the Forge deal and are making progress on bringing their private market capabilities to our clients.",
+      "verbatim": {
+        "text": "We closed the Forge deal and are making progress on bringing their private market capabilities to our clients.",
+        "segs": [
+          {
+            "t": "We closed the Forge deal and are making progress on bringing their private market capabilities to our clients.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/schwab-schw-q2-2026-earnings-call-transcript?referring_guid=4d93e7ca-5b5b-44f0-8544-3ec005fb752d&source=financialcontent",
+          "title": "Schwab (SCHW) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_summer_business_update_072126b.pdf",
+          "title": "2026 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/schwab-schw-q2-2026-earnings-call-transcript?referring_guid=4d93e7ca-5b5b-44f0-8544-3ec005fb752d&source=financialcontent",
+          "title": "Schwab (SCHW) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P2-2026-08-07",
+      "promiseId": "P2",
+      "date": "2026-08-07",
+      "call": "Q2 2026 Form 10-Q",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported integration work progressing and expected Forge’s private-company capabilities to enhance the offering for the growing client base.",
+      "quote": "Integration work is progressing, and we anticipate that incorporating Forge’s private company investment capabilities will enhance our ability to meet the evolving needs of investors across our growing client base.",
+      "verbatim": {
+        "text": "Integration work is progressing, and we anticipate that incorporating Forge’s private company investment capabilities will enhance our ability to meet the evolving needs of investors across our growing client base.",
+        "segs": [
+          {
+            "t": "Integration work is progressing, and we anticipate that incorporating Forge’s private company investment capabilities will enhance our ability to meet the evolving needs of investors across our growing client base.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10Q_080726.pdf",
+          "title": "THE CHARLES SCHWAB CORPORATION — FORM 10-Q, quarterly period ended June 30, 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10Q_080726.pdf",
+          "title": "THE CHARLES SCHWAB CORPORATION — FORM 10-Q, quarterly period ended June 30, 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "SCHW-P2-2026-08-27",
+      "promiseId": "P2",
+      "date": "2026-08-27",
+      "call": "Forge + Schwab: Building What’s Next",
+      "speaker": "Kelly Rodriques, Chief Executive Officer of Forge",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "In an updated company article, Forge’s CEO described integration as continuing and promised further client-transition updates.",
+      "quote": "As we move through this integration, our priority is to keep clients informed and supported.",
+      "verbatim": {
+        "text": "As we move through this integration, our priority is to keep clients informed and supported.",
+        "segs": [
+          {
+            "t": "As we move through this integration, our priority is to keep clients informed and supported.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://forgeglobal.com/insights/forge-schwab-building-whats-next/",
+          "title": "Insights: Forge + Schwab: Building What’s Next - Forge",
+          "domain": "forgeglobal.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://forgeglobal.com/insights/forge-schwab-building-whats-next/",
+          "title": "Insights: Forge + Schwab: Building What’s Next - Forge",
+          "domain": "forgeglobal.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "SCHW-P2-2026-09-28",
+      "promiseId": "P2",
+      "date": "2026-09-28",
+      "call": "Schwab's strategy chief shares playbook for private market — PitchBook interview",
+      "speaker": "Andrew D’Anna, Managing Director for Investment Platforms and Strategy",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated the desired integrated experience: clients would see private-market investments within their Schwab accounts rather than as a separate product.",
+      "quote": "That architecture was attractive because we want an integrated experience where clients see this asset class within their Schwab account, not as a separate product.",
+      "verbatim": {
+        "text": "That architecture was attractive because we want an integrated experience where clients see this asset class within their Schwab account, not as a separate product.",
+        "segs": [
+          {
+            "t": "That architecture was attractive because we want an integrated experience where clients see this asset class within their Schwab account, not as a separate product.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/markets/stocks/articles/schwabs-strategy-chief-shares-playbook-182448277.html",
+          "title": "Schwab's strategy chief shares playbook for private market",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/markets/stocks/articles/schwabs-strategy-chief-shares-playbook-182448277.html",
+          "title": "Schwab's strategy chief shares playbook for private market",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "SCHW-P2-2026-10-15",
+      "promiseId": "P2",
+      "date": "2026-10-15",
+      "call": "2026 Fall Business Update (Q3 2026 results)",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Forge integration and client-access rollout were not addressed in the quarterly business update.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_101526.pdf",
+          "title": "Schwab Fall 2026 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P3-2026-01-21",
+      "promiseId": "P3",
+      "date": "2026-01-21",
+      "call": "2026 Winter Business Update (Q4 2025 earnings call)",
+      "speaker": "Mike Verdeschi, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Targets 2026 NIM of 2.85%-2.95% and average 4Q2026 NIM above 2.9%, assuming another 50 basis points of Fed cuts.",
+      "quote": "Full-year net interest margin expands to a range of 2.85%-2.95%, with average 4Q2026 NIM expected to finish above 2.9%, despite assuming the Fed funds rate comes down by another 50 basis points.",
+      "verbatim": {
+        "text": "Full-year net interest margin expands to a range of 2.85%-2.95%, with average 4Q2026 NIM expected to finish above 2.9%, despite assuming the Fed funds rate comes down by another 50 basis points.",
+        "segs": [
+          {
+            "t": "Full-year net interest margin expands to a range of ",
+            "h": 0
+          },
+          {
+            "t": "2.85%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "2.95%",
+            "h": 1
+          },
+          {
+            "t": ", with average 4Q2026 NIM expected to finish above ",
+            "h": 0
+          },
+          {
+            "t": "2.9%",
+            "h": 1
+          },
+          {
+            "t": ", despite assuming the Fed funds rate comes down by another ",
+            "h": 0
+          },
+          {
+            "t": "50 basis points",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/532550-q4-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/532550-q4-2025/",
+          "title": "The Charles Schwab Corporation (SCHW) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_winter_business_update_012126.pdf",
+          "title": "2025 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P3-2026-04-16",
+      "promiseId": "P3",
+      "date": "2026-04-16",
+      "call": "2026 Spring Business Update (Q1 2026 earnings call)",
+      "speaker": "Mike Verdeschi, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Affirms planned NIM growth, with possible upside; expects to refresh the financial scenario in July.",
+      "quote": "I feel good about the NIM growth, both what we had laid out in that scenario, but also perhaps some upside to that when we come back in July with a refresh of our financial scenario.",
+      "verbatim": {
+        "text": "I feel good about the NIM growth, both what we had laid out in that scenario, but also perhaps some upside to that when we come back in July with a refresh of our financial scenario.",
+        "segs": [
+          {
+            "t": "I feel good about the NIM growth, both what we had laid out in that scenario, but also perhaps some upside to that when we come back in July with a refresh of our financial scenario.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/SCHW/transcripts/2026-year/1-quarter",
+          "title": "Charles Schwab Corporation (The) (SCHW) Q1 FY2026 Earnings Call Transcript - April 16, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/SCHW/transcripts/2026-year/1-quarter",
+          "title": "Charles Schwab Corporation (The) (SCHW) Q1 FY2026 Earnings Call Transcript - April 16, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P3-2026-07-21",
+      "promiseId": "P3",
+      "date": "2026-07-21",
+      "call": "2026 Summer Business Update (Q2 2026 earnings call)",
+      "speaker": "Mike Verdeschi, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raises full-year NIM to 3%-3.10% and average 4Q 2026 NIM to 3.25%-3.30%, assuming a potential late-year Fed rate hike.",
+      "quote": "With full-year net interest margin expanding to a range of 3%-3.10%, an average 4Q 2026 net interest margin expected to finish in the 3.25%-3.30% range as the timing of the potential Fed rate hike late in the year limits the impact in 2026.",
+      "verbatim": {
+        "text": "With full-year net interest margin expanding to a range of 3%-3.10%, an average 4Q 2026 net interest margin expected to finish in the 3.25%-3.30% range as the timing of the potential Fed rate hike late in the year limits the impact in 2026.",
+        "segs": [
+          {
+            "t": "With full-year net interest margin expanding to a range of ",
+            "h": 0
+          },
+          {
+            "t": "3%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "3.10%",
+            "h": 1
+          },
+          {
+            "t": ", an average 4Q ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " net interest margin expected to finish in the ",
+            "h": 0
+          },
+          {
+            "t": "3.25%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "3.30%",
+            "h": 1
+          },
+          {
+            "t": " range as the timing of the potential Fed rate hike late in the year limits the impact in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/650311-q2-2026/",
+          "title": "The Charles Schwab Corporation (SCHW) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/schw/transcripts/650311-q2-2026/",
+          "title": "The Charles Schwab Corporation (SCHW) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_summer_business_update_072126b.pdf",
+          "title": "2026 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P3-2026-10-15",
+      "promiseId": "P3",
+      "date": "2026-10-15",
+      "call": "2026 Fall Business Update (Q3 2026 earnings call)",
+      "speaker": "Mike Verdeschi, CFO",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Full-year NIM expected toward summer range’s lower end; 4Q25 to 4Q26 NIM expansion expected at roughly 25 to 30 basis points.",
+      "quote": "With these dynamics, we continue to expect strong full-year revenue growth and NIM expansion, and with just one quarter remaining in the year, we would expect revenue and full-year NIM to grow towards the lower end of the ranges that we provided at the Summer Business Update.",
+      "verbatim": {
+        "text": "With these dynamics, we continue to expect strong full-year revenue growth and NIM expansion, and with just one quarter remaining in the year, we would expect revenue and full-year NIM to grow towards the lower end of the ranges that we provided at the Summer Business Update.",
+        "segs": [
+          {
+            "t": "With these dynamics, we continue to expect strong full-year revenue growth and NIM expansion, and with just one quarter remaining in the year, we would expect revenue and full-year NIM to grow towards the lower end of the ranges that we provided at the Summer Business Update.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_101526.pdf",
+          "title": "Schwab Fall 2026 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P4-2026-01-21",
+      "promiseId": "P4",
+      "date": "2026-01-21",
+      "call": "2026 Winter Business Update (Q4 2025 results)",
+      "speaker": "Michael Verdeschi, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Initially expected 2026 adjusted expenses to grow 5.5% to 6.5% versus 2025.",
+      "quote": "Therefore, within this financial scenario for 2026, we anticipate annual expense growth to range from 5.5% to 6.5%.",
+      "verbatim": {
+        "text": "Therefore, within this financial scenario for 2026, we anticipate annual expense growth to range from 5.5% to 6.5%.",
+        "segs": [
+          {
+            "t": "Therefore, within this financial scenario for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", we anticipate annual expense growth to range from ",
+            "h": 0
+          },
+          {
+            "t": "5.5%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "6.5%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/24/schwab-schw-q4-2025-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/03/24/schwab-schw-q4-2025-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_winter_business_update_012126.pdf",
+          "title": "2025 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P4-2026-04-16",
+      "promiseId": "P4",
+      "date": "2026-04-16",
+      "call": "2026 Spring Business Update (Q1 2026 results)",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The call did not address the annual adjusted-expense growth target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_spring_business_update_041626.pdf",
+          "title": "2026 Spring Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.roic.ai/quote/SCHW/transcripts/2026-year/1-quarter",
+          "title": "Charles Schwab Corporation (The) (SCHW) Q1 FY2026 Earnings Call Transcript - April 16, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P4-2026-05-14",
+      "promiseId": "P4",
+      "date": "2026-05-14",
+      "call": "2026 Institutional Investor Day presentation",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised full-year adjusted-expense growth guidance to 8.5% to 9.5% versus 2025, citing volume-related expenses and Forge.",
+      "quote": "Expect full-year adjusted expenses ¹ to grow by 8.5% to 9.5% vs. 2025 driven by several factors",
+      "verbatim": {
+        "text": "Expect full-year adjusted expenses ¹ to grow by 8.5% to 9.5% vs. 2025 driven by several factors",
+        "segs": [
+          {
+            "t": "Expect full-year adjusted expenses ¹ to grow by ",
+            "h": 0
+          },
+          {
+            "t": "8.5%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "9.5%",
+            "h": 1
+          },
+          {
+            "t": " vs. ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " driven by several factors",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/2026_Institutional_Investor_Day.pdf",
+          "title": "Institutional Investor Day 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/2026_Institutional_Investor_Day.pdf",
+          "title": "Institutional Investor Day 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "SCHW-P4-2026-07-21",
+      "promiseId": "P4",
+      "date": "2026-07-21",
+      "call": "2026 Summer Business Update (Q2 2026 results)",
+      "speaker": "Mike Verdeschi, CFO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised annual expense-growth guidance to 9.5%-10.5%; underlying expenses remained in line with 5.5%-6.5%.",
+      "quote": "Given our sustained business momentum, we now anticipate annual expense growth to range from 9.5%-10.5%.",
+      "verbatim": {
+        "text": "Given our sustained business momentum, we now anticipate annual expense growth to range from 9.5%-10.5%.",
+        "segs": [
+          {
+            "t": "Given our sustained business momentum, we now anticipate annual expense growth to range from ",
+            "h": 0
+          },
+          {
+            "t": "9.5%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "10.5%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/schwab-schw-q2-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/schwab-schw-q2-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_summer_business_update_072126b.pdf",
+          "title": "2026 Business Update",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P4-2026-10-15",
+      "promiseId": "P4",
+      "date": "2026-10-15",
+      "call": "2026 Fall Business Update (Q3 2026 results)",
+      "speaker": "Mike Verdeschi, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected full-year expenses at the low end of the previously communicated range, while continuing strategic investments.",
+      "quote": "At the same time, we expect expenses to come in at the low end of the range as well, reflecting our continued progress on efficiency, while maintaining and adding investments in strategic initiatives to support long-term growth.",
+      "verbatim": {
+        "text": "At the same time, we expect expenses to come in at the low end of the range as well, reflecting our continued progress on efficiency, while maintaining and adding investments in strategic initiatives to support long-term growth.",
+        "segs": [
+          {
+            "t": "At the same time, we expect expenses to come in at the low end of the range as well, reflecting our continued progress on efficiency, while maintaining and adding investments in strategic initiatives to support long-term growth.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+          "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P5-2026-04-16",
+      "promiseId": "P5",
+      "date": "2026-04-16",
+      "call": "2026 Spring Business Update (Q1 2026)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "First iteration of the investor AI assistant promised for June.",
+      "quote": "Our first iteration of the investor AI assistant will launch in June.",
+      "verbatim": {
+        "text": "Our first iteration of the investor AI assistant will launch in June.",
+        "segs": [
+          {
+            "t": "Our first iteration of the investor AI assistant will launch in June.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/schwab-schw-q1-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/schwab-schw-q1-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_q1_2026_earnings_release.pdf",
+          "title": "Schwab 1Q 2026 Results",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P5-2026-05-14",
+      "promiseId": "P5",
+      "date": "2026-05-14",
+      "call": "2026 Institutional Investor Day presentation",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Schwab Assistant roadmap remained June through year end, with capabilities expanding over time.",
+      "quote": "Schwab Assistant will continue to be enhanced with more capabilities over time.",
+      "verbatim": {
+        "text": "Schwab Assistant will continue to be enhanced with more capabilities over time.",
+        "segs": [
+          {
+            "t": "Schwab Assistant will continue to be enhanced with more capabilities over time.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/2026_Institutional_Investor_Day.pdf",
+          "title": "Institutional Investor Day 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/2026_Institutional_Investor_Day.pdf",
+          "title": "Institutional Investor Day 2026",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "SCHW-P5-2026-07-21",
+      "promiseId": "P5",
+      "date": "2026-07-21",
+      "call": "2026 Summer Business Update (Q2 2026)",
+      "speaker": "Rick Wurster, President and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Portfolio Insights rollout in May and an employee Schwab Assistant pilot earlier in July; no replacement client-launch date given.",
+      "quote": "We are making tangible progress here with the rollout of Portfolio Insights in May and the employee pilot for the first iteration of Schwab Assistant that launched earlier this month.",
+      "verbatim": {
+        "text": "We are making tangible progress here with the rollout of Portfolio Insights in May and the employee pilot for the first iteration of Schwab Assistant that launched earlier this month.",
+        "segs": [
+          {
+            "t": "We are making tangible progress here with the rollout of Portfolio Insights in May and the employee pilot for the first iteration of Schwab Assistant that launched earlier this month.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/schwab-schw-q2-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/schwab-schw-q2-2026-earnings-call-transcript",
+          "title": "Schwab (SCHW) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "SCHW-P5-2026-09-30",
+      "promiseId": "P5",
+      "date": "2026-09-30",
+      "call": "Meet Charley, Schwab’s New AI-Powered Assistant Designed to Help Clients Get Answers and Take Action",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Client rollout rescheduled to begin in October, in phases for eligible U.S. retail clients.",
+      "quote": "Beginning in October, Charley will roll out in phases to eligible U.S. retail clients on Schwab.com and Schwab Mobile, bringing Schwab information, tools, and resources together in one conversation.",
+      "verbatim": {
+        "text": "Beginning in October, Charley will roll out in phases to eligible U.S. retail clients on Schwab.com and Schwab Mobile, bringing Schwab information, tools, and resources together in one conversation.",
+        "segs": [
+          {
+            "t": "Beginning in October, Charley will roll out in phases to eligible U.S. retail clients on Schwab.com and Schwab Mobile, bringing Schwab information, tools, and resources together in one conversation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Meet-Charley-Schwabs-New-AI-Powered-Assistant-Designed-to-Help-Clients-Get-Answers-and-Take-Action/default.aspx",
+          "title": "\n\tMeet Charley, Schwab’s New AI-Powered Assistant Designed to Help Clients Get Answers and Take Action | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Meet-Charley-Schwabs-New-AI-Powered-Assistant-Designed-to-Help-Clients-Get-Answers-and-Take-Action/default.aspx",
+          "title": "\n\tMeet Charley, Schwab’s New AI-Powered Assistant Designed to Help Clients Get Answers and Take Action | Charles Schwab\n",
+          "domain": "pressroom.aboutschwab.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "SCHW-P5-2026-10-15",
+      "promiseId": "P5",
+      "date": "2026-10-15",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Declared Charley introduced, providing U.S. retail clients conversational access to Schwab tools and insights.",
+      "quote": "Introduced Charley, a new AI-powered assistant that provides U.S. retail clients with conversational access to Schwab’s tools and insights",
+      "verbatim": {
+        "text": "Introduced Charley, a new AI-powered assistant that provides U.S. retail clients with conversational access to Schwab’s tools and insights • Partnered with Anthropic to bring Claude for Financial Advisors directly to the independent RIAs Schwab serves • Schwab was recognized as one of Fortune’s 2026 Most Innovative Companies (3)",
+        "segs": [
+          {
+            "t": "Introduced Charley, a new AI-powered assistant that provides U.S. retail clients with conversational access to Schwab’s tools and insights • Partnered with Anthropic to bring Claude for Financial Advisors directly to the independent RIAs Schwab serves • Schwab was recognized as one of Fortune’s ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " Most Innovative Companies (3)",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_q3_2026_earnings_release.pdf",
+          "title": "SCHWAB DELIVERS RECORD NET NEW ASSETS & EARNINGS",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_q3_2026_earnings_release.pdf",
+          "title": "SCHWAB DELIVERS RECORD NET NEW ASSETS & EARNINGS",
+          "domain": "content.schwab.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_transcript_10152026.pdf",
+      "title": "Charles Schwab & Co. October 15, 2026 Fall Business Update Page 1 Charles Schwab 3Q26 Results 10.15.2026 Q&A Transcript",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P1 P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/2026_Institutional_Investor_Day.pdf",
+      "title": "Institutional Investor Day 2026",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://stockanalysis.com/stocks/schw/transcripts/650311-q2-2026/",
+      "title": "The Charles Schwab Corporation (SCHW) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.roic.ai/quote/SCHW/transcripts/2026-year/1-quarter",
+      "title": "Charles Schwab Corporation (The) (SCHW) Q1 FY2026 Earnings Call Transcript - April 16, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_winter_business_update_012126.pdf",
+      "title": "2025 Business Update",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_summer_business_update_072126b.pdf",
+      "title": "2026 Business Update",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 7,
+      "url": "https://stockanalysis.com/stocks/schw/transcripts/532550-q4-2025/",
+      "title": "The Charles Schwab Corporation (SCHW) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/schwab-schw-q2-2026-earnings-call-transcript",
+      "title": "Schwab (SCHW) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 9,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/15/schwab-schw-q3-2026-earnings-call-transcript",
+      "title": "Schwab (SCHW) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://stockanalysis.com/stocks/schw/transcripts/532550-q4-2025",
+      "title": "The Charles Schwab Corporation (SCHW) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 11,
+      "url": "https://stockanalysis.com/stocks/schw/transcripts/610581-q1-2026/",
+      "title": "The Charles Schwab Corporation (SCHW) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 12,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_fall_business_update_101526.pdf",
+      "title": "Schwab Fall 2026 Business Update",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 13,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_q3_2026_earnings_release.pdf",
+      "title": "SCHWAB DELIVERS RECORD NET NEW ASSETS & EARNINGS",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 14,
+      "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Completes-Acquisition-of-Forge-Global/default.aspx",
+      "title": "\n\tCharles Schwab Completes Acquisition of Forge Global | Charles Schwab\n",
+      "domain": "pressroom.aboutschwab.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Meet-Charley-Schwabs-New-AI-Powered-Assistant-Designed-to-Help-Clients-Get-Answers-and-Take-Action/default.aspx",
+      "title": "\n\tMeet Charley, Schwab’s New AI-Powered Assistant Designed to Help Clients Get Answers and Take Action | Charles Schwab\n",
+      "domain": "pressroom.aboutschwab.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 16,
+      "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Announces-Details-of-Spot-Crypto-Trading-Launch/default.aspx",
+      "title": "\n\tCharles Schwab Announces Details of Spot Crypto Trading Launch | Charles Schwab\n",
+      "domain": "pressroom.aboutschwab.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Announces-Plans-to-Expand-Digital-Assets-Available-in-Schwab-Crypto-Accounts/default.aspx",
+      "title": "\n\tCharles Schwab Announces Plans to Expand Digital Assets Available in Schwab Crypto™ Accounts | Charles Schwab\n",
+      "domain": "pressroom.aboutschwab.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://pressroom.aboutschwab.com/press-releases/press-release/2025/Charles-Schwab-to-Acquire-Forge-Global-Creating-Premier-Destination-to-Democratize-Access-to-Private-Markets/default.aspx",
+      "title": "\n\tCharles Schwab to Acquire Forge Global, Creating Premier Destination to Democratize Access to Private Markets | Charles Schwab\n",
+      "domain": "pressroom.aboutschwab.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 19,
+      "url": "https://stockanalysis.com/stocks/schw/transcripts/299004-q4-2024/",
+      "title": "The Charles Schwab Corporation (SCHW) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 20,
+      "url": "https://stockanalysis.com/stocks/schw/transcripts/333985-q1-2025/",
+      "title": "The Charles Schwab Corporation (SCHW) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 21,
+      "url": "https://finance.yahoo.com/markets/stocks/articles/schwabs-strategy-chief-shares-playbook-182448277.html",
+      "title": "Schwab's strategy chief shares playbook for private market",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 22,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/schwab-schw-q1-2026-earnings-call-transcript",
+      "title": "Schwab (SCHW) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://stockanalysis.com/stocks/schw/transcripts/361349-q2-2025/",
+      "title": "The Charles Schwab Corporation (SCHW) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 24,
+      "url": "https://stockanalysis.com/stocks/schw/transcripts/388289-q3-2025",
+      "title": "The Charles Schwab Corporation (SCHW) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 25,
+      "url": "http://stockanalysis.com/stocks/schw/transcripts/585418-institutional-investor-day-2026",
+      "title": "The Charles Schwab Corporation (SCHW) Transcript: Institutional Investor Day 2026",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/schwab-schw-q2-2026-earnings-call-transcript?referring_guid=4d93e7ca-5b5b-44f0-8544-3ec005fb752d&source=financialcontent",
+      "title": "Schwab (SCHW) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 27,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/03/24/schwab-schw-q4-2025-earnings-call-transcript",
+      "title": "Schwab (SCHW) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 28,
+      "url": "https://x.com/CharlesSchwab/status/2054234006489588119?s=20",
+      "title": "Charles Schwab Corp on X: \"Schwab Crypto™ accounts are now being rolled out to retail clients.\n\nStarting today, the first group of clients can trade Bitcoin and Ethereum at Schwab, right alongside their other investments.\n\nSign up for updates and a chance to get early access: https://t.co/ELe1HWHS8… / X",
+      "domain": "x.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 29,
+      "url": "https://forgeglobal.com/insights/forge-schwab-building-whats-next/",
+      "title": "Insights: Forge + Schwab: Building What’s Next - Forge",
+      "domain": "forgeglobal.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 30,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_winter_business_update_012125.pdf",
+      "title": "2025 Business Update",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 31,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_spring2025_business_update_041725.pdf",
+      "title": "2025 Business Update",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 32,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schw_fall_business_update_10162025.pdf",
+      "title": "2025 Fall Business Update",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 33,
+      "url": "https://earningscalls.dev/transcripts/the-charles-schwab-corporation_schw_earnings_call_transcript_2026-01-21",
+      "title": "The Charles Schwab Corporation (SCHW) Earnings Call Transcript & Summary",
+      "domain": "earningscalls.dev",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 34,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/SEC_Form10Q_080726.pdf",
+      "title": "THE CHARLES SCHWAB CORPORATION — FORM 10-Q, quarterly period ended June 30, 2026",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 35,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_spring_business_update_041626.pdf",
+      "title": "2026 Spring Business Update",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 36,
+      "url": "https://content.schwab.com/web/retail/public/about-schwab/schwab_q1_2026_earnings_release.pdf",
+      "title": "Schwab 1Q 2026 Results",
+      "domain": "content.schwab.com",
+      "tier": "press",
+      "uses": "P5"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.006119Z",
+      "completedAt": "2026-11-05T06:28:46.992663Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.455565Z",
+      "completedAt": "2026-11-05T19:16:11.161968Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.462881Z",
+      "completedAt": "2026-11-05T19:11:45.765100Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:05.469991Z",
+      "completedAt": "2026-11-05T19:10:56.888749Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@2",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-06T04:55:54.993378Z",
+      "completedAt": "2026-11-06T05:00:03.881488Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@2",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-06T04:55:54.653124Z",
+      "completedAt": "2026-11-06T05:01:52.021861Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.251478Z",
+      "completedAt": "2026-11-05T19:48:03.896897Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.258572Z",
+      "completedAt": "2026-11-05T19:46:57.889480Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:18.265833Z",
+      "completedAt": "2026-11-05T19:46:01.834646Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@3",
+      "processor": "ultra",
+      "createdAt": "2026-11-06T05:01:53.275378Z",
+      "completedAt": "2026-11-06T05:03:45.314928Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@3",
+      "processor": "ultra",
+      "createdAt": "2026-11-06T05:01:53.605629Z",
+      "completedAt": "2026-11-06T05:04:26.346309Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "35 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "33 of 33 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "33 of 33 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-15; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Charles_Schwab_Corporation_logo.svg/3840px-Charles_Schwab_Corporation_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Charles_Schwab_Corporation_logo.svg",
+      "title": "File:Charles Schwab Corporation logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 3840,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://s21.q4cdn.com/917166017/files/doc_multimedia/2026/Crypto-bannerslice-1x.jpg",
+      "sourcePageUrl": "https://pressroom.aboutschwab.com/press-releases/press-release/2026/Charles-Schwab-Announces-Details-of-Spot-Crypto-Trading-Launch/default.aspx",
+      "title": "Charles Schwab Announces Details of Spot Crypto Trading Launch | Charles  Schwab",
+      "width": 1080,
+      "height": 720,
+      "rank": 9
+    }
+  },
+  "version": 3,
+  "builtAt": "2026-11-06T05:04:27.632Z"
+}

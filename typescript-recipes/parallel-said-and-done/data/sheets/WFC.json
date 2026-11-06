@@ -1,0 +1,1932 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "WFC",
+  "name": "Wells Fargo & Company",
+  "short": "Wells Fargo",
+  "website": "wellsfargo.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.wellsfargo.com/about/investor-relations/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-13",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": "2027-01-14",
+    "time": "10:00 AM ET",
+    "quarter": "Q4 2026"
+  },
+  "photoSubject": "Wells Fargo refurbished bank branch",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Refresh the entire branch network",
+      "commitment": "Refurbish over half the branch network by end-2025 and complete a refresh of the entire network by end-2028.",
+      "deadline": "Over half by end of 2025; entire network by end of 2028",
+      "firstStated": "2025-07-15",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Approximately 700 branches were refurbished in 2025; over half the network is complete. Full-network completion by the end of 2028 remains pending.",
+      "citations": [
+        {
+          "url": "https://www.wellsfargo.com/assets/pdf/about/investor-relations/annual-reports/2025-annual-report.pdf",
+          "title": "2025 Annual Report",
+          "domain": "wellsfargo.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/wells-fargo-wfc-q2-2025-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stories.wf.com/our-impact/new-wells-fargo-branches",
+          "title": "New Wells Fargo Branches | Wells Fargo",
+          "domain": "stories.wf.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/wells-fargo-wfc-q2-2025-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000202/wfc2025annualreport-arsfil.pdf",
+          "title": "2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Reach sustainable 17%–18% ROTCE",
+      "commitment": "Achieve a 17%–18% return on tangible common equity over the medium term.",
+      "deadline": "Medium term",
+      "firstStated": "2025-10-14",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Second-quarter ROTCE reached 17.7%; third-quarter ROTCE was 16.3%. Management still described progress toward sustainable 17% to 18% ROTCE, not completion.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000288/wfc2qer07-14x26ex991xrelea.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000318/wfc3qer10-13x26ex991xrelea.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+          "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/14/wells-fargo-wfc-q3-2025-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.wellsfargo.com/assets/pdf/about/investor-relations/earnings/third-quarter-2026-earnings.pdf",
+          "title": "Wells Fargo Reports Third Quarter 2026 Net Income of $6.0 billion, or $1.87 per Diluted Share",
+          "domain": "wellsfargo.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-14",
+            "what_was_said": "Management cautioned that outsized venture-capital equity gains favorably affected quarterly returns and could be lumpy. It continued to frame sustainable 17%–18% ROTCE as a goal to achieve in a reasonable timeframe, assuming favorable conditions, rather than declaring completion.",
+            "call": "Q2 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Optimize CET1 capital levels",
+      "commitment": "Manage the CET1 capital ratio to approximately 10%–10.5%; no completion date specified.",
+      "deadline": null,
+      "firstStated": "2025-10-14",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Reported CET1 reached 10.3% and subsequently 10.0%, within the unchanged 10% to 10.5% range, which management continued to target.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000213/wfc1qer04-14x26ex991xrelea.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.wellsfargo.com/assets/pdf/about/investor-relations/earnings/third-quarter-2026-earnings.pdf",
+          "title": "Wells Fargo Reports Third Quarter 2026 Net Income of $6.0 billion, or $1.87 per Diluted Share",
+          "domain": "wellsfargo.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/14/wells-fargo-wfc-q3-2025-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-04-14",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-13",
+            "what_was_said": "The CFO reported a CET1 ratio of 10.0%, well above the 8.5% regulatory minimum plus buffers. This supplied the latest reported level alongside the reaffirmation of the 10%–10.5% target.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Generate $50 billion annual NII",
+      "commitment": "Generate $50 billion, plus or minus, of total net interest income in 2026.",
+      "deadline": "Full year 2026",
+      "firstStated": "2026-01-14",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Full-year 2026 remained pending; management continued to expect $50 billion, plus or minus, of net interest income.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.wellsfargo.com/about/investor-relations/quarterly-earnings",
+          "title": "Quarterly earnings | Wells Fargo Investor Relations",
+          "domain": "wellsfargo.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/wells-fargo-wfc-q4-2025-earnings-call-transcript/",
+          "title": "Wells Fargo WFC Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Hold annual expenses near $55.7 billion",
+      "commitment": "Keep 2026 noninterest expense at approximately $55.7 billion.",
+      "deadline": "Full year 2026",
+      "firstStated": "2026-01-14",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Wells Fargo maintained its approximately $55.7 billion 2026 noninterest expense outlook; the full-year outcome remained pending.",
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/650783-q3-2026/",
+          "title": "Wells Fargo & Company (WFC) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/wells-fargo-wfc-q4-2025-earnings-call-transcript/",
+          "title": "Wells Fargo WFC Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "WFC-P1-2025-07-15",
+      "promiseId": "P1",
+      "date": "2025-07-15",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Charlie Scharf, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Targeted over half the branch network refurbished by end-2025 and the entire network refreshed by end-2028.",
+      "quote": "We are on track to have over half of our branch network refurbished by the end of this year, and to complete a refresh of the entire network by the end of 2028.",
+      "verbatim": {
+        "text": "We are on track to have over half of our branch network refurbished by the end of this year, and to complete a refresh of the entire network by the end of 2028.",
+        "segs": [
+          {
+            "t": "We are on track to have over half of our branch network refurbished by the end of this year, and to complete a refresh of the entire network by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2028",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/wells-fargo-wfc-q2-2025-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/wells-fargo-wfc-q2-2025-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P1-2025-10-14",
+      "promiseId": "P1",
+      "date": "2025-10-14",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Charlie Scharf, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Remained on track to refurbish over half the branches by the end of 2025.",
+      "quote": "We're also investing in our branch network and remain on track to have over half of our branches refurbished by the end of this year.",
+      "verbatim": {
+        "text": "We're also investing in our branch network and remain on track to have over half of our branches refurbished by the end of this year.",
+        "segs": [
+          {
+            "t": "We're also investing in our branch network and remain on track to have over half of our branches refurbished by the end of this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/337237-q3-2025",
+          "title": "Wells Fargo & Company (WFC) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/337237-q3-2025",
+          "title": "Wells Fargo & Company (WFC) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P1-2026-01-14",
+      "promiseId": "P1",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Charles Scharf, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Approximately 700 branches refurbished in 2025; over half complete, with remaining branches on track for completion over the next few years.",
+      "quote": "Over half of our network is now refurbished and we are on track to complete the remaining branches over the next few years.",
+      "verbatim": {
+        "text": "Over half of our network is now refurbished and we are on track to complete the remaining branches over the next few years.",
+        "segs": [
+          {
+            "t": "Over half of our network is now refurbished and we are on track to complete the remaining branches over the next few years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/wells-fargo-wfc-q4-2025-earnings-call-transcript/",
+          "title": "Wells Fargo WFC Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/wells-fargo-wfc-q4-2025-earnings-call-transcript/",
+          "title": "Wells Fargo WFC Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P1-2026-03-16",
+      "promiseId": "P1",
+      "date": "2026-03-16",
+      "call": "2025 Annual Report — CEO Letter",
+      "speaker": "Charles W. Scharf, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Confirmed approximately 700 refurbishments in 2025, over half the network complete, and remaining work on track over the next few years.",
+      "quote": "We refurbished approximately 700 branches in 2025, with over half our network now complete, and we are on track to finish the rest over the next few years.",
+      "verbatim": {
+        "text": "We refurbished approximately 700 branches in 2025, with over half our network now complete, and we are on track to finish the rest over the next few years.",
+        "segs": [
+          {
+            "t": "We refurbished approximately 700 branches in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", with over half our network now complete, and we are on track to finish the rest over the next few years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.wellsfargo.com/assets/pdf/about/investor-relations/annual-reports/2025-annual-report.pdf",
+          "title": "2025 Annual Report",
+          "domain": "wellsfargo.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.wellsfargo.com/assets/pdf/about/investor-relations/annual-reports/2025-annual-report.pdf",
+          "title": "2025 Annual Report",
+          "domain": "wellsfargo.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "shareholder_letter"
+    },
+    {
+      "id": "WFC-P1-2026-04-14",
+      "promiseId": "P1",
+      "date": "2026-04-14",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending branch-refurbishment commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/14/wells-fargo-wfc-q1-2026-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P1-2026-07-14",
+      "promiseId": "P1",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending branch-refurbishment commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+          "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P1-2026-08-28",
+      "promiseId": "P1",
+      "date": "2026-08-28",
+      "call": "Heading into your local Wells Fargo branch is still a power move",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected completion over the next couple of years; the same article also used broader end-of-decade wording.",
+      "quote": "Over the next couple of years, Wells Fargo will complete its multi-year refurbishment program, modernizing every branch with new technology as the bank evolves its service model.",
+      "verbatim": {
+        "text": "Over the next couple of years, Wells Fargo will complete its multi-year refurbishment program, modernizing every branch with new technology as the bank evolves its service model.",
+        "segs": [
+          {
+            "t": "Over the next couple of years, Wells Fargo will complete its multi-year refurbishment program, modernizing every branch with new technology as the bank evolves its service model.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stories.wf.com/our-impact/new-wells-fargo-branches",
+          "title": "New Wells Fargo Branches | Wells Fargo",
+          "domain": "stories.wf.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stories.wf.com/our-impact/new-wells-fargo-branches",
+          "title": "New Wells Fargo Branches | Wells Fargo",
+          "domain": "stories.wf.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "WFC-P1-2026-10-13",
+      "promiseId": "P1",
+      "date": "2026-10-13",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending branch-refurbishment commitment was not addressed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/650783-q3-2026/",
+          "title": "Wells Fargo & Company (WFC) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P2-2025-10-14",
+      "promiseId": "P2",
+      "date": "2025-10-14",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Charlie Scharf, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set medium-term ROTCE target of 17% to 18%, while managing to a 10% to 10.5% CET1 ratio.",
+      "quote": "You can see on Slide 10 that we are now targeting a 17%- 18% ROTCE over the medium term and managing to a 10%- 10.5% CET1 ratio.",
+      "verbatim": {
+        "text": "You can see on Slide 10 that we are now targeting a 17%- 18% ROTCE over the medium term and managing to a 10%- 10.5% CET1 ratio.",
+        "segs": [
+          {
+            "t": "You can see on Slide 10 that we are now targeting a ",
+            "h": 0
+          },
+          {
+            "t": "17%",
+            "h": 1
+          },
+          {
+            "t": "- ",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": " ROTCE over the medium term and managing to a ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": "- ",
+            "h": 0
+          },
+          {
+            "t": "10.5%",
+            "h": 1
+          },
+          {
+            "t": " CET1 ratio.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/337237-q3-2025",
+          "title": "Wells Fargo & Company (WFC) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/337237-q3-2025",
+          "title": "Wells Fargo & Company (WFC) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P2-2026-01-14",
+      "promiseId": "P2",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Charlie Scharf, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the medium-term ROTCE target of 17% to 18%.",
+      "quote": "As we discussed on last quarter's call, we have a new medium-term ROTCE target of 17% to 18%.",
+      "verbatim": {
+        "text": "As we discussed on last quarter's call, we have a new medium-term ROTCE target of 17% to 18%.",
+        "segs": [
+          {
+            "t": "As we discussed on last quarter's call, we have a new medium-term ROTCE target of ",
+            "h": 0
+          },
+          {
+            "t": "17%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/WFC-PR/transcripts/2025-year/4-quarter",
+          "title": "Wells Fargo & Company (WFC-PR) Q4 FY2025 Earnings Call Transcript - January 14, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/WFC-PR/transcripts/2025-year/4-quarter",
+          "title": "Wells Fargo & Company (WFC-PR) Q4 FY2025 Earnings Call Transcript - January 14, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P2-2026-04-14",
+      "promiseId": "P2",
+      "date": "2026-04-14",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Mike Santomassimo, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed confidence in multiple paths to 17% to 18% ROTCE within a reasonable amount of time.",
+      "quote": "I think when you add it all up, actually, there's a bunch of different paths to get us to that 17%-18%, which should give you a lot of confidence that it's achievable in a reasonable amount of time.",
+      "verbatim": {
+        "text": "I think when you add it all up, actually, there's a bunch of different paths to get us to that 17%-18%, which should give you a lot of confidence that it's achievable in a reasonable amount of time.",
+        "segs": [
+          {
+            "t": "I think when you add it all up, actually, there's a bunch of different paths to get us to that ",
+            "h": 0
+          },
+          {
+            "t": "17%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": ", which should give you a lot of confidence that it's achievable in a reasonable amount of time.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/399766-q1-2026",
+          "title": "Wells Fargo & Company (WFC) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/399766-q1-2026",
+          "title": "Wells Fargo & Company (WFC) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P2-2026-07-14",
+      "promiseId": "P2",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Charlie Scharf, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Broader growth and efficiency improvements supported confidence in reaching sustainable ROTCE of 17% to 18%.",
+      "quote": "More importantly, the growth and efficiency improvements that we have seen over the past several years are now broader based, and it is these trends that give us confidence in reaching our goal of a sustainable ROTCE of 17%-18%.",
+      "verbatim": {
+        "text": "More importantly, the growth and efficiency improvements that we have seen over the past several years are now broader based, and it is these trends that give us confidence in reaching our goal of a sustainable ROTCE of 17%-18%.",
+        "segs": [
+          {
+            "t": "More importantly, the growth and efficiency improvements that we have seen over the past several years are now broader based, and it is these trends that give us confidence in reaching our goal of a sustainable ROTCE of ",
+            "h": 0
+          },
+          {
+            "t": "17%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+          "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+          "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P2-2026-10-13",
+      "promiseId": "P2",
+      "date": "2026-10-13",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Charlie Scharf, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported increasing ROTCE and progress toward the unchanged 17% to 18% target.",
+      "quote": "Our ROTCE continues to increase and is getting closer to our 17% to 18% target.",
+      "verbatim": {
+        "text": "Our ROTCE continues to increase and is getting closer to our 17% to 18% target.",
+        "segs": [
+          {
+            "t": "Our ROTCE continues to increase and is getting closer to our ",
+            "h": 0
+          },
+          {
+            "t": "17%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "18%",
+            "h": 1
+          },
+          {
+            "t": " target.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P3-2025-10-14",
+      "promiseId": "P3",
+      "date": "2025-10-14",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Charlie Scharf, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set approximately 10% to 10.5% CET1 range; actual ratio was 11%; potentially lower levels depended on regulatory changes.",
+      "quote": "We are now managing to a CET1 ratio of approximately 10% to 10.5%, and we may have the opportunity to manage our capital levels even lower pending further changes from our regulators.",
+      "verbatim": {
+        "text": "We are now managing to a CET1 ratio of approximately 10% to 10.5%, and we may have the opportunity to manage our capital levels even lower pending further changes from our regulators.",
+        "segs": [
+          {
+            "t": "We are now managing to a CET1 ratio of approximately ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "10.5%",
+            "h": 1
+          },
+          {
+            "t": ", and we may have the opportunity to manage our capital levels even lower pending further changes from our regulators.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/14/wells-fargo-wfc-q3-2025-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/14/wells-fargo-wfc-q3-2025-earnings-call-transcript",
+          "title": "Wells Fargo (WFC) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P3-2026-01-14",
+      "promiseId": "P3",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Charles Scharf, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed approximately 10% to 10.5% range; actual CET1 was 10.6%, still above the range.",
+      "quote": "We will continue to focus on optimizing our capital levels as we manage to a CET1 ratio of approximately 10% to 10.5%.",
+      "verbatim": {
+        "text": "We will continue to focus on optimizing our capital levels as we manage to a CET1 ratio of approximately 10% to 10.5%.",
+        "segs": [
+          {
+            "t": "We will continue to focus on optimizing our capital levels as we manage to a CET1 ratio of approximately ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "10.5%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://tickertrends.io/transcripts/WFC/Q4-earnings-transcript-2025",
+          "title": "Wells Fargo & Company (WFC) Q4 2025 Earnings Call Transcript | TickerTrends",
+          "domain": "tickertrends.io",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/WFC-PR/transcripts/2025-year/4-quarter",
+          "title": "Wells Fargo & Company (WFC-PR) Q4 FY2025 Earnings Call Transcript - January 14, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://tickertrends.io/transcripts/WFC/Q4-earnings-transcript-2025",
+          "title": "Wells Fargo & Company (WFC) Q4 2025 Earnings Call Transcript | TickerTrends",
+          "domain": "tickertrends.io",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P3-2026-04-14",
+      "promiseId": "P3",
+      "date": "2026-04-14",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported preliminary CET1 of 10.3% at March 31, 2026, reaching the 10% to 10.5% management range.",
+      "quote": null,
+      "verbatim": {
+        "text": "Our capital levels remain strong with our CET1 ratio of 10.3%, within our stated 10%-10.5% target range, and well above our CET1 regulatory minimum plus buffers of 8.5%.",
+        "segs": [
+          {
+            "t": "Our capital levels remain strong with our CET1 ratio of ",
+            "h": 0
+          },
+          {
+            "t": "10.3%",
+            "h": 1
+          },
+          {
+            "t": ", within our stated ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "10.5%",
+            "h": 1
+          },
+          {
+            "t": " target range, and well above our CET1 regulatory minimum plus buffers of ",
+            "h": 0
+          },
+          {
+            "t": "8.5%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/WFC/earnings/WFC-Q1-2026-earnings_call-399766.html/",
+          "title": "Wells Fargo & Company (WFC) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000213/wfc1qer04-14x26ex991xrelea.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/WFC/earnings/WFC-Q1-2026-earnings_call-399766.html/",
+          "title": "Wells Fargo & Company (WFC) Q1 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "WFC-P3-2026-07-14",
+      "promiseId": "P3",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Michael Santomassimo, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "CET1 remained 10.3%, within the stated 10% to 10.5% target range.",
+      "quote": "Our capital levels remain strong with our CET1 ratio at 10.3%.",
+      "verbatim": {
+        "text": "Our capital levels remain strong with our CET1 ratio at 10.3%.",
+        "segs": [
+          {
+            "t": "Our capital levels remain strong with our CET1 ratio at ",
+            "h": 0
+          },
+          {
+            "t": "10.3%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/wells-fargo-wfc-q2-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/wells-fargo-wfc-q2-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P3-2026-10-13",
+      "promiseId": "P3",
+      "date": "2026-10-13",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Michael Santomassimo, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Retained the 10% to 10.5% range; reported CET1 of 10%.",
+      "quote": "We plan to continue to manage our CET1 ratio to be within our targeted range of 10% to 10.5%.",
+      "verbatim": {
+        "text": "We plan to continue to manage our CET1 ratio to be within our targeted range of 10% to 10.5%.",
+        "segs": [
+          {
+            "t": "We plan to continue to manage our CET1 ratio to be within our targeted range of ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "10.5%",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P4-2026-01-14",
+      "promiseId": "P4",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Michael Santomassimo, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Reported $47.5 billion NII in 2025; expected total NII of $50 billion, plus or minus, in 2026.",
+      "quote": "We reported $47.5 billion of net interest income in 2025, and we currently expect total net interest income to be $50 billion, plus or minus, in 2026.",
+      "verbatim": {
+        "text": "We reported $47.5 billion of net interest income in 2025, and we currently expect total net interest income to be $50 billion, plus or minus, in 2026.",
+        "segs": [
+          {
+            "t": "We reported ",
+            "h": 0
+          },
+          {
+            "t": "$47.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of net interest income in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", and we currently expect total net interest income to be ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": ", plus or minus, in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/wells-fargo-wfc-q4-2025-earnings-call-transcript/",
+          "title": "Wells Fargo WFC Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/wells-fargo-wfc-q4-2025-earnings-call-transcript/",
+          "title": "Wells Fargo WFC Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P4-2026-04-14",
+      "promiseId": "P4",
+      "date": "2026-04-14",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Michael Santomassimo, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Retained 2026 total NII guidance of $50 billion, plus or minus.",
+      "quote": "We are retaining our guidance of 50 billion dollars, plus or minus, of net interest income this year.",
+      "verbatim": {
+        "text": "We are retaining our guidance of 50 billion dollars, plus or minus, of net interest income this year.",
+        "segs": [
+          {
+            "t": "We are retaining our guidance of ",
+            "h": 0
+          },
+          {
+            "t": "50 billion",
+            "h": 1
+          },
+          {
+            "t": " dollars, plus or minus, of net interest income this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/14/wells-fargo-wfc-q1-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/14/wells-fargo-wfc-q1-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P4-2026-07-14",
+      "promiseId": "P4",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Mike Santomassimo, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $50 billion, plus or minus, NII for 2026 despite changes in underlying drivers.",
+      "quote": "Putting this all together, while the drivers have moved around since our original outlook, which is always the case, our current outlook is still $50 billion ± of NII for 2026.",
+      "verbatim": {
+        "text": "Putting this all together, while the drivers have moved around since our original outlook, which is always the case, our current outlook is still $50 billion ± of NII for 2026.",
+        "segs": [
+          {
+            "t": "Putting this all together, while the drivers have moved around since our original outlook, which is always the case, our current outlook is still ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": " ± of NII for ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+          "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+          "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P4-2026-10-13",
+      "promiseId": "P4",
+      "date": "2026-10-13",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Michael Santomassimo, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained full-year 2026 NII guidance of $50 billion, plus or minus.",
+      "quote": "We still expect net interest income for full year 2026 to be $50 billion, plus or minus.",
+      "verbatim": {
+        "text": "We still expect net interest income for full year 2026 to be $50 billion, plus or minus.",
+        "segs": [
+          {
+            "t": "We still expect net interest income for full year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " to be ",
+            "h": 0
+          },
+          {
+            "t": "$50 billion",
+            "h": 1
+          },
+          {
+            "t": ", plus or minus.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript/",
+          "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P5-2026-01-14",
+      "promiseId": "P5",
+      "date": "2026-01-14",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Mike Santomassimo, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected approximately $55.7 billion of noninterest expense in 2026.",
+      "quote": "Putting this all together, we currently expect non-interest expense to be approximately $55.7 billion in 2026.",
+      "verbatim": {
+        "text": "Putting this all together, we currently expect non-interest expense to be approximately $55.7 billion in 2026.",
+        "segs": [
+          {
+            "t": "Putting this all together, we currently expect non-interest expense to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$55.7 billion",
+            "h": 1
+          },
+          {
+            "t": " in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/364701-q4-2025",
+          "title": "Wells Fargo & Company (WFC) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/364701-q4-2025",
+          "title": "Wells Fargo & Company (WFC) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P5-2026-04-14",
+      "promiseId": "P5",
+      "date": "2026-04-14",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Mike Santomassimo, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "First-quarter expenses were in line; 2026 noninterest expense guidance remained approximately $55.7 billion.",
+      "quote": "Regarding our expense outlook, first quarter expenses were in line with our expectations and therefore guidance has not changed, and we still expect 2026 non-interest expense to be approximately $55.7 billion.",
+      "verbatim": {
+        "text": "Regarding our expense outlook, first quarter expenses were in line with our expectations and therefore guidance has not changed, and we still expect 2026 non-interest expense to be approximately $55.7 billion.",
+        "segs": [
+          {
+            "t": "Regarding our expense outlook, first quarter expenses were in line with our expectations and therefore guidance has not changed, and we still expect ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " non-interest expense to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$55.7 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/399766-q1-2026",
+          "title": "Wells Fargo & Company (WFC) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/399766-q1-2026",
+          "title": "Wells Fargo & Company (WFC) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P5-2026-07-14",
+      "promiseId": "P5",
+      "date": "2026-07-14",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Mike Santomassimo, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Maintained approximately $55.7 billion of noninterest expense for 2026.",
+      "quote": "Regarding our expense outlook, we still expect 2026 non-interest expense to be approximately $55.7 billion.",
+      "verbatim": {
+        "text": "Regarding our expense outlook, we still expect 2026 non-interest expense to be approximately $55.7 billion.",
+        "segs": [
+          {
+            "t": "Regarding our expense outlook, we still expect ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " non-interest expense to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$55.7 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+          "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+          "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "WFC-P5-2026-10-13",
+      "promiseId": "P5",
+      "date": "2026-10-13",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Mike Santomassimo, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed approximately $55.7 billion of 2026 noninterest expense.",
+      "quote": "Turning to expenses, we continue to expect 2026 non-interest expense to be approximately $55.7 billion.",
+      "verbatim": {
+        "text": "Turning to expenses, we continue to expect 2026 non-interest expense to be approximately $55.7 billion.",
+        "segs": [
+          {
+            "t": "Turning to expenses, we continue to expect ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " non-interest expense to be approximately ",
+            "h": 0
+          },
+          {
+            "t": "$55.7 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/650783-q3-2026/",
+          "title": "Wells Fargo & Company (WFC) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/wfc/transcripts/650783-q3-2026/",
+          "title": "Wells Fargo & Company (WFC) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://stockanalysis.com/stocks/wfc/transcripts/649260-q2-2026/",
+      "title": "Wells Fargo & Company (WFC) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/15/wells-fargo-wfc-q4-2025-earnings-call-transcript/",
+      "title": "Wells Fargo WFC Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript",
+      "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.wellsfargo.com/assets/pdf/about/investor-relations/earnings/third-quarter-2026-earnings.pdf",
+      "title": "Wells Fargo Reports Third Quarter 2026 Net Income of $6.0 billion, or $1.87 per Diluted Share",
+      "domain": "wellsfargo.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 5,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/14/wells-fargo-wfc-q3-2026-earnings-call-transcript/",
+      "title": "Wells Fargo (WFC) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 6,
+      "url": "https://stockanalysis.com/stocks/wfc/transcripts/650783-q3-2026/",
+      "title": "Wells Fargo & Company (WFC) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/10/14/wells-fargo-wfc-q3-2025-earnings-call-transcript",
+      "title": "Wells Fargo (WFC) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://stockanalysis.com/stocks/wfc/transcripts/337237-q3-2025",
+      "title": "Wells Fargo & Company (WFC) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 9,
+      "url": "https://www.roic.ai/quote/WFC-PR/transcripts/2025-year/4-quarter",
+      "title": "Wells Fargo & Company (WFC-PR) Q4 FY2025 Earnings Call Transcript - January 14, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://stockanalysis.com/stocks/wfc/transcripts/399766-q1-2026",
+      "title": "Wells Fargo & Company (WFC) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 11,
+      "url": "https://www.wellsfargo.com/assets/pdf/about/investor-relations/annual-reports/2025-annual-report.pdf",
+      "title": "2025 Annual Report",
+      "domain": "wellsfargo.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 12,
+      "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000213/wfc1qer04-14x26ex991xrelea.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000202/wfc2025annualreport-arsfil.pdf",
+      "title": "2025",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000288/wfc2qer07-14x26ex991xrelea.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://www.sec.gov/Archives/edgar/data/72971/000007297126000318/wfc3qer10-13x26ex991xrelea.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 16,
+      "url": "https://www.wellsfargo.com/about/investor-relations/quarterly-earnings",
+      "title": "Quarterly earnings | Wells Fargo Investor Relations",
+      "domain": "wellsfargo.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 17,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/wells-fargo-wfc-q2-2025-earnings-call-transcript",
+      "title": "Wells Fargo (WFC) Q2 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/14/wells-fargo-wfc-q1-2026-earnings-call-transcript",
+      "title": "Wells Fargo (WFC) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://finance.yahoo.com/quote/WFC/earnings/WFC-Q1-2026-earnings_call-399766.html/",
+      "title": "Wells Fargo & Company (WFC) Q1 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 20,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/07/21/wells-fargo-wfc-q2-2026-earnings-call-transcript/",
+      "title": "Wells Fargo (WFC) Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 21,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/14/wells-fargo-wfc-q1-2026-earnings-call-transcript/",
+      "title": "Wells Fargo (WFC) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 22,
+      "url": "https://stockanalysis.com/stocks/wfc/transcripts/364701-q4-2025",
+      "title": "Wells Fargo & Company (WFC) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/07/15/wells-fargo-wfc-q2-2025-earnings-call-transcript/",
+      "title": "Wells Fargo (WFC) Q2 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 24,
+      "url": "https://stories.wf.com/our-impact/new-wells-fargo-branches",
+      "title": "New Wells Fargo Branches | Wells Fargo",
+      "domain": "stories.wf.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 25,
+      "url": "https://tickertrends.io/transcripts/WFC/Q4-earnings-transcript-2025",
+      "title": "Wells Fargo & Company (WFC) Q4 2025 Earnings Call Transcript | TickerTrends",
+      "domain": "tickertrends.io",
+      "tier": "press",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.977423Z",
+      "completedAt": "2026-11-05T06:28:18.843031Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.484251Z",
+      "completedAt": "2026-11-05T19:12:36.092441Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.491202Z",
+      "completedAt": "2026-11-05T19:13:22.709943Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.498095Z",
+      "completedAt": "2026-11-05T19:12:27.010783Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.505046Z",
+      "completedAt": "2026-11-05T19:11:24.027346Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:04.512437Z",
+      "completedAt": "2026-11-05T19:12:16.216236Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.563252Z",
+      "completedAt": "2026-11-05T19:45:00.136096Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.570642Z",
+      "completedAt": "2026-11-05T19:47:20.704276Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.578266Z",
+      "completedAt": "2026-11-05T19:46:58.741301Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.585351Z",
+      "completedAt": "2026-11-05T19:44:31.115386Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:17.592618Z",
+      "completedAt": "2026-11-05T19:44:43.484611Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "26 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "23 of 23 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "23 of 23 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-13; next 2027-01-14"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Wells_Fargo_Logo_%282020%29.svg/330px-Wells_Fargo_Logo_%282020%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail&_=20230707054614",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Wells_Fargo_Logo_(2020).svg",
+      "title": "File:Wells Fargo Logo (2020).svg - Wikimedia Commons",
+      "width": 330,
+      "height": 330,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Wells_Fargo_Building_Broad_Street_Philadelphia.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://en.wikipedia.org/wiki/Wells_Fargo_Building_(Philadelphia)",
+      "title": "Wells Fargo Building (Philadelphia) - Wikipedia",
+      "width": 4458,
+      "height": 3112,
+      "rank": 8
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T20:06:58.005Z"
+}

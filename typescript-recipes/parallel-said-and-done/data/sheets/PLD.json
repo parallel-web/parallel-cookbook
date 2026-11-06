@@ -1,0 +1,3670 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "PLD",
+  "name": "Prologis, Inc.",
+  "short": "Prologis",
+  "website": "prologis.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://ir.prologis.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-15",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Prologis logistics warehouse rooftop solar",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Reach one gigawatt solar capacity",
+      "commitment": "Increase solar energy production and storage capacity to 1 gigawatt by 2025, more than doubling the previous goal.",
+      "deadline": "2025",
+      "firstStated": "2022-06-22",
+      "status": "exceeded",
+      "k": "done",
+      "outcomeSummary": "Prologis exceeded its 1 gigawatt goal, reporting 1.1 gigawatts of solar generation and storage capacity at December 31, 2025, including third-party owned projects.",
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/financials/sec-filings/content/0001193125-26-051453/pld-20251231.htm",
+          "title": "February 13, 2026 - 10-K: Annual report [Section 13 and 15(d), not S-K Item 405] | Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2022/07/18/prologis-pld-q2-2022-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2022 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/21/prologis-pld-q4-2025-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1029/prologis-reports-fourth-quarter-and-full-year-2025-results",
+          "title": "Prologis Reports Fourth Quarter and Full Year 2025 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-01-21",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "exceeded",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-21",
+            "what_was_said": "Management reported total installed capacity of 1.1 GW, explicitly achieving and surpassing the 1 GW goal set four years earlier, and said it would add further capacity.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Sustain 4%–6% market rent growth",
+      "commitment": "Forecast average annual market rent growth of 4%–6% over the next three years, with 2024 modestly positive and growth ramping thereafter.",
+      "deadline": "2024–2026",
+      "firstStated": "2023-12-13",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The forecast was cut to about zero for 2024, 2025, 2026; global rents declined 5% in 2024. No three-year achievement was reported.",
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/pld/transcripts/228937-bank-of-america-2024-global-real-estate-conference",
+          "title": "Prologis (PLD) Transcript: Bank of America 2024 Global Real Estate Conference",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.prologis.com/insights-news/research/2024-market-rents-reset-after-years-outperformance",
+          "title": "2024: Market Rents Reset After Years of Outperformance | Prologis",
+          "domain": "prologis.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/01/17/prologis-pld-q4-2023-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/17/prologis-pld-q2-2024-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2024-04-17",
+            "what_was_said": "Moghadam supplemented the weaker three-year outlook with a personal estimate: “north of 3% and around 4% probably, just shy of 4%,” explicitly noting that this was “not the official number.”",
+            "call": "Q1 2024 earnings call"
+          },
+          {
+            "date": "2025-01-21",
+            "what_was_said": "Management expected positive market-rent growth to emerge later in 2025, but cautioned that full-year 2025 had scenarios in which rents were “flat, down, or up.”",
+            "call": "Q4 2024 earnings call"
+          },
+          {
+            "date": "2026-10-15",
+            "what_was_said": "Management reported that market rents increased another 50 basis points during the quarter, marking the third consecutive quarter of positive market-rent growth.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Expand data-center development to 10 GW",
+      "commitment": "Pursue 10 GW of data-center development potential across the portfolio over the next 10 years; an opportunity outlook, not guaranteed construction.",
+      "deadline": "next 10 years",
+      "firstStated": "2025-01-21",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The opportunity remains open. Management reiterated over 10 gigawatts; latest power pipeline was 5.8 gigawatts, including 1.7 secured and 4.1 advanced-stage, not completed development.",
+      "citations": [
+        {
+          "url": "https://www.benzinga.com/news/26/07/60505656/prologis-q2-2026-earnings-call-complete-transcript",
+          "title": "Prologis Q2 2026 Earnings Call: Complete Transcript - Prologis (NYSE:PLD) - Benzinga",
+          "domain": "benzinga.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_a20af3ead15df35199c6bdef61e8c419/prologis/db/2327/24117/pdf/Prologis_Investor+Presentation_Oct_2026.pdf",
+          "title": "Prologis Investor Presentation - October 2026",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/245947-q4-2024",
+          "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/650301-q2-2026/",
+          "title": "Prologis (PLD) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-21",
+            "what_was_said": "Management clarified that 10 GW described its “universe of opportunity,” with no update to that number. It also reported stabilizing 72 MW of projects during Q4, distinguishing actual project progress from power procurement.",
+            "call": "Q4 2025 earnings call"
+          },
+          {
+            "date": "2026-07-16",
+            "what_was_said": "Management reported starting a 260-MW build-to-suit campus, reaching $2.1 billion of year-to-date data-center starts—above full-year guidance—and completing a 100-MW powered-land sale. These were development starts and monetization, not completion of the 10-GW opportunity.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-15",
+            "what_was_said": "Letters of intent covered approximately 1 GW, much of which management expected to start in 2027. Management also said 85% of the 5.8-GW pipeline would be able to start by 2030; this was a development-start outlook, not a completed-capacity figure.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Expand 2026 development starts",
+      "commitment": "Start $4 billion–$5 billion of development during 2026 on an owned-and-managed basis.",
+      "deadline": "2026",
+      "firstStated": "2026-01-21",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Owned-and-managed development-start guidance rose to $6 billion to $6.75 billion; year-to-date starts were nearly $5 billion. The revised full-year target remained pending.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_54d0cb5d7ff9fcdb3f6e674c626ac2f3/prologis/db/2346/24099/supplemental_financial_report_pdf/Q3_2026_Prologis_Earnings_Supplemental.pdf",
+          "title": "Supplemental Presentation File",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/21/prologis-pld-q4-2025-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-15",
+            "what_was_said": "CFO Tim Arndt reported $1 billion of third-quarter development starts, bringing year-to-date starts to nearly $5 billion. He said the guidance increase was driven predominantly by an expected very high fourth quarter of build-to-suit starts, with the remaining activity in new logistics development.",
+            "call": "Q3 2026 earnings conference call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Recycle capital through property sales",
+      "commitment": "Complete $3.25 billion–$4.25 billion of contributions and dispositions during 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-01-21",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The 2026 program remained pending with revised guidance of $3.5 billion to $4.75 billion; management cited pricing caution and deals moving into the new year.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/21/prologis-pld-q4-2025-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1055/prologis-reports-third-quarter-2026-results",
+          "title": "Prologis Reports Third Quarter 2026 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-15",
+            "what_was_said": "CFO Tim Arndt gave combined contributions and dispositions guidance of $3.5 billion–$4.75 billion. He explained that the outlook reflected caution about pricing amid interest-rate volatility and that a couple of deals were moving into the new year.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "PLD-P1-2022-06-22",
+      "promiseId": "P1",
+      "date": "2022-06-22",
+      "call": "June 22, 2022 company press release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Prologis set a goal of 1 GW of solar generation capacity, supported by storage, by 2025.",
+      "quote": "1 GW of solar generation capacity (supported by storage) by 2025",
+      "verbatim": {
+        "text": "1 GW of solar generation capacity (supported by storage) by 2025",
+        "segs": [
+          {
+            "t": "1 GW of solar generation capacity (supported by storage) by ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/4/prologis-commits-to-net-zero-emissions-by-2040",
+          "title": "Prologis Commits to Net Zero Emissions by 2040 :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/4/prologis-commits-to-net-zero-emissions-by-2040",
+          "title": "Prologis Commits to Net Zero Emissions by 2040 :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "PLD-P1-2022-07-18",
+      "promiseId": "P1",
+      "date": "2022-07-18",
+      "call": "Q2 2022 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed a 1 gigawatt solar production and storage goal by 2025, more than doubling the previous goal.",
+      "quote": "Our plan includes key milestones along the way such as a dramatic increase in our solar energy production and storage goal to 1 gigawatt by 2025, more than doubling our previous goal.",
+      "verbatim": {
+        "text": "Our plan includes key milestones along the way such as a dramatic increase in our solar energy production and storage goal to 1 gigawatt by 2025, more than doubling our previous goal.",
+        "segs": [
+          {
+            "t": "Our plan includes key milestones along the way such as a dramatic increase in our solar energy production and storage goal to 1 gigawatt by ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", more than doubling our previous goal.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2022/07/18/prologis-pld-q2-2022-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2022 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2022/07/18/prologis-pld-q2-2022-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2022 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2022-10-19",
+      "promiseId": "P1",
+      "date": "2022-10-19",
+      "call": "Q3 2022 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending solar and storage commitment was not discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2022/10/19/prologis-pld-q3-2022-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2022 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2022-11-29",
+      "promiseId": "P1",
+      "date": "2022-11-29",
+      "call": "November 29, 2022 company press release",
+      "speaker": "Susan Uthayakumar, Chief Energy and Sustainability Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the goal of 1 gigawatt of solar and battery storage by 2025; solar generation totalled 378 megawatts as of September 30, 2022.",
+      "quote": "Our solar plans are very ambitious and include a goal of 1 gigawatt of solar and battery storage by 2025.",
+      "verbatim": {
+        "text": "\"Our solar plans are very ambitious and include a goal of 1 gigawatt of solar and battery storage by 2025.",
+        "segs": [
+          {
+            "t": "\"Our solar plans are very ambitious and include a goal of 1 gigawatt of solar and battery storage by ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/947/prologis-ranks-2-for-on-site-solar-in-u-s",
+          "title": "Prologis Ranks #2 for On-Site Solar in U.S. :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/947/prologis-ranks-2-for-on-site-solar-in-u-s",
+          "title": "Prologis Ranks #2 for On-Site Solar in U.S. :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "PLD-P1-2023-01-18",
+      "promiseId": "P1",
+      "date": "2023-01-18",
+      "call": "Q4 2022 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Expected to add 115 megawatts over the year, reaching approximately 520 megawatts by year-end; reiterated 1 gigawatt of production and storage by 2025.",
+      "quote": "It's worth noting that we closed 2022 as the second largest on-site power producer in the U.S., a position we will build upon with our plan for 1 gigawatt of production and storage by 2025.",
+      "verbatim": {
+        "text": "It's worth noting that we closed 2022 as the second largest on-site power producer in the U.S., a position we will build upon with our plan for 1 gigawatt of production and storage by 2025.",
+        "segs": [
+          {
+            "t": "It's worth noting that we closed ",
+            "h": 0
+          },
+          {
+            "t": "2022",
+            "h": 1
+          },
+          {
+            "t": " as the second largest on-site power producer in the U.S., a position we will build upon with our plan for 1 gigawatt of production and storage by ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/01/18/prologis-pld-q4-2022-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2022 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/01/18/prologis-pld-q4-2022-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2022 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2023-04-18",
+      "promiseId": "P1",
+      "date": "2023-04-18",
+      "call": "Q1 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending solar and storage commitment was not discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/49950-q1-2023/",
+          "title": "Prologis (PLD) Q1 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2023-07-18",
+      "promiseId": "P1",
+      "date": "2023-07-18",
+      "call": "Q2 2023 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Added 45 megawatts in the first half; platform total reached 450 megawatts, nearly 50% toward the 1 gigawatt goal for 2025.",
+      "quote": "We added 45 megawatts of new solar production and storage in the first half of the year, bringing our platform total to 450 megawatts, nearly 50% of the way to our 1 gigawatt goal for 2025.",
+      "verbatim": {
+        "text": "We added 45 megawatts of new solar production and storage in the first half of the year, bringing our platform total to 450 megawatts, nearly 50% of the way to our 1 gigawatt goal for 2025.",
+        "segs": [
+          {
+            "t": "We added 45 megawatts of new solar production and storage in the first half of the year, bringing our platform total to 450 megawatts, nearly ",
+            "h": 0
+          },
+          {
+            "t": "50%",
+            "h": 1
+          },
+          {
+            "t": " of the way to our 1 gigawatt goal for ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/07/18/prologis-pld-q2-2023-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2023/07/18/prologis-pld-q2-2023-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2023-10-17",
+      "promiseId": "P1",
+      "date": "2023-10-17",
+      "call": "Q3 2023 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "The pending solar and storage commitment was not discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/83935-q3-2023/",
+          "title": "Prologis (PLD) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2023-12-06",
+      "promiseId": "P1",
+      "date": "2023-12-06",
+      "call": "December 6, 2023 company press release",
+      "speaker": "Hamid R. Moghadam, Co-founder, Chairman and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported 500 megawatts of rooftop solar and storage generation, halfway to the one gigawatt goal by 2025.",
+      "quote": "In fact, we expect to hit a gigawatt of installed capacity on our properties by 2025.",
+      "verbatim": {
+        "text": "\"In fact, we expect to hit a gigawatt of installed capacity on our properties by 2025.\"",
+        "segs": [
+          {
+            "t": "\"In fact, we expect to hit a gigawatt of installed capacity on our properties by ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".\"",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/974/prologis-hits-500-megawatt-solar-milestone---halfway-to-one-gigawatt-goal",
+          "title": "Prologis Hits 500-Megawatt Solar Milestone - Halfway to One Gigawatt Goal :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/974/prologis-hits-500-megawatt-solar-milestone---halfway-to-one-gigawatt-goal",
+          "title": "Prologis Hits 500-Megawatt Solar Milestone - Halfway to One Gigawatt Goal :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "PLD-P1-2024-01-17",
+      "promiseId": "P1",
+      "date": "2024-01-17",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Approximately 515 megawatts of solar and storage were in operation at year-end, with an additional 70 under construction.",
+      "quote": "In energy, and as seen in our new supplement disclosure, we stand at year-end with approximately 515 megawatts of solar and storage in operation with an additional 70 currently under construction.",
+      "verbatim": {
+        "text": "In energy, and as seen in our new supplement disclosure, we stand at year-end with approximately 515 megawatts of solar and storage in operation with an additional 70 currently under construction.",
+        "segs": [
+          {
+            "t": "In energy, and as seen in our new supplement disclosure, we stand at year-end with approximately 515 megawatts of solar and storage in operation with an additional 70 currently under construction.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/01/17/prologis-pld-q4-2023-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/01/17/prologis-pld-q4-2023-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2024-04-17",
+      "promiseId": "P1",
+      "date": "2024-04-17",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported meaningful Energy business deployment progress, including 405 megawatts of long-term storage-related contracts with investment-grade utilities.",
+      "quote": "In our Energy business, we've made meaningful progress on this year's deployment, including the signing of 405 megawatts of long-term storage-related contracts with investment-grade utilities.",
+      "verbatim": {
+        "text": "In our Energy business, we've made meaningful progress on this year's deployment, including the signing of 405 megawatts of long-term storage-related contracts with investment-grade utilities.",
+        "segs": [
+          {
+            "t": "In our Energy business, we've made meaningful progress on this year's deployment, including the signing of 405 megawatts of long-term storage-related contracts with investment-grade utilities.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/17/prologis-pld-q1-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/17/prologis-pld-q1-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2024-07-17",
+      "promiseId": "P1",
+      "date": "2024-07-17",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Timothy D. Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Operating solar capacity was 524 megawatts, with 134 megawatts under construction; together expected to generate approximately $55 million of NOI once stabilized.",
+      "quote": "We continue to grow our solar energy business, with the installed capacity of our operating portfolio now at 524 megawatts, with an additional 134 megawatts currently under construction, the total of which will generate approximately $55 million of NOI once stabilized, in line with our forecast.",
+      "verbatim": {
+        "text": "We continue to grow our solar energy business, with the installed capacity of our operating portfolio now at 524 megawatts, with an additional 134 megawatts currently under construction, the total of which will generate approximately $55 million of NOI once stabilized, in line with our forecast.",
+        "segs": [
+          {
+            "t": "We continue to grow our solar energy business, with the installed capacity of our operating portfolio now at 524 megawatts, with an additional 134 megawatts currently under construction, the total of which will generate approximately ",
+            "h": 0
+          },
+          {
+            "t": "$55 million",
+            "h": 1
+          },
+          {
+            "t": " of NOI once stabilized, in line with our forecast.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/17/prologis-pld-q2-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/17/prologis-pld-q2-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2024-10-16",
+      "promiseId": "P1",
+      "date": "2024-10-16",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Timothy D. Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected generation capacity well over 600 megawatts at year-end, with good line of sight to the 1-gigawatt goal by the end of 2025.",
+      "quote": "Our momentum here is building, and we continue to have and we expect to have generation capacity well over 600 megawatts at the end of this year, with good line of sight to our 1-gigawatt goal by the end of 2025.",
+      "verbatim": {
+        "text": "Our momentum here is building, and we continue to have and we expect to have generation capacity well over 600 megawatts at the end of this year, with good line of sight to our 1-gigawatt goal by the end of 2025.",
+        "segs": [
+          {
+            "t": "Our momentum here is building, and we continue to have and we expect to have generation capacity well over 600 megawatts at the end of this year, with good line of sight to our 1-gigawatt goal by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/16/prologis-pld-q3-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/16/prologis-pld-q3-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2025-01-21",
+      "promiseId": "P1",
+      "date": "2025-01-21",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Forecast hitting the 1 gigawatt goal for solar generation and storage by year-end 2025.",
+      "quote": "Finally, 2025 will be an important year for our energy business, where our forecast is to hit our 1 gigawatt goal for solar generation and storage by year-end.",
+      "verbatim": {
+        "text": "Finally, 2025 will be an important year for our energy business, where our forecast is to hit our 1 gigawatt goal for solar generation and storage by year-end.",
+        "segs": [
+          {
+            "t": "Finally, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " will be an important year for our energy business, where our forecast is to hit our 1 gigawatt goal for solar generation and storage by year-end.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/245947-q4-2024",
+          "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/245947-q4-2024",
+          "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2025-04-16",
+      "promiseId": "P1",
+      "date": "2025-04-16",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Over 900 MW of solar and storage capacity was in operation or under development, advancing toward the 1 GW goal for 2025.",
+      "quote": "Finally, at quarter end, we have over 900 MW of solar and storage capacity either in operation or under development, advancing us closer to our 1 GW goal for the year.",
+      "verbatim": {
+        "text": "Finally, at quarter end, we have over 900 MW of solar and storage capacity either in operation or under development, advancing us closer to our 1 GW goal for the year.",
+        "segs": [
+          {
+            "t": "Finally, at quarter end, we have over 900 MW of solar and storage capacity either in operation or under development, advancing us closer to our 1 GW goal for the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/308454-q1-2025",
+          "title": "Prologis (PLD) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/308454-q1-2025",
+          "title": "Prologis (PLD) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2025-07-16",
+      "promiseId": "P1",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Timothy Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Nearly 1.1 gigawatts were in operation or under development; the goal remained 1 gigawatt of solar production and storage by year-end.",
+      "quote": "Finally, in our energy business, we continue to make steady progress toward our goal of 1 gigawatt of solar production and storage by year-end, with nearly 1.1 gigawatts either in operation or under development today.",
+      "verbatim": {
+        "text": "Finally, in our energy business, we continue to make steady progress toward our goal of 1 gigawatt of solar production and storage by year-end, with nearly 1.1 gigawatts either in operation or under development today.",
+        "segs": [
+          {
+            "t": "Finally, in our energy business, we continue to make steady progress toward our goal of 1 gigawatt of solar production and storage by year-end, with nearly 1.1 gigawatts either in operation or under development today.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.earningscall.ai/stock/transcript/PLD-2025-Q2",
+          "title": "PROLOGIS, INC. Q2 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.earningscall.ai/stock/transcript/PLD-2025-Q2",
+          "title": "PROLOGIS, INC. Q2 2025 Earnings Call Transcript | Full Text",
+          "domain": "earningscall.ai",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2025-10-15",
+      "promiseId": "P1",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "With 825 megawatts of current capacity, management said it was on track for the one-gigawatt goal by year-end.",
+      "quote": "With 825 megawatts of current capacity, we are on track to deliver on our one-gigawatt goal by year-end.",
+      "verbatim": {
+        "text": "With 825 megawatts of current capacity, we are on track to deliver on our one-gigawatt goal by year-end.",
+        "segs": [
+          {
+            "t": "With 825 megawatts of current capacity, we are on track to deliver on our one-gigawatt goal by year-end.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/15/prologis-pld-q3-2025-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/10/15/prologis-pld-q3-2025-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P1-2026-01-21",
+      "promiseId": "P1",
+      "date": "2026-01-21",
+      "call": "Q4 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "The company reported surpassing its 1 gigawatt target for installed solar and battery storage during the quarter.",
+      "quote": "During the quarter, the company expanded its data center power pipeline to 5.7 gigawatts of capacity secured or in advanced stages of procurement and surpassed its 1 gigawatt target for installed solar and battery storage.",
+      "verbatim": {
+        "text": "DEPLOYMENT ACTIVITY During the quarter, the company expanded its data center power pipeline to 5.7 gigawatts of capacity secured or in advanced stages of procurement and surpassed its 1 gigawatt target for installed solar and battery storage.",
+        "segs": [
+          {
+            "t": "DEPLOYMENT ACTIVITY During the quarter, the company expanded its data center power pipeline to 5.7 gigawatts of capacity secured or in advanced stages of procurement and surpassed its 1 gigawatt target for installed solar and battery storage.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.prologis.com/sites/corporate/files/documents/2026/01/2026-01-21-Prologis-Reports-Fourth-Quarter-and-Full-Year-2025-Results.pdf",
+          "title": "Prologis Reports Fourth Quarter and Full Year 2025 Results - Jan 21, 2026",
+          "domain": "prologis.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.prologis.com/sites/corporate/files/documents/2026/01/2026-01-21-Prologis-Reports-Fourth-Quarter-and-Full-Year-2025-Results.pdf",
+          "title": "Prologis Reports Fourth Quarter and Full Year 2025 Results - Jan 21, 2026",
+          "domain": "prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLD-P1-2026-01-22",
+      "promiseId": "P1",
+      "date": "2026-01-22",
+      "call": "January 22, 2026 company blog",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "The company confirmed it achieved more than 1 GW of solar energy supported by battery storage, with capacity to power 172,000 average U.S. homes.",
+      "quote": "Today, we’ve achieved that and more, with the ability to power 172,000 average U.S. homes.",
+      "verbatim": {
+        "text": "Today, we’ve achieved that and more, with the ability to power 172,000 average U.S. homes. ¹",
+        "segs": [
+          {
+            "t": "Today, we’ve achieved that and more, with the ability to power ",
+            "h": 0
+          },
+          {
+            "t": "172,000",
+            "h": 1
+          },
+          {
+            "t": " average U.S. homes. ¹",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.prologis.com/insights-news/blog/power-where-its-needed-prologis-surpasses-1-gigawatt-solar-and-battery-storage",
+          "title": "Prologis: Leading Solar Energy Solutions for Logistics",
+          "domain": "prologis.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.prologis.com/insights-news/blog/power-where-its-needed-prologis-surpasses-1-gigawatt-solar-and-battery-storage",
+          "title": "Prologis: Leading Solar Energy Solutions for Logistics",
+          "domain": "prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "PLD-P1-2026-02-13",
+      "promiseId": "P1",
+      "date": "2026-02-13",
+      "call": "2025 Form 10-K",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported 1.1 gigawatts of solar generation and storage capacity at December 31, 2025, on the O&M portfolio, including Prologis and third-party owned projects.",
+      "quote": "At December 31, 2025, we had 1.1 gigawatts of solar generation and storage capacity on our O&M portfolio, including Prologis and third-party owned projects.",
+      "verbatim": {
+        "text": "At December 31, 2025, we had 1.1 gigawatts of solar generation and storage capacity on our O&M portfolio, including Prologis and third-party owned projects.",
+        "segs": [
+          {
+            "t": "At December 31, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", we had 1.1 gigawatts of solar generation and storage capacity on our O&M portfolio, including Prologis and third-party owned projects.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.prologis.com/financials/sec-filings/content/0001193125-26-051453/pld-20251231.htm",
+          "title": "February 13, 2026 - 10-K: Annual report [Section 13 and 15(d), not S-K Item 405] | Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/financials/sec-filings/content/0001193125-26-051453/pld-20251231.htm",
+          "title": "February 13, 2026 - 10-K: Annual report [Section 13 and 15(d), not S-K Item 405] | Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "PLD-P2-2023-12-13",
+      "promiseId": "P2",
+      "date": "2023-12-13",
+      "call": "Investor Forum 2023",
+      "speaker": "Melinda McLaughlin, SVP and Global Head of Research",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Forecast global market rent growth of 4%-6% CAGR over three years; the presentation identifies 2024–2026.",
+      "quote": "Our view for market rent growth across the globe is roughly a 4%-6% CAGR over the next three years.",
+      "verbatim": {
+        "text": "Our view for market rent growth across the globe is roughly a 4%-6% CAGR over the next three years.",
+        "segs": [
+          {
+            "t": "Our view for market rent growth across the globe is roughly a ",
+            "h": 0
+          },
+          {
+            "t": "4%",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "6%",
+            "h": 1
+          },
+          {
+            "t": " CAGR over the next three years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/393360-investor-day-2023/",
+          "title": "Prologis (PLD) Transcript: Investor Day 2023",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://ir.prologis.com/news-events/events-presentations/detail/20231213-prologis-investor-forum-2023",
+          "title": "Prologis Investor Forum 2023 :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/393360-investor-day-2023/",
+          "title": "Prologis (PLD) Transcript: Investor Day 2023",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_20c58d4e5f0003df7cbb30036282378c/prologis/db/2327/23427/pdf/PLD%2BInvestor%2BForum%2B2023%2B-%2BFull%2BPresentation.pdf",
+          "title": "Forward-looking statements",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "investor_day"
+    },
+    {
+      "id": "PLD-P2-2024-01-17",
+      "promiseId": "P2",
+      "date": "2024-01-17",
+      "call": "Q4 2023 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 4%–6% annual market rent growth over three years, with 2024 modestly positive and growth ramping thereafter.",
+      "quote": "We believe that annual market rent growth will average between 4% and 6% over the next three years, with 2024 being modestly positive and ramping thereafter.",
+      "verbatim": {
+        "text": "We believe that annual market rent growth will average between 4% and 6% over the next three years, with 2024 being modestly positive and ramping thereafter.",
+        "segs": [
+          {
+            "t": "We believe that annual market rent growth will average between ",
+            "h": 0
+          },
+          {
+            "t": "4%",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "6%",
+            "h": 1
+          },
+          {
+            "t": " over the next three years, with ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " being modestly positive and ramping thereafter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/01/17/prologis-pld-q4-2023-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/events-presentations/events/detail/20240117-prologis-q4-2023-earnings-conference-call",
+          "title": "Prologis Q4 2023 Earnings Conference Call :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/01/17/prologis-pld-q4-2023-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2023 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2024-03-04",
+      "promiseId": "P2",
+      "date": "2024-03-04",
+      "call": "Citi Global Property CEO Conference investor presentation, March 4–6, 2024",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Retained 4.0%–6.0% average market rent growth for 2024–2026 in the earnings-outlook table.",
+      "quote": null,
+      "verbatim": {
+        "text": "LEADING PLATFORM – OPERATIONS 2024-2026 Average Low High Market Rent Growth 4.0% 6.0% Average Occupancy 96.0% 97.0% Cash Same Store Growth, PLD Share 1 9.0% 10.0% ...",
+        "segs": [
+          {
+            "t": "LEADING PLATFORM – OPERATIONS ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " Average Low High Market Rent Growth ",
+            "h": 0
+          },
+          {
+            "t": "4.0%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "6.0%",
+            "h": 1
+          },
+          {
+            "t": " Average Occupancy ",
+            "h": 0
+          },
+          {
+            "t": "96.0%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "97.0%",
+            "h": 1
+          },
+          {
+            "t": " Cash Same Store Growth, PLD Share 1 ",
+            "h": 0
+          },
+          {
+            "t": "9.0%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "10.0%",
+            "h": 1
+          },
+          {
+            "t": " ...",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_9c00249764c385b113c83a1f83ada16d/prologis/db/2322/23716/presentation/PLD_March_2024_Citi_Presentation_vF.pdf",
+          "title": "PLD March 2024 Citi Presentation vF",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press",
+          "extract": {
+            "objective": "What Prologis executives said on the Citi Global Property CEO Conference investor presentation, March 4–6, 2024 (2024-03-04) about Sustain 4%–6% market rent growth: Retained 4.0%–6.0% average market rent growth for 2024–2026 in the earnings-outlook table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_9c00249764c385b113c83a1f83ada16d/prologis/db/2322/23716/presentation/PLD_March_2024_Citi_Presentation_vF.pdf",
+          "title": "PLD March 2024 Citi Presentation vF",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "PLD-P2-2024-04-17",
+      "promiseId": "P2",
+      "date": "2024-04-17",
+      "call": "Q1 2024 earnings call",
+      "speaker": "Hamid Moghadam, CEO",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Softened the three-year 4%–6% outlook to the lower end or slightly below, without issuing a new official target.",
+      "quote": "I would say we're at the lower end of that range and maybe a little bit lower than that when you look at it over a three-year period.",
+      "verbatim": {
+        "text": "I would say we're at the lower end of that range and maybe a little bit lower than that when you look at it over a three-year period.",
+        "segs": [
+          {
+            "t": "I would say we're at the lower end of that range and maybe a little bit lower than that when you look at it over a three-year period.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/17/prologis-pld-q1-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/04/17/prologis-pld-q1-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q1 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2024-06-05",
+      "promiseId": "P2",
+      "date": "2024-06-05",
+      "call": "Nareit REIT Week: 2024 Investor Conference",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Repeated that 2024–2026 average growth would likely be at the low end of 4%–6%, possibly below.",
+      "quote": "We said in our April call that what we had seen sort of out the gate here with just again this continued softness and weighing down by SoCal, that we'd likely be at the low end of that range, and we might be even below it.",
+      "verbatim": {
+        "text": "We said in our April call that what we had seen sort of out the gate here with just again this continued softness and weighing down by SoCal, that we'd likely be at the low end of that range, and we might be even below it.",
+        "segs": [
+          {
+            "t": "We said in our April call that what we had seen sort of out the gate here with just again this continued softness and weighing down by SoCal, that we'd likely be at the low end of that range, and we might be even below it.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/pld/transcripts/200338-nareit-reit-week-2024-investor-conference",
+          "title": "Prologis (PLD) Transcript: Nareit REIT Week: 2024 Investor Conference",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/pld/transcripts/200338-nareit-reit-week-2024-investor-conference",
+          "title": "Prologis (PLD) Transcript: Nareit REIT Week: 2024 Investor Conference",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "PLD-P2-2024-07-17",
+      "promiseId": "P2",
+      "date": "2024-07-17",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Timothy D. Arndt, CFO",
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Cut the end of '23 to end of 2026 outlook to flat or modestly positive rents, describing growth as deferred.",
+      "quote": "If we look at that same period, the end of '23 to the end of 2026, our sense is that rents are going to be flat then to modestly positive over that entire period, but we would couch that as rent that's really been deferred, that the window is moving and not ultimately lost.",
+      "verbatim": {
+        "text": "If we look at that same period, the end of '23 to the end of 2026, our sense is that rents are going to be flat then to modestly positive over that entire period, but we would couch that as rent that's really been deferred, that the window is moving and not ultimately lost.",
+        "segs": [
+          {
+            "t": "If we look at that same period, the end of '23 to the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", our sense is that rents are going to be flat then to modestly positive over that entire period, but we would couch that as rent that's really been deferred, that the window is moving and not ultimately lost.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/17/prologis-pld-q2-2024-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/191040-q2-2024",
+          "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/07/17/prologis-pld-q2-2024-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2024-09-10",
+      "promiseId": "P2",
+      "date": "2024-09-10",
+      "call": "Bank of America 2024 Global Real Estate Conference",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Lowered 2024, 2025, 2026 market rent growth to about zero overall, with declines first and growth later.",
+      "quote": "One is that I do think, and the company thinks that market rent growth over that three-year period, 2024, 2025, 2026, will be about zero, but the path to zero is different.",
+      "verbatim": {
+        "text": "One is that I do think, and the company thinks that market rent growth over that three-year period, 2024, 2025, 2026, will be about zero, but the path to zero is different.",
+        "segs": [
+          {
+            "t": "One is that I do think, and the company thinks that market rent growth over that three-year period, ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": ", ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", will be about zero, but the path to zero is different.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://stockanalysis.com/stocks/pld/transcripts/228937-bank-of-america-2024-global-real-estate-conference",
+          "title": "Prologis (PLD) Transcript: Bank of America 2024 Global Real Estate Conference",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://stockanalysis.com/stocks/pld/transcripts/228937-bank-of-america-2024-global-real-estate-conference",
+          "title": "Prologis (PLD) Transcript: Bank of America 2024 Global Real Estate Conference",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "PLD-P2-2024-10-16",
+      "promiseId": "P2",
+      "date": "2024-10-16",
+      "call": "Q3 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Did not restate the rent target; CFO instead set aside prior Investor Day FFO assumptions and discussed qualitative recovery.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/214012-q3-2024/",
+          "title": "Prologis (PLD) Q3 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/10/16/prologis-pld-q3-2024-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2025-01-21",
+      "promiseId": "P2",
+      "date": "2025-01-21",
+      "call": "Q4 2024 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Expected a later-year rent inflection, but did not address the specific three-year forecast.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/245947-q4-2024/",
+          "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2025-04-16",
+      "promiseId": "P2",
+      "date": "2025-04-16",
+      "call": "Q1 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported global rents declining 1.5%; did not address the specific three-year forecast.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/308454-q1-2025/",
+          "title": "Prologis (PLD) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2025-07-16",
+      "promiseId": "P2",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported market rents declining approximately 1.4% during the quarter; did not address the specific three-year forecast.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/336927-q2-2025/",
+          "title": "Prologis (PLD) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2025-10-15",
+      "promiseId": "P2",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed slowing rent declines and uncertainty around recovery timing, without addressing the specific three-year forecast.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/363939-q3-2025/",
+          "title": "Prologis (PLD) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2026-01-21",
+      "promiseId": "P2",
+      "date": "2026-01-21",
+      "call": "Q4 2025 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Expected positive aggregate rent growth to emerge during the year; did not address the specific three-year forecast.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/398860-q4-2025/",
+          "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2026-04-16",
+      "promiseId": "P2",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported an initial market-rent uptick but uneven recovery; did not address the specific three-year forecast.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/544216-q1-2026/",
+          "title": "Prologis (PLD) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2026-07-16",
+      "promiseId": "P2",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed stabilizing rents and a broader recovery, without addressing the specific three-year forecast.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/650301-q2-2026/",
+          "title": "Prologis (PLD) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P2-2026-10-15",
+      "promiseId": "P2",
+      "date": "2026-10-15",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Discussed rents growing above inflation over time, not the specific three-year forecast; no target change was announced.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P3-2025-01-21",
+      "promiseId": "P3",
+      "date": "2025-01-21",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Timothy D. Arndt, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Outlined 10 gigawatts of portfolio development potential over the next 10 years, an opportunity outlook rather than guaranteed construction.",
+      "quote": "Over the next 10 years, we see 10 gigawatts of development potential across our portfolio.",
+      "verbatim": {
+        "text": "Over the next 10 years, we see 10 gigawatts of development potential across our portfolio.",
+        "segs": [
+          {
+            "t": "Over the next 10 years, we see 10 gigawatts of development potential across our portfolio.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/21/prologis-pld-q4-2024-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/21/prologis-pld-q4-2024-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P3-2025-04-16",
+      "promiseId": "P3",
+      "date": "2025-04-16",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Advanced-stage power reached 2 GW alongside 1.4 GW fully secured; reported procurement progress without changing the development opportunity.",
+      "quote": "We now total 2 GW in this category alongside our 1.4 GW of power, which is already fully secured.",
+      "verbatim": {
+        "text": "We now total 2 GW in this category alongside our 1.4 GW of power, which is already fully secured.",
+        "segs": [
+          {
+            "t": "We now total 2 GW in this category alongside our 1.4 GW of power, which is already fully secured.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/308454-q1-2025",
+          "title": "Prologis (PLD) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/308454-q1-2025",
+          "title": "Prologis (PLD) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P3-2025-07-16",
+      "promiseId": "P3",
+      "date": "2025-07-16",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Added 200 megawatts to advanced-stage power, reaching 2.2 gigawatts; development and procurement progressed without changing the opportunity outlook.",
+      "quote": "In addition to our growing development volume, we continue to procure power, adding another 200 megawatts to our advanced stages category, bringing that total to 2.2 gigawatts.",
+      "verbatim": {
+        "text": "In addition to our growing development volume, we continue to procure power, adding another 200 megawatts to our advanced stages category, bringing that total to 2.2 gigawatts.",
+        "segs": [
+          {
+            "t": "In addition to our growing development volume, we continue to procure power, adding another 200 megawatts to our advanced stages category, bringing that total to 2.2 gigawatts.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/16/prologis-pld-q2-2025-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/07/16/prologis-pld-q2-2025-earnings-call-transcript",
+          "title": "Prologis (PLD) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P3-2025-10-15",
+      "promiseId": "P3",
+      "date": "2025-10-15",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Secured or advanced-stage power reached 5.2 GW, supporting the data-center opportunity; this was power availability, not completed construction.",
+      "quote": "Now, with 5.2 GW of power either secured or in this advanced stage, Prologis is one of the largest owners of utility-fed power available for data centers.",
+      "verbatim": {
+        "text": "Now, with 5.2 GW of power either secured or in this advanced stage, Prologis is one of the largest owners of utility-fed power available for data centers.",
+        "segs": [
+          {
+            "t": "Now, with 5.2 GW of power either secured or in this advanced stage, Prologis is one of the largest owners of utility-fed power available for data centers.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/363939-q3-2025",
+          "title": "Prologis (PLD) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/363939-q3-2025",
+          "title": "Prologis (PLD) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P3-2026-01-21",
+      "promiseId": "P3",
+      "date": "2026-01-21",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Dan Letter, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the 10 gigawatt opportunity pipeline, explicitly providing no update beyond that number; described it as a universe of opportunity.",
+      "quote": "But I'm very comfortable stating that 10 gigawatt of pipeline and there's just a lot behind that.",
+      "verbatim": {
+        "text": "But I'm very comfortable stating that 10 gigawatt of pipeline and there's just a lot behind that.",
+        "segs": [
+          {
+            "t": "But I'm very comfortable stating that 10 gigawatt of pipeline and there's just a lot behind that.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/21/prologis-pld-q4-2025-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/21/prologis-pld-q4-2025-earnings-call-transcript",
+          "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P3-2026-04-16",
+      "promiseId": "P3",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Ended with 5.6 GW secured or advanced-stage energy after stabilizing another 150-MW facility; no change to the long-term opportunity.",
+      "quote": "We ended the quarter with 5.6 GW of energy, either secured or in advanced stages, which reflects the stabilization of another 150-MW facility during the quarter.",
+      "verbatim": {
+        "text": "We ended the quarter with 5.6 GW of energy, either secured or in advanced stages, which reflects the stabilization of another 150-MW facility during the quarter.",
+        "segs": [
+          {
+            "t": "We ended the quarter with 5.6 GW of energy, either secured or in advanced stages, which reflects the stabilization of another 150-MW facility during the quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/544216-q1-2026",
+          "title": "Prologis (PLD) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/pld/transcripts/544216-q1-2026",
+          "title": "Prologis (PLD) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P3-2026-07-16",
+      "promiseId": "P3",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Tim Arndt, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated over 10 gigawatts of opportunity over the next 10 years; management characterized it as the existing projection, not a new target.",
+      "quote": "We see over 10 gigawatts of development opportunity over the next 10 years.",
+      "verbatim": {
+        "text": "We see over 10 gigawatts of development opportunity over the next 10 years.",
+        "segs": [
+          {
+            "t": "We see over 10 gigawatts of development opportunity over the next 10 years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.benzinga.com/news/26/07/60505656/prologis-q2-2026-earnings-call-complete-transcript",
+          "title": "Prologis Q2 2026 Earnings Call: Complete Transcript - Prologis (NYSE:PLD) - Benzinga",
+          "domain": "benzinga.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.benzinga.com/news/26/07/60505656/prologis-q2-2026-earnings-call-complete-transcript",
+          "title": "Prologis Q2 2026 Earnings Call: Complete Transcript - Prologis (NYSE:PLD) - Benzinga",
+          "domain": "benzinga.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P3-2026-10-15",
+      "promiseId": "P3",
+      "date": "2026-10-15",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Timothy Arndt, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Power pipeline totaled 5.8 gigawatts, including 1.7 secured and 4.1 advanced-stage; reported progress, not completion of the development opportunity.",
+      "quote": "Our pipeline currently totals 5.8 gigawatts, including 1.7 of secured power and 4.1 in advanced stages.",
+      "verbatim": {
+        "text": "Our pipeline currently totals 5.8 gigawatts, including 1.7 of secured power and 4.1 in advanced stages.",
+        "segs": [
+          {
+            "t": "Our pipeline currently totals 5.8 gigawatts, including 1.7 of secured power and 4.1 in advanced stages.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "PLD-P4-2026-01-21",
+      "promiseId": "P4",
+      "date": "2026-01-21",
+      "call": "Q4 2025 earnings supplemental",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Set 2026 owned-and-managed development-start guidance at $4,000 million to $5,000 million in the supplemental guidance table.",
+      "quote": null,
+      "verbatim": {
+        "text": "Realized development gains $ 400 $ 600 Capital Deployment PROLOGIS SHARE OWNED AND MANAGED Low High Development stabilizations $ 2,250 $ 2,750 $ 2,500 $ 3,000 Development starts $ 3,000 $ 4,000 $ 4,000 $ 5,000 ...",
+        "segs": [
+          {
+            "t": "Realized development gains ",
+            "h": 0
+          },
+          {
+            "t": "$ 400",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 600",
+            "h": 1
+          },
+          {
+            "t": " Capital Deployment PROLOGIS SHARE OWNED AND MANAGED Low High Development stabilizations ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,250",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,750",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 3,000",
+            "h": 1
+          },
+          {
+            "t": " Development starts ",
+            "h": 0
+          },
+          {
+            "t": "$ 3,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 4,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 4,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 5,000",
+            "h": 1
+          },
+          {
+            "t": " ...",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_e2c237411ac52e7598f9bf02468c3992/prologis/db/2317/21661/file/Q4_2025_Prologis_Earnings_Supplemental.pdf",
+          "title": "Prologis Supplemental Information",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press",
+          "extract": {
+            "objective": "What Prologis executives said on the Q4 2025 earnings supplemental (2026-01-21) about Expand 2026 development starts: Set 2026 owned-and-managed development-start guidance at $4,000 million to $5,000 million in the supplemental guidance table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_e2c237411ac52e7598f9bf02468c3992/prologis/db/2317/21661/file/Q4_2025_Prologis_Earnings_Supplemental.pdf",
+          "title": "Prologis Supplemental Information",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1029/prologis-reports-fourth-quarter-and-full-year-2025-results",
+          "title": "Prologis Reports Fourth Quarter and Full Year 2025 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "PLD-P4-2026-04-16",
+      "promiseId": "P4",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings supplemental",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 owned-and-managed development-start guidance to $4,500 million to $5,500 million in the supplemental guidance table.",
+      "quote": null,
+      "verbatim": {
+        "text": "Realized development gains $ 500 $ 700 Capital Deployment PROLOGIS SHARE OWNED AND MANAGED Low High Development stabilizations $ 2,250 $ 2,750 $ 2,500 $ 3,000 Development starts $ 3,500 $ 4,500 $ 4,500 $ 5,500 ... Operations Overview Q1 2025 Q2 2025 Q3 2025 Q4 2025 Q1 2026 0% 30% 60% 90% This is a non-GAAP financial measure.",
+        "segs": [
+          {
+            "t": "Realized development gains ",
+            "h": 0
+          },
+          {
+            "t": "$ 500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 700",
+            "h": 1
+          },
+          {
+            "t": " Capital Deployment PROLOGIS SHARE OWNED AND MANAGED Low High Development stabilizations ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,250",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,750",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 3,000",
+            "h": 1
+          },
+          {
+            "t": " Development starts ",
+            "h": 0
+          },
+          {
+            "t": "$ 3,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 4,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 4,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 5,500",
+            "h": 1
+          },
+          {
+            "t": " ... Operations Overview ",
+            "h": 0
+          },
+          {
+            "t": "Q1 2025",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "Q2 2025",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "Q3 2025",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "Q4 2025",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "Q1 2026",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "0%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "30%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "60%",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "90%",
+            "h": 1
+          },
+          {
+            "t": " This is a non-GAAP financial measure.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_d65a83a8d22dfff29d3bb1dc3c625c4b/prologis/db/2317/21681/file/Q1_2026_Prologis_Earnings_Supplemental.pdf",
+          "title": "Q1 2026 Supplemental Draft 04.XX.26",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press",
+          "extract": {
+            "objective": "What Prologis executives said on the Q1 2026 earnings supplemental (2026-04-16) about Expand 2026 development starts: Raised 2026 owned-and-managed development-start guidance to $4,500 million to $5,500 million in the supplemental guidance table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_d65a83a8d22dfff29d3bb1dc3c625c4b/prologis/db/2317/21681/file/Q1_2026_Prologis_Earnings_Supplemental.pdf",
+          "title": "Q1 2026 Supplemental Draft 04.XX.26",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1036/prologis-reports-first-quarter-2026-results",
+          "title": "Prologis Reports First Quarter 2026 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/prologis-pld-q1-2026-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "PLD-P4-2026-07-16",
+      "promiseId": "P4",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings supplemental",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 owned-and-managed development-start guidance to $5,500 million to $6,500 million in the supplemental guidance table.",
+      "quote": null,
+      "verbatim": {
+        "text": "Capital Deployment PROLOGIS SHARE OWNED AND MANAGED Low High Development stabilizations $ 2,250 $ 2,750 $ 2,500 $ 3,000 Development starts $ 4,500 $ 5,500 $ 5,500 $ 6,500",
+        "segs": [
+          {
+            "t": "Capital Deployment PROLOGIS SHARE OWNED AND MANAGED Low High Development stabilizations ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,250",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,750",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 3,000",
+            "h": 1
+          },
+          {
+            "t": " Development starts ",
+            "h": 0
+          },
+          {
+            "t": "$ 4,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 5,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 5,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 6,500",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_9c00249764c385b113c83a1f83ada16d/prologis/db/2346/23888/supplemental_financial_report_pdf/Q2_2026_Prologis_Earnings_Supplemental.pdf",
+          "title": "Supplemental Presentation File",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_9c00249764c385b113c83a1f83ada16d/prologis/db/2346/23888/supplemental_financial_report_pdf/Q2_2026_Prologis_Earnings_Supplemental.pdf",
+          "title": "Supplemental Presentation File",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1044/prologis-reports-second-quarter-2026-results",
+          "title": "Prologis Reports Second Quarter 2026 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.benzinga.com/news/26/07/60505656/prologis-q2-2026-earnings-call-complete-transcript",
+          "title": "Prologis Q2 2026 Earnings Call: Complete Transcript - Prologis (NYSE:PLD) - Benzinga",
+          "domain": "benzinga.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "PLD-P4-2026-10-15",
+      "promiseId": "P4",
+      "date": "2026-10-15",
+      "call": "Q3 2026 earnings supplemental",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 owned-and-managed development-start guidance to $6,000 million to $6,750 million in the supplemental guidance table.",
+      "quote": null,
+      "verbatim": {
+        "text": "Realized development gains $ 600 $ 700 Capital Deployment PROLOGIS SHARE OWNED AND MANAGED Low High Development stabilizations $ 2,500 $ 3,000 $ 2,750 $ 3,250 Development starts $ 5,000 $ 5,750 $ 6,000 $ 6,750 ...",
+        "segs": [
+          {
+            "t": "Realized development gains ",
+            "h": 0
+          },
+          {
+            "t": "$ 600",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 700",
+            "h": 1
+          },
+          {
+            "t": " Capital Deployment PROLOGIS SHARE OWNED AND MANAGED Low High Development stabilizations ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 3,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 2,750",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 3,250",
+            "h": 1
+          },
+          {
+            "t": " Development starts ",
+            "h": 0
+          },
+          {
+            "t": "$ 5,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 5,750",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 6,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$ 6,750",
+            "h": 1
+          },
+          {
+            "t": " ...",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://d1io3yog0oux5.cloudfront.net/_54d0cb5d7ff9fcdb3f6e674c626ac2f3/prologis/db/2346/24099/supplemental_financial_report_pdf/Q3_2026_Prologis_Earnings_Supplemental.pdf",
+          "title": "Supplemental Presentation File",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press",
+          "extract": {
+            "objective": "What Prologis executives said on the Q3 2026 earnings supplemental (2026-10-15) about Expand 2026 development starts: Raised 2026 owned-and-managed development-start guidance to $6,000 million to $6,750 million in the supplemental guidance table."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d1io3yog0oux5.cloudfront.net/_54d0cb5d7ff9fcdb3f6e674c626ac2f3/prologis/db/2346/24099/supplemental_financial_report_pdf/Q3_2026_Prologis_Earnings_Supplemental.pdf",
+          "title": "Supplemental Presentation File",
+          "domain": "d1io3yog0oux5.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1055/prologis-reports-third-quarter-2026-results",
+          "title": "Prologis Reports Third Quarter 2026 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript/",
+          "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "PLD-P5-2026-01-21",
+      "promiseId": "P5",
+      "date": "2026-01-21",
+      "call": "Q4 and full-year 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Initial 2026 Prologis-share guidance: contributions $1,500 to $2,000 million; dispositions $1,750 to $2,250 million. Guidance is tabular.",
+      "quote": null,
+      "verbatim": {
+        "text": "Capital Deployment - Prologis Share (in millions) ² Development stabilizations $2,250 to $2,750 Development starts $3,000 to $4,000 Acquisitions $1,000 to $1,500 Contributions $1,500 to $2,000 Dispositions $1,750 to $2,250",
+        "segs": [
+          {
+            "t": "Capital Deployment - Prologis Share (in millions) ² Development stabilizations ",
+            "h": 0
+          },
+          {
+            "t": "$2,250 to $2,750",
+            "h": 1
+          },
+          {
+            "t": " Development starts ",
+            "h": 0
+          },
+          {
+            "t": "$3,000 to $4,000",
+            "h": 1
+          },
+          {
+            "t": " Acquisitions ",
+            "h": 0
+          },
+          {
+            "t": "$1,000 to $1,500",
+            "h": 1
+          },
+          {
+            "t": " Contributions ",
+            "h": 0
+          },
+          {
+            "t": "$1,500 to $2,000",
+            "h": 1
+          },
+          {
+            "t": " Dispositions ",
+            "h": 0
+          },
+          {
+            "t": "$1,750 to $2,250",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1029/prologis-reports-fourth-quarter-and-full-year-2025-results",
+          "title": "Prologis Reports Fourth Quarter and Full Year 2025 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1029/prologis-reports-fourth-quarter-and-full-year-2025-results",
+          "title": "Prologis Reports Fourth Quarter and Full Year 2025 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLD-P5-2026-04-16",
+      "promiseId": "P5",
+      "date": "2026-04-16",
+      "call": "Q1 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 Prologis-share contributions to $1,750 to $2,250 million; dispositions remained $1,750 to $2,250 million. Guidance is tabular.",
+      "quote": null,
+      "verbatim": {
+        "text": "2026 GUIDANCE Earnings (per diluted share) Previous Current --- --- --- Net earnings attributable to common stockholders $3.70 to $4.00 $3.80 to $4.05 ... Development starts $3,000 to $4,000 $3,500 to $4,500 Acquisitions $1,000 to $1,500 $1,000 to $1,500 Contributions $1,500 to $2,000 $1,750 to $2,250 Dispositions $1,750 to $2,250 $1,750 to $2,250",
+        "segs": [
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " GUIDANCE Earnings (per diluted share) Previous Current --- --- --- Net earnings attributable to common stockholders ",
+            "h": 0
+          },
+          {
+            "t": "$3.70 to $4.00",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$3.80 to $4.05",
+            "h": 1
+          },
+          {
+            "t": " ... Development starts ",
+            "h": 0
+          },
+          {
+            "t": "$3,000 to $4,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$3,500 to $4,500",
+            "h": 1
+          },
+          {
+            "t": " Acquisitions ",
+            "h": 0
+          },
+          {
+            "t": "$1,000 to $1,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$1,000 to $1,500",
+            "h": 1
+          },
+          {
+            "t": " Contributions ",
+            "h": 0
+          },
+          {
+            "t": "$1,500 to $2,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$1,750 to $2,250",
+            "h": 1
+          },
+          {
+            "t": " Dispositions ",
+            "h": 0
+          },
+          {
+            "t": "$1,750 to $2,250",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$1,750 to $2,250",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "search",
+          "url": "https://ir.prologis.com/financials/sec-filings/content/0001193125-26-157977/pld-ex99_2.htm",
+          "title": "April 16, 2026 - EX-99.2 - 8-K: Current report | Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary",
+          "search": {
+            "rank": 4,
+            "query": "Prologis Q1 2026 earnings release transcript Recycle capital through property sales",
+            "objective": "Find Prologis, Inc.'s Q1 2026 earnings release (2026-04-16) transcript passage about Recycle capital through property sales: Raised 2026 Prologis-share contributions to $1,750 to $2,250 million; dispositions remained $1,750 to $2,250 million. Guidance is tabular."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://cs.prologis.com/sites/corpcs/files/documents/2026/04/2026-04-16-Prologis-Reports-First-Quarter-2026-Results.pdf",
+          "title": "Prologis Reports First Quarter 2026 Results - Apr 16, 2026",
+          "domain": "cs.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLD-P5-2026-07-16",
+      "promiseId": "P5",
+      "date": "2026-07-16",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 Prologis-share contributions to $2,000 to $2,500 million and dispositions to $2,250 to $2,750 million. Guidance is tabular.",
+      "quote": null,
+      "verbatim": {
+        "text": "2026 GUIDANCE --- --- --- Earnings (per diluted share)\\\\ Previous Current ... Capital Deployment - Prologis Share (in millions) ² Previous Current Development stabilizations $2,250 to $2,750 $2,250 to $2,750 Development starts $3,500 to $4,500 $4,500 to $5,500 Acquisitions $1,000 to $1,500 $1,500 to $2,000 Contributions $1,750 to $2,250 $2,000 to $2,500",
+        "segs": [
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " GUIDANCE --- --- --- Earnings (per diluted share)\\\\ Previous Current ... Capital Deployment - Prologis Share (in millions) ² Previous Current Development stabilizations ",
+            "h": 0
+          },
+          {
+            "t": "$2,250 to $2,750",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$2,250 to $2,750",
+            "h": 1
+          },
+          {
+            "t": " Development starts ",
+            "h": 0
+          },
+          {
+            "t": "$3,500 to $4,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$4,500 to $5,500",
+            "h": 1
+          },
+          {
+            "t": " Acquisitions ",
+            "h": 0
+          },
+          {
+            "t": "$1,000 to $1,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$1,500 to $2,000",
+            "h": 1
+          },
+          {
+            "t": " Contributions ",
+            "h": 0
+          },
+          {
+            "t": "$1,750 to $2,250",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$2,000 to $2,500",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "search",
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1044/prologis-reports-second-quarter-2026-results",
+          "title": "Prologis Reports Second Quarter 2026 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary",
+          "search": {
+            "rank": 2,
+            "query": "Prologis Q2 2026 earnings release transcript Recycle capital through property sales",
+            "objective": "Find Prologis, Inc.'s Q2 2026 earnings release (2026-07-16) transcript passage about Recycle capital through property sales: Raised 2026 Prologis-share contributions to $2,000 to $2,500 million and dispositions to $2,250 to $2,750 million. Guidance is tabular."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1044/prologis-reports-second-quarter-2026-results",
+          "title": "Prologis Reports Second Quarter 2026 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "PLD-P5-2026-10-15",
+      "promiseId": "P5",
+      "date": "2026-10-15",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "lowered",
+      "k": "c",
+      "summary": "Lowered 2026 Prologis-share contributions to $1,750 to $2,250 million and dispositions to $1,750 to $2,500 million. Guidance is tabular.",
+      "quote": null,
+      "verbatim": {
+        "text": "Capital Deployment - Prologis Share (in millions) ² Previous Current Development stabilizations $2,250 to $2,750 $2,500 to $3,000 Development starts $4,500 to $5,500 $5,000 to $5,750 Acquisitions $1,500 to $2,000 $2,100 to $2,300 Contributions $2,000 to $2,500",
+        "segs": [
+          {
+            "t": "Capital Deployment - Prologis Share (in millions) ² Previous Current Development stabilizations ",
+            "h": 0
+          },
+          {
+            "t": "$2,250 to $2,750",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$2,500 to $3,000",
+            "h": 1
+          },
+          {
+            "t": " Development starts ",
+            "h": 0
+          },
+          {
+            "t": "$4,500 to $5,500",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$5,000 to $5,750",
+            "h": 1
+          },
+          {
+            "t": " Acquisitions ",
+            "h": 0
+          },
+          {
+            "t": "$1,500 to $2,000",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "$2,100 to $2,300",
+            "h": 1
+          },
+          {
+            "t": " Contributions ",
+            "h": 0
+          },
+          {
+            "t": "$2,000 to $2,500",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1055/prologis-reports-third-quarter-2026-results",
+          "title": "Prologis Reports Third Quarter 2026 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://ir.prologis.com/news-events/press-releases/detail/1055/prologis-reports-third-quarter-2026-results",
+          "title": "Prologis Reports Third Quarter 2026 Results :: Prologis, Inc. (PLD)",
+          "domain": "ir.prologis.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript",
+      "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://ir.prologis.com/news-events/press-releases/detail/1029/prologis-reports-fourth-quarter-and-full-year-2025-results",
+      "title": "Prologis Reports Fourth Quarter and Full Year 2025 Results :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P1 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/21/prologis-pld-q4-2025-earnings-call-transcript/",
+      "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://ir.prologis.com/news-events/press-releases/detail/1055/prologis-reports-third-quarter-2026-results",
+      "title": "Prologis Reports Third Quarter 2026 Results :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://ir.prologis.com/news-events/press-releases/detail/1044/prologis-reports-second-quarter-2026-results",
+      "title": "Prologis Reports Second Quarter 2026 Results :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/01/17/prologis-pld-q4-2023-earnings-call-transcript",
+      "title": "Prologis (PLD) Q4 2023 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 7,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/04/17/prologis-pld-q1-2024-earnings-call-transcript",
+      "title": "Prologis (PLD) Q1 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 8,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/10/16/prologis-pld-q3-2024-earnings-call-transcript",
+      "title": "Prologis (PLD) Q3 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 9,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/245947-q4-2024",
+      "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 10,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/308454-q1-2025",
+      "title": "Prologis (PLD) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 11,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/650301-q2-2026/",
+      "title": "Prologis (PLD) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 12,
+      "url": "https://www.benzinga.com/news/26/07/60505656/prologis-q2-2026-earnings-call-complete-transcript",
+      "title": "Prologis Q2 2026 Earnings Call: Complete Transcript - Prologis (NYSE:PLD) - Benzinga",
+      "domain": "benzinga.com",
+      "tier": "press",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 13,
+      "url": "https://ir.prologis.com/financials/sec-filings/content/0001193125-26-051453/pld-20251231.htm",
+      "title": "February 13, 2026 - 10-K: Annual report [Section 13 and 15(d), not S-K Item 405] | Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://ir.prologis.com/news-events/press-releases/detail/4/prologis-commits-to-net-zero-emissions-by-2040",
+      "title": "Prologis Commits to Net Zero Emissions by 2040 :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://ir.prologis.com/news-events/press-releases/detail/947/prologis-ranks-2-for-on-site-solar-in-u-s",
+      "title": "Prologis Ranks #2 for On-Site Solar in U.S. :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://ir.prologis.com/news-events/press-releases/detail/974/prologis-hits-500-megawatt-solar-milestone---halfway-to-one-gigawatt-goal",
+      "title": "Prologis Hits 500-Megawatt Solar Milestone - Halfway to One Gigawatt Goal :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://www.prologis.com/sites/corporate/files/documents/2026/01/2026-01-21-Prologis-Reports-Fourth-Quarter-and-Full-Year-2025-Results.pdf",
+      "title": "Prologis Reports Fourth Quarter and Full Year 2025 Results - Jan 21, 2026",
+      "domain": "prologis.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://www.prologis.com/insights-news/blog/power-where-its-needed-prologis-surpasses-1-gigawatt-solar-and-battery-storage",
+      "title": "Prologis: Leading Solar Energy Solutions for Logistics",
+      "domain": "prologis.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "http://ir.prologis.com/news-events/events-presentations/detail/20231213-prologis-investor-forum-2023",
+      "title": "Prologis Investor Forum 2023 :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 20,
+      "url": "https://ir.prologis.com/events-presentations/events/detail/20240117-prologis-q4-2023-earnings-conference-call",
+      "title": "Prologis Q4 2023 Earnings Conference Call :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 21,
+      "url": "https://ir.prologis.com/news-events/press-releases/detail/1036/prologis-reports-first-quarter-2026-results",
+      "title": "Prologis Reports First Quarter 2026 Results :: Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 22,
+      "url": "https://cs.prologis.com/sites/corpcs/files/documents/2026/04/2026-04-16-Prologis-Reports-First-Quarter-2026-Results.pdf",
+      "title": "Prologis Reports First Quarter 2026 Results - Apr 16, 2026",
+      "domain": "cs.prologis.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://ir.prologis.com/financials/sec-filings/content/0001193125-26-157977/pld-ex99_2.htm",
+      "title": "April 16, 2026 - EX-99.2 - 8-K: Current report | Prologis, Inc. (PLD)",
+      "domain": "ir.prologis.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 24,
+      "url": "https://www.prologis.com/insights-news/research/2024-market-rents-reset-after-years-outperformance",
+      "title": "2024: Market Rents Reset After Years of Outperformance | Prologis",
+      "domain": "prologis.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 25,
+      "url": "https://www.fool.com/earnings/call-transcripts/2022/07/18/prologis-pld-q2-2022-earnings-call-transcript",
+      "title": "Prologis (PLD) Q2 2022 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/07/17/prologis-pld-q2-2024-earnings-call-transcript/",
+      "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 27,
+      "url": "http://stockanalysis.com/stocks/pld/transcripts/228937-bank-of-america-2024-global-real-estate-conference",
+      "title": "Prologis (PLD) Transcript: Bank of America 2024 Global Real Estate Conference",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 28,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/16/prologis-pld-q3-2026-earnings-call-transcript/",
+      "title": "Prologis (PLD) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 29,
+      "url": "https://www.fool.com/earnings/call-transcripts/2022/10/19/prologis-pld-q3-2022-earnings-call-transcript",
+      "title": "Prologis (PLD) Q3 2022 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 30,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/01/18/prologis-pld-q4-2022-earnings-call-transcript",
+      "title": "Prologis (PLD) Q4 2022 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 31,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/49950-q1-2023/",
+      "title": "Prologis (PLD) Q1 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 32,
+      "url": "https://www.fool.com/earnings/call-transcripts/2023/07/18/prologis-pld-q2-2023-earnings-call-transcript",
+      "title": "Prologis (PLD) Q2 2023 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 33,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/83935-q3-2023/",
+      "title": "Prologis (PLD) Q3 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 34,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/07/17/prologis-pld-q2-2024-earnings-call-transcript",
+      "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 35,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/10/15/prologis-pld-q3-2025-earnings-call-transcript",
+      "title": "Prologis (PLD) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 36,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/393360-investor-day-2023/",
+      "title": "Prologis (PLD) Transcript: Investor Day 2023",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 37,
+      "url": "http://stockanalysis.com/stocks/pld/transcripts/200338-nareit-reit-week-2024-investor-conference",
+      "title": "Prologis (PLD) Transcript: Nareit REIT Week: 2024 Investor Conference",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 38,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/191040-q2-2024",
+      "title": "Prologis (PLD) Q2 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 39,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/214012-q3-2024/",
+      "title": "Prologis (PLD) Q3 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 40,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/245947-q4-2024/",
+      "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 41,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/308454-q1-2025/",
+      "title": "Prologis (PLD) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 42,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/336927-q2-2025/",
+      "title": "Prologis (PLD) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 43,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/363939-q3-2025/",
+      "title": "Prologis (PLD) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 44,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/398860-q4-2025/",
+      "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 45,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/544216-q1-2026/",
+      "title": "Prologis (PLD) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 46,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/21/prologis-pld-q4-2024-earnings-call-transcript/",
+      "title": "Prologis (PLD) Q4 2024 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 47,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/07/16/prologis-pld-q2-2025-earnings-call-transcript",
+      "title": "Prologis (PLD) Q2 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 48,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/363939-q3-2025",
+      "title": "Prologis (PLD) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 49,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/21/prologis-pld-q4-2025-earnings-call-transcript",
+      "title": "Prologis (PLD) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 50,
+      "url": "https://stockanalysis.com/stocks/pld/transcripts/544216-q1-2026",
+      "title": "Prologis (PLD) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 51,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/16/prologis-pld-q1-2026-earnings-call-transcript/",
+      "title": "Prologis (PLD) Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 52,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_54d0cb5d7ff9fcdb3f6e674c626ac2f3/prologis/db/2346/24099/supplemental_financial_report_pdf/Q3_2026_Prologis_Earnings_Supplemental.pdf",
+      "title": "Supplemental Presentation File",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 53,
+      "url": "https://www.earningscall.ai/stock/transcript/PLD-2025-Q2",
+      "title": "PROLOGIS, INC. Q2 2025 Earnings Call Transcript | Full Text",
+      "domain": "earningscall.ai",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 54,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_20c58d4e5f0003df7cbb30036282378c/prologis/db/2327/23427/pdf/PLD%2BInvestor%2BForum%2B2023%2B-%2BFull%2BPresentation.pdf",
+      "title": "Forward-looking statements",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 55,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_9c00249764c385b113c83a1f83ada16d/prologis/db/2322/23716/presentation/PLD_March_2024_Citi_Presentation_vF.pdf",
+      "title": "PLD March 2024 Citi Presentation vF",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 56,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_e2c237411ac52e7598f9bf02468c3992/prologis/db/2317/21661/file/Q4_2025_Prologis_Earnings_Supplemental.pdf",
+      "title": "Prologis Supplemental Information",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 57,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_d65a83a8d22dfff29d3bb1dc3c625c4b/prologis/db/2317/21681/file/Q1_2026_Prologis_Earnings_Supplemental.pdf",
+      "title": "Q1 2026 Supplemental Draft 04.XX.26",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 58,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_9c00249764c385b113c83a1f83ada16d/prologis/db/2346/23888/supplemental_financial_report_pdf/Q2_2026_Prologis_Earnings_Supplemental.pdf",
+      "title": "Supplemental Presentation File",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 59,
+      "url": "https://d1io3yog0oux5.cloudfront.net/_a20af3ead15df35199c6bdef61e8c419/prologis/db/2327/24117/pdf/Prologis_Investor+Presentation_Oct_2026.pdf",
+      "title": "Prologis Investor Presentation - October 2026",
+      "domain": "d1io3yog0oux5.cloudfront.net",
+      "tier": "press",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.205886Z",
+      "completedAt": "2026-11-05T06:31:11.557450Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.677943Z",
+      "completedAt": "2026-11-05T19:15:03.888631Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.684543Z",
+      "completedAt": "2026-11-05T19:16:15.969558Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.691253Z",
+      "completedAt": "2026-11-05T19:12:34.089408Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.700458Z",
+      "completedAt": "2026-11-05T19:13:59.692581Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.710379Z",
+      "completedAt": "2026-11-05T19:13:34.155853Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.756356Z",
+      "completedAt": "2026-11-05T19:48:01.688742Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.766755Z",
+      "completedAt": "2026-11-05T19:51:33.580612Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.774200Z",
+      "completedAt": "2026-11-05T19:49:18.917606Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.781671Z",
+      "completedAt": "2026-11-05T19:48:14.845703Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.789062Z",
+      "completedAt": "2026-11-05T19:48:17.893929Z"
+    }
+  ],
+  "fills": {
+    "filled": 6
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "52 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "40 of 40 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "40 of 40 (100%); 6 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-15; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5c/Prologis_Logo_Current.svg/3840px-Prologis_Logo_Current.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Prologis_Logo_Current.svg",
+      "title": "File:Prologis Logo Current.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 750,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://www.prologis.com/sites/corporate/files/images/2026/06/020326_Prologis_Drone_22351_WilmingtonAve%2822673_WilmingtonAve%29_2003_0047_D.jpg",
+      "sourcePageUrl": "https://www.prologis.com/insights-news/blog/how-prologis-warehouse-rooftops-are-powering-community-solar-california",
+      "title": "How Prologis Warehouse Rooftops Are Powering Community Solar in California  | Prologis",
+      "width": 3560,
+      "height": 2000,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.386Z"
+}

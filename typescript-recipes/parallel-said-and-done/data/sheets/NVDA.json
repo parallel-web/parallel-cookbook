@@ -1,0 +1,2079 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "NVDA",
+  "name": "NVIDIA Corporation",
+  "short": "NVIDIA",
+  "website": "nvidia.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Last Sunday in January",
+  "irUrl": "https://investor.nvidia.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-08-26",
+    "quarter": "Q2 FY2027"
+  },
+  "nextCall": {
+    "date": "2026-11-17",
+    "time": "2:00 PM PT",
+    "quarter": "Q3 FY2027"
+  },
+  "photoSubject": "NVIDIA Blackwell AI data center",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch and ramp Blackwell",
+      "commitment": "Start Blackwell production shipments in Q2, ramp in Q3, and have customer data centers stood up in Q4.",
+      "deadline": "Q2 shipments; Q3 ramp; Q4 customer deployments",
+      "firstStated": "2024-05-22",
+      "status": "partly_delivered",
+      "k": "part",
+      "outcomeSummary": "Shipments and ramp slipped to the fourth quarter. NVIDIA reported $11.0 billion of Blackwell revenue in the fourth quarter of fiscal 2025; customer systems came online.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000262/q2fy25cfocommentary.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000315/q3fy25cfocommentary.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2025/Q425/Q4FY25-CFO-Commentary.pdf",
+          "title": "Q4FY25 CFO Commentary",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://transcripts.platformaeronaut.com/transcripts/NVDA-4Q25-transcript",
+          "title": "NVDA Q4 2025 Earnings Call Transcript | Platform Aeronaut Transcripts",
+          "domain": "transcripts.platformaeronaut.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://fintool.com/app/research/companies/NVDA/documents/transcripts/q1-2025",
+          "title": "NVIDIA (NVDA) Q1 2025 Earnings Call Transcript | Fintool",
+          "domain": "fintool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/08/28/nvidia-nvda-q2-2025-earnings-call-transcript/",
+          "title": "Nvidia (NVDA) Q2 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript/",
+          "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-02-26",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "partly_delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2024-11-20",
+            "what_was_said": "NVIDIA reported shipping 13,000 Blackwell GPU samples in Q3 and said its major partners were working to bring up their data centers. This distinguishes sample shipments from the delayed production rollout.",
+            "call": "Q3 FY2025 earnings call"
+          },
+          {
+            "date": "2025-02-26",
+            "what_was_said": "Management reported $11 billion of Blackwell revenue in Q4. Huang also acknowledged that the initial Blackwell 'hiccup' had probably cost a couple of months, while saying NVIDIA was fully recovered.",
+            "call": "Q4 FY2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Restore mid-70s gross margins",
+      "commitment": "Restore gross margins to the mid-70s later in 2025 as Blackwell manufacturing costs improve.",
+      "deadline": "Later in 2025 / exit FY2026",
+      "firstStated": "2025-02-26",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "The mid-70s exit target was delivered: quarterly non-GAAP gross margin reached 75.2% and GAAP gross margin 75.0%, reported February 25, 2026.",
+      "citations": [
+        {
+          "url": "http://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+          "title": "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript/",
+          "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q4/NVDA-Q4-2026-Earnings-Call-25-February-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-02-25",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-05-28",
+            "what_was_said": "Kress reported Q1 non-GAAP gross margin of 61%, including a $4.5 billion H20 inventory and purchase-obligation charge. Excluding that charge, non-GAAP gross margin would have been 71.3%. The late-year mid-70s target remained unchanged despite this interim setback.",
+            "call": "Q1 FY2026 earnings call"
+          },
+          {
+            "date": "2025-11-19",
+            "what_was_said": "Alongside the statement that the goal had been achieved, Kress reported Q3 gross margins of 73.4% GAAP and 73.6% non-GAAP, and forecast Q4 margins of 74.8% and 75.0%, respectively, plus or minus 50 basis points. This distinguishes the achievement language in S4 from the quarterly results then reported.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Launch Blackwell Ultra",
+      "commitment": "Bring Blackwell Ultra to market in the second half of 2025.",
+      "deadline": "Second half of 2025",
+      "firstStated": "2025-02-26",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "NVIDIA reported GB300 production shipments had begun in Q2 and Blackwell Ultra production was ramping at full speed, meeting the promised launch window.",
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026",
+          "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2026 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-ultra-ai-factory-platform-paves-way-for-age-of-ai-reasoning",
+          "title": "NVIDIA Blackwell Ultra AI Factory Platform Paves Way for Age of AI Reasoning | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript/",
+          "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q1/NVDA-Q1-2026-Earnings-Call-28-May-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-08-27",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-08-27",
+            "what_was_said": "Colette Kress said, “We began production shipments of GB300 in Q2.” This refers to fiscal Q2 FY2026, not calendar Q2.",
+            "call": "Q2 FY2026 earnings call"
+          },
+          {
+            "date": "2025-08-27",
+            "what_was_said": "Despite full production being underway, Kress still said, “We expect widespread market availability in the second half of the year.” This distinguishes production progress from completed market availability.",
+            "call": "Q2 FY2026 earnings call"
+          },
+          {
+            "date": "2025-11-19",
+            "what_was_said": "Kress reported a seamless transition to GB300, with production shipments to major cloud service providers, hyperscalers and GPU clouds already driving their growth. This confirms commercial delivery within the promised second-half window.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Bring Rubin into volume production",
+      "commitment": "Bring Rubin into volume production in 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-08-27",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Rubin was declared in full production; later announcements confirmed full-scale system production and the start of Vera Rubin production shipments.",
+      "citations": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer",
+          "title": "NVIDIA Kicks Off the Next Generation of AI With Rubin — Six New Chips, One Incredible AI Supercomputer | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory",
+          "title": "NVIDIA Vera Rubin Ramps Into Full Production to Power Agentic AI Factories Worldwide | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/NVDA-Q1-2027-Earnings-Call-20-May-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-01-05",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-08-26",
+            "what_was_said": "“We commenced production shipments of Vera Rubin earlier this month.” This confirms actual production shipments, beyond the full-production declarations included in the claimed statements.",
+            "call": "Q2 FY2027 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Deliver Blackwell and Rubin revenue",
+      "commitment": "Realize the $500 billion Blackwell and Rubin revenue opportunity across calendar 2025–2026.",
+      "deadline": "End of calendar 2026",
+      "firstStated": "2025-10-28",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The outlook expanded to at least $1 trillion through 2027; management had not declared the original $500 billion opportunity realized.",
+      "citations": [
+        {
+          "url": "https://www.nvidia.com/gtc/keynote/transcript.md",
+          "title": "Transcript: NVIDIA GTC 2026 Keynote with Jensen Huang",
+          "domain": "nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/NVDA-Q1-2027-Earnings-Call-20-May-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-11-19",
+            "what_was_said": "In Q&A, Colette Kress explicitly said NVIDIA was on track for the $500 billion forecast through calendar 2026, but added that the number would grow and that additional business offered upside above $500 billion.",
+            "call": "Q3 FY2026 earnings call"
+          },
+          {
+            "date": "2026-05-20",
+            "what_was_said": "Jensen Huang identified potential upside above the $1 trillion outlook from growing NVIDIA's share of frontier AI models and from standalone Vera CPUs, which were excluded from that figure.",
+            "call": "Q1 FY2027 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "NVDA-P1-2024-05-22",
+      "promiseId": "P1",
+      "date": "2024-05-22",
+      "call": "Q1 FY2025 earnings call",
+      "speaker": "Jensen Huang, President and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Production shipments start in Q2, ramp in Q3, and customer data centers should be stood up in Q4.",
+      "quote": "But our production shipments will start in Q2 and ramp in Q3, and customers should have data centers stood up in Q4.",
+      "verbatim": {
+        "text": "But our production shipments will start in Q2 and ramp in Q3, and customers should have data centers stood up in Q4.",
+        "segs": [
+          {
+            "t": "But our production shipments will start in ",
+            "h": 0
+          },
+          {
+            "t": "Q2",
+            "h": 1
+          },
+          {
+            "t": " and ramp in ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": ", and customers should have data centers stood up in ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/NVDA/transcripts/2025/1",
+          "title": "NVIDIA Corporation (NVDA) Q1 FY2025 Earnings Call Transcript - May 22, 2024 | Roic AI",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/NVDA/transcripts/2025/1",
+          "title": "NVIDIA Corporation (NVDA) Q1 FY2025 Earnings Call Transcript - May 22, 2024 | Roic AI",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P1-2024-08-28",
+      "promiseId": "P1",
+      "date": "2024-08-28",
+      "call": "CFO Commentary on Second Quarter Fiscal 2025 Results",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Customer samples shipped in the second quarter; production ramp moved to the fourth quarter and would continue into fiscal 2026.",
+      "quote": "Blackwell production ramp is scheduled to begin in the fourth quarter and continue into fiscal 2026.",
+      "verbatim": {
+        "text": "Blackwell production ramp is scheduled to begin in the fourth quarter and continue into fiscal 2026.",
+        "segs": [
+          {
+            "t": "Blackwell production ramp is scheduled to begin in the fourth quarter and continue into ",
+            "h": 0
+          },
+          {
+            "t": "fiscal 2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000262/q2fy25cfocommentary.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000262/q2fy25cfocommentary.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/nvda/transcripts/197211-q2-2025",
+          "title": "NVIDIA (NVDA) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "prepared_remarks"
+    },
+    {
+      "id": "NVDA-P1-2024-11-19",
+      "promiseId": "P1",
+      "date": "2024-11-19",
+      "call": "NVIDIA and Microsoft Showcase Blackwell Preview, Omniverse Industrial AI and RTX AI PCs at Microsoft Ignite",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Azure ND GB200 V6 private preview launched, demonstrating early Blackwell customer deployment.",
+      "quote": "At Microsoft Ignite, Microsoft announced the launch of the first cloud private preview of the Azure ND GB200 V6 VM series, based on the NVIDIA Blackwell platform.",
+      "verbatim": {
+        "text": "At Microsoft Ignite , Microsoft announced the launch of the first cloud private preview of the Azure ND GB200 V6 VM series , based on the NVIDIA Blackwell platform.",
+        "segs": [
+          {
+            "t": "At Microsoft Ignite , Microsoft announced the launch of the first cloud private preview of the Azure ND GB200 V6 VM series , based on the NVIDIA Blackwell platform.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://blogs.nvidia.com/blog/microsoft-ignite-blackwell-omniverse-rtx-ai",
+          "title": "NVIDIA and Microsoft Showcase Blackwell Preview, Omniverse Industrial AI and RTX AI PCs | NVIDIA Blog",
+          "domain": "blogs.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://blogs.nvidia.com/blog/microsoft-ignite-blackwell-omniverse-rtx-ai",
+          "title": "NVIDIA and Microsoft Showcase Blackwell Preview, Omniverse Industrial AI and RTX AI PCs | NVIDIA Blog",
+          "domain": "blogs.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "NVDA-P1-2024-11-20",
+      "promiseId": "P1",
+      "date": "2024-11-20",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Colette Kress, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Full production followed the change; 13,000 GPU samples shipped in the third quarter while partners worked to bring up data centers.",
+      "quote": "Blackwell is in full production after a successfully executed change.",
+      "verbatim": {
+        "text": "Blackwell is in full production after a successfully executed change.",
+        "segs": [
+          {
+            "t": "Blackwell is in full production after a successfully executed change.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/11/20/nvidia-nvda-q3-2025-earnings-call-transcript/",
+          "title": "Nvidia (NVDA) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2024/11/20/nvidia-nvda-q3-2025-earnings-call-transcript/",
+          "title": "Nvidia (NVDA) Q3 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000315/q3fy25cfocommentary.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P1-2025-01-06",
+      "promiseId": "P1",
+      "date": "2025-01-06",
+      "call": "CES 2025 keynote",
+      "speaker": "Jensen Huang, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Blackwell was in full production, with every cloud service provider operating systems.",
+      "quote": "First of all, every single cloud service provider now has systems up and running.",
+      "verbatim": {
+        "text": "First of all, every single cloud service provider now has systems up and running.",
+        "segs": [
+          {
+            "t": "First of all, every single cloud service provider now has systems up and running.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/nvda/transcripts/302557-ces-2025-keynote",
+          "title": "NVIDIA (NVDA) Transcript: CES 2025 Keynote",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/nvda/transcripts/302557-ces-2025-keynote",
+          "title": "NVIDIA (NVDA) Transcript: CES 2025 Keynote",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "NVDA-P1-2025-02-26",
+      "promiseId": "P1",
+      "date": "2025-02-26",
+      "call": "Q4 and Fiscal 2025 earnings release",
+      "speaker": "Jensen Huang, founder and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Declared massive-scale Blackwell AI supercomputer production successfully ramped, with billions of dollars in first-quarter sales.",
+      "quote": "We’ve successfully ramped up the massive-scale production of Blackwell AI supercomputers, achieving billions of dollars in sales in its first quarter.",
+      "verbatim": {
+        "text": "“We’ve successfully ramped up the massive-scale production of Blackwell AI supercomputers, achieving billions of dollars in sales in its first quarter.",
+        "segs": [
+          {
+            "t": "“We’ve successfully ramped up the massive-scale production of Blackwell AI supercomputers, achieving billions of dollars in sales in its first quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2025",
+          "title": "\n\tNVIDIA Corporation - NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2025\n",
+          "domain": "investor.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2025",
+          "title": "\n\tNVIDIA Corporation - NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2025\n",
+          "domain": "investor.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NVDA-P2-2025-02-26",
+      "promiseId": "P2",
+      "date": "2025-02-26",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Colette Kress, Executive Vice President and CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected gross margins to return to the mid-70s late in the fiscal year as Blackwell ramped and costs improved.",
+      "quote": "When fully ramped, we have many opportunities to improve the cost, and gross margin will improve and return to the mid-70s, late this fiscal year.",
+      "verbatim": {
+        "text": "When fully ramped, we have many opportunities to improve the cost, and gross margin will improve and return to the mid-70s, late this fiscal year.",
+        "segs": [
+          {
+            "t": "When fully ramped, we have many opportunities to improve the cost, and gross margin will improve and return to the mid-70s, late this fiscal year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript",
+          "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript",
+          "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2025/NVIDIA-4th-Quarter-FY25-Financial-Results/default.aspx",
+          "title": "\n\tNVIDIA Corporation - NVIDIA 4th Quarter FY25 Financial Results\n",
+          "domain": "investor.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P2-2025-05-28",
+      "promiseId": "P2",
+      "date": "2025-05-28",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Colette Kress, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the mid-70s gross-margin objective for late that year.",
+      "quote": "We are continuing to work towards achieving gross margins in the mid-70s range late this year.",
+      "verbatim": {
+        "text": "We are continuing to work towards achieving gross margins in the mid-70s range late this year.",
+        "segs": [
+          {
+            "t": "We are continuing to work towards achieving gross margins in the mid-70s range late this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q1/NVDA-Q1-2026-Earnings-Call-28-May-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q1/NVDA-Q1-2026-Earnings-Call-28-May-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P2-2025-08-27",
+      "promiseId": "P2",
+      "date": "2025-08-27",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Colette Kress, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed exiting the fiscal year with non-GAAP gross margins in the mid-70s.",
+      "quote": "We continue to expect to exit the year with non-GAAP gross margins in mid-70s.",
+      "verbatim": {
+        "text": "We continue to expect to exit the year with non-GAAP gross margins in mid-70s.",
+        "segs": [
+          {
+            "t": "We continue to expect to exit the year with non-GAAP gross margins in mid-70s.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P2-2025-11-19",
+      "promiseId": "P2",
+      "date": "2025-11-19",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Colette Kress, Executive Vice President and CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Claimed the mid-70s target achieved; Q3 non-GAAP margin was 73.6%, while Q4 guidance was 75%, with execution still pending.",
+      "quote": "We achieved that and getting ready to also execute that in Q4.",
+      "verbatim": {
+        "text": "We achieved that and getting ready to also execute that in Q4.",
+        "segs": [
+          {
+            "t": "We achieved that and getting ready to also execute that in ",
+            "h": 0
+          },
+          {
+            "t": "Q4",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026",
+          "title": "NVIDIA Announces Financial Results for Third Quarter Fiscal 2026 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P2-2026-02-25",
+      "promiseId": "P2",
+      "date": "2026-02-25",
+      "call": "Q4 and FY2026 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported Q4 FY2026 GAAP gross margin of 75.0% and non-GAAP gross margin of 75.2%, confirming delivery.",
+      "quote": "For the quarter, GAAP and non-GAAP gross margins were 75.0% and 75.2%, respectively.",
+      "verbatim": {
+        "text": "For the quarter, GAAP and non-GAAP gross margins were 75.0% and 75.2%, respectively.",
+        "segs": [
+          {
+            "t": "For the quarter, GAAP and non-GAAP gross margins were ",
+            "h": 0
+          },
+          {
+            "t": "75.0%",
+            "h": 1
+          },
+          {
+            "t": " and ",
+            "h": 0
+          },
+          {
+            "t": "75.2%",
+            "h": 1
+          },
+          {
+            "t": ", respectively.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+          "title": "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+          "title": "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NVDA-P3-2025-02-26",
+      "promiseId": "P3",
+      "date": "2025-02-26",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Jensen Huang, President and Chief Executive Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Blackwell Ultra was scheduled for the second half of 2025.",
+      "quote": "Yes. Blackwell Ultra is second half.",
+      "verbatim": {
+        "text": "Jensen Huang \\-- President and Chief Executive Officer Yes. Blackwell Ultra is second half.",
+        "segs": [
+          {
+            "t": "Jensen Huang \\-- President and Chief Executive Officer Yes. Blackwell Ultra is second half.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript/",
+          "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript/",
+          "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P3-2025-03-18",
+      "promiseId": "P3",
+      "date": "2025-03-18",
+      "call": "NVIDIA Blackwell Ultra AI Factory Platform Paves Way for Age of AI Reasoning",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Partner availability for Blackwell Ultra-based products remained targeted for the second half of 2025.",
+      "quote": "Blackwell Ultra-based products are expected to be available from partners starting from the second half of 2025.",
+      "verbatim": {
+        "text": "Blackwell Ultra-based products are expected to be available from partners starting from the second half of 2025.",
+        "segs": [
+          {
+            "t": "Blackwell Ultra-based products are expected to be available from partners starting from the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-ultra-ai-factory-platform-paves-way-for-age-of-ai-reasoning",
+          "title": "NVIDIA Blackwell Ultra AI Factory Platform Paves Way for Age of AI Reasoning | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-ultra-ai-factory-platform-paves-way-for-age-of-ai-reasoning",
+          "title": "NVIDIA Blackwell Ultra AI Factory Platform Paves Way for Age of AI Reasoning | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "NVDA-P3-2025-05-28",
+      "promiseId": "P3",
+      "date": "2025-05-28",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Colette M. Kress, Chief Financial Officer and Executive Vice President",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "GB300 sampling began earlier that month at major CSPs; production shipments were expected later that quarter.",
+      "quote": "Sampling of GB300 systems began earlier this month at the major CSPs, and we expect production shipments to commerce later this quarter.",
+      "verbatim": {
+        "text": "Sampling of GB300 systems began earlier this month at the major CSPs, and we expect production shipments to commerce later this quarter.",
+        "segs": [
+          {
+            "t": "Sampling of GB300 systems began earlier this month at the major CSPs, and we expect production shipments to commerce later this quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q1/NVDA-Q1-2026-Earnings-Call-28-May-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q1/NVDA-Q1-2026-Earnings-Call-28-May-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P3-2025-08-27",
+      "promiseId": "P3",
+      "date": "2025-08-27",
+      "call": "Q2 FY2026 earnings release",
+      "speaker": "Jensen Huang, Founder and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Blackwell Ultra production was ramping at full speed.",
+      "quote": "“Blackwell is the AI platform the world has been waiting for, delivering an exceptional generational leap — production of Blackwell Ultra is ramping at full speed, and demand is extraordinary,” said Jensen Huang, founder and CEO of NVIDIA.",
+      "verbatim": {
+        "text": "“Blackwell is the AI platform the world has been waiting for, delivering an exceptional generational leap — production of Blackwell Ultra is ramping at full speed, and demand is extraordinary,” said Jensen Huang, founder and CEO of NVIDIA.",
+        "segs": [
+          {
+            "t": "“Blackwell is the AI platform the world has been waiting for, delivering an exceptional generational leap — production of Blackwell Ultra is ramping at full speed, and demand is extraordinary,” said Jensen Huang, founder and CEO of NVIDIA.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026",
+          "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2026 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026",
+          "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2026 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NVDA-P4-2025-08-27",
+      "promiseId": "P4",
+      "date": "2025-08-27",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Colette M. Kress, CFO and Executive Vice President",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Rubin remains scheduled for volume production next year.",
+      "quote": "Rubin remains on schedule for volume production next year.",
+      "verbatim": {
+        "text": "Rubin remains on schedule for volume production next year.",
+        "segs": [
+          {
+            "t": "Rubin remains on schedule for volume production next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P4-2025-11-19",
+      "promiseId": "P4",
+      "date": "2025-11-19",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Colette M. Kress, CFO and Executive Vice President",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Rubin remains on track to ramp in the second half of 2026.",
+      "quote": "The Rubin platform is on track to ramp in the second half of 2026.",
+      "verbatim": {
+        "text": "The Rubin platform is on track to ramp in the second half of 2026.",
+        "segs": [
+          {
+            "t": "The Rubin platform is on track to ramp in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P4-2026-01-05",
+      "promiseId": "P4",
+      "date": "2026-01-05",
+      "call": "NVIDIA Kicks Off the Next Generation of AI With Rubin — Six New Chips, One Incredible AI Supercomputer",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Rubin is in full production; partner products are expected in the second half of 2026.",
+      "quote": "NVIDIA Rubin is in full production, and Rubin-based products will be available from partners the second half of 2026.",
+      "verbatim": {
+        "text": "Rubin Readiness NVIDIA Rubin is in full production, and Rubin-based products will be available from partners the second half of 2026.",
+        "segs": [
+          {
+            "t": "Rubin Readiness NVIDIA Rubin is in full production, and Rubin-based products will be available from partners the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer",
+          "title": "NVIDIA Kicks Off the Next Generation of AI With Rubin — Six New Chips, One Incredible AI Supercomputer | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer",
+          "title": "NVIDIA Kicks Off the Next Generation of AI With Rubin — Six New Chips, One Incredible AI Supercomputer | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "NVDA-P4-2026-02-25",
+      "promiseId": "P4",
+      "date": "2026-02-25",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Colette M. Kress, CFO and Executive Vice President",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "First Vera Rubin samples shipped earlier this week; production shipments remain on track for the second half of the year.",
+      "quote": "We shipped our first Vera Rubin samples to customers earlier this week and we remain on track to commence production shipments in the second half of the year.",
+      "verbatim": {
+        "text": "We shipped our first Vera Rubin samples to customers earlier this week and we remain on track to commence production shipments in the second half of the year.",
+        "segs": [
+          {
+            "t": "We shipped our first Vera Rubin samples to customers earlier this week and we remain on track to commence production shipments in the second half of the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q4/NVDA-Q4-2026-Earnings-Call-25-February-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q4/NVDA-Q4-2026-Earnings-Call-25-February-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P4-2026-03-16",
+      "promiseId": "P4",
+      "date": "2026-03-16",
+      "call": "NVIDIA Vera Rubin Opens Agentic AI Frontier",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Seven chips are in full production, with five racks supporting Vera Rubin AI factories.",
+      "quote": "The NVIDIA Vera Rubin platform is opening the agentic AI frontier with seven new chips in full production and five racks to scale the world’s largest AI factories.",
+      "verbatim": {
+        "text": "The NVIDIA Vera Rubin platform is opening the agentic AI frontier with seven new chips in full production and five racks to scale the world’s largest AI factories for every phase of AI.",
+        "segs": [
+          {
+            "t": "The NVIDIA Vera Rubin platform is opening the agentic AI frontier with seven new chips in full production and five racks to scale the world’s largest AI factories for every phase of AI.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Opens-Agentic-AI-Frontier/default.aspx",
+          "title": "\n\tNVIDIA Corporation - NVIDIA Vera Rubin Opens Agentic AI Frontier\n",
+          "domain": "investor.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Opens-Agentic-AI-Frontier/default.aspx",
+          "title": "\n\tNVIDIA Corporation - NVIDIA Vera Rubin Opens Agentic AI Frontier\n",
+          "domain": "investor.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "NVDA-P4-2026-05-20",
+      "promiseId": "P4",
+      "date": "2026-05-20",
+      "call": "Q1 FY2027 earnings call",
+      "speaker": "Colette M. Kress, CFO and Executive Vice President",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Vera Rubin production shipments remain on track for the second half of this year, starting in Q3.",
+      "quote": "We are on track to commence production shipments of Vera Rubin in the second half of this year, starting in Q3.",
+      "verbatim": {
+        "text": "We are on track to commence production shipments of Vera Rubin in the second half of this year, starting in Q3.",
+        "segs": [
+          {
+            "t": "We are on track to commence production shipments of Vera Rubin in the second half of this year, starting in ",
+            "h": 0
+          },
+          {
+            "t": "Q3",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/NVDA-Q1-2027-Earnings-Call-20-May-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/NVDA-Q1-2027-Earnings-Call-20-May-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P4-2026-05-31",
+      "promiseId": "P4",
+      "date": "2026-05-31",
+      "call": "NVIDIA Vera Rubin Ramps Into Full Production to Power Agentic AI Factories Worldwide",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "System builders and partners are in full-scale production of Vera Rubin.",
+      "quote": "Top system builders, infrastructure software and storage partners are in full-scale production of Vera Rubin.",
+      "verbatim": {
+        "text": "Top system builders, infrastructure software and storage partners are in full-scale production of Vera Rubin.",
+        "segs": [
+          {
+            "t": "Top system builders, infrastructure software and storage partners are in full-scale production of Vera Rubin.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory",
+          "title": "NVIDIA Vera Rubin Ramps Into Full Production to Power Agentic AI Factories Worldwide | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory",
+          "title": "NVIDIA Vera Rubin Ramps Into Full Production to Power Agentic AI Factories Worldwide | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "NVDA-P4-2026-08-26",
+      "promiseId": "P4",
+      "date": "2026-08-26",
+      "call": "Q2 FY2027 earnings release",
+      "speaker": "Jensen Huang, Founder and CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Vera Rubin is now in full production.",
+      "quote": "Vera Rubin, now in full production, was built to power exactly this moment.",
+      "verbatim": {
+        "text": "Vera Rubin, now in full production, was built to power exactly this moment.”",
+        "segs": [
+          {
+            "t": "Vera Rubin, now in full production, was built to power exactly this moment.”",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+          "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2027 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+          "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2027 | NVIDIA Newsroom",
+          "domain": "nvidianews.nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "NVDA-P5-2025-10-28",
+      "promiseId": "P5",
+      "date": "2025-10-28",
+      "call": "GTC Washington DC 2025 presentation",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Disclosed more than half a trillion dollars in cumulative Blackwell and Rubin revenue visibility through CY2026, preceding the first earnings-call statement.",
+      "quote": "Visibility into more than half a trillion dollars in cumulative Blackwell and Rubin revenue through CY2026 (so far)",
+      "verbatim": {
+        "text": "Visibility into more than half a trillion dollars in cumulative Blackwell and Rubin revenue through CY2026 (so far)",
+        "segs": [
+          {
+            "t": "Visibility into more than half a trillion dollars in cumulative Blackwell and Rubin revenue through CY2026 (so far)",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_events/2025/Oct/28/gtc-dc-2025.pdf",
+          "title": "Doc Events",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2025/GTC-Washington-DC-2025-2025-7Ku19EGpuF/default.aspx",
+          "title": "\n\tNVIDIA Corporation - GTC Washington DC 2025\n",
+          "domain": "investor.nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_events/2025/Oct/28/gtc-dc-2025.pdf",
+          "title": "Doc Events",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "NVDA-P5-2025-11-19",
+      "promiseId": "P5",
+      "date": "2025-11-19",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Colette Kress, Executive Vice President and CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reaffirmed $0.5 trillion through calendar 2026; reported the $500 billion forecast on track, with additional orders possible.",
+      "quote": "We currently have visibility to a $0.5 trillion in Blackwell and Rubin revenue from the start of this year through the end of calendar year 2026.",
+      "verbatim": {
+        "text": "We currently have visibility to a $0.5 trillion in Blackwell and Rubin revenue from the start of this year through the end of calendar year 2026.",
+        "segs": [
+          {
+            "t": "We currently have visibility to a ",
+            "h": 0
+          },
+          {
+            "t": "$0.5 trillion",
+            "h": 1
+          },
+          {
+            "t": " in Blackwell and Rubin revenue from the start of this year through the end of calendar year ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P5-2026-02-25",
+      "promiseId": "P5",
+      "date": "2026-02-25",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Colette Kress, Executive Vice President and CFO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Expected sequential revenue growth throughout calendar 2026, exceeding the previously shared $500 billion Blackwell and Rubin opportunity.",
+      "quote": "We look ahead, we expect sequential revenue growth throughout calendar 2026, exceeding what was included in the $500 billion Blackwell and Rubin revenue opportunity we shared last year.",
+      "verbatim": {
+        "text": "We look ahead, we expect sequential revenue growth throughout calendar 2026, exceeding what was included in the $500 billion",
+        "segs": [
+          {
+            "t": "We look ahead, we expect sequential revenue growth throughout calendar ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", exceeding what was included in the ",
+            "h": 0
+          },
+          {
+            "t": "$500 billion",
+            "h": 1
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q4/NVDA-Q4-2026-Earnings-Call-25-February-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q4/NVDA-Q4-2026-Earnings-Call-25-February-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P5-2026-03-16",
+      "promiseId": "P5",
+      "date": "2026-03-16",
+      "call": "GTC 2026 Keynote",
+      "speaker": "Jensen Huang, Founder, President and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Expanded Blackwell/Rubin visibility to at least $1 trillion through 2027, versus $500 billion through 2026.",
+      "quote": "I see through 2027. At least $1 trillion.",
+      "verbatim": {
+        "text": "I see through 2027. At least $1 trillion.",
+        "segs": [
+          {
+            "t": "I see through ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ". At least ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.nvidia.com/gtc/keynote/transcript.md",
+          "title": "Transcript: NVIDIA GTC 2026 Keynote with Jensen Huang",
+          "domain": "nvidia.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/GTC-2026-Keynote-2026-HhZOL0SIV4/default.aspx",
+          "title": "\n\tNVIDIA Corporation - GTC 2026 Keynote\n",
+          "domain": "investor.nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.nvidia.com/gtc/keynote/transcript.md",
+          "title": "Transcript: NVIDIA GTC 2026 Keynote with Jensen Huang",
+          "domain": "nvidia.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "NVDA-P5-2026-05-20",
+      "promiseId": "P5",
+      "date": "2026-05-20",
+      "call": "Q1 FY2027 earnings call",
+      "speaker": "Colette Kress, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed confidence in $1 trillion in Blackwell and Rubin revenue from 2025 through calendar 2027; not a new increase.",
+      "quote": "We are continuing to work vigorously on our supply chain ecosystem to address the incredible demand we see ahead of us, giving us full confidence in the $1 trillion in Blackwell and Rubin revenue we foresee from 2025 through calendar 2027.",
+      "verbatim": {
+        "text": "We are continuing to work vigorously on our supply chain ecosystem to address the incredible demand we see ahead of us, giving us full confidence in the $1 trillion in Blackwell and Rubin revenue we foresee from 2025 through calendar 2027.",
+        "segs": [
+          {
+            "t": "We are continuing to work vigorously on our supply chain ecosystem to address the incredible demand we see ahead of us, giving us full confidence in the ",
+            "h": 0
+          },
+          {
+            "t": "$1 trillion",
+            "h": 1
+          },
+          {
+            "t": " in Blackwell and Rubin revenue we foresee from ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " through calendar ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/NVDA-Q1-2027-Earnings-Call-20-May-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/NVDA-Q1-2027-Earnings-Call-20-May-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.nvidia.com/gtc/keynote/transcript.md",
+          "title": "Transcript: NVIDIA GTC 2026 Keynote with Jensen Huang",
+          "domain": "nvidia.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "NVDA-P5-2026-08-26",
+      "promiseId": "P5",
+      "date": "2026-08-26",
+      "call": "Q2 FY2027 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Management did not explicitly restate or revise the cumulative Blackwell and Rubin revenue target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s201.q4cdn.com/141608511/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+          "title": "NVIDIA Corp.",
+          "domain": "s201.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "http://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+      "title": "NVIDIA Corp.",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q3/NVDA-Q3-2026-Earnings-Call-19-November-2025-5_00-PM-ET.pdf",
+      "title": "NVIDIA Corp.",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q4/NVDA-Q4-2026-Earnings-Call-25-February-2026-5_00-PM-ET.pdf",
+      "title": "NVIDIA Corp.",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript/",
+      "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 5,
+      "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2027/q1/NVDA-Q1-2027-Earnings-Call-20-May-2026-5_00-PM-ET.pdf",
+      "title": "NVIDIA Corp.",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://s201.q4cdn.com/141608511/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+      "title": "NVIDIA Corp.",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 7,
+      "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q1/NVDA-Q1-2026-Earnings-Call-28-May-2025-5_00-PM-ET.pdf",
+      "title": "NVIDIA Corp.",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://www.nvidia.com/gtc/keynote/transcript.md",
+      "title": "Transcript: NVIDIA GTC 2026 Keynote with Jensen Huang",
+      "domain": "nvidia.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 9,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000262/q2fy25cfocommentary.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 10,
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000315/q3fy25cfocommentary.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "http://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-fourth-quarter-and-fiscal-2026",
+      "title": "NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2026 | NVIDIA Newsroom",
+      "domain": "nvidianews.nvidia.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 12,
+      "url": "https://nvidianews.nvidia.com/news/nvidia-blackwell-ultra-ai-factory-platform-paves-way-for-age-of-ai-reasoning",
+      "title": "NVIDIA Blackwell Ultra AI Factory Platform Paves Way for Age of AI Reasoning | NVIDIA Newsroom",
+      "domain": "nvidianews.nvidia.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2026",
+      "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2026 | NVIDIA Newsroom",
+      "domain": "nvidianews.nvidia.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://nvidianews.nvidia.com/news/rubin-platform-ai-supercomputer",
+      "title": "NVIDIA Kicks Off the Next Generation of AI With Rubin — Six New Chips, One Incredible AI Supercomputer | NVIDIA Newsroom",
+      "domain": "nvidianews.nvidia.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 15,
+      "url": "https://nvidianews.nvidia.com/news/vera-rubin-full-production-agentic-ai-factory",
+      "title": "NVIDIA Vera Rubin Ramps Into Full Production to Power Agentic AI Factories Worldwide | NVIDIA Newsroom",
+      "domain": "nvidianews.nvidia.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 16,
+      "url": "https://blogs.nvidia.com/blog/microsoft-ignite-blackwell-omniverse-rtx-ai",
+      "title": "NVIDIA and Microsoft Showcase Blackwell Preview, Omniverse Industrial AI and RTX AI PCs | NVIDIA Blog",
+      "domain": "blogs.nvidia.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://investor.nvidia.com/news/press-release-details/2025/NVIDIA-Announces-Financial-Results-for-Fourth-Quarter-and-Fiscal-2025",
+      "title": "\n\tNVIDIA Corporation - NVIDIA Announces Financial Results for Fourth Quarter and Fiscal 2025\n",
+      "domain": "investor.nvidia.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2025/NVIDIA-4th-Quarter-FY25-Financial-Results/default.aspx",
+      "title": "\n\tNVIDIA Corporation - NVIDIA 4th Quarter FY25 Financial Results\n",
+      "domain": "investor.nvidia.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 19,
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2026",
+      "title": "NVIDIA Announces Financial Results for Third Quarter Fiscal 2026 | NVIDIA Newsroom",
+      "domain": "nvidianews.nvidia.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 20,
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Opens-Agentic-AI-Frontier/default.aspx",
+      "title": "\n\tNVIDIA Corporation - NVIDIA Vera Rubin Opens Agentic AI Frontier\n",
+      "domain": "investor.nvidia.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 21,
+      "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-second-quarter-fiscal-2027",
+      "title": "NVIDIA Announces Financial Results for Second Quarter Fiscal 2027 | NVIDIA Newsroom",
+      "domain": "nvidianews.nvidia.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 22,
+      "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2025/GTC-Washington-DC-2025-2025-7Ku19EGpuF/default.aspx",
+      "title": "\n\tNVIDIA Corporation - GTC Washington DC 2025\n",
+      "domain": "investor.nvidia.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://s201.q4cdn.com/141608511/files/doc_events/2025/Oct/28/gtc-dc-2025.pdf",
+      "title": "Doc Events",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 24,
+      "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/event-details/2026/GTC-2026-Keynote-2026-HhZOL0SIV4/default.aspx",
+      "title": "\n\tNVIDIA Corporation - GTC 2026 Keynote\n",
+      "domain": "investor.nvidia.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 25,
+      "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2025/Q425/Q4FY25-CFO-Commentary.pdf",
+      "title": "Q4FY25 CFO Commentary",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://s201.q4cdn.com/141608511/files/doc_financials/2026/q2/NVDA-Q2-2026-Earnings-Call-27-August-2025-5_00-PM-ET.pdf",
+      "title": "NVIDIA Corp.",
+      "domain": "s201.q4cdn.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 27,
+      "url": "https://www.roic.ai/quote/NVDA/transcripts/2025/1",
+      "title": "NVIDIA Corporation (NVDA) Q1 FY2025 Earnings Call Transcript - May 22, 2024 | Roic AI",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 28,
+      "url": "https://stockanalysis.com/stocks/nvda/transcripts/197211-q2-2025",
+      "title": "NVIDIA (NVDA) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 29,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/11/20/nvidia-nvda-q3-2025-earnings-call-transcript/",
+      "title": "Nvidia (NVDA) Q3 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 30,
+      "url": "https://stockanalysis.com/stocks/nvda/transcripts/302557-ces-2025-keynote",
+      "title": "NVIDIA (NVDA) Transcript: CES 2025 Keynote",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 31,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/02/26/nvidia-nvda-q4-2025-earnings-call-transcript",
+      "title": "Nvidia (NVDA) Q4 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 32,
+      "url": "https://fintool.com/app/research/companies/NVDA/documents/transcripts/q1-2025",
+      "title": "NVIDIA (NVDA) Q1 2025 Earnings Call Transcript | Fintool",
+      "domain": "fintool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 33,
+      "url": "https://www.fool.com/earnings/call-transcripts/2024/08/28/nvidia-nvda-q2-2025-earnings-call-transcript/",
+      "title": "Nvidia (NVDA) Q2 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 34,
+      "url": "https://transcripts.platformaeronaut.com/transcripts/NVDA-4Q25-transcript",
+      "title": "NVDA Q4 2025 Earnings Call Transcript | Platform Aeronaut Transcripts",
+      "domain": "transcripts.platformaeronaut.com",
+      "tier": "press",
+      "uses": "P1"
+    }
+  ],
+  "focus": "P4",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T05:51:03.405618Z",
+      "completedAt": "2026-11-05T05:57:33.235044Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.701166Z",
+      "completedAt": "2026-11-05T19:14:51.011437Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.708209Z",
+      "completedAt": "2026-11-05T19:12:47.190448Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.715066Z",
+      "completedAt": "2026-11-05T19:12:04.318009Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.721939Z",
+      "completedAt": "2026-11-05T19:13:26.030622Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.728739Z",
+      "completedAt": "2026-11-05T19:15:16.112505Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.488202Z",
+      "completedAt": "2026-11-05T19:44:58.822006Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.495471Z",
+      "completedAt": "2026-11-05T19:45:23.027575Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.502738Z",
+      "completedAt": "2026-11-05T19:43:49.035894Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.511421Z",
+      "completedAt": "2026-11-05T19:45:23.054862Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.518793Z",
+      "completedAt": "2026-11-05T19:46:06.985004Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "29 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "28 of 28 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "28 of 28 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q2 FY2027 on 2026-08-26; next 2026-11-17"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/sco/thumb/2/21/Nvidia_logo.svg/3840px-Nvidia_logo.svg.png?utm_source=sco.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://sco.wikipedia.org/wiki/File:Nvidia_logo.svg",
+      "title": "File:Nvidia logo.svg - Wikipedia",
+      "width": 3840,
+      "height": 2828,
+      "rank": 5
+    },
+    "photo": {
+      "imageUrl": "https://www.nvidia.com/content/dam/en-zz/solutions/data-center/home/data-center-og.jpg",
+      "sourcePageUrl": "https://www.nvidia.com/en-us/data-center/",
+      "title": "Data Centers Built for Advanced AI Reasoning | NVIDIA",
+      "width": 1200,
+      "height": 630,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.330Z"
+}

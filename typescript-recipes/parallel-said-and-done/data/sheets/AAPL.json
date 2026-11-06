@@ -1,0 +1,2610 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "AAPL",
+  "name": "Apple Inc.",
+  "short": "Apple",
+  "website": "apple.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "Last Saturday of September",
+  "irUrl": "https://investor.apple.com/investor-relations/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-11-02",
+    "quarter": "Q4 FY2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Apple Houston server manufacturing facility",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Launch Apple Vision Pro",
+      "commitment": "Put Apple Vision Pro into customers’ hands early in 2024.",
+      "deadline": "early 2024",
+      "firstStated": "2023-06-05",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Apple Vision Pro arrived in U.S. Apple Stores on February 2, 2024, meeting the promised early-year launch; customers could also buy it online.",
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2024/02/apple-vision-pro-arrives-in-apple-store-locations-across-the-us",
+          "title": "Apple Vision Pro arrives in Apple Store locations across the U.S. - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2023/06/introducing-apple-vision-pro",
+          "title": "Introducing Apple Vision Pro: Apple’s first spatial computer - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/66748-q3-2023",
+          "title": "Apple (AAPL) Q3 2023 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2024/01/apple-vision-pro-available-in-the-us-on-february-2",
+          "title": "Apple Vision Pro available in the U.S. on February 2 - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/164428-q2-2024/",
+          "title": "Apple (AAPL) Q2 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2024-02-02",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Roll out Apple Intelligence",
+      "commitment": "Launch Apple Intelligence in U.S. English in fall 2024, then expand features, languages and regions over the following year.",
+      "deadline": "fall 2024; expansion over the following year",
+      "firstStated": "2024-08-01",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "U.S. English launched October 28, 2024; features and English locales expanded December 11, 2024; broader languages and EU access arrived March 31, 2025. Personalized Siri needed more time.",
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2024/10/apple-intelligence-is-available-today-on-iphone-ipad-and-mac",
+          "title": "Apple Intelligence is available today on iPhone, iPad, and Mac - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2024/12/apple-intelligence-now-features-image-playground-genmoji-and-more",
+          "title": "Apple Intelligence now features Image Playground, Genmoji, and more - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2025/03/apple-intelligence-features-expand-to-new-languages-and-regions-today",
+          "title": "Apple Intelligence features expand to new languages and regions today - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://earningscalls.dev/transcripts/apple-inc_aapl_earnings_call_transcript_2025-05-01",
+          "title": "Apple Inc. (AAPL) Earnings Call Transcript & Summary",
+          "domain": "earningscalls.dev",
+          "tier": "press"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/190138-q3-2024",
+          "title": "Apple (AAPL) Q3 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/218053-q4-2024/",
+          "title": "Apple (AAPL) Q4 2024 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/311069-q2-2025/",
+          "title": "Apple (AAPL) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2025-03-31",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [
+          "'EU access arrived March 31, 2025' needs a platform qualifier: that was first availability for EU iPhone and iPad users. EU Mac users already had access by December 11, 2024."
+        ],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-05-01",
+            "what_was_said": "Cook said the more personal Siri features needed more time to meet Apple's quality bar. Thus, the delivered language expansion did not mean every announced Apple Intelligence feature was complete.",
+            "call": "Q2 FY2025 earnings call"
+          },
+          {
+            "date": "2025-07-31",
+            "what_was_said": "Cook said Apple was making good progress on a more personalized Siri and expected to release those features 'next year,' meaning 2026.",
+            "call": "Q3 FY2025 earnings call"
+          },
+          {
+            "date": "2026-11-02",
+            "what_was_said": "Management reported that Siri AI launched in beta for U.S. English users in September 2026 and expanded to French, Japanese, Korean, Portuguese, and Spanish in October.",
+            "call": "Q4 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Ship more capable Siri",
+      "commitment": "Deliver the more capable Siri upgrade over the next several months.",
+      "deadline": "the next several months",
+      "firstStated": "2025-01-30",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Delayed from its original timetable, personalized Siri AI launched in beta on September 14, 2026; more languages followed October 26, 2026; EU mobile availability remained deferred.",
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/30/apple-aapl-q1-2025-earnings-call-transcript/",
+          "title": "Apple (AAPL) Q1 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://daringfireball.net/2025/03/apple_is_delaying_the_more_personalized_siri_apple_intelligence_features",
+          "title": "Daring Fireball: Apple Is Delaying the ‘More Personalized Siri’ Apple Intelligence Features",
+          "domain": "daringfireball.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here",
+          "title": "Siri AI, a profoundly more capable and personal assistant, is here - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/10/siri-ai-is-available-in-more-languages-starting-today",
+          "title": "Siri AI is available in more languages starting today - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/251672-q1-2025/",
+          "title": "Apple (AAPL) Q1 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/311069-q2-2025/",
+          "title": "Apple (AAPL) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.apple.com/in/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here",
+          "title": "Siri AI, a profoundly more capable and personal assistant, is here - Apple (IN)",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": "2026-09-14",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-30",
+            "what_was_said": "Cook said Siri AI was already in developer and public betas. He also said Apple had not been able to offer Siri AI in the European Union and was working toward a path forward. These remarks distinguish testing availability from the subsequent September rollout and establish the regional limitation before launch.",
+            "call": "Q3 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Expand U.S. manufacturing investment",
+      "commitment": "Spend $500 billion in the United States over the next four years.",
+      "deadline": "over the next four years",
+      "firstStated": "2025-02-24",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Apple raised its four-year U.S. commitment to $600 billion and reported manufacturing progress; the overall spending commitment remained pending.",
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2025/08/apple-increases-us-commitment-to-600-billion-usd-announces-ambitious-program",
+          "title": "Apple increases U.S. commitment to $600 billion, announces ambitious program - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://sixcolors.com/post/2025/10/this-is-tim-transcript-of-apples-q4-2025-financial-call",
+          "title": "This is Tim: Complete transcript of Apple’s Q4 2025 financial call – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q4-2026-earnings_call-702819.html",
+          "title": "Apple Inc. (AAPL) Q4 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/311069-q2-2025/",
+          "title": "Apple (AAPL) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/406161-q1-2026/",
+          "title": "Apple (AAPL) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-10-30",
+            "what_was_said": "Tim Cook said the new Houston factory for advanced AI servers had already started shipping its first products, providing concrete evidence of manufacturing delivery.",
+            "call": "Q4 FY2025 earnings call"
+          },
+          {
+            "date": "2026-04-30",
+            "what_was_said": "Tim Cook said Apple planned to reinvest any tariff refunds into U.S. innovation and advanced manufacturing, explicitly describing these as new investments additional to prior U.S. commitments. He did not specify a new aggregate dollar target.",
+            "call": "Q2 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Execute additional $100 billion buybacks",
+      "commitment": "Repurchase up to an additional $100 billion of shares under a new authorization, without a fixed completion deadline or minimum purchase obligation.",
+      "deadline": null,
+      "firstStated": "2026-04-30",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "The additional $100 billion authorization remained open, with no minimum purchase obligation; subsequent aggregate repurchase disclosures did not establish completion of this authorization.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+          "title": "aapl-20260926",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q3-2026-earnings_call-658553.html",
+          "title": "Apple Inc. (AAPL) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q4-2026-earnings_call-702819.html",
+          "title": "Apple Inc. (AAPL) Q4 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/548666-q2-2026/",
+          "title": "Apple (AAPL) Q2 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/702819-q4-2026/",
+          "title": "Apple (AAPL) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-30",
+            "what_was_said": "Management reported $25.8 billion in quarterly share repurchases, without identifying how much was purchased under the April 2026 authorization or declaring that authorization completed.",
+            "call": "Q3 FY2026 earnings call"
+          },
+          {
+            "date": "2026-11-02",
+            "what_was_said": "Management reported $24 billion in quarterly share repurchases, again without identifying purchases under the April 2026 authorization or declaring it completed.",
+            "call": "Q4 FY2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "AAPL-P1-2023-06-05",
+      "promiseId": "P1",
+      "date": "2023-06-05",
+      "call": "Introducing Apple Vision Pro: Apple’s first spatial computer",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Promised U.S. availability early next year, starting at $3,499, with more countries coming later next year.",
+      "quote": "Apple Vision Pro starts at $3,499 (U.S.), and will be available early next year on apple.com and at Apple Store locations in the U.S., with more countries coming later next year.",
+      "verbatim": {
+        "text": "Apple Vision Pro starts at $3,499 (U.S.), and will be available early next year on apple.com and at Apple Store locations in the U.S., with more countries coming later next year.",
+        "segs": [
+          {
+            "t": "Apple Vision Pro starts at ",
+            "h": 0
+          },
+          {
+            "t": "$3,499",
+            "h": 1
+          },
+          {
+            "t": " (U.S.), and will be available early next year on apple.com and at Apple Store locations in the U.S., with more countries coming later next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2023/06/introducing-apple-vision-pro",
+          "title": "Introducing Apple Vision Pro: Apple’s first spatial computer - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2023/06/introducing-apple-vision-pro",
+          "title": "Introducing Apple Vision Pro: Apple’s first spatial computer - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P1-2023-08-03",
+      "promiseId": "P1",
+      "date": "2023-08-03",
+      "call": "Q3 FY2023 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that customers would receive Vision Pro early next year.",
+      "quote": "We can’t wait to get it into customers’ hands early next year.",
+      "verbatim": {
+        "text": "We can’t wait to get it into customers’ hands early next year.",
+        "segs": [
+          {
+            "t": "We can’t wait to get it into customers’ hands early next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://sixcolors.com/post/2023/08/this-is-tim-apples-q3-2023-analyst-call-transcribed",
+          "title": "This is Tim: Apple’s Q3 2023 analyst call, transcribed – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://sixcolors.com/post/2023/08/this-is-tim-apples-q3-2023-analyst-call-transcribed",
+          "title": "This is Tim: Apple’s Q3 2023 analyst call, transcribed – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.roic.ai/quote/AAPL/transcripts/2024-year/1-quarter",
+          "title": "Apple Inc. (AAPL) Q1 FY2024 Earnings Call Transcript - February 1, 2024",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P1-2023-11-02",
+      "promiseId": "P1",
+      "date": "2023-11-02",
+      "call": "Q4 FY2023 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed customer availability early next year.",
+      "quote": "We're excited to get this magical product in the hands of customers early next year.",
+      "verbatim": {
+        "text": "We're excited to get this magical product in the hands of customers early next year.",
+        "segs": [
+          {
+            "t": "We're excited to get this magical product in the hands of customers early next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/AAPL/transcripts/2023-year/4-quarter",
+          "title": "Apple Inc. (AAPL) Q4 FY2023 Earnings Call Transcript - November 2, 2023",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/AAPL/transcripts/2023-year/4-quarter",
+          "title": "Apple Inc. (AAPL) Q4 FY2023 Earnings Call Transcript - November 2, 2023",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P1-2024-01-08",
+      "promiseId": "P1",
+      "date": "2024-01-08",
+      "call": "Apple Vision Pro available in the U.S. on February 2",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Announced U.S. store and online availability beginning Friday, February 2.",
+      "quote": "Apple today announced Apple Vision Pro will be available beginning Friday, February 2, at all U.S. Apple Store locations and the U.S. Apple Store online.",
+      "verbatim": {
+        "text": "CUPERTINO, CALIFORNIA Apple today announced Apple Vision Pro will be available beginning Friday, February 2, at all U.S. Apple Store locations and the U.S. Apple Store online.",
+        "segs": [
+          {
+            "t": "CUPERTINO, CALIFORNIA Apple today announced Apple Vision Pro will be available beginning Friday, February 2, at all U.S. Apple Store locations and the U.S. Apple Store online.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2024/01/apple-vision-pro-available-in-the-us-on-february-2",
+          "title": "Apple Vision Pro available in the U.S. on February 2 - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2024/01/apple-vision-pro-available-in-the-us-on-february-2",
+          "title": "Apple Vision Pro available in the U.S. on February 2 - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P1-2024-02-01",
+      "promiseId": "P1",
+      "date": "2024-02-01",
+      "call": "Q1 FY2024 earnings release",
+      "speaker": "Tim Cook, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Said customers would begin experiencing Vision Pro tomorrow.",
+      "quote": "And as customers begin to experience the incredible Apple Vision Pro tomorrow, we are committed as ever to the pursuit of groundbreaking innovation — in line with our values and on behalf of our customers.",
+      "verbatim": {
+        "text": "And as customers begin to experience the incredible Apple Vision Pro tomorrow, we are committed as ever to the pursuit of groundbreaking innovation — in line with our values and on behalf of our customers.”",
+        "segs": [
+          {
+            "t": "And as customers begin to experience the incredible Apple Vision Pro tomorrow, we are committed as ever to the pursuit of groundbreaking innovation — in line with our values and on behalf of our customers.”",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2024/02/apple-reports-first-quarter-results",
+          "title": "Apple reports first quarter results - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2024/02/apple-reports-first-quarter-results",
+          "title": "Apple reports first quarter results - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AAPL-P1-2024-02-02",
+      "promiseId": "P1",
+      "date": "2024-02-02",
+      "call": "Apple Vision Pro arrives in Apple Store locations across the U.S.",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed Vision Pro had arrived in Apple Store locations across the United States.",
+      "quote": "Today, Apple Vision Pro, a revolutionary spatial computer that transforms how people work, collaborate, connect, relive memories, and enjoy entertainment, arrived in Apple Store locations across the United States.",
+      "verbatim": {
+        "text": "Apple Vision Pro arrives in Apple Store locations across the U.S. Today, Apple Vision Pro, a revolutionary spatial computer that transforms how people work, collaborate, connect, relive memories, and enjoy entertainment, arrived in Apple Store locations across the United States.",
+        "segs": [
+          {
+            "t": "Apple Vision Pro arrives in Apple Store locations across the U.S. Today, Apple Vision Pro, a revolutionary spatial computer that transforms how people work, collaborate, connect, relive memories, and enjoy entertainment, arrived in Apple Store locations across the United States.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2024/02/apple-vision-pro-arrives-in-apple-store-locations-across-the-us",
+          "title": "Apple Vision Pro arrives in Apple Store locations across the U.S. - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2024/02/apple-vision-pro-arrives-in-apple-store-locations-across-the-us",
+          "title": "Apple Vision Pro arrives in Apple Store locations across the U.S. - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "AAPL-P1-2024-05-02",
+      "promiseId": "P1",
+      "date": "2024-05-02",
+      "call": "Q2 FY2024 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed Vision Pro launched during the past quarter and customers were experiencing spatial computing.",
+      "quote": "Of course, this past quarter, we were thrilled to launch Apple Vision Pro and it has been so wonderful to hear from people who now get to experience the magic of spatial computing.",
+      "verbatim": {
+        "text": "Of course, this past quarter, we were thrilled to launch Apple Vision Pro and it has been so wonderful to hear from people who now get to experience the magic of spatial computing.",
+        "segs": [
+          {
+            "t": "Of course, this past quarter, we were thrilled to launch Apple Vision Pro and it has been so wonderful to hear from people who now get to experience the magic of spatial computing.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/news/apple-inc-nasdaq-aapl-q2-162038149.html",
+          "title": "Apple Inc. (NASDAQ:AAPL) Q2 2024 Earnings Call Transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/news/apple-inc-nasdaq-aapl-q2-162038149.html",
+          "title": "Apple Inc. (NASDAQ:AAPL) Q2 2024 Earnings Call Transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P2-2024-08-01",
+      "promiseId": "P2",
+      "date": "2024-08-01",
+      "call": "Q3 FY2024 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "June objective: U.S. English launches in fall; more functionality, features, languages and regional coverage follow across the next year.",
+      "quote": "Our objective that we said in June is to roll out US English starting in the fall and that is to users, and then proceed with more functionality, more features, if you will, and more languages and regions coverage as we proceed across the next year.",
+      "verbatim": {
+        "text": "Our objective that we said in June is to roll out US English starting in the fall and that is to users, and then proceed with more functionality, more features, if you will, and more languages and regions coverage as we proceed across the next year.",
+        "segs": [
+          {
+            "t": "Our objective that we said in June is to roll out US English starting in the fall and that is to users, and then proceed with more functionality, more features, if you will, and more languages and regions coverage as we proceed across the next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/AAPL%3AQF/transcripts/2024-year/3-quarter",
+          "title": "Apple Inc. (AAPL QF) Q3 FY2024 Earnings Call Transcript - August 1, 2024",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/AAPL%3AQF/transcripts/2024-year/3-quarter",
+          "title": "Apple Inc. (AAPL QF) Q3 FY2024 Earnings Call Transcript - August 1, 2024",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P2-2024-09-09",
+      "promiseId": "P2",
+      "date": "2024-09-09",
+      "call": "Apple Intelligence comes to iPhone, iPad, and Mac starting next month",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "U.S. English launches first; localized English expands to Australia, Canada, New Zealand, South Africa and the U.K. in December.",
+      "quote": "Apple Intelligence first launches in U.S. English, and will quickly expand to include localized English in Australia, Canada, New Zealand, South Africa, and the U.K. in December.",
+      "verbatim": {
+        "text": "Apple Intelligence first launches in U.S. English, and will quickly expand to include localized English in Australia, Canada, New Zealand, South Africa, and the U.K. in December.",
+        "segs": [
+          {
+            "t": "Apple Intelligence first launches in U.S. English, and will quickly expand to include localized English in Australia, Canada, New Zealand, South Africa, and the U.K. in December.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2024/09/apple-intelligence-comes-to-iphone-ipad-and-mac-starting-next-month",
+          "title": "Apple Intelligence comes to iPhone, iPad, and Mac starting next month - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2024/09/apple-intelligence-comes-to-iphone-ipad-and-mac-starting-next-month",
+          "title": "Apple Intelligence comes to iPhone, iPad, and Mac starting next month - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P2-2024-10-28",
+      "promiseId": "P2",
+      "date": "2024-10-28",
+      "call": "Apple Intelligence is available today on iPhone, iPad, and Mac",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Initial U.S. English features shipped with iOS 18.1, iPadOS 18.1 and macOS Sequoia 15.1; broader expansion remained pending.",
+      "quote": "The first set of Apple Intelligence features is available now as a free software update with iOS 18.1, iPadOS 18.1, and macOS Sequoia 15.1, and can be accessed in most regions around the world when the device and Siri language are set to U.S. English.",
+      "verbatim": {
+        "text": "The first set of Apple Intelligence features is available now as a free software update with iOS 18.1, iPadOS 18.1, and macOS Sequoia 15.1, and can be accessed in most regions around the world when the device and Siri language are set to U.S. English.",
+        "segs": [
+          {
+            "t": "The first set of Apple Intelligence features is available now as a free software update with iOS 18.1, iPadOS 18.1, and macOS Sequoia 15.1, and can be accessed in most regions around the world when the device and Siri language are set to U.S. English.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2024/10/apple-intelligence-is-available-today-on-iphone-ipad-and-mac",
+          "title": "Apple Intelligence is available today on iPhone, iPad, and Mac - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2024/10/apple-intelligence-is-available-today-on-iphone-ipad-and-mac",
+          "title": "Apple Intelligence is available today on iPhone, iPad, and Mac - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P2-2024-10-31",
+      "promiseId": "P2",
+      "date": "2024-10-31",
+      "call": "Q4 FY2024 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "More languages and features start rolling out in April 2025, following the initial U.S. English launch.",
+      "quote": "And then, as we turn the corner to '25, we'll have more languages rolling out, starting in April as well and more features as well.",
+      "verbatim": {
+        "text": "And then, as we turn the corner to '25, we'll have more languages rolling out, starting in April as well and more features as well.",
+        "segs": [
+          {
+            "t": "And then, as we turn the corner to '25, we'll have more languages rolling out, starting in April as well and more features as well.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/AAPL/transcripts/2024-year/4-quarter",
+          "title": "Apple Inc. (AAPL) Q4 FY2024 Earnings Call Transcript - October 31, 2024",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/AAPL/transcripts/2024-year/4-quarter",
+          "title": "Apple Inc. (AAPL) Q4 FY2024 Earnings Call Transcript - October 31, 2024",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P2-2024-12-11",
+      "promiseId": "P2",
+      "date": "2024-12-11",
+      "call": "Apple Intelligence now features Image Playground, Genmoji, and more",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "New features shipped with iOS 18.2, iPadOS 18.2 and macOS Sequoia 15.2; localized English expanded internationally.",
+      "quote": "Today also marks the beginning of Apple Intelligence language expansion with localized English support for Australia, Canada, Ireland, New Zealand, South Africa, and the U.K.",
+      "verbatim": {
+        "text": "Today also marks the beginning of Apple Intelligence language expansion with localized English support for Australia, Canada, Ireland, New Zealand, South Africa, and the U.K.",
+        "segs": [
+          {
+            "t": "Today also marks the beginning of Apple Intelligence language expansion with localized English support for Australia, Canada, Ireland, New Zealand, South Africa, and the U.K.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2024/12/apple-intelligence-now-features-image-playground-genmoji-and-more",
+          "title": "Apple Intelligence now features Image Playground, Genmoji, and more - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2024/12/apple-intelligence-now-features-image-playground-genmoji-and-more",
+          "title": "Apple Intelligence now features Image Playground, Genmoji, and more - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P2-2025-01-30",
+      "promiseId": "P2",
+      "date": "2025-01-30",
+      "call": "Q1 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "April expansion planned: French, German, Italian, Portuguese, Spanish, Japanese, Korean, simplified Chinese, plus localized English for Singapore and India.",
+      "quote": "In April, we're bringing Apple Intelligence to more languages, including French, German, Italian, Portuguese, Spanish, Japanese, Korean, and simplified Chinese, as well as localized English to Singapore and India.",
+      "verbatim": {
+        "text": "In April, we're bringing Apple Intelligence to more languages, including French, German, Italian, Portuguese, Spanish, Japanese, Korean, and simplified Chinese, as well as localized English to Singapore and India.",
+        "segs": [
+          {
+            "t": "In April, we're bringing Apple Intelligence to more languages, including French, German, Italian, Portuguese, Spanish, Japanese, Korean, and simplified Chinese, as well as localized English to Singapore and India.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/30/apple-aapl-q1-2025-earnings-call-transcript/",
+          "title": "Apple (AAPL) Q1 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/30/apple-aapl-q1-2025-earnings-call-transcript/",
+          "title": "Apple (AAPL) Q1 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P2-2025-02-21",
+      "promiseId": "P2",
+      "date": "2025-02-21",
+      "call": "Apple Intelligence on iPhone, iPad, and Mac expands to more languages and regions in April",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "April expansion remained scheduled with iOS 18.4, iPadOS 18.4 and macOS Sequoia 15.4, including new languages and EU access.",
+      "quote": "These new languages will be accessible in nearly all regions around the world with the release of iOS 18.4, iPadOS 18.4, and macOS Sequoia 15.4 in April, and developers can start to test these releases today.",
+      "verbatim": {
+        "text": "These new languages will be accessible in nearly all regions around the world with the release of iOS 18.4, iPadOS 18.4, and macOS Sequoia 15.4 in April, and developers can start to test these releases today.",
+        "segs": [
+          {
+            "t": "These new languages will be accessible in nearly all regions around the world with the release of iOS 18.4, iPadOS 18.4, and macOS Sequoia 15.4 in April, and developers can start to test these releases today.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2025/02/apple-intelligence-expands-to-more-languages-and-regions-in-april",
+          "title": "Apple Intelligence expands to more languages and regions in April - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2025/02/apple-intelligence-expands-to-more-languages-and-regions-in-april",
+          "title": "Apple Intelligence expands to more languages and regions in April - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "AAPL-P2-2025-03-31",
+      "promiseId": "P2",
+      "date": "2025-03-31",
+      "call": "Apple Intelligence features expand to new languages and regions today",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "iOS 18.4, iPadOS 18.4 and macOS Sequoia 15.4 delivered additional languages worldwide and first EU iPhone/iPad access.",
+      "quote": "Starting today, with the availability of iOS 18.4, iPadOS 18.4, and macOS Sequoia 15.4, Apple Intelligence features are now available in many new languages, including French, German, Italian, Portuguese (Brazil), Spanish, Japanese, Korean, and Chinese (simplified) — as well as localized English for Singapore and India — and are accessible in nearly all regions around the world.",
+      "verbatim": {
+        "text": "Starting today, with the availability of iOS 18.4, iPadOS 18.4, and macOS Sequoia 15.4, Apple Intelligence features are now available in many new languages, including French, German, Italian, Portuguese (Brazil), Spanish, Japanese, Korean, and Chinese (simplified) — as well as localized English for Singapore and India — and are accessible in nearly all regions around the world.",
+        "segs": [
+          {
+            "t": "Starting today, with the availability of iOS 18.4, iPadOS 18.4, and macOS Sequoia 15.4, Apple Intelligence features are now available in many new languages, including French, German, Italian, Portuguese (Brazil), Spanish, Japanese, Korean, and Chinese (simplified) — as well as localized English for Singapore and India — and are accessible in nearly all regions around the world.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2025/03/apple-intelligence-features-expand-to-new-languages-and-regions-today",
+          "title": "Apple Intelligence features expand to new languages and regions today - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2025/03/apple-intelligence-features-expand-to-new-languages-and-regions-today",
+          "title": "Apple Intelligence features expand to new languages and regions today - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "AAPL-P2-2025-05-01",
+      "promiseId": "P2",
+      "date": "2025-05-01",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "iOS 18.4 language expansion confirmed delivered; more personal Siri features separately needed more time.",
+      "quote": "We just released iOS 18.4, which brought Apple Intelligence to more languages, including French, German, Italian, Portuguese, Spanish, Japanese, Korean and simplified Chinese as well as localized English to Singapore and India.",
+      "verbatim": {
+        "text": "We just released iOS 18.4, which brought Apple Intelligence to more languages, including French, German, Italian, Portuguese, Spanish, Japanese, Korean and simplified Chinese as well as localized English to Singapore and India.",
+        "segs": [
+          {
+            "t": "We just released iOS 18.4, which brought Apple Intelligence to more languages, including French, German, Italian, Portuguese, Spanish, Japanese, Korean and simplified Chinese as well as localized English to Singapore and India.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://earningscalls.dev/transcripts/apple-inc_aapl_earnings_call_transcript_2025-05-01",
+          "title": "Apple Inc. (AAPL) Earnings Call Transcript & Summary",
+          "domain": "earningscalls.dev",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://earningscalls.dev/transcripts/apple-inc_aapl_earnings_call_transcript_2025-05-01",
+          "title": "Apple Inc. (AAPL) Earnings Call Transcript & Summary",
+          "domain": "earningscalls.dev",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P3-2025-01-30",
+      "promiseId": "P3",
+      "date": "2025-01-30",
+      "call": "Q1 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Said the Siri upgrade would come over the next several months.",
+      "quote": "And, certainly, one of those is the -- is Siri, and that will be coming over the next several months.",
+      "verbatim": {
+        "text": "And, certainly, one of those is the -- is Siri, and that will be coming over the next several months.",
+        "segs": [
+          {
+            "t": "And, certainly, one of those is the -- is Siri, and that will be coming over the next several months.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/30/apple-aapl-q1-2025-earnings-call-transcript/",
+          "title": "Apple (AAPL) Q1 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2025/01/30/apple-aapl-q1-2025-earnings-call-transcript/",
+          "title": "Apple (AAPL) Q1 2025 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P3-2025-03-07",
+      "promiseId": "P3",
+      "date": "2025-03-07",
+      "call": "Apple statement on personalized Siri supplied to Daring Fireball",
+      "speaker": "Jacqueline Roy, Apple spokesperson",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Delayed personalized Siri, anticipating rollout in the coming year.",
+      "quote": "It’s going to take us longer than we thought to deliver on these features and we anticipate rolling them out in the coming year.",
+      "verbatim": {
+        "text": "It’s going to take us > longer than we thought to deliver on these features and we > anticipate rolling them out in the coming year.",
+        "segs": [
+          {
+            "t": "It’s going to take us > longer than we thought to deliver on these features and we > anticipate rolling them out in the coming year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://daringfireball.net/2025/03/apple_is_delaying_the_more_personalized_siri_apple_intelligence_features",
+          "title": "Daring Fireball: Apple Is Delaying the ‘More Personalized Siri’ Apple Intelligence Features",
+          "domain": "daringfireball.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://daringfireball.net/2025/03/apple_is_delaying_the_more_personalized_siri_apple_intelligence_features",
+          "title": "Daring Fireball: Apple Is Delaying the ‘More Personalized Siri’ Apple Intelligence Features",
+          "domain": "daringfireball.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "AAPL-P3-2025-05-01",
+      "promiseId": "P3",
+      "date": "2025-05-01",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated that personalized Siri needed more time to meet the high-quality bar; work was progressing.",
+      "quote": "With regard to the more personal Siri features we announced, we need more time to complete our work on these features so they meet our high-quality bar.",
+      "verbatim": {
+        "text": "With regard to the more personal Siri features we announced, we need more time to complete our work on these features so they meet our high-quality bar.",
+        "segs": [
+          {
+            "t": "With regard to the more personal Siri features we announced, we need more time to complete our work on these features so they meet our high-quality bar.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/311069-q2-2025/",
+          "title": "Apple (AAPL) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/311069-q2-2025/",
+          "title": "Apple (AAPL) Q2 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P3-2025-06-09",
+      "promiseId": "P3",
+      "date": "2025-06-09",
+      "call": "WWDC25 keynote",
+      "speaker": "Craig Federighi, Senior Vice President of Software Engineering",
+      "stance": "softened",
+      "k": "c",
+      "summary": "Promised to share more in the coming year, rather than reiterating rollout timing.",
+      "quote": "This work needed more time to reach our high quality bar, and we look forward to sharing more about it in the coming year.",
+      "verbatim": {
+        "text": "\"This work needed more time to reach our high quality bar, and we look forward to sharing more about it in the coming year.\"",
+        "segs": [
+          {
+            "t": "\"This work needed more time to reach our high quality bar, and we look forward to sharing more about it in the coming year.\"",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.macrumors.com/2025/06/09/personalized-siri-still-not-ready/",
+          "title": "WWDC 2025: Apple Says Personalized Siri Features Are Still Not Ready - MacRumors",
+          "domain": "macrumors.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.macrumors.com/2025/06/09/personalized-siri-still-not-ready/",
+          "title": "WWDC 2025: Apple Says Personalized Siri Features Are Still Not Ready - MacRumors",
+          "domain": "macrumors.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant",
+          "title": "Apple introduces Siri AI, a profoundly more capable and personal assistant - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "AAPL-P3-2025-06-12",
+      "promiseId": "P3",
+      "date": "2025-06-12",
+      "call": "Tom’s Guide WWDC25 interview, reported by 9to5Mac",
+      "speaker": "Greg Joswiak, Apple marketing head",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Confirmed 2026 as the release year for delayed Siri features.",
+      "quote": "Yeah, that’s what we said, yeah.",
+      "verbatim": {
+        "text": "> Spoonauer : So instead of an actual release date, is it okay to say 2026? > > Joz : Yeah, that’s what we said, yeah.",
+        "segs": [
+          {
+            "t": "> Spoonauer : So instead of an actual release date, is it okay to say ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": "? > > Joz : Yeah, that’s what we said, yeah.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://9to5mac.com/2025/06/12/apple-confirms-siris-delayed-features-wont-ship-until-2026",
+          "title": "Apple confirms Siri’s delayed features won’t ship until 2026 - 9to5Mac",
+          "domain": "9to5mac.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://9to5mac.com/2025/06/12/apple-confirms-siris-delayed-features-wont-ship-until-2026",
+          "title": "Apple confirms Siri’s delayed features won’t ship until 2026 - 9to5Mac",
+          "domain": "9to5mac.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "AAPL-P3-2025-07-31",
+      "promiseId": "P3",
+      "date": "2025-07-31",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported good progress and reiterated release next year.",
+      "quote": "We're making good progress on a more personalized Siri, and as we've said before, we expect to release these features next year.",
+      "verbatim": {
+        "text": "We're making good progress on a more personalized Siri, and as we've said before, we expect to release these features next year.",
+        "segs": [
+          {
+            "t": "We're making good progress on a more personalized Siri, and as we've said before, we expect to release these features next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/341149-q3-2025/",
+          "title": "Apple (AAPL) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/341149-q3-2025/",
+          "title": "Apple (AAPL) Q3 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P3-2025-10-30",
+      "promiseId": "P3",
+      "date": "2025-10-30",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed release next year and reported good progress.",
+      "quote": "We're making good progress on it, and as we've shared, we expect to release it next year.",
+      "verbatim": {
+        "text": "We're making good progress on it, and as we've shared, we expect to release it next year.",
+        "segs": [
+          {
+            "t": "We're making good progress on it, and as we've shared, we expect to release it next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/369370-q4-2025/",
+          "title": "Apple (AAPL) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/369370-q4-2025/",
+          "title": "Apple (AAPL) Q4 2025 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P3-2026-01-29",
+      "promiseId": "P3",
+      "date": "2026-01-29",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed that a more personalized Siri was coming this year.",
+      "quote": "This will help power future Apple intelligence features, including a more personalized Siri coming this year.",
+      "verbatim": {
+        "text": "This will help power future Apple intelligence features, including a more personalized Siri coming this year.",
+        "segs": [
+          {
+            "t": "This will help power future Apple intelligence features, including a more personalized Siri coming this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/29/apple-aapl-q1-2026-earnings-call-transcript",
+          "title": "Apple AAPL Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/29/apple-aapl-q1-2026-earnings-call-transcript",
+          "title": "Apple AAPL Q1 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P3-2026-04-30",
+      "promiseId": "P3",
+      "date": "2026-04-30",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed delivery of personalized Siri to users this year.",
+      "quote": "And we look forward to bringing a more personalized Siri to users coming this year.",
+      "verbatim": {
+        "text": "And we look forward to bringing a more personalized Siri to users coming this year.",
+        "segs": [
+          {
+            "t": "And we look forward to bringing a more personalized Siri to users coming this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/apple-aapl-q2-2026-earnings-call-transcript",
+          "title": "Apple AAPL Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/apple-aapl-q2-2026-earnings-call-transcript",
+          "title": "Apple AAPL Q2 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P3-2026-06-08",
+      "promiseId": "P3",
+      "date": "2026-06-08",
+      "call": "Apple introduces Siri AI, a profoundly more capable and personal assistant",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Started developer testing and committed to a user beta later this year.",
+      "quote": "These features are available for developer testing starting today, and will be available as a beta to users later this year.",
+      "verbatim": {
+        "text": "These features are available for developer testing starting today, and will be available as a beta to users later this year.",
+        "segs": [
+          {
+            "t": "These features are available for developer testing starting today, and will be available as a beta to users later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant",
+          "title": "Apple introduces Siri AI, a profoundly more capable and personal assistant - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant",
+          "title": "Apple introduces Siri AI, a profoundly more capable and personal assistant - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P3-2026-07-30",
+      "promiseId": "P3",
+      "date": "2026-07-30",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Developer and public betas were in use; broader user rollout was expected this fall.",
+      "quote": "We're looking forward to bringing these new capabilities to users this fall, in addition to amazing new updates across our operating systems.",
+      "verbatim": {
+        "text": "We're looking forward to bringing these new capabilities to users this fall, in addition to amazing new updates across our operating systems.",
+        "segs": [
+          {
+            "t": "We're looking forward to bringing these new capabilities to users this fall, in addition to amazing new updates across our operating systems.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/658553-q3-2026",
+          "title": "Apple (AAPL) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/658553-q3-2026",
+          "title": "Apple (AAPL) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P3-2026-09-14",
+      "promiseId": "P3",
+      "date": "2026-09-14",
+      "call": "Siri AI, a profoundly more capable and personal assistant powered by the next generation of Apple Intelligence, is here",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Began English beta rollout, delivering personal context, onscreen awareness, and systemwide app actions; more languages were promised next month.",
+      "quote": "Siri AI begins rolling out today in beta in English, and will expand to French, Japanese, Korean, Portuguese, and Spanish next month.",
+      "verbatim": {
+        "text": "Siri AI begins rolling out today in beta in English, and will expand to French, Japanese, Korean, Portuguese, and Spanish next month.",
+        "segs": [
+          {
+            "t": "Siri AI begins rolling out today in beta in English, and will expand to French, Japanese, Korean, Portuguese, and Spanish next month.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here",
+          "title": "Siri AI, a profoundly more capable and personal assistant, is here - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here",
+          "title": "Siri AI, a profoundly more capable and personal assistant, is here - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P3-2026-10-26",
+      "promiseId": "P3",
+      "date": "2026-10-26",
+      "call": "Siri AI is available in more languages starting today",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "27.2 updates expanded beta availability to French, Japanese, Korean, Portuguese, and Spanish.",
+      "quote": "With the 27.2 software updates released today, Siri AI — an entirely new version of Siri that is profoundly more capable, conversational, and personal — is expanding to more people around the world, with availability now in the French, Japanese, Korean, Portuguese, and Spanish languages.",
+      "verbatim": {
+        "text": "With the 27.2 software updates released today, Siri AI — an entirely new version of Siri that is profoundly more capable, conversational, and personal — is expanding to more people around the world, with availability now in the French, Japanese, Korean, Portuguese, and Spanish languages.",
+        "segs": [
+          {
+            "t": "With the 27.2 software updates released today, Siri AI — an entirely new version of Siri that is profoundly more capable, conversational, and personal — is expanding to more people around the world, with availability now in the French, Japanese, Korean, Portuguese, and Spanish languages.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2026/10/siri-ai-is-available-in-more-languages-starting-today",
+          "title": "Siri AI is available in more languages starting today - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2026/10/siri-ai-is-available-in-more-languages-starting-today",
+          "title": "Siri AI is available in more languages starting today - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P3-2026-11-02",
+      "promiseId": "P3",
+      "date": "2026-11-02",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "John Ternus, CEO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed U.S. English beta launch in September and French, Japanese, Korean, Portuguese, and Spanish expansion in October.",
+      "quote": "We launched Siri AI in beta for U.S. English users in September and expanded to French, Japanese, Korean, Portuguese, and Spanish in October.",
+      "verbatim": {
+        "text": "We launched Siri AI in beta for U.S. English users in September and expanded to French, Japanese, Korean, Portuguese, and Spanish in October.",
+        "segs": [
+          {
+            "t": "We launched Siri AI in beta for U.S. English users in September and expanded to French, Japanese, Korean, Portuguese, and Spanish in October.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/702819-q4-2026/",
+          "title": "Apple (AAPL) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/aapl/transcripts/702819-q4-2026/",
+          "title": "Apple (AAPL) Q4 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P4-2025-02-24",
+      "promiseId": "P4",
+      "date": "2025-02-24",
+      "call": "Apple will spend more than $500 billion in the U.S. over the next four years",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced plans to spend and invest more than $500 billion in the U.S. over the next four years.",
+      "quote": "Apple today announced its largest-ever spend commitment, with plans to spend and invest more than $500 billion in the U.S. over the next four years.",
+      "verbatim": {
+        "text": "Apple today announced its largest-ever spend commitment, with plans to spend and invest more than $500 billion in the U.S. over the next four years.",
+        "segs": [
+          {
+            "t": "Apple today announced its largest-ever spend commitment, with plans to spend and invest more than ",
+            "h": 0
+          },
+          {
+            "t": "$500 billion",
+            "h": 1
+          },
+          {
+            "t": " in the U.S. over the next four years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2025/02/apple-will-spend-more-than-500-billion-usd-in-the-us-over-the-next-four-years",
+          "title": "Apple will spend more than $500 billion in the U.S. over the next four years - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2025/02/apple-will-spend-more-than-500-billion-usd-in-the-us-over-the-next-four-years",
+          "title": "Apple will spend more than $500 billion in the U.S. over the next four years - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P4-2025-05-01",
+      "promiseId": "P4",
+      "date": "2025-05-01",
+      "call": "Q2 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed plans to spend $500 billion in the United States over the next four years.",
+      "quote": "And we are proud to increase our impact around the world, including here in the United States, where we recently announced plans to spend $500 billion over the next four years.",
+      "verbatim": {
+        "text": "And we are proud to increase our impact around the world, including here in the United States, where we recently announced plans to spend $500 billion over the next four years.",
+        "segs": [
+          {
+            "t": "And we are proud to increase our impact around the world, including here in the United States, where we recently announced plans to spend ",
+            "h": 0
+          },
+          {
+            "t": "$500 billion",
+            "h": 1
+          },
+          {
+            "t": " over the next four years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://sixcolors.com/post/2025/05/this-is-tim-transcript-of-apples-q2-2025-financial-call",
+          "title": "This is Tim: Complete transcript of Apple’s Q2 2025 financial call – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://sixcolors.com/post/2025/05/this-is-tim-transcript-of-apples-q2-2025-financial-call",
+          "title": "This is Tim: Complete transcript of Apple’s Q2 2025 financial call – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.apple.com/newsroom/2025/02/apple-will-spend-more-than-500-billion-usd-in-the-us-over-the-next-four-years",
+          "title": "Apple will spend more than $500 billion in the U.S. over the next four years - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P4-2025-07-31",
+      "promiseId": "P4",
+      "date": "2025-07-31",
+      "call": "Q3 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $500 billion over the next four years, supporting advanced manufacturing, silicon engineering, and artificial intelligence.",
+      "quote": "Over the next four years, Apple is investing $500 billion in the U.S., driving innovation and creating jobs in cutting-edge fields like advanced manufacturing, silicon engineering, and artificial intelligence.",
+      "verbatim": {
+        "text": "Over the next four years, Apple is investing $500 billion in the U.S., driving innovation and creating jobs in cutting-edge fields like advanced manufacturing, silicon engineering, and artificial intelligence.",
+        "segs": [
+          {
+            "t": "Over the next four years, Apple is investing ",
+            "h": 0
+          },
+          {
+            "t": "$500 billion",
+            "h": 1
+          },
+          {
+            "t": " in the U.S., driving innovation and creating jobs in cutting-edge fields like advanced manufacturing, silicon engineering, and artificial intelligence.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://sixcolors.com/post/2025/07/this-is-tim-transcript-of-apples-q3-2025-financial-call",
+          "title": "This is Tim: Complete transcript of Apple’s Q3 2025 financial call – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://sixcolors.com/post/2025/07/this-is-tim-transcript-of-apples-q3-2025-financial-call",
+          "title": "This is Tim: Complete transcript of Apple’s Q3 2025 financial call – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P4-2025-08-06",
+      "promiseId": "P4",
+      "date": "2025-08-06",
+      "call": "Apple increases U.S. commitment to $600 billion, announces American Manufacturing Program",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Added $100 billion, raising the U.S. investment commitment to $600 billion over the next four years.",
+      "quote": "Apple today announced a new $100 billion commitment to America, a significant acceleration of its U.S. investment that now totals $600 billion over the next four years.",
+      "verbatim": {
+        "text": "Apple today announced a new $100 billion commitment to America, a significant acceleration of its U.S. investment that now totals $600 billion over the next four years.",
+        "segs": [
+          {
+            "t": "Apple today announced a new ",
+            "h": 0
+          },
+          {
+            "t": "$100 billion",
+            "h": 1
+          },
+          {
+            "t": " commitment to America, a significant acceleration of its U.S. investment that now totals ",
+            "h": 0
+          },
+          {
+            "t": "$600 billion",
+            "h": 1
+          },
+          {
+            "t": " over the next four years.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2025/08/apple-increases-us-commitment-to-600-billion-usd-announces-ambitious-program",
+          "title": "Apple increases U.S. commitment to $600 billion, announces ambitious program - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2025/08/apple-increases-us-commitment-to-600-billion-usd-announces-ambitious-program",
+          "title": "Apple increases U.S. commitment to $600 billion, announces ambitious program - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "AAPL-P4-2025-10-30",
+      "promiseId": "P4",
+      "date": "2025-10-30",
+      "call": "Q4 FY2025 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed six hundred billion dollars over the next four years; reported initial Houston AI-server shipments.",
+      "quote": "A great example is the work we’re doing in the U.S. where we’re committed to invest six hundred billion dollars over the next four years with a focus on innovation and strategic areas like advanced manufacturing, silicon engineering, and artificial intelligence.",
+      "verbatim": {
+        "text": "A great example is the work we’re doing in the U.S. where we’re committed to invest six hundred billion dollars over the next four years with a focus on innovation and strategic areas like advanced manufacturing, silicon engineering, and artificial intelligence.",
+        "segs": [
+          {
+            "t": "A great example is the work we’re doing in the U.S. where we’re committed to invest six hundred billion dollars over the next four years with a focus on innovation and strategic areas like advanced manufacturing, silicon engineering, and artificial intelligence.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://sixcolors.com/post/2025/10/this-is-tim-transcript-of-apples-q4-2025-financial-call",
+          "title": "This is Tim: Complete transcript of Apple’s Q4 2025 financial call – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://sixcolors.com/post/2025/10/this-is-tim-transcript-of-apples-q4-2025-financial-call",
+          "title": "This is Tim: Complete transcript of Apple’s Q4 2025 financial call – Six Colors",
+          "domain": "sixcolors.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P4-2026-01-29",
+      "promiseId": "P4",
+      "date": "2026-01-29",
+      "call": "Q1 FY2026 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reaffirmed $600 billion over four years and said implementation was making great progress.",
+      "quote": "In the year since we made our initial commitment, we're making great progress.",
+      "verbatim": {
+        "text": "In the year since we made our initial commitment, we're making great progress.",
+        "segs": [
+          {
+            "t": "In the year since we made our initial commitment, we're making great progress.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://earningscall.biz/e/nasdaq/s/aapl/y/2026/q/q1",
+          "title": "EarningsCall · AAPL Q1 2026",
+          "domain": "earningscall.biz",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://earningscall.biz/e/nasdaq/s/aapl/y/2026/q/q1",
+          "title": "EarningsCall · AAPL Q1 2026",
+          "domain": "earningscall.biz",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P4-2026-04-30",
+      "promiseId": "P4",
+      "date": "2026-04-30",
+      "call": "Q2 FY2026 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Houston expansion for Mac mini production later this year as part of the $600 billion U.S. commitment.",
+      "quote": "As part of our $600 billion commitment to the U.S., we were pleased to share recently that Mac mini production is coming to America later this year, expanding our factory operations in Houston with a brand-new facility.",
+      "verbatim": {
+        "text": "Tim Cook CEO 0:18:37 As part of our $600 billion commitment to the U.S., we were pleased to share recently that Mac mini production is coming to America later this year, expanding our factory operations in Houston with a brand-new facility.",
+        "segs": [
+          {
+            "t": "Tim Cook CEO 0:18:37 As part of our ",
+            "h": 0
+          },
+          {
+            "t": "$600 billion",
+            "h": 1
+          },
+          {
+            "t": " commitment to the U.S., we were pleased to share recently that Mac mini production is coming to America later this year, expanding our factory operations in Houston with a brand-new facility.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q2-2026-earnings_call-548666.html",
+          "title": "Apple Inc. (AAPL) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q2-2026-earnings_call-548666.html",
+          "title": "Apple Inc. (AAPL) Q2 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P4-2026-07-30",
+      "promiseId": "P4",
+      "date": "2026-07-30",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Tim Cook, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $600 billion over four years and plans to reinvest received tariff refunds in the U.S.",
+      "quote": "Last year, we made a $600 billion commitment to the U.S. over four years, and now, as we said before, we plan to reinvest the tariff refunds we've received into the U.S.",
+      "verbatim": {
+        "text": "Last year, we made a $600 billion commitment to the U.S. over four years, and now, as we said before, we plan to reinvest the tariff refunds we've received into the U.S.",
+        "segs": [
+          {
+            "t": "Last year, we made a ",
+            "h": 0
+          },
+          {
+            "t": "$600 billion",
+            "h": 1
+          },
+          {
+            "t": " commitment to the U.S. over four years, and now, as we said before, we plan to reinvest the tariff refunds we've received into the U.S.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s3.documentcloud.org/documents/28537817/apple-3q-clean.pdf",
+          "title": "EarningsCallTranscript:AppleInc 8,565words 30July2026 02:00PM EarningsCallTranscripts FNDW English ©2026QuartrInc. Goodafternoon,welcometotheAppleQ3fiscalyear2026earningsconferencecall.MynameisSuhasini Chandramouli,DirectorofInvestorRelations.Today'scallisbeingrecorded.SpeakingfirsttodayisAppleCEO TimCook,followedbyCFOKevanParekh.Alsojoiningusontoday'scallisincomingCEOJohnTernus.Afterthe preparedremarks,we'llopenthecalltoquestionsfromanalysts.Pleasenotethatsomeoftheinformationyou'll hearduringourdiscussiontodaywillconsistofforward-lookingstatements,including,withoutlimitation,those regardingrevenue,grossmargin,operatingexpenses,otherincomeandexpense,taxes,andfuturebusiness outlook.Thesestatementsinvolverisksanduncertaintiesthatmaycauseactualresultsortrendstodiffer materiallyfromourforecast,includingrisksrelatedtothepotentialimpacttothecompany'sbusinessandresults ofoperationsfrommacroeconomicconditions,tariffsandothermeasures,andlegalandregulatoryproceedings. Formoreinformation,pleaserefertotheriskfactorsdiscussedinApple'smostrecentlyfiledreportsonForm 10-QandForm10-K,andtheForm8-KfiledwiththeSECtoday,alongwiththeassociatedpressrelease. AdditionalinformationwillalsobeinourreportonForm10-QforthequarterendedJune27,2026,tobefiled",
+          "domain": "s3.documentcloud.org",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s3.documentcloud.org/documents/28537817/apple-3q-clean.pdf",
+          "title": "EarningsCallTranscript:AppleInc 8,565words 30July2026 02:00PM EarningsCallTranscripts FNDW English ©2026QuartrInc. Goodafternoon,welcometotheAppleQ3fiscalyear2026earningsconferencecall.MynameisSuhasini Chandramouli,DirectorofInvestorRelations.Today'scallisbeingrecorded.SpeakingfirsttodayisAppleCEO TimCook,followedbyCFOKevanParekh.Alsojoiningusontoday'scallisincomingCEOJohnTernus.Afterthe preparedremarks,we'llopenthecalltoquestionsfromanalysts.Pleasenotethatsomeoftheinformationyou'll hearduringourdiscussiontodaywillconsistofforward-lookingstatements,including,withoutlimitation,those regardingrevenue,grossmargin,operatingexpenses,otherincomeandexpense,taxes,andfuturebusiness outlook.Thesestatementsinvolverisksanduncertaintiesthatmaycauseactualresultsortrendstodiffer materiallyfromourforecast,includingrisksrelatedtothepotentialimpacttothecompany'sbusinessandresults ofoperationsfrommacroeconomicconditions,tariffsandothermeasures,andlegalandregulatoryproceedings. Formoreinformation,pleaserefertotheriskfactorsdiscussedinApple'smostrecentlyfiledreportsonForm 10-QandForm10-K,andtheForm8-KfiledwiththeSECtoday,alongwiththeassociatedpressrelease. AdditionalinformationwillalsobeinourreportonForm10-QforthequarterendedJune27,2026,tobefiled",
+          "domain": "s3.documentcloud.org",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P4-2026-11-02",
+      "promiseId": "P4",
+      "date": "2026-11-02",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "John Ternus, CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the $600 billion four-year commitment while reporting continued U.S. manufacturing activity.",
+      "quote": "It's all part of our $600 billion four-year commitment to U.S. innovation and advanced manufacturing.",
+      "verbatim": {
+        "text": "It's all part of our $600 billion four-year commitment to U.S. innovation and advanced manufacturing.",
+        "segs": [
+          {
+            "t": "It's all part of our ",
+            "h": 0
+          },
+          {
+            "t": "$600 billion",
+            "h": 1
+          },
+          {
+            "t": " four-year commitment to U.S. innovation and advanced manufacturing.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q4-2026-earnings_call-702819.html",
+          "title": "Apple Inc. (AAPL) Q4 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q4-2026-earnings_call-702819.html",
+          "title": "Apple Inc. (AAPL) Q4 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P5-2026-04-30",
+      "promiseId": "P5",
+      "date": "2026-04-30",
+      "call": "Q2 FY2026 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Authorized an additional program to repurchase up to $100 billion of common stock.",
+      "quote": "The board of directors has also authorized an additional program to repurchase up to $100 billion of the Company’s common stock.",
+      "verbatim": {
+        "text": "The board of directors has also authorized an additional program to repurchase up to $100 billion of the Company’s common stock.",
+        "segs": [
+          {
+            "t": "The board of directors has also authorized an additional program to repurchase up to ",
+            "h": 0
+          },
+          {
+            "t": "$100 billion",
+            "h": 1
+          },
+          {
+            "t": " of the Company’s common stock.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.apple.com/newsroom/2026/04/apple-reports-second-quarter-results",
+          "title": "Apple reports second quarter results - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.apple.com/newsroom/2026/04/apple-reports-second-quarter-results",
+          "title": "Apple reports second quarter results - Apple",
+          "domain": "apple.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "AAPL-P5-2026-07-30",
+      "promiseId": "P5",
+      "date": "2026-07-30",
+      "call": "Q3 FY2026 earnings call",
+      "speaker": "Kevan Parekh, CFO",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported $4 billion dividends/equivalents and $25.8 billion aggregate repurchases; did not discuss the additional $100 billion authorization.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q3-2026-earnings_call-658553.html",
+          "title": "Apple Inc. (AAPL) Q3 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+          "title": "aapl-20260627",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "AAPL-P5-2026-11-02",
+      "promiseId": "P5",
+      "date": "2026-11-02",
+      "call": "Q4 FY2026 earnings call",
+      "speaker": "Kevan Parekh, CFO",
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "Reported $3.9 billion dividends/equivalents and $24 billion aggregate repurchases; did not discuss the additional $100 billion authorization.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q4-2026-earnings_call-702819.html",
+          "title": "Apple Inc. (AAPL) Q4 FY2026  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+          "title": "aapl-20260926",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/311069-q2-2025/",
+      "title": "Apple (AAPL) Q2 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q4-2026-earnings_call-702819.html",
+      "title": "Apple Inc. (AAPL) Q4 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.fool.com/earnings/call-transcripts/2025/01/30/apple-aapl-q1-2025-earnings-call-transcript/",
+      "title": "Apple (AAPL) Q1 2025 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 4,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/702819-q4-2026/",
+      "title": "Apple (AAPL) Q4 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://www.apple.com/newsroom/2023/06/introducing-apple-vision-pro",
+      "title": "Introducing Apple Vision Pro: Apple’s first spatial computer - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 6,
+      "url": "https://www.apple.com/newsroom/2024/01/apple-vision-pro-available-in-the-us-on-february-2",
+      "title": "Apple Vision Pro available in the U.S. on February 2 - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 7,
+      "url": "https://www.apple.com/newsroom/2024/02/apple-vision-pro-arrives-in-apple-store-locations-across-the-us",
+      "title": "Apple Vision Pro arrives in Apple Store locations across the U.S. - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 8,
+      "url": "https://www.apple.com/newsroom/2024/10/apple-intelligence-is-available-today-on-iphone-ipad-and-mac",
+      "title": "Apple Intelligence is available today on iPhone, iPad, and Mac - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 9,
+      "url": "https://www.apple.com/newsroom/2024/12/apple-intelligence-now-features-image-playground-genmoji-and-more",
+      "title": "Apple Intelligence now features Image Playground, Genmoji, and more - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 10,
+      "url": "https://www.apple.com/newsroom/2025/03/apple-intelligence-features-expand-to-new-languages-and-regions-today",
+      "title": "Apple Intelligence features expand to new languages and regions today - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 11,
+      "url": "https://www.apple.com/newsroom/2026/06/apple-introduces-siri-ai-a-profoundly-more-capable-and-personal-assistant",
+      "title": "Apple introduces Siri AI, a profoundly more capable and personal assistant - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 12,
+      "url": "https://www.apple.com/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here",
+      "title": "Siri AI, a profoundly more capable and personal assistant, is here - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://www.apple.com/newsroom/2026/10/siri-ai-is-available-in-more-languages-starting-today",
+      "title": "Siri AI is available in more languages starting today - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://www.apple.com/newsroom/2025/02/apple-will-spend-more-than-500-billion-usd-in-the-us-over-the-next-four-years",
+      "title": "Apple will spend more than $500 billion in the U.S. over the next four years - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 15,
+      "url": "https://www.apple.com/newsroom/2025/08/apple-increases-us-commitment-to-600-billion-usd-announces-ambitious-program",
+      "title": "Apple increases U.S. commitment to $600 billion, announces ambitious program - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 16,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000026/aapl-20260926.htm",
+      "title": "aapl-20260926",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 17,
+      "url": "https://www.apple.com/newsroom/2024/02/apple-reports-first-quarter-results",
+      "title": "Apple reports first quarter results - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://www.apple.com/newsroom/2024/09/apple-intelligence-comes-to-iphone-ipad-and-mac-starting-next-month",
+      "title": "Apple Intelligence comes to iPhone, iPad, and Mac starting next month - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 19,
+      "url": "https://www.apple.com/newsroom/2025/02/apple-intelligence-expands-to-more-languages-and-regions-in-april",
+      "title": "Apple Intelligence expands to more languages and regions in April - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 20,
+      "url": "https://www.apple.com/newsroom/2026/04/apple-reports-second-quarter-results",
+      "title": "Apple reports second quarter results - Apple",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 21,
+      "url": "https://www.sec.gov/Archives/edgar/data/320193/000032019326000020/aapl-20260627.htm",
+      "title": "aapl-20260627",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 22,
+      "url": "https://www.apple.com/in/newsroom/2026/09/siri-ai-a-profoundly-more-capable-and-personal-assistant-is-here",
+      "title": "Siri AI, a profoundly more capable and personal assistant, is here - Apple (IN)",
+      "domain": "apple.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 23,
+      "url": "https://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q3-2026-earnings_call-658553.html",
+      "title": "Apple Inc. (AAPL) Q3 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 24,
+      "url": "https://www.roic.ai/quote/AAPL/transcripts/2024-year/1-quarter",
+      "title": "Apple Inc. (AAPL) Q1 FY2024 Earnings Call Transcript - February 1, 2024",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 25,
+      "url": "https://www.roic.ai/quote/AAPL/transcripts/2023-year/4-quarter",
+      "title": "Apple Inc. (AAPL) Q4 FY2023 Earnings Call Transcript - November 2, 2023",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://finance.yahoo.com/news/apple-inc-nasdaq-aapl-q2-162038149.html",
+      "title": "Apple Inc. (NASDAQ:AAPL) Q2 2024 Earnings Call Transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.roic.ai/quote/AAPL%3AQF/transcripts/2024-year/3-quarter",
+      "title": "Apple Inc. (AAPL QF) Q3 FY2024 Earnings Call Transcript - August 1, 2024",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 28,
+      "url": "https://www.roic.ai/quote/AAPL/transcripts/2024-year/4-quarter",
+      "title": "Apple Inc. (AAPL) Q4 FY2024 Earnings Call Transcript - October 31, 2024",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 29,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/341149-q3-2025/",
+      "title": "Apple (AAPL) Q3 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 30,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/369370-q4-2025/",
+      "title": "Apple (AAPL) Q4 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 31,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/29/apple-aapl-q1-2026-earnings-call-transcript",
+      "title": "Apple AAPL Q1 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 32,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/30/apple-aapl-q2-2026-earnings-call-transcript",
+      "title": "Apple AAPL Q2 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 33,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/658553-q3-2026",
+      "title": "Apple (AAPL) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 34,
+      "url": "https://earningscall.biz/e/nasdaq/s/aapl/y/2026/q/q1",
+      "title": "EarningsCall · AAPL Q1 2026",
+      "domain": "earningscall.biz",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 35,
+      "url": "http://finance.yahoo.com/quote/AAPL/earnings/AAPL-Q2-2026-earnings_call-548666.html",
+      "title": "Apple Inc. (AAPL) Q2 FY2026  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 36,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/66748-q3-2023",
+      "title": "Apple (AAPL) Q3 2023 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 37,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/164428-q2-2024/",
+      "title": "Apple (AAPL) Q2 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 38,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/190138-q3-2024",
+      "title": "Apple (AAPL) Q3 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 39,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/218053-q4-2024/",
+      "title": "Apple (AAPL) Q4 2024 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 40,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/251672-q1-2025/",
+      "title": "Apple (AAPL) Q1 2025 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 41,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/406161-q1-2026/",
+      "title": "Apple (AAPL) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 42,
+      "url": "https://stockanalysis.com/stocks/aapl/transcripts/548666-q2-2026/",
+      "title": "Apple (AAPL) Q2 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 43,
+      "url": "https://earningscalls.dev/transcripts/apple-inc_aapl_earnings_call_transcript_2025-05-01",
+      "title": "Apple Inc. (AAPL) Earnings Call Transcript & Summary",
+      "domain": "earningscalls.dev",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 44,
+      "url": "https://daringfireball.net/2025/03/apple_is_delaying_the_more_personalized_siri_apple_intelligence_features",
+      "title": "Daring Fireball: Apple Is Delaying the ‘More Personalized Siri’ Apple Intelligence Features",
+      "domain": "daringfireball.net",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 45,
+      "url": "https://sixcolors.com/post/2025/10/this-is-tim-transcript-of-apples-q4-2025-financial-call",
+      "title": "This is Tim: Complete transcript of Apple’s Q4 2025 financial call – Six Colors",
+      "domain": "sixcolors.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 46,
+      "url": "https://sixcolors.com/post/2023/08/this-is-tim-apples-q3-2023-analyst-call-transcribed",
+      "title": "This is Tim: Apple’s Q3 2023 analyst call, transcribed – Six Colors",
+      "domain": "sixcolors.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 47,
+      "url": "https://www.macrumors.com/2025/06/09/personalized-siri-still-not-ready/",
+      "title": "WWDC 2025: Apple Says Personalized Siri Features Are Still Not Ready - MacRumors",
+      "domain": "macrumors.com",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 48,
+      "url": "https://9to5mac.com/2025/06/12/apple-confirms-siris-delayed-features-wont-ship-until-2026",
+      "title": "Apple confirms Siri’s delayed features won’t ship until 2026 - 9to5Mac",
+      "domain": "9to5mac.com",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 49,
+      "url": "https://sixcolors.com/post/2025/05/this-is-tim-transcript-of-apples-q2-2025-financial-call",
+      "title": "This is Tim: Complete transcript of Apple’s Q2 2025 financial call – Six Colors",
+      "domain": "sixcolors.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 50,
+      "url": "https://sixcolors.com/post/2025/07/this-is-tim-transcript-of-apples-q3-2025-financial-call",
+      "title": "This is Tim: Complete transcript of Apple’s Q3 2025 financial call – Six Colors",
+      "domain": "sixcolors.com",
+      "tier": "press",
+      "uses": "P4"
+    },
+    {
+      "n": 51,
+      "url": "https://s3.documentcloud.org/documents/28537817/apple-3q-clean.pdf",
+      "title": "EarningsCallTranscript:AppleInc 8,565words 30July2026 02:00PM EarningsCallTranscripts FNDW English ©2026QuartrInc. Goodafternoon,welcometotheAppleQ3fiscalyear2026earningsconferencecall.MynameisSuhasini Chandramouli,DirectorofInvestorRelations.Today'scallisbeingrecorded.SpeakingfirsttodayisAppleCEO TimCook,followedbyCFOKevanParekh.Alsojoiningusontoday'scallisincomingCEOJohnTernus.Afterthe preparedremarks,we'llopenthecalltoquestionsfromanalysts.Pleasenotethatsomeoftheinformationyou'll hearduringourdiscussiontodaywillconsistofforward-lookingstatements,including,withoutlimitation,those regardingrevenue,grossmargin,operatingexpenses,otherincomeandexpense,taxes,andfuturebusiness outlook.Thesestatementsinvolverisksanduncertaintiesthatmaycauseactualresultsortrendstodiffer materiallyfromourforecast,includingrisksrelatedtothepotentialimpacttothecompany'sbusinessandresults ofoperationsfrommacroeconomicconditions,tariffsandothermeasures,andlegalandregulatoryproceedings. Formoreinformation,pleaserefertotheriskfactorsdiscussedinApple'smostrecentlyfiledreportsonForm 10-QandForm10-K,andtheForm8-KfiledwiththeSECtoday,alongwiththeassociatedpressrelease. AdditionalinformationwillalsobeinourreportonForm10-QforthequarterendedJune27,2026,tobefiled",
+      "domain": "s3.documentcloud.org",
+      "tier": "press",
+      "uses": "P4"
+    }
+  ],
+  "focus": "P3",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T05:51:03.375382Z",
+      "completedAt": "2026-11-05T05:57:55.361248Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T18:46:08.048925Z",
+      "completedAt": "2026-11-05T18:49:59.299101Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.608170Z",
+      "completedAt": "2026-11-05T19:11:57.941656Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.614620Z",
+      "completedAt": "2026-11-05T19:13:53.794416Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.621439Z",
+      "completedAt": "2026-11-05T19:16:10.999159Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:00.628247Z",
+      "completedAt": "2026-11-05T19:11:36.270794Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.396805Z",
+      "completedAt": "2026-11-05T19:44:49.908155Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.374928Z",
+      "completedAt": "2026-11-05T19:44:21.370824Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.382409Z",
+      "completedAt": "2026-11-05T19:47:13.504287Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.389676Z",
+      "completedAt": "2026-11-05T19:45:52.410040Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:13.404051Z",
+      "completedAt": "2026-11-05T19:43:36.611145Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "42 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "40 of 40 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "40 of 40 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "warn",
+        "detail": "4 of 5 confirmed; flagged: P2"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q4 FY2026 on 2026-11-02; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Apple_logo_grey.svg/1920px-Apple_logo_grey.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Apple_logo_grey.svg",
+      "title": "File:Apple logo grey.svg - Wikimedia Commons",
+      "width": 1920,
+      "height": 2280,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://www.apple.com/newsroom/images/2026/02/apple-accelerates-us-manufacturing-with-mac-mini-production/article/Apple-US-manufacturing-investment-Houston-data-center-assembly-line-02_big.jpg.large.jpg",
+      "sourcePageUrl": "https://www.apple.com/newsroom/2026/02/apple-accelerates-us-manufacturing-with-mac-mini-production/",
+      "title": "Apple accelerates U.S. manufacturing with Mac mini production - Apple",
+      "width": 980,
+      "height": 735,
+      "rank": 7
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.292Z"
+}

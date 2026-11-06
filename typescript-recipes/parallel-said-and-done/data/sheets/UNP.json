@@ -1,0 +1,2126 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "UNP",
+  "name": "Union Pacific Corporation",
+  "short": "Union Pacific",
+  "website": "up.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investor.unionpacific.com/investor-relations",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-22",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Union Pacific freight train",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "2025 share repurchases",
+      "commitment": "Repurchase $4 billion to $4.5 billion of shares during 2025.",
+      "deadline": "2025",
+      "firstStated": "2025-01-23",
+      "status": "dropped",
+      "k": "drop",
+      "outcomeSummary": "Repurchases were suspended for the Norfolk Southern merger; 2025 buybacks totaled $2.7 billion, below the $4 billion to $4.5 billion commitment.",
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2024-year/4-quarter",
+          "title": "Union Pacific Corporation (UNP.TO) Q4 FY2024 Earnings Call Transcript - January 23, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm",
+          "title": "unp-20251231",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/26/union-pacific-unp-q3-2025-earnings-transcript",
+          "title": "Union Pacific (UNP) Q3 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://fortune.com/company-assets/706/quartr/annual-report-10-k-7a9b4-2026-02-06-03-05-04.pdf",
+          "title": "UNION PACIFIC CORPORATION — FORM 10-K, fiscal year ended December 31, 2025",
+          "domain": "fortune.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-07-29",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "dropped",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-04-24",
+            "what_was_said": "Management reiterated the $4 billion–$4.5 billion repurchase range and said it felt very good about it, but added: “If the situation changes, we can scale back” and “if the world changes dramatically for us, we can flex that.” This was conditional flexibility, not an actual reduction of the target.",
+            "call": "Q1 2025 earnings call"
+          },
+          {
+            "date": "2026-01-27",
+            "what_was_said": "Management reported $5.9 billion returned through dividends and repurchases combined during 2025, explicitly confirmed “And we stopped the share buyback,” and explained that it was ensuring sufficient cash was available.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Close Norfolk Southern merger",
+      "commitment": "Close the Norfolk Southern merger during 2027, subject to regulatory approval.",
+      "deadline": "2027",
+      "firstStated": "2025-07-29",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Merger remains pending regulatory approval. Expected closing shifted from early 2027 to the second half of 2027, still within the stated 2027 deadline.",
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-and-norfolk-southern-create-americas-first",
+          "title": "Union Pacific and Norfolk Southern to Create America’s First Transcontinental Railroad | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/27/union-pacific-unp-q4-2025-earnings-transcript",
+          "title": "Union Pacific (UNP) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-railroad-and-norfolk-southern-combination-gains",
+          "title": "Union Pacific Railroad and Norfolk Southern Combination Gains Additional Momentum | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-union-pacific-beats-q2-2026-forecasts-shares-rise-93CH-4809437",
+          "title": "Earnings call transcript: Union Pacific beats Q2 2026 forecasts, shares rise By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-23",
+            "what_was_said": "In Q&A, Jim Vena said management expected STB approval in Q2 2027: \"It'll be second quarter next year, we would expect to be at the place where they approve it, and we can move ahead.\" He cautioned, \"Now, it's not finalized.\" This adds an approval-timing expectation beyond S5's application-filing update.",
+            "call": "Q1 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "2026 earnings growth",
+      "commitment": "Deliver mid-single-digit earnings-per-share growth in 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-01-27",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "The 2026 outlook was raised to reported high single-digit EPS growth and reaffirmed; reported EPS grew 9% year-to-date. Full-year delivery remained pending.",
+      "citations": [
+        {
+          "url": "https://www.up.com/press-releases/financial/2q26-earnings-results-260723",
+          "title": "Union Pacific Reports Second Quarter 2026 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/27/union-pacific-unp-q4-2025-earnings-transcript",
+          "title": "Union Pacific (UNP) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.up.com/press-releases/financial/4q25-earnings-announcement-260127",
+          "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-union-pacific-beats-q2-2026-forecasts-shares-rise-93CH-4809437",
+          "title": "Earnings call transcript: Union Pacific beats Q2 2026 forecasts, shares rise By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-23",
+            "what_was_said": "Management clarified that the mid-single-digit EPS-growth outlook was based on reported EPS and included merger-cost headwinds not originally anticipated, while the company was not buying back shares.",
+            "call": "Q1 2026 earnings call"
+          },
+          {
+            "date": "2026-10-22",
+            "what_was_said": "Management reminded investors that the $11.98 reported 2025 EPS comparison base included $0.30 from a fourth-quarter land sale.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "2026 capital investment",
+      "commitment": "Invest $3.3 billion in capital improvements during 2026.",
+      "deadline": "2026",
+      "firstStated": "2026-01-27",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Union Pacific increased its 2026 capital plan from $3.3 billion to $3.5 billion, pulling forward work planned for 2027; completion remained pending.",
+      "citations": [
+        {
+          "url": "https://www.up.com/press-releases/financial/4q25-earnings-announcement-260127",
+          "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.unionpacific.com/node/30941/pdf",
+          "title": "Union Pacific Reports Third Quarter 2026 Results",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://stockanalysis.com/stocks/unp/transcripts/713922-q3-2026/",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/27/union-pacific-unp-q4-2025-earnings-transcript",
+          "title": "Union Pacific (UNP) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-10-22",
+            "what_was_said": "Management said it was updating 2026 capital spending to $3.5 billion to invest for growth and pull ahead some capital work planned for 2027.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Improve 2026 operating ratio",
+      "commitment": "Improve full-year 2026 operating ratio versus 2025.",
+      "deadline": "2026",
+      "firstStated": "2026-01-27",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Management narrowed guidance to core operating ratio improvement, warning that high fuel prices challenged reported operating ratio. Full-year performance remained pending.",
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-third-quarter-2026-results",
+          "title": "Union Pacific Reports Third Quarter 2026 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/27/union-pacific-unp-q4-2025-earnings-transcript",
+          "title": "Union Pacific (UNP) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://www.up.com/press-releases/financial/3q26-earnings-261022",
+          "title": "Union Pacific Reports Third Quarter 2026 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "UNP-P1-2025-01-23",
+      "promiseId": "P1",
+      "date": "2025-01-23",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Jennifer Hamann, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Planned $4 billion to $4.5 billion of 2025 repurchases alongside a dividend payout ratio around 45%.",
+      "quote": "We remain committed to our industry leading dividend payout ratio of around 45% of earnings and we plan to return excess cash to shareholders through share repurchases of $4 billion to $4.5 billion during the year.",
+      "verbatim": {
+        "text": "We remain committed to our industry leading dividend payout ratio of around 45% of earnings and we plan to return excess cash to shareholders through share repurchases of $4 billion to $4.5 billion during the year.",
+        "segs": [
+          {
+            "t": "We remain committed to our industry leading dividend payout ratio of around ",
+            "h": 0
+          },
+          {
+            "t": "45%",
+            "h": 1
+          },
+          {
+            "t": " of earnings and we plan to return excess cash to shareholders through share repurchases of ",
+            "h": 0
+          },
+          {
+            "t": "$4 billion",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$4.5 billion",
+            "h": 1
+          },
+          {
+            "t": " during the year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2024-year/4-quarter",
+          "title": "Union Pacific Corporation (UNP.TO) Q4 FY2024 Earnings Call Transcript - January 23, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2024-year/4-quarter",
+          "title": "Union Pacific Corporation (UNP.TO) Q4 FY2024 Earnings Call Transcript - January 23, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P1-2025-04-24",
+      "promiseId": "P1",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Jennifer Hamann, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Initiated $1.5 billion accelerated repurchase and bought another $220 million; reaffirmed $4 billion to $4.5 billion full-year guidance.",
+      "quote": "In February, we initiated an accelerated share repurchase program for $1.5 billion and through the quarter, we made open market purchases of an additional $220 million as we more recently took advantage of very attractive share prices.",
+      "verbatim": {
+        "text": "In February, we initiated an accelerated share repurchase program for $1.5 billion and through the quarter, we made open market purchases of an additional $220 million as we more recently took advantage of very attractive share prices.",
+        "segs": [
+          {
+            "t": "In February, we initiated an accelerated share repurchase program for ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 billion",
+            "h": 1
+          },
+          {
+            "t": " and through the quarter, we made open market purchases of an additional ",
+            "h": 0
+          },
+          {
+            "t": "$220 million",
+            "h": 1
+          },
+          {
+            "t": " as we more recently took advantage of very attractive share prices.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/UNP/transcripts/2025-year/1-quarter",
+          "title": "Union Pacific Corporation (UNP) Q1 FY2025 Earnings Call Transcript - April 24, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/UNP/transcripts/2025-year/1-quarter",
+          "title": "Union Pacific Corporation (UNP) Q1 FY2025 Earnings Call Transcript - April 24, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P1-2025-07-24",
+      "promiseId": "P1",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Jennifer Hamann, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Returned $4.3 billion through repurchases and dividends; capital deployment strategy remained unchanged.",
+      "quote": "Through the second quarter, we've returned $4.3 billion to our shareholders through a combination of share repurchases and dividends.",
+      "verbatim": {
+        "text": "Through the second quarter, we've returned $4.3 billion to our shareholders through a combination of share repurchases and dividends.",
+        "segs": [
+          {
+            "t": "Through the second quarter, we've returned ",
+            "h": 0
+          },
+          {
+            "t": "$4.3 billion",
+            "h": 1
+          },
+          {
+            "t": " to our shareholders through a combination of share repurchases and dividends.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.alphaspread.com/security/nyse/unp/earnings-calls/q2-2025",
+          "title": "UNP Q2 2025 Earnings Call Transcript - Alpha Spread",
+          "domain": "alphaspread.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.alphaspread.com/security/nyse/unp/earnings-calls/q2-2025",
+          "title": "UNP Q2 2025 Earnings Call Transcript - Alpha Spread",
+          "domain": "alphaspread.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-second-quarter-2025-results",
+          "title": "Union Pacific Reports Second Quarter 2025 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P1-2025-07-29",
+      "promiseId": "P1",
+      "date": "2025-07-29",
+      "call": "Q2 2025 Norfolk Southern earnings call — merger discussion",
+      "speaker": "Jennifer Hamann, CFO",
+      "stance": "dropped",
+      "k": "c",
+      "summary": "Suspended share repurchases following the Norfolk Southern merger announcement while maintaining dividends.",
+      "quote": "As part of that, both Union Pacific and Norfolk Southern have suspended share repurchases but will maintain their respective dividends.",
+      "verbatim": {
+        "text": "As part of that, both Union Pacific and Norfolk Southern have suspended share repurchases but will maintain their respective dividends.",
+        "segs": [
+          {
+            "t": "As part of that, both Union Pacific and Norfolk Southern have suspended share repurchases but will maintain their respective dividends.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/702165/000119312525168365/d943261d425.htm",
+          "title": "NORFOLK SOUTHERN CORP 425 filed July 30, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/702165/000119312525168365/d943261d425.htm",
+          "title": "NORFOLK SOUTHERN CORP 425 filed July 30, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2024-year/4-quarter",
+          "title": "Union Pacific Corporation (UNP.TO) Q4 FY2024 Earnings Call Transcript - January 23, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P1-2025-09-10",
+      "promiseId": "P1",
+      "date": "2025-09-10",
+      "call": "September 10, 2025 Form 8-K",
+      "speaker": "Jennifer L. Hamann, Executive Vice President and CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Confirmed share repurchases remained paused under the Norfolk Southern merger agreement.",
+      "quote": "Share repurchases have been paused per the terms of the Agreement and Plan of Merger by and among the Company, Norfolk Southern Corporation, Ruby Merger Sub 1 Corporation, and Ruby Merger Sub 2 LLC.",
+      "verbatim": {
+        "text": "Share repurchases have been paused per the terms of the Agreement and Plan of Merger by and among the Company, Norfolk Southern Corporation, Ruby Merger Sub 1 Corporation, and Ruby Merger Sub 2 LLC.",
+        "segs": [
+          {
+            "t": "Share repurchases have been paused per the terms of the Agreement and Plan of Merger by and among the Company, Norfolk Southern Corporation, Ruby Merger Sub 1 Corporation, and Ruby Merger Sub 2 LLC.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088525000271/unp-20250910.htm",
+          "title": "unp-20250910",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088525000271/unp-20250910.htm",
+          "title": "unp-20250910",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "UNP-P1-2025-10-23",
+      "promiseId": "P1",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Jennifer Hamann, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated the previously announced repurchase pause rather than newly withdrawing the target.",
+      "quote": "As we discussed when we announced our merger with the Norfolk Southern, we have paused our share repurchase program.",
+      "verbatim": {
+        "text": "As we discussed when we announced our merger with the Norfolk Southern, we have paused our share repurchase program.",
+        "segs": [
+          {
+            "t": "As we discussed when we announced our merger with the Norfolk Southern, we have paused our share repurchase program.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2025-year/3-quarter",
+          "title": "Union Pacific Corporation (UNP.TO) Q3 FY2025 Earnings Call Transcript - October 23, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2025-year/3-quarter",
+          "title": "Union Pacific Corporation (UNP.TO) Q3 FY2025 Earnings Call Transcript - October 23, 2025",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P1-2026-02-06",
+      "promiseId": "P1",
+      "date": "2026-02-06",
+      "call": "2025 Form 10-K",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reported $2.7 billion of 2025 repurchases and confirmed the program remained paused for the pending Norfolk Southern acquisition.",
+      "quote": "We also announced the pending acquisition of Norfolk Southern described in Note 20 to the Financial Statements and Supplementary Data, Item 8, and paused our share repurchase program.",
+      "verbatim": {
+        "text": "We also announced the pending acquisition of Norfolk Southern described in Note 20 to the Financial Statements and Supplementary Data, Item 8, and paused our share repurchase program.",
+        "segs": [
+          {
+            "t": "We also announced the pending acquisition of Norfolk Southern described in Note 20 to the Financial Statements and Supplementary Data, Item 8, and paused our share repurchase program.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm",
+          "title": "unp-20251231",
+          "domain": "sec.gov",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Union Pacific executives said on the 2025 Form 10-K (2026-02-06) about 2025 share repurchases: Reported $2.7 billion of 2025 repurchases and confirmed the program remained paused for the pending Norfolk Southern acquisition."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm",
+          "title": "unp-20251231",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "sec_filing"
+    },
+    {
+      "id": "UNP-P2-2025-07-29",
+      "promiseId": "P2",
+      "date": "2025-07-29",
+      "call": "Union Pacific and Norfolk Southern to Create America’s First Transcontinental Railroad",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Targets closing by early 2027, subject to STB review and approval, customary closing conditions, and shareholder approval.",
+      "quote": "The companies are targeting closing the transaction by early 2027.",
+      "verbatim": {
+        "text": "The companies are targeting closing the transaction by early 2027.",
+        "segs": [
+          {
+            "t": "The companies are targeting closing the transaction by early ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-and-norfolk-southern-create-americas-first",
+          "title": "Union Pacific and Norfolk Southern to Create America’s First Transcontinental Railroad | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-and-norfolk-southern-create-americas-first",
+          "title": "Union Pacific and Norfolk Southern to Create America’s First Transcontinental Railroad | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UNP-P2-2025-10-23",
+      "promiseId": "P2",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Jim Vena, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Plans to file the STB merger application in the upcoming weeks.",
+      "quote": "We'll also be filing our merger application with the Surface Transportation Board (STB).",
+      "verbatim": {
+        "text": "We'll also be filing our merger application with the Surface Transportation Board (STB).",
+        "segs": [
+          {
+            "t": "We'll also be filing our merger application with the Surface Transportation Board (STB).",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://finance.yahoo.com/quote/UNP.F/earnings/UNP.F-Q3-2025-earnings_call-366754.html",
+          "title": "UNION PACIFIC CORP.           R (UNP.F) Q3 FY2025  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://finance.yahoo.com/quote/UNP.F/earnings/UNP.F-Q3-2025-earnings_call-366754.html",
+          "title": "UNION PACIFIC CORP.           R (UNP.F) Q3 FY2025  earnings call transcript",
+          "domain": "finance.yahoo.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P2-2025-12-19",
+      "promiseId": "P2",
+      "date": "2025-12-19",
+      "call": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s STB Merger Application Details Enhancements to Competition and Public Benefits",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Completion remains expected by early 2027.",
+      "quote": "The two companies expect the transaction to be completed by early 2027.",
+      "verbatim": {
+        "text": "The two companies expect the transaction to be completed by early 2027.",
+        "segs": [
+          {
+            "t": "The two companies expect the transaction to be completed by early ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "http://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-union-pacific",
+          "title": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s STB Merger Application Details Enhancements to Competition and Public Benefits | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "http://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-union-pacific",
+          "title": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s STB Merger Application Details Enhancements to Competition and Public Benefits | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UNP-P2-2026-01-27",
+      "promiseId": "P2",
+      "date": "2026-01-27",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Jim Vena, Chief Executive Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Still targets closing in 2027; views the additional-information request as a short-term blip without significant timeline change.",
+      "quote": "We view this as a short term blip and do not expect a significant change to the timeline as we are still targeting closing in the 2027.",
+      "verbatim": {
+        "text": "We view this as a short term blip and do not expect a significant change to the timeline as we are still targeting closing in the 2027.",
+        "segs": [
+          {
+            "t": "We view this as a short term blip and do not expect a significant change to the timeline as we are still targeting closing in the ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/27/union-pacific-unp-q4-2025-earnings-transcript",
+          "title": "Union Pacific (UNP) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/01/27/union-pacific-unp-q4-2025-earnings-transcript",
+          "title": "Union Pacific (UNP) Q4 2025 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P2-2026-04-23",
+      "promiseId": "P2",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jim Vena, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Revised application filing is 100% on track for April 30th.",
+      "quote": "We are 100% on track with filing the revised application on April 30th.",
+      "verbatim": {
+        "text": "We are 100% on track with filing the revised application on April 30th.",
+        "segs": [
+          {
+            "t": "We are ",
+            "h": 0
+          },
+          {
+            "t": "100%",
+            "h": 1
+          },
+          {
+            "t": " on track with filing the revised application on April 30th.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2026-year/1-quarter",
+          "title": "Union Pacific Corporation (UNP) Q1 FY2026 Earnings Call Transcript - April 23, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/events/event-details/q1-2026-earnings-release",
+          "title": "Q1 2026 Earnings Release | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2026-year/1-quarter",
+          "title": "Union Pacific Corporation (UNP) Q1 FY2026 Earnings Call Transcript - April 23, 2026",
+          "domain": "roic.ai",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P2-2026-04-30",
+      "promiseId": "P2",
+      "date": "2026-04-30",
+      "call": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s Amended STB Merger Application Estimates Shippers Will Save $3.5 Billion Annually",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Closing expectation is now the first half of 2027, versus the earlier early 2027 formulation.",
+      "quote": "The two companies expect the transaction to be completed in the first half of 2027.",
+      "verbatim": {
+        "text": "The two companies expect the transaction to be completed in the first half of 2027.",
+        "segs": [
+          {
+            "t": "The two companies expect the transaction to be completed in the first half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-union-0",
+          "title": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s Amended STB Merger Application Estimates Shippers Will Save $3.5 Billion Annually | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-union-0",
+          "title": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s Amended STB Merger Application Estimates Shippers Will Save $3.5 Billion Annually | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "http://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-union-pacific",
+          "title": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s STB Merger Application Details Enhancements to Competition and Public Benefits | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UNP-P2-2026-05-28",
+      "promiseId": "P2",
+      "date": "2026-05-28",
+      "call": "Creating America’s First Transcontinental Railroad: STB Accepts Union Pacific-Norfolk Southern Merger Application",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Closing expectation moves to mid-2027 following STB acceptance of the merger application.",
+      "quote": "The two companies expect the transaction to be completed in mid-2027.",
+      "verbatim": {
+        "text": "The two companies expect the transaction to be completed in mid-2027.",
+        "segs": [
+          {
+            "t": "The two companies expect the transaction to be completed in mid-",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-stb-accepts",
+          "title": "Creating America’s First Transcontinental Railroad: STB Accepts Union Pacific-Norfolk Southern Merger Application | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-stb-accepts",
+          "title": "Creating America’s First Transcontinental Railroad: STB Accepts Union Pacific-Norfolk Southern Merger Application | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-union-0",
+          "title": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s Amended STB Merger Application Estimates Shippers Will Save $3.5 Billion Annually | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UNP-P2-2026-07-23",
+      "promiseId": "P2",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Jim Vena, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reports an important milestone: STB accepted the merger application as complete on May 28.",
+      "quote": "As to the status of our merger with Norfolk Southern, first, we met a very important milestone and the Surface Transportation Board accepted our application as complete on May 28.",
+      "verbatim": {
+        "text": "As to the status of our merger with Norfolk Southern, first, we met a very important milestone and the Surface Transportation Board accepted our application as complete on May 28.",
+        "segs": [
+          {
+            "t": "As to the status of our merger with Norfolk Southern, first, we met a very important milestone and the Surface Transportation Board accepted our application as complete on May 28.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://backpack.exchange/stocks/UNP/earnings/transcripts/fy2026-q2",
+          "title": "UNP Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+          "domain": "backpack.exchange",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/events/event-details/q2-2026-earnings-release",
+          "title": "Q2 2026 Earnings Release | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://backpack.exchange/stocks/UNP/earnings/transcripts/fy2026-q2",
+          "title": "UNP Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+          "domain": "backpack.exchange",
+          "tier": "press"
+        },
+        {
+          "url": "https://investor.unionpacific.com/static-files/85443ec4-228c-432e-b9c3-b2fbeab055a4",
+          "title": "Microsoft PowerPoint - UNP 2Q2026 ER Slides.pptx",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P2-2026-09-22",
+      "promiseId": "P2",
+      "date": "2026-09-22",
+      "call": "Union Pacific Railroad and Norfolk Southern Combination Gains Additional Momentum",
+      "speaker": null,
+      "stance": "revised",
+      "k": "c",
+      "summary": "Closing expectation shifts from mid-2027 to the second half of 2027; STB approval remains required.",
+      "quote": "The two companies expect the transaction to be completed in the second half of 2027.",
+      "verbatim": {
+        "text": "The two companies expect the transaction to be completed in the second half of 2027.",
+        "segs": [
+          {
+            "t": "The two companies expect the transaction to be completed in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-railroad-and-norfolk-southern-combination-gains",
+          "title": "Union Pacific Railroad and Norfolk Southern Combination Gains Additional Momentum | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-railroad-and-norfolk-southern-combination-gains",
+          "title": "Union Pacific Railroad and Norfolk Southern Combination Gains Additional Momentum | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-stb-accepts",
+          "title": "Creating America’s First Transcontinental Railroad: STB Accepts Union Pacific-Norfolk Southern Merger Application | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "UNP-P2-2026-10-22",
+      "promiseId": "P2",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Jennifer Hamann, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Continues building cash reserves for anticipated closing in the second half of 2027.",
+      "quote": "We will continue growing our cash reserves in anticipation of closing the Norfolk Southern merger in the second half of 2027.",
+      "verbatim": {
+        "text": "We will continue growing our cash reserves in anticipation of closing the Norfolk Southern merger in the second half of 2027.",
+        "segs": [
+          {
+            "t": "We will continue growing our cash reserves in anticipation of closing the Norfolk Southern merger in the second half of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-railroad-and-norfolk-southern-combination-gains",
+          "title": "Union Pacific Railroad and Norfolk Southern Combination Gains Additional Momentum | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P3-2026-01-27",
+      "promiseId": "P3",
+      "date": "2026-01-27",
+      "call": "Q4 and full year 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Targeted 2026 mid-single digit EPS growth, consistent with the 3-year high-single digit to low-double digit CAGR target through 2027.",
+      "quote": "Earnings per share growth of mid-single digit; consistent with attaining 3-year CAGR target of high-single digit to low-double digit through 2027.",
+      "verbatim": {
+        "text": "Earnings per share growth of mid-single digit; consistent with attaining 3-year CAGR target of high-single digit to low-double digit through 2027.",
+        "segs": [
+          {
+            "t": "Earnings per share growth of mid-single digit; consistent with attaining 3-year CAGR target of high-single digit to low-double digit through ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.up.com/press-releases/financial/4q25-earnings-announcement-260127",
+          "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.up.com/press-releases/financial/4q25-earnings-announcement-260127",
+          "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "UNP-P3-2026-04-23",
+      "promiseId": "P3",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jennifer L. Hamann, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the 2026 outlook for mid-single-digit EPS growth.",
+      "quote": "Looking ahead, we are affirming our 2026 outlook for mid-single-digit EPS growth.",
+      "verbatim": {
+        "text": "Looking ahead, we are affirming our 2026 outlook for mid-single-digit EPS growth.",
+        "segs": [
+          {
+            "t": "Looking ahead, we are affirming our ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " outlook for mid-single-digit EPS growth.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/union-pacific-unp-q1-2026-earnings-transcript",
+          "title": "Union Pacific UNP Q1 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/union-pacific-unp-q1-2026-earnings-transcript",
+          "title": "Union Pacific UNP Q1 2026 Earnings Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P3-2026-07-23",
+      "promiseId": "P3",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 reported EPS growth to high-single digit, consistent with the 3-year high-single to low-double digit CAGR target through 2027.",
+      "quote": "Reported earnings per share growth increased to high-single digit; consistent with attaining 3-year CAGR target of high-single to low-double digit through 2027.",
+      "verbatim": {
+        "text": "Reported earnings per share growth increased to high-single digit; consistent with attaining 3-year CAGR target of high-single to low-double digit through 2027.",
+        "segs": [
+          {
+            "t": "Reported earnings per share growth increased to high-single digit; consistent with attaining 3-year CAGR target of high-single to low-double digit through ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.up.com/press-releases/financial/2q26-earnings-results-260723",
+          "title": "Union Pacific Reports Second Quarter 2026 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.up.com/press-releases/financial/2q26-earnings-results-260723",
+          "title": "Union Pacific Reports Second Quarter 2026 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "UNP-P3-2026-10-22",
+      "promiseId": "P3",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Jennifer Hamann, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 reported EPS growth in the high single-digit range versus 2025 reported EPS of $11.98.",
+      "quote": "Looking out to the remainder of 2026 on slide eight, we are affirming our outlook of reported EPS growth in the high single-digit range versus 2025's reported EPS of $11.98.",
+      "verbatim": {
+        "text": "Looking out to the remainder of 2026 on slide eight, we are affirming our outlook of reported EPS growth in the high single-digit range versus 2025's reported EPS of $11.98.",
+        "segs": [
+          {
+            "t": "Looking out to the remainder of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " on slide eight, we are affirming our outlook of reported EPS growth in the high single-digit range versus ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": "'s reported EPS of ",
+            "h": 0
+          },
+          {
+            "t": "$11.98",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+          "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+          "domain": "fool.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P4-2026-01-27",
+      "promiseId": "P4",
+      "date": "2026-01-27",
+      "call": "Q4 and full-year 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced a $3.3 billion capital plan for 2026.",
+      "quote": "Capital plan of $3.3 billion.",
+      "verbatim": {
+        "text": "Capital Allocation ‒ Capital Plan of $3.3 Billion",
+        "segs": [
+          {
+            "t": "Capital Allocation ‒ Capital Plan of ",
+            "h": 0
+          },
+          {
+            "t": "$3.3 Billion",
+            "h": 1
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/static-files/bf90c770-972b-428d-9e9d-1b9cf111800a",
+          "title": "Microsoft PowerPoint - UNP 1Q2026 ER Slides_v1.pptx",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.up.com/press-releases/financial/4q25-earnings-announcement-260127",
+          "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific",
+          "domain": "up.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "UNP-P4-2026-04-23",
+      "promiseId": "P4",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call presentation",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "The earnings-call presentation reaffirmed the $3.3 billion capital plan for 2026.",
+      "quote": "Capital Plan of $3.3 Billion",
+      "verbatim": {
+        "text": "Capital Allocation ‒ Capital Plan of $3.3 Billion",
+        "segs": [
+          {
+            "t": "Capital Allocation ‒ Capital Plan of ",
+            "h": 0
+          },
+          {
+            "t": "$3.3 Billion",
+            "h": 1
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/static-files/bf90c770-972b-428d-9e9d-1b9cf111800a",
+          "title": "Microsoft PowerPoint - UNP 1Q2026 ER Slides_v1.pptx",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/static-files/bf90c770-972b-428d-9e9d-1b9cf111800a",
+          "title": "Microsoft PowerPoint - UNP 1Q2026 ER Slides_v1.pptx",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "UNP-P4-2026-07-23",
+      "promiseId": "P4",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call presentation",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "The earnings-call presentation retained the $3.3 billion capital plan for 2026.",
+      "quote": "Capital Plan of $3.3 Billion",
+      "verbatim": {
+        "text": "Affirmed: • Pricing Dollars In Excess of Inflation • Operating Ratio Improvement; Industry-Leading Operating Ratio and Return on Invested Capital • Continued Strong Cash Generation • Capital Allocation ‒ Capital Plan of $3.3 Billion ‒ Consistent Annual Dividend Increases",
+        "segs": [
+          {
+            "t": "Affirmed: • Pricing Dollars In Excess of Inflation • Operating Ratio Improvement; Industry-Leading Operating Ratio and Return on Invested Capital • Continued Strong Cash Generation • Capital Allocation ‒ Capital Plan of ",
+            "h": 0
+          },
+          {
+            "t": "$3.3 Billion",
+            "h": 1
+          },
+          {
+            "t": " ‒ Consistent Annual Dividend Increases",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/static-files/85443ec4-228c-432e-b9c3-b2fbeab055a4",
+          "title": "Microsoft PowerPoint - UNP 2Q2026 ER Slides.pptx",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/static-files/85443ec4-228c-432e-b9c3-b2fbeab055a4",
+          "title": "Microsoft PowerPoint - UNP 2Q2026 ER Slides.pptx",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "UNP-P4-2026-10-22",
+      "promiseId": "P4",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised the 2026 capital plan to $3.5 billion.",
+      "quote": "Capital plan of $3.5 billion.",
+      "verbatim": {
+        "text": "Capital plan of $3.5 billion .",
+        "segs": [
+          {
+            "t": "Capital plan of ",
+            "h": 0
+          },
+          {
+            "t": "$3.5 billion",
+            "h": 1
+          },
+          {
+            "t": " .",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "extract",
+          "urlFrom": "task-citation",
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-third-quarter-2026-results",
+          "title": "Union Pacific Reports Third Quarter 2026 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary",
+          "extract": {
+            "objective": "What Union Pacific executives said on the Q3 2026 earnings release (2026-10-22) about 2026 capital investment: Raised the 2026 capital plan to $3.5 billion."
+          }
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/node/30941/pdf",
+          "title": "Union Pacific Reports Third Quarter 2026 Results",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-third-quarter-2026-results",
+          "title": "Union Pacific Reports Third Quarter 2026 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "UNP-P5-2026-01-27",
+      "promiseId": "P5",
+      "date": "2026-01-27",
+      "call": "Q4 and full-year 2025 earnings release",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Introduced 2026 operating ratio improvement and industry leadership in operating ratio and return on invested capital.",
+      "quote": "Operating ratio improvement; industry-leading operating ratio and return on invested capital.",
+      "verbatim": {
+        "text": "Operating ratio improvement; industry-leading operating ratio and return on invested capital.",
+        "segs": [
+          {
+            "t": "Operating ratio improvement; industry-leading operating ratio and return on invested capital.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-fourth-quarter-and-full-year-2025-results",
+          "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-fourth-quarter-and-full-year-2025-results",
+          "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "UNP-P5-2026-04-23",
+      "promiseId": "P5",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jennifer Hamann, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed full-year 2026 operating ratio improvement despite fuel pressure.",
+      "quote": "When you put all those things together, we are still confident for a full year that we will be able to improve our operating ratio.",
+      "verbatim": {
+        "text": "When you put all those things together, we are still confident for a full year that we will be able to improve our operating ratio.",
+        "segs": [
+          {
+            "t": "When you put all those things together, we are still confident for a full year that we will be able to improve our operating ratio.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://stockanalysis.com/stocks/unp/transcripts/547062-q1-2026",
+          "title": "Union Pacific (UNP) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://stockanalysis.com/stocks/unp/transcripts/547062-q1-2026",
+          "title": "Union Pacific (UNP) Q1 2026 Earnings Call Transcript & Audio",
+          "domain": "stockanalysis.com",
+          "tier": "transcript"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P5-2026-07-23",
+      "promiseId": "P5",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Jennifer Hamann, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 2026 operating ratio improvement and industry leadership despite ongoing fuel-related margin pressure.",
+      "quote": "We also expect to continue delivering operating ratio improvement and maintain our position of industry leadership, even against ongoing margin pressure from fuel.",
+      "verbatim": {
+        "text": "We also expect to continue delivering operating ratio improvement and maintain our position of industry leadership, even against ongoing margin pressure from fuel.",
+        "segs": [
+          {
+            "t": "We also expect to continue delivering operating ratio improvement and maintain our position of industry leadership, even against ongoing margin pressure from fuel.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-union-pacific-beats-q2-2026-forecasts-shares-rise-93CH-4809437",
+          "title": "Earnings call transcript: Union Pacific beats Q2 2026 forecasts, shares rise By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-union-pacific-beats-q2-2026-forecasts-shares-rise-93CH-4809437",
+          "title": "Earnings call transcript: Union Pacific beats Q2 2026 forecasts, shares rise By Investing.com",
+          "domain": "investing.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://capedge.com/company/100885/transcripts/2026/q2",
+          "title": "Union Pacific Corporation (UNP) Q2 2026 Earnings Call Transcript | CapEdge",
+          "domain": "capedge.com",
+          "tier": "transcript"
+        },
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-second-quarter-2026-results",
+          "title": "Union Pacific Reports Second Quarter 2026 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "UNP-P5-2026-10-22",
+      "promiseId": "P5",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings release",
+      "speaker": null,
+      "stance": "softened",
+      "k": "c",
+      "summary": "Narrowed 2026 outlook to core-business operating ratio improvement; reported operating ratio challenged by high fuel prices.",
+      "quote": "Operating ratio improvement from core business; reported operating ratio challenged by high fuel prices.",
+      "verbatim": {
+        "text": "Operating ratio improvement from core business; reported operating ratio challenged by high fuel prices.",
+        "segs": [
+          {
+            "t": "Operating ratio improvement from core business; reported operating ratio challenged by high fuel prices.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-third-quarter-2026-results",
+          "title": "Union Pacific Reports Third Quarter 2026 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-third-quarter-2026-results",
+          "title": "Union Pacific Reports Third Quarter 2026 Results | Union Pacific Railroad Company",
+          "domain": "investor.unionpacific.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/10/22/union-pacific-unp-q3-2026-earnings-call-transcript?referring_guid=c3266633-166a-4ab3-a16a-1adcc2fcccaa&source=financialcontent",
+      "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 2,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/27/union-pacific-unp-q4-2025-earnings-transcript",
+      "title": "Union Pacific (UNP) Q4 2025 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://www.investing.com/news/transcripts/earnings-call-transcript-union-pacific-beats-q2-2026-forecasts-shares-rise-93CH-4809437",
+      "title": "Earnings call transcript: Union Pacific beats Q2 2026 forecasts, shares rise By Investing.com",
+      "domain": "investing.com",
+      "tier": "transcript",
+      "uses": "P2 P3 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://www.up.com/press-releases/financial/4q25-earnings-announcement-260127",
+      "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific",
+      "domain": "up.com",
+      "tier": "primary",
+      "uses": "P3 P4"
+    },
+    {
+      "n": 5,
+      "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-third-quarter-2026-results",
+      "title": "Union Pacific Reports Third Quarter 2026 Results | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://investor.unionpacific.com/static-files/85443ec4-228c-432e-b9c3-b2fbeab055a4",
+      "title": "Microsoft PowerPoint - UNP 2Q2026 ER Slides.pptx",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P2 P4"
+    },
+    {
+      "n": 7,
+      "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-railroad-and-norfolk-southern-combination-gains",
+      "title": "Union Pacific Railroad and Norfolk Southern Combination Gains Additional Momentum | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 8,
+      "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088526000037/unp-20251231.htm",
+      "title": "unp-20251231",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 9,
+      "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-and-norfolk-southern-create-americas-first",
+      "title": "Union Pacific and Norfolk Southern to Create America’s First Transcontinental Railroad | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 10,
+      "url": "http://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-union-pacific",
+      "title": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s STB Merger Application Details Enhancements to Competition and Public Benefits | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 11,
+      "url": "https://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-union-0",
+      "title": "Creating America’s First Transcontinental Railroad: Union Pacific and Norfolk Southern’s Amended STB Merger Application Estimates Shippers Will Save $3.5 Billion Annually | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 12,
+      "url": "https://investor.unionpacific.com/news-releases/news-release-details/creating-americas-first-transcontinental-railroad-stb-accepts",
+      "title": "Creating America’s First Transcontinental Railroad: STB Accepts Union Pacific-Norfolk Southern Merger Application | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 13,
+      "url": "https://www.up.com/press-releases/financial/2q26-earnings-results-260723",
+      "title": "Union Pacific Reports Second Quarter 2026 Results | Union Pacific",
+      "domain": "up.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 14,
+      "url": "https://investor.unionpacific.com/static-files/bf90c770-972b-428d-9e9d-1b9cf111800a",
+      "title": "Microsoft PowerPoint - UNP 1Q2026 ER Slides_v1.pptx",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 15,
+      "url": "https://investor.unionpacific.com/node/30941/pdf",
+      "title": "Union Pacific Reports Third Quarter 2026 Results",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 16,
+      "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-second-quarter-2025-results",
+      "title": "Union Pacific Reports Second Quarter 2025 Results | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 17,
+      "url": "https://www.sec.gov/Archives/edgar/data/702165/000119312525168365/d943261d425.htm",
+      "title": "NORFOLK SOUTHERN CORP 425 filed July 30, 2025",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 18,
+      "url": "https://www.sec.gov/Archives/edgar/data/100885/000010088525000271/unp-20250910.htm",
+      "title": "unp-20250910",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 19,
+      "url": "https://investor.unionpacific.com/events/event-details/q1-2026-earnings-release",
+      "title": "Q1 2026 Earnings Release | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 20,
+      "url": "https://investor.unionpacific.com/events/event-details/q2-2026-earnings-release",
+      "title": "Q2 2026 Earnings Release | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 21,
+      "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-fourth-quarter-and-full-year-2025-results",
+      "title": "Union Pacific Reports Fourth Quarter and Full Year 2025 Results | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 22,
+      "url": "https://investor.unionpacific.com/news-releases/news-release-details/union-pacific-reports-second-quarter-2026-results",
+      "title": "Union Pacific Reports Second Quarter 2026 Results | Union Pacific Railroad Company",
+      "domain": "investor.unionpacific.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 23,
+      "url": "https://www.up.com/press-releases/financial/3q26-earnings-261022",
+      "title": "Union Pacific Reports Third Quarter 2026 Results | Union Pacific",
+      "domain": "up.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 24,
+      "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2024-year/4-quarter",
+      "title": "Union Pacific Corporation (UNP.TO) Q4 FY2024 Earnings Call Transcript - January 23, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 25,
+      "url": "https://www.roic.ai/quote/UNP/transcripts/2025-year/1-quarter",
+      "title": "Union Pacific Corporation (UNP) Q1 FY2025 Earnings Call Transcript - April 24, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://www.alphaspread.com/security/nyse/unp/earnings-calls/q2-2025",
+      "title": "UNP Q2 2025 Earnings Call Transcript - Alpha Spread",
+      "domain": "alphaspread.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 27,
+      "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2025-year/3-quarter",
+      "title": "Union Pacific Corporation (UNP.TO) Q3 FY2025 Earnings Call Transcript - October 23, 2025",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 28,
+      "url": "https://finance.yahoo.com/quote/UNP.F/earnings/UNP.F-Q3-2025-earnings_call-366754.html",
+      "title": "UNION PACIFIC CORP.           R (UNP.F) Q3 FY2025  earnings call transcript",
+      "domain": "finance.yahoo.com",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 29,
+      "url": "https://www.roic.ai/quote/UNP.TO/transcripts/2026-year/1-quarter",
+      "title": "Union Pacific Corporation (UNP) Q1 FY2026 Earnings Call Transcript - April 23, 2026",
+      "domain": "roic.ai",
+      "tier": "transcript",
+      "uses": "P2"
+    },
+    {
+      "n": 30,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/04/23/union-pacific-unp-q1-2026-earnings-transcript",
+      "title": "Union Pacific UNP Q1 2026 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P3"
+    },
+    {
+      "n": 31,
+      "url": "https://stockanalysis.com/stocks/unp/transcripts/547062-q1-2026",
+      "title": "Union Pacific (UNP) Q1 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 32,
+      "url": "https://capedge.com/company/100885/transcripts/2026/q2",
+      "title": "Union Pacific Corporation (UNP) Q2 2026 Earnings Call Transcript | CapEdge",
+      "domain": "capedge.com",
+      "tier": "transcript",
+      "uses": "P5"
+    },
+    {
+      "n": 33,
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/01/26/union-pacific-unp-q3-2025-earnings-transcript",
+      "title": "Union Pacific (UNP) Q3 2025 Earnings Transcript | The Motley Fool",
+      "domain": "fool.com",
+      "tier": "transcript",
+      "uses": "P1"
+    },
+    {
+      "n": 34,
+      "url": "https://stockanalysis.com/stocks/unp/transcripts/713922-q3-2026/",
+      "title": "Union Pacific (UNP) Q3 2026 Earnings Call Transcript & Audio",
+      "domain": "stockanalysis.com",
+      "tier": "transcript",
+      "uses": "P4"
+    },
+    {
+      "n": 35,
+      "url": "https://backpack.exchange/stocks/UNP/earnings/transcripts/fy2026-q2",
+      "title": "UNP Earnings — Estimates, Results & Call Transcripts | Backpack Securities",
+      "domain": "backpack.exchange",
+      "tier": "press",
+      "uses": "P2"
+    },
+    {
+      "n": 36,
+      "url": "https://fortune.com/company-assets/706/quartr/annual-report-10-k-7a9b4-2026-02-06-03-05-04.pdf",
+      "title": "UNION PACIFIC CORPORATION — FORM 10-K, fiscal year ended December 31, 2025",
+      "domain": "fortune.com",
+      "tier": "press",
+      "uses": "P1"
+    }
+  ],
+  "focus": "P2",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.165187Z",
+      "completedAt": "2026-11-05T06:31:34.207299Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.259992Z",
+      "completedAt": "2026-11-05T19:14:28.002378Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.266973Z",
+      "completedAt": "2026-11-05T19:14:31.213127Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.274288Z",
+      "completedAt": "2026-11-05T19:11:53.313479Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.281156Z",
+      "completedAt": "2026-11-05T19:12:54.345633Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.288085Z",
+      "completedAt": "2026-11-05T19:13:03.854454Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.311386Z",
+      "completedAt": "2026-11-05T19:50:35.146961Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.318590Z",
+      "completedAt": "2026-11-05T19:50:00.439102Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.325812Z",
+      "completedAt": "2026-11-05T19:49:16.673710Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.333102Z",
+      "completedAt": "2026-11-05T19:46:02.068932Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.340408Z",
+      "completedAt": "2026-11-05T19:47:56.224129Z"
+    }
+  ],
+  "fills": {
+    "filled": 2
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "29 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "29 of 29 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "29 of 29 (100%); 2 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-22; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/de/Union_pacific_railroad_logo.svg/1280px-Union_pacific_railroad_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Union_pacific_railroad_logo.svg",
+      "title": "File:Union pacific railroad logo.svg - Wikimedia Commons",
+      "width": 1280,
+      "height": 1474,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://www.up.com/content/dam/upcom/corp-comm/images/news/2026/october/LIB_20260408-002.jpg",
+      "sourcePageUrl": "https://www.up.com/news",
+      "title": "Union Pacific News | Union Pacific",
+      "width": 1920,
+      "height": 1080,
+      "rank": 9
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T20:08:41.635Z"
+}

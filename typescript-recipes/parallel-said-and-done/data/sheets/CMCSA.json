@@ -1,0 +1,2243 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "CMCSA",
+  "name": "Comcast Corporation",
+  "short": "Comcast",
+  "website": "comcast.com",
+  "exchange": "NASDAQ",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://www.cmcsa.com/",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-22",
+    "quarter": "Q3 2026"
+  },
+  "nextCall": {
+    "date": null,
+    "time": null,
+    "quarter": null
+  },
+  "photoSubject": "Comcast Epic Universe theme park",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Open Epic Universe in May",
+      "commitment": "Open Epic Universe in May 2025; incur about $150 million in preopening costs across Q4 2024 and Q1 2025.",
+      "deadline": "May 2025",
+      "firstStated": "2024-10-17",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Epic Universe opened on May 22, 2025; pre-opening costs were around $35 million in the fourth quarter and around $100 million in the first quarter.",
+      "citations": [
+        {
+          "url": "https://corporate.comcast.com/press/releases/universal-epic-universe-universal-orlando-resort-new-theme-park-officially-open",
+          "title": "Universal Epic Universe, Universal Orlando Resort’s Highly Anticipated New Theme Park, Is Now Officially Open | Comcast Corporation",
+          "domain": "corporate.comcast.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000006/ex991-12312024.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000018/ex991-3312025.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/05ce0572-3978-454a-b366-45f389d1a635",
+          "title": "Static Files",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+          "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-05-22",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-01-30",
+            "what_was_said": "Management clarified the cost allocation, saying that over $100 million, or the vast majority of costs leading up to opening, would land in the first quarter.",
+            "call": "Q4 2024 earnings call"
+          },
+          {
+            "date": "2025-07-31",
+            "what_was_said": "Management confirmed the successful May 22 opening and noted that soft-opening costs limited second-quarter Theme Parks EBITDA growth, distinguishing these costs from the earlier Q4/Q1 preopening-cost estimate.",
+            "call": "Q2 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Reduce Peacock losses in 2025",
+      "commitment": "Continue improving Peacock EBITDA losses in 2025.",
+      "deadline": "2025",
+      "firstStated": "2025-01-30",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Peacock’s full-year 2025 EBITDA losses improved over $700 million year over year, including NBA rights beginning in the fourth quarter.",
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/news-releases/news-release-details/comcast-reports-4th-quarter-2025-results",
+          "title": "Comcast Reports 4th Quarter 2025 Results | Comcast Corporation",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/4baddd97-e649-4e24-a359-cafd4f7606a1",
+          "title": "Q4 2025 Comcast Corp Earnings Call on January 29, 2026 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+          "title": "Q4 2024 Comcast Corp Earnings Call on January 30, 2025 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-01-29",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-01-30",
+            "what_was_said": "In Q&A, management reiterated that Peacock revenues and losses would improve in 2025 while absorbing NBA costs in the second half. It cautioned that normalizing the business for the higher expense would take the full first NBA season into the second season.",
+            "call": "Q4 2024 earnings call"
+          },
+          {
+            "date": "2025-04-24",
+            "what_was_said": "Asked about losses over the rest of 2025, management declined to give a specific second-half or next-year forecast, while expecting greater scale and monetization to produce declining losses over time. This qualified the outlook without explicitly withdrawing the 2025 commitment.",
+            "call": "Q1 2025 earnings call"
+          },
+          {
+            "date": "2026-01-29",
+            "what_was_said": "Management confirmed that full-year Peacock losses improved by over $700 million, although the fourth-quarter loss was $552 million, reflecting NBA rights and the exclusive NFL game.",
+            "call": "Q4 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Launch NBA on NBC and Peacock",
+      "commitment": "Bring NBA programming to NBC and Peacock later in 2025.",
+      "deadline": "later in 2025",
+      "firstStated": "2024-07-23",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "NBA returned to NBC and debuted on Peacock with the season-opening doubleheader, fulfilling the promised launch timing.",
+      "citations": [
+        {
+          "url": "https://www.nbcsports.com/pressbox/press-releases/largest-audience-for-nba-tip-off-doubleheader-since-2010-as-nba-returned-to-nbc-and-debuted-on-peacock",
+          "title": "LARGEST AUDIENCE FOR “NBA TIP-OFF” DOUBLEHEADER SINCE 2010 AS NBA RETURNED TO NBC AND DEBUTED ON PEACOCK - NBC Sports",
+          "domain": "nbcsports.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+          "title": "Q4 2024 Comcast Corp Earnings Call on January 30, 2025 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/e48c3dc8-5912-4f05-9d2a-ce2704bde93a",
+          "title": "Q3 2025 Comcast Corp Earnings Call on October 30, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-10-23",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Sustain mid-single-digit share-count reductions",
+      "commitment": "Continue reducing the share count by mid-single-digits annually through a balanced capital-allocation framework.",
+      "deadline": null,
+      "firstStated": "2025-07-31",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Comcast reduced shares outstanding by 5% for 2025, then paused repurchases as of July 1, expecting the pause to remain at least through the separation.",
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026003964/ex991-12312025.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/0af34bca-95e8-465d-88c1-d78f5bcf5b68",
+          "title": "Q3 2026 Comcast Corporation Earnings Call on October 22, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+          "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Complete most network upgrades in 2026",
+      "commitment": "During 2026, complete network upgrades across most of the footprint and start marketing multi-gigabit symmetrical speeds.",
+      "deadline": "2026",
+      "firstStated": "2026-01-29",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Network upgrades continued; completion across most of the footprint and the promised start of multi-gigabit symmetrical-speed marketing were not confirmed.",
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/4baddd97-e649-4e24-a359-cafd4f7606a1",
+          "title": "Q4 2025 Comcast Corp Earnings Call on January 29, 2026 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/c02c2c7c-f5ab-425c-994f-5550702d344a",
+          "title": "Static Files",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://www.cmcsa.com/static-files/0af34bca-95e8-465d-88c1-d78f5bcf5b68",
+          "title": "Q3 2026 Comcast Corporation Earnings Call on October 22, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "CMCSA-P1-2024-10-17",
+      "promiseId": "P1",
+      "date": "2024-10-17",
+      "call": "Universal Epic Universe Officially Opens on May 22, 2025",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced May 22, 2025 opening, preceding the earnings-call cost commitment.",
+      "quote": "Universal Orlando Resort's highly anticipated fourth theme park – Universal Epic Universe – will officially open on May 22, 2025, unlocking the portals to five astounding worlds that will bring to life extraordinary adventures that go beyond guests' wildest imaginations.",
+      "verbatim": {
+        "text": "Universal Orlando Resort's highly anticipated fourth theme park – Universal Epic Universe – will officially open on May 22, 2025, unlocking the portals to five astounding worlds that will bring to life extraordinary adventures that go beyond guests' wildest imaginations.",
+        "segs": [
+          {
+            "t": "Universal Orlando Resort's highly anticipated fourth theme park – Universal Epic Universe – will officially open on May 22, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", unlocking the portals to five astounding worlds that will bring to life extraordinary adventures that go beyond guests' wildest imaginations.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.nbcuniversal.com/press-release/universal-orlando-resorts-much-anticipated-new-theme-park-universal-epic-universe-officially-opens",
+          "title": "Universal Orlando Resort's Much-Anticipated New Theme Park, Universal Epic Universe, Officially Opens on May 22, 2025 | NBCUNIVERSAL MEDIA",
+          "domain": "nbcuniversal.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.nbcuniversal.com/press-release/universal-orlando-resorts-much-anticipated-new-theme-park-universal-epic-universe-officially-opens",
+          "title": "Universal Orlando Resort's Much-Anticipated New Theme Park, Universal Epic Universe, Officially Opens on May 22, 2025 | NBCUNIVERSAL MEDIA",
+          "domain": "nbcuniversal.com",
+          "tier": "press"
+        },
+        {
+          "url": "https://media.universalparksusa.com/press-releases/universal-epic-universe-officially-opens-on-may-22-2025",
+          "title": "Press Releases Archive for Universal Orlando Resort™",
+          "domain": "media.universalparksusa.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CMCSA-P1-2024-10-31",
+      "promiseId": "P1",
+      "date": "2024-10-31",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed May 2025 opening; introduced about $150 million preopening costs across Q4 2024 and Q1 2025.",
+      "quote": "And as we gear up for the May 2025 opening, we expect to incur preopening costs of about $150 million in total over the fourth quarter this year and the first quarter next year.",
+      "verbatim": {
+        "text": "And as we gear up for the May 2025 opening, we expect to incur preopening costs of about $150 million in total over the fourth quarter this year and the first quarter next year.",
+        "segs": [
+          {
+            "t": "And as we gear up for the May ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " opening, we expect to incur preopening costs of about ",
+            "h": 0
+          },
+          {
+            "t": "$150 million",
+            "h": 1
+          },
+          {
+            "t": " in total over the fourth quarter this year and the first quarter next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/05ce0572-3978-454a-b366-45f389d1a635",
+          "title": "Static Files",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/05ce0572-3978-454a-b366-45f389d1a635",
+          "title": "Static Files",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P1-2025-01-30",
+      "promiseId": "P1",
+      "date": "2025-01-30",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "May opening reaffirmed; fourth-quarter costs around $35 million, with over $100 million expected in the first quarter.",
+      "quote": "Adjusted for Epic pre-opening costs of around $35 million, EBITDA in the fourth quarter was flat year over year with attendance trends improving across most of our Parks including Orlando, solidifying the foundation for our opening of Epic Universe in May.",
+      "verbatim": {
+        "text": "Adjusted for Epic pre-opening costs of around $35 million, EBITDA in the fourth quarter was flat year over year with attendance trends improving across most of our Parks including Orlando, solidifying the foundation for our opening of Epic Universe in May.",
+        "segs": [
+          {
+            "t": "Adjusted for Epic pre-opening costs of around ",
+            "h": 0
+          },
+          {
+            "t": "$35 million",
+            "h": 1
+          },
+          {
+            "t": ", EBITDA in the fourth quarter was flat year over year with attendance trends improving across most of our Parks including Orlando, solidifying the foundation for our opening of Epic Universe in May.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://cmcsa.gcs-web.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+          "title": "Static Files",
+          "domain": "cmcsa.gcs-web.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://cmcsa.gcs-web.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+          "title": "Static Files",
+          "domain": "cmcsa.gcs-web.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P1-2025-04-24",
+      "promiseId": "P1",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "May 22 opening remained on schedule; first-quarter incremental costs were about $100 million, in line with prior communication.",
+      "quote": "As we gear up for the May 22 opening, we incurred incremental costs which landed at about $100 million in the first quarter.",
+      "verbatim": {
+        "text": "As we gear up for the May 22 opening, we incurred incremental costs which landed at about $100 million in the first quarter.",
+        "segs": [
+          {
+            "t": "As we gear up for the May 22 opening, we incurred incremental costs which landed at about ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " in the first quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/d24b51b3-b6f7-4afd-8765-a0860722701c",
+          "title": "Q1 2025 Comcast Corp Earnings Call on April 24, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/d24b51b3-b6f7-4afd-8765-a0860722701c",
+          "title": "Q1 2025 Comcast Corp Earnings Call on April 24, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P1-2025-05-22",
+      "promiseId": "P1",
+      "date": "2025-05-22",
+      "call": "Universal Epic Universe, Universal Orlando Resort’s Highly Anticipated New Theme Park, Is Now Officially Open",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Epic Universe officially opened on May 22, 2025, at approx. 8 a.m.",
+      "quote": "At approx. 8 a.m., Universal Epic Universe officially opened with an awe-inspiring celebratory moment that featured special character appearances at each of the world’s portals, breathtaking fireworks, a mesmerizing fountain display and more.",
+      "verbatim": {
+        "text": "At approx. 8 a.m., Universal Epic Universe officially opened with an awe-inspiring celebratory moment that featured special character appearances at each of the world’s portals, breathtaking fireworks, a mesmerizing fountain display and more.",
+        "segs": [
+          {
+            "t": "At approx. 8 a.m., Universal Epic Universe officially opened with an awe-inspiring celebratory moment that featured special character appearances at each of the world’s portals, breathtaking fireworks, a mesmerizing fountain display and more.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.comcast.com/press/releases/universal-epic-universe-universal-orlando-resort-new-theme-park-officially-open",
+          "title": "Universal Epic Universe, Universal Orlando Resort’s Highly Anticipated New Theme Park, Is Now Officially Open | Comcast Corporation",
+          "domain": "corporate.comcast.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.comcast.com/press/releases/universal-epic-universe-universal-orlando-resort-new-theme-park-officially-open",
+          "title": "Universal Epic Universe, Universal Orlando Resort’s Highly Anticipated New Theme Park, Is Now Officially Open | Comcast Corporation",
+          "domain": "corporate.comcast.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CMCSA-P1-2025-07-31",
+      "promiseId": "P1",
+      "date": "2025-07-31",
+      "call": "Q2 2025 earnings release",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reported higher Theme Parks revenue, including from the successful opening of Epic Universe.",
+      "quote": "Revenue for Theme Parks increased due to higher revenue at domestic theme parks, including the successful opening of Epic Universe, and international theme parks, which include the positive impact from foreign currency.",
+      "verbatim": {
+        "text": "Revenue for Theme Parks increased due to higher revenue at domestic theme parks, including the successful opening of Epic Universe, and international theme parks, which include the positive impact from foreign currency.",
+        "segs": [
+          {
+            "t": "Revenue for Theme Parks increased due to higher revenue at domestic theme parks, including the successful opening of Epic Universe, and international theme parks, which include the positive impact from foreign currency.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000034/ex991-6302025.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000034/ex991-6302025.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "CMCSA-P2-2025-01-30",
+      "promiseId": "P2",
+      "date": "2025-01-30",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "After 46% full-year revenue growth and $1 billion lower Peacock EBITDA losses, Comcast expected continued loss improvement in 2025.",
+      "quote": "In Media, we are making a successful pivot to streaming, as evidenced by Peacock's strong revenue growth of 46% for the full year, driving a $1 billion improvement in Peacock's EBITDA loss, and we expect to make continued improvement in Peacock EBITDA losses in 2025.",
+      "verbatim": {
+        "text": "In Media, we are making a successful pivot to streaming, as evidenced by Peacock's strong revenue growth of 46% for the full year, driving a $1 billion improvement in Peacock's EBITDA loss, and we expect to make continued improvement in Peacock EBITDA losses in 2025.",
+        "segs": [
+          {
+            "t": "In Media, we are making a successful pivot to streaming, as evidenced by Peacock's strong revenue growth of ",
+            "h": 0
+          },
+          {
+            "t": "46%",
+            "h": 1
+          },
+          {
+            "t": " for the full year, driving a ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " improvement in Peacock's EBITDA loss, and we expect to make continued improvement in Peacock EBITDA losses in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+          "title": "Q4 2024 Comcast Corp Earnings Call on January 30, 2025 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+          "title": "Q4 2024 Comcast Corp Earnings Call on January 30, 2025 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P2-2025-04-24",
+      "promiseId": "P2",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Peacock reported double-digit revenue growth and more than $400 million year-over-year improvement in EBITDA losses.",
+      "quote": "Peacock delivered double-digit revenue growth and a more than $400 million year-over-year improvement in EBITDA losses.",
+      "verbatim": {
+        "text": "Peacock delivered double-digit revenue growth and a more than $400 million year-over-year improvement in EBITDA losses.",
+        "segs": [
+          {
+            "t": "Peacock delivered double-digit revenue growth and a more than ",
+            "h": 0
+          },
+          {
+            "t": "$400 million",
+            "h": 1
+          },
+          {
+            "t": " year-over-year improvement in EBITDA losses.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/d24b51b3-b6f7-4afd-8765-a0860722701c",
+          "title": "Q1 2025 Comcast Corp Earnings Call on April 24, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/d24b51b3-b6f7-4afd-8765-a0860722701c",
+          "title": "Q1 2025 Comcast Corp Earnings Call on April 24, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P2-2025-07-31",
+      "promiseId": "P2",
+      "date": "2025-07-31",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Peacock delivered double-digit revenue growth; EBITDA losses improved nearly $250 million year over year to $100 million for the quarter.",
+      "quote": "Peacock delivered double-digit revenue growth and a nearly $250 million year-over-year improvement in EBITDA losses, which landed at $100 million this quarter.",
+      "verbatim": {
+        "text": "Peacock delivered double-digit revenue growth and a nearly $250 million year-over-year improvement in EBITDA losses, which landed at $100 million this quarter.",
+        "segs": [
+          {
+            "t": "Peacock delivered double-digit revenue growth and a nearly ",
+            "h": 0
+          },
+          {
+            "t": "$250 million",
+            "h": 1
+          },
+          {
+            "t": " year-over-year improvement in EBITDA losses, which landed at ",
+            "h": 0
+          },
+          {
+            "t": "$100 million",
+            "h": 1
+          },
+          {
+            "t": " this quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+          "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+          "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P2-2025-10-30",
+      "promiseId": "P2",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Media EBITDA rose 28%, driven by nearly $220 million year-over-year improvement in Peacock losses to just over $200 million.",
+      "quote": "Overall Media EBITDA increased 28%, driven by nearly $220 million year-over-year improvement in Peacock losses, which landed at a loss of just over $200 million in the quarter.",
+      "verbatim": {
+        "text": "Overall Media EBITDA increased 28%, driven by nearly $220 million year-over-year improvement in Peacock losses, which landed at a loss of just over $200 million in the quarter.",
+        "segs": [
+          {
+            "t": "Overall Media EBITDA increased ",
+            "h": 0
+          },
+          {
+            "t": "28%",
+            "h": 1
+          },
+          {
+            "t": ", driven by nearly ",
+            "h": 0
+          },
+          {
+            "t": "$220 million",
+            "h": 1
+          },
+          {
+            "t": " year-over-year improvement in Peacock losses, which landed at a loss of just over ",
+            "h": 0
+          },
+          {
+            "t": "$200 million",
+            "h": 1
+          },
+          {
+            "t": " in the quarter.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/e48c3dc8-5912-4f05-9d2a-ce2704bde93a",
+          "title": "Q3 2025 Comcast Corp Earnings Call on October 30, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/e48c3dc8-5912-4f05-9d2a-ce2704bde93a",
+          "title": "Q3 2025 Comcast Corp Earnings Call on October 30, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P2-2026-01-29",
+      "promiseId": "P2",
+      "date": "2026-01-29",
+      "call": "Comcast Reports 4th Quarter 2025 Results",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Peacock: subscribers +22% to 44 million; revenue +23%/$1.6 billion quarterly, +10%/$5.4 billion annually; annual EBITDA losses improved over $700 million including fourth-quarter NBA rights.",
+      "quote": "Peacock Paid Subscribers Increased 22% Year-over-Year to 44 Million; Revenue Grew 23% to $1.6 Billion in the Fourth Quarter and 10% to $5.4 Billion for the Full Year; and Adjusted EBITDA Losses Improved by Over $700 Million for the Full Year, Including the Impact of NBA Rights Beginning in the Fourth Quarter",
+      "verbatim": {
+        "text": "Peacock Paid Subscribers Increased 22% Year-over-Year to 44 Million; Revenue Grew 23% to $1.6 Billion in the Fourth Quarter and 10% to $5.4 Billion for the Full Year; and Adjusted EBITDA Losses Improved by Over $700 Million for the Full Year, Including the Impact of NBA Rights Beginning in the Fourth Quarter",
+        "segs": [
+          {
+            "t": "Peacock Paid Subscribers Increased ",
+            "h": 0
+          },
+          {
+            "t": "22%",
+            "h": 1
+          },
+          {
+            "t": " Year-over-Year to ",
+            "h": 0
+          },
+          {
+            "t": "44 Million",
+            "h": 1
+          },
+          {
+            "t": "; Revenue Grew ",
+            "h": 0
+          },
+          {
+            "t": "23%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$1.6 Billion",
+            "h": 1
+          },
+          {
+            "t": " in the Fourth Quarter and ",
+            "h": 0
+          },
+          {
+            "t": "10%",
+            "h": 1
+          },
+          {
+            "t": " to ",
+            "h": 0
+          },
+          {
+            "t": "$5.4 Billion",
+            "h": 1
+          },
+          {
+            "t": " for the Full Year; and Adjusted EBITDA Losses Improved by Over ",
+            "h": 0
+          },
+          {
+            "t": "$700 Million",
+            "h": 1
+          },
+          {
+            "t": " for the Full Year, Including the Impact of NBA Rights Beginning in the Fourth Quarter",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/news-releases/news-release-details/comcast-reports-4th-quarter-2025-results",
+          "title": "Comcast Reports 4th Quarter 2025 Results | Comcast Corporation",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/news-releases/news-release-details/comcast-reports-4th-quarter-2025-results",
+          "title": "Comcast Reports 4th Quarter 2025 Results | Comcast Corporation",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "CMCSA-P3-2024-07-23",
+      "promiseId": "P3",
+      "date": "2024-07-23",
+      "call": "Q2 2024 earnings call",
+      "speaker": "Michael Cavanagh, President",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected 100 regular-season NBA games across NBC and Peacock starting with the 2025-2026 season; agreement not yet announced.",
+      "quote": "This package, which begins with the 2025-2026 season, includes, 100 NBA games each regular season across NBC and Peacock, which is more than any other media partner and more regular season games than each existing partner has under the current rights deal.",
+      "verbatim": {
+        "text": "This package, which begins with the 2025-2026 season, includes, 100 NBA games each regular season across NBC and Peacock, which is more than any other media partner and more regular season games than each existing partner has under the current rights deal.",
+        "segs": [
+          {
+            "t": "This package, which begins with the ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " season, includes, 100 NBA games each regular season across NBC and Peacock, which is more than any other media partner and more regular season games than each existing partner has under the current rights deal.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/8c6cdfaa-ba53-4156-ae90-8f27058dca43",
+          "title": "Q2 2024 Comcast Corp Earnings Call on July 23, 2024 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/8c6cdfaa-ba53-4156-ae90-8f27058dca43",
+          "title": "Q2 2024 Comcast Corp Earnings Call on July 23, 2024 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P3-2024-07-24",
+      "promiseId": "P3",
+      "date": "2024-07-24",
+      "call": "The NBA and WNBA Return to NBCUniversal With 11-Year Agreement for Regular Season and Playoff Basketball on NBC, Peacock, USA Network, Sky Sports, and Telemundo",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Formalized an 11-year agreement covering NBA and WNBA games beginning with the 2025-26 season, including NBC and Peacock.",
+      "quote": "NBCUniversal and the NBA today announced an 11-year agreement for NBC, Peacock, USA Network, Sky Sports and Telemundo to present NBA and WNBA regular-season and playoff basketball games beginning with the 2025-26 season.",
+      "verbatim": {
+        "text": "NEW YORK and STAMFORD, Conn. – July 24, 2024 – NBCUniversal and the NBA today announced an 11-year agreement for NBC, Peacock, USA Network, Sky Sports and Telemundo to present NBA and WNBA regular-season and playoff basketball games beginning with the 2025-26 season.",
+        "segs": [
+          {
+            "t": "NEW YORK and STAMFORD, Conn. – July 24, ",
+            "h": 0
+          },
+          {
+            "t": "2024",
+            "h": 1
+          },
+          {
+            "t": " – NBCUniversal and the NBA today announced an 11-year agreement for NBC, Peacock, USA Network, Sky Sports and Telemundo to present NBA and WNBA regular-season and playoff basketball games beginning with the ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": "-26 season.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.nbcsports.com/pressbox/press-releases/the-nba-and-wnba-return-to-nbcuniversal-with-11-year-agreement-for-regular-season-and-playoff-basketball-on-nbc-peacock-usa-network-sky-sports-and-telemundo",
+          "title": "THE NBA AND WNBA RETURN TO NBCUNIVERSAL WITH 11-YEAR AGREEMENT FOR REGULAR SEASON AND PLAYOFF BASKETBALL ON NBC, PEACOCK, USA NETWORK, SKY SPORTS, AND TELEMUNDO - NBC Sports",
+          "domain": "nbcsports.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.nbcsports.com/pressbox/press-releases/the-nba-and-wnba-return-to-nbcuniversal-with-11-year-agreement-for-regular-season-and-playoff-basketball-on-nbc-peacock-usa-network-sky-sports-and-telemundo",
+          "title": "THE NBA AND WNBA RETURN TO NBCUNIVERSAL WITH 11-YEAR AGREEMENT FOR REGULAR SEASON AND PLAYOFF BASKETBALL ON NBC, PEACOCK, USA NETWORK, SKY SPORTS, AND TELEMUNDO - NBC Sports",
+          "domain": "nbcsports.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CMCSA-P3-2024-10-31",
+      "promiseId": "P3",
+      "date": "2024-10-31",
+      "call": "Q3 2024 earnings call",
+      "speaker": "Mike Cavanagh, President",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Preparing to relaunch the NBA partnership starting with the 2025-2026 season.",
+      "quote": "We are all very grateful to our NBC sports team and look forward to them bringing the lessons learned and momentum to our entire sports portfolio, especially as we begin to prepare for the relaunch of our partnership with the NBA, starting with the 2025-2026 season.",
+      "verbatim": {
+        "text": "We are all very grateful to our NBC sports team and look forward to them bringing the lessons learned and momentum to our entire sports portfolio, especially as we begin to prepare for the relaunch of our partnership with the NBA, starting with the 2025-2026 season.",
+        "segs": [
+          {
+            "t": "We are all very grateful to our NBC sports team and look forward to them bringing the lessons learned and momentum to our entire sports portfolio, especially as we begin to prepare for the relaunch of our partnership with the NBA, starting with the ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": "-",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " season.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/05ce0572-3978-454a-b366-45f389d1a635",
+          "title": "Static Files",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/05ce0572-3978-454a-b366-45f389d1a635",
+          "title": "Static Files",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P3-2025-01-30",
+      "promiseId": "P3",
+      "date": "2025-01-30",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "NBA would return to NBC and launch on Peacock later that year.",
+      "quote": "We couldn't be more excited for the year ahead, as we welcome the NBA back to NBC and also on Peacock later this year.",
+      "verbatim": {
+        "text": "We couldn't be more excited for the year ahead, as we welcome the NBA back to NBC and also on Peacock later this year.",
+        "segs": [
+          {
+            "t": "We couldn't be more excited for the year ahead, as we welcome the NBA back to NBC and also on Peacock later this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+          "title": "Q4 2024 Comcast Corp Earnings Call on January 30, 2025 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+          "title": "Q4 2024 Comcast Corp Earnings Call on January 30, 2025 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P3-2025-04-24",
+      "promiseId": "P3",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Jason Armstrong, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "NBA would join Peacock's sports lineup starting that fall.",
+      "quote": "Today, we offer more premium sports than any other streaming service, including the NFL, the Olympics, Premier League, Kentucky Derby, Big Ten, and then starting this fall, we look forward to adding the NBA.",
+      "verbatim": {
+        "text": "Today, we offer more premium sports than any other streaming service, including the NFL, the Olympics, Premier League, Kentucky Derby, Big Ten, and then starting this fall, we look forward to adding the NBA.",
+        "segs": [
+          {
+            "t": "Today, we offer more premium sports than any other streaming service, including the NFL, the Olympics, Premier League, Kentucky Derby, Big Ten, and then starting this fall, we look forward to adding the NBA.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/d24b51b3-b6f7-4afd-8765-a0860722701c",
+          "title": "Q1 2025 Comcast Corp Earnings Call on April 24, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/d24b51b3-b6f7-4afd-8765-a0860722701c",
+          "title": "Q1 2025 Comcast Corp Earnings Call on April 24, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P3-2025-07-31",
+      "promiseId": "P3",
+      "date": "2025-07-31",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Mike Cavanagh, President",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed a fall launch, continuing heavily into the first half of next year.",
+      "quote": "But that will start in the fall and go obviously heavily into the first half of next year.",
+      "verbatim": {
+        "text": "But that will start in the fall and go obviously heavily into the first half of next year.",
+        "segs": [
+          {
+            "t": "But that will start in the fall and go obviously heavily into the first half of next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+          "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+          "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P3-2025-08-14",
+      "promiseId": "P3",
+      "date": "2025-08-14",
+      "call": "NBC Sports Announces Its Complete 2025-26 NBA Regular-Season Schedule, Featuring 100 Games Across NBC and Peacock",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Scheduled the 2025-26 NBA launch for Tuesday, Oct. 21, with a Tip-Off doubleheader; also announced NBA Mexico City Game 2025.",
+      "quote": "NBC Sports’ 2025-26 NBA slate begins with an NBA Tip-Off doubleheader on Tuesday, Oct. 21, and also features the NBA Mexico City Game 2025, the first-ever quadrupleheader on Martin Luther King Jr. Day, All-Star Weekend, and comprehensive playoff coverage.",
+      "verbatim": {
+        "text": "NBC Sports’ 2025-26 NBA slate begins with an NBA Tip-Off doubleheader on Tuesday, Oct. 21, and also features the NBA Mexico City Game 2025, the first-ever quadrupleheader on Martin Luther King Jr.",
+        "segs": [
+          {
+            "t": "NBC Sports’ ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": "-26 NBA slate begins with an NBA Tip-Off doubleheader on Tuesday, Oct. 21, and also features the NBA Mexico City Game ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", the first-ever quadrupleheader on Martin Luther King Jr.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://www.nbcsports.com/pressbox/press-releases/nbc-sports-announces-its-complete-2025-26-nba-regular-season-schedule-featuring-100-games-across-nbc-and-peacock",
+          "title": "NBC SPORTS ANNOUNCES ITS COMPLETE 2025-26 NBA REGULAR-SEASON SCHEDULE, FEATURING 100 GAMES ACROSS NBC AND PEACOCK - NBC Sports",
+          "domain": "nbcsports.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.nbcsports.com/pressbox/press-releases/nbc-sports-announces-its-complete-2025-26-nba-regular-season-schedule-featuring-100-games-across-nbc-and-peacock",
+          "title": "NBC SPORTS ANNOUNCES ITS COMPLETE 2025-26 NBA REGULAR-SEASON SCHEDULE, FEATURING 100 GAMES ACROSS NBC AND PEACOCK - NBC Sports",
+          "domain": "nbcsports.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CMCSA-P3-2025-10-23",
+      "promiseId": "P3",
+      "date": "2025-10-23",
+      "call": "Largest Audience for “NBA Tip-Off” Doubleheader Since 2010 as NBA Returned to NBC and Debuted on Peacock",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed NBA's completed NBC and Peacock debut; Thunder-Rockets averaged 5.9 million viewers.",
+      "quote": "For the full game, Thunder-Rockets averaged 5.9 million viewers across NBC and Peacock.",
+      "verbatim": {
+        "text": "For the full game, Thunder-Rockets averaged 5.9 million viewers across NBC and Peacock.",
+        "segs": [
+          {
+            "t": "For the full game, Thunder-Rockets averaged ",
+            "h": 0
+          },
+          {
+            "t": "5.9 million",
+            "h": 1
+          },
+          {
+            "t": " viewers across NBC and Peacock.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.nbcsports.com/pressbox/press-releases/largest-audience-for-nba-tip-off-doubleheader-since-2010-as-nba-returned-to-nbc-and-debuted-on-peacock",
+          "title": "LARGEST AUDIENCE FOR “NBA TIP-OFF” DOUBLEHEADER SINCE 2010 AS NBA RETURNED TO NBC AND DEBUTED ON PEACOCK - NBC Sports",
+          "domain": "nbcsports.com",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.nbcsports.com/pressbox/press-releases/largest-audience-for-nba-tip-off-doubleheader-since-2010-as-nba-returned-to-nbc-and-debuted-on-peacock",
+          "title": "LARGEST AUDIENCE FOR “NBA TIP-OFF” DOUBLEHEADER SINCE 2010 AS NBA RETURNED TO NBC AND DEBUTED ON PEACOCK - NBC Sports",
+          "domain": "nbcsports.com",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "CMCSA-P3-2025-10-30",
+      "promiseId": "P3",
+      "date": "2025-10-30",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Mike Cavanagh, President",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed the previous week’s NBA tip-off; opening-doubleheader audience was the largest since 2010.",
+      "quote": "Last week's NBA tip-off marked the start of one of the biggest stretches of live sports in our history and drew the largest audience for an NBA opening double header since 2010.",
+      "verbatim": {
+        "text": "Last week's NBA tip-off marked the start of one of the biggest stretches of live sports in our history and drew the largest audience for an NBA opening double header since 2010.",
+        "segs": [
+          {
+            "t": "Last week's NBA tip-off marked the start of one of the biggest stretches of live sports in our history and drew the largest audience for an NBA opening double header since ",
+            "h": 0
+          },
+          {
+            "t": "2010",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/e48c3dc8-5912-4f05-9d2a-ce2704bde93a",
+          "title": "Q3 2025 Comcast Corp Earnings Call on October 30, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/e48c3dc8-5912-4f05-9d2a-ce2704bde93a",
+          "title": "Q3 2025 Comcast Corp Earnings Call on October 30, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P4-2025-07-31",
+      "promiseId": "P4",
+      "date": "2025-07-31",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Jason Armstrong, Chief Financial Officer",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected to continue annual mid-single-digit share-count reductions within a robust, balanced capital-allocation framework.",
+      "quote": "We've been shrinking our share count by mid-single-digits on an annual basis for the past several years, and we expect to continue to do that as part of a robust and balanced capital allocation framework.",
+      "verbatim": {
+        "text": "We've been shrinking our share count by mid-single-digits on an annual basis for the past several years, and we expect to continue to do that as part of a robust and balanced capital allocation framework.",
+        "segs": [
+          {
+            "t": "We've been shrinking our share count by mid-single-digits on an annual basis for the past several years, and we expect to continue to do that as part of a robust and balanced capital allocation framework.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+          "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+          "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P4-2025-10-30",
+      "promiseId": "P4",
+      "date": "2025-10-30",
+      "call": "Comcast Reports 3rd Quarter 2025 Results",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Returned $2.8 billion: $1.2 billion dividends and $1.5 billion repurchases; shares outstanding declined 5% versus the prior-year period.",
+      "quote": "Returned $2.8 Billion to Shareholders Through a Combination of $1.2 Billion in Dividend Payments and $1.5 Billion in Share Repurchases, Reducing Shares Outstanding by 5% Compared to the Prior Year Period",
+      "verbatim": {
+        "text": "Returned $2.8 Billion to Shareholders Through a Combination of $1.2 Billion in Dividend Payments and $1.5 Billion in Share Repurchases, Reducing Shares Outstanding by 5% Compared to the Prior Year Period",
+        "segs": [
+          {
+            "t": "Returned ",
+            "h": 0
+          },
+          {
+            "t": "$2.8 Billion",
+            "h": 1
+          },
+          {
+            "t": " to Shareholders Through a Combination of ",
+            "h": 0
+          },
+          {
+            "t": "$1.2 Billion",
+            "h": 1
+          },
+          {
+            "t": " in Dividend Payments and ",
+            "h": 0
+          },
+          {
+            "t": "$1.5 Billion",
+            "h": 1
+          },
+          {
+            "t": " in Share Repurchases, Reducing Shares Outstanding by ",
+            "h": 0
+          },
+          {
+            "t": "5%",
+            "h": 1
+          },
+          {
+            "t": " Compared to the Prior Year Period",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/news-releases/news-release-details/comcast-reports-3rd-quarter-2025-results",
+          "title": "Comcast Reports 3rd Quarter 2025 Results | Comcast Corporation",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/news-releases/news-release-details/comcast-reports-3rd-quarter-2025-results",
+          "title": "Comcast Reports 3rd Quarter 2025 Results | Comcast Corporation",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "CMCSA-P4-2026-01-29",
+      "promiseId": "P4",
+      "date": "2026-01-29",
+      "call": "Comcast Reports 4th Quarter and Full Year 2025 Results",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Full-year capital returns were $11.7 billion, including $6.8 billion in repurchases; shares outstanding declined 5%.",
+      "quote": "Total Capital Returned for the Full Year Was $11.7 Billion, Including $6.8 Billion in Share Repurchases, Reducing Shares Outstanding by 5%",
+      "verbatim": {
+        "text": "Total Capital Returned for the Full Year Was $11.7 Billion, Including $6.8 Billion in Share Repurchases, Reducing Shares Outstanding by 5%",
+        "segs": [
+          {
+            "t": "Total Capital Returned for the Full Year Was ",
+            "h": 0
+          },
+          {
+            "t": "$11.7 Billion",
+            "h": 1
+          },
+          {
+            "t": ", Including ",
+            "h": 0
+          },
+          {
+            "t": "$6.8 Billion",
+            "h": 1
+          },
+          {
+            "t": " in Share Repurchases, Reducing Shares Outstanding by ",
+            "h": 0
+          },
+          {
+            "t": "5%",
+            "h": 1
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026003964/ex991-12312025.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026003964/ex991-12312025.htm",
+          "title": "sec.gov",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "CMCSA-P4-2026-04-23",
+      "promiseId": "P4",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jason Armstrong, Chief Financial Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported $11 billion returned over the past 12 months and strong, methodical share-count reduction; no replacement annual percentage target was stated.",
+      "quote": "And over the past 12 months, we've returned $11 billion to shareholders, which includes a significant and well above market dividend yield, along with strong and methodical share count reduction.",
+      "verbatim": {
+        "text": "And over the past 12 months, we've returned $11 billion to shareholders, which includes a significant and well above market dividend yield, along with strong and methodical share count reduction.",
+        "segs": [
+          {
+            "t": "And over the past 12 months, we've returned ",
+            "h": 0
+          },
+          {
+            "t": "$11 billion",
+            "h": 1
+          },
+          {
+            "t": " to shareholders, which includes a significant and well above market dividend yield, along with strong and methodical share count reduction.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/9d924deb-f862-43f0-9aae-555f34957b9f",
+          "title": "Q1 2026 Comcast Corp Earnings Call on April 23, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/9d924deb-f862-43f0-9aae-555f34957b9f",
+          "title": "Q1 2026 Comcast Corp Earnings Call on April 23, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P4-2026-06-29",
+      "promiseId": "P4",
+      "date": "2026-06-29",
+      "call": "Comcast Announces Plans to Separate Media and Technology Businesses into Two Leading Public Companies",
+      "speaker": "Mike Cavanagh, Co-Chief Executive Officer",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Announced a pause in share purchases through the separation process.",
+      "quote": "For that reason, we'll pause share purchases through the separation process.",
+      "verbatim": {
+        "text": "For that reason, we'll pause share purchases through the separation process.",
+        "segs": [
+          {
+            "t": "For that reason, we'll pause share purchases through the separation process.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/7ca0538a-30bf-46d2-9a41-27312d4a4d89",
+          "title": "Comcast Corp Announces Plans to Separate Media and Technology Businesses into Two Leading Public Companies on June 29, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/7ca0538a-30bf-46d2-9a41-27312d4a4d89",
+          "title": "Comcast Corp Announces Plans to Separate Media and Technology Businesses into Two Leading Public Companies on June 29, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "CMCSA-P4-2026-07-23",
+      "promiseId": "P4",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Jason Armstrong, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed the repurchase pause effective July 1st through the separation, following its announcement on the separation call.",
+      "quote": "As we recently announced on our separation call, we did pause share repurchases as of July 1st, and expect to remain paused through our separation.",
+      "verbatim": {
+        "text": "As we recently announced on our separation call, we did pause share repurchases as of July 1st, and expect to remain paused through our separation.",
+        "segs": [
+          {
+            "t": "As we recently announced on our separation call, we did pause share repurchases as of July 1st, and expect to remain paused through our separation.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/8a2ae730-efbd-41c5-a2a9-b96aef03ced2",
+          "title": "Q2 2026 Comcast Corp Earnings Call on July 23, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/8a2ae730-efbd-41c5-a2a9-b96aef03ced2",
+          "title": "Q2 2026 Comcast Corp Earnings Call on July 23, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P4-2026-10-22",
+      "promiseId": "P4",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Jason Armstrong, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed repurchases paused since July 1, remaining paused at least through the separation to protect balance sheets and investment-grade ratings.",
+      "quote": "As previously announced, we paused our share repurchases as of July 1 and expect that pause to remain in place at least through the separation, as we ensure both businesses are positioned with strong balance sheets and investment-grade ratings.",
+      "verbatim": {
+        "text": "As previously announced, we paused our share repurchases as of July 1 and expect that pause to remain in place at least through the separation, as we ensure both businesses are positioned with strong balance sheets and investment-grade ratings.",
+        "segs": [
+          {
+            "t": "As previously announced, we paused our share repurchases as of July 1 and expect that pause to remain in place at least through the separation, as we ensure both businesses are positioned with strong balance sheets and investment-grade ratings.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/0af34bca-95e8-465d-88c1-d78f5bcf5b68",
+          "title": "Q3 2026 Comcast Corporation Earnings Call on October 22, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/0af34bca-95e8-465d-88c1-d78f5bcf5b68",
+          "title": "Q3 2026 Comcast Corporation Earnings Call on October 22, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P5-2026-01-29",
+      "promiseId": "P5",
+      "date": "2026-01-29",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Mike Cavanagh, Co-Chief Executive Officer and Director",
+      "stance": "stated",
+      "k": "s",
+      "summary": "For 2026, planned upgrades across most of the footprint and the start of marketing multi-gigabit symmetrical speeds.",
+      "quote": "We'll also lean into our network leadership as we complete upgrades across most of the footprint and start marketing multi-gigabit symmetrical speeds and their differentiated capabilities, creating opportunities to move customers into higher value tiers over time.",
+      "verbatim": {
+        "text": "We'll also lean into our network leadership as we complete upgrades across most of the footprint and start marketing multi-gigabit symmetrical speeds and their differentiated capabilities, creating opportunities to move customers into higher value tiers over time.",
+        "segs": [
+          {
+            "t": "We'll also lean into our network leadership as we complete upgrades across most of the footprint and start marketing multi-gigabit symmetrical speeds and their differentiated capabilities, creating opportunities to move customers into higher value tiers over time.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/4baddd97-e649-4e24-a359-cafd4f7606a1",
+          "title": "Q4 2025 Comcast Corp Earnings Call on January 29, 2026 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/4baddd97-e649-4e24-a359-cafd4f7606a1",
+          "title": "Q4 2025 Comcast Corp Earnings Call on January 29, 2026 / 1:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P5-2026-03-03",
+      "promiseId": "P5",
+      "date": "2026-03-03",
+      "call": "Morgan Stanley Technology, Media & Telecom Conference",
+      "speaker": "Mike Cavanagh, Co-Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported mid-split upgrades 60% done; full FDX upgrade and wider marketing would follow.",
+      "quote": "We're about 60% done with mid-splits.",
+      "verbatim": {
+        "text": "We're about 60% done with mid-splits.",
+        "segs": [
+          {
+            "t": "We're about ",
+            "h": 0
+          },
+          {
+            "t": "60%",
+            "h": 1
+          },
+          {
+            "t": " done with mid-splits.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/f909ce1c-99b7-4033-b0dd-268a6d4cf6da",
+          "title": "Comcast Corp at Morgan Stanley Technology, Media & Telecom Conference on March 03, 2026 / 3:45PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/f909ce1c-99b7-4033-b0dd-268a6d4cf6da",
+          "title": "Comcast Corp at Morgan Stanley Technology, Media & Telecom Conference on March 03, 2026 / 3:45PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "CMCSA-P5-2026-04-23",
+      "promiseId": "P5",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No direct update on most-footprint upgrade completion or symmetrical-speed marketing; discussed network investment and reliability.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/9d924deb-f862-43f0-9aae-555f34957b9f",
+          "title": "Q1 2026 Comcast Corp Earnings Call on April 23, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P5-2026-05-14",
+      "promiseId": "P5",
+      "date": "2026-05-14",
+      "call": "MoffettNathanson Media, Internet & Communications Conference",
+      "speaker": "Steve Croney, Chief Executive Officer, Connectivity & Platforms",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "DOCSIS 4.0 deployments were accelerating; multi-gig symmetrical marketing was expected by year-end.",
+      "quote": "So as we get to scale, then we'll finally be able to market multi-gig symmetrical.",
+      "verbatim": {
+        "text": "So as we get to scale, then we'll finally be able to market multi-gig symmetrical.",
+        "segs": [
+          {
+            "t": "So as we get to scale, then we'll finally be able to market multi-gig symmetrical.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/c02c2c7c-f5ab-425c-994f-5550702d344a",
+          "title": "Static Files",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/c02c2c7c-f5ab-425c-994f-5550702d344a",
+          "title": "Static Files",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "CMCSA-P5-2026-07-23",
+      "promiseId": "P5",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Jason Armstrong, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated the long-term multi-gig symmetrical network path, without updating most-footprint completion or marketing timing.",
+      "quote": "If you look at the long-term end state, our path on that wire is a multi-gig symmetrical path, our network is an active network all the way into the home.",
+      "verbatim": {
+        "text": "If you look at the long-term end state, our path on that wire is a multi-gig symmetrical path, our network is an active network all the way into the home.",
+        "segs": [
+          {
+            "t": "If you look at the long-term end state, our path on that wire is a multi-gig symmetrical path, our network is an active network all the way into the home.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/8a2ae730-efbd-41c5-a2a9-b96aef03ced2",
+          "title": "Q2 2026 Comcast Corp Earnings Call on July 23, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/8a2ae730-efbd-41c5-a2a9-b96aef03ced2",
+          "title": "Q2 2026 Comcast Corp Earnings Call on July 23, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "CMCSA-P5-2026-09-09",
+      "promiseId": "P5",
+      "date": "2026-09-09",
+      "call": "Goldman Sachs Investor Conference",
+      "speaker": "Jason Armstrong, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reiterated DOCSIS 4.0 and FDX path to multi-gig symmetrical service in every home; gave no new completion or marketing date.",
+      "quote": "DOCSIS 4.0, FDX, full duplex -- there's a lot of jargon here, but simplistically, multi-gig symmetrical in every home, which matches where fiber is.",
+      "verbatim": {
+        "text": "DOCSIS 4.0, FDX, full duplex -- there's a lot of jargon here, but simplistically, multi-gig symmetrical in every home, which matches where fiber is.",
+        "segs": [
+          {
+            "t": "DOCSIS 4.0, FDX, full duplex -- there's a lot of jargon here, but simplistically, multi-gig symmetrical in every home, which matches where fiber is.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/cf1289bb-bc9c-4f50-9702-c68068174a7b",
+          "title": "Comcast Corporation at Goldman Sachs Communacopia + Technology Conference on September 09, 2026 / 3:10PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/cf1289bb-bc9c-4f50-9702-c68068174a7b",
+          "title": "Comcast Corporation at Goldman Sachs Communacopia + Technology Conference on September 09, 2026 / 3:10PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "CMCSA-P5-2026-10-22",
+      "promiseId": "P5",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Michael Cavanagh, President and Co-Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported continuing virtualization and multi-gigabit symmetrical upgrades; did not declare most-footprint completion or the start of symmetrical-speed marketing.",
+      "quote": "We're extending that leadership through network virtualization and upgrades to multi-gigabit symmetrical speeds, delivering even greater capacity, speed, and reliability at attractive economics.",
+      "verbatim": {
+        "text": "We're extending that leadership through network virtualization and upgrades to multi-gigabit symmetrical speeds, delivering even greater capacity, speed, and reliability at attractive economics.",
+        "segs": [
+          {
+            "t": "We're extending that leadership through network virtualization and upgrades to multi-gigabit symmetrical speeds, delivering even greater capacity, speed, and reliability at attractive economics.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.cmcsa.com/static-files/0af34bca-95e8-465d-88c1-d78f5bcf5b68",
+          "title": "Q3 2026 Comcast Corporation Earnings Call on October 22, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.cmcsa.com/static-files/0af34bca-95e8-465d-88c1-d78f5bcf5b68",
+          "title": "Q3 2026 Comcast Corporation Earnings Call on October 22, 2026 / 12:30PM",
+          "domain": "cmcsa.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://www.cmcsa.com/static-files/f20d2421-6edf-41bf-bdec-db79600fe7c2",
+      "title": "Q2 2025 Comcast Corp Earnings Call on July 31, 2025 / 12:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "https://www.cmcsa.com/static-files/d24b51b3-b6f7-4afd-8765-a0860722701c",
+      "title": "Q1 2025 Comcast Corp Earnings Call on April 24, 2025 / 12:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 3,
+      "url": "https://www.cmcsa.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+      "title": "Q4 2024 Comcast Corp Earnings Call on January 30, 2025 / 1:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 4,
+      "url": "https://www.cmcsa.com/static-files/0af34bca-95e8-465d-88c1-d78f5bcf5b68",
+      "title": "Q3 2026 Comcast Corporation Earnings Call on October 22, 2026 / 12:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://www.cmcsa.com/static-files/05ce0572-3978-454a-b366-45f389d1a635",
+      "title": "Static Files",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P1 P3"
+    },
+    {
+      "n": 6,
+      "url": "https://www.cmcsa.com/static-files/e48c3dc8-5912-4f05-9d2a-ce2704bde93a",
+      "title": "Q3 2025 Comcast Corp Earnings Call on October 30, 2025 / 12:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://www.cmcsa.com/static-files/4baddd97-e649-4e24-a359-cafd4f7606a1",
+      "title": "Q4 2025 Comcast Corp Earnings Call on January 29, 2026 / 1:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P2 P5"
+    },
+    {
+      "n": 8,
+      "url": "https://www.cmcsa.com/static-files/9d924deb-f862-43f0-9aae-555f34957b9f",
+      "title": "Q1 2026 Comcast Corp Earnings Call on April 23, 2026 / 12:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 9,
+      "url": "https://www.cmcsa.com/static-files/8a2ae730-efbd-41c5-a2a9-b96aef03ced2",
+      "title": "Q2 2026 Comcast Corp Earnings Call on July 23, 2026 / 12:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 10,
+      "url": "https://corporate.comcast.com/press/releases/universal-epic-universe-universal-orlando-resort-new-theme-park-officially-open",
+      "title": "Universal Epic Universe, Universal Orlando Resort’s Highly Anticipated New Theme Park, Is Now Officially Open | Comcast Corporation",
+      "domain": "corporate.comcast.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 11,
+      "url": "https://www.cmcsa.com/news-releases/news-release-details/comcast-reports-4th-quarter-2025-results",
+      "title": "Comcast Reports 4th Quarter 2025 Results | Comcast Corporation",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 12,
+      "url": "https://www.sec.gov/Archives/edgar/data/1166691/000162828026003964/ex991-12312025.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 13,
+      "url": "https://www.cmcsa.com/static-files/c02c2c7c-f5ab-425c-994f-5550702d344a",
+      "title": "Static Files",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 14,
+      "url": "https://cmcsa.gcs-web.com/static-files/d607dae2-419f-4480-9418-c6a55813bec0",
+      "title": "Static Files",
+      "domain": "cmcsa.gcs-web.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 15,
+      "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000034/ex991-6302025.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 16,
+      "url": "https://www.cmcsa.com/static-files/8c6cdfaa-ba53-4156-ae90-8f27058dca43",
+      "title": "Q2 2024 Comcast Corp Earnings Call on July 23, 2024 / 12:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 17,
+      "url": "https://www.cmcsa.com/news-releases/news-release-details/comcast-reports-3rd-quarter-2025-results",
+      "title": "Comcast Reports 3rd Quarter 2025 Results | Comcast Corporation",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 18,
+      "url": "https://www.cmcsa.com/static-files/7ca0538a-30bf-46d2-9a41-27312d4a4d89",
+      "title": "Comcast Corp Announces Plans to Separate Media and Technology Businesses into Two Leading Public Companies on June 29, 2026 / 12:30PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 19,
+      "url": "https://www.cmcsa.com/static-files/f909ce1c-99b7-4033-b0dd-268a6d4cf6da",
+      "title": "Comcast Corp at Morgan Stanley Technology, Media & Telecom Conference on March 03, 2026 / 3:45PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 20,
+      "url": "https://www.cmcsa.com/static-files/cf1289bb-bc9c-4f50-9702-c68068174a7b",
+      "title": "Comcast Corporation at Goldman Sachs Communacopia + Technology Conference on September 09, 2026 / 3:10PM",
+      "domain": "cmcsa.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 21,
+      "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000006/ex991-12312024.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 22,
+      "url": "https://www.sec.gov/Archives/edgar/data/1166691/000116669125000018/ex991-3312025.htm",
+      "title": "sec.gov",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 23,
+      "url": "https://www.nbcsports.com/pressbox/press-releases/largest-audience-for-nba-tip-off-doubleheader-since-2010-as-nba-returned-to-nbc-and-debuted-on-peacock",
+      "title": "LARGEST AUDIENCE FOR “NBA TIP-OFF” DOUBLEHEADER SINCE 2010 AS NBA RETURNED TO NBC AND DEBUTED ON PEACOCK - NBC Sports",
+      "domain": "nbcsports.com",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 24,
+      "url": "https://www.nbcuniversal.com/press-release/universal-orlando-resorts-much-anticipated-new-theme-park-universal-epic-universe-officially-opens",
+      "title": "Universal Orlando Resort's Much-Anticipated New Theme Park, Universal Epic Universe, Officially Opens on May 22, 2025 | NBCUNIVERSAL MEDIA",
+      "domain": "nbcuniversal.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 25,
+      "url": "https://media.universalparksusa.com/press-releases/universal-epic-universe-officially-opens-on-may-22-2025",
+      "title": "Press Releases Archive for Universal Orlando Resort™",
+      "domain": "media.universalparksusa.com",
+      "tier": "press",
+      "uses": "P1"
+    },
+    {
+      "n": 26,
+      "url": "https://www.nbcsports.com/pressbox/press-releases/the-nba-and-wnba-return-to-nbcuniversal-with-11-year-agreement-for-regular-season-and-playoff-basketball-on-nbc-peacock-usa-network-sky-sports-and-telemundo",
+      "title": "THE NBA AND WNBA RETURN TO NBCUNIVERSAL WITH 11-YEAR AGREEMENT FOR REGULAR SEASON AND PLAYOFF BASKETBALL ON NBC, PEACOCK, USA NETWORK, SKY SPORTS, AND TELEMUNDO - NBC Sports",
+      "domain": "nbcsports.com",
+      "tier": "press",
+      "uses": "P3"
+    },
+    {
+      "n": 27,
+      "url": "https://www.nbcsports.com/pressbox/press-releases/nbc-sports-announces-its-complete-2025-26-nba-regular-season-schedule-featuring-100-games-across-nbc-and-peacock",
+      "title": "NBC SPORTS ANNOUNCES ITS COMPLETE 2025-26 NBA REGULAR-SEASON SCHEDULE, FEATURING 100 GAMES ACROSS NBC AND PEACOCK - NBC Sports",
+      "domain": "nbcsports.com",
+      "tier": "press",
+      "uses": "P3"
+    }
+  ],
+  "focus": "P3",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:24.855360Z",
+      "completedAt": "2026-11-05T06:29:03.828573Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.888507Z",
+      "completedAt": "2026-11-05T19:12:15.507904Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.895397Z",
+      "completedAt": "2026-11-05T19:12:26.116626Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.902678Z",
+      "completedAt": "2026-11-05T19:12:27.561632Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.910095Z",
+      "completedAt": "2026-11-05T19:12:59.125318Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:02.917091Z",
+      "completedAt": "2026-11-05T19:13:27.935148Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.721318Z",
+      "completedAt": "2026-11-05T19:44:32.967396Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.728475Z",
+      "completedAt": "2026-11-05T19:45:36.556032Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.735764Z",
+      "completedAt": "2026-11-05T19:46:02.211117Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.742896Z",
+      "completedAt": "2026-11-05T19:45:23.011512Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:15.750199Z",
+      "completedAt": "2026-11-05T19:48:13.006026Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "34 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "33 of 33 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "33 of 33 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "Q3 2026 on 2026-10-22; next call not announced"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Comcast_%282013-2024%29_logo.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Comcast_(2013-2024)_logo.svg",
+      "title": "File:Comcast (2013-2024) logo.svg - Wikimedia Commons",
+      "width": 1000,
+      "height": 354,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://corporate.comcast.com/media/img/1000w/2024/01/corporate_Universal-Epic-Universe-First-Look-16x9.jpg",
+      "sourcePageUrl": "https://corporate.comcast.com/press/releases/universal-orlando-resort-first-look-new-theme-park-universal-epic-universe",
+      "title": "Universal Orlando Resort Shares First Official Look and Details About Its  Highly Anticipated New Theme Park, Universal Epic Universe | Comcast  Corporation",
+      "width": 1000,
+      "height": 563,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:26.645Z"
+}

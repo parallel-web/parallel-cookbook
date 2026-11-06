@@ -1,0 +1,2488 @@
+{
+  "schema": "said-done.sheet/1",
+  "ticker": "DOW",
+  "name": "Dow Inc.",
+  "short": "Dow",
+  "website": "dow.com",
+  "exchange": "NYSE",
+  "fiscalYearEnd": "December 31",
+  "irUrl": "https://investors.dow.com/en/default.aspx",
+  "asOf": "2026-11-05",
+  "windowStart": "2021-01-01",
+  "latestCall": {
+    "date": "2026-10-22",
+    "quarter": "3Q 2026"
+  },
+  "nextCall": {
+    "date": "2027-01-28",
+    "time": "8:00 AM ET",
+    "quarter": "4Q 2026"
+  },
+  "photoSubject": "Dow Barry UK siloxane plant",
+  "promises": [
+    {
+      "id": "P1",
+      "label": "Cut structural costs by $1 billion",
+      "commitment": "Implement $1 billion of annual run-rate cost reductions by 2026.",
+      "deadline": "2026",
+      "firstStated": "2025-01-30",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "Dow declared its $1 billion 2025 cost savings program complete, then reiterated completion.",
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q2/Dow-Inc-_2Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._2Q26_Earnings Call_Final",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._Earnings Call_2026-10-22_English",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2024/q4/Dow-Inc-Q4-2024-Earnings-Call-Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2024 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/ar/Dow-2025-Annual-Report_final.pdf",
+          "title": "2025 ANNUAL REPORT",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2026-07-23",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P2",
+      "label": "Monetize Gulf Coast infrastructure",
+      "commitment": "Close the 40% infrastructure-stake sale by mid-2025 for approximately $2.4 billion; an optional increase to 49% could raise total proceeds to approximately $3 billion.",
+      "deadline": "mid-2025",
+      "firstStated": "2024-12-09",
+      "status": "delivered",
+      "k": "done",
+      "outcomeSummary": "The 40% sale was completed by May 1, 2025 for approximately $2.4 billion; the subsequent 49% stake brought total proceeds to approximately $3 billion.",
+      "citations": [
+        {
+          "url": "https://corporate.dow.com/en-us/news/press-releases/dow-finalizes-strategic-partnership-with-macquarie-asset-managem.html",
+          "title": "Dow finalizes strategic partnership with Macquarie Asset Management as an investor in Diamond Infrastructure Solutions, its dedicated infrastructure company",
+          "domain": "corporate.dow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2025/Macquarie-Asset-Management-expands-equity-stake-in-Diamond-Infrastructure-Solutions-a-strategic-partnership-with-Dow/default.aspx",
+          "title": "\n\tMacquarie Asset Management expands equity stake in Diamond Infrastructure Solutions, a strategic partnership with Dow | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2024/q4/Dow-Inc-Q4-2024-Earnings-Call-Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2024 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q3/Dow-Inc-Q3-2025-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ3 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "outcomeDate": "2025-09-02",
+      "factCheck": {
+        "verdict": "correct",
+        "status": "delivered",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2025-07-24",
+            "what_was_said": "Although the initial sale had closed, Macquarie still had the option to increase its total stake to 49% within six months of closing, no later than November. Exercise would increase Dow's total proceeds to approximately $3 billion in 2025.",
+            "call": "Q2 2025 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P3",
+      "label": "Shut higher-cost European upstream assets",
+      "commitment": "Idle or shut down three initial European assets: Böhlen ethylene, Schkopau chlor-alkali/vinyls and Barry upstream siloxanes.",
+      "deadline": null,
+      "firstStated": "2025-04-24",
+      "status": "open",
+      "k": "open",
+      "outcomeSummary": "Barry upstream siloxanes shut; Böhlen ethylene and Schkopau chlor-alkali/vinyls shutdowns remain planned for 4Q27.",
+      "citations": [
+        {
+          "url": "https://corporate.dow.com/en-us/news/press-releases/dow-will-shut-down-three-upstream-european-assets-in-response-to.html",
+          "title": "Dow will shut down three upstream European assets in response to structural challenges in the region",
+          "domain": "corporate.dow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q2/Dow-Inc-_2Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._2Q26_Earnings Call_Final",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._Earnings Call_2026-10-22_English",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "open",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-07-23",
+            "what_was_said": "Management confirmed that Barry's upstream siloxanes unit had shut in the second quarter, with $60 million of EBITDA uplift expected in the second half of 2026. The other two European shutdowns remained on track for the end of 2027.",
+            "call": "Q2 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P4",
+      "label": "Unlock $6 billion cash support",
+      "commitment": "Deliver $6 billion in cash support over the next 2 years through asset transactions, reduced capital spending and cost savings.",
+      "deadline": "over the next 2 years",
+      "firstStated": "2025-04-24",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Target increased to more than $6.5 billion; well over half delivered in 2025. Full aggregate completion remained unconfirmed.",
+      "citations": [
+        {
+          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001751788/4ce7f620-2aac-4e2e-aac5-e124db1581ed.pdf",
+          "title": "Date of Report (Date of earliest event reported): October 23, 2025",
+          "domain": "d18rn0p25nwr6d.cloudfront.net",
+          "tier": "press"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q2/Dow-Inc-_2Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._2Q26_Earnings Call_Final",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-04-23",
+            "what_was_said": "Dow reported receiving the NOVA litigation cash payment in March, with approximately $300 million of tax withholdings still expected later in 2026. It remained on track to deliver the remaining $600 million from its original $1 billion cost-savings program by year-end.",
+            "call": "Q1 2026 earnings call"
+          },
+          {
+            "date": "2026-07-23",
+            "what_was_said": "Dow said it had materially completed the remaining savings associated with the $1 billion program announced in January 2025. It also reported receiving approximately $1 billion from the NOVA litigation in Q1 and the remaining approximately $300 million early in Q3.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-22",
+            "what_was_said": "Management referred to completion of the $1 billion 2025 cost-savings program. This confirmed delivery of a major component, but did not declare completion of the aggregate more-than-$6.5-billion cash-support commitment.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    },
+    {
+      "id": "P5",
+      "label": "Transform to Outperform earnings uplift",
+      "commitment": "Deliver at least $2 billion in near-term EBITDA improvement; management described the timeline as running through end-2028.",
+      "deadline": "end of 2028",
+      "firstStated": "2026-01-29",
+      "status": "revised",
+      "k": "rev",
+      "outcomeSummary": "Still pending: 2026 benefits increased to $700 million; approximately $2 billion total uplift expected by the end of next year, earlier than original 2028 timing.",
+      "citations": [
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2026/Dow-reports-third-quarter-2026-results/default.aspx",
+          "title": "\n\tDow reports third quarter 2026 results | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q2/Dow-Inc-_2Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._2Q26_Earnings Call_Final",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._Earnings Call_2026-10-22_English",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "outcomeDate": null,
+      "factCheck": {
+        "verdict": "correct",
+        "status": "revised",
+        "summaryErrors": [],
+        "held": 0,
+        "missing": [
+          {
+            "date": "2026-01-29",
+            "what_was_said": "Management specified at least $2 billion of transformation benefits by end-2028 and approximately $500 million in 2026, separate from the existing cost-savings program.",
+            "call": "Q4 2025 earnings call"
+          },
+          {
+            "date": "2026-07-23",
+            "what_was_said": "Prepared remarks already targeted the $2 billion total opportunity by end-2027. Management also raised expected 2026 benefits to $700 million and reported $190 million delivered in the first half. Q&A repeated the original by-2028 commitment while describing progress as outpacing the original timeline.",
+            "call": "Q2 2026 earnings call"
+          },
+          {
+            "date": "2026-10-22",
+            "what_was_said": "Management reported approximately $450 million of year-to-date transformation improvements, including approximately $250 million in Q3, and remained on track for approximately $700 million in 2026.",
+            "call": "Q3 2026 earnings call"
+          }
+        ],
+        "checks": 1,
+        "agree": 1
+      }
+    }
+  ],
+  "statements": [
+    {
+      "id": "DOW-P1-2025-01-30",
+      "promiseId": "P1",
+      "date": "2025-01-30",
+      "call": "Dow announces targeted actions to deliver $1B in cost savings",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Announced targeted actions to deliver $1 billion in cost savings.",
+      "quote": "Dow Inc. (NYSE: DOW) today announced targeted actions to deliver $1 billion in cost savings.",
+      "verbatim": {
+        "text": "30, 2025 /PRNewswire/ -- Dow Inc. (NYSE: DOW) today announced targeted actions to deliver $1 billion in cost savings.",
+        "segs": [
+          {
+            "t": "30, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " /PRNewswire/ -- Dow Inc. (NYSE: DOW) today announced targeted actions to deliver ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " in cost savings.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.dow.com/en/news/news-details/2025/Dow-announces-targeted-actions-to-deliver-1B-in-cost-savings/default.aspx",
+          "title": "\n\tDow announces targeted actions to deliver $1B in cost savings | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2025/Dow-announces-targeted-actions-to-deliver-1B-in-cost-savings/default.aspx",
+          "title": "\n\tDow announces targeted actions to deliver $1B in cost savings | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "DOW-P1-2025-04-24",
+      "promiseId": "P1",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Jeff L. Tate, Chief Financial Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed January’s at least $1 billion annual run-rate savings commitment, while pushing delivery higher and faster.",
+      "quote": "And lastly, we also announced in January that Dow would deliver at least $1 billion in targeted cost savings on an annual run rate basis in response to the ongoing macroeconomic challenges, and we continue to push the number higher and faster.",
+      "verbatim": {
+        "text": "And lastly, we also announced in January that Dow would deliver at least $1 billion in targeted cost savings on an annual run rate basis in response to the ongoing macroeconomic challenges, and we continue to push the number higher and faster.",
+        "segs": [
+          {
+            "t": "And lastly, we also announced in January that Dow would deliver at least ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " in targeted cost savings on an annual run rate basis in response to the ongoing macroeconomic challenges, and we continue to push the number higher and faster.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P1-2025-07-24",
+      "promiseId": "P1",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Jim R. Fitterling, Chair & CEO",
+      "stance": "ahead",
+      "k": "h",
+      "summary": "Accelerated the $1 billion program, expecting approximately $400 million of savings this year.",
+      "quote": "Additionally, we are accelerating progress on our $1 billion in cost savings actions, where we now expect to deliver approximately $400 million this year.",
+      "verbatim": {
+        "text": "Additionally, we are accelerating progress on our $1 billion in cost savings actions, where we now expect to deliver approximately $400 million this year.",
+        "segs": [
+          {
+            "t": "Additionally, we are accelerating progress on our ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " in cost savings actions, where we now expect to deliver approximately ",
+            "h": 0
+          },
+          {
+            "t": "$400 million",
+            "h": 1
+          },
+          {
+            "t": " this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q2/Dow-Inc-Q2-2025-Earnings-Call_Transcript_FINAL_.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ2 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q2/Dow-Inc-Q2-2025-Earnings-Call_Transcript_FINAL_.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ2 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P1-2025-10-23",
+      "promiseId": "P1",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Karen S. Carter, Chief Operating Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Progressing at least $1 billion in targeted savings by the end of 2026.",
+      "quote": "We are progressing the delivery of at least $1 billion in targeted cost savings by the end of 2026.",
+      "verbatim": {
+        "text": "We are progressing the delivery of at least $1 billion in targeted cost savings by the end of 2026.",
+        "segs": [
+          {
+            "t": "We are progressing the delivery of at least ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " in targeted cost savings by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q3/Dow-Inc-Q3-2025-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ3 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q3/Dow-Inc-Q3-2025-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ3 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P1-2026-01-29",
+      "promiseId": "P1",
+      "date": "2026-01-29",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Jim R. Fitterling, Chair & CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected remaining savings of more than $500 million from the $1 billion program by year-end.",
+      "quote": "First, we expect to deliver the remaining more than $500 million in cost savings by the end of this year from our previously announced $1 billion program.",
+      "verbatim": {
+        "text": "First, we expect to deliver the remaining more than $500 million in cost savings by the end of this year from our previously announced $1 billion program.",
+        "segs": [
+          {
+            "t": "First, we expect to deliver the remaining more than ",
+            "h": 0
+          },
+          {
+            "t": "$500 million",
+            "h": 1
+          },
+          {
+            "t": " in cost savings by the end of this year from our previously announced ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " program.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P1-2026-04-23",
+      "promiseId": "P1",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Karen S. Carter, Chief Operating Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "On track to deliver remaining savings from the $1 billion program by year-end.",
+      "quote": "First, we are on track to deliver the remaining cost savings from our previously announced $1 billion program by the end of this year.",
+      "verbatim": {
+        "text": "First, we are on track to deliver the remaining cost savings from our previously announced $1 billion program by the end of this year.",
+        "segs": [
+          {
+            "t": "First, we are on track to deliver the remaining cost savings from our previously announced ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " program by the end of this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2026 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2026 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P1-2026-07-23",
+      "promiseId": "P1",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call",
+      "speaker": "Karen S. Carter, Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Declared the $1 billion 2025 cost savings program complete.",
+      "quote": "This includes, first and foremost, the completion of our $1 billion 2025 cost savings program.",
+      "verbatim": {
+        "text": "This includes, first and foremost, the completion of our $1 billion 2025 cost savings program.",
+        "segs": [
+          {
+            "t": "This includes, first and foremost, the completion of our ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " cost savings program.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q2/Dow-Inc-_2Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._2Q26_Earnings Call_Final",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q2/Dow-Inc-_2Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._2Q26_Earnings Call_Final",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P1-2026-10-22",
+      "promiseId": "P1",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Karen S. Carter, Chief Executive Officer",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Reiterated completion of the $1 billion 2025 cost savings program.",
+      "quote": "And our collective self-help measures, which include the completion of our $1 billion 2025 cost savings program, the beginning of our previously announced European asset shutdowns and our transformation are all delivering tangible results.",
+      "verbatim": {
+        "text": "And our collective self-help measures, which include the completion of our $1 billion 2025 cost savings program, the beginning of our previously announced European asset shutdowns and our transformation are all delivering tangible results.",
+        "segs": [
+          {
+            "t": "And our collective self-help measures, which include the completion of our ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " cost savings program, the beginning of our previously announced European asset shutdowns and our transformation are all delivering tangible results.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._Earnings Call_2026-10-22_English",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._Earnings Call_2026-10-22_English",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P2-2024-12-09",
+      "promiseId": "P2",
+      "date": "2024-12-09",
+      "call": "Dow announces partnership with Macquarie Asset Management to launch Diamond Infrastructure Solutions",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Expected 40% sale in first half of 2025 for approximately $2.4 billion; 49% option within six months could yield approximately $3.0 billion.",
+      "quote": "Dow expects to receive initial cash proceeds of approximately $2.4 billion based on the sale of its 40% minority equity stake with the potential to generate cash proceeds up to approximately $3.0 billion for a 49% minority equity stake.",
+      "verbatim": {
+        "text": "Dow expects to receive initial cash proceeds of approximately $2.4 billion based on the sale of its 40% minority equity stake with the potential to generate cash proceeds up to approximately $3.0 billion for a 49% minority equity stake.",
+        "segs": [
+          {
+            "t": "Dow expects to receive initial cash proceeds of approximately ",
+            "h": 0
+          },
+          {
+            "t": "$2.4 billion",
+            "h": 1
+          },
+          {
+            "t": " based on the sale of its ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " minority equity stake with the potential to generate cash proceeds up to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$3.0 billion",
+            "h": 1
+          },
+          {
+            "t": " for a ",
+            "h": 0
+          },
+          {
+            "t": "49%",
+            "h": 1
+          },
+          {
+            "t": " minority equity stake.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.dow.com/en/news/news-details/2024/Dow-announces-partnership-with-Macquarie-Asset-Management-to-launch-Diamond-Infrastructure-Solutions/default.aspx",
+          "title": "\n\tDow announces partnership with Macquarie Asset Management to launch Diamond Infrastructure Solutions | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2024/Dow-announces-partnership-with-Macquarie-Asset-Management-to-launch-Diamond-Infrastructure-Solutions/default.aspx",
+          "title": "\n\tDow announces partnership with Macquarie Asset Management to launch Diamond Infrastructure Solutions | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "DOW-P2-2025-01-30",
+      "promiseId": "P2",
+      "date": "2025-01-30",
+      "call": "Q4 2024 earnings call",
+      "speaker": "Jim Fitterling, Chair and CEO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed 40% sale by mid-2025 for approximately $2.4 billion, with a 49% option potentially raising proceeds to approximately $3 billion.",
+      "quote": "This transaction is expected to generate approximately $2.4 billion of initial cash proceeds for Dow.",
+      "verbatim": {
+        "text": "This transaction is expected to generate approximately $2.4 billion of initial cash proceeds for Dow.",
+        "segs": [
+          {
+            "t": "This transaction is expected to generate approximately ",
+            "h": 0
+          },
+          {
+            "t": "$2.4 billion",
+            "h": 1
+          },
+          {
+            "t": " of initial cash proceeds for Dow.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2024/q4/Dow-Inc-Q4-2024-Earnings-Call-Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2024 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2024/q4/Dow-Inc-Q4-2024-Earnings-Call-Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2024 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P2-2025-04-24",
+      "promiseId": "P2",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Jeff Tate, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected $2.4 billion closing by May 1; 49% option could add $600 million within 6 months, reaching approximately $3 billion in 2025.",
+      "quote": "Dow sale of a minority equity stake in select infrastructure assets is expected to generate $2.4 billion of initial cash proceeds, with closing expected by May 1.",
+      "verbatim": {
+        "text": "Dow sale of a minority equity stake in select infrastructure assets is expected to generate $2.4 billion of initial cash proceeds, with closing expected by May 1.",
+        "segs": [
+          {
+            "t": "Dow sale of a minority equity stake in select infrastructure assets is expected to generate ",
+            "h": 0
+          },
+          {
+            "t": "$2.4 billion",
+            "h": 1
+          },
+          {
+            "t": " of initial cash proceeds, with closing expected by May 1.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P2-2025-05-01",
+      "promiseId": "P2",
+      "date": "2025-05-01",
+      "call": "Dow finalizes strategic partnership with Macquarie Asset Management as an investor in Diamond Infrastructure Solutions, its dedicated infrastructure company",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Completed 40% sale; received approximately $2.4 billion. Optional 49% stake could bring approximately $3 billion during 2025.",
+      "quote": "Dow (NYSE: DOW) today announced the completion of the sale of a 40% equity stake in Diamond Infrastructure Solutions, a dedicated infrastructure company with select U.S. Gulf Coast infrastructure assets, to a fund managed by Macquarie Asset Management, a leading global infrastructure and energy asset manager.",
+      "verbatim": {
+        "text": "MIDLAND, Mich. , May 1, 2025 \\-- Dow opens in a new tab (NYSE: DOW) today announced the completion of the sale of a 40% equity stake in Diamond Infrastructure Solutions, a dedicated infrastructure company with select U.S. Gulf Coast infrastructure assets, to a fund managed by Macquarie Asset Management, a leading global infrastructure and energy asset manager.",
+        "segs": [
+          {
+            "t": "MIDLAND, Mich. , May 1, ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " \\-- Dow opens in a new tab (NYSE: DOW) today announced the completion of the sale of a ",
+            "h": 0
+          },
+          {
+            "t": "40%",
+            "h": 1
+          },
+          {
+            "t": " equity stake in Diamond Infrastructure Solutions, a dedicated infrastructure company with select U.S. Gulf Coast infrastructure assets, to a fund managed by Macquarie Asset Management, a leading global infrastructure and energy asset manager.",
+            "h": 0
+          }
+        ],
+        "match": "matched",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.dow.com/en-us/news/press-releases/dow-finalizes-strategic-partnership-with-macquarie-asset-managem.html",
+          "title": "Dow finalizes strategic partnership with Macquarie Asset Management as an investor in Diamond Infrastructure Solutions, its dedicated infrastructure company",
+          "domain": "corporate.dow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.dow.com/en-us/news/press-releases/dow-finalizes-strategic-partnership-with-macquarie-asset-managem.html",
+          "title": "Dow finalizes strategic partnership with Macquarie Asset Management as an investor in Diamond Infrastructure Solutions, its dedicated infrastructure company",
+          "domain": "corporate.dow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "DOW-P2-2025-07-24",
+      "promiseId": "P2",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Jeff Tate, CFO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed May closing and approximately $2.4 billion received; 49% option within 6 months, by November, could bring approximately $3 billion.",
+      "quote": "In May, we finalized our strategic partnership with Macquarie Asset Management for the sale of a minority equity stake and select U.S. Gulf Coast infrastructure assets, receiving approximately $2.4 billion in initial cash proceeds from the transaction.",
+      "verbatim": {
+        "text": "In May, we finalized our strategic partnership with Macquarie Asset Management for the sale of a minority equity stake and select U.S. Gulf Coast infrastructure assets, receiving approximately $2.4 billion in initial cash proceeds from the transaction.",
+        "segs": [
+          {
+            "t": "In May, we finalized our strategic partnership with Macquarie Asset Management for the sale of a minority equity stake and select U.S. Gulf Coast infrastructure assets, receiving approximately ",
+            "h": 0
+          },
+          {
+            "t": "$2.4 billion",
+            "h": 1
+          },
+          {
+            "t": " in initial cash proceeds from the transaction.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q2/Dow-Inc-Q2-2025-Earnings-Call_Transcript_FINAL_.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ2 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q2/Dow-Inc-Q2-2025-Earnings-Call_Transcript_FINAL_.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ2 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P2-2025-09-02",
+      "promiseId": "P2",
+      "date": "2025-09-02",
+      "call": "Macquarie Asset Management expands equity stake in Diamond Infrastructure Solutions, a strategic partnership with Dow",
+      "speaker": null,
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Received additional $540 million as Macquarie increased its stake from 40% to 49%; total proceeds reached approximately $3 billion.",
+      "quote": "This brings Dow's total proceeds from the transaction to approximately $3 billion.",
+      "verbatim": {
+        "text": "This brings Dow's total proceeds from the transaction to approximately $3 billion.",
+        "segs": [
+          {
+            "t": "This brings Dow's total proceeds from the transaction to approximately ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.dow.com/en/news/news-details/2025/Macquarie-Asset-Management-expands-equity-stake-in-Diamond-Infrastructure-Solutions-a-strategic-partnership-with-Dow/default.aspx",
+          "title": "\n\tMacquarie Asset Management expands equity stake in Diamond Infrastructure Solutions, a strategic partnership with Dow | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2025/Macquarie-Asset-Management-expands-equity-stake-in-Diamond-Infrastructure-Solutions-a-strategic-partnership-with-Dow/default.aspx",
+          "title": "\n\tMacquarie Asset Management expands equity stake in Diamond Infrastructure Solutions, a strategic partnership with Dow | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "DOW-P2-2025-10-23",
+      "promiseId": "P2",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Karen Carter, COO",
+      "stance": "declared_done",
+      "k": "d",
+      "summary": "Confirmed second and final phase closed, delivering $3 billion total proceeds that year.",
+      "quote": "We closed the second and final phase of our strategic infrastructure asset partnership in the U.S. Gulf Coast delivering $3 billion in total proceeds for Dow this year.",
+      "verbatim": {
+        "text": "We closed the second and final phase of our strategic infrastructure asset partnership in the U.S. Gulf Coast delivering $3 billion in total proceeds for Dow this year.",
+        "segs": [
+          {
+            "t": "We closed the second and final phase of our strategic infrastructure asset partnership in the U.S. Gulf Coast delivering ",
+            "h": 0
+          },
+          {
+            "t": "$3 billion",
+            "h": 1
+          },
+          {
+            "t": " in total proceeds for Dow this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q3/Dow-Inc-Q3-2025-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ3 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q3/Dow-Inc-Q3-2025-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ3 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P3-2025-04-24",
+      "promiseId": "P3",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Jim Fitterling, Chair and CEO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Identified 3 European upstream assets for idling or shutdown: Böhlen ethylene, Schkopau chlor-alkali/vinyls, and Barry siloxanes; no closure deadline stated.",
+      "quote": "Today, we announced that we have identified 3 initial assets that we expect to idle or shut down.",
+      "verbatim": {
+        "text": "Today, we announced that we have identified 3 initial assets that we expect to idle or shut down.",
+        "segs": [
+          {
+            "t": "Today, we announced that we have identified 3 initial assets that we expect to idle or shut down.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P3-2025-07-07",
+      "promiseId": "P3",
+      "date": "2025-07-07",
+      "call": "Dow will shut down three upstream European assets in response to structural challenges in the region",
+      "speaker": null,
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Approved shutdowns: Barry mid-year 2026; Böhlen and Schkopau 4Q27; decommissioning and demolition potentially continue into 2029.",
+      "quote": "The shutdown of the assets is expected to begin in mid-2026 and is estimated to be complete by the end of 2027, with potential decommissioning and demolition to continue into 2029 as needed.",
+      "verbatim": {
+        "text": "The shutdown of the assets is expected to begin in mid-2026 and is estimated to be complete by the end of 2027, with potential decommissioning and demolition to continue into 2029 as needed.",
+        "segs": [
+          {
+            "t": "The shutdown of the assets is expected to begin in mid-",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and is estimated to be complete by the end of ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ", with potential decommissioning and demolition to continue into ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": " as needed.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://corporate.dow.com/en-us/news/press-releases/dow-will-shut-down-three-upstream-european-assets-in-response-to.html",
+          "title": "Dow will shut down three upstream European assets in response to structural challenges in the region",
+          "domain": "corporate.dow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://corporate.dow.com/en-us/news/press-releases/dow-will-shut-down-three-upstream-european-assets-in-response-to.html",
+          "title": "Dow will shut down three upstream European assets in response to structural challenges in the region",
+          "domain": "corporate.dow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "DOW-P3-2025-07-24",
+      "promiseId": "P3",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings call",
+      "speaker": "Karen Carter, Chief Operating Officer",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed shutdowns: $200 million annual EBITDA uplift by 2029, benefits beginning in 2026, and half achieved by 2027.",
+      "quote": "These shutdowns are cash accretive and expected to result in an annual EBITDA uplift of $200 million by 2029 with benefits beginning in 2026 and half of that achieved by 2027.",
+      "verbatim": {
+        "text": "These shutdowns are cash accretive and expected to result in an annual EBITDA uplift of $200 million by 2029 with benefits beginning in 2026 and half of that achieved by 2027.",
+        "segs": [
+          {
+            "t": "These shutdowns are cash accretive and expected to result in an annual EBITDA uplift of ",
+            "h": 0
+          },
+          {
+            "t": "$200 million",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": " with benefits beginning in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " and half of that achieved by ",
+            "h": 0
+          },
+          {
+            "t": "2027",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q2/Dow-Inc-Q2-2025-Earnings-Call_Transcript_FINAL_.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ2 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q2/Dow-Inc-Q2-2025-Earnings-Call_Transcript_FINAL_.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ2 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P3-2025-10-23",
+      "promiseId": "P3",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings call",
+      "speaker": "Karen Carter, Chief Operating Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Continued implementing the decision to shut three European upstream assets; did not declare the closures complete.",
+      "quote": "We also continue to optimize our global manufacturing footprint as evidenced last quarter when we announced the outcome of our strategic review in Europe, resulting in the shutdown of three upstream assets in the region.",
+      "verbatim": {
+        "text": "We also continue to optimize our global manufacturing footprint as evidenced last quarter when we announced the outcome of our strategic review in Europe, resulting in the shutdown of three upstream assets in the region.",
+        "segs": [
+          {
+            "t": "We also continue to optimize our global manufacturing footprint as evidenced last quarter when we announced the outcome of our strategic review in Europe, resulting in the shutdown of three upstream assets in the region.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q3/Dow-Inc-Q3-2025-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ3 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q3/Dow-Inc-Q3-2025-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ3 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P3-2026-01-29",
+      "promiseId": "P3",
+      "date": "2026-01-29",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Karen Carter, Chief Operating Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Expected $200 million annual EBITDA uplift by 2029; benefits beginning in 2026 with Barry basics siloxanes shutdown by midyear.",
+      "quote": "These shutdowns are cash accretive and expected to result in an annual EBITDA uplift of $200 million by 2029, with benefits beginning in 2026 with the shutdown of our Basics siloxanes capacity in Barry, U.K. by mid this year.",
+      "verbatim": {
+        "text": "These shutdowns are cash accretive and expected to result in an annual EBITDA uplift of $200 million by 2029, with benefits beginning in 2026 with the shutdown of our Basics siloxanes capacity in Barry, U.K. by mid this year.",
+        "segs": [
+          {
+            "t": "These shutdowns are cash accretive and expected to result in an annual EBITDA uplift of ",
+            "h": 0
+          },
+          {
+            "t": "$200 million",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2029",
+            "h": 1
+          },
+          {
+            "t": ", with benefits beginning in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": " with the shutdown of our Basics siloxanes capacity in Barry, U.K. by mid this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P3-2026-04-23",
+      "promiseId": "P3",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jim Fitterling, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported benefits beginning from European asset shutdowns; Barry remained scheduled for shutdown by midyear.",
+      "quote": "In addition, the benefits from our previously announced European asset shutdowns began this year.",
+      "verbatim": {
+        "text": "In addition, the benefits from our previously announced European asset shutdowns began this year.",
+        "segs": [
+          {
+            "t": "In addition, the benefits from our previously announced European asset shutdowns began this year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2026 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2026 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P3-2026-07-23",
+      "promiseId": "P3",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings release",
+      "speaker": null,
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reported Barry upstream siloxanes shutdown during the quarter; EBIT was $133 million, down $19 million year over year.",
+      "quote": "EBIT was $133 million, a decrease of $19 million versus the year-ago period, as tailwinds from the Company’s self-help initiatives were more than offset by higher fixed costs, including turnaround activity in the quarter and the costs associated with the in-period shutdown of our Barry, U.K. upstream siloxanes plant.",
+      "verbatim": {
+        "text": "EBIT was $133 million, a decrease of $19 million versus the year-ago period, as tailwinds from the Company’s self-help initiatives were more than offset by higher fixed costs, including turnaround activity in the quarter and the costs associated with the in-period shutdown of our Barry, U.K. upstream siloxanes plant.",
+        "segs": [
+          {
+            "t": "EBIT was ",
+            "h": 0
+          },
+          {
+            "t": "$133 million",
+            "h": 1
+          },
+          {
+            "t": ", a decrease of ",
+            "h": 0
+          },
+          {
+            "t": "$19 million",
+            "h": 1
+          },
+          {
+            "t": " versus the year-ago period, as tailwinds from the Company’s self-help initiatives were more than offset by higher fixed costs, including turnaround activity in the quarter and the costs associated with the in-period shutdown of our Barry, U.K. upstream siloxanes plant.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1751788/000175178826000144/exhibit991enrschedules2q26.htm",
+          "title": "DOW INC. 8-K exhibit 99.1, filed July 23, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1751788/000175178826000144/exhibit991enrschedules2q26.htm",
+          "title": "DOW INC. 8-K exhibit 99.1, filed July 23, 2026",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "DOW-P3-2026-10-22",
+      "promiseId": "P3",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings call",
+      "speaker": "Karen Carter, Chief Executive Officer",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Confirmed Barry siloxane shutdown completion alongside the second-quarter restart of Europe’s lowest-cost, most-flexible cracker.",
+      "quote": "We restarted our lowest cost and most flexible cracker in Europe in the second quarter, while also completing the shutdown of our higher-cost energy-intensive Barry siloxane unit in the United Kingdom.",
+      "verbatim": {
+        "text": "We restarted our lowest cost and most flexible cracker in Europe in the second quarter, while also completing the shutdown of our higher-cost energy-intensive Barry siloxane unit in the United Kingdom.",
+        "segs": [
+          {
+            "t": "We restarted our lowest cost and most flexible cracker in Europe in the second quarter, while also completing the shutdown of our higher-cost energy-intensive Barry siloxane unit in the United Kingdom.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._Earnings Call_2026-10-22_English",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._Earnings Call_2026-10-22_English",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P4-2025-04-24",
+      "promiseId": "P4",
+      "date": "2025-04-24",
+      "call": "Q1 2025 earnings call",
+      "speaker": "Jeff Tate, CFO",
+      "stance": "stated",
+      "k": "s",
+      "summary": "Committed to $6 billion in cash support over the next 2 years through asset transactions, reduced CapEx and cost savings.",
+      "quote": "Our collective actions to navigate the realities of the current macroeconomic environment and deliver $6 billion in cash support over the next 2 years enable Dow to maintain our financial flexibility.",
+      "verbatim": {
+        "text": "Our collective actions to navigate the realities of the current macroeconomic environment and deliver $6 billion in cash support over the next 2 years enable Dow to maintain our financial flexibility.",
+        "segs": [
+          {
+            "t": "Our collective actions to navigate the realities of the current macroeconomic environment and deliver ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " in cash support over the next 2 years enable Dow to maintain our financial flexibility.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P4-2025-07-24",
+      "promiseId": "P4",
+      "date": "2025-07-24",
+      "call": "Q2 2025 earnings release",
+      "speaker": "Jim Fitterling, Chair and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised cash-support and earnings-growth levers to more than $6 billion by 2026.",
+      "quote": "We are delivering near-term cash support and earnings growth levers, which we anticipate will total more than $6 billion by 2026.",
+      "verbatim": {
+        "text": "We are delivering near-term cash support and earnings growth levers, which we anticipate will total more than $6 billion by 2026.",
+        "segs": [
+          {
+            "t": "We are delivering near-term cash support and earnings growth levers, which we anticipate will total more than ",
+            "h": 0
+          },
+          {
+            "t": "$6 billion",
+            "h": 1
+          },
+          {
+            "t": " by ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://www.sec.gov/Archives/edgar/data/1751788/000175178825000142/exhibit991enrschedules2q25.htm",
+          "title": "DOW INC. 8-K exhibit 99.1, filed July 24, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://www.sec.gov/Archives/edgar/data/1751788/000175178825000142/exhibit991enrschedules2q25.htm",
+          "title": "DOW INC. 8-K exhibit 99.1, filed July 24, 2025",
+          "domain": "sec.gov",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "DOW-P4-2025-10-23",
+      "promiseId": "P4",
+      "date": "2025-10-23",
+      "call": "Q3 2025 earnings release",
+      "speaker": "Jim Fitterling, Chair and CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised the target to more than $6.5 billion; over half already achieved.",
+      "quote": "We remain on track to deliver more than $6.5 billion in near-term cash support, with over half already achieved.",
+      "verbatim": {
+        "text": "We remain on track to deliver more than $6.5 billion in near-term cash support, with over half already achieved.",
+        "segs": [
+          {
+            "t": "We remain on track to deliver more than ",
+            "h": 0
+          },
+          {
+            "t": "$6.5 billion",
+            "h": 1
+          },
+          {
+            "t": " in near-term cash support, with over half already achieved.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001751788/4ce7f620-2aac-4e2e-aac5-e124db1581ed.pdf",
+          "title": "Date of Report (Date of earliest event reported): October 23, 2025",
+          "domain": "d18rn0p25nwr6d.cloudfront.net",
+          "tier": "press"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001751788/4ce7f620-2aac-4e2e-aac5-e124db1581ed.pdf",
+          "title": "Date of Report (Date of earliest event reported): October 23, 2025",
+          "domain": "d18rn0p25nwr6d.cloudfront.net",
+          "tier": "press"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "DOW-P4-2026-01-29",
+      "promiseId": "P4",
+      "date": "2026-01-29",
+      "call": "Q4 2025 earnings call",
+      "speaker": "Jim Fitterling, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Delivered well over half of more than $6.5 billion in 2025, including accelerated savings from the $1 billion cost program.",
+      "quote": "We identified more than $6.5 billion in near-term cash support items and delivered well over half in 2025, including the accelerated delivery of our in-year cost savings from our $1 billion cost out program.",
+      "verbatim": {
+        "text": "We identified more than $6.5 billion in near-term cash support items and delivered well over half in 2025, including the accelerated delivery of our in-year cost savings from our $1 billion cost out program.",
+        "segs": [
+          {
+            "t": "We identified more than ",
+            "h": 0
+          },
+          {
+            "t": "$6.5 billion",
+            "h": 1
+          },
+          {
+            "t": " in near-term cash support items and delivered well over half in ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": ", including the accelerated delivery of our in-year cost savings from our ",
+            "h": 0
+          },
+          {
+            "t": "$1 billion",
+            "h": 1
+          },
+          {
+            "t": " cost out program.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P4-2026-04-09",
+      "promiseId": "P4",
+      "date": "2026-04-09",
+      "call": "2026 Annual Meeting of Stockholders",
+      "speaker": "Jim Fitterling, Chair and CEO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reaffirmed more than $6.5 billion in cash and cost savings support; reported receipt of the NOVA cash payment last month.",
+      "quote": "In total, these strategic actions and others represent more than $6.5 billion of near-term cash and cost savings support, which are essential for Dow's long-term resilience.",
+      "verbatim": {
+        "text": "In total, these strategic actions and others represent more than $6.5 billion of near-term cash and cost savings support, which are essential for Dow's long-term resilience.",
+        "segs": [
+          {
+            "t": "In total, these strategic actions and others represent more than ",
+            "h": 0
+          },
+          {
+            "t": "$6.5 billion",
+            "h": 1
+          },
+          {
+            "t": " of near-term cash and cost savings support, which are essential for Dow's long-term resilience.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_downloads/2026/04/DOW-INC-April-9-2026-Annual-Meeting-Meeting-Transcript_Final.pdf",
+          "title": "DOW INC. Annual Meeting - 1753893",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_downloads/2026/04/DOW-INC-April-9-2026-Annual-Meeting-Meeting-Transcript_Final.pdf",
+          "title": "DOW INC. Annual Meeting - 1753893",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "DOW-P4-2026-04-23",
+      "promiseId": "P4",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No explicit update or completion declaration for the aggregate cash-support target; constituent cost savings were discussed.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2026 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P4-2026-07-23",
+      "promiseId": "P4",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No aggregate cash-support update; completion of the separate cost-savings program did not establish aggregate delivery.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q2/Dow-Inc-_2Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._2Q26_Earnings Call_Final",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P4-2026-10-22",
+      "promiseId": "P4",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings call",
+      "speaker": null,
+      "stance": "not_mentioned",
+      "k": "x",
+      "summary": "No explicit update, completion declaration or withdrawal of the aggregate cash-support target.",
+      "quote": null,
+      "verbatim": null,
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+          "title": "Dow Inc._Earnings Call_2026-10-22_English",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2026/Dow-reports-third-quarter-2026-results/default.aspx",
+          "title": "\n\tDow reports third quarter 2026 results | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P5-2026-01-29",
+      "promiseId": "P5",
+      "date": "2026-01-29",
+      "call": "Dow launches Transform to Outperform to raise the competitive industry benchmark for productivity and growth to enable improved returns",
+      "speaker": null,
+      "stance": "stated",
+      "k": "s",
+      "summary": "Launched at least $2 billion in near-term Operating EBITDA uplift through 2028, with $500 million targeted in 2026.",
+      "quote": "The Company expects to provide at least $2 billion in near-term Op. EBITDA uplift.",
+      "verbatim": {
+        "text": "The Company expects to provide at least $2 billion in near-term Op. EBITDA uplift.",
+        "segs": [
+          {
+            "t": "The Company expects to provide at least ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " in near-term Op. EBITDA uplift.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.dow.com/en/news/news-details/2026/Dow-launches-Transform-to-Outperform-to-raise-the-competitive-industry-benchmark-for-productivity-and-growth-to-enable-improved-returns/default.aspx",
+          "title": "\n\tDow launches Transform to Outperform to raise the competitive industry benchmark for productivity and growth to enable improved returns | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2026/Dow-launches-Transform-to-Outperform-to-raise-the-competitive-industry-benchmark-for-productivity-and-growth-to-enable-improved-returns/default.aspx",
+          "title": "\n\tDow launches Transform to Outperform to raise the competitive industry benchmark for productivity and growth to enable improved returns | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "press_release"
+    },
+    {
+      "id": "DOW-P5-2026-04-23",
+      "promiseId": "P5",
+      "date": "2026-04-23",
+      "call": "Q1 2026 earnings call",
+      "speaker": "Jeffrey L. Tate, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $500 million in Transform to Outperform benefits this year, alongside the remaining $600 million from the 2025 program.",
+      "quote": "This includes the remaining $600 million from our 2025 program, as well as $500 million in growth and productivity improvements from Transform to Outperform.",
+      "verbatim": {
+        "text": "This includes the remaining $600 million from our 2025 program, as well as $500 million in growth and productivity improvements from Transform to Outperform.",
+        "segs": [
+          {
+            "t": "This includes the remaining ",
+            "h": 0
+          },
+          {
+            "t": "$600 million",
+            "h": 1
+          },
+          {
+            "t": " from our ",
+            "h": 0
+          },
+          {
+            "t": "2025",
+            "h": 1
+          },
+          {
+            "t": " program, as well as ",
+            "h": 0
+          },
+          {
+            "t": "$500 million",
+            "h": 1
+          },
+          {
+            "t": " in growth and productivity improvements from Transform to Outperform.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2026 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ1 2026 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "earnings_call"
+    },
+    {
+      "id": "DOW-P5-2026-06-09",
+      "promiseId": "P5",
+      "date": "2026-06-09",
+      "call": "Wells Fargo 16th Annual Industrials & Materials Conference",
+      "speaker": "Jeff Tate, CFO",
+      "stance": "reaffirmed",
+      "k": "h",
+      "summary": "Reaffirmed $2-plus billion total over the next couple of years, including $500 million in 2026.",
+      "quote": "And that will generate over the next couple of years, a total of $2-plus billion of value with an expectation of $500 million of that being delivered in 2026.",
+      "verbatim": {
+        "text": "And that will generate over the next couple of years, a total of $2-plus billion of value with an expectation of $500 million of that being delivered in 2026.",
+        "segs": [
+          {
+            "t": "And that will generate over the next couple of years, a total of ",
+            "h": 0
+          },
+          {
+            "t": "$2",
+            "h": 1
+          },
+          {
+            "t": "-plus billion of value with an expectation of ",
+            "h": 0
+          },
+          {
+            "t": "$500 million",
+            "h": 1
+          },
+          {
+            "t": " of that being delivered in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/doc_events/2026/06/Wells-Fargo_Industrials-Materials-Conference_-Transcript_-Final.pdf",
+          "title": "Company Name: Dow Inc. (DOW) Event: Wells Fargo 16th Annual Industrials & Materials Conference Date: June 9, 2026 <<Michael Sison,",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_events/2026/06/Wells-Fargo_Industrials-Materials-Conference_-Transcript_-Final.pdf",
+          "title": "Company Name: Dow Inc. (DOW) Event: Wells Fargo 16th Annual Industrials & Materials Conference Date: June 9, 2026 <<Michael Sison,",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "high",
+      "sourceType": "other"
+    },
+    {
+      "id": "DOW-P5-2026-07-23",
+      "promiseId": "P5",
+      "date": "2026-07-23",
+      "call": "Q2 2026 earnings release",
+      "speaker": "Karen S. Carter, CEO",
+      "stance": "raised",
+      "k": "c",
+      "summary": "Raised 2026 Transform to Outperform benefits by approximately $200 million, taking total in-year self-help benefits above $1.3 billion.",
+      "quote": "We now expect to generate approximately $200 million more in benefits from Transform to Outperform this year, enabling us to increase the total in-year benefits from self-help to greater than $1.3 billion.",
+      "verbatim": {
+        "text": "We now expect to generate approximately $200 million more in benefits from Transform to Outperform this year, enabling us to increase the total in-year benefits from self-help to greater than $1.3 billion.",
+        "segs": [
+          {
+            "t": "We now expect to generate approximately ",
+            "h": 0
+          },
+          {
+            "t": "$200 million",
+            "h": 1
+          },
+          {
+            "t": " more in benefits from Transform to Outperform this year, enabling us to increase the total in-year benefits from self-help to greater than ",
+            "h": 0
+          },
+          {
+            "t": "$1.3 billion",
+            "h": 1
+          },
+          {
+            "t": ".",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.dow.com/en/news/news-details/2026/Dow-reports-second-quarter-2026-results/default.aspx",
+          "title": "\n\tDow reports second quarter 2026 results | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2026/Dow-reports-second-quarter-2026-results/default.aspx",
+          "title": "\n\tDow reports second quarter 2026 results | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    },
+    {
+      "id": "DOW-P5-2026-09-16",
+      "promiseId": "P5",
+      "date": "2026-09-16",
+      "call": "Morgan Stanley 14th Annual Laguna Conference",
+      "speaker": "Jeff Tate, CFO",
+      "stance": "on_track",
+      "k": "h",
+      "summary": "Reaffirmed approximately $700 million this year and more than $2 billion total; approximately 70% of role reductions implemented.",
+      "quote": "We expect Transform to Outperform will deliver an upsized benefit of approximately $700 million this year, clearly demonstrating the early value we're capturing.",
+      "verbatim": {
+        "text": "We expect Transform to Outperform will deliver an upsized benefit of approximately $700 million this year, clearly demonstrating the early value we're capturing.",
+        "segs": [
+          {
+            "t": "We expect Transform to Outperform will deliver an upsized benefit of approximately ",
+            "h": 0
+          },
+          {
+            "t": "$700 million",
+            "h": 1
+          },
+          {
+            "t": " this year, clearly demonstrating the early value we're capturing.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Morgan-Stanley-Laguna-Conference-Transcript_Final.pdf",
+          "title": "MORG007_091526a_Dow_",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/content_files/Morgan-Stanley-Laguna-Conference-Transcript_Final.pdf",
+          "title": "MORG007_091526a_Dow_",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "other"
+    },
+    {
+      "id": "DOW-P5-2026-10-22",
+      "promiseId": "P5",
+      "date": "2026-10-22",
+      "call": "Q3 2026 earnings release",
+      "speaker": "Karen S. Carter, CEO",
+      "stance": "revised",
+      "k": "c",
+      "summary": "Targeted the upsized $700 million in 2026 and approximately $2 billion total by end of next year, earlier than original 2028.",
+      "quote": "Specific to the transformation, we are on track to achieve the upsized $700 million in growth and productivity benefits in 2026, as well as the approximately $2 billion in total uplift by the end of next year.",
+      "verbatim": {
+        "text": "Specific to the transformation, we are on track to achieve the upsized $700 million in growth and productivity benefits in 2026, as well as the approximately $2 billion in total uplift by the end of next year.",
+        "segs": [
+          {
+            "t": "Specific to the transformation, we are on track to achieve the upsized ",
+            "h": 0
+          },
+          {
+            "t": "$700 million",
+            "h": 1
+          },
+          {
+            "t": " in growth and productivity benefits in ",
+            "h": 0
+          },
+          {
+            "t": "2026",
+            "h": 1
+          },
+          {
+            "t": ", as well as the approximately ",
+            "h": 0
+          },
+          {
+            "t": "$2 billion",
+            "h": 1
+          },
+          {
+            "t": " in total uplift by the end of next year.",
+            "h": 0
+          }
+        ],
+        "match": "exact",
+        "backing": {
+          "via": "task",
+          "url": "https://investors.dow.com/en/news/news-details/2026/Dow-reports-third-quarter-2026-results/default.aspx",
+          "title": "\n\tDow reports third quarter 2026 results | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        }
+      },
+      "citations": [
+        {
+          "url": "https://investors.dow.com/en/news/news-details/2026/Dow-reports-third-quarter-2026-results/default.aspx",
+          "title": "\n\tDow reports third quarter 2026 results | Dow Investor Relations\n",
+          "domain": "investors.dow.com",
+          "tier": "primary"
+        },
+        {
+          "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+          "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+          "domain": "s23.q4cdn.com",
+          "tier": "primary"
+        }
+      ],
+      "confidence": "medium",
+      "sourceType": "earnings_release"
+    }
+  ],
+  "sources": [
+    {
+      "n": 1,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+      "title": "Dow Inc. NYSE:DOW FQ1 2025 Earnings Call Transcripts",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3 P4"
+    },
+    {
+      "n": 2,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q4/Dow-Inc-_4Q25-Earnings-Call_Transcript_FINAL.pdf",
+      "title": "Dow Inc. NYSE:DOW FQ4 2025 Earnings Call Transcripts",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 3,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q2/Dow-Inc-_2Q26_Earnings-Call_Final.pdf",
+      "title": "Dow Inc._2Q26_Earnings Call_Final",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 4,
+      "url": "https://s23.q4cdn.com/981382065/files/content_files/Dow-Inc-_3Q26_Earnings-Call_Final.pdf",
+      "title": "Dow Inc._Earnings Call_2026-10-22_English",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 5,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2026/q1/Dow-Inc-_Earnings-Call_Transcript_FINAL.pdf",
+      "title": "Dow Inc. NYSE:DOW FQ1 2026 Earnings Call Transcripts",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P3 P4 P5"
+    },
+    {
+      "n": 6,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q3/Dow-Inc-Q3-2025-Earnings-Call_Transcript_FINAL.pdf",
+      "title": "Dow Inc. NYSE:DOW FQ3 2025 Earnings Call Transcripts",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 7,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/q2/Dow-Inc-Q2-2025-Earnings-Call_Transcript_FINAL_.pdf",
+      "title": "Dow Inc. NYSE:DOW FQ2 2025 Earnings Call Transcripts",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2 P3"
+    },
+    {
+      "n": 8,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2024/q4/Dow-Inc-Q4-2024-Earnings-Call-Transcript_FINAL.pdf",
+      "title": "Dow Inc. NYSE:DOW FQ4 2024 Earnings Call Transcripts",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1 P2"
+    },
+    {
+      "n": 9,
+      "url": "https://investors.dow.com/en/news/news-details/2026/Dow-reports-third-quarter-2026-results/default.aspx",
+      "title": "\n\tDow reports third quarter 2026 results | Dow Investor Relations\n",
+      "domain": "investors.dow.com",
+      "tier": "primary",
+      "uses": "P4 P5"
+    },
+    {
+      "n": 10,
+      "url": "https://corporate.dow.com/en-us/news/press-releases/dow-finalizes-strategic-partnership-with-macquarie-asset-managem.html",
+      "title": "Dow finalizes strategic partnership with Macquarie Asset Management as an investor in Diamond Infrastructure Solutions, its dedicated infrastructure company",
+      "domain": "corporate.dow.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 11,
+      "url": "https://investors.dow.com/en/news/news-details/2025/Macquarie-Asset-Management-expands-equity-stake-in-Diamond-Infrastructure-Solutions-a-strategic-partnership-with-Dow/default.aspx",
+      "title": "\n\tMacquarie Asset Management expands equity stake in Diamond Infrastructure Solutions, a strategic partnership with Dow | Dow Investor Relations\n",
+      "domain": "investors.dow.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 12,
+      "url": "https://corporate.dow.com/en-us/news/press-releases/dow-will-shut-down-three-upstream-european-assets-in-response-to.html",
+      "title": "Dow will shut down three upstream European assets in response to structural challenges in the region",
+      "domain": "corporate.dow.com",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 13,
+      "url": "https://investors.dow.com/en/news/news-details/2025/Dow-announces-targeted-actions-to-deliver-1B-in-cost-savings/default.aspx",
+      "title": "\n\tDow announces targeted actions to deliver $1B in cost savings | Dow Investor Relations\n",
+      "domain": "investors.dow.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 14,
+      "url": "https://investors.dow.com/en/news/news-details/2024/Dow-announces-partnership-with-Macquarie-Asset-Management-to-launch-Diamond-Infrastructure-Solutions/default.aspx",
+      "title": "\n\tDow announces partnership with Macquarie Asset Management to launch Diamond Infrastructure Solutions | Dow Investor Relations\n",
+      "domain": "investors.dow.com",
+      "tier": "primary",
+      "uses": "P2"
+    },
+    {
+      "n": 15,
+      "url": "https://www.sec.gov/Archives/edgar/data/1751788/000175178826000144/exhibit991enrschedules2q26.htm",
+      "title": "DOW INC. 8-K exhibit 99.1, filed July 23, 2026",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P3"
+    },
+    {
+      "n": 16,
+      "url": "https://www.sec.gov/Archives/edgar/data/1751788/000175178825000142/exhibit991enrschedules2q25.htm",
+      "title": "DOW INC. 8-K exhibit 99.1, filed July 24, 2025",
+      "domain": "sec.gov",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 17,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_downloads/2026/04/DOW-INC-April-9-2026-Annual-Meeting-Meeting-Transcript_Final.pdf",
+      "title": "DOW INC. Annual Meeting - 1753893",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P4"
+    },
+    {
+      "n": 18,
+      "url": "https://investors.dow.com/en/news/news-details/2026/Dow-launches-Transform-to-Outperform-to-raise-the-competitive-industry-benchmark-for-productivity-and-growth-to-enable-improved-returns/default.aspx",
+      "title": "\n\tDow launches Transform to Outperform to raise the competitive industry benchmark for productivity and growth to enable improved returns | Dow Investor Relations\n",
+      "domain": "investors.dow.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 19,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_events/2026/06/Wells-Fargo_Industrials-Materials-Conference_-Transcript_-Final.pdf",
+      "title": "Company Name: Dow Inc. (DOW) Event: Wells Fargo 16th Annual Industrials & Materials Conference Date: June 9, 2026 <<Michael Sison,",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 20,
+      "url": "https://investors.dow.com/en/news/news-details/2026/Dow-reports-second-quarter-2026-results/default.aspx",
+      "title": "\n\tDow reports second quarter 2026 results | Dow Investor Relations\n",
+      "domain": "investors.dow.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 21,
+      "url": "https://s23.q4cdn.com/981382065/files/content_files/Morgan-Stanley-Laguna-Conference-Transcript_Final.pdf",
+      "title": "MORG007_091526a_Dow_",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P5"
+    },
+    {
+      "n": 22,
+      "url": "https://s23.q4cdn.com/981382065/files/doc_financials/2025/ar/Dow-2025-Annual-Report_final.pdf",
+      "title": "2025 ANNUAL REPORT",
+      "domain": "s23.q4cdn.com",
+      "tier": "primary",
+      "uses": "P1"
+    },
+    {
+      "n": 23,
+      "url": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0001751788/4ce7f620-2aac-4e2e-aac5-e124db1581ed.pdf",
+      "title": "Date of Report (Date of earliest event reported): October 23, 2025",
+      "domain": "d18rn0p25nwr6d.cloudfront.net",
+      "tier": "press",
+      "uses": "P4"
+    }
+  ],
+  "focus": "P1",
+  "runs": [
+    {
+      "kind": "sheet",
+      "spec": "sheet@2",
+      "processor": "ultra2x",
+      "createdAt": "2026-11-05T06:22:25.176260Z",
+      "completedAt": "2026-11-05T06:28:39.024198Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.295373Z",
+      "completedAt": "2026-11-05T19:14:09.664709Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.302462Z",
+      "completedAt": "2026-11-05T19:13:20.785535Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.309862Z",
+      "completedAt": "2026-11-05T19:13:11.114664Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.316946Z",
+      "completedAt": "2026-11-05T19:14:45.138946Z"
+    },
+    {
+      "kind": "trail",
+      "spec": "trail@1",
+      "processor": "ultra4x",
+      "createdAt": "2026-11-05T19:08:07.324006Z",
+      "completedAt": "2026-11-05T19:14:16.665319Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.347742Z",
+      "completedAt": "2026-11-05T19:46:37.422360Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.354882Z",
+      "completedAt": "2026-11-05T19:46:55.700643Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.362170Z",
+      "completedAt": "2026-11-05T19:48:27.817701Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.369761Z",
+      "completedAt": "2026-11-05T19:50:41.902063Z"
+    },
+    {
+      "kind": "check",
+      "spec": "check@2",
+      "processor": "ultra",
+      "createdAt": "2026-11-05T19:41:20.377329Z",
+      "completedAt": "2026-11-05T19:47:52.503648Z"
+    }
+  ],
+  "fills": {
+    "filled": 0
+  },
+  "gate": {
+    "kind": "sheet",
+    "checks": [
+      {
+        "id": "register",
+        "label": "Promise register, P1 to P5",
+        "result": "pass",
+        "detail": "5 promises: P1 P2 P3 P4 P5"
+      },
+      {
+        "id": "depth",
+        "label": "At least 2 dated statements per promise",
+        "result": "pass",
+        "detail": "37 statements"
+      },
+      {
+        "id": "cited",
+        "label": "Statements with a cited source",
+        "result": "pass",
+        "detail": "34 of 34 (100%)"
+      },
+      {
+        "id": "verbatim",
+        "label": "Statements backed by verbatim source text",
+        "result": "pass",
+        "detail": "34 of 34 (100%); 0 filled by Search or Extract"
+      },
+      {
+        "id": "dates",
+        "label": "Statement dates inside the window",
+        "result": "pass",
+        "detail": "2021-01-01 to 2026-11-05"
+      },
+      {
+        "id": "same-call",
+        "label": "Each quote from the call it is dated to",
+        "result": "pass",
+        "detail": "No statement sourced from a different call"
+      },
+      {
+        "id": "fact-check",
+        "label": "Outcomes confirmed by an independent fact-check",
+        "result": "pass",
+        "detail": "5 of 5 confirmed"
+      },
+      {
+        "id": "calendar",
+        "label": "Latest call known",
+        "result": "pass",
+        "detail": "3Q 2026 on 2026-10-22; next 2027-01-28"
+      }
+    ],
+    "passed": true
+  },
+  "images": {
+    "logo": {
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9b/Dow_Chemical_Company_logo.svg/3840px-Dow_Chemical_Company_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail",
+      "sourcePageUrl": "https://commons.wikimedia.org/wiki/File:Dow_Chemical_Company_logo.svg",
+      "title": "File:Dow Chemical Company logo.svg - Wikimedia Commons",
+      "width": 3840,
+      "height": 1348,
+      "rank": 1
+    },
+    "photo": {
+      "imageUrl": "https://gb.dow.com/en-gb/locations/dow-in-barry/_jcr_content/root/container/image_band/image.coreimg.jpeg/1745411412513/av13486.jpeg",
+      "sourcePageUrl": "https://gb.dow.com/en-gb/locations/dow-in-barry.html",
+      "title": "Dow in Barry",
+      "width": 1280,
+      "height": 837,
+      "rank": 1
+    }
+  },
+  "version": 2,
+  "builtAt": "2026-11-06T00:56:27.334Z"
+}
