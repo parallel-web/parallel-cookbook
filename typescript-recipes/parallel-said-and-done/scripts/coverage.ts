@@ -1,9 +1,9 @@
 /**
  * Makes a sheet for each company in config/companies.json that has none (or
  * the companies named), one Task run each, then follows each through stages 2
- * and 3. The deployment does the same for new companies on its hourly reconcile.
+ * and 3.
  *
- *   pnpm coverage                      every company without a sheet
+ *   pnpm coverage --all                every company without a sheet
  *   pnpm coverage MSFT META            these companies, even if they have one
  */
 import { parallelClient, publicError } from "../src/parallel/client";
@@ -15,6 +15,10 @@ import { flag, loadEnv, positional, today } from "./lib/env";
 
 loadEnv();
 const picked = positional().map((t) => t.toUpperCase());
+if (!picked.length && flag("all") !== "true") {
+  console.error("usage: pnpm coverage <TICKER...> or pnpm coverage --all");
+  process.exit(1);
+}
 const all = readCoverageConfig().companies.map((c) => c.ticker);
 const tickers = picked.length ? picked : (await Promise.all(all.map(async (t) => ((await readSheet(t)) ? null : t)))).filter((t): t is string => !!t);
 const log = (line: string) => console.log(line);

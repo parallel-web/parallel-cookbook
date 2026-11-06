@@ -43,7 +43,8 @@ const sheetFor = (ticker: string) =>
 const profiles = () =>
   cached("profiles", async () => {
     const stored = await readProfiles();
-    return Object.keys(stored).length ? stored : ((await bundled<Record<string, CompanyProfile>>("data/profiles.json")) ?? {});
+    if (storage().name === "files") return stored;
+    return { ...(await bundled<Record<string, CompanyProfile>>("data/profiles.json")), ...stored };
   });
 
 export async function loadCoverage(): Promise<Coverage> {

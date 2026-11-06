@@ -27,7 +27,7 @@ export async function startRun(
   kind: InflightRun["kind"],
   request: TaskRunCreateParams & { input: Record<string, unknown> },
   spec: string,
-  extra: { promise?: string; log?: (line: string) => void } = {},
+  extra: { stage?: { promise: string; sheetRunId: string }; log?: (line: string) => void } = {},
 ): Promise<StoredRun> {
   const webhook = taskWebhook();
   const body = { ...request, ...(webhook ? { webhook } : {}) };
@@ -43,7 +43,7 @@ export async function startRun(
   }
   await writeRaw(ticker, kind, stored.run.run_id, stored);
   const inflight = await readInflight(ticker);
-  inflight[stored.run.run_id] = { kind, spec, ...(extra.promise ? { promise: extra.promise } : {}), startedAt: new Date().toISOString() };
+  inflight[stored.run.run_id] = { kind, spec, ...extra.stage, startedAt: new Date().toISOString() };
   await writeInflight(ticker, inflight);
   return stored;
 }

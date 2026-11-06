@@ -1,21 +1,17 @@
 /**
- * Hourly safety net under the webhooks (vercel.json schedules it). See
- * src/pipeline/reconcile.ts. With CRON_SECRET set, only Vercel Cron can call
- * it; without, it still does nothing that stored state does not call for, and
- * at most once every ten minutes.
+ * Optional scheduled recovery for missed webhooks. See src/pipeline/reconcile.ts.
  */
 import { parallelClient, publicError } from "../../../../parallel/client";
 import { reconcile } from "../../../../pipeline/reconcile";
 import { storage } from "../../../../storage";
 
 export const runtime = "nodejs";
-export const maxDuration = 800;
 
 export async function GET(request: Request) {
-  const secret = process.env.CRON_SECRET;
-  if (secret && request.headers.get("authorization") !== `Bearer ${secret}`) return new Response("Unauthorized", { status: 401 });
   // A read-only deployment (no key, or no Blob store to write to) has nothing to reconcile.
   if (!process.env.PARALLEL_API_KEY || storage().name !== "blob") return Response.json({ ok: true, skipped: "not configured" });
+  const secret = process.env.CRON_SECRET;
+  if (!secret || request.headers.get("authorization") !== `Bearer ${secret}`) return new Response("Unauthorized", { status: 401 });
 
   // One reconcile at a time, and not more often than every ten minutes.
   const marker = "output/locks/reconcile-last.json";

@@ -137,6 +137,7 @@ export interface InflightRun {
   kind: "sheet-run" | "update-run" | "trail-run" | "check-run" | "resolve-run" | "profile-run";
   spec: string;
   promise?: string;
+  sheetRunId?: string;
   startedAt: string;
   /** Times handling its result failed; it is dropped after three. */
   attempts?: number;

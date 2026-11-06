@@ -35,16 +35,15 @@ export interface Manifest {
 }
 
 export async function readManifest(ticker: string): Promise<Manifest | null> {
-  return readRaw<Manifest>(ticker, "manifest", "latest");
-}
-
-export async function publishedManifest(ticker: string): Promise<Manifest | null> {
-  const m = await readManifest(ticker);
-  return m && (await readSheet(ticker))?.runs[0]?.runId === m.sheetRunId ? m : null;
+  // Publishing the private sheet selects its register. Older installs used one manifest per ticker.
+  const id = (await readSheet(ticker))?.runs[0]?.runId;
+  if (!id) return null;
+  const manifest = (await readRaw<Manifest>(ticker, "manifest", id)) ?? (await readRaw<Manifest>(ticker, "manifest", "latest"));
+  return manifest?.sheetRunId === id ? manifest : null;
 }
 
 export async function writeManifest(ticker: string, manifest: Manifest) {
-  await writeRaw(ticker, "manifest", "latest", manifest);
+  await writeRaw(ticker, "manifest", manifest.sheetRunId, manifest);
 }
 
 export async function readFills(ticker: string, runIds: string[]): Promise<FillRecord[]> {
@@ -62,8 +61,8 @@ export function sessionId(ticker: string, runId: string) {
 }
 
 /** Rebuilds a sheet from stored responses only. */
-export async function rebuild(ticker: string, builtAt = new Date().toISOString(), candidateRunId?: string): Promise<SheetData> {
-  const manifest = await readManifest(ticker);
+export async function rebuild(ticker: string, options: { manifest?: Manifest; candidateRunId?: string } = {}): Promise<SheetData> {
+  const manifest = options.manifest ?? (await readManifest(ticker));
   if (!manifest) throw new Error(`No stored runs for ${ticker}; run pnpm sheet ${ticker}`);
   const company = companyFor(ticker);
   const { windowStart } = readCoverageConfig();
@@ -71,7 +70,7 @@ export async function rebuild(ticker: string, builtAt = new Date().toISOString()
   const stage = async (kind: "trail-run" | "check-run" | "resolve-run", ids: Record<string, string | string[]> | undefined) =>
     (await Promise.all(Object.values(ids ?? {}).flat().map((id) => readRaw<StoredRun>(ticker, kind, id)))).filter(done);
   const prior = manifest.updates.some(u => !u.status) ? await readSheet(ticker) : null;
-  const included = manifest.updates.filter(u => u.status === "published" || u.runId === candidateRunId ||
+  const included = manifest.updates.filter(u => u.status === "published" || u.runId === options.candidateRunId ||
     (!u.status && prior?.runs.some(r => r.kind === "update" && r.runId === u.runId)));
   const [sheetRun, updateRuns, trails, checks, resolves, imagesRecord] = await Promise.all([
     readRaw<StoredRun>(ticker, "sheet-run", manifest.sheetRunId),
@@ -79,14 +78,14 @@ export async function rebuild(ticker: string, builtAt = new Date().toISOString()
     stage("trail-run", manifest.trails),
     stage("check-run", manifest.checks),
     stage("resolve-run", manifest.resolves),
-    manifest.images ? readRaw<ImagesRecord>(ticker, "images", "latest") : Promise.resolve(null),
+    manifest.images ? readRaw<ImagesRecord>(ticker, "images", manifest.sheetRunId).then(record => record ?? readRaw<ImagesRecord>(ticker, "images", "latest")) : null,
   ]);
   if (!sheetRun?.result) throw new Error(`Sheet run ${manifest.sheetRunId} has no stored result`);
   const updates = updateRuns.filter(done);
   const fills = await readFills(ticker, [manifest.sheetRunId, ...updates.map((u) => u.run.run_id)]);
   const irUrl = ((sheetRun.result.output as { content?: { investor_relations_url?: string } }).content ?? {}).investor_relations_url ?? null;
   const images = manifest.images ? picksFrom(imagesRecord, company, irUrl) : null;
-  const sheet = buildSheet({ company, windowStart, sheetRun, updates, trails, resolves, checks, fills, images, schedule: manifest.schedule ?? null, version: (manifest.baseVersion ?? 0) + 1 + updates.length, builtAt });
+  const sheet = buildSheet({ company, windowStart, sheetRun, updates, trails, resolves, checks, fills, images, schedule: manifest.schedule ?? null, version: (manifest.baseVersion ?? 0) + 1 + updates.length, builtAt: new Date().toISOString() });
   if (manifest.taskGroupId) sheet.runs[0].taskGroupId = manifest.taskGroupId;
   return sheet;
 }

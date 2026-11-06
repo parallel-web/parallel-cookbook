@@ -9,7 +9,7 @@ import type { StoredRun } from "../src/parallel/task";
 import { sameContent } from "../src/pipeline/advance";
 import { buildSheet } from "../src/sheet/build";
 import { readManifest, rebuild } from "../src/sheet/stored";
-import { companyFor, listCallDays, listRaw, readCoverageConfig, readRaw, readSheet, writeCallDay, writeSheet } from "../src/store";
+import { companyFor, listCallDays, listRaw, readCoverageConfig, readRaw, readSheet, withLock, writeCallDay, writeSheet } from "../src/store";
 import { rebuildCallDay } from "../src/updates/update";
 import { flag, loadEnv, positional } from "./lib/env";
 
@@ -47,12 +47,14 @@ if (compare && compare !== "true") {
   const picked = positional().map((t) => t.toUpperCase());
   const tickers = picked.length ? picked : readCoverageConfig().companies.map((c) => c.ticker);
   for (const ticker of tickers) {
-    if (!(await readManifest(ticker))) continue;
-    const sheet = await rebuild(ticker);
-    const current = await readSheet(ticker);
-    // Unchanged sheets keep their file (and builtAt), so a rebuild only touches what a rule change moved.
-    if (sheet.gate.passed && current && current.version === sheet.version && !sameContent(current, sheet)) await writeSheet(sheet);
-    console.log(`${ticker}: v${sheet.version} ${sheet.statements.filter((s) => s.verbatim).length}/${sheet.statements.length} verbatim · gate ${sheet.gate.passed ? "pass" : "fail"}${current ? "" : " (not published)"}`);
+    await withLock(ticker, async () => {
+      const manifest = await readManifest(ticker);
+      if (!manifest) return;
+      const sheet = await rebuild(ticker, { manifest });
+      const current = await readSheet(ticker);
+      if (sheet.gate.passed && current && current.version === sheet.version && !sameContent(current, sheet)) await writeSheet(sheet);
+      console.log(`${ticker}: v${sheet.version} ${sheet.statements.filter((s) => s.verbatim).length}/${sheet.statements.length} verbatim · gate ${sheet.gate.passed ? "pass" : "fail"}`);
+    });
   }
   for (const record of (await listCallDays()).filter((r) => tickers.includes(r.ticker))) {
     const next = await rebuildCallDay(record);

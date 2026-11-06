@@ -3,25 +3,29 @@
  * and monitor.event.detected for its monitors. It answers at once and does the
  * work after the response (Next.js `after`), within the function's time limit.
  *
- * The body is only a hint. Handlers fetch the run or the monitor's events from
- * the API with this app's key and act only on runs it started and monitors it
- * owns, so a forged request can at most make it re-read its own state.
- * Anything a webhook misses, the hourly reconcile picks up.
+ * Verify the raw delivery before scheduling any API or storage work.
  */
 import { after } from "next/server";
+import { Webhook } from "standardwebhooks";
 
 import { parallelClient, publicError } from "../../../../parallel/client";
 import { onRunComplete } from "../../../../pipeline/advance";
 import { onMonitorWebhook } from "../../../../updates/monitors";
 
 export const runtime = "nodejs";
-export const maxDuration = 800;
 
 const log = (line: string) => console.log(line);
 
 export async function POST(request: Request) {
   if (!process.env.PARALLEL_API_KEY) return Response.json({ ok: true, ignored: "not configured" });
-  const body = (await request.json().catch(() => null)) as { type?: string; data?: Record<string, unknown> } | null;
+  const secret = process.env.PARALLEL_WEBHOOK_SECRET;
+  if (!secret) return new Response("Webhook signing secret is not configured", { status: 503 });
+  let body: { type?: string; data?: Record<string, unknown> } | null;
+  try {
+    body = new Webhook(secret).verify(await request.text(), Object.fromEntries(request.headers)) as typeof body;
+  } catch {
+    return new Response("Invalid webhook", { status: 401 });
+  }
   const data = body?.data ?? {};
   const client = parallelClient();
 

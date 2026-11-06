@@ -5,21 +5,18 @@
  *   1. runs whose webhook never arrived: fetch their status, handle the finished ones
  *   2. monitor events no webhook delivered
  *   3. calls still waiting for a transcript, and calls no monitor reported
- *   4. companies added to config/companies.json: a sheet run and a profile run
- *   5. every idle company: the next quality step, if one is due (src/pipeline/advance.ts)
- *   6. monitors in step with each sheet's promises and the webhook URL
+ *   4. live sheets: profiles, quality steps and a monitor
+ *   5. monitor queries and webhooks
  *
  * Everything is driven by stored state, so running it twice does nothing new.
  */
 import type { Parallel } from "../parallel/client";
 import { publicError } from "../parallel/client";
-import { startSheet } from "../sheet/make-sheet";
-import { startProfile } from "../sheet/profile";
+import { PROFILE_SPEC_KEY, startProfile } from "../sheet/profile";
 import { readManifest } from "../sheet/stored";
-import { companyFor, listRaw, readInflight, readMonitors, readProfiles, readSheet, withLock } from "../store";
+import { companyFor, readInflight, readMonitors, readProfiles, withLock } from "../store";
 import { coveredTickers, ensureMonitor, handleMonitorEvents, notFound, recentEvents, replaceMissing, syncMonitors } from "../updates/monitors";
 import { catchUpCalls, retryWaiting } from "../updates/update";
-import { PROFILE_SPEC_KEY } from "../sheet/profile";
 import { advance, onRunComplete } from "./advance";
 
 type Log = (line: string) => void;
@@ -76,30 +73,20 @@ export async function reconcile(client: Parallel, options: { tickers?: string[];
   await safely("retry waiting")(() => retryWaiting(client, { log, tickers }));
   await safely("catch up calls")(() => catchUpCalls(client, { log, tickers }));
 
-  // 4. New companies: a sheet run and a profile run each. A company whose sheet run was already tried is left for a person.
+  // Only a register explicitly built with this store can start recurring work.
   const profiles = await readProfiles();
-  const today = new Date().toISOString().slice(0, 10);
-  await eachLimit(tickers, 4, async (t) => {
-    await safely(`${t} coverage`)(() =>
-      withLock(t, async () => {
-        const inflight = Object.values(await readInflight(t));
-        if (!(await readSheet(t)) && !inflight.some((r) => r.kind === "sheet-run") && !(await listRaw(t, "sheet-run")).length) {
-          await startSheet(client, t, { asOf: today, log });
-        }
-        if (profiles[t]?.spec !== PROFILE_SPEC_KEY && !inflight.some((r) => r.kind === "profile-run")) await startProfile(client, companyFor(t));
-      }),
-    );
-  });
-
-  // 5. The next quality step for every idle company, and a monitor for every published sheet.
   await eachLimit(tickers, 4, async (t) => {
     await safely(`${t} advance`)(async () => {
       if (!(await readManifest(t))) return;
-      await withLock(t, () => advance(client, t, log));
-      if (await readSheet(t)) await ensureMonitor(client, t, log);
+      await withLock(t, async () => {
+        const inflight = Object.values(await readInflight(t));
+        if (profiles[t]?.spec !== PROFILE_SPEC_KEY && !inflight.some((r) => r.kind === "profile-run")) await startProfile(client, companyFor(t));
+        await advance(client, t, log);
+        await ensureMonitor(client, t, log);
+      });
     });
   });
 
-  // 6. Monitor queries and webhooks.
+  // 5. Monitor queries and webhooks.
   await safely("sync monitors")(() => syncMonitors(client, { replace: false, tickers, log }));
 }

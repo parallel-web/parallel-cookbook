@@ -26,7 +26,7 @@ import { fillGaps } from "../sheet/fill";
 import { completeSheet } from "../sheet/make-sheet";
 import { recordProfile } from "../sheet/profile";
 import { RESOLVE_SPEC_KEY, resolveRequest } from "../sheet/resolve";
-import { appendFills, publish, publishedManifest, readFills, readManifest, rebuild, sessionId, writeManifest, type Manifest } from "../sheet/stored";
+import { appendFills, publish, readFills, readManifest, rebuild, sessionId, writeManifest, type Manifest } from "../sheet/stored";
 import { TRAIL_SPEC_KEY, trailRequest } from "../sheet/trail";
 import { companyFor, readInflight, readRaw, readSheet, withLock, writeDraft, writeInflight, writeRaw } from "../store";
 import { ensureMonitor } from "../updates/monitors";
@@ -82,10 +82,10 @@ export function sameContent(a: SheetData, b: SheetData) {
  */
 export async function advance(client: Parallel, ticker: string, log: Log): Promise<Step[]> {
   if (Object.keys(await readInflight(ticker)).length) return [];
-  const manifest = await publishedManifest(ticker);
+  const manifest = await readManifest(ticker);
   if (!manifest) return [];
   const company = companyFor(ticker);
-  let sheet = await rebuild(ticker);
+  let sheet = await rebuild(ticker, { manifest });
   const steps = planNext(manifest, sheet);
 
   if (steps.some((s) => s.kind === "check-run")) {
@@ -95,7 +95,7 @@ export async function advance(client: Parallel, ticker: string, log: Log): Promi
       log,
     });
     await appendFills(ticker, manifest.sheetRunId, fills);
-    if (fills.length) sheet = await rebuild(ticker);
+    if (fills.length) sheet = await rebuild(ticker, { manifest });
   }
 
   if (steps.length) {
@@ -109,7 +109,7 @@ export async function advance(client: Parallel, ticker: string, log: Log): Promi
             ? checkRequest(company, sheet, s.promise)
             : resolveRequest(company, sheet, s.promise, await checkRuns(s.promise));
       const spec = s.kind === "trail-run" ? TRAIL_SPEC_KEY : s.kind === "check-run" ? CHECK_SPEC_KEY : RESOLVE_SPEC_KEY;
-      await startRun(client, ticker, s.kind, request as never, spec, { promise: s.promise });
+      await startRun(client, ticker, s.kind, request, spec, { stage: { promise: s.promise, sheetRunId: manifest.sheetRunId } });
     }
     log(`${ticker}: started ${steps.map((s) => `${s.kind.replace("-run", "")} ${s.promise}`).join(", ")}`);
     return steps;
@@ -183,7 +183,11 @@ export async function onRunComplete(client: Parallel, runId: string, log: Log): 
         await recordProfile(ticker, final);
       } else if (entry.promise) {
         const m = await readManifest(ticker);
-        if (m) await writeManifest(ticker, applyStage(m, entry.kind, entry.promise, runId, !!result));
+        if (m && m.sheetRunId === entry.sheetRunId) {
+          await writeManifest(ticker, applyStage(m, entry.kind, entry.promise, runId, !!result));
+        } else {
+          log(`${ticker}: skipped ${runId}; it is not linked to the current register`);
+        }
       }
     } catch (error) {
       // Left in flight so the next reconcile retries it, up to three times.

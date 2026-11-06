@@ -1,5 +1,5 @@
 {
-  "_note": "Authored coverage list. These are the only hand-entered values in the demo: which companies to cover and how to name them. Every other field comes from Parallel API output. Add a company here and the next `pnpm monitors poll` makes its sheet and its monitor.",
+  "_note": "Add a company here, then run pnpm sheet TICKER to start research and monitoring for it.",
   "window_start": "2021-01-01",
   "companies": [
     { "ticker": "C", "name": "Citigroup Inc.", "short": "Citigroup", "website": "citigroup.com" },

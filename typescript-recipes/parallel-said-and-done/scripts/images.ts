@@ -22,7 +22,7 @@ for (const ticker of tickers) {
       const before = await readSheet(ticker);
       if (!before || before.runs[0]?.runId !== manifest.sheetRunId) return;
       const images = await searchImages(client, companyFor(ticker), before.photoSubject, `said-and-done-images-${ticker}`);
-      await writeRaw(ticker, "images", "latest", images);
+      await writeRaw(ticker, "images", manifest.sheetRunId, images);
       await writeManifest(ticker, { ...manifest, images: true });
       const sheet = await rebuild(ticker);
       await writeSheet({ ...before, images: sheet.images });

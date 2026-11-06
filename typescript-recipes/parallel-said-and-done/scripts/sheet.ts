@@ -11,7 +11,7 @@
 import { parallelClient, publicError } from "../src/parallel/client";
 import { drive } from "../src/pipeline/drive";
 import { startSheet } from "../src/sheet/make-sheet";
-import { readSheet, withLock } from "../src/store";
+import { readMonitor, readSheet, withLock } from "../src/store";
 import { flag, loadEnv, positional, today } from "./lib/env";
 
 loadEnv();
@@ -24,10 +24,13 @@ const ticker = arg.toUpperCase();
 const log = (line: string) => console.log(line);
 try {
   const client = parallelClient();
-  await withLock(ticker, () => startSheet(client, ticker, { processor: flag("processor"), asOf: flag("as-of") ?? today(), log }));
+  const started = await withLock(ticker, () => startSheet(client, ticker, { processor: flag("processor"), asOf: flag("as-of") ?? today(), log }));
   await drive(client, [ticker], log);
   const sheet = await readSheet(ticker);
-  console.log(sheet ? `${ticker}: published v${sheet.version}` : `${ticker}: not published; see output/drafts`);
+  if (!sheet || sheet.runs[0]?.runId !== started.run.run_id) throw new Error(`${ticker}: this run did not publish a sheet; see the run log and output/drafts`);
+  const monitor = await readMonitor(ticker);
+  if (!monitor) throw new Error(`${ticker}: published v${sheet.version} without a monitor; retry with pnpm monitors create ${ticker}`);
+  log(`${ticker}: published v${sheet.version}; monitor ${monitor.monitorId}${monitor.cancelledAt ? " (cancelled)" : ""}`);
 } catch (error) {
   console.error(publicError(error));
   process.exit(1);

@@ -18,7 +18,7 @@ import { startRun } from "../pipeline/runs";
 import { fillGaps } from "../sheet/fill";
 import { evaluateUpdate } from "../sheet/gate";
 import type { ScheduledCall } from "../sheet/build";
-import { appendFills, publish, publishedManifest, readFills, readManifest, rebuild, sessionId, writeManifest } from "../sheet/stored";
+import { appendFills, publish, readFills, readManifest, rebuild, sessionId, writeManifest } from "../sheet/stored";
 import { companyFor, listCallDays, readCallDay, readCoverageConfig, readRaw, readSheet, withLock, writeCallDay, writeDraft, writeRaw, writeSheet } from "../store";
 import { compareWithTask, coverageOf, matchPassages, rankResults, readCall, readSource, type ExtractResponseLike, type SearchResponseLike } from "./callday";
 import { companyDomains } from "../sheet/evidence";
@@ -60,7 +60,7 @@ export async function startCallDay(
   const company = companyFor(ticker);
   const sheet = await readSheet(ticker);
   if (!sheet) throw new Error(`No published sheet for ${ticker}`);
-  const manifest = await publishedManifest(ticker);
+  const manifest = await readManifest(ticker);
   if (!manifest) throw new Error(`Run pnpm sheet ${ticker} before processing a call or announcement`);
   const existing = await readCallDay(ticker, call.date, kind === "event" ? trigger.eventId : null);
   if (existing && existing.status !== "waiting_transcript" && !options.forceUpdate && !options.redo) {
@@ -133,14 +133,14 @@ export async function finishUpdate(
     return { record, sheet: null, published: false };
   }
 
-  let sheet = await rebuild(ticker, undefined, runId);
+  let sheet = await rebuild(ticker, { candidateRunId: runId });
   const fills = await fillGaps(client, company, sheet, await readFills(ticker, [runId]), {
     runId,
     sessionId: sessionId(ticker, runId),
     log,
   });
   await appendFills(ticker, runId, fills);
-  sheet = await rebuild(ticker, undefined, runId);
+  sheet = await rebuild(ticker, { candidateRunId: runId });
   record = compareWithTask({ ...record, coverage: coverageOf(sheet, record.passages) }, sheet, runId);
   const gate = evaluateUpdate(sheet, record, runId);
   const passed = gate.passed && sheet.gate.passed;
@@ -218,7 +218,7 @@ export async function catchUpCalls(client: Parallel, options: { log: Log; today?
     const due = sheet?.nextCall.date;
     if (!sheet || !due || due <= sheet.latestCall.date) continue;
     const daysPast = (new Date(`${today}T12:00:00Z`).getTime() - new Date(`${due}T12:00:00Z`).getTime()) / 86_400_000;
-    if (daysPast < 1 || daysPast > 14 || !(await publishedManifest(company.ticker)) || (await readCallDay(company.ticker, due))) continue;
+    if (daysPast < 1 || daysPast > 14 || !(await readManifest(company.ticker)) || (await readCallDay(company.ticker, due))) continue;
     options.log(`${company.ticker}: no "held" event for the ${due} call; running on the scheduled date`);
     await withLock(company.ticker, () =>
       startCallDay(
@@ -236,7 +236,7 @@ export async function catchUpCalls(client: Parallel, options: { log: Log; today?
 export async function retryWaiting(client: Parallel, options: { log: Log; tickers?: string[] }) {
   const now = Date.now();
   for (const record of (await listCallDays()).filter((r) => r.status === "waiting_transcript" && (!options.tickers || options.tickers.includes(r.ticker)))) {
-    if (!(await publishedManifest(record.ticker))) continue;
+    if (!(await readManifest(record.ticker))) continue;
     if (now - new Date(`${record.callDate}T12:00:00Z`).getTime() > 4 * 86_400_000) continue;
     const url = typeof record.trigger.content?.source_url === "string" ? record.trigger.content.source_url : undefined;
     await withLock(record.ticker, () =>

@@ -4,9 +4,10 @@
  * routes each one (updates/monitor-events.ts). The hourly reconcile reads the
  * same events, so one a webhook missed is still handled.
  */
+import type { MonitorCreateParams } from "parallel-web/resources/monitor";
 import type { Company } from "../lib/types";
 import type { Parallel } from "../parallel/client";
-import { publishedManifest } from "../sheet/stored";
+import { readManifest } from "../sheet/stored";
 import { webhookUrl } from "../pipeline/runs";
 import { companyFor, readCoverageConfig, readMonitor, readMonitors, readSheet, withLock, writeMonitor, type MonitorRecord } from "../store";
 import { onMonitorEvent, type MonitorEvent } from "./monitor-events";
@@ -33,13 +34,13 @@ async function monitorRequest(company: Company, url: string | null) {
     },
     metadata: { app: "said-and-done", ticker: company.ticker, spec: MONITOR_SPEC_KEY },
     ...(url ? { webhook: monitorWebhook(url) } : {}),
-  };
+  } satisfies MonitorCreateParams;
 }
 
 async function createOne(client: Parallel, ticker: string): Promise<MonitorRecord> {
   const url = webhookUrl();
   const request = await monitorRequest(companyFor(ticker), url);
-  const monitor = await client.monitor.create(request as never);
+  const monitor = await client.monitor.create(request, { maxRetries: 0 });
   const record: MonitorRecord = {
     ticker,
     monitorId: monitor.monitor_id,
@@ -51,14 +52,19 @@ async function createOne(client: Parallel, ticker: string): Promise<MonitorRecor
     webhookUrl: url,
     handledEventIds: [],
   };
-  await writeMonitor(record);
+  try {
+    await writeMonitor(record);
+  } catch (error) {
+    await cancelIfPresent(client, record.monitorId);
+    throw error;
+  }
   return record;
 }
 
-/** A monitor for a company with a published sheet and none yet. */
+/** Call with the company lock held, including the check for an existing monitor. */
 export async function ensureMonitor(client: Parallel, ticker: string, log: Log) {
   if (await readMonitor(ticker)) return;
-  if (!(await publishedManifest(ticker))) {
+  if (!(await readManifest(ticker))) {
     log(`${ticker}: run pnpm sheet ${ticker} before creating a monitor`);
     return;
   }
@@ -71,7 +77,8 @@ export async function ensureMonitor(client: Parallel, ticker: string, log: Log) 
  * Parallel account) is replaced by a new one, unless it was cancelled on purpose.
  */
 export async function replaceMissing(client: Parallel, record: MonitorRecord, log: Log) {
-  if (record.cancelledAt) return record;
+  const current = await readMonitor(record.ticker);
+  if (!current || current.cancelledAt || current.monitorId !== record.monitorId) return;
   const next = await createOne(client, record.ticker);
   log(`${record.ticker}: monitor ${record.monitorId} not found; replaced by ${next.monitorId}`);
   return next;
@@ -79,49 +86,62 @@ export async function replaceMissing(client: Parallel, record: MonitorRecord, lo
 
 export async function createMonitors(client: Parallel, tickers: string[], log: Log) {
   for (const ticker of tickers) {
-    const existing = await readMonitor(ticker);
-    if (existing) log(`${ticker}: already has ${existing.monitorId}`);
-    else await ensureMonitor(client, ticker, log);
+    await withLock(ticker, () => ensureMonitor(client, ticker, log));
+  }
+}
+
+async function forActiveMonitors(tickers: string[] | undefined, fn: (record: MonitorRecord) => Promise<void>) {
+  for (const { ticker } of await readMonitors()) {
+    if (tickers && !tickers.includes(ticker)) continue;
+    await withLock(ticker, async () => {
+      const current = await readMonitor(ticker);
+      if (current && !current.cancelledAt) await fn(current);
+    });
+  }
+}
+
+async function cancelIfPresent(client: Parallel, monitorId: string) {
+  try {
+    await client.monitor.cancel(monitorId);
+  } catch (error) {
+    if (!notFound(error)) throw error;
   }
 }
 
 /**
  * Keeps each monitor in step: its query names the sheet's current promises,
  * and it reports to the current WEBHOOK_URL. A monitor on an older spec (a
- * different output schema) is replaced: the new one is created first, then the
- * old one is cancelled.
+ * different output schema) is cancelled before creating its replacement.
  */
 export async function syncMonitors(client: Parallel, options: { replace: boolean; tickers?: string[]; log: Log }) {
   const url = webhookUrl();
-  for (const r of await readMonitors()) {
-    if (options.tickers && !options.tickers.includes(r.ticker)) continue;
-    if (r.cancelledAt) continue;
+  await forActiveMonitors(options.tickers, async r => {
     if (r.spec !== MONITOR_SPEC_KEY) {
       if (!options.replace) {
         options.log(`${r.ticker}: ${r.monitorId} is on ${r.spec}; run pnpm monitors sync to replace it`);
-        continue;
+        return;
       }
+      await cancelIfPresent(client, r.monitorId);
       const next = await createOne(client, r.ticker);
-      await client.monitor.cancel(r.monitorId);
       options.log(`${r.ticker}: ${r.spec} ${r.monitorId} → ${MONITOR_SPEC_KEY} ${next.monitorId}`);
-      continue;
+      return;
     }
     const sheet = await readSheet(r.ticker);
     const query = monitorQuery(companyFor(r.ticker), sheet);
     const changes: Record<string, unknown> = {};
     if (query !== r.query) Object.assign(changes, { type: "event_stream", settings: { query } });
     if ((r.webhookUrl ?? null) !== url) changes.webhook = monitorWebhook(url);
-    if (!Object.keys(changes).length) continue;
+    if (!Object.keys(changes).length) return;
     try {
       await client.monitor.update(r.monitorId, changes as never);
     } catch (error) {
       if (!notFound(error)) throw error;
       await replaceMissing(client, r, options.log);
-      continue;
+      return;
     }
     await writeMonitor({ ...r, query, webhookUrl: url });
     options.log(`${r.ticker}: monitor ${"settings" in changes ? `tracks ${sheet?.promises.length ?? 0} promises` : ""}${"webhook" in changes ? ` reports to ${url ?? "no webhook"}` : ""}`);
-  }
+  });
 }
 
 /** Handles a monitor's events not handled yet, oldest first. Takes the company's lock. */
@@ -191,12 +211,11 @@ export async function triggerMonitors(client: Parallel, tickers: string[], log: 
 
 /** Cancelling is irreversible; billing stops. The record stays, marked cancelled, so no reconcile recreates it. */
 export async function cancelMonitors(client: Parallel, tickers: string[], log: Log) {
-  for (const r of await readMonitors()) {
-    if (!tickers.includes(r.ticker) || r.cancelledAt) continue;
-    await client.monitor.cancel(r.monitorId);
+  await forActiveMonitors(tickers, async r => {
+    await cancelIfPresent(client, r.monitorId);
     await writeMonitor({ ...r, cancelledAt: new Date().toISOString() });
     log(`${r.ticker}: cancelled ${r.monitorId}`);
-  }
+  });
 }
 
 export function coveredTickers(): string[] {

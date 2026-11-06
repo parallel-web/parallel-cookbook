@@ -26,7 +26,7 @@ import { companyFor, readCoverageConfig, readSheet, writeDraft, writeRaw } from 
 import { fillGaps } from "./fill";
 import { searchImages } from "./images";
 import { SHEET_PROCESSOR, SHEET_SPEC_KEY, sheetRunRequest } from "./spec";
-import { publish, readManifest, rebuild, sessionId, writeManifest } from "./stored";
+import { publish, rebuild, sessionId, writeManifest, type Manifest } from "./stored";
 
 type Log = (line: string) => void;
 
@@ -51,13 +51,18 @@ export async function completeSheet(
   const runId = stored.run.run_id;
   await writeRaw(ticker, "sheet-run", runId, stored);
   if (stored.result?.run.status !== "completed") throw new Error(`Sheet run ${runId} ended ${stored.result?.run.status}`);
-  const baseVersion = (await readSheet(ticker))?.version ?? 0;
-  await writeManifest(ticker, { sheetRunId: runId, taskGroupId: null, updates: [], images: false, baseVersion });
+  const current = await readSheet(ticker);
+  const entry = { trigger: options.trigger, callDate: null, monitorEventId: null };
+  if (current?.runs[0]?.runId === runId) {
+    await publish(current, entry);
+    return { sheet: current, published: true };
+  }
+  const manifest: Manifest = { sheetRunId: runId, taskGroupId: null, updates: [], images: false, baseVersion: current?.version ?? 0 };
   // A sheet run starts with an empty fill log, so every gap is filled from scratch.
   await writeRaw(ticker, "fills", runId, []);
 
   // 2. Evidence: rebuild keeps a quote only where the run's own citations contain it.
-  let sheet = await rebuild(ticker);
+  let sheet = await rebuild(ticker, { manifest });
   options.log(`${ticker}: ${sheet.statements.length} statements, ${sheet.statements.filter((s) => s.verbatim).length} backed by Task citations`);
 
   // 3. Extract API (Search API when nothing was cited) for the statements still without verbatim text.
@@ -67,18 +72,19 @@ export async function completeSheet(
   // 4. Image Search: logo and header photo.
   if (options.images !== false) {
     const images = await searchImages(client, company, sheet.photoSubject, sessionId(ticker, runId));
-    await writeRaw(ticker, "images", "latest", images);
-    await writeManifest(ticker, { ...(await readManifest(ticker))!, images: true });
+    await writeRaw(ticker, "images", runId, images);
+    manifest.images = true;
   }
 
   // 5. Build and gate: publish, or hold the draft in output/drafts.
-  sheet = await rebuild(ticker);
+  sheet = await rebuild(ticker, { manifest });
   options.log(`${ticker}: ${sheet.statements.filter((s) => s.verbatim).length} verbatim after fills; gate ${sheet.gate.passed ? "passed" : "failed"}`);
   for (const c of sheet.gate.checks) options.log(`  ${c.result.padEnd(4)} ${c.label}: ${c.detail}`);
   if (!sheet.gate.passed) {
     await writeDraft(sheet, `v${sheet.version}`);
     return { sheet, published: false };
   }
-  await publish(sheet, { trigger: options.trigger, callDate: null, monitorEventId: null });
+  await writeManifest(ticker, manifest);
+  await publish(sheet, entry);
   return { sheet, published: true };
 }

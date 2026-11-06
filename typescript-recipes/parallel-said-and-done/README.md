@@ -39,7 +39,7 @@ scripts/                CLI entry points
 ```text
 Monitor (every 6 h) ──monitor.event.detected──▶ /api/webhooks/parallel ──▶ Search + Extract the call ──▶ update Task run
 Task run ──────────────task_run.status─────────▶ /api/webhooks/parallel ──▶ store result ──▶ next step ──▶ more Task runs, or publish
-Vercel Cron (hourly) ──────────────────────────▶ /api/cron/reconcile ─────▶ anything a webhook missed, new companies
+Optional hourly Vercel Cron ───────────────────▶ /api/cron/reconcile ─────▶ recover missed work for live companies
 ```
 
 State lives in [`src/storage.ts`](src/storage.ts): the app folder locally, a
@@ -71,22 +71,23 @@ it starts and handles their results the way the webhook route would.
 
 ### Deploy
 
-The Deploy button gives a read-only copy: it serves the recorded `data/`,
-needs no key, and its webhook and cron routes do nothing. To keep a deployment
-current:
+The Deploy button serves the recorded sheets on Vercel Hobby with no API key, Blob store or scheduled jobs.
 
-1. Add `PARALLEL_API_KEY`, and connect a private Blob store to the project
-   (Storage → Blob), which sets `BLOB_READ_WRITE_TOKEN`.
-2. Set `WEBHOOK_URL` to `https://<your-domain>/api/webhooks/parallel`.
-3. Seed the store from this folder, with the store's token from `vercel env pull`:
+To keep one company live:
 
-   ```bash
-   pnpm state push          # data/ and output/ → Blob
-   ```
-
-[`vercel.json`](vercel.json) runs the reconcile every hour. Its first run
-points every monitor at `WEBHOOK_URL`; from then on, Task runs and monitors
-report to the webhook.
+1. Connect a private Blob store to the Vercel project. Set `PARALLEL_API_KEY`,
+   `WEBHOOK_URL=https://<your-domain>/api/webhooks/parallel` and `PARALLEL_WEBHOOK_SECRET`
+   in the deployment environment, then redeploy. Get the signing secret from
+   **Settings → Webhooks** in the same Parallel account as the API key.
+2. From this folder, set the same API key, webhook URL and store's `BLOB_READ_WRITE_TOKEN`
+   in `.env.local`. Run `pnpm sheet MSFT` for each ticker you choose. This starts paid
+   research (about $8.10 per company before extras) and a recurring Monitor after
+   the sheet passes its gate. The command prints the published version and monitor ID.
+   Run `pnpm monitors list` to verify the active monitor points to the deployment.
+   The other companies continue to show their recorded sheets.
+3. For hourly recovery on Vercel Pro or Enterprise, set `CRON_SECRET` on the project,
+   copy [`vercel.live.json`](vercel.live.json) to `vercel.json` in the recipe root, and redeploy
+   with that file. You can also run `pnpm monitors poll MSFT` manually with the same store.
 
 ## How it works
 
@@ -143,11 +144,10 @@ a vote or a resolution for a dispute, and finally a new version if anything
 changed. A duplicate webhook, a retry, or a missed one picked up later by the
 hourly reconcile all land in the same place.
 
-**Webhook security.** The route never trusts the body. It takes only the run or
-monitor ID, fetches the run or the monitor's events with the app's own key, and
-acts only on runs it started and monitors it owns. A forged request can at most
-make it re-read its own state. Webhooks for one company are handled one at a
-time behind a lock.
+**Webhook security.** The route verifies the signature and timestamp on the raw
+body before making any API or storage requests. It then fetches the run or
+monitor events with the app's own key and handles them under the company's lock.
+See [Parallel's webhook setup guide](https://docs.parallel.ai/resources/webhook-setup).
 
 ```bash
 pnpm monitors create MSFT # for a locally generated sheet
@@ -156,9 +156,8 @@ pnpm monitors list
 pnpm monitors cancel --yes   # stays cancelled; the reconcile does not recreate it
 ```
 
-**Adding a company** is one line in [`config/companies.json`](config/companies.json)
-(ticker, name, website). After the next deploy, the hourly reconcile makes its
-sheet, runs stages 2 and 3, looks up its sector and gives it a monitor.
+**Adding a company.** Add its ticker, name and website to [`config/companies.json`](config/companies.json)
+and deploy that change. Run `pnpm sheet TICKER` with the deployment's store to start tracking it.
 
 ### Cost
 
