@@ -61,6 +61,19 @@ One command turns a CSV of tickers into a PDF per company: profile, four years o
 - Derived metrics, headlines and arithmetic cross-checks computed in Python, not researched
 - Resumable: interrupted submissions are reconciled before new runs start
 
+### 💊 [Drug Asset Profiles](./parallel-drug-profiles)
+
+Cited PDF asset profiles for a CSV of drugs
+
+One command turns a CSV of drugs into a PDF per drug. Each covers regulatory status in the US, EU, China and Japan; the US label's Indications and Usage section, copied word for word; pivotal trials and their published results; ongoing trials; US exclusivity and Medicare coverage; an outlook; and an official product photo. A research basis page lists every field's citations, reasoning and confidence.
+
+**Key Features:**
+
+- Six focused Task runs per drug, using the free ClinicalTrials.gov, PubMed, ChEMBL and CMS Coverage Data Connectors, plus an outlook run on their facts
+- Source policies per section: regulator sites only for approvals, a 12-month window for news
+- Every NCT ID, PubMed ID, FDA application and DailyMed label checked against its public registry in Python
+- Images API product photos, kept only if they come from the sponsor, a press wire or a regulator
+
 ## Getting Started
 
 Each recipe includes detailed setup instructions and dependencies. Install the Parallel Python SDK to get started:
