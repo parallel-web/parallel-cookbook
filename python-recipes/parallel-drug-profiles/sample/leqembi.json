@@ -1,0 +1,2457 @@
+{
+  "asset": {
+    "asset": "Leqembi",
+    "sponsor": "Eisai",
+    "focus_indication": "early Alzheimer's disease"
+  },
+  "runs": {
+    "identity": {
+      "run_id": "srun_2061305f859d4f67ae2642f4e9427a81",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "originator": "BioArctic",
+        "highest_stage": "approved",
+        "mechanism_of_action": "Lecanemab is a humanized IgG1 monoclonal antibody that binds aggregated soluble amyloid-beta protofibrils and insoluble amyloid-beta, reducing amyloid plaques in the brain.",
+        "route": "Intravenous infusion and subcutaneous injection.",
+        "brand_names": [
+          {
+            "region": "United States",
+            "name": "Leqembi"
+          },
+          {
+            "region": "United States",
+            "name": "Leqembi Iqlik"
+          },
+          {
+            "region": "European Union",
+            "name": "Leqembi"
+          },
+          {
+            "region": "China",
+            "name": "Leqembi"
+          },
+          {
+            "region": "Japan",
+            "name": "Leqembi"
+          },
+          {
+            "region": "Japan",
+            "name": "Leqembi Pen"
+          }
+        ],
+        "modality": "monoclonal antibody",
+        "rights_holders": [
+          {
+            "rights": "global development and commercialization rights; global lead and final decision authority",
+            "company": "Eisai"
+          },
+          {
+            "rights": "joint development; co-commercialization and co-promotion",
+            "company": "Biogen"
+          }
+        ],
+        "chembl_id": "CHEMBL3833321",
+        "generic_name": "lecanemab",
+        "development_codes": [
+          "BAN2401"
+        ],
+        "targets": [
+          "APP (amyloid beta)"
+        ]
+      },
+      "basis": [
+        {
+          "field": "originator",
+          "reasoning": "BioArctic identifies itself as the company that invented Leqembi; the Eisai source identifies the asset as lecanemab/Leqembi.",
+          "citations": [
+            {
+              "url": "https://www.bioarctic.com/en/leqembi-annual-sales-exceed-eur-500-million-second-sales-milestone-achieved",
+              "title": "Leqembi\u00ae annual sales exceed EUR 500 million \u2013 second sales milestone achieved \u2013 BioArctic"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "highest_stage",
+          "reasoning": "Eisai reports Leqembi approved in many countries and regions, and the FDA approval record independently confirms approval; this establishes approved as the highest stage reached.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761269Orig1s000Approv.pdf",
+              "title": "CENTER FOR DRUG EVALUATION AND RESEARCH"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "mechanism_of_action",
+          "reasoning": "The sources describe lecanemab as a humanized IgG1 antibody directed at soluble protofibril and insoluble amyloid-beta, and state that antibody binding reduces amyloid plaques.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202647.html",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/leqembi",
+              "title": "Leqembi | European Medicines Agency (EMA)"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "route",
+          "reasoning": "The clinical-trial description identifies intravenous treatment, while the Japan product announcement describes the approved subcutaneous autoinjector; both routes are used for the asset.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202647.html",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202652.html",
+              "title": "LEQEMBI\u00ae Pen (Subcutaneous Formulation of LEQEMBI\u00ae) Approved in Japan for the Treatment of Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "brand_names",
+          "reasoning": "The US approval record and US autoinjector announcement establish the two US names; EMA identifies EU-authorized Leqembi; the China regulator identifies Leqembi (\u4e50\u610f\u4fdd); Japanese approval records identify Leqembi and the newly approved Leqembi Pen.",
+          "citations": [
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761269Orig1s000Approv.pdf",
+              "title": "CENTER FOR DRUG EVALUATION AND RESEARCH"
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202647.html",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/leqembi",
+              "title": "Leqembi | European Medicines Agency (EMA)"
+            },
+            {
+              "url": "https://www.nmpa.gov.cn/directory/web/nmpa/zhuanti/cxylqx/cxypxx/20240109192251169.html",
+              "title": "\u56fd\u5bb6\u836f\u76d1\u5c40\u6279\u51c6\u4ed1\u5361\u5948\u5355\u6297\u6ce8\u5c04\u6db2\u4e0a\u5e02"
+            },
+            {
+              "url": "https://www.pmda.go.jp/files/000281190.pdf",
+              "title": "List of Approved Drugs April 2004 to February 2026"
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202652.html",
+              "title": "LEQEMBI\u00ae Pen (Subcutaneous Formulation of LEQEMBI\u00ae) Approved in Japan for the Treatment of Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "modality",
+          "reasoning": "The source explicitly classifies lecanemab as a humanized IgG1 monoclonal antibody.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202647.html",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "rights_holders",
+          "reasoning": "Eisai states that it holds global rights obtained from BioArctic and leads development and regulatory submissions with final decision-making authority; Eisai and Biogen co-commercialize and co-promote, supporting the two current rights-holder roles.",
+          "citations": [
+            {
+              "url": "https://media-us.eisai.com/pressreleases?item=123004",
+              "title": "Eisai Presents Five-Year Lecanemab Data at CTAD | Eisai US"
+            },
+            {
+              "url": "https://investors.biogen.com/news-releases/news-release-details/leqembir-lecanemab-subcutaneous-formulation-initiation-treatment",
+              "title": "LEQEMBI\u00ae (lecanemab) Subcutaneous Formulation as an Initiation Treatment for Early Alzheimer\u2019s Disease Approved in China | Biogen"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "chembl_id",
+          "reasoning": "The lecanemab profile explicitly lists CHEMBL3833321 as its ChEMBL identifier; the ChEMBL compound lookup independently returned the same molecule ID.",
+          "citations": [
+            {
+              "url": "https://platform.opentargets.org/drug/CHEMBL3833321",
+              "title": "Open Targets Platform"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "generic_name",
+          "reasoning": "Eisai\u2019s pipeline lists lecanemab as the generic name for BAN2401/Leqembi.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "development_codes",
+          "reasoning": "Eisai\u2019s pipeline explicitly lists BAN2401 as the development code for lecanemab.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "targets",
+          "reasoning": "The mechanism source identifies aggregated amyloid-beta as the antibody target; the ChEMBL-linked target listing maps lecanemab to amyloid-beta A4 protein, corresponding to the APP gene symbol requested by the schema.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202647.html",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://conductscience.org/library/genes/351",
+              "title": "APP: amyloid beta precursor protein | Genes | ConductScience.org"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "brand_names.0",
+          "reasoning": "The FDA approval record names LEQEMBI as the US trade name.",
+          "citations": [
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761269Orig1s000Approv.pdf",
+              "title": "CENTER FOR DRUG EVALUATION AND RESEARCH"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "brand_names.1",
+          "reasoning": "Eisai identifies LEQEMBI IQLIK as the US subcutaneous brand and states that US initiation-treatment approval was obtained.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202647.html",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "brand_names.2",
+          "reasoning": "The EMA record identifies Leqembi as authorized for use in the European Union.",
+          "citations": [
+            {
+              "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/leqembi",
+              "title": "Leqembi | European Medicines Agency (EMA)"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "brand_names.3",
+          "reasoning": "The China NMPA notice names the approved product Leqembi (Chinese trademark \u4e50\u610f\u4fdd).",
+          "citations": [
+            {
+              "url": "https://www.nmpa.gov.cn/directory/web/nmpa/zhuanti/cxylqx/cxypxx/20240109192251169.html",
+              "title": "\u56fd\u5bb6\u836f\u76d1\u5c40\u6279\u51c6\u4ed1\u5361\u5948\u5355\u6297\u6ce8\u5c04\u6db2\u4e0a\u5e02"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "brand_names.4",
+          "reasoning": "Japan\u2019s approved-drug list identifies Leqembi for intravenous infusion.",
+          "citations": [
+            {
+              "url": "https://www.pmda.go.jp/files/000281190.pdf",
+              "title": "List of Approved Drugs April 2004 to February 2026"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "brand_names.5",
+          "reasoning": "Eisai states that Leqembi Pen was approved in Japan as the subcutaneous formulation.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202652.html",
+              "title": "LEQEMBI\u00ae Pen (Subcutaneous Formulation of LEQEMBI\u00ae) Approved in Japan for the Treatment of Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "rights_holders.0",
+          "reasoning": "Eisai identifies itself as the global development and regulatory lead with final decision authority and states it obtained global rights to study, develop, manufacture and market lecanemab.",
+          "citations": [
+            {
+              "url": "https://media-us.eisai.com/pressreleases?item=123004",
+              "title": "Eisai Presents Five-Year Lecanemab Data at CTAD | Eisai US"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "rights_holders.1",
+          "reasoning": "The joint company announcement explicitly says Eisai and Biogen co-commercialize and co-promote the product.",
+          "citations": [
+            {
+              "url": "https://investors.biogen.com/news-releases/news-release-details/leqembir-lecanemab-subcutaneous-formulation-initiation-treatment",
+              "title": "LEQEMBI\u00ae (lecanemab) Subcutaneous Formulation as an Initiation Treatment for Early Alzheimer\u2019s Disease Approved in China | Biogen"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "development_codes.0",
+          "reasoning": "The sponsor pipeline explicitly gives BAN2401 as the development code.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "targets.0",
+          "reasoning": "Lecanemab is directed against aggregated amyloid-beta, and the ChEMBL-linked target mapping associates it with amyloid-beta A4 protein (APP).",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202647.html",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://conductscience.org/library/genes/351",
+              "title": "APP: amyloid beta precursor protein | Genes | ConductScience.org"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "connector_calls": [
+        {
+          "connector": "chembl",
+          "tool": "compound_search",
+          "error": ""
+        }
+      ],
+      "error": null
+    },
+    "regulatory": {
+      "run_id": "srun_2061305f859d4f6753578b45e3db1ac1",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "japan": {
+          "status": "approved",
+          "first_approval_date": "2023-09-25",
+          "approved_indications": [
+            {
+              "approval_date": "2023-09-25",
+              "indication": "Slowing progression of mild cognitive impairment and mild dementia due to Alzheimer's disease"
+            }
+          ]
+        },
+        "china": {
+          "nmpa_approval_number": "",
+          "status": "approved",
+          "first_approval_date": "2024-01",
+          "approved_indications": [
+            {
+              "approval_date": "2024-01",
+              "indication": "Treatment of mild cognitive impairment and mild dementia due to Alzheimer's disease"
+            }
+          ]
+        },
+        "eu": {
+          "status": "approved",
+          "ema_product_number": "EMEA/H/C/005966",
+          "first_approval_date": "2025-04-15",
+          "approved_indications": [
+            {
+              "approval_date": "2025-04-15",
+              "indication": "Early Alzheimer's disease in adults with mild cognitive impairment or mild dementia who are ApoE \u03b54 noncarriers or heterozygotes and have confirmed amyloid pathology"
+            }
+          ]
+        },
+        "us": {
+          "label_revision_date": "2026-07",
+          "conversion_to_traditional_date": "2023-07-06",
+          "dailymed_setid": "9d1ff786-e577-410a-a273-c4d7d0e4e975",
+          "application_number": "BLA761269",
+          "first_approval_date": "2023-01-06",
+          "boxed_warning": "amyloid-related imaging abnormalities",
+          "status": "approved",
+          "approval_pathways": [
+            "accelerated approval",
+            "fast track",
+            "priority review",
+            "breakthrough therapy"
+          ],
+          "approved_indications": [
+            {
+              "approval_date": "2023-01-06",
+              "indication": "Treatment of Alzheimer's disease; initiate in mild cognitive impairment or mild dementia stage"
+            }
+          ]
+        }
+      },
+      "basis": [
+        {
+          "field": "japan",
+          "reasoning": "The MHLW record identifies Leqembi, states the approved indication and gives the approval date of 25 September 2023. The later PMDA label retains the same indication, supporting approved status currently; no separate approved indication is established in this evidence.",
+          "citations": [
+            {
+              "url": "https://www.mhlw.go.jp/content/12404000/001154010.pdf",
+              "title": "\u7b2c210\u56de\u85ac\u4fa1\u5c02\u9580\u90e8\u4f1a\u8b70\u4e8b\u6b21\u7b2c"
+            },
+            {
+              "url": "https://www.pmda.go.jp/PmdaSearch/iyakuDetail/ResultDataSetPDF/170033_1190408A1025_1_06",
+              "title": "\u30ec\u30b1\u30f3\u30d3\u70b9\u6ef4\u9759\u6ce8200mg\u3001\u30ec\u30b1\u30f3\u30d3\u70b9\u6ef4\u9759\u6ce8500mg"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "china",
+          "reasoning": "The NMPA notice identifies Leqembi, says it was approved for marketing and states the indication; its publication date establishes the approval month used here. The notice does not provide an NMPA approval number, so that field is left empty.",
+          "citations": [
+            {
+              "url": "https://www.nmpa.gov.cn/directory/web/nmpa/zhuanti/cxylqx/cxypxx/20240109192251169.html",
+              "title": "\u56fd\u5bb6\u836f\u76d1\u5c40\u6279\u51c6\u4ed1\u5361\u5948\u5355\u6297\u6ce8\u5c04\u6db2\u4e0a\u5e02"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "eu",
+          "reasoning": "The EMA record marks Leqembi authorised and gives the marketing authorisation date; its product number and approved indication are directly stated in the additional EMA excerpts.",
+          "citations": [
+            {
+              "url": "https://www.ema.europa.eu/en/medicines/human/EPAR/leqembi",
+              "title": "Leqembi | European Medicines Agency (EMA)"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "us",
+          "reasoning": "FDA approval evidence identifies BLA 761269, the original approval date and indication. FDA lists accelerated approval conversion on 6 July 2023, and the FDA announcement identifies the accelerated approval, Fast Track, Priority Review and Breakthrough Therapy designations. The current DailyMed labeling evidence supplies the label identifier, July 2026 revision, boxed warning and current Alzheimer\u2019s indication.",
+          "citations": [
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761269Orig1s000Approv.pdf",
+              "title": "CENTER FOR DRUG EVALUATION AND RESEARCH"
+            },
+            {
+              "url": "https://www.fda.gov/media/151146/download",
+              "title": "CDER Drug and Biologic Accelerated Approvals Based on a Surrogate Endpoint As of June 30, 2026 NDA and BLA Accelerated"
+            },
+            {
+              "url": "http://www.fda.gov/news-events/press-announcements/fda-grants-accelerated-approval-alzheimers-disease-treatment",
+              "title": "FDA Grants Accelerated Approval for Alzheimer's Disease Treatment | FDA"
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls.json?application_number=BLA761269&pagesize=100",
+              "title": "dailymed.nlm.nih.gov"
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d1ff786-e577-410a-a273-c4d7d0e4e975",
+              "title": "DailyMed - LEQEMBI- lecanemab injection, solution LECANEMAB AUTOINJECTOR- lecanemab-irmb injection, solution"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "connector_calls": [],
+      "error": null
+    },
+    "news": {
+      "run_id": "srun_2061305f859d4f67f888d39699583b01",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "recent_developments": [
+          {
+            "date": "2026-11-16",
+            "headline": "Five-year extension data presented",
+            "detail": "Eisai and Biogen presented five-year Clarity AD extension results showing continued benefit versus natural-history comparators, including improvement on CDR-SB in 62% of the low-tau group, adding long-term evidence for early Alzheimer\u2019s disease."
+          },
+          {
+            "date": "2026-11-13",
+            "headline": "Japan launches LEQEMBI Pen",
+            "detail": "LEQEMBI Pen launched in Japan and entered the NHI Drug Price List, bringing weekly at-home subcutaneous treatment to patients with early Alzheimer\u2019s disease."
+          },
+          {
+            "date": "2026-09-01",
+            "headline": "Canada reimbursement recommendation",
+            "detail": "Canada\u2019s Drug Agency issued a final positive recommendation supporting public reimbursement for eligible patients with MCI or mild dementia due to Alzheimer\u2019s disease, advancing access while negotiations and provincial-plan decisions remain."
+          },
+          {
+            "date": "2026-08-24",
+            "headline": "U.S. initiation autoinjector available",
+            "detail": "LEQEMBI IQLIK became available in the U.S. as a once-weekly 500-mg subcutaneous initiation option for early Alzheimer\u2019s disease, enabling at-home dosing from treatment start."
+          },
+          {
+            "date": "2025-12-09",
+            "headline": "China insurance-list inclusion",
+            "detail": "LEQEMBI was added to China\u2019s Commercial Insurance Innovative Drug List, creating a pathway for commercial insurers to negotiate coverage and potentially expand access."
+          }
+        ],
+        "pending_decisions": [
+          {
+            "decision": "A CHMP opinion, or a further list of outstanding issues, on the EU variation introducing a new intravenous maintenance posology for early Alzheimer\u2019s disease is scheduled for December 2026.",
+            "region": "eu",
+            "expected_date": "2026-12"
+          },
+          {
+            "decision": "Regulatory decisions remain pending on applications for 500-mg subcutaneous autoinjector initiation treatment for early Alzheimer\u2019s disease in four additional countries; Eisai has not published decision dates.",
+            "region": "other",
+            "expected_date": ""
+          }
+        ],
+        "regulatory_actions": [
+          {
+            "region": "other",
+            "detail": "Eisai\u2019s pipeline update reported applications submitted in four additional countries for the 500-mg subcutaneous autoinjector initiation regimen for early Alzheimer\u2019s disease.",
+            "date": "2026-11-10",
+            "action": "submission"
+          },
+          {
+            "region": "japan",
+            "detail": "Japan approved LEQEMBI Pen as a new subcutaneous route of administration for early Alzheimer\u2019s disease.",
+            "date": "2026-09-16",
+            "action": "new formulation or regimen approved"
+          },
+          {
+            "region": "china",
+            "detail": "China\u2019s NMPA approved subcutaneous autoinjector initiation treatment for MCI due to Alzheimer\u2019s disease or mild Alzheimer\u2019s dementia.",
+            "date": "2026-09-02",
+            "action": "new formulation or regimen approved"
+          },
+          {
+            "region": "us",
+            "detail": "The FDA approved a once-weekly 500-mg subcutaneous starting-dose regimen of LEQEMBI IQLIK for Alzheimer\u2019s disease, including early disease.",
+            "date": "2026-07-13",
+            "action": "new formulation or regimen approved"
+          },
+          {
+            "region": "us",
+            "detail": "The FDA extended review of the sBLA for a subcutaneous starting dose in early Alzheimer\u2019s disease by three months after a major amendment, setting a revised PDUFA date of August 24, 2026.",
+            "date": "2026-05-08",
+            "action": "other"
+          },
+          {
+            "region": "china",
+            "detail": "NMPA granted Priority Review to the subcutaneous autoinjector application for early Alzheimer\u2019s disease; the application had been accepted in January 2026.",
+            "date": "2026-02-09",
+            "action": "designation"
+          },
+          {
+            "region": "us",
+            "detail": "The FDA accepted Eisai\u2019s sBLA for weekly subcutaneous initiation dosing in early Alzheimer\u2019s disease and granted Priority Review.",
+            "date": "2026-01-26",
+            "action": "filing accepted"
+          },
+          {
+            "region": "eu",
+            "detail": "Eisai\u2019s application to add an intravenous maintenance posology for early Alzheimer\u2019s disease was accepted for review.",
+            "date": "2026-01",
+            "action": "filing accepted"
+          }
+        ]
+      },
+      "basis": [
+        {
+          "field": "recent_developments",
+          "reasoning": "The cited company and partner releases document the five-year Clarity AD extension results, Japan and U.S. launch milestones, Canada\u2019s final reimbursement recommendation, and China\u2019s commercial-insurance-list inclusion within the requested 12-month period. The Japan release also confirms NHI pricing-list publication; the reimbursement announcements are described as access steps, not completed payer coverage.",
+          "citations": [
+            {
+              "url": "https://investors.biogen.com/news-releases/news-release-details/new-five-year-lecanemab-data-clarity-ad-study-long-term",
+              "title": "New Five-Year Lecanemab Data from Clarity AD Study Long-Term Extension Presented at CTAD 2026 | Biogen"
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202662.html",
+              "title": "LEQEMBI\u00ae Pen (Subcutaneous Formulation of LEQEMBI\u00ae) Now Available in Japan for Patients with Early Alzheimer\u2019s Disease | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202648.html",
+              "title": "Canada\u2019s Drug Agency Issues Final Positive Recommendation Supporting Public Reimbursement of LEQEMBI\u00ae (lecanemab) for Early Alzheimer\u2019s Disease | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://investors.biogen.com/news-releases/news-release-details/leqembi-iqlikr-lecanemab-irmb-autoinjector-initiation-therapy",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer\u2019s Disease | Biogen"
+            },
+            {
+              "url": "https://www.bioarctic.com/en/leqembi-included-in-chinas-commercial-insurance-innovative-drug-list",
+              "title": "Leqembi included in China\u2019s commercial insurance innovative drug list \u2013 BioArctic"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "pending_decisions",
+          "reasoning": "The CHMP minutes identify the Leqembi EU variation as a new posology and set December 2026 for an opinion or further issues; Eisai\u2019s pipeline separately reports four additional-country submissions for SC initiation but publishes no decision timetable or country names.",
+          "citations": [
+            {
+              "url": "https://www.ema.europa.eu/en/documents/minutes/minutes-chmp-meeting-20-23-july-2026_en.pdf",
+              "title": "CHMP Minutes 20-23 July 2026"
+            },
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/index.html",
+              "title": "Latest Major R&D Pipeline | Research and Development (R&D) | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "regulatory_actions",
+          "reasoning": "The cited first-party pipeline and regulatory announcements cover the additional-country SC submissions, the Japan and China route/regimen approvals, the FDA approval and review extension, the FDA filing acceptance, China\u2019s priority-review designation, and the accepted EU maintenance-posology variation. The China approval date is the NMPA action date (September 2), distinct from the September 3 announcement; the U.S. approval date is confirmed by the FDA letter signature.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/index.html",
+              "title": "Latest Major R&D Pipeline | Research and Development (R&D) | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202652.html",
+              "title": "LEQEMBI\u00ae Pen (Subcutaneous Formulation of LEQEMBI\u00ae) Approved in Japan for the Treatment of Early Alzheimer\u2019s Disease | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202649.html",
+              "title": "LEQEMBI\u00ae (lecanemab) Subcutaneous Formulation as an Initiation Treatment for Early Alzheimer\u2019s Disease Approved in China | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/761375Orig1s001ltr.pdf",
+              "title": "Approval Letter_761375Orig1s001ltr.pdf"
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202625.html",
+              "title": "Update on FDA Priority Review of LEQEMBI\u00ae IQLIK\u2122 (lecanemab-irmb) Subcutaneous Injection as a Starting Dose for Early Alzheimer\u2019s Disease | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202605.html",
+              "title": "FDA Accepts LEQEMBI\u00ae IQLIK\u2122 (lecanemab-irmb) Supplemental Biologics License Application as a Subcutaneous Starting Dose for the Treatment of Early Alzheimer\u2019s Disease under priority Review | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://tdnet-pdf.kabutan.jp/20260903/140120260903531228.pdf",
+              "title": "No.26-49"
+            },
+            {
+              "url": "https://www.bioarctic.com/en/bla-for-subcutaneous-formulation-of-leqembi-designated-for-priority-review-in-china/",
+              "title": "BLA for subcutaneous formulation of Leqembi\u00ae designated for Priority Review in China \u2013 BioArctic"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments.0",
+          "reasoning": "Biogen\u2019s release dated November 16 reports the five-year extension findings in early AD, including continuing benefit and 62% improvement among the low-tau subgroup.",
+          "citations": [
+            {
+              "url": "https://investors.biogen.com/news-releases/news-release-details/new-five-year-lecanemab-data-clarity-ad-study-long-term",
+              "title": "New Five-Year Lecanemab Data from Clarity AD Study Long-Term Extension Presented at CTAD 2026 | Biogen"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments.1",
+          "reasoning": "Eisai states LEQEMBI Pen launched in Japan on November 13 and was added to the NHI Drug Price List.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202662.html",
+              "title": "LEQEMBI\u00ae Pen (Subcutaneous Formulation of LEQEMBI\u00ae) Now Available in Japan for Patients with Early Alzheimer\u2019s Disease | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "recent_developments.2",
+          "reasoning": "Eisai reports CDA-AMC\u2019s final positive public-reimbursement recommendation for eligible early-AD patients and notes further negotiations and individual plan decisions remain.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202648.html",
+              "title": "Canada\u2019s Drug Agency Issues Final Positive Recommendation Supporting Public Reimbursement of LEQEMBI\u00ae (lecanemab) for Early Alzheimer\u2019s Disease | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "recent_developments.3",
+          "reasoning": "Biogen states that once-weekly 500-mg subcutaneous initiation therapy became available in the U.S. on August 24.",
+          "citations": [
+            {
+              "url": "https://investors.biogen.com/news-releases/news-release-details/leqembi-iqlikr-lecanemab-irmb-autoinjector-initiation-therapy",
+              "title": "LEQEMBI IQLIK\u00ae (lecanemab-irmb) Autoinjector for Initiation of Therapy Now Available in the U.S. for Early Alzheimer\u2019s Disease | Biogen"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "recent_developments.4",
+          "reasoning": "BioArctic reports the December 9 inclusion in China\u2019s commercial-insurance innovative-drug list and explains that insurers would negotiate coverage details.",
+          "citations": [
+            {
+              "url": "https://www.bioarctic.com/en/leqembi-included-in-chinas-commercial-insurance-innovative-drug-list",
+              "title": "Leqembi included in China\u2019s commercial insurance innovative drug list \u2013 BioArctic"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "pending_decisions.0",
+          "reasoning": "The CHMP minutes identify the Leqembi variation as introducing a new posology and schedule an opinion or further issues for December 2026.",
+          "citations": [
+            {
+              "url": "https://www.ema.europa.eu/en/documents/minutes/minutes-chmp-meeting-20-23-july-2026_en.pdf",
+              "title": "CHMP Minutes 20-23 July 2026"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "pending_decisions.1",
+          "reasoning": "Eisai\u2019s pipeline says SC-AI initiation applications were submitted in four additional countries, while the cited status gives no decision date or country-level timetable.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/index.html",
+              "title": "Latest Major R&D Pipeline | Research and Development (R&D) | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "regulatory_actions.0",
+          "reasoning": "The pipeline status is dated November 10, 2026, and reports four additional-country applications for the 500-mg SC-AI initiation regimen.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/index.html",
+              "title": "Latest Major R&D Pipeline | Research and Development (R&D) | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "regulatory_actions.1",
+          "reasoning": "Eisai\u2019s September 16 announcement says Japan approved LEQEMBI Pen as a new route of administration.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202652.html",
+              "title": "LEQEMBI\u00ae Pen (Subcutaneous Formulation of LEQEMBI\u00ae) Approved in Japan for the Treatment of Early Alzheimer\u2019s Disease | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "regulatory_actions.2",
+          "reasoning": "The NMPA approval announcement identifies early-AD initiation and specifies the approval date as September 2, 2026.",
+          "citations": [
+            {
+              "url": "https://tdnet-pdf.kabutan.jp/20260903/140120260903531228.pdf",
+              "title": "No.26-49"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "regulatory_actions.3",
+          "reasoning": "The FDA letter approves the new 500-mg weekly subcutaneous starting regimen and carries a July 13, 2026 electronic signature date.",
+          "citations": [
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/appletter/2026/761375Orig1s001ltr.pdf",
+              "title": "Approval Letter_761375Orig1s001ltr.pdf"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "regulatory_actions.4",
+          "reasoning": "Eisai reported on May 8 that FDA extended review by three months after a major amendment and set August 24 as the new PDUFA date.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202625.html",
+              "title": "Update on FDA Priority Review of LEQEMBI\u00ae IQLIK\u2122 (lecanemab-irmb) Subcutaneous Injection as a Starting Dose for Early Alzheimer\u2019s Disease | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "regulatory_actions.5",
+          "reasoning": "The February 9 report says NMPA granted Priority Review, and the China approval release confirms the application had been accepted in January 2026.",
+          "citations": [
+            {
+              "url": "https://www.bioarctic.com/en/bla-for-subcutaneous-formulation-of-leqembi-designated-for-priority-review-in-china/",
+              "title": "BLA for subcutaneous formulation of Leqembi\u00ae designated for Priority Review in China \u2013 BioArctic"
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202649.html",
+              "title": "LEQEMBI\u00ae (lecanemab) Subcutaneous Formulation as an Initiation Treatment for Early Alzheimer\u2019s Disease Approved in China | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "regulatory_actions.6",
+          "reasoning": "Eisai\u2019s January 26 release states FDA accepted the sBLA for weekly SC starting-dose treatment and granted Priority Review.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202605.html",
+              "title": "FDA Accepts LEQEMBI\u00ae IQLIK\u2122 (lecanemab-irmb) Supplemental Biologics License Application as a Subcutaneous Starting Dose for the Treatment of Early Alzheimer\u2019s Disease under priority Review | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "regulatory_actions.7",
+          "reasoning": "Eisai\u2019s pipeline identifies the early-AD IV-maintenance application in the EU as accepted in January 2026.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/index.html",
+              "title": "Latest Major R&D Pipeline | Research and Development (R&D) | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "connector_calls": [],
+      "error": null
+    },
+    "trials": {
+      "run_id": "srun_2061305f859d4f679dba1be7bee698c1",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "pivotal_trials": [
+          {
+            "status": "active, not recruiting",
+            "primary_endpoint": "change from baseline in CDR-SB at 18 months",
+            "nct_id": "NCT03887455",
+            "enrollment": 1906.0,
+            "other_registry_id": "2018-004739-58",
+            "acronym": "CLARITY AD",
+            "lead_sponsor": "Eisai Inc.",
+            "comparator": "placebo",
+            "indication": "early Alzheimer disease",
+            "phase": "phase 3",
+            "primary_completion_date": "2026-12-31",
+            "start_date": "2019-03-27"
+          },
+          {
+            "status": "completed",
+            "primary_endpoint": "change from baseline in ADCOMS at month 12",
+            "nct_id": "NCT01767311",
+            "enrollment": 856.0,
+            "other_registry_id": "2012-002843-11",
+            "acronym": "",
+            "lead_sponsor": "Eisai Inc.",
+            "comparator": "placebo",
+            "indication": "early Alzheimer disease",
+            "phase": "phase 2",
+            "primary_completion_date": "2024-12-10",
+            "start_date": "2012-12-20"
+          }
+        ],
+        "ongoing_trials": [
+          {
+            "status": "active, not recruiting",
+            "primary_endpoint": "PACC5 change at week 216 (A45) / amyloid PET SUVr change at week 216 (A3)",
+            "nct_id": "NCT04468659",
+            "enrollment": 1400.0,
+            "other_registry_id": "2020-004244-28",
+            "acronym": "AHEAD 3-45",
+            "lead_sponsor": "Eisai Inc.",
+            "comparator": "placebo",
+            "indication": "preclinical Alzheimer disease",
+            "phase": "phase 3",
+            "primary_completion_date": "2028-12-21",
+            "start_date": "2020-07-14"
+          },
+          {
+            "status": "active, not recruiting",
+            "primary_endpoint": "time to recurrent progression in CDR-SB through week 364",
+            "nct_id": "NCT06384573",
+            "enrollment": 40.0,
+            "other_registry_id": "",
+            "acronym": "DIAN-TU",
+            "lead_sponsor": "Washington University School of Medicine",
+            "comparator": "None",
+            "indication": "dominantly inherited Alzheimer disease",
+            "phase": "phase 3",
+            "primary_completion_date": "2030-06",
+            "start_date": "2024-06-10"
+          },
+          {
+            "status": "active, not recruiting",
+            "primary_endpoint": "change from baseline in DIAN-MCE through week 208",
+            "nct_id": "NCT01760005",
+            "enrollment": 490.0,
+            "other_registry_id": "2013-000307-17",
+            "acronym": "DIAN-TU",
+            "lead_sponsor": "Washington University School of Medicine",
+            "comparator": "placebo",
+            "indication": "dominantly inherited Alzheimer disease",
+            "phase": "phase 2/3",
+            "primary_completion_date": "2028-04",
+            "start_date": "2012-12"
+          },
+          {
+            "status": "active, not recruiting",
+            "primary_endpoint": "tau PET change from week 24 to weeks 104 and 208",
+            "nct_id": "NCT05269394",
+            "enrollment": 197.0,
+            "other_registry_id": "2013-000307-17",
+            "acronym": "DIAN-TU",
+            "lead_sponsor": "Washington University School of Medicine",
+            "comparator": "placebo (E2814) plus lecanemab",
+            "indication": "dominantly inherited Alzheimer disease",
+            "phase": "phase 2/3",
+            "primary_completion_date": "2028-04",
+            "start_date": "2021-12-22"
+          },
+          {
+            "status": "active, not recruiting",
+            "primary_endpoint": "change from baseline in CSF MTBR-tau-243 at 6 months",
+            "nct_id": "NCT06602258",
+            "enrollment": 105.0,
+            "other_registry_id": "",
+            "acronym": "",
+            "lead_sponsor": "Eisai Inc.",
+            "comparator": "placebo (E2814) plus lecanemab",
+            "indication": "early Alzheimer disease",
+            "phase": "phase 2",
+            "primary_completion_date": "2026-12-03",
+            "start_date": "2024-09-30"
+          }
+        ]
+      },
+      "basis": [
+        {
+          "field": "pivotal_trials",
+          "reasoning": "ClinicalTrials.gov records identify the registered phase, status, sponsor, enrollment, dates, comparator, and primary outcome for the two early Alzheimer studies. The FDA record explicitly identifies NCT01767311 as the pivotal phase 2 study and Study 301/CLARITY AD as the phase 3 efficacy study for traditional approval. The EudraCT identifiers are listed in the respective registry records.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT03887455",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT01767311",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761269Orig1s000RiskR.pdf",
+              "title": "Eisai Inc. Leqembi Risk Assessment and Risk Mitigation Review(s) \u2014 Application 761269"
+            },
+            {
+              "url": "https://www.fda.gov/news-events/press-announcements/fda-converts-novel-alzheimers-disease-treatment-traditional-approval",
+              "title": "FDA Converts Novel Alzheimer's Disease Treatment to Traditional Approval | FDA"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "ongoing_trials",
+          "reasoning": "The ClinicalTrials.gov intervention and phase search returned a ten-record inventory with no next-page token. These five noncompleted phase 2/3 records list lecanemab as an intervention and provide registered recruitment statuses, phases, endpoints, sponsors, comparator designs, enrollment counts, and dates. The selected records include Eisai-sponsored or partner-involved programs and the DIAN-TU master and study records. Phase 3 records precede phase 2/3 and phase 2 records. DIAN studies address familial Alzheimer disease, the E2814 records study combinations, and AHEAD studies preclinical Alzheimer disease, within the ongoing-trials field scope of any indication.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT04468659",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT06384573",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT01760005",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT05269394",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT06602258",
+              "title": "clinical_trials: get_trial_details"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "pivotal_trials.0",
+          "reasoning": "The registered record identifies CLARITY AD as an Eisai-sponsored phase 3 early-Alzheimer study, active but not recruiting, with placebo, actual enrollment 1,906, the 18-month CDR-SB endpoint, dates, and the EudraCT number. FDA identifies Study 301 as the phase 3 efficacy study supporting traditional approval.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT03887455",
+              "title": "clinical_trials: get_trial_details"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "pivotal_trials.1",
+          "reasoning": "The registered phase 2 record gives NCT01767311, an early-Alzheimer population, Eisai as sponsor, placebo comparator, actual enrollment 856, start and primary-completion dates, and ADCOMS change at month 12. FDA names this study as the pivotal phase 2 trial for lecanemab.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT01767311",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761269Orig1s000RiskR.pdf",
+              "title": "Eisai Inc. Leqembi Risk Assessment and Risk Mitigation Review(s) \u2014 Application 761269"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "ongoing_trials.0",
+          "reasoning": "The registry identifies AHEAD 3-45 as an ongoing, active-not-recruiting phase 3 Eisai trial of lecanemab in preclinical Alzheimer disease, with placebo comparator, estimated enrollment, both Week 216 primary outcomes, and the EudraCT number.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT04468659",
+              "title": "clinical_trials: get_trial_details"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "ongoing_trials.1",
+          "reasoning": "The DIAN-TU ART registry record lists lecanemab in a phase 3 open-label study sponsored by Washington University with Eisai as collaborator, gives its active-not-recruiting status, enrollment and dates, and the recurrent CDR-SB progression endpoint. Its single-arm open-label design supports comparator None. The other study number is a study code, not a separate registry identifier.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT06384573",
+              "title": "clinical_trials: get_trial_details"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "ongoing_trials.2",
+          "reasoning": "The DIAN-TU master record lists lecanemab, active-not-recruiting status, phase 2 and phase 3, Washington University sponsorship with Eisai collaboration, a placebo-controlled platform, DIAN-MCE endpoint, enrollment and dates. It also lists EudraCT and Spanish Registry identifiers.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT01760005",
+              "title": "clinical_trials: get_trial_details"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "ongoing_trials.3",
+          "reasoning": "The registered DIAN-TU study lists lecanemab with E2814 and matching placebo, phase 2 and phase 3, active-not-recruiting status, Washington University sponsorship and Eisai collaboration, enrollment and dates. Its primary endpoint is tau PET change at Weeks 104 and 208 from Week 24; the placebo is for E2814 while lecanemab is background treatment. EudraCT provides the other-registry identifier.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT05269394",
+              "title": "clinical_trials: get_trial_details"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "ongoing_trials.4",
+          "reasoning": "The registry identifies the Eisai-sponsored phase 2 early-Alzheimer study as testing E2814 with concurrent lecanemab, active but not recruiting, with placebo plus lecanemab as comparator, enrollment 105, dates, and CSF MTBR-tau-243 change at 6 months. The listed E2814-G000-202 is an internal study number, so no separate registry ID is supplied.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT06602258",
+              "title": "clinical_trials: get_trial_details"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "connector_calls": [
+        {
+          "connector": "clinical_trials",
+          "tool": "search_trials",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        }
+      ],
+      "error": null
+    },
+    "evidence": {
+      "run_id": "srun_2061305f859d4f6742eb6430b9ef7de1",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "key_safety": [
+          {
+            "drug_incidence": "12.6%",
+            "comparator_incidence": "1.7%",
+            "finding": "Amyloid-related imaging abnormalities with edema or effusions (ARIA-E)"
+          },
+          {
+            "drug_incidence": "17.3%",
+            "comparator_incidence": "9.0%",
+            "finding": "Amyloid-related imaging abnormalities with hemosiderin deposition (ARIA-H)"
+          },
+          {
+            "drug_incidence": "26.4%",
+            "comparator_incidence": "7.4%",
+            "finding": "Infusion-related reactions"
+          },
+          {
+            "drug_incidence": "0.7%",
+            "comparator_incidence": "0.1%",
+            "finding": "Intracerebral hemorrhage greater than 1 cm in diameter"
+          }
+        ],
+        "pivotal_results": [
+          {
+            "pmid": "36449413",
+            "primary_endpoint": "Change from baseline at 18 months in the Clinical Dementia Rating\u2013Sum of Boxes (CDR-SB) score.",
+            "nct_id": "NCT03887455",
+            "effect_measure": "difference in means",
+            "trial": "CLARITY AD",
+            "p_value": "P<0.001",
+            "publication_year": 2023.0,
+            "ci_lower": -0.67,
+            "result_summary": "At 18 months, mean CDR-SB worsening was 1.21 points with lecanemab versus 1.66 with placebo (between-group difference \u22120.45 points; 95% CI \u22120.67 to \u22120.23), representing 27% less decline.",
+            "journal": "N Engl J Med",
+            "ci_upper": -0.23,
+            "estimate": -0.45
+          },
+          {
+            "pmid": "33865446",
+            "primary_endpoint": "Bayesian analysis of 12-month clinical change on ADCOMS for the ED90 dose; success required an 80% probability of at least 25% less clinical decline versus placebo.",
+            "nct_id": "NCT01767311",
+            "effect_measure": "other",
+            "trial": "Study 201 (BAN2401-G000-201)",
+            "p_value": "",
+            "publication_year": 2021.0,
+            "ci_lower": null,
+            "result_summary": "At 12 months, the 10-mg/kg every-2-weeks ED90 dose had a 64% probability of being at least 25% better than placebo on ADCOMS, below the prespecified 80% threshold, so the primary endpoint was not met.",
+            "journal": "Alzheimer\u2019s Research & Therapy",
+            "ci_upper": null,
+            "estimate": null
+          }
+        ]
+      },
+      "basis": [
+        {
+          "field": "key_safety",
+          "reasoning": "The CLARITY AD primary publication reports comparative incidences for ARIA-E, ARIA-H, and infusion reactions. The FDA prescribing information reports Study 2 incidence of intracerebral hemorrhage greater than 1 cm for lecanemab and placebo.",
+          "citations": [
+            {
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2212948",
+              "title": "Lecanemab in Early Alzheimer\u2019s Disease | New England Journal of Medicine"
+            },
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d1ff786-e577-410a-a273-c4d7d0e4e975",
+              "title": "DailyMed - LEQEMBI- lecanemab injection, solution\nLECANEMAB AUTOINJECTOR- lecanemab-irmb injection, solution\n"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "pivotal_results",
+          "reasoning": "The peer-reviewed CLARITY AD primary publication reports the 18-month CDR-SB primary comparison, confidence interval, and P value (PubMed PMID 36449413; DOI 10.1056/NEJMoa2212948); its registry record supplies the trial acronym and NCT identifier. The peer-reviewed Study 201 report gives its 12-month Bayesian ADCOMS endpoint and missed success threshold (PubMed PMID 33865446; DOI 10.1186/s13195-021-00813-8), and FDA review explicitly identifies Study 201 as the pivotal phase 2 trial.",
+          "citations": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/36449413/",
+              "title": "pubmed: get_article_metadata"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT03887455",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2212948",
+              "title": "Lecanemab in Early Alzheimer\u2019s Disease | New England Journal of Medicine"
+            },
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33865446/",
+              "title": "pubmed: get_article_metadata"
+            },
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761269Orig1s000RiskR.pdf",
+              "title": "Eisai Inc. Leqembi Risk Assessment and Risk Mitigation Review(s) \u2014 Application 761269"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "pivotal_results.0",
+          "reasoning": "The primary paper and PubMed record report the 18-month primary endpoint result, effect estimate, 95% CI, P value, publication metadata, and journal; the ClinicalTrials.gov record identifies CLARITY AD and NCT03887455.",
+          "citations": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/36449413/",
+              "title": "pubmed: get_article_metadata"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT03887455",
+              "title": "clinical_trials: get_trial_details"
+            },
+            {
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2212948",
+              "title": "Lecanemab in Early Alzheimer\u2019s Disease | New England Journal of Medicine"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "pivotal_results.1",
+          "reasoning": "The peer-reviewed Study 201 paper reports the primary Bayesian ADCOMS endpoint, its 64% probability result and failure to reach the prespecified threshold, publication details, and NCT identifier; FDA review establishes its pivotal phase 2 status.",
+          "citations": [
+            {
+              "url": "https://pubmed.ncbi.nlm.nih.gov/33865446/",
+              "title": "pubmed: get_article_metadata"
+            },
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761269Orig1s000RiskR.pdf",
+              "title": "Eisai Inc. Leqembi Risk Assessment and Risk Mitigation Review(s) \u2014 Application 761269"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "key_safety.0",
+          "reasoning": "CLARITY AD Table 3 reports ARIA-E incidence on lecanemab and placebo.",
+          "citations": [
+            {
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2212948",
+              "title": "Lecanemab in Early Alzheimer\u2019s Disease | New England Journal of Medicine"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "key_safety.1",
+          "reasoning": "CLARITY AD Table 3 reports ARIA-H incidence on lecanemab and placebo.",
+          "citations": [
+            {
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2212948",
+              "title": "Lecanemab in Early Alzheimer\u2019s Disease | New England Journal of Medicine"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "key_safety.2",
+          "reasoning": "The primary publication reports the comparative incidence of infusion-related reactions.",
+          "citations": [
+            {
+              "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2212948",
+              "title": "Lecanemab in Early Alzheimer\u2019s Disease | New England Journal of Medicine"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "key_safety.3",
+          "reasoning": "The FDA prescribing information reports intracerebral hemorrhage greater than 1 cm in Study 2 for the treated and placebo groups.",
+          "citations": [
+            {
+              "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d1ff786-e577-410a-a273-c4d7d0e4e975",
+              "title": "DailyMed - LEQEMBI- lecanemab injection, solution\nLECANEMAB AUTOINJECTOR- lecanemab-irmb injection, solution\n"
+            }
+          ],
+          "confidence": "high"
+        }
+      ],
+      "connector_calls": [
+        {
+          "connector": "pubmed",
+          "tool": "search_articles",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "search_trials",
+          "error": ""
+        },
+        {
+          "connector": "pubmed",
+          "tool": "get_article_metadata",
+          "error": ""
+        },
+        {
+          "connector": "pubmed",
+          "tool": "search_articles",
+          "error": ""
+        },
+        {
+          "connector": "clinical_trials",
+          "tool": "get_trial_details",
+          "error": ""
+        },
+        {
+          "connector": "pubmed",
+          "tool": "get_article_metadata",
+          "error": ""
+        }
+      ],
+      "error": null
+    },
+    "market": {
+      "run_id": "srun_2061305f859d4f67e81cac8120669de1",
+      "status": "completed",
+      "processor": "core",
+      "content": {
+        "us_exclusivity": {
+          "expected_competition": "Not known.",
+          "listed_exclusivities": [],
+          "patents": [
+            {
+              "covers": "Protofibril-selective antibody composition (composition of matter); patent-term restoration requested.",
+              "expiry_date": "2027-03-23",
+              "patent_number": "8025878"
+            }
+          ]
+        },
+        "latest_annual_sales": {
+          "amount_m": 88000.0,
+          "period": "FY2025",
+          "currency": "JPY"
+        },
+        "us_list_price": {
+          "basis": "Eisai U.S. price list, 360-mg subcutaneous maintenance at $385 per weekly autoinjector (52 weeks)",
+          "annual_wac_usd": 20020.0,
+          "as_of": "2026-10-05"
+        },
+        "medicare": {
+          "national_coverage_determination": "NCD 200.3, Monoclonal Antibodies Directed Against Amyloid for the Treatment of Alzheimer's Disease (AD)",
+          "benefit": "both",
+          "coverage_conditions": "CMS covers Part B antiamyloid treatment under CED for MCI due to AD or mild AD dementia with confirmed amyloid pathology\u2014via an IND randomized trial for surrogate-endpoint approvals or a CMS-approved prospective comparative study (registry data permitted) for direct-clinical-benefit approvals; self-administered LEQEMBI IQLIK may instead be covered by a Part D plan."
+        },
+        "competitors": [
+          {
+            "stage": "approved",
+            "sponsor": "Eli Lilly and Company",
+            "drug": "Kisunla (donanemab-azbt)"
+          },
+          {
+            "stage": "phase 3",
+            "sponsor": "AriBio Co., Ltd.",
+            "drug": "AR1001"
+          },
+          {
+            "stage": "phase 3",
+            "sponsor": "Hoffmann-La Roche",
+            "drug": "trontinemab"
+          },
+          {
+            "stage": "phase 3",
+            "sponsor": "Eli Lilly and Company",
+            "drug": "remternetug"
+          },
+          {
+            "stage": "phase 3",
+            "sponsor": "Annovis Bio Inc.",
+            "drug": "buntanetap"
+          }
+        ]
+      },
+      "basis": [
+        {
+          "field": "us_exclusivity",
+          "reasoning": "The FDA Purple Book product-detail range identifies the exact Leqembi BLA and applicant but shows no populated first-licensure or regulatory-exclusivity expiry, so the listed-exclusivities array is empty. Patent 8,025,878 claims protofibril-selective antibodies and its patent record gives an anticipated 2027-03-23 expiry; the Federal Register documents BioArctic's request for a five-year term restoration, so the date is the currently shown base expiry and the requested extension is noted rather than assumed granted. No US biosimilar entry date or settlement is disclosed in the cited product and patent records.",
+          "citations": [
+            {
+              "url": "https://purplebooksearch.fda.gov/index.cfm?blaNo=761269&event=productdetails",
+              "title": "Purple Book Search"
+            },
+            {
+              "url": "https://patents.google.com/patent/US8025878B2/en",
+              "title": "US8025878B2 - Protofibril selective antibodies and the use thereof \n        - Google Patents"
+            },
+            {
+              "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/8025878",
+              "title": "US8025878B2 - Protofibril selective antibodies and the use thereof"
+            },
+            {
+              "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23865/determination-of-regulatory-review-period-for-purposes-of-patent-extension-leqembi",
+              "title": "\n      Federal Register\n       :: \n      Determination of Regulatory Review Period for Purposes of Patent Extension; LEQEMBI\n    "
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "latest_annual_sales",
+          "reasoning": "Eisai's consolidated FY2025 report assigns \u00a588.0 billion to Leqembi, and Eisai's global revenue announcement confirms the same FY2025 worldwide figure. Converting \u00a588.0 billion to the requested millions gives JPY 88,000.",
+          "citations": [
+            {
+              "url": "https://tdnet-pdf.kabutan.jp/20260515/140120260514534167.pdf",
+              "title": "CONSOLIDATED FINANCIAL REPORT [IFRS] for Fiscal 2025 (Year Ended March 31, 2026)"
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202624.html",
+              "title": "Revenue of LEQEMBI\u00ae (Preliminary Basis) | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "us_list_price",
+          "reasoning": "Eisai's U.S. price list effective October 5, 2026 sets the 360-mg autoinjector at $385 per unit. The FDA label specifies 360 mg subcutaneously once weekly as maintenance; annualizing 52 weekly units gives a WAC of $20,020.",
+          "citations": [
+            {
+              "url": "https://us.eisai.com/-/media/Files/USEisaiRedesign/EisaiIncPriceList.pdf",
+              "title": "Eisai Inc. Product Price List"
+            },
+            {
+              "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2026/761269s011lbl.pdf",
+              "title": "label"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "medicare",
+          "reasoning": "CMS identifies NCD 200.3 and states CED coverage for confirmed-amyloid MCI or mild AD dementia, with randomized IND trials for surrogate-endpoint approvals and CMS-approved prospective comparative studies (registries allowed) for drugs approved on direct clinical benefit. Medicare.gov identifies Part B coverage for Leqembi, while the sponsor's Part D information includes LEQEMBI IQLIK, supporting both benefits across the IV and self-administered SC presentations.",
+          "citations": [
+            {
+              "url": "https://www.cms.gov/medicare-coverage-database/view/ncd.aspx?ncdid=375",
+              "title": "NCD - Monoclonal Antibodies Directed Against Amyloid for the Treatment of Alzheimer's Disease (AD) (200.3)"
+            },
+            {
+              "url": "https://www.medicare.gov/coverage/monoclonal-antibodies-for-treating-early-alzheimers-disease",
+              "title": "Monoclonal Antibodies for Early Alzheimer's | Medicare"
+            },
+            {
+              "url": "https://www.leqembi.com/en/patient-support-program",
+              "title": "Patient Support Program | LEQEMBI\u00ae (lecanemab-irmb)"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors",
+          "reasoning": "FDA and Lilly sources identify Kisunla (donanemab) as approved for early symptomatic Alzheimer's disease. ClinicalTrials.gov records identify AR1001, trontinemab, and remternetug as Phase 3 studies in early or early symptomatic Alzheimer's disease with their named sponsors; the supplied current trial record identifies buntanetap as a Phase 3 early-AD study sponsored by Annovis Bio.",
+          "citations": [
+            {
+              "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-kisunlatm-donanemab-azbt-approved-fda-treatment-early",
+              "title": "Lilly's Kisunla\u2122 (donanemab-azbt) Approved by the FDA for the Treatment of Early Symptomatic Alzheimer's Disease | Eli Lilly and Company"
+            },
+            {
+              "url": "https://www.fda.gov/drugs/news-events-human-drugs/fda-approves-treatment-adults-alzheimers-disease",
+              "title": "FDA approves treatment for adults with Alzheimer's disease | FDA"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT05531526",
+              "title": "Study Details | NCT05531526 | Phase 3, Double-blind, Randomized, Placebo-controlled Trial to Evaluate the Efficacy and Safety of AR1001 in Participants With Early Alzheimer's Disease (Polaris-AD) | ClinicalTrials.gov"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT07169578",
+              "title": "Study Details | NCT07169578 | A Study of Trontinemab in Participants With Early Symptomatic Alzheimer's Disease | ClinicalTrials.gov"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT06653153?a=19&intr=Remternetug%20%5C(SC%5C)&rank=2&tab=study",
+              "title": "Study Details | NCT06653153 | A Study of Remternetug (LY3372993) in Early Alzheimer's Disease (TRAILRUNNER-ALZ 3) | ClinicalTrials.gov"
+            },
+            {
+              "url": "https://clinicaltrials.gov/study/NCT06709014",
+              "title": "Study Details | NCT06709014 | A Double-blind Dual Study Assessing Safety and Efficacy of Buntanetap in Participants With Early AD | ClinicalTrials.gov"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors.0",
+          "reasoning": "FDA identifies Kisunla as approved for early symptomatic Alzheimer's disease; Lilly's announcement identifies Eli Lilly and Company as its sponsor.",
+          "citations": [
+            {
+              "url": "https://investor.lilly.com/news-releases/news-release-details/lillys-kisunlatm-donanemab-azbt-approved-fda-treatment-early",
+              "title": "Lilly's Kisunla\u2122 (donanemab-azbt) Approved by the FDA for the Treatment of Early Symptomatic Alzheimer's Disease | Eli Lilly and Company"
+            },
+            {
+              "url": "https://www.fda.gov/drugs/news-events-human-drugs/fda-approves-treatment-adults-alzheimers-disease",
+              "title": "FDA approves treatment for adults with Alzheimer's disease | FDA"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors.1",
+          "reasoning": "The ClinicalTrials.gov record names AriBio Co., Ltd., describes an early-Alzheimer's study, and identifies it as Phase 3.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT05531526",
+              "title": "Study Details | NCT05531526 | Phase 3, Double-blind, Randomized, Placebo-controlled Trial to Evaluate the Efficacy and Safety of AR1001 in Participants With Early Alzheimer's Disease (Polaris-AD) | ClinicalTrials.gov"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors.2",
+          "reasoning": "The ClinicalTrials.gov record names Hoffmann-La Roche and identifies Phase 3 trontinemab in early symptomatic Alzheimer's disease.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT07169578",
+              "title": "Study Details | NCT07169578 | A Study of Trontinemab in Participants With Early Symptomatic Alzheimer's Disease | ClinicalTrials.gov"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors.3",
+          "reasoning": "The ClinicalTrials.gov record names Eli Lilly and Company and identifies Phase 3 remternetug in early Alzheimer's disease.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT06653153?a=19&intr=Remternetug%20%5C(SC%5C)&rank=2&tab=study",
+              "title": "Study Details | NCT06653153 | A Study of Remternetug (LY3372993) in Early Alzheimer's Disease (TRAILRUNNER-ALZ 3) | ClinicalTrials.gov"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "competitors.4",
+          "reasoning": "The supplied ClinicalTrials.gov record names Annovis Bio Inc. and identifies buntanetap in a Phase 3 early-Alzheimer's study.",
+          "citations": [
+            {
+              "url": "https://clinicaltrials.gov/study/NCT06709014",
+              "title": "Study Details | NCT06709014 | A Double-blind Dual Study Assessing Safety and Efficacy of Buntanetap in Participants With Early AD | ClinicalTrials.gov"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "connector_calls": [
+        {
+          "connector": "cms_coverage",
+          "tool": "search_national_coverage",
+          "error": ""
+        }
+      ],
+      "error": null
+    },
+    "outlook": {
+      "run_id": "srun_2061305f859d4f67f0cea0f7d64e9441",
+      "status": "completed",
+      "processor": "pro",
+      "content": {
+        "upcoming_catalysts": [
+          {
+            "event": "The CTAD LEADER symposium is scheduled to present multicenter real-world outcomes and at-home subcutaneous administration findings, informing the practicality of treatment outside trials.",
+            "expected_date": "2026-11-18"
+          },
+          {
+            "event": "CHMP is scheduled to issue either an opinion or further outstanding issues on the EU monthly IV maintenance variation, rather than a guaranteed approval.",
+            "expected_date": "2026-12"
+          },
+          {
+            "event": "The anticipated unextended expiry of US patent 8,025,878 is an exclusivity checkpoint subject to patent-term restoration, not a confirmed biosimilar-entry date.",
+            "expected_date": "2027-03-23"
+          }
+        ],
+        "differentiation": [
+          "Lecanemab targets soluble A\u03b2 protofibrils as well as insoluble aggregates, whereas Kisunla targets modified, N-terminally truncated N3pE A\u03b2; this mechanistic distinction does not establish comparative clinical superiority.",
+          "US Leqembi Iqlik enables at-home treatment from initiation with 500 mg subcutaneously once weekly, whereas Kisunla requires IV administration every four weeks.",
+          "Leqembi supports continued maintenance after 18 months, including 360 mg subcutaneously weekly, contrasting with Kisunla\u2019s option to stop treatment after amyloid plaque clearance."
+        ],
+        "risks": [
+          "ARIA and potentially fatal intracerebral hemorrhage remain material safety constraints, with symptomatic ARIA-E occurring in 9% of treated ApoE \u03b54 homozygotes versus 2% of heterozygotes and 1% of noncarriers.",
+          "The average randomized benefit was modest at 0.45 CDR-SB points over 18 months, while subcutaneous efficacy relies on bridging to IV evidence and long-term maintenance benefit remains incompletely established.",
+          "Ongoing dosing and MRI monitoring may constrain persistence and uptake against Kisunla\u2019s monthly, potentially finite treatment course.",
+          "The March 2027 unextended core-patent expiry creates exclusivity uncertainty because BioArctic\u2019s March 2032 projection assumes a five-year extension where available."
+        ],
+        "summary": "Leqembi (lecanemab) is Eisai\u2019s approved anti-A\u03b2 protofibril antibody for early Alzheimer\u2019s disease, with IV treatment and US at-home subcutaneous initiation and maintenance options. In Clarity AD, it reduced 18-month CDR-SB worsening by 0.45 points versus placebo, representing 27% relative slowing. The central question is whether easier administration and sustained treatment can translate that modest average benefit into durable real-world use despite ARIA risk, monitoring requirements and competition from potentially finite treatment."
+      },
+      "basis": [
+        {
+          "field": "upcoming_catalysts",
+          "reasoning": "Eisai\u2019s CTAD agenda dates the LEADER presentation and identifies its at-home administration content. EMA\u2019s timetable specifies an opinion or outstanding issues in December, while the pipeline identifies the IV maintenance submission. The patent record supplies the anticipated unextended expiry, and the restoration application and BioArctic footnote require qualification rather than treating that date as biosimilar entry.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202660.html",
+              "title": "Eisai to Present New Five-Year Lecanemab Data and Real-World Alzheimer\u2019s Disease Research at the 19th Clinical Trials on Alzheimer\u2019s Disease (CTAD) Conference | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.ema.europa.eu/en/documents/minutes/minutes-chmp-meeting-20-23-july-2026_en.pdf",
+              "title": "CHMP Minutes 20-23 July 2026"
+            },
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://patents.google.com/patent/US8025878B2/en",
+              "title": "US8025878B2 - Protofibril selective antibodies and the use thereof \n        - Google Patents"
+            },
+            {
+              "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23865/determination-of-regulatory-review-period-for-purposes-of-patent-extension-leqembi",
+              "title": "\n      Federal Register\n       :: \n      Determination of Regulatory Review Period for Purposes of Patent Extension; LEQEMBI\n    "
+            },
+            {
+              "url": "https://www.bioarctic.com/en/wp-content/uploads/sites/2/2026/04/BioArctic-in-the-future.pdf",
+              "title": "BioArctic in the future"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "differentiation",
+          "reasoning": "The sources establish different binding targets, home subcutaneous administration versus four-weekly IV administration, and continuing maintenance versus plaque-guided stopping. These are product-profile comparisons, not evidence of head-to-head efficacy superiority; the supplied facts and prescribing information provide the 500-mg initiation dose.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.ema.europa.eu/en/documents/product-information/kisunla-epar-product-information_en.pdf",
+              "title": "Kisunla, INN-donanemab"
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202640.html",
+              "title": "FDA Approves LEQEMBI IQLIK\u00ae (lecanemab-irmb) Subcutaneous Injection as an Initiation Dose for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.lilly.com/hcp/product/kisunla/dosing-use",
+              "title": "Dosing & Use | How Kisunla\u00ae (donanemab-azbt) Is Administered"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "risks",
+          "reasoning": "Label evidence directly supports ARIA risk, genotype-specific symptomatic events, the randomized effect size, bridging and maintenance limitations, and MRI monitoring. Persistence and competitive uptake are analytical risks inferred from those burdens and the competitor\u2019s stopping option. Patent timing is explicitly qualified by BioArctic\u2019s extension assumption.",
+          "citations": [
+            {
+              "url": "https://www.leqembi.com/-/media/Files/Leqembi/Prescribing-Information.pdf",
+              "title": "Subcutaneous injection: 500 mg administered once a week using the HIGHLIGHTS OF PRESCRIBING INFORMATION o LEQEMBI IQLIK autoinjector. (2.2, 2.6)"
+            },
+            {
+              "url": "https://www.lilly.com/hcp/product/kisunla/dosing-use",
+              "title": "Dosing & Use | How Kisunla\u00ae (donanemab-azbt) Is Administered"
+            },
+            {
+              "url": "https://patents.google.com/patent/US8025878B2/en",
+              "title": "US8025878B2 - Protofibril selective antibodies and the use thereof \n        - Google Patents"
+            },
+            {
+              "url": "https://www.bioarctic.com/en/wp-content/uploads/sites/2/2026/04/BioArctic-in-the-future.pdf",
+              "title": "BioArctic in the future"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "summary",
+          "reasoning": "The pipeline and approval announcement establish the asset\u2019s mechanism and approved administration options; the label supplies the 18-month randomized result. The final sentence synthesizes the commercial question from administration convenience, safety and monitoring burdens, and the competitor\u2019s potential finite course rather than claiming an established uptake outcome.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.eisai.com/news/2026/news202640.html",
+              "title": "FDA Approves LEQEMBI IQLIK\u00ae (lecanemab-irmb) Subcutaneous Injection as an Initiation Dose for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.leqembi.com/-/media/Files/Leqembi/Prescribing-Information.pdf",
+              "title": "Subcutaneous injection: 500 mg administered once a week using the HIGHLIGHTS OF PRESCRIBING INFORMATION o LEQEMBI IQLIK autoinjector. (2.2, 2.6)"
+            },
+            {
+              "url": "https://www.lilly.com/hcp/product/kisunla/dosing-use",
+              "title": "Dosing & Use | How Kisunla\u00ae (donanemab-azbt) Is Administered"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "upcoming_catalysts.0",
+          "reasoning": "The announced agenda schedules LEADER on November 18 and identifies utilization, outcomes and at-home subcutaneous administration presentations; their practical significance is an analytical interpretation.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202660.html",
+              "title": "Eisai to Present New Five-Year Lecanemab Data and Real-World Alzheimer\u2019s Disease Research at the 19th Clinical Trials on Alzheimer\u2019s Disease (CTAD) Conference | News ReleaseNews Release\uff1a2026 | Eisai Co., Ltd."
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "upcoming_catalysts.1",
+          "reasoning": "EMA specifies the December procedural milestone, and the other evidence identifies the IV maintenance regimen as every four weeks; an opinion or further questions is not assured approval.",
+          "citations": [
+            {
+              "url": "https://www.ema.europa.eu/en/documents/minutes/minutes-chmp-meeting-20-23-july-2026_en.pdf",
+              "title": "CHMP Minutes 20-23 July 2026"
+            },
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.leqembi.com/-/media/Files/Leqembi/Prescribing-Information.pdf",
+              "title": "Subcutaneous injection: 500 mg administered once a week using the HIGHLIGHTS OF PRESCRIBING INFORMATION o LEQEMBI IQLIK autoinjector. (2.2, 2.6)"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "upcoming_catalysts.2",
+          "reasoning": "The patent record lists March 23, 2027 as anticipated expiration, while the restoration application and extension assumption prevent treating it as definitive loss of exclusivity or a launch date.",
+          "citations": [
+            {
+              "url": "https://patents.google.com/patent/US8025878B2/en",
+              "title": "US8025878B2 - Protofibril selective antibodies and the use thereof \n        - Google Patents"
+            },
+            {
+              "url": "https://www.federalregister.gov/documents/2025/12/29/2025-23865/determination-of-regulatory-review-period-for-purposes-of-patent-extension-leqembi",
+              "title": "\n      Federal Register\n       :: \n      Determination of Regulatory Review Period for Purposes of Patent Extension; LEQEMBI\n    "
+            },
+            {
+              "url": "https://www.bioarctic.com/en/wp-content/uploads/sites/2/2026/04/BioArctic-in-the-future.pdf",
+              "title": "BioArctic in the future"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "differentiation.0",
+          "reasoning": "The sources identify lecanemab\u2019s soluble protofibril and insoluble aggregate binding versus donanemab\u2019s N3pE binding; the comparison is mechanistic only.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/innovation/research/pipeline/pdf/epipeline.pdf",
+              "title": "Major R&D Pipeline"
+            },
+            {
+              "url": "https://www.ema.europa.eu/en/documents/product-information/kisunla-epar-product-information_en.pdf",
+              "title": "Kisunla, INN-donanemab"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "differentiation.1",
+          "reasoning": "The approval announcement and label establish at-home weekly 500-mg initiation, while the comparator label establishes four-weekly IV administration.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202640.html",
+              "title": "FDA Approves LEQEMBI IQLIK\u00ae (lecanemab-irmb) Subcutaneous Injection as an Initiation Dose for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.leqembi.com/-/media/Files/Leqembi/Prescribing-Information.pdf",
+              "title": "Subcutaneous injection: 500 mg administered once a week using the HIGHLIGHTS OF PRESCRIBING INFORMATION o LEQEMBI IQLIK autoinjector. (2.2, 2.6)"
+            },
+            {
+              "url": "https://www.ema.europa.eu/en/documents/product-information/kisunla-epar-product-information_en.pdf",
+              "title": "Kisunla, INN-donanemab"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "differentiation.2",
+          "reasoning": "Leqembi\u2019s 360-mg weekly maintenance after 18 months contrasts with the competitor\u2019s label-supported plaque-guided stopping option.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202640.html",
+              "title": "FDA Approves LEQEMBI IQLIK\u00ae (lecanemab-irmb) Subcutaneous Injection as an Initiation Dose for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.lilly.com/hcp/product/kisunla/dosing-use",
+              "title": "Dosing & Use | How Kisunla\u00ae (donanemab-azbt) Is Administered"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "risks.0",
+          "reasoning": "The label directly warns of serious or fatal ARIA and hemorrhage and supplies the three genotype-specific symptomatic ARIA-E percentages.",
+          "citations": [
+            {
+              "url": "https://www.leqembi.com/-/media/Files/Leqembi/Prescribing-Information.pdf",
+              "title": "Subcutaneous injection: 500 mg administered once a week using the HIGHLIGHTS OF PRESCRIBING INFORMATION o LEQEMBI IQLIK autoinjector. (2.2, 2.6)"
+            }
+          ],
+          "confidence": "high"
+        },
+        {
+          "field": "risks.1",
+          "reasoning": "The label establishes the effect size, PK/plaque-based SC bridge and limited evidence for long-term benefit after maintenance transition; describing the absolute benefit as modest is an analytical assessment.",
+          "citations": [
+            {
+              "url": "https://www.leqembi.com/-/media/Files/Leqembi/Prescribing-Information.pdf",
+              "title": "Subcutaneous injection: 500 mg administered once a week using the HIGHLIGHTS OF PRESCRIBING INFORMATION o LEQEMBI IQLIK autoinjector. (2.2, 2.6)"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "risks.2",
+          "reasoning": "Continuing dosing, MRI requirements and the competitor\u2019s potentially finite monthly course support a plausible persistence and uptake risk, not a demonstrated comparative commercial outcome.",
+          "citations": [
+            {
+              "url": "https://www.eisai.com/news/2026/news202640.html",
+              "title": "FDA Approves LEQEMBI IQLIK\u00ae (lecanemab-irmb) Subcutaneous Injection as an Initiation Dose for Early Alzheimer's Disease | News ReleaseNews Release:2026 | Eisai Co., Ltd."
+            },
+            {
+              "url": "https://www.leqembi.com/-/media/Files/Leqembi/Prescribing-Information.pdf",
+              "title": "Subcutaneous injection: 500 mg administered once a week using the HIGHLIGHTS OF PRESCRIBING INFORMATION o LEQEMBI IQLIK autoinjector. (2.2, 2.6)"
+            },
+            {
+              "url": "https://www.ema.europa.eu/en/documents/product-information/kisunla-epar-product-information_en.pdf",
+              "title": "Kisunla, INN-donanemab"
+            },
+            {
+              "url": "https://www.lilly.com/hcp/product/kisunla/dosing-use",
+              "title": "Dosing & Use | How Kisunla\u00ae (donanemab-azbt) Is Administered"
+            }
+          ],
+          "confidence": "medium"
+        },
+        {
+          "field": "risks.3",
+          "reasoning": "The unextended date and BioArctic\u2019s explicitly conditional five-year extension support exclusivity uncertainty rather than a categorical 2032 protection claim.",
+          "citations": [
+            {
+              "url": "https://patents.google.com/patent/US8025878B2/en",
+              "title": "US8025878B2 - Protofibril selective antibodies and the use thereof \n        - Google Patents"
+            },
+            {
+              "url": "https://www.bioarctic.com/en/wp-content/uploads/sites/2/2026/04/BioArctic-in-the-future.pdf",
+              "title": "BioArctic in the future"
+            }
+          ],
+          "confidence": "medium"
+        }
+      ],
+      "connector_calls": [],
+      "error": null
+    }
+  },
+  "label": {
+    "setid": "9d1ff786-e577-410a-a273-c4d7d0e4e975",
+    "url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=9d1ff786-e577-410a-a273-c4d7d0e4e975",
+    "status": "copied",
+    "indications_and_usage": "LEQEMBI is indicated for the treatment of Alzheimer\u2019s disease. Treatment with LEQEMBI should be initiated in patients with mild cognitive impairment or mild dementia stage of disease, the population in which treatment was initiated in clinical trials.",
+    "printed_revision": "2026-07",
+    "dailymed_version": 24,
+    "dailymed_published": "Jul 27, 2026"
+  },
+  "image": {
+    "status": "found",
+    "file": "images/leqembi.png",
+    "image_url": "https://mma.prnewswire.com/media/2789900/Eisai_Inc___Leqembi_Product_Shot_High_Resolution.jpg?p=facebook",
+    "source_page_url": "https://media-us.eisai.com/2025-10-06-Eisai-and-Biogen-Announce-U-S-Availability-of-LEQEMBI-R-IQLIK-TM-lecanemab-irmb-Subcutaneous-Injection-Maintenance-Dose-for-Treatment-of-Early-Alzheimers-Disease",
+    "title": "Eisai and Biogen Announce U.S. Availability of LEQEMBI\u00ae IQLIK\u2122  (lecanemab-irmb) Subcutaneous Injection Maintenance Dose for Treatment of  Early Alzheimer's Disease - Oct 6, 2025",
+    "width": 2700,
+    "height": 1414,
+    "search_id": "search_e623b435b7fa06172ca07cef607da514",
+    "rejected": []
+  },
+  "checks": {
+    "results": [
+      {
+        "check": "NCT ID resolves",
+        "subject": "pivotal trials: CLARITY AD",
+        "result": "pass",
+        "detail": "NCT03887455: A Study to Confirm Safety and Efficacy of Lecanemab in Participants With Early Alzheimer's Disease",
+        "ref": "NCT03887455"
+      },
+      {
+        "check": "trial phase matches registry",
+        "subject": "pivotal trials: CLARITY AD",
+        "result": "pass",
+        "detail": "run: phase 3; registry: phase 3",
+        "ref": "NCT03887455"
+      },
+      {
+        "check": "trial status matches registry",
+        "subject": "pivotal trials: CLARITY AD",
+        "result": "pass",
+        "detail": "run: active, not recruiting; registry: active, not recruiting",
+        "ref": "NCT03887455"
+      },
+      {
+        "check": "lead sponsor matches registry",
+        "subject": "pivotal trials: CLARITY AD",
+        "result": "pass",
+        "detail": "run: Eisai Inc.; registry: Eisai Inc.",
+        "ref": "NCT03887455"
+      },
+      {
+        "check": "enrollment matches registry (within 5%)",
+        "subject": "pivotal trials: CLARITY AD",
+        "result": "pass",
+        "detail": "run: 1906; registry: 1906",
+        "ref": "NCT03887455"
+      },
+      {
+        "check": "primary completion date matches registry",
+        "subject": "pivotal trials: CLARITY AD",
+        "result": "pass",
+        "detail": "run: 2026-12-31; registry: 2026-12-31",
+        "ref": "NCT03887455"
+      },
+      {
+        "check": "trial starts before primary completion",
+        "subject": "pivotal trials: CLARITY AD",
+        "result": "pass",
+        "detail": "2019-03-27 -> 2026-12-31",
+        "ref": "NCT03887455"
+      },
+      {
+        "check": "NCT ID resolves",
+        "subject": "pivotal trials: NCT01767311",
+        "result": "pass",
+        "detail": "NCT01767311: A Study to Evaluate Safety, Tolerability, and Efficacy of Lecanemab in Subjects With Early Alzheimer's Disease",
+        "ref": "NCT01767311"
+      },
+      {
+        "check": "trial phase matches registry",
+        "subject": "pivotal trials: NCT01767311",
+        "result": "pass",
+        "detail": "run: phase 2; registry: phase 2",
+        "ref": "NCT01767311"
+      },
+      {
+        "check": "trial status matches registry",
+        "subject": "pivotal trials: NCT01767311",
+        "result": "pass",
+        "detail": "run: completed; registry: completed",
+        "ref": "NCT01767311"
+      },
+      {
+        "check": "lead sponsor matches registry",
+        "subject": "pivotal trials: NCT01767311",
+        "result": "pass",
+        "detail": "run: Eisai Inc.; registry: Eisai Inc.",
+        "ref": "NCT01767311"
+      },
+      {
+        "check": "enrollment matches registry (within 5%)",
+        "subject": "pivotal trials: NCT01767311",
+        "result": "pass",
+        "detail": "run: 856; registry: 856",
+        "ref": "NCT01767311"
+      },
+      {
+        "check": "primary completion date matches registry",
+        "subject": "pivotal trials: NCT01767311",
+        "result": "pass",
+        "detail": "run: 2024-12-10; registry: 2024-12-10",
+        "ref": "NCT01767311"
+      },
+      {
+        "check": "trial starts before primary completion",
+        "subject": "pivotal trials: NCT01767311",
+        "result": "pass",
+        "detail": "2012-12-20 -> 2024-12-10",
+        "ref": "NCT01767311"
+      },
+      {
+        "check": "NCT ID resolves",
+        "subject": "ongoing trials: AHEAD 3-45",
+        "result": "pass",
+        "detail": "NCT04468659: AHEAD 3-45 Study: A Study to Evaluate Efficacy and Safety of Treatment With Lecanemab in Participants With Preclinical Alzheimer's Disease and Elevated Amyloid and Also in Participants With Early Preclinical Alzheimer's Disease and Intermediate Amyloid",
+        "ref": "NCT04468659"
+      },
+      {
+        "check": "trial phase matches registry",
+        "subject": "ongoing trials: AHEAD 3-45",
+        "result": "pass",
+        "detail": "run: phase 3; registry: phase 3",
+        "ref": "NCT04468659"
+      },
+      {
+        "check": "trial status matches registry",
+        "subject": "ongoing trials: AHEAD 3-45",
+        "result": "pass",
+        "detail": "run: active, not recruiting; registry: active, not recruiting",
+        "ref": "NCT04468659"
+      },
+      {
+        "check": "lead sponsor matches registry",
+        "subject": "ongoing trials: AHEAD 3-45",
+        "result": "pass",
+        "detail": "run: Eisai Inc.; registry: Eisai Inc.",
+        "ref": "NCT04468659"
+      },
+      {
+        "check": "enrollment matches registry (within 5%)",
+        "subject": "ongoing trials: AHEAD 3-45",
+        "result": "pass",
+        "detail": "run: 1400; registry: 1400",
+        "ref": "NCT04468659"
+      },
+      {
+        "check": "primary completion date matches registry",
+        "subject": "ongoing trials: AHEAD 3-45",
+        "result": "pass",
+        "detail": "run: 2028-12-21; registry: 2028-12-21",
+        "ref": "NCT04468659"
+      },
+      {
+        "check": "trial starts before primary completion",
+        "subject": "ongoing trials: AHEAD 3-45",
+        "result": "pass",
+        "detail": "2020-07-14 -> 2028-12-21",
+        "ref": "NCT04468659"
+      },
+      {
+        "check": "NCT ID resolves",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "NCT06384573: DIAN-TU Amyloid Removal Trial (ART) in Dominantly Inherited Alzheimer's Disease",
+        "ref": "NCT06384573"
+      },
+      {
+        "check": "trial phase matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: phase 3; registry: phase 3",
+        "ref": "NCT06384573"
+      },
+      {
+        "check": "trial status matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: active, not recruiting; registry: active, not recruiting",
+        "ref": "NCT06384573"
+      },
+      {
+        "check": "lead sponsor matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: Washington University School of Medicine; registry: Washington University School of Medicine",
+        "ref": "NCT06384573"
+      },
+      {
+        "check": "enrollment matches registry (within 5%)",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: 40; registry: 40",
+        "ref": "NCT06384573"
+      },
+      {
+        "check": "primary completion date matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: 2030-06; registry: 2030-06",
+        "ref": "NCT06384573"
+      },
+      {
+        "check": "trial starts before primary completion",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "2024-06-10 -> 2030-06",
+        "ref": "NCT06384573"
+      },
+      {
+        "check": "NCT ID resolves",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "NCT01760005: Dominantly Inherited Alzheimer Network Trial: An Opportunity to Prevent Dementia. A Study of Potential Disease Modifying Treatments in Individuals at Risk for or With a Type of Early Onset Alzheimer's Disease Caused by a Genetic Mutation. Master Protocol DIAN-TU-001",
+        "ref": "NCT01760005"
+      },
+      {
+        "check": "trial phase matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: phase 2/3; registry: phase 2/3",
+        "ref": "NCT01760005"
+      },
+      {
+        "check": "trial status matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: active, not recruiting; registry: active, not recruiting",
+        "ref": "NCT01760005"
+      },
+      {
+        "check": "lead sponsor matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: Washington University School of Medicine; registry: Washington University School of Medicine",
+        "ref": "NCT01760005"
+      },
+      {
+        "check": "enrollment matches registry (within 5%)",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: 490; registry: 490",
+        "ref": "NCT01760005"
+      },
+      {
+        "check": "primary completion date matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: 2028-04; registry: 2028-04",
+        "ref": "NCT01760005"
+      },
+      {
+        "check": "trial starts before primary completion",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "2012-12 -> 2028-04",
+        "ref": "NCT01760005"
+      },
+      {
+        "check": "NCT ID resolves",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "NCT05269394: Dominantly Inherited Alzheimer Network Trial: An Opportunity to Prevent Dementia. A Study of Potential Disease Modifying Treatments in Individuals With a Type of Early Onset Alzheimer's Disease Caused by a Genetic Mutation (DIAN-TU)",
+        "ref": "NCT05269394"
+      },
+      {
+        "check": "trial phase matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: phase 2/3; registry: phase 2/3",
+        "ref": "NCT05269394"
+      },
+      {
+        "check": "trial status matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: active, not recruiting; registry: active, not recruiting",
+        "ref": "NCT05269394"
+      },
+      {
+        "check": "lead sponsor matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: Washington University School of Medicine; registry: Washington University School of Medicine",
+        "ref": "NCT05269394"
+      },
+      {
+        "check": "enrollment matches registry (within 5%)",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: 197; registry: 197",
+        "ref": "NCT05269394"
+      },
+      {
+        "check": "primary completion date matches registry",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "run: 2028-04; registry: 2028-04",
+        "ref": "NCT05269394"
+      },
+      {
+        "check": "trial starts before primary completion",
+        "subject": "ongoing trials: DIAN-TU",
+        "result": "pass",
+        "detail": "2021-12-22 -> 2028-04",
+        "ref": "NCT05269394"
+      },
+      {
+        "check": "NCT ID resolves",
+        "subject": "ongoing trials: NCT06602258",
+        "result": "pass",
+        "detail": "NCT06602258: A Study of E2814 With Concurrent Lecanemab Treatment in Participants With Early Alzheimer's Disease",
+        "ref": "NCT06602258"
+      },
+      {
+        "check": "trial phase matches registry",
+        "subject": "ongoing trials: NCT06602258",
+        "result": "pass",
+        "detail": "run: phase 2; registry: phase 2",
+        "ref": "NCT06602258"
+      },
+      {
+        "check": "trial status matches registry",
+        "subject": "ongoing trials: NCT06602258",
+        "result": "pass",
+        "detail": "run: active, not recruiting; registry: active, not recruiting",
+        "ref": "NCT06602258"
+      },
+      {
+        "check": "lead sponsor matches registry",
+        "subject": "ongoing trials: NCT06602258",
+        "result": "pass",
+        "detail": "run: Eisai Inc.; registry: Eisai Inc.",
+        "ref": "NCT06602258"
+      },
+      {
+        "check": "enrollment matches registry (within 5%)",
+        "subject": "ongoing trials: NCT06602258",
+        "result": "pass",
+        "detail": "run: 105; registry: 105",
+        "ref": "NCT06602258"
+      },
+      {
+        "check": "primary completion date matches registry",
+        "subject": "ongoing trials: NCT06602258",
+        "result": "pass",
+        "detail": "run: 2026-12-03; registry: 2026-12-03",
+        "ref": "NCT06602258"
+      },
+      {
+        "check": "trial starts before primary completion",
+        "subject": "ongoing trials: NCT06602258",
+        "result": "pass",
+        "detail": "2024-09-30 -> 2026-12-03",
+        "ref": "NCT06602258"
+      },
+      {
+        "check": "PMID resolves",
+        "subject": "evidence: CLARITY AD",
+        "result": "pass",
+        "detail": "36449413: Lecanemab in Early Alzheimer's Disease.",
+        "ref": "36449413"
+      },
+      {
+        "check": "publication year matches PubMed",
+        "subject": "evidence: CLARITY AD",
+        "result": "pass",
+        "detail": "run: 2023; PubMed: 2023 Jan 5 (online 2022 Nov 29)",
+        "ref": "36449413"
+      },
+      {
+        "check": "journal matches PubMed",
+        "subject": "evidence: CLARITY AD",
+        "result": "pass",
+        "detail": "run: N Engl J Med; PubMed: N Engl J Med",
+        "ref": "36449413"
+      },
+      {
+        "check": "estimate inside its 95% CI",
+        "subject": "evidence: CLARITY AD",
+        "result": "pass",
+        "detail": "-0.45 (95% CI -0.67 to -0.23)",
+        "ref": ""
+      },
+      {
+        "check": "P value agrees with the 95% CI",
+        "subject": "evidence: CLARITY AD",
+        "result": "pass",
+        "detail": "P<0.001; CI excludes 0",
+        "ref": ""
+      },
+      {
+        "check": "PMID resolves",
+        "subject": "evidence: Study 201 (BAN2401-G000-201)",
+        "result": "pass",
+        "detail": "33865446: A randomized, double-blind, phase 2b proof-of-concept clinical trial in early Alzheimer's disease with lecanemab, an ant",
+        "ref": "33865446"
+      },
+      {
+        "check": "publication year matches PubMed",
+        "subject": "evidence: Study 201 (BAN2401-G000-201)",
+        "result": "pass",
+        "detail": "run: 2021; PubMed: 2021 Apr 17 (online 2021 Apr 17)",
+        "ref": "33865446"
+      },
+      {
+        "check": "journal matches PubMed",
+        "subject": "evidence: Study 201 (BAN2401-G000-201)",
+        "result": "pass",
+        "detail": "run: Alzheimer\u2019s Research & Therapy; PubMed: Alzheimers Res Ther",
+        "ref": "33865446"
+      },
+      {
+        "check": "estimate inside its 95% CI",
+        "subject": "evidence: Study 201 (BAN2401-G000-201)",
+        "result": "skip",
+        "detail": "estimate or CI not reported",
+        "ref": ""
+      },
+      {
+        "check": "FDA application is this drug",
+        "subject": "regulatory: United States",
+        "result": "pass",
+        "detail": "BLA761269: LEQEMBI",
+        "ref": ""
+      },
+      {
+        "check": "first approval date matches Drugs@FDA",
+        "subject": "regulatory: United States",
+        "result": "pass",
+        "detail": "run: 2023-01-06; Drugs@FDA: 20230106",
+        "ref": ""
+      },
+      {
+        "check": "DailyMed set ID is this drug",
+        "subject": "regulatory: United States",
+        "result": "pass",
+        "detail": "9d1ff786-e577-410a-a273-c4d7d0e4e975: LEQEMBI (LECANEMAB) INJECTION, SOLUTION LECANEMAB AUTOINJECTOR (LECANEMAB-IRMB) INJECTION, (version 24, published Jul 27, 2026)",
+        "ref": ""
+      },
+      {
+        "check": "label revision date matches the label",
+        "subject": "regulatory: United States",
+        "result": "pass",
+        "detail": "run: 2026-07; label prints: 2026-07",
+        "ref": ""
+      },
+      {
+        "check": "Indications and Usage copied from the label",
+        "subject": "regulatory: United States",
+        "result": "pass",
+        "detail": "251 characters copied verbatim",
+        "ref": ""
+      },
+      {
+        "check": "approval date is not in the future",
+        "subject": "regulatory: japan",
+        "result": "pass",
+        "detail": "2023-09-25",
+        "ref": ""
+      },
+      {
+        "check": "indication approved on or after first approval",
+        "subject": "regulatory: japan",
+        "result": "pass",
+        "detail": "Slowing progression of mild cognitive impairment and mild dementia due to Alzheimer's disease: 2023-09-25 vs first 2023-09-25",
+        "ref": ""
+      },
+      {
+        "check": "approval date is not in the future",
+        "subject": "regulatory: china",
+        "result": "pass",
+        "detail": "2024-01",
+        "ref": ""
+      },
+      {
+        "check": "indication approved on or after first approval",
+        "subject": "regulatory: china",
+        "result": "pass",
+        "detail": "Treatment of mild cognitive impairment and mild dementia due to Alzheimer's disease: 2024-01 vs first 2024-01",
+        "ref": ""
+      },
+      {
+        "check": "approval date is not in the future",
+        "subject": "regulatory: eu",
+        "result": "pass",
+        "detail": "2025-04-15",
+        "ref": ""
+      },
+      {
+        "check": "indication approved on or after first approval",
+        "subject": "regulatory: eu",
+        "result": "pass",
+        "detail": "Early Alzheimer's disease in adults with mild cognitive impairment or mild dementia who are ApoE \u03b54 noncarriers or heterozygotes and have confirmed amyloid pathology: 2025-04-15 vs first 2025-04-15",
+        "ref": ""
+      },
+      {
+        "check": "approval date is not in the future",
+        "subject": "regulatory: us",
+        "result": "pass",
+        "detail": "2023-01-06",
+        "ref": ""
+      },
+      {
+        "check": "indication approved on or after first approval",
+        "subject": "regulatory: us",
+        "result": "pass",
+        "detail": "Treatment of Alzheimer's disease; initiate in mild cognitive impairment or mild dementia stage: 2023-01-06 vs first 2023-01-06",
+        "ref": ""
+      },
+      {
+        "check": "accelerated approval converted after it was granted",
+        "subject": "regulatory: us",
+        "result": "pass",
+        "detail": "2023-01-06 -> 2023-07-06",
+        "ref": ""
+      },
+      {
+        "check": "brand region has an approval",
+        "subject": "identity: Leqembi (United States)",
+        "result": "pass",
+        "detail": "regulatory status in us: approved",
+        "ref": ""
+      },
+      {
+        "check": "brand region has an approval",
+        "subject": "identity: Leqembi Iqlik (United States)",
+        "result": "pass",
+        "detail": "regulatory status in us: approved",
+        "ref": ""
+      },
+      {
+        "check": "brand region has an approval",
+        "subject": "identity: Leqembi (European Union)",
+        "result": "pass",
+        "detail": "regulatory status in eu: approved",
+        "ref": ""
+      },
+      {
+        "check": "brand region has an approval",
+        "subject": "identity: Leqembi (China)",
+        "result": "pass",
+        "detail": "regulatory status in china: approved",
+        "ref": ""
+      },
+      {
+        "check": "brand region has an approval",
+        "subject": "identity: Leqembi (Japan)",
+        "result": "pass",
+        "detail": "regulatory status in japan: approved",
+        "ref": ""
+      },
+      {
+        "check": "brand region has an approval",
+        "subject": "identity: Leqembi Pen (Japan)",
+        "result": "pass",
+        "detail": "regulatory status in japan: approved",
+        "ref": ""
+      }
+    ],
+    "computed": {
+      "last_protection_ends": "2027-03-23",
+      "last_protection_basis": "US patent 8025878 (Protofibril-selective antibody composition (composition of matter); patent-term restoration requested.)"
+    },
+    "passed": 77,
+    "total": 77,
+    "skipped": 1
+  }
+}

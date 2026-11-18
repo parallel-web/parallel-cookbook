@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Drug asset profiles</title>
+<style>
+{{ font_css }}
+:root {
+  --ink: #1D1B16; --ink2: #5C5B59; --ink3: #66635C; --rail: #B9B5AC; --rule2: #D4D2CA;
+  --card: #F2F1EE; --paper: #FCFCFA; --white: #FFFFFF; --orange: #FB631B;
+  --sans: 'Gerstner Programm', 'Geist', 'Helvetica Neue', Arial, 'Hiragino Sans GB', 'Heiti SC', 'Noto Sans CJK SC', 'Noto Sans CJK JP', 'Hiragino Sans', sans-serif;
+  --mono: 'FT System Mono', 'Geist Mono', 'SF Mono', Menlo, 'Hiragino Sans GB', 'Heiti SC', 'Noto Sans CJK SC', 'Noto Sans CJK JP', 'Hiragino Sans', monospace;
+  --display: 'NaN Holo', 'Gerstner Programm', 'Geist', 'Helvetica Neue', Arial, sans-serif;
+}
+@page {
+  size: 816px 1056px;
+  margin: 24px 32px 40px;
+  background: #FCFCFA;
+  @bottom-left { content: element(footer); vertical-align: top; padding-top: 12px; }
+  @bottom-right {
+    content: counter(page) " / " counter(pages); vertical-align: top; padding-top: 12px;
+    font-family: 'FT System Mono', 'Geist Mono', 'SF Mono', Menlo, monospace; font-size: 7px; letter-spacing: 0.05em; color: #5C5B59;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--sans); color: var(--ink); font-size: 9px; line-height: 12px; font-feature-settings: "tnum" 1; }
+.sheet + .sheet { break-before: page; }
+.running { position: running(footer); font-family: var(--mono); font-size: 7px; line-height: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink2); }
+.running b { color: var(--ink); font-weight: 400; }
+
+/* type, from the Parallel print scale */
+.headline { font-family: var(--display); font-weight: 500; font-size: 23.375px; line-height: 26px; letter-spacing: -0.69px; }
+.t-stat { font-size: 32px; line-height: 36px; font-weight: 500; letter-spacing: -0.5px; }
+.t-title { font-size: 14px; line-height: 16px; font-weight: 500; letter-spacing: -0.14px; }
+.t-body { font-size: 12px; line-height: 16px; }
+.t-note { font-size: 10px; line-height: 12px; color: var(--ink2); }
+.t-sample { font-size: 9px; line-height: 12px; color: var(--ink3); text-align: right; }
+.t-tech { font-family: var(--mono); font-size: 8px; line-height: 12px; color: var(--ink2); }
+.kick { font-family: var(--mono); font-size: 7px; line-height: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink2); }
+.subj { font-family: var(--mono); font-size: 6.5px; line-height: 9px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink2); }
+.topic { font-size: 10.5px; line-height: 12px; font-weight: 500; }
+.ex-q { font-size: 9.5px; line-height: 11.5px; }
+.ex-d { font-size: 9px; line-height: 11px; color: var(--ink2); }
+.ex-tag { font-family: var(--mono); font-size: 7px; line-height: 10px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--orange); }
+.val { font-family: var(--mono); font-size: 8px; line-height: 12px; white-space: nowrap; }
+.ref { font-family: var(--mono); font-size: 6.5px; line-height: 0; color: var(--ink2); vertical-align: 1.5px; margin-left: 3px; letter-spacing: 0; white-space: nowrap; font-weight: 400; }
+.t-stat .ref, .headline .ref { vertical-align: 12px; }
+.ref a, .sources a, .cites a, a.plain { color: inherit; text-decoration: none; }
+
+/* section anatomy */
+.sec, .page > .grid { margin-top: 16px; break-inside: avoid; }
+.grid > .sec { margin-top: 0; }
+.sheet > .page:first-child > .sec:first-child { margin-top: 0; }
+.basis { margin-top: 0; }
+.basis .sec { break-inside: auto; }
+.basis .row, .sources div { break-inside: avoid; }
+.rule { height: 0; border-top: 0.75px solid var(--ink); }
+.sec-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding-top: 8px; min-height: 40px; padding-bottom: 8px; }
+.sec-head .t-title { flex: 1; min-width: 0; }
+.sec-head .t-sample { flex: 0 0 auto; max-width: 236px; padding-top: 1px; }
+.g-two .sec-head .t-sample { max-width: 180px; }
+.g-head, .g-stat { display: grid; grid-template-columns: 176px 560px; column-gap: 16px; }
+.g-two { display: grid; grid-template-columns: 368px 368px; column-gap: 16px; }
+.railed { border-left: 0.75px solid var(--rail); padding-left: 12px; }
+.wordmark svg { width: 132px; height: auto; display: block; margin-top: 8px; }
+.wordmark svg path { fill: var(--ink); }
+.product { margin-top: 12px; background: var(--white); border: 0.75px solid var(--rule2); border-radius: 4px; padding: 6px; height: 92px; display: flex; align-items: center; justify-content: center; }
+.product img { max-width: 160px; max-height: 80px; object-fit: contain; display: block; }
+
+/* cards */
+.card { background: var(--card); border-radius: 4px; padding: 12px 16px; }
+.card.flush { padding: 8px 0 6px; }
+.card.flush > .row { padding-left: 16px; padding-right: 16px; }
+.row { display: flex; align-items: center; gap: 12px; padding-top: 5px; padding-bottom: 5px; position: relative; }
+.card.flush > .row + .row::before { content: ""; position: absolute; top: 0; left: 16px; right: 16px; border-top: 0.75px solid var(--rule2); }
+.row.top { align-items: flex-start; }
+
+/* status grid */
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); column-gap: 12px; }
+.kpi .v { margin-top: 4px; }
+.kpi .s { margin-top: 3px; }
+.badge { display: inline-block; font-family: var(--mono); font-size: 7px; line-height: 10.5px; height: 12px; padding: 0 6px; border-radius: 6px; letter-spacing: 0.05em; text-transform: uppercase; background: var(--white); color: var(--ink2); border: 0.75px solid var(--rail); white-space: nowrap; }
+.badge.solid, .badge.conf-high, .badge.st-approved { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.badge.conf-low, .badge.st-complete-response-letter, .badge.st-withdrawn, .badge.warn { color: var(--orange); border-color: var(--orange); }
+.strip { margin-top: 10px; padding-top: 8px; border-top: 0.75px solid var(--rule2); }
+
+/* label */
+.label { break-inside: auto; }
+.label .sec-head, .label-meta { break-after: avoid; }
+.label-meta { display: flex; gap: 16px; margin-bottom: 6px; }
+.label-text { font-size: 10.5px; line-height: 14px; }
+.label-text p + p { margin-top: 3px; }
+
+/* tables */
+table.tbl { width: 100%; border-collapse: collapse; }
+table.tbl th { text-align: left; font-weight: 400; padding: 0 6px 6px 0; vertical-align: bottom; }
+table.tbl td { text-align: left; padding: 4px 6px 4px 0; border-top: 0.75px solid var(--rule2); vertical-align: top; }
+table.tbl td.num, table.tbl th.num { text-align: right; }
+table.tbl td:last-child, table.tbl th:last-child { padding-right: 0; }
+.mark { font-family: var(--mono); font-size: 8px; }
+.val.wrap { white-space: normal; }
+table.tbl.fixed { table-layout: fixed; }
+.mark.bad { color: var(--orange); }
+
+/* lists */
+.idx { font-family: var(--mono); font-size: 7px; line-height: 11.5px; color: var(--ink2); width: 14px; flex: 0 0 14px; }
+.date { font-family: var(--mono); font-size: 7px; line-height: 12px; letter-spacing: 0.05em; color: var(--ink2); white-space: nowrap; flex: 0 0 52px; }
+.forest svg { display: block; }
+
+/* basis page */
+.b-left { flex: 0 0 156px; }
+.b-right { flex: 1; }
+.basis .card.flush > .row { padding-top: 3px; padding-bottom: 3px; }
+.cites { font-family: var(--mono); font-size: 6.5px; line-height: 9px; color: var(--ink2); white-space: nowrap; margin-left: 4px; }
+.cites b { color: var(--ink); font-weight: 400; margin-left: 6px; }
+.units { display: flex; flex-wrap: wrap; gap: 2px; margin-top: 6px; width: 120px; }
+.units i, .legend i { display: block; flex: 0 0 6.5px; width: 6.5px; height: 6.5px; border-radius: 1px; background: var(--rail); }
+.units i.u-high, .legend i.u-high { background: var(--ink); }
+.units i.u-low, .legend i.u-low { background: var(--orange); }
+.legend { display: flex; gap: 12px; margin-top: 6px; font-size: 9px; line-height: 12px; }
+.legend span { display: inline-flex; align-items: center; gap: 4px; }
+.check { display: flex; gap: 6px; padding: 4px 0; border-top: 0.75px solid var(--rule2); }
+.check .mark { width: 10px; flex: 0 0 10px; }
+.sources { margin-top: 4px; }
+.sources div { font-family: var(--mono); font-size: 6.5px; line-height: 9px; color: var(--ink2); white-space: nowrap; overflow: hidden; padding: 2px 0 1px; border-top: 0.75px solid var(--rule2); }
+.sources b { color: var(--ink); font-weight: 400; }
+
+/* closing */
+.closing { margin-top: 24px; padding-top: 8px; border-top: 0.75px solid var(--ink); }
+.powered { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.cap { display: inline-flex; align-items: center; justify-content: center; width: 80px; height: 16px; border-radius: 8px; background: var(--orange); }
+.cap svg { display: block; width: 60px; height: auto; }
+.cap svg path { fill: var(--paper); }
+</style>
+</head>
+<body>
+{% macro refs(src, field) -%}
+  {%- set r = src.refs(field) -%}{%- if r %}<span class="ref">[{% for n in r %}<a href="{{ src.urls[n - 1] }}">{{ n }}</a>{{ "," if not loop.last }}{% endfor %}]</span>{% endif -%}
+{%- endmacro %}
+{% macro status_badge(st) -%}<span class="badge st-{{ st|replace(' ', '-') }}">{{ st }}</span>{%- endmacro %}
+{% macro trial_mark(p, nct) -%}
+  {%- set r = p.check_by_ref.get(nct) -%}
+  {%- if r == "pass" %}<span class="mark">✓</span>{% elif r == "fail" %}<span class="mark bad">!</span>{% else %}<span class="mark" style="color:var(--rail)">–</span>{% endif -%}
+{%- endmacro %}
+
+{% for p in profiles %}
+{% set c = p.c %}{% set src = p.src %}{% set idn = c.identity %}{% set news = c.news %}{% set mkt = c.market %}{% set out = c.outlook %}
+<section class="sheet">
+<div class="running"><b>{{ p.title }}</b> · Drug asset profile · Researched with the Parallel Task API · {{ p.generated }}</div>
+
+<div class="page">
+  <!-- Header -->
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="g-head">
+      <div>
+        <div class="wordmark">{{ wordmark }}</div>
+        <div class="t-body" style="margin-top:16px">Drug asset profile</div>
+        <div class="t-note">{{ p.generated|long_date }}</div>
+        <div class="kick" style="margin-top:16px">Checks</div>
+        <div class="t-title" style="margin-top:2px">{{ p.checks.passed }} of {{ p.checks.total }} passed</div>
+        <div class="t-note">against ClinicalTrials.gov, PubMed, Drugs@FDA and DailyMed</div>
+        {% if p.image %}
+        <div class="product"><img src="{{ p.image.uri }}" alt="{{ p.image.title|striptags|truncate(80) }}"></div>
+        <div class="subj" style="margin-top:4px"><a class="plain" href="{{ p.image.source_page_url }}">Image: {{ p.image.domain }}</a></div>
+        {% endif %}
+      </div>
+      <div style="padding-top:8px">
+        <div><span class="ex-tag">{{ p.asset.sponsor }}{% if idn.modality %} · {{ idn.modality }}{% endif %}</span>
+          <span class="subj" style="margin-left:6px">{{ [idn.targets|join(", "), idn.route, idn.development_codes|join(", ")]|select|join(" · ")|truncate(88, true, "…") }}</span></div>
+        <div class="headline" style="margin-top:4px">{{ p.title }}{{ refs(src, "generic_name") }}</div>
+        <div class="subj" style="margin-top:4px">{{ ["Focus: " ~ (p.asset.focus_indication or "lead indication"), ("Highest stage: " ~ idn.highest_stage) if idn.highest_stage, ("Originator: " ~ idn.originator) if idn.originator, idn.chembl_id if idn.chembl_id and idn.chembl_id != "Not found"]|select|join(" · ") }}</div>
+        {% if out.summary %}<div class="t-body" style="margin-top:8px">{{ out.summary|clip(560) }}{{ refs(src, "summary") }}</div>{% endif %}
+        {% if idn.mechanism_of_action %}<div class="railed t-note" style="margin-top:12px">{{ idn.mechanism_of_action|clip(300) }}{{ refs(src, "mechanism_of_action") }}</div>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <!-- Regulatory status -->
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">{{ p.claims.regulatory }}</div>
+      <div class="t-sample">Regulator sites only: FDA, DailyMed, EMA, NMPA, PMDA. {{ src.line("us", "eu", "china", "japan") }}</div>
+    </div>
+    <div class="card">
+      <div class="kpis">
+        {% for r in p.regions %}
+        <div class="kpi">
+          <div class="kick">{{ r.name }}{{ refs(src, r.key) }}</div>
+          <div class="v">{{ status_badge(r.status) }}</div>
+          <div class="ex-q s">{% if r.first %}First approved {{ r.first|month }}{% else %}&nbsp;{% endif %}</div>
+          <div class="subj">{{ r.id|truncate(34, true, "…") if r.id else "" }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% if p.indications %}
+      <div class="strip">
+        <table class="tbl">
+          <thead><tr><th class="kick" style="width:52px">Region</th><th class="kick">Approved indication</th><th class="kick num" style="width:64px">Approved</th></tr></thead>
+          <tbody>
+          {% for i in p.indications[:9] %}
+          <tr><td class="val">{{ i.region }}</td>
+              <td class="ex-q">{{ i.indication|clip(150) }}{% if i.unconfirmed %} <span class="badge warn">news only</span>{% endif %}</td>
+              <td class="val num">{{ i.approval_date|month }}</td></tr>
+          {% endfor %}
+          </tbody>
+        </table>
+        {% if p.unconfirmed %}<div class="ex-d" style="margin-top:6px"><span class="badge warn">news only</span> Reported in the news run but not found on the regulator's site by the regulatory run. Check before relying on it.</div>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- US label -->
+  <div class="sec label">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">US label: Indications and Usage, word for word</div>
+      <div class="t-sample">{% if p.label.indications_and_usage %}Copied from DailyMed with the Extract API. No model wrote this text.{% else %}{{ p.label.status or "No US label" }}{% endif %}</div>
+    </div>
+    {% if p.label.indications_and_usage %}
+    <div class="label-meta t-note">
+      <div><div class="kick">Label revised</div><div class="ex-q" style="color:var(--ink)">{{ p.label.printed_revision|month }}</div></div>
+      <div><div class="kick">DailyMed version</div><div class="ex-q" style="color:var(--ink)">{{ p.label.dailymed_version }}, published {{ p.label.dailymed_published }}</div></div>
+    </div>
+    <div class="railed label-text">
+      {% for line in p.label.indications_and_usage.splitlines() %}<p>{{ line }}</p>{% endfor %}
+      <div class="subj" style="margin-top:6px"><a class="plain" href="{{ p.label.url }}">dailymed.nlm.nih.gov · set ID {{ p.label.setid }}</a></div>
+    </div>
+    {% else %}
+    <div class="card"><div class="t-note">{% if p.regions[0].status == "approved" %}The US label could not be copied: {{ p.label.status or "no DailyMed set ID was found" }}.{% elif p.regions[0].status == "unknown" %}US approval status is unknown. No US prescribing information was verified.{% else %}No US prescribing information: the asset is not approved in the United States.{% endif %}</div></div>
+    {% endif %}
+  </div>
+
+  <!-- Regulatory actions -->
+  <div class="grid g-two">
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Regulatory actions</div><div class="t-sample">Last 12 months, open web. {{ src.line("regulatory_actions") }}</div></div>
+      <div class="card flush">
+        {% for a in news.regulatory_actions[:5] %}
+        <div class="row top"><span class="date">{{ a.date }}</span>
+          <div><div><span class="badge{{ ' warn' if a.action in ('complete response letter', 'refusal or withdrawal') else (' solid' if 'approved' in a.action or a.action == 'approval' else '') }}">{{ a.action }}</span> <span class="subj">{{ a.region }}</span>{{ refs(src, "regulatory_actions." ~ loop.index0) }}</div>
+            <div class="ex-d" style="margin-top:2px">{{ a.detail|clip(150) }}</div></div></div>
+        {% else %}<div class="row"><span class="t-note">No regulatory actions found in the last 12 months.</span></div>{% endfor %}
+      </div>
+    </div>
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Upcoming catalysts</div><div class="t-sample">Next 12 months. {{ src.line("upcoming_catalysts", "pending_decisions") }}</div></div>
+      <div class="card flush">
+        {% for e in p.catalysts[:5] %}
+        <div class="row top"><span class="date">{{ e.date }}</span><div>{% if e.decision %}<span class="badge">decision</span> <span class="subj">{{ e.region }}</span><div class="ex-q" style="margin-top:2px">{% else %}<div class="ex-q">{% endif %}{{ e.text|clip(150) }}{{ refs(src, e.field) }}</div></div></div>
+        {% else %}<div class="row"><span class="t-note">None found.</span></div>{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <!-- Pivotal trials -->
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">{{ p.claims.trials }}{{ refs(src, "pivotal_trials") }}</div>
+      <div class="t-sample">✓ phase, status, sponsor, enrollment and dates match ClinicalTrials.gov. {{ src.line("pivotal_trials") }}</div>
+    </div>
+    <div class="card">
+      <table class="tbl">
+        <thead><tr><th style="width:12px"></th><th class="kick" style="width:118px">Trial</th><th class="kick" style="width:44px">Phase</th><th class="kick">Comparator · primary endpoint</th><th class="kick num" style="width:40px">N</th><th class="kick" style="width:86px">Status</th><th class="kick num" style="width:58px">Primary end</th></tr></thead>
+        <tbody>
+        {% for t in c.trials.pivotal_trials[:5] %}
+        <tr><td>{{ trial_mark(p, t.nct_id) }}</td>
+            <td><div class="topic">{{ t.acronym or t.nct_id or t.other_registry_id }}</div><div class="subj">{% if t.nct_id %}<a class="plain" href="https://clinicaltrials.gov/study/{{ t.nct_id }}">{{ t.nct_id }}</a>{% else %}{{ t.other_registry_id }}{% endif %}</div></td>
+            <td class="val">{{ t.phase|replace("phase ", "Ph ") }}</td>
+            <td class="ex-q">{{ t.comparator|clip(70) }}<div class="ex-d">{{ t.primary_endpoint|clip(110) }}</div></td>
+            <td class="val num">{{ t.enrollment|num }}</td>
+            <td class="ex-d">{{ t.status }}</td>
+            <td class="val num">{{ t.primary_completion_date|month }}</td></tr>
+        {% else %}<tr><td colspan="7" class="t-note">No pivotal trials found.</td></tr>{% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Evidence -->
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">{{ p.claims.evidence }}</div>
+      <div class="t-sample">Effect and 95% CI as printed; dashed line marks no effect. {{ src.line("pivotal_results") }}</div>
+    </div>
+    <div class="card flush">
+      {% for r in p.results[:3] %}
+      <div class="row top">
+        <div style="flex:0 0 120px"><div class="topic">{{ r.trial }}{{ refs(src, "pivotal_results." ~ loop.index0) }}</div>
+          <div class="subj">{{ [r.journal, r.publication_year|int|string if r.publication_year else ""]|select|join(" ") }}{% if r.pmid %} · <a class="plain" href="https://pubmed.ncbi.nlm.nih.gov/{{ r.pmid }}/">PMID {{ r.pmid }}</a> {{ trial_mark(p, r.pmid) }}{% endif %}</div></div>
+        <div style="flex:1"><div class="ex-q">{{ r.result_summary|clip(230) }}</div><div class="ex-d" style="margin-top:2px">{{ r.primary_endpoint|clip(140) }}</div></div>
+        <div style="flex:0 0 150px" class="forest">{{ r.plot }}
+          <div class="val" style="margin-top:2px">{% if r.estimate is not none %}{{ r.short }} {{ r.estimate|stat }}{% if r.ci_lower is not none %} ({{ r.ci_lower|stat }} to {{ r.ci_upper|stat }}){% endif %}{% else %}not reported{% endif %}</div>
+          <div class="subj">{{ r.p_value or "" }}</div></div>
+      </div>
+      {% else %}<div class="row"><span class="t-note">No peer-reviewed pivotal results found.</span></div>{% endfor %}
+    </div>
+  </div>
+
+  <div class="grid g-two">
+    <!-- Safety -->
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Key safety findings</div><div class="t-sample">{{ src.line("key_safety") }}</div></div>
+      <div class="card">
+        <table class="tbl fixed">
+          <thead><tr><th class="kick">Finding</th><th class="kick num" style="width:76px">Drug</th><th class="kick num" style="width:76px">Comparator</th></tr></thead>
+          <tbody>
+          {% for s in c.evidence.key_safety[:4] %}<tr><td class="ex-q">{{ s.finding|clip(90) }}{{ refs(src, "key_safety." ~ loop.index0) }}</td><td class="val num wrap">{{ s.drug_incidence or "—" }}</td><td class="val num wrap">{{ s.comparator_incidence or "—" }}</td></tr>
+          {% else %}<tr><td colspan="3" class="t-note">None reported.</td></tr>{% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Ongoing trials -->
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Ongoing trials</div><div class="t-sample">{{ src.line("ongoing_trials") }}</div></div>
+      <div class="card flush">
+        {% for t in c.trials.ongoing_trials[:6] %}
+        <div class="row top"><span class="idx">{{ trial_mark(p, t.nct_id) }}</span>
+          <div style="flex:1"><div class="ex-q">{{ t.indication|clip(70) }}</div><div class="subj">{{ [t.acronym, t.nct_id or t.other_registry_id, t.phase]|select|join(" · ") }}</div></div>
+          <span class="val">{{ t.primary_completion_date|month }}</span></div>
+        {% else %}<div class="row"><span class="t-note">None found.</span></div>{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <!-- Market and exclusivity -->
+  {% set ex = mkt.us_exclusivity or {} %}{% set med = mkt.medicare or {} %}{% set price = mkt.us_list_price or {} %}{% set sales = mkt.latest_annual_sales or {} %}
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">{{ p.claims.market }}{{ refs(src, "us_exclusivity") }}</div>
+      <div class="t-sample">The protection date is the latest reported patent or exclusivity expiry. {{ src.line("us_exclusivity") }}</div>
+    </div>
+    <div class="g-stat">
+      <div>
+        <div class="t-stat">{{ p.computed.last_protection_ends[:4] if p.computed.last_protection_ends else "n/a" }}</div>
+        <div class="t-body">last listed US protection</div>
+        {% if p.computed.last_protection_basis %}<div class="t-note" style="margin-top:4px">{{ p.computed.last_protection_basis|clip(90) }}</div>{% endif %}
+      </div>
+      <div class="card">
+        <div class="kpis">
+          <div class="kpi"><div class="kick">US list price{{ refs(src, "us_list_price") }}</div><div class="t-title v">{{ ("$" ~ price.annual_wac_usd|num) if price.annual_wac_usd else "n/a" }}</div><div class="subj s">{{ "per year" if price.annual_wac_usd else "" }}{% if price.as_of %} · {{ price.as_of|month }}{% endif %}</div></div>
+          <div class="kpi"><div class="kick">Annual sales{{ refs(src, "latest_annual_sales") }}</div><div class="t-title v">{{ sales.amount_m|money(sales.currency) }}</div><div class="subj s">{{ sales.period or "" }}</div></div>
+          <div class="kpi"><div class="kick">Medicare{{ refs(src, "medicare") }}</div><div class="t-title v">{{ med.benefit or "n/a" }}</div><div class="subj s">{{ (med.national_coverage_determination or "")|truncate(40, true, "…") if med.national_coverage_determination not in (None, "", "None") else "no national coverage determination" }}</div></div>
+          <div class="kpi"><div class="kick">{{ "Reference product exclusivity" if p.computed.reference_product_exclusivity_ends else "Listed exclusivity" }}</div><div class="t-title v">{{ (p.computed.reference_product_exclusivity_ends or (ex.listed_exclusivities[0].expiry_date if ex.listed_exclusivities else ""))|month or "n/a" }}</div><div class="subj s">{{ "FDA Purple Book" if p.computed.reference_product_exclusivity_ends else (ex.listed_exclusivities[0].kind if ex.listed_exclusivities else "") }}</div></div>
+        </div>
+        {% if med.coverage_conditions and med.coverage_conditions != "None" %}<div class="strip ex-d" style="color:var(--ink)"><span class="kick">Coverage conditions</span> {{ med.coverage_conditions|clip(260) }}</div>{% endif %}
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g-two">
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">US patents and exclusivities</div><div class="t-sample">Orange Book or Purple Book</div></div>
+      <div class="card">
+        <table class="tbl">
+          <thead><tr><th class="kick">Patent or exclusivity</th><th class="kick">Covers</th><th class="kick num" style="width:52px">Expires</th></tr></thead>
+          <tbody>
+          {% for e in ex.listed_exclusivities or [] %}<tr><td class="ex-q">{{ e.kind }}</td><td class="ex-d">exclusivity</td><td class="val num">{{ e.expiry_date|month }}</td></tr>{% endfor %}
+          {% for x in (ex.patents or [])[:6] %}<tr><td class="val">US {{ x.patent_number }}</td><td class="ex-d">{{ x.covers|clip(60) }}</td><td class="val num">{{ x.expiry_date|month }}</td></tr>{% endfor %}
+          {% if not ex.listed_exclusivities and not ex.patents %}<tr><td colspan="3" class="t-note">None listed.</td></tr>{% endif %}
+          </tbody>
+        </table>
+        {% if ex.expected_competition and not ex.expected_competition.startswith("Not known") %}<div class="ex-d" style="margin-top:6px">{{ ex.expected_competition|clip(200) }}</div>{% endif %}
+      </div>
+    </div>
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">Competitors</div><div class="t-sample">In the focus indication. {{ src.line("competitors") }}</div></div>
+      <div class="card flush">
+        {% for x in mkt.competitors[:5] %}<div class="row"><span class="ex-q" style="flex:1">{{ x.drug }}{{ refs(src, "competitors." ~ loop.index0) }}</span><span class="subj">{{ x.sponsor|truncate(30, true, "…") }}</span><span class="badge{{ ' solid' if x.stage == 'approved' }}">{{ x.stage }}</span></div>
+        {% else %}<div class="row"><span class="t-note">None found.</span></div>{% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="grid g-two">
+    {% for key, title in [("differentiation", "Differentiation"), ("risks", "Risks")] %}
+    <div class="sec">
+      <div class="rule"></div>
+      <div class="sec-head"><div class="t-title">{{ title }}</div><div class="t-sample">{{ src.line(key) }}</div></div>
+      <div class="card flush">
+        {% for x in out[key][:4] %}<div class="row top"><span class="idx">{{ "%02d"|format(loop.index) }}</span><span class="ex-q">{{ x|clip(230) }}{{ refs(src, key ~ "." ~ loop.index0) }}</span></div>
+        {% else %}<div class="row"><span class="t-note">Not available.</span></div>{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head"><div class="t-title">Other developments</div><div class="t-sample">Last 12 months. {{ src.line("recent_developments") }}</div></div>
+    <div class="card flush">
+      {% for e in news.recent_developments[:4] %}
+      <div class="row top"><span class="date">{{ e.date }}</span><div><div class="topic">{{ e.headline }}{{ refs(src, "recent_developments." ~ loop.index0) }}</div><div class="ex-d" style="margin-top:2px">{{ e.detail|clip(220) }}</div></div></div>
+      {% else %}<div class="row"><span class="t-note">None found.</span></div>{% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="page basis">
+  <!-- Research basis -->
+  {% set rows = src.rows() %}
+  <div class="sec">
+    <div class="rule"></div>
+    <div class="sec-head">
+      <div class="t-title">Research basis: {{ rows|length }} fields, {{ p.conf_counts.high }} high and {{ p.conf_counts.medium }} medium confidence{% if p.conf_counts.low %}, {{ p.conf_counts.low }} low{% endif %}</div>
+      <div class="t-sample">The Task API returns citations, reasoning and a confidence rating with every field.</div>
+    </div>
+    <div class="g-stat">
+      <div>
+        <div class="t-stat">{{ src.urls|length }}</div>
+        <div class="t-body">sources cited</div>
+        <div class="railed t-note" style="margin-top:8px">{% for dom, n in src.domain_counts()[:5] %}{{ dom }} {{ n }}{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
+        {% if p.connector_calls %}
+        <div class="kick" style="margin-top:16px">Data connector calls</div>
+        <div class="t-note" style="margin-top:2px">{% for name, n in p.connector_calls %}{{ name }} {{ n }}{% if not loop.last %}<br>{% endif %}{% endfor %}</div>
+        {% endif %}
+        <div class="kick" style="margin-top:16px">Confidence by field</div>
+        <div class="units">{% for r in rows %}<i class="u-{{ r.confidence }}"></i>{% endfor %}</div>
+        <div class="legend"><span><i class="u-high"></i>High</span><span><i class="u-medium"></i>Medium</span><span><i class="u-low"></i>Low</span></div>
+        <div class="kick" style="margin-top:16px">Checks, no model involved</div>
+        {% for g in p.check_groups %}
+        <div class="check"><span class="mark{{ ' bad' if g.failures }}">{{ "!" if g.failures else "✓" }}</span><div><div class="ex-d" style="color:var(--ink)">{{ g.name }}</div><div class="subj">{{ g.passed }} of {{ g.total }} passed</div>
+          {% for f in g.failures[:3] %}<div class="ex-d" style="margin-top:2px">{{ f.check|sentence }}: {{ f.detail|clip(110) }}</div>{% endfor %}</div></div>
+        {% endfor %}
+        {% if p.failed %}<div class="railed t-note" style="margin-top:16px">Runs that did not complete: {{ p.failed|join(", ") }}.</div>{% endif %}
+        <div class="kick" style="margin-top:16px">Sources</div>
+        <div class="sources">{% for x in src.listing() %}<div><a href="{{ x.url }}"><b>[{{ x.n }}]</b> {{ x.title|truncate(32, true, "…") }}</a></div>{% endfor %}</div>
+        <div class="closing">
+          <div class="t-note">For research workflows only. Not medical, regulatory or investment advice.</div>
+          <div class="powered" style="margin-top:12px"><span class="t-tech">Powered by</span><span class="cap">{{ lockup }}</span></div>
+        </div>
+      </div>
+      <div class="card flush">
+        <div class="row"><span class="kick b-left">Field and run</span><span class="kick">Why Parallel believes it, and where it came from</span></div>
+        {% for r in rows %}
+        <div class="row top">
+          <div class="b-left"><div class="topic">{{ r.label }}</div><div style="margin-top:2px"><span class="subj">{{ r.run }}</span> <span class="badge conf-{{ r.confidence }}">{{ r.confidence }}</span></div></div>
+          <div class="b-right ex-d" style="color:var(--ink)">{{ r.reasoning }}<span class="cites">{% for n in r.refs %}<a href="{{ src.urls[n - 1] }}"><b>[{{ n }}]</b> {{ src.urls[n - 1]|domain }}</a>{% endfor %}</span></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+{% endfor %}
+</body>
+</html>
