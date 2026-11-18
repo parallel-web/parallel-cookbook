@@ -19,7 +19,8 @@ Group holds every run for the CSV. Per asset:
   render                                           one PDF per asset in <out>/pdf, and <out>/profiles.pdf
 
 Each batch is recorded in <out>/state.json before submission, with submission
-retries disabled, so an interrupted run resumes without duplicating work.
+retries disabled, so an interrupted run resumes without duplicating work. Completed
+results are saved as they arrive.
 """
 
 from __future__ import annotations
@@ -86,7 +87,7 @@ class Job:
         self.out = out
         (out / "data").mkdir(parents=True, exist_ok=True)
         self.state_path = out / "state.json"
-        self.state = json.loads(self.state_path.read_text()) if self.state_path.exists() else {"task_group_id": None, "runs": {}}
+        self.state = json.loads(self.state_path.read_text()) if self.state_path.exists() else {"task_group_id": None, "runs": {}, "inputs": {}}
 
     def save(self) -> None:
         tmp = self.state_path.with_suffix(".tmp")
@@ -98,6 +99,19 @@ class Job:
 
     def path(self, asset: dict) -> Path:
         return self.out / "data" / f"{slug(asset['asset'])}.json"
+
+    def profile(self, asset: dict) -> dict:
+        path = self.path(asset)
+        data = json.loads(path.read_text()) if path.exists() else {"asset": asset, "runs": {}}
+        if data["asset"] != asset:
+            sys.exit(f"Research input changed for {asset['asset']}. Use a different --out folder.")
+        return data
+
+    def save_profile(self, data: dict) -> None:
+        path = self.path(data["asset"])
+        tmp = path.with_suffix(".tmp")
+        tmp.write_text(json.dumps(data, indent=2, default=str))
+        tmp.replace(path)
 
 
 # ----------------------------------------------------------------------------- runs
@@ -128,6 +142,31 @@ def outlook_run(asset: dict, facts: dict) -> dict:
         "task_spec": spec.OUTLOOK,
         "metadata": {"asset": slug(asset["asset"]), "section": "outlook"},
     }
+
+
+def remember_inputs(client, job: Job, assets: list[dict]) -> None:
+    """Bind a checkpoint to its CSV rows before submitting or reusing runs."""
+    inputs = job.state.setdefault("inputs", {})
+    pending = {key for key, _ in job.state.get("pending", [])}
+    previous = {key for key, runs in job.state["runs"].items() if runs} | pending
+    legacy = {slug(a["asset"]) for a in assets} & (previous - inputs.keys())
+    if legacy:
+        # Old checkpoints only stored IDs. Read the original section input from the API.
+        for event in client.task_group.get_runs(job.state["task_group_id"], include_input=True):
+            if event.type != "task_run.state" or not event.input:
+                continue
+            meta = event.run.metadata or {}
+            key = meta.get("asset")
+            if key in legacy and meta.get("section") in spec.SECTIONS:
+                inputs[key] = event.input.input
+        if legacy - inputs.keys():
+            sys.exit("Could not verify the original input for saved runs. Use a different --out folder.")
+    for asset in assets:
+        key = slug(asset["asset"])
+        if key in inputs and inputs[key] != asset:
+            sys.exit(f"Research input changed for {asset['asset']}. Use a different --out folder.")
+        inputs[key] = asset
+    job.save()
 
 
 def recover_pending(client, job: Job) -> None:
@@ -166,19 +205,16 @@ def submit(client, job: Job, runs: list[tuple[str, str, dict]]) -> None:
         job.save()
 
 
-def statuses(client, group_id: str) -> dict[str, str]:
-    return {e.run.run_id: e.run.status for e in client.task_group.get_runs(group_id) if e.type == "task_run.state"}
-
-
-def start_outlooks(client, job: Job, assets: list[dict], status: dict[str, str]) -> None:
+def start_outlooks(client, job: Job, profiles: dict[str, dict], status: dict[str, str]) -> None:
     ready = []
-    for a in assets:
-        runs = job.runs(slug(a["asset"]))
+    for key, profile in profiles.items():
+        runs = job.runs(key)
+        results = profile["runs"]
         if "outlook" in runs or any(status.get(runs.get(s)) not in TERMINAL for s in spec.SECTIONS):
             continue
-        facts = {s: client.task_run.result(runs[s]).output.content for s in spec.SECTIONS if status[runs[s]] == "completed"}
+        facts = {s: results[s]["content"] for s in spec.SECTIONS if results[s]["status"] == "completed"}
         if facts:
-            ready.append((slug(a["asset"]), "outlook", outlook_run(a, facts)))
+            ready.append((key, "outlook", outlook_run(profile["asset"], facts)))
         else:
             runs["outlook"] = None
             job.save()
@@ -201,16 +237,34 @@ def progress(job: Job, assets: list[dict], status: dict[str, str], started: floa
     return done["outlook"] == len(assets)
 
 
-def collect(client, job: Job, assets: list[dict]) -> None:
-    owner = {run_id: (k, s) for k, runs in job.state["runs"].items() for s, run_id in runs.items() if run_id}
-    results = defaultdict(dict)
+def collect(client, job: Job, profiles: dict[str, dict]) -> dict[str, str]:
+    """Save terminal results as they arrive so the outlook and PDF reuse them locally."""
+    owner = {run_id: (key, section) for key in profiles for section, run_id in job.runs(key).items() if run_id}
+    status = {}
+    for run_id, (key, section) in owner.items():
+        saved = profiles[key]["runs"].get(section)
+        if (
+            saved and saved.get("run_id") == run_id and saved["status"] in TERMINAL
+            and (saved["status"] != "completed" or saved["content"] is not None)
+        ):
+            status[run_id] = saved["status"]
+    pending = owner.keys() - status.keys()
+    if not pending:
+        return status
     for e in client.task_group.get_runs(job.state["task_group_id"], include_output=True):
-        if e.type != "task_run.state" or e.run.run_id not in owner:
+        if e.type != "task_run.state" or e.run.run_id not in pending:
             continue
-        key, section = owner[e.run.run_id]
+        run_id = e.run.run_id
+        status[run_id] = e.run.status
+        if e.run.status not in TERMINAL:
+            continue
+        if e.run.status == "completed" and e.output is None:
+            sys.exit(f"Parallel returned no output for completed run {run_id}. Its result may have expired.")
+        key, section = owner[run_id]
+        profile = profiles[key]
         out = e.output
-        results[key][section] = {
-            "run_id": e.run.run_id,
+        profile["runs"][section] = {
+            "run_id": run_id,
             "status": e.run.status,
             "processor": e.run.processor,
             "content": out.content if out else None,
@@ -221,11 +275,15 @@ def collect(client, job: Job, assets: list[dict]) -> None:
             ],
             "error": e.run.error.model_dump() if e.run.error else None,
         }
-    for a in assets:
-        job.path(a).write_text(json.dumps({"asset": a, "runs": results[slug(a["asset"])]}, indent=2, default=str))
+        job.save_profile(profile)
+    if missing := pending - status.keys():
+        sys.exit(f"Task Group no longer returned {len(missing)} saved run ID(s). Their results may have expired.")
+    return status
 
 
 def research(client, job: Job, assets: list[dict], connectors: bool = True) -> None:
+    profiles = {slug(a["asset"]): job.profile(a) for a in assets}
+    remember_inputs(client, job, assets)
     if not job.state["task_group_id"]:
         job.state["task_group_id"] = client.task_group.create(metadata={"recipe": "parallel-drug-profiles"}).task_group_id
         job.save()
@@ -236,12 +294,11 @@ def research(client, job: Job, assets: list[dict], connectors: bool = True) -> N
         submit(client, job, new)
     started = time.time()
     while True:
-        status = statuses(client, job.state["task_group_id"])
-        start_outlooks(client, job, assets, status)
-        if progress(job, assets, statuses(client, job.state["task_group_id"]), started):
+        status = collect(client, job, profiles)
+        start_outlooks(client, job, profiles, status)
+        if progress(job, assets, status, started):
             break
         time.sleep(POLL_SECONDS)
-    collect(client, job, assets)
 
 
 # ----------------------------------------------------------------------------- label (Extract, copied word for word)
@@ -250,7 +307,7 @@ def research(client, job: Job, assets: list[dict], connectors: bool = True) -> N
 def copy_labels(client, job: Job, assets: list[dict]) -> None:
     """Extract the DailyMed label for each US-approved asset and copy section 1 verbatim. No model writes this text."""
     for a in assets:
-        data = json.loads(job.path(a).read_text())
+        data = job.profile(a)
         reg = (data["runs"].get("regulatory") or {}).get("content") or {}
         setid = (reg.get("us") or {}).get("dailymed_setid", "").strip().lower()
         if not re.fullmatch(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", setid):
@@ -260,7 +317,7 @@ def copy_labels(client, job: Job, assets: list[dict]) -> None:
             res = client.extract(urls=[url], advanced_settings={"full_content": True, "fetch_policy": LABEL_FETCH}).results
             page = res[0].full_content if res else ""
             data["label"] = {"setid": setid, "url": url, **checks.label_section(page or "")}
-        job.path(a).write_text(json.dumps(data, indent=2, default=str))
+        job.save_profile(data)
 
 
 # ----------------------------------------------------------------------------- product image (Images API)
@@ -269,7 +326,7 @@ def copy_labels(client, job: Job, assets: list[dict]) -> None:
 def find_images(client, job: Job, assets: list[dict]) -> None:
     """One product photo per asset, vetted in images.py. Saved results are reused, so a resumed job does not search twice."""
     for a in assets:
-        data = json.loads(job.path(a).read_text())
+        data = job.profile(a)
         if (data.get("image") or {}).get("status") == "found" and (job.out / data["image"]["file"]).exists():
             continue
         identity = (data["runs"].get("identity") or {}).get("content") or {}
@@ -280,7 +337,7 @@ def find_images(client, job: Job, assets: list[dict]) -> None:
         img = data["image"]
         print(f"  {a['asset']}: image {img['status']}" + (f" from {images.host(img['source_page_url'])}" if img["status"] == "found" else "")
               + (f", {len(img.get('rejected', []))} candidates rejected" if img.get("rejected") else ""))
-        job.path(a).write_text(json.dumps(data, indent=2, default=str))
+        job.save_profile(data)
 
 
 # ----------------------------------------------------------------------------- main
@@ -319,9 +376,9 @@ def main() -> None:
     for a in assets:
         if not job.path(a).exists():
             continue
-        data = json.loads(job.path(a).read_text())
+        data = job.profile(a)
         data["checks"] = checks.run_all(data)
-        job.path(a).write_text(json.dumps(data, indent=2, default=str))
+        job.save_profile(data)
         failed = [c for c in data["checks"]["results"] if c["result"] == "fail"]
         print(f"{a['asset']}: {data['checks']['passed']}/{data['checks']['total']} checks passed" + (f", {len(failed)} to review" if failed else ""))
         for c in failed:

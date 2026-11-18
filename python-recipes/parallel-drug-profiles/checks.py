@@ -9,9 +9,7 @@
   consistency                 sections agree: brands need approvals, and approvals or rejections in the news
                               appear in the regulatory section
 
-It also computes facts the runs are never asked for: US reference product
-exclusivity (12 years from first licensure, for biologics) and the last date any
-listed exclusivity or patent protects the product.
+It also finds the latest expiry date among the listed US exclusivities and patents.
 """
 
 from __future__ import annotations
@@ -289,26 +287,19 @@ def same_month_or_adjacent(a: str | None, b: str | None) -> bool:
     return abs(months(pa[0]) - months(pb[0])) <= 1
 
 
-def exclusivity(reg_us: dict, market: dict) -> dict:
-    """Facts computed here, never asked of a model."""
+def exclusivity(market: dict) -> dict:
+    """Summarize reported protection dates without inferring eligibility from a BLA."""
     facts = {}
-    app = (reg_us.get("application_number") or "").upper()
-    first = parse_date(reg_us.get("first_approval_date"))
-    if app.startswith("BLA") and first and first[1] == 3:
-        d = first[0]
-        try:
-            facts["reference_product_exclusivity_ends"] = d.replace(year=d.year + 12).isoformat()
-        except ValueError:  # 29 February
-            facts["reference_product_exclusivity_ends"] = d.replace(year=d.year + 12, day=28).isoformat()
     ex = market.get("us_exclusivity") or {}
     dated = [(parse_date(e.get("expiry_date")), re.sub(r"(?i)( exclusivity)?$", " exclusivity", e.get("kind") or "", count=1)) for e in ex.get("listed_exclusivities", [])]
     dated += [(parse_date(p.get("expiry_date")), f"US patent {p.get('patent_number')} ({p.get('covers')})") for p in ex.get("patents", [])]
-    if "reference_product_exclusivity_ends" in facts:
-        dated.append((parse_date(facts["reference_product_exclusivity_ends"]), "reference product exclusivity (computed)"))
     dated = [(d[0], why) for d, why in dated if d]
     if dated:
         last, why = max(dated)
         facts["last_protection_ends"], facts["last_protection_basis"] = last.isoformat(), why
+    reference_dates = [d for d, why in dated if why.casefold() == "reference product exclusivity"]
+    if reference_dates:
+        facts["reference_product_exclusivity_ends"] = max(reference_dates).isoformat()
     return facts
 
 
@@ -317,12 +308,19 @@ def exclusivity(reg_us: dict, market: dict) -> dict:
 
 def label_section(page: str) -> dict:
     """Copy section 1 of the full prescribing information from an Extract of a DailyMed page, and its printed revision date."""
-    text = page.replace("\\", "")
-    m = re.search(r"^[\s*#-]*1\s+INDICATIONS\s+(?:AND|&)\s+USAGE\s*$(.*?)^[\s*#-]*2\s+DOSAGE\s+AND\s+ADMINISTRATION", text, re.S | re.M | re.I)
+    text = re.sub(r"\\([^\w\s])", r"\1", page)
+    sections = re.findall(
+        r"^[ \t*#-]*1[ \t]+INDICATIONS[ \t]+(?:AND|&)[ \t]+USAGE[ \t*]*$"
+        r"(.*?)^[ \t*#-]*2[ \t]+DOSAGE[ \t]+AND[ \t]+ADMINISTRATION\b",
+        text, re.S | re.M | re.I,
+    )
     body = ""
-    if m:
-        lines = [re.sub(r"^[\s*+-]+", "", ln).strip() for ln in m.group(1).splitlines()]
-        body = "\n".join(ln for ln in lines if ln)
+    for section in reversed(sections):
+        lines = [re.sub(r"^\s*(?:#+|[*+-])\s+", "", ln).strip() for ln in section.splitlines() if ln.strip()]
+        # DailyMed often puts the same section titles in its table of contents.
+        if any(not re.match(r"\[?1\.\d+\b", line) for line in lines):
+            body = "\n".join(lines)
+            break
     rev = re.search(r"Revised:\s*(\d{1,2})/(\d{4})", text)
     return {
         "status": "copied" if body else "section 1 not found on the page",
@@ -347,7 +345,7 @@ def run_all(data: dict) -> dict:
         results += check_us(reg.get("us", {}), runs.get("identity", {}), label)
         results += check_dates(reg)
         results += check_consistency(runs.get("identity", {}), reg, runs.get("news", {}))
-    computed = exclusivity(reg.get("us", {}), runs.get("market", {}))
+    computed = exclusivity(runs.get("market", {}))
     counted = [r for r in results if r["result"] != "skip"]
     return {
         "results": results,

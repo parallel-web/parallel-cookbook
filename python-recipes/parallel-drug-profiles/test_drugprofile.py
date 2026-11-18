@@ -7,12 +7,14 @@ import tempfile
 import unittest
 from datetime import date
 from pathlib import Path
-from unittest.mock import patch
+from types import SimpleNamespace
+from unittest.mock import Mock, patch
 
 import checks
 import drugprofile
 import images
 import render
+import spec
 
 render.ensure_pdf_support()  # on macOS, re-runs the tests with Homebrew's Pango on the library path
 
@@ -52,6 +54,27 @@ class ParsingTests(unittest.TestCase):
         self.assertEqual(got["indications_and_usage"], "LEQEMBI is indicated for the treatment of Alzheimer’s disease.")
         self.assertEqual(got["printed_revision"], "2026-07")
         self.assertEqual(checks.label_section("no label here")["status"], "section 1 not found on the page")
+
+    def test_amjevita_style_table_of_contents_is_not_label_text(self):
+        toc = (
+            "  # 1 INDICATIONS AND USAGE\n\n"
+            "  ## 1\\.1 Rheumatoid Arthritis\n\n"
+            "  ## 1\\.2 Juvenile Idiopathic Arthritis\n\n"
+            "  # 2 DOSAGE AND ADMINISTRATION\n"
+        )
+        body = (
+            "* 1 INDICATIONS AND USAGE\n\n"
+            "  ## 1\\.1 Rheumatoid Arthritis\n\n"
+            "  Example prescribing text from the first subsection.\n\n"
+            "  ## 1\\.2 Juvenile Idiopathic Arthritis\n\n"
+            "  Example prescribing text from the second subsection.\n\n"
+            "* 2 DOSAGE AND ADMINISTRATION\n"
+        )
+        self.assertEqual(checks.label_section(toc)["status"], "section 1 not found on the page")
+        self.assertEqual(checks.label_section(toc + body)["indications_and_usage"], (
+            "1.1 Rheumatoid Arthritis\nExample prescribing text from the first subsection.\n"
+            "1.2 Juvenile Idiopathic Arthritis\nExample prescribing text from the second subsection."
+        ))
 
 
 class CheckTests(unittest.TestCase):
@@ -107,14 +130,19 @@ class CheckTests(unittest.TestCase):
         self.assertIsNone(checks.news_approval(news("submission", "2026-01-12"), reg))
         self.assertEqual(len(checks.unconfirmed_approvals(reg, {"regulatory_actions": [news("new indication approved", "2026-08-12")]})), 1)
 
-    def test_exclusivity_is_computed(self):
-        got = checks.exclusivity({"application_number": "BLA761269", "first_approval_date": "2023-01-06"}, {})
-        self.assertEqual(got["reference_product_exclusivity_ends"], "2035-01-06")
-        leap = checks.exclusivity({"application_number": "BLA761000", "first_approval_date": "2024-02-29"}, {})
-        self.assertEqual(leap["reference_product_exclusivity_ends"], "2036-02-29")  # +12 years from a leap day is another leap day
+    def test_exclusivity_uses_listed_dates(self):
+        data = {"runs": {"regulatory": {"content": {"us": {
+            "status": "approved", "application_number": "BLA761024", "first_approval_date": "2016-09-23",
+        }}}}}
+        with patch.object(checks, "get_json", return_value=None):
+            self.assertEqual(checks.run_all(data)["computed"], {})  # Amjevita, a biosimilar
+        reference = {"us_exclusivity": {"listed_exclusivities": [
+            {"kind": "Reference Product Exclusivity", "expiry_date": "2035-07-06"},
+        ]}}
+        self.assertEqual(checks.exclusivity(reference)["reference_product_exclusivity_ends"], "2035-07-06")
         market = {"us_exclusivity": {"listed_exclusivities": [{"kind": "NCE", "expiry_date": "2030-09-30"}],
                                      "patents": [{"patent_number": "1", "expiry_date": "2043-12-09", "covers": "compound"}]}}
-        got = checks.exclusivity({"application_number": "NDA218436", "first_approval_date": "2025-09-30"}, market)
+        got = checks.exclusivity(market)
         self.assertEqual(got["last_protection_ends"], "2043-12-09")
         self.assertNotIn("reference_product_exclusivity_ends", got)
 
@@ -181,6 +209,15 @@ class ImageTests(unittest.TestCase):
 
 
 class RunTests(unittest.TestCase):
+    def event(self, section, status="completed"):
+        return SimpleNamespace(
+            type="task_run.state",
+            run=SimpleNamespace(run_id=section, status=status, processor="core", error=None,
+                                metadata={"asset": "leqembi", "section": section}),
+            input=SimpleNamespace(input=ASSET),
+            output=SimpleNamespace(content=SAMPLE["runs"][section]["content"], basis=[]) if status == "completed" else None,
+        )
+
     def test_source_policies_and_connectors(self):
         reg = drugprofile.section_run(ASSET, "regulatory")
         self.assertIn("fda.gov", reg["source_policy"]["include_domains"])
@@ -199,6 +236,65 @@ class RunTests(unittest.TestCase):
             p.write_text("name,sponsor\nLeqembi,Eisai\n")
             with self.assertRaises(SystemExit):
                 drugprofile.read_assets(str(p))
+
+    def test_resume_rejects_changed_csv_row_before_reusing_runs(self):
+        with tempfile.TemporaryDirectory() as d:
+            job = drugprofile.Job(Path(d))
+            job.state["inputs"]["leqembi"] = ASSET
+            job.runs("leqembi")["trials"] = "trials"
+            job.save()
+            for field in ("sponsor", "focus_indication"):
+                with self.subTest(field=field):
+                    client = Mock()
+                    with self.assertRaisesRegex(SystemExit, "Research input changed"):
+                        drugprofile.research(client, drugprofile.Job(Path(d)), [{**ASSET, field: "changed"}])
+                    self.assertEqual(client.mock_calls, [])
+
+    def test_legacy_resume_checks_original_task_input(self):
+        with tempfile.TemporaryDirectory() as d:
+            job = drugprofile.Job(Path(d))
+            job.state = {"task_group_id": "group", "runs": {"leqembi": {"trials": "trials"}}}
+            client = Mock()
+            client.task_group.get_runs.return_value = [self.event("trials")]
+            with self.assertRaisesRegex(SystemExit, "Research input changed"):
+                drugprofile.research(client, job, [{**ASSET, "focus_indication": "different indication"}])
+            client.task_group.get_runs.assert_called_once_with("group", include_input=True)
+
+    def test_outlook_and_resume_use_saved_results_after_group_rows_expire(self):
+        with tempfile.TemporaryDirectory() as d, patch.object(drugprofile.time, "sleep"):
+            job = drugprofile.Job(Path(d))
+            job.state.update(task_group_id="group", inputs={"leqembi": ASSET})
+            job.runs("leqembi").update({s: s for s in spec.SECTIONS})
+            client = Mock()
+            client.task_group.get_runs.side_effect = [
+                [self.event(s, "completed" if s == "identity" else "running") for s in spec.SECTIONS],
+                [self.event(s) for s in spec.SECTIONS if s != "identity"],
+                [self.event("outlook")],
+            ]
+            client.with_options.return_value.task_group.add_runs.return_value = SimpleNamespace(run_ids=["outlook"])
+
+            drugprofile.research(client, job, [ASSET], connectors=False)
+            client.task_run.result.assert_not_called()
+            submitted = client.with_options.return_value.task_group.add_runs.call_args.kwargs["inputs"][0]
+            self.assertIn('"identity"', submitted["input"]["facts"])
+            self.assertEqual(set(job.profile(ASSET)["runs"]), {*spec.SECTIONS, "outlook"})
+
+            client.reset_mock()
+            drugprofile.research(client, drugprofile.Job(Path(d)), [ASSET], connectors=False)
+            self.assertEqual(client.mock_calls, [])
+
+    def test_missing_uncaptured_run_stops_polling(self):
+        with tempfile.TemporaryDirectory() as d, patch.object(drugprofile.time, "sleep") as sleep:
+            job = drugprofile.Job(Path(d))
+            job.state.update(task_group_id="group", inputs={"leqembi": ASSET})
+            job.runs("leqembi").update({s: s for s in spec.SECTIONS})
+            client = Mock()
+            client.task_group.get_runs.return_value = [self.event(s) for s in spec.SECTIONS if s != "identity"]
+
+            with self.assertRaisesRegex(SystemExit, "results may have expired"):
+                drugprofile.research(client, job, [ASSET], connectors=False)
+            sleep.assert_not_called()
+            self.assertIn("trials", job.profile(ASSET)["runs"])
 
 
 class RenderTests(unittest.TestCase):
@@ -234,6 +330,36 @@ class RenderTests(unittest.TestCase):
         _, written, incomplete = self.render(data)
         self.assertEqual(len(written), 1)
         self.assertEqual(incomplete, [ASSET["asset"]])
+
+    def test_label_text_is_not_truncated(self):
+        from pypdf import PdfReader
+
+        data = copy.deepcopy(SAMPLE)
+        paragraph = "Example prescribing information. " * 80
+        data["label"]["indications_and_usage"] = "\n".join(
+            [paragraph + "End of the first paragraph."] + [paragraph] * 7 + ["Ninth paragraph is preserved."]
+        )
+        _, written, _ = self.render(data)
+        text = " ".join(" ".join(page.extract_text().split()) for page in PdfReader(written[0]).pages)
+        self.assertIn("End of the first paragraph.", text)
+        self.assertIn("Ninth paragraph is preserved.", text)
+
+    def test_missing_or_unknown_regulatory_status_stays_unconfirmed(self):
+        from pypdf import PdfReader
+
+        unknown = {region: {"status": "unknown", "approved_indications": []} for region, _ in render.REGIONS}
+        for status, content in (("failed", None), ("completed", unknown)):
+            with self.subTest(status=status):
+                data = copy.deepcopy(SAMPLE)
+                data["runs"]["regulatory"].update(status=status, content=content)
+                data["runs"]["market"]["content"]["us_exclusivity"] = {}
+                data["label"] = {}
+                _, written, incomplete = self.render(data)
+                text = " ".join(" ".join(page.extract_text().split()) for page in PdfReader(written[0]).pages)
+                self.assertIn("Approval status unconfirmed", text)
+                self.assertIn("No US prescribing information was verified.", text)
+                self.assertIn("US approval and market protection unconfirmed", text)
+                self.assertEqual(bool(incomplete), status == "failed")
 
 
 if __name__ == "__main__":

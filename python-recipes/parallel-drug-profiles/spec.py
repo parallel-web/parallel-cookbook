@@ -244,7 +244,8 @@ MARKET = task_spec(
     us_exclusivity=obj(
         "US exclusivity. Empty lists if the asset is not approved in the US.",
         listed_exclusivities=arr(
-            "Regulatory exclusivities listed in FDA's Orange Book (drugs) or Purple Book (biologics), with expiry dates.",
+            "Regulatory exclusivities listed in FDA's Orange Book (drugs) or Purple Book (biologics), with expiry dates. "
+            "Include reference product exclusivity only if the Purple Book publishes an expiry date for this product.",
             obj("An exclusivity.", kind=s("Exclusivity type as listed, e.g. NCE, ODE, NI, reference product exclusivity."), expiry_date=s(f"Expiry date, {DATE}.")),
         ),
         patents=arr(

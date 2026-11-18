@@ -258,6 +258,8 @@ def claims(c: dict, regions: list[dict], comp: dict, unconfirmed: list[dict]) ->
         reg = f"Approved in {', '.join(approved[:-1]) + ' and ' + approved[-1] if len(approved) > 1 else approved[0]}"
         if firsts:
             reg += f", first in {min(firsts)[0].strftime('%b %Y')}"
+    elif any(r["status"] == "unknown" for r in regions):
+        reg = "Approval status unconfirmed in one or more regions"
     else:
         reg = "Not yet approved in the US, EU, China or Japan"
     us = next(r for r in regions if r["key"] == "us")
@@ -282,6 +284,8 @@ def claims(c: dict, regions: list[dict], comp: dict, unconfirmed: list[dict]) ->
 
     if comp.get("last_protection_ends"):
         market = f"Listed US protection runs to {month(comp['last_protection_ends'])}"
+    elif us["status"] == "unknown":
+        market = "US approval and market protection unconfirmed"
     elif us["status"] == "approved":
         market = "No US patents or exclusivities found"
     else:
@@ -350,7 +354,7 @@ def build(data: dict, out: Path | None = None) -> dict:
     c, basis, failed = merge(data)
     idn, reg, news = c["identity"], c["regulatory"], c["news"]
     chk = data.get("checks") or checks.run_all(data)
-    comp = chk.get("computed", {})
+    comp = checks.exclusivity(c["market"])
     unconfirmed = checks.unconfirmed_approvals(reg, news)
 
     regions = []

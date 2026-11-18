@@ -85,6 +85,9 @@ body { font-family: var(--sans); color: var(--ink); font-size: 9px; line-height:
 .strip { margin-top: 10px; padding-top: 8px; border-top: 0.75px solid var(--rule2); }
 
 /* label */
+.label { break-inside: auto; }
+.label .sec-head, .label-meta { break-after: avoid; }
+.label-meta { display: flex; gap: 16px; margin-bottom: 6px; }
 .label-text { font-size: 10.5px; line-height: 14px; }
 .label-text p + p { margin-top: 3px; }
 
@@ -210,25 +213,23 @@ table.tbl.fixed { table-layout: fixed; }
   </div>
 
   <!-- US label -->
-  <div class="sec">
+  <div class="sec label">
     <div class="rule"></div>
     <div class="sec-head">
       <div class="t-title">US label: Indications and Usage, word for word</div>
       <div class="t-sample">{% if p.label.indications_and_usage %}Copied from DailyMed with the Extract API. No model wrote this text.{% else %}{{ p.label.status or "No US label" }}{% endif %}</div>
     </div>
     {% if p.label.indications_and_usage %}
-    <div class="g-stat">
-      <div class="t-note">
-        <div class="kick">Label revised</div><div class="ex-q" style="color:var(--ink)">{{ p.label.printed_revision|month }}</div>
-        <div class="kick" style="margin-top:6px">DailyMed version</div><div class="ex-q" style="color:var(--ink)">{{ p.label.dailymed_version }}, published {{ p.label.dailymed_published }}</div>
-      </div>
-      <div class="railed label-text">
-        {% for line in p.label.indications_and_usage.splitlines()[:8] %}<p>{{ line|clip(420) }}</p>{% endfor %}
-        <div class="subj" style="margin-top:6px"><a class="plain" href="{{ p.label.url }}">dailymed.nlm.nih.gov · set ID {{ p.label.setid }}</a></div>
-      </div>
+    <div class="label-meta t-note">
+      <div><div class="kick">Label revised</div><div class="ex-q" style="color:var(--ink)">{{ p.label.printed_revision|month }}</div></div>
+      <div><div class="kick">DailyMed version</div><div class="ex-q" style="color:var(--ink)">{{ p.label.dailymed_version }}, published {{ p.label.dailymed_published }}</div></div>
+    </div>
+    <div class="railed label-text">
+      {% for line in p.label.indications_and_usage.splitlines() %}<p>{{ line }}</p>{% endfor %}
+      <div class="subj" style="margin-top:6px"><a class="plain" href="{{ p.label.url }}">dailymed.nlm.nih.gov · set ID {{ p.label.setid }}</a></div>
     </div>
     {% else %}
-    <div class="card"><div class="t-note">{% if p.regions[0].status == "approved" %}The US label could not be copied: {{ p.label.status or "no DailyMed set ID was found" }}.{% else %}No US prescribing information: the asset is not approved in the United States.{% endif %}</div></div>
+    <div class="card"><div class="t-note">{% if p.regions[0].status == "approved" %}The US label could not be copied: {{ p.label.status or "no DailyMed set ID was found" }}.{% elif p.regions[0].status == "unknown" %}US approval status is unknown. No US prescribing information was verified.{% else %}No US prescribing information: the asset is not approved in the United States.{% endif %}</div></div>
     {% endif %}
   </div>
 
@@ -341,7 +342,7 @@ table.tbl.fixed { table-layout: fixed; }
     <div class="rule"></div>
     <div class="sec-head">
       <div class="t-title">{{ p.claims.market }}{{ refs(src, "us_exclusivity") }}</div>
-      <div class="t-sample">The protection date is computed from the listed dates; biologic exclusivity is computed as 12 years from first licensure. {{ src.line("us_exclusivity") }}</div>
+      <div class="t-sample">The protection date is the latest reported patent or exclusivity expiry. {{ src.line("us_exclusivity") }}</div>
     </div>
     <div class="g-stat">
       <div>
@@ -354,7 +355,7 @@ table.tbl.fixed { table-layout: fixed; }
           <div class="kpi"><div class="kick">US list price{{ refs(src, "us_list_price") }}</div><div class="t-title v">{{ ("$" ~ price.annual_wac_usd|num) if price.annual_wac_usd else "n/a" }}</div><div class="subj s">{{ "per year" if price.annual_wac_usd else "" }}{% if price.as_of %} · {{ price.as_of|month }}{% endif %}</div></div>
           <div class="kpi"><div class="kick">Annual sales{{ refs(src, "latest_annual_sales") }}</div><div class="t-title v">{{ sales.amount_m|money(sales.currency) }}</div><div class="subj s">{{ sales.period or "" }}</div></div>
           <div class="kpi"><div class="kick">Medicare{{ refs(src, "medicare") }}</div><div class="t-title v">{{ med.benefit or "n/a" }}</div><div class="subj s">{{ (med.national_coverage_determination or "")|truncate(40, true, "…") if med.national_coverage_determination not in (None, "", "None") else "no national coverage determination" }}</div></div>
-          <div class="kpi"><div class="kick">{{ "Biologic exclusivity" if p.computed.reference_product_exclusivity_ends else "Listed exclusivity" }}</div><div class="t-title v">{{ (p.computed.reference_product_exclusivity_ends or (ex.listed_exclusivities[0].expiry_date if ex.listed_exclusivities else ""))|month or "n/a" }}</div><div class="subj s">{{ "12 years from licensure, computed" if p.computed.reference_product_exclusivity_ends else (ex.listed_exclusivities[0].kind if ex.listed_exclusivities else "") }}</div></div>
+          <div class="kpi"><div class="kick">{{ "Reference product exclusivity" if p.computed.reference_product_exclusivity_ends else "Listed exclusivity" }}</div><div class="t-title v">{{ (p.computed.reference_product_exclusivity_ends or (ex.listed_exclusivities[0].expiry_date if ex.listed_exclusivities else ""))|month or "n/a" }}</div><div class="subj s">{{ "FDA Purple Book" if p.computed.reference_product_exclusivity_ends else (ex.listed_exclusivities[0].kind if ex.listed_exclusivities else "") }}</div></div>
         </div>
         {% if med.coverage_conditions and med.coverage_conditions != "None" %}<div class="strip ex-d" style="color:var(--ink)"><span class="kick">Coverage conditions</span> {{ med.coverage_conditions|clip(260) }}</div>{% endif %}
       </div>
