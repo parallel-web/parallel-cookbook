@@ -900,7 +900,8 @@ def validate_form_inputs(industry, geography, details, debug=False):
             },
             timeout=30,
         )
-        response.raise_for_status()
+        if response.status_code != 200:
+            raise requests.HTTPError("Expected HTTP 200 from Research")
         research = response.json()
         response_id = research.get("id")
         response_status = research.get("status")
@@ -915,9 +916,22 @@ def validate_form_inputs(industry, geography, details, debug=False):
             if part["type"] == "output_text"
         )
         decision = json.loads(result_content)
+        if (
+            not isinstance(decision, dict)
+            or decision.keys() != FORM_VALIDATION_SCHEMA["properties"].keys()
+        ):
+            raise ValueError("Unexpected fields in Research validation result")
+
         is_valid = decision["is_valid"]
-        if not isinstance(is_valid, bool):
-            raise ValueError("Expected a boolean validation decision")
+        reasoning = decision["reasoning"]
+        issues_found = decision["issues_found"]
+        if (
+            not isinstance(is_valid, bool)
+            or not isinstance(reasoning, str)
+            or not isinstance(issues_found, list)
+            or not all(isinstance(issue, str) for issue in issues_found)
+        ):
+            raise ValueError("Unexpected field types in Research validation result")
     except (requests.RequestException, AttributeError, KeyError, TypeError, ValueError) as error:
         error_type = type(error).__name__
         app.logger.warning(
@@ -934,8 +948,8 @@ def validate_form_inputs(industry, geography, details, debug=False):
         return is_valid, message, {
             "response_id": response_id,
             "model": "parallel",
-            "reasoning": decision.get("reasoning", "No reasoning provided"),
-            "issues_found": decision.get("issues_found", []),
+            "reasoning": reasoning,
+            "issues_found": issues_found,
             "raw_response": result_content,
             "combined_input": form_input,
         }

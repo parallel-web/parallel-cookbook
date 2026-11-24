@@ -22,8 +22,8 @@ with (
 REJECTION = "Please adjust your inputs to be focused on a specific industry."
 
 
-def research_response(content, *, status="completed"):
-    response = Mock(spec=requests.Response, status_code=200)
+def research_response(content, *, status="completed", status_code=200):
+    response = Mock(spec=requests.Response, status_code=status_code)
     response.json.return_value = {
         "id": "research_test",
         "status": status,
@@ -150,18 +150,24 @@ class FormValidationTests(unittest.TestCase):
         self.task_create.assert_not_called()
 
     def test_provider_errors_allow_submission_on_both_routes(self):
-        http_error = Mock(spec=requests.Response, status_code=503)
-        http_error.raise_for_status.side_effect = requests.HTTPError()
         no_text = research_response(decision(False))
         no_text.json.return_value["output"].pop()
         failures = {
             "timeout": requests.Timeout(),
-            "HTTP error": http_error,
+            "HTTP error": Mock(spec=requests.Response, status_code=503),
+            "unexpected redirect": research_response(decision(False), status_code=302),
             "incomplete response": research_response(decision(False), status="incomplete"),
             "missing output text": no_text,
             "malformed JSON": research_response("not JSON"),
             "missing verdict": research_response("{}"),
             "non-boolean verdict": research_response(decision("false")),
+            "missing required fields": research_response('{"is_valid": false}'),
+            "invalid issue type": research_response(
+                '{"is_valid": false, "reasoning": "Placeholder", "issues_found": [1]}'
+            ),
+            "extra field in verdict": research_response(
+                '{"is_valid": false, "reasoning": "Placeholder", "issues_found": [], "extra": true}'
+            ),
         }
 
         for name, failure in failures.items():
