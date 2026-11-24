@@ -13,7 +13,7 @@ A comprehensive web application that generates detailed market research reports 
 - **Download Support**: Export reports as Markdown files
 - **Shareable URLs**: Each report gets a unique URL slug for easy sharing
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
-- **Input Validation**: Low-latency validation of inputs via Parallel's Chat API
+- **Input Validation**: Form validation with Parallel Research in interactive mode at low effort
 
 ## Quick Start
 
@@ -68,6 +68,10 @@ A comprehensive web application that generates detailed market research reports 
 
 6. **Open your browser** and go to `http://localhost:5000`
 
+### Testing Form Validation
+
+With Python 3.12, run `python -B -m unittest test_validation` from this directory after installing the recipe requirements. The tests mock the provider, database, and report task creation.
+
 ## 🔑 API Keys Setup
 
 ### Parallel Deep Research API
@@ -75,7 +79,7 @@ A comprehensive web application that generates detailed market research reports 
 1. Sign up at [platform.parallel.ai](https://platform.parallel.ai)
 2. Navigate to your API keys section
 3. Create a new API key
-4. Add it to your `.env.local` as `PARALLEL_API_KEY`
+4. Add it to your `.env.local` as `PARALLEL_API_KEY`. The key needs access to the Research API for form validation.
 
 **Documentation**: [Parallel Deep Research Docs](https://docs.parallel.ai/task-api/features/task-deep-research)
 
@@ -234,7 +238,8 @@ MAX_REPORTS_PER_HOUR=100                        # Global reports per hour (defau
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/` | GET | Main dashboard with form and report library |
-| `/generate-report` | POST | Generate new report (returns task_run_id) |
+| `/api/validate-inputs` | POST | Check industry, geography, and research focus before submission |
+| `/generate-report` | POST | Validate input and start a new report (returns task_run_id) |
 | `/stream-events/<task_run_id>` | GET | SSE stream for real-time progress |
 | `/monitor-task/<task_run_id>` | POST | Monitor task with robust reconnection |
 | `/complete-task/<task_run_id>` | POST | Complete task and save report |
